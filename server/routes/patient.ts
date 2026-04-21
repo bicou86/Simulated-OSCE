@@ -77,6 +77,7 @@ router.post("/chat", async (req: Request, res: Response) => {
       rr: station.vitals?.rr ?? "",
       temp: station.vitals?.temp ?? "",
       spo2: station.vitals?.spo2 ?? "",
+      openingLine: station.openingLine ?? "",
     });
 
     const client = new OpenAI({ apiKey: key });
