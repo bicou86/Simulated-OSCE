@@ -1,9 +1,11 @@
 import { Link, useLocation } from "wouter";
-import { Activity, Library, Settings, FileText } from "lucide-react";
+import { Activity, Library, Settings, FileText, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useKeyStatus } from "@/hooks/useKeyStatus";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
+  const { loading, status } = useKeyStatus();
 
   const navItems = [
     { href: "/", icon: Library, label: "Bibliothèque" },
@@ -11,6 +13,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     { href: "/evaluation", icon: FileText, label: "Évaluations" },
     { href: "/settings", icon: Settings, label: "Paramètres" },
   ];
+
+  // Bannière si au moins une clé manque — invisible sur la page Paramètres.
+  const showBanner =
+    !loading &&
+    status !== null &&
+    (!status.openai_ok || !status.anthropic_ok) &&
+    location !== "/settings";
 
   return (
     <div className="flex h-screen w-screen bg-background overflow-hidden selection:bg-primary/20">
@@ -54,7 +63,25 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 h-full overflow-hidden relative bg-background">
+      <main className="flex-1 h-full overflow-hidden relative bg-background flex flex-col">
+        {showBanner && (
+          <div className="bg-amber-50 border-b border-amber-200 text-amber-900 px-4 py-3 flex items-center gap-3 shrink-0 no-print" data-testid="banner-keys-missing">
+            <AlertTriangle className="w-5 h-5 shrink-0 text-amber-600" />
+            <div className="flex-1 text-sm">
+              <strong>Configuration incomplète.</strong>{" "}
+              {status && !status.openai_ok && "La clé OpenAI n'est pas valide. "}
+              {status && !status.anthropic_ok && "La clé Anthropic n'est pas valide. "}
+              Les simulations et évaluations ne fonctionneront pas tant que les clés ne sont pas renseignées.
+            </div>
+            <button
+              onClick={() => setLocation("/settings")}
+              className="shrink-0 px-3 py-1.5 rounded-md bg-amber-600 text-white text-sm font-medium hover:bg-amber-700"
+              data-testid="banner-cta"
+            >
+              Ouvrir Paramètres
+            </button>
+          </div>
+        )}
         <div className="h-full overflow-y-auto w-full">
           {children}
         </div>
