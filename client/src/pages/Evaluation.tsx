@@ -4,10 +4,11 @@ import { MOCK_STATIONS, type Station } from "@/lib/mockData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Printer, ArrowLeft, CheckCircle2, XCircle, AlertTriangle, TrendingUp, Loader2, RotateCcw } from "lucide-react";
+import { Download, ArrowLeft, CheckCircle2, XCircle, AlertTriangle, TrendingUp, Loader2, RotateCcw } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { ApiError, evaluate, type EvaluationReport } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
+import { ReportPdf } from "@/components/ReportPdf";
 
 type Session = {
   station: Station;
@@ -37,6 +38,7 @@ export default function Evaluation() {
   const [report, setReport] = useState<EvaluationReport | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
+  const [isExporting, setIsExporting] = useState(false);
 
   async function runEvaluation() {
     if (!session || !station) return;
@@ -79,7 +81,39 @@ export default function Evaluation() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handlePrint = () => window.print();
+  async function handleExportPdf() {
+    if (!report || !station) return;
+    setIsExporting(true);
+    try {
+      // Import dynamique pour éviter de charger @react-pdf/renderer au premier rendu.
+      const { pdf } = await import("@react-pdf/renderer");
+      const blob = await pdf(
+        <ReportPdf
+          report={report}
+          stationTitle={station.title}
+          stationSpecialty={station.specialty}
+          generatedAt={new Date()}
+        />,
+      ).toBlob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      const safeTitle = station.title.replace(/[^a-zA-Z0-9À-ÿ _-]/g, "").slice(0, 60);
+      link.download = `OSCE_${safeTitle}_${new Date().toISOString().slice(0, 10)}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      toast({
+        title: "Export PDF impossible",
+        description: (err as Error).message,
+        variant: "destructive",
+      });
+    } finally {
+      setIsExporting(false);
+    }
+  }
 
   if (!station) {
     return (
@@ -165,8 +199,9 @@ export default function Evaluation() {
             {loading ? <Loader2 className="w-5 h-5 mr-2 animate-spin" /> : <RotateCcw className="w-5 h-5 mr-2" />}
             Réévaluer
           </Button>
-          <Button onClick={handlePrint} className="shadow-sm">
-            <Printer className="w-5 h-5 mr-2" /> Imprimer
+          <Button onClick={handleExportPdf} disabled={isExporting} className="shadow-sm" data-testid="button-export-pdf">
+            {isExporting ? <Loader2 className="w-5 h-5 mr-2 animate-spin" /> : <Download className="w-5 h-5 mr-2" />}
+            {isExporting ? "Génération…" : "Exporter en PDF"}
           </Button>
         </div>
       </div>
