@@ -8,6 +8,7 @@ export type ApiErrorCode =
   | "bad_request"
   | "not_configured"
   | "internal_error"
+  | "not_found"
   | "network_error";
 
 export class ApiError extends Error {
@@ -23,11 +24,15 @@ export class ApiError extends Error {
   }
 }
 
-// Envoie un JSON, attend un JSON. Relance ApiError avec code/hint si le backend l'a renvoyé.
-async function jsonFetch<T>(
-  url: string,
-  init: RequestInit,
-): Promise<T> {
+async function parseErrorBody(res: Response): Promise<{ error?: string; code?: ApiErrorCode; hint?: string }> {
+  try {
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
+async function jsonFetch<T>(url: string, init: RequestInit): Promise<T> {
   let res: Response;
   try {
     res = await fetch(url, init);
@@ -39,12 +44,7 @@ async function jsonFetch<T>(
     });
   }
   if (!res.ok) {
-    let body: { error?: string; code?: ApiErrorCode; hint?: string } = {};
-    try {
-      body = await res.json();
-    } catch {
-      // rien à faire, on tombera sur le message générique ci-dessous
-    }
+    const body = await parseErrorBody(res);
     throw new ApiError({
       message: body.error ?? `HTTP ${res.status}`,
       code: body.code ?? "internal_error",
@@ -89,27 +89,31 @@ export function getSettingsStatus(): Promise<SettingsStatus> {
   return jsonFetch("/api/settings/status", { method: "GET" });
 }
 
-// ───────── /api/patient ─────────
+// ───────── /api/stations ─────────
 
-export interface PatientStation {
-  scenario: string;
-  context?: string;
-  vitals?: {
-    hr?: string;
-    bp?: string;
-    rr?: string;
-    temp?: string;
-    spo2?: string;
-  };
-  openingLine?: string;
+export type StationSource = "AMBOSS" | "German" | "RESCOS" | "USMLE" | "USMLE_Triage";
+
+export interface StationMeta {
+  id: string;       // "RESCOS-1"
+  title: string;
+  source: StationSource;
+  setting: string;
 }
+
+export function listStations(): Promise<{ stations: StationMeta[]; total: number }> {
+  return jsonFetch("/api/stations", { method: "GET" });
+}
+
+// ───────── /api/patient ─────────
 
 export type ChatRole = "user" | "assistant";
 
 export interface ChatInput {
-  station: PatientStation;
+  stationId: string;
   history: Array<{ role: ChatRole; content: string }>;
   userMessage: string;
+  mode: "voice" | "text";
+  model?: "gpt-4o-mini" | "gpt-4o";
 }
 
 export function chatPatient(input: ChatInput): Promise<{ reply: string }> {
@@ -120,7 +124,19 @@ export function chatPatient(input: ChatInput): Promise<{ reply: string }> {
   });
 }
 
-// STT : POST multipart. On prend un Blob (issu de MediaRecorder) + un filename.
+export interface PatientBrief {
+  stationId: string;
+  setting: string;
+  patientDescription: string;
+  vitals: Record<string, string>;
+  phraseOuverture: string;
+  phraseOuvertureComplement?: string;
+}
+
+export function getPatientBrief(stationId: string): Promise<PatientBrief> {
+  return jsonFetch(`/api/patient/${encodeURIComponent(stationId)}/brief`, { method: "GET" });
+}
+
 export async function sttPatient(audio: Blob, filename = "audio.webm"): Promise<{ text: string }> {
   const form = new FormData();
   form.append("audio", audio, filename);
@@ -128,17 +144,10 @@ export async function sttPatient(audio: Blob, filename = "audio.webm"): Promise<
   try {
     res = await fetch("/api/patient/stt", { method: "POST", body: form });
   } catch (err) {
-    throw new ApiError({
-      message: (err as Error).message,
-      code: "network_error",
-      status: 0,
-    });
+    throw new ApiError({ message: (err as Error).message, code: "network_error", status: 0 });
   }
   if (!res.ok) {
-    let body: { error?: string; code?: ApiErrorCode; hint?: string } = {};
-    try {
-      body = await res.json();
-    } catch { /* noop */ }
+    const body = await parseErrorBody(res);
     throw new ApiError({
       message: body.error ?? `HTTP ${res.status}`,
       code: body.code ?? "internal_error",
@@ -151,7 +160,6 @@ export async function sttPatient(audio: Blob, filename = "audio.webm"): Promise<
 
 export type TtsVoice = "alloy" | "echo" | "fable" | "nova" | "onyx" | "shimmer";
 
-// TTS : renvoie un Blob audio/mpeg, à piper dans un Audio element ou AudioContext.
 export async function ttsPatient(text: string, voice: TtsVoice = "nova"): Promise<Blob> {
   let res: Response;
   try {
@@ -161,17 +169,10 @@ export async function ttsPatient(text: string, voice: TtsVoice = "nova"): Promis
       body: JSON.stringify({ text, voice }),
     });
   } catch (err) {
-    throw new ApiError({
-      message: (err as Error).message,
-      code: "network_error",
-      status: 0,
-    });
+    throw new ApiError({ message: (err as Error).message, code: "network_error", status: 0 });
   }
   if (!res.ok) {
-    let body: { error?: string; code?: ApiErrorCode; hint?: string } = {};
-    try {
-      body = await res.json();
-    } catch { /* noop */ }
+    const body = await parseErrorBody(res);
     throw new ApiError({
       message: body.error ?? `HTTP ${res.status}`,
       code: body.code ?? "internal_error",
@@ -184,28 +185,30 @@ export async function ttsPatient(text: string, voice: TtsVoice = "nova"): Promis
 
 // ───────── /api/evaluator ─────────
 
-export interface EvaluationReport {
+export interface EvaluationScores {
   globalScore: number;
-  anamnese: number;
-  examen: number;
-  communication: number;
-  diagnostic: number;
-  strengths: string[];
-  criticalOmissions: string[];
-  priorities: string[];
+  sections: Array<{
+    key: string;
+    name: string;
+    weight: number;
+    score: number;
+    raw?: string;
+  }>;
   verdict: "Réussi" | "À retravailler" | "Échec";
 }
 
-export interface EvaluateInput {
-  station: {
-    scenario: string;
-    title?: string;
-    specialty?: string;
-  };
-  transcript: Array<{ role: "patient" | "doctor"; text: string }>;
+export interface EvaluationResult {
+  markdown: string;
+  scores: EvaluationScores;
 }
 
-export function evaluate(input: EvaluateInput): Promise<EvaluationReport> {
+export interface EvaluateInput {
+  stationId: string;
+  transcript: Array<{ role: "patient" | "doctor"; text: string }>;
+  model?: "claude-sonnet-4-5" | "claude-opus-4-7";
+}
+
+export function evaluate(input: EvaluateInput): Promise<EvaluationResult> {
   return jsonFetch("/api/evaluator/evaluate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

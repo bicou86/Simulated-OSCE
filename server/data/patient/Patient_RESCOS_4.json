@@ -1,0 +1,5032 @@
+{
+  "type": "PATIENT",
+  "source": "RESCOS",
+  "batch": 4,
+  "count": 16,
+  "stations": [
+    {
+      "id": "RESCOS-57 - Ralentissement - Consultation téléphonique EMS",
+      "setting": "Urgence hôpital régional - Consultation téléphonique avec infirmier·ère d'EMS",
+      "patient_description": "M. Michel Bertchi, 88 ans, résident en EMS, présente un ralentissement avec déshydratation sur diarrhées aiguës",
+      "vitals": {
+        "fc": "98 bpm",
+        "ta": "120/78 mmHg",
+        "temperature": "37.8°C"
+      },
+      "source_scenario": true,
+      "nom": "Sofia/Sofian",
+      "age": "",
+      "contexte": "Appel téléphonique au médecin de garde à 21h30",
+      "ouverture": "Résident ralenti ce soir avec diarrhées depuis 2 jours",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "M. Bertchi est ralenti depuis ce soir",
+          "Gémit souvent, ne se laisse pas faire comme d'habitude",
+          "Répond avec temps de latence mais orienté aux 4 modes",
+          "Hier soir était normal, souriant après visite de sa fille"
+        ],
+        "diarrhees": [
+          "Depuis 2 jours",
+          "5-6 épisodes aujourd'hui",
+          "Type aqueux, pas de sang",
+          "Un autre résident avec symptômes similaires"
+        ],
+        "signesAssocies": [
+          "Vomissement 1x après midi (alimentaire)",
+          "Température 37.8°C ce soir",
+          "Fatigue importante",
+          "Inconfortable, mains sur le ventre"
+        ]
+      },
+      "comportement": {
+        "attitude": [
+          "Stressé·e mais professionnel·le",
+          "Inquiet·ète pour le résident",
+          "Cherche conseils clairs"
+        ],
+        "durantAppel": [
+          "Reste derrière paravent (invisible)",
+          "Communication claire et calme",
+          "Peut avoir le scénario avec soi"
+        ],
+        "reponsesSituations": [
+          "Si transfert immédiat demandé: 'Je ne suis pas certaine que ce soit nécessaire...'",
+          "Si demande d'opinion: 'Je suis un peu perdu·e, il allait bien hier...'",
+          "Si insistance transfert: accepte et appelle ambulance",
+          "Si réveil patient demandé: 'Il dort bien maintenant, pas sûr que ce soit une bonne idée'"
+        ]
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Identification de l'interlocuteur et contexte",
+          "reponse": "[Infirmier·ère de nuit à l'EMS de la Croix]"
+        },
+        "a2": {
+          "item": "Caractérisation du symptôme principal - Ralentissement",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis ce soir"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "temps de latence aux sollicitations"
+            },
+            {
+              "question": "État de conscience",
+              "reponse": "orienté aux 4 modes"
+            },
+            {
+              "question": "Comparaison état habituel",
+              "reponse": "hier normal, souriant"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Caractérisation des diarrhées",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis 2 jours"
+            },
+            {
+              "question": "Fréquence",
+              "reponse": "5-6 épisodes aujourd'hui"
+            },
+            {
+              "question": "Aspect",
+              "reponse": "aqueux, non sanglant, pas de méléna"
+            },
+            {
+              "question": "Contage",
+              "reponse": "un autre résident avec symptômes similaires"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes associés",
+          "details": [
+            {
+              "question": "Douleurs abdominales",
+              "reponse": "inconfortable, mains sur le ventre"
+            },
+            {
+              "question": "Vomissements",
+              "reponse": "1 épisode après midi, alimentaire"
+            },
+            {
+              "question": "Fièvre",
+              "reponse": "37.8°C ce soir, pas de fièvre dans la journée"
+            },
+            {
+              "question": "Fatigue",
+              "reponse": "importante"
+            },
+            {
+              "question": "Faiblesse",
+              "reponse": "généralisée"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Recherche de symptômes neurologiques",
+          "details": [
+            {
+              "question": "Céphalées",
+              "reponse": "non"
+            },
+            {
+              "question": "Vertiges",
+              "reponse": "non"
+            },
+            {
+              "question": "Troubles visuels",
+              "reponse": "non"
+            },
+            {
+              "question": "Paresthésies/parésie",
+              "reponse": "non"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Antécédents médicaux",
+          "details": [
+            {
+              "question": "HTA",
+              "reponse": null
+            },
+            {
+              "question": "Hypercholestérolémie",
+              "reponse": null
+            },
+            {
+              "question": "HBP",
+              "reponse": null
+            },
+            {
+              "question": "Troubles du sommeil",
+              "reponse": null
+            },
+            {
+              "question": "Déclin cognitif léger",
+              "reponse": null
+            },
+            {
+              "question": "TB dans jeunesse",
+              "reponse": "traitement complet"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Médicaments",
+          "details": [
+            {
+              "question": "Cosaar Plus 50/12.5mg",
+              "reponse": "Losartan + Hydrochlorothiazide"
+            },
+            {
+              "question": "Atorvastatine 10mg",
+              "reponse": null
+            },
+            {
+              "question": "Pradif T 40mcg",
+              "reponse": null
+            },
+            {
+              "question": "Distraneurine caps",
+              "reponse": null
+            },
+            {
+              "question": "Ginkgo 3x/j",
+              "reponse": null
+            }
+          ]
+        },
+        "a8": {
+          "item": "Allergies",
+          "reponse": "[Aucune allergie ni intolérance]"
+        },
+        "a9": {
+          "item": "Contexte social et familial",
+          "details": [
+            {
+              "question": "En EMS depuis 6 ans",
+              "reponse": null
+            },
+            {
+              "question": "Veuf depuis 8 ans",
+              "reponse": null
+            },
+            {
+              "question": "Fille en Allemagne",
+              "reponse": "visite récente avec petit-fils"
+            },
+            {
+              "question": "Fils en Suisse",
+              "reponse": "visite 1x/mois"
+            }
+          ]
+        },
+        "a10": {
+          "item": "Directives anticipées",
+          "reponse": "[Décision de réanimation: OUI]"
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Signes vitaux",
+          "details": [
+            {
+              "item": "FC 98/min",
+              "resultat": null
+            },
+            {
+              "item": "TA 120/78 mmHg",
+              "resultat": null
+            },
+            {
+              "item": "T° 37.8°C auriculaire",
+              "resultat": null
+            }
+          ]
+        },
+        "e2": {
+          "examen": "État neurologique",
+          "details": [
+            {
+              "item": "Ralenti mais orienté aux 4 modes",
+              "resultat": null
+            },
+            {
+              "item": "Pas de signe de latéralisation",
+              "resultat": null
+            },
+            {
+              "item": "Pas de parésie grossière",
+              "resultat": null
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Signes de déshydratation",
+          "details": [
+            {
+              "item": "Pâleur des téguments",
+              "resultat": null
+            },
+            {
+              "item": "Muqueuses sèches",
+              "resultat": null
+            },
+            {
+              "item": "Langue sèche",
+              "resultat": null
+            },
+            {
+              "item": "Temps de recoloration 4 secondes",
+              "resultat": null
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Examen abdominal",
+          "details": [
+            {
+              "item": "Palpation diffusément sensible",
+              "resultat": null
+            },
+            {
+              "item": "Pas de défense",
+              "resultat": null
+            },
+            {
+              "item": "Pas de détente",
+              "resultat": null
+            },
+            {
+              "item": "Bruits intestinaux augmentés",
+              "resultat": null
+            }
+          ]
+        }
+      },
+      "questions_cloture": [
+        {
+          "contexte": "Questions de l'infirmier·ère",
+          "question_patient": "Dois-je le transférer cette nuit?"
+        }
+      ]
+    },
+    {
+      "id": "RESCOS-57b - Ralentissement - Consultation téléphonique",
+      "setting": "Urgences d'un hôpital régional (médecin assistant·e). Il est 21h30",
+      "patient_description": "M. Michel Bertchi, 88 ans, résident en EMS, présente un ralentissement depuis ce soir avec diarrhées depuis 2 jours",
+      "vitals": {
+        "fc": "98 bpm",
+        "ta": "120/78 mmHg",
+        "temperature": "37.8°C"
+      },
+      "source_scenario": true,
+      "nom": "Sofia/Sofian (infirmier·ère) - Patient: Michel Bertchi",
+      "age": "88 ans (patient)",
+      "contexte": "Infirmier·ère de nuit dans un EMS depuis 3 ans. Début du travail à 19h, colloque de transmission de 19h à 20h, puis tournée du soir.",
+      "ouverture": "Bonsoir, Sofia/Sofian, infirmier·ère de nuit à l'EMS de la Croix. Je vous appelle car un de nos résident est un peu ralenti ce soir. Je m'inquiète pour lui et je ne sais pas quoi faire...",
+      "ouverture_complement": "Inquiétude concernant l'état du résident",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "M. Bertchi est ralenti depuis ce soir",
+          "Il gémit souvent et ne se laisse pas faire comme d'habitude",
+          "Il n'arrive pas bien à dire ce qui se passe mais semble inconfortable et fatigué",
+          "Répond avec un temps de latence de quelques secondes aux sollicitations",
+          "Orienté aux 4 modes"
+        ],
+        "diarrhees": [
+          "Début il y a 2 jours",
+          "5-6 épisodes aujourd'hui, moins la veille",
+          "Type aqueux",
+          "Pas de sang frais ni de méléna",
+          "Un autre résident a eu des diarrhées ces derniers jours (contage)",
+          "1 épisode depuis l'arrivée en service ce soir"
+        ],
+        "douleurs": [
+          "Localisation imprécise, mains sur le ventre au niveau du nombril",
+          "Semble aller mieux depuis qu'il est allé à selles",
+          "Intensité non évaluable",
+          "Bouillotte chaude proposée"
+        ],
+        "symptomesAssocies": [
+          "Fièvre : 37.8°C ce soir (thermomètre auriculaire), pas de fièvre dans la journée",
+          "Vomissement : 1 seul épisode ce jour après le repas du midi, alimentaire",
+          "Fatigue importante",
+          "Faiblesse généralisée",
+          "Pas de céphalées, vertiges, paresthésies, parésie ou troubles visuels"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Cosaar Plus 50/12.5mg, Atorvastatine 10mg, Pradif T 40mcg, Distraneurine caps, Ginkgo 3x/j",
+        "tabac": "Pas connu",
+        "alcool": "Occasionnel lors de fêtes spéciales à l'EMS, max 1 verre de vin rouge",
+        "alimentation": "Alimentation équilibrée faite par cuisine de l'EMS. Appétit conservé.",
+        "allergies": "Aucune allergie ni intolérance",
+        "vaccins": "Vaccins à jour (schéma suisse). Dernier vaccin Grippe l'hiver passé"
+      },
+      "antecedents": {
+        "medicaux": [
+          "Tuberculose dans sa jeunesse (traitement complet)",
+          "Hypertension",
+          "Hypercholestérolémie",
+          "Hyperplasie bénigne de la prostate",
+          "Troubles du sommeil",
+          "Déclin cognitif léger lentement progressif",
+          "Pneumonie en 2016"
+        ],
+        "chirurgicaux": [
+          "Réparation coiffe des rotateurs",
+          "Accident de vélo avec fracture du tibia (1955)"
+        ]
+      },
+      "informations_personnelles": {
+        "profession": "En EMS depuis 6 ans",
+        "etatCivil": "Veuf, a perdu son épouse il y a 8 ans",
+        "famille": "Une fille de 53 ans vivant en Allemagne, un fils de 56 ans vivant en Suisse alémanique (Grisons). Visite 1x/mois de son fils.",
+        "autonomie": "Relativement autonome habituellement hormis aide à l'habillement. S'alimente de manière autonome au réfectoire de l'EMS."
+      },
+      "contexte_social": {
+        "activites": "Participe habituellement volontiers aux rencontres et activités organisées par l'EMS",
+        "loisirs": "Regarde souvent la télévision",
+        "visite": "Sa fille est venue lui rendre visite avec un de ses petits-fils venu d'Allemagne récemment"
+      },
+      "comportement": {
+        "attitude": [
+          "Un peu stressé·e par la situation",
+          "Reste professionnel·le et communique clairement et calmement",
+          "Inquiet·ète pour le résident",
+          "Cherche des conseils et des consignes claires"
+        ],
+        "durantConsultation": [
+          "Position derrière un paravent (invisible pour les candidats)",
+          "Le patient est dans sa chambre et ne participe pas activement",
+          "Peut avoir le scénario avec soi car invisible"
+        ]
+      },
+      "questions_patient": {
+        "principales": [
+          "Souhaite savoir s'il faut transférer le patient de nuit ou si la situation peut attendre l'évaluation médicale du lendemain",
+          "Inquiet·ète car le patient n'est pas comme d'habitude",
+          "Ne veut pas que M. Bertchi péjore son état général"
+        ],
+        "questions": [
+          "Faut-il vraiment le transférer ce soir aux urgences?",
+          "Pensez-vous qu'il va s'en sortir?",
+          "C'est de ma faute s'il va mal?"
+        ]
+      },
+      "histoire_from_criteria": {
+        "a5": {
+          "item": "Diarrhées",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis 2 jours"
+            },
+            {
+              "question": "Fréquence",
+              "reponse": "5-6 épisodes ce jour"
+            },
+            {
+              "question": "Consistance",
+              "reponse": "aqueuses"
+            },
+            {
+              "question": "Présence de mucus ou de sang",
+              "reponse": "pas de sang frais ni de méléna"
+            },
+            {
+              "question": "Caractère habituel ou nouveau",
+              "reponse": "nouveau"
+            },
+            {
+              "question": "Transit habituel",
+              "reponse": "habituellement normal"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Autres symptômes associés",
+          "details": [
+            {
+              "question": "Fièvre",
+              "reponse": "il n'a pas eu de fièvre sur la journée, température à 37.8°C ce soir"
+            },
+            {
+              "question": "Fatigue",
+              "reponse": "fatigue importante"
+            },
+            {
+              "question": "Alimentation",
+              "reponse": "appétit conservé"
+            },
+            {
+              "question": "Vomissements",
+              "reponse": "1 seul épisode ce jour, après le repas du midi, alimentaire"
+            },
+            {
+              "question": "Mesures entreprises",
+              "reponse": "bouillotte chaude proposée"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Anamnèse environnement / contage",
+          "reponse": "Un autre résident de l'EMS a eu des symptômes similaires il y a quelques jours"
+        },
+        "a8": {
+          "item": "Antécédents médicaux, médicaments habituels",
+          "details": [
+            {
+              "question": "Hypertension",
+              "reponse": null
+            },
+            {
+              "question": "Hypercholestérolémie",
+              "reponse": null
+            },
+            {
+              "question": "Hyperplasie bénigne de la prostate",
+              "reponse": null
+            },
+            {
+              "question": "Troubles du sommeil",
+              "reponse": null
+            },
+            {
+              "question": "Déclin cognitif léger",
+              "reponse": null
+            },
+            {
+              "question": "Médicaments",
+              "reponse": "Cosaar Plus 50/12.5mg, Atorvastatine 10mg, Pradif T 40mcg, Distraneurine caps, Ginkgo"
+            }
+          ]
+        },
+        "a9": {
+          "item": "Erreur de délivrance médicaments ou introduction médicament",
+          "reponse": "Pas d'erreur de délivrance, pas de nouveau médicament"
+        }
+      },
+      "examen_resultats": {},
+      "questions_cloture": [
+        {
+          "contexte": "Questions difficiles du patient",
+          "question_patient": "Faut-il vraiment le transférer ce soir aux urgences?"
+        }
+      ],
+      "resultats_examens_complementaires": {
+        "m2": {
+          "item": "Questionne sur l'hydratation du patient",
+          "resultat": "Langue et muqueuses sèches, temps de recoloration de 4 secondes, pâleur des téguments"
+        },
+        "m3": {
+          "item": "Demande si directives anticipées connues et/ou attitude de réanimation",
+          "resultat": "Décision de réanimation dans le dossier est OUI, directives anticipées non connues"
+        }
+      }
+    },
+    {
+      "id": "RESCOS-58 - Rectorragies",
+      "setting": "Urgences d'un hôpital périphérique",
+      "patient_description": "M./Mme Delacrétaz, 52 ans, directeur/trice d'une boîte de consulting, se présente pour la présence de sang dans les selles depuis 3 jours.",
+      "vitals": {
+        "ta": "120/75 mmHg",
+        "fc": "115 bpm",
+        "sao2": "98%",
+        "fr": "15/min",
+        "temperature": "37.2°C"
+      },
+      "source_scenario": true,
+      "nom": "Delacrétaz",
+      "age": "52 ans",
+      "contexte": "Directeur/trice d'une boîte de consulting, marié(e), 2 enfants de 25 et 21 ans",
+      "ouverture": "Je viens aux urgences parce qu'il y a du sang quand je vais aux toilettes",
+      "ouverture_complement": "Depuis ce matin j'ai aussi des étourdissements, je suis essoufflé(e) en montant les escaliers",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Sang dans les selles depuis 3 jours",
+          "Beaucoup de sang (tache de 10 cm de diamètre dans les toilettes)",
+          "3 selles avec sang par jour",
+          "Sang rouge vif",
+          "Jamais eu de selles noires",
+          "Pas de sang entre les selles",
+          "Pas de mucus",
+          "Pas de douleurs au ventre ni à l'anus",
+          "N'a jamais eu ça auparavant"
+        ],
+        "symptomesAssocies": [
+          "Fatigue inhabituelle (épuisé.e)",
+          "Vertiges quand se lève rapidement (depuis ce matin)",
+          "Essoufflement modéré à l'effort (escaliers)",
+          "Peine à suivre mon horaire habituel",
+          "Alternance diarrhée-constipation depuis quelques semaines",
+          "Appétit conservé",
+          "Perte de 2 kg possible (pantalons moins serrés)"
+        ],
+        "representationMaladie": [
+          "Anxieux car son père est décédé d'un cancer généralisé à 72 ans",
+          "Cause initiale du cancer paternel non connue",
+          "Un peu inquiet/ète"
+        ]
+      },
+      "anamnese_systemes": {
+        "generale": [
+          "Possible perte de 2 kg ces dernières semaines",
+          "Pas de fièvre",
+          "Pas de sueurs nocturnes",
+          "Fatigue inhabituelle (épuisé.e)"
+        ],
+        "cardiovasculaire": [
+          "Rien de particulier"
+        ],
+        "pulmonaire": [
+          "Dyspnée d'effort",
+          "Pas de toux",
+          "Pas d'expectorations",
+          "Pas d'hémoptysie"
+        ],
+        "digestive": [
+          "Pas de nausée",
+          "Pas de vomissement",
+          "Environ 3 selles sanguinolentes/jour les 3 derniers jours",
+          "Jamais de selles noires",
+          "Pas de douleur au ventre"
+        ],
+        "genitourinaire": [
+          "Pas d'écoulement",
+          "Pas de brûlure mictionnelle"
+        ],
+        "neurologique": [
+          "Vertiges quand se lève rapidement (depuis ce matin)"
+        ],
+        "ophtalmologique": [
+          "Pas de trouble visuel"
+        ],
+        "hemorragique": [
+          "Ne saigne pas quand se brosse les dents",
+          "Pas d'épistaxis",
+          "Pas d'hématurie",
+          "Pas d'hématomes ni pétéchies"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Normale",
+        "activitePhysique": "Jardinage",
+        "sommeil": "Normal",
+        "tabac": "Presque 2 paquets/jours depuis 25 ans",
+        "alcool": "Occasionnel et social, 2 verres de vin 3x/semaine et un peu plus le weekend",
+        "drogues": "Non",
+        "medicaments": "Aspirine cardio 1x/jour, AINS occasionnel (n'en a pas pris ces derniers jours)"
+      },
+      "antecedents": [
+        "Notion d'ulcère ancien traité médicalement il y a un an",
+        "Traité par un médicament dont a oublié le nom (inhibiteur de pompe à protons)",
+        "Avait rapidement complètement soulagé",
+        "AINS au besoin pour des maux de dos",
+        "Récemment commencé aspirine en prophylaxie cardiaque",
+        "Pas de chirurgie",
+        "Aucune allergie"
+      ],
+      "antecedents_familiaux": [
+        "Père : décédé d'un cancer généralisé, 72 ans",
+        "Mère : se porte bien",
+        "Fratrie : 1 sœur, architecte à Lausanne en bonne santé",
+        "Pas de maladie hémorragique dans la famille"
+      ],
+      "informations_personnelles": {
+        "profession": "Directeur/-trice d'une boîte de consulting",
+        "hobbies": "Jardinage",
+        "poids": "Normal",
+        "taille": "178cm",
+        "imc": "28",
+        "orientationSexuelle": "Non précisée",
+        "etatCivil": "Marié(e)",
+        "enfants": "2 enfants de 25 et 21 ans",
+        "situationSocioEconomique": "Stable",
+        "origine": "Non précisée",
+        "etatEsprit": "Un peu angoissé(e), inquiet/ète"
+      },
+      "comportement": {
+        "durantEntretien": [
+          "Assis(e) sur une chaise",
+          "Calme",
+          "Un peu nerveux/euse",
+          "Pas de douleur",
+          "État général conservé"
+        ],
+        "durantExamen": [
+          "Légèrement tachycarde (donner la carte si ausculte le cœur ou prend le pouls)",
+          "Examen pulmonaire normal",
+          "Examen digestif sans particularité",
+          "Masse polypoïde au TR (à dire par examinateur/trice)"
+        ]
+      },
+      "informationADonner": "J'ai eu de la peine à suivre mon horaire habituel, je me sens épuisé(e) (troisième partie de la réponse d'introduction). Information donnée par l'examinateur/trice si toucher rectal évoqué : 'le toucher rectal montre une masse polypoïde'.",
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Hématochésie",
+          "details": [
+            {
+              "question": "Chronologie (depuis quand ?)",
+              "reponse": "il y a 3 jours"
+            },
+            {
+              "question": "Sang rouge ou noir",
+              "reponse": "sang rouge"
+            },
+            {
+              "question": "Fréquence des selles",
+              "reponse": "3 selles avec sang/jour"
+            },
+            {
+              "question": "1er épisode",
+              "reponse": "oui, n'a jamais eu ça avant"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Symptômes de gravité",
+          "details": [
+            {
+              "question": "Perte de connaissance",
+              "reponse": "non"
+            },
+            {
+              "question": "Fatigabilité inhabituelle",
+              "reponse": "oui, épuisé(e)"
+            },
+            {
+              "question": "Hypotension orthostatique",
+              "reponse": "vertiges quand se lève rapidement"
+            },
+            {
+              "question": "Essoufflement",
+              "reponse": "oui dans les escaliers"
+            },
+            {
+              "question": "Anémie",
+              "reponse": null
+            },
+            {
+              "question": "Tachycardie",
+              "reponse": "légèrement tachycarde"
+            },
+            {
+              "question": "Dyspnée",
+              "reponse": "modérée à l'effort"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Symptômes digestifs associés",
+          "details": [
+            {
+              "question": "Trouble du transit (diarrhée/constipation)",
+              "reponse": "alternance depuis quelques semaines"
+            },
+            {
+              "question": "Nausées",
+              "reponse": "non"
+            },
+            {
+              "question": "Vomissements",
+              "reponse": "non"
+            },
+            {
+              "question": "Douleurs",
+              "reponse": "aucune douleur abdominale ni anale"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes systémiques",
+          "details": [
+            {
+              "question": "Fièvre",
+              "reponse": "non"
+            },
+            {
+              "question": "Frissons",
+              "reponse": "non"
+            },
+            {
+              "question": "Perte de poids (quantifié)",
+              "reponse": "possible 2 kg, pantalons moins serrés"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Habitudes : Tabac / OH / Quantité",
+          "details": [
+            {
+              "question": "Tabac",
+              "reponse": "presque 2 paquets/jour depuis 25 ans"
+            },
+            {
+              "question": "Alcool",
+              "reponse": "occasionnel et social, 2 verres 3x/semaine"
+            },
+            {
+              "question": "Drogues",
+              "reponse": "non"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e2": {
+          "examen": "Auscultation abdominale",
+          "details": [
+            {
+              "item": "Bruits dans les 4 quadrants",
+              "resultat": null
+            },
+            {
+              "item": "Souffles vasculaires (aorte, a. iliaques et a. rénales)",
+              "resultat": null
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Percussion",
+          "details": [
+            {
+              "item": "4 quadrants",
+              "resultat": null
+            },
+            {
+              "item": "Effectué dans les 4 quadrants = oui",
+              "resultat": null
+            },
+            {
+              "item": "Pas ou incomplètement effectué = non",
+              "resultat": null
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Palpation superficielle",
+          "details": [
+            {
+              "item": "Effectué dans les 4 quadrants = oui",
+              "resultat": null
+            },
+            {
+              "item": "Pas ou incomplètement effectué = non",
+              "resultat": null
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Palpation profonde bimanuelle",
+          "details": [
+            {
+              "item": "Effectué dans les 4 quadrants = oui",
+              "resultat": null
+            },
+            {
+              "item": "Pas ou incomplètement effectué = non",
+              "resultat": null
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Recherche signes péritonéaux : Défense / Détente",
+          "details": [
+            {
+              "item": "Oui = les 2",
+              "resultat": null
+            },
+            {
+              "item": "Non = pas ou incomplètement effectué",
+              "resultat": null
+            }
+          ]
+        },
+        "e8": {
+          "examen": "Toucher rectal",
+          "details": [
+            {
+              "item": "Proposé / évoqué par le /la candidat·e",
+              "resultat": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-58b - Rectorragies",
+      "setting": "Urgences d'un hôpital régional",
+      "patient_description": "M./Mme Delacrétaz, 52 ans, directeur/trice d'une boîte de consulting, se présente pour apparition de sang dans les selles",
+      "vitals": {
+        "temperature": "36.2°C",
+        "ta": "120/80 mmHg",
+        "fc": "108 bpm",
+        "fr": "23/min",
+        "saturation": "100% à l'air ambiant"
+      },
+      "source_scenario": true,
+      "nom": "M./Mme Delacrétaz",
+      "age": "52 ans",
+      "contexte": "Urgences d'un hôpital régional",
+      "ouverture": "Je viens aux urgences parce qu'il y a du sang quand je vais aux toilettes.",
+      "ouverture_complement": "Depuis ce matin j'ai aussi des étourdissements, j'étais inhabituellement à bout de souffle en montant les escaliers.",
+      "histoire_actuelle": {
+        "debut": "Il y a 3 jours",
+        "evolution": "Ça a commencé il y a 3 jours et depuis ce matin aggravation avec apparition de fatigue et vertiges",
+        "symptomePrincipal": [
+          "Apparition de sang quand je vais à selles depuis 3 jours",
+          "Il y en a beaucoup (une tache de 10 cm de diamètre) de sang dans les toilettes",
+          "3 selles avec sang par jour",
+          "Il s'agit de sang rouge",
+          "Jamais eu de selles noires",
+          "Pas de sang entre les selles",
+          "Pas de mucus",
+          "Pas de douleurs au ventre ni à l'anus",
+          "N'ai jamais eu ça auparavant"
+        ],
+        "symptomesAssocies": [
+          "Alternance diarrhée-constipation depuis quelques semaines",
+          "Pas de notion de voyage, de contage",
+          "Appétit conservé",
+          "Perte de 2 kg mais pas sûr·e",
+          "J'ai de la peine à suivre mon horaire habituel, je me sens épuisé·e"
+        ],
+        "symptomesAbsents": [
+          "Pas de nausées",
+          "Pas de trouble de l'appétit",
+          "Pas de fièvre",
+          "Pas de douleur",
+          "Ne saigne pas quand je me brosse les dents",
+          "Pas d'épistaxis",
+          "Pas d'hématurie",
+          "Pas d'hématomes ni pétéchies"
+        ]
+      },
+      "anamnese_systemes": {
+        "generale": [
+          "Possible perte de 2 kg ces dernières semaines",
+          "Pas de fièvre",
+          "Pas de sueurs nocturnes"
+        ],
+        "cardiovasculaire": [
+          "Rien de particulier"
+        ],
+        "pulmonaire": [
+          "Dyspnée modérée à l'effort",
+          "Pas de toux",
+          "Ni d'expectorations",
+          "Ni d'hémoptysie"
+        ],
+        "digestive": [
+          "Pas de nausée",
+          "Ni de vomissement",
+          "Environ 3 selles sanguinolentes/jour les 3 derniers jours",
+          "Jamais de selles noires",
+          "Pas de douleur au ventre"
+        ],
+        "urinaire": [
+          "Pas d'écoulement ni de brûlure mictionnelle"
+        ],
+        "neurologique": [
+          "Vertiges quand je me lève rapidement, présents depuis le matin même"
+        ],
+        "ophtalmologique": [
+          "Pas trouble visuel"
+        ],
+        "psychiatrique": [
+          "Anxieux·euse car mon père est décédé d'un cancer généralisé"
+        ]
+      },
+      "habitudes": {
+        "alcool": "Occasionnel et social, 2 verres de vin 3x/semaine et un peu plus le weekend",
+        "tabac": "Presque 2 paquets/jours depuis 25 ans",
+        "drogues": "Non"
+      },
+      "antecedents": {
+        "medicaux": "Notion d'ulcère ancien traité médicalement il y a un an (inhibiteur de pompe à protons → j'ai oublié ce que c'était)",
+        "chirurgicaux": "Aucun",
+        "familiaux": "Père: décédé d'un cancer généralisé, 72 ans. Mère: se porte bien. Fratrie: 1 sœur, architecte à Lausanne en bonne santé. Pas de maladie hémorragique dans la famille"
+      },
+      "contexte_social": {
+        "conditionsVie": "Marié·e, 2 enfants de 25 et 21 ans",
+        "loisir": "Jardinage"
+      },
+      "comportement": {
+        "etatGeneral": "État général conservé, pas de douleur",
+        "comportement": [
+          "Calme, assis·e sur une chaise"
+        ],
+        "etatEmotionnel": [
+          "Un peu inquiet·ète, un peu nerveux·euse"
+        ],
+        "habillement": "Vêtement standard",
+        "durantExamen": [
+          "Légèrement tachycarde (donner la carte si ausculte le cœur ou prend le pouls)",
+          "Examen pulmonaire normal",
+          "Masse polypoïde au toucher rectal"
+        ]
+      },
+      "etat_esprit": "Un peu angoissé·e, inquiet·ète",
+      "medicaments": {
+        "actuels": [
+          "Aspirine cardio 1x/jour",
+          "AINS occasionnel (n'en ai pas pris ces derniers jours)"
+        ],
+        "allergies": [
+          "Aucune"
+        ]
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Hématorragies",
+          "details": [
+            {
+              "question": "Chronologie depuis quand",
+              "reponse": "Depuis 3 jours"
+            },
+            {
+              "question": "Sang rouge ou noir",
+              "reponse": "Sang rouge"
+            },
+            {
+              "question": "Fréquence des selles",
+              "reponse": "3 selles avec sang par jour"
+            },
+            {
+              "question": "Première épisode",
+              "reponse": "Oui, première fois, jamais eu ça avant"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Symptômes de gravité",
+          "details": [
+            {
+              "question": "Perte de connaissance",
+              "reponse": "Non"
+            },
+            {
+              "question": "Fatigabilité inhabituelle",
+              "reponse": "Oui, j'ai de la peine à suivre mon horaire habituel, je me sens épuisé·e"
+            },
+            {
+              "question": "Hypotension",
+              "reponse": "Non"
+            },
+            {
+              "question": "Orthostatisme/essoufflement",
+              "reponse": "Depuis ce matin étourdissements, inhabituellement à bout de souffle en montant les escaliers"
+            },
+            {
+              "question": "Anémie",
+              "reponse": "Non connu"
+            },
+            {
+              "question": "Tachycardie",
+              "reponse": "Légèrement tachycarde"
+            },
+            {
+              "question": "Dyspnée",
+              "reponse": "Dyspnée modérée à l'effort"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Symptômes digestifs associés",
+          "details": [
+            {
+              "question": "Trouble du transit (diarrhée/constipation)",
+              "reponse": "Alternance diarrhée-constipation depuis quelques semaines"
+            },
+            {
+              "question": "Alternance",
+              "reponse": "Oui, depuis quelques semaines"
+            },
+            {
+              "question": "Nausées",
+              "reponse": "Non"
+            },
+            {
+              "question": "Vomissements",
+              "reponse": "Non"
+            },
+            {
+              "question": "Douleurs",
+              "reponse": "Pas de douleur au ventre ni à l'anus"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes systémiques",
+          "details": [
+            {
+              "question": "Fièvre",
+              "reponse": "Non"
+            },
+            {
+              "question": "Frissons",
+              "reponse": "Non"
+            },
+            {
+              "question": "Perte de poids (quantifié)",
+              "reponse": "Possible perte de 2 kg ces dernières semaines, mais pas sûr·e"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Antécédents médicaux-chirurgicaux",
+          "reponse": "Notion d'ulcère ancien traité médicalement il y a un an par un médicament dont j'ai oublié le nom (inhibiteur de pompe à protons) qui m'avait rapidement complètement soulagé·e. Pas de chirurgie."
+        },
+        "a6": {
+          "item": "Habitudes",
+          "details": [
+            {
+              "question": "Tabac/OH/Quantité",
+              "reponse": "Tabac: presque 2 paquets/jour depuis 25 ans. Alcool: occasionnel et social, 2 verres de vin 3x/semaine et un peu plus le weekend. Pas de drogues"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Anamnèse familiale (cancers)",
+          "reponse": "Père décédé d'un cancer généralisé à 72 ans. Mère se porte bien. 1 sœur architecte à Lausanne en bonne santé. Pas de maladie hémorragique dans la famille."
+        },
+        "a8": {
+          "item": "Médicaments",
+          "reponse": "Aspirine cardio 1x/jour récemment commencé en prophylaxie cardiaque. AINS occasionnel pour maux de dos mais n'en ai pas pris ces derniers jours."
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Inspection",
+          "details": [
+            {
+              "item": "Cicatrices anciennes",
+              "resultat": "Aucune"
+            },
+            {
+              "item": "Orifices herniaires",
+              "resultat": "Normaux"
+            },
+            {
+              "item": "Aspect général",
+              "resultat": "État général conservé"
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Auscultation",
+          "resultat": "Bruits normaux dans les 4 quadrants"
+        },
+        "e3": {
+          "examen": "Souffles vasculaires (aorte, artères iliaques et artères rénales)",
+          "resultat": "Pas de souffle"
+        },
+        "e4": {
+          "examen": "Percussion",
+          "details": [
+            {
+              "item": "4 quadrants",
+              "resultat": "Effectué dans les 4 quadrants, normal"
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Percussion du foie (de haut en bas, sur la ligne médioclaviculaire, mesure de la taille)",
+          "resultat": "Effectué correctement, normal"
+        },
+        "e6": {
+          "examen": "Palpation superficielle",
+          "details": [
+            {
+              "item": "Effectué dans les 4 quadrants",
+              "resultat": "Oui"
+            },
+            {
+              "item": "Pas d'incomplètement effectué",
+              "resultat": "Non"
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Palpation profonde",
+          "details": [
+            {
+              "item": "Effectué dans les 4 quadrants",
+              "resultat": "Oui"
+            },
+            {
+              "item": "Pas d'incomplètement effectué",
+              "resultat": "Non"
+            }
+          ]
+        },
+        "e8": {
+          "examen": "Recherche signes péritonéaux : Défense/détente",
+          "resultat": "Pas de défense ni détente, abdomen souple"
+        },
+        "e9": {
+          "examen": "Toucher rectal",
+          "details": [
+            {
+              "item": "Masse palpée (position en Position Gynécologique)",
+              "resultat": "Masse polypoïde palpable au toucher rectal"
+            },
+            {
+              "item": "Prostate (description)",
+              "resultat": "Prostate normale si PS homme"
+            },
+            {
+              "item": "Sphincter (longueur et symétrie)",
+              "resultat": "Sphincter normal"
+            }
+          ]
+        }
+      },
+      "resultats_examens_complementaires": {
+        "m1": {
+          "item": "Demande un examen de laboratoire (FSC, crase)",
+          "resultat": "Donner les résultats une fois la prise de sang demandée: Hb 92 g/L (N: 120-160), Hct 28% (N: 36-46%), VGM 72 fL (N: 80-100), plaquettes 450 G/L (N: 150-400), leucocytes 8.5 G/L (N: 4-10). Si pas demandé, ne donner rien."
+        }
+      }
+    },
+    {
+      "id": "RESCOS-59 - SD - Cholestérol",
+      "setting": "Cabinet de médecine générale",
+      "patient_description": "Patient avec découverte récente d'un cholestérol élevé",
+      "vitals": {},
+      "source_scenario": true,
+      "nom": "",
+      "age": "",
+      "contexte": "Cabinet médical, découverte récente d'hypercholestérolémie",
+      "ouverture": "",
+      "etat_esprit": [
+        "Ambivalent face aux médicaments",
+        "Préoccupé par les effets secondaires",
+        "Intéressé par les alternatives naturelles",
+        "Besoin de comprendre les chiffres",
+        "Souhaite impliquer son/sa conjoint(e)"
+      ],
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Établir le partenariat (Team Talk)",
+          "details": [
+            {
+              "question": "Expliciter qu'il y a un choix à faire",
+              "reponse": "hygiène de vie vs statines"
+            },
+            {
+              "question": "Notion de partenariat",
+              "reponse": "travaillons ensemble pour trouver la meilleure solution"
+            },
+            {
+              "question": "Offrir du soutien",
+              "reponse": "je suis là pour vous accompagner"
+            },
+            {
+              "question": "Demander ce qui est important pour le patient",
+              "reponse": null
+            }
+          ]
+        },
+        "a2": {
+          "item": "Explorer le contexte du patient",
+          "details": [
+            {
+              "question": "Facteurs de risque cardiovasculaire",
+              "reponse": null
+            },
+            {
+              "question": "Mode de vie actuel",
+              "reponse": "alimentation, exercice"
+            },
+            {
+              "question": "Antécédents familiaux",
+              "reponse": null
+            },
+            {
+              "question": "Médicaments actuels",
+              "reponse": null
+            },
+            {
+              "question": "Expériences passées avec médicaments",
+              "reponse": null
+            }
+          ]
+        },
+        "a3": {
+          "item": "Évaluer les connaissances et représentations",
+          "details": [
+            {
+              "question": "Que savez-vous sur le cholestérol?",
+              "reponse": null
+            },
+            {
+              "question": "Connaissances sur les statines",
+              "reponse": null
+            },
+            {
+              "question": "Sources d'information du patient",
+              "reponse": null
+            },
+            {
+              "question": "Croyances et préoccupations",
+              "reponse": null
+            },
+            {
+              "question": "Attentes thérapeutiques",
+              "reponse": null
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Présentation des options (Option Talk)",
+          "details": [
+            {
+              "item": "Lister clairement les options disponibles",
+              "resultat": null
+            },
+            {
+              "item": "Option 1: Mesures hygiéno-diététiques seules",
+              "resultat": null
+            },
+            {
+              "item": "Option 2: Traitement par statine",
+              "resultat": null
+            },
+            {
+              "item": "Option 3: Combinaison des deux approches",
+              "resultat": null
+            },
+            {
+              "item": "Possibilité de différer la décision",
+              "resultat": null
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Communication des risques absolus",
+          "details": [
+            {
+              "item": "Risque cardiovasculaire de base du patient",
+              "resultat": null
+            },
+            {
+              "item": "Réduction absolue du risque avec statines",
+              "resultat": null
+            },
+            {
+              "item": "Nombre nécessaire à traiter (NNT)",
+              "resultat": null
+            },
+            {
+              "item": "Éviter les pourcentages relatifs seuls",
+              "resultat": null
+            },
+            {
+              "item": "Utilisation d'aides visuelles si disponibles",
+              "resultat": null
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Bénéfices des options",
+          "details": [
+            {
+              "item": "Hygiène de vie: bénéfices globaux sur santé",
+              "resultat": null
+            },
+            {
+              "item": "Statines: réduction risque cardiovasculaire",
+              "resultat": null
+            },
+            {
+              "item": "Effets sur qualité de vie",
+              "resultat": null
+            },
+            {
+              "item": "Délai d'apparition des bénéfices",
+              "resultat": null
+            },
+            {
+              "item": "Réversibilité des choix",
+              "resultat": null
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Risques et inconvénients",
+          "details": [
+            {
+              "item": "Effets secondaires des statines",
+              "resultat": "myalgies 5-10%"
+            },
+            {
+              "item": "Contraintes de l'hygiène de vie",
+              "resultat": null
+            },
+            {
+              "item": "Prise quotidienne de médicament",
+              "resultat": null
+            },
+            {
+              "item": "Surveillance biologique",
+              "resultat": null
+            },
+            {
+              "item": "Coûts financiers",
+              "resultat": null
+            }
+          ]
+        }
+      },
+      "questions_cloture": [
+        {
+          "contexte": "Questions difficiles du patient",
+          "question_patient": "Que feriez-vous à ma place?"
+        }
+      ]
+    },
+    {
+      "id": "RESCOS-60 - SD - Iléus palliatif",
+      "setting": "Service de médecine interne",
+      "patient_description": "Mme Thorler, 50 ans, carcinose péritonéale sur cancer de l'ovaire, 4ème épisode d'iléus en 6 mois",
+      "vitals": {},
+      "source_scenario": true,
+      "nom": "Mme Thorler",
+      "age": "50 ans",
+      "contexte": "4ème hospitalisation pour iléus, fatiguée des hospitalisations",
+      "ouverture": "",
+      "antecedents": {
+        "diagnostic": "Cancer ovaire avec carcinose péritonéale",
+        "traitement": "Chimiothérapie palliative en cours",
+        "complications": "Iléus récidivants, ascite",
+        "symptomes": [
+          "Nausées et vomissements fécaloïdes",
+          "Perte de 13 kg",
+          "Douleurs abdominales",
+          "Fatigue intense"
+        ]
+      },
+      "etat_esprit": [
+        "Épuisée par les hospitalisations répétées",
+        "Ambivalente sur les interventions",
+        "Souhaite rentrer chez elle",
+        "Peur de la douleur",
+        "Préoccupée par l'image corporelle"
+      ],
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Établir le contexte et le partenariat",
+          "details": [
+            {
+              "question": "Se présenter comme interne de garde",
+              "reponse": null
+            },
+            {
+              "question": "Reconnaître la situation difficile",
+              "reponse": "4ème hospitalisation"
+            },
+            {
+              "question": "Établir un climat de confiance",
+              "reponse": null
+            },
+            {
+              "question": "Explorer l'expérience des hospitalisations précédentes",
+              "reponse": null
+            },
+            {
+              "question": "Valider les émotions de la patiente",
+              "reponse": null
+            }
+          ]
+        },
+        "a2": {
+          "item": "Évaluer la compréhension de la maladie",
+          "details": [
+            {
+              "question": "Compréhension de la carcinose péritonéale",
+              "reponse": null
+            },
+            {
+              "question": "Vécu des épisodes d'iléus précédents",
+              "reponse": null
+            },
+            {
+              "question": "Efficacité des traitements antérieurs",
+              "reponse": null
+            },
+            {
+              "question": "Impact sur la qualité de vie",
+              "reponse": null
+            },
+            {
+              "question": "Attentes pour cette hospitalisation",
+              "reponse": null
+            }
+          ]
+        },
+        "a3": {
+          "item": "Explorer les valeurs et priorités (Team Talk)",
+          "details": [
+            {
+              "question": "Qu'est-ce qui est le plus important pour vous maintenant?",
+              "reponse": null
+            },
+            {
+              "question": "Qualité de vie vs durée de vie",
+              "reponse": null
+            },
+            {
+              "question": "Souhaits concernant le lieu de soins",
+              "reponse": null
+            },
+            {
+              "question": "Importance du confort",
+              "reponse": null
+            },
+            {
+              "question": "Projets ou événements importants à venir",
+              "reponse": null
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes actuels",
+          "details": [
+            {
+              "question": "Nausées et vomissements",
+              "reponse": "depuis 3 jours"
+            },
+            {
+              "question": "Vomissements fécaloïdes",
+              "reponse": "hier"
+            },
+            {
+              "question": "Absence de selles et gaz",
+              "reponse": "48h"
+            },
+            {
+              "question": "Douleurs abdominales",
+              "reponse": null
+            },
+            {
+              "question": "Ascite et inconfort associé",
+              "reponse": null
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Présentation des options thérapeutiques (Option Talk)",
+          "details": [
+            {
+              "item": "Expliciter qu'il y a 3 options possibles",
+              "resultat": null
+            },
+            {
+              "item": "Option 1: Gastrostomie de décharge",
+              "resultat": null
+            },
+            {
+              "item": "Option 2: Sonde naso-gastrique à demeure",
+              "resultat": null
+            },
+            {
+              "item": "Option 3: Traitement symptomatique seul",
+              "resultat": null
+            },
+            {
+              "item": "Toutes visent le confort, pas la guérison",
+              "resultat": null
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Option 1: Gastrostomie de décharge",
+          "details": [
+            {
+              "item": "Avantages: bien tolérée, pas visible",
+              "resultat": null
+            },
+            {
+              "item": "Permet douche et bain",
+              "resultat": "avec protection"
+            },
+            {
+              "item": "Inconvénients: intervention chirurgicale",
+              "resultat": null
+            },
+            {
+              "item": "Risque infection péristomiale",
+              "resultat": "abcès"
+            },
+            {
+              "item": "Souvent impossible si ascite importante",
+              "resultat": null
+            },
+            {
+              "item": "Risque hémorragie ou fuites",
+              "resultat": null
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Option 2: Sonde naso-gastrique",
+          "details": [
+            {
+              "item": "Avantages: facile à poser",
+              "resultat": null
+            },
+            {
+              "item": "Peut être enlevée à tout moment",
+              "resultat": null
+            },
+            {
+              "item": "Inconvénients: gêne au visage",
+              "resultat": null
+            },
+            {
+              "item": "Parfois douloureuse",
+              "resultat": null
+            },
+            {
+              "item": "Changement de narine nécessaire",
+              "resultat": null
+            },
+            {
+              "item": "Aspiration difficile à domicile",
+              "resultat": null
+            }
+          ]
+        }
+      },
+      "questions_cloture": [
+        {
+          "contexte": "Questions existentielles de la patiente",
+          "question_patient": "Combien de temps me reste-t-il?"
+        }
+      ]
+    },
+    {
+      "id": "RESCOS-61 - Suivi de grossesse - ECC Obstétrique",
+      "setting": "Service de gynécologie-obstétrique",
+      "patient_description": "Patiente enceinte consultant pour suivi de grossesse ou symptomatologie obstétricale",
+      "vitals": {
+        "ta": "120/80 mmHg",
+        "fc": "80 bpm",
+        "temperature": "37.0°C"
+      },
+      "source_scenario": true,
+      "nom": "Patiente enceinte",
+      "age": "Variable selon le cas",
+      "contexte": "Patiente enceinte consultant pour suivi de grossesse ou symptomatologie spécifique selon le terme",
+      "ouverture": "Variable selon le scénario clinique et le terme de grossesse",
+      "ouverture_complement": "Adapter selon la pathologie obstétricale simulée",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Adapter selon le terme de grossesse et la pathologie",
+          "1er trimestre : nausées, saignements, douleurs pelviennes",
+          "2ème trimestre : mouvements fœtaux, contractions, signes pré-éclampsie",
+          "3ème trimestre : contractions, douleurs, préparation accouchement",
+          "Post-partum : douleurs, saignements, troubles allaitement"
+        ],
+        "symptomesAssocies": [
+          "Adapter selon la pathologie simulée",
+          "Signes généraux : fièvre, fatigue, œdèmes",
+          "Symptômes pré-éclampsie : céphalées, troubles visuels",
+          "Signes infectieux : pertes, brûlures, fièvre",
+          "Troubles fœtaux : diminution mouvements"
+        ],
+        "circonstances": [
+          "Mode d'apparition des symptômes",
+          "Facteurs déclenchants ou aggravants",
+          "Évolution depuis le début",
+          "Retentissement sur activités quotidiennes"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Adapter selon objectifs pédagogiques",
+        "alcool": "Consommation avant/pendant grossesse",
+        "activite": "Niveau d'activité physique habituel",
+        "profession": "Expositions professionnelles éventuelles"
+      },
+      "antecedents": [
+        "Adapter selon le scénario pédagogique",
+        "Pathologies chroniques pertinentes",
+        "Antécédents gynéco-obstétricaux",
+        "Interventions chirurgicales antérieures"
+      ],
+      "antecedents_familiaux": [
+        "Pathologies héréditaires pertinentes",
+        "Complications obstétricales familiales",
+        "Maladies thromboemboliques",
+        "Diabète, HTA, pathologies cardiovasculaires"
+      ],
+      "comportement": {
+        "durantEntretien": [
+          "Adapter selon pathologie et terme",
+          "Expressions d'inquiétude appropriées",
+          "Questions pertinentes de la patiente",
+          "Comportement selon gravité simulée"
+        ],
+        "durantExamen": [
+          "Signes physiques cohérents avec pathologie",
+          "Collaboration à l'examen",
+          "Réactions appropriées aux manœuvres",
+          "Manifestations selon terme de grossesse"
+        ],
+        "questionsAPoser": [
+          "Est-ce que mon bébé va bien ?",
+          "Est-ce normal à mon terme ?",
+          "Dois-je m'inquiéter pour l'accouchement ?"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Compléments vitaminiques (acide folique, fer)",
+          "Traitements chroniques adaptés à la grossesse",
+          "Autres selon pathologie simulée"
+        ],
+        "observance": "Bonne ou adapter selon objectifs"
+      },
+      "grossesseActuelle": {
+        "terme": "Selon le scénario pédagogique",
+        "suivi": "Régulier avec gynécologue/sage-femme",
+        "examens": "Échographies et dépistages selon terme",
+        "complications": "Selon pathologie simulée"
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Motif de consultation et caractérisation selon le terme",
+          "details": [
+            {
+              "question": "1er trimestre",
+              "reponse": "douleurs, saignements, pertes vaginales, nausées, troubles urinaires"
+            },
+            {
+              "question": "2ème trimestre",
+              "reponse": "mouvements fœtaux 18-20 SA, contractions, douleurs abdominales, signes pré-éclampsie"
+            },
+            {
+              "question": "3ème trimestre",
+              "reponse": "idem 2ème + risque accru pré-éclampsie, travail, thromboembolie"
+            },
+            {
+              "question": "Post-partum",
+              "reponse": "infections, saignements, douleurs, troubles périnéaux, dépression, allaitement"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Caractérisation des symptômes principaux",
+          "details": [
+            {
+              "question": "Douleurs",
+              "reponse": "localisation, irradiation, qualité, facteurs déclenchants/aggravants"
+            },
+            {
+              "question": "Saignements",
+              "reponse": "quantité, spontané/provoqué, contexte"
+            },
+            {
+              "question": "Pertes vaginales",
+              "reponse": "aspect, couleur, odeur, démangeaisons, brûlures"
+            },
+            {
+              "question": "Contractions utérines",
+              "reponse": "fréquence, durée, intensité, évolution"
+            },
+            {
+              "question": "Symptômes associés",
+              "reponse": "fièvre, frissons, fatigue"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Recherche de signes d'alarme obstétricaux",
+          "details": [
+            {
+              "question": "Symptômes pré-éclampsie",
+              "reponse": "céphalées, troubles visuels, barre épigastrique, œdèmes, prise poids rapide"
+            },
+            {
+              "question": "Signes de cholestase gravidique",
+              "reponse": "prurit, lésions de grattage"
+            },
+            {
+              "question": "Signes thromboemboliques",
+              "reponse": "dyspnée, douleurs thoraciques, douleurs membres inférieurs"
+            },
+            {
+              "question": "Symptômes infectieux",
+              "reponse": "fièvre, frissons, pertes malodorantes"
+            },
+            {
+              "question": "Diminution mouvements fœtaux",
+              "reponse": "perception maternelle, inquiétudes"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Antécédents gynéco-obstétricaux",
+          "details": [
+            {
+              "question": "Gestité et parité",
+              "reponse": "nombre grossesses, fausses couches, IVG"
+            },
+            {
+              "question": "Accouchements antérieurs",
+              "reponse": "terme, voie, complications, poids naissance"
+            },
+            {
+              "question": "Antécédents gynécologiques",
+              "reponse": "IST, pathologies, dernier contrôle/cytologie"
+            },
+            {
+              "question": "Rapports sexuels",
+              "reponse": "partenaires, protection, IST"
+            },
+            {
+              "question": "Contraception antérieure",
+              "reponse": null
+            }
+          ]
+        },
+        "a5": {
+          "item": "Antécédents médicaux et chirurgicaux",
+          "details": [
+            {
+              "question": "Pathologies chroniques",
+              "reponse": "HTA, diabète, thromboembolie, anémie, obésité"
+            },
+            {
+              "question": "Interventions chirurgicales",
+              "reponse": "année, indication, voie d'abord"
+            },
+            {
+              "question": "Hospitalisations antérieures",
+              "reponse": null
+            },
+            {
+              "question": "Allergies",
+              "reponse": "substances, type de réaction"
+            },
+            {
+              "question": "Traitements actuels",
+              "reponse": null
+            }
+          ]
+        },
+        "a6": {
+          "item": "Antécédents familiaux",
+          "details": [
+            {
+              "question": "Maladies héréditaires",
+              "reponse": "consanguinité, pathologies génétiques"
+            },
+            {
+              "question": "Thromboembolies veineuses",
+              "reponse": "âge d'apparition, contexte familial"
+            },
+            {
+              "question": "Pathologies cardiovasculaires",
+              "reponse": "diabète, HTA, AVC"
+            },
+            {
+              "question": "Cancers",
+              "reponse": "sein, utérus, col, digestifs - degré parenté, âge diagnostic"
+            },
+            {
+              "question": "Complications obstétricales familiales",
+              "reponse": null
+            }
+          ]
+        },
+        "a7": {
+          "item": "Anamnèse socioprofessionnelle et habitudes",
+          "details": [
+            {
+              "question": "Activité professionnelle",
+              "reponse": "exposition, pénibilité, arrêt"
+            },
+            {
+              "question": "Situation familiale",
+              "reponse": "partenaire, enfants à charge, soutien"
+            },
+            {
+              "question": "Habitudes de vie",
+              "reponse": "tabac, alcool, drogues, activité physique"
+            },
+            {
+              "question": "Conditions de logement",
+              "reponse": "salubrité, sécurité"
+            },
+            {
+              "question": "Violences",
+              "reponse": "actuelles, antérieures, dépistage systématique"
+            }
+          ]
+        },
+        "a8": {
+          "item": "Suivi de grossesse actuelle",
+          "details": [
+            {
+              "question": "Terme de grossesse",
+              "reponse": "DDR, échographie de datation, correction si ≥5j"
+            },
+            {
+              "question": "Échographies et dépistages",
+              "reponse": "datation, morphologie, croissance, DPNI"
+            },
+            {
+              "question": "Sérologies",
+              "reponse": "HIV, syphilis, hépatites, toxoplasmose, CMV, rubéole"
+            },
+            {
+              "question": "Vaccinations",
+              "reponse": "grippe, coqueluche"
+            },
+            {
+              "question": "Examens complémentaires",
+              "reponse": "HGPO, streptocoque B, formule sanguine"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Signes vitaux et état général",
+          "details": [
+            {
+              "item": "Tension artérielle",
+              "resultat": "recherche HTA gravidique"
+            },
+            {
+              "item": "Pouls et température",
+              "resultat": null
+            },
+            {
+              "item": "Fréquence respiratoire et saturation si nécessaire",
+              "resultat": null
+            },
+            {
+              "item": "Poids actuel et prise de poids",
+              "resultat": "courbe pondérale"
+            },
+            {
+              "item": "État général",
+              "resultat": "pâleur, ictère, œdèmes"
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Examen physique général orienté",
+          "details": [
+            {
+              "item": "Auscultation cardio-pulmonaire",
+              "resultat": "au 1er contrôle puis selon plainte"
+            },
+            {
+              "item": "Examen des seins",
+              "resultat": "début grossesse si FDR, post-partum systématique"
+            },
+            {
+              "item": "Membres inférieurs",
+              "resultat": "œdèmes, varices, signes thromboemboliques"
+            },
+            {
+              "item": "Réflexes ostéotendineux",
+              "resultat": "recherche hyperréflexie si pré-éclampsie"
+            },
+            {
+              "item": "Ganglions",
+              "resultat": "aires accessibles, adénopathies"
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Examen abdominal obstétrical",
+          "details": [
+            {
+              "item": "Inspection abdomen",
+              "resultat": "cicatrices, vergetures, pigmentation"
+            },
+            {
+              "item": "Hauteur utérine",
+              "resultat": "mesure symphyse-fond utérin, courbe"
+            },
+            {
+              "item": "Manœuvres de Leopold",
+              "resultat": "3ème trimestre - présentation, dos fœtal"
+            },
+            {
+              "item": "Palpation contractions utérines",
+              "resultat": "fréquence, intensité, durée"
+            },
+            {
+              "item": "Auscultation bruits du cœur fœtal",
+              "resultat": "Doppler dès 12 SA"
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Examen abdominal général",
+          "details": [
+            {
+              "item": "Auscultation abdominale",
+              "resultat": "bruits hydroaériques"
+            },
+            {
+              "item": "Palpation abdominale",
+              "resultat": "défense, détente, organomégalies"
+            },
+            {
+              "item": "Points douloureux",
+              "resultat": "Murphy, McBurney selon contexte"
+            },
+            {
+              "item": "Percussion des loges rénales",
+              "resultat": "douleurs lombaires"
+            },
+            {
+              "item": "Recherche d'ascite si contexte pathologique",
+              "resultat": null
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Examen gynécologique",
+          "details": [
+            {
+              "item": "Examen au spéculum",
+              "resultat": "1er contrôle, puis si saignements/pertes/liquide"
+            },
+            {
+              "item": "Inspection vulvaire",
+              "resultat": "lésions, malformations, mutilations si risque"
+            },
+            {
+              "item": "Toucher vaginal",
+              "resultat": "si contractions <34 SA, après spéculum, CI si placenta prævia"
+            },
+            {
+              "item": "Évaluation col utérin",
+              "resultat": "longueur, dilatation, consistance"
+            },
+            {
+              "item": "Prélèvements selon indications",
+              "resultat": "infections, fibronectine, rupture membranes"
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Évaluation vitalité fœtale",
+          "details": [
+            {
+              "item": "Auscultation Doppler",
+              "resultat": "dès 12 SA, rythme cardiaque fœtal"
+            },
+            {
+              "item": "Cardiotocogramme",
+              "resultat": "dès 24 SA si indications spécifiques"
+            },
+            {
+              "item": "Mouvements fœtaux perçus",
+              "resultat": "interrogatoire maternel"
+            },
+            {
+              "item": "Échographie fœtale",
+              "resultat": "selon indications cliniques"
+            },
+            {
+              "item": "Biométries fœtales",
+              "resultat": "courbes de croissance, percentiles"
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Recherche de complications spécifiques selon le terme",
+          "details": [
+            {
+              "item": "Pré-éclampsie",
+              "resultat": "TA, réflexes, œdèmes, protéinurie"
+            },
+            {
+              "item": "Menace accouchement prématuré",
+              "resultat": "contractions, modification cervicale"
+            },
+            {
+              "item": "Rupture prématurée membranes",
+              "resultat": "liquide, tests spécifiques"
+            },
+            {
+              "item": "Retard croissance",
+              "resultat": "hauteur utérine, biométries"
+            },
+            {
+              "item": "Présentation siège",
+              "resultat": "manœuvres Leopold, confirmation échographique"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-62 - Toux - ECC Poumon",
+      "setting": "Cabinet de médecine générale",
+      "patient_description": "Patient de 65 ans consultant pour toux fébrile évoluant depuis 10 jours avec dyspnée d'effort",
+      "vitals": {
+        "temperature": "39.0°C",
+        "ta": "140/90 mmHg",
+        "fc": "90 bpm",
+        "fr": "20/min",
+        "sao2": "95%"
+      },
+      "source_scenario": true,
+      "nom": "Patient de 65 ans",
+      "age": "65 ans",
+      "contexte": "Enseignant retraité consultant pour toux productive fébrile",
+      "ouverture": "Je viens vous voir car je tousse, et ce matin j'ai eu de la fièvre",
+      "ouverture_complement": "Je suis inquiet car mon père avait des problèmes pulmonaires graves",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Toux depuis 10 jours, d'abord sèche puis grasse",
+          "Crachats jaunes-verts depuis 3 jours",
+          "Quantité environ 1 paquet de mouchoirs/jour",
+          "Fièvre à 39°C ce matin",
+          "Frissons nocturnes la nuit passée"
+        ],
+        "symptomesAssocies": [
+          "Douleur thoracique droite seulement en toussant depuis hier",
+          "Dyspnée au moindre effort, même à la maison",
+          "Pas de dyspnée de repos",
+          "Dort à plat, pas de réveil nocturne par dyspnée",
+          "Pas de nycturie"
+        ],
+        "circonstances": [
+          "Début progressif il y a 10 jours",
+          "Aggravation ces derniers jours",
+          "Conjoint a eu un épisode grippal il y a 2 semaines",
+          "Limitation des activités habituelles"
+        ]
+      },
+      "habitudes": {
+        "tabac": "5 cigarettes/jour depuis 30 ans (7.5 UPA)",
+        "alcool": "Un verre de vin occasionnel",
+        "activite": "Marche plusieurs fois/semaine, monte 3 étages habituellement",
+        "profession": "Enseignant école primaire, retraité"
+      },
+      "antecedents": [
+        "Hypertension artérielle traitée",
+        "Dyslipidémie traitée",
+        "Jamais hospitalisé",
+        "Pas d'antécédents pulmonaires"
+      ],
+      "antecedents_familiaux": [
+        "Père fumeur, bronchites à répétition, oxygène à domicile, décédé à 68 ans",
+        "Mère cancer du sein à 60 ans, toujours vivante à 90 ans",
+        "Sœur 70 ans en bonne santé"
+      ],
+      "contexte_social": {
+        "situation": "Vit avec conjoint en bonne santé",
+        "enfants": "3 enfants en bonne santé",
+        "logement": "Appartement 3ème étage",
+        "autonomie": "Totalement autonome habituellement"
+      },
+      "comportement": {
+        "durantEntretien": [
+          "Toux productive pendant la consultation",
+          "Légère dyspnée en parlant",
+          "Expression d'inquiétude sur l'évolution (comme le père)",
+          "Coopératif mais fatigué"
+        ],
+        "durantExamen": [
+          "Fréquence respiratoire légèrement augmentée",
+          "Douleur à la palpation thorax droit",
+          "Râles crépitants base droite à simuler",
+          "Pas de cyanose ni hippocratisme"
+        ],
+        "questionsAPoser": [
+          "Est-ce que je vais finir comme mon père avec de l'oxygène ?",
+          "C'est une pneumonie docteur ?",
+          "Combien de temps vais-je être comme ça ?"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Médicaments pour la tension (nom non retenu)",
+          "Médicaments pour le cholestérol (nom non retenu)"
+        ],
+        "observance": "Bonne observance habituelle"
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Caractérisation de la toux",
+          "details": [
+            {
+              "question": "Type de toux",
+              "reponse": "sèche puis productive"
+            },
+            {
+              "question": "Horaire",
+              "reponse": "diurne et/ou nocturne"
+            },
+            {
+              "question": "Facteurs déclenchants",
+              "reponse": "effort, froid, position"
+            },
+            {
+              "question": "Durée et évolution",
+              "reponse": "10 jours, sèche puis grasse"
+            },
+            {
+              "question": "Efficacité de la toux",
+              "reponse": "productive ou non"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Caractérisation des expectorations",
+          "details": [
+            {
+              "question": "Couleur des crachats",
+              "reponse": "jaunes-verts depuis 3 jours"
+            },
+            {
+              "question": "Quantité",
+              "reponse": "environ 1 paquet de mouchoirs/jour"
+            },
+            {
+              "question": "Odeur",
+              "reponse": "fétide si germes anaérobes"
+            },
+            {
+              "question": "Présence de sang",
+              "reponse": "hémoptysie"
+            },
+            {
+              "question": "Évolution dans le temps",
+              "reponse": "claires puis purulentes"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Caractérisation de la douleur thoracique",
+          "details": [
+            {
+              "question": "Localisation",
+              "reponse": "thorax droit"
+            },
+            {
+              "question": "Reproductible à la palpation",
+              "reponse": "oui/non"
+            },
+            {
+              "question": "Variation avec la respiration",
+              "reponse": "augmentée à la toux"
+            },
+            {
+              "question": "Irradiation",
+              "reponse": "épaule si plèvre diaphragmatique"
+            },
+            {
+              "question": "Intensité",
+              "reponse": "échelle 0-10"
+            },
+            {
+              "question": "Durée et circonstances",
+              "reponse": "depuis hier soir, en toussant"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Évaluation de la dyspnée",
+          "details": [
+            {
+              "question": "Circonstances",
+              "reponse": "repos vs effort - moindre effort"
+            },
+            {
+              "question": "Classification NYHA ou mMRC",
+              "reponse": "stade III NYHA"
+            },
+            {
+              "question": "Orthopnée",
+              "reponse": "dort à plat"
+            },
+            {
+              "question": "Dyspnée paroxystique nocturne",
+              "reponse": "absence"
+            },
+            {
+              "question": "Évolution dans le temps",
+              "reponse": "aggravation récente"
+            },
+            {
+              "question": "Sifflements ou bruits associés",
+              "reponse": null
+            }
+          ]
+        },
+        "a5": {
+          "item": "Signes généraux et symptômes associés",
+          "details": [
+            {
+              "question": "Fièvre",
+              "reponse": "39°C ce matin, frissons nocturnes"
+            },
+            {
+              "question": "Asthénie et perte de poids",
+              "reponse": null
+            },
+            {
+              "question": "Sueurs nocturnes",
+              "reponse": null
+            },
+            {
+              "question": "Signes d'insuffisance cardiaque",
+              "reponse": "œdèmes, nycturie - absents"
+            },
+            {
+              "question": "Autres symptômes respiratoires",
+              "reponse": "rhinorrhée, pharyngite"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Antécédents personnels et facteurs de risque",
+          "details": [
+            {
+              "question": "Pathologies chroniques",
+              "reponse": "HTA, dyslipidémie"
+            },
+            {
+              "question": "Antécédents pulmonaires",
+              "reponse": "aucun"
+            },
+            {
+              "question": "Hospitalisations antérieures",
+              "reponse": "jamais"
+            },
+            {
+              "question": "Allergies médicamenteuses",
+              "reponse": null
+            },
+            {
+              "question": "Vaccinations",
+              "reponse": "grippe, pneumocoque"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Habitudes et expositions",
+          "details": [
+            {
+              "question": "Tabac",
+              "reponse": "5 cigarettes/jour depuis 30 ans = 7.5 UPA"
+            },
+            {
+              "question": "Alcool",
+              "reponse": "consommation occasionnelle"
+            },
+            {
+              "question": "Activité physique",
+              "reponse": "marche régulière, monte 3 étages"
+            },
+            {
+              "question": "Exposition professionnelle",
+              "reponse": "enseignant retraité"
+            },
+            {
+              "question": "Exposition infectieuse",
+              "reponse": "conjoint grippal il y a 2 semaines"
+            }
+          ]
+        },
+        "a8": {
+          "item": "Antécédents familiaux",
+          "details": [
+            {
+              "question": "Pathologies pulmonaires",
+              "reponse": "père BPCO sévère, décédé 68 ans"
+            },
+            {
+              "question": "Pathologies cardiovasculaires",
+              "reponse": null
+            },
+            {
+              "question": "Cancers",
+              "reponse": "mère cancer sein à 60 ans"
+            },
+            {
+              "question": "Maladies héréditaires",
+              "reponse": null
+            },
+            {
+              "question": "Allergies familiales",
+              "reponse": null
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Inspection générale - patient couché",
+          "details": [
+            {
+              "item": "Aspect général",
+              "resultat": "faciès, pâleur, transpiration, agitation"
+            },
+            {
+              "item": "Fréquence respiratoire",
+              "resultat": "mesure et valeur"
+            },
+            {
+              "item": "Cycle respiratoire",
+              "resultat": "rapport I/E, expirium prolongé"
+            },
+            {
+              "item": "Détresse respiratoire",
+              "resultat": "tirage, muscles accessoires"
+            },
+            {
+              "item": "Cyanose centrale et périphérique",
+              "resultat": null
+            },
+            {
+              "item": "Hippocratisme digital",
+              "resultat": null
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Inspection thoracique - patient assis",
+          "details": [
+            {
+              "item": "Forme du thorax",
+              "resultat": "tonneau, pectus excavatum/carinatum"
+            },
+            {
+              "item": "Asymétrie thoracique",
+              "resultat": null
+            },
+            {
+              "item": "Déformations rachidiennes",
+              "resultat": "cyphose, scoliose"
+            },
+            {
+              "item": "Cicatrices",
+              "resultat": "thoracotomie, drains"
+            },
+            {
+              "item": "Respiration paradoxale",
+              "resultat": "test mains abdomen/thorax"
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Palpation thoracique",
+          "details": [
+            {
+              "item": "Ampliation thoracique",
+              "resultat": "symétrie des mouvements"
+            },
+            {
+              "item": "Localisation précise de la douleur",
+              "resultat": "reproduction palpation"
+            },
+            {
+              "item": "Vibrations vocales",
+              "resultat": "faire dire '33', comparaison G/D"
+            },
+            {
+              "item": "Technique correcte",
+              "resultat": "bord cubital, 3 hauteurs"
+            },
+            {
+              "item": "Recherche d'emphysème sous-cutané",
+              "resultat": null
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Percussion thoracique",
+          "details": [
+            {
+              "item": "Limite inférieure poumons",
+              "resultat": "percussion postérieure"
+            },
+            {
+              "item": "Comparaison sonorité G/D",
+              "resultat": "3 hauteurs, région axillaire"
+            },
+            {
+              "item": "Reconnaissance des sons",
+              "resultat": "normal, matité, tympanisme"
+            },
+            {
+              "item": "Technique correcte",
+              "resultat": "doigt sur doigt"
+            },
+            {
+              "item": "Interprétation",
+              "resultat": "épanchement, consolidation, pneumothorax"
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Auscultation pulmonaire",
+          "details": [
+            {
+              "item": "Demande respiration bouche ouverte",
+              "resultat": null
+            },
+            {
+              "item": "Points d'auscultation",
+              "resultat": "postérieur 3 niveaux, axillaire, antérieur"
+            },
+            {
+              "item": "Comparaison symétrique G/D systématique",
+              "resultat": null
+            },
+            {
+              "item": "Murmure vésiculaire",
+              "resultat": "intensité, symétrie"
+            },
+            {
+              "item": "Souffle tubaire",
+              "resultat": "consolidation parenchymateuse"
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Identification des bruits pathologiques",
+          "details": [
+            {
+              "item": "Sibilances",
+              "resultat": "sifflements haute fréquence - asthme"
+            },
+            {
+              "item": "Ronchi",
+              "resultat": "basse fréquence, ronflements - bronchite"
+            },
+            {
+              "item": "Râles fins",
+              "resultat": "crépitants, velcro - pneumonie, fibrose"
+            },
+            {
+              "item": "Râles grossiers",
+              "resultat": "bulleux, humides - bronchite, OAP"
+            },
+            {
+              "item": "Frottement pleural",
+              "resultat": "craquement tout le cycle"
+            },
+            {
+              "item": "Stridor",
+              "resultat": "sifflement trachéal audible sans stéthoscope"
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Examen cardiovasculaire complémentaire",
+          "details": [
+            {
+              "item": "Palpation choc de pointe",
+              "resultat": null
+            },
+            {
+              "item": "Auscultation cardiaque",
+              "resultat": "5 foyers"
+            },
+            {
+              "item": "Œdèmes membres inférieurs",
+              "resultat": null
+            },
+            {
+              "item": "Turgescence jugulaire",
+              "resultat": null
+            },
+            {
+              "item": "Reflux hépato-jugulaire",
+              "resultat": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-63 - Toux - Pédiatrie",
+      "setting": "Urgences, hôpital régional",
+      "patient_description": "Liam Lambretta, bébé de 5 mois, est emmené par son parent pour de la toux.",
+      "vitals": {
+        "fc": "145 bpm",
+        "fr": "40/min",
+        "temperature": "38.6°C"
+      },
+      "source_scenario": true,
+      "nom": "Mère/Père de Liam Lambretta",
+      "age": "Parent d'un bébé de 5 mois",
+      "contexte": "Parent inquiet amenant son bébé de 5 mois aux urgences pour toux persistante",
+      "ouverture": "Mon bébé tousse énormément depuis plusieurs jours et je suis très inquiet(e)",
+      "ouverture_complement": "Il devient tout bleu quand il tousse et il vomit après",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Toux depuis 5 jours",
+          "Quintes de toux répétées",
+          "Bébé devient bleu (cyanosé) pendant les quintes",
+          "Toux de plus en plus fréquente",
+          "Difficulté à reprendre son souffle après les quintes",
+          "Fait un bruit inspiratoire après les quintes (chant du coq)"
+        ],
+        "symptomesAssocies": [
+          "Fièvre depuis 4 jours (jusqu'à 39°C)",
+          "Plusieurs pics de fièvre par jour",
+          "Répond au paracétamol mais la fièvre revient",
+          "Vomissements depuis 3 jours (6-8x/jour)",
+          "Vomit après les quintes de toux",
+          "Vomit des glaires claires, un peu blanchâtres",
+          "Très fatigué et apathique après les accès de toux"
+        ],
+        "evolution": [
+          "D'abord un simple rhume",
+          "Toux qui s'aggrave progressivement",
+          "Quintes de plus en plus rapprochées",
+          "État général qui se dégrade"
+        ],
+        "alimentation": [
+          "Prend seulement la moitié des quantités habituelles de lait",
+          "Difficulté à téter à cause de la toux",
+          "Une seule couche mouillée en 24h au lieu de 4 habituellement",
+          "Parent très inquiet de la déshydratation"
+        ]
+      },
+      "anamnese_systemes": {
+        "generale": [
+          "Bébé habituellement en bonne santé",
+          "Suit bien les courbes de croissance",
+          "Développement psychomoteur normal"
+        ],
+        "respiratoire": [
+          "Pas d'antécédents respiratoires",
+          "Pas d'asthme dans la famille",
+          "Respiration difficile pendant les quintes"
+        ]
+      },
+      "antecedents": [
+        "Grossesse sans particularité",
+        "Accouchement par voie basse sans complication",
+        "Période néonatale sans particularité",
+        "Pas de vaccinations (parents opposés)",
+        "Seul traitement : Vitamine D",
+        "Pas d'allergies connues",
+        "Pas d'hospitalisations antérieures"
+      ],
+      "antecedents_familiaux": [
+        "2 grandes sœurs jumelles de 4 ans",
+        "Les sœurs sont actuellement enrhumées",
+        "Pas de maladies chroniques dans la famille",
+        "Parents en bonne santé"
+      ],
+      "informations_personnelles": {
+        "contexteFamilial": "Famille avec 3 enfants",
+        "vaccination": "Parents opposés aux vaccinations",
+        "inquietudes": "Très inquiet(e) de voir son bébé devenir bleu",
+        "etatEsprit": "Anxieux/anxieuse mais collaboratif/collaborative"
+      },
+      "comportement": {
+        "durantEntretien": [
+          "Tenir une poupée représentant le bébé",
+          "Montrer de l'inquiétude et de l'anxiété",
+          "Décrire précisément les quintes de toux",
+          "Insister sur la cyanose qui fait très peur",
+          "Mentionner le bruit inspiratoire après les quintes si demandé",
+          "Exprimer la fatigue due aux nuits blanches"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est grave docteur?",
+          "Est-ce qu'il va devoir être hospitalisé?",
+          "Comment peut-on l'aider à mieux respirer?",
+          "C'est de notre faute s'il n'est pas vacciné?"
+        ]
+      },
+      "informationADonner": "Si le médecin demande spécifiquement : mentionner que les sœurs vont à la crèche et qu'il y a eu des cas de coqueluche là-bas il y a quelques semaines.",
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Toux",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis 5 jours"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "de plus en plus fréquente"
+            },
+            {
+              "question": "Qualité",
+              "reponse": "toux en quintes"
+            },
+            {
+              "question": "Fréquence",
+              "reponse": "à répétition"
+            },
+            {
+              "question": "Cyanose",
+              "reponse": "devient bleu lors des quintes"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Fièvre",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis 4 jours"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "plusieurs pics par jour"
+            },
+            {
+              "question": "Température précisée",
+              "reponse": "jusqu'à 39°C"
+            },
+            {
+              "question": "Réponse aux fébrifuges",
+              "reponse": "répond au paracétamol"
+            },
+            {
+              "question": "Frissons/marbrures",
+              "reponse": null
+            }
+          ]
+        },
+        "a3": {
+          "item": "Vomissements",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": "depuis 3 jours"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "6-8x/jour"
+            },
+            {
+              "question": "Association avec toux",
+              "reponse": "oui, après les quintes"
+            },
+            {
+              "question": "Contenu",
+              "reponse": "glaires claires, un peu blanchâtres"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Alimentation/Hydratation",
+          "details": [
+            {
+              "question": "Allaitement",
+              "reponse": "prend la moitié des quantités habituelles"
+            },
+            {
+              "question": "Couches mouillées",
+              "reponse": "1 seule/24h au lieu de 4"
+            }
+          ]
+        },
+        "a5": {
+          "item": "État général",
+          "details": [
+            {
+              "question": "Apathie et/ou fatigue",
+              "reponse": "fatigué, apathique après les accès de toux"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Anamnèse personnelle",
+          "details": [
+            {
+              "question": "Grossesse",
+              "reponse": "sans particularité"
+            },
+            {
+              "question": "Accouchement",
+              "reponse": "voie basse sans particularité"
+            },
+            {
+              "question": "Néonatale",
+              "reponse": "sans particularité"
+            },
+            {
+              "question": "Croissance",
+              "reponse": "suit les courbes"
+            },
+            {
+              "question": "Développement",
+              "reponse": "sans particularité"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Vaccins/Médicaments",
+          "details": [
+            {
+              "question": "Vaccins",
+              "reponse": "aucun"
+            },
+            {
+              "question": "Médicaments",
+              "reponse": "Vitamine D"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-64 - Toux - Station double 1",
+      "setting": "Cabinet de médecine générale",
+      "patient_description": "Mme Denise Dumont, 61 ans, consulte pour l'exacerbation d'une toux chronique et l'apparition depuis 4 jours de crachats de sang rouge",
+      "vitals": {
+        "ta": "155/90 mmHg",
+        "fc": "68 bpm",
+        "temperature": "36.9°C"
+      },
+      "source_scenario": true,
+      "nom": "Denise Dumont",
+      "age": "61 ans",
+      "contexte": "Cabinet d'un médecin généraliste, la Dresse Dupuis",
+      "ouverture": "Je viens vous voir parce que, depuis 4 jours, je crache et il y a du sang, cela m'inquiète",
+      "ouverture_complement": "Non, le reste ça va, ce sont ces crachats qui m'inquiètent",
+      "histoire_actuelle": {
+        "touxExpectorations": [
+          "Je tousse depuis plusieurs années, surtout le matin, avec des crachats en général blancs, mousseux.",
+          "D'habitude je tousse le matin mais depuis 1 mois je trouve que je tousse plus durant la journée (sans avoir plus de crachats, qui sont restés clairs)",
+          "Mon médecin m'avait dit que j'avais peut-être une bronchite chronique (BPCO) mais je n'ai pas voulu faire de tests ni prendre de traitement pour ça.",
+          "Quand j'ai une bronchite, les crachats sont jaunes, parfois verts. J'ai en général une bronchite par année, qui a tendance à durer et le docteur m'a parfois donné des antibiotiques pour la couper.",
+          "Depuis 4 jours, j'ai remarqué du sang dans les crachats. C'est ce qui m'a motivée à venir consulter.",
+          "Ce n'est pas un gros saignement, les crachats sont sanglants, rouge frais, pas plus abondants que d'habitude (fond d'un mouchoir).",
+          "À part le rouge, je n'ai pas remarqué que mes crachats étaient devenus jaunes ou verts ces derniers temps."
+        ],
+        "douleur": [
+          "Je sens une vague douleur au niveau de la poitrine à droite (sur le côté au niveau du sein)",
+          "Elle est apparue il y a environ 1 mois",
+          "Pas très forte (si demandé: 2/10) mais gênante",
+          "La douleur augmente quand je tousse ou quand je respire profondément (pas aggravée au mouvement)"
+        ],
+        "essoufflement": [
+          "Je me sens un peu plus essoufflée par rapport à d'habitude (j'habite un appartement au 3e étage sans ascenseur, j'y arrive essoufflée !)",
+          "Je n'ai pas d'asthme mais l'impression que ça siffle un peu parfois (si demandé: depuis 2 ans)",
+          "Je ne me réveille pas la nuit avec de la peine à respirer, pas besoin d'oreillers supplémentaires"
+        ],
+        "poids": [
+          "J'ai perdu du poids",
+          "J'ai perdu 4 kg",
+          "Ces derniers mois, sans faire de régime"
+        ],
+        "symptomesNegatifs": [
+          "Pas de problème dans les jambes (jambe enflée, douloureuse, rouge...)",
+          "Pas de chevilles enflées",
+          "Pas de fièvre, pas de sudation",
+          "Pas d'épisode de bronchite récemment",
+          "Pas de maladie ou problème cardiaque (p.ex souffle au cœur, rhumatisme articulaire aigu dans la jeunesse)",
+          "Pas de douleurs articulaires, ma voix n'a pas changé",
+          "Pas de fatigue",
+          "Pas de voyage, pas d'immobilité, pas d'antécédent de thrombose ou d'embolie pulmonaire",
+          "Contrôles gynécologiques 1 x/an avec mammographie de contrôle, dernière il y a 1 mois, résultat normal"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "alcool": "pas régulièrement, 1 verre de vin le week-end",
+        "tabac": "Oui je fume (si demandé : 1 paquet par jour / depuis 35 ans)",
+        "allergie": "Pas d'allergie"
+      },
+      "antecedents": [
+        "Il y a 2 ans mon médecin traitant m'avait parlé de bronchite chronique (BPCO). Il m'avait proposé des examens pour les poumons mais je n'ai pas voulu les faire parce que je me sentais bien.",
+        "On ne m'a jamais parlé de tuberculose, et pourtant, il y a 20 ans, je passais souvent dans le camion de la radiophotographie."
+      ],
+      "antecedents_familiaux": [
+        "Père (88 ans) et mère (85 ans) sans problème de santé.",
+        "Pas d'embolie pulmonaire ni tuberculose dans la famille."
+      ],
+      "contexte_social": [
+        "Mariée, sans enfant",
+        "Chauffeur de taxi"
+      ],
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Caractérisation de l'hémoptysie",
+          "details": [
+            {
+              "question": "Début et durée",
+              "reponse": "depuis 4 jours"
+            },
+            {
+              "question": "Quantité",
+              "reponse": "fond d'un mouchoir, pas abondant"
+            },
+            {
+              "question": "Aspect du sang",
+              "reponse": "rouge frais, mélangé aux crachats"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "pas d'aggravation récente"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Histoire de la toux chronique",
+          "details": [
+            {
+              "question": "Ancienneté",
+              "reponse": "depuis plusieurs années"
+            },
+            {
+              "question": "Horaire habituel",
+              "reponse": "surtout le matin"
+            },
+            {
+              "question": "Évolution récente",
+              "reponse": "augmentation depuis 1 mois, toute la journée"
+            },
+            {
+              "question": "Caractère des expectorations habituelles",
+              "reponse": "blanches, mousseuses"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Symptômes respiratoires associés",
+          "details": [
+            {
+              "question": "Dyspnée d'effort",
+              "reponse": "essoufflement dans les escaliers, 3e étage"
+            },
+            {
+              "question": "Sibilances",
+              "reponse": "impression de sifflement parfois depuis 2 ans"
+            },
+            {
+              "question": "Douleur thoracique",
+              "reponse": "côté droit, apparue il y a 1 mois, 2/10"
+            },
+            {
+              "question": "Caractère de la douleur",
+              "reponse": "augmentée par la toux et inspiration profonde"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Antécédents respiratoires",
+          "details": [
+            {
+              "question": "BPCO suspectée par médecin traitant",
+              "reponse": "il y a 2 ans, refus d'examens"
+            },
+            {
+              "question": "Épisodes de bronchite",
+              "reponse": "1 par an, crachats jaunes-verts, antibiotiques"
+            },
+            {
+              "question": "Absence de tuberculose connue",
+              "reponse": "pas de diagnostic antérieur"
+            },
+            {
+              "question": "Participation aux campagnes de dépistage",
+              "reponse": "radiophotographie il y a 20 ans"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Facteurs de risque et habitudes",
+          "details": [
+            {
+              "question": "Tabagisme actif",
+              "reponse": "1 paquet/jour depuis 35 ans"
+            },
+            {
+              "question": "Profession",
+              "reponse": "chauffeur de taxi - exposition"
+            },
+            {
+              "question": "Consommation d'alcool",
+              "reponse": "1 verre de vin le week-end"
+            },
+            {
+              "question": "Absence de toxiques",
+              "reponse": null
+            }
+          ]
+        },
+        "a6": {
+          "item": "Symptômes généraux et signes d'alarme",
+          "details": [
+            {
+              "question": "Perte de poids",
+              "reponse": "4 kg ces derniers mois, involontaire"
+            },
+            {
+              "question": "Absence de fièvre",
+              "reponse": "pas de syndrome infectieux"
+            },
+            {
+              "question": "Absence de sudations nocturnes",
+              "reponse": null
+            },
+            {
+              "question": "Absence de fatigue anormale",
+              "reponse": null
+            }
+          ]
+        },
+        "a7": {
+          "item": "Signes négatifs importants",
+          "details": [
+            {
+              "question": "Pas d'œdèmes des membres inférieurs",
+              "reponse": null
+            },
+            {
+              "question": "Pas de troubles du sommeil respiratoires",
+              "reponse": "pas de réveils nocturnes"
+            },
+            {
+              "question": "Pas de voyage récent",
+              "reponse": null
+            },
+            {
+              "question": "Pas d'immobilisation ou antécédent thromboembolique",
+              "reponse": null
+            }
+          ]
+        },
+        "a8": {
+          "item": "Antécédents personnels et familiaux",
+          "details": [
+            {
+              "question": "Absence de maladie cardiaque",
+              "reponse": "pas de souffle, pas de rhumatisme articulaire"
+            },
+            {
+              "question": "Antécédents familiaux",
+              "reponse": "parents vivants sans pathologie respiratoire"
+            },
+            {
+              "question": "Absence d'antécédent familial de tuberculose ou embolie",
+              "reponse": null
+            },
+            {
+              "question": "Suivi gynécologique régulier",
+              "reponse": "mammographie normale il y a 1 mois"
+            }
+          ]
+        },
+        "a9": {
+          "item": "Médicaments et allergies",
+          "reponse": "Aucun médicament, aucune allergie connue"
+        },
+        "a10": {
+          "item": "Contexte social et professionnel",
+          "details": [
+            {
+              "question": "Situation familiale",
+              "reponse": "mariée, sans enfants"
+            },
+            {
+              "question": "Profession",
+              "reponse": "chauffeur de taxi"
+            },
+            {
+              "question": "Impact sur la qualité de vie",
+              "reponse": "inquiétude concernant le cancer"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Examen général et signes vitaux",
+          "details": [
+            {
+              "item": "Évaluation de l'état général",
+              "resultat": null
+            },
+            {
+              "item": "Mesure de la fréquence respiratoire",
+              "resultat": "16/min"
+            },
+            {
+              "item": "Évaluation des signes de détresse respiratoire",
+              "resultat": null
+            },
+            {
+              "item": "Recherche de cyanose",
+              "resultat": null
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Inspection thoracique",
+          "details": [
+            {
+              "item": "Inspection statique du thorax",
+              "resultat": null
+            },
+            {
+              "item": "Évaluation de la symétrie respiratoire",
+              "resultat": null
+            },
+            {
+              "item": "Recherche de déformation thoracique",
+              "resultat": null
+            },
+            {
+              "item": "Évaluation du tirage et de l'ampliation",
+              "resultat": null
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Palpation thoracique",
+          "details": [
+            {
+              "item": "Palpation des vibrations vocales",
+              "resultat": null
+            },
+            {
+              "item": "Recherche de douleur à la palpation",
+              "resultat": "côté droit"
+            },
+            {
+              "item": "Évaluation de l'ampliation thoracique",
+              "resultat": null
+            },
+            {
+              "item": "Palpation des aires ganglionnaires (sus-claviculaires, axillaires)",
+              "resultat": null
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Percussion pulmonaire",
+          "details": [
+            {
+              "item": "Percussion systématique des deux champs pulmonaires",
+              "resultat": null
+            },
+            {
+              "item": "Recherche de matité",
+              "resultat": "pas de matité trouvée"
+            },
+            {
+              "item": "Évaluation de la sonorité pulmonaire",
+              "resultat": null
+            },
+            {
+              "item": "Délimitation des bases pulmonaires",
+              "resultat": null
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Auscultation pulmonaire",
+          "details": [
+            {
+              "item": "Auscultation systématique des deux champs pulmonaires",
+              "resultat": null
+            },
+            {
+              "item": "Identification des sibilances",
+              "resultat": "quelques sibilances sur les 2 champs"
+            },
+            {
+              "item": "Recherche de râles crépitants ou sous-crépitants",
+              "resultat": null
+            },
+            {
+              "item": "Évaluation du murmure vésiculaire",
+              "resultat": null
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Examen cardiovasculaire",
+          "details": [
+            {
+              "item": "Auscultation cardiaque systématique",
+              "resultat": null
+            },
+            {
+              "item": "Recherche de signes d'insuffisance cardiaque droite",
+              "resultat": null
+            },
+            {
+              "item": "Évaluation des pouls périphériques",
+              "resultat": null
+            },
+            {
+              "item": "Recherche d'œdèmes des membres inférieurs",
+              "resultat": null
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Examen ORL et recherche d'adénopathies",
+          "details": [
+            {
+              "item": "Palpation des aires ganglionnaires cervicales",
+              "resultat": null
+            },
+            {
+              "item": "Examen de la cavité buccale",
+              "resultat": null
+            },
+            {
+              "item": "Palpation des aires ganglionnaires sus-claviculaires",
+              "resultat": null
+            },
+            {
+              "item": "Recherche d'adénopathies axillaires",
+              "resultat": null
+            }
+          ]
+        },
+        "e8": {
+          "examen": "Recherche de signes extrarespiratoires",
+          "details": [
+            {
+              "item": "Recherche d'hippocratisme digital",
+              "resultat": null
+            },
+            {
+              "item": "Examen cutané (recherche de métastases)",
+              "resultat": null
+            },
+            {
+              "item": "Palpation abdominale (hépatomégalie)",
+              "resultat": null
+            },
+            {
+              "item": "Évaluation neurologique de base",
+              "resultat": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-64 - Toux - Station double 2",
+      "setting": "Présentation de Mme Dumont au pneumologue",
+      "patient_description": "Examinateur-trice : Posez uniquement les questions écrites en rouge.",
+      "source_scenario": false,
+      "examen_resultats": {
+        "e6": {
+          "examen": "Examens spécialisés",
+          "details": [
+            {
+              "item": "Cultures d'expectorations et recherche de BK",
+              "resultat": null
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Examens spécialisés",
+          "details": [
+            {
+              "item": "Test sanguin de QuantiFéron",
+              "resultat": null
+            }
+          ]
+        },
+        "e8": {
+          "examen": "Examens spécialisés",
+          "details": [
+            {
+              "item": "Échocardiographie transthoracique",
+              "resultat": null
+            }
+          ]
+        },
+        "e9": {
+          "examen": "Examens spécialisés",
+          "details": [
+            {
+              "item": "Bilan angiologique veineux (TVP)",
+              "resultat": null
+            }
+          ]
+        },
+        "e10": {
+          "examen": "Examens spécialisés",
+          "details": [
+            {
+              "item": "Spirométrie=Fonctions pulmonaires à faire à distance pour confirmer le COPD",
+              "resultat": null
+            }
+          ]
+        }
+      },
+      "presentation": {
+        "p1": {
+          "item": "Identité, motif de consultation",
+          "details": [
+            {
+              "question": "Nom, prénom, âge",
+              "reponse": null
+            }
+          ]
+        },
+        "p2": {
+          "item": "Identité, motif de consultation",
+          "details": [
+            {
+              "question": "Hémoptysie",
+              "reponse": null
+            }
+          ]
+        },
+        "p3": {
+          "item": "Identité, motif de consultation",
+          "details": [
+            {
+              "question": "Aggravation de la toux et de la dyspnée",
+              "reponse": null
+            }
+          ]
+        },
+        "p4": {
+          "item": "Résume les éléments pertinents de l'anamnèse",
+          "details": [
+            {
+              "question": "Tabagisme actif à 35 UPA",
+              "reponse": null
+            }
+          ]
+        },
+        "p5": {
+          "item": "Résume les éléments pertinents de l'anamnèse",
+          "details": [
+            {
+              "question": "Douleur thoracique respiro-dépendante et augmentée à la toux",
+              "reponse": null
+            }
+          ]
+        },
+        "p6": {
+          "item": "Résume les éléments pertinents de l'anamnèse",
+          "details": [
+            {
+              "question": "Possible BPCO non investigué (sur refus de la patiente)",
+              "reponse": null
+            }
+          ]
+        },
+        "p7": {
+          "item": "Résume les éléments pertinents de l'anamnèse",
+          "details": [
+            {
+              "question": "Perte pondérale 4 kg/quelques mois",
+              "reponse": null
+            }
+          ]
+        },
+        "p8": {
+          "item": "Résume les éléments pertinents de l'anamnèse",
+          "details": [
+            {
+              "question": "Afébrile, pas de sudations",
+              "reponse": null
+            }
+          ]
+        },
+        "p9": {
+          "item": "Résume les éléments pertinents de l'examen physique",
+          "details": [
+            {
+              "question": "Fréquence respiratoire normale",
+              "reponse": null
+            }
+          ]
+        },
+        "p10": {
+          "item": "Résume les éléments pertinents de l'examen physique",
+          "details": [
+            {
+              "question": "Auscultation pulmonaire : sibilances diffuses",
+              "reponse": null
+            }
+          ]
+        },
+        "p11": {
+          "item": "Résume les éléments pertinents de l'examen physique",
+          "details": [
+            {
+              "question": "Percussion pulmonaire normale",
+              "reponse": null
+            }
+          ]
+        },
+        "p12": {
+          "item": "Résume les éléments pertinents de l'examen physique",
+          "details": [
+            {
+              "question": "Auscultation cardiaque normale",
+              "reponse": null
+            }
+          ]
+        },
+        "p13": {
+          "item": "Résume les éléments pertinents de l'examen physique",
+          "details": [
+            {
+              "question": "Palpation thoracique sous le sein droit normale",
+              "reponse": null
+            }
+          ]
+        },
+        "p15": {
+          "item": "Réflexivité",
+          "details": [
+            {
+              "question": "Réalise ne pas avoir cherché certains éléments pertinents dans l'anamnèse et /ou l'examen clinique et les mentionne",
+              "reponse": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-65 - Tremblements - ECC Neurologie",
+      "setting": "Service de neurologie",
+      "patient_description": "Homme de 64 ans présentant un tremblement unilatéral de repos de la main droite",
+      "vitals": {
+        "ta": "135/80 mmHg",
+        "fc": "68 bpm"
+      },
+      "source_scenario": true,
+      "nom": "Homme de 64 ans",
+      "age": "64 ans",
+      "contexte": "Homme actif de 64 ans consultant pour tremblement de la main droite",
+      "ouverture": "J'ai un tremblement de la main droite qui me gêne de plus en plus",
+      "ouverture_complement": "Ma femme dit que je bouge moins vite qu'avant",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Tremblement main droite depuis 18 mois environ",
+          "Début insidieux, progressif",
+          "Surtout au repos, disparaît lors de l'utilisation",
+          "Gêne croissante pour l'écriture",
+          "Embarras en public, tend à cacher la main"
+        ],
+        "symptomesAssocies": [
+          "Sensation de raideur main et avant-bras droit",
+          "Écriture plus petite qu'avant",
+          "Mouvements plus lents selon l'épouse",
+          "Difficulté boutonnage, activités fines",
+          "Pas de troubles de la marche actuellement"
+        ],
+        "circonstances": [
+          "Remarqué d'abord par l'épouse",
+          "Aggravation par le stress, émotions",
+          "Amélioration par l'alcool (noté occasionnellement)",
+          "Pire en fin de journée, fatigue"
+        ],
+        "facteursDeclenchants": [
+          "Stress au travail (cadre commercial)",
+          "Contrariétés, situations tendues",
+          "Fatigue, manque de sommeil",
+          "Situations sociales (restaurant, réunions)"
+        ]
+      },
+      "habitudes": {
+        "profession": "Cadre commercial, nombreux déplacements",
+        "tabac": "Ex-fumeur depuis 5 ans (20 PA)",
+        "alcool": "Consommation sociale modérée",
+        "activite": "Golf abandonné (gêne par tremblements)",
+        "sommeil": "Sommeil correct, pas de troubles"
+      },
+      "antecedents": [
+        "Bonne santé générale",
+        "Hypertension artérielle légère",
+        "Pas d'antécédent neurologique",
+        "Pas de traumatisme crânien"
+      ],
+      "antecedents_familiaux": [
+        "Père avec tremblements des mains (âge avancé)",
+        "Grand-père paternel 'maladie de Parkinson' (selon famille)",
+        "Mère décédée AVC à 78 ans"
+      ],
+      "comportement": {
+        "durantEntretien": [
+          "Tremblement visible main droite au repos",
+          "Tend à cacher la main ou la poser",
+          "Exprime gêne professionnelle et sociale",
+          "Inquiet sur évolution (références Parkinson famille)"
+        ],
+        "durantExamen": [
+          "Tremblement repos 4-5 Hz main droite",
+          "Rigidité discrète côté droit",
+          "Bradykinésie tests alternés rapides",
+          "Micrographie si fait écrire",
+          "Pas d'instabilité posturale"
+        ],
+        "questionsAPoser": [
+          "Est-ce que j'ai la maladie de Parkinson ?",
+          "Est-ce héréditaire ? Mes enfants risquent-ils l'avoir ?",
+          "Vais-je finir en fauteuil roulant ?"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Enalapril 10mg/j pour HTA",
+          "Aucun autre traitement régulier"
+        ],
+        "anterieurs": [
+          "Jamais de neuroleptiques",
+          "Pas d'antidépresseurs",
+          "Pas de médicaments neurologiques"
+        ]
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Caractérisation du tremblement",
+          "details": [
+            {
+              "question": "Localisation",
+              "reponse": "main droite, doigts, poignet, propagation"
+            },
+            {
+              "question": "Circonstances d'apparition",
+              "reponse": "repos, action, attitude"
+            },
+            {
+              "question": "Fréquence",
+              "reponse": "4-6 Hz typique du repos"
+            },
+            {
+              "question": "Amplitude",
+              "reponse": "fine, grossière, évolution"
+            },
+            {
+              "question": "Facteurs modulateurs",
+              "reponse": "stress, fatigue, émotion, concentration"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Évolution temporelle et progression",
+          "details": [
+            {
+              "question": "Date d'apparition",
+              "reponse": "début insidieux, évolution lente"
+            },
+            {
+              "question": "Progression",
+              "reponse": "unilatérale → bilatérale, asymétrique"
+            },
+            {
+              "question": "Fluctuations",
+              "reponse": "horaires, saisonnières, médicamenteuses"
+            },
+            {
+              "question": "Retentissement fonctionnel",
+              "reponse": "écriture, préhension fine"
+            },
+            {
+              "question": "Gêne sociale",
+              "reponse": "isolement, embarras en public"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Symptômes moteurs associés",
+          "details": [
+            {
+              "question": "Raideur musculaire",
+              "reponse": "roue dentée, rigidité plastique"
+            },
+            {
+              "question": "Ralentissement moteur",
+              "reponse": "bradykinésie, akinésie"
+            },
+            {
+              "question": "Troubles de la marche",
+              "reponse": "petits pas, freezing, festination"
+            },
+            {
+              "question": "Troubles posturaux",
+              "reponse": "instabilité, réflexes de rattrapage"
+            },
+            {
+              "question": "Micrographie",
+              "reponse": "diminution taille écriture"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes non moteurs",
+          "details": [
+            {
+              "question": "Troubles de l'olfaction",
+              "reponse": "anosmie, hyposmie"
+            },
+            {
+              "question": "Troubles du sommeil",
+              "reponse": "RBD, insomnie, somnolence diurne"
+            },
+            {
+              "question": "Troubles cognitifs",
+              "reponse": "ralentissement, troubles exécutifs"
+            },
+            {
+              "question": "Troubles de l'humeur",
+              "reponse": "dépression, anxiété, apathie"
+            },
+            {
+              "question": "Troubles digestifs",
+              "reponse": "constipation, troubles déglutition"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Antécédents et facteurs de risque",
+          "details": [
+            {
+              "question": "Antécédents familiaux",
+              "reponse": "maladie de Parkinson, tremblements"
+            },
+            {
+              "question": "Traumatisme crânien",
+              "reponse": "sévère, récent"
+            },
+            {
+              "question": "Expositions toxiques",
+              "reponse": "MPTP, pesticides, solvants"
+            },
+            {
+              "question": "Infections",
+              "reponse": "encéphalite, COVID-19"
+            },
+            {
+              "question": "Troubles vasculaires cérébraux",
+              "reponse": "AVC, ischémie"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Médicaments et substances",
+          "details": [
+            {
+              "question": "Neuroleptiques",
+              "reponse": "halopéridol, rispéridone, olanzapine"
+            },
+            {
+              "question": "Antiémétiques",
+              "reponse": "métoclopramide, dompéridone"
+            },
+            {
+              "question": "Antidépresseurs",
+              "reponse": "ISRS, tricycliques"
+            },
+            {
+              "question": "Antiépileptiques",
+              "reponse": "valproïne, phénytoïne"
+            },
+            {
+              "question": "Substances",
+              "reponse": "alcool, café, sevrage"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Observation et caractérisation du tremblement",
+          "details": [
+            {
+              "item": "Tremblement de repos",
+              "resultat": "disparaît lors du mouvement volontaire"
+            },
+            {
+              "item": "Asymétrie",
+              "resultat": "prédominance unilatérale droite"
+            },
+            {
+              "item": "Fréquence",
+              "resultat": "4-6 Hz, comptage sur 10 secondes"
+            },
+            {
+              "item": "Amplitude",
+              "resultat": "millimétrique à centimétrique"
+            },
+            {
+              "item": "Manœuvres d'activation",
+              "resultat": "calcul mental, marche"
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Examen du tonus musculaire",
+          "details": [
+            {
+              "item": "Rigidité plastique",
+              "resultat": "résistance continue, cire"
+            },
+            {
+              "item": "Phénomène de la roue dentée",
+              "resultat": "à-coups, intermittent"
+            },
+            {
+              "item": "Asymétrie tonique",
+              "resultat": "plus marquée côté tremblement"
+            },
+            {
+              "item": "Manœuvre de Froment",
+              "resultat": "renforcement controlatéral"
+            },
+            {
+              "item": "Test du ballottement",
+              "resultat": "genou, moins ample si rigidité"
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Évaluation de la bradykinésie",
+          "details": [
+            {
+              "item": "Mouvements alternés rapides",
+              "resultat": "piano, tap des doigts"
+            },
+            {
+              "item": "Ouverture-fermeture mains",
+              "resultat": "amplitude, rythme, fatigue"
+            },
+            {
+              "item": "Mouvements pieds",
+              "resultat": "tapping, amplitude décroissante"
+            },
+            {
+              "item": "Mimique faciale",
+              "resultat": "hypomimie, clignements rares"
+            },
+            {
+              "item": "Déglutition",
+              "resultat": "bradykinésie oro-faciale"
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Examen de la marche et posture",
+          "details": [
+            {
+              "item": "Démarche",
+              "resultat": "petits pas, festination, traînant"
+            },
+            {
+              "item": "Ballant des bras",
+              "resultat": "diminué du côté atteint"
+            },
+            {
+              "item": "Demi-tour",
+              "resultat": "en bloc, nombreux petits pas"
+            },
+            {
+              "item": "Posture",
+              "resultat": "attitude fléchie, camptocormie"
+            },
+            {
+              "item": "Freezing",
+              "resultat": "blocage initiation marche"
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Tests des réflexes posturaux",
+          "details": [
+            {
+              "item": "Test de la poussée",
+              "resultat": "réflexes de rattrapage"
+            },
+            {
+              "item": "Réflexe de rétropulsion",
+              "resultat": "instabilité arrière"
+            },
+            {
+              "item": "Station unipodale",
+              "resultat": "équilibre statique"
+            },
+            {
+              "item": "Réactions parachute",
+              "resultat": "protection chute"
+            },
+            {
+              "item": "Adaptation posturale",
+              "resultat": "changements position"
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Recherche d'autres mouvements anormaux",
+          "details": [
+            {
+              "item": "Dyskinésies",
+              "resultat": "chorée, athétose, dystonie"
+            },
+            {
+              "item": "Tics",
+              "resultat": "suppressibles, prédictibles"
+            },
+            {
+              "item": "Myoclonies",
+              "resultat": "secousses brèves, brutales"
+            },
+            {
+              "item": "Tremblements autres",
+              "resultat": "action, attitude, intention"
+            },
+            {
+              "item": "Mouvements stéréotypés",
+              "resultat": "répétitifs, rythmés"
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Examen neurologique général",
+          "details": [
+            {
+              "item": "Fonctions supérieures",
+              "resultat": "MMSE, fluences, horloge"
+            },
+            {
+              "item": "Nerfs crâniens",
+              "resultat": "olfaction, oculomotricité, facial"
+            },
+            {
+              "item": "Force musculaire",
+              "resultat": "pas de déficit pyramidal"
+            },
+            {
+              "item": "Sensibilité",
+              "resultat": "conservée, pas d'atteinte"
+            },
+            {
+              "item": "Réflexes",
+              "resultat": "normaux, pas de Babinski"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-66 - Troubles de l'équilibre - ECC Neurologie",
+      "setting": "Service de neurologie",
+      "patient_description": "Femme de 74 ans présentant des troubles de l'équilibre avec amaigrissement de 8 kg en 6 mois",
+      "vitals": {
+        "ta": "120/70 mmHg",
+        "fc": "72 bpm"
+      },
+      "source_scenario": true,
+      "nom": "Femme de 74 ans",
+      "age": "74 ans",
+      "contexte": "Retraitée présentant des troubles de l'équilibre progressifs avec amaigrissement important",
+      "ouverture": "Je ne tiens plus debout correctement et j'ai perdu beaucoup de poids",
+      "ouverture_complement": "Ma famille s'inquiète car je chute de plus en plus souvent",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Troubles de l'équilibre progressifs depuis 8 mois",
+          "Instabilité à la marche, sensation d'ébriété",
+          "Chutes répétées, surtout dans l'obscurité",
+          "Difficultés croissantes pour se lever d'une chaise",
+          "Peur de sortir seule, isolement progressif"
+        ],
+        "symptomesAssocies": [
+          "Amaigrissement de 8 kg en 6 mois (65→57 kg)",
+          "Perte d'appétit progressive",
+          "Fatigue générale, moins d'énergie",
+          "Difficultés de concentration",
+          "Pas de troubles visuels ou auditifs nets"
+        ],
+        "circonstances": [
+          "Début insidieux, aggravation progressive",
+          "Première chute il y a 4 mois (sans blessure)",
+          "Arrêt progressif des activités (jardinage, courses)",
+          "Famille de plus en plus inquiète"
+        ],
+        "facteursDeclenchants": [
+          "Aggravation dans l'obscurité",
+          "Pire en fin de journée (fatigue)",
+          "Amélioration relative au repos",
+          "Pas de relation avec les repas ou positions"
+        ]
+      },
+      "habitudes": {
+        "activite": "Retraitée, jardinage abandonné récemment",
+        "tabac": "Non fumeuse",
+        "alcool": "Très occasionnel",
+        "alimentation": "Appétit diminué, repas moins copieux"
+      },
+      "antecedents": [
+        "Hypertension artérielle bien contrôlée",
+        "Ostéoporose traitée par calcium/vitamine D",
+        "Pas d'antécédent neurologique",
+        "Pas d'antécédent oncologique personnel"
+      ],
+      "antecedents_familiaux": [
+        "Mère décédée maladie d'Alzheimer à 82 ans",
+        "Père décédé cancer du poumon à 75 ans",
+        "Une sœur avec maladie de Parkinson"
+      ],
+      "comportement": {
+        "durantEntretien": [
+          "Position prudente dans le fauteuil",
+          "Exprime son inquiétude et celle de sa famille",
+          "Mentionne la peur de chuter",
+          "Évoque l'isolement social progressif"
+        ],
+        "durantExamen": [
+          "Démarche prudente, élargissement du polygone",
+          "Romberg positif (instabilité yeux fermés)",
+          "Léger tremblement des mains à l'action",
+          "Troubles discrets de la coordination"
+        ],
+        "questionsAPoser": [
+          "Est-ce que j'ai une maladie grave ?",
+          "Est-ce que cela peut être un cancer ?",
+          "Vais-je pouvoir rester chez moi ?"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Amlodipine 5mg/j",
+          "Calcium 1g + vitamine D 800UI/j",
+          "Paracétamol si douleurs"
+        ],
+        "observance": "Bonne observance habituelle"
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Caractérisation des troubles de l'équilibre",
+          "details": [
+            {
+              "question": "Type de déséquilibre",
+              "reponse": "instabilité marche, vertiges, chutes"
+            },
+            {
+              "question": "Circonstances d'apparition",
+              "reponse": "marche, changement position, obscurité"
+            },
+            {
+              "question": "Évolution temporelle",
+              "reponse": "progressive, fluctuante, épisodique"
+            },
+            {
+              "question": "Facteurs aggravants",
+              "reponse": "fatigue, stress, médicaments"
+            },
+            {
+              "question": "Retentissement fonctionnel",
+              "reponse": "limitation activités, peur de chuter"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Analyse de l'amaigrissement",
+          "details": [
+            {
+              "question": "Perte de poids chiffrée",
+              "reponse": "8 kg en 6 mois, involontaire"
+            },
+            {
+              "question": "Modification de l'appétit",
+              "reponse": "anorexie, dégoût alimentaire"
+            },
+            {
+              "question": "Troubles de la déglutition",
+              "reponse": "fausses routes, dysphagie"
+            },
+            {
+              "question": "Troubles digestifs",
+              "reponse": "nausées, vomissements, transit"
+            },
+            {
+              "question": "Contexte psychologique",
+              "reponse": "dépression, isolement social"
+            }
+          ]
+        },
+        "a3": {
+          "item": "Symptômes neurologiques associés",
+          "details": [
+            {
+              "question": "Troubles cognitifs",
+              "reponse": "mémoire, concentration, orientation"
+            },
+            {
+              "question": "Troubles moteurs",
+              "reponse": "faiblesse, raideur, tremblements"
+            },
+            {
+              "question": "Troubles sensitifs",
+              "reponse": "fourmillements, engourdissements"
+            },
+            {
+              "question": "Troubles visuels",
+              "reponse": "diplopie, baisse acuité, champ visuel"
+            },
+            {
+              "question": "Troubles de la parole",
+              "reponse": "dysarthrie, dysphonie"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Recherche de signes d'alarme oncologique",
+          "details": [
+            {
+              "question": "Altération état général",
+              "reponse": "asthénie, fièvre, sueurs"
+            },
+            {
+              "question": "Douleurs",
+              "reponse": "osseuses, abdominales, thoraciques"
+            },
+            {
+              "question": "Antécédents néoplasiques",
+              "reponse": "personnels, familiaux"
+            },
+            {
+              "question": "Symptômes spécifiques d'organe",
+              "reponse": "toux, dyspnée, troubles transit"
+            },
+            {
+              "question": "Facteurs de risque",
+              "reponse": "tabac, alcool, expositions"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Antécédents et comorbidités",
+          "details": [
+            {
+              "question": "Maladies neurodégénératives",
+              "reponse": "Parkinson, Alzheimer, SEP"
+            },
+            {
+              "question": "Pathologies cardiovasculaires",
+              "reponse": "AVC, cardiopathies"
+            },
+            {
+              "question": "Troubles métaboliques",
+              "reponse": "diabète, dysthyroïdie"
+            },
+            {
+              "question": "Maladies auto-immunes",
+              "reponse": "lupus, vascularites"
+            },
+            {
+              "question": "Chirurgies antérieures",
+              "reponse": "neurochirurgie, ORL"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Médicaments et toxiques",
+          "details": [
+            {
+              "question": "Psychotropes",
+              "reponse": "benzodiazépines, antidépresseurs, neuroleptiques"
+            },
+            {
+              "question": "Antiépileptiques",
+              "reponse": "phénytoïne, carbamazépine"
+            },
+            {
+              "question": "Antihypertenseurs",
+              "reponse": "risque hypotension orthostatique"
+            },
+            {
+              "question": "Oto-toxiques",
+              "reponse": "aminosides, diurétiques de l'anse"
+            },
+            {
+              "question": "Alcoolisme",
+              "reponse": "consommation, sevrage, carences vitaminiques"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Évaluation de l'état général et nutritionnel",
+          "details": [
+            {
+              "item": "Poids et taille",
+              "resultat": "IMC, dénutrition"
+            },
+            {
+              "item": "État d'hydratation",
+              "resultat": "pli cutané, muqueuses"
+            },
+            {
+              "item": "Pâleur",
+              "resultat": "anémie, néoplasie"
+            },
+            {
+              "item": "Adénopathies",
+              "resultat": "aires ganglionnaires"
+            },
+            {
+              "item": "Signes vitaux",
+              "resultat": "température, TA couchée/debout"
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Examen de la statique et de la marche",
+          "details": [
+            {
+              "item": "Station debout",
+              "resultat": "Romberg, élargissement polygone sustentation"
+            },
+            {
+              "item": "Marche spontanée",
+              "resultat": "démarche, vitesse, régularité"
+            },
+            {
+              "item": "Demi-tour",
+              "resultat": "nombre de pas, hésitation, instabilité"
+            },
+            {
+              "item": "Marche sur ligne droite",
+              "resultat": "écarts, corrections"
+            },
+            {
+              "item": "Marche yeux fermés",
+              "resultat": "aggravation instabilité"
+            }
+          ]
+        },
+        "e3": {
+          "examen": "Examen de la coordination cérébelleuse",
+          "details": [
+            {
+              "item": "Épreuves index-nez",
+              "resultat": "dysmétrie, tremblement intentionnel"
+            },
+            {
+              "item": "Épreuves talon-genou",
+              "resultat": "ataxie membres inférieurs"
+            },
+            {
+              "item": "Mouvements alternés rapides",
+              "resultat": "adiadococinésie"
+            },
+            {
+              "item": "Écriture",
+              "resultat": "micrographie, tremblements"
+            },
+            {
+              "item": "Dysarthrie cérébelleuse",
+              "resultat": "parole scandée, explosive"
+            }
+          ]
+        },
+        "e4": {
+          "examen": "Examen du système extrapyramidal",
+          "details": [
+            {
+              "item": "Tonus musculaire",
+              "resultat": "rigidité, roue dentée"
+            },
+            {
+              "item": "Tremblements",
+              "resultat": "repos, action, attitude"
+            },
+            {
+              "item": "Bradykinésie",
+              "resultat": "lenteur initiation, exécution mouvements"
+            },
+            {
+              "item": "Réflexes posturaux",
+              "resultat": "test de la poussée"
+            },
+            {
+              "item": "Micrographie, hypomimie faciale",
+              "resultat": null
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Examen de la sensibilité proprioceptive",
+          "details": [
+            {
+              "item": "Sensibilité positionnelle",
+              "resultat": "gros orteils, doigts"
+            },
+            {
+              "item": "Sensibilité vibratoire",
+              "resultat": "diapason 128 Hz, niveau"
+            },
+            {
+              "item": "Romberg",
+              "resultat": "aggravation yeux fermés"
+            },
+            {
+              "item": "Marche aveugle",
+              "resultat": "démarche talonnante"
+            },
+            {
+              "item": "Pseudo-athétose",
+              "resultat": "mouvements involontaires"
+            }
+          ]
+        },
+        "e6": {
+          "examen": "Examen vestibulaire et oculomoteur",
+          "details": [
+            {
+              "item": "Nystagmus",
+              "resultat": "spontané, provoqué, direction"
+            },
+            {
+              "item": "Mouvements oculaires",
+              "resultat": "saccades, poursuite lente"
+            },
+            {
+              "item": "Manœuvre de Dix-Hallpike",
+              "resultat": "VPPB"
+            },
+            {
+              "item": "Head impulse test",
+              "resultat": "atteinte vestibulaire périphérique"
+            },
+            {
+              "item": "Coordination œil-tête",
+              "resultat": "VOR, instabilité du regard"
+            }
+          ]
+        },
+        "e7": {
+          "examen": "Examen neurologique général",
+          "details": [
+            {
+              "item": "Fonctions supérieures",
+              "resultat": "MMSE, orientation, mémoire"
+            },
+            {
+              "item": "Nerfs crâniens",
+              "resultat": "VII, IX-X, XII"
+            },
+            {
+              "item": "Force musculaire",
+              "resultat": "testing analytique"
+            },
+            {
+              "item": "Réflexes ostéotendineux",
+              "resultat": "asymétrie, vivacité"
+            },
+            {
+              "item": "Signes pyramidaux",
+              "resultat": "Babinski, réflexes de libération"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "RESCOS-67 - Fatigue",
+      "setting": "Cabinet de médecine générale de la Dre Kovac (médecin assistant·e)",
+      "patient_description": "Madame Gomez, 38 ans, consulte pour une baisse d'énergie",
+      "vitals": {
+        "ta": "122/84 mmHg",
+        "fc": "60 bpm",
+        "temperature": "36.6°C"
+      },
+      "source_scenario": true,
+      "nom": "Madame Iris Gomez",
+      "age": "38 ans",
+      "contexte": "Cabinet de médecine générale",
+      "ouverture": "J'ai l'impression de ne plus avoir d'énergie. Je suis tout le temps épuisée et ça commence vraiment à me déranger",
+      "ouverture_complement": "Normalement, je suis plutôt active et en forme et là y a vraiment quelque chose qui n'est pas comme d'habitude",
+      "histoire_actuelle": {
+        "symptomePrincipal": "Fatigue et baisse d'énergie importante avec impact sur mon quotidien",
+        "chronologie": "Depuis 6 mois environ, au début intermittent surtout les jours avec beaucoup de travail. Depuis 2 mois péjoration, quasiment constante à présent. Présente dès le matin, péjoration l'après-midi et le soir.",
+        "developpement": "Progressif",
+        "circonstances": "Sans facteur déclenchant particulier selon moi",
+        "facteursAggravants": "Activité physique ou tâches lors desquelles je dois beaucoup me concentrer, par exemple au travail",
+        "symptomesAssocies": [
+          "Aucun autre symptôme remarqué"
+        ],
+        "consequences": "Diminution de ma motivation et de ma concentration, ce qui a un impact sur mes performances au travail",
+        "reponseAuSymptome": "Prise de vitamines du commerce pendant 1 mois il y a 3 mois mais sans effet",
+        "episodesAnterieurs": "Oui, lors de l'adolescence et âge jeune adulte lorsque je manquais de fer"
+      },
+      "anamnese_systemes": {
+        "generale": [
+          "Prise de poids environ 3-4kg sur la dernière année, selon moi parce que je mange assez mal depuis 1 an à cause du stress au boulot",
+          "Pas de sudations nocturnes",
+          "Pas de changement d'appétit majeur",
+          "Pas de fièvre"
+        ],
+        "digestive": [
+          "Tendance à la constipation, en aggravation depuis environ 2-3 mois",
+          "Mange assez peu de fruits et de légumes surtout depuis 1 année",
+          "Transit environ 1x/2j, selles plutôt dures",
+          "Jamais de sang dans les selles"
+        ],
+        "psychiatrique": [
+          "Souvent débordée par les responsabilités familiales et professionnelles",
+          "Niveau de stress élevé",
+          "Depuis 1 an, nouvelles responsabilités au travail",
+          "Sautes d'humeur, passant de moments de tristesse et de découragement à des moments de frustration ou d'irritabilité",
+          "Émotionnellement vulnérable, mal à gérer les situations stressantes de manière efficace",
+          "Plus de mal à trouver du plaisir dans les activités que j'aimais auparavant",
+          "Diminution générale de l'intérêt et de la motivation",
+          "Parfois difficultés à m'endormir le soir (parfois 1h30 pour m'endormir)",
+          "Réfléchit beaucoup au travail",
+          "A pris de la Valériane pour l'aider",
+          "Durée du sommeil en moyenne 7h, qualité ok, faible impact sur la fatigue",
+          "Pas d'idées suicidaires"
+        ],
+        "gynecologique": [
+          "Règles régulières, cycles de 28 jours",
+          "Durée 3-5 jours",
+          "Quantité normale d'après moi",
+          "Activité sexuelle irrégulière, toujours protégée par préservatif",
+          "Contraception par pilule oestro-progestative"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "alimentation": "Je reconnais ne pas avoir une alimentation très équilibrée surtout depuis 1 année, avec une préférence pour les aliments riches en glucides et en graisses. Pas d'exercice physique régulier, passe beaucoup de temps devant un écran au travail et à la maison.",
+        "tabac": "10 cigarettes par jour depuis l'âge de 18 ans. Avais arrêté pendant mes grossesses.",
+        "alcool": "Occasionnel",
+        "drogues": "Non"
+      },
+      "antecedents": {
+        "medicaux": "Antécédent de carence martiale lorsque j'étais adolescente/jeune adulte en raison de règles abondantes. 3x substitution orale. Substitution pendant la grossesse puis en ordre.",
+        "chirurgicaux": "Aucun",
+        "familiaux": "Rien de particulier",
+        "allergies": "Aucune"
+      },
+      "contexte_social": {
+        "etatCivil": "Divorcée depuis 3 ans",
+        "enfants": "2 enfants âgés de 8 (fille = Emma) et 6 ans (garçon = Jules)",
+        "garde": "Garde alternée 50/50. Entente ok avec mon ex-mari.",
+        "hobbies": "Regarde beaucoup des séries. Lecture, joue un peu de guitare et aime bien chanter."
+      },
+      "comportement": {
+        "durantEntretien": [
+          "Fatigue",
+          "Un peu ralentie",
+          "Affect un peu triste mais pas franchement déprimée"
+        ],
+        "durantStatus": [
+          "Ralentissement de la phase de relaxation des ROT : quel que soit le site, il faut essayer de simuler que la phase de relaxation du ROT est ralentie alors que la phase de contraction est normale"
+        ]
+      },
+      "etat_esprit": "Fatiguée, collaborante, un peu ralentie, affect un peu triste mais pas franchement déprimée",
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Caractérisation de la fatigue",
+          "details": [
+            {
+              "question": "Durée",
+              "reponse": "Depuis 6 mois environ"
+            },
+            {
+              "question": "Évolution",
+              "reponse": "Au début intermittent surtout les jours avec beaucoup de travail. Depuis 2 mois péjoration, quasiment constante à présent"
+            },
+            {
+              "question": "Chronologie sur la journée",
+              "reponse": "Présente dès le matin, péjoration l'après-midi et le soir"
+            },
+            {
+              "question": "Circonstances de survenue",
+              "reponse": "Sans facteur déclenchant particulier selon moi"
+            }
+          ]
+        },
+        "a2": {
+          "item": "Conséquences de la fatigue sur le quotidien",
+          "reponse": "Diminution de ma motivation et de ma concentration, ce qui a un impact sur mes performances au travail"
+        },
+        "a3": {
+          "item": "Symptômes B associés",
+          "details": [
+            {
+              "question": "Fièvre",
+              "reponse": "Non"
+            },
+            {
+              "question": "Variation de poids",
+              "reponse": "Prise de poids environ 3-4kg sur la dernière année, selon moi parce que je mange assez mal depuis 1 an à cause du stress au boulot"
+            },
+            {
+              "question": "Sueurs nocturnes",
+              "reponse": "Non"
+            }
+          ]
+        },
+        "a4": {
+          "item": "Symptômes d'hypothyroïdie",
+          "details": [
+            {
+              "question": "Intolérance au froid",
+              "reponse": "Non"
+            },
+            {
+              "question": "Transit ralenti",
+              "reponse": "Tendance à la constipation, en aggravation depuis environ 2-3 mois, transit environ 1x/2j, selles plutôt dures"
+            }
+          ]
+        },
+        "a5": {
+          "item": "Sommeil",
+          "details": [
+            {
+              "question": "Durée",
+              "reponse": "En moyenne 7h"
+            },
+            {
+              "question": "Qualité",
+              "reponse": "Ok"
+            },
+            {
+              "question": "Impact sur la fatigue",
+              "reponse": "Faible impact sur la fatigue"
+            }
+          ]
+        },
+        "a6": {
+          "item": "Autres symptômes associés",
+          "details": [
+            {
+              "question": "Toux",
+              "reponse": "Non"
+            },
+            {
+              "question": "Douleurs abdominales",
+              "reponse": "Non"
+            },
+            {
+              "question": "Modifications de l'appétit",
+              "reponse": "Pas de changement d'appétit majeur"
+            },
+            {
+              "question": "Douleurs musculaires ou articulaires",
+              "reponse": "Non"
+            },
+            {
+              "question": "Polyurie ou polydipsie",
+              "reponse": "Non"
+            }
+          ]
+        },
+        "a7": {
+          "item": "Situation menstruelle",
+          "details": [
+            {
+              "question": "Durée des règles",
+              "reponse": "3-5 jours"
+            },
+            {
+              "question": "Abondance",
+              "reponse": "Quantité normale d'après moi"
+            }
+          ]
+        },
+        "a8": {
+          "item": "Anamnèse psychiatrique",
+          "details": [
+            {
+              "question": "Humeur",
+              "reponse": "Souvent débordée par les responsabilités, sautes d'humeur"
+            },
+            {
+              "question": "Stress",
+              "reponse": "Niveau de stress élevé, nouvelles responsabilités au travail depuis 1 an"
+            },
+            {
+              "question": "Perte d'intérêt",
+              "reponse": "Plus de mal à trouver du plaisir dans les activités que j'aimais auparavant"
+            },
+            {
+              "question": "Troubles de la concentration",
+              "reponse": "Oui, difficultés de concentration"
+            },
+            {
+              "question": "Anxiété",
+              "reponse": "Émotionnellement vulnérable, mal à gérer les situations stressantes"
+            }
+          ]
+        },
+        "a9": {
+          "item": "Alimentation",
+          "details": [
+            {
+              "question": "Activité physique",
+              "reponse": "Pas d'exercice physique régulier, passe beaucoup de temps devant un écran"
+            }
+          ]
+        },
+        "a10": {
+          "item": "Antécédents",
+          "details": [
+            {
+              "question": "Antécédents médicaux",
+              "reponse": "Antécédent de carence martiale lors de l'adolescence et âge jeune adulte en raison de règles abondantes. 3x substitution orale. Substitution pendant la grossesse puis en ordre"
+            },
+            {
+              "question": "Traitement",
+              "reponse": "Aucun médicament actuellement"
+            }
+          ]
+        },
+        "a11": {
+          "item": "Anamnèse familiale",
+          "reponse": "Rien de particulier"
+        },
+        "a12": {
+          "item": "Consommations",
+          "details": [
+            {
+              "question": "Tabac",
+              "reponse": "10 cigarettes par jour depuis l'âge de 18 ans. Avais arrêté pendant mes grossesses"
+            },
+            {
+              "question": "OH",
+              "reponse": "Occasionnel"
+            },
+            {
+              "question": "Drogues",
+              "reponse": "Non"
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Général : examen rapide de la peau - examen des sclères",
+          "details": [
+            {
+              "item": "Si réalisé, dire :",
+              "resultat": "Les sclères sont légèrement pâles"
+            }
+          ]
+        },
+        "e2": {
+          "examen": "Recherche d'adénopathies cervicales - sus-claviculaires",
+          "resultat": "Pas d'adénopathies"
+        },
+        "e3": {
+          "examen": "Palpation de la glande thyroïde",
+          "resultat": "Thyroïde normale, pas d'augmentation de volume"
+        },
+        "e4": {
+          "examen": "Auscultation cardiaque correctement réalisé",
+          "details": [
+            {
+              "item": "4 foyers",
+              "resultat": "Oui"
+            },
+            {
+              "item": "NON = incomplet ou non réalisé",
+              "resultat": null
+            },
+            {
+              "item": "ET postérieur",
+              "resultat": "Non nécessaire pour ce cas"
+            }
+          ]
+        },
+        "e5": {
+          "examen": "Auscultation pulmonaire (antérieure et postérieure)",
+          "resultat": "Auscultation pulmonaire normale"
+        },
+        "e6": {
+          "examen": "Examen abdominal : palpation 4 quadrants - recherche d'hépatosplénomégalie",
+          "resultat": "Abdomen souple, pas d'hépatosplénomégalie"
+        },
+        "e7": {
+          "examen": "Examen des ROT au niveau du genou ou de la cheville ou au moins sur 1 site",
+          "details": [
+            {
+              "item": "Ralentissement de la phase de relaxation des ROT",
+              "resultat": "Oui, phase de relaxation ralentie alors que la phase de contraction est normale"
+            }
+          ]
+        }
+      },
+      "resultats_examens_complementaires": {
+        "m2": {
+          "item": "Demande des tests thyroïdiens (TSH seule ou avec T4 libre)",
+          "resultat": "TSH 20.6 mU/L (N: 0.2-3.5), T4 libre 2.06 pmol/L (N: 12-22)"
+        }
+      }
+    },
+    {
+      "id": "RESCOS-68 - Eruption cutanée",
+      "setting": "Cabinet de médecine générale (remplacement de la Dre Jacqueline Dupont)",
+      "patient_description": "M./Mme Maballe, 31 ans, consulte pour une éruption cutanée",
+      "vitals": {
+        "fr": "15/min",
+        "ta": "125/70 mmHg",
+        "fc": "72 bpm",
+        "temperature": "37.2°C",
+        "sao2": "98% (air ambiant)"
+      },
+      "source_scenario": true,
+      "nom": "M./Mme Maballe",
+      "age": "31 ans",
+      "contexte": "Patient en bonne santé habituelle",
+      "ouverture": "Éruption cutanée sur le flanc droit depuis 2 jours",
+      "ouverture_complement": "Douleurs intenses associées",
+      "histoire_actuelle": {
+        "lesions": [
+          "Apparues il y a 2 jours sur le flanc droit",
+          "Lésions vésiculopapuleuses",
+          "Ne dépassent pas la ligne médiane",
+          "Distribution sur un dermatome thoracique",
+          "Évolution vers des croûtes avec érythème induré"
+        ],
+        "douleurs": [
+          "Douleurs apparues 48 heures AVANT les lésions",
+          "Intenses, type brûlures avec lancées",
+          "Intensité 6-8/10",
+          "Associées à un prurit",
+          "Peu soulagées par le paracétamol"
+        ],
+        "symptomesAbsents": [
+          "Pas de fièvre",
+          "Pas de fatigue",
+          "Pas de toux",
+          "Pas de céphalées",
+          "Pas d'autres symptômes"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Varicelle à l'âge de 3 ans",
+          "Pas de maladie immunologique connue",
+          "Infection Covid-19 il y a 2 mois",
+          "BSH (bonne santé habituelle)"
+        ],
+        "chirurgicaux": "Aucun",
+        "medicaments": "Aucun médicament régulier, paracétamol récemment pour les douleurs",
+        "allergies": "Aucune allergie connue",
+        "vaccins": "Vaccins à jour selon schéma Suisse, 2 doses Covid"
+      },
+      "comportement": {
+        "attitude": [
+          "Patient inquiet par les douleurs intenses",
+          "Coopératif pour l'examen",
+          "Souhaite comprendre ce qui lui arrive"
+        ],
+        "durantExamen": [
+          "Signale la douleur lors de la palpation",
+          "Montre précisément où les lésions ont commencé",
+          "Décrit bien la chronologie douleur puis lésions"
+        ]
+      },
+      "questions_patient": {
+        "principales": [
+          "Intensité de la douleur",
+          "Contagiosité pour l'entourage",
+          "Durée de la maladie",
+          "Risque de récidive"
+        ],
+        "questions": [
+          "Est-ce contagieux pour ma famille?",
+          "Combien de temps vais-je avoir mal?",
+          "Est-ce que ça peut laisser des séquelles?",
+          "Pourquoi ça m'arrive maintenant?"
+        ]
+      },
+      "facteurs": {
+        "exposition": "Pas de contage récent",
+        "voyage": "Pas de voyage récent",
+        "stress": "Pas de stress particulier",
+        "immunosuppression": "Pas de traitement immunosuppresseur"
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Lésions",
+          "reponse": "Apparues il y a 2 jours sur le flanc droit",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": null
+            },
+            {
+              "question": "Évolution en nombre",
+              "reponse": null
+            },
+            {
+              "question": "Évolution en caractère",
+              "reponse": null
+            },
+            {
+              "question": "Localisation",
+              "reponse": null
+            }
+          ]
+        },
+        "a2": {
+          "item": "Douleurs",
+          "reponse": "48 heures avant",
+          "details": [
+            {
+              "question": "Début",
+              "reponse": null
+            },
+            {
+              "question": "Précise moment par rapport aux lésions",
+              "reponse": null
+            }
+          ]
+        },
+        "a3": {
+          "item": "Douleurs",
+          "reponse": "Douleurs intenses type brûlures, avec lancées, associées à un prurit, soulagées par paracétamol",
+          "details": [
+            {
+              "question": "Caractère",
+              "reponse": null
+            },
+            {
+              "question": "Intensité",
+              "reponse": null
+            },
+            {
+              "question": "Facteurs atténuants/Facteurs aggravants",
+              "reponse": null
+            },
+            {
+              "question": "Médicaments pris",
+              "reponse": null
+            }
+          ]
+        },
+        "a4": {
+          "item": "Prurit",
+          "details": [
+            {
+              "question": "Début & Évolution",
+              "reponse": null
+            }
+          ]
+        },
+        "a5": {
+          "item": "Premier épisode",
+          "details": [
+            {
+              "question": "A demandé si ATCD similaire",
+              "reponse": null
+            }
+          ]
+        },
+        "a6": {
+          "item": "Symptômes associés : Fièvre/fatigue/toux/céphalées",
+          "reponse": "Pas de fièvre ni autre symptôme"
+        },
+        "a7": {
+          "item": "Facteurs de risque",
+          "reponse": "Pas connu pour maladie immunologique, pas de médicament",
+          "details": [
+            {
+              "question": "Trauma/stress",
+              "reponse": null
+            },
+            {
+              "question": "Traitement immunosuppresseur/infection récente/maladie (cancer, HIV, Immuno)",
+              "reponse": null
+            },
+            {
+              "question": "Fatigue importante",
+              "reponse": null
+            }
+          ]
+        },
+        "a8": {
+          "item": "Anamnèse personnelle",
+          "reponse": "Pas d'allergie connue, fait la varicelle à l'âge de 3 ans",
+          "details": [
+            {
+              "question": "Allergie",
+              "reponse": null
+            },
+            {
+              "question": "Vaccins",
+              "reponse": null
+            }
+          ]
+        },
+        "a9": {
+          "item": "Anamnèse de varicelle",
+          "reponse": "Varicelle à 3 ans"
+        },
+        "a10": {
+          "item": "Contage",
+          "reponse": "Pas de notion de contage"
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Inspection des lésions",
+          "resultat": "« Photo de lésions sur le thorax latéral D »"
+        },
+        "e3": {
+          "examen": "Examen des aires ganglionnaires : Axillaires/Inguinales/Cervicales",
+          "resultat": "Pas d'adénopathie"
+        },
+        "e5": {
+          "examen": "Examen des muqueuses : Bouche/Nez/OGE (intention)",
+          "resultat": "Normal, pas de lésion"
+        },
+        "e6": {
+          "examen": "Intention de faire status ORL, pulmonaire ou cardio",
+          "resultat": "« L'examen est normal, passez à la suite »"
+        }
+      },
+      "questions_cloture": [
+        {
+          "contexte": "Questions difficiles du patient",
+          "question_patient": "Est-ce contagieux?"
+        }
+      ]
+    },
+    {
+      "id": "RESCOS-69 - Traumatisme MS - Basketteur 25 ans",
+      "setting": "Urgences d'un hôpital universitaire",
+      "patient_description": "M/Mme Norton, 25 ans, consulte pour des douleurs du bras D après son match de basketball",
+      "vitals": {
+        "ta": "139/80 mmHg",
+        "fc": "90 bpm",
+        "fr": "18/min",
+        "temperature": "37.2°C",
+        "saturation": "98% (air ambiant)"
+      },
+      "source_scenario": true,
+      "nom": "Larry/Layla Norton",
+      "age": "25 ans",
+      "contexte": "Urgences d'un hôpital universitaire",
+      "ouverture": "[Je suis venu·e parce que je me suis fait mal au bras au match]",
+      "ouverture_complement": "[Je n'ai jamais eu aussi mal. Je pense que ça peut être cassé]",
+      "histoire_actuelle": {
+        "deroulement": [
+          "Après le match de Basketball: en fait, j'étais dans le vestiaire et...",
+          "L.Norton (L.N) a été dans le vestiaire avec l'équipe, déçu·e de la défaite et sa performance",
+          "Un·e coéquipier·ière est venu·e lui crier dessus (agression verbale)",
+          "Cette personne, (Jean/Jeanne) cherchait la bagarre, a critiqué L.N dans ses compétences sportives, mais aussi pour ses origines américaines",
+          "Quand L.N a dit «Fuck off, you bully!», le conflit s'est transformé en agression physique",
+          "Les deux se sont donné des coups"
+        ],
+        "traumatisme": [
+          "Jean/ne a pris le bras de L.N et l'a tordu brusquement avec tous ces forces",
+          "L.N a ressenti directement un craquement avec de vives douleurs et un petite envie de vomir",
+          "Jean/ne, choqué·e, est parti·e en courant",
+          "Seul·e 1 autre coéquipier/-ère était sous la douche mais pas de témoin direct"
+        ],
+        "douleurs": [
+          "[Évolution-constantes, 9/10, malgré 400mg d'ibuprofen, 1 g de paracétamol]",
+          "[Ça commence à pulser, aggravé par les mouvements, mais persistant sans mouvement]",
+          "[Bras D]",
+          "[N'arrive plus à bouger le bras au niveau de l'épaule et coude]",
+          "[Déformation et œdème du tiers distal de l'humérus qui se sont développé immédiatement]",
+          "[Sensibilité préservée MSD]",
+          "[Perfusion main, bras, et avant-bras sans particularité]"
+        ],
+        "autresLesions": [
+          "[3 x griffures superficielles MSG]",
+          "[Pas d'autre lésion, ni hématome]",
+          "[Pas de traumatisme crânien, ni trauma abdominal notamment]"
+        ],
+        "contexteHarcelement": [
+          "Depuis son arrivée en Suisse L.N n'est pas bien intégré·e, jugé·e trop américain·e, associé· à Trump, bien que il/elle soit démocrate",
+          "1-2 joueur·ses en particulier, (Jean/Jeanne), critique bcp, accuse de trop chercher l'attention du coach, d'être une «lèche-cul», ne mérite pas l'attention, a réussi à faire un groupe contre LN",
+          "Quelques attaques sur les réseaux sociaux aussi",
+          "LN vie mal cet harcèlement, est seul·e en Suisse",
+          "LN est très surpris·e, déçu·e de la violence, mais a également honte, est confus·e concernant l'avenir"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "[NON]",
+        "tabac": "[NON]",
+        "alcool": "[NON]",
+        "drogues": "[NON]",
+        "contraception": "[Oui, préservatif hommes]"
+      },
+      "antecedents": {
+        "medicaux": "[RAS]",
+        "chirurgicaux": "[NON]",
+        "allergies": "[NON]",
+        "vaccins": "[Oui selon schéma USA]",
+        "voyage": "[Oui, arrivé du Texas (chez lui/elle) il y a 3 mois, avant début de saison]"
+      },
+      "informations_personnelles": {
+        "profession": "Joueur·se de Basketball semi-professionnel",
+        "hobbies": "Basketball, basketball, cours à pied, basketball",
+        "etatCivil": "célibataire, pas d'enfant, hétérosexuel·e, habite à Lausanne, est venu·e en Suisse pour jouer au basketball, originaire de Texas, USA"
+      },
+      "comportement": {
+        "attitude": [
+          "Algique, en détresse",
+          "Triste, algique, démunie"
+        ],
+        "durantConsultation": [
+          "Si le/la candidat·e demande des nouvelles du match: [Nous avons perdu] - cette défaite a créé bcp de tension dans l'équipe",
+          "Si le/la candidat·e demande si vous êtes tombé: [Plus ou moins], et continuez comme ça si le/la candidat·e pose des questions fermées"
+        ]
+      },
+      "histoire_from_criteria": {
+        "a1": {
+          "item": "Moment et le lieu",
+          "reponse": "Après le match de basketball, dans le vestiaire"
+        },
+        "a2": {
+          "item": "Déroulement",
+          "reponse": "Altercation avec un coéquipier qui m'a tordu le bras",
+          "details": [
+            {
+              "question": "Personnes impliquées",
+              "reponse": null
+            },
+            {
+              "question": "Mécanisme du traumatisme",
+              "reponse": null
+            }
+          ]
+        },
+        "a3": {
+          "item": "Demande concernant autre lésion traumatique (coup)",
+          "details": [
+            {
+              "question": "Cérébrale",
+              "reponse": null
+            },
+            {
+              "question": "Abdominale",
+              "reponse": null
+            },
+            {
+              "question": "Thoracique",
+              "reponse": null
+            },
+            {
+              "question": "Autre",
+              "reponse": null
+            }
+          ]
+        },
+        "a4": {
+          "item": "Douleurs",
+          "details": [
+            {
+              "question": "Localisation",
+              "reponse": null
+            },
+            {
+              "question": "Intensité",
+              "reponse": null
+            },
+            {
+              "question": "Évolution",
+              "reponse": null
+            },
+            {
+              "question": "Facteurs aggravant",
+              "reponse": null
+            },
+            {
+              "question": "Facteurs atténuant",
+              "reponse": null
+            },
+            {
+              "question": "Médicaments pris ou reçus",
+              "reponse": null
+            },
+            {
+              "question": "Caractère",
+              "reponse": null
+            }
+          ]
+        },
+        "a5": {
+          "item": "Symptômes associés",
+          "details": [
+            {
+              "question": "Perte de sensibilité ou paresthésies du MSD",
+              "reponse": null
+            }
+          ]
+        }
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Inspection bras D",
+          "resultat": "Importante tuméfaction avec déformation du tiers inférieur au niveau de l'humérus droit, peau intacte, pas de lésion cutanée"
+        },
+        "e5": {
+          "examen": "Examen sommaire corps",
+          "details": [
+            {
+              "item": "Abdomen",
+              "resultat": null
+            },
+            {
+              "item": "Thorax",
+              "resultat": null
+            },
+            {
+              "item": "Bassin",
+              "resultat": null
+            },
+            {
+              "item": "4 membres",
+              "resultat": null
+            },
+            {
+              "item": "Crâne",
+              "resultat": null
+            },
+            {
+              "item": "Visage",
+              "resultat": null
+            },
+            {
+              "item": "Cavité buccale",
+              "resultat": null
+            },
+            {
+              "item": "Dents",
+              "resultat": null
+            }
+          ]
+        }
+      },
+      "resultats_examens_complementaires": {
+        "m1": {
+          "item": "Demande des radiographies du MSD ou CT du MSD",
+          "resultat": "Vous donnez les radiographies du MSD dans le dossier"
+        }
+      }
+    }
+  ]
+}

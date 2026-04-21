@@ -91,3 +91,38 @@
     margin: 1.5cm;
   }
 }
+
+/* Mise en forme du rapport Markdown produit par l'évaluateur. */
+.prose-osce {
+  color: hsl(var(--foreground));
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+.prose-osce h1 { font-size: 1.35rem; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.prose-osce h2 { font-size: 1.15rem; font-weight: 700; margin-top: 1.1rem; margin-bottom: 0.4rem; color: hsl(var(--primary)); }
+.prose-osce h3 { font-size: 1rem;    font-weight: 600; margin-top: 0.9rem;  margin-bottom: 0.35rem; }
+.prose-osce p  { margin-bottom: 0.6rem; }
+.prose-osce strong { font-weight: 700; }
+.prose-osce ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.6rem; }
+.prose-osce ol { list-style: decimal; padding-left: 1.25rem; margin-bottom: 0.6rem; }
+.prose-osce li { margin-bottom: 0.2rem; }
+.prose-osce code { background: hsl(var(--muted)); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85em; }
+.prose-osce pre { background: hsl(var(--muted)); padding: 0.75rem 1rem; border-radius: 6px; overflow-x: auto; margin-bottom: 0.75rem; font-size: 0.8rem; white-space: pre; }
+.prose-osce blockquote { border-left: 3px solid hsl(var(--primary) / 0.35); padding-left: 0.9rem; color: hsl(var(--muted-foreground)); margin: 0.75rem 0; }
+.prose-osce table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+.prose-osce th, .prose-osce td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+.prose-osce th {
+  background: hsl(var(--muted) / 0.6);
+  font-weight: 600;
+}
+.prose-osce hr { border: 0; border-top: 1px solid hsl(var(--border)); margin: 1rem 0; }

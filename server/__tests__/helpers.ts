@@ -5,11 +5,13 @@ import express from "express";
 import settingsRouter from "../routes/settings";
 import patientRouter from "../routes/patient";
 import evaluatorRouter from "../routes/evaluator";
+import stationsRouter from "../routes/stations";
 
 export function buildTestApp() {
   const app = express();
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
+  app.use("/api/stations", stationsRouter);
   app.use("/api/settings", settingsRouter);
   app.use("/api/patient", patientRouter);
   app.use("/api/evaluator", evaluatorRouter);

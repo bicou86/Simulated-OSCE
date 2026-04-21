@@ -1,4 +1,4 @@
-// Tests de la route /api/evaluator/evaluate — Claude est mocké.
+// Tests de la route /api/evaluator/evaluate — dual output (markdown + scores).
 
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import request from "supertest";
@@ -16,16 +16,23 @@ vi.mock("openai", () => {
   return { default: OpenAI, toFile: vi.fn() };
 });
 
-const anthropicCreate = vi.fn();
+// Hoisted : vi.mock est remonté en haut du fichier, donc on doit exposer la mock fn
+// et le store de config via vi.hoisted pour y faire référence dans les factories.
+const { runEvaluationMock, configMocks } = vi.hoisted(() => {
+  return {
+    runEvaluationMock: vi.fn(),
+    configMocks: { openai: "sk", anthropic: "sk-ant" },
+  };
+});
+
 vi.mock("@anthropic-ai/sdk", () => {
   class Anthropic {
-    messages = { create: anthropicCreate };
+    messages = { create: vi.fn() };
     constructor(_opts: unknown) {}
   }
   return { default: Anthropic };
 });
 
-const configMocks = { openai: "sk", anthropic: "sk-ant" };
 vi.mock("../lib/config", () => ({
   loadConfig: vi.fn(async () => {}),
   getOpenAIKey: () => configMocks.openai,
@@ -34,89 +41,81 @@ vi.mock("../lib/config", () => ({
   isConfigured: () => true,
 }));
 
-import { buildTestApp } from "./helpers";
+vi.mock("../services/evaluatorService", async () => {
+  const actual = await vi.importActual<typeof import("../services/evaluatorService")>(
+    "../services/evaluatorService",
+  );
+  return {
+    ...actual,
+    runEvaluation: runEvaluationMock,
+  };
+});
 
-const VALID_REPORT = {
-  globalScore: 82,
-  anamnese: 85,
-  examen: 75,
-  communication: 90,
-  diagnostic: 80,
-  strengths: ["Salutation et mise en confiance."],
-  criticalOmissions: ["A oublié les allergies médicamenteuses."],
-  priorities: ["Systématiser la question des allergies."],
-  verdict: "Réussi",
+import { buildTestApp } from "./helpers";
+import {
+  EvaluatorOutputError,
+  EvaluatorStationNotFoundError,
+} from "../services/evaluatorService";
+
+const VALID_RESULT = {
+  markdown: "# Rapport\n\nContenu détaillé…",
+  scores: {
+    globalScore: 72,
+    sections: [
+      { key: "anamnese", name: "Anamnèse", weight: 0.25, score: 80, raw: "8/10" },
+      { key: "examen", name: "Examen", weight: 0.25, score: 65 },
+      { key: "management", name: "Management", weight: 0.5, score: 70 },
+    ],
+    verdict: "Réussi" as const,
+  },
 };
 
 describe("POST /api/evaluator/evaluate", () => {
-  beforeEach(() => {
-    configMocks.anthropic = "sk-ant";
-  });
-
+  beforeEach(() => { configMocks.anthropic = "sk-ant"; });
   afterEach(() => vi.clearAllMocks());
 
-  it("returns the parsed report on a clean JSON response", async () => {
-    anthropicCreate.mockResolvedValue({
-      content: [{ type: "text", text: JSON.stringify(VALID_REPORT) }],
-    });
+  it("returns { markdown, scores } on a valid result", async () => {
+    runEvaluationMock.mockResolvedValue(VALID_RESULT);
     const app = buildTestApp();
     const res = await request(app).post("/api/evaluator/evaluate").send({
-      station: { scenario: "Douleur thoracique" },
+      stationId: "RESCOS-1",
       transcript: [
         { role: "doctor", text: "Bonjour" },
         { role: "patient", text: "J'ai mal" },
       ],
     });
     expect(res.status).toBe(200);
-    expect(res.body).toEqual(VALID_REPORT);
-    expect(anthropicCreate).toHaveBeenCalledWith(
-      expect.objectContaining({ model: "claude-sonnet-4-5" }),
+    expect(res.body).toEqual(VALID_RESULT);
+  });
+
+  it("502 upstream_error when the service fails to parse the model output", async () => {
+    runEvaluationMock.mockRejectedValue(
+      new EvaluatorOutputError("Missing <scores_json>", "raw text"),
     );
-  });
-
-  it("unwraps a ```json fenced block before parsing", async () => {
-    anthropicCreate.mockResolvedValue({
-      content: [{ type: "text", text: "```json\n" + JSON.stringify(VALID_REPORT) + "\n```" }],
-    });
     const app = buildTestApp();
     const res = await request(app).post("/api/evaluator/evaluate").send({
-      station: { scenario: "Test" },
-      transcript: [{ role: "doctor", text: "hi" }],
-    });
-    expect(res.status).toBe(200);
-    expect(res.body.globalScore).toBe(82);
-  });
-
-  it("502 when the model returns non-JSON", async () => {
-    anthropicCreate.mockResolvedValue({
-      content: [{ type: "text", text: "I cannot answer." }],
-    });
-    const app = buildTestApp();
-    const res = await request(app).post("/api/evaluator/evaluate").send({
-      station: { scenario: "Test" },
+      stationId: "RESCOS-1",
       transcript: [{ role: "doctor", text: "hi" }],
     });
     expect(res.status).toBe(502);
     expect(res.body.code).toBe("upstream_error");
   });
 
-  it("502 when JSON violates the schema", async () => {
-    anthropicCreate.mockResolvedValue({
-      content: [{ type: "text", text: JSON.stringify({ ...VALID_REPORT, verdict: "Inconnu" }) }],
-    });
+  it("400 when station not found", async () => {
+    runEvaluationMock.mockRejectedValue(new EvaluatorStationNotFoundError("XYZ-1"));
     const app = buildTestApp();
     const res = await request(app).post("/api/evaluator/evaluate").send({
-      station: { scenario: "Test" },
+      stationId: "XYZ-1",
       transcript: [{ role: "doctor", text: "hi" }],
     });
-    expect(res.status).toBe(502);
+    expect(res.status).toBe(400);
   });
 
   it("412 when Anthropic key is missing", async () => {
     configMocks.anthropic = "";
     const app = buildTestApp();
     const res = await request(app).post("/api/evaluator/evaluate").send({
-      station: { scenario: "Test" },
+      stationId: "RESCOS-1",
       transcript: [{ role: "doctor", text: "hi" }],
     });
     expect(res.status).toBe(412);
