@@ -1,16 +1,21 @@
 import type { Express } from "express";
-import { createServer, type Server } from "http";
-import { storage } from "./storage";
+import { type Server } from "http";
+
+import { loadConfig } from "./lib/config";
+import settingsRouter from "./routes/settings";
+import patientRouter from "./routes/patient";
+import evaluatorRouter from "./routes/evaluator";
 
 export async function registerRoutes(
   httpServer: Server,
-  app: Express
+  app: Express,
 ): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
+  // Charge les clés API en mémoire (process.env + .env.local).
+  await loadConfig();
 
-  // use storage to perform CRUD operations on the storage interface
-  // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
+  app.use("/api/settings", settingsRouter);
+  app.use("/api/patient", patientRouter);
+  app.use("/api/evaluator", evaluatorRouter);
 
   return httpServer;
 }

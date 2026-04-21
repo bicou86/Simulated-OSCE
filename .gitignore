@@ -4,3 +4,11 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Variables d'environnement (clés API — ne jamais committer)
+.env
+.env.local
+.env.*.local
+
+# Répertoire local du harnais Claude Code
+.claude/
