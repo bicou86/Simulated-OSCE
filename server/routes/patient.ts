@@ -84,20 +84,27 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
     return sendApiError(res, "not_configured", "Clé OpenAI manquante.");
   }
 
-  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
   res.setHeader("Cache-Control", "no-cache, no-transform");
   res.setHeader("Connection", "keep-alive");
   res.setHeader("X-Accel-Buffering", "no");
   res.flushHeaders?.();
 
-  // Si le socket côté client est fermé, on arrête d'émettre pour ne pas se coincer
-  // dans l'async iterator — mais on laisse res.end() être appelé dans le finally (no-op
-  // si déjà fermé).
+  // AbortController propagé jusqu'au SDK OpenAI : dès que le socket de réponse se
+  // ferme prématurément (client qui annule, proxy qui coupe), on abort l'appel upstream
+  // pour ne pas facturer de tokens inutiles. On s'abonne sur `res` plutôt que sur `req`
+  // car `req.close` est délicat à interpréter en supertest/Node moderne (il peut tomber
+  // pendant la lecture du body). `res.close` couvre tous les cas de déconnexion client.
+  const controller = new AbortController();
   let clientGone = false;
-  res.on("close", () => { clientGone = true; });
+  let responseEnded = false;
+  res.on("close", () => {
+    clientGone = true;
+    if (!responseEnded) controller.abort();
+  });
 
   try {
-    for await (const evt of streamPatientChat(parsed.data)) {
+    for await (const evt of streamPatientChat(parsed.data, controller.signal)) {
       if (clientGone) break;
       if (evt.type === "delta") {
         writeSseEvent(res, "delta", { text: evt.text });
@@ -108,7 +115,9 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
       }
     }
   } catch (err) {
-    if (err instanceof StationNotFoundError) {
+    if ((err as Error)?.name === "AbortError") {
+      // Client parti → ne tente pas d'écrire un event error, le socket est fermé.
+    } else if (err instanceof StationNotFoundError) {
       writeSseEvent(res, "error", { code: "bad_request", message: err.message });
     } else if ((err as Error).message === "OPENAI_API_KEY_MISSING") {
       writeSseEvent(res, "error", { code: "not_configured", message: "Clé OpenAI manquante." });
@@ -117,6 +126,7 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
       writeSseEvent(res, "error", { code: mapped.code, message: mapped.error, hint: mapped.hint });
     }
   } finally {
+    responseEnded = true;
     res.end();
   }
 });

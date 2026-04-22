@@ -169,13 +169,26 @@ export default function Simulation() {
       // Chemin streaming : affichage token-par-token + TTS progressif des phrases.
       const { fullText, aborted } = await sendStream(input);
       if (aborted) return;
-      if (fullText) {
+
+      if (fullText && fullText.trim().length > 0) {
         setTranscript((prev) => [...prev, { role: "patient", text: fullText }]);
+      } else {
+        // Filet de sécurité : le stream a terminé sans erreur mais sans contenu
+        // (ex. route SSE non montée et interceptée plus haut par notre garde content-type,
+        // ou panne silencieuse upstream). On bascule sur l'endpoint non-stream + TTS manuel
+        // pour ne pas bloquer la simulation.
+        const { reply } = await chatPatient(input);
+        setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
+        try {
+          const audio = await ttsPatient(reply, voice.current);
+          playAudio(audio);
+        } catch { /* TTS optionnel */ }
       }
     } catch (err) {
       const e = err as ApiError;
-      // Fallback non-streaming : si le stream a échoué (réseau, proxy, erreur upstream),
-      // on réessaie l'endpoint classique pour ne pas bloquer la simulation.
+      // Fallback non-streaming : si le stream a échoué (réseau, proxy, erreur upstream,
+      // content-type invalide), on réessaie l'endpoint classique pour ne pas bloquer la
+      // simulation.
       try {
         const { reply } = await chatPatient(input);
         setTranscript((prev) => [...prev, { role: "patient", text: reply }]);

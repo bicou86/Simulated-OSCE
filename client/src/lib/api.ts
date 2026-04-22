@@ -9,7 +9,10 @@ export type ApiErrorCode =
   | "not_configured"
   | "internal_error"
   | "not_found"
-  | "network_error";
+  | "network_error"
+  // Emis côté client quand une réponse "200 OK" n'est pas du SSE (ex. fallback SPA
+  // qui renvoie index.html). Le consommateur doit basculer sur l'endpoint non-stream.
+  | "invalid_sse_response";
 
 export class ApiError extends Error {
   readonly code: ApiErrorCode;

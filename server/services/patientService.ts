@@ -165,7 +165,11 @@ export interface StreamEvent {
 
 // Async generator qui yield des events discrets à partir du flux OpenAI.
 // Le consommateur (route SSE) se charge de sérialiser au format text/event-stream.
-export async function* streamPatientChat(opts: ChatOptions): AsyncGenerator<StreamEvent> {
+// `signal` permet à la route d'abort l'appel OpenAI si le client se déconnecte.
+export async function* streamPatientChat(
+  opts: ChatOptions,
+  signal?: AbortSignal,
+): AsyncGenerator<StreamEvent> {
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
@@ -174,19 +178,22 @@ export async function* streamPatientChat(opts: ChatOptions): AsyncGenerator<Stre
   const model = opts.model ?? "gpt-4o-mini";
   const started = Date.now();
 
-  const stream = await client.chat.completions.create({
-    model,
-    temperature: 0.7,
-    max_tokens: 400,
-    stream: true,
-    // include_usage : OpenAI n'envoie le bloc usage qu'en fin de stream si on le demande.
-    stream_options: { include_usage: true },
-    messages: [
-      { role: "system", content: system },
-      ...opts.history,
-      { role: "user", content: opts.userMessage },
-    ],
-  });
+  const stream = await client.chat.completions.create(
+    {
+      model,
+      temperature: 0.7,
+      max_tokens: 400,
+      stream: true,
+      // include_usage : OpenAI n'envoie le bloc usage qu'en fin de stream si on le demande.
+      stream_options: { include_usage: true },
+      messages: [
+        { role: "system", content: system },
+        ...opts.history,
+        { role: "user", content: opts.userMessage },
+      ],
+    },
+    { signal },
+  );
 
   let fullText = "";
   let pending = "";

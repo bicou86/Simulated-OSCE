@@ -139,6 +139,20 @@ export function useStreamingChat(options: StreamingChatOptions) {
         });
       }
 
+      // Garde-fou : si la route SSE n'est pas montée (ex. interception par le fallback
+      // SPA Vite), le serveur renvoie 200 OK + text/html. Ça passerait le parseur sans
+      // produire un seul event, et le consommateur verrait un fullText vide sans erreur.
+      // On force une ApiError ici pour que le consommateur bascule sur le fallback.
+      const contentType = res.headers.get("content-type") ?? "";
+      if (!contentType.toLowerCase().includes("text/event-stream")) {
+        throw new ApiError({
+          message: "Réponse SSE invalide",
+          code: "invalid_sse_response",
+          hint: `Content-Type reçu : ${contentType || "absent"}`,
+          status: res.status,
+        });
+      }
+
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buffer = "";
