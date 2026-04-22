@@ -76,6 +76,8 @@ function writeSseEvent(res: Response, event: string, data: unknown): void {
 }
 
 router.post("/chat/stream", async (req: Request, res: Response) => {
+  // eslint-disable-next-line no-console
+  console.log(`[sse] /api/patient/chat/stream hit — stationId=${req.body?.stationId ?? "?"}`);
   const parsed = ChatBody.safeParse(req.body);
   if (!parsed.success) {
     return sendApiError(res, "bad_request", "Payload /chat/stream invalide.", parsed.error.issues[0]?.message);
