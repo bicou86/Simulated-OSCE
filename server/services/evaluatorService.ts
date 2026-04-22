@@ -7,6 +7,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 
 import { getAnthropicKey } from "../lib/config";
+import { logRequest } from "../lib/logger";
 import { loadPrompt } from "../lib/prompts";
 import { evaluatorFilePath, getStationMeta } from "./stationsService";
 
@@ -119,12 +120,27 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
   ].join("\n");
 
   const client = new Anthropic({ apiKey: key });
-  const msg = await client.messages.create({
-    model: opts.model ?? "claude-sonnet-4-5",
-    max_tokens: 6000,
-    system: systemBlocks,
-    messages: [{ role: "user", content: userMessage }],
-  });
+  const model = opts.model ?? "claude-sonnet-4-5";
+  const started = Date.now();
+  let msg: Awaited<ReturnType<typeof client.messages.create>>;
+  try {
+    msg = await client.messages.create({
+      model,
+      max_tokens: 6000,
+      system: systemBlocks,
+      messages: [{ role: "user", content: userMessage }],
+    });
+  } catch (err) {
+    void logRequest({
+      route: "/api/evaluator/evaluate",
+      stationId: opts.stationId,
+      model,
+      tokensIn: 0, tokensOut: 0, cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok: false,
+    });
+    throw err;
+  }
 
   // Observabilité : trace la consommation tokens et le stop_reason pour diagnostiquer
   // les troncatures éventuelles et vérifier les cache-hits.
@@ -135,6 +151,18 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
       `cache_created=${msg.usage.cache_creation_input_tokens ?? 0} ` +
       `cache_read=${msg.usage.cache_read_input_tokens ?? 0}`,
   );
+
+  void logRequest({
+    route: "/api/evaluator/evaluate",
+    stationId: opts.stationId,
+    model,
+    tokensIn: msg.usage.input_tokens ?? 0,
+    tokensOut: msg.usage.output_tokens ?? 0,
+    cachedTokens: msg.usage.cache_read_input_tokens ?? 0,
+    cacheWriteTokens: msg.usage.cache_creation_input_tokens ?? 0,
+    latencyMs: Date.now() - started,
+    ok: true,
+  });
 
   const raw = msg.content
     .filter((block): block is Anthropic.TextBlock => block.type === "text")

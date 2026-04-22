@@ -5,6 +5,7 @@
 import { promises as fs } from "fs";
 import OpenAI from "openai";
 import { getOpenAIKey } from "../lib/config";
+import { logRequest } from "../lib/logger";
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
 
@@ -106,17 +107,44 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
 
   const system = await buildSystemPrompt(opts.stationId, opts.mode);
   const client = new OpenAI({ apiKey: key });
-  const completion = await client.chat.completions.create({
-    model: opts.model ?? "gpt-4o-mini",
-    temperature: 0.7,
-    max_tokens: 400,
-    messages: [
-      { role: "system", content: system },
-      ...opts.history,
-      { role: "user", content: opts.userMessage },
-    ],
-  });
-  return completion.choices[0]?.message?.content?.trim() ?? "";
+  const model = opts.model ?? "gpt-4o-mini";
+  const started = Date.now();
+  try {
+    const completion = await client.chat.completions.create({
+      model,
+      temperature: 0.7,
+      max_tokens: 400,
+      messages: [
+        { role: "system", content: system },
+        ...opts.history,
+        { role: "user", content: opts.userMessage },
+      ],
+    });
+    const reply = completion.choices[0]?.message?.content?.trim() ?? "";
+    void logRequest({
+      route: "/api/patient/chat",
+      stationId: opts.stationId,
+      model,
+      tokensIn: completion.usage?.prompt_tokens ?? 0,
+      tokensOut: completion.usage?.completion_tokens ?? 0,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok: true,
+    });
+    return reply;
+  } catch (err) {
+    void logRequest({
+      route: "/api/patient/chat",
+      stationId: opts.stationId,
+      model,
+      tokensIn: 0,
+      tokensOut: 0,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok: false,
+    });
+    throw err;
+  }
 }
 
 // ─────────── Streaming ───────────
@@ -143,12 +171,16 @@ export async function* streamPatientChat(opts: ChatOptions): AsyncGenerator<Stre
 
   const system = await buildSystemPrompt(opts.stationId, opts.mode);
   const client = new OpenAI({ apiKey: key });
+  const model = opts.model ?? "gpt-4o-mini";
+  const started = Date.now();
 
   const stream = await client.chat.completions.create({
-    model: opts.model ?? "gpt-4o-mini",
+    model,
     temperature: 0.7,
     max_tokens: 400,
     stream: true,
+    // include_usage : OpenAI n'envoie le bloc usage qu'en fin de stream si on le demande.
+    stream_options: { include_usage: true },
     messages: [
       { role: "system", content: system },
       ...opts.history,
@@ -159,30 +191,54 @@ export async function* streamPatientChat(opts: ChatOptions): AsyncGenerator<Stre
   let fullText = "";
   let pending = "";
   let sentenceIndex = 0;
+  let tokensIn = 0;
+  let tokensOut = 0;
+  let ok = true;
 
-  for await (const chunk of stream) {
-    const delta = chunk.choices[0]?.delta?.content ?? "";
-    if (!delta) continue;
-    fullText += delta;
-    pending += delta;
-    yield { type: "delta", text: delta };
+  try {
+    for await (const chunk of stream) {
+      // Le dernier chunk peut n'avoir que `usage` sans choices[0].delta.
+      if ((chunk as any).usage) {
+        tokensIn = (chunk as any).usage.prompt_tokens ?? 0;
+        tokensOut = (chunk as any).usage.completion_tokens ?? 0;
+      }
+      const delta = chunk.choices?.[0]?.delta?.content ?? "";
+      if (!delta) continue;
+      fullText += delta;
+      pending += delta;
+      yield { type: "delta", text: delta };
 
-    // Extrait toutes les phrases complètes du buffer courant.
-    while (true) {
-      const match = pending.match(SENTENCE_END);
-      if (!match) break;
-      const endIdx = match.index! + match[1].length;
-      const candidate = pending.slice(0, endIdx).trim();
-      if (candidate.length < MIN_SENTENCE_LENGTH) break;
-      yield { type: "sentence", text: candidate, index: sentenceIndex++ };
-      pending = pending.slice(endIdx + match[2].length);
+      // Extrait toutes les phrases complètes du buffer courant.
+      while (true) {
+        const match = pending.match(SENTENCE_END);
+        if (!match) break;
+        const endIdx = match.index! + match[1].length;
+        const candidate = pending.slice(0, endIdx).trim();
+        if (candidate.length < MIN_SENTENCE_LENGTH) break;
+        yield { type: "sentence", text: candidate, index: sentenceIndex++ };
+        pending = pending.slice(endIdx + match[2].length);
+      }
     }
-  }
 
-  // Fin du stream : flush du buffer restant comme dernière phrase s'il contient du texte.
-  const tail = pending.trim();
-  if (tail.length > 0) {
-    yield { type: "sentence", text: tail, index: sentenceIndex++ };
+    // Fin du stream : flush du buffer restant comme dernière phrase s'il contient du texte.
+    const tail = pending.trim();
+    if (tail.length > 0) {
+      yield { type: "sentence", text: tail, index: sentenceIndex++ };
+    }
+    yield { type: "done", fullText: fullText.trim() };
+  } catch (err) {
+    ok = false;
+    throw err;
+  } finally {
+    void logRequest({
+      route: "/api/patient/chat/stream",
+      stationId: opts.stationId,
+      model,
+      tokensIn,
+      tokensOut,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok,
+    });
   }
-  yield { type: "done", fullText: fullText.trim() };
 }

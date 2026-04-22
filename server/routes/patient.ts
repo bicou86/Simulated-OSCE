@@ -11,6 +11,7 @@ import { z } from "zod";
 
 import { getOpenAIKey } from "../lib/config";
 import { mapUpstreamError, sendApiError, sendUpstreamError } from "../lib/errors";
+import { logRequest } from "../lib/logger";
 import { sanitizeForTts } from "../lib/textSanitize";
 import {
   getPatientBrief,
@@ -146,6 +147,12 @@ router.post("/stt", upload.single("audio"), async (req: Request, res: Response) 
   if (!key) return sendApiError(res, "not_configured", "Clé OpenAI manquante.");
   if (!req.file) return sendApiError(res, "bad_request", "Champ 'audio' (multipart) manquant.");
 
+  const started = Date.now();
+  // Estimation grossière de la durée audio : on ne veut pas décompresser le webm ici.
+  // Whisper est facturé à la minute réelle ; cette estimation sert uniquement au log.
+  // 16 kB/s est un ordre de grandeur OK pour Opus mono à 24 kbps effectifs.
+  const durationSec = req.file.size / (16 * 1024);
+
   try {
     const client = new OpenAI({ apiKey: key });
     const file = await toFile(req.file.buffer, req.file.originalname || "audio.webm", {
@@ -157,8 +164,26 @@ router.post("/stt", upload.single("audio"), async (req: Request, res: Response) 
       language: "fr",
     });
     const text = typeof result === "string" ? result : result.text;
+    void logRequest({
+      route: "/api/patient/stt",
+      model: "whisper-1",
+      tokensIn: 0,
+      tokensOut: 0,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      durationSec,
+      ok: true,
+    });
     return res.json({ text });
   } catch (err) {
+    void logRequest({
+      route: "/api/patient/stt",
+      model: "whisper-1",
+      tokensIn: 0, tokensOut: 0, cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      durationSec,
+      ok: false,
+    });
     return sendUpstreamError(res, err);
   }
 });
@@ -184,6 +209,7 @@ router.post("/tts", async (req: Request, res: Response) => {
     return sendApiError(res, "bad_request", "Le texte est vide après nettoyage des caractères non prononçables.");
   }
 
+  const started = Date.now();
   try {
     const client = new OpenAI({ apiKey: key });
     const response = await client.audio.speech.create({
@@ -196,8 +222,24 @@ router.post("/tts", async (req: Request, res: Response) => {
     res.setHeader("Content-Type", "audio/mpeg");
     res.setHeader("Content-Length", buffer.length.toString());
     res.setHeader("Cache-Control", "no-store");
+    void logRequest({
+      route: "/api/patient/tts",
+      model: "tts-1",
+      tokensIn: 0, tokensOut: 0, cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      charCount: cleaned.length,
+      ok: true,
+    });
     return res.end(buffer);
   } catch (err) {
+    void logRequest({
+      route: "/api/patient/tts",
+      model: "tts-1",
+      tokensIn: 0, tokensOut: 0, cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      charCount: cleaned.length,
+      ok: false,
+    });
     return sendUpstreamError(res, err);
   }
 });
