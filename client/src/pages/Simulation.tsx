@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useMediaRecorder } from "@/hooks/useMediaRecorder";
+import { useStreamingChat } from "@/hooks/useStreamingChat";
 import { getPreferredVoice } from "@/lib/preferences";
 import {
   ApiError,
@@ -72,6 +73,9 @@ export default function Simulation() {
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const scrollAnchorRef = useRef<HTMLDivElement | null>(null);
 
+  const streaming = useStreamingChat({ voice: voice.current });
+  const { sendMessage: sendStream, abort: abortStream, isStreaming, partialText } = streaming;
+
   // Chargement initial du brief (feuille de porte + phrase d'ouverture).
   useEffect(() => {
     if (!stationId) {
@@ -117,7 +121,7 @@ export default function Simulation() {
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, [transcript, isSending, isTranscribing]);
+  }, [transcript, isSending, isTranscribing, partialText]);
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -150,37 +154,43 @@ export default function Simulation() {
     const newTurn: TranscriptTurn = { role: "doctor", text: cleaned };
     setTranscript((prev) => [...prev, newTurn]);
 
-    try {
-      const { reply } = await chatPatient({
-        stationId,
-        history: buildHistory([newTurn]),
-        userMessage: cleaned,
-        mode,
-      });
-      setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
+    const input = {
+      stationId,
+      history: buildHistory([newTurn]),
+      userMessage: cleaned,
+      mode,
+    };
 
-      try {
-        const audio = await ttsPatient(reply, voice.current);
-        playAudio(audio);
-      } catch (err) {
-        const e = err as ApiError;
-        toast({
-          title: "Synthèse vocale indisponible",
-          description: `${e.message}${e.hint ? ` — ${e.hint}` : ""}`,
-          variant: "destructive",
-        });
+    try {
+      // Chemin streaming : affichage token-par-token + TTS progressif des phrases.
+      const { fullText, aborted } = await sendStream(input);
+      if (aborted) return;
+      if (fullText) {
+        setTranscript((prev) => [...prev, { role: "patient", text: fullText }]);
       }
     } catch (err) {
       const e = err as ApiError;
-      toast({
-        title: "Le patient n'a pas pu répondre",
-        description: `${e.message}${e.hint ? ` — ${e.hint}` : ""}`,
-        variant: "destructive",
-      });
+      // Fallback non-streaming : si le stream a échoué (réseau, proxy, erreur upstream),
+      // on réessaie l'endpoint classique pour ne pas bloquer la simulation.
+      try {
+        const { reply } = await chatPatient(input);
+        setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
+        try {
+          const audio = await ttsPatient(reply, voice.current);
+          playAudio(audio);
+        } catch { /* TTS optionnel — on ne bloque pas l'échange */ }
+      } catch (err2) {
+        const e2 = err2 as ApiError;
+        toast({
+          title: "Le patient n'a pas pu répondre",
+          description: `${e2.message ?? e.message}${e2.hint ? ` — ${e2.hint}` : ""}`,
+          variant: "destructive",
+        });
+      }
     } finally {
       setIsSending(false);
     }
-  }, [buildHistory, playAudio, stationId, toast]);
+  }, [buildHistory, playAudio, sendStream, stationId, toast]);
 
   const handleStart = useCallback(async () => {
     if (!brief) return;
@@ -195,7 +205,10 @@ export default function Simulation() {
     }
   }, [brief, playAudio, transcript.length]);
 
-  const handleStop = () => setIsActive(false);
+  const handleStop = () => {
+    abortStream();
+    setIsActive(false);
+  };
 
   const handleDebrief = () => {
     if (!stationId || !brief) return;
@@ -381,10 +394,11 @@ export default function Simulation() {
                 <Badge variant="outline" className="px-4 py-1.5 text-sm bg-background">
                   {isRecording ? "Enregistrement…" :
                    isTranscribing ? "Transcription…" :
+                   isStreaming ? "Le patient parle…" :
                    isSending ? "Le patient réfléchit…" :
                    timedOut ? "Station terminée" :
                    isActive ? "En cours" : "En pause"}
-                  {(isRecording || isTranscribing || isSending) && (
+                  {(isRecording || isTranscribing || isSending || isStreaming) && (
                     <span className="ml-2 w-2 h-2 rounded-full bg-red-500 inline-block animate-pulse" />
                   )}
                 </Badge>
@@ -409,7 +423,19 @@ export default function Simulation() {
                 </div>
               ))}
 
-              {(isSending || isTranscribing) && (
+              {isStreaming && partialText && (
+                <div className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
+                    Patient (voix IA)
+                  </span>
+                  <div className="p-5 rounded-3xl text-lg shadow-sm border bg-white border-border/50 text-foreground rounded-tl-sm">
+                    {partialText}
+                    <span className="ml-1 inline-block w-2 h-5 bg-primary/60 align-middle animate-pulse" />
+                  </div>
+                </div>
+              )}
+
+              {((isSending && !isStreaming) || isTranscribing) && (
                 <div className="flex items-start max-w-[85%] opacity-70">
                   <div className="p-5 rounded-3xl text-lg bg-white border rounded-tl-sm flex items-center gap-2 text-muted-foreground">
                     <Loader2 className="w-4 h-4 animate-spin" />
