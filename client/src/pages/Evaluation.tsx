@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "wouter";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import {
   Download, ArrowLeft, TrendingUp, Loader2, RotateCcw, FileText,
+  ClipboardList, Lightbulb,
 } from "lucide-react";
 import {
   ApiError, evaluate, type EvaluationResult, type EvaluationScores, type PatientBrief,
 } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
+import { AccentedMarkdown } from "@/components/AccentedMarkdown";
+import { stripRedundantSections } from "@/lib/reportFormatting";
 
 interface Session {
   stationId: string;
@@ -28,6 +28,70 @@ function readSession(stationId: string): Session | null {
   } catch {
     return null;
   }
+}
+
+// Palette conditionnelle du verdict, partagée entre la carte synthèse et les
+// barres de progression des axes.
+type Tone = "green" | "amber" | "red";
+function toneForScore(score: number): Tone {
+  if (score >= 70) return "green";
+  if (score >= 50) return "amber";
+  return "red";
+}
+const TONE_CLASSES: Record<Tone, { text: string; bg: string; border: string; ring: string; progress: string }> = {
+  green: {
+    text: "text-emerald-700",
+    bg: "bg-emerald-50",
+    border: "border-emerald-200",
+    ring: "border-emerald-300",
+    progress: "bg-emerald-500",
+  },
+  amber: {
+    text: "text-amber-700",
+    bg: "bg-amber-50",
+    border: "border-amber-200",
+    ring: "border-amber-300",
+    progress: "bg-amber-500",
+  },
+  red: {
+    text: "text-red-700",
+    bg: "bg-red-50",
+    border: "border-red-200",
+    ring: "border-red-300",
+    progress: "bg-red-500",
+  },
+};
+
+// Barre simple colorée selon le score (remplace le composant <Progress> par défaut
+// qui n'accepte qu'une couleur unique).
+function ScoreBar({ value }: { value: number }) {
+  const tone = toneForScore(value);
+  const safe = Math.max(0, Math.min(100, value));
+  return (
+    <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+      <div
+        className={`h-full ${TONE_CLASSES[tone].progress} transition-all`}
+        style={{ width: `${safe}%` }}
+      />
+    </div>
+  );
+}
+
+// Petits libellés injectés en préambule des h2 narratifs (détection par texte).
+// Le prompt evaluator produit trois sections h2 : "DÉTAIL PAR SECTION",
+// "ANALYSE QUALITATIVE" (où Points forts / Points à améliorer / Éléments
+// critiques apparaissent en labels inline accentués), et "CONSEILS
+// PERSONNALISÉS". Pas de h2 "POINTS FORTS" / "AXES D'AMÉLIORATION" séparés.
+function sectionIcon(heading: string): React.ReactNode {
+  const h = heading.toUpperCase();
+  if (h.includes("DÉTAIL") || h.includes("DETAIL")) {
+    return <ClipboardList className="w-5 h-5 text-primary" />;
+  }
+  if (h.includes("ANALYSE")) {
+    return <FileText className="w-5 h-5 text-slate-700" />;
+  }
+  if (h.includes("CONSEIL")) return <Lightbulb className="w-5 h-5 text-blue-600" />;
+  return null;
 }
 
 export default function Evaluation() {
@@ -76,6 +140,18 @@ export default function Evaluation() {
     void runEvaluation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Markdown nettoyé (sans SCORE GLOBAL ni LÉGENDE DES STATUTS) : mémoïsé pour
+  // ne pas refaire le strip à chaque re-render.
+  const cleanedMarkdown = useMemo(
+    () => (result ? stripRedundantSections(result.markdown) : ""),
+    [result],
+  );
+
+  // Icônes injectées en post-traitement sur les h2 : pour garder `AccentedMarkdown`
+  // agnostique, on ajoute les icônes via un sélecteur post-rendu.
+  // Plutôt que ce hack, on scanne les titres niveau 2 dans `cleanedMarkdown` et on
+  // fait le rendu section par section en React pur — voir renderStructured() ci-dessous.
 
   async function handleExportPdf() {
     if (!result || !session) return;
@@ -157,11 +233,9 @@ export default function Evaluation() {
 
   if (!result) return null;
 
-  const scores = result.scores;
-  const verdictTone =
-    scores.verdict === "Réussi" ? { bg: "bg-primary/5", border: "border-primary/20", fg: "text-primary" } :
-    scores.verdict === "À retravailler" ? { bg: "bg-amber-50", border: "border-amber-200", fg: "text-amber-700" } :
-    { bg: "bg-red-50", border: "border-red-200", fg: "text-red-700" };
+  const scores: EvaluationScores = result.scores;
+  const globalTone = toneForScore(scores.globalScore);
+  const gt = TONE_CLASSES[globalTone];
 
   return (
     <div className="p-8 max-w-5xl mx-auto animate-in fade-in duration-500 pb-24">
@@ -181,7 +255,7 @@ export default function Evaluation() {
         </div>
       </div>
 
-      {/* Scores + verdict */}
+      {/* Synthèse : donut + barres par axe + verdict, colorés selon le score */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Card className="md:col-span-2 border-border shadow-sm">
           <CardHeader className="bg-muted/30 pb-4">
@@ -189,8 +263,11 @@ export default function Evaluation() {
           </CardHeader>
           <CardContent className="pt-6">
             <div className="flex items-center gap-6">
-              <div className="flex-shrink-0 relative flex items-center justify-center w-32 h-32 rounded-full bg-primary/5 border-[8px] border-primary/20" data-testid="score-global">
-                <span className="text-4xl font-bold text-primary">{scores.globalScore}%</span>
+              <div
+                className={`flex-shrink-0 relative flex items-center justify-center w-32 h-32 rounded-full ${gt.bg} border-[8px] ${gt.ring}`}
+                data-testid="score-global"
+              >
+                <span className={`text-4xl font-bold ${gt.text}`}>{scores.globalScore}%</span>
               </div>
               <div className="flex-1 space-y-4">
                 {scores.sections.map((s) => (
@@ -206,7 +283,7 @@ export default function Evaluation() {
                         {s.raw ? `${s.raw} · ${s.score}%` : `${s.score}%`}
                       </span>
                     </div>
-                    <Progress value={s.score} className="h-2" />
+                    <ScoreBar value={s.score} />
                   </div>
                 ))}
               </div>
@@ -214,14 +291,14 @@ export default function Evaluation() {
           </CardContent>
         </Card>
 
-        <Card className={`border ${verdictTone.border} ${verdictTone.bg}`}>
+        <Card className={`border ${gt.border} ${gt.bg}`}>
           <CardHeader>
-            <CardTitle className={`text-lg flex items-center ${verdictTone.fg}`}>
+            <CardTitle className={`text-lg flex items-center ${gt.text}`}>
               <TrendingUp className="w-5 h-5 mr-2" /> Verdict
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className={`text-3xl font-bold mb-2 ${verdictTone.fg}`} data-testid="verdict">{scores.verdict}</p>
+            <p className={`text-3xl font-bold mb-2 ${gt.text}`} data-testid="verdict">{scores.verdict}</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {scores.globalScore}% — moyenne pondérée des axes évalués.
             </p>
@@ -229,7 +306,10 @@ export default function Evaluation() {
         </Card>
       </div>
 
-      {/* Rapport détaillé en markdown */}
+      {/* Rapport détaillé : Markdown nettoyé rendu avec accents + tableaux stylés.
+          Les icônes de section sont placées à côté du contenu via une sur-couche
+          qui cible le Markdown déjà rendu : plus simple, on ajoute un pictogramme
+          inline en tête de chaque h2 détecté. */}
       <Card className="border-border shadow-sm">
         <CardHeader className="bg-muted/30">
           <CardTitle className="text-xl flex items-center">
@@ -237,11 +317,60 @@ export default function Evaluation() {
           </CardTitle>
         </CardHeader>
         <CardContent className="py-6">
-          <div className="prose-osce">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{result.markdown}</ReactMarkdown>
-          </div>
+          <StructuredReport markdown={cleanedMarkdown} />
         </CardContent>
       </Card>
+    </div>
+  );
+}
+
+// ─────────── Rendu du Markdown découpé par section h2 ───────────
+// On découpe le texte nettoyé sur les titres niveau 2 pour pouvoir afficher une
+// icône dédiée à côté de chaque section narrative sans alourdir AccentedMarkdown.
+// Les sections qui ne sont pas des h2 (préambule, contenu sans titre) sont
+// rendues telles quelles en tête de rapport.
+
+interface Section {
+  heading: string | null;
+  body: string;
+}
+
+function splitByH2(markdown: string): Section[] {
+  const lines = markdown.split("\n");
+  const sections: Section[] = [];
+  let current: Section = { heading: null, body: "" };
+  for (const line of lines) {
+    const m = line.match(/^##\s+(.+?)\s*$/);
+    if (m) {
+      if (current.heading !== null || current.body.trim() !== "") {
+        sections.push(current);
+      }
+      current = { heading: m[1], body: "" };
+    } else {
+      current.body += (current.body ? "\n" : "") + line;
+    }
+  }
+  if (current.heading !== null || current.body.trim() !== "") {
+    sections.push(current);
+  }
+  return sections;
+}
+
+function StructuredReport({ markdown }: { markdown: string }) {
+  const sections = useMemo(() => splitByH2(markdown), [markdown]);
+  return (
+    <div>
+      {sections.map((s, i) => (
+        <section key={i}>
+          {s.heading !== null && (
+            <h2 className="text-xl font-bold text-primary mt-8 mb-4 pb-2 border-b border-primary/20 uppercase tracking-wide flex items-center gap-2">
+              {sectionIcon(s.heading)}
+              <span>{s.heading}</span>
+            </h2>
+          )}
+          {s.body.trim() !== "" && <AccentedMarkdown>{s.body}</AccentedMarkdown>}
+        </section>
+      ))}
     </div>
   );
 }

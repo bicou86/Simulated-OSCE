@@ -81,27 +81,29 @@ Description de la présentation clinique.
 
 ## RAPPORT D'ÉVALUATION — STRUCTURE OBLIGATOIRE
 
+> **Format des titres** : les titres Markdown (`#`, `##`, `###`) **ne doivent
+> contenir AUCUN emoji ni icône décorative**. Ne les préfixe jamais de 📋 📊
+> 📝 💡 ✅ etc. — le rendu web ajoute une icône Lucide à côté du titre, et le
+> PDF utilise une puce typographique (■ ▸ ◆). Un emoji en tête de titre fait
+> doublon à l'écran et produit un carré tofu dans le PDF (Helvetica n'a pas de
+> glyphes emoji). Les symboles de statut ✅ ⚠️ ❌ restent autorisés **dans les
+> cellules de tableau** — c'est le seul endroit où tu les utilises.
+
 ### 1. En-tête
 Station [ID] — [Titre] · Cadre : [setting] · Diagnostic attendu : [diagnostic_attendu]
 
-### 2. Score global
-```
-┌──────────────────┬────────┬──────────┬───────────┐
-│ Section          │ Poids  │ Score    │ Résultat  │
-├──────────────────┼────────┼──────────┼───────────┤
-│ Anamnèse         │ 25%    │ 9/12     │ 75%       │
-│ Examen           │ 25%    │ 5/7      │ 71%       │
-│ Management       │ 25%    │ 3/5      │ 60%       │
-│ Clôture          │ 0%     │ 1/2      │ Qualitatif│
-└──────────────────┴────────┴──────────┴───────────┘
-```
+### 2. (Score global — NE PAS inclure dans le Markdown)
+Les scores par section et le score global sont déjà fournis dans le bloc
+`<scores_json>` (contrat machine) : l'UI et le PDF les rendent en composant
+dédié (donut, barres, verdict). **Ne produis donc pas de section « Score global »
+ni de tableau récapitulatif global en début de rapport** — c'est du doublon qui
+s'affichait auparavant en ASCII art mal formaté.
 
-### 3. Légende des statuts
-- ✅ = OK — item complètement couvert
-- ⚠️ = Partiel — item partiellement couvert (avec fraction X/Y)
-- ❌ = Manquant — non fait
-- [N/A] = Non applicable — contexte ne permettait pas l'évaluation
-- [?] = Non observé — observation partielle, impossible de juger
+### 3. (Légende des statuts — NE PAS inclure dans le Markdown)
+Pour la même raison, **ne produis plus de section « Légende des statuts »** :
+les badges colorés ✅ / ⚠️ / ❌ portent leur sens et un tooltip au survol
+affiche le libellé complet côté web. Tu continues évidemment à *utiliser* ces
+symboles dans la colonne « Statut » des tableaux de détail.
 
 Pour les items ⚠️ partiels, **toujours lister explicitement** les sous-items manquants.
 
