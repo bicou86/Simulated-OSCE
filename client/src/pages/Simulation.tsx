@@ -5,13 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import {
-  Play, Square, Mic, MicOff, AlertCircle, HeartPulse, FileAudio, CheckCircle2, Loader2, Send, ArrowLeft,
+  Play, Square, Mic, MicOff, AlertCircle, HeartPulse, FileAudio, CheckCircle2, Loader2, Send, ArrowLeft, Headphones as HeadphonesIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useMediaRecorder } from "@/hooks/useMediaRecorder";
 import { useStreamingChat } from "@/hooks/useStreamingChat";
-import { getPreferredVoice, getVoicePreferences, resolveVoice } from "@/lib/preferences";
+import { useConversationMode } from "@/hooks/useConversationMode";
+import {
+  getConversationPreferences,
+  getPreferredVoice,
+  getVoicePreferences,
+  resolveVoice,
+} from "@/lib/preferences";
 import { canonicalSetting } from "@/lib/settingGroups";
 import {
   ApiError,
@@ -83,7 +89,23 @@ export default function Simulation() {
   const scrollAnchorRef = useRef<HTMLDivElement | null>(null);
 
   const streaming = useStreamingChat({ voice });
-  const { sendMessage: sendStream, abort: abortStream, isStreaming, partialText } = streaming;
+  const {
+    sendMessage: sendStream,
+    abort: abortStream,
+    isStreaming,
+    partialText,
+    isAudioPlaying: isStreamAudioPlaying,
+  } = streaming;
+
+  // Mode conversation — activable depuis la Simulation seulement si l'utilisateur a
+  // coché "Activer le mode conversation" dans Settings. Toggle ON au niveau Simulation
+  // = démarrage effectif du VAD.
+  const convPrefs = useRef(getConversationPreferences());
+  const [conversationMode, setConversationMode] = useState(false);
+  // Suspendre le VAD pendant que le patient parle (stream en cours, TTS en cours, son
+  // de fallback en cours) pour éviter le larsen.
+  const [isFallbackAudioPlaying, setIsFallbackAudioPlaying] = useState(false);
+  const patientSpeaking = isStreaming || isStreamAudioPlaying || isFallbackAudioPlaying || isSending || isTranscribing;
 
   // Chargement initial du brief (feuille de porte + phrase d'ouverture).
   useEffect(() => {
@@ -158,7 +180,12 @@ export default function Simulation() {
     const audio = audioElementRef.current;
     if (audio) {
       audio.src = url;
-      audio.onended = () => URL.revokeObjectURL(url);
+      audio.onplay = () => setIsFallbackAudioPlaying(true);
+      audio.onended = () => {
+        setIsFallbackAudioPlaying(false);
+        URL.revokeObjectURL(url);
+      };
+      audio.onpause = () => setIsFallbackAudioPlaying(false);
       audio.play().catch(() => { /* autoplay peut être bloqué avant première interaction */ });
     }
   }, []);
@@ -222,6 +249,55 @@ export default function Simulation() {
     }
   }, [buildHistory, playAudio, sendStream, stationId, toast]);
 
+  // Hook de mode conversation : VAD écoute en continu pendant que l'utilisateur parle,
+  // capture l'audio, émet un blob dès qu'un silence prolongé est détecté, et on enchaîne
+  // automatiquement STT → sendDoctorMessage. Le hook est suspendu pendant que le patient
+  // parle (patientSpeaking) pour éviter que la voix TTS soit captée et retranscrite.
+  const conversation = useConversationMode({
+    silenceThresholdMs: convPrefs.current.silenceThresholdMs,
+    minSpeechDurationMs: convPrefs.current.minSpeechDurationMs,
+    suspended: patientSpeaking,
+    onUtteranceComplete: async (clip) => {
+      setIsTranscribing(true);
+      try {
+        const { text } = await sttPatient(clip.blob, clip.filename);
+        if (text.trim().length > 0) {
+          await sendDoctorMessage(text, "voice");
+        }
+      } catch (err) {
+        const e = err as ApiError;
+        toast({
+          title: "Transcription impossible",
+          description: `${e.message}${e.hint ? ` — ${e.hint}` : ""}`,
+          variant: "destructive",
+        });
+      } finally {
+        setIsTranscribing(false);
+      }
+    },
+    onError: (err) => {
+      toast({ title: "Mode conversation interrompu", description: err.message, variant: "destructive" });
+    },
+  });
+
+  const toggleConversationMode = useCallback(async () => {
+    if (conversationMode) {
+      conversation.stop();
+      setConversationMode(false);
+      return;
+    }
+    try {
+      await conversation.start();
+      setConversationMode(true);
+    } catch (err) {
+      toast({
+        title: "Accès au micro refusé",
+        description: (err as Error).message,
+        variant: "destructive",
+      });
+    }
+  }, [conversation, conversationMode, toast]);
+
   // Démarre la station sans message initial : en OSCE, le candidat (médecin) parle
   // toujours en premier. Le patient simulé ne répondra qu'après la première question.
   // La phrase d'ouverture scénaristique (brief.phraseOuverture) reste disponible côté
@@ -235,7 +311,20 @@ export default function Simulation() {
   const handleStop = () => {
     abortStream();
     setIsActive(false);
+    if (conversationMode) {
+      conversation.stop();
+      setConversationMode(false);
+    }
   };
+
+  // Coupe automatiquement le mode conversation à la fin du timer, pour éviter qu'il
+  // reste actif après "Fin de station".
+  useEffect(() => {
+    if (timeLeft === 0 && conversationMode) {
+      conversation.stop();
+      setConversationMode(false);
+    }
+  }, [timeLeft, conversationMode, conversation]);
 
   const handleDebrief = () => {
     if (!stationId || !brief) return;
@@ -505,15 +594,32 @@ export default function Simulation() {
             <Button
               type="button"
               onClick={handleMicClick}
-              disabled={!isActive || timedOut || isSending || isTranscribing}
+              disabled={!isActive || timedOut || isSending || isTranscribing || conversationMode}
               size="lg"
               variant={isRecording ? "destructive" : "default"}
               className="shrink-0 h-14 w-14 rounded-full p-0"
               aria-label={isRecording ? "Arrêter l'enregistrement" : "Démarrer l'enregistrement"}
               data-testid="button-mic"
+              title={conversationMode ? "Désactivé en mode conversation" : undefined}
             >
               {isRecording ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
             </Button>
+            {convPrefs.current.enabled && (
+              <Button
+                type="button"
+                onClick={toggleConversationMode}
+                disabled={!isActive || timedOut}
+                size="lg"
+                variant={conversationMode ? "destructive" : "outline"}
+                className="shrink-0 h-14 px-4 rounded-full gap-2"
+                aria-label={conversationMode ? "Désactiver le mode conversation" : "Activer le mode conversation"}
+                title={conversationMode ? "Mode conversation actif — cliquer pour arrêter" : "Mode conversation (auto-silence)"}
+                data-testid="button-conversation-mode"
+              >
+                <HeadphonesIcon className="w-5 h-5" />
+                {conversationMode && <span className="text-xs font-semibold">ON</span>}
+              </Button>
+            )}
             <Input
               type="text"
               placeholder={isActive ? "Ou tapez votre question ici…" : "Démarrez la station pour interagir"}

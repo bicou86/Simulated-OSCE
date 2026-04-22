@@ -50,6 +50,10 @@ function parseSse(buffer: string): SseEvent[] {
 export function useStreamingChat(options: StreamingChatOptions) {
   const [isStreaming, setIsStreaming] = useState(false);
   const [partialText, setPartialText] = useState("");
+  // isAudioPlaying = au moins un clip TTS est en cours OU la file en contient un.
+  // Exposé pour que les consommateurs (ex. mode conversation / VAD) puissent se
+  // suspendre pendant que le patient parle, afin d'éviter un larsen.
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const audioQueueRef = useRef<string[]>([]);
@@ -62,9 +66,11 @@ export function useStreamingChat(options: StreamingChatOptions) {
     const next = audioQueueRef.current.shift();
     if (!next) {
       playingRef.current = false;
+      setIsAudioPlaying(false);
       return;
     }
     playingRef.current = true;
+    setIsAudioPlaying(true);
     el.src = next;
     el.play().catch(() => {
       // Autoplay bloqué ou clip corrompu → on passe au suivant pour ne pas figer la file.
@@ -104,6 +110,7 @@ export function useStreamingChat(options: StreamingChatOptions) {
     }
     audioQueueRef.current = [];
     playingRef.current = false;
+    setIsAudioPlaying(false);
   }, []);
 
   const abort = useCallback(() => {
@@ -213,6 +220,7 @@ export function useStreamingChat(options: StreamingChatOptions) {
   return {
     isStreaming,
     partialText,
+    isAudioPlaying,
     sendMessage,
     abort,
   };
