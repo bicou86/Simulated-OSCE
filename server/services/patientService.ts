@@ -6,7 +6,7 @@ import { promises as fs } from "fs";
 import OpenAI from "openai";
 import { getOpenAIKey } from "../lib/config";
 import { logRequest } from "../lib/logger";
-import { extractSex, type PatientSex } from "../lib/patientSex";
+import { extractAge, extractSex, type PatientSex } from "../lib/patientSex";
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
 
@@ -70,7 +70,7 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     phraseOuverture: station.ouverture ?? station.phrase_ouverture ?? "",
     phraseOuvertureComplement: station.ouverture_complement ?? station.phrase_ouverture_complement,
     sex: extractSex(patientDescription),
-    age: typeof station.age === "number" ? station.age : undefined,
+    age: extractAge(station.age, patientDescription),
   };
 }
 
