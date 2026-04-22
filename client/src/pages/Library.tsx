@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Play, Search, Loader2, AlertCircle } from "lucide-react";
 import { ApiError, listStations, type StationMeta, type StationSource } from "@/lib/api";
+import { availableCanonicalSettings, canonicalSetting } from "@/lib/settingGroups";
 
 const SOURCES: StationSource[] = ["AMBOSS", "German", "RESCOS", "USMLE", "USMLE_Triage"];
 
@@ -45,18 +46,19 @@ export default function Library() {
     return () => { cancelled = true; };
   }, []);
 
-  // Liste des settings disponibles (ex: "Cabinet médical", "Service d'urgences") pour le filtre.
-  const settings = useMemo(() => {
-    const set = new Set<string>();
-    for (const s of stations) if (s.setting) set.add(s.setting);
-    return Array.from(set).sort((a, b) => a.localeCompare(b, "fr"));
-  }, [stations]);
+  // Liste des cadres canoniques présents dans les données, pour alimenter le combobox.
+  // Les 64 variantes brutes sont regroupées en ~17 étiquettes sémantiques par
+  // lib/settingGroups.ts.
+  const settings = useMemo(
+    () => availableCanonicalSettings(stations.map((s) => s.setting)),
+    [stations],
+  );
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return stations.filter((s) => {
       if (sourceFilter !== "all" && s.source !== sourceFilter) return false;
-      if (settingFilter !== "all" && s.setting !== settingFilter) return false;
+      if (settingFilter !== "all" && canonicalSetting(s.setting) !== settingFilter) return false;
       if (q && !`${s.id} ${s.title} ${s.setting}`.toLowerCase().includes(q)) return false;
       return true;
     });
@@ -168,7 +170,9 @@ export default function Library() {
                       </div>
                       <CardTitle className="text-lg font-semibold leading-tight mt-1">{s.title}</CardTitle>
                       {s.setting && (
-                        <CardDescription className="text-sm text-primary/80">{s.setting}</CardDescription>
+                        <CardDescription className="text-sm text-primary/80">
+                          {canonicalSetting(s.setting)}
+                        </CardDescription>
                       )}
                     </CardHeader>
                   </Card>
