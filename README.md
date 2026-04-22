@@ -46,15 +46,24 @@ server/
   routes.ts             # Monte les routeurs /api/*
   routes/
     settings.ts         # POST /api/settings, GET /api/settings/status
-    patient.ts          # POST /api/patient/{chat, stt, tts}
+    patient.ts          # POST /api/patient/{chat, chat/stream, stt, tts}
     evaluator.ts        # POST /api/evaluator/evaluate
+    admin.ts            # GET  /api/admin/stats (X-Admin-Key requis)
+    stations.ts         # GET  /api/stations, /api/stations/:id
+  services/
+    stationsService.ts  # Catalogue 285 stations en mémoire au boot
+    patientService.ts   # Isolation patient + runPatientChat + streamPatientChat
+    evaluatorService.ts # Isolation évaluateur + cache Anthropic ephemeral
   lib/
-    config.ts           # Clés API en mémoire + .env.local optionnel
+    config.ts           # Clés API + ADMIN_KEY (auto-générée) + .env.local
     errors.ts           # Enveloppe d'erreurs { error, code, hint }
+    logger.ts           # JSONL request logger + estimation coût USD
     prompts.ts          # Loader markdown avec substitution {{variable}}
+    textSanitize.ts     # Retire emojis avant TTS
   prompts/
     patient.md          # Rôle-play patient francophone
     evaluator.md        # Grille OSCE pondérée + contrat JSON
+  logs/                 # (non versionné) requests.jsonl — 1 ligne par appel LLM
 
 client/src/
   pages/                # Library, Simulation, Evaluation, Settings
@@ -62,10 +71,10 @@ client/src/
   hooks/
     useMediaRecorder.ts # Push-to-talk (webm + fallback mp4 Safari)
     useKeyStatus.ts     # Ping /api/settings/status
+    useStreamingChat.ts # SSE fetch + TTS chunké (file audio séquentielle)
   lib/
     api.ts              # Client typé (ApiError normalisé)
     preferences.ts      # Voix TTS préférée (localStorage)
-    mockData.ts         # 4 stations : RESCOS / AMBOSS / USMLE / Triage
 ```
 
 ## Gestion des clés API
@@ -79,10 +88,36 @@ client/src/
 
 1. **Bibliothèque** → choix d'une station (scénario + signes vitaux + contexte caché).
 2. **Simulation** → bouton *Démarrer* lance le timer de 13 min et lit la phrase d'ouverture via TTS.
-3. Push-to-talk : clic sur le micro pour enregistrer, clic à nouveau pour envoyer. Audio → Whisper → message "étudiant" → Chat → message "patient" → TTS.
+3. Push-to-talk : clic sur le micro pour enregistrer, clic à nouveau pour envoyer. Audio → Whisper → message "étudiant" → Chat streamé → message "patient" streamé + TTS progressif.
 4. Alternative clavier : champ texte en bas de l'interface.
 5. Bouton *Évaluer* à la fin → navigation vers la page Évaluation.
 6. **Évaluation** → le transcript est envoyé à Claude Sonnet 4.5 via `/api/evaluator/evaluate`, qui renvoie un rapport JSON strict (scores pondérés, points forts, omissions critiques, priorités, verdict).
+
+## Streaming SSE + TTS chunké
+
+Pour réduire la latence perçue au premier mot du patient, `POST /api/patient/chat/stream` émet des events SSE :
+
+| Event | Payload | Déclenchement |
+|---|---|---|
+| `delta` | `{ text }` | À chaque token reçu d'OpenAI |
+| `sentence` | `{ text, index }` | Phrase complète détectée (ponctuation terminale, min 12 chars) |
+| `done` | `{ fullText }` | Fin du stream |
+| `error` | `{ code, message, hint? }` | Échec upstream (la connexion SSE se ferme juste après) |
+
+Côté client, `useStreamingChat` lance le TTS de chaque `sentence` en parallèle et enfile les clips audio dans un `HTMLAudioElement` séquentiel. Si le stream échoue, `Simulation` bascule automatiquement sur l'endpoint `POST /api/patient/chat` non-streaming.
+
+## Observabilité — /api/admin/stats
+
+Chaque appel LLM (chat sync + stream, STT, TTS, evaluator) écrit une ligne dans `server/logs/requests.jsonl` avec latence, tokens in/out, tokens cachés (Anthropic) et coût estimé en USD (tarifs au 2026-04-22).
+
+```bash
+# La clé est auto-générée au premier démarrage et affichée dans les logs :
+#   [admin] ADMIN_KEY générée : <hex>
+
+curl -s -H "X-Admin-Key: <votre-clé>" http://localhost:5000/api/admin/stats?days=7
+```
+
+Réponse : `{ period, totals, byDay[], byRoute[], byModel[] }` — coûts agrégés + compteurs par dimension.
 
 ## Compatibilité navigateurs
 
@@ -96,13 +131,15 @@ client/src/
 npm run test
 ```
 
-- `client/src/lib/api.test.ts` : client API côté navigateur (fetch mocké, 11 cas).
-- `server/__tests__/*.test.ts` : routes supertest + SDK OpenAI/Anthropic mockés (19 cas).
+- `client/src/lib/api.test.ts` : client API côté navigateur (fetch mocké, 10 cas).
+- `server/__tests__/*.test.ts` : routes supertest + SDK OpenAI/Anthropic mockés (32 cas) — incluant SSE stream, aggregation stats et auth admin.
 - Environnement : `happy-dom` pour le client, `node` pour le serveur.
 
 ## Sécurité
 
 - `.env`, `.env.local` et `.env.*.local` sont ignorés par git.
-- Les clés persistées sur disque ont les droits `0600` (lecture/écriture propriétaire uniquement).
+- `server/logs/` (JSONL d'observabilité) est également ignoré par git.
+- Les clés persistées sur disque (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `ADMIN_KEY`) ont les droits `0600`.
 - Aucune clé n'est loggée. Les erreurs upstream n'exposent que `status` + message générique.
+- `ADMIN_KEY` n'est jamais exposée via les API publiques — elle est consultée uniquement en lecture par `/api/admin/*`.
 - La limite d'upload Whisper est plafonnée à 25 Mo côté serveur (multer memory storage).
