@@ -89,12 +89,15 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
   res.setHeader("X-Accel-Buffering", "no");
   res.flushHeaders?.();
 
-  let aborted = false;
-  req.on("close", () => { aborted = true; });
+  // Si le socket côté client est fermé, on arrête d'émettre pour ne pas se coincer
+  // dans l'async iterator — mais on laisse res.end() être appelé dans le finally (no-op
+  // si déjà fermé).
+  let clientGone = false;
+  res.on("close", () => { clientGone = true; });
 
   try {
     for await (const evt of streamPatientChat(parsed.data)) {
-      if (aborted) break;
+      if (clientGone) break;
       if (evt.type === "delta") {
         writeSseEvent(res, "delta", { text: evt.text });
       } else if (evt.type === "sentence") {
@@ -113,7 +116,7 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
       writeSseEvent(res, "error", { code: mapped.code, message: mapped.error, hint: mapped.hint });
     }
   } finally {
-    if (!aborted) res.end();
+    res.end();
   }
 });
 
