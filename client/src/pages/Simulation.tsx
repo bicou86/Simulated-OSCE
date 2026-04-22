@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useMediaRecorder } from "@/hooks/useMediaRecorder";
 import { useStreamingChat } from "@/hooks/useStreamingChat";
-import { getPreferredVoice } from "@/lib/preferences";
+import { getPreferredVoice, getVoicePreferences, resolveVoice } from "@/lib/preferences";
 import { canonicalSetting } from "@/lib/settingGroups";
 import {
   ApiError,
@@ -20,6 +20,7 @@ import {
   sttPatient,
   ttsPatient,
   type PatientBrief,
+  type TtsVoice,
 } from "@/lib/api";
 
 const TOTAL_DURATION = 13 * 60;
@@ -73,11 +74,15 @@ export default function Simulation() {
   const [isTranscribing, setIsTranscribing] = useState(false);
 
   const { isRecording, error: recorderError, start: startRec, stop: stopRec } = useMediaRecorder();
-  const voice = useRef(getPreferredVoice());
+  // Voix TTS du patient — état initial = fallback preferredVoice ; résolu en fonction du
+  // sexe/âge du brief dès qu'il est chargé (cf. useEffect ci-dessous).
+  const [voice, setVoice] = useState<TtsVoice>(() => getPreferredVoice());
+  const voiceRef = useRef<TtsVoice>(voice);
+  useEffect(() => { voiceRef.current = voice; }, [voice]);
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const scrollAnchorRef = useRef<HTMLDivElement | null>(null);
 
-  const streaming = useStreamingChat({ voice: voice.current });
+  const streaming = useStreamingChat({ voice });
   const { sendMessage: sendStream, abort: abortStream, isStreaming, partialText } = streaming;
 
   // Chargement initial du brief (feuille de porte + phrase d'ouverture).
@@ -102,6 +107,14 @@ export default function Simulation() {
     })();
     return () => { cancelled = true; };
   }, [stationId]);
+
+  // Résolution de la voix dès que le brief est chargé : choisit maleVoice / femaleVoice
+  // selon `brief.sex` (+ cas pédiatrique si age < 12) ou preferredVoice si auto OFF.
+  useEffect(() => {
+    if (!brief) return;
+    const prefs = getVoicePreferences();
+    setVoice(resolveVoice(brief, prefs));
+  }, [brief]);
 
   // Timer
   useEffect(() => {
@@ -180,7 +193,7 @@ export default function Simulation() {
         const { reply } = await chatPatient(input);
         setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
         try {
-          const audio = await ttsPatient(reply, voice.current);
+          const audio = await ttsPatient(reply, voiceRef.current);
           playAudio(audio);
         } catch { /* TTS optionnel */ }
       }
@@ -193,7 +206,7 @@ export default function Simulation() {
         const { reply } = await chatPatient(input);
         setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
         try {
-          const audio = await ttsPatient(reply, voice.current);
+          const audio = await ttsPatient(reply, voiceRef.current);
           playAudio(audio);
         } catch { /* TTS optionnel — on ne bloque pas l'échange */ }
       } catch (err2) {

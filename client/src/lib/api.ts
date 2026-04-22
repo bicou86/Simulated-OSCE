@@ -127,6 +127,8 @@ export function chatPatient(input: ChatInput): Promise<{ reply: string }> {
   });
 }
 
+export type PatientSex = "male" | "female" | "unknown";
+
 export interface PatientBrief {
   stationId: string;
   setting: string;
@@ -134,6 +136,8 @@ export interface PatientBrief {
   vitals: Record<string, string>;
   phraseOuverture: string;
   phraseOuvertureComplement?: string;
+  sex: PatientSex;
+  age?: number;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {

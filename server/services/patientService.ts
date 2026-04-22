@@ -6,6 +6,7 @@ import { promises as fs } from "fs";
 import OpenAI from "openai";
 import { getOpenAIKey } from "../lib/config";
 import { logRequest } from "../lib/logger";
+import { extractSex, type PatientSex } from "../lib/patientSex";
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
 
@@ -50,20 +51,26 @@ export interface PatientBrief {
   vitals: Record<string, string>;
   phraseOuverture: string;
   phraseOuvertureComplement?: string;
+  sex: PatientSex;
+  age?: number;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
 // elle peut afficher les signes vitaux / cadre / description sans faire d'appel LLM.
 // Aucune donnée de scoring ni script anamnèse complet n'est renvoyée.
+// `sex` est déduit de `patient_description` par extractSex (cache mémoire).
 export async function getPatientBrief(stationId: string): Promise<PatientBrief> {
   const station = await getPatientStation(stationId);
+  const patientDescription = station.patient_description ?? "";
   return {
     stationId,
     setting: station.setting ?? "",
-    patientDescription: station.patient_description ?? "",
+    patientDescription,
     vitals: station.vitals ?? {},
     phraseOuverture: station.ouverture ?? station.phrase_ouverture ?? "",
     phraseOuvertureComplement: station.ouverture_complement ?? station.phrase_ouverture_complement,
+    sex: extractSex(patientDescription),
+    age: typeof station.age === "number" ? station.age : undefined,
   };
 }
 
