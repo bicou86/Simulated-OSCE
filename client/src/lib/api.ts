@@ -129,6 +129,16 @@ export function chatPatient(input: ChatInput): Promise<{ reply: string }> {
 
 export type PatientSex = "male" | "female" | "unknown";
 
+export type InterlocutorType = "self" | "parent";
+export type ParentRole = "mother" | "father" | "caregiver";
+
+export interface Interlocutor {
+  type: InterlocutorType;
+  parentRole?: ParentRole;
+  parentPresent?: boolean;
+  reason: string;
+}
+
 export interface PatientBrief {
   stationId: string;
   setting: string;
@@ -138,6 +148,7 @@ export interface PatientBrief {
   phraseOuvertureComplement?: string;
   sex: PatientSex;
   age?: number;
+  interlocutor: Interlocutor;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {

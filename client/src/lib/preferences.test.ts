@@ -14,8 +14,18 @@ import {
 } from "./preferences";
 import type { PatientBrief } from "./api";
 
-function brief(sex: PatientBrief["sex"], age?: number): Pick<PatientBrief, "sex" | "age"> {
-  return { sex, age };
+type ResolveArg = Pick<PatientBrief, "sex" | "age" | "interlocutor">;
+
+function brief(sex: PatientBrief["sex"], age?: number): ResolveArg {
+  return { sex, age, interlocutor: { type: "self", reason: "test" } };
+}
+
+function briefWithParent(
+  sex: PatientBrief["sex"],
+  age: number | undefined,
+  parentRole: "mother" | "father" | "caregiver",
+): ResolveArg {
+  return { sex, age, interlocutor: { type: "parent", parentRole, reason: "test" } };
 }
 
 describe("resolveVoice", () => {
@@ -60,6 +70,29 @@ describe("resolveVoice", () => {
   it("returns preferredVoice when brief is null/undefined", () => {
     expect(resolveVoice(null, defaults)).toBe("alloy");
     expect(resolveVoice(undefined, defaults)).toBe("alloy");
+  });
+
+  // ─ Interlocutor takes precedence over pediatric rule ─
+  it("parent/mother → femaleVoice, even if patient is pediatric boy", () => {
+    expect(resolveVoice(briefWithParent("male", 2, "mother"), defaults)).toBe("nova");
+  });
+
+  it("parent/father → maleVoice, even if patient is pediatric girl", () => {
+    expect(resolveVoice(briefWithParent("female", 2, "father"), defaults)).toBe("onyx");
+  });
+
+  it("parent/caregiver → femaleVoice (default when role ambiguous)", () => {
+    expect(resolveVoice(briefWithParent("unknown", undefined, "caregiver"), defaults)).toBe("nova");
+  });
+
+  it("parent interlocutor bypasses pediatric rule (age < 12 doesn't force female for father)", () => {
+    // Père d'un garçon de 6 ans → masculin, pas féminin comme le ferait la règle pédiatrique.
+    expect(resolveVoice(briefWithParent("male", 6, "father"), defaults)).toBe("onyx");
+  });
+
+  it("parent interlocutor still respects autoVoiceBySex OFF override", () => {
+    const prefs = { ...defaults, autoVoiceBySex: false };
+    expect(resolveVoice(briefWithParent("male", 2, "mother"), prefs)).toBe("alloy");
   });
 });
 

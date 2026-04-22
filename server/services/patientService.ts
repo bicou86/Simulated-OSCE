@@ -7,6 +7,10 @@ import OpenAI from "openai";
 import { getOpenAIKey } from "../lib/config";
 import { logRequest } from "../lib/logger";
 import { extractAge, extractSex, type PatientSex } from "../lib/patientSex";
+import {
+  resolveInterlocutor,
+  type Interlocutor,
+} from "../lib/patientInterlocutor";
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
 
@@ -53,6 +57,7 @@ export interface PatientBrief {
   phraseOuvertureComplement?: string;
   sex: PatientSex;
   age?: number;
+  interlocutor: Interlocutor;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -62,6 +67,9 @@ export interface PatientBrief {
 export async function getPatientBrief(stationId: string): Promise<PatientBrief> {
   const station = await getPatientStation(stationId);
   const patientDescription = station.patient_description ?? "";
+  const sex = extractSex(patientDescription);
+  const age = extractAge(station.age, patientDescription);
+  const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
   return {
     stationId,
     setting: station.setting ?? "",
@@ -69,8 +77,9 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     vitals: station.vitals ?? {},
     phraseOuverture: station.ouverture ?? station.phrase_ouverture ?? "",
     phraseOuvertureComplement: station.ouverture_complement ?? station.phrase_ouverture_complement,
-    sex: extractSex(patientDescription),
-    age: extractAge(station.age, patientDescription),
+    sex,
+    age,
+    interlocutor,
   };
 }
 
@@ -79,6 +88,32 @@ const TEXT_MODE_DIRECTIVE = `
 
 ## ADAPTATION
 La conversation se déroule en mode texte, pas en mode vocal. Tu peux répondre avec des phrases légèrement plus construites, mais reste naturel et bref.`;
+
+// Directive injectée quand l'interlocuteur est un parent / tuteur (patient pré-verbal,
+// inconscient, dément…). Remplace la règle "tu es le patient" par "tu es le parent".
+function interlocutorDirective(interlocutor: Interlocutor, station: any): string {
+  if (interlocutor.type === "self" && !interlocutor.parentPresent) return "";
+
+  if (interlocutor.type === "parent") {
+    const role =
+      interlocutor.parentRole === "mother" ? "la mère" :
+      interlocutor.parentRole === "father" ? "le père" :
+      "l'accompagnant·e";
+    const roleLower = role;
+    const patientName = station.nom ?? "l'enfant";
+    return `
+
+## CONTEXTE D'INTERLOCUTION
+Le patient est ${patientName}${station.age ? ` (${station.age})` : ""}. **Tu n'incarnes PAS le patient** — tu incarnes ${roleLower} qui répond aux questions du médecin à la place du patient. Tu parles à la première personne en tant que parent / accompagnant ("Ma fille a commencé à tousser hier soir", "Il refuse de manger depuis ce matin"), jamais en tant que l'enfant / le patient lui-même. Tu peux exprimer l'inquiétude, l'observation comportementale, l'historique et tout ce qu'un·e accompagnant·e attentif·ve observerait — mais pas les sensations internes que seul le patient pourrait décrire. Si le médecin te demande "Où avez-vous mal ?", reformule en "Elle se tient souvent le ventre" plutôt que d'inventer une sensation.
+Toutes les règles en-dessous qui disent "tu es le patient" s'appliquent à "tu es l'interlocuteur du médecin (ici ${roleLower})". La règle d'ouverture reste : le médecin parle en premier, tu ne produis jamais de tour spontané.`;
+  }
+
+  // interlocutor.type === "self" && parentPresent
+  return `
+
+## CONTEXTE D'INTERLOCUTION
+Un parent est présent dans la pièce. Tu réponds toi-même aux questions du médecin (tu es le patient, un enfant en âge scolaire), mais le parent peut intervenir brièvement pour préciser des éléments factuels (dates, antécédents, chronologie) si tu hésites. Reste en personnage ; c'est à toi de parler en priorité.`;
+}
 
 // Construit le system prompt complet : markdown + bloc <station_data>.
 export async function buildSystemPrompt(
@@ -89,9 +124,14 @@ export async function buildSystemPrompt(
     loadPrompt("patient"),
     getPatientStation(stationId),
   ]);
+  const patientDescription = station.patient_description ?? "";
+  const sex = extractSex(patientDescription);
+  const age = extractAge(station.age, patientDescription);
+  const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
   const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
-  return template + modeDirective + dataBlock;
+  const interlocDirective = interlocutorDirective(interlocutor, station);
+  return template + interlocDirective + modeDirective + dataBlock;
 }
 
 export interface ChatTurn {

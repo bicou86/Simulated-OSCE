@@ -16,6 +16,8 @@ import {
   getConversationPreferences,
   getPreferredVoice,
   getVoicePreferences,
+  interlocutorArticle,
+  interlocutorSpeakerLabel,
   resolveVoice,
 } from "@/lib/preferences";
 import { canonicalSetting } from "@/lib/settingGroups";
@@ -438,6 +440,16 @@ export default function Simulation() {
                       <FileAudio className="w-4 h-4 mr-2" /> Patient
                     </h3>
                     <p className="text-lg leading-relaxed">{brief.patientDescription}</p>
+                    {brief.interlocutor?.type === "parent" && (
+                      <p className="mt-3 text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
+                        <span className="font-semibold">Interlocuteur :</span> {interlocutorArticle(brief)} répond à votre place — le patient ne s'exprime pas directement.
+                      </p>
+                    )}
+                    {brief.interlocutor?.parentPresent && (
+                      <p className="mt-3 text-xs text-muted-foreground">
+                        Un parent est présent dans la pièce ; il peut intervenir pour préciser des éléments factuels.
+                      </p>
+                    )}
                   </div>
                   <Separator />
                 </>
@@ -546,7 +558,7 @@ export default function Simulation() {
                   msg.role === "patient" ? "items-start" : "items-end ml-auto",
                 )}>
                   <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                    {msg.role === "patient" ? "Patient (voix IA)" : "Étudiant / Médecin"}
+                    {msg.role === "patient" ? `${interlocutorSpeakerLabel(brief)} (voix IA)` : "Étudiant / Médecin"}
                   </span>
                   <div className={cn(
                     "p-5 rounded-3xl text-lg shadow-sm border",
@@ -562,7 +574,7 @@ export default function Simulation() {
               {isStreaming && partialText && (
                 <div className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
                   <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                    Patient (voix IA)
+                    {interlocutorSpeakerLabel(brief)} (voix IA)
                   </span>
                   <div className="p-5 rounded-3xl text-lg shadow-sm border bg-white border-border/50 text-foreground rounded-tl-sm">
                     {partialText}

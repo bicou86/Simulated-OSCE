@@ -78,19 +78,55 @@ export function setVoicePreferences(patch: Partial<VoicePreferences>): void {
 }
 
 // Résout la voix effective à utiliser pour un brief donné.
-// Cas pédiatrique (age < 12) : femaleVoice par défaut (OpenAI TTS ne sait pas vraiment
-// imiter une voix d'enfant, mais la voix féminine est généralement perçue comme plus douce).
-// Si autoVoiceBySex OFF → preferredVoice.
-// Sinon : sex → maleVoice / femaleVoice, unknown → preferredVoice.
+// Ordre de priorité (du plus spécifique au plus général) :
+//   1. autoVoiceBySex OFF → preferredVoice (override utilisateur)
+//   2. interlocutor.type === "parent" → voix selon parentRole (mère = féminine,
+//      père = masculine, accompagnant·e → féminine par défaut). La règle
+//      pédiatrique ne s'applique PAS : on a un adulte en face.
+//   3. age < 12 (cas pédiatrique self) → femaleVoice (OpenAI TTS ne sait pas
+//      imiter une voix d'enfant, mais féminin = plus doux)
+//   4. sex → male/female voice ; unknown → preferredVoice
 export function resolveVoice(
-  brief: Pick<PatientBrief, "sex" | "age"> | null | undefined,
+  brief: Pick<PatientBrief, "sex" | "age" | "interlocutor"> | null | undefined,
   prefs: VoicePreferences,
 ): TtsVoice {
-  if (!brief || !prefs.autoVoiceBySex) return prefs.preferredVoice;
+  if (!brief || !prefs.autoVoiceBySex) return prefs?.preferredVoice ?? "nova";
+  const it = brief.interlocutor;
+  if (it?.type === "parent") {
+    if (it.parentRole === "father") return prefs.maleVoice;
+    // mother, caregiver, ou undefined → féminine par défaut
+    return prefs.femaleVoice;
+  }
   if (typeof brief.age === "number" && brief.age < 12) return prefs.femaleVoice;
   if (brief.sex === "female") return prefs.femaleVoice;
   if (brief.sex === "male") return prefs.maleVoice;
   return prefs.preferredVoice;
+}
+
+// Libellé pour l'UI (feuille de porte + label du transcript).
+// "Patient (voix IA)" / "Mère du patient (voix IA)" / "Père du patient (voix IA)".
+export function interlocutorSpeakerLabel(brief: Pick<PatientBrief, "interlocutor"> | null | undefined): string {
+  const it = brief?.interlocutor;
+  if (!it || it.type === "self") return "Patient";
+  switch (it.parentRole) {
+    case "mother": return "Mère du patient";
+    case "father": return "Père du patient";
+    case "caregiver": return "Accompagnant·e";
+    default: return "Accompagnant·e";
+  }
+}
+
+// Libellé pour la feuille de porte sous "Patient" (quand type=parent).
+// "la mère" / "le père" / "l'accompagnant·e".
+export function interlocutorArticle(brief: Pick<PatientBrief, "interlocutor"> | null | undefined): string {
+  const it = brief?.interlocutor;
+  if (!it || it.type === "self") return "";
+  switch (it.parentRole) {
+    case "mother": return "la mère";
+    case "father": return "le père";
+    case "caregiver": return "l'accompagnant·e";
+    default: return "l'accompagnant·e";
+  }
 }
 
 // ─────────────── Mode conversation (VAD auto-silence) ───────────────
