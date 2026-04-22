@@ -12,6 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMediaRecorder } from "@/hooks/useMediaRecorder";
 import { useStreamingChat } from "@/hooks/useStreamingChat";
 import { getPreferredVoice } from "@/lib/preferences";
+import { canonicalSetting } from "@/lib/settingGroups";
 import {
   ApiError,
   chatPatient,
@@ -60,6 +61,9 @@ export default function Simulation() {
   const [loadError, setLoadError] = useState<string | null>(null);
 
   const [isActive, setIsActive] = useState(false);
+  // Une fois true, reste true jusqu'au démontage. Pilote l'affichage de la feuille de
+  // porte (PATIENT + SIGNES VITAUX) — cachée avant tout clic sur « Démarrer ».
+  const [hasStarted, setHasStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(TOTAL_DURATION);
   const [announcementPlayed, setAnnouncementPlayed] = useState(false);
 
@@ -192,18 +196,15 @@ export default function Simulation() {
     }
   }, [buildHistory, playAudio, sendStream, stationId, toast]);
 
-  const handleStart = useCallback(async () => {
+  // Démarre la station sans message initial : en OSCE, le candidat (médecin) parle
+  // toujours en premier. Le patient simulé ne répondra qu'après la première question.
+  // La phrase d'ouverture scénaristique (brief.phraseOuverture) reste disponible côté
+  // service pour le system prompt, mais n'est pas jouée automatiquement ici.
+  const handleStart = useCallback(() => {
     if (!brief) return;
+    setHasStarted(true);
     setIsActive(true);
-    if (transcript.length === 0) {
-      const opening = [brief.phraseOuverture, brief.phraseOuvertureComplement].filter(Boolean).join(" ");
-      setTranscript([{ role: "patient", text: opening }]);
-      try {
-        const audio = await ttsPatient(opening, voice.current);
-        playAudio(audio);
-      } catch { /* silent */ }
-    }
-  }, [brief, playAudio, transcript.length]);
+  }, [brief]);
 
   const handleStop = () => {
     abortStream();
@@ -299,38 +300,50 @@ export default function Simulation() {
         <div className="p-6 bg-primary/5 border-b border-primary/10">
           <div className="flex items-center gap-2 mb-3">
             <Badge variant="outline" className="bg-white font-mono">{stationId}</Badge>
-            {brief.setting && <Badge variant="secondary">{brief.setting}</Badge>}
+            {brief.setting && <Badge variant="secondary">{canonicalSetting(brief.setting)}</Badge>}
           </div>
           <h2 className="text-2xl font-bold tracking-tight text-foreground">Feuille de porte</h2>
         </div>
 
         <div className="p-6 space-y-8 flex-1">
-          {brief.patientDescription && (
-            <>
-              <div>
-                <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
-                  <FileAudio className="w-4 h-4 mr-2" /> Patient
-                </h3>
-                <p className="text-lg leading-relaxed">{brief.patientDescription}</p>
-              </div>
-              <Separator />
-            </>
-          )}
-
-          {Object.keys(brief.vitals).length > 0 && (
-            <div>
-              <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
-                <HeartPulse className="w-4 h-4 mr-2" /> Signes vitaux
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {Object.entries(brief.vitals).map(([k, v]) => (
-                  <div key={k} className="bg-muted p-4 rounded-xl border border-border/50">
-                    <span className="text-sm text-muted-foreground block mb-1">{VITAL_LABELS[k] ?? k}</span>
-                    <span className="text-lg font-semibold text-primary">{v}</span>
-                  </div>
-                ))}
-              </div>
+          {!hasStarted ? (
+            // Contenu scellé : on ne révèle Patient + Signes vitaux qu'au clic sur Démarrer.
+            <div className="h-full flex flex-col items-center justify-center text-center text-muted-foreground py-12">
+              <FileAudio className="w-10 h-10 mb-4 text-border" />
+              <p className="text-base font-medium max-w-[260px]">
+                Appuyez sur <span className="text-foreground font-semibold">Démarrer</span> pour révéler la feuille de porte.
+              </p>
             </div>
+          ) : (
+            <>
+              {brief.patientDescription && (
+                <>
+                  <div>
+                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
+                      <FileAudio className="w-4 h-4 mr-2" /> Patient
+                    </h3>
+                    <p className="text-lg leading-relaxed">{brief.patientDescription}</p>
+                  </div>
+                  <Separator />
+                </>
+              )}
+
+              {Object.keys(brief.vitals).length > 0 && (
+                <div>
+                  <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
+                    <HeartPulse className="w-4 h-4 mr-2" /> Signes vitaux
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {Object.entries(brief.vitals).map(([k, v]) => (
+                      <div key={k} className="bg-muted p-4 rounded-xl border border-border/50">
+                        <span className="text-sm text-muted-foreground block mb-1">{VITAL_LABELS[k] ?? k}</span>
+                        <span className="text-lg font-semibold text-primary">{v}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
@@ -355,7 +368,7 @@ export default function Simulation() {
           </div>
 
           <div className="flex gap-3">
-            {!isActive && !timedOut && transcript.length === 0 ? (
+            {!isActive && !timedOut && !hasStarted ? (
               <Button onClick={handleStart} size="lg" className="h-16 px-8 text-xl rounded-2xl shadow-lg bg-green-600 hover:bg-green-700 text-white" data-testid="button-start">
                 <Play className="w-6 h-6 mr-3 fill-current" /> Démarrer
               </Button>
@@ -382,11 +395,19 @@ export default function Simulation() {
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 md:p-10 space-y-6">
-          {transcript.length === 0 && !isActive ? (
+          {transcript.length === 0 && !hasStarted ? (
             <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-60">
               <Mic className="w-20 h-20 mb-6 text-border" />
               <p className="text-2xl font-medium">La simulation n'a pas commencé</p>
               <p className="text-lg mt-2">Appuyez sur Démarrer pour lancer la station</p>
+            </div>
+          ) : transcript.length === 0 && !isStreaming && !isSending && !isTranscribing ? (
+            // La station a démarré mais le candidat n'a pas encore parlé — en OSCE, c'est
+            // le médecin qui ouvre l'entretien, le patient ne répond qu'ensuite.
+            <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-70">
+              <Mic className="w-16 h-16 mb-5 text-border" />
+              <p className="text-xl font-medium">En attente de votre première question…</p>
+              <p className="text-sm mt-2">Utilisez le micro ou tapez votre question ci-dessous.</p>
             </div>
           ) : (
             <div className="space-y-6 max-w-4xl mx-auto w-full">
