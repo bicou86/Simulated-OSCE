@@ -10,9 +10,14 @@ import multer from "multer";
 import { z } from "zod";
 
 import { getOpenAIKey } from "../lib/config";
-import { sendApiError, sendUpstreamError } from "../lib/errors";
+import { mapUpstreamError, sendApiError, sendUpstreamError } from "../lib/errors";
 import { sanitizeForTts } from "../lib/textSanitize";
-import { getPatientBrief, runPatientChat, StationNotFoundError } from "../services/patientService";
+import {
+  getPatientBrief,
+  runPatientChat,
+  StationNotFoundError,
+  streamPatientChat,
+} from "../services/patientService";
 
 const router = Router();
 
@@ -50,6 +55,65 @@ router.post("/chat", async (req: Request, res: Response) => {
       return sendApiError(res, "not_configured", "Clé OpenAI manquante.");
     }
     return sendUpstreamError(res, err);
+  }
+});
+
+// ───────── Chat streaming (SSE) ─────────
+//
+// POST /api/patient/chat/stream — envoie des events text/event-stream :
+//   event: delta    data: { text }
+//   event: sentence data: { text, index }   (dès qu'une phrase complète est prête)
+//   event: done     data: { fullText }
+//   event: error    data: { code, message } (sur échec upstream, puis fin du stream)
+//
+// Le client combine les `delta` pour afficher en "machine à écrire" et lance le TTS
+// de chaque `sentence` en parallèle pour jouer l'audio progressivement.
+
+function writeSseEvent(res: Response, event: string, data: unknown): void {
+  res.write(`event: ${event}\n`);
+  res.write(`data: ${JSON.stringify(data)}\n\n`);
+}
+
+router.post("/chat/stream", async (req: Request, res: Response) => {
+  const parsed = ChatBody.safeParse(req.body);
+  if (!parsed.success) {
+    return sendApiError(res, "bad_request", "Payload /chat/stream invalide.", parsed.error.issues[0]?.message);
+  }
+  if (!getOpenAIKey()) {
+    return sendApiError(res, "not_configured", "Clé OpenAI manquante.");
+  }
+
+  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Cache-Control", "no-cache, no-transform");
+  res.setHeader("Connection", "keep-alive");
+  res.setHeader("X-Accel-Buffering", "no");
+  res.flushHeaders?.();
+
+  let aborted = false;
+  req.on("close", () => { aborted = true; });
+
+  try {
+    for await (const evt of streamPatientChat(parsed.data)) {
+      if (aborted) break;
+      if (evt.type === "delta") {
+        writeSseEvent(res, "delta", { text: evt.text });
+      } else if (evt.type === "sentence") {
+        writeSseEvent(res, "sentence", { text: evt.text, index: evt.index });
+      } else if (evt.type === "done") {
+        writeSseEvent(res, "done", { fullText: evt.fullText });
+      }
+    }
+  } catch (err) {
+    if (err instanceof StationNotFoundError) {
+      writeSseEvent(res, "error", { code: "bad_request", message: err.message });
+    } else if ((err as Error).message === "OPENAI_API_KEY_MISSING") {
+      writeSseEvent(res, "error", { code: "not_configured", message: "Clé OpenAI manquante." });
+    } else {
+      const mapped = mapUpstreamError(err);
+      writeSseEvent(res, "error", { code: mapped.code, message: mapped.error, hint: mapped.hint });
+    }
+  } finally {
+    if (!aborted) res.end();
   }
 });
 

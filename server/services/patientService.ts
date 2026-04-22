@@ -118,3 +118,71 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
   });
   return completion.choices[0]?.message?.content?.trim() ?? "";
 }
+
+// ─────────── Streaming ───────────
+
+// Détecte la fin d'une phrase : ponctuation terminale suivie d'un espace ou fin de texte.
+// Longueur minimale d'un "flush" pour éviter des abréviations ("Dr. ", "M. ").
+const SENTENCE_END = /([.!?…]+)(\s+|$)/;
+const MIN_SENTENCE_LENGTH = 12;
+
+export interface StreamEvent {
+  type: "delta" | "sentence" | "done" | "error";
+  text?: string;
+  index?: number;
+  fullText?: string;
+  code?: string;
+  message?: string;
+}
+
+// Async generator qui yield des events discrets à partir du flux OpenAI.
+// Le consommateur (route SSE) se charge de sérialiser au format text/event-stream.
+export async function* streamPatientChat(opts: ChatOptions): AsyncGenerator<StreamEvent> {
+  const key = getOpenAIKey();
+  if (!key) throw new Error("OPENAI_API_KEY_MISSING");
+
+  const system = await buildSystemPrompt(opts.stationId, opts.mode);
+  const client = new OpenAI({ apiKey: key });
+
+  const stream = await client.chat.completions.create({
+    model: opts.model ?? "gpt-4o-mini",
+    temperature: 0.7,
+    max_tokens: 400,
+    stream: true,
+    messages: [
+      { role: "system", content: system },
+      ...opts.history,
+      { role: "user", content: opts.userMessage },
+    ],
+  });
+
+  let fullText = "";
+  let pending = "";
+  let sentenceIndex = 0;
+
+  for await (const chunk of stream) {
+    const delta = chunk.choices[0]?.delta?.content ?? "";
+    if (!delta) continue;
+    fullText += delta;
+    pending += delta;
+    yield { type: "delta", text: delta };
+
+    // Extrait toutes les phrases complètes du buffer courant.
+    while (true) {
+      const match = pending.match(SENTENCE_END);
+      if (!match) break;
+      const endIdx = match.index! + match[1].length;
+      const candidate = pending.slice(0, endIdx).trim();
+      if (candidate.length < MIN_SENTENCE_LENGTH) break;
+      yield { type: "sentence", text: candidate, index: sentenceIndex++ };
+      pending = pending.slice(endIdx + match[2].length);
+    }
+  }
+
+  // Fin du stream : flush du buffer restant comme dernière phrase s'il contient du texte.
+  const tail = pending.trim();
+  if (tail.length > 0) {
+    yield { type: "sentence", text: tail, index: sentenceIndex++ };
+  }
+  yield { type: "done", fullText: fullText.trim() };
+}
