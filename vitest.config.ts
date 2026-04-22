@@ -8,6 +8,10 @@ export default defineConfig({
       "@shared": path.resolve(import.meta.dirname, "shared"),
     },
   },
+  // JSX automatique (React 17+) pour que les .test.tsx n'aient pas besoin d'importer React.
+  esbuild: {
+    jsx: "automatic",
+  },
   test: {
     // Tests client dans happy-dom (besoin de fetch/FormData/Blob/URL), tests serveur en node.
     environmentMatchGlobs: [

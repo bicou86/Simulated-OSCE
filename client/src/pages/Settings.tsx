@@ -316,6 +316,33 @@ export default function Settings() {
               Le coût par station est identique au mode clic — vous envoyez simplement les mêmes requêtes automatiquement.
               Le seul surcoût possible vient d'éventuels faux déclenchements par le bruit de fond, limités par le seuil de durée minimale ci-dessus.
             </div>
+
+            <div className="space-y-2">
+              <Label>Raccourcis clavier</Label>
+              <div className="rounded-md border border-border/60 overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50 text-xs uppercase tracking-wider text-muted-foreground">
+                    <tr>
+                      <th className="text-left px-3 py-2 w-24">Touche</th>
+                      <th className="text-left px-3 py-2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60">
+                      <td className="px-3 py-2"><kbd className="px-2 py-0.5 bg-muted rounded font-mono text-xs">M</kbd></td>
+                      <td className="px-3 py-2">Activer / désactiver le mode conversation pendant la simulation</td>
+                    </tr>
+                    <tr className="border-t border-border/60">
+                      <td className="px-3 py-2"><kbd className="px-2 py-0.5 bg-muted rounded font-mono text-xs">Échap</kbd></td>
+                      <td className="px-3 py-2">Couper immédiatement le mode conversation (n'active jamais)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Les raccourcis sont ignorés pendant la saisie dans un champ texte et en dehors de la Simulation Active.
+              </p>
+            </div>
           </CardContent>
         </Card>
 

@@ -12,6 +12,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useMediaRecorder } from "@/hooks/useMediaRecorder";
 import { useStreamingChat } from "@/hooks/useStreamingChat";
 import { useConversationMode } from "@/hooks/useConversationMode";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { MicLevelIndicator } from "@/components/MicLevelIndicator";
 import {
   getConversationPreferences,
   getPreferredVoice,
@@ -328,6 +330,31 @@ export default function Simulation() {
     }
   }, [timeLeft, conversationMode, conversation]);
 
+  // Raccourcis clavier :
+  //   - M : toggle mode conversation (si activé dans Settings et simulation en cours)
+  //   - Échap : coupe toujours le mode conversation (n'active jamais)
+  // Affiche un toast discret pour que l'utilisateur sache qu'il a bien tapé la bonne touche.
+  useKeyboardShortcuts(
+    {
+      m: () => {
+        if (!convPrefs.current.enabled) return;
+        void toggleConversationMode();
+        toast({
+          title: conversationMode ? "Mode conversation suspendu (M)" : "Mode conversation activé (M)",
+          duration: 1500,
+        });
+      },
+      Escape: () => {
+        if (conversationMode) {
+          conversation.stop();
+          setConversationMode(false);
+          toast({ title: "Mode conversation coupé (Échap)", duration: 1500 });
+        }
+      },
+    },
+    { enabled: isActive && timeLeft > 0 },
+  );
+
   const handleDebrief = () => {
     if (!stationId || !brief) return;
     try {
@@ -625,11 +652,22 @@ export default function Simulation() {
                 variant={conversationMode ? "destructive" : "outline"}
                 className="shrink-0 h-14 px-4 rounded-full gap-2"
                 aria-label={conversationMode ? "Désactiver le mode conversation" : "Activer le mode conversation"}
-                title={conversationMode ? "Mode conversation actif — cliquer pour arrêter" : "Mode conversation (auto-silence)"}
+                title={
+                  conversationMode
+                    ? "Mode conversation actif — M ou Échap pour arrêter"
+                    : "Mode conversation (auto-silence) — M pour basculer"
+                }
                 data-testid="button-conversation-mode"
               >
-                <HeadphonesIcon className="w-5 h-5" />
-                {conversationMode && <span className="text-xs font-semibold">ON</span>}
+                {conversationMode ? (
+                  <MicLevelIndicator
+                    state={conversation.state}
+                    level={conversation.level}
+                    className="w-16"
+                  />
+                ) : (
+                  <HeadphonesIcon className="w-5 h-5" />
+                )}
               </Button>
             )}
             <Input

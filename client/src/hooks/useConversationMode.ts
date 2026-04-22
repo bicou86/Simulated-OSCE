@@ -129,21 +129,40 @@ function extensionForMime(mime: string): string {
   return "bin";
 }
 
+// État global du mode conversation — consommé par l'indicateur visuel du micro.
+export type ConversationState = "off" | "listening" | "voice" | "suspended";
+
 export interface UseConversationModeResult {
   isActive: boolean;
   isListening: boolean;
   isSpeaking: boolean;
+  // État de haut niveau pour l'UI (indicateur micro).
+  state: ConversationState;
+  // Niveau audio lissé (0..1), utilisable pour animer un indicateur d'onde.
+  level: number;
   start: () => Promise<void>;
   stop: () => void;
 }
+
+// Seuil RMS normalisé (0..1) au-delà duquel le niveau est scale-to-1 visuellement.
+// En pratique une voix normale à ~40 cm produit un RMS entre 0.03 et 0.12.
+const LEVEL_NORMALIZE = 0.2;
+
+// Profondeur du buffer de lissage (moving average) pour `level` — évite les sautillements.
+const SMOOTHING_WINDOW = 4;
 
 export function useConversationMode(options: ConversationModeOptions): UseConversationModeResult {
   const [isActive, setIsActive] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [state, setState] = useState<ConversationState>("off");
+  const [level, setLevel] = useState(0);
 
   const optsRef = useRef(options);
   useEffect(() => { optsRef.current = options; }, [options]);
+
+  // Buffer circulaire pour moyenne glissante du niveau (lissage visuel).
+  const levelBufferRef = useRef<number[]>([]);
 
   const streamRef = useRef<MediaStream | null>(null);
   const contextRef = useRef<AudioContext | null>(null);
@@ -174,8 +193,11 @@ export function useConversationMode(options: ConversationModeOptions): UseConver
     contextRef.current = null;
     analyserRef.current = null;
     vadCtxRef.current = { state: "idle", speechStartedAt: 0, lastVoiceAt: 0, silenceStartedAt: 0 };
+    levelBufferRef.current = [];
     setIsListening(false);
     setIsSpeaking(false);
+    setState("off");
+    setLevel(0);
   }, []);
 
   const startRecorder = useCallback(() => {
@@ -220,6 +242,16 @@ export function useConversationMode(options: ConversationModeOptions): UseConver
     const isVoice = !suspended && rms > RMS_VOICE_THRESHOLD;
     setIsSpeaking(isVoice);
 
+    // Niveau normalisé + moving average pour l'indicateur visuel.
+    const rawLevel = Math.min(1, rms / LEVEL_NORMALIZE);
+    const buf = levelBufferRef.current;
+    buf.push(rawLevel);
+    if (buf.length > SMOOTHING_WINDOW) buf.shift();
+    const smoothed = buf.reduce((s, v) => s + v, 0) / buf.length;
+    // Pendant un suspend, on force 0 pour que l'indicateur se replie visuellement.
+    setLevel(suspended ? 0 : smoothed);
+    setState(suspended ? "suspended" : isVoice ? "voice" : "listening");
+
     const now = performance.now();
     const { next, event } = vadStep(vadCtxRef.current, {
       now,
@@ -263,6 +295,7 @@ export function useConversationMode(options: ConversationModeOptions): UseConver
 
       setIsActive(true);
       setIsListening(true);
+      setState("listening");
       rafRef.current = requestAnimationFrame(tick);
     } catch (err) {
       cleanup();
@@ -281,5 +314,5 @@ export function useConversationMode(options: ConversationModeOptions): UseConver
     return () => cleanup();
   }, [cleanup]);
 
-  return { isActive, isListening, isSpeaking, start, stop };
+  return { isActive, isListening, isSpeaking, state, level, start, stop };
 }
