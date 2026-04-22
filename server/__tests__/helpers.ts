@@ -2,6 +2,7 @@
 // Utilisé par tous les tests supertest.
 
 import express from "express";
+import adminRouter from "../routes/admin";
 import settingsRouter from "../routes/settings";
 import patientRouter from "../routes/patient";
 import evaluatorRouter from "../routes/evaluator";
@@ -15,5 +16,6 @@ export function buildTestApp() {
   app.use("/api/settings", settingsRouter);
   app.use("/api/patient", patientRouter);
   app.use("/api/evaluator", evaluatorRouter);
+  app.use("/api/admin", adminRouter);
   return app;
 }

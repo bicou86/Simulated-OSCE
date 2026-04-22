@@ -5,10 +5,11 @@
 //
 // Les clés ne sont JAMAIS renvoyées au client, seulement des booléens "configuré / valide".
 
+import { randomBytes } from "crypto";
 import { promises as fs } from "fs";
 import path from "path";
 
-type ProviderKey = "OPENAI_API_KEY" | "ANTHROPIC_API_KEY";
+type ProviderKey = "OPENAI_API_KEY" | "ANTHROPIC_API_KEY" | "ADMIN_KEY";
 
 const ENV_LOCAL_PATH = path.resolve(process.cwd(), ".env.local");
 
@@ -16,6 +17,7 @@ const ENV_LOCAL_PATH = path.resolve(process.cwd(), ".env.local");
 const state: Record<ProviderKey, string | undefined> = {
   OPENAI_API_KEY: undefined,
   ANTHROPIC_API_KEY: undefined,
+  ADMIN_KEY: undefined,
 };
 
 // Parseur minimaliste .env : KEY=VALUE par ligne, ignore commentaires et lignes vides.
@@ -29,7 +31,7 @@ function parseEnvFile(content: string): Partial<Record<ProviderKey, string>> {
     if (eq === -1) continue;
     const key = line.slice(0, eq).trim();
     const value = line.slice(eq + 1).trim();
-    if (key === "OPENAI_API_KEY" || key === "ANTHROPIC_API_KEY") {
+    if (key === "OPENAI_API_KEY" || key === "ANTHROPIC_API_KEY" || key === "ADMIN_KEY") {
       out[key] = value;
     }
   }
@@ -82,10 +84,33 @@ async function writeEnvLocal(updates: Partial<Record<ProviderKey, string>>): Pro
 }
 
 // Initialisation au démarrage : process.env > .env.local (process.env a la priorité).
+// ADMIN_KEY est auto-générée (24 bytes hex) et persistée dans .env.local si absente.
 export async function loadConfig(): Promise<void> {
   const fromFile = await readEnvLocal();
   state.OPENAI_API_KEY = process.env.OPENAI_API_KEY || fromFile.OPENAI_API_KEY;
   state.ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || fromFile.ANTHROPIC_API_KEY;
+
+  const adminKey = process.env.ADMIN_KEY || fromFile.ADMIN_KEY;
+  if (adminKey) {
+    state.ADMIN_KEY = adminKey;
+  } else {
+    const generated = randomBytes(24).toString("hex");
+    state.ADMIN_KEY = generated;
+    try {
+      await writeEnvLocal({ ADMIN_KEY: generated });
+      // eslint-disable-next-line no-console
+      console.log(`[admin] ADMIN_KEY générée : ${generated}`);
+    } catch {
+      // Si l'écriture échoue (FS en lecture seule…), on garde la clé en mémoire uniquement
+      // — le restart régénérera une nouvelle clé.
+      // eslint-disable-next-line no-console
+      console.log(`[admin] ADMIN_KEY en mémoire (persist KO) : ${generated}`);
+    }
+  }
+}
+
+export function getAdminKey(): string | undefined {
+  return state.ADMIN_KEY;
 }
 
 export function getOpenAIKey(): string | undefined {
