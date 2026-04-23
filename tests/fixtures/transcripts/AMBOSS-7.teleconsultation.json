@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 2 / J4 — station teleconsultation (fillette 2 ans, toux/fièvre, appel téléphonique, accompagnant = mère). Valide que la pipeline applique les poids teleconsultation (35/5/30/15/15) et que l'agent Accompagnant est routé (interlocutor.type === parent).",
+    "frozenAt": "2026-04-23",
+    "gitCommitAtFreeze": "57a0f90",
+    "author": "phase-2-j4"
+  },
+  "stationId": "AMBOSS-7",
+  "expectedStationType": "teleconsultation",
+  "expectedCommunicationWeight": 15,
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Madame, qu'est-ce qui vous amène à m'appeler ?" },
+    { "role": "patient", "text": "Bonjour docteur. Ma fille Virginia, 2 ans, tousse depuis hier soir et elle a de la fièvre." },
+    { "role": "doctor", "text": "A-t-elle de la fièvre maintenant, vous l'avez prise ?" },
+    { "role": "patient", "text": "Oui, j'ai pris 39,2 au front ce matin. Elle a chaud, elle tremble un peu." },
+    { "role": "doctor", "text": "Respire-t-elle bien ? Est-ce qu'elle est essoufflée ?" },
+    { "role": "patient", "text": "Elle respire vite, et elle tousse beaucoup, une toux sèche." },
+    { "role": "doctor", "text": "Je vais l'examiner." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — AMBOSS-7\n\nTéléconsultation pédiatrique. Le candidat a bien identifié l'impossibilité d'examen physique et redirigé vers un examen présentiel.",
+    "scores": {
+      "globalScore": 69,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.35, "score": 80 },
+        { "key": "examen", "name": "Examen", "weight": 0.05, "score": 60 },
+        { "key": "management", "name": "Management", "weight": 0.30, "score": 70 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.15, "score": 50 },
+        { "key": "communication", "name": "Communication", "weight": 0.15, "score": 60 }
+      ],
+      "verdict": "Réussi"
+    }
+  },
+  "expectedGlobalScore": 69,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0)",
+    "calc": "80×0.35 + 60×0.05 + 70×0.30 + 50×0.15 + 60×0.15 = 28 + 3 + 21 + 7.5 + 9 = 68.5 → arrondi 69",
+    "value": 69
+  }
+}
