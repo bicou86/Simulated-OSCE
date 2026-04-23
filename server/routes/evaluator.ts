@@ -1,5 +1,6 @@
 // Route HTTP "évaluateur" — logique dans evaluatorService.
 // POST /api/evaluator/evaluate → { markdown, scores }
+// GET  /api/evaluator/weights  → table de pondération par station_type
 
 import { Router, type Request, type Response } from "express";
 import { z } from "zod";
@@ -11,8 +12,20 @@ import {
   EvaluatorStationNotFoundError,
   runEvaluation,
 } from "../services/evaluatorService";
+import {
+  EVALUATION_AXES,
+  EVALUATION_WEIGHTS,
+} from "../../shared/evaluation-weights";
 
 const router = Router();
+
+// GET /api/evaluator/weights → expose la table statique pour que le front
+// l'affiche dans le panel score (poids à côté de chaque axe). Pas de
+// paramètres, pas d'authentification — la table est publique par design
+// (reproductibilité score-à-score).
+router.get("/weights", (_req: Request, res: Response) => {
+  res.json({ axes: EVALUATION_AXES, weights: EVALUATION_WEIGHTS });
+});
 
 const EvaluateBody = z.object({
   stationId: z.string().min(1),

@@ -29,14 +29,12 @@ function normalize(s: string): string {
 
 // Les regex utilisent un `\b` d'ancrage à gauche. L'ancrage droit dépend du
 // terme : les stems médicaux qui admettent des suffixes ("psychiatrique",
-// "dépressif", "urgence(s)", "pronostique") sont en prefix-match (pas de
-// `\b` final) ; les mots courts qui ont des collisions avec du français
-// usuel ("visio" vs "**visio**n", "appel" vs "**appel**é") exigent un
-// word-boundary droit.
+// "dépressif", "pronostique") sont en prefix-match (pas de `\b` final) ;
+// les mots courts qui ont des collisions avec du français usuel ("visio" vs
+// "**visio**n", "appel" vs "**appel**é") exigent un word-boundary droit.
 const TELECONSULT_RE = /\b(?:telephon|teleconsult|telemedecin|appel\b|visio\b|visioconf)/;
 const BBN_SETTING_RE = /\b(?:annonce|mauvaise\s+nouvelle|diagnostic\s+grave|deces|pronostic|deuil)/;
 const PSY_RE = /\b(?:psychiatr|depress|anxi|suicid|humeur|psychos|addict|phobi|boulimi|anorexi|bipolair)/;
-const TRIAGE_SETTING_RE = /\b(?:urgence|triage|\bsau\b|smur)/;
 const CAREGIVER_MENTION_RE = /\b(?:mere|pere|parent|accompagnant)/;
 
 // Entrée logique minimale pour l'inférence. On découple de la shape réelle
@@ -90,12 +88,14 @@ export function inferStationType(input: StationTypeInput): StationTypeInference 
     return { type: "psy", matchedRule: "rule_4_psy_keywords" };
   }
 
-  // Règle 5 — triage : source USMLE_Triage ou cadre urgences/SAU.
+  // Règle 5 — triage : uniquement source === "USMLE_Triage". La règle 5b
+  // (mots-clés « urgences/triage/SAU » dans le setting) a été dropée après
+  // audit 2026-04-23 car elle capturait 72 stations AMBOSS/German cliniques
+  // classiques en ER, toutes pédagogiquement des anamnèses-examens. Triage au
+  // sens ECOS = priorisation multi-patients, correspond exactement à la
+  // source USMLE_Triage.
   if (input.source === "USMLE_Triage") {
-    return { type: "triage", matchedRule: "rule_5a_triage_source" };
-  }
-  if (TRIAGE_SETTING_RE.test(settingN)) {
-    return { type: "triage", matchedRule: "rule_5b_triage_setting" };
+    return { type: "triage", matchedRule: "rule_5_triage_source" };
   }
 
   // Règle 6 — défaut.
