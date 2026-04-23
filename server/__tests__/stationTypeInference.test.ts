@@ -191,15 +191,15 @@ describe("inferStationType — ordre des règles", () => {
     expect(r.type).toBe("teleconsultation");
   });
 
-  it("Fixture de non-régression AMBOSS-1 : classification stable anamnese_examen", () => {
-    // Verrouille pédagogiquement AMBOSS-1 sur anamnese_examen pour que la
-    // fixture transcript figée J4 reste valide — toute modification future
-    // qui reclassifierait AMBOSS-1 casserait ce test avant de casser le
-    // score-à-score.
+  // ─── Fixtures de non-régression J4 : verrouillage du station_type ───
+  // Chaque fixture transcript J4 doit rester sur son station_type actuel ;
+  // toute modification d'une règle d'inférence qui reclassifierait une fixture
+  // casserait le test ici AVANT de casser le score-à-score pondéré.
+
+  it("Fixture AMBOSS-1 : classification stable anamnese_examen", () => {
     const r = inferStationType({
       id: "AMBOSS-1",
       fullId: "AMBOSS-1 - Douleurs abdominales - Femme 47 ans",
-      title: "Douleurs abdominales - Femme 47 ans",
       source: "AMBOSS",
       setting: "Service d'urgences",
       patientDescription: "Marcia Billings, femme de 47 ans, consultante pour des douleurs abdominales",
@@ -207,5 +207,57 @@ describe("inferStationType — ordre des règles", () => {
       interlocutorType: "self",
     });
     expect(r.type).toBe("anamnese_examen");
+  });
+
+  it("Fixture AMBOSS-3 : classification stable anamnese_examen", () => {
+    const r = inferStationType({
+      id: "AMBOSS-3",
+      fullId: "AMBOSS-3 - Douleurs abdominales - Femme 34 ans",
+      source: "AMBOSS",
+      setting: "Cabinet médical",
+      patientDescription: "Femme de 34 ans consultant pour des douleurs abdominales",
+      age: 34,
+      interlocutorType: "self",
+    });
+    expect(r.type).toBe("anamnese_examen");
+  });
+
+  it("Fixture USMLE-1 : classification stable anamnese_examen (malgré setting urgences)", () => {
+    const r = inferStationType({
+      id: "USMLE-1",
+      fullId: "USMLE-1 - Douleur thoracique - Homme de 46 ans",
+      source: "USMLE",
+      setting: "Service d'urgences",
+      patientDescription: "Homme de 46 ans, douleur thoracique",
+      age: 46,
+      interlocutorType: "self",
+    });
+    expect(r.type).toBe("anamnese_examen");
+  });
+
+  it("Fixture German-2 : classification stable anamnese_examen", () => {
+    const r = inferStationType({
+      id: "German-2",
+      fullId: "German-2 - Acouphènes",
+      source: "German",
+      setting: "Cabinet ORL",
+      patientDescription: "M. Dupont, 50 ans, se présente chez l'ORL pour un nouveau problème auriculaire",
+      age: 50,
+      interlocutorType: "self",
+    });
+    expect(r.type).toBe("anamnese_examen");
+  });
+
+  it("Fixture AMBOSS-7 : classification stable teleconsultation", () => {
+    const r = inferStationType({
+      id: "AMBOSS-7",
+      fullId: "AMBOSS-7 - Toux et fièvre - Fillette 2 ans",
+      source: "AMBOSS",
+      setting: "Consultation téléphonique",
+      patientDescription: "Virginia Jameson, fillette de 2 ans, présentée par sa mère",
+      age: 2,
+      interlocutorType: "parent",
+    });
+    expect(r.type).toBe("teleconsultation");
   });
 });

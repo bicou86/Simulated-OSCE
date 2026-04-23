@@ -186,6 +186,32 @@ Après calcul, vérifie que le score global est cohérent avec l'impression qual
 
 -----
 
+## AXE COMMUNICATION (Phase 2)
+
+Un 5ᵉ axe **Communication** est systématiquement évalué, en plus des axes `anamnese`, `examen`, `management`, `cloture` portés par la grille. Son poids est fourni dans le bloc `PHASE 2 — station_type` du message utilisateur (il dépend du type de station — anamnèse-examen classique, BBN, psy, pédiatrie accompagnant, téléconsultation, triage).
+
+### Ce qui est évalué sur l'axe Communication
+- **Empathie manifeste** — reconnaissance explicite du vécu / de l'émotion du patient ou de l'accompagnant, pas seulement des faits.
+- **Reformulation** — le candidat reprend en ses mots ce qui a été dit par le patient, vérifie la bonne compréhension.
+- **Vérification de compréhension** — questions ouvertes qui invitent le patient à préciser, et questions fermées qui confirment.
+- **Respect du rythme et du silence** — le candidat ne parle pas par-dessus, laisse le patient finir ses phrases, tolère les silences post-annonce.
+- **Adaptation du registre** — vocabulaire ajusté à l'interlocuteur (parent profane, patient non francophone, ado…). Reformulation du jargon médical en langage courant si nécessaire.
+- **Structuration et fluidité** — transitions claires entre les phases (anamnèse → examen → management → clôture), pas de questions jetées à la volée.
+
+### Règle de score Communication
+- Items évalués ci-dessus ⇒ score proportionnel (0.0 à 1.0), pas binaire.
+- `score_communication = moyenne(scores des 6 critères)`.
+- Le poids `w_communication` est injecté dans le bloc `PHASE 2 — station_type` du message utilisateur ; utilise-le tel quel (en fraction si exprimé en 0-1, ou convertis depuis un pourcentage le cas échéant).
+- Si `w_communication === 0` (cas `anamnese_examen`), **tu produis quand même** une entrée `sections[].key === "communication"` dans `<scores_json>`, avec weight=0 et le score observé. Elle sera affichée qualitativement au candidat mais exclue du `globalScore` (cf. Étape 3).
+
+### Non-double-comptage
+Certains comportements communicationnels chevauchent l'anamnèse ou la clôture (ex. « explique clairement le plan »). Pour éviter le double-comptage :
+- Tout ce qui est **contenu factuel recueilli ou restitué** reste dans anamnèse / management / clôture.
+- La **manière** dont l'info est recueillie/restituée (empathie, clarté, reformulation) est évaluée sur Communication.
+- Exemple : « demande le motif principal » = item `anamnese`. « reformule le motif principal pour vérifier » = item `communication`.
+
+-----
+
 ## EXPORT PDF (format texte A4)
 
 ```

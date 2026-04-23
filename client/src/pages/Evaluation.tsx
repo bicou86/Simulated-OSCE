@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import {
   ApiError, evaluate, type EvaluationResult, type EvaluationScores, type PatientBrief,
+  type StationType,
 } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
@@ -28,6 +29,21 @@ function readSession(stationId: string): Session | null {
   } catch {
     return null;
   }
+}
+
+// Libellés user-friendly des 6 station_type inférés (Phase 2). Affichés dans
+// le header de la page évaluation à côté du titre « Performance Globale ».
+const STATION_TYPE_LABELS: Record<StationType, string> = {
+  anamnese_examen: "Anamnèse-examen",
+  bbn: "Annonce mauvaise nouvelle (BBN)",
+  psy: "Entretien psychiatrique",
+  pediatrie_accompagnant: "Pédiatrie avec accompagnant",
+  teleconsultation: "Téléconsultation",
+  triage: "Triage",
+};
+
+function stationTypeLabel(t: StationType): string {
+  return STATION_TYPE_LABELS[t] ?? t;
 }
 
 // Palette conditionnelle du verdict, partagée entre la carte synthèse et les
@@ -258,8 +274,17 @@ export default function Evaluation() {
       {/* Synthèse : donut + barres par axe + verdict, colorés selon le score */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Card className="md:col-span-2 border-border shadow-sm">
-          <CardHeader className="bg-muted/30 pb-4">
+          <CardHeader className="bg-muted/30 pb-4 flex-row items-center justify-between">
             <CardTitle className="text-xl">Performance Globale</CardTitle>
+            {result.stationType && (
+              <span
+                className="text-xs font-medium text-muted-foreground bg-background px-2 py-1 rounded-md border border-border"
+                data-testid="eval-station-type"
+                title="station_type inféré au chargement de la station (Phase 2)"
+              >
+                Type : {stationTypeLabel(result.stationType)}
+              </span>
+            )}
           </CardHeader>
           <CardContent className="pt-6">
             <div className="flex items-center gap-6">
@@ -270,22 +295,29 @@ export default function Evaluation() {
                 <span className={`text-4xl font-bold ${gt.text}`}>{scores.globalScore}%</span>
               </div>
               <div className="flex-1 space-y-4">
-                {scores.sections.map((s) => (
-                  <div key={s.key} data-testid={`score-${s.key}`}>
-                    <div className="flex justify-between text-sm mb-1 font-medium">
-                      <span>
-                        {s.name}
-                        <span className="text-muted-foreground ml-2 font-normal">
-                          (poids {(s.weight * 100).toFixed(0)}%)
+                {scores.sections.map((s) => {
+                  const weightPct = Math.round(s.weight * 100);
+                  const nonEvaluated = weightPct === 0;
+                  return (
+                    <div key={s.key} data-testid={`score-${s.key}`} className={nonEvaluated ? "opacity-60" : ""}>
+                      <div className="flex justify-between text-sm mb-1 font-medium">
+                        <span>
+                          {s.name}
+                          <span
+                            className="text-muted-foreground ml-2 font-normal"
+                            title={nonEvaluated ? "axe affiché mais non évalué sur ce type de station (poids 0)" : undefined}
+                          >
+                            (poids {weightPct}%{nonEvaluated ? " — non évalué" : ""})
+                          </span>
                         </span>
-                      </span>
-                      <span className="text-muted-foreground tabular-nums">
-                        {s.raw ? `${s.raw} · ${s.score}%` : `${s.score}%`}
-                      </span>
+                        <span className="text-muted-foreground tabular-nums">
+                          {s.raw ? `${s.raw} · ${s.score}%` : `${s.score}%`}
+                        </span>
+                      </div>
+                      <ScoreBar value={s.score} />
                     </div>
-                    <ScoreBar value={s.score} />
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </CardContent>
