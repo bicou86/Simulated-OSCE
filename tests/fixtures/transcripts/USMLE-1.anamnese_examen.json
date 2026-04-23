@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 2 / J4 — 3e station anamnese_examen (douleur thoracique homme 46 ans, source USMLE). Protège AMBOSS-1/3 sur une source différente et valide que USMLE non-Triage reste sur anamnese_examen malgré un setting Urgences.",
+    "frozenAt": "2026-04-23",
+    "gitCommitAtFreeze": "57a0f90",
+    "author": "phase-2-j4"
+  },
+  "stationId": "USMLE-1",
+  "expectedStationType": "anamnese_examen",
+  "expectedCommunicationWeight": 0,
+  "transcript": [
+    { "role": "doctor", "text": "Hello, what brings you in today?" },
+    { "role": "patient", "text": "J'ai une douleur dans la poitrine qui dure depuis une heure." },
+    { "role": "doctor", "text": "Pouvez-vous décrire la douleur ?" },
+    { "role": "patient", "text": "C'est serré, comme un étau. Ça remonte dans le bras gauche." },
+    { "role": "doctor", "text": "J'ausculte le cœur." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — USMLE-1\n\nAnamnèse pertinente pour un syndrome coronarien.",
+    "scores": {
+      "globalScore": 58,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.30, "score": 70 },
+        { "key": "examen", "name": "Examen", "weight": 0.25, "score": 55 },
+        { "key": "management", "name": "Management", "weight": 0.30, "score": 60 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.15, "score": 35 },
+        { "key": "communication", "name": "Communication", "weight": 0, "score": 45 }
+      ],
+      "verdict": "À retravailler"
+    }
+  },
+  "expectedGlobalScore": 58,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0)",
+    "calc": "(70×0.30 + 55×0.25 + 60×0.30 + 35×0.15) / 1.0 = 57.5 → Sonnet renvoie 58",
+    "value": 58
+  }
+}

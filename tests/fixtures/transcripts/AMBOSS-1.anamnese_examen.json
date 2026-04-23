@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 2 / J4 — station anamnese_examen classique (douleurs abdominales). Verrouille la classification et la pipeline de pondération : Communication = 0 (poids), les 4 axes classiques portent 100% du score. Modifier ce fichier uniquement si la fixture doit être ré-étalonnée.",
+    "frozenAt": "2026-04-23",
+    "gitCommitAtFreeze": "57a0f90",
+    "author": "phase-2-j4"
+  },
+  "stationId": "AMBOSS-1",
+  "expectedStationType": "anamnese_examen",
+  "expectedCommunicationWeight": 0,
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Madame, qu'est-ce qui vous amène aujourd'hui ?" },
+    { "role": "patient", "text": "Bonjour docteur, j'ai mal au ventre depuis ce matin." },
+    { "role": "doctor", "text": "Pouvez-vous me décrire cette douleur, où exactement ?" },
+    { "role": "patient", "text": "En haut à droite, ça commence vers le bas de la cage thoracique." },
+    { "role": "doctor", "text": "Je palpe votre abdomen." },
+    { "role": "doctor", "text": "Je cherche le signe de Murphy." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — AMBOSS-1\n\nAnalyse détaillée de la performance.\n\n**Points forts :** anamnèse structurée.\n\n**Points à améliorer :** exploration des facteurs modulants.",
+    "scores": {
+      "globalScore": 65,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.25, "score": 80 },
+        { "key": "examen", "name": "Examen", "weight": 0.25, "score": 70 },
+        { "key": "management", "name": "Management", "weight": 0.25, "score": 60 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.25, "score": 50 },
+        { "key": "communication", "name": "Communication", "weight": 0, "score": 40 }
+      ],
+      "verdict": "À retravailler"
+    }
+  },
+  "expectedGlobalScore": 65,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0) avec Communication weight=0 exclu",
+    "calc": "80×0.25 + 70×0.25 + 60×0.25 + 50×0.25 = 65",
+    "value": 65
+  }
+}

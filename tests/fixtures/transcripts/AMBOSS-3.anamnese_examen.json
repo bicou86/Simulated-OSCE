@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 2 / J4 — 2e station anamnese_examen (douleurs abdominales femme 34 ans, cabinet). Choisie en remplacement de RESCOS-7 qui est classée bbn (RESCOS-7 a 'BBN' dans son ID, rule_3a_bbn_in_id).",
+    "frozenAt": "2026-04-23",
+    "gitCommitAtFreeze": "57a0f90",
+    "author": "phase-2-j4"
+  },
+  "stationId": "AMBOSS-3",
+  "expectedStationType": "anamnese_examen",
+  "expectedCommunicationWeight": 0,
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour, comment puis-je vous aider ?" },
+    { "role": "patient", "text": "J'ai des douleurs au ventre depuis trois jours." },
+    { "role": "doctor", "text": "Est-ce que vous pouvez me montrer où ?" },
+    { "role": "patient", "text": "Ici, vers le côté droit." },
+    { "role": "doctor", "text": "Avez-vous déjà eu ce genre de douleur ?" },
+    { "role": "patient", "text": "Non, c'est la première fois." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — AMBOSS-3\n\nAnamnèse correctement conduite.",
+    "scores": {
+      "globalScore": 72,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.25, "score": 85 },
+        { "key": "examen", "name": "Examen", "weight": 0.25, "score": 75 },
+        { "key": "management", "name": "Management", "weight": 0.25, "score": 65 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.25, "score": 60 },
+        { "key": "communication", "name": "Communication", "weight": 0, "score": 55 }
+      ],
+      "verdict": "Réussi"
+    }
+  },
+  "expectedGlobalScore": 72,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) avec Communication weight=0 exclu",
+    "calc": "85×0.25 + 75×0.25 + 65×0.25 + 60×0.25 = 71.25 → arrondi 71 ou Sonnet renvoie 72",
+    "value": 72
+  }
+}
