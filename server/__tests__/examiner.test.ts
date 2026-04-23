@@ -99,6 +99,10 @@ const hipFixture = {
 };
 
 // Fixture multi-manœuvres (Bug #2) : trois gestes distincts dans la grille ORL.
+// e3 reproduit la forme combo rencontrée dans German-2 : un `resultat` résumé
+// + un tableau `details` dont chaque item a resultat=null. On doit matcher le
+// résumé quand la requête vise la catégorie ("otoscopie"), pas tomber sur un
+// détail null.
 const entFixture = {
   id: "TEST-ENT-1",
   setting: "Cabinet ORL",
@@ -106,6 +110,10 @@ const entFixture = {
     e3: {
       examen: "Otoscopie bilatérale",
       resultat: "Normale des deux côtés",
+      details: [
+        { item: "Aspect du tympan", resultat: null },
+        { item: "Présence de cérumen", resultat: null },
+      ],
     },
     e4: {
       examen: "Tests auditifs au diapason",
@@ -173,6 +181,21 @@ describe("flattenExamenResultats", () => {
     expect(flattenExamenResultats(undefined)).toEqual([]);
     expect(flattenExamenResultats(null)).toEqual([]);
     expect(flattenExamenResultats("nope")).toEqual([]);
+  });
+
+  it("émet aussi le résumé catégorie-niveau quand la catégorie a { resultat, details }", () => {
+    // Reproduit German-2 e3 : "Otoscopie bilatérale" avec resultat résumé +
+    // 2 details à null. On doit voir les 3 findings : 1 catégorie-niveau + 2
+    // details ; sinon la requête "otoscopie" matche un détail null et tombe
+    // sur no_resultat.
+    const flat = flattenExamenResultats(entFixture.examen_resultats);
+    const categoryLevel = flat.find(
+      (f) => f.categoryKey === "e3" && f.maneuver === "Otoscopie bilatérale",
+    );
+    expect(categoryLevel?.resultat).toMatch(/Normale des deux côtés/i);
+    // Les 2 details de e3 restent émis, resultat null chacun.
+    const e3Details = flat.filter((f) => f.categoryKey === "e3" && f.resultat === null);
+    expect(e3Details).toHaveLength(2);
   });
 });
 
