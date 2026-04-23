@@ -8,6 +8,37 @@ import {
   CAREGIVER_FINDING_BLACKLIST,
 } from "./intentRouter";
 
+describe("classifyDoctorIntent — Phase 3 demandes d'imagerie", () => {
+  const imagingCases: Array<[string, string]> = [
+    ["je demande une radio du thorax", "demande radio thorax"],
+    ["je demande une radiographie thoracique", "demande radiographie"],
+    ["je fais un ECG", "fais ECG"],
+    ["je réalise un ECG 12 dérivations", "réalise ECG"],
+    ["je demande une échographie abdominale", "demande écho abdo"],
+    ["je prescris un scanner cérébral", "prescris scanner"],
+    ["je fais un fond d'œil", "fond d'œil"],
+    ["une radio thorax", "forme nominale radio"],
+    ["un ECG", "forme nominale ECG"],
+    ["faire une IRM du genou", "infinitif IRM"],
+  ];
+  for (const [utterance, label] of imagingCases) {
+    it(`"${utterance}" → examiner (${label})`, () => {
+      expect(classifyDoctorIntent(utterance)).toBe("examiner");
+    });
+  }
+
+  const notImagingCases: Array<[string, string]> = [
+    ["la radio à la maison m'a réveillé", "radio = TSF, pas médicale"],
+    ["depuis quand l'enfant a-t-il de la fièvre", "question anamnèse"],
+    ["avez-vous déjà passé un ECG", "anamnèse ECG passé"],
+  ];
+  for (const [utterance, label] of notImagingCases) {
+    it(`"${utterance}" → patient (${label})`, () => {
+      expect(classifyDoctorIntent(utterance)).toBe("patient");
+    });
+  }
+});
+
 describe("classifyDoctorIntent — gestes d'examen", () => {
   const examinerCases: Array<[string, string]> = [
     ["je palpe l'abdomen", "palpation abdominale"],

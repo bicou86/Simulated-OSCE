@@ -65,6 +65,18 @@ const GESTURE_PATTERNS: RegExp[] = [
 
   // Examens ciblés (noms d'examen autonomes)
   /\b(?:otoscopie|bandelette\s+urinaire|glasgow|reflexes?\s+osteotendineux|glycemie\s+capillaire)\b/,
+
+  // Phase 3 — demandes d'imagerie (ECG, radio, écho, scanner, IRM, fond d'œil,
+  // photo dermato). Le candidat verbalise « je demande une radio thorax » ou
+  // « je fais un ECG » → route examinateur, qui retourne soit l'image si la
+  // station en contient, soit le fallback `no_imaging`. Le mot "radio" isolé
+  // n'est PAS matché (trop ambigu — « la radio à la maison ») — on exige un
+  // verbe d'intention 1re personne en amont.
+  new RegExp(`${J1}(?:demande|fais|realise|effectue|prescris|prescrire|propose)\\b[^.]{0,30}\\b(?:radio(?:graphie)?|rx|cliche|ecg|electrocardiogram|echo(?:graphie)?|scanner|tdm|irm|imagerie|fond\\s+d'?oeil|photographie|radiographie|echocardiograph)\\b`),
+  // Forme nominale directe "un ECG", "une radio thorax", "un scanner abdo"
+  /\b(?:un|une|une?\s+nouvelle)\s+(?:ecg|radio(?:graphie)?(?:\s+(?:thoracique|pulmonaire|du\s+thorax|abdominale|de\s+l'?abdomen))?|echo(?:graphie)?|scanner|tdm|irm)\b/,
+  // Forme impérative d'adresser au laborantin/radio
+  /\b(?:faire|realiser|prescrire|demander)\s+(?:un|une)\s+(?:ecg|radio|echo|scanner|tdm|irm|imagerie)\b/,
 ];
 
 // Re-export des blacklists + détecteurs depuis le module partagé. Garde les

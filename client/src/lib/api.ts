@@ -221,7 +221,8 @@ export type ExaminerLookupKind =
   | "findings"       // plusieurs findings agrégés → voir `items`
   | "no_resultat"    // manœuvre reconnue, pas de finding à rapporter
   | "no_match"       // aucune manœuvre reconnue dans la grille
-  | "no_teleconsult"; // cadre téléconsultation — examen physique impossible
+  | "no_teleconsult" // cadre téléconsultation — examen physique impossible
+  | "no_imaging";    // Phase 3 — imagerie demandée, station n'en contient pas
 
 export interface ExaminerLookupItem {
   categoryKey: string;
@@ -229,6 +230,9 @@ export interface ExaminerLookupItem {
   maneuver: string;
   resultat: string;
   source?: "title_as_result";
+  resultatType?: "text" | "image";
+  resultatUrl?: string;
+  resultatCaption?: string;
 }
 
 export interface ExaminerLookupResult {
@@ -241,6 +245,9 @@ export interface ExaminerLookupResult {
   maneuver?: string;
   resultat?: string;
   source?: "title_as_result";
+  resultatType?: "text" | "image";
+  resultatUrl?: string;
+  resultatCaption?: string;
   items?: ExaminerLookupItem[];
   fallback?: string;
 }

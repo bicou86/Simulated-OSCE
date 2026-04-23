@@ -125,11 +125,53 @@ const entFixture = {
   },
 };
 
+// Fixture Phase 3 — station avec findings porteurs d'images (ECG + radio).
+const imageFixture = {
+  id: "TEST-IMG-1",
+  setting: "Service d'urgences",
+  examen_resultats: {
+    e3: {
+      examen: "Examen cardiovasculaire",
+      details: [
+        {
+          item: "ECG 12 dérivations",
+          resultat: "Sus-décalage ST antérieur V1-V4, onde Q en V2-V3",
+          resultat_type: "image",
+          resultat_url: "/medical-images/TEST-IMG-1/ecg-stemi.png",
+          resultat_caption: "ECG 12 dérivations à l'admission",
+        },
+        { item: "Auscultation cardiaque", resultat: "B1-B2 bien frappés, pas de souffle" },
+      ],
+    },
+    e4: {
+      examen: "Radiographie thoracique",
+      resultat: "Émoussement sinus costo-phrénique gauche",
+      resultat_type: "image",
+      resultat_url: "/medical-images/TEST-IMG-1/radio-thorax.png",
+    },
+  },
+};
+
+// Fixture Phase 3 — station sans aucune image (non-régression sur les 279
+// stations qui n'ont pas de `resultat_type: "image"`).
+const noImageFixture = {
+  id: "TEST-NOIMG-1",
+  setting: "Cabinet médical",
+  examen_resultats: {
+    e1: {
+      examen: "Examen cardiovasculaire",
+      resultat: "Auscultation normale, pas de souffle",
+    },
+  },
+};
+
 const fixturesById: Record<string, any> = {
   "TEST-1": stationFixture,
   "TEST-TEL-1": teleconsultFixture,
   "TEST-HIP-1": hipFixture,
   "TEST-ENT-1": entFixture,
+  "TEST-IMG-1": imageFixture,
+  "TEST-NOIMG-1": noImageFixture,
 };
 
 vi.mock("../services/patientService", async () => {
@@ -160,6 +202,7 @@ import {
   isTeleconsultStation,
   titleLooksLikeFinding,
   splitMultiGestures,
+  queryAsksForImage,
 } from "../services/examinerService";
 
 afterEach(() => vi.clearAllMocks());
@@ -476,5 +519,107 @@ describe("POST /api/examiner/lookup", () => {
       query: "palpation",
     });
     expect(res.status).toBe(400);
+  });
+});
+
+// ─────── Phase 3 : imagerie dans examen_resultats ───────
+
+describe("queryAsksForImage", () => {
+  it("détecte les mots-clés d'imagerie courants", () => {
+    expect(queryAsksForImage("je demande une radio thorax")).toBe(true);
+    expect(queryAsksForImage("faites un ECG")).toBe(true);
+    expect(queryAsksForImage("échographie abdominale")).toBe(true);
+    expect(queryAsksForImage("scanner cérébral")).toBe(true);
+    expect(queryAsksForImage("IRM du genou")).toBe(true);
+    expect(queryAsksForImage("fond d'œil")).toBe(true);
+  });
+  it("ne matche pas une phrase sans imagerie", () => {
+    expect(queryAsksForImage("je palpe l'abdomen")).toBe(false);
+    expect(queryAsksForImage("je cherche le signe de Murphy")).toBe(false);
+    expect(queryAsksForImage("comment allez-vous")).toBe(false);
+  });
+});
+
+describe("flattenExamenResultats — champs image (Phase 3)", () => {
+  it("propage resultat_type/url/caption d'un item détail", () => {
+    const flat = flattenExamenResultats(imageFixture.examen_resultats);
+    const ecg = flat.find((f) => f.maneuver === "ECG 12 dérivations");
+    expect(ecg?.resultatType).toBe("image");
+    expect(ecg?.resultatUrl).toBe("/medical-images/TEST-IMG-1/ecg-stemi.png");
+    expect(ecg?.resultatCaption).toBe("ECG 12 dérivations à l'admission");
+  });
+  it("propage resultat_type/url depuis une catégorie (sans details)", () => {
+    const flat = flattenExamenResultats(imageFixture.examen_resultats);
+    const radio = flat.find((f) => f.maneuver === "Radiographie thoracique");
+    expect(radio?.resultatType).toBe("image");
+    expect(radio?.resultatUrl).toBe("/medical-images/TEST-IMG-1/radio-thorax.png");
+  });
+  it("laisse resultatType/Url undefined sur les items sans image", () => {
+    const flat = flattenExamenResultats(imageFixture.examen_resultats);
+    const ausc = flat.find((f) => f.maneuver === "Auscultation cardiaque");
+    expect(ausc?.resultatType).toBeUndefined();
+    expect(ausc?.resultatUrl).toBeUndefined();
+  });
+  it("promeut resultatType à 'image' si URL présente sans type explicite", () => {
+    const flat = flattenExamenResultats({
+      e1: {
+        examen: "Photo",
+        resultat: "éruption",
+        resultat_url: "/medical-images/X/photo.jpg",
+      },
+    });
+    expect(flat[0]?.resultatType).toBe("image");
+  });
+});
+
+describe("lookupExaminer — propagation image (Phase 3)", () => {
+  it("retourne l'image avec un finding matchant (query 'ECG')", async () => {
+    const r = await lookupExaminer("TEST-IMG-1", "je fais un ECG");
+    expect(r.kind).toBe("finding");
+    expect(r.resultatType).toBe("image");
+    expect(r.resultatUrl).toBe("/medical-images/TEST-IMG-1/ecg-stemi.png");
+    expect(r.resultatCaption).toMatch(/à l'admission/);
+    expect(r.resultat).toMatch(/sus-décalage/i);
+  });
+  it("retourne l'image sur une requête radio thorax", async () => {
+    const r = await lookupExaminer("TEST-IMG-1", "je demande une radiographie thoracique");
+    expect(r.kind).toBe("finding");
+    expect(r.resultatType).toBe("image");
+    expect(r.resultatUrl).toMatch(/radio-thorax\.png/);
+  });
+  it("mode agrégé : chaque item porte son URL image indépendamment", async () => {
+    const r = await lookupExaminer(
+      "TEST-IMG-1",
+      "je fais un ECG puis une radiographie thoracique",
+    );
+    expect(r.kind).toBe("findings");
+    expect(r.items).toBeDefined();
+    const ecg = r.items!.find((i) => /ECG/i.test(i.maneuver));
+    const radio = r.items!.find((i) => /Radiographie/i.test(i.maneuver));
+    expect(ecg?.resultatType).toBe("image");
+    expect(radio?.resultatType).toBe("image");
+  });
+});
+
+describe("lookupExaminer — fallback no_imaging (Phase 3 amendement 1)", () => {
+  it("renvoie no_imaging si query d'imagerie sans match sur la grille", async () => {
+    const r = await lookupExaminer("TEST-NOIMG-1", "je demande une radio thorax");
+    expect(r.kind).toBe("no_imaging");
+    expect(r.match).toBe(false);
+    expect(r.fallback).toMatch(/Imagerie non disponible/i);
+    expect(r.fallback).toMatch(/présentiel|orientez/i);
+  });
+  it("renvoie no_match sur une query non-imagerie sans match", async () => {
+    const r = await lookupExaminer("TEST-NOIMG-1", "xyz abcdef qqchose");
+    expect(r.kind).toBe("no_match");
+    expect(r.fallback).toMatch(/non disponible/i);
+  });
+  it("non-régression : station sans image continue de renvoyer ses findings texte inchangés", async () => {
+    const r = await lookupExaminer("TEST-NOIMG-1", "auscultation cardiaque");
+    expect(r.kind).toBe("finding");
+    expect(r.resultat).toMatch(/Auscultation normale/i);
+    // Aucun champ image ne doit apparaître sur les findings texte.
+    expect(r.resultatType).toBeUndefined();
+    expect(r.resultatUrl).toBeUndefined();
   });
 });

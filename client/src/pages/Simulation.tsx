@@ -14,6 +14,7 @@ import { useStreamingChat } from "@/hooks/useStreamingChat";
 import { useConversationMode } from "@/hooks/useConversationMode";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { MicLevelIndicator } from "@/components/MicLevelIndicator";
+import { ExaminerImage } from "@/components/ExaminerImage";
 import {
   getConversationPreferences,
   getPreferredVoice,
@@ -39,7 +40,12 @@ import { classifyDoctorIntent } from "@/lib/intentRouter";
 const TOTAL_DURATION = 13 * 60;
 const ANNOUNCEMENT_11_MIN = 2 * 60;
 
-type ExaminerItem = { maneuver: string; text: string };
+type ExaminerItem = {
+  maneuver: string;
+  text: string;
+  imageUrl?: string;
+  imageCaption?: string;
+};
 
 type TranscriptTurn =
   | { role: "patient" | "doctor"; text: string }
@@ -49,15 +55,20 @@ type TranscriptTurn =
       maneuver?: string;
       isError?: boolean;
       items?: ExaminerItem[];
+      imageUrl?: string;      // Phase 3 — image associée au finding unique
+      imageCaption?: string;
     };
 
 const EXAMINER_TIMEOUT_MS = 10_000;
 
 // Transforme la réponse déterministe de /api/examiner/lookup en un tour
 // affichable. Le `kind` pilote le rendu :
-//   - finding    → bulle simple, texte = resultat, manœuvre en en-tête.
-//   - findings   → bulle unique agrégée avec liste à puces (`items`).
-//   - no_resultat / no_match / no_teleconsult → fallback textuel dédié.
+//   - finding    → bulle simple, texte = resultat, manœuvre en en-tête,
+//                  image optionnelle affichée en dessous (Phase 3).
+//   - findings   → bulle unique agrégée avec liste à puces (`items`),
+//                  chaque item peut porter une image.
+//   - no_resultat / no_match / no_teleconsult / no_imaging → fallback
+//                  textuel dédié.
 // Le fallback legacy (sans `kind`) reste géré au cas où un client de test
 // renvoie l'ancien shape.
 function buildExaminerTurn(
@@ -67,11 +78,24 @@ function buildExaminerTurn(
     return {
       role: "examiner",
       text: "",
-      items: found.items.map((it) => ({ maneuver: it.maneuver, text: it.resultat })),
+      items: found.items.map((it) => ({
+        maneuver: it.maneuver,
+        text: it.resultat,
+        ...(it.resultatType === "image" && it.resultatUrl
+          ? { imageUrl: it.resultatUrl, imageCaption: it.resultatCaption }
+          : {}),
+      })),
     };
   }
   if (found.kind === "finding" && found.resultat) {
-    return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
+    return {
+      role: "examiner",
+      text: found.resultat,
+      maneuver: found.maneuver,
+      ...(found.resultatType === "image" && found.resultatUrl
+        ? { imageUrl: found.resultatUrl, imageCaption: found.resultatCaption }
+        : {}),
+    };
   }
   if (!found.kind && found.match && found.resultat) {
     return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
@@ -707,17 +731,36 @@ export default function Simulation() {
                           : "bg-slate-100 border-slate-300 text-slate-800",
                       )}>
                         {hasItems ? (
-                          <ul className="space-y-1.5 list-disc list-inside">
+                          <ul className="space-y-2 list-disc list-inside">
                             {msg.items!.map((it, i) => (
                               <li key={i}>
                                 <span className="font-semibold not-italic">{it.maneuver}</span>
                                 {" — "}
                                 {it.text}
+                                {it.imageUrl && (
+                                  <ExaminerImage
+                                    url={it.imageUrl}
+                                    alt={it.maneuver}
+                                    caption={it.imageCaption}
+                                    maneuver={it.maneuver}
+                                    className="mt-1.5"
+                                  />
+                                )}
                               </li>
                             ))}
                           </ul>
                         ) : (
-                          msg.text
+                          <>
+                            {msg.text}
+                            {msg.imageUrl && (
+                              <ExaminerImage
+                                url={msg.imageUrl}
+                                alt={msg.maneuver ?? "Image examinateur"}
+                                caption={msg.imageCaption}
+                                maneuver={msg.maneuver}
+                              />
+                            )}
+                          </>
                         )}
                       </div>
                     </div>
