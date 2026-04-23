@@ -7,8 +7,8 @@ import {
   ClipboardList, Lightbulb,
 } from "lucide-react";
 import {
-  ApiError, evaluate, type EvaluationResult, type EvaluationScores, type PatientBrief,
-  type StationType,
+  ApiError, evaluate, getEvaluationWeights, type EvaluationResult, type EvaluationScores,
+  type EvaluationWeightsResponse, type PatientBrief, type StationType,
 } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
@@ -44,6 +44,62 @@ const STATION_TYPE_LABELS: Record<StationType, string> = {
 
 function stationTypeLabel(t: StationType): string {
   return STATION_TYPE_LABELS[t] ?? t;
+}
+
+// Canonicals côté front : ordre d'affichage + libellés fallback des axes.
+// Source de vérité des POIDS = `/api/evaluator/weights` (table Phase 2),
+// non les weights renvoyés avec chaque section d'évaluation. Ça rend la
+// page robuste à un serveur stale qui aurait omis une section (ex. Clôture
+// absente de la sortie Sonnet) — on synthétise la rangée manquante avec
+// score=0 et le poids canonique.
+const CANONICAL_AXES = ["anamnese", "examen", "management", "cloture", "communication"] as const;
+type CanonicalAxis = typeof CANONICAL_AXES[number];
+
+const AXIS_LABELS: Record<CanonicalAxis, string> = {
+  anamnese: "Anamnèse",
+  examen: "Examen",
+  management: "Management",
+  cloture: "Clôture",
+  communication: "Communication",
+};
+
+interface DisplaySection {
+  key: CanonicalAxis;
+  name: string;
+  weight: number; // 0-1 (fraction)
+  score: number;
+  raw?: string;
+}
+
+// Fusion côté front : pour chaque axe canonique, on récupère le score depuis
+// la sortie évaluateur (par key), et le POIDS toujours depuis la table Phase 2
+// (via /api/evaluator/weights). Si la table n'est pas disponible (pas encore
+// fetchée, ou stationType inconnu), on retombe sur le weight de la section ou
+// 0. L'ordre des rangées rendues est TOUJOURS CANONICAL_AXES, donc 5 rangées
+// exactement — anamnèse > examen > management > clôture > communication.
+export function buildDisplaySections(
+  sections: EvaluationScores["sections"],
+  weightsTable: EvaluationWeightsResponse | null,
+  stationType: StationType | undefined,
+): DisplaySection[] {
+  const byKey = new Map<string, EvaluationScores["sections"][number]>();
+  for (const s of sections) byKey.set(s.key, s);
+  const canonicalPercent = weightsTable && stationType ? weightsTable.weights[stationType] : null;
+  return CANONICAL_AXES.map((axis) => {
+    const existing = byKey.get(axis);
+    const weightPct = canonicalPercent
+      ? canonicalPercent[axis]
+      : existing
+        ? Math.round(existing.weight * 100)
+        : 0;
+    return {
+      key: axis,
+      name: existing?.name ?? AXIS_LABELS[axis],
+      weight: weightPct / 100,
+      score: existing?.score ?? 0,
+      ...(existing?.raw ? { raw: existing.raw } : {}),
+    };
+  });
 }
 
 // Palette conditionnelle du verdict, partagée entre la carte synthèse et les
@@ -119,9 +175,29 @@ export default function Evaluation() {
   const session = stationId ? readSession(stationId) : null;
 
   const [result, setResult] = useState<EvaluationResult | null>(null);
+  const [weightsTable, setWeightsTable] = useState<EvaluationWeightsResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
   const [isExporting, setIsExporting] = useState(false);
+
+  // Table Phase 2 fetchée une fois au mount. Source de vérité des POIDS.
+  // Le résultat d'évaluation transporte les scores ; les poids affichés
+  // viennent d'ici, pas du payload évaluateur — garde-fou contre les
+  // hallucinations de Sonnet et contre un serveur stale.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const w = await getEvaluationWeights();
+        if (!cancelled) setWeightsTable(w);
+      } catch {
+        // Table non accessible (endpoint manquant ? serveur pré-Phase-2 ?)
+        // On fonctionnera en mode dégradé — cf. buildDisplaySections qui
+        // retombe sur les weights du payload évaluateur dans ce cas.
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
   async function runEvaluation() {
     if (!session) return;
@@ -138,6 +214,17 @@ export default function Evaluation() {
     setError(null);
     try {
       const res = await evaluate({ stationId: session.stationId, transcript: session.transcript });
+      // Instrumentation debug Phase 2 — loggue la shape brute que le front
+      // reçoit. Utile au user pour diagnostiquer un serveur stale vs un
+      // bug front. Apparaît dans la DevTools Console du navigateur.
+      // eslint-disable-next-line no-console
+      console.info("[evaluation] received result:", {
+        stationType: res.stationType,
+        communicationWeight: res.communicationWeight,
+        sectionsCount: res.scores?.sections?.length,
+        sectionKeys: res.scores?.sections?.map((s) => s.key),
+        globalScore: res.scores?.globalScore,
+      });
       setResult(res);
     } catch (err) {
       const e = err as ApiError;
@@ -295,7 +382,15 @@ export default function Evaluation() {
                 <span className={`text-4xl font-bold ${gt.text}`}>{scores.globalScore}%</span>
               </div>
               <div className="flex-1 space-y-4">
-                {scores.sections.map((s) => {
+                {/* Les 5 rangées canoniques sont TOUJOURS rendues, quelles que
+                    soient les sections présentes dans `scores.sections`. Les
+                    poids viennent de la table Phase 2 via /api/evaluator/weights
+                    (source de vérité unique), pas du payload évaluateur. Ça
+                    protège le rendu contre :
+                      - un serveur stale qui n'aurait pas le weight override
+                      - une hallucination Sonnet sur le weight par axe
+                      - une section Clôture omise de la sortie LLM */}
+                {buildDisplaySections(scores.sections, weightsTable, result.stationType).map((s) => {
                   const weightPct = Math.round(s.weight * 100);
                   const nonEvaluated = weightPct === 0;
                   return (
