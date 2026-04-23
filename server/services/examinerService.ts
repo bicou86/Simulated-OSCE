@@ -27,8 +27,23 @@ export function flattenExamenResultats(block: unknown): FlatFinding[] {
     if (!rawCat || typeof rawCat !== "object") continue;
     const cat = rawCat as { examen?: string; resultat?: string | null; details?: unknown };
     const categoryName = typeof cat.examen === "string" ? cat.examen : key;
-    if (Array.isArray(cat.details) && cat.details.length > 0) {
-      for (const d of cat.details) {
+    const hasDetails = Array.isArray(cat.details) && cat.details.length > 0;
+    // Une catégorie peut porter à la fois un résumé (resultat) ET des items
+    // détaillés (details). Ex. German-2 e3 = "Otoscopie bilatérale" avec
+    // resultat="Normale des deux côtés" + 4 détails à resultat null.
+    // On émet alors le résumé comme finding catégorie-niveau en plus des
+    // détails — sans quoi une requête générique ("otoscopie") ne matcherait
+    // qu'un item à null et retomberait sur no_resultat.
+    if (typeof cat.resultat === "string") {
+      out.push({
+        categoryKey: key,
+        categoryName,
+        maneuver: categoryName,
+        resultat: cat.resultat,
+      });
+    }
+    if (hasDetails) {
+      for (const d of cat.details as unknown[]) {
         if (!d || typeof d !== "object") continue;
         const detail = d as { item?: string; resultat?: string | null };
         out.push({
@@ -38,12 +53,14 @@ export function flattenExamenResultats(block: unknown): FlatFinding[] {
           resultat: typeof detail.resultat === "string" ? detail.resultat : null,
         });
       }
-    } else {
+    } else if (typeof cat.resultat !== "string") {
+      // Ni détails ni résumé texte → on émet un finding "manœuvre reconnue,
+      // pas de finding" pour que la requête soit au moins matchable.
       out.push({
         categoryKey: key,
         categoryName,
         maneuver: categoryName,
-        resultat: typeof cat.resultat === "string" ? cat.resultat : null,
+        resultat: null,
       });
     }
   }
