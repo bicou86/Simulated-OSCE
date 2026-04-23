@@ -108,6 +108,50 @@ export const PATIENT_FINDING_BLACKLIST: string[] = [
   "glasgow",
 ];
 
+// Liste noire ADDITIONNELLE pour un accompagnant·e (caregiver) : en plus des
+// termes patient, un parent ne doit pas produire les verbes de mesure
+// instrumentale ni le jargon soignant qu'un vrai parent n'utiliserait pas.
+// Ces termes sont OK pour le patient adulte qui rapporte un finding objectif
+// qu'il a entendu d'un autre médecin — mais jamais pour un parent qui décrit
+// ce qu'il observe chez son enfant.
+export const CAREGIVER_EXTRA_BLACKLIST: string[] = [
+  // Mesures instrumentales qu'un parent n'a pas
+  "saturation",
+  "spo2",
+  "tachypnee",
+  "tachypneique",
+  "tachycardie",
+  "tachycarde",
+  "bradycardie",
+  "dyspnee",
+  "dyspneique",
+  "cyanose",
+  "cyanosee",
+  "cyanose peripherique",
+  "hyperthermie",
+  "febrile",
+  // Verbes de soignant
+  "j'ai mesure",
+  "j ai mesure",
+  "pouls est regulier",
+  "pouls est irregulier",
+  "pouls filant",
+  "a l'auscultation",
+  "a la palpation",
+  "elle presente une",
+  "il presente une",
+  "on objective",
+  // Jargon additionnel
+  "murmure vesiculaire",
+  "pale cutanee",
+  "palure cutanee",
+];
+
+export const CAREGIVER_FINDING_BLACKLIST: string[] = [
+  ...PATIENT_FINDING_BLACKLIST,
+  ...CAREGIVER_EXTRA_BLACKLIST,
+];
+
 const BLACKLIST_RE = new RegExp(
   "\\b(?:" + PATIENT_FINDING_BLACKLIST.map((t) => t.replace(/\s+/g, "\\s+")).join("|") + ")\\b",
 );
@@ -166,9 +210,20 @@ export function classifyDoctorIntent(raw: string): DoctorIntent {
 // des findings objectifs. Utilisé par le test de non-régression et par le
 // "judge" futur (point 17). Retourne la liste des termes détectés (vide si OK).
 export function detectPatientFindingLeaks(reply: string): string[] {
+  return detectLeaks(reply, PATIENT_FINDING_BLACKLIST);
+}
+
+// Variante caregiver : même mécanisme sur la blacklist étendue. À utiliser
+// quand le LLM a été routé sur le prompt Accompagnant — les verbes de mesure
+// instrumentale et le jargon soignant sont en plus interdits.
+export function detectCaregiverFindingLeaks(reply: string): string[] {
+  return detectLeaks(reply, CAREGIVER_FINDING_BLACKLIST);
+}
+
+function detectLeaks(reply: string, blacklist: string[]): string[] {
   const text = normalize(reply);
   const hits: string[] = [];
-  for (const term of PATIENT_FINDING_BLACKLIST) {
+  for (const term of blacklist) {
     const re = new RegExp("\\b" + term.replace(/\s+/g, "\\s+") + "\\b");
     if (re.test(text)) hits.push(term);
   }

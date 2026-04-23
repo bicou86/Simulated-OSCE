@@ -2,7 +2,10 @@ import { describe, expect, it } from "vitest";
 import {
   classifyDoctorIntent,
   detectPatientFindingLeaks,
+  detectCaregiverFindingLeaks,
   PATIENT_FINDING_BLACKLIST,
+  CAREGIVER_EXTRA_BLACKLIST,
+  CAREGIVER_FINDING_BLACKLIST,
 } from "./intentRouter";
 
 describe("classifyDoctorIntent — gestes d'examen", () => {
@@ -127,5 +130,80 @@ describe("detectPatientFindingLeaks", () => {
   it("tolère les accents absents", () => {
     expect(detectPatientFindingLeaks("Defense abdominale")).toContain("defense abdominale");
     expect(detectPatientFindingLeaks("Défense abdominale")).toContain("defense abdominale");
+  });
+
+  it("la blacklist patient ne contient PAS les verbes de mesure soignant (reste permissive)", () => {
+    // "Saturation" peut légitimement sortir d'une bouche de patient adulte qui
+    // rapporte un finding antérieur ("on m'a dit que ma saturation baissait").
+    // Le filtrage caregiver est plus strict.
+    expect(detectPatientFindingLeaks("Ma saturation était basse")).toHaveLength(0);
+    expect(detectPatientFindingLeaks("J'ai une tachycardie connue")).toHaveLength(0);
+  });
+});
+
+describe("CAREGIVER blacklist — invariants", () => {
+  it("CAREGIVER_FINDING_BLACKLIST est l'union patient + extras sans doublon", () => {
+    for (const term of PATIENT_FINDING_BLACKLIST) {
+      expect(CAREGIVER_FINDING_BLACKLIST).toContain(term);
+    }
+    for (const term of CAREGIVER_EXTRA_BLACKLIST) {
+      expect(CAREGIVER_FINDING_BLACKLIST).toContain(term);
+    }
+  });
+  it("CAREGIVER_EXTRA_BLACKLIST couvre les mesures instrumentales clés", () => {
+    const must = [
+      "saturation",
+      "spo2",
+      "tachypnee",
+      "tachycardie",
+      "dyspnee",
+      "cyanose",
+      "febrile",
+      "j'ai mesure",
+      "murmure vesiculaire",
+    ];
+    for (const term of must) {
+      expect(CAREGIVER_EXTRA_BLACKLIST).toContain(term);
+    }
+  });
+});
+
+describe("detectCaregiverFindingLeaks", () => {
+  it("détecte les verbes de mesure qu'un parent ne devrait pas produire", () => {
+    const reply = "J'ai mesuré sa saturation, elle est à 94%.";
+    const leaks = detectCaregiverFindingLeaks(reply);
+    expect(leaks).toContain("j'ai mesure");
+    expect(leaks).toContain("saturation");
+  });
+  it("détecte le jargon clinique (tachypnée, cyanose, fébrile) et leurs variantes", () => {
+    // Les formes dérivées (tachypnéique, cyanosée) doivent matcher leur
+    // variante en blacklist, pas la racine.
+    expect(detectCaregiverFindingLeaks("Elle est tachypnéique")).toContain("tachypneique");
+    expect(detectCaregiverFindingLeaks("Elle a une tachypnée marquée")).toContain("tachypnee");
+    expect(detectCaregiverFindingLeaks("Je la trouve cyanosée")).toContain("cyanosee");
+    expect(detectCaregiverFindingLeaks("Cyanose périphérique")).toContain("cyanose");
+    expect(detectCaregiverFindingLeaks("Elle est fébrile à 39")).toContain("febrile");
+  });
+  it("détecte le murmure vésiculaire (finding auscultatoire inventé)", () => {
+    expect(detectCaregiverFindingLeaks("Le murmure vésiculaire est symétrique"))
+      .toContain("murmure vesiculaire");
+  });
+  it("ne produit AUCUN leak sur le registre naïf attendu du parent", () => {
+    const goodReplies = [
+      "Elle est toute molle, elle ne tient pas droite.",
+      "Elle a chaud au front, j'ai pris 39,2 avec le thermomètre.",
+      "Elle respire vite et elle tire sur ses côtes.",
+      "Elle pleure dès que je la bouge, elle se tient la jambe gauche.",
+      "Son cœur bat vite, je le sens contre ma poitrine quand je la porte.",
+      "Je ne saurais pas vous dire docteur, moi je vois juste qu'elle mange moins.",
+    ];
+    for (const r of goodReplies) {
+      expect(detectCaregiverFindingLeaks(r)).toEqual([]);
+    }
+  });
+  it("détecte aussi les leaks de la blacklist patient (signe éponyme)", () => {
+    // La caregiver blacklist inclut patient blacklist → Murphy reste interdit.
+    expect(detectCaregiverFindingLeaks("Le signe de Murphy est positif"))
+      .toContain("murphy");
   });
 });
