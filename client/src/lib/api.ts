@@ -120,11 +120,20 @@ export function getSettingsStatus(): Promise<SettingsStatus> {
 
 export type StationSource = "AMBOSS" | "German" | "RESCOS" | "USMLE" | "USMLE_Triage";
 
+export type StationType =
+  | "teleconsultation"
+  | "pediatrie_accompagnant"
+  | "bbn"
+  | "psy"
+  | "triage"
+  | "anamnese_examen";
+
 export interface StationMeta {
   id: string;       // "RESCOS-1"
   title: string;
   source: StationSource;
   setting: string;
+  stationType?: StationType;
 }
 
 export function listStations(): Promise<{ stations: StationMeta[]; total: number }> {
@@ -173,6 +182,7 @@ export interface PatientBrief {
   sex: PatientSex;
   age?: number;
   interlocutor: Interlocutor;
+  stationType?: StationType;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {
