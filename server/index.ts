@@ -60,6 +60,8 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // `registerRoutes` monte tous les /api/* ET un garde 404 JSON sur /api :
+  // tout /api/* non enregistré renvoie du JSON, jamais l'index.html de Vite.
   await registerRoutes(httpServer, app);
 
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {

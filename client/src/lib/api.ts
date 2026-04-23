@@ -55,6 +55,30 @@ async function jsonFetch<T>(url: string, init: RequestInit): Promise<T> {
       status: res.status,
     });
   }
+  // Garde-fou : si le serveur répond 200 mais avec du HTML (typiquement le
+  // catch-all Vite/SPA qui avale un /api/* non enregistré — serveur dev pas
+  // redémarré, route mal nommée, ou contournement d'ordre de middleware),
+  // surface un message clair plutôt que l'énigmatique `Unexpected token '<'`
+  // de JSON.parse. Log les 200 premiers caractères en console pour le debug.
+  const contentType = res.headers.get("content-type") || "";
+  if (!/(application|text)\/json/i.test(contentType)) {
+    const snippet = await res
+      .text()
+      .then((t) => t.slice(0, 200).replace(/\s+/g, " ").trim())
+      .catch(() => "");
+    // eslint-disable-next-line no-console
+    console.error(
+      `[api] Réponse non-JSON reçue de ${url} (Content-Type: ${contentType || "?"}, status ${res.status}): ${snippet}`,
+    );
+    throw new ApiError({
+      message:
+        `Réponse non-JSON du serveur pour ${url} — l'endpoint n'est probablement pas enregistré. ` +
+        `Redémarrez le serveur de dev si vous venez d'ajouter cette route.`,
+      code: "upstream_error",
+      hint: snippet ? `Premiers caractères reçus : ${snippet}` : undefined,
+      status: res.status,
+    });
+  }
   return res.json() as Promise<T>;
 }
 
@@ -174,6 +198,54 @@ export async function sttPatient(audio: Blob, filename = "audio.webm"): Promise<
     });
   }
   return res.json();
+}
+
+// ───────── /api/examiner ─────────
+// Lookup déterministe d'un finding d'examen physique depuis la grille patient
+// (aucun appel LLM côté serveur). Le champ `kind` est le discriminator
+// canonique — les champs historiques (`match`, `resultat`, `fallback`) restent
+// présents pour la compatibilité avec les clients non encore migrés.
+
+export type ExaminerLookupKind =
+  | "finding"        // finding unique, `resultat` disponible
+  | "findings"       // plusieurs findings agrégés → voir `items`
+  | "no_resultat"    // manœuvre reconnue, pas de finding à rapporter
+  | "no_match"       // aucune manœuvre reconnue dans la grille
+  | "no_teleconsult"; // cadre téléconsultation — examen physique impossible
+
+export interface ExaminerLookupItem {
+  categoryKey: string;
+  categoryName: string;
+  maneuver: string;
+  resultat: string;
+  source?: "title_as_result";
+}
+
+export interface ExaminerLookupResult {
+  match: boolean;
+  kind: ExaminerLookupKind;
+  stationId: string;
+  query: string;
+  categoryKey?: string;
+  categoryName?: string;
+  maneuver?: string;
+  resultat?: string;
+  source?: "title_as_result";
+  items?: ExaminerLookupItem[];
+  fallback?: string;
+}
+
+export function examinerLookup(
+  stationId: string,
+  query: string,
+  signal?: AbortSignal,
+): Promise<ExaminerLookupResult> {
+  return jsonFetch("/api/examiner/lookup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ stationId, query }),
+    signal,
+  });
 }
 
 export type TtsVoice = "alloy" | "echo" | "fable" | "nova" | "onyx" | "shimmer";
