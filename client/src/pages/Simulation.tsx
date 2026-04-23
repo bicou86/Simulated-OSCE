@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import {
-  Play, Square, Mic, MicOff, AlertCircle, HeartPulse, FileAudio, CheckCircle2, Loader2, Send, ArrowLeft, Headphones as HeadphonesIcon,
+  Play, Square, Mic, MicOff, AlertCircle, HeartPulse, FileAudio, CheckCircle2, Loader2, Send, ArrowLeft, Headphones as HeadphonesIcon, Stethoscope,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -26,17 +26,62 @@ import { canonicalSetting } from "@/lib/settingGroups";
 import {
   ApiError,
   chatPatient,
+  examinerLookup,
   getPatientBrief,
   sttPatient,
   ttsPatient,
+  type ExaminerLookupResult,
   type PatientBrief,
   type TtsVoice,
 } from "@/lib/api";
+import { classifyDoctorIntent } from "@/lib/intentRouter";
 
 const TOTAL_DURATION = 13 * 60;
 const ANNOUNCEMENT_11_MIN = 2 * 60;
 
-type TranscriptTurn = { role: "patient" | "doctor"; text: string };
+type ExaminerItem = { maneuver: string; text: string };
+
+type TranscriptTurn =
+  | { role: "patient" | "doctor"; text: string }
+  | {
+      role: "examiner";
+      text: string;
+      maneuver?: string;
+      isError?: boolean;
+      items?: ExaminerItem[];
+    };
+
+const EXAMINER_TIMEOUT_MS = 10_000;
+
+// Transforme la réponse déterministe de /api/examiner/lookup en un tour
+// affichable. Le `kind` pilote le rendu :
+//   - finding    → bulle simple, texte = resultat, manœuvre en en-tête.
+//   - findings   → bulle unique agrégée avec liste à puces (`items`).
+//   - no_resultat / no_match / no_teleconsult → fallback textuel dédié.
+// Le fallback legacy (sans `kind`) reste géré au cas où un client de test
+// renvoie l'ancien shape.
+function buildExaminerTurn(
+  found: ExaminerLookupResult,
+): Extract<TranscriptTurn, { role: "examiner" }> {
+  if (found.kind === "findings" && found.items && found.items.length > 0) {
+    return {
+      role: "examiner",
+      text: "",
+      items: found.items.map((it) => ({ maneuver: it.maneuver, text: it.resultat })),
+    };
+  }
+  if (found.kind === "finding" && found.resultat) {
+    return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
+  }
+  if (!found.kind && found.match && found.resultat) {
+    return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
+  }
+  return {
+    role: "examiner",
+    text: found.fallback ?? "Finding non disponible pour cette station.",
+    maneuver: found.maneuver,
+  };
+}
 
 function systemAnnounce(text: string) {
   if (typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -172,11 +217,16 @@ export default function Simulation() {
     return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
   };
 
+  // Historique envoyé au LLM patient : on filtre les tours `examiner` — ils sont
+  // hors-dialogue (findings pré-scriptés) et on ne veut pas que le patient les
+  // référence ou les paraphrase.
   const buildHistory = useCallback((extra: TranscriptTurn[] = []): Array<{ role: "user" | "assistant"; content: string }> => {
-    return [...transcript, ...extra].map((t) => ({
-      role: t.role === "doctor" ? "user" : "assistant",
-      content: t.text,
-    }));
+    return [...transcript, ...extra]
+      .filter((t) => t.role !== "examiner")
+      .map((t) => ({
+        role: t.role === "doctor" ? "user" : "assistant",
+        content: t.text,
+      }));
   }, [transcript]);
 
   const playAudio = useCallback((blob: Blob) => {
@@ -201,6 +251,40 @@ export default function Simulation() {
     setIsSending(true);
     const newTurn: TranscriptTurn = { role: "doctor", text: cleaned };
     setTranscript((prev) => [...prev, newTurn]);
+
+    // Routeur d'intention : si le candidat verbalise un geste d'examen physique,
+    // on demande au service Examinateur (déterministe, lecture de examen_resultats)
+    // plutôt qu'au LLM patient. Règle : un faux positif vaut mieux qu'un patient
+    // qui invente un signe de Murphy.
+    if (classifyDoctorIntent(cleaned) === "examiner") {
+      // Timeout matériel : si l'examinateur ne répond pas en 10 s, on abort le
+      // fetch et on affiche une bulle d'erreur en rouge plutôt que laisser le
+      // badge "En cours" bloqué pendant toute la station (13 min chrono).
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), EXAMINER_TIMEOUT_MS);
+      try {
+        const found = await examinerLookup(stationId, cleaned, controller.signal);
+        setTranscript((prev) => [...prev, buildExaminerTurn(found)]);
+      } catch (err) {
+        const isAbort = controller.signal.aborted;
+        const errorText = isAbort
+          ? "Temps de réponse dépassé (> 10 s). Réessayez le geste ou passez à l'examen suivant."
+          : `Erreur de récupération du finding — ${(err as ApiError)?.message ?? "erreur réseau"}.`;
+        setTranscript((prev) => [
+          ...prev,
+          { role: "examiner", text: errorText, isError: true },
+        ]);
+        toast({
+          title: "Examinateur indisponible",
+          description: errorText,
+          variant: "destructive",
+        });
+      } finally {
+        window.clearTimeout(timeoutId);
+        setIsSending(false);
+      }
+      return;
+    }
 
     const input = {
       stationId,
@@ -357,10 +441,25 @@ export default function Simulation() {
 
   const handleDebrief = () => {
     if (!stationId || !brief) return;
+    // L'évaluateur n'accepte que les rôles {doctor, patient}. On convertit les
+    // tours examiner en messages `patient` préfixés `[Examinateur] ` pour que
+    // Claude Sonnet les lise comme des findings objectifs établis, sans casser
+    // le contrat de la route /api/evaluator.
+    const transcriptForEval: Array<{ role: "patient" | "doctor"; text: string }> = transcript.map((t) => {
+      if (t.role === "examiner") {
+        if (t.items && t.items.length > 0) {
+          const lines = t.items.map((it) => `  - ${it.maneuver} : ${it.text}`).join("\n");
+          return { role: "patient", text: `[Examinateur]\n${lines}` };
+        }
+        const prefix = t.maneuver ? `[Examinateur · ${t.maneuver}] ` : "[Examinateur] ";
+        return { role: "patient", text: prefix + t.text };
+      }
+      return { role: t.role, text: t.text };
+    });
     try {
       sessionStorage.setItem(
         `osce.session.${stationId}`,
-        JSON.stringify({ stationId, brief, transcript }),
+        JSON.stringify({ stationId, brief, transcript: transcriptForEval }),
       );
     } catch { /* sessionStorage peut être désactivé */ }
     setLocation(`/evaluation?station=${encodeURIComponent(stationId)}`);
@@ -467,14 +566,16 @@ export default function Simulation() {
                       <FileAudio className="w-4 h-4 mr-2" /> Patient
                     </h3>
                     <p className="text-lg leading-relaxed">{brief.patientDescription}</p>
-                    {brief.interlocutor?.type === "parent" && (
-                      <p className="mt-3 text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
+                    {/* Bandeau interlocuteur — affiché sur TOUTES les stations pour
+                        clarifier qui parle. Couleur ambre pour parent (le patient
+                        ne s'exprime pas directement), neutre sinon. */}
+                    {brief.interlocutor?.type === "parent" ? (
+                      <p className="mt-3 text-sm text-amber-900 bg-amber-50 border border-amber-200 rounded-md px-3 py-2" data-testid="interlocutor-banner">
                         <span className="font-semibold">Interlocuteur :</span> {interlocutorArticle(brief)} répond à votre place — le patient ne s'exprime pas directement.
                       </p>
-                    )}
-                    {brief.interlocutor?.parentPresent && (
-                      <p className="mt-3 text-xs text-muted-foreground">
-                        Un parent est présent dans la pièce ; il peut intervenir pour préciser des éléments factuels.
+                    ) : (
+                      <p className="mt-3 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-md px-3 py-2" data-testid="interlocutor-banner">
+                        <span className="font-semibold">Interlocuteur :</span> le patient s'exprime directement{brief.interlocutor?.parentPresent ? " (un parent est présent dans la pièce)" : ""}.
                       </p>
                     )}
                   </div>
@@ -579,24 +680,68 @@ export default function Simulation() {
                 </Badge>
               </div>
 
-              {transcript.map((msg, idx) => (
-                <div key={idx} className={cn(
-                  "flex flex-col max-w-[85%] animate-in fade-in slide-in-from-bottom-2",
-                  msg.role === "patient" ? "items-start" : "items-end ml-auto",
-                )}>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                    {msg.role === "patient" ? `${interlocutorSpeakerLabel(brief)} (voix IA)` : "Étudiant / Médecin"}
-                  </span>
-                  <div className={cn(
-                    "p-5 rounded-3xl text-lg shadow-sm border",
-                    msg.role === "patient"
-                      ? "bg-white border-border/50 text-foreground rounded-tl-sm"
-                      : "bg-primary text-primary-foreground border-primary/20 rounded-tr-sm",
+              {transcript.map((msg, idx) => {
+                if (msg.role === "examiner") {
+                  const isError = "isError" in msg && msg.isError === true;
+                  // Mode agrégé (Bug #2) : une bulle unique, en-tête sans
+                  // manœuvre (chaque ligne la porte déjà), liste à puces.
+                  const hasItems = !isError && Array.isArray(msg.items) && msg.items.length > 0;
+                  const headerManeuver = hasItems ? "" : msg.maneuver;
+                  return (
+                    <div
+                      key={idx}
+                      className="flex flex-col max-w-[85%] mx-auto items-stretch animate-in fade-in slide-in-from-bottom-2"
+                      data-testid={isError ? "bubble-examiner-error" : "bubble-examiner"}
+                    >
+                      <span className={cn(
+                        "text-xs font-semibold uppercase tracking-wider mb-1 px-2 flex items-center gap-1.5",
+                        isError ? "text-red-600" : "text-slate-500",
+                      )}>
+                        {isError ? <AlertCircle className="w-3.5 h-3.5" /> : <Stethoscope className="w-3.5 h-3.5" />}
+                        {isError ? "Erreur examinateur" : `Findings — Examinateur${headerManeuver ? ` · ${headerManeuver}` : ""}`}
+                      </span>
+                      <div className={cn(
+                        "p-4 rounded-2xl text-base shadow-sm border italic",
+                        isError
+                          ? "bg-red-50 border-red-300 text-red-800"
+                          : "bg-slate-100 border-slate-300 text-slate-800",
+                      )}>
+                        {hasItems ? (
+                          <ul className="space-y-1.5 list-disc list-inside">
+                            {msg.items!.map((it, i) => (
+                              <li key={i}>
+                                <span className="font-semibold not-italic">{it.maneuver}</span>
+                                {" — "}
+                                {it.text}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          msg.text
+                        )}
+                      </div>
+                    </div>
+                  );
+                }
+                return (
+                  <div key={idx} className={cn(
+                    "flex flex-col max-w-[85%] animate-in fade-in slide-in-from-bottom-2",
+                    msg.role === "patient" ? "items-start" : "items-end ml-auto",
                   )}>
-                    {msg.text}
+                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
+                      {msg.role === "patient" ? `${interlocutorSpeakerLabel(brief)} (voix IA)` : "Étudiant / Médecin"}
+                    </span>
+                    <div className={cn(
+                      "p-5 rounded-3xl text-lg shadow-sm border",
+                      msg.role === "patient"
+                        ? "bg-white border-border/50 text-foreground rounded-tl-sm"
+                        : "bg-primary text-primary-foreground border-primary/20 rounded-tr-sm",
+                    )}>
+                      {msg.text}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
 
               {isStreaming && partialText && (
                 <div className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
