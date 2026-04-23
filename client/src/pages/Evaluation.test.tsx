@@ -12,10 +12,10 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import { Router } from "wouter";
 import { memoryLocation } from "wouter/memory-location";
 
-import Evaluation from "./Evaluation";
+import Evaluation, { buildDisplaySections } from "./Evaluation";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
-import type { EvaluationResult, StationType } from "@/lib/api";
+import type { EvaluationResult, EvaluationWeightsResponse, StationType } from "@/lib/api";
 
 // Évite de rendre le PDF pendant les tests — `@react-pdf/renderer` n'aime pas
 // happy-dom et ça ralentit le test pour rien.
@@ -115,16 +115,40 @@ const STATION_TYPE_LABELS: Record<StationType, string> = {
   triage: "Triage",
 };
 
+const PHASE2_WEIGHTS_PAYLOAD: EvaluationWeightsResponse = {
+  axes: ["anamnese", "examen", "management", "cloture", "communication"],
+  weights: {
+    anamnese_examen:        { anamnese: 25, examen: 25, management: 25, cloture: 25, communication: 0 },
+    bbn:                    { anamnese: 15, examen: 5, management: 15, cloture: 25, communication: 40 },
+    psy:                    { anamnese: 25, examen: 5, management: 20, cloture: 20, communication: 30 },
+    pediatrie_accompagnant: { anamnese: 25, examen: 20, management: 20, cloture: 15, communication: 20 },
+    teleconsultation:       { anamnese: 35, examen: 5, management: 30, cloture: 15, communication: 15 },
+    triage:                 { anamnese: 30, examen: 20, management: 35, cloture: 10, communication: 5 },
+  },
+};
+
+// Wrapper fetch : renvoie la table des poids pour /api/evaluator/weights et
+// délègue au handler fourni pour le reste. Chaque test compose son handler
+// pour /api/evaluator/evaluate + d'éventuels autres endpoints.
+function fetchWithWeights(
+  handler: (url: string) => Response | Promise<Response>,
+): (url: RequestInfo | URL) => Promise<Response> {
+  return async (url: RequestInfo | URL) => {
+    const u = typeof url === "string" ? url : url.toString();
+    if (u.endsWith("/api/evaluator/weights")) return ok(PHASE2_WEIGHTS_PAYLOAD);
+    return handler(u);
+  };
+}
+
 describe("Evaluation — pill stationType (Bug A hotfix)", () => {
   for (const [type, label] of Object.entries(STATION_TYPE_LABELS) as Array<[StationType, string]>) {
     it(`${type} → pill rendue avec label "Type : ${label}"`, async () => {
-      const fetchMock = vi.fn(async (url: RequestInfo | URL) => {
-        const u = typeof url === "string" ? url : url.toString();
+      const fetchMock = vi.fn(fetchWithWeights((u) => {
         if (u.endsWith("/api/evaluator/evaluate")) {
           return ok(buildResult("TEST-STATION", type));
         }
         throw new Error(`Unexpected fetch to ${u}`);
-      });
+      }));
       vi.stubGlobal("fetch", fetchMock);
       renderEvaluation();
 
@@ -133,6 +157,56 @@ describe("Evaluation — pill stationType (Bug A hotfix)", () => {
       expect(pill.textContent).toContain(`Type : ${label}`);
     });
   }
+});
+
+// Ce test reproduit EXACTEMENT le symptôme observé par le user en prod après
+// le 1er hotfix (3c5359f) : serveur stale qui renvoie seulement 4 sections
+// (sans Clôture) avec un weight Communication à 0.25. La fusion client-side
+// doit quand même rendre les 5 rangées avec les poids Phase 2 canoniques,
+// pas ceux que Sonnet a hallucinés.
+describe("Evaluation — résilience à un serveur stale (4 sections, weights Sonnet-hallucinés)", () => {
+  it("rend quand même 5 rangées avec les poids canoniques Phase 2", async () => {
+    const staleResult: EvaluationResult = {
+      markdown: "# Rapport\n",
+      scores: {
+        globalScore: 55,
+        sections: [
+          // Stale server : ordre et weight Sonnet-hallucinés, Clôture absente.
+          { key: "anamnese", name: "Anamnèse", weight: 0.25, score: 80 },
+          { key: "examen", name: "Examen physique", weight: 0.25, score: 70 },
+          { key: "management", name: "Management", weight: 0.25, score: 60 },
+          { key: "communication", name: "Communication", weight: 0.25, score: 8 },
+          // Pas de cloture !
+        ],
+        verdict: "À retravailler",
+      },
+      stationType: "anamnese_examen",
+      communicationWeight: 0,
+    };
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) return ok(staleResult);
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    await waitFor(() => expect(screen.getByTestId("score-cloture")).toBeDefined());
+
+    // Les 5 axes sont là.
+    for (const axis of ["anamnese", "examen", "management", "cloture", "communication"] as const) {
+      expect(screen.getByTestId(`score-${axis}`)).toBeDefined();
+    }
+    // Clôture synthétisée : score 0, poids 25% (canonique anamnese_examen).
+    const cloture = screen.getByTestId("score-cloture");
+    expect(cloture.textContent).toContain("Clôture");
+    expect(cloture.textContent).toContain("poids 25%");
+    // Communication reprend son poids CANONIQUE (0), pas celui que Sonnet
+    // a halluciné (0.25). C'est la bulle garde-fou du bug observé en prod.
+    const comm = screen.getByTestId("score-communication");
+    expect(comm.textContent).toContain("poids 0%");
+    expect(comm.textContent).toContain("non évalué");
+    expect(comm.className).toMatch(/opacity-60/);
+  });
 });
 
 describe("Evaluation — 5 axes avec poids canoniques (Bug B hotfix)", () => {
@@ -168,13 +242,12 @@ describe("Evaluation — 5 axes avec poids canoniques (Bug B hotfix)", () => {
   }
 
   it("anamnese_examen → ligne Communication grisée + marqueur 'non évalué'", async () => {
-    const fetchMock = vi.fn(async (url: RequestInfo | URL) => {
-      const u = typeof url === "string" ? url : url.toString();
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
       if (u.endsWith("/api/evaluator/evaluate")) {
         return ok(buildResult("TEST-STATION", "anamnese_examen"));
       }
       throw new Error(`Unexpected fetch to ${u}`);
-    });
+    }));
     vi.stubGlobal("fetch", fetchMock);
     renderEvaluation();
 
@@ -185,13 +258,12 @@ describe("Evaluation — 5 axes avec poids canoniques (Bug B hotfix)", () => {
   });
 
   it("anamnese_examen → la ligne Communication n'affiche JAMAIS 'poids 20%' (garde-fou bug B)", async () => {
-    const fetchMock = vi.fn(async (url: RequestInfo | URL) => {
-      const u = typeof url === "string" ? url : url.toString();
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
       if (u.endsWith("/api/evaluator/evaluate")) {
         return ok(buildResult("TEST-STATION", "anamnese_examen"));
       }
       throw new Error(`Unexpected fetch to ${u}`);
-    });
+    }));
     vi.stubGlobal("fetch", fetchMock);
     renderEvaluation();
 
