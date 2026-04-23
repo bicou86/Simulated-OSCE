@@ -10,6 +10,10 @@ import { getAnthropicKey } from "../lib/config";
 import { logRequest } from "../lib/logger";
 import { loadPrompt } from "../lib/prompts";
 import { evaluatorFilePath, getStationMeta } from "./stationsService";
+import {
+  getAxisWeights,
+  type StationType,
+} from "../../shared/evaluation-weights";
 
 const fileCache = new Map<string, any[]>();
 
@@ -62,6 +66,8 @@ export type EvaluationScores = z.infer<typeof EvaluationScores>;
 export interface EvaluationResult {
   markdown: string;
   scores: EvaluationScores;
+  stationType?: StationType;
+  communicationWeight?: number;
 }
 
 // Extrait le JSON scores du bloc <scores_json>…</scores_json> en fin de message.
@@ -90,6 +96,11 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
   const key = getAnthropicKey();
   if (!key) throw new Error("ANTHROPIC_API_KEY_MISSING");
 
+  const meta = getStationMeta(opts.stationId);
+  const stationType: StationType | undefined = meta?.stationType;
+  const axisWeights = stationType ? getAxisWeights(stationType) : undefined;
+  const communicationWeight = axisWeights?.communication ?? 0;
+
   const [promptTemplate, station] = await Promise.all([
     loadPrompt("evaluator"),
     getEvaluatorStation(opts.stationId),
@@ -110,9 +121,33 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
     },
   ];
 
+  // Phase 2 — injection explicite du station_type inféré + des poids de l'axe
+  // Communication, pour que Sonnet n'ait pas à deviner l'importance
+  // pédagogique. On passe le poids en pourcentage (cf. shared/evaluation-
+  // weights.ts), cohérent avec le format `weight` 0-1 attendu en sortie ⇒
+  // Sonnet divise par 100.
+  const phase2Block = stationType && axisWeights
+    ? [
+        "",
+        "PHASE 2 — station_type :",
+        `  type inféré : ${stationType}`,
+        `  poids canoniques de cette station (en %) :`,
+        `    anamnese=${axisWeights.anamnese}  examen=${axisWeights.examen}  ` +
+          `management=${axisWeights.management}  cloture=${axisWeights.cloture}  ` +
+          `communication=${axisWeights.communication}`,
+        "  Utilise ces poids pour l'axe COMMUNICATION (exprime weight en fraction, ex. 0.40 pour 40%).",
+        "  Conserve le comportement existant pour les 4 axes classiques (anamnèse, examen,",
+        "  management, clôture) : leurs poids viennent toujours du champ `weights` de",
+        `  <station_data>. L'axe Communication est additif — si weight=0, produis quand même`,
+        "  la ligne dans sections[] avec score observé, elle sera exclue du globalScore.",
+        "",
+      ].join("\n")
+    : "";
+
   const userMessage = [
     `Station ${opts.stationId}.`,
     "",
+    phase2Block,
     "TRANSCRIPTION :",
     formatTranscript(opts.transcript),
     "",
@@ -195,7 +230,12 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
     );
   }
 
-  return { markdown, scores: validated.data };
+  return {
+    markdown,
+    scores: validated.data,
+    stationType,
+    communicationWeight,
+  };
 }
 
 export class EvaluatorOutputError extends Error {

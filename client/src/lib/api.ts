@@ -300,6 +300,8 @@ export interface EvaluationScores {
 export interface EvaluationResult {
   markdown: string;
   scores: EvaluationScores;
+  stationType?: StationType;
+  communicationWeight?: number;
 }
 
 export interface EvaluateInput {

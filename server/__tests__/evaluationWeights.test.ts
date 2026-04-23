@@ -66,6 +66,24 @@ describe("EVALUATION_WEIGHTS — poids Communication non-trivial hors anamnese_e
       expect(EVALUATION_WEIGHTS[type].communication, type).toBeGreaterThan(0);
     }
   });
+  it("anamnese_examen est le SEUL type avec Communication === 0 (protège non-régression Phase 1)", () => {
+    // Invariant critique : toute future refonte des poids doit préserver
+    // Communication=0 UNIQUEMENT sur anamnese_examen, sous peine de casser
+    // les fixtures score-à-score des stations adulte-self classiques.
+    const zeroCommTypes = ALL_STATION_TYPES.filter(
+      (t) => EVALUATION_WEIGHTS[t].communication === 0,
+    );
+    expect(zeroCommTypes).toEqual(["anamnese_examen"]);
+  });
+  it("bbn a exactement 40 points en Communication (ligne critique pédagogiquement)", () => {
+    // Garde-fou explicite : BBN = annonce de mauvaise nouvelle, exercice
+    // dont l'évaluation est dominée par la communication. Une réduction
+    // accidentelle ce poids ferait régresser les stations BBN validées en
+    // Phase 2 bis / 3.
+    expect(EVALUATION_WEIGHTS.bbn.communication).toBe(40);
+    const bbn = EVALUATION_WEIGHTS.bbn;
+    expect(bbn.anamnese + bbn.examen + bbn.management + bbn.cloture + bbn.communication).toBe(100);
+  });
   it("bbn a le poids Communication le plus élevé (annonce = exercice communicationnel)", () => {
     const bbn = EVALUATION_WEIGHTS.bbn.communication;
     for (const type of ALL_STATION_TYPES) {
