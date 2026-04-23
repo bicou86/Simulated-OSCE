@@ -89,49 +89,64 @@ const TEXT_MODE_DIRECTIVE = `
 ## ADAPTATION
 La conversation se déroule en mode texte, pas en mode vocal. Tu peux répondre avec des phrases légèrement plus construites, mais reste naturel et bref.`;
 
-// Directive injectée quand l'interlocuteur est un parent / tuteur (patient pré-verbal,
-// inconscient, dément…). Remplace la règle "tu es le patient" par "tu es le parent".
-function interlocutorDirective(interlocutor: Interlocutor, station: any): string {
-  if (interlocutor.type === "self" && !interlocutor.parentPresent) return "";
-
-  if (interlocutor.type === "parent") {
-    const role =
-      interlocutor.parentRole === "mother" ? "la mère" :
-      interlocutor.parentRole === "father" ? "le père" :
-      "l'accompagnant·e";
-    const roleLower = role;
-    const patientName = station.nom ?? "l'enfant";
+// Directive injectée quand l'interlocuteur est un parent présent à côté d'un
+// patient qui parle (enfant en âge scolaire). Le patient parle, le parent peut
+// compléter. Le cas `type === "parent"` est géré via un prompt dédié
+// (`caregiver.md`), pas via une directive additive.
+function interlocutorDirective(interlocutor: Interlocutor): string {
+  if (interlocutor.type === "self" && interlocutor.parentPresent) {
     return `
 
 ## CONTEXTE D'INTERLOCUTION
-Le patient est ${patientName}${station.age ? ` (${station.age})` : ""}. **Tu n'incarnes PAS le patient** — tu incarnes ${roleLower} qui répond aux questions du médecin à la place du patient. Tu parles à la première personne en tant que parent / accompagnant ("Ma fille a commencé à tousser hier soir", "Il refuse de manger depuis ce matin"), jamais en tant que l'enfant / le patient lui-même. Tu peux exprimer l'inquiétude, l'observation comportementale, l'historique et tout ce qu'un·e accompagnant·e attentif·ve observerait — mais pas les sensations internes que seul le patient pourrait décrire. Si le médecin te demande "Où avez-vous mal ?", reformule en "Elle se tient souvent le ventre" plutôt que d'inventer une sensation.
-Toutes les règles en-dessous qui disent "tu es le patient" s'appliquent à "tu es l'interlocuteur du médecin (ici ${roleLower})". La règle d'ouverture reste : le médecin parle en premier, tu ne produis jamais de tour spontané.`;
+Un parent est présent dans la pièce. Tu réponds toi-même aux questions du médecin (tu es le patient, un enfant en âge scolaire), mais le parent peut intervenir brièvement pour préciser des éléments factuels (dates, antécédents, chronologie) si tu hésites. Reste en personnage ; c'est à toi de parler en priorité.`;
   }
+  return "";
+}
 
-  // interlocutor.type === "self" && parentPresent
+// Bloc d'identification du patient injecté dans le prompt caregiver : même
+// valeur logique que l'ancienne directive "le patient est X", mais consommé par
+// caregiver.md qui a son propre registre naïf.
+function caregiverIdentityBlock(
+  interlocutor: Interlocutor,
+  station: any,
+): string {
+  const role =
+    interlocutor.parentRole === "mother" ? "la mère" :
+    interlocutor.parentRole === "father" ? "le père" :
+    "l'accompagnant·e";
+  const patientName = station.nom ?? "le patient";
+  const age = station.age ? ` (${station.age})` : "";
   return `
 
-## CONTEXTE D'INTERLOCUTION
-Un parent est présent dans la pièce. Tu réponds toi-même aux questions du médecin (tu es le patient, un enfant en âge scolaire), mais le parent peut intervenir brièvement pour préciser des éléments factuels (dates, antécédents, chronologie) si tu hésites. Reste en personnage ; c'est à toi de parler en priorité.`;
+## PATIENT DONT TU ES L'ACCOMPAGNANT·E
+Tu es ${role} de ${patientName}${age}. Toutes les règles du prompt s'appliquent en te nommant toi comme interlocuteur du médecin, pas le patient.`;
 }
 
 // Construit le system prompt complet : markdown + bloc <station_data>.
+// Quand l'interlocuteur est un parent/accompagnant, on charge `caregiver.md`
+// au lieu de `patient.md` — le caregiver prompt a son propre registre naïf
+// non-médical, sa propre blacklist élargie (verbes de mesure instrumentale,
+// jargon soignant) et ses propres few-shots. Le cas `self + parent présent`
+// reste sur patient.md + une directive additive.
 export async function buildSystemPrompt(
   stationId: string,
   mode: "voice" | "text",
 ): Promise<string> {
-  const [template, station] = await Promise.all([
-    loadPrompt("patient"),
-    getPatientStation(stationId),
-  ]);
+  const station = await getPatientStation(stationId);
   const patientDescription = station.patient_description ?? "";
   const sex = extractSex(patientDescription);
   const age = extractAge(station.age, patientDescription);
   const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
+
+  const useCaregiverPrompt = interlocutor.type === "parent";
+  const template = await loadPrompt(useCaregiverPrompt ? "caregiver" : "patient");
+  const identityBlock = useCaregiverPrompt
+    ? caregiverIdentityBlock(interlocutor, station)
+    : interlocutorDirective(interlocutor);
+
   const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
-  const interlocDirective = interlocutorDirective(interlocutor, station);
-  return template + interlocDirective + modeDirective + dataBlock;
+  return template + identityBlock + modeDirective + dataBlock;
 }
 
 export interface ChatTurn {
