@@ -315,3 +315,30 @@ export function evaluate(input: EvaluateInput): Promise<EvaluationResult> {
     body: JSON.stringify(input),
   });
 }
+
+// Table statique de pondération exposée par le backend — consommée par la
+// page évaluation pour afficher le poids à côté de chaque score d'axe.
+// Immuable côté front ; l'édition se fait dans shared/evaluation-weights.ts.
+export type EvaluationAxis =
+  | "anamnese"
+  | "examen"
+  | "management"
+  | "cloture"
+  | "communication";
+
+export interface AxisWeights {
+  anamnese: number;
+  examen: number;
+  management: number;
+  cloture: number;
+  communication: number;
+}
+
+export interface EvaluationWeightsResponse {
+  axes: readonly EvaluationAxis[];
+  weights: Record<StationType, AxisWeights>;
+}
+
+export function getEvaluationWeights(): Promise<EvaluationWeightsResponse> {
+  return jsonFetch("/api/evaluator/weights", { method: "GET" });
+}

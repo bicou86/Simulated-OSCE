@@ -105,15 +105,31 @@ describe("inferStationType — ordre des règles", () => {
     expect(r.type).toBe("psy");
   });
 
-  it("Règle 5a : source USMLE_Triage → triage", () => {
+  it("Règle 5 : source USMLE_Triage → triage", () => {
     const r = inferStationType(base({ source: "USMLE_Triage", setting: "Cabinet" }));
     expect(r.type).toBe("triage");
-    expect(r.matchedRule).toBe("rule_5a_triage_source");
+    expect(r.matchedRule).toBe("rule_5_triage_source");
   });
-  it("Règle 5b : setting urgences/SAU → triage", () => {
-    expect(inferStationType(base({ setting: "Urgences" })).type).toBe("triage");
-    expect(inferStationType(base({ setting: "Service d'urgences" })).type).toBe("triage");
-    expect(inferStationType(base({ setting: "SAU" })).type).toBe("triage");
+  it("Règle 5 : setting « Service d'urgences » sur AMBOSS → anamnese_examen (pas triage)", () => {
+    // Non-régression pédagogique : AMBOSS-1 et consorts ont "Service d'urgences"
+    // en setting mais sont des anamnèses-examens cliniques classiques, pas des
+    // exercices de triage au sens ECOS (priorisation multi-patients).
+    // Cette règle protège la fixture AMBOSS-1 → anamnese_examen pour la
+    // non-régression score-à-score.
+    const r = inferStationType(base({
+      source: "AMBOSS",
+      setting: "Service d'urgences",
+      patientDescription: "Marcia Billings, femme de 47 ans, consultante pour des douleurs abdominales",
+      age: 47,
+      interlocutorType: "self",
+    }));
+    expect(r.type).toBe("anamnese_examen");
+    expect(r.matchedRule).toBe("rule_6_default");
+  });
+  it("Règle 5 : setting « SAU » / « Urgences » sur source non-Triage → anamnese_examen", () => {
+    expect(inferStationType(base({ source: "RESCOS", setting: "Urgences" })).type).toBe("anamnese_examen");
+    expect(inferStationType(base({ source: "AMBOSS", setting: "SAU" })).type).toBe("anamnese_examen");
+    expect(inferStationType(base({ source: "German", setting: "Service d'urgence" })).type).toBe("anamnese_examen");
   });
 
   it("Règle 6 : défaut → anamnese_examen", () => {
@@ -173,5 +189,23 @@ describe("inferStationType — ordre des règles", () => {
       specialite: "psychiatrie",
     });
     expect(r.type).toBe("teleconsultation");
+  });
+
+  it("Fixture de non-régression AMBOSS-1 : classification stable anamnese_examen", () => {
+    // Verrouille pédagogiquement AMBOSS-1 sur anamnese_examen pour que la
+    // fixture transcript figée J4 reste valide — toute modification future
+    // qui reclassifierait AMBOSS-1 casserait ce test avant de casser le
+    // score-à-score.
+    const r = inferStationType({
+      id: "AMBOSS-1",
+      fullId: "AMBOSS-1 - Douleurs abdominales - Femme 47 ans",
+      title: "Douleurs abdominales - Femme 47 ans",
+      source: "AMBOSS",
+      setting: "Service d'urgences",
+      patientDescription: "Marcia Billings, femme de 47 ans, consultante pour des douleurs abdominales",
+      age: 47,
+      interlocutorType: "self",
+    });
+    expect(r.type).toBe("anamnese_examen");
   });
 });
