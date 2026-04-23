@@ -13,6 +13,10 @@ import {
 } from "../lib/patientInterlocutor";
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
+import {
+  detectCaregiverFindingLeaks,
+  detectPatientFindingLeaks,
+} from "@shared/patientLeakDetection";
 
 // Cache des fichiers JSON déjà parsés (clé = filename).
 const fileCache = new Map<string, any[]>();
@@ -58,18 +62,21 @@ export interface PatientBrief {
   sex: PatientSex;
   age?: number;
   interlocutor: Interlocutor;
+  stationType?: string;   // inféré par stationsService, optionnel pour rétrocompat tests
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
 // elle peut afficher les signes vitaux / cadre / description sans faire d'appel LLM.
 // Aucune donnée de scoring ni script anamnèse complet n'est renvoyée.
 // `sex` est déduit de `patient_description` par extractSex (cache mémoire).
+// `stationType` est repris depuis le catalog (inférence déterministe au boot).
 export async function getPatientBrief(stationId: string): Promise<PatientBrief> {
   const station = await getPatientStation(stationId);
   const patientDescription = station.patient_description ?? "";
   const sex = extractSex(patientDescription);
   const age = extractAge(station.age, patientDescription);
   const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
+  const meta = getStationMeta(stationId);
   return {
     stationId,
     setting: station.setting ?? "",
@@ -80,6 +87,7 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     sex,
     age,
     interlocutor,
+    stationType: meta?.stationType,
   };
 }
 
@@ -122,6 +130,20 @@ function caregiverIdentityBlock(
 Tu es ${role} de ${patientName}${age}. Toutes les règles du prompt s'appliquent en te nommant toi comme interlocuteur du médecin, pas le patient.`;
 }
 
+// Résout l'interlocuteur effectif pour une station (parent vs self), en
+// factorisant la logique partagée entre buildSystemPrompt (prompt routing) et
+// runPatientChat / streamPatientChat (leak detection post-génération).
+export async function resolveStationInterlocutor(
+  stationId: string,
+): Promise<{ station: any; interlocutor: Interlocutor }> {
+  const station = await getPatientStation(stationId);
+  const patientDescription = station.patient_description ?? "";
+  const sex = extractSex(patientDescription);
+  const age = extractAge(station.age, patientDescription);
+  const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
+  return { station, interlocutor };
+}
+
 // Construit le system prompt complet : markdown + bloc <station_data>.
 // Quand l'interlocuteur est un parent/accompagnant, on charge `caregiver.md`
 // au lieu de `patient.md` — le caregiver prompt a son propre registre naïf
@@ -132,12 +154,7 @@ export async function buildSystemPrompt(
   stationId: string,
   mode: "voice" | "text",
 ): Promise<string> {
-  const station = await getPatientStation(stationId);
-  const patientDescription = station.patient_description ?? "";
-  const sex = extractSex(patientDescription);
-  const age = extractAge(station.age, patientDescription);
-  const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
-
+  const { station, interlocutor } = await resolveStationInterlocutor(stationId);
   const useCaregiverPrompt = interlocutor.type === "parent";
   const template = await loadPrompt(useCaregiverPrompt ? "caregiver" : "patient");
   const identityBlock = useCaregiverPrompt
@@ -147,6 +164,32 @@ export async function buildSystemPrompt(
   const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
   return template + identityBlock + modeDirective + dataBlock;
+}
+
+// Détecte les leaks de findings objectifs dans la réponse LLM POST-génération.
+// Mode log-only : on émet une ligne JSON structurée dans stdout (picked up par
+// /var/log/* ou l'agrégateur Replit), on ne bloque pas la conversation. Sert
+// de télémétrie pour renforcer le prompt ou passer en mode sanitize plus tard.
+// Respecte l'invariant 3 ECOS : jamais d'invention — ici on détecte la sortie
+// suspecte sans la censurer, pour ne pas briser l'expérience sur un faux
+// positif tant que la liste n'est pas 100% stabilisée.
+function logLeaksIfAny(
+  stationId: string,
+  interlocutorType: Interlocutor["type"],
+  reply: string,
+): void {
+  if (!reply) return;
+  const leaks = interlocutorType === "parent"
+    ? detectCaregiverFindingLeaks(reply)
+    : detectPatientFindingLeaks(reply);
+  if (leaks.length === 0) return;
+  // eslint-disable-next-line no-console
+  console.info(JSON.stringify({
+    event: "patient_response_leak",
+    stationId,
+    interlocutor: interlocutorType,
+    leaks,
+  }));
 }
 
 export interface ChatTurn {
@@ -167,6 +210,7 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
+  const { interlocutor } = await resolveStationInterlocutor(opts.stationId);
   const system = await buildSystemPrompt(opts.stationId, opts.mode);
   const client = new OpenAI({ apiKey: key });
   const model = opts.model ?? "gpt-4o-mini";
@@ -183,6 +227,7 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
       ],
     });
     const reply = completion.choices[0]?.message?.content?.trim() ?? "";
+    logLeaksIfAny(opts.stationId, interlocutor.type, reply);
     void logRequest({
       route: "/api/patient/chat",
       stationId: opts.stationId,
@@ -235,6 +280,7 @@ export async function* streamPatientChat(
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
+  const { interlocutor } = await resolveStationInterlocutor(opts.stationId);
   const system = await buildSystemPrompt(opts.stationId, opts.mode);
   const client = new OpenAI({ apiKey: key });
   const model = opts.model ?? "gpt-4o-mini";
@@ -294,6 +340,7 @@ export async function* streamPatientChat(
     if (tail.length > 0) {
       yield { type: "sentence", text: tail, index: sentenceIndex++ };
     }
+    logLeaksIfAny(opts.stationId, interlocutor.type, fullText);
     yield { type: "done", fullText: fullText.trim() };
   } catch (err) {
     ok = false;
