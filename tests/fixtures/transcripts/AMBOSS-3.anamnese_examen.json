@@ -8,6 +8,7 @@
   "stationId": "AMBOSS-3",
   "expectedStationType": "anamnese_examen",
   "expectedCommunicationWeight": 0,
+  "expectedCanonicalWeights": { "anamnese": 25, "examen": 25, "management": 25, "cloture": 25, "communication": 0 },
   "transcript": [
     { "role": "doctor", "text": "Bonjour, comment puis-je vous aider ?" },
     { "role": "patient", "text": "J'ai des douleurs au ventre depuis trois jours." },
@@ -30,10 +31,10 @@
       "verdict": "Réussi"
     }
   },
-  "expectedGlobalScore": 72,
+  "expectedGlobalScore": 71,
   "expectedComputedFromWeights": {
-    "formula": "Σ(score × weight) avec Communication weight=0 exclu",
-    "calc": "85×0.25 + 75×0.25 + 65×0.25 + 60×0.25 = 71.25 → arrondi 71 ou Sonnet renvoie 72",
-    "value": 72
+    "formula": "Σ(score × poids_canonique) / Σ(poids_canonique > 0) — override serveur depuis bug B hotfix",
+    "calc": "(85×0.25 + 75×0.25 + 65×0.25 + 60×0.25) / 1.0 = 71.25 → arrondi 71",
+    "value": 71
   }
 }

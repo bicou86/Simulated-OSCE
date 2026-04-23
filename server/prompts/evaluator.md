@@ -201,8 +201,17 @@ Un 5ᵉ axe **Communication** est systématiquement évalué, en plus des axes `
 ### Règle de score Communication
 - Items évalués ci-dessus ⇒ score proportionnel (0.0 à 1.0), pas binaire.
 - `score_communication = moyenne(scores des 6 critères)`.
-- Le poids `w_communication` est injecté dans le bloc `PHASE 2 — station_type` du message utilisateur ; utilise-le tel quel (en fraction si exprimé en 0-1, ou convertis depuis un pourcentage le cas échéant).
-- Si `w_communication === 0` (cas `anamnese_examen`), **tu produis quand même** une entrée `sections[].key === "communication"` dans `<scores_json>`, avec weight=0 et le score observé. Elle sera affichée qualitativement au candidat mais exclue du `globalScore` (cf. Étape 3).
+- **Tu produis TOUJOURS une entrée `sections[].key === "communication"`** dans `<scores_json>`, quelle que soit la station.
+
+### Pondération : le backend écrase tes `weight`
+Depuis Phase 2, tu ne décides plus des poids. Mets `weight: 0` dans chaque entrée de `sections` par défaut — le serveur réécrira les poids à partir de la table canonique `shared/evaluation-weights.ts` avant de renvoyer au front. C'est la source de vérité unique pour éviter toute divergence.
+
+Concrètement pour `<scores_json>` :
+- `sections[].weight` : mets 0 partout, ou les valeurs de `<station_data>.weights` si ça t'aide à raisonner — **elles seront remplacées server-side**.
+- `sections[].score` : c'est la valeur qui compte, évalue-la rigoureusement selon l'Étape 1-2.
+- `globalScore` : mets ta meilleure estimation ; **elle sera également recalculée server-side** via `Σ(score × poids_canonique) / Σ(poids_canonique > 0)`.
+
+Le bloc `PHASE 2 — station_type` du message utilisateur est informatif : il te dit quel type de station pédagogique c'est, pour que tu adaptes le ton de l'analyse qualitative et la priorisation des conseils — pas pour que tu calcules des poids.
 
 ### Non-double-comptage
 Certains comportements communicationnels chevauchent l'anamnèse ou la clôture (ex. « explique clairement le plan »). Pour éviter le double-comptage :

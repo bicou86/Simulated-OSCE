@@ -52,6 +52,10 @@ interface Fixture {
   stationId: string;
   expectedStationType: string;
   expectedCommunicationWeight: number;
+  expectedCanonicalWeights: {
+    anamnese: number; examen: number; management: number; cloture: number; communication: number;
+    [key: string]: number;
+  };
   transcript: Array<{ role: "doctor" | "patient"; text: string }>;
   mockedSonnet: {
     markdown: string;
@@ -131,13 +135,32 @@ describe("J4 non-régression — pipeline d'évaluation par fixture", () => {
       expect(result.communicationWeight, `communicationWeight de ${fx.stationId}`).toBe(
         fx.expectedCommunicationWeight,
       );
-      // 3) Score global : Sonnet-mocké renvoie exactement la valeur figée.
+      // 3) Score global : RECALCULÉ serveur-side à partir des scores Sonnet
+      //    et des poids canoniques (depuis bug B hotfix). La valeur
+      //    expectedGlobalScore de la fixture encode cette formule canonique,
+      //    pas la valeur que Sonnet renvoie — ce qui est exactement l'effet
+      //    voulu : le poids Phase 2 domine, l'hallucination LLM est neutralisée.
       expect(result.scores.globalScore, `globalScore de ${fx.stationId}`).toBe(
         fx.expectedGlobalScore,
       );
-      // 4) Sections parsées identiques (same keys, weights, scores).
-      expect(result.scores.sections).toEqual(fx.mockedSonnet.scores.sections);
-      // 5) Verdict identique.
+      // 4) Les 5 axes canoniques sont TOUS présents dans sections, dans
+      //    l'ordre anamnese > examen > management > cloture > communication.
+      //    Les weights sont ceux de la table Phase 2 (en fraction, pas en %).
+      expect(result.scores.sections.map((s) => s.key)).toEqual([
+        "anamnese", "examen", "management", "cloture", "communication",
+      ]);
+      for (const s of result.scores.sections) {
+        const expectedWeightFraction = fx.expectedCanonicalWeights[s.key] / 100;
+        expect(s.weight, `weight de ${s.key} sur ${fx.stationId}`).toBeCloseTo(
+          expectedWeightFraction, 5,
+        );
+        // Le score doit venir de la mocked Sonnet output (par key)
+        const mockedSection = fx.mockedSonnet.scores.sections.find((m) => m.key === s.key);
+        if (mockedSection) {
+          expect(s.score, `score de ${s.key} sur ${fx.stationId}`).toBe(mockedSection.score);
+        }
+      }
+      // 5) Verdict identique (non affecté par l'override des weights).
       expect(result.scores.verdict).toBe(fx.mockedSonnet.scores.verdict);
     });
   }
@@ -164,19 +187,29 @@ describe("J4 non-régression — pipeline d'évaluation par fixture", () => {
   });
 });
 
-// Vérifications mathématiques indépendantes : on confirme que le globalScore
-// figé dans chaque fixture est cohérent avec la formule `Σ(score × weight)`
-// appliquée sur ses sections. Protège contre un glissement silencieux du
-// globalScore gelé vs les scores individuels gelés.
-describe("J4 non-régression — cohérence arithmétique globalScore vs sections", () => {
+// Vérifications mathématiques indépendantes : on confirme que le
+// expectedGlobalScore figé dans chaque fixture est cohérent avec la formule
+// `Σ(score × poids_canonique) / Σ(poids_canonique > 0)` appliquée aux scores
+// Sonnet et aux poids canoniques (Phase 2 table). Depuis le bug B hotfix,
+// les poids dans mockedSonnet sont ignorés — la formule canonique est la
+// seule source de vérité. Ce test protège contre un glissement silencieux
+// entre les scores par axe et le globalScore gelé.
+describe("J4 non-régression — cohérence arithmétique globalScore vs scores × poids canoniques", () => {
   for (const file of FIXTURE_FILES) {
-    it(`${file} — globalScore ≈ weighted average des axes évalués`, async () => {
+    it(`${file} — expectedGlobalScore = Σ(score × poids_canonique) / Σ(poids>0)`, async () => {
       const fx = await loadFixture(file);
+      const canonical = fx.expectedCanonicalWeights;
       const sections = fx.mockedSonnet.scores.sections;
-      const weightedSum = sections.reduce((acc, s) => acc + s.score * s.weight, 0);
-      const totalWeight = sections.reduce((acc, s) => acc + (s.weight > 0 ? s.weight : 0), 0);
+      const weightedSum = sections.reduce((acc, s) => {
+        const wPct = canonical[s.key] ?? 0;
+        return acc + s.score * (wPct / 100);
+      }, 0);
+      const totalWeight = sections.reduce((acc, s) => {
+        const wPct = canonical[s.key] ?? 0;
+        return acc + (wPct > 0 ? wPct / 100 : 0);
+      }, 0);
       const computed = totalWeight === 0 ? 0 : weightedSum / totalWeight;
-      // Tolérance ±1 point pour tolérer l'arrondi que Sonnet produit (int).
+      // Tolérance 1 point pour arrondi int (Math.round vs virgule flottante).
       expect(Math.abs(computed - fx.expectedGlobalScore), `fixture ${file}`).toBeLessThanOrEqual(1);
     });
   }

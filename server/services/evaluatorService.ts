@@ -230,11 +230,80 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
     );
   }
 
+  // Phase 2 — override des poids : la table `shared/evaluation-weights.ts`
+  // est la source de vérité unique. Sonnet peut halluciner un poids
+  // (ex. Communication=0.20 sur anamnese_examen observé en prod), donc
+  // on ne lui fait pas confiance ici. On réécrit chaque section.weight à
+  // partir de la table canonique, puis on recalcule globalScore en
+  // appliquant la formule documentée dans evaluator.md (Σ score×weight /
+  // Σ weight>0). Cela garantit que le front affiche toujours des poids
+  // cohérents avec /api/evaluator/weights, quel que soit le LLM sous-jacent.
+  const scores = axisWeights
+    ? normalizeScoresWithCanonicalWeights(validated.data, axisWeights)
+    : validated.data;
+
   return {
     markdown,
-    scores: validated.data,
+    scores,
     stationType,
     communicationWeight,
+  };
+}
+
+// Réécrit les poids des sections à partir de la table Phase 2 et recalcule
+// globalScore. Garde-fou contre l'hallucination LLM (cf. bug B Phase 2).
+// Ajoute une ligne Communication avec score 0 si Sonnet ne l'a pas produite.
+export function normalizeScoresWithCanonicalWeights(
+  scores: EvaluationScores,
+  canonical: { anamnese: number; examen: number; management: number; cloture: number; communication: number },
+): EvaluationScores {
+  const canonicalFraction: Record<string, number> = {
+    anamnese: canonical.anamnese / 100,
+    examen: canonical.examen / 100,
+    management: canonical.management / 100,
+    cloture: canonical.cloture / 100,
+    communication: canonical.communication / 100,
+  };
+  const nameByKey: Record<string, string> = {
+    anamnese: "Anamnèse",
+    examen: "Examen",
+    management: "Management",
+    cloture: "Clôture",
+    communication: "Communication",
+  };
+
+  // Indexe les sections produites par Sonnet par clé normalisée.
+  const byKey = new Map<string, typeof scores.sections[number]>();
+  for (const s of scores.sections) {
+    byKey.set(s.key, s);
+  }
+
+  // Reconstruit la liste dans l'ordre canonique avec les poids Phase 2.
+  // Si une section est absente de la sortie Sonnet, on l'insère avec score=0
+  // (pédagogiquement équivalent à « non couvert ») — elle reste affichée au
+  // candidat, ce qui est plus transparent qu'un trou silencieux.
+  const orderedKeys = ["anamnese", "examen", "management", "cloture", "communication"] as const;
+  const sections = orderedKeys.map((key) => {
+    const existing = byKey.get(key);
+    return {
+      key,
+      name: existing?.name ?? nameByKey[key],
+      weight: canonicalFraction[key],
+      score: existing?.score ?? 0,
+      ...(existing?.raw ? { raw: existing.raw } : {}),
+    };
+  });
+
+  // Recalcule globalScore = Σ(score×weight) / Σ(weight>0). Exclut donc les
+  // axes à poids nul (ex. Communication sur anamnese_examen).
+  const weightedSum = sections.reduce((acc, s) => acc + s.score * s.weight, 0);
+  const totalWeight = sections.reduce((acc, s) => acc + (s.weight > 0 ? s.weight : 0), 0);
+  const globalScore = totalWeight === 0 ? 0 : Math.round(weightedSum / totalWeight);
+
+  return {
+    ...scores,
+    sections,
+    globalScore,
   };
 }
 
