@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "description": "Fixture gold-standard Phase 3 J3 — profil P2 (proche en soins palliatifs). Station RESCOS-71 (Martine Bettaz, 52 ans, fille et accompagnante principale de M. Louis Bettaz 78 ans cancer pancréatique métastatique phase terminale). 3 conversations types qui exercent H (épuisement), I (question sur la fin), J (directives anticipées). Verrouille la cible pédagogique : accueil de l'ambivalence émotionnelle, réponses pratiques, pas de pronostic chiffré inventé.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "ebc744c",
+    "author": "phase-3-j3",
+    "profileUnderTest": "palliatif",
+    "templateUnderTest": "caregiver",
+    "fewShotExercised": ["H", "I", "J"]
+  },
+  "stationId": "RESCOS-71",
+  "expectedProfile": "palliatif",
+  "expectedTemplate": "caregiver",
+  "expectedDirective": {
+    "containsName": "Profil P2",
+    "containsExamples": "H, I, J"
+  },
+  "conversations": [
+    {
+      "id": "palliatif-epuisement-culpabilite",
+      "focus": "H — accompagnante exprime épuisement + ambivalence si le médecin ouvre l'espace",
+      "pedagogicalChecklist": [
+        "Candidat pose une question ouverte sur le vécu de l'accompagnante",
+        "L'accompagnante-LLM exprime l'épuisement en langage courant",
+        "L'accompagnante-LLM exprime l'ambivalence culpable sans jargon psy",
+        "Aucun jargon clinique (pas de 'burn out', 'dépression réactionnelle', etc.)"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Bonjour Madame. Avant qu'on parle de votre père, j'aimerais savoir comment vous, vous allez ?" },
+        {
+          "role": "caregiver_gold",
+          "text": "Moi… honnêtement ? Je suis à bout, docteur. Je dors plus la nuit parce que j'ai peur qu'il meure pendant que je dors. Je me sens coupable de vous dire ça, parce que c'est mon père, je devrais être là à chaque seconde… Mais j'en peux plus. Il y a des moments où j'aimerais que ça s'arrête, et je m'en veux de le penser.",
+          "mustContain": ["à bout", "j'en peux plus", "coupable"],
+          "mustNotContain": ["burn out", "dépression", "sémiologie", "auscultation"]
+        }
+      ]
+    },
+    {
+      "id": "palliatif-question-sur-la-fin",
+      "focus": "I — questions pratiques sur la fin de vie (souffrance, domicile, soins)",
+      "pedagogicalChecklist": [
+        "L'accompagnante-LLM pose des questions concrètes pragmatiques",
+        "Elle n'invente PAS de pronostic chiffré (ne dit pas 'il lui reste X jours')",
+        "Elle peut citer ce que l'oncologue lui a dit antérieurement, entre guillemets",
+        "Elle exprime une préférence sans prescrire une procédure"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Avez-vous des questions sur ce qui peut se passer dans les prochaines semaines ?" },
+        {
+          "role": "caregiver_gold",
+          "text": "Oui… Comment ça va se passer, à la fin ? Est-ce qu'il va souffrir ? J'aurais aimé qu'il reste à la maison si c'est possible, mais je ne suis pas sûre de savoir gérer seule. Est-ce que l'équipe palliative peut venir plus souvent, ou est-ce qu'il faudrait l'hospitaliser quand ça deviendra trop dur ? L'oncologue nous avait parlé de 'quelques semaines' il y a un mois, mais je ne sais pas si c'est toujours d'actualité.",
+          "mustContain": ["comment ça va se passer", "souffrir", "à la maison"],
+          "mustNotContain": ["euthanasie", "il lui reste 3 jours", "diagnostic vital engagé"]
+        }
+      ]
+    },
+    {
+      "id": "palliatif-directives-anticipees",
+      "focus": "J — directives anticipées déjà rédigées, accompagnante rapporte factuellement",
+      "pedagogicalChecklist": [
+        "L'accompagnante-LLM confirme les directives déjà rédigées (dans les données de la station)",
+        "Elle rapporte qu'elle est personne de confiance et a cosigné",
+        "Elle peut exprimer l'espoir de ne pas avoir à décider",
+        "Pas d'invention de nouvelles directives hors scénario"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Votre père a rédigé des directives anticipées ?" },
+        {
+          "role": "caregiver_gold",
+          "text": "Oui, on les a remplies avec l'infirmière de l'EMP il y a deux semaines. Il a écrit qu'il ne voulait pas être réanimé, et qu'il me désignait pour décider s'il ne peut plus parler. J'ai signé aussi. Je… j'espère ne pas avoir à décider, mais au moins c'est clair.",
+          "mustContain": ["infirmière", "réanimé", "signé"],
+          "mustNotContain": ["je vais l'euthanasier", "(invente une volonté nouvelle)"]
+        }
+      ]
+    }
+  ]
+}

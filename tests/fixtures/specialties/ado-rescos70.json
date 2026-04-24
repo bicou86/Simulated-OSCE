@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "description": "Fixture gold-standard Phase 3 J3 — profil B (adolescent·e 14-17). Station RESCOS-70 (Emma Delacroix, 16 ans, demande de contraception masquée, mère présente). 3 conversations types qui exercent B1 (parent-présent réticence), B2 (solo ouverture), B3 (résistance à la divulgation). Verrouille le cadre de confidentialité qui est l'enjeu pédagogique central.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "ebc744c",
+    "author": "phase-3-j3",
+    "profileUnderTest": "adolescent",
+    "templateUnderTest": "patient",
+    "fewShotExercised": ["B1", "B2", "B3"]
+  },
+  "stationId": "RESCOS-70",
+  "expectedProfile": "adolescent",
+  "expectedTemplate": "patient",
+  "expectedDirective": {
+    "containsName": "Profil B",
+    "containsExamples": "B1, B2, B3"
+  },
+  "conversations": [
+    {
+      "id": "ado-parent-present-reticence",
+      "focus": "B1 — ado se ferme en présence du parent sur question intime",
+      "pedagogicalChecklist": [
+        "Candidat doit détecter la réticence et proposer un tête-à-tête",
+        "Le patient-LLM répond par monosyllabes / évitement tant que la mère est là",
+        "Le patient ne révèle PAS la vraie raison de la consultation en présence du parent",
+        "Ton courtois, pas d'agressivité envers le parent"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Bonjour Emma. Ta maman m'a dit que tu avais mal au ventre et que tu étais fatiguée. Qu'est-ce qui se passe ?" },
+        {
+          "role": "patient_gold",
+          "text": "Euh… ça va. Je suis un peu fatiguée, c'est tout.",
+          "mustContain": ["ça va"],
+          "mustNotContain": ["contraception", "pilule", "copain", "accident"]
+        },
+        { "role": "doctor", "text": "Est-ce que tu prends quoi que ce soit en ce moment ? Médicament, contraception, autre ?" },
+        {
+          "role": "patient_gold",
+          "text": "Non, rien.",
+          "mustContain": ["rien"],
+          "mustNotContain": ["pilule", "contraception", "copain"]
+        }
+      ]
+    },
+    {
+      "id": "ado-solo-ouverture",
+      "focus": "B2 — ado s'ouvre réellement une fois seule avec un médecin respectueux",
+      "pedagogicalChecklist": [
+        "Candidat a demandé à la mère de sortir (préalable à ce segment)",
+        "Candidat rappelle la confidentialité explicite",
+        "Le patient-LLM révèle le motif réel (contraception + accident préservatif)",
+        "Le patient tient à la confidentialité vis-à-vis de la mère"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Madame, je propose qu'on prenne cinq minutes juste Emma et moi, pour qu'elle puisse parler librement. Vous pouvez nous attendre dans le couloir ?" },
+        {
+          "role": "patient_gold",
+          "text": "(Emma attend que sa mère soit sortie avant de répondre)",
+          "note": "Turn narratif, pas de réponse verbale de l'ado ici — c'est la mère qui parle côté caregiver."
+        },
+        { "role": "doctor", "text": "Merci. Emma, tout ce que tu me diras reste entre nous — je ne le répéterai pas à ta mère sans ton accord. Qu'est-ce qui t'amène vraiment ?" },
+        {
+          "role": "patient_gold",
+          "text": "En fait… j'ai un copain depuis l'été. On utilise des préservatifs, mais il y en a un qui s'est déchiré il y a une dizaine de jours. J'ai peur d'être enceinte, et j'aimerais commencer la pilule. Ma mère sait pas, et je préfère qu'elle sache pas.",
+          "mustContain": ["copain", "pilule", "ma mère sait pas"],
+          "mustNotContain": ["accouchement", "avortement", "diagnostic"]
+        }
+      ]
+    },
+    {
+      "id": "ado-parent-insiste-apres",
+      "focus": "B3 — ado défend son espace privé quand le parent revient et insiste",
+      "pedagogicalChecklist": [
+        "Candidat ne divulgue PAS le contenu du tête-à-tête au parent",
+        "Candidat oriente le parent vers l'ado pour ses questions",
+        "Le patient-LLM (ado) s'interpose sans agressivité",
+        "Le patient-LLM ne cède pas et ne divulgue pas à sa mère"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Madame, vous pouvez revenir. La consultation s'est bien passée, Emma va revenir me voir dans quelques semaines." },
+        { "role": "mother_gold", "text": "Docteur, qu'est-ce qu'elle vous a dit ? J'ai le droit de savoir, je suis sa mère.", "note": "Ce turn appartient au profil caregiver P1 — voir fixture miroir, pas ici." },
+        {
+          "role": "patient_gold",
+          "text": "Maman, c'est entre moi et le docteur maintenant. Ça va, je vais bien, on a juste parlé.",
+          "mustContain": ["entre moi et le docteur"],
+          "mustNotContain": ["pilule", "copain", "accident"]
+        }
+      ]
+    }
+  ]
+}

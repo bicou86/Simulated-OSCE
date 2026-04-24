@@ -40,7 +40,7 @@ export interface InterlocutorInput {
 // où le patient est représenté par un·e proche non-parental·e. Tous ces rôles
 // tombent sur parentRole="caregiver" (le type "parent" reste un générique
 // "interlocuteur tiers" dans l'enum actuel — rename évité pour rétrocompat).
-const PARENT_PRESENTED_RE = /(?:présenté|apporté|amené|accompagné)e?\s+(?:par\s+)?(?:sa|son|la|le|par)\s+(mère|maman|père|papa|parent|tuteur|tutrice|grand[- ]m[eè]re|grand[- ]p[eè]re|fille|fils|conjoint(?:e)?|époux|épouse|compagne|compagnon|accompagnant(?:e)?|proche)/i;
+const PARENT_PRESENTED_RE = /(?:présenté|représenté|apporté|amené|accompagné)e?\s+(?:par\s+)?(?:sa|son|la|le|par)\s+(mère|maman|père|papa|parent|tuteur|tutrice|grand[- ]m[eè]re|grand[- ]p[eè]re|fille|fils|conjoint(?:e)?|époux|épouse|compagne|compagnon|accompagnant(?:e)?|proche)/i;
 
 // "Mère d'un garçon…", "Père d'un bébé…" — le patient est l'enfant, la chaîne
 // décrit en fait le parent. Cette forme indique aussi parent.
