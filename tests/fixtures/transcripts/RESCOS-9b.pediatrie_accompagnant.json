@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 3 / J1 — station pediatrie_accompagnant (boiterie fébrile, fillette 2 ans, accompagnée par son parent, urgences pédiatriques). Témoin Phase 2 ajouté par J1-pilots. Valide que la pipeline applique les poids pediatrie_accompagnant (25/20/20/15/20) et que l'agent Accompagnant est routé.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "phase-3-j1-pilots",
+    "author": "phase-3-j1-pilots"
+  },
+  "stationId": "RESCOS-9b",
+  "expectedStationType": "pediatrie_accompagnant",
+  "expectedCommunicationWeight": 20,
+  "expectedCanonicalWeights": { "anamnese": 25, "examen": 20, "management": 20, "cloture": 15, "communication": 20 },
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Madame, qu'est-ce qui vous amène avec Charlotte aux urgences aujourd'hui ?" },
+    { "role": "patient", "text": "Bonjour docteur. Depuis hier soir, elle boite en marchant et ce matin elle a 38.8 de fièvre." },
+    { "role": "doctor", "text": "Est-ce qu'elle se plaint d'une douleur précise ? Touche-t-elle un endroit en particulier ?" },
+    { "role": "patient", "text": "Elle tient sa jambe droite et elle pleure quand je la pose par terre. Elle refuse de marcher." },
+    { "role": "doctor", "text": "A-t-elle eu un traumatisme récent, une chute ?" },
+    { "role": "patient", "text": "Pas que je sache, elle a joué au parc hier après-midi, mais rien de particulier." },
+    { "role": "doctor", "text": "Je vais examiner sa hanche et son genou, et je vais proposer une prise de sang et une échographie de hanche." },
+    { "role": "patient", "text": "D'accord. Qu'est-ce que ça pourrait être ?" },
+    { "role": "doctor", "text": "Plusieurs possibilités : une arthrite de hanche, une rhume de hanche, ou autre. La prise de sang et l'imagerie vont nous aider à trancher." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — RESCOS-9b\n\nBoiterie fébrile chez une fillette de 2 ans. L'accompagnant (parent) est l'interlocuteur principal — anamnèse bien conduite en registre familial, examen ciblé, orientation appropriée vers l'imagerie.\n\n**Points forts :** exploration du mécanisme, clarté du plan d'investigation.\n\n**Points à améliorer :** rassurance plus explicite, exploration de l'entourage infectieux.",
+    "scores": {
+      "globalScore": 70,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.25, "score": 80 },
+        { "key": "examen", "name": "Examen", "weight": 0.20, "score": 70 },
+        { "key": "management", "name": "Management", "weight": 0.20, "score": 65 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.15, "score": 55 },
+        { "key": "communication", "name": "Communication", "weight": 0.20, "score": 75 }
+      ],
+      "verdict": "Réussi"
+    }
+  },
+  "expectedGlobalScore": 70,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0)",
+    "calc": "80×0.25 + 70×0.20 + 65×0.20 + 55×0.15 + 75×0.20 = 20 + 14 + 13 + 8.25 + 15 = 70.25 → arrondi 70",
+    "value": 70
+  }
+}

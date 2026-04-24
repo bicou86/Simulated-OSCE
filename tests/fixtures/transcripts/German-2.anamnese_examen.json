@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 3 / J1 — station anamnese_examen ORL (acouphènes chez adulte). Témoin Phase 2 ajouté par J1-pilots pour verrouiller score-à-score tolérance 0 après intégration du support images. Pas d'image sur cette station — non-régression pure sur la pipeline.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "phase-3-j1-pilots",
+    "author": "phase-3-j1-pilots"
+  },
+  "stationId": "German-2",
+  "expectedStationType": "anamnese_examen",
+  "expectedCommunicationWeight": 0,
+  "expectedCanonicalWeights": { "anamnese": 25, "examen": 25, "management": 25, "cloture": 25, "communication": 0 },
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Monsieur, qu'est-ce qui vous amène à l'ORL aujourd'hui ?" },
+    { "role": "patient", "text": "Bonjour docteur, j'entends des sifflements dans l'oreille droite depuis quelques semaines." },
+    { "role": "doctor", "text": "Ces sifflements sont-ils permanents ou intermittents ?" },
+    { "role": "patient", "text": "Presque permanents, ça me dérange surtout la nuit pour dormir." },
+    { "role": "doctor", "text": "Avez-vous remarqué une baisse d'audition associée ?" },
+    { "role": "patient", "text": "Oui, j'ai l'impression d'entendre moins bien à droite." },
+    { "role": "doctor", "text": "Je réalise une otoscopie bilatérale." },
+    { "role": "doctor", "text": "Je fais les tests de Rinne et Weber." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — German-2\n\nAcouphènes unilatéraux avec hypoacousie associée. Anamnèse structurée, examen ORL ciblé.\n\n**Points forts :** exploration systématique des caractéristiques de l'acouphène.\n\n**Points à améliorer :** pas d'exploration du contexte (exposition sonore, ototoxiques) ni proposition d'examens complémentaires (audiométrie).",
+    "scores": {
+      "globalScore": 63,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.25, "score": 70 },
+        { "key": "examen", "name": "Examen", "weight": 0.25, "score": 65 },
+        { "key": "management", "name": "Management", "weight": 0.25, "score": 55 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.25, "score": 60 },
+        { "key": "communication", "name": "Communication", "weight": 0, "score": 75 }
+      ],
+      "verdict": "À retravailler"
+    }
+  },
+  "expectedGlobalScore": 63,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0) avec Communication weight=0 exclu",
+    "calc": "70×0.25 + 65×0.25 + 55×0.25 + 60×0.25 = 17.5 + 16.25 + 13.75 + 15 = 62.5 → arrondi 63",
+    "value": 63
+  }
+}

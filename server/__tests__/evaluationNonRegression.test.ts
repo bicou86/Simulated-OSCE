@@ -109,6 +109,16 @@ const FIXTURE_FILES = [
   "AMBOSS-3.anamnese_examen.json",
   "USMLE-1.anamnese_examen.json",
   "AMBOSS-7.teleconsultation.json",
+  // Phase 3 / J1-pilots — 4 témoins supplémentaires (un par station_type non
+  // couvert en Phase 2 : anamnese_examen alternatif, psy, bbn,
+  // pediatrie_accompagnant). Le but est de verrouiller score-à-score
+  // tolérance 0 après l'ajout du support images. Les fixtures elles-mêmes
+  // ne portent pas d'image ; elles vérifient que la pipeline d'évaluation
+  // est strictement identique à Phase 2 sur des stations déjà existantes.
+  "German-2.anamnese_examen.json",
+  "German-4.psy.json",
+  "RESCOS-7.bbn.json",
+  "RESCOS-9b.pediatrie_accompagnant.json",
 ];
 
 describe("J4 non-régression — pipeline d'évaluation par fixture", () => {

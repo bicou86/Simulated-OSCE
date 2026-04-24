@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 3 / J1 — station psy (anxiété, cabinet de psychiatrie). Témoin Phase 2 ajouté par J1-pilots. Valide que la pipeline applique les poids psy (25/5/20/20/30) et que Communication=30 domine la pondération.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "phase-3-j1-pilots",
+    "author": "phase-3-j1-pilots"
+  },
+  "stationId": "German-4",
+  "expectedStationType": "psy",
+  "expectedCommunicationWeight": 30,
+  "expectedCanonicalWeights": { "anamnese": 25, "examen": 5, "management": 20, "cloture": 20, "communication": 30 },
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Madame Winkelried, merci d'être venue. Qu'est-ce qui vous amène aujourd'hui ?" },
+    { "role": "patient", "text": "Bonjour docteur. Je ne me sens pas bien, je suis tout le temps anxieuse, ça dure depuis des mois." },
+    { "role": "doctor", "text": "Pouvez-vous me décrire ce que vous ressentez concrètement ?" },
+    { "role": "patient", "text": "Le cœur qui bat vite, la boule au ventre, je n'arrive plus à dormir. J'ai peur tout le temps sans raison." },
+    { "role": "doctor", "text": "Je comprends, c'est éprouvant. Depuis quand exactement ça a commencé à s'intensifier ?" },
+    { "role": "patient", "text": "Depuis ma rupture il y a six mois. Avant j'étais stressée, mais là c'est incontrôlable." },
+    { "role": "doctor", "text": "Y a-t-il des moments où vous pensez à vous faire du mal ou à mettre fin à vos jours ?" },
+    { "role": "patient", "text": "Non, pas vraiment. Des fois je me dis que j'en peux plus, mais je ne ferais pas ça." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — German-4\n\nEntretien psychiatrique pour trouble anxieux généralisé post-rupture. Bonne alliance thérapeutique, évaluation du risque suicidaire correctement réalisée.\n\n**Points forts :** empathie, reformulation, question sur les idées suicidaires posée explicitement.\n\n**Points à améliorer :** exploration plus poussée des antécédents, proposition thérapeutique à structurer.",
+    "scores": {
+      "globalScore": 73,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.25, "score": 75 },
+        { "key": "examen", "name": "Examen", "weight": 0.05, "score": 60 },
+        { "key": "management", "name": "Management", "weight": 0.20, "score": 70 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.20, "score": 65 },
+        { "key": "communication", "name": "Communication", "weight": 0.30, "score": 80 }
+      ],
+      "verdict": "Réussi"
+    }
+  },
+  "expectedGlobalScore": 73,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0)",
+    "calc": "75×0.25 + 60×0.05 + 70×0.20 + 65×0.20 + 80×0.30 = 18.75 + 3 + 14 + 13 + 24 = 72.75 → arrondi 73",
+    "value": 73
+  }
+}
