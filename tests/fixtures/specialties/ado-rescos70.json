@@ -18,52 +18,53 @@
   "conversations": [
     {
       "id": "ado-parent-present-reticence",
-      "focus": "B1 — ado se ferme en présence du parent sur question intime",
+      "focus": "B1 — ado se ferme en présence du parent sur question intime, nie prendre tout traitement",
       "pedagogicalChecklist": [
         "Candidat doit détecter la réticence et proposer un tête-à-tête",
         "Le patient-LLM répond par monosyllabes / évitement tant que la mère est là",
-        "Le patient ne révèle PAS la vraie raison de la consultation en présence du parent",
+        "Le patient NIE prendre un traitement (pilule cachée) et ne mentionne PAS le copain",
         "Ton courtois, pas d'agressivité envers le parent"
       ],
       "turns": [
         { "role": "doctor", "text": "Bonjour Emma. Ta maman m'a dit que tu avais mal au ventre et que tu étais fatiguée. Qu'est-ce qui se passe ?" },
         {
           "role": "patient_gold",
-          "text": "Euh… ça va. Je suis un peu fatiguée, c'est tout.",
-          "mustContain": ["ça va"],
-          "mustNotContain": ["contraception", "pilule", "copain", "accident"]
+          "text": "Euh… ça va. Je suis un peu fatiguée, c'est tout. J'ai eu quelques maux de ventre, mais rien de grave.",
+          "mustContain": ["fatiguée"],
+          "mustNotContain": ["contraception", "pilule", "copain", "cerazette", "gynéco"]
         },
         { "role": "doctor", "text": "Est-ce que tu prends quoi que ce soit en ce moment ? Médicament, contraception, autre ?" },
         {
           "role": "patient_gold",
           "text": "Non, rien.",
           "mustContain": ["rien"],
-          "mustNotContain": ["pilule", "contraception", "copain"]
+          "mustNotContain": ["pilule", "cerazette", "contraception", "copain", "désogestrel"]
         }
       ]
     },
     {
       "id": "ado-solo-ouverture",
-      "focus": "B2 — ado s'ouvre réellement une fois seule avec un médecin respectueux",
+      "focus": "B2 — ado s'ouvre réellement une fois seule avec un médecin respectueux ; révèle pilule + copain + effets secondaires",
       "pedagogicalChecklist": [
         "Candidat a demandé à la mère de sortir (préalable à ce segment)",
-        "Candidat rappelle la confidentialité explicite",
-        "Le patient-LLM révèle le motif réel (contraception + accident préservatif)",
-        "Le patient tient à la confidentialité vis-à-vis de la mère"
+        "Candidat rappelle la confidentialité explicite avant d'aborder l'intime",
+        "Le patient-LLM révèle qu'elle prend déjà la pilule depuis ~3 mois, prescrite par une gynécologue consultée seule",
+        "Le patient-LLM verbalise les effets secondaires actuels (spotting + douleurs pelviennes basses) en registre courant",
+        "Le patient tient à la confidentialité vis-à-vis de la mère et ne demande PAS à ce qu'on lui explique les modalités légales, elle les sous-entend"
       ],
       "turns": [
         { "role": "doctor", "text": "Madame, je propose qu'on prenne cinq minutes juste Emma et moi, pour qu'elle puisse parler librement. Vous pouvez nous attendre dans le couloir ?" },
         {
           "role": "patient_gold",
-          "text": "(Emma attend que sa mère soit sortie avant de répondre)",
+          "text": "(Emma attend que sa mère soit sortie avant de répondre — ne parle pas tant que la porte n'est pas refermée.)",
           "note": "Turn narratif, pas de réponse verbale de l'ado ici — c'est la mère qui parle côté caregiver."
         },
         { "role": "doctor", "text": "Merci. Emma, tout ce que tu me diras reste entre nous — je ne le répéterai pas à ta mère sans ton accord. Qu'est-ce qui t'amène vraiment ?" },
         {
           "role": "patient_gold",
-          "text": "En fait… j'ai un copain depuis l'été. On utilise des préservatifs, mais il y en a un qui s'est déchiré il y a une dizaine de jours. J'ai peur d'être enceinte, et j'aimerais commencer la pilule. Ma mère sait pas, et je préfère qu'elle sache pas.",
-          "mustContain": ["copain", "pilule", "ma mère sait pas"],
-          "mustNotContain": ["accouchement", "avortement", "diagnostic"]
+          "text": "En fait si, je prends la pilule. Ma gynéco me l'a donnée il y a trois mois, c'est Cerazette je crois. J'ai un copain depuis l'été. Ma mère sait pas, et je préfère qu'elle sache pas. Le truc, c'est que depuis deux ou trois semaines j'ai des petits saignements qui arrivent n'importe quand, et des douleurs en bas du ventre de temps en temps. Je voulais savoir si c'est normal avec la pilule ou si c'est grave.",
+          "mustContain": ["pilule", "gynéco", "trois mois", "sait pas", "saignements"],
+          "mustNotContain": ["accident", "préservatif qui s'est déchiré", "peur d'être enceinte", "aimerais commencer"]
         }
       ]
     },

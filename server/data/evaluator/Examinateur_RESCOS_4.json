@@ -7682,9 +7682,9 @@
       "diagnostic_attendu": "Les radiographies du bras doivent être transmises si et quand le·la candidat·e les demandes (cf grille d'évaluation)"
     },
     {
-      "id": "RESCOS-70 - Demande de contraception masquée - Adolescente 16 ans",
+      "id": "RESCOS-70 - Contraception cachée + effets secondaires - Adolescente 16 ans",
       "setting": "Cabinet médical, consultation programmée",
-      "patient_resume": "Emma Delacroix, 16 ans, amenée par sa mère pour une plainte vague ; demande réelle = contraception après un accident de préservatif, confidentialité vis-à-vis de la mère",
+      "patient_resume": "Emma Delacroix, 16 ans, mère présente en salle d'attente pour 'fatigue + maux de ventre'. Motif réel = effets secondaires modérés (spotting + douleurs pelviennes basses) d'une pilule progestative (Cerazette) prise en cachette depuis 3 mois, prescrite par une gynéco. Enjeu = cadre de confidentialité et évaluation des effets secondaires.",
       "grille": {
         "anamnese": [
           {
@@ -7715,15 +7715,25 @@
             "text": "Anamnèse gynéco professionnelle et non-jugeante",
             "items_attendus": [
               "Date des dernières règles, régularité du cycle",
-              "Activité sexuelle, protection utilisée, notion d'accident",
-              "Antécédents gynéco, contraception antérieure, ATCD familiaux"
+              "Activité sexuelle, protection actuelle (au-delà de la seule pilule)",
+              "Contraception EN COURS (identifie Cerazette / désogestrel si Emma la nomme), observance, durée",
+              "Antécédents gynéco, historique de la prescription, ATCD familiaux"
             ]
           },
           {
             "id": "a5",
+            "text": "Caractérisation des symptômes actuels (spotting + douleurs pelviennes)",
+            "items_attendus": [
+              "Spotting : début, fréquence, abondance, facteurs déclencheurs",
+              "Douleurs : localisation, caractère, horaire, lien avec les règles / les rapports",
+              "Évolution récente, signes d'alarme (fièvre, pertes, saignement abondant)"
+            ]
+          },
+          {
+            "id": "a6",
             "text": "Évaluation des facteurs de risque associés",
             "items_attendus": [
-              "Tabac, alcool, drogues (facteurs de choix de contraception)",
+              "Tabac, alcool, drogues (facteurs de risque thrombo-emboliques et choix contraceptif)",
               "Violences/rapports non consentis (ouverture de la question avec respect)",
               "IST : question posée, contexte évalué"
             ]
@@ -7753,20 +7763,25 @@
         "management": [
           {
             "id": "m1",
-            "text": "Test de grossesse urinaire proposé et réalisé au cabinet"
+            "text": "Test de grossesse urinaire proposé en précaution (spotting + douleurs pelviennes chez une adolescente sexuellement active)"
           },
           {
             "id": "m2",
-            "text": "Propose une contraception adaptée (pilule, patch, anneau, DIU)",
+            "text": "Normalise les effets secondaires de Cerazette OU propose une alternative si inacceptables pour Emma",
             "items_attendus": [
-              "Explique 2-3 options, avantages/inconvénients en registre simple",
-              "Donne l'ordonnance adaptée",
-              "Propose le rendez-vous de suivi à 3 mois"
+              "Explique que le spotting est fréquent sous progestatif pur les 3-6 premiers mois",
+              "Explique que les douleurs pelviennes doivent être réévaluées si persistantes ou associées à fièvre/pertes",
+              "Laisse Emma décider si elle veut continuer Cerazette, changer, ou consulter sa gynéco pour décision partagée"
             ]
           },
           {
             "id": "m3",
-            "text": "Propose une contraception d'urgence si indiquée et propose un dépistage IST"
+            "text": "Renouvellement d'ordonnance si demandé, OU renvoi vers la gynécologue traitante",
+            "items_attendus": [
+              "Peut renouveler Cerazette 3 mois en l'absence de contre-indication identifiée",
+              "Propose rapprochement du rendez-vous gynéco si symptômes inquiétants",
+              "Discute d'un dépistage IST (première fois, rapports actifs)"
+            ]
           }
         ],
         "cloture": [
@@ -7800,7 +7815,7 @@
           }
         ]
       },
-      "diagnostic_attendu": "Demande légitime de contraception chez une adolescente doué·e de discernement, avec accident de préservatif sans grossesse (test βHCG négatif). Enjeu principal = cadre de confidentialité."
+      "diagnostic_attendu": "Effets secondaires modérés (spotting + douleurs pelviennes basses) sous désogestrel (Cerazette) pris depuis 3 mois chez une adolescente doué·e de discernement, en cachette de sa mère. Pas de grossesse (βHCG négatif). Enjeu principal = (1) cadre de confidentialité stable dans les deux sens (anamnèse intime sans mère, puis retour sans divulgation), (2) évaluation clinique des effets secondaires, (3) décision partagée renouvellement / alternative / renvoi gynéco. Zéro urgence vitale."
     },
     {
       "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
