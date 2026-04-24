@@ -265,6 +265,63 @@ export function examinerLookup(
   });
 }
 
+// ───────── /api/examiner/labs (Phase 3 J2) ─────────
+// Retour structuré : labs résolus avec paramètres, flags calculés, sources
+// cliniques. Symétrique à ExaminerLookupResult mais avec `results[]` au lieu
+// d'une bulle unique ; plusieurs labs peuvent être demandés dans la même
+// phrase ("NFS + CRP") → on renvoie 1 entrée par lab.
+
+export type LabFlag = "low" | "normal" | "high" | "critical";
+
+export interface LabsLookupParameter {
+  key: string;
+  label: string;
+  value: number | string;
+  unit: string;
+  flag: LabFlag;
+  normalRange: { min: number; max: number; source: "adult" | "pediatric" };
+  criticalLow?: number;
+  criticalHigh?: number;
+  sourceRef?: string;
+  note?: string;
+}
+
+export interface LabsLookupResolvedResult {
+  key: string;
+  label: string;
+  parameters: LabsLookupParameter[];
+  interpretation?: string;
+}
+
+export type LabsLookupKind =
+  | "labs"
+  | "no_match"
+  | "no_labs"
+  | "no_teleconsult";
+
+export interface LabsLookupResult {
+  match: boolean;
+  kind: LabsLookupKind;
+  stationId: string;
+  query: string;
+  results?: LabsLookupResolvedResult[];
+  fallback?: string;
+  requestedLabKeys?: string[];
+}
+
+export function labsLookup(
+  stationId: string,
+  query: string,
+  signal?: AbortSignal,
+): Promise<LabsLookupResult> {
+  return jsonFetch("/api/examiner/labs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ stationId, query }),
+    signal,
+  });
+}
+
 export type TtsVoice = "alloy" | "echo" | "fable" | "nova" | "onyx" | "shimmer";
 
 export async function ttsPatient(text: string, voice: TtsVoice = "nova"): Promise<Blob> {

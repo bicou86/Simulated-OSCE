@@ -8,6 +8,42 @@ import {
   CAREGIVER_FINDING_BLACKLIST,
 } from "./intentRouter";
 
+describe("classifyDoctorIntent — Phase 3 J2 demandes de labos", () => {
+  const labsCases: Array<[string, string]> = [
+    ["je demande une NFS", "demande NFS"],
+    ["je prescris une CRP", "prescris CRP"],
+    ["je fais un ionogramme", "fais ionogramme"],
+    ["je commande un bilan hépatique", "bilan hépatique"],
+    ["je propose un gaz du sang", "gaz du sang"],
+    ["je demande une troponine hs", "troponine"],
+    ["faites une βHCG", "β HCG (lettre grecque)"],
+    ["je prescris un hémogramme complet", "hémogramme"],
+    ["un bilan rénal s'il vous plaît", "forme nominale bilan rénal"],
+    ["une lipase", "forme nominale lipase"],
+    ["faites une beta hcg", "beta hcg écrit en latin"],
+  ];
+  for (const [utterance, label] of labsCases) {
+    it(`"${utterance}" → labs (${label})`, () => {
+      expect(classifyDoctorIntent(utterance)).toBe("labs");
+    });
+  }
+
+  const notLabsCases: Array<[string, string]> = [
+    ["avez-vous déjà fait une NFS", "anamnèse NFS passée"],
+    ["vos dernières analyses montraient quoi", "anamnèse analyses antérieures"],
+    ["votre dernière CRP à combien", "anamnèse CRP antérieure"],
+    ["quand avez-vous eu votre dernier ionogramme", "anamnèse ionogramme"],
+    ["je palpe l'abdomen", "geste physique pur"],
+    ["je demande une radio du thorax", "imagerie, pas labs"],
+    ["a-t-elle eu une NFS récemment", "3e personne anamnèse"],
+  ];
+  for (const [utterance, label] of notLabsCases) {
+    it(`"${utterance}" → pas labs (${label})`, () => {
+      expect(classifyDoctorIntent(utterance)).not.toBe("labs");
+    });
+  }
+});
+
 describe("classifyDoctorIntent — Phase 3 demandes d'imagerie", () => {
   const imagingCases: Array<[string, string]> = [
     ["je demande une radio du thorax", "demande radio thorax"],
