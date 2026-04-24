@@ -130,4 +130,69 @@ describe("buildSystemPrompt — interlocutor injection", () => {
     expect(prompt).toContain("CAREGIVER TEMPLATE");
     expect(prompt).toContain("## ADAPTATION");
   });
+
+  // Phase 3 J3 — injection de profil de spécialité.
+  it("register:gyneco on adult woman → Profil A directive injected in patient prompt", async () => {
+    currentStation = {
+      id: "GYN-1",
+      patient_description: "Elaine Hill, femme de 50 ans, consultante pour saignements",
+      age: "50 ans",
+      register: "gyneco",
+    };
+    const prompt = await buildSystemPrompt("GYN-1", "voice");
+    expect(prompt).toContain("PATIENT TEMPLATE");
+    expect(prompt).toContain("PROFIL ACTIF");
+    expect(prompt).toContain("Profil A");
+    expect(prompt).toContain("A1, A2, A3, A4");
+  });
+
+  it("adolescent 16 yo (no register, no parent) → Profil B directive in patient prompt", async () => {
+    currentStation = {
+      id: "ADO-1",
+      patient_description: "Emma Delacroix, adolescente de 16 ans",
+      age: "16 ans",
+      patient_age_years: 16,
+    };
+    const prompt = await buildSystemPrompt("ADO-1", "voice");
+    expect(prompt).toContain("PATIENT TEMPLATE");
+    expect(prompt).toContain("Profil B");
+    expect(prompt).toContain("B1, B2, B3");
+  });
+
+  it("register:palliatif on caregiver-handled station → Profil P2 directive", async () => {
+    currentStation = {
+      id: "PAL-1",
+      nom: "Louis Bettaz",
+      patient_description: "M. Louis Bettaz, 78 ans, cancer pancréatique, présenté par sa fille",
+      age: "78 ans",
+      register: "palliatif",
+    };
+    const prompt = await buildSystemPrompt("PAL-1", "voice");
+    expect(prompt).toContain("CAREGIVER TEMPLATE");
+    expect(prompt).toContain("Profil P2");
+    expect(prompt).toContain("H, I, J");
+  });
+
+  it("Phase 2 station (no register, adult, no adolescent age) → no specialty directive (backwards compat)", async () => {
+    currentStation = {
+      id: "PHASE2-BASE",
+      patient_description: "Marcia Billings, femme de 47 ans, consultante pour douleurs abdominales",
+      age: "47 ans",
+    };
+    const prompt = await buildSystemPrompt("PHASE2-BASE", "voice");
+    expect(prompt).toContain("PATIENT TEMPLATE");
+    expect(prompt).not.toContain("PROFIL ACTIF");
+  });
+
+  it("pediatric station (2 yo) → no adolescent directive (caregiver template only)", async () => {
+    currentStation = {
+      id: "PED-2YO",
+      nom: "Charlotte",
+      patient_description: "Charlotte, 2 ans, amenée par sa mère",
+      age: "2 ans",
+    };
+    const prompt = await buildSystemPrompt("PED-2YO", "voice");
+    expect(prompt).toContain("CAREGIVER TEMPLATE");
+    expect(prompt).not.toContain("PROFIL ACTIF");
+  });
 });

@@ -2,7 +2,7 @@
   "type": "PATIENT",
   "source": "RESCOS",
   "batch": 4,
-  "count": 16,
+  "count": 18,
   "stations": [
     {
       "id": "RESCOS-57 - Ralentissement - Consultation téléphonique EMS",
@@ -5030,6 +5030,150 @@
           "resultat": "Vous donnez les radiographies du MSD dans le dossier"
         }
       }
+    },
+    {
+      "id": "RESCOS-70 - Demande de contraception masquée - Adolescente 16 ans",
+      "setting": "Cabinet médical, consultation programmée",
+      "patient_description": "Emma Delacroix, adolescente de 16 ans, amenée par sa mère pour 'fatigue et maux de ventre vagues depuis quelques semaines'",
+      "vitals": {
+        "ta": "112/68 mmHg",
+        "fc": "78 bpm",
+        "fr": "14/min",
+        "temperature": "36.8°C"
+      },
+      "source_scenario": true,
+      "nom": "Emma Delacroix",
+      "age": "16 ans",
+      "patient_age_years": 16,
+      "tags": ["adolescent", "contraception", "confidentialite", "gyneco"],
+      "contexte": "Consultation programmée. La mère d'Emma est présente dans la salle, s'est exprimée au téléphone au secrétariat : 'ma fille est fatiguée, elle a mal au ventre, j'aimerais qu'on l'examine'. Emma, elle, n'a pas d'autre symptôme gênant — elle veut en réalité demander une contraception, sans que sa mère le sache. Elle a un copain depuis l'été (rapports protégés jusqu'ici, un accident récent). Elle n'ose pas le dire tant que sa mère est là.",
+      "ouverture": "Euh… bonjour docteur.",
+      "ouverture_complement": "Ma mère a voulu que je vienne.",
+      "consignes_jeu": [
+        "Tu te tiens en retrait, un peu renfermée quand ta mère est dans la salle.",
+        "Tu réponds aux questions par monosyllabes ou de façon vague quand la mère est présente : « euh… ça va », « rien de spécial », « je sais pas », « un peu fatiguée ».",
+        "Si le médecin demande à te voir seule (ou invite ta mère à sortir), tu acceptes discrètement — un regard vers ta mère, tu patientes qu'elle sorte.",
+        "Une fois seule avec le médecin, si le cadre est respectueux et non jugeant, tu ouvres : tu veux la pilule, tu as un copain depuis l'été, tu as eu un accident de préservatif récent, tu n'as jamais consulté une gynéco.",
+        "Tu tiens absolument à la confidentialité : tu ne veux PAS que ta mère sache. Si le médecin te propose d'en parler à ta mère, tu refuses fermement mais sans agressivité.",
+        "Tu es lycéenne en 1ère L, bonne élève, pas de prise de risque particulière à part l'accident de préservatif.",
+        "Si le médecin ne te voit pas seule ou pose directement la question de la contraception devant ta mère, tu te refermes totalement et tu ne révèles rien."
+      ],
+      "register": "gyneco",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Demande réelle : contraception + test de grossesse après un préservatif qui s'est rompu il y a 10 jours",
+          "Raison affichée par la mère : 'fatigue et maux de ventre' — en réalité Emma va bien physiquement",
+          "Anxiété depuis l'accident de préservatif, crainte d'être enceinte"
+        ],
+        "symptomesAssocies": [
+          "Dernières règles : il y a 5 semaines (cycle habituellement régulier 28 jours → retard de 1 semaine)",
+          "Pas de nausées, pas de tension mammaire, pas de signes évocateurs de grossesse",
+          "Sommeil un peu perturbé depuis 10 jours par l'angoisse"
+        ],
+        "contexteVie": [
+          "Lycéenne en 1ère littéraire, bonnes notes",
+          "Copain depuis juillet (3 mois), lui a 17 ans, élève dans le même lycée",
+          "Rapports sexuels protégés (préservatif) jusqu'à l'accident récent",
+          "Pas d'antécédents gynéco — jamais consultée",
+          "Pas de tabac, pas d'alcool régulier, pas de drogues"
+        ]
+      },
+      "anamneseSystemes": {
+        "ORL/pulmonaire/cardio/digestif/urinaire/neuro": "rien à signaler",
+        "gynécologique": "cycle normalement régulier 28 jours, règles moyennement abondantes, 5 jours de durée, pas de dysménorrhée invalidante"
+      },
+      "habitudes": {
+        "activité": "normale (sport 2x/semaine)",
+        "alimentation": "équilibrée",
+        "tabac": "non",
+        "alcool": "très occasionnel (soirées, pas régulier)",
+        "drogues": "non"
+      },
+      "antecedents": {
+        "medicaux": "aucun antécédent significatif, vaccinations à jour",
+        "chirurgicaux": "aucun",
+        "gyneco": "puberté normale vers 12 ans, cycles réguliers depuis",
+        "familiaux": "mère suivie pour HTA, père en bonne santé, pas d'antécédent oncologique notable"
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Examen général",
+          "resultat": "Adolescente calme, bien orientée, pas de pâleur, pas de marbrures. Poids 55 kg, taille 1.65 m, IMC normal."
+        },
+        "e2": {
+          "examen": "Examen abdominal",
+          "resultat": "Abdomen souple, indolore à la palpation, pas de défense, pas de masse. Palpation des fosses iliaques sans particularité."
+        },
+        "e3": {
+          "examen": "Examen gynécologique (intention)",
+          "resultat": "Non réalisé à cette consultation — pas de plainte nécessitant un examen pelvien ce jour. À proposer en consultation dédiée avec la patiente, si elle y consent."
+        }
+      },
+      "examens_complementaires": {
+        "bhcg": {
+          "parameters": {
+            "bhcg_qual": { "value": 0 }
+          },
+          "interpretation": "Test de grossesse urinaire négatif réalisé au cabinet — rassurant 10 jours après l'accident de préservatif."
+        }
+      }
+    },
+    {
+      "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
+      "setting": "Consultation en unité de soins palliatifs mobiles, patient alité à domicile",
+      "patient_description": "M. Louis Bettaz, 78 ans, cancer pancréatique métastatique en phase terminale, suivi à domicile. Sa fille Martine, 52 ans, est l'accompagnante principale et vient seule au cabinet pour cette consultation de point.",
+      "vitals": {
+        "ta": "Non applicable (consultation accompagnante seule)",
+        "remarque": "Les constantes du patient ne sont pas pertinentes ici — la consultation est dédiée à la fille."
+      },
+      "source_scenario": true,
+      "nom": "Martine Bettaz",
+      "age": "52 ans",
+      "patient_age_years": 52,
+      "tags": ["palliatif", "fin-de-vie", "accompagnante", "epuisement-proche"],
+      "contexte": "Consultation de point avec l'accompagnante principale d'un patient en phase terminale. M. Bettaz est confiné au lit depuis 3 semaines, sa fille Martine assure l'essentiel des soins avec l'appui de l'équipe mobile de soins palliatifs (infirmier·ère 2x/jour, médecin référent à distance). Martine est épuisée, dort mal, et a verbalisé récemment à l'infirmière de l'EMP 'qu'elle n'en peut plus' — ce qui a motivé cette consultation.",
+      "ouverture": "Bonjour docteur. Je viens pour parler de mon père.",
+      "ouverture_complement": "Enfin, de lui, mais aussi un peu de moi, si on peut.",
+      "consignes_jeu": [
+        "Tu es la fille. Pas une soignante. Tu parles en langage courant, jamais clinique.",
+        "Tu es visiblement épuisée : fatigue dans la voix, phrases qui s'arrêtent, parfois larmes retenues.",
+        "Tu n'oses pas toujours dire toute l'ambivalence que tu ressens : tu aimes ton père, tu veux être là pour lui, mais tu n'en peux plus. Il te faut un médecin empathique pour que tu exprimes cette ambivalence ouvertement.",
+        "Tu peux évoquer directement des moments où tu souhaites que 'ça s'arrête' — puis tu t'en veux de l'avoir pensé.",
+        "Tu rapportes les directives anticipées de ton père (pas de réanimation, tu es la personne de confiance, une sédation est acceptable si la douleur devient ingérable) — il les a signées avec l'infirmière il y a 2 semaines, tu as signé aussi.",
+        "Tu as des questions pragmatiques : que va-t-il se passer à la fin ? Peut-il souffrir ? Peut-on appeler l'EMP la nuit si besoin ? Faut-il envisager une hospitalisation en unité de soins palliatifs ?",
+        "Tu ne donnes PAS de pronostic chiffré toi-même. Tu peux rapporter que 'l'oncologue avait parlé de quelques semaines il y a un mois' — citation, pas calcul personnel.",
+        "Tu peux craquer en fin de consultation si le médecin t'a donné de l'espace ('comment allez-vous, vous ?')."
+      ],
+      "register": "palliatif",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Cancer pancréatique métastatique (foie, poumons) de M. Bettaz diagnostiqué il y a 14 mois",
+          "Décision collégiale d'arrêt des traitements oncologiques il y a 2 mois (chimio devenue délétère)",
+          "Confinement au lit depuis 3 semaines, douleurs contrôlées par patchs de fentanyl + oxycodone de secours",
+          "Directives anticipées signées il y a 2 semaines : pas de réanimation, fille désignée personne de confiance, sédation profonde acceptée si douleurs réfractaires"
+        ],
+        "symptomesFille": [
+          "Épuisement : 5h de sommeil par nuit, interrompu par réveils multiples pour vérifier le père",
+          "Amaigrissement (4 kg en 2 mois)",
+          "Anxiété diffuse, palpitations occasionnelles",
+          "Pensées intrusives : peur qu'il meure seul / qu'il souffre / qu'elle 'rate' la fin",
+          "Moments d'ambivalence : souhait que 'ça se termine' suivi de culpabilité massive",
+          "Pas d'idées suicidaires, pas de prise de psychotropes, pas d'alcool"
+        ],
+        "contextePere": [
+          "Veuf depuis 8 ans, ancien enseignant",
+          "Conscient, parle peu mais reconnaît Martine et les soignants",
+          "N'a pas exprimé de peur de la mort — a dit plusieurs fois 'c'est assez long comme ça'",
+          "Appétit quasi nul, s'hydrate difficilement",
+          "Escarres débutants malgré les soins"
+        ]
+      },
+      "antecedents": {
+        "fille": "Pas d'antécédents médicaux notables. Travaille à mi-temps comme comptable, a pris un congé sans solde il y a 5 semaines pour être présente.",
+        "familiaux": "Mère de Martine décédée d'un cancer du sein à 65 ans — deuil difficile à l'époque."
+      },
+      "examen_resultats": {},
+      "examens_complementaires": {}
     }
   ]
 }
