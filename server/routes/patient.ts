@@ -35,6 +35,10 @@ const ChatBody = z.object({
   userMessage: z.string().min(1),
   mode: z.enum(["voice", "text"]).default("voice"),
   model: z.enum(["gpt-4o-mini", "gpt-4o"]).optional(),
+  // Phase 4 J2 — id du participant qui a parlé au tour précédent (sticky).
+  // Optionnel : à T0 le client n'en a pas, le serveur retombera sur le défaut
+  // de la station (cf. PatientBrief.defaultSpeakerId).
+  currentSpeakerId: z.string().min(1).nullable().optional(),
 });
 
 router.post("/chat", async (req: Request, res: Response) => {
@@ -46,8 +50,20 @@ router.post("/chat", async (req: Request, res: Response) => {
     return sendApiError(res, "not_configured", "Clé OpenAI manquante.");
   }
   try {
-    const reply = await runPatientChat(parsed.data);
-    return res.json({ reply });
+    const outcome = await runPatientChat(parsed.data);
+    if (outcome.type === "clarification_needed") {
+      // Pas d'appel LLM effectué — on retourne un payload spécial qui pilote
+      // l'UI de clarification (« À qui parlez-vous ? » avec boutons profils).
+      return res.json(outcome);
+    }
+    // Rétrocompat : on garde `reply` au top-level (clients pré-J2) et on
+    // ajoute speakerId/speakerRole + le discriminant `type` pour les nouveaux.
+    return res.json({
+      type: "reply",
+      reply: outcome.reply,
+      speakerId: outcome.speakerId,
+      speakerRole: outcome.speakerRole,
+    });
   } catch (err) {
     if (err instanceof StationNotFoundError) {
       return sendApiError(res, "bad_request", err.message);
@@ -114,6 +130,20 @@ router.post("/chat/stream", async (req: Request, res: Response) => {
         writeSseEvent(res, "sentence", { text: evt.text, index: evt.index });
       } else if (evt.type === "done") {
         writeSseEvent(res, "done", { fullText: evt.fullText });
+      } else if (evt.type === "speaker") {
+        // Phase 4 J2 — émis avant le premier delta. L'UI met à jour son
+        // currentSpeakerId / le label affiché sur la bulle en cours.
+        writeSseEvent(res, "speaker", {
+          speakerId: evt.speakerId,
+          speakerRole: evt.speakerRole,
+        });
+      } else if (evt.type === "clarification_needed") {
+        // Pas d'appel LLM ; on émet un seul event puis on ferme. L'UI ouvre
+        // un panneau « À qui parlez-vous ? ».
+        writeSseEvent(res, "clarification_needed", {
+          reason: evt.reason,
+          candidates: evt.candidates,
+        });
       }
     }
   } catch (err) {

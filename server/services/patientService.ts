@@ -21,6 +21,14 @@ import {
   detectCaregiverFindingLeaks,
   detectPatientFindingLeaks,
 } from "@shared/patientLeakDetection";
+import {
+  getStationParticipants,
+  type Participant,
+  type ParticipantRole,
+  type ParticipantSections,
+} from "@shared/station-schema";
+import { routeAddress, type RouteResult } from "./addressRouter";
+import { buildLayVocabularyDirective } from "../lib/vocabularyConstraints";
 
 // Cache des fichiers JSON déjà parsés (clé = filename).
 const fileCache = new Map<string, any[]>();
@@ -67,6 +75,14 @@ export interface PatientBrief {
   age?: number;
   interlocutor: Interlocutor;
   stationType?: string;   // inféré par stationsService, optionnel pour rétrocompat tests
+  // Phase 4 J2 — composition multi-profils. Vide pour les stations historiques.
+  participants?: Participant[];
+  // ID du participant qui répond par défaut au tout premier tour (T0). Sert
+  // au client à initialiser `currentSpeakerId` sans avoir à réimplémenter
+  // l'heuristique de défaut côté front. Pour les stations mono-patient,
+  // c'est l'unique participant. Pour les multi-profils, on s'aligne sur
+  // l'interlocuteur résolu par patientInterlocutor (parent vs self).
+  defaultSpeakerId?: string;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -74,6 +90,11 @@ export interface PatientBrief {
 // Aucune donnée de scoring ni script anamnèse complet n'est renvoyée.
 // `sex` est déduit de `patient_description` par extractSex (cache mémoire).
 // `stationType` est repris depuis le catalog (inférence déterministe au boot).
+//
+// Phase 4 J2 — `participants[]` (si la station est multi-profils) et
+// `defaultSpeakerId` (le participant qui parle par défaut à T0) sont exposés
+// pour permettre au client de threader `currentSpeakerId` dans ses requêtes
+// /chat sans avoir à recalculer le défaut.
 export async function getPatientBrief(stationId: string): Promise<PatientBrief> {
   const station = await getPatientStation(stationId);
   const patientDescription = station.patient_description ?? "";
@@ -81,6 +102,11 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
   const age = extractAge(station.age, patientDescription);
   const interlocutor = resolveInterlocutor({ patientDescription, age, sex });
   const meta = getStationMeta(stationId);
+  const participants = getStationParticipants(station);
+  const defaultSpeakerId = computeDefaultSpeakerId(participants, interlocutor);
+  const isMultiProfile =
+    Array.isArray((station as { participants?: unknown }).participants) &&
+    ((station as { participants: unknown[] }).participants).length >= 2;
   return {
     stationId,
     setting: station.setting ?? "",
@@ -92,7 +118,31 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     age,
     interlocutor,
     stationType: meta?.stationType,
+    // On expose `participants` UNIQUEMENT pour les stations multi-profils
+    // déclarées (≥ 2). Pour les mono-patient legacy, l'helper synthétise un
+    // participant unique mais l'UI n'a pas besoin de l'afficher — le label
+    // historique « Patient (voix IA) » reste suffisant.
+    participants: isMultiProfile ? participants : undefined,
+    defaultSpeakerId,
   };
+}
+
+// Choisit le participant qui répond par défaut au tout premier tour. Mappe
+// l'interlocuteur résolu par patientInterlocutor (parent vs self) sur un id
+// participant. Si aucun mapping ne fonctionne (fallback paranoïaque), on
+// retombe sur le premier participant déclaré.
+function computeDefaultSpeakerId(
+  participants: Participant[],
+  interlocutor: Interlocutor,
+): string {
+  if (participants.length === 0) return "patient";
+  if (interlocutor.type === "parent") {
+    const acc = participants.find((p) => p.role === "accompanying");
+    if (acc) return acc.id;
+  }
+  const pat = participants.find((p) => p.role === "patient");
+  if (pat) return pat.id;
+  return participants[0].id;
 }
 
 // Directive additionnelle injectée quand l'étudiant interagit au clavier plutôt qu'à la voix.
@@ -154,16 +204,44 @@ export async function resolveStationInterlocutor(
 // non-médical, sa propre blacklist élargie (verbes de mesure instrumentale,
 // jargon soignant) et ses propres few-shots. Le cas `self + parent présent`
 // reste sur patient.md + une directive additive.
+//
+// Phase 4 J2 — overload multi-profils :
+//   • Si `target` est fourni (issu du routeur d'adresse pour une station
+//     multi-profils), on choisit le template en fonction de SON rôle
+//     (`accompanying` ⇒ caregiver.md, sinon patient.md) et on injecte une
+//     directive « TU INCARNES » + une liste « AUTRES PRÉSENTS » pour que
+//     le LLM ne réponde pas au nom du mauvais profil.
+//   • Sans `target`, on conserve strictement la logique pré-J2 (résolution
+//     parent vs self via patientInterlocutor). Aucune régression sur les
+//     279 stations mono-patient legacy.
 export async function buildSystemPrompt(
   stationId: string,
   mode: "voice" | "text",
+  target?: Participant,
+  allParticipants?: Participant[],
 ): Promise<string> {
   const { station, interlocutor } = await resolveStationInterlocutor(stationId);
-  const useCaregiverPrompt = interlocutor.type === "parent";
+
+  let useCaregiverPrompt: boolean;
+  let identityBlock: string;
+  let othersBlock = "";
+
+  if (target) {
+    useCaregiverPrompt = target.role === "accompanying" || target.role === "witness";
+    identityBlock = useCaregiverPrompt
+      ? caregiverParticipantIdentityBlock(target, station)
+      : patientParticipantIdentityBlock(target);
+    if (allParticipants && allParticipants.length >= 2) {
+      othersBlock = otherParticipantsBlock(allParticipants, target);
+    }
+  } else {
+    useCaregiverPrompt = interlocutor.type === "parent";
+    identityBlock = useCaregiverPrompt
+      ? caregiverIdentityBlock(interlocutor, station)
+      : interlocutorDirective(interlocutor);
+  }
+
   const template = await loadPrompt(useCaregiverPrompt ? "caregiver" : "patient");
-  const identityBlock = useCaregiverPrompt
-    ? caregiverIdentityBlock(interlocutor, station)
-    : interlocutorDirective(interlocutor);
 
   // Phase 3 J3 — injection déterministe d'une directive pointant vers le
   // profil de spécialité à prioriser (gynéco / adolescent / palliatif), si
@@ -176,9 +254,168 @@ export async function buildSystemPrompt(
     useCaregiverPrompt ? "caregiver" : "patient",
   );
 
-  const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
+  // Phase 4 J3 — registre lay : on injecte une directive énumérative
+  // listant les termes médicaux à proscrire et leurs équivalents grand
+  // public. Active uniquement quand `target.vocabulary === 'lay'` (les
+  // stations mono-patient legacy n'ont pas de target → pas d'effet).
+  const vocabularyDirective =
+    target && target.vocabulary === "lay" ? buildLayVocabularyDirective() : "";
+
+  // Phase 4 J3 — cloisonnement : si la station déclare des
+  // `participantSections` ET qu'on a un target avec un knowledgeScope, on
+  // filtre les sections sensibles avant injection. Pour les stations sans
+  // règles, le filtre est l'identité (les invariants ECOS legacy
+  // s'appliquent à l'identique).
+  const filteredStation = target
+    ? filterStationByScope(
+        station as Record<string, unknown>,
+        target.knowledgeScope,
+      )
+    : (station as Record<string, unknown>);
+
+  const dataBlock = `\n\n<station_data>\n${JSON.stringify(filteredStation, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
-  return template + identityBlock + specialtyDirective + modeDirective + dataBlock;
+  return (
+    template +
+    identityBlock +
+    othersBlock +
+    vocabularyDirective +
+    specialtyDirective +
+    modeDirective +
+    dataBlock
+  );
+}
+
+// Bloc d'identité injecté quand le target est un participant `patient` —
+// le LLM doit incarner CE patient précisément (utile sur les stations où
+// plusieurs profils coexistent : « Tu es Emma, 16 ans »).
+function patientParticipantIdentityBlock(target: Participant): string {
+  const ageStr = typeof target.age === "number" ? `, ${target.age} ans` : "";
+  return `\n\n## TU INCARNES
+Tu es ${target.name}${ageStr}, le ou la patient·e que le médecin examine. Le médecin t'adresse SA QUESTION ACTUELLE personnellement. Réponds en ton nom propre, à la première personne, sans parler à la place de quelqu'un d'autre.`;
+}
+
+// Bloc d'identité injecté quand le target est un participant `accompanying`
+// (ou `witness`) — variante du caregiverIdentityBlock historique mais qui
+// utilise le NOM EXPLICITE du participant target (pas l'inférence
+// parentRole legacy). Le patient sujet de la station est référencé via le
+// premier `participants[role==='patient']` ou, à défaut, le champ legacy
+// `nom`.
+function caregiverParticipantIdentityBlock(
+  target: Participant,
+  station: any,
+): string {
+  const patientName =
+    typeof station.nom === "string" && station.nom.length > 0
+      ? station.nom
+      : "le patient";
+  return `\n\n## TU INCARNES
+Tu es ${target.name}, accompagnant·e de ${patientName}. Le médecin t'adresse SA QUESTION ACTUELLE en tant qu'accompagnant·e. Réponds en ton nom propre — n'incarne pas ${patientName} à sa place.`;
+}
+
+// ─── Phase 4 J3 — cloisonnement par knowledgeScope ────────────────────────
+//
+// Filtre le JSON de la station avant injection dans le prompt LLM en
+// fonction des règles déclarées par `participantSections` ET du scope du
+// participant cible. Sections non listées = visibles à tous (rétrocompat
+// 100 % stations historiques).
+//
+// L'algorithme :
+//   • clone profond du JSON station (on ne mute pas le cache)
+//   • supprime explicitement `participantSections` de la copie envoyée au
+//     LLM (la table de règles n'a pas à être révélée au modèle)
+//   • pour chaque entrée de la table :
+//       – si la section est visible (intersection des tags non vide), on
+//         laisse intact ;
+//       – sinon on supprime le chemin pointé.
+//   • support des chemins pointés à 1 ou 2 niveaux (`a` ou `a.b`) — c'est
+//     suffisant pour les patterns présents dans nos JSON ECOS (top-level
+//     ou sous-clé directe d'un objet).
+function deleteAtPath(obj: Record<string, unknown>, path: string): void {
+  const parts = path.split(".");
+  if (parts.length === 1) {
+    delete obj[parts[0]];
+    return;
+  }
+  let cur: unknown = obj;
+  for (let i = 0; i < parts.length - 1; i++) {
+    if (!cur || typeof cur !== "object" || Array.isArray(cur)) return;
+    cur = (cur as Record<string, unknown>)[parts[i]];
+  }
+  if (cur && typeof cur === "object" && !Array.isArray(cur)) {
+    delete (cur as Record<string, unknown>)[parts[parts.length - 1]];
+  }
+}
+
+// Champs systématiquement retirés du JSON station avant injection dans le
+// prompt LLM cible-spécifique. Ce sont des métadonnées catalogue/runtime
+// qui (a) ne servent pas au LLM pour jouer son rôle et (b) peuvent leak
+// involontairement le scénario complet :
+//   • `id`, `tags` → titre + catégories qui révèlent le pitch (ex.
+//     « RESCOS-70 - Contraception cachée + effets secondaires », tags
+//     ["contraception", "effets-secondaires-pilule"]).
+//   • `participants`, `participantSections` → métadonnées de routage
+//     d'adresse et règles de cloisonnement (le LLM voit déjà son identité
+//     via le bloc "TU INCARNES" et la liste "AUTRES PRÉSENTS" injectés
+//     séparément).
+//   • `register`, `patient_age_years`, `source_scenario` → flags Phase 3 J3
+//     et compteurs internes, sans valeur narrative.
+const META_FIELDS_TO_STRIP = [
+  "id",
+  "tags",
+  "register",
+  "patient_age_years",
+  "source_scenario",
+  "participants",
+  "participantSections",
+];
+
+export function filterStationByScope(
+  station: Record<string, unknown>,
+  participantScope: string[],
+): Record<string, unknown> {
+  const sections = (station.participantSections ?? null) as
+    | ParticipantSections
+    | null;
+  // Clone toujours, même sans rule, pour qu'on puisse en toute sécurité
+  // déposer les champs métadonnées (qui ne doivent JAMAIS apparaître
+  // dans le contexte LLM).
+  const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
+  for (const f of META_FIELDS_TO_STRIP) delete cloned[f];
+  if (!sections) return cloned;
+  const scopeSet = new Set(participantScope);
+  for (const [path, requiredTags] of Object.entries(sections)) {
+    const visible = requiredTags.some((t) => scopeSet.has(t));
+    if (!visible) deleteAtPath(cloned, path);
+  }
+  return cloned;
+}
+
+// Liste les autres profils présents dans la pièce pour que le LLM sache
+// qu'il ne doit PAS répondre à leur place tant que le médecin ne s'adresse
+// pas à eux explicitement (la prochaine question pourra rebasculer ;
+// l'orchestrateur côté serveur appellera buildSystemPrompt à nouveau avec
+// le bon target).
+function otherParticipantsBlock(
+  participants: Participant[],
+  target: Participant,
+): string {
+  const others = participants.filter((p) => p.id !== target.id);
+  if (others.length === 0) return "";
+  const list = others
+    .map((p) => {
+      const role =
+        p.role === "patient"
+          ? "patient·e"
+          : p.role === "accompanying"
+            ? "accompagnant·e"
+            : "tiers";
+      const ageStr = typeof p.age === "number" ? `, ${p.age} ans` : "";
+      return `${p.name}${ageStr} (${role})`;
+    })
+    .join(" ; ");
+  return `\n\n## AUTRES PERSONNES PRÉSENTES
+${list}. Ces profils sont présents dans la pièce mais le médecin NE leur adresse PAS sa question actuelle. Ne réponds pas à leur place. Si le médecin change d'interlocuteur lors d'un prochain tour, on te le signalera explicitement.`;
 }
 
 // Détecte les leaks de findings objectifs dans la réponse LLM POST-génération.
@@ -218,15 +455,130 @@ export interface ChatOptions {
   userMessage: string;
   mode: "voice" | "text";
   model?: string;
+  // Phase 4 J2 — id du participant qui a parlé au tour précédent (sticky).
+  // Le client le repasse à chaque requête. `null`/absent à T0 ⇒ on retombe
+  // sur le défaut de la station (cf. computeDefaultSpeakerId).
+  currentSpeakerId?: string | null;
+}
+
+// Phase 4 J2 — résultat d'un tour de chat patient. Discriminated union :
+//   • `reply` ⇒ réponse LLM normale, taggée du participant qui a répondu.
+//   • `clarification_needed` ⇒ le routeur d'adresse a tranché « ambigu » :
+//     on N'APPELLE PAS OpenAI, on demande à l'UI de clarifier à qui le
+//     candidat parle. Pas de tokens consommés sur ambigu.
+export interface PatientChatReply {
+  type: "reply";
+  reply: string;
+  speakerId: string;
+  speakerRole: ParticipantRole;
+}
+export interface PatientChatClarification {
+  type: "clarification_needed";
+  reason: string;
+  candidates: Array<{ id: string; name: string; role: ParticipantRole }>;
+}
+export type PatientChatOutcome = PatientChatReply | PatientChatClarification;
+
+// Phase 4 J2 — résolution d'adresse pour un tour. Le routeur lui-même
+// (addressRouter) reste pur. Cette fonction est l'orchestration : elle
+// charge la station, construit la liste des participants effective (en
+// synthétisant un participant unique pour les stations mono-patient
+// legacy) et appelle le routeur.
+//
+// Trois sorties possibles :
+//   • { kind: "ok", target } ⇒ on connaît le participant qui doit répondre,
+//     on peut appeler le LLM avec le bon system prompt.
+//   • { kind: "ambiguous", route, candidates } ⇒ multi-profils sans marqueur
+//     identifiable. L'UI doit demander une clarification.
+//   • { kind: "ok", target } pour mono-patient ⇒ identique à legacy, le
+//     participant unique synthétisé fait foi.
+async function resolveTargetParticipant(
+  stationId: string,
+  userMessage: string,
+  currentSpeakerId: string | null | undefined,
+): Promise<
+  | { kind: "ok"; target: Participant; allParticipants: Participant[]; route: RouteResult }
+  | {
+      kind: "ambiguous";
+      route: RouteResult;
+      allParticipants: Participant[];
+    }
+> {
+  const station = await getPatientStation(stationId);
+  const allParticipants = getStationParticipants(station);
+  // Mono-profil (1 participant : legacy mono-patient OU station déclarant un seul
+  // participant explicitement) ⇒ on retourne directement, pas d'appel routeur.
+  if (allParticipants.length <= 1) {
+    return {
+      kind: "ok",
+      target: allParticipants[0],
+      allParticipants,
+      route: {
+        targetId: allParticipants[0]?.id ?? "patient",
+        confidence: "high",
+        reason: "mono-patient (synthèse legacy ou un seul participant déclaré)",
+      },
+    };
+  }
+  const route = routeAddress({
+    message: userMessage,
+    participants: allParticipants,
+    currentSpeaker: currentSpeakerId ?? null,
+  });
+  if (route.confidence === "ambiguous") {
+    return { kind: "ambiguous", route, allParticipants };
+  }
+  const target = allParticipants.find((p) => p.id === route.targetId);
+  if (!target) {
+    // Le routeur a renvoyé un targetId qui n'existe plus dans la liste —
+    // ne devrait jamais arriver, mais on dégrade en ambigu plutôt que
+    // d'aiguiller silencieusement vers un profil obsolète.
+    return { kind: "ambiguous", route, allParticipants };
+  }
+  return { kind: "ok", target, allParticipants, route };
+}
+
+// Builds the clarification payload with the trimmed participant info that
+// the UI needs to show buttons.
+function buildClarificationOutcome(
+  participants: Participant[],
+  reason: string,
+): PatientChatClarification {
+  return {
+    type: "clarification_needed",
+    reason,
+    candidates: participants.map((p) => ({ id: p.id, name: p.name, role: p.role })),
+  };
 }
 
 // Appelle OpenAI Chat Completions. L'historique passé par le client est utilisé tel quel.
-export async function runPatientChat(opts: ChatOptions): Promise<string> {
+//
+// Phase 4 J2 — la fonction retourne désormais un PatientChatOutcome :
+//   • soit la réponse LLM tagguée du speaker (cas normal, station mono ou
+//     multi-profils résolu),
+//   • soit un payload `clarification_needed` (cas multi-profils ambigu)
+//     SANS appel OpenAI — pas de tokens consommés sur ambigu.
+export async function runPatientChat(opts: ChatOptions): Promise<PatientChatOutcome> {
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
+  const resolved = await resolveTargetParticipant(
+    opts.stationId,
+    opts.userMessage,
+    opts.currentSpeakerId,
+  );
+  if (resolved.kind === "ambiguous") {
+    return buildClarificationOutcome(resolved.allParticipants, resolved.route.reason);
+  }
+
+  const { target, allParticipants } = resolved;
   const { interlocutor } = await resolveStationInterlocutor(opts.stationId);
-  const system = await buildSystemPrompt(opts.stationId, opts.mode);
+  const system = await buildSystemPrompt(
+    opts.stationId,
+    opts.mode,
+    target,
+    allParticipants,
+  );
   const client = new OpenAI({ apiKey: key });
   const model = opts.model ?? "gpt-4o-mini";
   const started = Date.now();
@@ -242,7 +594,13 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
       ],
     });
     const reply = completion.choices[0]?.message?.content?.trim() ?? "";
-    logLeaksIfAny(opts.stationId, interlocutor.type, reply);
+    // Leak detection : on aligne sur le ROLE du participant qui répond, pas
+    // sur l'interlocuteur statique de la station — un participant
+    // accompanying qui répond doit être checké contre la blacklist
+    // caregiver.
+    const interlocutorTypeForLeaks: Interlocutor["type"] =
+      target.role === "patient" ? "self" : "parent";
+    logLeaksIfAny(opts.stationId, interlocutorTypeForLeaks, reply);
     void logRequest({
       route: "/api/patient/chat",
       stationId: opts.stationId,
@@ -253,7 +611,12 @@ export async function runPatientChat(opts: ChatOptions): Promise<string> {
       latencyMs: Date.now() - started,
       ok: true,
     });
-    return reply;
+    return {
+      type: "reply",
+      reply,
+      speakerId: target.id,
+      speakerRole: target.role,
+    };
   } catch (err) {
     void logRequest({
       route: "/api/patient/chat",
@@ -277,17 +640,37 @@ const SENTENCE_END = /([.!?…]+)(\s+|$)/;
 const MIN_SENTENCE_LENGTH = 12;
 
 export interface StreamEvent {
-  type: "delta" | "sentence" | "done" | "error";
+  type:
+    | "delta"
+    | "sentence"
+    | "done"
+    | "error"
+    // Phase 4 J2 — événements liés au routage multi-profils.
+    | "speaker"
+    | "clarification_needed";
   text?: string;
   index?: number;
   fullText?: string;
   code?: string;
   message?: string;
+  // Phase 4 J2 — émis avant tout `delta` quand le routeur a tranché en
+  // faveur d'un participant. Le client met à jour `currentSpeakerId` et
+  // affiche le bon label ("Mère du patient (voix IA)" vs "Patient (voix IA)").
+  speakerId?: string;
+  speakerRole?: ParticipantRole;
+  // Phase 4 J2 — émis seul (pas de delta/done associé) quand le routeur a
+  // tranché « ambigu ». Aucun appel OpenAI n'est effectué dans ce cas.
+  candidates?: Array<{ id: string; name: string; role: ParticipantRole }>;
+  reason?: string;
 }
 
 // Async generator qui yield des events discrets à partir du flux OpenAI.
 // Le consommateur (route SSE) se charge de sérialiser au format text/event-stream.
 // `signal` permet à la route d'abort l'appel OpenAI si le client se déconnecte.
+//
+// Phase 4 J2 — séquence des events :
+//   1. soit `clarification_needed` (et fin du stream — pas d'OpenAI),
+//   2. soit `speaker` puis `delta*`, `sentence*`, `done`.
 export async function* streamPatientChat(
   opts: ChatOptions,
   signal?: AbortSignal,
@@ -295,11 +678,43 @@ export async function* streamPatientChat(
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
-  const { interlocutor } = await resolveStationInterlocutor(opts.stationId);
-  const system = await buildSystemPrompt(opts.stationId, opts.mode);
+  const resolved = await resolveTargetParticipant(
+    opts.stationId,
+    opts.userMessage,
+    opts.currentSpeakerId,
+  );
+  if (resolved.kind === "ambiguous") {
+    yield {
+      type: "clarification_needed",
+      reason: resolved.route.reason,
+      candidates: resolved.allParticipants.map((p) => ({
+        id: p.id,
+        name: p.name,
+        role: p.role,
+      })),
+    };
+    return;
+  }
+
+  const { target, allParticipants } = resolved;
+  const system = await buildSystemPrompt(
+    opts.stationId,
+    opts.mode,
+    target,
+    allParticipants,
+  );
   const client = new OpenAI({ apiKey: key });
   const model = opts.model ?? "gpt-4o-mini";
   const started = Date.now();
+
+  // Tag du speaker — émis EN PREMIER pour que le client puisse mettre à jour
+  // l'UI (label « Mère du patient (voix IA) » vs « Patient (voix IA) »)
+  // avant le premier delta.
+  yield {
+    type: "speaker",
+    speakerId: target.id,
+    speakerRole: target.role,
+  };
 
   const stream = await client.chat.completions.create(
     {
@@ -355,7 +770,9 @@ export async function* streamPatientChat(
     if (tail.length > 0) {
       yield { type: "sentence", text: tail, index: sentenceIndex++ };
     }
-    logLeaksIfAny(opts.stationId, interlocutor.type, fullText);
+    const interlocutorTypeForLeaks: Interlocutor["type"] =
+      target.role === "patient" ? "self" : "parent";
+    logLeaksIfAny(opts.stationId, interlocutorTypeForLeaks, fullText);
     yield { type: "done", fullText: fullText.trim() };
   } catch (err) {
     ok = false;

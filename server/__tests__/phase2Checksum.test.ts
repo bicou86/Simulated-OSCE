@@ -1,5 +1,5 @@
-// Phase 3 J4 — verrou de non-régression byte-identique sur les 283 stations
-// Phase 2 NON touchées par J3.
+// Phase 3 J4 — verrou de non-régression byte-identique sur les stations
+// Phase 2 NON touchées par les phases ultérieures.
 //
 // Le test recalcule un SHA-256 sur la sérialisation déterministe (JSON keys
 // triées récursivement) de chaque station et compare au snapshot
@@ -7,10 +7,13 @@
 // est byte-modifiée par mégarde lors d'un merge, le test échoue immédiatement
 // en pointant l'ID concerné.
 //
-// Les 3 stations pilotes J3 (AMBOSS-4, RESCOS-70, RESCOS-71) sont
-// volontairement exclues du checksum : elles portent les champs additifs J3
-// (register, patient_age_years, motif_cache, tags) qui ont par construction
-// modifié le hash. Le verrou démarre à la baseline post-J3.
+// Stations volontairement exclues du checksum :
+//   • Phase 3 J3 — AMBOSS-4, RESCOS-70, RESCOS-71 : champs additifs
+//     (register, patient_age_years, motif_cache, tags).
+//   • Phase 4 J1 — RESCOS-9b, RESCOS-13, RESCOS-63 (+ RESCOS-70, RESCOS-71
+//     déjà exclus) : champ additif `participants[]` pour la composition
+//     multi-profils (ado + mère, enfant + parent, …).
+// Le verrou redémarre à 280 stations post-J1, déterministes.
 //
 // Pour mettre à jour le snapshot après un changement Phase 2 *intentionnel*,
 // supprimer phase2-checksum.json et relancer le test avec
@@ -36,7 +39,16 @@ const SNAPSHOT_PATH = path.resolve(
   "__snapshots__",
   "phase2-checksum.json",
 );
-const J3_PILOTS = new Set(["AMBOSS-4", "RESCOS-70", "RESCOS-71"]);
+// Pilotes exclus = Phase 3 J3 ∪ Phase 4 J1 (RESCOS-70 et RESCOS-71 sont
+// communs aux deux phases : J3 a ajouté register/tags, J1 ajoute participants[]).
+const PHASE_PILOTS_EXCLUDED = new Set([
+  "AMBOSS-4",
+  "RESCOS-70",
+  "RESCOS-71",
+  "RESCOS-9b",
+  "RESCOS-13",
+  "RESCOS-63",
+]);
 
 // Tri récursif des clés objet → sérialisation déterministe indépendante de
 // l'ordre de définition dans les fichiers source. Les arrays gardent leur
@@ -68,7 +80,7 @@ async function computeChecksums(): Promise<Record<string, string>> {
     const parsed = JSON.parse(content) as { stations: Array<{ id: string }> };
     for (const station of parsed.stations) {
       const shortId = shortIdOf(station.id);
-      if (J3_PILOTS.has(shortId)) continue;
+      if (PHASE_PILOTS_EXCLUDED.has(shortId)) continue;
       // En cas de doublon d'ID (cf. RESCOS-64 historique dans
       // Patient_RESCOS_4.json), on conserve la première occurrence — même
       // règle que stationsService au démarrage.
@@ -90,23 +102,30 @@ interface Snapshot {
   checksums: Record<string, string>;
 }
 
-describe("Phase 2 byte-stability checksum (post-J3 baseline)", () => {
+describe("Phase 2 byte-stability checksum (post-J1 baseline)", () => {
   it("snapshot file exists and has a sane structure", async () => {
     const raw = await fs.readFile(SNAPSHOT_PATH, "utf-8");
     const snap = JSON.parse(raw) as Snapshot;
     expect(snap._meta.algorithm).toMatch(/sha256/i);
     expect(Array.isArray(snap._meta.excluded)).toBe(true);
     expect(snap._meta.excluded).toEqual(
-      expect.arrayContaining(["AMBOSS-4", "RESCOS-70", "RESCOS-71"]),
+      expect.arrayContaining([
+        "AMBOSS-4",
+        "RESCOS-70",
+        "RESCOS-71",
+        "RESCOS-9b",
+        "RESCOS-13",
+        "RESCOS-63",
+      ]),
     );
     expect(Object.keys(snap.checksums).length).toBe(snap._meta.stationCount);
     expect(Object.keys(snap.checksums).length).toBeGreaterThanOrEqual(280);
   });
 
-  it("none of the 3 J3 pilots is present in the snapshot (excluded by design)", async () => {
+  it("none of the excluded pilots is present in the snapshot (excluded by design)", async () => {
     const raw = await fs.readFile(SNAPSHOT_PATH, "utf-8");
     const snap = JSON.parse(raw) as Snapshot;
-    for (const pilot of J3_PILOTS) {
+    for (const pilot of PHASE_PILOTS_EXCLUDED) {
       expect(snap.checksums[pilot]).toBeUndefined();
     }
   });

@@ -36,8 +36,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           {navItems.map((item) => {
             const isActive = location === item.href || (item.href !== "/" && location.startsWith(item.href));
             return (
-              <Link key={item.href} href={item.href}>
-                <a className={cn(
+              <Link key={item.href} href={item.href} className={cn(
                   "flex items-center gap-3 px-3 py-3 md:px-4 md:py-4 rounded-xl transition-all duration-200 group relative",
                   isActive 
                     ? "bg-primary text-primary-foreground shadow-md shadow-primary/20" 
@@ -48,8 +47,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                   {isActive && (
                     <div className="absolute left-0 w-1.5 h-8 bg-white/20 rounded-r-full" />
                   )}
-                </a>
-              </Link>
+                </Link>
             );
           })}
         </nav>

@@ -2795,7 +2795,32 @@
             }
           ]
         }
-      }
+      },
+      "participants": [
+        {
+          "id": "liam",
+          "role": "patient",
+          "name": "Liam Lambretta",
+          "age": 0,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité"
+          ]
+        },
+        {
+          "id": "parent",
+          "role": "accompanying",
+          "name": "Parent de Liam",
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité",
+            "symptômes_observés",
+            "infant_routine",
+            "antécédents_familiaux",
+            "vaccination_status"
+          ]
+        }
+      ]
     },
     {
       "id": "RESCOS-64 - Toux - Station double 1",
@@ -5045,7 +5070,13 @@
       "nom": "Emma Delacroix",
       "age": "16 ans",
       "patient_age_years": 16,
-      "tags": ["adolescent", "contraception", "confidentialite", "gyneco", "effets-secondaires-pilule"],
+      "tags": [
+        "adolescent",
+        "contraception",
+        "confidentialite",
+        "gyneco",
+        "effets-secondaires-pilule"
+      ],
       "contexte": "Consultation programmée. La mère d'Emma a pris le rendez-vous par téléphone et reste en salle d'attente (ou entre en salle de consultation si le candidat ne demande pas explicitement un tête-à-tête). Emma prend en réalité une pilule progestative (Cerazette / désogestrel) depuis environ trois mois, prescrite par une gynécologue qu'elle a consultée seule à la rentrée. Elle a un copain depuis l'été. Sa mère ignore tout : ni la pilule, ni le copain. Depuis deux à trois semaines, Emma a des petits saignements irréguliers entre les règles (spotting) et des douleurs abdominales basses intermittentes, qu'elle redoute être 'anormales'. Elle ne sait pas si ces symptômes sont des effets secondaires banals de la pilule ou s'ils cachent quelque chose de grave. Elle n'ose pas en parler avec sa gynéco (rendez-vous de contrôle pas avant deux mois) ni avec sa mère (risque de découverte). La mère a inféré 'fatigue + maux de ventre' depuis le comportement d'Emma et a forcé le rendez-vous chez le généraliste.",
       "ouverture": "Euh… bonjour docteur.",
       "ouverture_complement": "Ma mère a voulu que je vienne.",
@@ -5120,10 +5151,76 @@
       "examens_complementaires": {
         "bhcg": {
           "parameters": {
-            "bhcg_qual": { "value": 0 }
+            "bhcg_qual": {
+              "value": 0
+            }
           },
           "interpretation": "Test de grossesse urinaire négatif réalisé au cabinet en précaution chez toute adolescente sexuellement active avec douleurs pelviennes + saignements irréguliers — rassurant. Compatible avec une bonne observance de Cerazette depuis 3 mois."
         }
+      },
+      "participants": [
+        {
+          "id": "emma",
+          "role": "patient",
+          "name": "Emma Delacroix",
+          "age": 16,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité",
+            "symptômes",
+            "sexual_health",
+            "contraception",
+            "mother_relation",
+            "school",
+            "full_scenario"
+          ]
+        },
+        {
+          "id": "mother",
+          "role": "accompanying",
+          "name": "Mère d'Emma Delacroix",
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité",
+            "symptômes_observés",
+            "antécédents_familiaux",
+            "mother_view"
+          ]
+        }
+      ],
+      "participantSections": {
+        "contexte": [
+          "full_scenario"
+        ],
+        "motif_cache": [
+          "full_scenario"
+        ],
+        "consignes_jeu": [
+          "full_scenario"
+        ],
+        "histoire_actuelle.symptomePrincipal": [
+          "sexual_health",
+          "contraception"
+        ],
+        "histoire_actuelle.symptomesAssocies": [
+          "sexual_health"
+        ],
+        "histoire_actuelle.contexteVie": [
+          "sexual_health",
+          "school"
+        ],
+        "antecedents.gyneco": [
+          "sexual_health"
+        ],
+        "antecedents.traitements_en_cours": [
+          "contraception"
+        ],
+        "anamneseSystemes": [
+          "sexual_health"
+        ],
+        "examens_complementaires": [
+          "sexual_health"
+        ]
       }
     },
     {
@@ -5138,7 +5235,12 @@
       "nom": "Martine Bettaz",
       "age": "52 ans",
       "patient_age_years": 52,
-      "tags": ["palliatif", "fin-de-vie", "accompagnante", "epuisement-proche"],
+      "tags": [
+        "palliatif",
+        "fin-de-vie",
+        "accompagnante",
+        "epuisement-proche"
+      ],
       "contexte": "Consultation de point avec l'accompagnante principale d'un patient en phase terminale. M. Bettaz est confiné au lit depuis 3 semaines, sa fille Martine assure l'essentiel des soins avec l'appui de l'équipe mobile de soins palliatifs (infirmier·ère 2x/jour, médecin référent à distance). Martine est épuisée, dort mal, et a verbalisé récemment à l'infirmière de l'EMP 'qu'elle n'en peut plus' — ce qui a motivé cette consultation.",
       "ouverture": "Bonjour docteur. Je viens pour parler de mon père.",
       "ouverture_complement": "Enfin, de lui, mais aussi un peu de moi, si on peut.",
@@ -5181,7 +5283,42 @@
         "familiaux": "Mère de Martine décédée d'un cancer du sein à 65 ans — deuil difficile à l'époque."
       },
       "examen_resultats": {},
-      "examens_complementaires": {}
+      "examens_complementaires": {},
+      "participants": [
+        {
+          "id": "louis",
+          "role": "patient",
+          "name": "M. Louis Bettaz",
+          "age": 78,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité",
+            "douleur_propre",
+            "full_scenario"
+          ]
+        },
+        {
+          "id": "martine",
+          "role": "accompanying",
+          "name": "Martine Bettaz",
+          "age": 52,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "identité",
+            "symptômes_observés",
+            "antécédents_pancréas",
+            "caregiver_burden",
+            "social_situation",
+            "treatment_observed",
+            "full_scenario"
+          ]
+        }
+      ],
+      "participantSections": {
+        "consignes_jeu": [
+          "full_scenario"
+        ]
+      }
     }
   ]
 }

@@ -97,8 +97,15 @@ describe("streamPatientChat (generator)", () => {
     }
 
     const types = events.map((e) => e.type);
-    expect(types[0]).toBe("delta");
+    // Phase 4 J2 — le générateur émet d'abord un event `speaker` (id du
+    // participant qui répond) avant tout delta. Les stations mono-patient
+    // legacy émettent ce tag sur le participant unique synthétisé.
+    expect(types[0]).toBe("speaker");
+    expect(types[1]).toBe("delta");
     expect(types.at(-1)).toBe("done");
+    const speakerEvt = events[0];
+    expect(speakerEvt.speakerId).toBe("patient");
+    expect(speakerEvt.speakerRole).toBe("patient");
 
     const sentences = events.filter((e) => e.type === "sentence");
     expect(sentences.length).toBeGreaterThanOrEqual(2);

@@ -16,12 +16,17 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { MicLevelIndicator } from "@/components/MicLevelIndicator";
 import { ExaminerImage } from "@/components/ExaminerImage";
 import { ExaminerLabs } from "@/components/ExaminerLabs";
+import { ClarificationPanel } from "@/components/ClarificationPanel";
+import { CurrentSpeakerBadge } from "@/components/CurrentSpeakerBadge";
+import { SpeakerSwitchButtons } from "@/components/SpeakerSwitchButtons";
 import {
   getConversationPreferences,
   getPreferredVoice,
   getVoicePreferences,
   interlocutorArticle,
   interlocutorSpeakerLabel,
+  participantAvatar,
+  participantSpeakerLabel,
   resolveVoice,
 } from "@/lib/preferences";
 import { canonicalSetting } from "@/lib/settingGroups";
@@ -33,9 +38,11 @@ import {
   labsLookup,
   sttPatient,
   ttsPatient,
+  type ChatReplyClarification,
   type ExaminerLookupResult,
   type LabsLookupResult,
   type LabsLookupResolvedResult,
+  type ParticipantRoleClient,
   type PatientBrief,
   type TtsVoice,
 } from "@/lib/api";
@@ -52,7 +59,17 @@ type ExaminerItem = {
 };
 
 type TranscriptTurn =
-  | { role: "patient" | "doctor"; text: string }
+  | {
+      role: "patient" | "doctor";
+      text: string;
+      // Phase 4 J2 — id/rôle du participant qui a réellement répondu (côté
+      // patient) ou auquel le candidat s'adressait (côté doctor — pas
+      // exploité pour le moment, le label "Étudiant / Médecin" reste
+      // statique). Optionnel : les tours pré-J2 (tests, monoclient) n'en
+      // portent pas, on retombe sur le label legacy.
+      speakerId?: string;
+      speakerRole?: ParticipantRoleClient;
+    }
   | {
       role: "examiner";
       text: string;
@@ -187,6 +204,21 @@ export default function Simulation() {
   const [isSending, setIsSending] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
 
+  // Phase 4 J2 — participant qui a parlé au tour précédent. Initialisé
+  // depuis brief.defaultSpeakerId quand le brief arrive ; mis à jour à
+  // chaque réponse LLM via le tag `speakerId` retourné par le serveur.
+  // Null tant que le brief n'est pas chargé OU si la station est mono et
+  // n'a pas de défaut explicite (le serveur retombera de toute façon sur
+  // le seul participant disponible).
+  const [currentSpeakerId, setCurrentSpeakerId] = useState<string | null>(null);
+  // Phase 4 J2 — payload de clarification reçu si le routeur n'a pas pu
+  // trancher. Quand non-null, l'UI affiche un panneau de boutons profils
+  // au-dessus de la barre d'input.
+  const [pendingClarification, setPendingClarification] = useState<Omit<ChatReplyClarification, "type"> | null>(null);
+  // Phase 4 J2 — speaker tag pour la bulle de stream en cours (avant que
+  // le tour ne soit committé en transcript final).
+  const [streamingSpeaker, setStreamingSpeaker] = useState<{ speakerId: string; speakerRole: ParticipantRoleClient } | null>(null);
+
   const { isRecording, error: recorderError, start: startRec, stop: stopRec } = useMediaRecorder();
   // Voix TTS du patient — état initial = fallback preferredVoice ; résolu en fonction du
   // sexe/âge du brief dès qu'il est chargé (cf. useEffect ci-dessous).
@@ -196,7 +228,14 @@ export default function Simulation() {
   const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const scrollAnchorRef = useRef<HTMLDivElement | null>(null);
 
-  const streaming = useStreamingChat({ voice });
+  const streaming = useStreamingChat({
+    voice,
+    // Phase 4 J2 — dès que le serveur émet l'event `speaker` (avant tout
+    // delta), on capture le speaker du tour en cours pour que la bulle
+    // streaming affiche le bon label.
+    onSpeaker: (s) => setStreamingSpeaker(s),
+    onClarification: (payload) => setPendingClarification(payload),
+  });
   const {
     sendMessage: sendStream,
     abort: abortStream,
@@ -244,6 +283,16 @@ export default function Simulation() {
     if (!brief) return;
     const prefs = getVoicePreferences();
     setVoice(resolveVoice(brief, prefs));
+  }, [brief]);
+
+  // Phase 4 J2 — initialisation du sticky speaker : on s'aligne sur le
+  // défaut serveur (ex. RESCOS-71 ⇒ Martine ; RESCOS-70 ⇒ Emma). Si le
+  // brief n'expose pas de default (stations historiques sans
+  // participants[]), on laisse null — le serveur synthétisera le speaker
+  // unique côté pipeline.
+  useEffect(() => {
+    if (!brief) return;
+    setCurrentSpeakerId(brief.defaultSpeakerId ?? null);
   }, [brief]);
 
   // Timer
@@ -381,24 +430,66 @@ export default function Simulation() {
       history: buildHistory([newTurn]),
       userMessage: cleaned,
       mode,
+      // Phase 4 J2 — sticky speaker pour le routeur d'adresse côté serveur.
+      currentSpeakerId,
     };
 
     try {
       // Chemin streaming : affichage token-par-token + TTS progressif des phrases.
-      const { fullText, aborted } = await sendStream(input);
-      if (aborted) return;
+      // Phase 4 J2 — la `clarification` peut court-circuiter le tour : aucun
+      // delta n'a été reçu, on a juste un payload « À qui parlez-vous ? ».
+      // streamingSpeaker est mis à jour via onSpeaker dans options.
+      const result = await sendStream(input);
+      if (result.aborted) return;
+      const { fullText, speakerId, speakerRole, clarification } = result;
+
+      if (clarification) {
+        // setPendingClarification a déjà été déclenché par onClarification,
+        // mais on l'écrit aussi ici pour les chemins fallback qui ne
+        // passent pas par le hook (rétention en cas d'absence de SSE).
+        setPendingClarification(clarification);
+        setStreamingSpeaker(null);
+        return;
+      }
 
       if (fullText && fullText.trim().length > 0) {
-        setTranscript((prev) => [...prev, { role: "patient", text: fullText }]);
+        setTranscript((prev) => [
+          ...prev,
+          {
+            role: "patient",
+            text: fullText,
+            speakerId: speakerId ?? undefined,
+            speakerRole: speakerRole ?? undefined,
+          },
+        ]);
+        if (speakerId) setCurrentSpeakerId(speakerId);
+        setStreamingSpeaker(null);
       } else {
         // Filet de sécurité : le stream a terminé sans erreur mais sans contenu
         // (ex. route SSE non montée et interceptée plus haut par notre garde content-type,
         // ou panne silencieuse upstream). On bascule sur l'endpoint non-stream + TTS manuel
         // pour ne pas bloquer la simulation.
-        const { reply } = await chatPatient(input);
-        setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
+        const fallback = await chatPatient(input);
+        if (fallback.type === "clarification_needed") {
+          setPendingClarification({
+            reason: fallback.reason,
+            candidates: fallback.candidates,
+          });
+          setStreamingSpeaker(null);
+          return;
+        }
+        setTranscript((prev) => [
+          ...prev,
+          {
+            role: "patient",
+            text: fallback.reply,
+            speakerId: fallback.speakerId,
+            speakerRole: fallback.speakerRole,
+          },
+        ]);
+        setCurrentSpeakerId(fallback.speakerId);
         try {
-          const audio = await ttsPatient(reply, voiceRef.current);
+          const audio = await ttsPatient(fallback.reply, voiceRef.current);
           playAudio(audio);
         } catch { /* TTS optionnel */ }
       }
@@ -408,10 +499,27 @@ export default function Simulation() {
       // content-type invalide), on réessaie l'endpoint classique pour ne pas bloquer la
       // simulation.
       try {
-        const { reply } = await chatPatient(input);
-        setTranscript((prev) => [...prev, { role: "patient", text: reply }]);
+        const fallback = await chatPatient(input);
+        if (fallback.type === "clarification_needed") {
+          setPendingClarification({
+            reason: fallback.reason,
+            candidates: fallback.candidates,
+          });
+          setStreamingSpeaker(null);
+          return;
+        }
+        setTranscript((prev) => [
+          ...prev,
+          {
+            role: "patient",
+            text: fallback.reply,
+            speakerId: fallback.speakerId,
+            speakerRole: fallback.speakerRole,
+          },
+        ]);
+        setCurrentSpeakerId(fallback.speakerId);
         try {
-          const audio = await ttsPatient(reply, voiceRef.current);
+          const audio = await ttsPatient(fallback.reply, voiceRef.current);
           playAudio(audio);
         } catch { /* TTS optionnel — on ne bloque pas l'échange */ }
       } catch (err2) {
@@ -425,7 +533,7 @@ export default function Simulation() {
     } finally {
       setIsSending(false);
     }
-  }, [buildHistory, playAudio, sendStream, stationId, toast]);
+  }, [buildHistory, currentSpeakerId, playAudio, sendStream, stationId, toast]);
 
   // Hook de mode conversation : VAD écoute en continu pendant que l'utilisateur parle,
   // capture l'audio, émet un blob dès qu'un silence prolongé est détecté, et on enchaîne
@@ -754,6 +862,33 @@ export default function Simulation() {
           />
         </div>
 
+        {/* Phase 4 J4 — barre dual-speaker. Visible UNIQUEMENT pour les
+            stations multi-profils (CurrentSpeakerBadge et
+            SpeakerSwitchButtons retournent null si participants.length<2),
+            donc rétrocompat 100 % sur les stations mono-patient legacy. */}
+        {brief?.participants && brief.participants.length >= 2 && (
+          <div className="border-b border-border/50 bg-muted/30 px-4 py-2 flex flex-wrap items-center gap-3">
+            <CurrentSpeakerBadge brief={brief} currentSpeakerId={currentSpeakerId} />
+            <div className="flex-1" />
+            <SpeakerSwitchButtons
+              brief={brief}
+              currentSpeakerId={currentSpeakerId}
+              disabled={!isActive || timedOut}
+              onSwitch={(p) => {
+                // Insère le tag « [À NAME] » au début du textarea s'il
+                // n'y est pas déjà. Le serveur consommera ce tag à la
+                // prochaine soumission via routeAddress.
+                const tag = `[À ${p.name}] `;
+                setTextInput((prev) => (prev.startsWith(tag) ? prev : tag + prev));
+                // On met aussi à jour currentSpeakerId localement pour
+                // que le badge bascule immédiatement (le serveur le
+                // confirmera avec son event `speaker` au tour suivant).
+                setCurrentSpeakerId(p.id);
+              }}
+            />
+          </div>
+        )}
+
         <div className="flex-1 overflow-y-auto p-6 md:p-10 space-y-6">
           {transcript.length === 0 && !hasStarted ? (
             <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-60">
@@ -885,13 +1020,30 @@ export default function Simulation() {
                     </div>
                   );
                 }
+                // Phase 4 J2 — label per-message si la station est
+                // multi-profils ; sinon retombe sur le label legacy.
+                const patientLabel =
+                  msg.role === "patient" && msg.speakerId
+                    ? participantSpeakerLabel(brief, msg.speakerId)
+                    : interlocutorSpeakerLabel(brief);
+                // Phase 4 J4 — avatar + footer du participant qui parle
+                // (multi-profils uniquement). Sur mono-patient, footer/avatar
+                // omis pour ne pas polluer l'UI legacy.
+                const speakerParticipant =
+                  msg.role === "patient" && msg.speakerId && brief?.participants
+                    ? brief.participants.find((p) => p.id === msg.speakerId)
+                    : null;
+                const speakerAvatar = speakerParticipant
+                  ? participantAvatar(speakerParticipant)
+                  : null;
                 return (
-                  <div key={idx} className={cn(
+                  <div key={idx} data-testid={`bubble-${msg.role}`} className={cn(
                     "flex flex-col max-w-[85%] animate-in fade-in slide-in-from-bottom-2",
                     msg.role === "patient" ? "items-start" : "items-end ml-auto",
                   )}>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                      {msg.role === "patient" ? `${interlocutorSpeakerLabel(brief)} (voix IA)` : "Étudiant / Médecin"}
+                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2 flex items-center gap-1.5">
+                      {speakerAvatar && <span aria-hidden className="text-base leading-none">{speakerAvatar}</span>}
+                      {msg.role === "patient" ? `${patientLabel} (voix IA)` : "Étudiant / Médecin"}
                     </span>
                     <div className={cn(
                       "p-5 rounded-3xl text-lg shadow-sm border",
@@ -901,21 +1053,49 @@ export default function Simulation() {
                     )}>
                       {msg.text}
                     </div>
+                    {speakerParticipant && (
+                      <span
+                        data-testid={`bubble-footer-${msg.speakerId}`}
+                        className="text-[11px] text-muted-foreground mt-1 px-2"
+                      >
+                        — {speakerParticipant.name}
+                      </span>
+                    )}
                   </div>
                 );
               })}
 
-              {isStreaming && partialText && (
-                <div className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                    {interlocutorSpeakerLabel(brief)} (voix IA)
+              {isStreaming && partialText && (() => {
+                // Phase 4 J4 — avatar/footer du participant qui parle pour
+                // la bulle de stream en cours (avant que le tour ne soit
+                // commit en transcript).
+                const streamParticipant =
+                  streamingSpeaker?.speakerId && brief?.participants
+                    ? brief.participants.find((p) => p.id === streamingSpeaker.speakerId)
+                    : null;
+                const streamAvatar = streamParticipant
+                  ? participantAvatar(streamParticipant)
+                  : null;
+                return (
+                <div data-testid="bubble-patient-streaming" className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2 flex items-center gap-1.5">
+                    {streamAvatar && <span aria-hidden className="text-base leading-none">{streamAvatar}</span>}
+                    {streamingSpeaker
+                      ? participantSpeakerLabel(brief, streamingSpeaker.speakerId)
+                      : interlocutorSpeakerLabel(brief)} (voix IA)
                   </span>
                   <div className="p-5 rounded-3xl text-lg shadow-sm border bg-white border-border/50 text-foreground rounded-tl-sm">
                     {partialText}
                     <span className="ml-1 inline-block w-2 h-5 bg-primary/60 align-middle animate-pulse" />
                   </div>
+                  {streamParticipant && (
+                    <span className="text-[11px] text-muted-foreground mt-1 px-2">
+                      — {streamParticipant.name}
+                    </span>
+                  )}
                 </div>
-              )}
+                );
+              })()}
 
               {((isSending && !isStreaming) || isTranscribing) && (
                 <div className="flex items-start max-w-[85%] opacity-70">
@@ -934,6 +1114,24 @@ export default function Simulation() {
           {recorderError && (
             <div className="mb-2 text-sm text-red-600 flex items-center gap-1">
               <AlertCircle className="w-4 h-4" /> {recorderError}
+            </div>
+          )}
+          {/* Phase 4 J2 — panneau « À qui parlez-vous ? » : affiché quand le
+              routeur d'adresse n'a pas pu trancher (T0 multi-profils sans
+              vocatif, ou ambiguïté sur le nom de famille). Cliquer sur un
+              bouton insère un tag explicite [À X] dans la barre. */}
+          {pendingClarification && (
+            <div className="mb-3 max-w-4xl mx-auto">
+              <ClarificationPanel
+                reason={pendingClarification.reason}
+                candidates={pendingClarification.candidates}
+                onChoose={(c) => {
+                  const tag = `[À ${c.name}] `;
+                  setTextInput((prev) => (prev.startsWith(tag) ? prev : tag + prev));
+                  setPendingClarification(null);
+                }}
+                onDismiss={() => setPendingClarification(null)}
+              />
             </div>
           )}
           <form onSubmit={handleTextSubmit} className="flex items-center gap-3 max-w-4xl mx-auto">
