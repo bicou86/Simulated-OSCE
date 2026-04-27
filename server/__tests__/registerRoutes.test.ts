@@ -131,4 +131,61 @@ describe("registerRoutes — intégration HTTP de l'app réelle", () => {
       expect(res.headers["content-type"], `${method} ${path}`).toMatch(/application\/json/);
     }
   });
+
+  // ─── Phase 4 J2 (fix sérialisation) — vérifie sur le vrai catalog que le
+  // brief sérialisé via HTTP contient bien participants[] et
+  // defaultSpeakerId pour les 5 stations pilotes annotées en J1, et
+  // qu'à l'inverse les stations mono-patient legacy n'exposent PAS le
+  // champ participants (il reste `undefined` ⇒ omis par JSON.stringify).
+  describe("/api/patient/:id/brief — sérialisation participants[] (Phase 4 J2)", () => {
+    const PILOTS_MULTI: Array<{ sid: string; expectedIds: string[]; expectedDefault: string }> = [
+      { sid: "RESCOS-70", expectedIds: ["emma", "mother"], expectedDefault: "emma" },
+      { sid: "RESCOS-71", expectedIds: ["louis", "martine"], expectedDefault: "martine" },
+      { sid: "RESCOS-9b", expectedIds: ["charlotte", "parent"], expectedDefault: "parent" },
+      { sid: "RESCOS-13", expectedIds: ["patient", "mother"], expectedDefault: "patient" },
+      { sid: "RESCOS-63", expectedIds: ["liam", "parent"], expectedDefault: "parent" },
+    ];
+
+    for (const { sid, expectedIds, expectedDefault } of PILOTS_MULTI) {
+      it(`${sid} → expose participants[2] + defaultSpeakerId="${expectedDefault}"`, async () => {
+        const app = await makeApp();
+        const res = await request(app).get(`/api/patient/${sid}/brief`);
+        expect(res.status).toBe(200);
+        expect(res.headers["content-type"]).toMatch(/application\/json/);
+        expect(Array.isArray(res.body.participants)).toBe(true);
+        expect(res.body.participants).toHaveLength(2);
+        const ids = res.body.participants.map((p: { id: string }) => p.id).sort();
+        expect(ids).toEqual([...expectedIds].sort());
+        // Chaque participant doit porter les champs obligatoires du schéma.
+        for (const p of res.body.participants) {
+          expect(typeof p.id).toBe("string");
+          expect(typeof p.name).toBe("string");
+          expect(["patient", "accompanying", "witness"]).toContain(p.role);
+          expect(["medical", "lay"]).toContain(p.vocabulary);
+          expect(Array.isArray(p.knowledgeScope)).toBe(true);
+        }
+        expect(res.body.defaultSpeakerId).toBe(expectedDefault);
+      });
+    }
+
+    it("station mono-patient legacy (AMBOSS-1) → pas de participants dans la réponse", async () => {
+      const app = await makeApp();
+      const res = await request(app).get("/api/patient/AMBOSS-1/brief");
+      expect(res.status).toBe(200);
+      // `participants` est volontairement omis (undefined ⇒ JSON.stringify
+      // le drop) pour conserver la rétrocompat 100 % des intégrations
+      // pré-J2 qui consomment uniquement les champs legacy.
+      expect(res.body.participants).toBeUndefined();
+      // defaultSpeakerId reste exposé (= "patient" pour les mono).
+      expect(res.body.defaultSpeakerId).toBe("patient");
+    });
+
+    it("station mono-patient legacy (RESCOS-1) → pas de participants dans la réponse", async () => {
+      const app = await makeApp();
+      const res = await request(app).get("/api/patient/RESCOS-1/brief");
+      expect(res.status).toBe(200);
+      expect(res.body.participants).toBeUndefined();
+      expect(res.body.defaultSpeakerId).toBe("patient");
+    });
+  });
 });
