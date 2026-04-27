@@ -1,15 +1,18 @@
 {
   "_meta": {
-    "description": "SHA-256 checksum (canonical key-sorted JSON) of every Phase 2 station NOT modified by Phase 3 J3. Locks 283 stations against accidental byte-mutation during merges. The 3 J3 pilots (AMBOSS-4, RESCOS-70, RESCOS-71) are intentionally excluded — they carry the additive J3 fields (register, patient_age_years, motif_cache).",
+    "description": "SHA-256 checksum (canonical key-sorted JSON) of every Phase 2 station NOT modified by Phase 3 J3 or Phase 4 J1. Locks 280 stations against accidental byte-mutation during merges. Excluded pilots carry additive schema deltas expected by their respective phases.",
     "excluded": [
       "AMBOSS-4",
       "RESCOS-70",
-      "RESCOS-71"
+      "RESCOS-71",
+      "RESCOS-9b",
+      "RESCOS-13",
+      "RESCOS-63"
     ],
-    "excludedReason": "Phase 3 J3 pilots — additive schema delta expected",
+    "excludedReason": "Phase 3 J3 pilots (AMBOSS-4, RESCOS-70, RESCOS-71) + Phase 4 J1 pilots (RESCOS-9b, RESCOS-13, RESCOS-63) — additive schema delta expected. RESCOS-70 and RESCOS-71 also receive participants[] in J1.",
     "generatedAt": "2026-04-27",
     "algorithm": "sha256(JSON.stringify(sortedKeys(station)))",
-    "stationCount": 283
+    "stationCount": 280
   },
   "checksums": {
     "AMBOSS-1": "a9691fc53af82afcd1268008944c7daf6d284c3c66a08fd5e61fc3c96050a4bb",
@@ -143,7 +146,6 @@
     "RESCOS-10 -Céphalée": "50f4108bea8ee4cf7b7f7cc55c1d258cf398aea06be41c51e81803fe745ed8aa",
     "RESCOS-11": "fef0d8374c993ed7e5c827e240382c488317ffa8661a724211b28d7a622945d9",
     "RESCOS-12": "2979df3485465ff287248844c759903e59e48247d61cb3b4787c7b0ed7ef0c3e",
-    "RESCOS-13": "1a27512d04ba3503368df74a742632e33c9723cea4030ff8da4fcea263621905",
     "RESCOS-14": "88ddf52f987a203e1e8938e5a4fe38ae6c36bcf1f472b898757f884a11f2cf2e",
     "RESCOS-15": "241a703021e41df5405fc2547679bac034d45b4057e31d944469f599e2a1b69e",
     "RESCOS-16": "c21a46c9ba68a566b78afd5dabaeb8c1c34ec4a8be440d1ae73e6b9a0c0aa68e",
@@ -200,7 +202,6 @@
     "RESCOS-60": "c16c8e0127fe589cc709f0b92166ab09041516cde4981472b69b0bcddd84a39b",
     "RESCOS-61": "11fb07d091ac95918d6647a5ff35e49c52925e82a9bedaecad09c0a0d5b43af2",
     "RESCOS-62": "3091af57837b253f12e49e54efb8052e24c59440f51309a59a993781434cace9",
-    "RESCOS-63": "45a9e9281093ee5e3edfc1e728d9e17ec29fa26f7cb47862f6807df3177b92d2",
     "RESCOS-64": "3425fe13ef889b22b48a4eb16c5b05ceea55c02a66737521191e8f2df604c0f9",
     "RESCOS-65": "e25b8b3a594c3acf1456a6c953541e4f73f14a0e9267aac6bc56eae6b0d19362",
     "RESCOS-66": "c8697acc9a76151592b0a8c5a36da81eee4b1bbf3ad253955f2b5ef89dd8105f",
@@ -210,7 +211,6 @@
     "RESCOS-7": "020fbb2c7c953bba2730378f51071a06db3dcb7546c082c427888612c8c7f5c2",
     "RESCOS-8": "ddbd0f20f5c6f7d27e811b7855c3a1066558f8d5fcc6594e53d41db34e775811",
     "RESCOS-9": "425fbf7a9a773ce094a2c897848eb09258f10419101eeccb57c05a9e3a788f6d",
-    "RESCOS-9b": "002e1a65433229b16ff11ae6f16980a01efef2aa700ecbbbcf4b3becb2f7bae2",
     "USMLE Triage 1": "bb75a82695414559f6660f16670ae5953db2f9ccf4b28e7a7368eac9b66bad76",
     "USMLE Triage 10": "b2674e6d05c905f22cc9ddffa56ea5c277221b607f000f543be51a83c29e25e4",
     "USMLE Triage 11": "1482d66dcb105978a43ff62f0be3a630673a81a9704dd709319287f24241819f",

@@ -3105,21 +3105,58 @@
       "examens_complementaires": {
         "nfs": {
           "parameters": {
-            "hb": { "value": 11.8 },
-            "gb": { "value": 18.2 },
-            "plaquettes": { "value": 385 },
-            "neutrophiles": { "value": 13.5 },
-            "lymphocytes": { "value": 3.2 }
+            "hb": {
+              "value": 11.8
+            },
+            "gb": {
+              "value": 18.2
+            },
+            "plaquettes": {
+              "value": 385
+            },
+            "neutrophiles": {
+              "value": 13.5
+            },
+            "lymphocytes": {
+              "value": 3.2
+            }
           },
           "interpretation": "Hyperleucocytose à prédominance neutrophile (GB 18.2 G/L, normes pédiatriques 5–15.5 G/L). Hémoglobine dans les normes pédiatriques."
         },
         "crp": {
           "parameters": {
-            "crp": { "value": 68 }
+            "crp": {
+              "value": 68
+            }
           },
           "interpretation": "CRP franchement élevée (68 mg/L) — syndrome inflammatoire net, compatible avec une infection bactérienne."
         }
-      }
+      },
+      "participants": [
+        {
+          "id": "charlotte",
+          "role": "patient",
+          "name": "Charlotte Borloz",
+          "age": 2,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "self.symptoms.observable"
+          ]
+        },
+        {
+          "id": "parent",
+          "role": "accompanying",
+          "name": "Parent de Charlotte Borloz",
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "child.history",
+            "child.symptoms",
+            "child.timeline",
+            "family.history",
+            "household.context"
+          ]
+        }
+      ]
     },
     {
       "id": "RESCOS-10 -Céphalée",
@@ -4258,7 +4295,34 @@
           ]
         }
       },
-      "examen_resultats": {}
+      "examen_resultats": {},
+      "participants": [
+        {
+          "id": "patient",
+          "role": "patient",
+          "name": "Anne/Steve Peters",
+          "age": 20,
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "self.symptoms",
+            "self.mood",
+            "self.daily-life",
+            "self.social-context"
+          ]
+        },
+        {
+          "id": "mother",
+          "role": "accompanying",
+          "name": "Mère d'Anne/Steve",
+          "vocabulary": "lay",
+          "knowledgeScope": [
+            "patient.behavior-change",
+            "patient.timeline",
+            "family.history",
+            "household.context"
+          ]
+        }
+      ]
     },
     {
       "id": "RESCOS-14 - Diarrhées",
