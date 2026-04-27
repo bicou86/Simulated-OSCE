@@ -65,11 +65,11 @@ export function ExaminerLabs({ results, className }: ExaminerLabsProps) {
           <table className="w-full text-sm not-italic table-fixed">
             <thead className="bg-slate-50 text-slate-600">
               <tr>
-                <th className="text-left font-medium px-3 py-1.5 w-[35%]">Paramètre</th>
+                <th className="text-left font-medium px-3 py-1.5 w-[30%]">Paramètre</th>
                 <th className="text-right font-medium px-3 py-1.5 w-[15%]">Valeur</th>
                 <th className="text-left font-medium px-3 py-1.5 w-[15%]">Unité</th>
                 <th className="text-left font-medium px-3 py-1.5 w-[20%]">Normes</th>
-                <th className="text-left font-medium px-3 py-1.5 w-[15%]">Flag</th>
+                <th className="text-left font-medium px-3 py-1.5 w-[20%]">Flag</th>
               </tr>
             </thead>
             <tbody>
@@ -102,7 +102,7 @@ export function ExaminerLabs({ results, className }: ExaminerLabsProps) {
                   <td className="px-3 py-1.5">
                     <span
                       className={cn(
-                        "inline-block rounded border px-2 py-0.5 text-xs uppercase tracking-wide",
+                        "inline-block rounded border px-2 py-0.5 text-xs uppercase tracking-wide whitespace-nowrap",
                         flagClasses(p.flag),
                       )}
                     >
