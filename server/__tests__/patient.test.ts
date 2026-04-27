@@ -50,10 +50,12 @@ vi.mock("../services/patientService", async () => {
   );
   return {
     ...actual,
+    // Phase 4 J2 — le service renvoie maintenant un PatientChatOutcome.
+    // Pour ces tests on simule une station mono-patient (rétrocompat 100 %),
+    // donc speakerId/Role sont fixes et le mock se comporte comme avant
+    // côté appel OpenAI.
     runPatientChat: vi.fn(async (opts: { userMessage: string }) => {
       await buildSystemPromptMock(opts);
-      // la fonction réelle appelle OpenAI — on re-bind à notre mock de chat pour vérifier
-      // que les routes construisent bien le payload attendu.
       const completion = await openaiChat({
         model: "gpt-4o-mini",
         messages: [
@@ -61,7 +63,13 @@ vi.mock("../services/patientService", async () => {
           { role: "user", content: opts.userMessage },
         ],
       });
-      return completion.choices[0]?.message?.content?.trim() ?? "";
+      const reply = completion.choices[0]?.message?.content?.trim() ?? "";
+      return {
+        type: "reply" as const,
+        reply,
+        speakerId: "patient",
+        speakerRole: "patient" as const,
+      };
     }),
     getPatientBrief: vi.fn(async (stationId: string) => ({
       stationId,
@@ -91,7 +99,14 @@ describe("POST /api/patient/chat", () => {
       mode: "voice",
     });
     expect(res.status).toBe(200);
-    expect(res.body).toEqual({ reply: "J'ai mal au thorax." });
+    // Phase 4 J2 — payload élargi (type/speakerId/speakerRole), `reply` reste
+    // au top-level pour la rétrocompat des intégrations qui ne lisent que ça.
+    expect(res.body).toEqual({
+      type: "reply",
+      reply: "J'ai mal au thorax.",
+      speakerId: "patient",
+      speakerRole: "patient",
+    });
   });
 
   it("400 on invalid body", async () => {

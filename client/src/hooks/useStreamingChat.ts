@@ -10,17 +10,38 @@
 //   rappeler l'endpoint non-streaming /chat classique.
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ApiError, ttsPatient, type ChatInput, type TtsVoice } from "@/lib/api";
+import {
+  ApiError,
+  ttsPatient,
+  type ChatInput,
+  type ChatReplyClarification,
+  type ParticipantRoleClient,
+  type TtsVoice,
+} from "@/lib/api";
 
 export interface StreamingChatOptions {
   voice: TtsVoice;
   onSentence?: (text: string, index: number) => void;
   onError?: (err: ApiError) => void;
+  // Phase 4 J2 — déclenché dès l'event SSE `speaker` (avant tout delta).
+  // Permet à l'UI de mettre à jour le label du tour en cours sans attendre
+  // la fin de la réponse.
+  onSpeaker?: (speaker: { speakerId: string; speakerRole: ParticipantRoleClient }) => void;
+  // Phase 4 J2 — le routeur n'a pas pu trancher : l'UI doit afficher un
+  // panneau « À qui parlez-vous ? ». Aucun audio n'est joué dans ce cas.
+  onClarification?: (payload: Omit<ChatReplyClarification, "type">) => void;
 }
 
 export interface StreamResult {
   fullText: string;
   aborted: boolean;
+  // Phase 4 J2 — id/rôle du participant qui a réellement répondu sur ce
+  // tour. `null` si le tour s'est terminé en clarification (pas de réponse
+  // LLM produite).
+  speakerId: string | null;
+  speakerRole: ParticipantRoleClient | null;
+  // Phase 4 J2 — le serveur a renvoyé un payload de clarification.
+  clarification?: Omit<ChatReplyClarification, "type">;
 }
 
 interface SseEvent {
@@ -164,6 +185,9 @@ export function useStreamingChat(options: StreamingChatOptions) {
       const decoder = new TextDecoder();
       let buffer = "";
       let fullText = "";
+      let speakerId: string | null = null;
+      let speakerRole: ParticipantRoleClient | null = null;
+      let clarification: Omit<ChatReplyClarification, "type"> | undefined;
 
       while (true) {
         const { value, done } = await reader.read();
@@ -192,6 +216,24 @@ export function useStreamingChat(options: StreamingChatOptions) {
               .catch(() => { /* une phrase sans audio, on continue silencieusement */ });
           } else if (evt.event === "done") {
             fullText = payload.fullText ?? "";
+          } else if (evt.event === "speaker") {
+            // Phase 4 J2 — premier event d'un tour résolu : on tag le speaker
+            // courant pour que l'UI affiche le bon label (« Mère du patient »
+            // vs « Patient ») avant le premier delta.
+            speakerId = payload.speakerId ?? null;
+            speakerRole = (payload.speakerRole ?? null) as ParticipantRoleClient | null;
+            if (speakerId && speakerRole) {
+              options.onSpeaker?.({ speakerId, speakerRole });
+            }
+          } else if (evt.event === "clarification_needed") {
+            // Phase 4 J2 — le routeur a tranché « ambigu ». On ne reçoit
+            // aucun delta/done — on remonte le payload au consommateur via
+            // onClarification + le champ `clarification` de StreamResult.
+            clarification = {
+              reason: payload.reason ?? "",
+              candidates: payload.candidates ?? [],
+            };
+            options.onClarification?.(clarification);
           } else if (evt.event === "error") {
             const err = new ApiError({
               message: payload.message ?? "Streaming interrompu",
@@ -205,10 +247,10 @@ export function useStreamingChat(options: StreamingChatOptions) {
         }
       }
 
-      return { fullText, aborted: false };
+      return { fullText, aborted: false, speakerId, speakerRole, clarification };
     } catch (err) {
       if ((err as any)?.name === "AbortError") {
-        return { fullText: "", aborted: true };
+        return { fullText: "", aborted: true, speakerId: null, speakerRole: null };
       }
       throw err;
     } finally {

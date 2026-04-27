@@ -8,6 +8,7 @@ import {
   CONVERSATION_BOUNDS,
   getConversationPreferences,
   getVoicePreferences,
+  participantSpeakerLabel,
   resolveVoice,
   setConversationPreferences,
   setVoicePreferences,
@@ -156,5 +157,78 @@ describe("conversation preferences", () => {
   it("persists enabled toggle", () => {
     setConversationPreferences({ enabled: true });
     expect(getConversationPreferences().enabled).toBe(true);
+  });
+});
+
+// ─── Phase 4 J2 — participantSpeakerLabel (label per-message) ─────────────
+
+describe("participantSpeakerLabel", () => {
+  const multiBrief: PatientBrief = {
+    stationId: "RESCOS-70",
+    setting: "Cabinet",
+    patientDescription: "Emma 16 ans + mère",
+    vitals: {},
+    phraseOuverture: "",
+    sex: "female",
+    age: 16,
+    interlocutor: { type: "self", reason: "test" },
+    participants: [
+      {
+        id: "emma",
+        role: "patient",
+        name: "Emma Delacroix",
+        age: 16,
+        vocabulary: "lay",
+        knowledgeScope: ["self.symptoms"],
+      },
+      {
+        id: "mother",
+        role: "accompanying",
+        name: "Mère d'Emma Delacroix",
+        vocabulary: "lay",
+        knowledgeScope: ["family.history"],
+      },
+    ],
+    defaultSpeakerId: "emma",
+  };
+
+  const monoBrief: PatientBrief = {
+    stationId: "RESCOS-1",
+    setting: "Cabinet",
+    patientDescription: "Adulte 47 ans",
+    vitals: {},
+    phraseOuverture: "",
+    sex: "female",
+    age: 47,
+    interlocutor: { type: "self", reason: "adult" },
+    // pas de participants[] : station mono-patient legacy
+  };
+
+  it("multi-profile + speaker patient → 'Patient'", () => {
+    expect(participantSpeakerLabel(multiBrief, "emma")).toBe("Patient");
+  });
+
+  it("multi-profile + speaker accompanying → 'Accompagnant·e'", () => {
+    expect(participantSpeakerLabel(multiBrief, "mother")).toBe("Accompagnant·e");
+  });
+
+  it("multi-profile + unknown speakerId → fallback legacy interlocutor label", () => {
+    // L'id ne matche aucun participant ⇒ on retombe sur
+    // interlocutorSpeakerLabel(brief), qui pour `interlocutor.type=self`
+    // renvoie « Patient ».
+    expect(participantSpeakerLabel(multiBrief, "ghost")).toBe("Patient");
+  });
+
+  it("mono-patient (no participants[]) → fallback legacy quel que soit le speakerId", () => {
+    expect(participantSpeakerLabel(monoBrief, "patient")).toBe("Patient");
+    expect(participantSpeakerLabel(monoBrief, null)).toBe("Patient");
+  });
+
+  it("null brief → 'Patient' (defensive default)", () => {
+    expect(participantSpeakerLabel(null, "emma")).toBe("Patient");
+  });
+
+  it("brief sans speakerId fourni → fallback legacy", () => {
+    expect(participantSpeakerLabel(multiBrief, undefined)).toBe("Patient");
   });
 });

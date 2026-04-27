@@ -116,6 +116,26 @@ export function interlocutorSpeakerLabel(brief: Pick<PatientBrief, "interlocutor
   }
 }
 
+// Phase 4 J2 — libellé per-message à partir d'un speakerId résolu côté
+// serveur. Prend le brief multi-profils (avec `participants`) et l'id du
+// participant qui a répondu sur ce tour. Si la station est mono-patient
+// (pas de `participants`) ou si l'id ne matche pas, on retombe sur le
+// label legacy `interlocutorSpeakerLabel(brief)`.
+export function participantSpeakerLabel(
+  brief: PatientBrief | null | undefined,
+  speakerId: string | null | undefined,
+): string {
+  if (!brief) return "Patient";
+  if (!speakerId || !brief.participants || brief.participants.length === 0) {
+    return interlocutorSpeakerLabel(brief);
+  }
+  const p = brief.participants.find((x) => x.id === speakerId);
+  if (!p) return interlocutorSpeakerLabel(brief);
+  if (p.role === "patient") return "Patient";
+  if (p.role === "accompanying") return "Accompagnant·e";
+  return "Tiers";
+}
+
 // Libellé pour la feuille de porte sous "Patient" (quand type=parent).
 // "la mère" / "le père" / "l'accompagnant·e".
 export function interlocutorArticle(brief: Pick<PatientBrief, "interlocutor"> | null | undefined): string {

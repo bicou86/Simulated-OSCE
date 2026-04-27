@@ -150,9 +150,33 @@ export interface ChatInput {
   userMessage: string;
   mode: "voice" | "text";
   model?: "gpt-4o-mini" | "gpt-4o";
+  // Phase 4 J2 — id du participant qui a parlé au tour précédent (sticky).
+  // Le serveur l'utilise pour le routage d'adresse sur les stations
+  // multi-profils. Optionnel : à T0 le client passe brief.defaultSpeakerId
+  // (ou null), le serveur retombera sur l'ambiguïté → UI de clarification.
+  currentSpeakerId?: string | null;
 }
 
-export function chatPatient(input: ChatInput): Promise<{ reply: string }> {
+// Phase 4 J2 — réponse de /api/patient/chat. Discriminated union :
+//   • `reply` (cas normal) ⇒ texte LLM + tag du speaker (id + role).
+//   • `clarification_needed` ⇒ le routeur n'a pas pu trancher, l'UI
+//     affiche un panneau avec boutons profils, AUCUN appel LLM consommé.
+export type ParticipantRoleClient = "patient" | "accompanying" | "witness";
+
+export interface ChatReplyOk {
+  type: "reply";
+  reply: string;
+  speakerId: string;
+  speakerRole: ParticipantRoleClient;
+}
+export interface ChatReplyClarification {
+  type: "clarification_needed";
+  reason: string;
+  candidates: Array<{ id: string; name: string; role: ParticipantRoleClient }>;
+}
+export type ChatReply = ChatReplyOk | ChatReplyClarification;
+
+export function chatPatient(input: ChatInput): Promise<ChatReply> {
   return jsonFetch("/api/patient/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -172,6 +196,18 @@ export interface Interlocutor {
   reason: string;
 }
 
+// Phase 4 J2 — sous-shape Participant côté client (miroir du schéma Zod
+// shared/station-schema.ts, dupliqué pour ne pas tirer la dépendance Zod
+// dans le bundle navigateur).
+export interface ClientParticipant {
+  id: string;
+  role: ParticipantRoleClient;
+  name: string;
+  age?: number;
+  vocabulary: "medical" | "lay";
+  knowledgeScope: string[];
+}
+
 export interface PatientBrief {
   stationId: string;
   setting: string;
@@ -183,6 +219,14 @@ export interface PatientBrief {
   age?: number;
   interlocutor: Interlocutor;
   stationType?: StationType;
+  // Phase 4 J2 — composition multi-profils. `participants` est défini
+  // UNIQUEMENT pour les stations annotées avec ≥ 2 participants. Pour les
+  // stations mono-patient legacy, le champ est absent et l'UI conserve
+  // l'affichage historique (label « Patient (voix IA) »).
+  participants?: ClientParticipant[];
+  // Le participant qui répond par défaut au tout premier tour. Sert à
+  // initialiser `currentSpeakerId` côté client.
+  defaultSpeakerId?: string;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {
