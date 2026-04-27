@@ -49,16 +49,37 @@ export const participantSchema = z.object({
 });
 export type Participant = z.infer<typeof participantSchema>;
 
+// Phase 4 J3 — `participantSections` : règles de cloisonnement par section.
+//   • Clé = chemin pointé dans le JSON de la station, ex.
+//     `histoire_actuelle.symptomesAssocies`, `antecedents.gyneco`, ou
+//     un top-level seul (`contexte`, `motif_cache`).
+//   • Valeur = liste de tags (≥ 1). Un participant voit la section si SON
+//     `knowledgeScope` intersecte la liste de tags.
+//   • Une section ABSENTE de cette table est visible par défaut à tous
+//     les participants (rétrocompat 100 % stations mono-patient et
+//     toutes les sections legacy non-sensibles).
+//   • Validation au boot (`validateMultiProfileStations` dans
+//     stationsService) : tout chemin référencé doit exister dans le JSON
+//     de la station, tout tag listé doit appartenir à au moins un
+//     participant — sinon, throw immédiat.
+export const participantSectionsSchema = z.record(
+  z.string().min(1),
+  z.array(z.string().min(1)).min(1),
+);
+export type ParticipantSections = z.infer<typeof participantSectionsSchema>;
+
 // Schéma de station permissif :
 //   • `id` requis (déjà invariant fort dans stationsService),
-//   • `participants` optionnel,
+//   • `participants` optionnel (J1),
+//   • `participantSections` optionnel (J3),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
-//     décrire — l'objectif J1 est seulement de typer le champ additif.
+//     décrire — l'objectif est seulement de typer les champs additifs.
 export const stationSchema = z
   .object({
     id: z.string().min(1),
     participants: z.array(participantSchema).optional(),
+    participantSections: participantSectionsSchema.optional(),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;

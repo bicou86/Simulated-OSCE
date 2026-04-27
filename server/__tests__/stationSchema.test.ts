@@ -198,19 +198,27 @@ describe("stationSchema — pilotes multi-profils (Phase 4 J1)", () => {
     expect(participants[0].id).not.toBe("patient" === participants[0].id ? "" : "patient");
   });
 
-  it("RESCOS-70 ado profile uses lay vocabulary and exposes self-* knowledge tags", async () => {
+  it("RESCOS-70 ado profile uses lay vocabulary and exposes scope tags du domaine (J3)", async () => {
     const station = await loadStation("Patient_RESCOS_4.json", "RESCOS-70");
     const [emma] = getStationParticipants(station);
     expect(emma.vocabulary).toBe("lay");
     expect(emma.age).toBe(16);
-    expect(emma.knowledgeScope.some((tag) => tag.startsWith("self."))).toBe(true);
+    // Phase 4 J3 — taxonomie domain-specific (sexual_health, contraception,
+    // school, …) qui pilote le filtre participantSections. Les tags J1
+    // génériques (`self.*`) ont été remplacés par cette taxonomie ciblée
+    // et le filtre serveur ne lit que ces tags-là.
+    expect(emma.knowledgeScope).toContain("sexual_health");
+    expect(emma.knowledgeScope).toContain("contraception");
   });
 
-  it("RESCOS-71 caregiver profile carries treatment.adherence in knowledgeScope", async () => {
+  it("RESCOS-71 caregiver profile carries caregiver_burden in knowledgeScope (J3)", async () => {
     const station = await loadStation("Patient_RESCOS_4.json", "RESCOS-71");
     const participants = getStationParticipants(station);
     const martine = participants.find((p) => p.role === "accompanying");
     expect(martine).toBeDefined();
-    expect(martine?.knowledgeScope).toContain("treatment.adherence");
+    // Le tag domain-specific J3 remplace l'ancien `treatment.adherence`
+    // (cf. user spec : Martine scope = caregiver_burden, social_situation,
+    // antécédents_pancréas, …).
+    expect(martine?.knowledgeScope).toContain("caregiver_burden");
   });
 });

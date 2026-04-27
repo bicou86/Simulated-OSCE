@@ -25,8 +25,10 @@ import {
   getStationParticipants,
   type Participant,
   type ParticipantRole,
+  type ParticipantSections,
 } from "@shared/station-schema";
 import { routeAddress, type RouteResult } from "./addressRouter";
+import { buildLayVocabularyDirective } from "../lib/vocabularyConstraints";
 
 // Cache des fichiers JSON déjà parsés (clé = filename).
 const fileCache = new Map<string, any[]>();
@@ -252,12 +254,32 @@ export async function buildSystemPrompt(
     useCaregiverPrompt ? "caregiver" : "patient",
   );
 
-  const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
+  // Phase 4 J3 — registre lay : on injecte une directive énumérative
+  // listant les termes médicaux à proscrire et leurs équivalents grand
+  // public. Active uniquement quand `target.vocabulary === 'lay'` (les
+  // stations mono-patient legacy n'ont pas de target → pas d'effet).
+  const vocabularyDirective =
+    target && target.vocabulary === "lay" ? buildLayVocabularyDirective() : "";
+
+  // Phase 4 J3 — cloisonnement : si la station déclare des
+  // `participantSections` ET qu'on a un target avec un knowledgeScope, on
+  // filtre les sections sensibles avant injection. Pour les stations sans
+  // règles, le filtre est l'identité (les invariants ECOS legacy
+  // s'appliquent à l'identique).
+  const filteredStation = target
+    ? filterStationByScope(
+        station as Record<string, unknown>,
+        target.knowledgeScope,
+      )
+    : (station as Record<string, unknown>);
+
+  const dataBlock = `\n\n<station_data>\n${JSON.stringify(filteredStation, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
   return (
     template +
     identityBlock +
     othersBlock +
+    vocabularyDirective +
     specialtyDirective +
     modeDirective +
     dataBlock
@@ -289,6 +311,61 @@ function caregiverParticipantIdentityBlock(
       : "le patient";
   return `\n\n## TU INCARNES
 Tu es ${target.name}, accompagnant·e de ${patientName}. Le médecin t'adresse SA QUESTION ACTUELLE en tant qu'accompagnant·e. Réponds en ton nom propre — n'incarne pas ${patientName} à sa place.`;
+}
+
+// ─── Phase 4 J3 — cloisonnement par knowledgeScope ────────────────────────
+//
+// Filtre le JSON de la station avant injection dans le prompt LLM en
+// fonction des règles déclarées par `participantSections` ET du scope du
+// participant cible. Sections non listées = visibles à tous (rétrocompat
+// 100 % stations historiques).
+//
+// L'algorithme :
+//   • clone profond du JSON station (on ne mute pas le cache)
+//   • supprime explicitement `participantSections` de la copie envoyée au
+//     LLM (la table de règles n'a pas à être révélée au modèle)
+//   • pour chaque entrée de la table :
+//       – si la section est visible (intersection des tags non vide), on
+//         laisse intact ;
+//       – sinon on supprime le chemin pointé.
+//   • support des chemins pointés à 1 ou 2 niveaux (`a` ou `a.b`) — c'est
+//     suffisant pour les patterns présents dans nos JSON ECOS (top-level
+//     ou sous-clé directe d'un objet).
+function deleteAtPath(obj: Record<string, unknown>, path: string): void {
+  const parts = path.split(".");
+  if (parts.length === 1) {
+    delete obj[parts[0]];
+    return;
+  }
+  let cur: unknown = obj;
+  for (let i = 0; i < parts.length - 1; i++) {
+    if (!cur || typeof cur !== "object" || Array.isArray(cur)) return;
+    cur = (cur as Record<string, unknown>)[parts[i]];
+  }
+  if (cur && typeof cur === "object" && !Array.isArray(cur)) {
+    delete (cur as Record<string, unknown>)[parts[parts.length - 1]];
+  }
+}
+
+export function filterStationByScope(
+  station: Record<string, unknown>,
+  participantScope: string[],
+): Record<string, unknown> {
+  const sections = (station.participantSections ?? null) as
+    | ParticipantSections
+    | null;
+  // Clone toujours, même sans rule, pour qu'on puisse en toute sécurité
+  // déposer le champ `participantSections` (qui ne doit JAMAIS apparaître
+  // dans le contexte LLM).
+  const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
+  delete cloned.participantSections;
+  if (!sections) return cloned;
+  const scopeSet = new Set(participantScope);
+  for (const [path, requiredTags] of Object.entries(sections)) {
+    const visible = requiredTags.some((t) => scopeSet.has(t));
+    if (!visible) deleteAtPath(cloned, path);
+  }
+  return cloned;
 }
 
 // Liste les autres profils présents dans la pièce pour que le LLM sache

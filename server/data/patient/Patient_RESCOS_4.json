@@ -2804,7 +2804,7 @@
           "age": 0,
           "vocabulary": "lay",
           "knowledgeScope": [
-            "self.symptoms.observable"
+            "identité"
           ]
         },
         {
@@ -2813,11 +2813,11 @@
           "name": "Parent de Liam",
           "vocabulary": "lay",
           "knowledgeScope": [
-            "infant.history",
-            "infant.symptoms",
-            "feeding.routine",
-            "vaccination.history",
-            "family.history"
+            "identité",
+            "symptômes_observés",
+            "infant_routine",
+            "antécédents_familiaux",
+            "vaccination_status"
           ]
         }
       ]
@@ -5166,10 +5166,13 @@
           "age": 16,
           "vocabulary": "lay",
           "knowledgeScope": [
-            "self.symptoms",
-            "self.daily-life",
-            "self.intimacy",
-            "self.school-context"
+            "identité",
+            "symptômes",
+            "sexual_health",
+            "contraception",
+            "mother_relation",
+            "school",
+            "full_scenario"
           ]
         },
         {
@@ -5178,12 +5181,44 @@
           "name": "Mère d'Emma Delacroix",
           "vocabulary": "lay",
           "knowledgeScope": [
-            "family.history",
-            "child.development",
-            "household.context"
+            "identité",
+            "symptômes_observés",
+            "antécédents_familiaux",
+            "mother_view"
           ]
         }
-      ]
+      ],
+      "participantSections": {
+        "contexte": [
+          "full_scenario"
+        ],
+        "motif_cache": [
+          "full_scenario"
+        ],
+        "consignes_jeu": [
+          "full_scenario"
+        ],
+        "histoire_actuelle.symptomePrincipal": [
+          "sexual_health",
+          "contraception"
+        ],
+        "histoire_actuelle.symptomesAssocies": [
+          "sexual_health"
+        ],
+        "histoire_actuelle.contexteVie": [
+          "sexual_health",
+          "school"
+        ],
+        "antecedents.gyneco": [
+          "sexual_health"
+        ],
+        "antecedents.traitements_en_cours": [
+          "contraception"
+        ],
+        "anamneseSystemes": [
+          "sexual_health"
+        ]
+      }
     },
     {
       "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
@@ -5254,7 +5289,9 @@
           "age": 78,
           "vocabulary": "lay",
           "knowledgeScope": [
-            "self.symptoms.partial"
+            "identité",
+            "douleur_propre",
+            "full_scenario"
           ]
         },
         {
@@ -5264,14 +5301,21 @@
           "age": 52,
           "vocabulary": "lay",
           "knowledgeScope": [
-            "caregiver.observations",
-            "patient.daily-life",
-            "patient.history",
-            "treatment.adherence",
-            "end-of-life.wishes"
+            "identité",
+            "symptômes_observés",
+            "antécédents_pancréas",
+            "caregiver_burden",
+            "social_situation",
+            "treatment_observed",
+            "full_scenario"
           ]
         }
-      ]
+      ],
+      "participantSections": {
+        "consignes_jeu": [
+          "full_scenario"
+        ]
+      }
     }
   ]
 }
