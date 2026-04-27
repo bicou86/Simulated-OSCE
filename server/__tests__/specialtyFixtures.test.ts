@@ -158,15 +158,142 @@ describe("Phase 3 J3 — fixtures gold-standard de spécialités (wiring déterm
     });
   }
 
-  it("non-regression: Phase 2 witness stations receive NO specialty directive", async () => {
-    await initCatalog();
-    const witnesses = ["AMBOSS-1", "AMBOSS-7", "RESCOS-7", "RESCOS-9b", "German-2", "German-4"];
-    for (const stationId of witnesses) {
+  // Phase 2 témoins : un test discret par station (it.each) pour qu'une
+  // régression sur l'une d'elles produise un échec ciblé, pas un échec global
+  // qui masque les autres.
+  describe.each([
+    "AMBOSS-1",
+    "AMBOSS-7",
+    "RESCOS-7",
+    "RESCOS-9b",
+    "German-2",
+    "German-4",
+  ])("non-regression: Phase 2 witness %s receives NO specialty directive", (stationId) => {
+    it("buildSystemPrompt does not inject PROFIL ACTIF", async () => {
+      await initCatalog();
       const prompt = await buildSystemPrompt(stationId, "voice");
-      // AMBOSS-1 reste anamnese_examen sans register, pas de profil injecté.
-      // RESCOS-9b est pédiatrique 2yo → pas de profil adolescent/palliatif/gyneco.
-      // AMBOSS-7 est téléconsultation pédiatrique 2yo → idem.
       expect(prompt).not.toContain("PROFIL ACTIF");
+    });
+  });
+});
+
+// Phase 3 J4 — fixture P1-bis (parent insistant). Schéma branchu (success/failure)
+// distinct des fixtures J3 conversations[]. Validation déterministe : structure +
+// invariants globaux (Emma ne révèle JAMAIS la pilule devant la mère).
+describe("Phase 3 J4 — fixture P1-bis ado-rescos70-parent-insistant (branched)", () => {
+  interface BranchedFixture {
+    _meta: { description: string; profileUnderTest: string; templateUnderTest: string; siblingOf?: string };
+    stationId: string;
+    expectedProfile: string;
+    expectedTemplate: string;
+    scenarioVariant: string;
+    globalMustNotContain: string[];
+    branches: Array<{
+      id: string;
+      outcome: "success" | "failure";
+      summary: string;
+      pedagogicalChecklist: string[];
+      turns: Array<{
+        role: string;
+        text: string;
+        speaker?: string;
+        narrativeOnly?: boolean;
+        annotation?: string;
+        mustContain?: string[];
+        mustNotContain?: string[];
+      }>;
+    }>;
+  }
+
+  async function loadBranchedFixture(): Promise<BranchedFixture> {
+    const raw = await fs.readFile(
+      path.join(FIXTURES_DIR, "ado-rescos70-parent-insistant.json"),
+      "utf-8",
+    );
+    return JSON.parse(raw) as BranchedFixture;
+  }
+
+  it("loads with expected structure (RESCOS-70, adolescent profile, 2 branches)", async () => {
+    const fx = await loadBranchedFixture();
+    expect(fx.stationId).toBe("RESCOS-70");
+    expect(fx.expectedProfile).toBe("adolescent");
+    expect(fx.expectedTemplate).toBe("patient");
+    expect(fx.scenarioVariant).toBe("parent-insiste-fort");
+    expect(fx.branches).toHaveLength(2);
+    const outcomes = fx.branches.map((b) => b.outcome).sort();
+    expect(outcomes).toEqual(["failure", "success"]);
+  });
+
+  it("Branch A (success) escalates mother turns BEFORE candidate invokes confidentiality framework", async () => {
+    const fx = await loadBranchedFixture();
+    const branchA = fx.branches.find((b) => b.outcome === "success");
+    expect(branchA).toBeDefined();
+    const motherTurns = branchA!.turns.filter((t) => t.role === "mother_gold");
+    // Au moins 3 tours d'escalade côté mère (cf. spec J4 : 3-4 tours).
+    expect(motherTurns.length).toBeGreaterThanOrEqual(3);
+    // mustContain attendus sur les tours de la mère, agrégés.
+    const allMotherText = motherTurns.map((t) => t.text.toLowerCase()).join(" ");
+    expect(allMotherText).toContain("mère");
+    expect(allMotherText).toContain("rester");
+    expect(allMotherText).toContain("j'ai le droit");
+    expect(allMotherText).toContain("ma fille");
+  });
+
+  it("Branch A — Emma reveals pill ONLY after mother is out + candidate stated confidentiality", async () => {
+    const fx = await loadBranchedFixture();
+    const branchA = fx.branches.find((b) => b.outcome === "success");
+    const lastEmmaTurn = [...branchA!.turns].reverse().find(
+      (t) => t.role === "patient_gold" && !t.narrativeOnly,
+    );
+    expect(lastEmmaTurn).toBeDefined();
+    expect(lastEmmaTurn!.text.toLowerCase()).toContain("pilule");
+    expect(lastEmmaTurn!.text.toLowerCase()).toContain("trois mois");
+  });
+
+  it("Branch B (failure) — mother stays, Emma never reveals pill or boyfriend", async () => {
+    const fx = await loadBranchedFixture();
+    const branchB = fx.branches.find((b) => b.outcome === "failure");
+    expect(branchB).toBeDefined();
+    const allEmmaText = branchB!.turns
+      .filter((t) => t.role === "patient_gold")
+      .map((t) => t.text.toLowerCase())
+      .join(" ");
+    for (const forbidden of fx.globalMustNotContain) {
+      expect(allEmmaText).not.toContain(forbidden.toLowerCase());
     }
+  });
+
+  it("Global invariant: across BOTH branches, no Emma turn mentions pill while mother is in the room", async () => {
+    const fx = await loadBranchedFixture();
+    for (const branch of fx.branches) {
+      let motherInRoom = true;
+      for (const turn of branch.turns) {
+        // La mère sort dès qu'on rencontre une annotation 'cède au cadre' ou
+        // un turn doctor "Madame ... salle d'attente ... Cinq minutes."
+        if (
+          turn.role === "mother_gold" &&
+          turn.annotation &&
+          turn.annotation.toLowerCase().includes("cède")
+        ) {
+          motherInRoom = false;
+          continue;
+        }
+        if (turn.role !== "patient_gold" || turn.narrativeOnly) continue;
+        if (motherInRoom) {
+          const t = turn.text.toLowerCase();
+          for (const forbidden of fx.globalMustNotContain) {
+            expect(t).not.toContain(forbidden.toLowerCase());
+          }
+        }
+      }
+    }
+  });
+
+  it("buildSystemPrompt(RESCOS-70) still injects Profil B directive (parent-insistant variant doesn't change wiring)", async () => {
+    await initCatalog();
+    const prompt = await buildSystemPrompt("RESCOS-70", "voice");
+    expect(prompt).toContain("PROFIL ACTIF");
+    expect(prompt).toContain("Profil B");
+    expect(prompt).toContain("B1, B2, B3");
   });
 });

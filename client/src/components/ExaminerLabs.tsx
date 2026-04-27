@@ -62,7 +62,7 @@ export function ExaminerLabs({ results, className }: ExaminerLabsProps) {
           <div className="bg-slate-100 border-b border-slate-300 px-3 py-2 text-sm font-semibold not-italic text-slate-800">
             {lab.label}
           </div>
-          <table className="w-full text-sm not-italic">
+          <table className="w-full text-sm not-italic table-fixed">
             <thead className="bg-slate-50 text-slate-600">
               <tr>
                 <th className="text-left font-medium px-3 py-1.5 w-[35%]">Paramètre</th>
@@ -84,10 +84,10 @@ export function ExaminerLabs({ results, className }: ExaminerLabsProps) {
                   data-testid={`examiner-labs-row-${lab.key}-${p.key}`}
                   data-flag={p.flag}
                 >
-                  <td className="px-3 py-1.5 text-slate-800">
+                  <td className="px-3 py-1.5 text-slate-800 break-words">
                     {p.label}
                     {p.note && (
-                      <span className="block text-[11px] text-slate-500 italic mt-0.5">
+                      <span className="block text-[11px] text-slate-500 italic mt-0.5 break-words">
                         {p.note}
                       </span>
                     )}

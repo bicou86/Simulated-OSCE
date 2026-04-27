@@ -40,6 +40,9 @@ L'application est servie sur [http://localhost:5000](http://localhost:5000). Un 
 
 ## Architecture
 
+> Phase 3 (images, labs, spécialités) est documentée séparément :
+> [docs/architecture/phase-3.md](docs/architecture/phase-3.md).
+
 ```
 server/
   index.ts              # Bootstrap Express + HMR Vite

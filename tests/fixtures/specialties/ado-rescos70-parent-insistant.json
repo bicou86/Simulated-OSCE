@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "description": "Fixture gold-standard Phase 3 J4 — P1-bis : variante 'parent qui insiste plus dur'. Station RESCOS-70 (Emma Delacroix, 16 ans, contraception cachée). 3-4 tours d'escalade de la mère AVANT que le candidat n'invoque le cadre de confidentialité, puis bifurcation : Branch A (candidat tient le cadre — mère cède au T4 — bascule B2 réussie) vs Branch B (candidat formule maladroitement / cède — mère reste — Emma se mure dans le silence et ne révèle que 'fatigue + maux de ventre'). Verrouille la cible pédagogique : la confidentialité doit pouvoir être affirmée même sous pression émotionnelle.",
+    "frozenAt": "2026-04-27",
+    "gitCommitAtFreeze": "76243b3",
+    "author": "phase-3-j4",
+    "profileUnderTest": "adolescent",
+    "templateUnderTest": "patient",
+    "fewShotExercised": ["B1", "B2"],
+    "supersedes": null,
+    "siblingOf": "ado-rescos70.json"
+  },
+  "stationId": "RESCOS-70",
+  "expectedProfile": "adolescent",
+  "expectedTemplate": "patient",
+  "expectedDirective": {
+    "containsName": "Profil B",
+    "containsExamples": "B1, B2, B3"
+  },
+  "scenarioVariant": "parent-insiste-fort",
+  "globalMustNotContain": [
+    "pilule",
+    "Cerazette",
+    "cerazette",
+    "désogestrel",
+    "copain",
+    "gynéco"
+  ],
+  "globalMustNotContainNote": "Tant que la mère est dans la pièce, Emma ne révèle JAMAIS la pilule, le copain, ni la consultation gynéco — peu importe la branche, peu importe le tour. Cet invariant est la cible pédagogique principale de cette fixture.",
+  "branches": [
+    {
+      "id": "branch-A-candidat-tient-cadre",
+      "outcome": "success",
+      "summary": "Candidat invoque le cadre de confidentialité (art. 19c CC suisse + cadre adolescent) calmement et avec tact ; la mère cède au T4 ; Emma s'ouvre une fois seule (B2 réussi).",
+      "pedagogicalChecklist": [
+        "Le candidat ne capitule pas après la 1re ni la 2e objection de la mère",
+        "Le candidat invoque le cadre de confidentialité explicitement (référence à la capacité de discernement de l'adolescent·e ou à l'art. 19c CC, sans jargon hostile)",
+        "Le candidat reconnaît le rôle parental sans renier le cadre ('je comprends que c'est votre fille' + 'je dois pouvoir lui parler seul·e')",
+        "La mère, si le ton reste respectueux, finit par accepter de sortir (T4)",
+        "Une fois la mère sortie, Emma s'ouvre comme dans la fixture B2 sœur (pilule + gynéco + spotting + douleurs pelviennes)",
+        "Aucune révélation intime n'est produite tant que la mère est présente"
+      ],
+      "turns": [
+        {
+          "role": "doctor",
+          "text": "Bonjour Emma, bonjour Madame. Je vais commencer par parler avec Emma quelques minutes. Madame, est-ce que vous pouvez nous laisser ?"
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "Docteur, je préfère rester. Je suis sa mère, c'est moi qui ai pris le rendez-vous.",
+          "mustContain": ["mère", "rester"]
+        },
+        {
+          "role": "doctor",
+          "text": "Je comprends, Madame. C'est important pour moi de pouvoir parler avec Emma de façon ouverte. Pouvez-vous nous attendre dans la salle d'attente ?"
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "Mais elle ne va rien dire d'important. J'ai le droit de savoir, c'est ma fille, elle a 16 ans.",
+          "mustContain": ["j'ai le droit", "ma fille"]
+        },
+        {
+          "role": "doctor",
+          "text": "Je sais que c'est votre fille et que vous voulez bien faire. À 16 ans, Emma a aussi besoin d'un espace pour parler de sa santé en confiance — c'est ce que la loi prévoit pour les adolescents qui peuvent comprendre leur situation. Ça ne veut pas dire qu'on va vous cacher quelque chose de grave : si Emma m'autorise à vous en parler, je le ferai."
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "Si vous me demandez de sortir, c'est que vous cachez quelque chose. Je veux comprendre.",
+          "mustContain": ["cachez", "comprendre"]
+        },
+        {
+          "role": "doctor",
+          "text": "Je ne cache rien. C'est juste qu'Emma me parlera plus librement de ce qu'elle ressent si on est tous les deux. Vous pourrez nous rejoindre à la fin si Emma est d'accord. Cinq minutes."
+        },
+        {
+          "role": "patient_gold",
+          "speaker": "Emma",
+          "text": "(Emma reste silencieuse, regard baissé. Elle attend que sa mère décide.)",
+          "narrativeOnly": true,
+          "mustNotContain": ["pilule", "Cerazette", "cerazette", "copain", "désogestrel", "gynéco"]
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "(soupir) Bon, d'accord. Cinq minutes. Je suis dans le couloir.",
+          "annotation": "T4 — la mère cède au cadre tenu calmement. Bascule B2 enclenchée."
+        },
+        {
+          "role": "doctor",
+          "text": "Merci. Emma, tout ce que tu vas me dire reste entre nous, sauf si tu m'autorises à en parler à ta mère ou s'il y a un danger immédiat pour toi. Qu'est-ce qui t'amène vraiment ?"
+        },
+        {
+          "role": "patient_gold",
+          "speaker": "Emma",
+          "text": "En fait, je prends la pilule depuis trois mois. Ma gynéco me l'a prescrite, c'est Cerazette. J'ai un copain depuis l'été, ma mère le sait pas. Depuis deux ou trois semaines, j'ai des petits saignements qui arrivent n'importe quand et des douleurs en bas du ventre. Je voulais savoir si c'est normal ou si c'est grave.",
+          "mustContain": ["pilule", "trois mois", "saignements"],
+          "mustNotContain": ["accident", "préservatif qui s'est déchiré"],
+          "annotation": "B2 réussi : Emma s'ouvre dès que la mère est sortie ET que le candidat a explicitement énoncé la confidentialité."
+        }
+      ]
+    },
+    {
+      "id": "branch-B-candidat-cede-ou-formule-mal",
+      "outcome": "failure",
+      "summary": "Candidat capitule après la pression émotionnelle de la mère ('je veux comprendre') ou formule la confidentialité de manière maladroite ('je dois vous demander de sortir') — la mère reste, Emma se referme totalement et ne sort qu'une plainte vague 'fatigue + maux de ventre'. Le motif réel (pilule + spotting) reste masqué, échec pédagogique.",
+      "pedagogicalChecklist": [
+        "Le candidat n'invoque pas (ou maladroitement) le cadre de confidentialité",
+        "Le candidat cède sous la 2e ou 3e pression de la mère et autorise sa présence",
+        "Emma, percevant que sa confidentialité n'est pas garantie, reste sur la version 'officielle' construite par la mère",
+        "Aucune révélation de pilule / copain / gynéco n'est produite (cohérent avec consignes_jeu de la station)",
+        "Le candidat, en relecture, identifie cette branche comme un échec sur la dimension confidentialité"
+      ],
+      "turns": [
+        {
+          "role": "doctor",
+          "text": "Bonjour Emma, bonjour Madame. Alors qu'est-ce qui vous amène ?"
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "Docteur, je préfère rester. Je suis sa mère.",
+          "mustContain": ["mère", "rester"]
+        },
+        {
+          "role": "doctor",
+          "text": "Très bien Madame, allez-y, je vous écoute toutes les deux."
+        },
+        {
+          "role": "patient_gold",
+          "speaker": "Emma",
+          "text": "Euh… je suis fatiguée. J'ai quelques maux de ventre, mais c'est pas grave.",
+          "mustContain": ["fatiguée"],
+          "mustNotContain": ["pilule", "Cerazette", "cerazette", "copain", "désogestrel", "gynéco", "saignements"],
+          "annotation": "Emma reste dans la version 'officielle' que sa mère a déjà transmise — pas de révélation."
+        },
+        {
+          "role": "doctor",
+          "text": "Je vois. Emma, est-ce que tu prends quelque chose pour ces maux de ventre ?"
+        },
+        {
+          "role": "patient_gold",
+          "speaker": "Emma",
+          "text": "Non, rien.",
+          "mustContain": ["rien"],
+          "mustNotContain": ["pilule", "Cerazette", "cerazette", "copain", "désogestrel", "gynéco"]
+        },
+        {
+          "role": "doctor",
+          "text": "Madame, est-ce que vous voulez bien sortir un instant ?"
+        },
+        {
+          "role": "mother_gold",
+          "narrativeOnly": true,
+          "text": "Maintenant ? Mais elle ne m'a rien caché jusque-là, je vois pas pourquoi je sortirais.",
+          "mustContain": ["caché"]
+        },
+        {
+          "role": "doctor",
+          "text": "Bon… ok. Bon Emma, on va faire un examen alors."
+        },
+        {
+          "role": "patient_gold",
+          "speaker": "Emma",
+          "text": "(silence, regard fuyant — Emma a compris que la confidentialité ne sera pas tenue)",
+          "narrativeOnly": true,
+          "mustNotContain": ["pilule", "Cerazette", "cerazette", "copain", "désogestrel", "gynéco"],
+          "annotation": "B1 perdu : Emma ne révèle PAS la pilule ; le motif réel reste masqué pour le restant de la consultation. Échec pédagogique sur la dimension confidentialité."
+        }
+      ]
+    }
+  ]
+}
