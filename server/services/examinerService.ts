@@ -18,6 +18,31 @@ interface FlatFinding {
   categoryName: string;    // "Examen abdominal", "Signe de Murphy"
   maneuver: string;        // "Palpation de l'abdomen" ou categoryName si pas de détail
   resultat: string | null; // texte du finding, ou null si non renseigné (hygiène…)
+  // Phase 3 — un finding peut porter une image médicale (ECG, radio, photo,
+  // fond d'œil, écho, …) en complément du texte. L'URL pointe vers un fichier
+  // sous `public/medical-images/<station-id>/`, licence CC-BY ou CC0
+  // uniquement, attribution dans ATTRIBUTIONS.md par station. Pas de
+  // génération LLM — images figées dans le repo.
+  resultatType?: "text" | "image";
+  resultatUrl?: string;
+  resultatCaption?: string;
+}
+
+function extractImageFields(
+  source: { resultat_type?: unknown; resultat_url?: unknown; resultat_caption?: unknown },
+): Pick<FlatFinding, "resultatType" | "resultatUrl" | "resultatCaption"> {
+  const out: Pick<FlatFinding, "resultatType" | "resultatUrl" | "resultatCaption"> = {};
+  if (source.resultat_type === "image") out.resultatType = "image";
+  if (typeof source.resultat_url === "string" && source.resultat_url.length > 0) {
+    out.resultatUrl = source.resultat_url;
+  }
+  if (typeof source.resultat_caption === "string" && source.resultat_caption.length > 0) {
+    out.resultatCaption = source.resultat_caption;
+  }
+  // Promouvoir resultatType à "image" si URL présente sans type explicite —
+  // commodité pour les stations qui ne porteraient que `resultat_url`.
+  if (out.resultatUrl && !out.resultatType) out.resultatType = "image";
+  return out;
 }
 
 export function flattenExamenResultats(block: unknown): FlatFinding[] {
@@ -25,9 +50,17 @@ export function flattenExamenResultats(block: unknown): FlatFinding[] {
   const out: FlatFinding[] = [];
   for (const [key, rawCat] of Object.entries(block as Record<string, unknown>)) {
     if (!rawCat || typeof rawCat !== "object") continue;
-    const cat = rawCat as { examen?: string; resultat?: string | null; details?: unknown };
+    const cat = rawCat as {
+      examen?: string;
+      resultat?: string | null;
+      resultat_type?: unknown;
+      resultat_url?: unknown;
+      resultat_caption?: unknown;
+      details?: unknown;
+    };
     const categoryName = typeof cat.examen === "string" ? cat.examen : key;
     const hasDetails = Array.isArray(cat.details) && cat.details.length > 0;
+    const catImageFields = extractImageFields(cat);
     // Une catégorie peut porter à la fois un résumé (resultat) ET des items
     // détaillés (details). Ex. German-2 e3 = "Otoscopie bilatérale" avec
     // resultat="Normale des deux côtés" + 4 détails à resultat null.
@@ -40,27 +73,37 @@ export function flattenExamenResultats(block: unknown): FlatFinding[] {
         categoryName,
         maneuver: categoryName,
         resultat: cat.resultat,
+        ...catImageFields,
       });
     }
     if (hasDetails) {
       for (const d of cat.details as unknown[]) {
         if (!d || typeof d !== "object") continue;
-        const detail = d as { item?: string; resultat?: string | null };
+        const detail = d as {
+          item?: string;
+          resultat?: string | null;
+          resultat_type?: unknown;
+          resultat_url?: unknown;
+          resultat_caption?: unknown;
+        };
         out.push({
           categoryKey: key,
           categoryName,
           maneuver: typeof detail.item === "string" ? detail.item : categoryName,
           resultat: typeof detail.resultat === "string" ? detail.resultat : null,
+          ...extractImageFields(detail),
         });
       }
     } else if (typeof cat.resultat !== "string") {
       // Ni détails ni résumé texte → on émet un finding "manœuvre reconnue,
-      // pas de finding" pour que la requête soit au moins matchable.
+      // pas de finding" pour que la requête soit au moins matchable. On garde
+      // les champs image éventuels (ex. photo sans texte associé).
       out.push({
         categoryKey: key,
         categoryName,
         maneuver: categoryName,
         resultat: null,
+        ...catImageFields,
       });
     }
   }
@@ -144,6 +187,31 @@ export function titleLooksLikeFinding(title: string): boolean {
   return CLINICAL_VERB_RE.test(normalize(title));
 }
 
+// ─────────── Détection requête d'imagerie (Phase 3) ───────────
+// Si le candidat demande une image (ECG, radio, écho, scanner, IRM, fond
+// d'œil, otoscopie, photo dermato), on veut retourner soit l'image si la
+// station en contient une (via `resultat_type: "image"`), soit un fallback
+// dédié `no_imaging` — symétrique du `no_resultat`/`no_teleconsult` —
+// plutôt qu'un `no_match` générique qui laisserait le candidat perplexe.
+// Combinaison de 3 groupes :
+//  (a) stems longs en prefix-match (radiograph → radiographie/-ier/-ique) ;
+//  (b) mots courts ambigus ("radio" seul) matchés UNIQUEMENT quand suivis
+//      d'un qualifieur médical, pour éviter "la radio à la maison" ;
+//  (c) acronymes exacts avec boundary droite (rx, ecg, irm, tdm, scanner).
+const IMAGING_REQUEST_RE = new RegExp([
+  // (a) stems longs
+  "\\b(?:radiograph|radioscop|cliche|echograph|echocardiogr|retinograph|imagerie|electrocardiogr|photographie|fond\\s+d'?(?:oe|e)il|photo\\s+(?:clinique|dermato|cutan))",
+  // (b) "radio" / "echo" isolés + qualifieur médical
+  "\\bradio\\s+(?:thorax|thoracique|pulmonaire|abdominale|du\\s+thorax|des\\s+poumons|des\\s+membres)",
+  "\\becho\\s+(?:abdominale|abdominopelvien|cardiaque|pelvienne|obstetricale|doppler)",
+  // (c) acronymes
+  "\\b(?:rx|ecg|ekg|tdm|irm|scanner)\\b",
+].join("|"));
+
+export function queryAsksForImage(query: string): boolean {
+  return IMAGING_REQUEST_RE.test(normalize(query));
+}
+
 // ─────────── Multi-manœuvres dans une seule phrase (Bug #2) ───────────
 // Certaines requêtes énumèrent plusieurs gestes ("je fais une otoscopie, puis
 // les tests de Rinne et Weber"). On segmente sur les connecteurs usuels et on
@@ -169,11 +237,12 @@ export function splitMultiGestures(raw: string): string[] {
 // ─────────── API ───────────
 
 export type ExaminerLookupKind =
-  | "finding"        // finding unique, resultat disponible
+  | "finding"        // finding unique, resultat disponible (text OR image)
   | "findings"       // 2+ findings agrégés dans une même bulle
   | "no_resultat"    // manœuvre reconnue, pas de finding à rapporter
   | "no_match"       // aucune manœuvre reconnue dans la grille
-  | "no_teleconsult"; // cadre téléconsultation — examen physique impossible
+  | "no_teleconsult" // cadre téléconsultation — examen physique impossible
+  | "no_imaging";    // Phase 3 — imagerie demandée mais absente de la grille
 
 export interface ExaminerLookupItem {
   categoryKey: string;
@@ -181,6 +250,9 @@ export interface ExaminerLookupItem {
   maneuver: string;
   resultat: string;
   source?: "title_as_result";
+  resultatType?: "text" | "image";
+  resultatUrl?: string;
+  resultatCaption?: string;
 }
 
 export interface ExaminerLookupResult {
@@ -193,6 +265,9 @@ export interface ExaminerLookupResult {
   maneuver?: string;
   resultat?: string;
   source?: "title_as_result";
+  resultatType?: "text" | "image";
+  resultatUrl?: string;
+  resultatCaption?: string;
   items?: ExaminerLookupItem[];
   fallback?: string;
 }
@@ -210,6 +285,8 @@ const FALLBACK_NO_RESULTAT =
   "Manœuvre notée, pas de finding clinique spécifique à rapporter.";
 const FALLBACK_TELECONSULT =
   "Examen physique impossible en téléconsultation. Reformulez en question au parent/patient ou demandez une consultation en présentiel.";
+const FALLBACK_NO_IMAGING =
+  "Imagerie non disponible sur cette station. Évaluez la pertinence de l'examen demandé ; orientez en présentiel si nécessaire.";
 
 const MIN_SCORE = 1;
 const MAX_FINDINGS = 4;
@@ -292,6 +369,18 @@ export async function lookupExaminer(
   }
 
   if (matches.length === 0) {
+    // Phase 3 amendement 1 : si la requête mentionnait une imagerie et qu'on
+    // ne trouve pas d'item correspondant, on renvoie `no_imaging` plutôt que
+    // `no_match` générique. Symétrique du futur `no_labs`.
+    if (queryAsksForImage(query)) {
+      return {
+        match: false,
+        kind: "no_imaging",
+        stationId,
+        query,
+        fallback: FALLBACK_NO_IMAGING,
+      };
+    }
     return {
       match: false,
       kind: "no_match",
@@ -330,11 +419,16 @@ export async function lookupExaminer(
       maneuver: m.finding.maneuver,
       resultat: m.text,
       source: m.source,
+      // Phase 3 — propage les champs image éventuels (ECG, radio, photo, …).
+      ...(m.finding.resultatType ? { resultatType: m.finding.resultatType } : {}),
+      ...(m.finding.resultatUrl ? { resultatUrl: m.finding.resultatUrl } : {}),
+      ...(m.finding.resultatCaption ? { resultatCaption: m.finding.resultatCaption } : {}),
     };
   }
 
   // ≥ 2 findings texto : on renvoie un payload agrégé ; le front affiche
-  // une seule bulle examinateur avec la liste à puces.
+  // une seule bulle examinateur avec la liste à puces. Chaque item peut
+  // porter ses propres champs image (un ECG + un résumé texte côte à côte).
   return {
     match: true,
     kind: "findings",
@@ -346,6 +440,9 @@ export async function lookupExaminer(
       maneuver: m.finding.maneuver,
       resultat: m.text!,
       source: m.source,
+      ...(m.finding.resultatType ? { resultatType: m.finding.resultatType } : {}),
+      ...(m.finding.resultatUrl ? { resultatUrl: m.finding.resultatUrl } : {}),
+      ...(m.finding.resultatCaption ? { resultatCaption: m.finding.resultatCaption } : {}),
     })),
   };
 }

@@ -17,8 +17,16 @@ export default defineConfig({
     environmentMatchGlobs: [
       ["client/**", "happy-dom"],
       ["server/**", "node"],
+      ["tests/**", "node"],
     ],
-    include: ["client/src/**/*.test.{ts,tsx}", "server/**/*.test.ts"],
+    include: [
+      "client/src/**/*.test.{ts,tsx}",
+      "server/**/*.test.ts",
+      // Phase 3 J4 — tests d'intégration LLM, gated par RUN_LLM_INTEGRATION=1.
+      // Le fichier déclare ses suites sous describe.skip quand l'env var
+      // n'est pas posée, donc inclus en permanence sans coût.
+      "tests/integration/**/*.test.ts",
+    ],
     globals: false,
     restoreMocks: true,
   },

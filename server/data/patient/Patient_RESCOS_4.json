@@ -2,7 +2,7 @@
   "type": "PATIENT",
   "source": "RESCOS",
   "batch": 4,
-  "count": 16,
+  "count": 18,
   "stations": [
     {
       "id": "RESCOS-57 - Ralentissement - Consultation téléphonique EMS",
@@ -4790,7 +4790,10 @@
       "examen_resultats": {
         "e1": {
           "examen": "Inspection des lésions",
-          "resultat": "« Photo de lésions sur le thorax latéral D »"
+          "resultat": "Éruption papulo-squameuse en gouttes, lésions multiples de 2 à 8 mm, érythémato-squameuses, bien limitées, disséminées sur le tronc et les flancs. Aspect évocateur d'un psoriasis en gouttes.",
+          "resultat_type": "image",
+          "resultat_url": "/medical-images/RESCOS-68/dermato-psoriasis-gouttes.jpg",
+          "resultat_caption": "Inspection des lésions — psoriasis en gouttes (guttate psoriasis) sur le flanc. Source : Wikimedia Commons, CC0."
         },
         "e3": {
           "examen": "Examen des aires ganglionnaires : Axillaires/Inguinales/Cervicales",
@@ -5027,6 +5030,158 @@
           "resultat": "Vous donnez les radiographies du MSD dans le dossier"
         }
       }
+    },
+    {
+      "id": "RESCOS-70 - Contraception cachée + effets secondaires - Adolescente 16 ans",
+      "setting": "Cabinet médical, consultation programmée",
+      "patient_description": "Emma Delacroix, adolescente de 16 ans, consulte pour 'fatigue et maux de ventre vagues depuis quelques semaines'. Sa mère a pris le rendez-vous et reste présente en salle d'attente (décision de laisser la mère dans la salle de consultation ou pas = à apprécier par le candidat).",
+      "vitals": {
+        "ta": "112/68 mmHg",
+        "fc": "78 bpm",
+        "fr": "14/min",
+        "temperature": "36.8°C"
+      },
+      "source_scenario": true,
+      "nom": "Emma Delacroix",
+      "age": "16 ans",
+      "patient_age_years": 16,
+      "tags": ["adolescent", "contraception", "confidentialite", "gyneco", "effets-secondaires-pilule"],
+      "contexte": "Consultation programmée. La mère d'Emma a pris le rendez-vous par téléphone et reste en salle d'attente (ou entre en salle de consultation si le candidat ne demande pas explicitement un tête-à-tête). Emma prend en réalité une pilule progestative (Cerazette / désogestrel) depuis environ trois mois, prescrite par une gynécologue qu'elle a consultée seule à la rentrée. Elle a un copain depuis l'été. Sa mère ignore tout : ni la pilule, ni le copain. Depuis deux à trois semaines, Emma a des petits saignements irréguliers entre les règles (spotting) et des douleurs abdominales basses intermittentes, qu'elle redoute être 'anormales'. Elle ne sait pas si ces symptômes sont des effets secondaires banals de la pilule ou s'ils cachent quelque chose de grave. Elle n'ose pas en parler avec sa gynéco (rendez-vous de contrôle pas avant deux mois) ni avec sa mère (risque de découverte). La mère a inféré 'fatigue + maux de ventre' depuis le comportement d'Emma et a forcé le rendez-vous chez le généraliste.",
+      "ouverture": "Euh… bonjour docteur.",
+      "ouverture_complement": "Ma mère a voulu que je vienne.",
+      "consignes_jeu": [
+        "Tu te tiens en retrait, un peu renfermée, regards furtifs vers ta mère quand elle est dans la salle.",
+        "Tant que ta mère est présente, tu réponds par monosyllabes ou de façon vague : « euh… ça va », « un peu fatiguée », « je sais pas ». Tu NIES prendre tout traitement (« non, rien ») et tu NE mentionnes PAS le copain.",
+        "Si le médecin demande à te voir seule (ou invite ta mère à sortir), tu acceptes discrètement — un regard vers ta mère, tu patientes qu'elle sorte sans forcer.",
+        "Une fois seule avec le médecin, si le cadre est respectueux et non jugeant, tu t'ouvres : tu prends la pilule Cerazette depuis environ trois mois, prescrite par une gynéco que tu as consultée seule. Tu as un copain depuis l'été (17 ans, même lycée). Ta mère ne sait rien.",
+        "Tu as deux symptômes à formuler en registre de patiente, pas de soignante : des petits saignements entre les règles (« j'ai des petits saignements qui arrivent n'importe quand depuis trois semaines ») et des douleurs abdominales basses intermittentes (« j'ai des douleurs en bas du ventre de temps en temps »). Tu veux savoir si c'est normal avec la pilule ou si c'est grave.",
+        "Tu tiens absolument à la confidentialité vis-à-vis de ta mère. Si le médecin te propose de l'informer, tu refuses fermement mais sans agressivité (« non, je préfère que ça reste entre nous »). Tu acceptes en revanche qu'il te donne un renouvellement de l'ordonnance si la tienne touche à sa fin.",
+        "Tu es lycéenne en 1ère L, bonne élève, pas d'autres prises de risque. Pas de tabac, alcool très occasionnel en soirée, pas de drogues.",
+        "Si le médecin ne te voit pas seule ou pose directement la question de la contraception devant ta mère, tu te refermes totalement et tu ne révèles rien de la pilule ou du copain."
+      ],
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Prend la pilule progestative Cerazette (désogestrel) depuis environ trois mois, en cachette de sa mère, prescrite par une gynécologue consultée seule.",
+          "Depuis 2-3 semaines : petits saignements irréguliers entre les règles (spotting) — Emma les qualifie de 'petites tâches qui arrivent n'importe quand'",
+          "Depuis 2-3 semaines : douleurs abdominales basses intermittentes, modérées, sans horaire précis, non rythmées par les repas ni les règles",
+          "Raison affichée par la mère : 'fatigue et maux de ventre' — interprétation parentale des plaintes vagues d'Emma.",
+          "Anxiété : Emma redoute que ces symptômes soient 'anormaux' (mais ne consulte ni sa gynéco — rendez-vous loin — ni sa mère — secret)."
+        ],
+        "symptomesAssocies": [
+          "Dernières règles 'régulières' il y a environ 6 semaines, peu abondantes (habituel sous désogestrel).",
+          "Pas de nausées, pas de tension mammaire franche, pas de vomissements, pas de signes évocateurs de grossesse.",
+          "Pas de troubles urinaires, pas de pertes anormales en dehors du spotting, pas de dyspareunie marquée.",
+          "Sommeil correct, appétit normal, humeur légèrement anxieuse liée au secret."
+        ],
+        "contexteVie": [
+          "Lycéenne en 1ère littéraire, bonnes notes, pas d'absentéisme.",
+          "Copain depuis juillet (3-4 mois), lui a 17 ans, élève dans le même lycée — relation stable à son âge.",
+          "Rapports sexuels actifs sous pilule + préservatif les 2 premiers mois, puis pilule seule (rassurée par la prescription).",
+          "Pas d'antécédents gynéco particuliers ; puberté à 12 ans, cycles réguliers avant pilule.",
+          "Pas de tabac, pas d'alcool régulier, pas de drogues."
+        ]
+      },
+      "motif_cache": {
+        "description": "Le motif affiché (fatigue + maux de ventre) est une interprétation de la mère. Le motif réel d'Emma = comprendre si les effets secondaires modérés de la pilule (spotting + douleurs pelviennes basses) sont normaux, ET éventuellement obtenir un renouvellement sans que sa mère n'apprenne l'existence de la contraception.",
+        "conditions_revelation": "Emma révèle le motif réel UNIQUEMENT si (a) le médecin demande explicitement à voir Emma seule ET (b) cadre la confidentialité avant l'anamnèse intime (c) pose des questions directes mais non jugeantes. Sinon, elle maintient le brouillard."
+      },
+      "anamneseSystemes": {
+        "ORL/pulmonaire/cardio/digestif/urinaire/neuro": "rien à signaler",
+        "gynécologique": "cycle pré-pilule régulier 28 jours ; sous Cerazette depuis 3 mois : spotting modéré depuis 2-3 semaines, douleurs pelviennes basses intermittentes"
+      },
+      "habitudes": {
+        "activité": "normale (sport 2x/semaine, natation)",
+        "alimentation": "équilibrée",
+        "tabac": "non",
+        "alcool": "très occasionnel (soirées, pas régulier)",
+        "drogues": "non"
+      },
+      "antecedents": {
+        "medicaux": "aucun antécédent significatif, vaccinations à jour (HPV reçu en 3e)",
+        "chirurgicaux": "aucun",
+        "gyneco": "puberté normale vers 12 ans, cycles réguliers pré-pilule. Consulte une gynécologue depuis 3 mois pour suivi contraception — rendez-vous suivant dans 2 mois.",
+        "traitements_en_cours": "Désogestrel 75 µg (Cerazette) 1 comprimé/jour en continu depuis 3 mois ; bonne observance (jamais d'oubli de > 3h).",
+        "familiaux": "mère suivie pour HTA, père en bonne santé, pas d'antécédent thromboembolique, pas d'antécédent oncologique notable"
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Examen général",
+          "resultat": "Adolescente calme, bien orientée, pas de pâleur, pas de marbrures. Poids 55 kg, taille 1.65 m, IMC normal 20.2."
+        },
+        "e2": {
+          "examen": "Examen abdominal",
+          "resultat": "Abdomen souple, légère sensibilité sus-pubienne à la palpation profonde, pas de défense, pas de masse, pas d'hépato-splénomégalie. Fosses iliaques sans particularité."
+        },
+        "e3": {
+          "examen": "Examen gynécologique (intention)",
+          "resultat": "Non indiqué ce jour en l'absence de signes de gravité (pas de fièvre, pas de pertes, pas de saignement abondant). À proposer avec consentement d'Emma si les symptômes persistent ou s'aggravent, ou à orienter vers sa gynécologue traitante."
+        }
+      },
+      "examens_complementaires": {
+        "bhcg": {
+          "parameters": {
+            "bhcg_qual": { "value": 0 }
+          },
+          "interpretation": "Test de grossesse urinaire négatif réalisé au cabinet en précaution chez toute adolescente sexuellement active avec douleurs pelviennes + saignements irréguliers — rassurant. Compatible avec une bonne observance de Cerazette depuis 3 mois."
+        }
+      }
+    },
+    {
+      "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
+      "setting": "Consultation en unité de soins palliatifs mobiles, patient alité à domicile",
+      "patient_description": "M. Louis Bettaz, 78 ans, cancer pancréatique métastatique en phase terminale, suivi à domicile. Patient représenté par sa fille Martine, 52 ans, accompagnante principale, qui vient seule au cabinet pour cette consultation de point.",
+      "vitals": {
+        "ta": "Non applicable (consultation accompagnante seule)",
+        "remarque": "Les constantes du patient ne sont pas pertinentes ici — la consultation est dédiée à la fille."
+      },
+      "source_scenario": true,
+      "nom": "Martine Bettaz",
+      "age": "52 ans",
+      "patient_age_years": 52,
+      "tags": ["palliatif", "fin-de-vie", "accompagnante", "epuisement-proche"],
+      "contexte": "Consultation de point avec l'accompagnante principale d'un patient en phase terminale. M. Bettaz est confiné au lit depuis 3 semaines, sa fille Martine assure l'essentiel des soins avec l'appui de l'équipe mobile de soins palliatifs (infirmier·ère 2x/jour, médecin référent à distance). Martine est épuisée, dort mal, et a verbalisé récemment à l'infirmière de l'EMP 'qu'elle n'en peut plus' — ce qui a motivé cette consultation.",
+      "ouverture": "Bonjour docteur. Je viens pour parler de mon père.",
+      "ouverture_complement": "Enfin, de lui, mais aussi un peu de moi, si on peut.",
+      "consignes_jeu": [
+        "Tu es la fille. Pas une soignante. Tu parles en langage courant, jamais clinique.",
+        "Tu es visiblement épuisée : fatigue dans la voix, phrases qui s'arrêtent, parfois larmes retenues.",
+        "Tu n'oses pas toujours dire toute l'ambivalence que tu ressens : tu aimes ton père, tu veux être là pour lui, mais tu n'en peux plus. Il te faut un médecin empathique pour que tu exprimes cette ambivalence ouvertement.",
+        "Tu peux évoquer directement des moments où tu souhaites que 'ça s'arrête' — puis tu t'en veux de l'avoir pensé.",
+        "Tu rapportes les directives anticipées de ton père (pas de réanimation, tu es la personne de confiance, une sédation est acceptable si la douleur devient ingérable) — il les a signées avec l'infirmière il y a 2 semaines, tu as signé aussi.",
+        "Tu as des questions pragmatiques : que va-t-il se passer à la fin ? Peut-il souffrir ? Peut-on appeler l'EMP la nuit si besoin ? Faut-il envisager une hospitalisation en unité de soins palliatifs ?",
+        "Tu ne donnes PAS de pronostic chiffré toi-même. Tu peux rapporter que 'l'oncologue avait parlé de quelques semaines il y a un mois' — citation, pas calcul personnel.",
+        "Tu peux craquer en fin de consultation si le médecin t'a donné de l'espace ('comment allez-vous, vous ?')."
+      ],
+      "register": "palliatif",
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Cancer pancréatique métastatique (foie, poumons) de M. Bettaz diagnostiqué il y a 14 mois",
+          "Décision collégiale d'arrêt des traitements oncologiques il y a 2 mois (chimio devenue délétère)",
+          "Confinement au lit depuis 3 semaines, douleurs contrôlées par patchs de fentanyl + oxycodone de secours",
+          "Directives anticipées signées il y a 2 semaines : pas de réanimation, fille désignée personne de confiance, sédation profonde acceptée si douleurs réfractaires"
+        ],
+        "symptomesFille": [
+          "Épuisement : 5h de sommeil par nuit, interrompu par réveils multiples pour vérifier le père",
+          "Amaigrissement (4 kg en 2 mois)",
+          "Anxiété diffuse, palpitations occasionnelles",
+          "Pensées intrusives : peur qu'il meure seul / qu'il souffre / qu'elle 'rate' la fin",
+          "Moments d'ambivalence : souhait que 'ça se termine' suivi de culpabilité massive",
+          "Pas d'idées suicidaires, pas de prise de psychotropes, pas d'alcool"
+        ],
+        "contextePere": [
+          "Veuf depuis 8 ans, ancien enseignant",
+          "Conscient, parle peu mais reconnaît Martine et les soignants",
+          "N'a pas exprimé de peur de la mort — a dit plusieurs fois 'c'est assez long comme ça'",
+          "Appétit quasi nul, s'hydrate difficilement",
+          "Escarres débutants malgré les soins"
+        ]
+      },
+      "antecedents": {
+        "fille": "Pas d'antécédents médicaux notables. Travaille à mi-temps comme comptable, a pris un congé sans solde il y a 5 semaines pour être présente.",
+        "familiaux": "Mère de Martine décédée d'un cancer du sein à 65 ans — deuil difficile à l'époque."
+      },
+      "examen_resultats": {},
+      "examens_complementaires": {}
     }
   ]
 }

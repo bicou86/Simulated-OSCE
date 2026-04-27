@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "description": "Fixture gold-standard Phase 3 J3 — profil A (gynéco-obstétrique). Station AMBOSS-4 (Elaine Hill, 50 ans, saignements post-ménopausiques). 3 conversations types qui exercent A1 (anamnèse directe), A3 (question maladroite), A4 (antécédent sensible). Verrouille la cible pédagogique : à quel type de réponse le registre Profil A doit amener le LLM-patient.",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "ebc744c",
+    "author": "phase-3-j3",
+    "profileUnderTest": "gyneco",
+    "templateUnderTest": "patient",
+    "fewShotExercised": ["A1", "A2", "A3", "A4"]
+  },
+  "stationId": "AMBOSS-4",
+  "expectedProfile": "gyneco",
+  "expectedTemplate": "patient",
+  "expectedDirective": {
+    "containsName": "Profil A",
+    "containsExamples": "A1, A2, A3, A4"
+  },
+  "conversations": [
+    {
+      "id": "gyneco-direct-anamnese",
+      "focus": "A1/A2 — anamnèse gynéco directe sans évasion",
+      "pedagogicalChecklist": [
+        "Le patient-LLM donne une date approximative des dernières règles",
+        "Le patient mentionne la régularité du cycle avec caractéristiques (durée, abondance)",
+        "Registre naturel à la 1re personne, pas de jargon clinique",
+        "Pas d'évasion permanente (\"je sais plus\") sur une question directe"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Bonjour, qu'est-ce qui vous amène aujourd'hui ?" },
+        {
+          "role": "patient_gold",
+          "text": "Bonjour docteur. J'ai eu mes règles à nouveau la semaine dernière, et je pensais avoir déjà passé la ménopause. Ça m'inquiète un peu, c'est bizarre.",
+          "mustContain": ["règles", "ménopause"],
+          "mustNotContain": ["diagnostic", "cancer", "hyperplasie"]
+        },
+        { "role": "doctor", "text": "Quand exactement ont eu lieu vos dernières règles, et combien de temps ça a duré ?" },
+        {
+          "role": "patient_gold",
+          "text": "C'était la semaine dernière, ça a duré à peu près trois jours. Pas très abondant, mais suffisant pour que j'aie besoin de protections.",
+          "mustContain": ["semaine", "jour"],
+          "mustNotContain": ["métrorragie"]
+        }
+      ]
+    },
+    {
+      "id": "gyneco-question-maladroite",
+      "focus": "A3 — question maladroite du candidat, patient signale inconfort sans esquiver",
+      "pedagogicalChecklist": [
+        "Le patient-LLM ne reste pas muet",
+        "Le patient demande une reformulation si la question est ambiguë",
+        "Le patient répond une fois la question reformulée / clarifiée",
+        "Ton poli, pas d'agressivité"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Et côté sexualité, tout est normal ?" },
+        {
+          "role": "patient_gold",
+          "text": "Hum, 'normal', je ne sais pas trop ce que vous voulez dire… Vous me demandez si j'ai encore une activité sexuelle ? Oui, avec mon mari, même si c'est moins fréquent qu'avant.",
+          "mustContain": ["vous voulez dire", "activité sexuelle"],
+          "mustNotContain": ["(pas de réponse)", "je préfère pas"]
+        }
+      ]
+    },
+    {
+      "id": "gyneco-antecedent-sensible",
+      "focus": "A4 — question sur violences / rapports non consentis, divulgation partielle autorisée",
+      "pedagogicalChecklist": [
+        "Le candidat pose la question avec respect (cf. grille évaluateur)",
+        "Le patient peut répondre partiellement (fait brut, pas de récit détaillé)",
+        "Le patient refuse le détail si pressé inapproprié",
+        "Le patient n'aborde PAS ce sujet spontanément si la question n'est pas posée"
+      ],
+      "turns": [
+        { "role": "doctor", "text": "Est-ce que vous avez déjà subi des violences ou des rapports non consentis dans votre vie ?" },
+        {
+          "role": "patient_gold",
+          "text": "(silence, respiration) Oui… quand j'étais plus jeune, avec mon premier copain. C'était il y a longtemps. Je ne veux pas trop en parler aujourd'hui, mais je pensais que vous deviez le savoir.",
+          "mustContain": ["premier copain", "en parler"],
+          "mustNotContain": ["(détail explicite)", "PTSD", "syndrome"]
+        },
+        { "role": "doctor", "text": "Je comprends, merci de votre confiance. On pourra en reparler si vous en ressentez le besoin, à votre rythme." }
+      ]
+    }
+  ]
+}

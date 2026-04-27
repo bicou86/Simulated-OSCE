@@ -7,6 +7,7 @@ import { z } from "zod";
 
 import { sendApiError } from "../lib/errors";
 import { lookupExaminer, StationNotFoundError } from "../services/examinerService";
+import { lookupLabs } from "../services/labsService";
 
 const router = Router();
 
@@ -27,6 +28,30 @@ router.post("/lookup", async (req: Request, res: Response) => {
   }
   try {
     const result = await lookupExaminer(parsed.data.stationId, parsed.data.query);
+    return res.json(result);
+  } catch (err) {
+    if (err instanceof StationNotFoundError) {
+      return sendApiError(res, "bad_request", err.message);
+    }
+    return sendApiError(res, "internal_error", (err as Error).message);
+  }
+});
+
+// Phase 3 J2 — route labs. Même shape de payload que /lookup, mais le service
+// lit `examens_complementaires[lab_key]` plutôt que `examen_resultats` et
+// résout le résultat avec LAB_DEFINITIONS (normes, flags, sources cliniques).
+router.post("/labs", async (req: Request, res: Response) => {
+  const parsed = LookupBody.safeParse(req.body);
+  if (!parsed.success) {
+    return sendApiError(
+      res,
+      "bad_request",
+      "Payload /examiner/labs invalide.",
+      parsed.error.issues[0]?.message,
+    );
+  }
+  try {
+    const result = await lookupLabs(parsed.data.stationId, parsed.data.query);
     return res.json(result);
   } catch (err) {
     if (err instanceof StationNotFoundError) {

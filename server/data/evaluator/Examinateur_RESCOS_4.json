@@ -2,7 +2,7 @@
   "type": "EXAMINATEUR",
   "source": "RESCOS",
   "batch": 4,
-  "count": 16,
+  "count": 18,
   "stations": [
     {
       "id": "RESCOS-57 - Ralentissement - Consultation téléphonique EMS",
@@ -7680,6 +7680,268 @@
         ]
       },
       "diagnostic_attendu": "Les radiographies du bras doivent être transmises si et quand le·la candidat·e les demandes (cf grille d'évaluation)"
+    },
+    {
+      "id": "RESCOS-70 - Contraception cachée + effets secondaires - Adolescente 16 ans",
+      "setting": "Cabinet médical, consultation programmée",
+      "patient_resume": "Emma Delacroix, 16 ans, mère présente en salle d'attente pour 'fatigue + maux de ventre'. Motif réel = effets secondaires modérés (spotting + douleurs pelviennes basses) d'une pilule progestative (Cerazette) prise en cachette depuis 3 mois, prescrite par une gynéco. Enjeu = cadre de confidentialité et évaluation des effets secondaires.",
+      "grille": {
+        "anamnese": [
+          {
+            "id": "a1",
+            "text": "Salutations, cadre de consultation, vérification de l'identité",
+            "binaryOnly": true
+          },
+          {
+            "id": "a2",
+            "text": "Identifie la nécessité d'un tête-à-tête avec l'adolescente",
+            "items_attendus": [
+              "Détecte le malaise / la réticence d'Emma en présence de la mère",
+              "Propose explicitement à la mère de quitter la salle",
+              "Le fait de façon respectueuse, sans brusquer"
+            ]
+          },
+          {
+            "id": "a3",
+            "text": "Cadre clairement la confidentialité avec la patiente",
+            "items_attendus": [
+              "Explicite que ce qui sera dit reste entre la patiente et le médecin",
+              "Rappelle le droit du mineur·e doué·e de discernement (CH)",
+              "Demande à la patiente son accord avant toute divulgation"
+            ]
+          },
+          {
+            "id": "a4",
+            "text": "Anamnèse gynéco professionnelle et non-jugeante",
+            "items_attendus": [
+              "Date des dernières règles, régularité du cycle",
+              "Activité sexuelle, protection actuelle (au-delà de la seule pilule)",
+              "Contraception EN COURS (identifie Cerazette / désogestrel si Emma la nomme), observance, durée",
+              "Antécédents gynéco, historique de la prescription, ATCD familiaux"
+            ]
+          },
+          {
+            "id": "a5",
+            "text": "Caractérisation des symptômes actuels (spotting + douleurs pelviennes)",
+            "items_attendus": [
+              "Spotting : début, fréquence, abondance, facteurs déclencheurs",
+              "Douleurs : localisation, caractère, horaire, lien avec les règles / les rapports",
+              "Évolution récente, signes d'alarme (fièvre, pertes, saignement abondant)"
+            ]
+          },
+          {
+            "id": "a6",
+            "text": "Évaluation des facteurs de risque associés",
+            "items_attendus": [
+              "Tabac, alcool, drogues (facteurs de risque thrombo-emboliques et choix contraceptif)",
+              "Violences/rapports non consentis (ouverture de la question avec respect)",
+              "IST : question posée, contexte évalué"
+            ]
+          }
+        ],
+        "examen": [
+          {
+            "id": "e1",
+            "text": "Examen général : poids, taille, TA, IMC",
+            "binaryOnly": true
+          },
+          {
+            "id": "e2",
+            "text": "Examen abdominal si plainte",
+            "binaryOnly": true
+          },
+          {
+            "id": "e3",
+            "text": "N'impose PAS un examen gynéco ce jour si non-indiqué",
+            "items_attendus": [
+              "Propose sans forcer, explique le but",
+              "Accepte un refus",
+              "Propose une consultation dédiée ultérieure"
+            ]
+          }
+        ],
+        "management": [
+          {
+            "id": "m1",
+            "text": "Test de grossesse urinaire proposé en précaution (spotting + douleurs pelviennes chez une adolescente sexuellement active)"
+          },
+          {
+            "id": "m2",
+            "text": "Normalise les effets secondaires de Cerazette OU propose une alternative si inacceptables pour Emma",
+            "items_attendus": [
+              "Explique que le spotting est fréquent sous progestatif pur les 3-6 premiers mois",
+              "Explique que les douleurs pelviennes doivent être réévaluées si persistantes ou associées à fièvre/pertes",
+              "Laisse Emma décider si elle veut continuer Cerazette, changer, ou consulter sa gynéco pour décision partagée"
+            ]
+          },
+          {
+            "id": "m3",
+            "text": "Renouvellement d'ordonnance si demandé, OU renvoi vers la gynécologue traitante",
+            "items_attendus": [
+              "Peut renouveler Cerazette 3 mois en l'absence de contre-indication identifiée",
+              "Propose rapprochement du rendez-vous gynéco si symptômes inquiétants",
+              "Discute d'un dépistage IST (première fois, rapports actifs)"
+            ]
+          }
+        ],
+        "cloture": [
+          {
+            "id": "c1",
+            "text": "Retour auprès de la mère sans divulgation",
+            "items_attendus": [
+              "Ne livre AUCUN détail médical confidentiel à la mère",
+              "Peut dire 'la consultation s'est bien passée, je revois Emma dans X semaines'",
+              "Ne cède PAS à la pression si la mère insiste"
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Informe Emma de la possibilité de revenir / de numéro utile en urgence"
+          }
+        ],
+        "communication": [
+          {
+            "id": "com1",
+            "text": "Cadre respectueux et non-jugeant avec une adolescente",
+            "items_attendus": [
+              "Langage adapté, pas infantilisant",
+              "Ton non moralisateur sur les rapports / contraception",
+              "Respect du rythme de la patiente"
+            ]
+          },
+          {
+            "id": "com2",
+            "text": "Gestion de la mère : ni confrontation ni complicité excessive"
+          }
+        ]
+      },
+      "diagnostic_attendu": "Effets secondaires modérés (spotting + douleurs pelviennes basses) sous désogestrel (Cerazette) pris depuis 3 mois chez une adolescente doué·e de discernement, en cachette de sa mère. Pas de grossesse (βHCG négatif). Enjeu principal = (1) cadre de confidentialité stable dans les deux sens (anamnèse intime sans mère, puis retour sans divulgation), (2) évaluation clinique des effets secondaires, (3) décision partagée renouvellement / alternative / renvoi gynéco. Zéro urgence vitale."
+    },
+    {
+      "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
+      "setting": "Consultation en unité de soins palliatifs mobiles, accompagnante seule au cabinet",
+      "patient_resume": "Martine Bettaz, 52 ans, fille et accompagnante principale de M. Louis Bettaz, 78 ans, en phase terminale de cancer pancréatique. Consultation dédiée à la fille, épuisée.",
+      "grille": {
+        "anamnese": [
+          {
+            "id": "a1",
+            "text": "Salutations, cadre, disponibilité pour l'accompagnante",
+            "binaryOnly": true
+          },
+          {
+            "id": "a2",
+            "text": "Exploration du vécu de l'accompagnante (pas seulement du patient)",
+            "items_attendus": [
+              "Pose une question ouverte sur le vécu de Martine (« comment allez-vous, vous ? »)",
+              "Laisse le silence, n'enchaîne pas",
+              "Nomme l'épuisement / la charge quand Martine l'évoque"
+            ]
+          },
+          {
+            "id": "a3",
+            "text": "Recueil des éléments pratiques",
+            "items_attendus": [
+              "Symptômes actuels de M. Bettaz (douleur, conscience, alimentation)",
+              "Organisation des soins (EMP, fréquence, numéros d'urgence)",
+              "Sommeil et état physique de Martine",
+              "Présence d'un réseau de soutien familial / amical"
+            ]
+          },
+          {
+            "id": "a4",
+            "text": "Validation des directives anticipées",
+            "items_attendus": [
+              "Rappelle qu'elles existent",
+              "Vérifie que Martine les comprend et y adhère",
+              "Valide son rôle de personne de confiance"
+            ]
+          },
+          {
+            "id": "a5",
+            "text": "Accueil de l'ambivalence émotionnelle",
+            "items_attendus": [
+              "Ne juge PAS les pensées ambivalentes (« souhait que ça s'arrête »)",
+              "Normalise ces ressentis sans les minimiser",
+              "Propose un espace de parole si Martine l'exprime"
+            ]
+          }
+        ],
+        "examen": [
+          {
+            "id": "e1",
+            "text": "Évaluation de l'état psychique de Martine",
+            "items_attendus": [
+              "Recherche d'idées suicidaires (exclue ici)",
+              "Évaluation anxiété / dépression débutante",
+              "Évaluation du deuil anticipé"
+            ]
+          }
+        ],
+        "management": [
+          {
+            "id": "m1",
+            "text": "Propose un répit pour Martine",
+            "items_attendus": [
+              "Aide à domicile renforcée",
+              "Relais avec un·e autre membre de la famille",
+              "Envisage hospitalisation en USP si Martine ne peut plus assurer"
+            ]
+          },
+          {
+            "id": "m2",
+            "text": "Répond aux questions pratiques sur la fin de vie",
+            "items_attendus": [
+              "Explique le processus de fin de vie en registre simple",
+              "Aborde la sédation profonde si pertinent",
+              "Informe sur les démarches post-décès sans brusquer"
+            ]
+          },
+          {
+            "id": "m3",
+            "text": "Propose un suivi pour Martine elle-même",
+            "items_attendus": [
+              "Consultation médicale de suivi proche",
+              "Référence à un·e psychologue ou à un groupe de parole",
+              "Rappel que le deuil se prépare"
+            ]
+          }
+        ],
+        "cloture": [
+          {
+            "id": "c1",
+            "text": "Synthèse empathique",
+            "items_attendus": [
+              "Reformule ce que Martine a partagé",
+              "Légitime son épuisement",
+              "Donne un plan clair pour les jours à venir"
+            ]
+          },
+          {
+            "id": "c2",
+            "text": "Disponibilité explicite",
+            "items_attendus": [
+              "Numéro de l'EMP 24/7",
+              "Mention explicite : « vous pouvez appeler si ça va mal »"
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "id": "com1",
+            "text": "Registre empathique, pas clinique",
+            "items_attendus": [
+              "Silences respectés",
+              "Reflet émotionnel approprié",
+              "Pas de jargon médical quand l'accompagnante parle en termes courants"
+            ]
+          },
+          {
+            "id": "com2",
+            "text": "Ne promet pas l'impossible (pas de pronostic chiffré, pas de promesse de 'zéro douleur')"
+          }
+        ]
+      },
+      "diagnostic_attendu": "Épuisement d'accompagnante principale dans un contexte de fin de vie à domicile. L'enjeu est double : soutien à Martine et organisation pragmatique des prochains jours/semaines."
     }
   ]
 }

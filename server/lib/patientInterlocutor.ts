@@ -35,7 +35,12 @@ export interface InterlocutorInput {
 
 // Priorité 1 — marqueurs explicites "présenté(e) par sa/son {rôle}".
 // On capture aussi "apporté par", "accompagné par", "amené par" qu'on voit parfois.
-const PARENT_PRESENTED_RE = /(?:présenté|apporté|amené|accompagné)e?\s+(?:par\s+)?(?:sa|son|la|le|par)\s+(mère|maman|père|papa|parent|tuteur|tutrice|grand[- ]m[eè]re|grand[- ]p[eè]re)/i;
+// Phase 3 J3 : ajout des rôles proches adultes (fille / fils / conjoint·e / époux·se /
+// accompagnant·e / proche) pour couvrir les stations gériatriques et palliatives
+// où le patient est représenté par un·e proche non-parental·e. Tous ces rôles
+// tombent sur parentRole="caregiver" (le type "parent" reste un générique
+// "interlocuteur tiers" dans l'enum actuel — rename évité pour rétrocompat).
+const PARENT_PRESENTED_RE = /(?:présenté|représenté|apporté|amené|accompagné)e?\s+(?:par\s+)?(?:sa|son|la|le|par)\s+(mère|maman|père|papa|parent|tuteur|tutrice|grand[- ]m[eè]re|grand[- ]p[eè]re|fille|fils|conjoint(?:e)?|époux|épouse|compagne|compagnon|accompagnant(?:e)?|proche)/i;
 
 // "Mère d'un garçon…", "Père d'un bébé…" — le patient est l'enfant, la chaîne
 // décrit en fait le parent. Cette forme indique aussi parent.

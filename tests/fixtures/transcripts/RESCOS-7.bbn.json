@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "description": "Fixture non-régression Phase 3 / J1 — station BBN (annonce mauvaise nouvelle post-traumatisme crânien, hématome sous-dural). Témoin Phase 2 ajouté par J1-pilots. Valide que la pipeline applique les poids bbn (15/5/15/25/40) et que Communication=40 domine la pondération (protocole SPIKES).",
+    "frozenAt": "2026-04-24",
+    "gitCommitAtFreeze": "phase-3-j1-pilots",
+    "author": "phase-3-j1-pilots"
+  },
+  "stationId": "RESCOS-7",
+  "expectedStationType": "bbn",
+  "expectedCommunicationWeight": 40,
+  "expectedCanonicalWeights": { "anamnese": 15, "examen": 5, "management": 15, "cloture": 25, "communication": 40 },
+  "transcript": [
+    { "role": "doctor", "text": "Bonjour Monsieur Dubois. Avant de commencer, pouvez-vous me dire ce que vous savez déjà de votre situation ?" },
+    { "role": "patient", "text": "Bonjour docteur. Je sais que j'ai eu un accident de vélo et que j'ai tapé ma tête. Les infirmiers m'ont dit qu'il y avait quelque chose sur le scanner." },
+    { "role": "doctor", "text": "C'est exact. Est-ce que vous souhaitez que je vous explique en détail ce que le scanner a montré ?" },
+    { "role": "patient", "text": "Oui, je préfère savoir." },
+    { "role": "doctor", "text": "Le scanner a révélé un hématome sous-dural, c'est-à-dire une collection de sang entre le cerveau et son enveloppe. C'est une situation qui nécessite une intervention neurochirurgicale." },
+    { "role": "patient", "text": "Une opération ? C'est grave ?" },
+    { "role": "doctor", "text": "Oui, c'est sérieux, mais c'est une intervention bien maîtrisée. Je comprends que c'est beaucoup à encaisser. Prenez le temps que vous voulez, on peut en parler ensemble." },
+    { "role": "patient", "text": "J'ai peur... Ma femme et mes enfants, qui va les prévenir ?" },
+    { "role": "doctor", "text": "Bien sûr, nous allons prévenir votre famille avec vous si vous le souhaitez. L'équipe va vous accompagner à chaque étape." }
+  ],
+  "mockedSonnet": {
+    "markdown": "# Rapport — RESCOS-7\n\nAnnonce de mauvaise nouvelle sur hématome sous-dural post-traumatique. Protocole SPIKES bien appliqué : exploration des connaissances du patient, autorisation avant annonce, empathie, accompagnement.\n\n**Points forts :** communication structurée, silence respecté, exploration des préoccupations familiales.\n\n**Points à améliorer :** clarifier la temporalité de l'intervention, proposer un support écrit.",
+    "scores": {
+      "globalScore": 76,
+      "sections": [
+        { "key": "anamnese", "name": "Anamnèse", "weight": 0.15, "score": 70 },
+        { "key": "examen", "name": "Examen", "weight": 0.05, "score": 50 },
+        { "key": "management", "name": "Management", "weight": 0.15, "score": 65 },
+        { "key": "cloture", "name": "Clôture", "weight": 0.25, "score": 75 },
+        { "key": "communication", "name": "Communication", "weight": 0.40, "score": 85 }
+      ],
+      "verdict": "Réussi"
+    }
+  },
+  "expectedGlobalScore": 76,
+  "expectedComputedFromWeights": {
+    "formula": "Σ(score × weight) / Σ(weights > 0)",
+    "calc": "70×0.15 + 50×0.05 + 65×0.15 + 75×0.25 + 85×0.40 = 10.5 + 2.5 + 9.75 + 18.75 + 34 = 75.5 → arrondi 76",
+    "value": 76
+  }
+}

@@ -14,6 +14,10 @@ import {
 import { loadPrompt } from "../lib/prompts";
 import { getStationMeta, patientFilePath } from "./stationsService";
 import {
+  buildSpecialtyDirective,
+  selectSpecialtyProfile,
+} from "./specialtyProfileSelector";
+import {
   detectCaregiverFindingLeaks,
   detectPatientFindingLeaks,
 } from "@shared/patientLeakDetection";
@@ -161,9 +165,20 @@ export async function buildSystemPrompt(
     ? caregiverIdentityBlock(interlocutor, station)
     : interlocutorDirective(interlocutor);
 
+  // Phase 3 J3 — injection déterministe d'une directive pointant vers le
+  // profil de spécialité à prioriser (gynéco / adolescent / palliatif), si
+  // la station porte les flags correspondants. Zéro LLM : heuristique pure
+  // sur `register` + âge, cf. specialtyProfileSelector.ts. Les 279 stations
+  // sans flag ni âge éligible reçoivent une directive vide (rétrocompat).
+  const profile = selectSpecialtyProfile(station as Record<string, unknown>);
+  const specialtyDirective = buildSpecialtyDirective(
+    profile,
+    useCaregiverPrompt ? "caregiver" : "patient",
+  );
+
   const dataBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
-  return template + identityBlock + modeDirective + dataBlock;
+  return template + identityBlock + specialtyDirective + modeDirective + dataBlock;
 }
 
 // Détecte les leaks de findings objectifs dans la réponse LLM POST-génération.

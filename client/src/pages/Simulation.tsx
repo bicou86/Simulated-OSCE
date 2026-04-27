@@ -14,6 +14,8 @@ import { useStreamingChat } from "@/hooks/useStreamingChat";
 import { useConversationMode } from "@/hooks/useConversationMode";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { MicLevelIndicator } from "@/components/MicLevelIndicator";
+import { ExaminerImage } from "@/components/ExaminerImage";
+import { ExaminerLabs } from "@/components/ExaminerLabs";
 import {
   getConversationPreferences,
   getPreferredVoice,
@@ -28,9 +30,12 @@ import {
   chatPatient,
   examinerLookup,
   getPatientBrief,
+  labsLookup,
   sttPatient,
   ttsPatient,
   type ExaminerLookupResult,
+  type LabsLookupResult,
+  type LabsLookupResolvedResult,
   type PatientBrief,
   type TtsVoice,
 } from "@/lib/api";
@@ -39,7 +44,12 @@ import { classifyDoctorIntent } from "@/lib/intentRouter";
 const TOTAL_DURATION = 13 * 60;
 const ANNOUNCEMENT_11_MIN = 2 * 60;
 
-type ExaminerItem = { maneuver: string; text: string };
+type ExaminerItem = {
+  maneuver: string;
+  text: string;
+  imageUrl?: string;
+  imageCaption?: string;
+};
 
 type TranscriptTurn =
   | { role: "patient" | "doctor"; text: string }
@@ -49,17 +59,53 @@ type TranscriptTurn =
       maneuver?: string;
       isError?: boolean;
       items?: ExaminerItem[];
+      imageUrl?: string;      // Phase 3 — image associée au finding unique
+      imageCaption?: string;
+    }
+  | {
+      // Phase 3 J2 — bulle dédiée pour les labs. Role séparé pour garder le
+      // rendu de la bulle examinateur classique intact et isoler le tableau.
+      role: "examiner-labs";
+      text: string;              // vide en cas de succès ; message de fallback sinon
+      isError?: boolean;
+      labsResults?: LabsLookupResolvedResult[];
+      header?: string;           // ex. "NFS + CRP" pour résumé du header
     };
 
 const EXAMINER_TIMEOUT_MS = 10_000;
 
 // Transforme la réponse déterministe de /api/examiner/lookup en un tour
 // affichable. Le `kind` pilote le rendu :
-//   - finding    → bulle simple, texte = resultat, manœuvre en en-tête.
-//   - findings   → bulle unique agrégée avec liste à puces (`items`).
-//   - no_resultat / no_match / no_teleconsult → fallback textuel dédié.
+//   - finding    → bulle simple, texte = resultat, manœuvre en en-tête,
+//                  image optionnelle affichée en dessous (Phase 3).
+//   - findings   → bulle unique agrégée avec liste à puces (`items`),
+//                  chaque item peut porter une image.
+//   - no_resultat / no_match / no_teleconsult / no_imaging → fallback
+//                  textuel dédié.
 // Le fallback legacy (sans `kind`) reste géré au cas où un client de test
 // renvoie l'ancien shape.
+// Phase 3 J2 — transforme la réponse de /api/examiner/labs en un tour affichable.
+// Le `kind` pilote le rendu :
+//   - labs         → bulle avec 1+ tableaux, header = "NFS + CRP", pas d'erreur.
+//   - no_teleconsult / no_labs / no_match → fallback textuel.
+function buildLabsTurn(
+  found: LabsLookupResult,
+): Extract<TranscriptTurn, { role: "examiner-labs" }> {
+  if (found.kind === "labs" && found.results && found.results.length > 0) {
+    const header = found.results.map((r) => r.label).join(" + ");
+    return {
+      role: "examiner-labs",
+      text: "",
+      labsResults: found.results,
+      header,
+    };
+  }
+  return {
+    role: "examiner-labs",
+    text: found.fallback ?? "Laboratoires non disponibles pour cette station.",
+  };
+}
+
 function buildExaminerTurn(
   found: ExaminerLookupResult,
 ): Extract<TranscriptTurn, { role: "examiner" }> {
@@ -67,11 +113,24 @@ function buildExaminerTurn(
     return {
       role: "examiner",
       text: "",
-      items: found.items.map((it) => ({ maneuver: it.maneuver, text: it.resultat })),
+      items: found.items.map((it) => ({
+        maneuver: it.maneuver,
+        text: it.resultat,
+        ...(it.resultatType === "image" && it.resultatUrl
+          ? { imageUrl: it.resultatUrl, imageCaption: it.resultatCaption }
+          : {}),
+      })),
     };
   }
   if (found.kind === "finding" && found.resultat) {
-    return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
+    return {
+      role: "examiner",
+      text: found.resultat,
+      maneuver: found.maneuver,
+      ...(found.resultatType === "image" && found.resultatUrl
+        ? { imageUrl: found.resultatUrl, imageCaption: found.resultatCaption }
+        : {}),
+    };
   }
   if (!found.kind && found.match && found.resultat) {
     return { role: "examiner", text: found.resultat, maneuver: found.maneuver };
@@ -256,7 +315,8 @@ export default function Simulation() {
     // on demande au service Examinateur (déterministe, lecture de examen_resultats)
     // plutôt qu'au LLM patient. Règle : un faux positif vaut mieux qu'un patient
     // qui invente un signe de Murphy.
-    if (classifyDoctorIntent(cleaned) === "examiner") {
+    const intent = classifyDoctorIntent(cleaned);
+    if (intent === "examiner") {
       // Timeout matériel : si l'examinateur ne répond pas en 10 s, on abort le
       // fetch et on affiche une bulle d'erreur en rouge plutôt que laisser le
       // badge "En cours" bloqué pendant toute la station (13 min chrono).
@@ -276,6 +336,36 @@ export default function Simulation() {
         ]);
         toast({
           title: "Examinateur indisponible",
+          description: errorText,
+          variant: "destructive",
+        });
+      } finally {
+        window.clearTimeout(timeoutId);
+        setIsSending(false);
+      }
+      return;
+    }
+
+    // Phase 3 J2 — demande de labos : route déterministe dédiée, lecture de
+    // `examens_complementaires` + résolution via LAB_DEFINITIONS. Même timeout
+    // que la route examinateur, même gestion d'erreur.
+    if (intent === "labs") {
+      const controller = new AbortController();
+      const timeoutId = window.setTimeout(() => controller.abort(), EXAMINER_TIMEOUT_MS);
+      try {
+        const found = await labsLookup(stationId, cleaned, controller.signal);
+        setTranscript((prev) => [...prev, buildLabsTurn(found)]);
+      } catch (err) {
+        const isAbort = controller.signal.aborted;
+        const errorText = isAbort
+          ? "Temps de réponse dépassé (> 10 s). Réessayez la demande de lab ou passez à la suite."
+          : `Erreur de récupération des labos — ${(err as ApiError)?.message ?? "erreur réseau"}.`;
+        setTranscript((prev) => [
+          ...prev,
+          { role: "examiner-labs", text: errorText, isError: true },
+        ]);
+        toast({
+          title: "Laboratoires indisponibles",
           description: errorText,
           variant: "destructive",
         });
@@ -453,6 +543,21 @@ export default function Simulation() {
         }
         const prefix = t.maneuver ? `[Examinateur · ${t.maneuver}] ` : "[Examinateur] ";
         return { role: "patient", text: prefix + t.text };
+      }
+      if (t.role === "examiner-labs") {
+        // Phase 3 J2 — convertit les tours labs en messages [Examinateur]
+        // préfixés pour que l'évaluateur les voie comme des findings objectifs.
+        if (t.labsResults && t.labsResults.length > 0) {
+          const labs = t.labsResults.map((lab) => {
+            const rows = lab.parameters
+              .map((p) => `    - ${p.label} : ${p.value}${p.unit ? " " + p.unit : ""} (${p.flag})`)
+              .join("\n");
+            const interp = lab.interpretation ? `\n    Interprétation : ${lab.interpretation}` : "";
+            return `  ${lab.label}\n${rows}${interp}`;
+          }).join("\n");
+          return { role: "patient", text: `[Examinateur · Laboratoires]\n${labs}` };
+        }
+        return { role: "patient", text: `[Examinateur · Laboratoires] ${t.text}` };
       }
       return { role: t.role, text: t.text };
     });
@@ -681,6 +786,44 @@ export default function Simulation() {
               </div>
 
               {transcript.map((msg, idx) => {
+                if (msg.role === "examiner-labs") {
+                  const isError = "isError" in msg && msg.isError === true;
+                  const hasResults = !isError
+                    && Array.isArray(msg.labsResults)
+                    && msg.labsResults.length > 0;
+                  const header = hasResults ? msg.header : null;
+                  return (
+                    <div
+                      key={idx}
+                      className="flex flex-col max-w-[90%] mx-auto items-stretch animate-in fade-in slide-in-from-bottom-2"
+                      data-testid={isError ? "bubble-labs-error" : "bubble-labs"}
+                    >
+                      <span className={cn(
+                        "text-xs font-semibold uppercase tracking-wider mb-1 px-2 flex items-center gap-1.5",
+                        isError ? "text-red-600" : "text-slate-500",
+                      )}>
+                        {isError ? <AlertCircle className="w-3.5 h-3.5" /> : <FileAudio className="w-3.5 h-3.5" />}
+                        {isError
+                          ? "Erreur laboratoires"
+                          : `Laboratoires — Examinateur${header ? ` · ${header}` : ""}`}
+                      </span>
+                      <div className={cn(
+                        "p-4 rounded-2xl shadow-sm border",
+                        isError
+                          ? "bg-red-50 border-red-300 text-red-800 italic"
+                          : hasResults
+                            ? "bg-slate-50 border-slate-300"
+                            : "bg-slate-100 border-slate-300 text-slate-700 italic",
+                      )}>
+                        {hasResults ? (
+                          <ExaminerLabs results={msg.labsResults!} />
+                        ) : (
+                          msg.text
+                        )}
+                      </div>
+                    </div>
+                  );
+                }
                 if (msg.role === "examiner") {
                   const isError = "isError" in msg && msg.isError === true;
                   // Mode agrégé (Bug #2) : une bulle unique, en-tête sans
@@ -707,17 +850,36 @@ export default function Simulation() {
                           : "bg-slate-100 border-slate-300 text-slate-800",
                       )}>
                         {hasItems ? (
-                          <ul className="space-y-1.5 list-disc list-inside">
+                          <ul className="space-y-2 list-disc list-inside">
                             {msg.items!.map((it, i) => (
                               <li key={i}>
                                 <span className="font-semibold not-italic">{it.maneuver}</span>
                                 {" — "}
                                 {it.text}
+                                {it.imageUrl && (
+                                  <ExaminerImage
+                                    url={it.imageUrl}
+                                    alt={it.maneuver}
+                                    caption={it.imageCaption}
+                                    maneuver={it.maneuver}
+                                    className="mt-1.5"
+                                  />
+                                )}
                               </li>
                             ))}
                           </ul>
                         ) : (
-                          msg.text
+                          <>
+                            {msg.text}
+                            {msg.imageUrl && (
+                              <ExaminerImage
+                                url={msg.imageUrl}
+                                alt={msg.maneuver ?? "Image examinateur"}
+                                caption={msg.imageCaption}
+                                maneuver={msg.maneuver}
+                              />
+                            )}
+                          </>
                         )}
                       </div>
                     </div>
