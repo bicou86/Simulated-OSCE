@@ -1,18 +1,21 @@
 {
   "_meta": {
-    "description": "SHA-256 checksum (canonical key-sorted JSON) of every Phase 2 station NOT modified by Phase 3 J3 or Phase 4 J1. Locks 280 stations against accidental byte-mutation during merges. Excluded pilots carry additive schema deltas expected by their respective phases.",
+    "description": "SHA-256 checksum (canonical key-sorted JSON) of every Phase 2 station NOT modified by Phase 3 J3, Phase 4 J1 or Phase 5 J1. Locks 278 stations against accidental byte-mutation during merges. Excluded pilots carry additive schema deltas expected by their respective phases.",
     "excluded": [
       "AMBOSS-4",
       "RESCOS-70",
       "RESCOS-71",
       "RESCOS-9b",
       "RESCOS-13",
-      "RESCOS-63"
+      "RESCOS-63",
+      "AMBOSS-24",
+      "USMLE-34",
+      "RESCOS-72"
     ],
-    "excludedReason": "Phase 3 J3 pilots (AMBOSS-4, RESCOS-70, RESCOS-71) + Phase 4 J1 pilots (RESCOS-9b, RESCOS-13, RESCOS-63) — additive schema delta expected. RESCOS-70 and RESCOS-71 also receive participants[] in J1.",
+    "excludedReason": "Phase 3 J3 pilots (AMBOSS-4, RESCOS-70, RESCOS-71) + Phase 4 J1 pilots (RESCOS-9b, RESCOS-13, RESCOS-63) + Phase 5 J1 pilots (AMBOSS-24, USMLE-34, RESCOS-72) — additive schema delta expected (legalContext en J1 Phase 5). RESCOS-70 et RESCOS-71 reçoivent aussi participants[] en Phase 4 J1. RESCOS-72 est une station de novo (certificat_complaisance, pas de baseline).",
     "generatedAt": "2026-04-27",
     "algorithm": "sha256(JSON.stringify(sortedKeys(station)))",
-    "stationCount": 280
+    "stationCount": 278
   },
   "checksums": {
     "AMBOSS-1": "a9691fc53af82afcd1268008944c7daf6d284c3c66a08fd5e61fc3c96050a4bb",
@@ -31,7 +34,6 @@
     "AMBOSS-21": "5bc71f3399834cbb3fab0c0b96fe49f9f3dd8be96855756936472ad392e5ea03",
     "AMBOSS-22": "9d21a12d5d8460c6d8889b04954fb43ebe7b20f9fc9ab481e7317afd34e1446c",
     "AMBOSS-23": "df0176a6024949d15ccefc5f1ae940d235030eca75adb1846b272cf626f788b2",
-    "AMBOSS-24": "840df1e80b7c0435b05df69e4c3f70f7e4655de5a8a8b8356c9d39f6bfce1759",
     "AMBOSS-25": "60be753293686ad4a0d489dbc29bda50378cb94a5b9dcaa026594472d8f7e20f",
     "AMBOSS-26": "98128ae73b87d2cf18279f69689cd400c32008b75420e63d0ff6ba0493d6722b",
     "AMBOSS-27": "20d04c83bd3b629af15422858136cc55ac77279b0e9f94e01b7e82727a09188a",
@@ -278,7 +280,6 @@
     "USMLE-31": "ad9d4db31d6c0e5b56d04d7cf49ca9ae78a1660dfba03f5afad2d7c6212ba6de",
     "USMLE-32": "f9f73e00b3ce667d73e2e1f545268d5305f25af10a74988ea9b8291ad4c00df8",
     "USMLE-33": "923ec5bab91cbab26b1d84f8cc562fb21c14c8fd5b4f1bcd9691cadd9aaa2def",
-    "USMLE-34": "8f006d628041997751cd8467c1b309ea030e199424a253e43b1e7438edc9fc20",
     "USMLE-35": "2b2e8b0cf00fa5d9a50eb522e295c6e6af2184bd97f3a520f7dc29acd2c72a6d",
     "USMLE-36": "dcf26c7380be729bdaade7241141968bd3ddfbfb4de12001bebf5fbf224668d1",
     "USMLE-37": "f9eeade4f081972002a7b0aff438825025ac82459566e6d8280d191e572a6609",

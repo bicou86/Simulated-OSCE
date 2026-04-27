@@ -146,3 +146,100 @@ describe("Fixtures pilotes multi-profils — audit déclaratif (Phase 4 J4)", ()
     }
   });
 });
+
+// ─── Phase 5 J1 — audit déclaratif des 3 stations pilotes médico-légales ───
+//
+// Pour chaque pilote, on vérifie que :
+//   • la station a bien un legalContext valide (parsé via stationSchema),
+//   • la category, expected_decision et mandatory_reporting sont
+//     conformes au design Q2 (cf. docs/architecture/phase-4.md à venir),
+//   • les 9 champs du legalContext sont présents et non vides,
+//   • getPatientBrief() N'EXPOSE PAS legalContext (ni decision_rationale)
+//     côté client (vérification de la rétrocompat brief Phase 4).
+
+interface LegalPilotExpectation {
+  shortId: string;
+  file: string;
+  expectedCategory: string;
+  expectedSubjectStatus: string;
+  expectedMandatory: boolean;
+  expectedDecision: string;
+}
+
+const LEGAL_PILOTS: LegalPilotExpectation[] = [
+  {
+    shortId: "AMBOSS-24",
+    file: "Patient_AMBOSS_2.json",
+    expectedCategory: "secret_pro_levee",
+    expectedSubjectStatus: "adult_capable",
+    expectedMandatory: false,
+    expectedDecision: "refer",
+  },
+  {
+    shortId: "USMLE-34",
+    file: "Patient_USMLE_2.json",
+    expectedCategory: "signalement_maltraitance",
+    expectedSubjectStatus: "adult_capable",
+    expectedMandatory: true,
+    expectedDecision: "report",
+  },
+  {
+    shortId: "RESCOS-72",
+    file: "Patient_RESCOS_4.json",
+    expectedCategory: "certificat_complaisance",
+    expectedSubjectStatus: "adult_capable",
+    expectedMandatory: false,
+    expectedDecision: "decline_certificate",
+  },
+];
+
+describe("Fixtures pilotes médico-légales — audit déclaratif (Phase 5 J1)", () => {
+  it.each(LEGAL_PILOTS)(
+    "$shortId : legalContext.category=$expectedCategory, decision=$expectedDecision, mandatory=$expectedMandatory",
+    async ({ shortId, file, expectedCategory, expectedSubjectStatus, expectedMandatory, expectedDecision }) => {
+      const station = await loadStationRaw(file, shortId);
+      expect(station).toBeDefined();
+      expect(station.legalContext).toBeDefined();
+      expect(station.legalContext.category).toBe(expectedCategory);
+      expect(station.legalContext.subject_status).toBe(expectedSubjectStatus);
+      expect(station.legalContext.mandatory_reporting).toBe(expectedMandatory);
+      expect(station.legalContext.expected_decision).toBe(expectedDecision);
+      // Les 9 champs du schéma final présents.
+      expect(Array.isArray(station.legalContext.applicable_law)).toBe(true);
+      expect(Array.isArray(station.legalContext.red_flags)).toBe(true);
+      expect(Array.isArray(station.legalContext.candidate_must_verbalize)).toBe(true);
+      expect(Array.isArray(station.legalContext.candidate_must_avoid)).toBe(true);
+      expect(typeof station.legalContext.decision_rationale).toBe("string");
+      expect(station.legalContext.decision_rationale.length).toBeGreaterThan(50);
+    },
+  );
+
+  it.each(LEGAL_PILOTS)(
+    "$shortId : getPatientBrief() N'EXPOSE PAS legalContext (server-only)",
+    async ({ shortId }) => {
+      await initCatalog();
+      const brief = await getPatientBrief(shortId);
+      const briefAsObj = brief as unknown as Record<string, unknown>;
+      expect(briefAsObj.legalContext).toBeUndefined();
+      expect(briefAsObj.decision_rationale).toBeUndefined();
+    },
+  );
+
+  it("USMLE-34 : enfants exposés ⇒ applicable_law inclut CP-364bis OU CC-443a", async () => {
+    const station = await loadStationRaw("Patient_USMLE_2.json", "USMLE-34");
+    const laws = station.legalContext.applicable_law as string[];
+    expect(laws.some((l) => /364bis/.test(l) || /443a/.test(l))).toBe(true);
+  });
+
+  it("RESCOS-72 : applicable_law inclut CP-318 (faux dans les titres)", async () => {
+    const station = await loadStationRaw("Patient_RESCOS_4.json", "RESCOS-72");
+    expect(station.legalContext.applicable_law).toEqual(
+      expect.arrayContaining(["CP-318"]),
+    );
+  });
+
+  it("AMBOSS-24 : decision_rationale doit citer le secret professionnel", async () => {
+    const station = await loadStationRaw("Patient_AMBOSS_2.json", "AMBOSS-24");
+    expect(station.legalContext.decision_rationale).toMatch(/secret professionnel/i);
+  });
+});

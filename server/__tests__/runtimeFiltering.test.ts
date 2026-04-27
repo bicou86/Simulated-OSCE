@@ -107,6 +107,48 @@ describe("Phase 4 J3 (fix) — non-régression mono-patient legacy", () => {
     expect(prompt).not.toMatch(/## TU INCARNES/);
   });
 
+  it.each([
+    { sid: "AMBOSS-24", file: "Patient_AMBOSS_2.json" },
+    { sid: "USMLE-34", file: "Patient_USMLE_2.json" },
+    { sid: "RESCOS-72", file: "Patient_RESCOS_4.json" },
+  ])(
+    "Phase 5 J1 — $sid : decision_rationale et legalContext absents du prompt LLM (META_FIELDS_TO_STRIP)",
+    async ({ sid, file }) => {
+      // Le patient/accompagnant ne doit JAMAIS connaître le cadre légal
+      // attendu (cf. invariant Phase 5 A). On vérifie que :
+      //   • decision_rationale, applicable_law, expected_decision,
+      //     red_flags, candidate_must_verbalize, candidate_must_avoid
+      //     n'apparaissent NULLE PART dans le prompt buildé,
+      //   • le mot-clé "legalContext" lui-même n'est pas leak,
+      //   • les expressions juridiques typiques (CP-321, CP-318,
+      //     CC-443a, CP-364bis) ne sont pas leak.
+      await initCatalog();
+      const station = await loadStationRaw(file, sid);
+      const participants = getStationParticipants(station);
+      const target = participants[0];
+      const prompt = await buildSystemPrompt(sid, "text", target, participants);
+      // Le mot-clé du champ ne fuit pas.
+      expect(prompt).not.toMatch(/"legalContext"/);
+      expect(prompt).not.toMatch(/decision_rationale/i);
+      expect(prompt).not.toMatch(/expected_decision/i);
+      expect(prompt).not.toMatch(/applicable_law/i);
+      expect(prompt).not.toMatch(/candidate_must_verbalize/i);
+      expect(prompt).not.toMatch(/candidate_must_avoid/i);
+      expect(prompt).not.toMatch(/mandatory_reporting/i);
+      expect(prompt).not.toMatch(/subject_status/i);
+      // Articles de loi typiques absents.
+      expect(prompt).not.toMatch(/CP-32[01]/);
+      expect(prompt).not.toMatch(/CP-364bis/);
+      expect(prompt).not.toMatch(/CC-443a/);
+      expect(prompt).not.toMatch(/CDM-FMH/);
+      // Catégorie de la station non leak (ne doit pas apparaître via tags
+      // ou autre — déjà strippé par META_FIELDS_TO_STRIP).
+      expect(prompt).not.toMatch(/secret_pro_levee/);
+      expect(prompt).not.toMatch(/signalement_maltraitance/);
+      expect(prompt).not.toMatch(/certificat_complaisance/);
+    },
+  );
+
   it("RESCOS-1 (mono, target synthétique du runtime J2) ⇒ id et tags strippés mais prompt cohérent", async () => {
     // Quand le pipeline runtime synthétise un participant unique pour
     // mono-patient, le filtre s'applique et les meta-fields disparaissent.

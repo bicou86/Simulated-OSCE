@@ -23,6 +23,8 @@ import {
 } from "@shared/patientLeakDetection";
 import {
   getStationParticipants,
+  legalContextSchema,
+  type LegalContext,
   type Participant,
   type ParticipantRole,
   type ParticipantSections,
@@ -62,6 +64,36 @@ export async function getPatientStation(stationId: string): Promise<any> {
     return fallback;
   }
   return station;
+}
+
+// Phase 5 J1 — accès server-only au cadre médico-légal d'une station.
+//
+// Retourne :
+//   • le `LegalContext` parsé Zod si la station l'a déclaré,
+//   • `null` sinon (rétrocompat 100 % stations sans qualification).
+//
+// Cet helper est consommé par l'évaluateur médico-légal J2
+// (`/api/evaluation/legal`) — JAMAIS exposé via getPatientBrief ni
+// injecté dans un prompt LLM (cf. META_FIELDS_TO_STRIP). C'est l'unique
+// point d'entrée propre pour lire `legalContext.decision_rationale`,
+// `expected_decision`, `red_flags`, etc.
+export async function getLegalContext(stationId: string): Promise<LegalContext | null> {
+  const station = await getPatientStation(stationId);
+  const raw = (station as { legalContext?: unknown }).legalContext;
+  if (raw === undefined || raw === null) return null;
+  // safeParse pour ne pas crasher la chaîne si une station a un
+  // legalContext malformé qui aurait échappé au validateur boot —
+  // on retourne null + log d'audit plutôt que de throw côté évaluateur.
+  const parsed = legalContextSchema.safeParse(raw);
+  if (!parsed.success) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[getLegalContext] ${stationId}: legalContext malformé, ignoré.`,
+      parsed.error.issues,
+    );
+    return null;
+  }
+  return parsed.data;
 }
 
 export interface PatientBrief {
@@ -360,6 +392,12 @@ function deleteAtPath(obj: Record<string, unknown>, path: string): void {
 //     séparément).
 //   • `register`, `patient_age_years`, `source_scenario` → flags Phase 3 J3
 //     et compteurs internes, sans valeur narrative.
+//   • `legalContext` (Phase 5 J1) → qualification médico-légale qui
+//     contient `decision_rationale`, `applicable_law`, `expected_decision` —
+//     informations que le patient/accompagnant ne doit JAMAIS connaître
+//     (cf. invariant Phase 5 A : le patient ne cite jamais le bon cadre
+//     légal lui-même). Le contexte est consulté via `getLegalContext`
+//     côté serveur uniquement, par l'évaluateur médico-légal (J2).
 const META_FIELDS_TO_STRIP = [
   "id",
   "tags",
@@ -368,6 +406,7 @@ const META_FIELDS_TO_STRIP = [
   "source_scenario",
   "participants",
   "participantSections",
+  "legalContext",
 ];
 
 export function filterStationByScope(

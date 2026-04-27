@@ -5319,6 +5319,126 @@
           "full_scenario"
         ]
       }
+    },
+    {
+      "id": "RESCOS-72 - Certificat de complaisance - Arrêt de travail abusif",
+      "setting": "Cabinet de médecine générale",
+      "patient_description": "M. Marc Bernard, 34 ans, ingénieur en système d'information, consulte sans rendez-vous pour une « lombalgie aiguë » et demande un arrêt de travail d'une semaine.",
+      "vitals": {
+        "ta": "128/82 mmHg",
+        "fc": "76 bpm",
+        "fr": "16/min",
+        "temperature": "36.8°C",
+        "spo2": "99%"
+      },
+      "source_scenario": true,
+      "nom": "Marc Bernard",
+      "age": "34 ans",
+      "patient_age_years": 34,
+      "tags": [
+        "certificat-complaisance",
+        "AT-abusif",
+        "MG-suisse",
+        "secret-pro"
+      ],
+      "contexte": "Cabinet de médecine générale en Suisse romande. M. Bernard se présente sans rendez-vous le mardi matin et demande explicitement « un papier pour 7 jours d'arrêt » pour cause de « lombalgie aiguë depuis dimanche soir ». En réalité — élément CACHÉ, à révéler uniquement si le médecin pose un cadre bienveillant et non-jugeant — il quitte mercredi pour 10 jours de road trip aux États-Unis avec un ami ; ses congés ont été refusés la semaine dernière par son employeur en raison d'une charge de travail exceptionnelle (deadline projet). Il a déjà payé son billet d'avion (2200 CHF) et son hébergement non-remboursable. L'examen clinique est strictement normal : pas de douleur à la palpation paravertébrale, Lasègue négatif bilatéral, ROT symétriques, pas de raideur réelle (il se penche pour ramasser sa veste sans grimace).",
+      "ouverture": "Bonjour docteur. Euh… j'aurais besoin d'un papier d'arrêt.",
+      "ouverture_complement": "J'ai super mal au dos depuis dimanche, je peux pas bosser comme ça. Une semaine ça devrait suffire.",
+      "consignes_jeu": [
+        "Tu joues Marc, 34 ans, ingénieur SI dans une grande entreprise lausannoise. Tu es bien portant, en bonne santé, aucun antécédent. Ton EXAMEN clinique est normal — tu ne dois pas mimer de douleur à la palpation ni de Lasègue positif.",
+        "Au début de la consultation, tu insistes sur la « lombalgie aiguë depuis dimanche soir », tu cotes la douleur 8/10 mais tu marches normalement, tu t'assieds et te lèves sans difficulté, tu te penches sans grimace. Tu réponds vague aux questions précises (« ça lance, ça serre, je sais pas trop »).",
+        "Si le médecin reste FACTUEL et te demande d'expliquer comment tu as fait ce matin (douche, métro, ramasser quelque chose), tu te trahis : tu décris une journée normale avec des activités incompatibles avec la douleur que tu décris.",
+        "Tu NIES catégoriquement toute autre raison à ta demande tant que le médecin n'a pas posé un cadre BIENVEILLANT et explicite (« Je ne suis pas là pour vous juger, mais j'ai besoin de comprendre ce qui se passe vraiment pour vous aider »). Tu peux refuser une fois ou deux la confidence.",
+        "Si le cadre est respectueux et non-jugeant, tu finis par t'effondrer et avouer : « OK je vous mens. Je pars 10 jours aux États-Unis demain avec mon pote, j'ai déjà payé 2200 balles, mes congés ont été refusés la semaine dernière, je sais pas quoi faire. » Tu insistes alors pour qu'il « comprenne » et te fasse l'arrêt « pour cette fois ».",
+        "Si le médecin REFUSE le certificat (réponse canonique attendue), tu peux montrer une frustration mesurée mais respectueuse, demander des alternatives. Tu acceptes finalement l'orientation vers une discussion avec ton employeur ou des congés sans solde.",
+        "Si le médecin fait un certificat de complaisance (réponse FAUSSE), tu pars rapidement, soulagé. Note : ce comportement n'est pas la trajectoire pédagogique attendue.",
+        "Tu n'es pas soignant — tu n'utilises JAMAIS de jargon médical (ni « lombalgie d'effort », ni « antalgie », ni « hernie », ni « sciatique »). Tu dis « mal au dos », « ça me fait mal quand je bouge », « ça serre »."
+      ],
+      "histoire_actuelle": {
+        "symptomePrincipal": [
+          "Plainte affichée : « lombalgie aiguë depuis dimanche soir », cotée 8/10",
+          "Plainte vague et non spécifique (pas d'irradiation, pas d'horaire mécanique clair)",
+          "Pas de notion de traumatisme ni d'effort déclencheur",
+          "Comportement clinique INCOMPATIBLE avec la plainte (marche normale, position assise sans gêne, flexion sans grimace)"
+        ],
+        "symptomesAssocies": [
+          "Pas de troubles sphinctériens, pas de paresthésie, pas de déficit moteur",
+          "Pas de fièvre, pas de perte de poids, pas de réveil nocturne",
+          "Sommeil et appétit conservés"
+        ],
+        "contexteVie": [
+          "Ingénieur en système d'information dans grande entreprise lausannoise",
+          "Bonne santé habituelle, aucun arrêt de travail antérieur",
+          "Demande de congés refusée la semaine dernière (charge de travail / deadline)",
+          "Voyage prévu de 10 jours aux États-Unis à partir de mercredi (déjà payé 2200 CHF)"
+        ]
+      },
+      "motif_cache": {
+        "description": "Le motif affiché (lombalgie aiguë) est intégralement fabriqué pour obtenir un certificat médical d'arrêt de travail couvrant un voyage personnel. Marc cherche un certificat de complaisance pour ne pas perdre son projet financier (vol + hébergement non-remboursable) et éviter le conflit avec son employeur.",
+        "conditions_revelation": "Marc révèle le motif réel UNIQUEMENT si (a) le médecin renonce au questionnement médical déductif et passe à un cadre EXPLICITEMENT bienveillant et non-jugeant (« je suis là pour vous aider, pas pour vous juger »), ET (b) reformule la disjonction entre la plainte et l'examen normal sans agressivité. Sinon Marc maintient sa version et insiste, parfois en haussant le ton."
+      },
+      "antecedents": {
+        "medicaux": "rien à signaler. Pas de pathologie chronique, pas de traitement habituel.",
+        "chirurgicaux": "appendicectomie à 14 ans, sans complication.",
+        "traumatologiques": "aucun antécédent de lombalgie, aucun traumatisme dorsal récent ou ancien.",
+        "psy": "rien — pas de suivi, pas de plainte d'ordre psy.",
+        "familiaux": "père HTA équilibrée, mère bien portante, pas d'antécédent rhumatologique ou neurologique familial.",
+        "traitements_en_cours": "aucun."
+      },
+      "examen_resultats": {
+        "e1": {
+          "examen": "Examen général",
+          "resultat": "Patient en très bon état général, marche aisée dans la salle d'attente, pas de boiterie, posture assise sans antalgie, se penche pour ramasser sa veste sans grimace. Poids 78 kg, taille 1.82 m, IMC 23.5."
+        },
+        "e2": {
+          "examen": "Examen rachis lombaire",
+          "resultat": "Pas de douleur à la palpation des épineuses ni des paravertébraux. Mobilités flexion/extension/inclinaisons complètes sans grimace. Pas de défense, pas de contracture."
+        },
+        "e3": {
+          "examen": "Lasègue bilatéral",
+          "resultat": "Lasègue négatif à droite et à gauche jusqu'à 80°, pas de douleur radiculaire, pas de signe de Bragard."
+        },
+        "e4": {
+          "examen": "Examen neurologique des membres inférieurs",
+          "resultat": "ROT rotuliens et achilléens symétriques, sensibilité conservée, force musculaire 5/5 partout, pas de signe de queue de cheval."
+        }
+      },
+      "legalContext": {
+        "category": "certificat_complaisance",
+        "jurisdiction": "CH",
+        "subject_status": "adult_capable",
+        "applicable_law": [
+          "CP-318",
+          "CDM-FMH-art-34",
+          "CO-art-324a"
+        ],
+        "mandatory_reporting": false,
+        "expected_decision": "decline_certificate",
+        "decision_rationale": "Patient adulte capable, plainte fabriquée, examen clinique strictement normal, contexte révélant une demande non médicale (voyage personnel, conflit employeur). Émettre un certificat d'incapacité de travail dans ces conditions tomberait sous CP-318 (faux dans les titres : « celui qui aura constaté faussement, par écrit, dans un titre d'une portée importante des faits ayant une portée juridique »), engagerait la responsabilité disciplinaire FMH (CDM art. 34 « le médecin n'établit pas d'attestation contraire à la vérité ») et exposerait à des poursuites pénales du médecin lui-même. Décision canonique : REFUSER le certificat de manière pédagogique, expliquer le cadre légal, valider la difficulté de la situation (perte financière, conflit pro), proposer des alternatives non frauduleuses (dialogue avec l'employeur, congés sans solde, médiation RH, consultation psy si la situation génère une vraie souffrance).",
+        "red_flags": [
+          "plainte vague et non spécifique",
+          "examen clinique strictement normal",
+          "comportement incompatible avec la douleur cotée 8/10",
+          "demande explicite et chiffrée d'un arrêt précis (« 7 jours »)",
+          "contexte révélé : voyage personnel non remboursable + congés refusés",
+          "absence d'antécédent et d'événement déclenchant"
+        ],
+        "candidate_must_verbalize": [
+          "refus motivé du certificat médical",
+          "cadre légal du faux dans les titres (CP-318)",
+          "responsabilité disciplinaire FMH (CDM art. 34)",
+          "alternatives non frauduleuses (dialogue employeur, congés sans solde, médiation)",
+          "validation empathique de la difficulté du patient",
+          "préservation de la relation thérapeutique malgré le refus"
+        ],
+        "candidate_must_avoid": [
+          "émettre le certificat « pour cette fois »",
+          "refuser sans expliquer le cadre légal",
+          "moraliser ou juger le patient",
+          "menacer de signaler le patient à l'employeur",
+          "rompre la relation thérapeutique de manière abrupte"
+        ]
+      }
     }
   ]
 }

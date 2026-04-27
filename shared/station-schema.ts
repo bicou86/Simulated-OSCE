@@ -68,10 +68,95 @@ export const participantSectionsSchema = z.record(
 );
 export type ParticipantSections = z.infer<typeof participantSectionsSchema>;
 
+// Phase 5 J1 — `legalContext` : qualification médico-légale d'une station.
+//
+// Champ STATION-LEVEL, additif et OPTIONNEL. Décrit le cadre juridique
+// suisse applicable, la décision attendue, les faits objectifs qui la
+// justifient, et les concepts que le candidat doit verbaliser ou éviter.
+// Consommé par l'évaluateur médico-légal (J2) qui en dérive un score
+// gradé 0/1/2 par item agrégé en pourcentage par axe.
+//
+// INVARIANTS
+//   • Le champ `decision_rationale` (et plus généralement TOUT
+//     `legalContext`) est strippé par `META_FIELDS_TO_STRIP` dans
+//     `filterStationByScope` — JAMAIS injecté au LLM patient
+//     (cf. invariant Phase 5 A : le patient ne cite jamais le bon
+//     cadre légal lui-même).
+//   • Schéma additif strict : aucun champ n'est rebaptisé. Les 286
+//     stations historiques continuent de parser sans annotation.
+//   • Pas de LLM dans la validation : Zod déterministe.
+//   • Le scoring (gradé 0/1/2) est isolé dans /api/evaluation/legal —
+//     ne touche pas les 5 axes Phase 2/3 (anamnese, examen, management,
+//     cloture, communication).
+export const legalCategorySchema = z.enum([
+  "signalement_maltraitance",
+  "signalement_danger_tiers",
+  "secret_pro_levee",
+  "certificat_complaisance",
+  "declaration_obligatoire",
+]);
+export type LegalCategory = z.infer<typeof legalCategorySchema>;
+
+// `subject_status` pilote l'arsenal légal applicable :
+//   • minor          ⇒ CP 364bis / CC 307–315 (protection de l'enfant)
+//   • adult_capable  ⇒ CP 321 / CDM FMH (cadre standard)
+//   • adult_incapable ⇒ CC 443a (signalement à l'APEA, capacité de
+//                                discernement insuffisante)
+export const legalSubjectStatusSchema = z.enum([
+  "minor",
+  "adult_capable",
+  "adult_incapable",
+]);
+export type LegalSubjectStatus = z.infer<typeof legalSubjectStatusSchema>;
+
+// Décision attendue — pilote le scoring axe « décision » dans l'évaluateur :
+//   • report             ⇒ signaler à l'autorité (APEA / police / OFSP)
+//   • no_report          ⇒ ne PAS signaler (faits insuffisants /
+//                          confidentialité prime)
+//   • defer              ⇒ différer (recueil d'éléments, deuxième consult)
+//   • refer              ⇒ orienter (foyer, gynéco-obstétrique, juriste FMH)
+//   • decline_certificate ⇒ refuser le certificat
+export const legalExpectedDecisionSchema = z.enum([
+  "report",
+  "no_report",
+  "defer",
+  "refer",
+  "decline_certificate",
+]);
+export type LegalExpectedDecision = z.infer<typeof legalExpectedDecisionSchema>;
+
+// Juridiction — par défaut « CH » (droit fédéral suisse). Évolutivité
+// cantonale réservée pour Phase 6 ; les 3 pilotes Phase 5 J1 sont
+// fédéral-only (`applicable_law` reste cantonal-agnostic).
+export const legalJurisdictionSchema = z.enum([
+  "CH",
+  "VD",
+  "GE",
+  "BE",
+  "FR",
+  "ZH",
+]);
+export type LegalJurisdiction = z.infer<typeof legalJurisdictionSchema>;
+
+export const legalContextSchema = z.object({
+  category: legalCategorySchema,
+  jurisdiction: legalJurisdictionSchema.optional(),
+  subject_status: legalSubjectStatusSchema,
+  applicable_law: z.array(z.string().min(1)).min(1),
+  mandatory_reporting: z.boolean(),
+  expected_decision: legalExpectedDecisionSchema,
+  decision_rationale: z.string().min(1),
+  red_flags: z.array(z.string().min(1)).min(1),
+  candidate_must_verbalize: z.array(z.string().min(1)).min(1),
+  candidate_must_avoid: z.array(z.string().min(1)),
+});
+export type LegalContext = z.infer<typeof legalContextSchema>;
+
 // Schéma de station permissif :
 //   • `id` requis (déjà invariant fort dans stationsService),
-//   • `participants` optionnel (J1),
-//   • `participantSections` optionnel (J3),
+//   • `participants` optionnel (Phase 4 J1),
+//   • `participantSections` optionnel (Phase 4 J3),
+//   • `legalContext` optionnel (Phase 5 J1),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
 //     décrire — l'objectif est seulement de typer les champs additifs.
@@ -80,6 +165,7 @@ export const stationSchema = z
     id: z.string().min(1),
     participants: z.array(participantSchema).optional(),
     participantSections: participantSectionsSchema.optional(),
+    legalContext: legalContextSchema.optional(),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;
