@@ -93,10 +93,17 @@ describe("filterStationByScope — Phase 4 J3", () => {
     expect(ant.traitements_en_cours).toBeUndefined(); // contraception only
   });
 
-  it("station sans participantSections ⇒ identité (clone, sans muter l'original)", () => {
+  it("station sans participantSections ⇒ champs cliniques préservés (clone), méta strippés", () => {
+    // Phase 4 J3 (fix runtime) — meta-fields (id, tags, register, …) sont
+    // systématiquement strippés dès qu'on entre dans filterStationByScope :
+    // ils ne servent pas au LLM et risquent de leak le pitch (cf. cas
+    // RESCOS-70 où l'id contient « Contraception cachée »).
     const station = { id: "X", nom: "Mr. X", vitals: { ta: "120/80" } };
     const out = filterStationByScope(station, []);
-    expect(out).toEqual(station);
+    // L'id est systématiquement strippé (même en l'absence de règles).
+    expect(out.id).toBeUndefined();
+    expect(out.nom).toBe("Mr. X");
+    expect(out.vitals).toEqual({ ta: "120/80" });
     // Vérification que c'est un clone (mutation indépendante).
     (out.vitals as Record<string, unknown>).ta = "MUTATED";
     expect((station.vitals as Record<string, unknown>).ta).toBe("120/80");
@@ -116,17 +123,50 @@ describe("filterStationByScope — Phase 4 J3", () => {
     expect(() => filterStationByScope(station, [])).not.toThrow();
   });
 
-  it("préserve les arrays et scalars hors règles", () => {
+  it("préserve les arrays et scalars hors règles ET hors meta-fields", () => {
+    // `tags` est désormais un meta-field globalement strippé (cf. fix
+    // runtime J3 — il leakait `effets-secondaires-pilule` sur RESCOS-70).
+    // Les autres clés non-listées sont préservées telles quelles.
     const station: Record<string, unknown> = {
       id: "X",
       tags: ["a", "b", "c"],
+      customArray: ["x", "y"],
       vitals: { ta: "120/80", fc: "70" },
       stationType: "anamnese_examen",
     };
     const out = filterStationByScope(station, []);
-    expect(out.tags).toEqual(["a", "b", "c"]);
+    expect(out.id).toBeUndefined();
+    expect(out.tags).toBeUndefined();
+    // Les arrays "non-meta" restent intactes.
+    expect(out.customArray).toEqual(["x", "y"]);
     expect(out.vitals).toEqual({ ta: "120/80", fc: "70" });
     expect(out.stationType).toBe("anamnese_examen");
+  });
+
+  it("strip systématique des 7 meta-fields (id, tags, register, patient_age_years, source_scenario, participants, participantSections)", () => {
+    const station: Record<string, unknown> = {
+      id: "X",
+      tags: ["a"],
+      register: "gyneco",
+      patient_age_years: 16,
+      source_scenario: true,
+      participants: [{ id: "p", role: "patient", name: "P", vocabulary: "lay", knowledgeScope: ["s"] }],
+      participantSections: { foo: ["bar"] },
+      // Champs cliniques préservés.
+      patient_description: "X is sick",
+      vitals: { ta: "120/80" },
+    };
+    const out = filterStationByScope(station, []);
+    expect(out.id).toBeUndefined();
+    expect(out.tags).toBeUndefined();
+    expect(out.register).toBeUndefined();
+    expect(out.patient_age_years).toBeUndefined();
+    expect(out.source_scenario).toBeUndefined();
+    expect(out.participants).toBeUndefined();
+    expect(out.participantSections).toBeUndefined();
+    // Champs cliniques préservés.
+    expect(out.patient_description).toBe("X is sick");
+    expect(out.vitals).toEqual({ ta: "120/80" });
   });
 
   it("règle avec 2 tags ⇒ visible si scope intersecte au moins UN tag (OR logique)", () => {

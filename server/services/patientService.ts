@@ -347,6 +347,29 @@ function deleteAtPath(obj: Record<string, unknown>, path: string): void {
   }
 }
 
+// Champs systématiquement retirés du JSON station avant injection dans le
+// prompt LLM cible-spécifique. Ce sont des métadonnées catalogue/runtime
+// qui (a) ne servent pas au LLM pour jouer son rôle et (b) peuvent leak
+// involontairement le scénario complet :
+//   • `id`, `tags` → titre + catégories qui révèlent le pitch (ex.
+//     « RESCOS-70 - Contraception cachée + effets secondaires », tags
+//     ["contraception", "effets-secondaires-pilule"]).
+//   • `participants`, `participantSections` → métadonnées de routage
+//     d'adresse et règles de cloisonnement (le LLM voit déjà son identité
+//     via le bloc "TU INCARNES" et la liste "AUTRES PRÉSENTS" injectés
+//     séparément).
+//   • `register`, `patient_age_years`, `source_scenario` → flags Phase 3 J3
+//     et compteurs internes, sans valeur narrative.
+const META_FIELDS_TO_STRIP = [
+  "id",
+  "tags",
+  "register",
+  "patient_age_years",
+  "source_scenario",
+  "participants",
+  "participantSections",
+];
+
 export function filterStationByScope(
   station: Record<string, unknown>,
   participantScope: string[],
@@ -355,10 +378,10 @@ export function filterStationByScope(
     | ParticipantSections
     | null;
   // Clone toujours, même sans rule, pour qu'on puisse en toute sécurité
-  // déposer le champ `participantSections` (qui ne doit JAMAIS apparaître
+  // déposer les champs métadonnées (qui ne doivent JAMAIS apparaître
   // dans le contexte LLM).
   const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
-  delete cloned.participantSections;
+  for (const f of META_FIELDS_TO_STRIP) delete cloned[f];
   if (!sections) return cloned;
   const scopeSet = new Set(participantScope);
   for (const [path, requiredTags] of Object.entries(sections)) {

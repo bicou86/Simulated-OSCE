@@ -56,19 +56,23 @@ describe("Phase 4 J3 — RESCOS-70 trifecta : cloisonnement Emma vs Mère", () =
     const participants = getStationParticipants(station);
     const mother = participants.find((p) => p.id === "mother")!;
     const prompt = await buildSystemPrompt("RESCOS-70", "text", mother, participants);
-    // ZÉRO leak des termes sensibles dans le prompt produit.
-    // Note : on excepte la directive lay vocabulaire (qui peut citer des
-    // mots médicaux comme exemples « interdits ») — le test cible uniquement
-    // le bloc <station_data> + identité.
-    const dataBlock = prompt.split("<station_data>")[1] ?? "";
-    const idBlock = prompt.split("## TU INCARNES")[1]?.split("##")[0] ?? "";
-    const sensitiveZone = dataBlock + "\n" + idBlock;
-    expect(sensitiveZone).not.toMatch(/cerazette/i);
-    expect(sensitiveZone).not.toMatch(/désogestrel/i);
-    expect(sensitiveZone).not.toMatch(/pilule/i);
-    expect(sensitiveZone).not.toMatch(/contracept/i);
-    expect(sensitiveZone).not.toMatch(/spotting/i);
-    expect(sensitiveZone).not.toMatch(/copain/i);
+    // ZÉRO leak des termes sensibles dans le PROMPT ENTIER. La version
+    // initiale du test slicait sur `prompt.split("<station_data>")[1]`,
+    // mais caregiver.md cite `<station_data>` deux fois dans ses
+    // instructions avant le bloc de données réel — l'index `[1]` était
+    // le morceau ENTRE deux mentions de la docstring caregiver, pas le
+    // bloc data. On vérifie maintenant le prompt complet en autorisant
+    // la directive vocabulaire (qui peut citer des termes médicaux comme
+    // exemples interdits, mais ne mentionne pas ces termes-ci).
+    expect(prompt).not.toMatch(/cerazette/i);
+    expect(prompt).not.toMatch(/désogestrel/i);
+    expect(prompt).not.toMatch(/spotting/i);
+    expect(prompt).not.toMatch(/copain/i);
+    // « pilule » et « contracept » : pas dans la directive vocabulaire
+    // lay non plus (cf. vocabularyConstraints.ts), donc on peut asserter
+    // strictement leur absence dans le prompt entier.
+    expect(prompt).not.toMatch(/\bpilule\b/i);
+    expect(prompt).not.toMatch(/\bcontracept/i);
     // Identité mère + template caregiver bien activé.
     expect(prompt).toMatch(/Mère d'Emma Delacroix/);
   });
