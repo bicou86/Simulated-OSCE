@@ -30,10 +30,15 @@ function flagClasses(flag: LabFlag): string {
   }
 }
 
+// Label court pour la pill de flag — 4 chars max sur "CRIT" pour tenir dans
+// la colonne Flag à 1280px de viewport sans clipping (cf. fix-j4 column
+// width). Convention biologie hospitalière FR (Synlab/Unilabs) : "CRIT" =
+// valeur critique. Le flag kind sous-jacent reste "critical" — c'est ce que
+// voit Sonnet via station.examens_complementaires, pas le label UI.
 function flagLabel(flag: LabFlag): string {
   switch (flag) {
     case "critical":
-      return "CRITIQUE";
+      return "CRIT";
     case "low":
       return "bas";
     case "high":
