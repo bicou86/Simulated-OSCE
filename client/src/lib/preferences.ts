@@ -136,6 +136,65 @@ export function participantSpeakerLabel(
   return "Tiers";
 }
 
+// Phase 4 J4 — avatar emoji par participant. Déterministe : déduit de
+// l'âge + rôle + préfixe du nom (Mère/Père/Parent). Pas de table d'images
+// custom (rétrocompat licence stricte b — les emojis Unicode sont libres).
+//
+// Heuristique :
+//   • patient + age<2 ⇒ 👶
+//   • patient + age<12 ⇒ 🧒
+//   • patient + age<60 ⇒ 🧑
+//   • patient + age≥60 ⇒ 👴
+//   • accompanying + nom commence par « Mère / Maman » ⇒ 👩
+//   • accompanying + nom commence par « Père / Papa » ⇒ 👨
+//   • accompanying + nom commence par « Parent » ⇒ 🧑‍🤝‍🧑
+//   • witness ou défaut ⇒ 🧑
+export function participantAvatar(p: {
+  role: "patient" | "accompanying" | "witness";
+  age?: number;
+  name: string;
+}): string {
+  if (p.role === "patient") {
+    if (typeof p.age === "number") {
+      if (p.age < 2) return "👶";
+      if (p.age < 12) return "🧒";
+      if (p.age < 60) return "🧑";
+      return "👴";
+    }
+    return "🧑";
+  }
+  const nameLower = p.name.toLowerCase();
+  if (/^(m[èe]re|maman)\b/.test(nameLower)) return "👩";
+  if (/^(p[èe]re|papa)\b/.test(nameLower)) return "👨";
+  if (/^parent\b/.test(nameLower)) return "🧑‍🤝‍🧑";
+  return "🧑";
+}
+
+// Phase 4 J4 — classe Tailwind ciblée pour la couleur d'accent par rôle.
+// Patient = bleu (focus médical), accompagnant = vert (registre tiers),
+// témoin = orange (rare). Reste cohérent avec le reste de l'UI ECOS.
+export function participantAccentClass(role: "patient" | "accompanying" | "witness"): {
+  badge: string;
+  ring: string;
+} {
+  if (role === "patient") {
+    return {
+      badge: "bg-blue-100 text-blue-900 border-blue-300",
+      ring: "ring-blue-300",
+    };
+  }
+  if (role === "accompanying") {
+    return {
+      badge: "bg-emerald-100 text-emerald-900 border-emerald-300",
+      ring: "ring-emerald-300",
+    };
+  }
+  return {
+    badge: "bg-amber-100 text-amber-900 border-amber-300",
+    ring: "ring-amber-300",
+  };
+}
+
 // Libellé pour la feuille de porte sous "Patient" (quand type=parent).
 // "la mère" / "le père" / "l'accompagnant·e".
 export function interlocutorArticle(brief: Pick<PatientBrief, "interlocutor"> | null | undefined): string {

@@ -17,12 +17,15 @@ import { MicLevelIndicator } from "@/components/MicLevelIndicator";
 import { ExaminerImage } from "@/components/ExaminerImage";
 import { ExaminerLabs } from "@/components/ExaminerLabs";
 import { ClarificationPanel } from "@/components/ClarificationPanel";
+import { CurrentSpeakerBadge } from "@/components/CurrentSpeakerBadge";
+import { SpeakerSwitchButtons } from "@/components/SpeakerSwitchButtons";
 import {
   getConversationPreferences,
   getPreferredVoice,
   getVoicePreferences,
   interlocutorArticle,
   interlocutorSpeakerLabel,
+  participantAvatar,
   participantSpeakerLabel,
   resolveVoice,
 } from "@/lib/preferences";
@@ -859,6 +862,33 @@ export default function Simulation() {
           />
         </div>
 
+        {/* Phase 4 J4 — barre dual-speaker. Visible UNIQUEMENT pour les
+            stations multi-profils (CurrentSpeakerBadge et
+            SpeakerSwitchButtons retournent null si participants.length<2),
+            donc rétrocompat 100 % sur les stations mono-patient legacy. */}
+        {brief?.participants && brief.participants.length >= 2 && (
+          <div className="border-b border-border/50 bg-muted/30 px-4 py-2 flex flex-wrap items-center gap-3">
+            <CurrentSpeakerBadge brief={brief} currentSpeakerId={currentSpeakerId} />
+            <div className="flex-1" />
+            <SpeakerSwitchButtons
+              brief={brief}
+              currentSpeakerId={currentSpeakerId}
+              disabled={!isActive || timedOut}
+              onSwitch={(p) => {
+                // Insère le tag « [À NAME] » au début du textarea s'il
+                // n'y est pas déjà. Le serveur consommera ce tag à la
+                // prochaine soumission via routeAddress.
+                const tag = `[À ${p.name}] `;
+                setTextInput((prev) => (prev.startsWith(tag) ? prev : tag + prev));
+                // On met aussi à jour currentSpeakerId localement pour
+                // que le badge bascule immédiatement (le serveur le
+                // confirmera avec son event `speaker` au tour suivant).
+                setCurrentSpeakerId(p.id);
+              }}
+            />
+          </div>
+        )}
+
         <div className="flex-1 overflow-y-auto p-6 md:p-10 space-y-6">
           {transcript.length === 0 && !hasStarted ? (
             <div className="h-full flex flex-col items-center justify-center text-muted-foreground opacity-60">
@@ -996,12 +1026,23 @@ export default function Simulation() {
                   msg.role === "patient" && msg.speakerId
                     ? participantSpeakerLabel(brief, msg.speakerId)
                     : interlocutorSpeakerLabel(brief);
+                // Phase 4 J4 — avatar + footer du participant qui parle
+                // (multi-profils uniquement). Sur mono-patient, footer/avatar
+                // omis pour ne pas polluer l'UI legacy.
+                const speakerParticipant =
+                  msg.role === "patient" && msg.speakerId && brief?.participants
+                    ? brief.participants.find((p) => p.id === msg.speakerId)
+                    : null;
+                const speakerAvatar = speakerParticipant
+                  ? participantAvatar(speakerParticipant)
+                  : null;
                 return (
                   <div key={idx} data-testid={`bubble-${msg.role}`} className={cn(
                     "flex flex-col max-w-[85%] animate-in fade-in slide-in-from-bottom-2",
                     msg.role === "patient" ? "items-start" : "items-end ml-auto",
                   )}>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2 flex items-center gap-1.5">
+                      {speakerAvatar && <span aria-hidden className="text-base leading-none">{speakerAvatar}</span>}
                       {msg.role === "patient" ? `${patientLabel} (voix IA)` : "Étudiant / Médecin"}
                     </span>
                     <div className={cn(
@@ -1012,16 +1053,33 @@ export default function Simulation() {
                     )}>
                       {msg.text}
                     </div>
+                    {speakerParticipant && (
+                      <span
+                        data-testid={`bubble-footer-${msg.speakerId}`}
+                        className="text-[11px] text-muted-foreground mt-1 px-2"
+                      >
+                        — {speakerParticipant.name}
+                      </span>
+                    )}
                   </div>
                 );
               })}
 
-              {isStreaming && partialText && (
+              {isStreaming && partialText && (() => {
+                // Phase 4 J4 — avatar/footer du participant qui parle pour
+                // la bulle de stream en cours (avant que le tour ne soit
+                // commit en transcript).
+                const streamParticipant =
+                  streamingSpeaker?.speakerId && brief?.participants
+                    ? brief.participants.find((p) => p.id === streamingSpeaker.speakerId)
+                    : null;
+                const streamAvatar = streamParticipant
+                  ? participantAvatar(streamParticipant)
+                  : null;
+                return (
                 <div data-testid="bubble-patient-streaming" className="flex flex-col max-w-[85%] items-start animate-in fade-in slide-in-from-bottom-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2">
-                    {/* Phase 4 J2 — si le serveur a déjà émis l'event speaker
-                        pour ce tour, on affiche le label du participant qui
-                        répond ; sinon on retombe sur le label legacy. */}
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1 px-2 flex items-center gap-1.5">
+                    {streamAvatar && <span aria-hidden className="text-base leading-none">{streamAvatar}</span>}
                     {streamingSpeaker
                       ? participantSpeakerLabel(brief, streamingSpeaker.speakerId)
                       : interlocutorSpeakerLabel(brief)} (voix IA)
@@ -1030,8 +1088,14 @@ export default function Simulation() {
                     {partialText}
                     <span className="ml-1 inline-block w-2 h-5 bg-primary/60 align-middle animate-pulse" />
                   </div>
+                  {streamParticipant && (
+                    <span className="text-[11px] text-muted-foreground mt-1 px-2">
+                      — {streamParticipant.name}
+                    </span>
+                  )}
                 </div>
-              )}
+                );
+              })()}
 
               {((isSending && !isStreaming) || isTranscribing) && (
                 <div className="flex items-start max-w-[85%] opacity-70">
