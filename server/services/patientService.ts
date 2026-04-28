@@ -31,6 +31,7 @@ import {
 } from "@shared/station-schema";
 import { routeAddress, type RouteResult } from "./addressRouter";
 import { buildLayVocabularyDirective } from "../lib/vocabularyConstraints";
+import { buildLegalLeakDirective } from "../lib/legalLexicon";
 
 // Cache des fichiers JSON déjà parsés (clé = filename).
 const fileCache = new Map<string, any[]>();
@@ -293,17 +294,39 @@ export async function buildSystemPrompt(
   const vocabularyDirective =
     target && target.vocabulary === "lay" ? buildLayVocabularyDirective() : "";
 
+  // Phase 5 J3 — cloisonnement médico-légal : si la station déclare un
+  // legalContext, on injecte une directive de blacklist (codes de loi
+  // spécifiques + concepts juridiques transversaux) PLUS un garde-fou
+  // sémantique. Conditionnel strict : aucun effet sur les stations
+  // sans legalContext (= 285/288 stations historiques inchangées). Le
+  // bloc legalContext lui-même reste strippé via META_FIELDS_TO_STRIP
+  // (cf. invariant Phase 5 A : le patient ne voit jamais le rationale).
+  const rawLegal = (station as { legalContext?: { applicable_law?: string[] } })
+    .legalContext;
+  const legalLeakDirective =
+    rawLegal && Array.isArray(rawLegal.applicable_law)
+      ? buildLegalLeakDirective(rawLegal.applicable_law)
+      : "";
+
   // Phase 4 J3 — cloisonnement : si la station déclare des
   // `participantSections` ET qu'on a un target avec un knowledgeScope, on
   // filtre les sections sensibles avant injection. Pour les stations sans
   // règles, le filtre est l'identité (les invariants ECOS legacy
   // s'appliquent à l'identique).
+  //
+  // Phase 5 J3 — cas mono-patient avec legalContext :
+  // si target est absent (chemin legacy 285+ stations), on conserve
+  // strictement le prompt historique sauf pour `legalContext` qui DOIT
+  // être strippé (sinon le rationale fuiterait au LLM patient — cf.
+  // invariant Phase 5 A). Pour les autres META_FIELDS (id, tags, …) on
+  // conserve la sémantique legacy d'avant J3 par souci de
+  // non-régression sur le prompt des stations historiques.
   const filteredStation = target
     ? filterStationByScope(
         station as Record<string, unknown>,
         target.knowledgeScope,
       )
-    : (station as Record<string, unknown>);
+    : stripLegalContextOnly(station as Record<string, unknown>);
 
   const dataBlock = `\n\n<station_data>\n${JSON.stringify(filteredStation, null, 2)}\n</station_data>`;
   const modeDirective = mode === "text" ? TEXT_MODE_DIRECTIVE : "";
@@ -312,6 +335,7 @@ export async function buildSystemPrompt(
     identityBlock +
     othersBlock +
     vocabularyDirective +
+    legalLeakDirective +
     specialtyDirective +
     modeDirective +
     dataBlock
@@ -408,6 +432,22 @@ const META_FIELDS_TO_STRIP = [
   "participantSections",
   "legalContext",
 ];
+
+// Phase 5 J3 — variante minimale du strip pour le chemin mono-patient
+// legacy. On clone la station et on retire UNIQUEMENT `legalContext` —
+// les autres META_FIELDS (id, tags, …) restent en place pour préserver
+// strictement le prompt historique des 285+ stations sans qualification
+// médico-légale (invariant J3 #3 : prompt mono-patient sans legalContext
+// inchangé). Les stations Phase 5 (AMBOSS-24, USMLE-34, RESCOS-72) qui
+// passent ici (target absent) bénéficient quand même du strip de leur
+// legalContext.decision_rationale.
+export function stripLegalContextOnly(
+  station: Record<string, unknown>,
+): Record<string, unknown> {
+  const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
+  delete cloned.legalContext;
+  return cloned;
+}
 
 export function filterStationByScope(
   station: Record<string, unknown>,

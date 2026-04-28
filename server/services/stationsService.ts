@@ -10,6 +10,7 @@ import { extractAge, extractSex } from "../lib/patientSex";
 import { resolveInterlocutor } from "../lib/patientInterlocutor";
 import { inferStationType, type StationType } from "./stationTypeInference";
 import { stationSchema, type Participant, type ParticipantSections } from "@shared/station-schema";
+import { findUnmappedLawCodes } from "../lib/legalLexicon";
 
 export type StationSource = "AMBOSS" | "German" | "RESCOS" | "USMLE" | "USMLE_Triage";
 
@@ -150,6 +151,12 @@ export async function initCatalog(): Promise<void> {
     // (pas de runtime silencieux). Garde-fou anti-régression pour les
     // stations annotées (cf. spec utilisateur J3 invariants).
     await validateMultiProfileStations(patientFiles);
+    // Phase 5 J3 — verrou strict : pour toute station portant un
+    // legalContext, chaque code listé dans `applicable_law` doit avoir
+    // une entrée dans LEGAL_LAW_CODE_PATTERNS. Sinon le test de leak
+    // runtime serait aveugle sur ce code (faux négatif silencieux) et
+    // la directive prompt ne pourrait pas le citer dans la blacklist.
+    await validateLegalContextLawCodes(patientFiles);
   })();
   return initPromise;
 }
@@ -210,6 +217,41 @@ async function validateMultiProfileStations(patientFiles: string[]): Promise<voi
   }
 }
 
+// Phase 5 J3 — validateur strict des codes médico-légaux.
+//
+// Pour chaque station portant un `legalContext`, on vérifie que tout
+// code listé dans `applicable_law` est mappé dans LEGAL_LAW_CODE_PATTERNS.
+// Sinon (a) la blacklist directive ne pourrait pas citer le code dans
+// la liste « ne jamais nommer », et (b) les tests de leak runtime
+// auraient un trou : le code pourrait fuir dans le prompt sans être
+// détecté. Mieux vaut throw au boot avec un message clair que d'avoir
+// un faux positif silencieux en prod.
+async function validateLegalContextLawCodes(patientFiles: string[]): Promise<void> {
+  const errors: string[] = [];
+  for (const file of patientFiles) {
+    const content = await fs.readFile(path.join(PATIENT_DIR, file), "utf-8");
+    const parsed = JSON.parse(content) as { stations: Array<Record<string, unknown>> };
+    for (const rawStation of parsed.stations) {
+      const ctx = rawStation.legalContext as
+        | { applicable_law?: unknown }
+        | undefined;
+      if (!ctx || !Array.isArray(ctx.applicable_law)) continue;
+      const fullId = (rawStation.id as string) ?? "<no id>";
+      const codes = ctx.applicable_law.filter((c): c is string => typeof c === "string");
+      const unmapped = findUnmappedLawCodes(codes);
+      if (unmapped.length > 0) {
+        errors.push(
+          `[${fullId}] legalContext.applicable_law contient ${unmapped.length} code(s) non mappé(s) dans LEGAL_LAW_CODE_PATTERNS : ${unmapped.join(", ")}. Ajoutez l'entrée dans server/lib/legalLexicon.ts (humanLabel + detectPatterns) pour permettre la blacklist directive et le test de leak runtime.`,
+        );
+      }
+    }
+  }
+  if (errors.length > 0) {
+    const msg = `Validation Phase 5 J3 échouée :\n  - ${errors.join("\n  - ")}`;
+    throw new Error(msg);
+  }
+}
+
 // Walk a dotted path through a JSON object (1 or 2 levels). Retourne
 // `true` si la propriété existe (même `null`/`undefined`).
 function hasJsonPath(obj: unknown, path: string): boolean {
@@ -228,6 +270,7 @@ function hasJsonPath(obj: unknown, path: string): boolean {
 // règles cassées sont bien rejetées sans devoir relancer initCatalog).
 export const __test__ = {
   validateMultiProfileStations,
+  validateLegalContextLawCodes,
   hasJsonPath,
 };
 

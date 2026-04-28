@@ -12,8 +12,12 @@
 
 import { describe, expect, it } from "vitest";
 import {
+  buildLegalLeakDirective,
   countLexiconMatches,
+  findUnmappedLawCodes,
   LEGAL_AXES,
+  LEGAL_BLACKLIST_TERMS,
+  LEGAL_LAW_CODE_PATTERNS,
   LEGAL_LEXICON,
   LEGAL_LEXICON_VERSION,
   listLegalLexiconKeys,
@@ -256,6 +260,65 @@ describe("legalLexicon — exemples positifs et négatifs par entrée", () => {
     const missing: string[] = [];
     for (const k of lexiconKeys) if (!caseKeys.has(k)) missing.push(k);
     expect(missing, `entrée(s) sans test : ${missing.join(", ")}`).toEqual([]);
+  });
+});
+
+describe("legalLexicon — codes de loi (Phase 5 J3)", () => {
+  it("LEGAL_LAW_CODE_PATTERNS couvre les codes utilisés par les 3 pilotes", async () => {
+    const { promises: fs } = await import("fs");
+    const path = await import("path");
+    const PATIENT_DIR = path.resolve(__dirname, "..", "data", "patient");
+    const allCodes = new Set<string>();
+    const files = ["Patient_AMBOSS_2.json", "Patient_USMLE_2.json", "Patient_RESCOS_4.json"];
+    for (const f of files) {
+      const raw = await fs.readFile(path.join(PATIENT_DIR, f), "utf-8");
+      const parsed = JSON.parse(raw) as { stations: Array<Record<string, unknown>> };
+      for (const station of parsed.stations) {
+        const ctx = station.legalContext as { applicable_law?: string[] } | undefined;
+        if (!ctx?.applicable_law) continue;
+        for (const c of ctx.applicable_law) allCodes.add(c);
+      }
+    }
+    const unmapped = findUnmappedLawCodes([...allCodes]);
+    expect(unmapped, `codes non mappés : ${unmapped.join(", ")}`).toEqual([]);
+  });
+
+  it("findUnmappedLawCodes : retourne [] pour les codes mappés", () => {
+    expect(findUnmappedLawCodes(["CP-321", "CP-318", "LAVI-art-1"])).toEqual([]);
+  });
+
+  it("findUnmappedLawCodes : retourne le sous-ensemble non mappé", () => {
+    expect(findUnmappedLawCodes(["CP-321", "CP-999", "INCONNU-42"])).toEqual([
+      "CP-999",
+      "INCONNU-42",
+    ]);
+  });
+
+  it("chaque entrée de LEGAL_LAW_CODE_PATTERNS a humanLabel + ≥ 1 detectPattern", () => {
+    for (const [code, spec] of Object.entries(LEGAL_LAW_CODE_PATTERNS)) {
+      expect(spec.humanLabel.length, `humanLabel vide : ${code}`).toBeGreaterThan(0);
+      expect(spec.detectPatterns.length, `detectPatterns vide : ${code}`).toBeGreaterThan(0);
+    }
+  });
+
+  it("LEGAL_BLACKLIST_TERMS : chaque entrée a term + ≥ 1 pattern", () => {
+    for (const t of LEGAL_BLACKLIST_TERMS) {
+      expect(t.term.length).toBeGreaterThan(0);
+      expect(t.detectPatterns.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("buildLegalLeakDirective : contient le marker + le garde-fou + les codes humainLabel", () => {
+    const dir = buildLegalLeakDirective(["CP-321", "CP-318"]);
+    expect(dir).toContain("## CADRE JURIDIQUE — INTERDICTIONS STRICTES");
+    expect(dir).toMatch(/r[ée]agir\s+[ée]motionnellement/i);
+    expect(dir).toContain("art. 321 CP (secret professionnel)");
+    expect(dir).toContain("art. 318 CP (faux dans les titres)");
+  });
+
+  it("buildLegalLeakDirective : applicable_law vide → directive avec mention « aucun code spécifique »", () => {
+    const dir = buildLegalLeakDirective([]);
+    expect(dir).toContain("aucun code spécifique");
   });
 });
 

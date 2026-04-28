@@ -417,6 +417,228 @@ export function listLegalLexiconKeys(): string[] {
   return Object.keys(LEGAL_LEXICON);
 }
 
+// ─── Phase 5 J3 — codes de loi, blacklist, directive prompt ──────────────
+//
+// Triple usage :
+//   1. Boot guard : pour toute station avec legalContext, chaque code listé
+//      dans `applicable_law` DOIT avoir une entrée ici. Si manquant, on
+//      throw au boot avec un message clair (« missing lexicon mapping
+//      for X »).
+//   2. Blacklist directive injectée dans le prompt patient/accompagnant :
+//      on liste les `humanLabel` correspondants pour que le LLM sache
+//      explicitement quoi NE PAS dire.
+//   3. Test de leak runtime : on applique les `detectPatterns` au system
+//      prompt généré pour s'assurer qu'aucun code n'a fui.
+
+export interface LegalLawCodeSpec {
+  // Étiquette humaine injectée dans la directive (« art. 321 CP »).
+  humanLabel: string;
+  // Variantes regex défensives utilisées par les tests de leak runtime
+  // (vérifient qu'aucun de ces patterns n'apparaît dans le system prompt
+  // d'une station portant un legalContext).
+  detectPatterns: RegExp[];
+}
+
+export const LEGAL_LAW_CODE_PATTERNS: Record<string, LegalLawCodeSpec> = {
+  "CP-318": {
+    humanLabel: "art. 318 CP (faux dans les titres)",
+    detectPatterns: [
+      /\bCP[\s\-]?318\b/,
+      /\bart(?:icle)?\.?\s*318\b/i,
+      /\bfaux\s+dans\s+les?\s+titres?\b/i,
+    ],
+  },
+  "CP-321": {
+    humanLabel: "art. 321 CP (secret professionnel)",
+    detectPatterns: [
+      /\bCP[\s\-]?321\b/,
+      /\bart(?:icle)?\.?\s*321\b/i,
+      /\bsecret\s+(?:professionnel|m[ée]dical)\b/i,
+    ],
+  },
+  "CP-364": {
+    humanLabel: "art. 364 CP (droit d'aviser)",
+    detectPatterns: [
+      /\bCP[\s\-]?364\b(?!\s*bis)/,
+      /\bart(?:icle)?\.?\s*364\b(?!\s*bis)/i,
+    ],
+  },
+  "CP-364bis": {
+    humanLabel: "art. 364bis CP (devoir d'aviser pour mineurs)",
+    detectPatterns: [
+      /\bCP[\s\-]?364\s*bis\b/i,
+      /\bart(?:icle)?\.?\s*364\s*bis\b/i,
+      /\b364\s*bis\b/i,
+    ],
+  },
+  "CC-307": {
+    humanLabel: "art. 307 CC (mesures de protection de l'enfant)",
+    detectPatterns: [
+      /\bCC[\s\-]?307\b/,
+      /\bart(?:icle)?\.?\s*307\b\s*CC\b/i,
+    ],
+  },
+  "CC-314c": {
+    humanLabel: "art. 314c CC (signalement à l'APEA mineur)",
+    detectPatterns: [
+      /\bCC[\s\-]?314\s*c\b/i,
+      /\bart(?:icle)?\.?\s*314\s*c\b/i,
+      /\b314\s*c\b/i,
+    ],
+  },
+  "CC-443a": {
+    humanLabel: "art. 443a CC (signalement à l'APEA adulte)",
+    detectPatterns: [
+      /\bCC[\s\-]?443\s*a\b/i,
+      /\bart(?:icle)?\.?\s*443\s*a\b/i,
+      /\b443\s*a\b/i,
+    ],
+  },
+  "LAVI-art-1": {
+    humanLabel: "LAVI art. 1 (loi sur l'aide aux victimes)",
+    detectPatterns: [
+      /\bLAVI\b/,
+      /\baide\s+aux\s+victimes?\b/i,
+    ],
+  },
+  "CDM-FMH-art-34": {
+    humanLabel: "CDM art. 34 FMH (déontologie médicale)",
+    detectPatterns: [
+      /\bFMH\b/,
+      /\bCDM\b/,
+      /\bcode\s+de\s+d[ée]ontologie\b/i,
+    ],
+  },
+  "CO-art-324a": {
+    humanLabel: "art. 324a CO (paiement du salaire en cas d'empêchement)",
+    detectPatterns: [
+      /\bCO[\s\-]?324\s*a\b/i,
+      /\bart(?:icle)?\.?\s*324\s*a\b/i,
+      /\b324\s*a\b\s*CO\b/i,
+    ],
+  },
+};
+
+// Blacklist GÉNÉRIQUE de concepts juridiques transversaux qui s'applique
+// à toute station portant un legalContext, indépendamment des codes
+// `applicable_law` listés. Le patient/accompagnant ne doit JAMAIS citer
+// spontanément ces termes — il décrit son vécu, ses émotions, ses faits,
+// pas le cadre juridique.
+//
+// Format : { term: string (label affiché dans la directive),
+//            detectPatterns: RegExp[] (utilisés par les tests de leak
+//            runtime pour vérifier l'absence dans le prompt) }.
+export interface LegalBlacklistTerm {
+  term: string;
+  detectPatterns: RegExp[];
+}
+
+export const LEGAL_BLACKLIST_TERMS: LegalBlacklistTerm[] = [
+  {
+    term: "secret professionnel / secret médical",
+    detectPatterns: [/\bsecret\s+(?:professionnel|m[ée]dical|pro)\b/i],
+  },
+  {
+    term: "signalement / signaler à l'APEA / aviser l'APEA",
+    detectPatterns: [/\bAPEA\b/, /\bautorit[ée]\s+de\s+protection\b/i],
+  },
+  {
+    term: "droit d'aviser / devoir d'aviser",
+    detectPatterns: [
+      /\b(?:droit|devoir)\s+d['’ʼ]aviser\b/i,
+    ],
+  },
+  {
+    term: "LAVI / aide aux victimes",
+    detectPatterns: [/\bLAVI\b/, /\baide\s+aux\s+victimes?\b/i],
+  },
+  {
+    term: "FMH / Fédération des médecins suisses",
+    detectPatterns: [/\bFMH\b/],
+  },
+  {
+    term: "CDM / Code de déontologie médicale",
+    detectPatterns: [/\bCDM\b/, /\bcode\s+de\s+d[ée]ontologie\b/i],
+  },
+  {
+    term: "faux dans les titres",
+    detectPatterns: [/\bfaux\s+dans\s+les?\s+titres?\b/i],
+  },
+  {
+    term: "responsabilité disciplinaire",
+    detectPatterns: [/\b(?:responsabilit[ée]\s+)?disciplinaire\b/i],
+  },
+  {
+    term: "certificat de complaisance",
+    detectPatterns: [/\bcertificat\s+de\s+complaisance\b/i],
+  },
+  {
+    term: "intérêt supérieur de l'enfant",
+    detectPatterns: [/\bint[ée]r[êe]t\s+(?:sup[ée]rieur\s+)?de\s+l['’ʼ]enfant\b/i],
+  },
+  {
+    term: "Code pénal (CP) / Code civil (CC) / article XXX",
+    detectPatterns: [
+      /\bCode\s+p[ée]nal\b/i,
+      /\bCode\s+civil\b/i,
+    ],
+  },
+];
+
+// Construit la directive prompt à injecter quand la station a un
+// `legalContext`. Combine :
+//   • la blacklist générique (concepts transversaux),
+//   • les `humanLabel` des codes listés dans `applicable_law` de cette
+//     station (pour que le LLM ait une vue précise des codes spécifiques
+//     à NE PAS citer pour CE scénario),
+//   • un garde-fou sémantique : si le candidat invoque correctement le
+//     cadre, le patient peut RÉAGIR (peur, soulagement, refus, acceptation)
+//     mais ne CONFIRME JAMAIS le bon article ou la bonne décision.
+//
+// La directive est volontairement énumérative et formelle — c'est le
+// format que le LLM respecte le mieux pour les contraintes négatives
+// (cf. vocabularyConstraints.ts). 0 LLM dans cette construction : pure
+// concaténation de tables statiques.
+export function buildLegalLeakDirective(applicable_law: string[]): string {
+  const stationCodeLabels = applicable_law
+    .map((code) => LEGAL_LAW_CODE_PATTERNS[code]?.humanLabel)
+    .filter((s): s is string => typeof s === "string" && s.length > 0);
+
+  const codeLines =
+    stationCodeLabels.length > 0
+      ? stationCodeLabels.map((l) => `- ❌ ${l}`).join("\n")
+      : "- (aucun code spécifique listé pour cette station)";
+  const genericLines = LEGAL_BLACKLIST_TERMS
+    .map((t) => `- ❌ ${t.term}`)
+    .join("\n");
+
+  return `
+
+## CADRE JURIDIQUE — INTERDICTIONS STRICTES (rôle patient·e / accompagnant·e)
+
+Tu n'es PAS juriste. Tu n'es PAS soignant·e. Tu ne CONNAIS PAS les articles de loi qui s'appliquent à ta situation. Tu ne CITES JAMAIS spontanément, et tu ne CONFIRMES JAMAIS si le médecin les nomme correctement, les expressions juridiques suivantes :
+
+### Codes de loi spécifiques à ta situation (ne jamais nommer, ne jamais confirmer) :
+${codeLines}
+
+### Concepts juridiques transversaux (ne jamais utiliser spontanément) :
+${genericLines}
+
+### Garde-fou sémantique (comportement si le médecin invoque le cadre légal) :
+- Si le médecin invoque correctement le cadre légal (signalement, refus de certificat, secret pro), tu peux RÉAGIR ÉMOTIONNELLEMENT (peur, soulagement, colère, refus, acceptation, sidération) — c'est attendu.
+- Tu ne dis JAMAIS « oui c'est l'article X » ou « vous avez raison de citer Y ». Tu ne CONFIRMES PAS la justesse du raisonnement juridique du médecin. Si on te demande explicitement « est-ce que je cite le bon article ? », tu réponds en patient·e : « je n'y connais rien, c'est vous le médecin ».
+- Tu n'utilises pas non plus les acronymes institutionnels (APEA, LAVI, FMH, CDM) — tu peux à la rigueur dire « les services sociaux », « une association d'aide aux femmes », « votre ordre médical » si la conversation t'y mène, jamais l'acronyme officiel.
+
+Règle générale : ton vocabulaire est celui d'un·e profane qui décrit son vécu (ce que tu RESSENS, ce qu'il t'est ARRIVÉ, ce que tu CRAINS), pas celui d'un·e juriste qui qualifie une situation.`;
+}
+
+// Garde-fou boot Phase 5 J3 : retourne la liste des codes de
+// `applicable_law` qui ne sont PAS mappés dans LEGAL_LAW_CODE_PATTERNS.
+// Si non vide, le validateur de catalogue throw avec un message clair.
+export function findUnmappedLawCodes(applicable_law: string[]): string[] {
+  return applicable_law.filter((code) => !(code in LEGAL_LAW_CODE_PATTERNS));
+}
+
 // Helper de matching : compte le nombre de patterns DISTINCTS de l'entrée
 // `entryKey` qui matchent dans `transcript`. Un pattern compte au plus une
 // fois (pas de boost de score par occurrences répétées du même pattern).
