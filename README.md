@@ -46,6 +46,25 @@ L'application est servie sur [http://localhost:5000](http://localhost:5000). Un 
 > sinon le bundle servi est l'ancien (route 404 surprise garantie).
 > Pour automatiser, lance plutôt `npm run dev:watch`.
 
+## Triage médico-légal Phase 6
+
+Outil offline déterministe (zéro LLM) qui classe les 287 stations en 3
+statuts (A/B/C) restreints aux 3 catégories Phase 5
+(`secret_pro_levee`, `signalement_maltraitance`,
+`certificat_complaisance`). Sortie : un CSV destiné à une relecture
+pédagogique humaine par un médecin CH avant l'annotation effective des
+fixtures.
+
+```bash
+npx tsx scripts/triage-medico-legal.ts
+```
+
+Génère `triage-output/phase-6-j1.csv` + résumé stdout (counts par
+statut, par catégorie, par source, top 10 ambiguïtés). Le run de
+référence J1 est commité ; les runs ultérieurs sont locaux (cf.
+`.gitignore`). Voir [`triage-output/README.md`](triage-output/README.md)
+pour le format CSV et le workflow de relecture.
+
 ## Architecture
 
 > Phase 3 (images, labs, spécialités) est documentée séparément :
