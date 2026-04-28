@@ -242,4 +242,51 @@ describe("Fixtures pilotes médico-légales — audit déclaratif (Phase 5 J1)",
     const station = await loadStationRaw("Patient_AMBOSS_2.json", "AMBOSS-24");
     expect(station.legalContext.decision_rationale).toMatch(/secret professionnel/i);
   });
+
+  // Phase 5 J4 — l'UI <LegalDebriefPanel> consomme directement
+  // applicable_law, candidate_must_verbalize / must_avoid et red_flags
+  // pour générer chips, recommandations et axes. On verrouille ici les
+  // pré-conditions minimales du rendu pour que le composant ne tombe
+  // jamais sur une donnée vide en prod.
+  it.each(LEGAL_PILOTS)(
+    "$shortId : applicable_law non vide (chips affichables côté UI)",
+    async ({ shortId, file }) => {
+      const station = await loadStationRaw(file, shortId);
+      const laws = station.legalContext.applicable_law as string[];
+      expect(laws.length).toBeGreaterThan(0);
+      for (const code of laws) {
+        expect(code.length).toBeGreaterThan(0);
+      }
+    },
+  );
+
+  it.each(LEGAL_PILOTS)(
+    "$shortId : candidate_must_verbalize ≥ 4 items (couverture pédagogique 4 axes UI)",
+    async ({ shortId, file }) => {
+      const station = await loadStationRaw(file, shortId);
+      const items = station.legalContext.candidate_must_verbalize as string[];
+      expect(items.length, `${shortId}: au moins 4 must_verbalize attendus`).toBeGreaterThanOrEqual(4);
+      for (const it of items) {
+        expect(it.length).toBeGreaterThan(0);
+      }
+    },
+  );
+
+  it.each(LEGAL_PILOTS)(
+    "$shortId : red_flags ≥ 3 items (debrief pédagogique non vide)",
+    async ({ shortId, file }) => {
+      const station = await loadStationRaw(file, shortId);
+      const items = station.legalContext.red_flags as string[];
+      expect(items.length, `${shortId}: au moins 3 red_flags attendus`).toBeGreaterThanOrEqual(3);
+    },
+  );
+
+  it.each(LEGAL_PILOTS)(
+    "$shortId : candidate_must_avoid ≥ 3 items (anti-patterns pour scoring négatif)",
+    async ({ shortId, file }) => {
+      const station = await loadStationRaw(file, shortId);
+      const items = station.legalContext.candidate_must_avoid as string[];
+      expect(items.length, `${shortId}: au moins 3 must_avoid attendus`).toBeGreaterThanOrEqual(3);
+    },
+  );
 });
