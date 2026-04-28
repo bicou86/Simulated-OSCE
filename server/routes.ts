@@ -7,6 +7,7 @@ import adminRouter from "./routes/admin";
 import settingsRouter from "./routes/settings";
 import patientRouter from "./routes/patient";
 import evaluatorRouter from "./routes/evaluator";
+import evaluationRouter from "./routes/evaluation";
 import examinerRouter from "./routes/examiner";
 import stationsRouter from "./routes/stations";
 
@@ -21,6 +22,7 @@ export function mountApiRoutes(app: Express): void {
   app.use("/api/patient", patientRouter);
   app.use("/api/examiner", examinerRouter);
   app.use("/api/evaluator", evaluatorRouter);
+  app.use("/api/evaluation", evaluationRouter);
   app.use("/api/admin", adminRouter);
 
   // Defense-in-depth : tout /api/* qui n'a pas matché un router enregistré
