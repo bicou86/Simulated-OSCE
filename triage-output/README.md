@@ -62,6 +62,40 @@ Cette propriété est requise pour que `git diff` soit utile entre runs.
 * `phase-6-j1.csv` — premier run référence (commité).
 * `phase-6-jN.csv` — runs ultérieurs J2, J3 (générés mais ignorés via
   `.gitignore`).
-* `phase-6-j1-reviewed.csv` — version annotée par le relecteur humain
-  (local uniquement, jamais commité car peut contenir des notes
-  internes pédagogiques).
+* `phase-6-j1-validated.csv` — version annotée par le relecteur humain,
+  augmentée des colonnes `human_validated_status`,
+  `human_validated_category`, `human_notes`. **COMMITÉE** pour
+  traçabilité car c'est la source d'autorité de J2 (le script
+  `scripts/apply-triage-j2.ts` la consomme).
+* `phase-6-j1-reviewed.csv` — alias historique du fichier validé
+  (réservé si la convention de nommage évolue).
+
+## J2 — application effective
+
+```bash
+npx tsx scripts/apply-triage-j2.ts
+```
+
+Le script lit `phase-6-j1-validated.csv`, ouvre chaque fichier de
+station JSON, et :
+
+1. Pour les **status A** confirmés : ajoute `legalContext` (uniquement
+   sur USMLE Triage 39 en J2 — les 3 pilotes Phase 5 ont déjà le leur)
+   ET pose `medicoLegalReviewed: true`.
+2. Pour les **status B** confirmés : pose uniquement
+   `medicoLegalReviewed: true`.
+3. Pour les **status C** : SKIP (USMLE-9 reste sans flag, sera traité
+   en Phase 7).
+
+Propriétés clés :
+
+* **Idempotent** : 2 runs successifs ne produisent aucune modification
+  supplémentaire (les stations déjà flaggées sont skippées).
+* **Préservation byte-for-byte** du formatting des fixtures : le script
+  édite le texte source via balanced-braces matching, sans passer par
+  `JSON.stringify` (qui reformaterait German_2 et perdrait les trailing
+  newlines de German_4 / RESCOS_4).
+* **Zéro modification du brief patient** : seuls les champs additifs
+  sont ajoutés ; le narratif (id, setting, symptoms, vitals, …) reste
+  identique. Les flags ajoutés sont strippés côté HTTP et côté prompt
+  LLM (cf. `META_FIELDS_TO_STRIP` + `stripLegalContextOnly`).

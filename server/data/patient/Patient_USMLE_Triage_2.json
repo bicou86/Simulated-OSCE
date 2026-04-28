@@ -398,7 +398,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 2 - Œil Rouge",
@@ -883,7 +884,8 @@
           "contexte": "Question difficile de la patiente",
           "question_patient": "Est-ce que c'est ça ? (en référence à la conjonctivite)"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 30 - Masse Testiculaire",
@@ -1267,7 +1269,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 31 - Règles irrégulières",
@@ -1699,7 +1702,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 32 - Fièvre chez l'enfant",
@@ -2102,7 +2106,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 33 - Patient Difficile - Fibromyalgie",
@@ -2513,7 +2518,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 34 - Patient Difficile - Recherche de Médicaments",
@@ -2929,7 +2935,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 35 - Patient Difficile - Non Francophone",
@@ -3342,7 +3349,8 @@
             }
           ]
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 36 - Cas téléphonique - Douleur abdominale",
@@ -3682,7 +3690,8 @@
           "examen": "Limitation consultation téléphonique",
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 37 - Cas téléphonique - Chute d'une personne âgée",
@@ -3979,7 +3988,8 @@
           "examen": "Limitation consultation téléphonique",
           "resultat": "Pas d'examen physique possible [consultation téléphonique via fille]"
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 38 - Cas téléphonique - Fin de grossesse",
@@ -4342,7 +4352,8 @@
           "examen": "Limitation consultation téléphonique",
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 39 - Cas téléphonique - Suspicion de maltraitance",
@@ -4746,7 +4757,45 @@
           "examen": "Limitation consultation téléphonique",
           "resultat": "Aucun examen physique possible [consultation téléphonique]"
         }
-      }
+      },
+      "legalContext": {
+        "category": "signalement_maltraitance",
+        "jurisdiction": "CH",
+        "subject_status": "minor",
+        "applicable_law": [
+          "CP-321",
+          "CP-364",
+          "CP-364bis",
+          "CC-307",
+          "CC-314c"
+        ],
+        "mandatory_reporting": true,
+        "expected_decision": "report",
+        "decision_rationale": "Suspicion fondée de maltraitance sexuelle d'une mineure de 3 ans (Joey, fille de l'appelante Kelly Richards). En droit fédéral suisse, l'art. 364bis CP (devoir d'aviser pour les professionnels en contact avec des mineurs, en vigueur depuis 2019) et l'art. 314c CC (signalement à l'APEA mineur) imposent au médecin de signaler tout indice concret de mise en danger d'un mineur, MÊME quand l'information est recueillie par téléphone. Les indices verbaux rapportés (marques sur parties intimes, irritabilité sans raison apparente, modification comportementale, contexte de garde paternelle conflictuelle) constituent une suspicion fondée. Décision canonique : ORGANISER une évaluation physique en urgence (consultation pédiatrique au cabinet ou aux urgences) ET signaler à l'APEA en parallèle, en informant la mère du signalement par transparence. Le secret professionnel (CP-321) ne fait pas obstacle car CP-364bis et CC-314c constituent les bases légales explicites de levée pour la protection de l'enfance (CC-307 mesures de protection).",
+        "red_flags": [
+          "marques observées par la mère sur les parties intimes de l'enfant",
+          "irritabilité sans raison apparente, modification comportementale (« n'agit pas comme d'habitude »)",
+          "pleurs au change rapportés par la mère",
+          "contexte de garde paternelle conflictuelle (séparation, divorce)",
+          "mère en larmes avec demande explicite « à quoi ça ressemble si quelqu'un lui faisait quelque chose »"
+        ],
+        "candidate_must_verbalize": [
+          "obligation de signalement APEA pour mineur en danger (art. 364bis CP / art. 314c CC)",
+          "documentation rigoureuse des éléments téléphoniques entendus",
+          "orientation vers consultation physique en urgence pour examen pédiatrique spécialisé",
+          "secret professionnel levé en cas de signalement obligatoire pour mineur",
+          "ressources LAVI et service de protection de l'enfance cantonal",
+          "soutien et écoute non-jugeante de la mère, validation de sa démarche"
+        ],
+        "candidate_must_avoid": [
+          "rassurer faussement la mère que ce n'est probablement rien",
+          "minimiser les indices verbaux (irritabilité, marques, comportement inhabituel)",
+          "promettre la confidentialité absolue malgré le contexte de mineur en danger",
+          "accepter le récit unique de la mère sans organiser une évaluation médicale physique",
+          "imposer un dépôt de plainte immédiat avant toute évaluation"
+        ]
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 3 - Troubles de Mémoire",
@@ -5309,7 +5358,8 @@
           "contexte": "Question difficile de l'épouse",
           "question_patient": "Pensez-vous que c'est quelque chose comme la maladie d'Alzheimer ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 40 - Cas téléphonique - Intoxication",
@@ -5533,7 +5583,8 @@
           "examen": "Limitation consultation téléphonique",
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
-      }
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 4 - Vertiges",
@@ -5986,7 +6037,8 @@
           "contexte": "Question difficile de la patiente",
           "question_patient": "Est-ce que je pourrais avoir fait un AVC ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 5 - Céphalées",
@@ -6442,7 +6494,8 @@
           "contexte": "Question difficile de la patiente",
           "question_patient": "Est-ce que j'ai une tumeur au cerveau ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 6 - Troubles du Sommeil",
@@ -6827,7 +6880,8 @@
           "contexte": "Question difficile du patient",
           "question_patient": "Est-ce que je suis en train de devenir fou ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 7 - Céphalées",
@@ -7312,7 +7366,8 @@
           "contexte": "Question difficile du patient",
           "question_patient": "Est-ce que je vais mourir ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 8 - Syncope",
@@ -7754,7 +7809,8 @@
           "contexte": "Question difficile du patient",
           "question_patient": "Est-ce que ça peut être grave ? Suis-je en danger ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE Triage 9 - Coup de Chaleur",
@@ -8245,7 +8301,8 @@
           "contexte": "Question difficile du patient",
           "question_patient": "Est-ce que mes reins vont récupérer ? Vais-je avoir besoin de dialyse ?"
         }
-      ]
+      ],
+      "medicoLegalReviewed": true
     }
   ]
 }

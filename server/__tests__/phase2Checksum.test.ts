@@ -58,14 +58,29 @@ const PHASE_PILOTS_EXCLUDED = new Set([
   "RESCOS-72",
 ]);
 
+// Champs d'AUDIT internes ajoutés post-Phase 2 et qui ne doivent pas
+// faire dériver le checksum byte-stability (ils n'ont aucun impact sur
+// le narratif patient consommé par le LLM ni par le client) :
+//   • legalContext (Phase 5 J1) — qualification médico-légale
+//   • medicoLegalReviewed (Phase 6 J1/J2) — flag d'audit du triage
+// On les strippe AVANT le hash pour que l'invariant Phase 2 reste sur
+// le contenu narratif uniquement. Cohérent avec META_FIELDS_TO_STRIP
+// côté serveur (le LLM ne voit jamais ces champs non plus).
+const AUDIT_FIELDS_EXCLUDED_FROM_CHECKSUM = new Set([
+  "legalContext",
+  "medicoLegalReviewed",
+]);
+
 // Tri récursif des clés objet → sérialisation déterministe indépendante de
 // l'ordre de définition dans les fichiers source. Les arrays gardent leur
 // ordre — c'est volontaire (l'ordre des items dans pédagogiques compte).
-function sortKeysRecursive(v: unknown): unknown {
-  if (Array.isArray(v)) return v.map(sortKeysRecursive);
+// Les champs d'audit Phase 5/6 sont retirés au top-level.
+function sortKeysRecursive(v: unknown, isStationRoot = false): unknown {
+  if (Array.isArray(v)) return v.map((x) => sortKeysRecursive(x));
   if (v && typeof v === "object") {
     const out: Record<string, unknown> = {};
     for (const k of Object.keys(v as Record<string, unknown>).sort()) {
+      if (isStationRoot && AUDIT_FIELDS_EXCLUDED_FROM_CHECKSUM.has(k)) continue;
       out[k] = sortKeysRecursive((v as Record<string, unknown>)[k]);
     }
     return out;
@@ -93,7 +108,7 @@ async function computeChecksums(): Promise<Record<string, string>> {
       // Patient_RESCOS_4.json), on conserve la première occurrence — même
       // règle que stationsService au démarrage.
       if (out[shortId]) continue;
-      const canon = JSON.stringify(sortKeysRecursive(station));
+      const canon = JSON.stringify(sortKeysRecursive(station, true));
       out[shortId] = crypto.createHash("sha256").update(canon).digest("hex");
     }
   }
