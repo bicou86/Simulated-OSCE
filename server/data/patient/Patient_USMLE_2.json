@@ -4660,7 +4660,45 @@
           "contexte": "Questions difficiles à poser",
           "question_patient": "Je bois beaucoup d'eau, docteur. À votre avis, quelle en est la raison ?"
         }
-      ]
+      ],
+      "legalContext": {
+        "category": "signalement_maltraitance",
+        "jurisdiction": "CH",
+        "subject_status": "adult_capable",
+        "applicable_law": [
+          "CP-321",
+          "CP-364",
+          "CP-364bis",
+          "CC-307",
+          "CC-314c"
+        ],
+        "mandatory_reporting": true,
+        "expected_decision": "report",
+        "decision_rationale": "Patiente adulte capable mais 2 enfants présents au domicile, dont un giflé récemment par le père alcoolisé. Le facteur enfants-en-danger active CP-364bis (devoir d'aviser l'autorité de protection de l'enfant pour tout indice concret de mise en danger d'un mineur — « toute personne agissant à titre professionnel et étant en contact régulier avec des enfants peut aviser l'APEA »). En droit fédéral suisse, l'exposition continue d'enfants à de la violence domestique constitue une mise en danger du développement psychique justifiant l'avis à l'APEA (CC-307 mesures de protection). Décision canonique : SIGNALER à l'APEA, en informant la patiente du signalement et en l'orientant simultanément vers LAVI/foyer pour sa propre sécurité. Le secret pro (CP-321) ne fait pas obstacle car CP-364 (droit d'aviser) et CP-364bis (devoir d'aviser pour professionnels en contact avec des mineurs, en vigueur depuis 2019) couplés à CC-314c (signalement à l'APEA mineur) constituent des bases légales explicites de levée du secret pro.",
+        "red_flags": [
+          "ecchymoses au visage et aux bras de la patiente",
+          "minimisation et défense du conjoint",
+          "deux enfants exposés au domicile",
+          "enfant giflé récemment par le père alcoolisé",
+          "alcoolisation chronique du conjoint",
+          "auto-blâme et culpabilité"
+        ],
+        "candidate_must_verbalize": [
+          "devoir d'aviser l'APEA (art. 364bis CP / art. 314c CC)",
+          "enfants en danger priment sur secret professionnel",
+          "informer la patiente du signalement (transparence)",
+          "ressources LAVI / foyer d'accueil pour la patiente",
+          "orientation pédiatrique pour évaluation des enfants",
+          "non-jugement et soutien"
+        ],
+        "candidate_must_avoid": [
+          "promettre de ne rien signaler malgré les enfants",
+          "signaler dans le dos de la patiente sans l'informer",
+          "blâmer la patiente pour l'inaction",
+          "culpabiliser le retour au domicile",
+          "imposer un dépôt de plainte immédiat"
+        ]
+      }
     },
     {
       "id": "USMLE-35 - Hallucinations visuelles - Homme 27 ans",

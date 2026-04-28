@@ -452,3 +452,60 @@ export interface EvaluationWeightsResponse {
 export function getEvaluationWeights(): Promise<EvaluationWeightsResponse> {
   return jsonFetch("/api/evaluator/weights", { method: "GET" });
 }
+
+// ───────── /api/evaluation/legal (Phase 5 J2/J4) ─────────
+//
+// Évaluation médico-légale heuristique 100 % déterministe (zéro LLM côté
+// serveur). N'est pertinente QUE pour les stations portant un
+// `legalContext` ; pour les autres, l'endpoint répond 400 et l'UI ne
+// rend simplement pas le panel.
+//
+// L'UI consomme cet endpoint EN PARALLÈLE de /api/evaluator/evaluate
+// pour ne pas allonger la latence de la page Evaluation (Phase 2/3 prend
+// ~10 s avec Sonnet ; legal est instantané).
+
+export type LegalAxisKey = "reconnaissance" | "verbalisation" | "decision" | "communication";
+
+export interface LegalAxisItemReport {
+  text: string;
+  concept: string;
+  isAntiPattern: boolean;
+  matchedPatterns: number;
+  grade: -2 | -1 | 0 | 1 | 2;
+}
+
+export interface LegalAxisReport {
+  axis: LegalAxisKey;
+  items: LegalAxisItemReport[];
+  score_pct: number;
+}
+
+export interface LegalEvaluation {
+  stationId: string;
+  category: string;
+  expected_decision:
+    | "report"
+    | "no_report"
+    | "defer"
+    | "refer"
+    | "decline_certificate";
+  mandatory_reporting: boolean;
+  axes: Record<LegalAxisKey, LegalAxisReport>;
+  missing: string[];
+  avoided: string[];
+  unmapped: string[];
+  lexiconVersion: string;
+}
+
+export interface EvaluateLegalInput {
+  stationId: string;
+  transcript: string;
+}
+
+export function evaluateLegal(input: EvaluateLegalInput): Promise<LegalEvaluation> {
+  return jsonFetch("/api/evaluation/legal", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  });
+}

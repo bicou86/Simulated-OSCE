@@ -13,6 +13,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
 import { AccentedMarkdown } from "@/components/AccentedMarkdown";
+import LegalDebriefPanel from "@/components/LegalDebriefPanel";
 import { stripRedundantSections } from "@/lib/reportFormatting";
 
 interface Session {
@@ -447,6 +448,22 @@ export default function Evaluation() {
           <StructuredReport markdown={cleanedMarkdown} />
         </CardContent>
       </Card>
+
+      {/* Phase 5 J4 — debrief médico-légal additif. Le composant fait son
+          propre fetch /api/evaluation/legal et :
+            • se cache silencieusement (return null) pour les ~285 stations
+              sans legalContext (réponse 400 attendue),
+            • s'affiche pour les 3 pilotes Phase 5 (AMBOSS-24, USMLE-34,
+              RESCOS-72) avec score gradué par axe + décision attendue +
+              recommandations pédagogiques.
+          ZÉRO modification du scoring 5-axes Phase 2/3 : on consomme un
+          endpoint isolé (POST /api/evaluation/legal). */}
+      <LegalDebriefPanel
+        stationId={session.stationId}
+        transcript={session.transcript
+          .map((t) => `[${t.role === "doctor" ? "Médecin" : "Patient"}] ${t.text}`)
+          .join("\n")}
+      />
     </div>
   );
 }

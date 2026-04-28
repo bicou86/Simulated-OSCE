@@ -130,14 +130,46 @@ const PHASE2_WEIGHTS_PAYLOAD: EvaluationWeightsResponse = {
 // Wrapper fetch : renvoie la table des poids pour /api/evaluator/weights et
 // délègue au handler fourni pour le reste. Chaque test compose son handler
 // pour /api/evaluator/evaluate + d'éventuels autres endpoints.
+//
+// Phase 5 J4 — par défaut, /api/evaluation/legal répond 400 (= station
+// sans legalContext). Le panel se cache silencieusement (return null) et
+// les tests existants ne voient AUCUNE différence visuelle. Les tests
+// qui veulent tester le rendu du panel passent un handler custom qui
+// répond 200 sur cette route.
 function fetchWithWeights(
   handler: (url: string) => Response | Promise<Response>,
 ): (url: RequestInfo | URL) => Promise<Response> {
   return async (url: RequestInfo | URL) => {
     const u = typeof url === "string" ? url : url.toString();
     if (u.endsWith("/api/evaluator/weights")) return ok(PHASE2_WEIGHTS_PAYLOAD);
+    // Phase 5 J4 — /api/evaluation/legal : on laisse le handler du test
+    // répondre EN PREMIER (les tests dédiés au panel renvoient 200 avec
+    // une fixture). Si le handler ne connaît pas la route et throw, on
+    // retombe sur le défaut 400 (= station sans legalContext, panel se
+    // cache silencieusement). Cette indirection permet aux tests
+    // existants de continuer à throw sur les URL inattendues sans avoir
+    // à connaître /api/evaluation/legal explicitement.
+    if (u.endsWith("/api/evaluation/legal")) {
+      try {
+        return await handler(u);
+      } catch {
+        return legalNotApplicableResponse();
+      }
+    }
     return handler(u);
   };
+}
+
+// Réponse 400 par défaut sur /api/evaluation/legal (= station sans
+// legalContext, le panel se cache).
+function legalNotApplicableResponse(): Response {
+  return new Response(
+    JSON.stringify({
+      error: "Station ne déclare pas de legalContext.",
+      code: "bad_request",
+    }),
+    { status: 400, headers: { "Content-Type": "application/json" } },
+  );
 }
 
 describe("Evaluation — pill stationType (Bug A hotfix)", () => {
@@ -273,5 +305,134 @@ describe("Evaluation — 5 axes avec poids canoniques (Bug B hotfix)", () => {
     // Ce garde-fou empêche toute régression silencieuse.
     expect(row.textContent).not.toContain("poids 20%");
     expect(row.textContent).toContain("poids 0%");
+  });
+});
+
+// ─── Phase 5 J4 — intégration LegalDebriefPanel ───────────────────────────
+//
+// Vérifie le rendu CONDITIONNEL du panel sur la page Evaluation :
+//   • station SANS legalContext (le défaut, /api/evaluation/legal renvoie
+//     400 via fetchWithWeights) → panel ABSENT (invariants J4 #2 et #3).
+//   • station AVEC legalContext (/api/evaluation/legal renvoie 200) →
+//     panel rendu sous le rapport détaillé Phase 2/3.
+//
+// Le scoring 5-axes Phase 2/3 reste strictement intouché (mêmes
+// assertions que les tests précédents), donc invariant J4 #1 verrouillé.
+
+const LEGAL_FIXTURE_AMBOSS24 = {
+  stationId: "TEST-STATION",
+  category: "secret_pro_levee",
+  expected_decision: "refer" as const,
+  mandatory_reporting: false,
+  axes: {
+    reconnaissance: {
+      axis: "reconnaissance" as const,
+      score_pct: 100,
+      items: [
+        {
+          text: "secret professionnel (art. 321 CP)",
+          concept: "secret professionnel (art. 321 CP)",
+          isAntiPattern: false,
+          matchedPatterns: 2,
+          grade: 2 as const,
+        },
+      ],
+    },
+    verbalisation: {
+      axis: "verbalisation" as const,
+      score_pct: 50,
+      items: [],
+    },
+    decision: {
+      axis: "decision" as const,
+      score_pct: 75,
+      items: [],
+    },
+    communication: {
+      axis: "communication" as const,
+      score_pct: 25,
+      items: [],
+    },
+  },
+  missing: ["item à verbaliser"],
+  avoided: [],
+  unmapped: [],
+  lexiconVersion: "1.0.0",
+};
+
+describe("Evaluation — LegalDebriefPanel (Phase 5 J4)", () => {
+  it("station SANS legalContext → panel ABSENT (invariant J4 #2)", async () => {
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResult("TEST-STATION", "anamnese_examen"));
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    // On attend le rendu Phase 2/3 (preuve que la page est arrivée au bout).
+    await waitFor(() => expect(screen.getByTestId("score-anamnese")).toBeDefined());
+    // Donne le temps au panel de tenter sa requête + se hider sur 400.
+    await waitFor(() => {
+      // Le panel ne doit PAS apparaître. On asserte explicitement après
+      // que l'état loading transitoire ait disparu.
+      expect(screen.queryByTestId("legal-debrief-loading")).toBeNull();
+    });
+    expect(screen.queryByTestId("legal-debrief-panel")).toBeNull();
+    expect(screen.queryByTestId("legal-debrief-error")).toBeNull();
+  });
+
+  it("station AVEC legalContext → panel rendu, scoring 5-axes Phase 2/3 inchangé (invariant J4 #1)", async () => {
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResult("TEST-STATION", "anamnese_examen"));
+      }
+      // Override : cette station A un legalContext, on renvoie 200.
+      // Note : on construit un fresh Response à chaque appel — Response.body
+      // est single-use et le panel peut potentiellement remonter.
+      if (u.endsWith("/api/evaluation/legal")) {
+        return ok(LEGAL_FIXTURE_AMBOSS24);
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    // Le scoring 5-axes Phase 2/3 reste strictement présent.
+    await waitFor(() => expect(screen.getByTestId("score-anamnese")).toBeDefined());
+    for (const axis of ["anamnese", "examen", "management", "cloture", "communication"] as const) {
+      expect(screen.getByTestId(`score-${axis}`)).toBeDefined();
+    }
+    // Le panel médico-légal apparaît en complément.
+    await waitFor(() => expect(screen.getByTestId("legal-debrief-panel")).toBeDefined());
+    // Et porte bien les valeurs canoniques du fixture.
+    expect(screen.getByTestId("legal-category-badge").textContent).toContain(
+      "Levée du secret professionnel",
+    );
+    expect(screen.getByTestId("legal-decision-badge").textContent).toMatch(/Orienter/i);
+  });
+
+  it("le panel s'affiche APRÈS le rapport détaillé (ordre vertical)", async () => {
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResult("TEST-STATION", "anamnese_examen"));
+      }
+      if (u.endsWith("/api/evaluation/legal")) {
+        return ok(LEGAL_FIXTURE_AMBOSS24);
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    await waitFor(() => expect(screen.getByTestId("legal-debrief-panel")).toBeDefined());
+    const reportCard = screen.getByText(/Rapport détaillé/i).closest("[class*='rounded-xl']");
+    const panel = screen.getByTestId("legal-debrief-panel");
+    expect(reportCard).not.toBeNull();
+    // Position relative dans le DOM : le panel doit suivre le rapport.
+    const ordering = reportCard!.compareDocumentPosition(panel);
+    // Node.DOCUMENT_POSITION_FOLLOWING = 4 → panel est APRÈS reportCard.
+    expect(ordering & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 });

@@ -39,8 +39,13 @@ const SNAPSHOT_PATH = path.resolve(
   "__snapshots__",
   "phase2-checksum.json",
 );
-// Pilotes exclus = Phase 3 J3 ∪ Phase 4 J1 (RESCOS-70 et RESCOS-71 sont
-// communs aux deux phases : J3 a ajouté register/tags, J1 ajoute participants[]).
+// Pilotes exclus = Phase 3 J3 ∪ Phase 4 J1 ∪ Phase 5 J1.
+//   • RESCOS-70/RESCOS-71 sont communs Phase 3 J3 + Phase 4 J1
+//     (register/tags + participants[]).
+//   • AMBOSS-24/USMLE-34 ajoutent legalContext (Phase 5 J1) — annotation
+//     additive sur stations existantes ⇒ checksum dérive.
+//   • RESCOS-72 est une station entièrement nouvelle (Phase 5 J1),
+//     créée pour le scénario certificat_complaisance — pas de baseline.
 const PHASE_PILOTS_EXCLUDED = new Set([
   "AMBOSS-4",
   "RESCOS-70",
@@ -48,6 +53,9 @@ const PHASE_PILOTS_EXCLUDED = new Set([
   "RESCOS-9b",
   "RESCOS-13",
   "RESCOS-63",
+  "AMBOSS-24",
+  "USMLE-34",
+  "RESCOS-72",
 ]);
 
 // Tri récursif des clés objet → sérialisation déterministe indépendante de
@@ -116,10 +124,13 @@ describe("Phase 2 byte-stability checksum (post-J1 baseline)", () => {
         "RESCOS-9b",
         "RESCOS-13",
         "RESCOS-63",
+        "AMBOSS-24",
+        "USMLE-34",
+        "RESCOS-72",
       ]),
     );
     expect(Object.keys(snap.checksums).length).toBe(snap._meta.stationCount);
-    expect(Object.keys(snap.checksums).length).toBeGreaterThanOrEqual(280);
+    expect(Object.keys(snap.checksums).length).toBeGreaterThanOrEqual(278);
   });
 
   it("none of the excluded pilots is present in the snapshot (excluded by design)", async () => {

@@ -188,4 +188,52 @@ describe("registerRoutes — intégration HTTP de l'app réelle", () => {
       expect(res.body.defaultSpeakerId).toBe("patient");
     });
   });
+
+  // ─── Phase 5 J1 — vérifie sur le vrai catalog que /api/patient/:id/brief
+  // N'EXPOSE JAMAIS `legalContext` (ni decision_rationale, ni
+  // applicable_law, etc.). Le contexte médico-légal vit côté serveur
+  // uniquement, lu par l'évaluateur via getLegalContext.
+  describe("/api/patient/:id/brief — pas de fuite legalContext (Phase 5 J1)", () => {
+    it.each([
+      { sid: "AMBOSS-24", category: "secret_pro_levee" },
+      { sid: "USMLE-34", category: "signalement_maltraitance" },
+      { sid: "RESCOS-72", category: "certificat_complaisance" },
+    ])(
+      "$sid : aucune fuite legalContext / decision_rationale / applicable_law",
+      async ({ sid }) => {
+        const app = await makeApp();
+        const res = await request(app).get(`/api/patient/${sid}/brief`);
+        expect(res.status).toBe(200);
+        expect(res.body.legalContext).toBeUndefined();
+        expect(res.body.decision_rationale).toBeUndefined();
+        expect(res.body.applicable_law).toBeUndefined();
+        expect(res.body.expected_decision).toBeUndefined();
+        expect(res.body.candidate_must_verbalize).toBeUndefined();
+        expect(res.body.candidate_must_avoid).toBeUndefined();
+        expect(res.body.mandatory_reporting).toBeUndefined();
+        // Sérialisation JSON complète sans aucun mot-clé du schéma.
+        const serialized = JSON.stringify(res.body);
+        expect(serialized).not.toMatch(/legalContext/);
+        expect(serialized).not.toMatch(/decision_rationale/);
+        expect(serialized).not.toMatch(/CP-321/);
+        expect(serialized).not.toMatch(/CP-318/);
+      },
+    );
+  });
+
+  describe("/api/patient/RESCOS-72 — la station de novo est bien servie", () => {
+    it("RESCOS-72 expose un brief valide via /api/patient/RESCOS-72/brief", async () => {
+      const app = await makeApp();
+      const res = await request(app).get("/api/patient/RESCOS-72/brief");
+      expect(res.status).toBe(200);
+      expect(res.body.stationId).toBe("RESCOS-72");
+      expect(res.body.patientDescription).toMatch(/Marc Bernard/);
+      expect(res.body.setting).toMatch(/médecine générale/i);
+      // La station apparaît dans /api/stations.
+      const list = await request(app).get("/api/stations");
+      expect(list.status).toBe(200);
+      const ids = (list.body.stations as Array<{ id: string }>).map((s) => s.id);
+      expect(ids).toContain("RESCOS-72");
+    });
+  });
 });

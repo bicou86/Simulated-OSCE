@@ -32,11 +32,19 @@ L'application est servie sur [http://localhost:5000](http://localhost:5000). Un 
 | Script | Description |
 |---|---|
 | `npm run dev` | Serveur complet (Express + Vite HMR) sur le port 5000 |
+| `npm run dev:watch` | Idem `dev` mais avec `tsx watch` — relance auto à chaque modif d'un fichier `server/**` |
 | `npm run build` | Build du client (Vite) + du serveur (esbuild bundle) dans `dist/` |
 | `npm run start` | Lance le build de production (nécessite `npm run build` d'abord) |
 | `npm run check` | Vérification TypeScript (aucun emit) |
 | `npm run test` | Suite vitest (client + serveur, SDK mockés) |
 | `npm run test:watch` | Mode watch vitest |
+
+> ⚠️ **Restart manuel obligatoire avec `npm run dev`.** Le HMR Vite ne couvre QUE les
+> fichiers du client (`client/src/**`). Toute modification côté serveur
+> (`server/**`, `shared/**`) — par exemple ajout d'un router, d'une route, ou
+> d'un service — exige de tuer le process tsx et de relancer `npm run dev`,
+> sinon le bundle servi est l'ancien (route 404 surprise garantie).
+> Pour automatiser, lance plutôt `npm run dev:watch`.
 
 ## Architecture
 
