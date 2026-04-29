@@ -18,6 +18,9 @@ export default defineConfig({
       ["client/**", "happy-dom"],
       ["server/**", "node"],
       ["tests/**", "node"],
+      // Phase 6 J1 — tests des scripts d'outillage offline (triage médico-
+      // légal). Pas d'I/O navigateur, environnement node.
+      ["scripts/**", "node"],
     ],
     include: [
       "client/src/**/*.test.{ts,tsx}",
@@ -26,6 +29,9 @@ export default defineConfig({
       // Le fichier déclare ses suites sous describe.skip quand l'env var
       // n'est pas posée, donc inclus en permanence sans coût.
       "tests/integration/**/*.test.ts",
+      // Phase 6 J1 — tests des scripts (triage médico-légal). Heuristiques
+      // déterministes sur les 287 stations, zéro LLM, zéro réseau.
+      "scripts/**/*.test.ts",
     ],
     globals: false,
     restoreMocks: true,

@@ -191,6 +191,18 @@ const LEGAL_PILOTS: LegalPilotExpectation[] = [
     expectedMandatory: false,
     expectedDecision: "decline_certificate",
   },
+  // Phase 6 J2 — 4e station signalement_maltraitance (téléconsultation,
+  // suspicion maltraitance sexuelle de mineure 3 ans). Subject_status
+  // est "minor" (Joey, 3 ans), distinct des 3 autres pilotes en
+  // adult_capable. Catégorie identique à USMLE-34 → lexique J2 inchangé.
+  {
+    shortId: "USMLE Triage 39",
+    file: "Patient_USMLE_Triage_2.json",
+    expectedCategory: "signalement_maltraitance",
+    expectedSubjectStatus: "minor",
+    expectedMandatory: true,
+    expectedDecision: "report",
+  },
 ];
 
 describe("Fixtures pilotes médico-légales — audit déclaratif (Phase 5 J1)", () => {

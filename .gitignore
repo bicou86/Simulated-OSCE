@@ -18,3 +18,13 @@ server/logs/
 
 # Previews éphémères Phase 3 (non committés — artefacts de travail)
 tmp/phase3-previews/
+
+# Phase 6 — sorties du script de triage médico-légal.
+# Sont commités pour traçabilité :
+#   • phase-6-j1.csv : run machine de référence J1
+#   • phase-6-j1-validated.csv : version revue par le médecin CH,
+#     consommée par scripts/apply-triage-j2.ts (source d'autorité J2).
+# Tous les autres CSV restent locaux.
+triage-output/*.csv
+!triage-output/phase-6-j1.csv
+!triage-output/phase-6-j1-validated.csv

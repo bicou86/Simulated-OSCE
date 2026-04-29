@@ -422,6 +422,10 @@ function deleteAtPath(obj: Record<string, unknown>, path: string): void {
 //     (cf. invariant Phase 5 A : le patient ne cite jamais le bon cadre
 //     légal lui-même). Le contexte est consulté via `getLegalContext`
 //     côté serveur uniquement, par l'évaluateur médico-légal (J2).
+//   • `medicoLegalReviewed` (Phase 6 J1/J2) → flag d'audit interne
+//     indiquant qu'une station a été passée en revue par le triage
+//     Phase 6. Métadonnée d'audit qui n'a aucune valeur narrative pour
+//     le LLM ni client — strippée par défense.
 const META_FIELDS_TO_STRIP = [
   "id",
   "tags",
@@ -431,6 +435,7 @@ const META_FIELDS_TO_STRIP = [
   "participants",
   "participantSections",
   "legalContext",
+  "medicoLegalReviewed",
 ];
 
 // Phase 5 J3 — variante minimale du strip pour le chemin mono-patient
@@ -441,11 +446,15 @@ const META_FIELDS_TO_STRIP = [
 // inchangé). Les stations Phase 5 (AMBOSS-24, USMLE-34, RESCOS-72) qui
 // passent ici (target absent) bénéficient quand même du strip de leur
 // legalContext.decision_rationale.
+//
+// Phase 6 J2 — strip aussi `medicoLegalReviewed` (flag d'audit interne
+// qui ne doit jamais sortir vers le LLM ou le client).
 export function stripLegalContextOnly(
   station: Record<string, unknown>,
 ): Record<string, unknown> {
   const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
   delete cloned.legalContext;
+  delete cloned.medicoLegalReviewed;
   return cloned;
 }
 

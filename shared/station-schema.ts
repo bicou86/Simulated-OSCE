@@ -152,11 +152,29 @@ export const legalContextSchema = z.object({
 });
 export type LegalContext = z.infer<typeof legalContextSchema>;
 
+// Phase 6 J1 — `medicoLegalReviewed` : tracker du triage Phase 6.
+//
+// Champ STATION-LEVEL, ADDITIF, OPTIONNEL, default false. Indique si la
+// station a été passée en revue par le triage médico-légal Phase 6
+// (relecture humaine d'un médecin CH). N'a AUCUN impact runtime :
+//   • non lu par /api/patient/:id/brief (pas exposé au client),
+//   • non lu par buildSystemPrompt (pas injecté au LLM),
+//   • non lu par /api/evaluator/evaluate (Phase 2/3),
+//   • non lu par /api/evaluation/legal (Phase 5 J2).
+// Le flag est uniquement consommé par le script de triage (J1) et
+// éventuellement par un futur rapport d'avancement Phase 6 J3.
+//
+// En J1, AUCUNE station ne porte ce flag : le script écrit du CSV, pas
+// dans les fichiers JSON. En J2, le flag sera mis à `true` au moment où
+// le legalContext est ajouté à une station (ou pour confirmer qu'elle a
+// été vue et marquée non applicable).
+
 // Schéma de station permissif :
 //   • `id` requis (déjà invariant fort dans stationsService),
 //   • `participants` optionnel (Phase 4 J1),
 //   • `participantSections` optionnel (Phase 4 J3),
 //   • `legalContext` optionnel (Phase 5 J1),
+//   • `medicoLegalReviewed` optionnel default false (Phase 6 J1),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
 //     décrire — l'objectif est seulement de typer les champs additifs.
@@ -166,6 +184,7 @@ export const stationSchema = z
     participants: z.array(participantSchema).optional(),
     participantSections: participantSectionsSchema.optional(),
     legalContext: legalContextSchema.optional(),
+    medicoLegalReviewed: z.boolean().optional().default(false),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;
