@@ -10,6 +10,7 @@ import evaluatorRouter from "./routes/evaluator";
 import evaluationRouter from "./routes/evaluation";
 import examinerRouter from "./routes/examiner";
 import stationsRouter from "./routes/stations";
+import debugRouter from "./routes/debug";
 
 // Monte tous les routers API + un garde 404 JSON. Source de vérité unique :
 // `registerRoutes` (runtime) et `buildTestApp` (tests) utilisent tous deux
@@ -24,6 +25,10 @@ export function mountApiRoutes(app: Express): void {
   app.use("/api/evaluator", evaluatorRouter);
   app.use("/api/evaluation", evaluationRouter);
   app.use("/api/admin", adminRouter);
+  // Phase 7 J3 — debug-only routes. Garde NODE_ENV interne : router
+  // monté en permanence (les tests doivent pouvoir l'invoquer), mais
+  // les handlers eux-mêmes 404 hors dev. Voir server/routes/debug.ts.
+  app.use("/api/debug", debugRouter);
 
   // Defense-in-depth : tout /api/* qui n'a pas matché un router enregistré
   // renvoie un JSON 404 explicite plutôt que tomber dans le catch-all Vite/SPA

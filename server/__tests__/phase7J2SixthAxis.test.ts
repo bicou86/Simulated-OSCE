@@ -156,15 +156,30 @@ afterEach(() => {
 });
 
 // ────────────────────────────────────────────────────────────────────────
-// Test A — Snapshot non-régression scoring global sur 5 stations témoins
+// Test A — Snapshot non-régression scoring global sur 6 stations témoins
 //          SANS legalContext.
 //
-// Stations choisies (cf. spec utilisateur, avec 2 substitutions explicitées
-// dans le commit message Phase 7 J2 : RESCOS-70 et Patient_Type_2_Diabetes
-// n'existent pas dans le corpus → remplacés par RESCOS-7 (bbn, diversifie
-// le station_type) et USMLE-8 (Suivi diabète, conserve la thématique
-// diabète type 2 du témoin demandé)). Les 3 stations user-listées qui
-// existent (AMBOSS-1, RESCOS-64, German-70) sont conservées telles quelles.
+// Phase 7 J3 (mea culpa Phase 7 J2) — RESCOS-70 a été substituée à tort
+// en J2 par RESCOS-7 sous prétexte d'inexistence dans le corpus. Vérif
+// runtime ultérieure : RESCOS-70 EXISTE bel et bien (Patient_RESCOS_4.json
+// ligne 5075, "Contraception cachée + effets secondaires - Adolescente
+// 16 ans", stationType=anamnese_examen, hasLegalContext=false). Le faux
+// négatif J2 venait du `stations_index.json` (legacy, incomplet) que
+// j'avais utilisé comme source — alors que la source de vérité est le
+// catalogue chargé par initCatalog() depuis Patient_*.json. Réintégrée
+// en J3 + RESCOS-7 et USMLE-8 conservées comme couverture additionnelle
+// (diversification station_type BBN + thématique diabète type 2).
+//
+// Process : ne plus jamais substituer en silence un ID qui ne marche
+// pas — toujours vérifier via getStationMeta après initCatalog avant
+// de conclure « inexistant ».
+//
+// Stations finales (6) :
+//   • AMBOSS-1, RESCOS-64, German-70 — user-listées originelles
+//   • RESCOS-70 — réintégrée J3 (faux négatif J2 corrigé)
+//   • RESCOS-7 — diversification BBN
+//   • USMLE-8 — substitut accepté pour Patient_Type_2_Diabetes
+//     (filename pattern user-listé, pas un station_id)
 //
 // Scores mockés : valeurs synthétiques mais STABLES (gravées dans le
 // fichier). L'oracle `expectedSnapshot` est calculé analytiquement par
@@ -203,6 +218,16 @@ const WITNESS_CASES: WitnessCase[] = [
     expectedSnapshot: 60,
   },
   {
+    // Phase 7 J3 — réintégrée après mea culpa J2 (faux négatif sur
+    // l'existence de la station). Scores synthétiques distincts des
+    // autres pour ne pas converger fortuitement vers le même snapshot.
+    stationId: "RESCOS-70",
+    expectedStationType: "anamnese_examen",
+    mockedScores: { anamnese: 70, examen: 80, management: 90, cloture: 70, communication: 30 },
+    // (70×25 + 80×25 + 90×25 + 70×25) / 100 = (1750+2000+2250+1750)/100 = 77.5 → round = 78
+    expectedSnapshot: 78,
+  },
+  {
     stationId: "RESCOS-7",
     expectedStationType: "bbn",
     mockedScores: { anamnese: 80, examen: 70, management: 60, cloture: 50, communication: 90 },
@@ -220,7 +245,7 @@ const WITNESS_CASES: WitnessCase[] = [
   },
 ];
 
-describe("Phase 7 J2 — Test A : snapshot non-régression sur 5 stations sans legalContext", () => {
+describe("Phase 7 J2/J3 — Test A : snapshot non-régression sur 6 stations sans legalContext", () => {
   for (const tc of WITNESS_CASES) {
     it(`${tc.stationId} (${tc.expectedStationType}) — globalScore inchangé byte-à-byte vs Phase 6`, async () => {
       anthropicMessagesCreate.mockImplementationOnce(async () =>
