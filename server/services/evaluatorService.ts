@@ -11,9 +11,14 @@ import { logRequest } from "../lib/logger";
 import { loadPrompt } from "../lib/prompts";
 import { evaluatorFilePath, getStationMeta } from "./stationsService";
 import {
+  MEDICO_LEGAL_WEIGHT_PCT,
   getAxisWeights,
+  getEffectiveAxisWeights,
+  type AxisWeights6,
   type StationType,
 } from "../../shared/evaluation-weights";
+import { evaluateLegal, LEGAL_AXES, type LegalAxis } from "./legalEvaluator";
+import { getLegalContext } from "./patientService";
 
 const fileCache = new Map<string, any[]>();
 
@@ -68,6 +73,14 @@ export interface EvaluationResult {
   scores: EvaluationScores;
   stationType?: StationType;
   communicationWeight?: number;
+  // Phase 7 J2 — 6e axe additif. Présent UNIQUEMENT quand la station a
+  // un `legalContext` (sinon undefined → UI n'affiche pas la ligne).
+  // medicoLegalScore : score 0–100 du 6e axe, agrégé depuis legalEvaluator.
+  // medicoLegalWeight : poids effectif (en %), 10 quand actif, sinon
+  // absent. Permet à l'UI Evaluation J3/J4 d'afficher conditionnellement
+  // le breakdown 6-axes sans dupliquer la logique de pondération.
+  medicoLegalScore?: number;
+  medicoLegalWeight?: number;
 }
 
 // Extrait le JSON scores du bloc <scores_json>…</scores_json> en fin de message.
@@ -101,10 +114,17 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
   const axisWeights = stationType ? getAxisWeights(stationType) : undefined;
   const communicationWeight = axisWeights?.communication ?? 0;
 
-  const [promptTemplate, station] = await Promise.all([
+  const [promptTemplate, station, legalCtx] = await Promise.all([
     loadPrompt("evaluator"),
     getEvaluatorStation(opts.stationId),
+    // Phase 7 J2 — détection de la qualification médico-légale en
+    // parallèle. getLegalContext est server-only et déterministe : il
+    // lit la fixture station puis safeParse Zod. Renvoie null si la
+    // station n'a pas (ou plus) de legalContext, auquel cas le pipeline
+    // évaluateur retombe SUR LE COMPORTEMENT v1 byte-à-byte (5 axes).
+    getLegalContext(opts.stationId).catch(() => null),
   ]);
+  const hasLegalContext = legalCtx !== null;
 
   const stationBlock = `\n\n<station_data>\n${JSON.stringify(station, null, 2)}\n</station_data>`;
   const systemBlocks: Anthropic.TextBlockParam[] = [
@@ -238,8 +258,33 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
   // appliquant la formule documentée dans evaluator.md (Σ score×weight /
   // Σ weight>0). Cela garantit que le front affiche toujours des poids
   // cohérents avec /api/evaluator/weights, quel que soit le LLM sous-jacent.
-  const scores = axisWeights
-    ? normalizeScoresWithCanonicalWeights(validated.data, axisWeights)
+  //
+  // Phase 7 J2 — branche dynamique 6 axes :
+  //   • si la station n'a PAS de legalContext → comportement v1 inchangé,
+  //     score global byte-à-byte identique à Phase 6 (invariant J2 #3).
+  //   • si la station a un legalContext → on appelle legalEvaluator
+  //     (déterministe, zéro LLM, lexique v1.1.0) pour obtenir 4 sous-scores
+  //     d'axe ; on les agrège en un score `medico_legal` (moyenne pondérée
+  //     uniforme 25 % chacun, cf. note ci-dessous) ; on bascule sur les
+  //     poids effectifs 6 axes (5 axes × 0.9 + medico_legal = 10).
+  let medicoLegalScore: number | undefined;
+  let medicoLegalWeight: number | undefined;
+  if (hasLegalContext && stationType) {
+    const transcriptString = formatTranscript(opts.transcript);
+    const legalEval = await evaluateLegal({
+      stationId: opts.stationId,
+      transcript: transcriptString,
+    });
+    medicoLegalScore = aggregateMedicoLegalScore(legalEval.axes);
+    medicoLegalWeight = MEDICO_LEGAL_WEIGHT_PCT;
+  }
+
+  const scores = stationType
+    ? normalizeScoresWithCanonicalWeights(
+        validated.data,
+        getEffectiveAxisWeights(stationType, hasLegalContext),
+        medicoLegalScore,
+      )
     : validated.data;
 
   return {
@@ -247,15 +292,62 @@ export async function runEvaluation(opts: EvaluateOptions): Promise<EvaluationRe
     scores,
     stationType,
     communicationWeight,
+    medicoLegalScore,
+    medicoLegalWeight,
   };
+}
+
+// Phase 7 J2 — agrégation des 4 sous-axes médico-légaux en un score
+// unique 0–100. Pondération interne UNIFORME (25 % chacun par défaut).
+//
+// Choix justifié : chacun des 4 axes (reconnaissance, verbalisation,
+// décision, communication) couvre une dimension distincte et ÉGALEMENT
+// critique du raisonnement médico-légal. Reconnaître le drapeau rouge
+// (axe 1) sans verbaliser au candidat (axe 2) ni prendre la bonne décision
+// (axe 3) ni la communiquer correctement (axe 4) ne « réussit » pas
+// l'épreuve. Un déséquilibre artificiel (ex. décision 40 %) introduirait
+// un biais pédagogique non-justifié par les pilotes Phase 5/6 et ne serait
+// validable qu'avec des données de cohorte étudiants.
+//
+// Si l'utilisateur revoit cette pondération en Phase 8+, modifier ici
+// uniquement (source de vérité unique).
+const MEDICO_LEGAL_SUB_AXIS_WEIGHTS: Record<LegalAxis, number> = {
+  reconnaissance: 0.25,
+  verbalisation: 0.25,
+  decision: 0.25,
+  communication: 0.25,
+};
+
+export function aggregateMedicoLegalScore(
+  axes: Record<LegalAxis, { score_pct: number }>,
+): number {
+  let weighted = 0;
+  for (const axis of LEGAL_AXES) {
+    weighted += axes[axis].score_pct * MEDICO_LEGAL_SUB_AXIS_WEIGHTS[axis];
+  }
+  // Math.round pour rester dans le contrat int 0–100 du schéma Zod
+  // EvaluationScores.sections[].score. La table sub-axis somme à 1.0
+  // donc weighted ∈ [0, 100].
+  return Math.round(Math.max(0, Math.min(100, weighted)));
 }
 
 // Réécrit les poids des sections à partir de la table Phase 2 et recalcule
 // globalScore. Garde-fou contre l'hallucination LLM (cf. bug B Phase 2).
 // Ajoute une ligne Communication avec score 0 si Sonnet ne l'a pas produite.
+//
+// Phase 7 J2 — gère la branche 6 axes :
+//   • `canonical` est de type AxisWeights6 (5 axes + medico_legal). Quand
+//     medico_legal=0, on ne produit PAS de section medico_legal (rétrocompat
+//     stations sans legalContext, sections.length === 5).
+//   • Quand medico_legal>0 ET medicoLegalScore est fourni, on ajoute une
+//     6e section { key: "medico_legal", weight: 0.10, score: medicoLegalScore }.
+//   • La formule globalScore = Σ score×weight / Σ weight>0 reste inchangée
+//     et la propriété d'invariance v1 ↔ v2 sur stations sans legalContext
+//     est garantie : poids strictement identiques + medico_legal exclu.
 export function normalizeScoresWithCanonicalWeights(
   scores: EvaluationScores,
-  canonical: { anamnese: number; examen: number; management: number; cloture: number; communication: number },
+  canonical: AxisWeights6,
+  medicoLegalScore?: number,
 ): EvaluationScores {
   const canonicalFraction: Record<string, number> = {
     anamnese: canonical.anamnese / 100,
@@ -263,6 +355,7 @@ export function normalizeScoresWithCanonicalWeights(
     management: canonical.management / 100,
     cloture: canonical.cloture / 100,
     communication: canonical.communication / 100,
+    medico_legal: canonical.medico_legal / 100,
   };
   const nameByKey: Record<string, string> = {
     anamnese: "Anamnèse",
@@ -270,6 +363,7 @@ export function normalizeScoresWithCanonicalWeights(
     management: "Management",
     cloture: "Clôture",
     communication: "Communication",
+    medico_legal: "Médico-légal",
   };
 
   // Indexe les sections produites par Sonnet par clé normalisée.
@@ -282,8 +376,17 @@ export function normalizeScoresWithCanonicalWeights(
   // Si une section est absente de la sortie Sonnet, on l'insère avec score=0
   // (pédagogiquement équivalent à « non couvert ») — elle reste affichée au
   // candidat, ce qui est plus transparent qu'un trou silencieux.
-  const orderedKeys = ["anamnese", "examen", "management", "cloture", "communication"] as const;
-  const sections = orderedKeys.map((key) => {
+  //
+  // Phase 7 J2 — la 6e ligne `medico_legal` est ajoutée UNIQUEMENT si la
+  // station a un legalContext (i.e. medico_legal weight > 0 ET
+  // medicoLegalScore défini). Sinon on conserve sections.length === 5,
+  // garantissant la rétrocompat byte-à-byte avec Phase 6.
+  // Type explicite (et compatible avec le schéma Zod EvaluationScores qui
+  // accepte `key: z.string()` libre) — sinon TS infère un literal-tuple
+  // sur `fiveAxisKeys` et refuse le push de "medico_legal".
+  type Section = { key: string; name: string; weight: number; score: number; raw?: string };
+  const fiveAxisKeys = ["anamnese", "examen", "management", "cloture", "communication"] as const;
+  const sections: Section[] = fiveAxisKeys.map((key) => {
     const existing = byKey.get(key);
     return {
       key,
@@ -294,8 +397,19 @@ export function normalizeScoresWithCanonicalWeights(
     };
   });
 
+  if (canonical.medico_legal > 0 && typeof medicoLegalScore === "number") {
+    sections.push({
+      key: "medico_legal",
+      name: nameByKey.medico_legal,
+      weight: canonicalFraction.medico_legal,
+      score: medicoLegalScore,
+    });
+  }
+
   // Recalcule globalScore = Σ(score×weight) / Σ(weight>0). Exclut donc les
-  // axes à poids nul (ex. Communication sur anamnese_examen).
+  // axes à poids nul (ex. Communication sur anamnese_examen). Le 6e axe
+  // medico_legal entre naturellement dans la somme quand il est présent
+  // (poids > 0 et score fourni) — le service appelant n'a rien d'autre à faire.
   const weightedSum = sections.reduce((acc, s) => acc + s.score * s.weight, 0);
   const totalWeight = sections.reduce((acc, s) => acc + (s.weight > 0 ? s.weight : 0), 0);
   const globalScore = totalWeight === 0 ? 0 : Math.round(weightedSum / totalWeight);
