@@ -240,6 +240,228 @@ const CASES: LexiconCase[] = [
     positive: "Cette consultation est terminée, ne revenez plus.",
     negative: "On peut continuer à se voir, je reste votre médecin.",
   },
+
+  // ─── Phase 7 J1 — violence_sexuelle_adulte must_verbalize ───
+  {
+    key: "reconnaissance du contexte d'agression sexuelle",
+    positive: "Vous me décrivez ce qui ressemble à une agression sexuelle.",
+    negative: "Vous avez fait du sport hier, je vois sur votre dossier.",
+  },
+  {
+    key: "absence de consentement / contrainte",
+    positive: "Vous parlez d'actes sexuels sans votre consentement, sous contrainte sexuelle.",
+    negative: "Vous avez signé le formulaire d'admission tout à l'heure.",
+  },
+  {
+    key: "orientation centre LAVI / aide aux victimes (adulte)",
+    positive: "Je peux vous orienter vers un centre LAVI pour un accompagnement gratuit.",
+    negative: "Je vous prescris du paracétamol pour la fièvre.",
+  },
+  {
+    key: "kit médico-légal sous 72h / examen médico-légal",
+    positive: "Nous pouvons proposer un kit médico-légal sous 72h pour le recueil de preuves.",
+    negative: "Je vais ausculter vos poumons, respirez profondément.",
+  },
+  {
+    key: "écoute sans jugement et validation du récit de la victime",
+    positive: "Je vous écoute sans jugement, je vous crois, vous êtes ici en sécurité.",
+    negative: "Asseyez-vous, je vais préparer le brassard de tension.",
+  },
+  {
+    key: "soutien psychologique et orientation spécialisée",
+    positive: "Je vous propose un soutien psychologique avec un psychologue formé.",
+    negative: "Voici une ordonnance pour vos vitamines D.",
+  },
+  {
+    key: "respect du rythme de la victime",
+    positive: "On avance à votre rythme, à votre demande, sans vous brusquer.",
+    negative: "Je vais vous prescrire un examen sanguin de routine.",
+  },
+  {
+    key: "confidentialité et autonomie de la décision de plainte",
+    positive: "La confidentialité est garantie sauf à votre demande, et la plainte reste votre choix.",
+    negative: "Le résultat de votre prise de sang sera disponible demain.",
+  },
+  // violence_sexuelle_adulte must_avoid
+  {
+    key: "victim-blaming / questions inversant la culpabilité",
+    positive: "Pourquoi étiez-vous habillée comme ça à cette heure ?",
+    negative: "Prenez le temps qu'il vous faut, je suis là pour vous écouter.",
+  },
+  {
+    key: "imposer la plainte à la victime adulte capable",
+    positive: "Vous devez absolument porter plainte, c'est le seul moyen.",
+    negative: "Porter plainte reste votre décision, je vous accompagnerai si vous le souhaitez.",
+  },
+  {
+    key: "signalement automatique police sans accord (adulte capable)",
+    positive: "Je dois obligatoirement informer la police, c'est automatique.",
+    negative: "Si vous le souhaitez, je peux vous accompagner pour une déclaration à la police.",
+  },
+
+  // ─── Phase 7 J1 — capacite_discernement must_verbalize ───
+  {
+    key: "définition tripartite de la capacité de discernement (CC-16)",
+    positive: "Pour évaluer la capacité de discernement (CC-16), il faut comprendre, apprécier, décider.",
+    negative: "Vous m'avez dit que vous habitez à Lausanne avec votre fils.",
+  },
+  {
+    key: "consentement éclairé (CDM art. 3)",
+    positive: "Cela suppose un consentement éclairé selon CDM art. 3.",
+    negative: "Vous avez bien dormi cette nuit ?",
+  },
+  {
+    key: "évaluation psychiatrique spécialisée",
+    positive: "Je propose une évaluation par un psychiatre spécialisé.",
+    negative: "Je vais vous prescrire un test sanguin de glycémie.",
+  },
+  {
+    key: "documenter l'évaluation tripartite",
+    positive: "Je vais documenter l'évaluation et tracer dans le dossier.",
+    negative: "Je vais nettoyer votre plaie avant de la suturer.",
+  },
+  {
+    key: "saisine APEA / curatelle de représentation (CC-443a / CC-394)",
+    positive: "On peut envisager une saisine APEA pour une curatelle de représentation (CC-443a).",
+    negative: "Buvez bien d'eau pendant la journée pour éviter la déshydratation.",
+  },
+  {
+    key: "test de compréhension active (reformulation par le patient)",
+    positive: "Qu'avez-vous compris de ce que je vous ai dit ? Expliquez-moi avec vos mots.",
+    negative: "Pouvez-vous me donner votre numéro de carte d'assurance ?",
+  },
+  {
+    key: "respect de l'autonomie résiduelle",
+    positive: "Je respecte votre autonomie résiduelle et vos volontés exprimées.",
+    negative: "Le scanner est prévu pour demain matin à 8 heures.",
+  },
+  {
+    key: "association de la famille avec accord du patient",
+    positive: "Avec votre accord, je vais associer la famille à la discussion.",
+    negative: "Tournez la tête vers la gauche, s'il vous plaît.",
+  },
+  // capacite_discernement must_avoid
+  {
+    key: "question fermée « vous comprenez ? » (ne teste pas la compréhension)",
+    positive: "Voilà, vous comprenez ?",
+    negative: "Pouvez-vous me dire ce que vous avez retenu de notre échange ?",
+  },
+  {
+    key: "négation de l'autonomie résiduelle (famille décide à la place)",
+    positive: "Maintenant votre famille décide pour vous, ce n'est plus à vous de décider.",
+    negative: "Vous restez décisionnaire, et nous associerons votre famille avec votre accord.",
+  },
+
+  // ─── Phase 7 J1 — directives_anticipees must_verbalize ───
+  {
+    key: "recherche de directives anticipées existantes (CC-370)",
+    positive: "Avez-vous rédigé des directives anticipées ? CC-370 prévoit ce dispositif.",
+    negative: "Avez-vous mangé avant de venir ce matin ?",
+  },
+  {
+    key: "mandat pour cause d'inaptitude (CC-360)",
+    positive: "Avez-vous établi un mandat pour cause d'inaptitude (CC-360) ?",
+    negative: "Vous avez signé le formulaire de consentement opératoire.",
+  },
+  {
+    key: "représentation thérapeutique (CC-377 / CC-378)",
+    positive: "Qui souhaitez-vous comme représentant thérapeutique selon CC-378 ?",
+    negative: "Vos résultats de bilan rénal sont normaux.",
+  },
+  {
+    key: "ouverture du dialogue sur les volontés futures",
+    positive: "Souhaitez-vous discuter de vos volontés futures et de qui vous voulez comme représentant ?",
+    negative: "Vous êtes à jour de vos vaccins, c'est très bien.",
+  },
+  {
+    key: "respect des volontés exprimées dans les directives",
+    positive: "Nous allons respecter vos volontés exprimées dans vos directives.",
+    negative: "Le rendez-vous de contrôle est dans trois mois.",
+  },
+  {
+    key: "ordre légal de représentation à défaut de directives (CC-378)",
+    positive: "À défaut de directives, l'ordre légal de représentation CC-378 s'applique.",
+    negative: "Buvez votre tisane chaude avant de dormir.",
+  },
+  {
+    key: "orientation conseil juridique pour rédaction",
+    positive: "Pour la rédaction, je vous recommande un conseil juridique ou un notaire.",
+    negative: "Le résultat du test de grossesse est négatif.",
+  },
+  {
+    key: "communication respectueuse sur les volontés évolutives",
+    positive: "Vos directives peuvent évoluer ; vous pouvez les modifier à tout moment, vos volontés sont prioritaires.",
+    negative: "Vous reverrez l'orthopédiste dans deux semaines.",
+  },
+  // directives_anticipees must_avoid
+  {
+    key: "éviter le sujet des directives par gêne",
+    positive: "Ce n'est pas le moment d'en parler, passons à autre chose.",
+    negative: "C'est un sujet important, prenons le temps d'en parler ensemble.",
+  },
+  {
+    key: "projeter ses propres valeurs sur les volontés du patient",
+    positive: "À votre place je choisirais ce traitement, moi je ferais comme ça.",
+    negative: "Quelles sont vos valeurs et préférences face à ce choix ?",
+  },
+
+  // ─── Phase 7 J1 — responsabilite_teleconsult must_verbalize ───
+  {
+    key: "limites de l'examen téléphonique reconnues",
+    positive: "Je reconnais les limites de l'examen à distance, je ne peux pas vous examiner physiquement.",
+    negative: "Votre tension est à 120 sur 80, tout va bien.",
+  },
+  {
+    key: "vérification d'identité du patient à distance",
+    positive: "Je vais d'abord faire une vérification d'identité : votre nom complet et date de naissance, s'il vous plaît.",
+    negative: "Vos résultats sont arrivés ce matin par courriel.",
+  },
+  {
+    key: "consentement à la téléconsultation",
+    positive: "Êtes-vous d'accord pour cette téléconsultation à distance aujourd'hui ?",
+    negative: "Asseyez-vous, je vais ausculter votre cœur.",
+  },
+  {
+    key: "consigne de surveillance écrite et red flags",
+    positive: "Voici la consigne de surveillance : si les symptômes s'aggravent, considérez ces red flags.",
+    negative: "On reprendra rendez-vous l'année prochaine pour le suivi annuel.",
+  },
+  {
+    key: "orientation urgences ou consultation physique en cas de doute",
+    positive: "En cas de doute, je vous propose de vous rendre aux urgences pour une consultation physique.",
+    negative: "Mangez équilibré et faites un peu d'exercice.",
+  },
+  {
+    key: "documentation horodatée du contact",
+    positive: "Je vais tracer la téléconsultation dans le dossier avec date et heure.",
+    negative: "Souriez pour la photo de la carte d'identité.",
+  },
+  {
+    key: "explicitation des limites de la téléconsultation au patient",
+    positive: "Je ne peux pas vous voir aujourd'hui, et je vous propose une consultation physique si possible.",
+    negative: "Je vais palper votre abdomen, dites-moi si ça vous gêne.",
+  },
+  {
+    key: "transparence sur le caractère partiel de l'évaluation",
+    positive: "Mon évaluation reste partielle, je ne peux pas tout conclure à distance.",
+    negative: "L'examen clinique est complet et rassurant.",
+  },
+  // responsabilite_teleconsult must_avoid
+  {
+    key: "prescription à distance sans documentation rigoureuse",
+    positive: "Je vous prescris à distance sans vous voir, c'est plus rapide.",
+    negative: "Avant toute prescription, je préfère un examen physique en consultation.",
+  },
+  {
+    key: "rappel ultérieur insuffisant face à un red flag",
+    positive: "Je vous rappelle dans une semaine, voilà.",
+    negative: "Si quelque chose change avant 24 heures, contactez les urgences sans attendre.",
+  },
+  {
+    key: "rassurance creuse sans examen",
+    positive: "Tout va bien, ne vous inquiétez pas, à distance je peux vous affirmer que ce n'est rien.",
+    negative: "Je préfère vous voir en personne avant de me prononcer.",
+  },
 ];
 
 describe("legalLexicon — exemples positifs et négatifs par entrée", () => {
