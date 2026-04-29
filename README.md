@@ -46,24 +46,66 @@ L'application est servie sur [http://localhost:5000](http://localhost:5000). Un 
 > sinon le bundle servi est l'ancien (route 404 surprise garantie).
 > Pour automatiser, lance plutôt `npm run dev:watch`.
 
-## Triage médico-légal Phase 6
+## Stations médico-légales
 
-Outil offline déterministe (zéro LLM) qui classe les 287 stations en 3
-statuts (A/B/C) restreints aux 3 catégories Phase 5
-(`secret_pro_levee`, `signalement_maltraitance`,
-`certificat_complaisance`). Sortie : un CSV destiné à une relecture
-pédagogique humaine par un médecin CH avant l'annotation effective des
-fixtures.
+État du corpus en clôture Phase 6 (cf.
+[`docs/phase-6-bilan.md`](docs/phase-6-bilan.md)) :
+
+| Compteur | Valeur |
+|---|---|
+| Total stations uniques | 287 |
+| Stations avec `legalContext` | 4 |
+| Stations avec `medicoLegalReviewed: true` | 286 |
+| Stations sans flag (Phase 7) | 1 (USMLE-9) |
+
+### Stations annotées
+
+| ID | Catégorie | Décision | Phase |
+|---|---|---|---|
+| AMBOSS-24 | `secret_pro_levee` | `refer` | 5 J1 |
+| USMLE-34 | `signalement_maltraitance` | `report` | 5 J1 |
+| RESCOS-72 | `certificat_complaisance` | `decline_certificate` | 5 J1 |
+| USMLE Triage 39 | `signalement_maltraitance` | `report` | 6 J2 |
+
+Pour les définitions pédagogiques des 3 catégories, les bases légales CH
+typiques, les anti-patterns et le glossaire (APEA, LAVI, FMH, CDM…),
+voir [`docs/medico-legal-CH-reference-v1.md`](docs/medico-legal-CH-reference-v1.md).
+
+### Workflow de triage / annotation (Phase 6+)
+
+L'outillage est offline et déterministe (zéro LLM). Pour annoter de
+nouvelles stations en Phase 7+ :
 
 ```bash
+# 1. Triage automatique → CSV
 npx tsx scripts/triage-medico-legal.ts
+
+# 2. Relecture par un médecin CH : le CSV est complété avec les colonnes
+#    human_validated_status / human_validated_category / human_notes
+#    puis sauvegardé en triage-output/phase-N-validated.csv (commité).
+
+# 3. Application idempotente (ajoute legalContext + medicoLegalReviewed)
+npx tsx scripts/apply-triage-j2.ts
+
+# 4. Audit corpus — bloque toute dérive silencieuse des compteurs
+npx vitest run server/__tests__/phase6CorpusAudit.test.ts
 ```
 
-Génère `triage-output/phase-6-j1.csv` + résumé stdout (counts par
-statut, par catégorie, par source, top 10 ambiguïtés). Le run de
-référence J1 est commité ; les runs ultérieurs sont locaux (cf.
-`.gitignore`). Voir [`triage-output/README.md`](triage-output/README.md)
-pour le format CSV et le workflow de relecture.
+Le CSV machine de référence (`phase-6-j1.csv`) et la version validée
+par le médecin (`phase-6-j1-validated.csv`) sont commités pour
+traçabilité. Les autres CSV sont locaux (cf. `.gitignore`). Format
+détaillé dans [`triage-output/README.md`](triage-output/README.md).
+
+### Garde-fous médico-légaux
+
+* `legalContext` et `medicoLegalReviewed` sont strippés du brief HTTP
+  et du system prompt LLM via `META_FIELDS_TO_STRIP`
+  ([`server/services/patientService.ts`](server/services/patientService.ts)).
+* Boot guard : tout code de `applicable_law` doit être mappé dans
+  `LEGAL_LAW_CODE_PATTERNS` ([`server/lib/legalLexicon.ts`](server/lib/legalLexicon.ts)).
+* Lexique fermé v1.0.0 (3 catégories) — aucune extension en Phase 6.
+  Phase 7 ouvrira potentiellement `violence_sexuelle_adulte` (USMLE-9)
+  et `capacite_discernement` (cf. dette technique dans le bilan).
 
 ## Architecture
 
