@@ -414,6 +414,32 @@ export default function Evaluation() {
                     </div>
                   );
                 })}
+                {/* Phase 7 J2/J4 — 6e axe Médico-légal, conditionnel.
+                    Affiché UNIQUEMENT quand la station porte un legalContext
+                    (i.e. result.medicoLegalScore et medicoLegalWeight définis
+                    côté backend). Pour les ~282 stations sans legalContext,
+                    cette ligne est absente du rendu — invariant de rétro-
+                    compatibilité visuelle vs Phase 6 (5 axes uniquement).
+                    Format identique aux 5 lignes du dessus pour cohérence
+                    visuelle ; le drill-down sous-axes (reconnaissance /
+                    verbalisation / décision / communication) reste dans le
+                    LegalDebriefPanel Phase 5 plus bas, on n'écrase rien. */}
+                {result.medicoLegalScore !== undefined && result.medicoLegalWeight !== undefined && (
+                  <div data-testid="score-medico_legal">
+                    <div className="flex justify-between text-sm mb-1 font-medium">
+                      <span>
+                        Médico-légal
+                        <span className="text-muted-foreground ml-2 font-normal">
+                          (poids {result.medicoLegalWeight}%)
+                        </span>
+                      </span>
+                      <span className="text-muted-foreground tabular-nums">
+                        {result.medicoLegalScore}%
+                      </span>
+                    </div>
+                    <ScoreBar value={result.medicoLegalScore} />
+                  </div>
+                )}
               </div>
             </div>
           </CardContent>

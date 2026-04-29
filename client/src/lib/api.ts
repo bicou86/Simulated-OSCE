@@ -410,6 +410,17 @@ export interface EvaluationResult {
   scores: EvaluationScores;
   stationType?: StationType;
   communicationWeight?: number;
+  // Phase 7 J2/J4 — 6e axe additif. Présent UNIQUEMENT quand la station
+  // a un legalContext annoté (5/287 stations à J3 : AMBOSS-24, USMLE-34,
+  // RESCOS-72, USMLE Triage 39, USMLE-9). Les ~282 autres stations ne
+  // portent aucun de ces deux champs (undefined ⇒ UI ne rend pas la
+  // 6e ligne, rétrocompat byte-à-byte vs Phase 6).
+  //   • medicoLegalScore  : 0–100, agrégé depuis legalEvaluator (moyenne
+  //                          uniforme 25 % par sous-axe).
+  //   • medicoLegalWeight : 10 (le poids effectif en %, identique pour
+  //                          toutes les stations avec legalContext).
+  medicoLegalScore?: number;
+  medicoLegalWeight?: number;
 }
 
 export interface EvaluateInput {

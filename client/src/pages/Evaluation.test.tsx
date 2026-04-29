@@ -436,3 +436,116 @@ describe("Evaluation — LegalDebriefPanel (Phase 5 J4)", () => {
     expect(ordering & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 });
+
+// ─── Phase 7 J4 — 6e ligne axe medico_legal (conditionnelle) ────────────
+//
+// Vérifie que l'UI Evaluation expose la 6e rangée Médico-légal IFF la
+// station a un legalContext (signal côté backend : medicoLegalScore +
+// medicoLegalWeight définis dans EvaluationResult). Sans ces champs,
+// rendu strictement identique à Phase 6 (5 axes uniquement).
+//
+// Garde-fou rétrocompat : 1 test sans medicoLegal* (≡ ~282 stations
+// du corpus) → 5 axes seulement, aucun marker medico_legal dans le DOM.
+
+function buildResultWithMedicoLegal(
+  stationId: string,
+  stationType: StationType,
+  medicoLegalScore: number,
+  medicoLegalWeight: number = 10,
+): EvaluationResult {
+  const base = buildResult(stationId, stationType);
+  return {
+    ...base,
+    medicoLegalScore,
+    medicoLegalWeight,
+  };
+}
+
+describe("Evaluation — 6e ligne medico_legal conditionnelle (Phase 7 J4)", () => {
+  it("station AVEC legalContext (medicoLegal* définis) → 6 axes affichés, ligne medico_legal présente", async () => {
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResultWithMedicoLegal("TEST-STATION", "anamnese_examen", 82, 10));
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    // Les 5 axes canoniques restent rendus.
+    await waitFor(() => expect(screen.getByTestId("score-anamnese")).toBeDefined());
+    for (const axis of ["anamnese", "examen", "management", "cloture", "communication"] as const) {
+      expect(screen.getByTestId(`score-${axis}`)).toBeDefined();
+    }
+    // La 6e ligne medico_legal apparaît avec le bon score et le bon poids.
+    const ml = screen.getByTestId("score-medico_legal");
+    expect(ml.textContent).toContain("Médico-légal");
+    expect(ml.textContent).toContain("(poids 10%)");
+    expect(ml.textContent).toContain("82%");
+  });
+
+  it("station SANS legalContext (medicoLegal* undefined) → 5 axes seulement, ligne medico_legal ABSENTE (rétrocompat byte-à-byte Phase 6)", async () => {
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResult("TEST-STATION", "anamnese_examen"));
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    // 5 axes canoniques rendus, 6e absent.
+    await waitFor(() => expect(screen.getByTestId("score-anamnese")).toBeDefined());
+    for (const axis of ["anamnese", "examen", "management", "cloture", "communication"] as const) {
+      expect(screen.getByTestId(`score-${axis}`)).toBeDefined();
+    }
+    expect(screen.queryByTestId("score-medico_legal")).toBeNull();
+    // Garde-fou supplémentaire : aucun texte « Médico-légal » dans le
+    // breakdown de la card Performance Globale (pour catcher une régression
+    // qui rendrait la ligne sans data-testid).
+    const perfCard = screen.getByText(/Performance Globale/i).closest("[class*='rounded-xl']");
+    expect(perfCard).not.toBeNull();
+    expect(perfCard!.textContent).not.toContain("Médico-légal");
+  });
+
+  it("station avec medicoLegalScore=0 et medicoLegalWeight=10 → ligne rendue (score=0 reste affichable)", async () => {
+    // Cas limite : transcript vide médico-légalement → score 0 mais le
+    // 6e axe doit toujours apparaître (= station avec legalContext mais
+    // candidat n'a rien verbalisé), pas être hidden silencieusement.
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(buildResultWithMedicoLegal("TEST-STATION", "anamnese_examen", 0, 10));
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    await waitFor(() => expect(screen.getByTestId("score-medico_legal")).toBeDefined());
+    expect(screen.getByTestId("score-medico_legal").textContent).toContain("0%");
+    expect(screen.getByTestId("score-medico_legal").textContent).toContain("(poids 10%)");
+  });
+
+  it("station avec medicoLegalScore défini mais medicoLegalWeight undefined → ligne ABSENTE (les deux champs requis)", async () => {
+    // Garde défensive : si le backend produit un payload partiel (score
+    // sans weight), l'UI ne rend pas la ligne (préfère silence à un poids
+    // erroné). Cas peu probable post-J4 mais protège contre une régression
+    // côté API future.
+    const partial: EvaluationResult = {
+      ...buildResult("TEST-STATION", "anamnese_examen"),
+      medicoLegalScore: 75,
+      // medicoLegalWeight intentionnellement undefined.
+    };
+    const fetchMock = vi.fn(fetchWithWeights((u) => {
+      if (u.endsWith("/api/evaluator/evaluate")) {
+        return ok(partial);
+      }
+      throw new Error(`Unexpected fetch to ${u}`);
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+    renderEvaluation();
+
+    await waitFor(() => expect(screen.getByTestId("score-anamnese")).toBeDefined());
+    expect(screen.queryByTestId("score-medico_legal")).toBeNull();
+  });
+});
