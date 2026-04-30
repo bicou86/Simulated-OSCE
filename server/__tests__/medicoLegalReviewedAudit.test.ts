@@ -1,16 +1,19 @@
 // Phase 6 J2 — audit du flag medicoLegalReviewed sur le catalogue.
+// Phase 7 J3 — couverture étendue à 287/287 (USMLE-9 désormais annotée
+// avec legalContext violence_sexuelle_adulte + medicoLegalReviewed=true).
 //
 // Vérifie côté SERVEUR (vraies fixtures, pas de mock) :
-//   • 286 / 287 stations portent medicoLegalReviewed=true (toutes sauf
-//     USMLE-9 qui reste en status C, à traiter Phase 7).
-//   • USMLE-9 ne porte PAS medicoLegalReviewed.
+//   • 287 / 287 stations portent medicoLegalReviewed=true (couverture
+//     complète post-J3 ; héritage Phase 6 J2 = 286/287).
+//   • USMLE-9 porte un legalContext (violence_sexuelle_adulte) ET
+//     medicoLegalReviewed=true depuis J3.
 //   • Aucune station ne fuite medicoLegalReviewed dans /api/patient/:id/brief
 //     (META_FIELDS_TO_STRIP étendu en J2 + allow-list explicite du brief).
 //   • Le flag est correctement parsé par le schéma Zod (default false
 //     quand absent, true quand présent).
 //
 // Contraintes : ZÉRO appel LLM, ZÉRO mock fs. On consomme les vraies
-// fixtures du repo (post-J2 appliqué).
+// fixtures du repo (post-J3 appliqué).
 
 import { promises as fs } from "fs";
 import path from "path";
@@ -59,27 +62,28 @@ beforeAll(async () => {
   await initCatalog();
 });
 
-describe("Phase 6 J2 — couverture medicoLegalReviewed sur le catalogue", () => {
-  it("286 stations sur 287 portent medicoLegalReviewed=true", async () => {
+describe("Phase 6 J2 / Phase 7 J3 — couverture medicoLegalReviewed sur le catalogue", () => {
+  it("287 stations sur 287 portent medicoLegalReviewed=true (couverture complète post-J3)", async () => {
     const rows = await auditAllFixtures();
     expect(rows.length).toBe(287);
     const flagged = rows.filter((r) => r.flagValue === true);
-    expect(flagged.length).toBe(286);
+    expect(flagged.length).toBe(287);
   });
 
-  it("USMLE-9 (status C, Phase 7) ne porte PAS medicoLegalReviewed", async () => {
+  it("USMLE-9 (annotée Phase 7 J3) porte legalContext ET medicoLegalReviewed=true", async () => {
     const rows = await auditAllFixtures();
     const u9 = rows.find((r) => r.shortId === "USMLE-9");
     expect(u9).toBeDefined();
-    expect(u9!.hasFlag).toBe(false);
-    expect(u9!.flagValue).toBeUndefined();
-    expect(u9!.hasLegalContext).toBe(false);
+    expect(u9!.hasFlag).toBe(true);
+    expect(u9!.flagValue).toBe(true);
+    expect(u9!.hasLegalContext).toBe(true);
   });
 
   it("toute station avec legalContext porte aussi medicoLegalReviewed=true", async () => {
     const rows = await auditAllFixtures();
     const annotated = rows.filter((r) => r.hasLegalContext);
-    expect(annotated.length).toBe(4); // 3 pilotes Phase 5 + USMLE Triage 39
+    // 3 pilotes Phase 5 + USMLE Triage 39 (Phase 6) + USMLE-9 (Phase 7 J3) = 5
+    expect(annotated.length).toBe(5);
     for (const r of annotated) {
       expect(r.flagValue, `${r.shortId} avec legalContext doit avoir flag=true`).toBe(true);
     }

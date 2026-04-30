@@ -679,7 +679,7 @@
     },
     {
       "id": "USMLE-3 - Douleur dorsale - Homme de 51 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Rick Meyer, 51 ans, travaillant dans la construction, se présente au cabinet en se plaignant de douleurs dorsales",
       "vitals": {
         "ta": "120/85 mmHg",
@@ -1905,7 +1905,7 @@
     },
     {
       "id": "USMLE-6 - Diabète pédiatrique - Fille de 10 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "La mère de Louise Johnson, 10 ans, consulte car sa fille a récemment été diagnostiquée avec le diabète",
       "source_scenario": true,
       "nom": "Mère de Louise Johnson",
@@ -3317,7 +3317,46 @@
           "contexte": "Questions difficiles à poser",
           "question_patient": "C'est entièrement ma faute, docteur. Pensez-vous que mes amis m'accepteront à nouveau un jour ?"
         }
-      ]
+      ],
+      "legalContext": {
+        "category": "violence_sexuelle_adulte",
+        "jurisdiction": "CH",
+        "subject_status": "adult_capable",
+        "applicable_law": [
+          "CP-321",
+          "LAVI-art-1",
+          "CDM-FMH-art-34"
+        ],
+        "mandatory_reporting": false,
+        "expected_decision": "refer",
+        "decision_rationale": "Patiente adulte capable de discernement (Julia Melton, 25 ans, étudiante, alerte et orientée x3, force 5/5, NCC II-XII intacts) — agression sexuelle aiguë (viol vaginal par deux hommes il y a 3 heures, sans préservatif, contrainte physique). En droit fédéral suisse, le secret professionnel (CP-321) protège la patiente : il n'existe AUCUN devoir d'aviser la police pour un adulte capable victime d'agression sexuelle — la décision de plainte appartient à la victime (autonomie). Décision canonique : ORIENTER vers (a) un examen médico-légal sous 72h pour préservation des preuves (kit médico-légal cantonal, recueil de prélèvements ADN/biologiques avant douche/change), (b) la LAVI / aide aux victimes pour soutien psychosocial et juridique gratuit, (c) un soutien psychologique spécialisé en aigu et au moyen terme, (d) une consultation gynéco-obstétrique pour prophylaxie HIV/IST et contraception d'urgence (dernières règles il y a 3 semaines, pas de contraception). Documenter rigoureusement les lésions somatiques cliniques (douleur thoracique D 8/10, paroi thoracique D douloureuse à la palpation et à la respiration profonde, douleurs aux poignets compatibles avec contention) à fin de preuve, dans le respect de l'autonomie de la patiente concernant le dépôt de plainte. Conduite communicationnelle : écoute sans jugement, validation du récit (« je vous crois »), respect du rythme et des silences, ne pas forcer la plainte, ne pas culpabiliser. Cadre déontologique : CDM-FMH-art-34 (déontologie professionnelle).",
+        "red_flags": [
+          "viol vaginal par deux hommes il y a 3 heures",
+          "absence de protection (pas de préservatif)",
+          "contrainte physique (maintenue au sol, gifles, coups de poings)",
+          "blessures somatiques compatibles (douleur thoracique D 8/10, palpation thoracique D douloureuse, douleurs aux poignets)",
+          "auto-blâme et culpabilité inappropriée exprimés par la patiente",
+          "réticence initiale à donner les détails / pleurs / tremblements / éviter contact visuel",
+          "patiente venue seule, isolement social",
+          "plainte police pas encore déposée"
+        ],
+        "candidate_must_verbalize": [
+          "reconnaissance du contexte d'agression sexuelle",
+          "absence de consentement / contrainte",
+          "écoute sans jugement et validation du récit de la victime",
+          "kit médico-légal sous 72h / examen médico-légal",
+          "orientation centre LAVI / aide aux victimes (adulte)",
+          "soutien psychologique et orientation spécialisée",
+          "respect du rythme de la victime",
+          "confidentialité et autonomie de la décision de plainte"
+        ],
+        "candidate_must_avoid": [
+          "victim-blaming / questions inversant la culpabilité",
+          "imposer la plainte à la victime adulte capable",
+          "signalement automatique police sans accord (adulte capable)"
+        ]
+      },
+      "medicoLegalReviewed": true
     },
     {
       "id": "USMLE-10 - Douleur mollet - Femme de 35 ans",
@@ -3706,7 +3745,7 @@
     },
     {
       "id": "USMLE-11 - Dysphonie - Homme de 62 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Oliver Jefferson, 62 ans, se présente au cabinet en se plaignant d'enrouement",
       "vitals": {
         "ta": "115/75 mmHg",
@@ -4025,7 +4064,7 @@
     },
     {
       "id": "USMLE-12 - Douleurs cervicales - Femme de 67 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Carol Holland, 67 ans, vient au cabinet en se plaignant de douleurs au cou",
       "vitals": {
         "ta": "115/75 mmHg",
@@ -5077,7 +5116,7 @@
     },
     {
       "id": "USMLE-15 - Aménorrhée - Femme de 36 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Patricia Garrison, 36 ans, vient au cabinet en se plaignant de l'absence récente de menstruations",
       "vitals": {
         "ta": "120/85 mmHg",
@@ -5431,7 +5470,7 @@
     },
     {
       "id": "USMLE-16 - Dyspareunie - Femme de 28 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Stéphanie McCall, 28 ans, se présente au cabinet en se plaignant de douleurs pendant les rapports sexuels",
       "vitals": {
         "ta": "120/85 mmHg",
@@ -5770,7 +5809,7 @@
     },
     {
       "id": "USMLE-17 - Perte auditive - Homme de 75 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Paul Stout, 75 ans, se présente au cabinet en se plaignant de perte auditive",
       "vitals": {
         "ta": "132/68 mmHg",
@@ -6436,7 +6475,7 @@
     },
     {
       "id": "USMLE-19 - Fièvre nourrisson - Garçon de 7 mois",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "La mère de Josh White, un garçon de 7 mois, vient au cabinet en se plaignant que son enfant a de la fièvre",
       "source_scenario": true,
       "nom": "Mère de Josh White",
@@ -6672,7 +6711,7 @@
     },
     {
       "id": "USMLE-20 - Toux - Homme de 26 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Éric Glenn, 26 ans, se présente au cabinet en se plaignant de toux",
       "vitals": {
         "ta": "120/80 mmHg",
@@ -6999,7 +7038,7 @@
     },
     {
       "id": "USMLE-21 - Ictère - Femme de 52 ans",
-      "setting": "Cabinet médical",
+      "setting": "Cabinet de médecine générale",
       "patient_description": "Gail Abbott, 52 ans, se présente au cabinet en se plaignant d'avoir les yeux et la peau jaunes",
       "vitals": {
         "ta": "130/80 mmHg",

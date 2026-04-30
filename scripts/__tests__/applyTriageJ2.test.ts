@@ -1,12 +1,19 @@
 // Phase 6 J2 — tests du script d'application des annotations.
+// Phase 7 J3 — mises à jour : USMLE-9 a reçu une annotation legalContext
+// directe (violence_sexuelle_adulte) + medicoLegalReviewed=true en J3
+// — hors du périmètre du script applyTriageJ2 (qui ne traite que les
+// stations status A/B du CSV J1, sans toucher au status C). Les
+// invariants du script lui-même restent stricts ; ce sont les
+// assertions de l'état corpus qui ont évolué (286→287 reviewed).
 //
-// Couvre les 8 invariants documentés dans le brief J2 :
+// Couvre les 8 invariants documentés dans le brief J2 (mise à jour J3) :
 //   1. Le script tourne sur les 286 stations cibles sans crash.
 //   2. USMLE Triage 39 reçoit legalContext.category="signalement_maltraitance".
 //   3. USMLE Triage 39 reçoit medicoLegalReviewed=true.
 //   4. Les 285 autres stations B reçoivent medicoLegalReviewed=true
 //      SANS legalContext.
-//   5. USMLE-9 (status C) ne reçoit PAS medicoLegalReviewed.
+//   5. USMLE-9 — annotée Phase 7 J3 indépendamment du script
+//      (violence_sexuelle_adulte direct fixture edit).
 //   6. Idempotence — 2 runs successifs produisent le même état.
 //   7. Aucune fixture ne perd de champs (les champs existants sont
 //      préservés byte-for-byte sauf l'ajout des champs additifs).
@@ -106,11 +113,12 @@ describe("Phase 6 J2 — état post-application sur les fixtures", () => {
     expect(s.medicoLegalReviewed).toBe(true);
   });
 
-  it("test 4 — 286 stations status A/B ont medicoLegalReviewed=true", async () => {
+  it("test 4 — 287 stations ont medicoLegalReviewed=true (post-J3 : USMLE-9 désormais annotée)", async () => {
     const rows = await loadAllStations();
     const reviewed = rows.filter((r) => r.data.medicoLegalReviewed === true);
-    // 287 stations - 1 USMLE-9 status C = 286 marquées.
-    expect(reviewed.length).toBe(286);
+    // Phase 6 J2 : 286 marquées (status C USMLE-9 exclu).
+    // Phase 7 J3 : couverture complète, USMLE-9 reçoit violence_sexuelle_adulte.
+    expect(reviewed.length).toBe(287);
   });
 
   it("les 285 stations B (sauf 4 status A) ont medicoLegalReviewed=true SANS legalContext", async () => {
@@ -139,11 +147,17 @@ describe("Phase 6 J2 — état post-application sur les fixtures", () => {
     expect(count).toBe(282);
   });
 
-  it("test 5 — USMLE-9 (status C) ne reçoit PAS medicoLegalReviewed", async () => {
+  it("test 5 — USMLE-9 (status C J1, annotée J3) reçoit legalContext + medicoLegalReviewed=true", async () => {
+    // Phase 6 J2 : USMLE-9 était sans flag (status C, reportée Phase 7).
+    // Phase 7 J3 : annotation directe (HORS script applyTriageJ2 qui
+    // continue de skip le status C par design — l'annotation USMLE-9
+    // est un edit fixture manuel J3, pas une régénération via le CSV).
     const rows = await loadAllStations();
     const s = findStation(rows, "USMLE-9");
-    expect(s.medicoLegalReviewed).toBeUndefined();
-    expect(s.legalContext).toBeUndefined();
+    expect(s.medicoLegalReviewed).toBe(true);
+    const ctx = s.legalContext as { category?: string } | undefined;
+    expect(ctx).toBeDefined();
+    expect(ctx!.category).toBe("violence_sexuelle_adulte");
   });
 
   it("les 4 stations status A ont toutes medicoLegalReviewed=true ET legalContext", async () => {

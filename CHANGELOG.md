@@ -5,6 +5,127 @@ fichier. Le format est inspiré de [Keep a Changelog](https://keepachangelog.com
 les phases de développement sont versionnées chronologiquement
 (Phase 1 → Phase N).
 
+## [Phase 7 J1] — Extension lexique médico-légal CH v1.0.0 → v1.1.0
+
+Branche : `phase-7-medico-legal-extension`. Livraison J1 : extension
+PURE du lexique pédagogique (4 nouvelles catégories), tests de
+couverture, snapshot de non-régression v1.0.0, documentation v2. **Aucune
+station du corpus n'est annotée en J1** (les fixtures restent
+inchangées byte-à-byte). Annotation de USMLE-9 prévue J3, introduction
+du 6ᵉ axe `medico_legal` au scoring prévue J2.
+
+### Added
+
+* **4 nouvelles catégories du lexique v1.1.0**, ajoutées dans
+  [`server/lib/legalLexicon.ts`](server/lib/legalLexicon.ts) avec leurs
+  entrées must_verbalize / must_avoid (axes : reconnaissance /
+  verbalisation / décision / communication) et patterns regex
+  défensifs :
+  * `violence_sexuelle_adulte` — prise en charge LAVI + médico-légal
+    (kit médico-légal sous 72h, centres LAVI, soutien psychologique)
+    d'une victime adulte capable de discernement. Décision attendue :
+    `refer`. Pas de signalement automatique (autonomie de la victime).
+  * `capacite_discernement` — évaluation tripartite CC-16 (comprendre,
+    apprécier, décider), test de compréhension active, saisine APEA /
+    curatelle de représentation (CC-394, CC-443a). Décision : `refer`.
+  * `directives_anticipees` — recherche / respect / rédaction CC-370
+    et suivants, mandat pour cause d'inaptitude (CC-360),
+    représentation thérapeutique (CC-377, CC-378). Décision : `refer`.
+  * `responsabilite_teleconsult` — limites de l'examen à distance,
+    vérification d'identité, consentement, consigne de surveillance,
+    documentation horodatée, orientation urgences (CDM art. 3 al. 3,
+    CO art. 394+398, LPD, FMH directives télémédecine). Décision :
+    `refer`.
+* **Type `LegalLexiconCategory`** + constante
+  `LEGAL_LEXICON_CATEGORIES` (7 valeurs) + helper
+  `listLegalLexiconCategories()` qui dérive l'énumération depuis les
+  entrées effectives du lexique.
+* **Champ `category: LegalLexiconCategory`** ajouté à
+  `LegalLexiconEntry` ; chaque entrée du lexique (v1.0.0 et v1.1.0)
+  porte maintenant son étiquette de catégorie. Additif strict côté
+  scoring (`legalEvaluator` n'utilise pas `category` pour calculer les
+  scores — non-régression numérique stricte).
+* **Tests de couverture v1.1.0** dans
+  [`server/__tests__/legalLexicon.v1.1.0.test.ts`](server/__tests__/legalLexicon.v1.1.0.test.ts)
+  (30 tests) :
+  * Pour chaque nouvelle catégorie : transcript canonique « parfait »
+    score moyen ≥ 75 % ; transcript vide score 0 sur les axes avec
+    must_verbalize ; transcripts anti-pattern font remonter ≥ ⌈n/2⌉
+    entrées must_avoid ; transcript partiel score 20–70 % ; gradation
+    perfect > partial > empty.
+  * Énumération : `LEGAL_LEXICON_VERSION === "1.1.0"`,
+    `listLegalLexiconCategories()` énumère exactement 7 catégories,
+    chaque catégorie a ≥ 1 must_verbalize ET ≥ 1 must_avoid.
+  * **Snapshot non-régression v1.0.0** : les patterns des 3 catégories
+    Phase 5 produisent EXACTEMENT les mêmes match counts (sur les 3
+    transcripts canoniques de référence) qu'au commit `bea866d`
+    (clôture Phase 6).
+  * **Mutex audit** : marqueurs strictement distinctifs (« art. 321 »,
+    « 364bis », « CP-318 », « kit médico-légal », « CC-16 »,
+    « CC-370 », « téléconsultation »…) n'apparaissent que dans le
+    transcript de leur propre catégorie ; sanity check inverse.
+  * **Garde-fou anti-patterns** : aucun anti-pattern ne fire sur le
+    transcript « parfait » de sa propre catégorie (où le candidat
+    fait bien).
+* **42 nouvelles paires positif/négatif** dans
+  [`server/__tests__/legalLexicon.test.ts`](server/__tests__/legalLexicon.test.ts)
+  pour les 42 nouvelles entrées du lexique (couverture exhaustive
+  inchangée : tout key dans `LEGAL_LEXICON` a un cas de test).
+* **Documentation pédagogique v2** :
+  [`docs/medico-legal-CH-reference-v2.md`](docs/medico-legal-CH-reference-v2.md)
+  — référence v1.1.0 avec les 7 catégories (3 v1.0.0 conservées
+  textuellement + 4 nouvelles), tableau récapitulatif, glossaire CH
+  étendu (LAVI art. 5+15, CC-16, CC-370+, ASSM, CO art. 394+398,
+  LPD, kit médico-légal cantonal, mandat pour cause d'inaptitude,
+  représentation thérapeutique). Le document v1 reste accessible
+  côte-à-côte ([`docs/medico-legal-CH-reference-v1.md`](docs/medico-legal-CH-reference-v1.md)).
+
+### Changed
+
+* **`LEGAL_LEXICON_VERSION`** bumpé de `"1.0.0"` à `"1.1.0"`. Le champ
+  `lexiconVersion` retourné par `POST /api/evaluation/legal` reflète
+  automatiquement le bump.
+* **Enum Zod `legalCategorySchema`** dans
+  [`shared/station-schema.ts`](shared/station-schema.ts) étendue par
+  4 valeurs additives — passe de 5 à 9 valeurs acceptées (les 5
+  Phase 5 sont conservées strictement, dont les 2 réservées
+  `signalement_danger_tiers` et `declaration_obligatoire`). 7 valeurs
+  disposent d'une couverture lexique en v1.1.0 ; les 2 réservées
+  attendent toujours leur extension.
+
+### Notes — invariants J1
+
+1. **ZÉRO modif scoring 5-axes Phase 2/3** —
+   `server/services/evaluatorService.ts`,
+   `shared/evaluation-weights.ts`,
+   `server/services/legalEvaluator.ts` inchangés (`git diff` vide).
+2. **ZÉRO modif des 287 fixtures** — `server/data/patient/Patient_*.json`
+   inchangés byte-à-byte.
+3. **ZÉRO LLM ajouté** — pas de nouvelle dépendance OpenAI / Anthropic.
+   La chaîne médico-légale reste 100 % déterministe (regex statiques).
+4. **Schéma additif strict** — l'enum Zod ne supprime AUCUNE valeur
+   Phase 5 ; le type `LegalLexiconEntry` ajoute `category` sans
+   modifier `axis`/`patterns`/`antiPattern`.
+5. **Non-régression v1.0.0 stricte** — snapshot numérique des match
+   counts vert (cf. `legalLexicon.v1.1.0.test.ts`).
+6. **Briefs HTTP identiques byte-à-byte** — `legalContext` continue
+   d'être strippé du brief HTTP via `META_FIELDS_TO_STRIP` (Phase 5
+   J3) ; aucune fixture n'a été touchée.
+7. **Tests baseline** — 1037 → 1151 (+114 tests : 42 paires de cas
+   d'entrée × 2 + 30 tests v1.1.0).
+
+### Hors scope J1 (à venir Phase 7)
+
+* **J2** — introduction du 6ᵉ axe `medico_legal` au scoring global,
+  poids par défaut 10 %.
+* **J3** — annotation de USMLE-9 dans la nouvelle catégorie
+  `violence_sexuelle_adulte`.
+* **J4** — nettoyage technique : doublon RESCOS-64 + harmonisation
+  des 8 variantes de « Cabinet de médecine générale ».
+* **J5** — bilan Phase 7, audit corpus étendu, préparation PR.
+
+---
+
 ## [Phase 6] — Annotation médico-légale du corpus existant
 
 Branche : `phase-6-triage-medico-legal`. Commits : `fc51dd6` (J1),

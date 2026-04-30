@@ -88,12 +88,24 @@ export type ParticipantSections = z.infer<typeof participantSectionsSchema>;
 //   • Le scoring (gradé 0/1/2) est isolé dans /api/evaluation/legal —
 //     ne touche pas les 5 axes Phase 2/3 (anamnese, examen, management,
 //     cloture, communication).
+// Phase 7 J1 — extension v1.0.0 → v1.1.0 : ajout de 4 catégories
+// pédagogiques (violence_sexuelle_adulte, capacite_discernement,
+// directives_anticipees, responsabilite_teleconsult). Additif strict :
+// AUCUNE valeur supprimée — les 5 valeurs Phase 5 (3 actives + 2
+// réservées : `signalement_danger_tiers`, `declaration_obligatoire`)
+// sont maintenues. Total : 9 valeurs acceptées, dont 7 disposent d'une
+// couverture lexique (cf. `listLegalLexiconCategories` dans
+// `server/lib/legalLexicon.ts`).
 export const legalCategorySchema = z.enum([
   "signalement_maltraitance",
   "signalement_danger_tiers",
   "secret_pro_levee",
   "certificat_complaisance",
   "declaration_obligatoire",
+  "violence_sexuelle_adulte",
+  "capacite_discernement",
+  "directives_anticipees",
+  "responsabilite_teleconsult",
 ]);
 export type LegalCategory = z.infer<typeof legalCategorySchema>;
 

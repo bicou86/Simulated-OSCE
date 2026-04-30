@@ -36,10 +36,18 @@ async function getRows(): Promise<TriageRow[]> {
   return cachedRows;
 }
 
+// Catégories admissibles en status A — historiquement les 3 catégories
+// Phase 5 (lexique v1.0.0). Phase 7 J1 a étendu le lexique à v1.1.0
+// (+ 4 catégories CH), et Phase 7 J3 annote USMLE-9 avec
+// violence_sexuelle_adulte ; l'auto-cohérence (test 2) propage cette
+// catégorie en status A via le short-circuit `alreadyAnnotated` du
+// triage. On élargit donc la whitelist en gardant la sémantique
+// d'origine : « catégorie issue du lexique vivant ».
 const ALLOWED_A_CATEGORIES = new Set([
   "secret_pro_levee",
   "signalement_maltraitance",
   "certificat_complaisance",
+  "violence_sexuelle_adulte",
 ]);
 
 // Parser CSV minimal RFC 4180 — utilisé pour le round-trip test 5.

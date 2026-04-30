@@ -7,20 +7,26 @@
 // (compteur global, station hors lexique, fuite HTTP, jurisdiction
 // inattendue, etc.).
 //
-// COMPTEURS DE RÉFÉRENCE (clôture Phase 6, à modifier explicitement
-// quand Phase 7 étendra le corpus annoté) :
+// COMPTEURS DE RÉFÉRENCE (mis à jour Phase 7 J3 — annotation USMLE-9) :
 //   • 287 stations uniques au total (dédup par shortId, RESCOS-64 doublon
 //     hérité Phase 4 compté une seule fois — cf. medicoLegalReviewedAudit).
-//   • 4 stations avec legalContext :
-//       AMBOSS-24, USMLE-34, RESCOS-72, USMLE Triage 39.
-//   • 286 stations avec medicoLegalReviewed=true (toutes sauf USMLE-9).
-//   • 1 station ni annotée ni reviewed : USMLE-9 (status C, reportée
-//     Phase 7 — nécessite extension lexique pour violence sexuelle adulte).
+//   • 5 stations avec legalContext :
+//       AMBOSS-24, USMLE-34, RESCOS-72, USMLE Triage 39, USMLE-9 (J3).
+//   • 287 stations avec medicoLegalReviewed=true (toutes : USMLE-9 l'a
+//     reçu en J3 avec son legalContext).
+//   • 0 station unflagged : la couverture est désormais complète sur le
+//     corpus existant. Tout ajout de station Phase 8+ devra être annoté
+//     ou flaggé reviewed à l'ingestion.
+//
+// HISTORIQUE :
+//   • Phase 6 J3 : 4 legalContext, 286 reviewed, 1 unflagged (USMLE-9).
+//   • Phase 7 J3 : 5 legalContext, 287 reviewed, 0 unflagged.
 //
 // INVARIANTS RUNTIME ADDITIONNELS :
-//   • Toutes les categories utilisées appartiennent au lexique
-//     v1.0.0 (3 catégories Phase 5).
-//   • Toutes les jurisdictions valent "CH" (pas de cantonal en Phase 6).
+//   • Toutes les categories utilisées appartiennent au lexique vivant
+//     (3 catégories Phase 5 + 1 catégorie Phase 7 J1+J3 :
+//     violence_sexuelle_adulte → utilisée par USMLE-9).
+//   • Toutes les jurisdictions valent "CH" (pas de cantonal en Phase 6/7).
 //   • Toute station avec legalContext porte aussi medicoLegalReviewed=true
 //     (cohérence — déjà couverte par medicoLegalReviewedAudit, dupliquée
 //     ici pour fournir un message d'erreur orienté "phase 7 dérive").
@@ -42,10 +48,17 @@ import { buildTestApp } from "./helpers";
 
 const PATIENT_DIR = path.resolve(__dirname, "..", "data", "patient");
 
-const PHASE6_LEXICON_CATEGORIES = new Set<string>([
+// Catégories effectivement utilisées par les stations annotées au
+// runtime (corpus vivant). Phase 6 ouvrait 3 catégories ; Phase 7 J3
+// ajoute violence_sexuelle_adulte via USMLE-9. Cet ensemble n'est PAS
+// le lexique complet (lexique v1.1.0 ouvre 9 catégories enum + 7 avec
+// couverture pattern) — c'est le sous-ensemble effectivement consommé
+// par le corpus.
+const ACTIVE_CORPUS_CATEGORIES = new Set<string>([
   "secret_pro_levee",
   "signalement_maltraitance",
   "certificat_complaisance",
+  "violence_sexuelle_adulte",
 ]);
 
 const EXPECTED_LEGAL_CONTEXT_IDS = new Set<string>([
@@ -53,9 +66,10 @@ const EXPECTED_LEGAL_CONTEXT_IDS = new Set<string>([
   "USMLE-34",
   "RESCOS-72",
   "USMLE Triage 39",
+  "USMLE-9",
 ]);
 
-const EXPECTED_UNFLAGGED_IDS = new Set<string>(["USMLE-9"]);
+const EXPECTED_UNFLAGGED_IDS = new Set<string>([]);
 
 const TOTAL_STATIONS = 287;
 
@@ -114,24 +128,24 @@ describe("Phase 6 J3 — compteurs corpus figés en clôture de phase", () => {
     expect(rows.length).toBe(TOTAL_STATIONS);
   });
 
-  it("exactement 4 stations portent un legalContext (les 4 attendues)", async () => {
+  it("exactement 5 stations portent un legalContext (les 5 attendues, J3 incluant USMLE-9)", async () => {
     const rows = await auditCorpus();
     const annotated = rows.filter((r) => r.hasLegalContext);
-    expect(annotated.length).toBe(4);
+    expect(annotated.length).toBe(5);
     const ids = new Set(annotated.map((r) => r.shortId));
     expect(ids).toEqual(EXPECTED_LEGAL_CONTEXT_IDS);
   });
 
-  it("exactement 286 stations portent medicoLegalReviewed=true", async () => {
+  it("exactement 287 stations portent medicoLegalReviewed=true (couverture complète J3)", async () => {
     const rows = await auditCorpus();
     const reviewed = rows.filter((r) => r.reviewed);
-    expect(reviewed.length).toBe(286);
+    expect(reviewed.length).toBe(287);
   });
 
-  it("exactement 1 station n'a ni legalContext ni medicoLegalReviewed (USMLE-9)", async () => {
+  it("0 station unflagged : couverture complète post-J3", async () => {
     const rows = await auditCorpus();
     const unflagged = rows.filter((r) => !r.hasLegalContext && !r.reviewed);
-    expect(unflagged.length).toBe(1);
+    expect(unflagged.length).toBe(0);
     expect(new Set(unflagged.map((r) => r.shortId))).toEqual(EXPECTED_UNFLAGGED_IDS);
   });
 
@@ -148,8 +162,8 @@ describe("Phase 6 J3 — compteurs corpus figés en clôture de phase", () => {
   });
 });
 
-describe("Phase 6 J3 — invariants lexique v1.0.0 (3 catégories Phase 5)", () => {
-  it("toutes les categories utilisées sont dans le lexique v1.0.0", async () => {
+describe("Phase 7 J3 — invariants lexique vivant (catégories effectives du corpus)", () => {
+  it("toutes les categories utilisées appartiennent à l'ensemble corpus actif (3 v1.0.0 + violence_sexuelle_adulte v1.1.0/J3)", async () => {
     const rows = await auditCorpus();
     for (const r of rows) {
       if (!r.hasLegalContext) continue;
@@ -158,8 +172,8 @@ describe("Phase 6 J3 — invariants lexique v1.0.0 (3 catégories Phase 5)", () 
         `${r.shortId} : category vide alors que legalContext présent`,
       ).toBeDefined();
       expect(
-        PHASE6_LEXICON_CATEGORIES.has(r.legalCategory!),
-        `${r.shortId} : category « ${r.legalCategory} » hors lexique v1.0.0`,
+        ACTIVE_CORPUS_CATEGORIES.has(r.legalCategory!),
+        `${r.shortId} : category « ${r.legalCategory} » hors set corpus actif`,
       ).toBe(true);
     }
   });
