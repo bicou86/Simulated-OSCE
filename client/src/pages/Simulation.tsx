@@ -51,6 +51,7 @@ import {
   TOTAL_DURATION_LEGACY_SEC as TOTAL_DURATION,
   computeInitialPhaseDuration,
 } from "@/lib/phaseTimer";
+import { runPart1Evaluation } from "@/lib/part1Evaluation";
 
 const ANNOUNCEMENT_11_MIN = 2 * 60;
 
@@ -777,13 +778,14 @@ export default function Simulation() {
     { enabled: isActive && timeLeft > 0 },
   );
 
-  const handleDebrief = () => {
-    if (!stationId || !brief) return;
-    // L'évaluateur n'accepte que les rôles {doctor, patient}. On convertit les
-    // tours examiner en messages `patient` préfixés `[Examinateur] ` pour que
-    // Claude Sonnet les lise comme des findings objectifs établis, sans casser
-    // le contrat de la route /api/evaluator.
-    const transcriptForEval: Array<{ role: "patient" | "doctor"; text: string }> = transcript.map((t) => {
+  // L'évaluateur n'accepte que les rôles {doctor, patient}. On convertit les
+  // tours examiner en messages `patient` préfixés `[Examinateur] ` pour que
+  // Claude Sonnet les lise comme des findings objectifs établis, sans casser
+  // le contrat de la route /api/evaluator. Phase 9 J3 — extrait dans un
+  // helper local pour réutilisation par handleDebrief ET par la transition
+  // P1 → P2 (Bug 2).
+  const buildTranscriptForEval = useCallback((): Array<{ role: "patient" | "doctor"; text: string }> => {
+    return transcript.map((t) => {
       if (t.role === "examiner") {
         if (t.items && t.items.length > 0) {
           const lines = t.items.map((it) => `  - ${it.maneuver} : ${it.text}`).join("\n");
@@ -809,6 +811,11 @@ export default function Simulation() {
       }
       return { role: t.role, text: t.text };
     });
+  }, [transcript]);
+
+  const handleDebrief = () => {
+    if (!stationId || !brief) return;
+    const transcriptForEval = buildTranscriptForEval();
     try {
       sessionStorage.setItem(
         `osce.session.${stationId}`,
@@ -817,6 +824,60 @@ export default function Simulation() {
     } catch { /* sessionStorage peut être désactivé */ }
     setLocation(`/evaluation?station=${encodeURIComponent(stationId)}`);
   };
+
+  // Phase 9 J3 — Bug 2 : transition automatique P1 → P2.
+  //
+  // Le déclenchement de l'évaluation P1 et la navigation vers P2 sont
+  // découplés pour permettre à l'évaluation de tourner pendant que le
+  // candidat lit l'écran intermédiaire :
+  //   • `useEffect` ci-dessous : déclenche `runPart1Evaluation` en
+  //     arrière-plan dès que `timedOut === true` ET `nextPartStationId`
+  //     est défini. Idempotent via flag `part1EvalTriggeredRef` (une
+  //     seule fois par session).
+  //   • `handleTransitionToPart2` : appelé au clic « Continuer » de
+  //     l'overlay, navigue vers /simulation?station=${P2}. L'évaluation
+  //     est déjà partie en parallèle, son résultat est lu plus tard
+  //     depuis sessionStorage `osce.eval.${P1}`.
+  //
+  // Q-A4 Option b validée : si l'évaluation échoue, toast visible mais
+  // la transition continue (l'expérience candidat n'est jamais bloquée).
+  const part1EvalTriggeredRef = useRef(false);
+  useEffect(() => {
+    if (!stationId || !brief?.nextPartStationId) return;
+    // Calcul local de `timedOut` (la variable globale est déclarée plus
+    // bas dans la fonction render — on duplique la logique pour éviter
+    // une référence avant déclaration côté useEffect).
+    const phasesArr = brief.phases;
+    const isTimedOut =
+      timeLeft === 0 &&
+      (!phasesArr || currentPhaseIndex >= phasesArr.length - 1);
+    if (!isTimedOut) return;
+    if (part1EvalTriggeredRef.current) return;
+    part1EvalTriggeredRef.current = true;
+    const transcriptForEval = buildTranscriptForEval();
+    // Persiste le transcript P1 sous la clé legacy (réutilisable pour la
+    // combinaison bilan UI P1+P2 future, dette Phase 9 #7).
+    try {
+      sessionStorage.setItem(
+        `osce.session.${stationId}`,
+        JSON.stringify({ stationId, brief, transcript: transcriptForEval }),
+      );
+    } catch { /* sessionStorage peut être désactivé */ }
+    void runPart1Evaluation(stationId, transcriptForEval).then((record) => {
+      if (record.error) {
+        toast({
+          title: "Évaluation partie 1 indisponible",
+          description: "Le bilan final affichera le détail. La partie 2 démarre normalement.",
+          variant: "destructive",
+        });
+      }
+    });
+  }, [timeLeft, currentPhaseIndex, stationId, brief, buildTranscriptForEval, toast]);
+
+  const handleTransitionToPart2 = useCallback(() => {
+    if (!brief?.nextPartStationId) return;
+    setLocation(`/simulation?station=${encodeURIComponent(brief.nextPartStationId)}`);
+  }, [brief, setLocation]);
 
   const handleMicClick = async () => {
     if (!isActive || timeLeft === 0) return;
@@ -896,9 +957,53 @@ export default function Simulation() {
   const isSilentPhase = currentPhase?.kind === "silent";
   const inputsDisabled = !isActive || timedOut || isSending || isTranscribing || isSilentPhase;
 
+  // Phase 9 J3 — overlay écran intermédiaire transition P1 → P2 (Bug 2).
+  // Affiché conditionnellement quand la station courante est une P1 avec
+  // une P2 enchaînée ET que le timer P1 est arrivé à 0. L'évaluation P1
+  // est déjà partie en arrière-plan via le useEffect ci-dessus ; ce
+  // composant n'a qu'une fonction de transition UI + bouton « Continuer ».
+  // Pour les 286 stations classiques sans `nextPartStationId` : overlay
+  // jamais rendu, comportement legacy strictement préservé.
+  const showTransitionOverlay = timedOut && !!brief.nextPartStationId;
+
   return (
     <div className="h-full flex flex-col md:flex-row bg-muted/30">
       <audio ref={audioElementRef} className="hidden" data-testid="audio-patient" />
+
+      {showTransitionOverlay && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          data-testid="transition-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="transition-overlay-title"
+        >
+          <div className="bg-card border border-border rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-8 space-y-6">
+            <div className="flex items-center gap-3">
+              <CheckCircle2 className="w-8 h-8 text-primary" />
+              <h2 id="transition-overlay-title" className="text-2xl font-bold text-foreground">
+                Phase 1 terminée
+              </h2>
+            </div>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Préparation de la phase 2…
+            </p>
+            <p className="text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-md px-4 py-3 leading-relaxed">
+              La partie 2 est une présentation orale au pneumologue : <span className="font-semibold">4 minutes de préparation</span> suivies de <span className="font-semibold">9 minutes de présentation</span> chronométrées (13 minutes au total).
+            </p>
+            <div className="flex justify-end">
+              <Button
+                onClick={handleTransitionToPart2}
+                size="lg"
+                className="h-12 px-6 text-base rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground"
+                data-testid="button-transition-continue"
+              >
+                Continuer
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Panneau gauche : feuille de porte */}
       <div className="w-full md:w-1/3 border-r border-border bg-card overflow-y-auto shadow-sm z-10 flex flex-col">

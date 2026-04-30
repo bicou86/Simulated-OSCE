@@ -250,6 +250,12 @@ export interface PatientBrief {
   // doit afficher `consigneCandidat` prioritairement à `patientDescription`
   // quand il est présent.
   consigneCandidat?: string;
+  // Phase 9 J3 — Bug 2 : shortId de la station partie 2 si la station
+  // courante est une P1 ayant une P2 enchaînée. Utilisé par l'UI pour
+  // afficher l'écran intermédiaire de transition automatique en fin de
+  // P1 et déclencher l'évaluation P1 en arrière-plan. Champ omis pour
+  // les 286 stations classiques + RESCOS-64-P2 elle-même.
+  nextPartStationId?: string;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {

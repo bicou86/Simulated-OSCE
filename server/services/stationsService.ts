@@ -353,6 +353,28 @@ export function getStationMeta(shortId: string): StationMeta | undefined {
   return catalog.get(shortId);
 }
 
+// Phase 9 J3 — Bug 2 transition automatique P1 → P2.
+//
+// Retourne les stations enfants d'une station P1, c'est-à-dire les stations
+// du catalogue qui portent `parentStationId === parentShortId`. Le filtre
+// est strict :
+//   • `parentStationId === parentShortId` (lien référentiel Phase 8 J1)
+//   • shortId termine par `-P2` (suffixe partie 2, cf. extractShortId
+//     Phase 8 J2). Double critère pour robustesse, au cas où une future
+//     station P2 aurait un parentStationId mal renseigné.
+//
+// En J3, seule RESCOS-64-P2 satisfait ces deux conditions pour parent
+// "RESCOS-64". Les 286 autres stations sans `parentStationId` retournent
+// un tableau vide.
+//
+// Aucun appel LLM, complexité O(n) sur le catalog (n=288 — négligeable).
+export function findChildStations(parentShortId: string): StationMeta[] {
+  // Itération via Array.from pour compat target TS du build (cf. listStations).
+  return Array.from(catalog.values()).filter(
+    (meta) => meta.parentStationId === parentShortId && /-P2$/.test(meta.id),
+  );
+}
+
 // Helpers d'accès aux chemins des JSON — seuls patientService et evaluatorService
 // doivent les utiliser.
 export function patientFilePath(filename: string): string {

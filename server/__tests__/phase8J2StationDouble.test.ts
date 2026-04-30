@@ -117,11 +117,11 @@ describe("Phase 8 J2 — catalog & validation référentielle", () => {
 });
 
 describe("Phase 8 J2 — Brief HTTP partie 1 RESCOS-64 (non-régression)", () => {
-  it("getPatientBrief(« RESCOS-64 ») = 647 bytes UTF-8 (baseline Chrome préservée)", async () => {
+  it("getPatientBrief(« RESCOS-64 ») = 682 bytes UTF-8 (baseline Phase 9 J3 actée, +35 vs Phase 8 J2 = ajout nextPartStationId)", async () => {
     const brief = await getPatientBrief("RESCOS-64");
     const json = JSON.stringify(brief);
     const bytes = Buffer.byteLength(json, "utf-8");
-    expect(bytes).toBe(647);
+    expect(bytes).toBe(682);
   });
 
   it("brief partie 1 : setting « Cabinet de médecine générale » (consultation patient simulé)", async () => {
@@ -135,12 +135,12 @@ describe("Phase 8 J2 — Brief HTTP partie 1 RESCOS-64 (non-régression)", () =>
     expect(json).not.toContain("parentStationId");
   });
 
-  it("GET /api/patient/RESCOS-64/brief : status 200 + 647 bytes UTF-8", async () => {
+  it("GET /api/patient/RESCOS-64/brief : status 200 + 682 bytes UTF-8 (baseline Phase 9 J3)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64/brief");
     expect(res.status).toBe(200);
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(647);
+    expect(bytes).toBe(682);
   });
 });
 

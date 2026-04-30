@@ -12,7 +12,7 @@ import {
   type Interlocutor,
 } from "../lib/patientInterlocutor";
 import { loadPrompt } from "../lib/prompts";
-import { getStationMeta, patientFilePath } from "./stationsService";
+import { findChildStations, getStationMeta, patientFilePath } from "./stationsService";
 import {
   buildSpecialtyDirective,
   selectSpecialtyProfile,
@@ -127,6 +127,15 @@ export interface PatientBrief {
   // `patientDescription` quand il est présent (fallback). Absent (undefined)
   // pour les 287 stations classiques.
   consigneCandidat?: string;
+  // Phase 9 J3 — Bug 2 : si la station courante (P1) a une partie 2 dans
+  // le catalogue (lien `parentStationId` + suffixe -P2), on expose ici le
+  // shortId de la P2 pour que l'UI puisse afficher l'écran intermédiaire
+  // de transition automatique en fin de P1. Champ omis (undefined) pour :
+  //   • les 286 stations classiques sans P2
+  //   • RESCOS-64-P2 elle-même (pas de P3 dans le corpus J3)
+  // Calculé à la volée via `findChildStations(stationId)`. Aucun appel
+  // LLM, lecture O(n) du catalog en mémoire.
+  nextPartStationId?: string;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -164,6 +173,14 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     typeof (station as { consigneCandidat?: unknown }).consigneCandidat === "string"
       ? ((station as { consigneCandidat: string }).consigneCandidat)
       : undefined;
+  // Phase 9 J3 — calcul de `nextPartStationId` : on consulte le catalog
+  // pour trouver une station enfant (lien parentStationId + suffixe -P2$).
+  // En J3, seul RESCOS-64 → RESCOS-64-P2. Les 286 autres stations sans P2
+  // reçoivent `undefined` (champ omis du JSON HTTP, byteLength inchangé).
+  // Si plusieurs enfants existent (corpus futur), on prend le premier
+  // dans l'ordre du catalog (cohérent avec listStations() : tri stable).
+  const children = findChildStations(stationId);
+  const nextPartStationId = children.length > 0 ? children[0].id : undefined;
   return {
     stationId,
     setting: station.setting ?? "",
@@ -183,6 +200,7 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     defaultSpeakerId,
     phases,
     consigneCandidat,
+    nextPartStationId,
   };
 }
 

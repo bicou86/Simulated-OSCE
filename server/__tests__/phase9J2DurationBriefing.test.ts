@@ -239,12 +239,12 @@ describe("Phase 9 J2 — getPatientBrief (propagation phases + consigneCandidat)
 // ────────────────────────────────────────────────────────────────────────
 
 describe("Phase 9 J2 — endpoint /api/patient/:id/brief baselines", () => {
-  it("GET /api/patient/RESCOS-64/brief : 647 bytes UTF-8 (non-régression Phase 8 J2)", async () => {
+  it("GET /api/patient/RESCOS-64/brief : 682 bytes UTF-8 (baseline Phase 9 J3, +35 vs Phase 8 J2 = ajout nextPartStationId)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64/brief");
     expect(res.status).toBe(200);
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(647);
+    expect(bytes).toBe(682);
   });
 
   it("GET /api/patient/AMBOSS-24/brief : 528 bytes UTF-8 (non-régression Phase 7)", async () => {
