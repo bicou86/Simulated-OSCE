@@ -116,6 +116,17 @@ export interface PatientBrief {
   // c'est l'unique participant. Pour les multi-profils, on s'aligne sur
   // l'interlocuteur résolu par patientInterlocutor (parent vs self).
   defaultSpeakerId?: string;
+  // Phase 9 J2 — découpage temporel chronométré pour les stations doubles
+  // partie 2 (Bug 3a). Absent (undefined) pour les 287 stations classiques :
+  // l'UI retombe sur la durée legacy 13 min unique. Présent pour
+  // RESCOS-64-P2 : 4 min « preparation » silencieuse + 9 min « presentation »
+  // examinateur (cf. shared/station-schema.ts:stationPhaseSchema).
+  phases?: Array<{ id: string; label: string; minutes: number; kind: "silent" | "examiner" }>;
+  // Phase 9 J2 — consigne candidat orientée présentation pour partie 2
+  // (Bug 3b). L'UI affiche `consigneCandidat` prioritairement à
+  // `patientDescription` quand il est présent (fallback). Absent (undefined)
+  // pour les 287 stations classiques.
+  consigneCandidat?: string;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -140,6 +151,19 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
   const isMultiProfile =
     Array.isArray((station as { participants?: unknown }).participants) &&
     ((station as { participants: unknown[] }).participants).length >= 2;
+  // Phase 9 J2 — propagation phases + consigneCandidat (additifs stricts).
+  // Les champs sont absents pour les 287 stations historiques ; présents
+  // pour RESCOS-64-P2 (Patient_RESCOS_4.json partie 2). Aucun calcul ni
+  // valeur synthétisée : on relit tels quels depuis la fixture, puis on
+  // les omet de la réponse HTTP s'ils ne sont pas définis (undefined →
+  // sérialisation JSON les supprime, baseline byteLength des stations
+  // legacy strictement inchangée).
+  const rawPhases = (station as { phases?: unknown }).phases;
+  const phases = Array.isArray(rawPhases) ? (rawPhases as PatientBrief["phases"]) : undefined;
+  const consigneCandidat =
+    typeof (station as { consigneCandidat?: unknown }).consigneCandidat === "string"
+      ? ((station as { consigneCandidat: string }).consigneCandidat)
+      : undefined;
   return {
     stationId,
     setting: station.setting ?? "",
@@ -157,6 +181,8 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     // historique « Patient (voix IA) » reste suffisant.
     participants: isMultiProfile ? participants : undefined,
     defaultSpeakerId,
+    phases,
+    consigneCandidat,
   };
 }
 
@@ -501,6 +527,15 @@ const META_FIELDS_TO_STRIP = [
   // pour qu'aucun brief HTTP ni system prompt ne fuite l'arbre des
   // stations doubles.
   "parentStationId",
+  // Phase 9 J2 — `phases` et `consigneCandidat` sont des métadonnées
+  // UI (découpage chronométré + consigne candidat orientée présentation).
+  // Sans valeur narrative pour le LLM patient. Strippées par défense
+  // au cas où une fixture future combinerait `phases` ET flow patient
+  // simulé (RESCOS-64-P2 utilise actuellement le flow examinateur, qui
+  // n'injecte de toute façon pas de <station_data>). Le brief HTTP
+  // construit explicitement ces champs hors du chemin de strip.
+  "phases",
+  "consigneCandidat",
 ];
 
 // Phase 5 J3 — variante minimale du strip pour le chemin mono-patient

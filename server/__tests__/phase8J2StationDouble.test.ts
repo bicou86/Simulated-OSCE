@@ -144,12 +144,17 @@ describe("Phase 8 J2 — Brief HTTP partie 1 RESCOS-64 (non-régression)", () =>
   });
 });
 
-describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (nouvelle baseline)", () => {
-  it("getPatientBrief(« RESCOS-64-P2 ») = 362 bytes UTF-8 (baseline Phase 8 J2 actée)", async () => {
+describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (baseline)", () => {
+  it("getPatientBrief(« RESCOS-64-P2 ») = 751 bytes UTF-8 (baseline Phase 9 J2 actée, +389 vs Phase 8 J2)", async () => {
+    // Phase 9 J2 — baseline mise à jour de 362 → 751 bytes UTF-8 suite à
+    // l'ajout additif de `phases[]` (~140 bytes) et `consigneCandidat`
+    // (~245 bytes) dans la fixture Patient_RESCOS_4.json partie 2 (Bug
+    // 3a + Bug 3b). Cf. test phase9J2DurationBriefing.test.ts pour la
+    // baseline canonique post-J2.
     const brief = await getPatientBrief("RESCOS-64-P2");
     const json = JSON.stringify(brief);
     const bytes = Buffer.byteLength(json, "utf-8");
-    expect(bytes).toBe(362);
+    expect(bytes).toBe(751);
   });
 
   it("brief partie 2 : setting « Présentation de Mme Dumont au pneumologue »", async () => {
@@ -172,12 +177,12 @@ describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (nouvelle baseline)", 
     expect(json).not.toContain("medicoLegalReviewed");
   });
 
-  it("GET /api/patient/RESCOS-64-P2/brief : status 200 + 362 bytes UTF-8", async () => {
+  it("GET /api/patient/RESCOS-64-P2/brief : status 200 + 751 bytes UTF-8 (baseline Phase 9 J2)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(362);
+    expect(bytes).toBe(751);
     // Le shortId est toujours stable côté client (pas de leak interne).
     expect(res.body.stationId).toBe("RESCOS-64-P2");
   });

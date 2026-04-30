@@ -47,8 +47,11 @@ import {
   type TtsVoice,
 } from "@/lib/api";
 import { classifyDoctorIntent } from "@/lib/intentRouter";
+import {
+  TOTAL_DURATION_LEGACY_SEC as TOTAL_DURATION,
+  computeInitialPhaseDuration,
+} from "@/lib/phaseTimer";
 
-const TOTAL_DURATION = 13 * 60;
 const ANNOUNCEMENT_11_MIN = 2 * 60;
 
 type ExaminerItem = {
@@ -198,6 +201,10 @@ export default function Simulation() {
   const [hasStarted, setHasStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(TOTAL_DURATION);
   const [announcementPlayed, setAnnouncementPlayed] = useState(false);
+  // Phase 9 J2 — index de la phase courante quand la station expose
+  // `phases[]` (Bug 3a). 0 = première phase (préparation silencieuse pour
+  // RESCOS-64-P2). Reste à 0 pour les 287 stations classiques sans phases.
+  const [currentPhaseIndex, setCurrentPhaseIndex] = useState(0);
 
   const [transcript, setTranscript] = useState<TranscriptTurn[]>([]);
   const [textInput, setTextInput] = useState("");
@@ -295,17 +302,44 @@ export default function Simulation() {
     setCurrentSpeakerId(brief.defaultSpeakerId ?? null);
   }, [brief]);
 
-  // Timer
+  // Phase 9 J2 — initialisation du timer en fonction de `brief.phases`
+  // (Bug 3a). Pour RESCOS-64-P2 : démarre sur la phase 0 « Préparation »
+  // (4 min). Pour les 287 stations classiques sans `phases` : retombe sur
+  // la durée legacy 13 min (TOTAL_DURATION). Resync du timer dès que le
+  // brief est chargé, tant que la station n'est pas active.
+  useEffect(() => {
+    if (!brief) return;
+    if (isActive) return;
+    setTimeLeft(computeInitialPhaseDuration(brief));
+    setCurrentPhaseIndex(0);
+  }, [brief, isActive]);
+
+  // Timer — Phase 9 J2 :
+  //   • Stations classiques (sans `phases`) : comportement legacy
+  //     inchangé (annonce T-2 min, fin de station à 0).
+  //   • Stations multi-phases (RESCOS-64-P2) : à la fin de chaque phase
+  //     non-terminale, transition automatique à la phase suivante avec
+  //     reset du timer sur la durée de la nouvelle phase. Désactive
+  //     l'annonce T-2 min (la transition prep→présent suffit comme
+  //     événement notable, cf. arbitrage utilisateur Q3).
   useEffect(() => {
     if (!isActive) return;
+    const phases = brief?.phases;
+    const hasPhases = !!phases && phases.length > 0;
     const interval = window.setInterval(() => {
       setTimeLeft((prev) => {
         const next = prev - 1;
-        if (next === ANNOUNCEMENT_11_MIN && !announcementPlayed) {
+        if (!hasPhases && next === ANNOUNCEMENT_11_MIN && !announcementPlayed) {
           systemAnnounce("Il vous reste 2 minutes");
           setAnnouncementPlayed(true);
         }
         if (next === 0) {
+          if (hasPhases && currentPhaseIndex < phases!.length - 1) {
+            // Transition automatique à la phase suivante.
+            const nextPhase = phases![currentPhaseIndex + 1];
+            setCurrentPhaseIndex(currentPhaseIndex + 1);
+            return nextPhase.minutes * 60;
+          }
           systemAnnounce("Fin de la station");
           setIsActive(false);
         }
@@ -313,7 +347,7 @@ export default function Simulation() {
       });
     }, 1000);
     return () => window.clearInterval(interval);
-  }, [isActive, announcementPlayed]);
+  }, [isActive, announcementPlayed, brief, currentPhaseIndex]);
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -679,15 +713,26 @@ export default function Simulation() {
     setIsActive(true);
   }, [brief]);
 
-  // Phase 9 J1 — déclenche l'opening examinateur dès le passage à actif
-  // pour les stations partie 2 (shortId -P2). Une seule fois par session.
+  // Phase 9 J1+J2 — déclenche l'opening examinateur sur les stations
+  // partie 2 (shortId -P2). Une seule fois par session via examinerOpenedRef.
+  //   • J1 (stations sans `phases[]`) : déclenchement immédiat dès
+  //     `isActive` (rétrocompat héritage).
+  //   • J2 (stations avec `phases[]`) : déclenchement uniquement quand on
+  //     entre dans une phase de `kind === "examiner"` (donc à la
+  //     transition prep→présent pour RESCOS-64-P2). Pendant la phase
+  //     `kind === "silent"` (préparation), zéro appel LLM.
   useEffect(() => {
     if (!isActive) return;
     if (!stationId || !/-P2$/.test(stationId)) return;
     if (examinerOpenedRef.current) return;
+    const phases = brief?.phases;
+    if (phases && phases.length > 0) {
+      const cur = phases[currentPhaseIndex];
+      if (cur?.kind !== "examiner") return;
+    }
     examinerOpenedRef.current = true;
     void sendExaminerOpening();
-  }, [isActive, stationId, sendExaminerOpening]);
+  }, [isActive, stationId, sendExaminerOpening, brief, currentPhaseIndex]);
 
   const handleStop = () => {
     abortStream();
@@ -836,11 +881,20 @@ export default function Simulation() {
     );
   }
 
-  const progressPercentage = ((TOTAL_DURATION - timeLeft) / TOTAL_DURATION) * 100;
+  // Phase 9 J2 — `progressPercentage` calculé sur la durée de la phase
+  // courante (pour les stations multi-phases). Pour les 287 stations
+  // classiques sans `phases`, retombe sur TOTAL_DURATION (rétrocompat).
+  const currentPhase = brief.phases && brief.phases.length > 0 ? brief.phases[currentPhaseIndex] : null;
+  const currentPhaseDurationSec = currentPhase ? currentPhase.minutes * 60 : TOTAL_DURATION;
+  const progressPercentage = ((currentPhaseDurationSec - timeLeft) / currentPhaseDurationSec) * 100;
   const isWarningTime = timeLeft <= 120 && timeLeft > 0;
   const isCriticalTime = timeLeft <= 30 && timeLeft > 0;
-  const timedOut = timeLeft === 0;
-  const inputsDisabled = !isActive || timedOut || isSending || isTranscribing;
+  const timedOut = timeLeft === 0 && (!brief.phases || currentPhaseIndex >= brief.phases.length - 1);
+  // Phase 9 J2 — pendant une phase « silent » (préparation), l'input
+  // candidat reste bloqué : on attend la transition vers la phase
+  // examinateur (la phase préparation est silencieuse côté candidat).
+  const isSilentPhase = currentPhase?.kind === "silent";
+  const inputsDisabled = !isActive || timedOut || isSending || isTranscribing || isSilentPhase;
 
   return (
     <div className="h-full flex flex-col md:flex-row bg-muted/30">
@@ -867,7 +921,36 @@ export default function Simulation() {
             </div>
           ) : (
             <>
-              {brief.patientDescription && (
+              {/* Phase 9 J2 — `consigneCandidat` (Bug 3b) prioritaire sur
+                  `patientDescription` quand présent : pour les stations
+                  doubles partie 2, l'UI affiche la consigne candidat orientée
+                  présentation au lieu de l'instruction examinateur historique.
+                  Le bandeau interlocuteur n'est pas pertinent en mode
+                  examinateur (pas de patient simulé qui parle), on le
+                  remplace par un encart « Phases » résumant le découpage
+                  chronométré. */}
+              {brief.consigneCandidat ? (
+                <>
+                  <div>
+                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
+                      <FileAudio className="w-4 h-4 mr-2" /> Consigne candidat
+                    </h3>
+                    <p className="text-lg leading-relaxed" data-testid="consigne-candidat">{brief.consigneCandidat}</p>
+                    {brief.phases && brief.phases.length > 0 && (
+                      <div className="mt-3 text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-md px-3 py-2" data-testid="phases-banner">
+                        <span className="font-semibold">Phases :</span>{" "}
+                        {brief.phases.map((p, i) => (
+                          <span key={p.id}>
+                            {i > 0 && " → "}
+                            {p.label} ({p.minutes} min)
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <Separator />
+                </>
+              ) : brief.patientDescription ? (
                 <>
                   <div>
                     <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3 flex items-center">
@@ -889,7 +972,7 @@ export default function Simulation() {
                   </div>
                   <Separator />
                 </>
-              )}
+              ) : null}
 
               {Object.keys(brief.vitals).length > 0 && (
                 <div>
@@ -923,6 +1006,22 @@ export default function Simulation() {
             )}>
               {formatTime(timeLeft)}
             </div>
+            {/* Phase 9 J2 — badge phase courante pour les stations multi-phases.
+                Indique au candidat où il en est dans le découpage chronométré
+                (ex. « Préparation 1/2 » puis « Présentation 2/2 »). */}
+            {currentPhase && brief.phases && brief.phases.length > 1 && (
+              <div
+                className={cn(
+                  "flex items-center font-medium px-3 py-1.5 rounded-lg border",
+                  isSilentPhase
+                    ? "text-slate-700 bg-slate-50 border-slate-200"
+                    : "text-emerald-800 bg-emerald-50 border-emerald-200",
+                )}
+                data-testid="phase-badge"
+              >
+                {currentPhase.label} ({currentPhaseIndex + 1}/{brief.phases.length})
+              </div>
+            )}
             {isWarningTime && !isCriticalTime && (
               <div className="flex items-center text-amber-600 font-medium bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-200">
                 <AlertCircle className="w-5 h-5 mr-2" /> Dernières minutes

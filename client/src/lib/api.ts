@@ -213,6 +213,17 @@ export interface ClientParticipant {
   knowledgeScope: string[];
 }
 
+// Phase 9 J2 — phase chronométrée (miroir client de StationPhase
+// shared/station-schema.ts). Présente UNIQUEMENT pour les stations
+// doubles partie 2 (RESCOS-64-P2 en J2). Absente pour les 287
+// stations classiques : l'UI retombe sur la durée legacy 13 min unique.
+export interface PatientBriefPhase {
+  id: string;
+  label: string;
+  minutes: number;
+  kind: "silent" | "examiner";
+}
+
 export interface PatientBrief {
   stationId: string;
   setting: string;
@@ -232,6 +243,13 @@ export interface PatientBrief {
   // Le participant qui répond par défaut au tout premier tour. Sert à
   // initialiser `currentSpeakerId` côté client.
   defaultSpeakerId?: string;
+  // Phase 9 J2 — découpage temporel chronométré (Bug 3a station double
+  // partie 2). Cf. PatientBriefPhase. Absent → fallback timer legacy.
+  phases?: PatientBriefPhase[];
+  // Phase 9 J2 — consigne candidat orientée présentation (Bug 3b). L'UI
+  // doit afficher `consigneCandidat` prioritairement à `patientDescription`
+  // quand il est présent.
+  consigneCandidat?: string;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {

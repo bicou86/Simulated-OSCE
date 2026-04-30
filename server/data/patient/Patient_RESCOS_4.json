@@ -3269,6 +3269,11 @@
       "id": "RESCOS-64 - Toux - Station double 2",
       "setting": "Présentation de Mme Dumont au pneumologue",
       "patient_description": "Examinateur-trice : Posez uniquement les questions écrites en rouge.",
+      "consigneCandidat": "Vous avez 4 minutes pour préparer votre présentation orale (9 minutes) au pneumologue. Synthétisez le tableau clinique, l'hypothèse diagnostique principale et la prise en charge initiale.",
+      "phases": [
+        { "id": "preparation", "label": "Préparation", "minutes": 4, "kind": "silent" },
+        { "id": "presentation", "label": "Présentation à l'examinateur", "minutes": 9, "kind": "examiner" }
+      ],
       "source_scenario": false,
       "examen_resultats": {
         "e6": {
