@@ -181,12 +181,38 @@ export type LegalContext = z.infer<typeof legalContextSchema>;
 // le legalContext est ajouté à une station (ou pour confirmer qu'elle a
 // été vue et marquée non applicable).
 
+// Phase 8 J1 — `parentStationId` : référence vers une station parente
+// pour les « stations doubles » (partie 1 anamnèse/examen + partie 2
+// présentation orale au spécialiste).
+//
+// Cas d'usage canonique : RESCOS-64 (toux chronique avec hémoptysie).
+// Partie 1 = consultation patient simulé (13 min, scoring 6-axes Phase 7).
+// Partie 2 = présentation orale du cas au pneumologue (4 min prép + 9 min
+// présentation, scoring 4 axes 25% chacun ISOLÉ du scoring 6-axes —
+// jamais agrégé, cf. arbitrage utilisateur Phase 8 #4). La partie 2
+// portera `parentStationId` pointant vers le shortId de la partie 1.
+//
+// INVARIANTS
+//   • Strictement OPTIONNEL : aucune station historique ne porte ce
+//     champ. Les 287 stations existantes parsent sans modification
+//     (test snapshot ci-dessous).
+//   • Type minimal : `z.string().min(1)` (shortId non-vide). La
+//     validation RÉFÉRENTIELLE (le shortId pointé existe dans le
+//     catalogue) est confiée à `validateParentStationIds` côté
+//     `stationsService` — Zod local n'a pas accès au catalogue, et
+//     l'init catalogue précède la validation référentielle (cycle
+//     d'init two-pass : ingestion globale → validation post-init).
+//   • Aucune création de fixture partie 2 en J1 : J1 = schéma + tests
+//     uniquement. Les fixtures partie 2 arriveront en J2.
+
 // Schéma de station permissif :
 //   • `id` requis (déjà invariant fort dans stationsService),
 //   • `participants` optionnel (Phase 4 J1),
 //   • `participantSections` optionnel (Phase 4 J3),
 //   • `legalContext` optionnel (Phase 5 J1),
 //   • `medicoLegalReviewed` optionnel default false (Phase 6 J1),
+//   • `parentStationId` optionnel (Phase 8 J1, validation référentielle
+//     post-init dans stationsService),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
 //     décrire — l'objectif est seulement de typer les champs additifs.
@@ -197,6 +223,7 @@ export const stationSchema = z
     participantSections: participantSectionsSchema.optional(),
     legalContext: legalContextSchema.optional(),
     medicoLegalReviewed: z.boolean().optional().default(false),
+    parentStationId: z.string().min(1).optional(),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;
