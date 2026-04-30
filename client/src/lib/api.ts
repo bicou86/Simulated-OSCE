@@ -155,6 +155,11 @@ export interface ChatInput {
   // multi-profils. Optionnel : à T0 le client passe brief.defaultSpeakerId
   // (ou null), le serveur retombera sur l'ambiguïté → UI de clarification.
   currentSpeakerId?: string | null;
+  // Phase 9 J1 — discriminant flow conversationnel pour stations doubles
+  // partie 2 (shortId -P2). "examiner" : LLM ouvre la conversation et pose
+  // les 15 questions ordonnées. "patient" (défaut, omis = patient) : flow
+  // patient simulé classique des 287 autres stations.
+  conversationMode?: "patient" | "examiner";
 }
 
 // Phase 4 J2 — réponse de /api/patient/chat. Discriminated union :

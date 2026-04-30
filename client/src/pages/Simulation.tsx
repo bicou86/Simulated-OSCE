@@ -432,6 +432,10 @@ export default function Simulation() {
       mode,
       // Phase 4 J2 — sticky speaker pour le routeur d'adresse côté serveur.
       currentSpeakerId,
+      // Phase 9 J1 — discriminant flow conversationnel. En station double
+      // partie 2 (shortId -P2), tous les tours du candidat doivent être
+      // adressés à l'examinateur LLM (et non à un patient simulé).
+      conversationMode: /-P2$/.test(stationId) ? ("examiner" as const) : ("patient" as const),
     };
 
     try {
@@ -584,8 +588,89 @@ export default function Simulation() {
     }
   }, [conversation, conversationMode, toast]);
 
-  // Démarre la station sans message initial : en OSCE, le candidat (médecin) parle
-  // toujours en premier. Le patient simulé ne répondra qu'après la première question.
+  // Phase 9 J1 — flow examinateur (station double partie 2, shortId -P2).
+  // C'est le LLM qui ouvre la conversation : on envoie un premier appel
+  // SSE avec userMessage="" et conversationMode="examiner" pour que le
+  // serveur génère la 1ère question de la grille presentation. Le flag
+  // examinerOpenedRef garantit qu'on ne déclenche l'opening qu'une fois,
+  // même si isActive bascule plusieurs fois.
+  const examinerOpenedRef = useRef(false);
+  const sendExaminerOpening = useCallback(async () => {
+    if (!stationId) return;
+    setIsSending(true);
+    const input = {
+      stationId,
+      history: [],
+      userMessage: "",
+      mode: "voice" as const,
+      currentSpeakerId: null,
+      conversationMode: "examiner" as const,
+    };
+    try {
+      const result = await sendStream(input);
+      if (result.aborted) return;
+      const { fullText, speakerId, speakerRole, clarification } = result;
+      if (clarification) {
+        // Ne devrait pas arriver en mode examiner (bypass routing serveur),
+        // filet de sécurité.
+        setPendingClarification(clarification);
+        setStreamingSpeaker(null);
+        return;
+      }
+      if (fullText && fullText.trim().length > 0) {
+        setTranscript((prev) => [
+          ...prev,
+          {
+            role: "patient",
+            text: fullText,
+            speakerId: speakerId ?? "examiner",
+            speakerRole: speakerRole ?? undefined,
+          },
+        ]);
+        if (speakerId) setCurrentSpeakerId(speakerId);
+        setStreamingSpeaker(null);
+      } else {
+        // Filet : fallback non-streaming si le SSE n'a pas produit de texte.
+        const fallback = await chatPatient(input);
+        if (fallback.type === "clarification_needed") {
+          setPendingClarification({
+            reason: fallback.reason,
+            candidates: fallback.candidates,
+          });
+          setStreamingSpeaker(null);
+          return;
+        }
+        setTranscript((prev) => [
+          ...prev,
+          {
+            role: "patient",
+            text: fallback.reply,
+            speakerId: fallback.speakerId,
+            speakerRole: fallback.speakerRole,
+          },
+        ]);
+        setCurrentSpeakerId(fallback.speakerId);
+        try {
+          const audio = await ttsPatient(fallback.reply, voiceRef.current);
+          playAudio(audio);
+        } catch { /* TTS optionnel */ }
+      }
+    } catch (err) {
+      const e = err as ApiError;
+      toast({
+        title: "L'examinateur n'a pas pu poser sa question",
+        description: `${e.message ?? ""}${e.hint ? ` — ${e.hint}` : ""}`,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSending(false);
+    }
+  }, [stationId, sendStream, playAudio, toast]);
+
+  // Démarre la station sans message initial : en OSCE classique, le candidat
+  // (médecin) parle toujours en premier. Phase 9 J1 — exception station
+  // double partie 2 : c'est l'examinateur LLM qui ouvre, déclenché par
+  // useEffect ci-dessous dès qu'isActive bascule à true.
   // La phrase d'ouverture scénaristique (brief.phraseOuverture) reste disponible côté
   // service pour le system prompt, mais n'est pas jouée automatiquement ici.
   const handleStart = useCallback(() => {
@@ -593,6 +678,16 @@ export default function Simulation() {
     setHasStarted(true);
     setIsActive(true);
   }, [brief]);
+
+  // Phase 9 J1 — déclenche l'opening examinateur dès le passage à actif
+  // pour les stations partie 2 (shortId -P2). Une seule fois par session.
+  useEffect(() => {
+    if (!isActive) return;
+    if (!stationId || !/-P2$/.test(stationId)) return;
+    if (examinerOpenedRef.current) return;
+    examinerOpenedRef.current = true;
+    void sendExaminerOpening();
+  }, [isActive, stationId, sendExaminerOpening]);
 
   const handleStop = () => {
     abortStream();
