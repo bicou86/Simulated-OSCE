@@ -452,7 +452,8 @@ describe("Phase 7 J2 — Test B : stations avec legalContext, vérification de l
   //       transcript « parfait »),
   //   (b) aggregateMedicoLegalScore agrège correctement les 4 sous-axes
   //       en un score medico_legal, qui sera réutilisé par runEvaluation
-  //       quand la station obtiendra une grille évaluateur (TODO Phase 8).
+  //       end-to-end (la grille évaluateur RESCOS-72 a été intégrée
+  //       Phase 8 J4 — la dette Phase 5 J1 est désormais fermée).
   it("RESCOS-72 — legalEvaluator + agrégation 4 sous-axes (formule formule isolée)", async () => {
     const legal = await evaluateLegal({
       stationId: "RESCOS-72",

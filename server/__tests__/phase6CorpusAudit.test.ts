@@ -7,20 +7,24 @@
 // (compteur global, station hors lexique, fuite HTTP, jurisdiction
 // inattendue, etc.).
 //
-// COMPTEURS DE RÉFÉRENCE (mis à jour Phase 7 J3 — annotation USMLE-9) :
-//   • 287 stations uniques au total (dédup par shortId, RESCOS-64 doublon
-//     hérité Phase 4 compté une seule fois — cf. medicoLegalReviewedAudit).
+// COMPTEURS DE RÉFÉRENCE (mis à jour Phase 8 J2 — RESCOS-64 partie 2 indexée) :
+//   • 288 stations uniques au total (dédup par shortId via extractShortId
+//     qui gère désormais le pattern « Station double 2 » → -P2 ;
+//     RESCOS-64-P1 et RESCOS-64-P2 indexés distinctement, plus de doublon
+//     silencieux au catalog).
 //   • 5 stations avec legalContext :
 //       AMBOSS-24, USMLE-34, RESCOS-72, USMLE Triage 39, USMLE-9 (J3).
-//   • 287 stations avec medicoLegalReviewed=true (toutes : USMLE-9 l'a
-//     reçu en J3 avec son legalContext).
-//   • 0 station unflagged : la couverture est désormais complète sur le
-//     corpus existant. Tout ajout de station Phase 8+ devra être annoté
+//   • 288 stations avec medicoLegalReviewed=true (toutes : RESCOS-64-P2
+//     reçoit le flag en Phase 8 J2 par cohérence avec partie 1).
+//   • 1 station avec parentStationId : RESCOS-64-P2 → "RESCOS-64".
+//   • 0 station unflagged : la couverture est complète sur le corpus
+//     existant. Tout ajout de station Phase 9+ devra être annoté
 //     ou flaggé reviewed à l'ingestion.
 //
 // HISTORIQUE :
 //   • Phase 6 J3 : 4 legalContext, 286 reviewed, 1 unflagged (USMLE-9).
 //   • Phase 7 J3 : 5 legalContext, 287 reviewed, 0 unflagged.
+//   • Phase 8 J2 : 5 legalContext, 288 reviewed, 0 unflagged, 1 paire double.
 //
 // INVARIANTS RUNTIME ADDITIONNELS :
 //   • Toutes les categories utilisées appartiennent au lexique vivant
@@ -30,9 +34,9 @@
 //   • Toute station avec legalContext porte aussi medicoLegalReviewed=true
 //     (cohérence — déjà couverte par medicoLegalReviewedAudit, dupliquée
 //     ici pour fournir un message d'erreur orienté "phase 7 dérive").
-//   • Aucune des 287 stations ne fuite legalContext ni medicoLegalReviewed
-//     dans le brief HTTP /api/patient/:id/brief.
-//   • /api/stations renvoie bien 287 entrées (non-régression Phase 5).
+//   • Aucune des 288 stations ne fuite legalContext, medicoLegalReviewed
+//     ni parentStationId dans le brief HTTP /api/patient/:id/brief.
+//   • /api/stations renvoie bien 288 entrées (Phase 8 J2 : +1 vs Phase 5).
 //
 // CONTRAINTES : ZÉRO appel LLM, ZÉRO mock fs. On consomme les vraies
 // fixtures du repo dans leur état Phase 6 J2 appliqué.
@@ -41,7 +45,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import request from "supertest";
 import { beforeAll, describe, expect, it } from "vitest";
-import { initCatalog } from "../services/stationsService";
+import { initCatalog, __test__ as stationsTest } from "../services/stationsService";
 import { getPatientBrief } from "../services/patientService";
 import { LEGAL_LAW_CODE_PATTERNS } from "../lib/legalLexicon";
 import { buildTestApp } from "./helpers";
@@ -71,7 +75,9 @@ const EXPECTED_LEGAL_CONTEXT_IDS = new Set<string>([
 
 const EXPECTED_UNFLAGGED_IDS = new Set<string>([]);
 
-const TOTAL_STATIONS = 287;
+// Phase 8 J2 : +1 station double partie 2 (RESCOS-64-P2 désormais
+// indexée distinctement dans le catalog).
+const TOTAL_STATIONS = 288;
 
 interface AuditRow {
   shortId: string;
@@ -93,7 +99,10 @@ async function auditCorpus(): Promise<AuditRow[]> {
     const parsed = JSON.parse(txt) as { stations: Array<Record<string, unknown>> };
     for (const s of parsed.stations) {
       const fullId = s.id as string;
-      const shortId = fullId.split(" - ")[0];
+      // Phase 8 J2 — utilise extractShortId du service pour aligner le
+      // dédup local avec la logique du catalog. Le pattern « Station
+      // double 2 » → -P2 fait que partie 2 a un shortId distinct.
+      const shortId = stationsTest.extractShortId(fullId);
       if (seen.has(shortId)) continue;
       seen.add(shortId);
       const ctx = s.legalContext as
@@ -136,10 +145,11 @@ describe("Phase 6 J3 — compteurs corpus figés en clôture de phase", () => {
     expect(ids).toEqual(EXPECTED_LEGAL_CONTEXT_IDS);
   });
 
-  it("exactement 287 stations portent medicoLegalReviewed=true (couverture complète J3)", async () => {
+  // Phase 8 J2 : 287 → 288 (RESCOS-64-P2 ajout, medicoLegalReviewed=true).
+  it("exactement 288 stations portent medicoLegalReviewed=true (couverture complète post-Phase 8 J2)", async () => {
     const rows = await auditCorpus();
     const reviewed = rows.filter((r) => r.reviewed);
-    expect(reviewed.length).toBe(287);
+    expect(reviewed.length).toBe(288);
   });
 
   it("0 station unflagged : couverture complète post-J3", async () => {
@@ -228,7 +238,8 @@ describe("Phase 6 J3 — strip HTTP global : aucune fuite des champs additifs", 
     "subject_status",
   ];
 
-  it("getPatientBrief() ne contient AUCUN champ médico-légal pour les 287 stations", async () => {
+  // Phase 8 J2 : 287 → 288 (RESCOS-64-P2 inclus dans le balayage).
+  it("getPatientBrief() ne contient AUCUN champ médico-légal pour les 288 stations", async () => {
     const rows = await auditCorpus();
     for (const r of rows) {
       const brief = await getPatientBrief(r.shortId);
@@ -242,7 +253,8 @@ describe("Phase 6 J3 — strip HTTP global : aucune fuite des champs additifs", 
     }
   });
 
-  it("GET /api/stations renvoie bien 287 entrées (non-régression Phase 5)", async () => {
+  // Phase 8 J2 : 287 → 288 (RESCOS-64-P2 indexée distinctement).
+  it("GET /api/stations renvoie bien 288 entrées (Phase 8 J2 : +1 vs Phase 5)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/stations");
     expect(res.status).toBe(200);

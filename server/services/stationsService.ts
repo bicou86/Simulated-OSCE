@@ -26,6 +26,11 @@ export interface StationMeta {
   patientFile: string;   // ex: "Patient_RESCOS_1.json"
   evaluatorFile: string; // ex: "Examinateur_RESCOS_1.json"
   indexInFile: number;   // index dans le tableau stations[]
+  // Phase 8 J1 — référence partie-1 pour les stations doubles (optionnel).
+  // Pointe vers le shortId d'une autre station du catalogue. Validé par
+  // validateParentStationIds() au boot ; aucune fixture historique ne
+  // porte ce champ en J1.
+  parentStationId?: string;
 }
 
 const PATIENT_DIR = path.resolve(import.meta.dirname, "..", "data", "patient");
@@ -36,6 +41,19 @@ const catalog = new Map<string, StationMeta>();
 
 function extractShortId(fullId: string): string {
   // "RESCOS-1 - Adénopathie sus-claviculaire" → "RESCOS-1"
+  // Phase 8 J2 — exception ciblée pour les stations doubles partie 2
+  // (présentation orale au spécialiste). Le pattern fullId attendu est
+  // « ... - Station double 2 », pour lequel le shortId historique
+  // « RESCOS-64 » entrerait en collision avec la partie 1. On suffixe
+  // donc « -P2 » uniquement dans ce cas, ce qui rend la partie 2
+  // indexable distinctement dans le catalog (cf. arbitrage Q2 R3
+  // asymétrique : partie 1 garde son shortId actuel, baselines HTTP
+  // de la partie 1 préservées byte-à-byte).
+  if (/ - Station double 2$/.test(fullId)) {
+    const idx = fullId.indexOf(" - ");
+    const base = idx === -1 ? fullId : fullId.slice(0, idx);
+    return `${base}-P2`;
+  }
   const idx = fullId.indexOf(" - ");
   return idx === -1 ? fullId : fullId.slice(0, idx);
 }
@@ -57,6 +75,7 @@ async function ingestPatientFile(filename: string): Promise<void> {
       patient_description?: string;
       age?: string | number;
       specialite?: string;
+      parentStationId?: string;
     }>;
   };
 
@@ -112,6 +131,10 @@ async function ingestPatientFile(filename: string): Promise<void> {
       patientFile: filename,
       evaluatorFile: evaluatorFilename,
       indexInFile: idx,
+      parentStationId:
+        typeof station.parentStationId === "string" && station.parentStationId.length > 0
+          ? station.parentStationId
+          : undefined,
     });
   });
 }
@@ -157,6 +180,13 @@ export async function initCatalog(): Promise<void> {
     // runtime serait aveugle sur ce code (faux négatif silencieux) et
     // la directive prompt ne pourrait pas le citer dans la blacklist.
     await validateLegalContextLawCodes(patientFiles);
+    // Phase 8 J1 — verrou strict : toute station portant `parentStationId`
+    // doit pointer vers un shortId présent dans le catalogue. Sinon la
+    // station partie 2 référencerait une partie 1 inexistante, ce qui
+    // casserait le routing partie-1/partie-2 prévu pour J2/J3 et serait
+    // détecté seulement à l'usage. Validation post-init catalogue
+    // (le catalog est rempli avant ce check, deux passes).
+    validateParentStationIds();
   })();
   return initPromise;
 }
@@ -252,6 +282,41 @@ async function validateLegalContextLawCodes(patientFiles: string[]): Promise<voi
   }
 }
 
+// Phase 8 J1 — validateur référentiel des stations doubles.
+//
+// Pour chaque entrée du catalogue qui porte `parentStationId`, on vérifie
+// que le shortId pointé existe dans le catalogue. Sinon le routing
+// partie-1/partie-2 (J2) serait silencieusement cassé : la partie 2
+// référencerait une partie 1 inexistante, et l'erreur ne serait visible
+// qu'à l'usage. Throw au boot avec message explicite.
+//
+// Logique pure exposée séparément (`checkParentStationIdReferences`)
+// pour faciliter les tests unitaires sans setup catalog global.
+export function checkParentStationIdReferences(
+  metas: Iterable<{ fullId: string; parentStationId?: string }>,
+  knownShortIds: Set<string>,
+): string[] {
+  const errors: string[] = [];
+  for (const meta of metas) {
+    if (!meta.parentStationId) continue;
+    if (!knownShortIds.has(meta.parentStationId)) {
+      errors.push(
+        `[${meta.fullId}] parentStationId points to unknown station: « ${meta.parentStationId} » (aucune station avec ce shortId dans le catalogue)`,
+      );
+    }
+  }
+  return errors;
+}
+
+function validateParentStationIds(): void {
+  const knownShortIds = new Set(catalog.keys());
+  const errors = checkParentStationIdReferences(catalog.values(), knownShortIds);
+  if (errors.length > 0) {
+    const msg = `Validation Phase 8 J1 échouée :\n  - ${errors.join("\n  - ")}`;
+    throw new Error(msg);
+  }
+}
+
 // Walk a dotted path through a JSON object (1 or 2 levels). Retourne
 // `true` si la propriété existe (même `null`/`undefined`).
 function hasJsonPath(obj: unknown, path: string): boolean {
@@ -272,6 +337,12 @@ export const __test__ = {
   validateMultiProfileStations,
   validateLegalContextLawCodes,
   hasJsonPath,
+  checkParentStationIdReferences,
+  validateParentStationIds,
+  // Phase 8 J2 — exposé pour les tests d'audit corpus qui doivent
+  // dédup par shortId selon la même logique que le catalog (sinon les
+  // stations doubles partie 2 sont collisionnées avec la partie 1).
+  extractShortId,
 };
 
 export function listStations(): StationMeta[] {

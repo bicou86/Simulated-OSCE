@@ -317,7 +317,9 @@ describe("Phase 7 J3 — Sujet 3 : GET /api/debug/evaluation-weights", () => {
 });
 
 // ────────────────────────────────────────────────────────────────────────
-// Sujet 1 (extension) — Cohérence corpus J3 sur les 287 stations.
+// Sujet 1 (extension) — Cohérence corpus J3 sur les 287 stations
+// (Phase 8 J2 : 288 stations désormais — RESCOS-64-P2 indexée
+// distinctement via le pattern « Station double 2 » → -P2).
 //
 // Garde-fou minimaliste : prouve qu'AUCUNE station autre que USMLE-9
 // n'a été mutée par l'opération J3. La preuve formelle vit dans le

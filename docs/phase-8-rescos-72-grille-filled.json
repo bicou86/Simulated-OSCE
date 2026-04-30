@@ -1,0 +1,257 @@
+{
+  "id": "RESCOS-72 - Certificat de complaisance - Arrêt de travail abusif",
+  "setting": "Cabinet de médecine générale",
+  "patient_resume": "M. Marc Bernard, 34 ans, ingénieur en système d'information dans une grande entreprise lausannoise, consulte sans rendez-vous pour une « lombalgie aiguë depuis dimanche soir » cotée 8/10 et demande explicitement un arrêt de travail de 7 jours. Motif réel caché : voyage personnel de 10 jours aux États-Unis prévu dès le lendemain (billet de 2200 CHF non-remboursable), ses congés ayant été refusés par l'employeur la semaine précédente pour cause de deadline projet ; l'examen clinique est strictement normal et le comportement (marche, flexion sans grimace) incompatible avec la plainte.",
+
+  "grille": {
+    "anamnese": [
+      {
+        "id": "a1",
+        "text": "Salutations, présentation et exploration du motif de consultation",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Se présente et accueille le patient",
+          "Pose une question ouverte sur le motif de consultation",
+          "Laisse le patient exposer sa demande sans interrompre"
+        ]
+      },
+      {
+        "id": "a2",
+        "text": "Caractérisation de la lombalgie (anamnèse douleur structurée)",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Mode d'installation et circonstances déclenchantes (effort, traumatisme)",
+          "Chronologie précise (début dimanche soir, évolution)",
+          "Localisation et irradiation (sciatalgie, cruralgie)",
+          "Type de douleur (mécanique vs inflammatoire, horaire diurne/nocturne)",
+          "Intensité cotée sur EVA et facteurs aggravants/calmants",
+          "Antalgiques déjà essayés et efficacité"
+        ],
+        "scoringRule": "5-6 = 3 pts, 3-4 = 2 pts, 1-2 = 1 pt"
+      },
+      {
+        "id": "a3",
+        "text": "Recherche de drapeaux rouges (red flags lombalgie)",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Antécédent de néoplasie",
+          "Fièvre, sueurs nocturnes, perte de poids inexpliquée",
+          "Traumatisme récent significatif",
+          "Troubles sphinctériens, anesthésie en selle (queue de cheval)",
+          "Déficit moteur ou sensitif des membres inférieurs",
+          "Réveils nocturnes par la douleur, douleur non mécanique",
+          "Âge > 50 ans avec premier épisode, immunosuppression, corticothérapie au long cours"
+        ],
+        "scoringRule": "5-7 = 3 pts, 3-4 = 2 pts, 1-2 = 1 pt"
+      },
+      {
+        "id": "a4",
+        "text": "Contexte professionnel, social et impact fonctionnel",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Métier exercé et nature des tâches (sédentaire, port de charges)",
+          "Impact concret sur les activités professionnelles",
+          "Impact sur les activités quotidiennes (douche, transports, courses)",
+          "Antécédents d'arrêts de travail et contexte relationnel au travail",
+          "Situation familiale et soutien social"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      },
+      {
+        "id": "a5",
+        "text": "Cadre bienveillant et non-jugeant permettant la révélation du motif réel",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Reformule la disjonction plainte / examen sans agressivité",
+          "Verbalise explicitement la non-jugement (« je suis là pour vous aider, pas pour vous juger »)",
+          "Pose une question ouverte invitant à élargir le récit (« qu'est-ce qui se passe vraiment pour vous ? »)",
+          "Respecte les silences et n'enchaîne pas trop vite",
+          "Rappelle le secret professionnel si pertinent"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      }
+    ],
+    "examen": [
+      {
+        "id": "e1",
+        "text": "Examen général et observation du comportement clinique",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Observation de la marche, de la posture assise et des transferts",
+          "Constantes vitales (TA, FC, T°)",
+          "Recherche d'une attitude antalgique ou d'une boiterie",
+          "Note la cohérence (ou l'incohérence) entre la plainte cotée 8/10 et le comportement"
+        ]
+      },
+      {
+        "id": "e2",
+        "text": "Examen du rachis lombaire (inspection, palpation, mobilités)",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Inspection (statique, courbures, asymétrie)",
+          "Palpation des épineuses et des paravertébraux (douleur provoquée, contracture)",
+          "Mobilités actives en flexion, extension et inclinaisons latérales",
+          "Recherche d'un Schober diminué",
+          "Test de la sacro-iliaque si pertinent"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      },
+      {
+        "id": "e3",
+        "text": "Examen neurologique des membres inférieurs",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Lasègue bilatéral (et Bragard si positif)",
+          "ROT rotuliens et achilléens comparatifs",
+          "Force musculaire segmentaire (L3-S1) y compris marche sur les pointes et les talons",
+          "Sensibilité tactile et algique des dermatomes L2-S1",
+          "Recherche d'un syndrome de la queue de cheval (tonus sphinctérien, anesthésie en selle)"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      },
+      {
+        "id": "e4",
+        "text": "Identification et verbalisation de la disjonction plainte / examen",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Synthétise un examen clinique strictement normal",
+          "Note l'absence de drapeaux rouges",
+          "Verbalise au patient (avec tact) le décalage entre la plainte 8/10 et l'examen normal",
+          "Ne se contente pas du récit subjectif pour justifier une décision"
+        ]
+      }
+    ],
+    "management": [
+      {
+        "id": "m1",
+        "text": "Décision : refus du certificat médical d'incapacité de travail",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Refuse explicitement de délivrer le certificat",
+          "Énonce le refus de manière claire, sans ambiguïté ni promesse pour « la prochaine fois »",
+          "Ne propose pas de date d'arrêt rétro-active ou anticipée"
+        ]
+      },
+      {
+        "id": "m2",
+        "text": "Verbalisation du cadre médico-légal et déontologique suisse",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Évoque l'art. 318 CP (faux certificat médical) ou la notion de faux dans les titres",
+          "Évoque le Code de déontologie FMH (art. 34 : le médecin n'établit pas d'attestation contraire à la vérité)",
+          "Explique que le certificat doit refléter une réalité médicale objectivable",
+          "Mentionne la responsabilité personnelle du médecin (pénale et disciplinaire)",
+          "Réaffirme le secret professionnel (art. 321 CP) qui protège l'échange de cette consultation"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      },
+      {
+        "id": "m3",
+        "text": "Proposition d'alternatives non frauduleuses",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Dialogue ouvert avec l'employeur / RH pour renégocier les congés",
+          "Demande de congé sans solde",
+          "Médiation interne (RH, supérieur hiérarchique, représentation du personnel)",
+          "Recours à une assurance annulation voyage si souscrite",
+          "Consultation psychologique si la situation génère une vraie souffrance (épuisement, anxiété)"
+        ],
+        "scoringRule": "4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt"
+      },
+      {
+        "id": "m4",
+        "text": "Maintien du lien thérapeutique malgré le refus",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Reformule et légitime la difficulté financière et professionnelle",
+          "Distingue le refus de l'acte du jugement sur la personne",
+          "Réaffirme la disponibilité du cabinet pour de futures consultations",
+          "Évite toute formulation moralisante ou culpabilisante"
+        ],
+        "scoringRule": "Fait = 2 pts, ± = 1 pt, Pas fait = 0 pt"
+      },
+      {
+        "id": "m5",
+        "text": "Documentation appropriée dans le dossier médical",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Note la consultation, l'examen normal et l'absence d'incapacité objectivable",
+          "Documente le refus du certificat et le motif",
+          "Ne consigne PAS d'éléments stigmatisants (pas de jugement de valeur, pas de mention « simulateur »)",
+          "Respecte le secret médical sur les éléments confidentiels révélés"
+        ]
+      }
+    ],
+    "cloture": [
+      {
+        "id": "c1",
+        "text": "Synthèse claire de la décision et du raisonnement",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Reformule la décision (refus du certificat) en termes simples",
+          "Reprend le raisonnement (examen normal, cadre légal)",
+          "Récapitule les alternatives proposées"
+        ]
+      },
+      {
+        "id": "c2",
+        "text": "Validation de la compréhension et de l'adhésion du patient",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Vérifie que le patient a compris le refus et ses raisons",
+          "Laisse un espace pour les questions ou objections",
+          "Reconnaît l'inconfort de la situation pour le patient"
+        ]
+      },
+      {
+        "id": "c3",
+        "text": "Disponibilité explicite pour la suite",
+        "binaryOnly": true,
+        "items_attendus": [
+          "Propose une nouvelle consultation si symptômes réels apparaissent ou persistent",
+          "Mentionne la possibilité d'un soutien (psychologue, médecin du travail) si la situation devient pesante",
+          "Termine sur une note respectueuse, sans rupture relationnelle"
+        ]
+      }
+    ],
+    "communication": [
+      {
+        "id": "com1",
+        "text": "Registre empathique et respectueux malgré le refus",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Ton calme et posé tout au long de l'entretien",
+          "Reflets émotionnels appropriés (validation du stress, de la frustration)",
+          "Silences respectés, pas d'interruption brusque",
+          "Langage corporel non-jugeant"
+        ],
+        "scoringRule": "Fait = 2 pts, ± = 1 pt, Pas fait = 0 pt"
+      },
+      {
+        "id": "com2",
+        "text": "Absence de jugement moral explicite envers le patient",
+        "binaryOnly": true,
+        "items_attendus": [
+          "N'utilise PAS de termes moralisants (« vous mentez », « c'est malhonnête », « ce n'est pas bien »)",
+          "Ne menace PAS de signaler le patient à l'employeur ou à l'assurance",
+          "Sépare clairement le comportement (demande inappropriée) de la personne",
+          "Pas de sarcasme ni de ton condescendant"
+        ]
+      },
+      {
+        "id": "com3",
+        "text": "Clarté pédagogique sur la limite éthique et légale du certificat",
+        "binaryOnly": false,
+        "items_attendus": [
+          "Explique en langage non-technique pourquoi le certificat ne peut être établi",
+          "Distingue clairement ce que le médecin peut faire (constater) de ce qu'il ne peut pas (inventer)",
+          "Vérifie la compréhension par reformulation invitée",
+          "Évite le jargon juridique brut sans explication"
+        ],
+        "scoringRule": "Fait = 2 pts, ± = 1 pt, Pas fait = 0 pt"
+      }
+    ]
+  },
+
+  "diagnostic_attendu": "Demande de certificat médical de complaisance pour couvrir un voyage personnel non-autorisé par l'employeur, sur fond de plainte fabriquée (lombalgie aiguë alléguée à 8/10) et d'examen clinique strictement normal sans drapeau rouge. La réponse canonique attendue est le refus argumenté du certificat (références : art. 318 CP — faux certificat médical ; CDM FMH art. 34 — interdiction d'attestation contraire à la vérité ; art. 321 CP — secret professionnel maintenu) avec validation empathique de la difficulté du patient, proposition d'alternatives non frauduleuses (dialogue avec l'employeur, congés sans solde, médiation RH, assurance annulation, soutien psychologique si souffrance réelle) et préservation explicite du lien thérapeutique."
+}
