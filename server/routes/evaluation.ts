@@ -100,8 +100,11 @@ router.post("/presentation", async (req: Request, res: Response) => {
     return res.json(result);
   } catch (err) {
     if (err instanceof PresentationEvaluatorStationNotFoundError) {
-      // 404 : station inexistante dans le catalogue.
-      res.status(404);
+      // 404 : station inexistante dans le catalogue. Phase 8 J4 hotfix —
+      // « not_found » n'était pas dans ApiErrorCode jusqu'à J4, ce qui
+      // faisait que sendApiError écrivait un status undefined et le
+      // runtime Replit retournait 500 « Invalid status code: undefined ».
+      // Le code « not_found » → 404 est désormais reconnu (cf. errors.ts).
       return sendApiError(res, "not_found", err.message);
     }
     if (err instanceof PresentationEvaluatorNotPart2Error) {

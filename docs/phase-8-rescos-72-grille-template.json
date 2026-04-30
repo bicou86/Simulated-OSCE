@@ -1,0 +1,175 @@
+{
+  "_template_meta": {
+    "_phase": "Phase 8 J4",
+    "_purpose": "Template VIDE de la grille évaluateur RESCOS-72 (certificat de complaisance) à remplir par l'utilisateur — ferme la dette Phase 5 J1 documentée dans docs/phase-7-bilan.md.",
+    "_format": "Calque sur la grille RESCOS-71 voisine (Examinateur_RESCOS_4.json:7821-7945). 5 axes ECOS classiques. PAS d'axe medico_legal (calculé séparément par legalEvaluator depuis le legalContext de la fixture patient).",
+    "_consignes_remplissage": [
+      "1) text : remplacer le placeholder par un libellé clair et court de l'item (ex. « Accueil et exploration du motif réel », « Examen rachis lombaire bilatéral », …).",
+      "2) items_attendus : remplacer [\"TODO\"] par la liste des éléments attendus du candidat. Format conforme aux conventions Phase 8 J3 — voir _conventions_scoringRule ci-dessous.",
+      "3) binaryOnly : laissé à `true` par défaut. À basculer à `false` si l'item a plusieurs sous-éléments à scorer en gradation (avec scoringRule explicite). Pour les items typiques 'Salutation patient', 'Cadre confidentialité', 'Refus du certificat' → garder binaryOnly:true.",
+      "4) scoringRule : ajouter UNIQUEMENT sur les items où binaryOnly:false. Formats valides Phase 8 J3 (cf. server/services/presentationEvaluator.ts) :",
+      "   • count-based : '4-5 = 3 pts, 2-3 = 2 pts, 1 = 1 pt' (range possible, sémantique = au moins X éléments)",
+      "   • alias-binaire : 'Fait = 2 pts, ± = 1 pt, Pas fait = 0 pt' (pour items à évaluation globale type 'réflexivité')",
+      "   • token-based : 'A = 1 pt, B = 1 pt' (chaque token est un sous-élément distinct à matcher dans transcript) — pas pertinent pour RESCOS-72 a priori",
+      "5) Recalibration max acquise J3 : si tu listes 1 sous-élément dans items_attendus avec ruleMax=2, le runtime cap automatiquement max=1 (pas de fausse pénalisation). Tu peux donc lister la rule sans inquiétude si le nombre de sous-éléments varie.",
+      "6) patient_resume : à remplacer par 1 paragraphe court (1-3 phrases) qui résume le cas pour Sonnet. Exemple structure : '<Nom> <âge>, <profession>, consulte pour <plainte affichée>. Motif réel <résumé caché>.'",
+      "7) diagnostic_attendu : à remplacer par le diagnostic / la conclusion pédagogique attendue. Exemple : 'Demande de certificat de complaisance pour <motif personnel>. La réponse canonique est le refus avec orientation alternative.'",
+      "8) PAS DE BLOC weights : RESCOS-72 utilise les poids canoniques evaluation-weights.ts (5 axes Phase 7 + medico_legal additif depuis legalEvaluator), pas un bloc weights local."
+    ],
+    "_axes_attendus": ["anamnese", "examen", "management", "cloture", "communication"],
+    "_axes_NON_inclus": ["medico_legal — branché via legalEvaluator depuis legalContext patient"],
+    "_compteurs_pre_crees": {
+      "anamnese": 5,
+      "examen": 4,
+      "management": 5,
+      "cloture": 3,
+      "communication": 3,
+      "_total": 20
+    },
+    "_workflow_post_remplissage": [
+      "1) L'utilisateur remplit ce template et le renvoie à Claude Code.",
+      "2) Claude Code retire la clé '_template_meta' au moment de l'intégration.",
+      "3) Claude Code copie le bloc station {id, setting, patient_resume, grille, diagnostic_attendu} dans server/data/evaluator/Examinateur_RESCOS_4.json APRÈS RESCOS-71 (ligne actuelle 7945, fichier passe de 7946 → ~8050 lignes).",
+      "4) Claude Code ajoute les tests d'intégration (Phase C J4 Sujet 2)."
+    ]
+  },
+
+  "id": "RESCOS-72 - Certificat de complaisance - Arrêt de travail abusif",
+  "setting": "Cabinet de médecine générale",
+  "patient_resume": "TODO — résumé court du cas pour Sonnet (1-3 phrases). Exemple : « M. Marc Bernard, 34 ans, ingénieur SI, consulte pour lombalgie aiguë depuis dimanche soir et demande un arrêt de travail d'une semaine. Plainte fabriquée pour couvrir un voyage personnel non-autorisé par l'employeur ; examen clinique strictement normal. »",
+
+  "grille": {
+    "anamnese": [
+      {
+        "id": "a1",
+        "text": "TODO — Accueil et exploration du motif initial",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "a2",
+        "text": "TODO — Caractérisation de la lombalgie (chronologie, intensité, mode d'installation)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "a3",
+        "text": "TODO — Recherche de signes de gravité (drapeaux rouges)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "a4",
+        "text": "TODO — Contexte professionnel et social",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "a5",
+        "text": "TODO — Recueil bienveillant non-jugeant qui permet la révélation du motif caché",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      }
+    ],
+    "examen": [
+      {
+        "id": "e1",
+        "text": "TODO — Examen général + observation du comportement clinique",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "e2",
+        "text": "TODO — Examen du rachis lombaire (palpation, mobilités)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "e3",
+        "text": "TODO — Examen neurologique (Lasègue, ROT, force, sensibilité)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "e4",
+        "text": "TODO — Identification de la disjonction plainte / examen",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      }
+    ],
+    "management": [
+      {
+        "id": "m1",
+        "text": "TODO — Décision : refus du certificat de complaisance",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "m2",
+        "text": "TODO — Verbalisation des principes médico-légaux (CDM FMH, art. 318 CP, art. 321 CP)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "m3",
+        "text": "TODO — Proposition d'alternatives (discussion avec employeur, congés sans solde, etc.)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "m4",
+        "text": "TODO — Maintien du lien thérapeutique malgré le refus (reformulation, légitimation de la difficulté)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "m5",
+        "text": "TODO — Documentation appropriée dans le dossier (sans certifier de faux)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      }
+    ],
+    "cloture": [
+      {
+        "id": "c1",
+        "text": "TODO — Synthèse claire de la décision et du raisonnement",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "c2",
+        "text": "TODO — Validation de la compréhension du patient",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "c3",
+        "text": "TODO — Disponibilité pour suite (consultation ultérieure si vraie pathologie, etc.)",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      }
+    ],
+    "communication": [
+      {
+        "id": "com1",
+        "text": "TODO — Registre empathique et respectueux malgré le refus",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "com2",
+        "text": "TODO — Absence de jugement moral explicite envers le patient",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      },
+      {
+        "id": "com3",
+        "text": "TODO — Clarté pédagogique sur la limite éthique du certificat",
+        "binaryOnly": true,
+        "items_attendus": ["TODO"]
+      }
+    ]
+  },
+
+  "diagnostic_attendu": "TODO — diagnostic / conclusion pédagogique attendue. Exemple : « Demande de certificat de complaisance pour couvrir un voyage personnel non-autorisé. La réponse canonique est le refus argumenté du certificat avec maintien du lien thérapeutique et proposition d'alternatives (discussion avec l'employeur, congés sans solde). »"
+}

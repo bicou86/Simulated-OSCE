@@ -9,6 +9,7 @@ export type ApiErrorCode =
   | "upstream_error"      // 5xx côté OpenAI/Anthropic
   | "bad_request"         // 400 — entrée invalide
   | "not_configured"      // 412 — clé non renseignée côté serveur
+  | "not_found"           // 404 — ressource inexistante (Phase 8 J4)
   | "internal_error";     // 500 — inattendu
 
 interface ApiErrorBody {
@@ -23,6 +24,7 @@ const HTTP_BY_CODE: Record<ApiErrorCode, number> = {
   upstream_error: 502,
   bad_request: 400,
   not_configured: 412,
+  not_found: 404,
   internal_error: 500,
 };
 
