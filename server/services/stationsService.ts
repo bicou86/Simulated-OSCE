@@ -41,6 +41,19 @@ const catalog = new Map<string, StationMeta>();
 
 function extractShortId(fullId: string): string {
   // "RESCOS-1 - Adénopathie sus-claviculaire" → "RESCOS-1"
+  // Phase 8 J2 — exception ciblée pour les stations doubles partie 2
+  // (présentation orale au spécialiste). Le pattern fullId attendu est
+  // « ... - Station double 2 », pour lequel le shortId historique
+  // « RESCOS-64 » entrerait en collision avec la partie 1. On suffixe
+  // donc « -P2 » uniquement dans ce cas, ce qui rend la partie 2
+  // indexable distinctement dans le catalog (cf. arbitrage Q2 R3
+  // asymétrique : partie 1 garde son shortId actuel, baselines HTTP
+  // de la partie 1 préservées byte-à-byte).
+  if (/ - Station double 2$/.test(fullId)) {
+    const idx = fullId.indexOf(" - ");
+    const base = idx === -1 ? fullId : fullId.slice(0, idx);
+    return `${base}-P2`;
+  }
   const idx = fullId.indexOf(" - ");
   return idx === -1 ? fullId : fullId.slice(0, idx);
 }
@@ -326,6 +339,10 @@ export const __test__ = {
   hasJsonPath,
   checkParentStationIdReferences,
   validateParentStationIds,
+  // Phase 8 J2 — exposé pour les tests d'audit corpus qui doivent
+  // dédup par shortId selon la même logique que le catalog (sinon les
+  // stations doubles partie 2 sont collisionnées avec la partie 1).
+  extractShortId,
 };
 
 export function listStations(): StationMeta[] {

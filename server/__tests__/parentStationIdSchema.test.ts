@@ -103,20 +103,30 @@ describe("stationSchema — parentStationId (Phase 8 J1)", () => {
   });
 });
 
-describe("stationSchema — snapshot catalogue post-Phase 7 (Phase 8 J1)", () => {
-  it("toutes les fixtures historiques parsent et aucune ne porte parentStationId (additif strict)", async () => {
+describe("stationSchema — snapshot catalogue post-Phase 8 J2", () => {
+  it("toutes les fixtures parsent et seul RESCOS-64 partie 2 porte parentStationId", async () => {
     // Lit directement les Patient_*.json sans passer par stationsService
-    // pour rester focalisé sur le schéma Zod (et permettre l'audit même
-    // sur les fixtures « doublon » comme RESCOS-64 partie 2 qui est
-    // ignorée par le catalog).
+    // pour rester focalisé sur le schéma Zod. À Phase 8 J2, exactement 1
+    // fixture porte parentStationId : RESCOS-64 partie 2 → "RESCOS-64".
+    // Tous les autres parses doivent retourner parentStationId undefined.
+    // Filtre les fichiers de test temporaires (TEST_LEGAL_*) que d'autres
+    // tests créent/suppriment dans beforeEach/afterEach (race-safe).
     const files = (await fs.readdir(PATIENT_DIR))
       .filter((f) => f.startsWith("Patient_") && f.endsWith(".json"))
+      .filter((f) => !f.includes("TEST_LEGAL"))
       .sort();
     let count = 0;
     const errors: string[] = [];
-    const withParentStationId: string[] = [];
+    const withParentStationId: Array<{ fullId: string; parent: string }> = [];
     for (const f of files) {
-      const txt = await fs.readFile(path.join(PATIENT_DIR, f), "utf-8");
+      let txt: string;
+      try {
+        txt = await fs.readFile(path.join(PATIENT_DIR, f), "utf-8");
+      } catch {
+        // Race avec un autre test qui aurait supprimé le fichier entre
+        // readdir et readFile. Skip silencieusement (pas notre périmètre).
+        continue;
+      }
       const parsed = JSON.parse(txt) as { stations: Array<Record<string, unknown>> };
       for (const s of parsed.stations) {
         count++;
@@ -125,21 +135,28 @@ describe("stationSchema — snapshot catalogue post-Phase 7 (Phase 8 J1)", () =>
           errors.push(`[${s.id as string}] ${r.error.message}`);
           continue;
         }
-        // Aucune fixture historique ne doit déclarer parentStationId :
-        // J1 pose le champ schéma mais ne touche PAS les fixtures.
         if (r.data.parentStationId !== undefined) {
-          withParentStationId.push(s.id as string);
+          withParentStationId.push({
+            fullId: s.id as string,
+            parent: r.data.parentStationId,
+          });
         }
       }
     }
-    // Aucune erreur de parsing.
+    // Aucune erreur de parsing sur le corpus.
     expect(errors).toEqual([]);
-    // Aucun parentStationId présent dans les fixtures.
-    expect(withParentStationId).toEqual([]);
-    // Sanité : on a effectivement parcouru tout le corpus (≥ 287
-    // stations physiques, RESCOS-64 partie 1 et partie 2 comptent ici
-    // pour 2 stations physiques distinctes — l'audit ne dédup pas).
-    expect(count).toBeGreaterThanOrEqual(287);
+    // Phase 8 J2 : exactement 1 fixture avec parentStationId
+    // (RESCOS-64 partie 2 → "RESCOS-64").
+    expect(withParentStationId).toEqual([
+      {
+        fullId: "RESCOS-64 - Toux - Station double 2",
+        parent: "RESCOS-64",
+      },
+    ]);
+    // Sanité : on a effectivement parcouru tout le corpus
+    // (≥ 288 stations physiques après Phase 8 J2 — partie 1 et partie 2
+    // sont 2 entrées physiques distinctes dans le fichier patient).
+    expect(count).toBeGreaterThanOrEqual(288);
   });
 });
 

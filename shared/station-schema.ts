@@ -193,9 +193,10 @@ export type LegalContext = z.infer<typeof legalContextSchema>;
 // portera `parentStationId` pointant vers le shortId de la partie 1.
 //
 // INVARIANTS
-//   • Strictement OPTIONNEL : aucune station historique ne porte ce
-//     champ. Les 287 stations existantes parsent sans modification
-//     (test snapshot ci-dessous).
+//   • Strictement OPTIONNEL : à Phase 8 J1, aucune station ne porte
+//     ce champ. À Phase 8 J2, RESCOS-64-P2 (partie 2 station double)
+//     devient la première et unique station qui le porte (1/288).
+//     Les 287 autres stations parsent sans modification.
 //   • Type minimal : `z.string().min(1)` (shortId non-vide). La
 //     validation RÉFÉRENTIELLE (le shortId pointé existe dans le
 //     catalogue) est confiée à `validateParentStationIds` côté

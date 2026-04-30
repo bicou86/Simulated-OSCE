@@ -436,6 +436,12 @@ const META_FIELDS_TO_STRIP = [
   "participantSections",
   "legalContext",
   "medicoLegalReviewed",
+  // Phase 8 J2 — `parentStationId` est une métadonnée d'architecture
+  // (lien partie-1 / partie-2 pour les stations doubles). Aucune valeur
+  // narrative pour le LLM patient ni le client. Strippé par défense
+  // pour qu'aucun brief HTTP ni system prompt ne fuite l'arbre des
+  // stations doubles.
+  "parentStationId",
 ];
 
 // Phase 5 J3 — variante minimale du strip pour le chemin mono-patient
@@ -449,12 +455,15 @@ const META_FIELDS_TO_STRIP = [
 //
 // Phase 6 J2 — strip aussi `medicoLegalReviewed` (flag d'audit interne
 // qui ne doit jamais sortir vers le LLM ou le client).
+// Phase 8 J2 — strip aussi `parentStationId` (métadonnée d'architecture
+// stations doubles, pas de valeur narrative).
 export function stripLegalContextOnly(
   station: Record<string, unknown>,
 ): Record<string, unknown> {
   const cloned = JSON.parse(JSON.stringify(station)) as Record<string, unknown>;
   delete cloned.legalContext;
   delete cloned.medicoLegalReviewed;
+  delete cloned.parentStationId;
   return cloned;
 }
 

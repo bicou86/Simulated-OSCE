@@ -1,10 +1,14 @@
 // Phase 6 J2 — audit du flag medicoLegalReviewed sur le catalogue.
 // Phase 7 J3 — couverture étendue à 287/287 (USMLE-9 désormais annotée
 // avec legalContext violence_sexuelle_adulte + medicoLegalReviewed=true).
+// Phase 8 J2 — corpus passe à 288 stations physiques distinctes :
+// RESCOS-64 partie 2 (présentation pneumologue) est désormais indexée
+// séparément (shortId « RESCOS-64-P2 », nouveau pattern extractShortId)
+// et porte aussi medicoLegalReviewed=true.
 //
 // Vérifie côté SERVEUR (vraies fixtures, pas de mock) :
-//   • 287 / 287 stations portent medicoLegalReviewed=true (couverture
-//     complète post-J3 ; héritage Phase 6 J2 = 286/287).
+//   • 288 / 288 stations portent medicoLegalReviewed=true (couverture
+//     complète post-J2 Phase 8 ; était 287/287 fin Phase 7).
 //   • USMLE-9 porte un legalContext (violence_sexuelle_adulte) ET
 //     medicoLegalReviewed=true depuis J3.
 //   • Aucune station ne fuite medicoLegalReviewed dans /api/patient/:id/brief
@@ -19,7 +23,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import request from "supertest";
 import { beforeAll, describe, expect, it } from "vitest";
-import { initCatalog } from "../services/stationsService";
+import { initCatalog, __test__ as stationsTest } from "../services/stationsService";
 import { getPatientBrief } from "../services/patientService";
 import { stationSchema } from "@shared/station-schema";
 import { buildTestApp } from "./helpers";
@@ -44,7 +48,12 @@ async function auditAllFixtures(): Promise<AuditRow[]> {
     const parsed = JSON.parse(txt) as { stations: Array<Record<string, unknown>> };
     for (const s of parsed.stations) {
       const fullId = s.id as string;
-      const shortId = fullId.split(" - ")[0];
+      // Phase 8 J2 — utilise extractShortId du service (pattern « Station
+      // double 2 » → suffixe « -P2 ») pour aligner le dédup local avec
+      // la logique du catalog. Sans cette source de vérité commune,
+      // partie 2 collisionnerait avec partie 1 sur shortId « RESCOS-64 »
+      // et serait silencieusement dropée comme avant Phase 8.
+      const shortId = stationsTest.extractShortId(fullId);
       if (seen.has(shortId)) continue;
       seen.add(shortId);
       out.push({
@@ -62,12 +71,13 @@ beforeAll(async () => {
   await initCatalog();
 });
 
-describe("Phase 6 J2 / Phase 7 J3 — couverture medicoLegalReviewed sur le catalogue", () => {
-  it("287 stations sur 287 portent medicoLegalReviewed=true (couverture complète post-J3)", async () => {
+describe("Phase 6 J2 / Phase 7 J3 / Phase 8 J2 — couverture medicoLegalReviewed sur le catalogue", () => {
+  // Phase 8 J2: 287 → 288 (ajout RESCOS-64-P2 stationi double partie 2).
+  it("288 stations sur 288 portent medicoLegalReviewed=true (couverture complète post-Phase 8 J2)", async () => {
     const rows = await auditAllFixtures();
-    expect(rows.length).toBe(287);
+    expect(rows.length).toBe(288);
     const flagged = rows.filter((r) => r.flagValue === true);
-    expect(flagged.length).toBe(287);
+    expect(flagged.length).toBe(288);
   });
 
   it("USMLE-9 (annotée Phase 7 J3) porte legalContext ET medicoLegalReviewed=true", async () => {
