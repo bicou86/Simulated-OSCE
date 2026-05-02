@@ -155,6 +155,11 @@ export interface ChatInput {
   // multi-profils. Optionnel : à T0 le client passe brief.defaultSpeakerId
   // (ou null), le serveur retombera sur l'ambiguïté → UI de clarification.
   currentSpeakerId?: string | null;
+  // Phase 9 J1 — discriminant flow conversationnel pour stations doubles
+  // partie 2 (shortId -P2). "examiner" : LLM ouvre la conversation et pose
+  // les 15 questions ordonnées. "patient" (défaut, omis = patient) : flow
+  // patient simulé classique des 287 autres stations.
+  conversationMode?: "patient" | "examiner";
 }
 
 // Phase 4 J2 — réponse de /api/patient/chat. Discriminated union :
@@ -208,6 +213,17 @@ export interface ClientParticipant {
   knowledgeScope: string[];
 }
 
+// Phase 9 J2 — phase chronométrée (miroir client de StationPhase
+// shared/station-schema.ts). Présente UNIQUEMENT pour les stations
+// doubles partie 2 (RESCOS-64-P2 en J2). Absente pour les 287
+// stations classiques : l'UI retombe sur la durée legacy 13 min unique.
+export interface PatientBriefPhase {
+  id: string;
+  label: string;
+  minutes: number;
+  kind: "silent" | "examiner";
+}
+
 export interface PatientBrief {
   stationId: string;
   setting: string;
@@ -227,6 +243,26 @@ export interface PatientBrief {
   // Le participant qui répond par défaut au tout premier tour. Sert à
   // initialiser `currentSpeakerId` côté client.
   defaultSpeakerId?: string;
+  // Phase 9 J2 — découpage temporel chronométré (Bug 3a station double
+  // partie 2). Cf. PatientBriefPhase. Absent → fallback timer legacy.
+  phases?: PatientBriefPhase[];
+  // Phase 9 J2 — consigne candidat orientée présentation (Bug 3b). L'UI
+  // doit afficher `consigneCandidat` prioritairement à `patientDescription`
+  // quand il est présent.
+  consigneCandidat?: string;
+  // Phase 9 J3 — Bug 2 : shortId de la station partie 2 si la station
+  // courante est une P1 ayant une P2 enchaînée. Utilisé par l'UI pour
+  // afficher l'écran intermédiaire de transition automatique en fin de
+  // P1 et déclencher l'évaluation P1 en arrière-plan. Champ omis pour
+  // les 286 stations classiques + RESCOS-64-P2 elle-même.
+  nextPartStationId?: string;
+  // Phase 9 J4 — Q-A10 : shortId de la station partie 1 si la station
+  // courante est une P2 (suffixe -P2). Permet à la page /evaluation de
+  // détecter une P2 et lire le résultat P1 stocké en sessionStorage
+  // `osce.eval.${parentStationId}` (cf. Phase 9 J3) pour rendre le
+  // bilan combiné (dette 7). Champ omis pour les 287 stations sans
+  // parent (286 classiques + RESCOS-64 P1).
+  parentStationId?: string;
 }
 
 export function getPatientBrief(stationId: string): Promise<PatientBrief> {
@@ -516,6 +552,68 @@ export interface EvaluateLegalInput {
 
 export function evaluateLegal(input: EvaluateLegalInput): Promise<LegalEvaluation> {
   return jsonFetch("/api/evaluation/legal", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  });
+}
+
+// ───────── /api/evaluation/presentation (Phase 8 J3 / Phase 9 J4) ─────────
+//
+// Évaluateur de la partie 2 d'une station double (présentation orale au
+// spécialiste). 4 axes 25 % chacun (presentation, raisonnement, examens,
+// management). Heuristique pure côté serveur — ZÉRO LLM. Endpoint isolé
+// du scoring 6-axes Phase 2/3 ; ne s'applique qu'aux stations dont le
+// shortId termine par `-P2` (= 1/288 en J4 : RESCOS-64-P2).
+//
+// Phase 9 J4 — consommé par /evaluation pour rendre la section P2 du
+// bilan combiné (dette 7) quand `brief.parentStationId` est défini.
+
+export const PRESENTATION_AXES = [
+  "presentation",
+  "raisonnement",
+  "examens",
+  "management",
+] as const;
+export type PresentationAxis = (typeof PRESENTATION_AXES)[number];
+
+export interface PresentationItemReport {
+  id: string;
+  text: string;
+  binaryOnly: boolean;
+  scoringRule: string | null;
+  matched: string[];
+  expected: number;
+  score: number;
+  max: number;
+  skipped: boolean;
+}
+
+export interface PresentationAxisReport {
+  axis: PresentationAxis;
+  items: PresentationItemReport[];
+  score: number;
+  max: number;
+  normalized: number;
+}
+
+export interface PresentationEvaluation {
+  stationId: string;
+  parentStationId: string;
+  axes: Record<PresentationAxis, PresentationAxisReport>;
+  weights: Record<PresentationAxis, number>;
+  weightedScore: number;
+}
+
+export interface EvaluatePresentationInput {
+  stationId: string;
+  transcript: string;
+}
+
+export function evaluatePresentation(
+  input: EvaluatePresentationInput,
+): Promise<PresentationEvaluation> {
+  return jsonFetch("/api/evaluation/presentation", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),

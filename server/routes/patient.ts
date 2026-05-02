@@ -24,22 +24,51 @@ const router = Router();
 
 // ───────── Chat ─────────
 
-const ChatBody = z.object({
-  stationId: z.string().min(1),
-  history: z
-    .array(z.object({
-      role: z.enum(["user", "assistant"]),
-      content: z.string(),
-    }))
-    .default([]),
-  userMessage: z.string().min(1),
-  mode: z.enum(["voice", "text"]).default("voice"),
-  model: z.enum(["gpt-4o-mini", "gpt-4o"]).optional(),
-  // Phase 4 J2 — id du participant qui a parlé au tour précédent (sticky).
-  // Optionnel : à T0 le client n'en a pas, le serveur retombera sur le défaut
-  // de la station (cf. PatientBrief.defaultSpeakerId).
-  currentSpeakerId: z.string().min(1).nullable().optional(),
-});
+const ChatBody = z
+  .object({
+    stationId: z.string().min(1),
+    history: z
+      .array(z.object({
+        role: z.enum(["user", "assistant"]),
+        content: z.string(),
+      }))
+      .default([]),
+    // Phase 9 J1 — relâche min(1) au profit d'un superRefine conditionnel :
+    // userMessage doit rester non-vide SAUF en mode examinateur à T0
+    // (history vide), où le LLM ouvre la conversation sans message
+    // candidat préalable. Tous les autres cas conservent le contrat
+    // historique (zéro régression sur les 287 stations patient simulé).
+    userMessage: z.string(),
+    mode: z.enum(["voice", "text"]).default("voice"),
+    model: z.enum(["gpt-4o-mini", "gpt-4o"]).optional(),
+    // Phase 4 J2 — id du participant qui a parlé au tour précédent (sticky).
+    // Optionnel : à T0 le client n'en a pas, le serveur retombera sur le défaut
+    // de la station (cf. PatientBrief.defaultSpeakerId).
+    currentSpeakerId: z.string().min(1).nullable().optional(),
+    // Phase 9 J1 — discriminant flow conversationnel.
+    //   • "patient" (défaut, rétrocompat 287 stations) : flow patient
+    //     simulé classique, candidat parle en premier, routing
+    //     multi-profils via addressRouter.
+    //   • "examiner" (station double partie 2 uniquement, shortId -P2) :
+    //     flow examinateur OSCE, LLM ouvre la conversation, pose les 15
+    //     questions ordonnées, neutre, pas d'aide ; bypass routing.
+    conversationMode: z.enum(["patient", "examiner"]).default("patient"),
+  })
+  .superRefine((data, ctx) => {
+    // userMessage doit être non-vide SAUF en mode examiner à T0 (history vide).
+    const isExaminerOpen =
+      data.conversationMode === "examiner" && data.history.length === 0;
+    if (!isExaminerOpen && data.userMessage.length === 0) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "string",
+        inclusive: true,
+        path: ["userMessage"],
+        message: "userMessage requis (sauf mode examiner à T0).",
+      });
+    }
+  });
 
 router.post("/chat", async (req: Request, res: Response) => {
   const parsed = ChatBody.safeParse(req.body);

@@ -206,6 +206,40 @@ export type LegalContext = z.infer<typeof legalContextSchema>;
 //   • Aucune création de fixture partie 2 en J1 : J1 = schéma + tests
 //     uniquement. Les fixtures partie 2 arriveront en J2.
 
+// Phase 9 J2 — schéma `phases` additif pour les stations doubles partie 2
+// (Bug 3a E2E Phase 8). Décrit le découpage temporel chronométré d'une
+// station entre une phase de préparation silencieuse et une phase
+// interactive (présentation au LLM examinateur, ou autres flows futurs).
+//
+// CONVENTION RESCOS-64-P2 (validée arbitrage utilisateur Phase 9 cadrage B) :
+//   • phase 1 « preparation » : 4 min silencieuses (zéro appel LLM)
+//   • phase 2 « presentation » : 9 min interactives avec examinateur
+//   • Total chronométré = 13 min
+//
+// INVARIANTS
+//   • Strictement OPTIONNEL : à Phase 9 J2, seule RESCOS-64-P2 porte ce
+//     champ. Les 287 autres stations parsent sans modification (timer
+//     UI legacy 13 min unique préservé via fallback).
+//   • `kind: "silent"` → la phase n'émet aucun événement LLM ; sert
+//     uniquement de chronomètre de préparation visible côté candidat.
+//   • `kind: "examiner"` → la phase déclenche l'ouverture du flow
+//     examinateur (cf. Phase 9 J1 conversationMode="examiner").
+//   • Les minutes sont en nombres entiers strictement positifs (pas de
+//     phases vides).
+//   • La somme des minutes définit la durée totale chronométrée. Aucune
+//     contrainte forte (le code consommateur peut comparer somme et
+//     duration globale si elle est ajoutée par ailleurs).
+export const phaseKindSchema = z.enum(["silent", "examiner"]);
+export type PhaseKind = z.infer<typeof phaseKindSchema>;
+
+export const stationPhaseSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  minutes: z.number().int().positive(),
+  kind: phaseKindSchema,
+});
+export type StationPhase = z.infer<typeof stationPhaseSchema>;
+
 // Schéma de station permissif :
 //   • `id` requis (déjà invariant fort dans stationsService),
 //   • `participants` optionnel (Phase 4 J1),
@@ -214,6 +248,11 @@ export type LegalContext = z.infer<typeof legalContextSchema>;
 //   • `medicoLegalReviewed` optionnel default false (Phase 6 J1),
 //   • `parentStationId` optionnel (Phase 8 J1, validation référentielle
 //     post-init dans stationsService),
+//   • `phases` optionnel (Phase 9 J2, découpage temporel des stations
+//     doubles partie 2 — fallback durée unique 13 min si absent),
+//   • `consigneCandidat` optionnel (Phase 9 J2, consigne candidat
+//     orientée présentation pour partie 2 — fallback patient_description
+//     si absent),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
 //     décrire — l'objectif est seulement de typer les champs additifs.
@@ -225,6 +264,8 @@ export const stationSchema = z
     legalContext: legalContextSchema.optional(),
     medicoLegalReviewed: z.boolean().optional().default(false),
     parentStationId: z.string().min(1).optional(),
+    phases: z.array(stationPhaseSchema).min(1).optional(),
+    consigneCandidat: z.string().min(1).optional(),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;

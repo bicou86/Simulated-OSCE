@@ -4,17 +4,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Download, ArrowLeft, TrendingUp, Loader2, RotateCcw, FileText,
-  ClipboardList, Lightbulb,
+  ClipboardList, Lightbulb, Layers, AlertTriangle,
 } from "lucide-react";
 import {
-  ApiError, evaluate, getEvaluationWeights, type EvaluationResult, type EvaluationScores,
-  type EvaluationWeightsResponse, type PatientBrief, type StationType,
+  ApiError, evaluate, evaluatePresentation, getEvaluationWeights,
+  PRESENTATION_AXES,
+  type EvaluationResult, type EvaluationScores,
+  type EvaluationWeightsResponse, type PatientBrief, type PresentationAxis,
+  type PresentationEvaluation, type StationType,
 } from "@/lib/api";
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
 import { AccentedMarkdown } from "@/components/AccentedMarkdown";
 import LegalDebriefPanel from "@/components/LegalDebriefPanel";
 import { stripRedundantSections } from "@/lib/reportFormatting";
+import {
+  readPart1EvaluationRecord,
+  type Part1EvaluationRecord,
+} from "@/lib/part1Evaluation";
 
 interface Session {
   stationId: string;
@@ -72,12 +79,43 @@ interface DisplaySection {
   raw?: string;
 }
 
+// Phase 9 J4 — Q-A8 (validée user) : pondération du score combiné
+// stations doubles. P1 (consultation patient, 9 min) prime sur P2
+// (présentation orale, 4 min) au prorata (60/40), arrondi via Math.round.
+const COMBINED_SCORE_WEIGHT_P1 = 0.6;
+const COMBINED_SCORE_WEIGHT_P2 = 0.4;
+
+export function combinedGlobalScore(scoreP1: number, scoreP2: number): number {
+  return Math.round(COMBINED_SCORE_WEIGHT_P1 * scoreP1 + COMBINED_SCORE_WEIGHT_P2 * scoreP2);
+}
+
+// Libellés et ordre canonique des 4 axes presentation (Phase 8 J3).
+// Source unique côté client pour les labels affichés (le serveur expose
+// les axes via les clés `axes[axis]` du payload PresentationEvaluation
+// avec scores normalisés 0..1).
+const PRESENTATION_AXIS_LABELS: Record<PresentationAxis, string> = {
+  presentation: "Présentation",
+  raisonnement: "Raisonnement",
+  examens: "Examens complémentaires",
+  management: "Management",
+};
+
 // Fusion côté front : pour chaque axe canonique, on récupère le score depuis
-// la sortie évaluateur (par key), et le POIDS toujours depuis la table Phase 2
-// (via /api/evaluator/weights). Si la table n'est pas disponible (pas encore
-// fetchée, ou stationType inconnu), on retombe sur le weight de la section ou
-// 0. L'ordre des rangées rendues est TOUJOURS CANONICAL_AXES, donc 5 rangées
-// exactement — anamnèse > examen > management > clôture > communication.
+// la sortie évaluateur (par key) ET le POIDS DYNAMIQUE depuis la même section
+// (rééchelonné en mode 6-axes via getEffectiveAxisWeights côté backend, cf.
+// Phase 7 J2). La table /api/evaluator/weights reste un fallback de robustesse
+// pour les cas où une section canonique n'est pas présente dans `sections`
+// (serveur stale, hallucination LLM omettant une rangée). L'ordre des rangées
+// rendues est TOUJOURS CANONICAL_AXES, donc 5 rangées exactement —
+// anamnèse > examen > management > clôture > communication.
+//
+// Phase 9 J4 — Bug 1 : inversion de priorité. Avant J4, la table statique
+// (canonicalPercent, base v1 25/25/25/25/0 pour anamnese_examen) primait
+// sur `existing.weight`, ce qui faisait que les stations à legalContext
+// affichaient 25% côté HTML alors que le PDF (qui consomme `existing.weight`)
+// affichait 23% (= 22.5 arrondi par Math.round). Maintenant : `existing.weight`
+// (rééchelonné backend) est la source primaire ; canonicalPercent ne sert
+// qu'aux axes absents de `sections`.
 export function buildDisplaySections(
   sections: EvaluationScores["sections"],
   weightsTable: EvaluationWeightsResponse | null,
@@ -88,10 +126,10 @@ export function buildDisplaySections(
   const canonicalPercent = weightsTable && stationType ? weightsTable.weights[stationType] : null;
   return CANONICAL_AXES.map((axis) => {
     const existing = byKey.get(axis);
-    const weightPct = canonicalPercent
-      ? canonicalPercent[axis]
-      : existing
-        ? Math.round(existing.weight * 100)
+    const weightPct = existing
+      ? Math.round(existing.weight * 100)
+      : canonicalPercent
+        ? canonicalPercent[axis]
         : 0;
     return {
       key: axis,
@@ -175,7 +213,21 @@ export default function Evaluation() {
 
   const session = stationId ? readSession(stationId) : null;
 
+  // Phase 9 J4 — Q-A10/dette 7 : détection P2 (station double partie 2). Si
+  // `brief.parentStationId` est défini, la page bascule sur le rendu bilan
+  // combiné : appel /api/evaluation/presentation au lieu de /api/evaluator/evaluate
+  // + lecture sessionStorage `osce.eval.${parentStationId}` pour le résultat P1.
+  // Pour les 287 stations sans parent, isP2 reste false → flow strictement
+  // identique au pré-J4 (rétrocompat byte-à-byte des tests existants).
+  const parentStationId = session?.brief?.parentStationId;
+  const isP2 = !!parentStationId;
+
   const [result, setResult] = useState<EvaluationResult | null>(null);
+  const [presentationResult, setPresentationResult] = useState<PresentationEvaluation | null>(null);
+  // Q-A9 (validée) : pas de stockage P2 sessionStorage. P2 lu directement
+  // depuis le résultat /api/evaluation/presentation (state React standard).
+  // Seul P1 reste en sessionStorage `osce.eval.${parentStationId}`.
+  const [p1Record, setP1Record] = useState<Part1EvaluationRecord | null>(null);
   const [weightsTable, setWeightsTable] = useState<EvaluationWeightsResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
@@ -214,6 +266,29 @@ export default function Evaluation() {
     setLoading(true);
     setError(null);
     try {
+      if (isP2) {
+        // Phase 9 J4 — flow stations doubles partie 2 (présentation orale).
+        // Endpoint isolé /api/evaluation/presentation, scoring 4 axes 25 %
+        // (presentation/raisonnement/examens/management) heuristique pure.
+        // Le transcript est sérialisé en string (l'endpoint /presentation
+        // attend un payload string, pas un tableau de tours, cf. Phase 8 J3).
+        const transcriptString = session.transcript
+          .map((t) => `[${t.role}] ${t.text}`)
+          .join("\n");
+        const pres = await evaluatePresentation({
+          stationId: session.stationId,
+          transcript: transcriptString,
+        });
+        // eslint-disable-next-line no-console
+        console.info("[evaluation] received P2 presentation result:", {
+          stationId: pres.stationId,
+          parentStationId: pres.parentStationId,
+          weightedScore: pres.weightedScore,
+          axes: Object.keys(pres.axes),
+        });
+        setPresentationResult(pres);
+        return;
+      }
       const res = await evaluate({ stationId: session.stationId, transcript: session.transcript });
       // Instrumentation debug Phase 2 — loggue la shape brute que le front
       // reçoit. Utile au user pour diagnostiquer un serveur stale vs un
@@ -244,6 +319,16 @@ export default function Evaluation() {
     void runEvaluation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Phase 9 J4 — dette 7 : lecture du record P1 depuis sessionStorage. Une
+  // seule fois au mount, uniquement quand la station courante est une P2
+  // (parentStationId défini). En cas d'absence/JSON malformé/erreur P1,
+  // readPart1EvaluationRecord retourne null → fallback dégradé géré côté
+  // rendu (bandeau d'avertissement, P2 seule).
+  useEffect(() => {
+    if (!isP2 || !parentStationId) return;
+    setP1Record(readPart1EvaluationRecord(parentStationId));
+  }, [isP2, parentStationId]);
 
   // Markdown nettoyé (sans SCORE GLOBAL ni LÉGENDE DES STATUTS) : mémoïsé pour
   // ne pas refaire le strip à chaque re-render.
@@ -305,19 +390,25 @@ export default function Evaluation() {
     );
   }
 
-  if (loading && !result) {
+  // Phase 9 J4 — dette 7 : la condition de loader/erreur dépend du flow.
+  // En mode P2, on attend `presentationResult` (et non `result`).
+  const primaryResult = isP2 ? presentationResult : result;
+
+  if (loading && !primaryResult) {
     return (
       <div className="p-8 max-w-5xl mx-auto flex flex-col items-center justify-center h-full text-center">
         <Loader2 className="w-12 h-12 animate-spin text-primary mb-6" />
         <h1 className="text-3xl font-bold mb-2">Analyse en cours</h1>
         <p className="text-muted-foreground text-lg">
-          Claude Sonnet 4.5 relit le transcript et structure le rapport selon la grille officielle…
+          {isP2
+            ? "Analyse heuristique de la présentation orale en cours…"
+            : "Claude Sonnet 4.5 relit le transcript et structure le rapport selon la grille officielle…"}
         </p>
       </div>
     );
   }
 
-  if (error && !result) {
+  if (error && !primaryResult) {
     return (
       <div className="p-8 max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">Évaluation impossible</h1>
@@ -332,6 +423,26 @@ export default function Evaluation() {
           </Button>
         </div>
       </div>
+    );
+  }
+
+  // Phase 9 J4 — dette 7 : branche de rendu P2 (bilan combiné). Émise AVANT
+  // le rendu classique 5/6 axes pour éviter d'agréger deux comportements
+  // dans un seul bloc JSX. Pour les 287 stations sans parentStationId,
+  // cette branche est court-circuitée et le rendu legacy s'applique
+  // strictement à l'identique (rétrocompat byte-à-byte des tests Phase 7).
+  if (isP2 && presentationResult && parentStationId) {
+    return (
+      <CombinedEvaluationView
+        session={session}
+        parentStationId={parentStationId}
+        presentationResult={presentationResult}
+        p1Record={p1Record}
+        weightsTable={weightsTable}
+        loading={loading}
+        onRetry={runEvaluation}
+        onBack={() => setLocation("/")}
+      />
     );
   }
 
@@ -541,6 +652,231 @@ function StructuredReport({ markdown }: { markdown: string }) {
           {s.body.trim() !== "" && <AccentedMarkdown>{s.body}</AccentedMarkdown>}
         </section>
       ))}
+    </div>
+  );
+}
+
+// ────────────────────────────────────────────────────────────────────────
+// Phase 9 J4 — dette 7 : rendu bilan combiné stations doubles (P1 + P2).
+//
+// Branche dédiée invoquée UNIQUEMENT pour les stations P2 (parentStationId
+// défini dans le brief). Compose verticalement :
+//   1. bandeau « Bilan combiné — Station double » (si P1 lu avec succès)
+//   2. score global combiné = round(0.6 × scoreP1 + 0.4 × scoreP2) (Q-A8)
+//   3. section P1 (5 axes + medico_legal optionnel) — si record P1 valide
+//   4. section P2 (4 axes presentation 25 % chacun) — toujours
+//   5. fallback dégradé si P1 absent/erreur (Q-J4-6) : bandeau warning,
+//      pas de score combiné, section P2 seule, aucun crash.
+//
+// Pour les 287 stations sans parentStationId : ce composant n'est JAMAIS
+// rendu (cf. condition `isP2 && presentationResult` côté Evaluation()).
+// ────────────────────────────────────────────────────────────────────────
+
+interface CombinedEvaluationViewProps {
+  session: Session;
+  parentStationId: string;
+  presentationResult: PresentationEvaluation;
+  p1Record: Part1EvaluationRecord | null;
+  weightsTable: EvaluationWeightsResponse | null;
+  loading: boolean;
+  onRetry: () => void;
+  onBack: () => void;
+}
+
+function CombinedEvaluationView({
+  session,
+  parentStationId,
+  presentationResult,
+  p1Record,
+  weightsTable,
+  loading,
+  onRetry,
+  onBack,
+}: CombinedEvaluationViewProps) {
+  const p1EvaluatorOk = !!p1Record?.evaluatorResult && !p1Record?.error;
+  const p1EvaluatorResult = p1EvaluatorOk ? p1Record!.evaluatorResult! : null;
+
+  const scoreP1 = p1EvaluatorResult?.scores.globalScore ?? null;
+  const scoreP2 = Math.round(presentationResult.weightedScore);
+  const combined =
+    scoreP1 !== null ? combinedGlobalScore(scoreP1, scoreP2) : null;
+  const combinedTone = combined !== null ? toneForScore(combined) : toneForScore(scoreP2);
+  const ct = TONE_CLASSES[combinedTone];
+
+  return (
+    <div className="p-8 max-w-5xl mx-auto animate-in fade-in duration-500 pb-24">
+      <div className="flex justify-between items-center mb-8 no-print">
+        <Button variant="ghost" onClick={onBack} className="text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="w-5 h-5 mr-2" /> Retour à la bibliothèque
+        </Button>
+        <Button variant="outline" onClick={onRetry} disabled={loading}>
+          {loading ? <Loader2 className="w-5 h-5 mr-2 animate-spin" /> : <RotateCcw className="w-5 h-5 mr-2" />}
+          Réévaluer
+        </Button>
+      </div>
+
+      {p1EvaluatorOk ? (
+        <Card
+          className={`border ${ct.border} ${ct.bg} mb-6`}
+          data-testid="combined-banner"
+        >
+          <CardHeader className="pb-3">
+            <CardTitle className={`text-base flex items-center ${ct.text}`}>
+              <Layers className="w-5 h-5 mr-2" />
+              Bilan combiné — Station double
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Récapitulatif des deux temps de la station :{" "}
+              <span className="font-semibold">{parentStationId}</span> (consultation, 9 min) →{" "}
+              <span className="font-semibold">{session.stationId}</span> (présentation orale, 4 min).
+              Score combiné pondéré 60 % / 40 % proportionnellement à la durée.
+            </p>
+          </CardContent>
+        </Card>
+      ) : (
+        <Card
+          className="border border-amber-200 bg-amber-50 mb-6"
+          data-testid="combined-warning"
+        >
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base flex items-center text-amber-700">
+              <AlertTriangle className="w-5 h-5 mr-2" />
+              Évaluation Phase 1 indisponible — bilan partiel affiché
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-amber-900 leading-relaxed">
+              Le résultat de la consultation initiale ({parentStationId}) n'a pas pu être récupéré ;
+              seule la présentation orale ({session.stationId}) est notée ci-dessous. Le score
+              global combiné n'est pas calculé.
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      {combined !== null && (
+        <Card className="md:col-span-2 border-border shadow-sm mb-8" data-testid="combined-global-card">
+          <CardHeader className="bg-muted/30 pb-4">
+            <CardTitle className="text-xl">Performance globale combinée</CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-6">
+              <div
+                className={`flex-shrink-0 relative flex items-center justify-center w-32 h-32 rounded-full ${ct.bg} border-[8px] ${ct.ring}`}
+                data-testid="combined-score-global"
+              >
+                <span className={`text-4xl font-bold ${ct.text}`}>{combined}%</span>
+              </div>
+              <div className="flex-1 space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Phase 1 (poids 60 %)</span>
+                  <span className="tabular-nums font-medium" data-testid="combined-score-p1">{scoreP1}%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Phase 2 (poids 40 %)</span>
+                  <span className="tabular-nums font-medium" data-testid="combined-score-p2">{scoreP2}%</span>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {p1EvaluatorResult && (
+        <Card className="border-border shadow-sm mb-8" data-testid="combined-section-p1">
+          <CardHeader className="bg-muted/30">
+            <CardTitle className="text-lg flex items-center">
+              <ClipboardList className="w-5 h-5 mr-2 text-primary" />
+              Phase 1 — Consultation ({parentStationId})
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6 space-y-4">
+            {buildDisplaySections(
+              p1EvaluatorResult.scores.sections,
+              weightsTable,
+              p1EvaluatorResult.stationType,
+            ).map((s) => {
+              const weightPct = Math.round(s.weight * 100);
+              const nonEvaluated = weightPct === 0;
+              return (
+                <div
+                  key={s.key}
+                  data-testid={`p1-score-${s.key}`}
+                  className={nonEvaluated ? "opacity-60" : ""}
+                >
+                  <div className="flex justify-between text-sm mb-1 font-medium">
+                    <span>
+                      {s.name}
+                      <span className="text-muted-foreground ml-2 font-normal">
+                        (poids {weightPct}%{nonEvaluated ? " — non évalué" : ""})
+                      </span>
+                    </span>
+                    <span className="text-muted-foreground tabular-nums">{s.score}%</span>
+                  </div>
+                  <ScoreBar value={s.score} />
+                </div>
+              );
+            })}
+            {p1EvaluatorResult.medicoLegalScore !== undefined &&
+              p1EvaluatorResult.medicoLegalWeight !== undefined && (
+                <div data-testid="p1-score-medico_legal">
+                  <div className="flex justify-between text-sm mb-1 font-medium">
+                    <span>
+                      Médico-légal
+                      <span className="text-muted-foreground ml-2 font-normal">
+                        (poids {p1EvaluatorResult.medicoLegalWeight}%)
+                      </span>
+                    </span>
+                    <span className="text-muted-foreground tabular-nums">
+                      {p1EvaluatorResult.medicoLegalScore}%
+                    </span>
+                  </div>
+                  <ScoreBar value={p1EvaluatorResult.medicoLegalScore} />
+                </div>
+              )}
+            <p className="text-xs text-muted-foreground pt-2">
+              Score Phase 1 :{" "}
+              <span className="tabular-nums font-medium">{scoreP1}%</span>
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      <Card className="border-border shadow-sm" data-testid="combined-section-p2">
+        <CardHeader className="bg-muted/30">
+          <CardTitle className="text-lg flex items-center">
+            <FileText className="w-5 h-5 mr-2 text-primary" />
+            Phase 2 — Présentation orale ({session.stationId})
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="pt-6 space-y-4">
+          {PRESENTATION_AXES.map((axis) => {
+            const axisReport = presentationResult.axes[axis];
+            const weightPct = Math.round((presentationResult.weights[axis] ?? 0) * 100);
+            const axisScore = Math.round(axisReport.normalized * 100);
+            return (
+              <div key={axis} data-testid={`p2-score-${axis}`}>
+                <div className="flex justify-between text-sm mb-1 font-medium">
+                  <span>
+                    {PRESENTATION_AXIS_LABELS[axis]}
+                    <span className="text-muted-foreground ml-2 font-normal">
+                      (poids {weightPct}%)
+                    </span>
+                  </span>
+                  <span className="text-muted-foreground tabular-nums">{axisScore}%</span>
+                </div>
+                <ScoreBar value={axisScore} />
+              </div>
+            );
+          })}
+          <p className="text-xs text-muted-foreground pt-2">
+            Score Phase 2 :{" "}
+            <span className="tabular-nums font-medium">{scoreP2}%</span>
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 }

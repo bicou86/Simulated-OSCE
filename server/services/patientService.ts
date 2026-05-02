@@ -12,7 +12,7 @@ import {
   type Interlocutor,
 } from "../lib/patientInterlocutor";
 import { loadPrompt } from "../lib/prompts";
-import { getStationMeta, patientFilePath } from "./stationsService";
+import { findChildStations, getStationMeta, patientFilePath } from "./stationsService";
 import {
   buildSpecialtyDirective,
   selectSpecialtyProfile,
@@ -116,6 +116,38 @@ export interface PatientBrief {
   // c'est l'unique participant. Pour les multi-profils, on s'aligne sur
   // l'interlocuteur résolu par patientInterlocutor (parent vs self).
   defaultSpeakerId?: string;
+  // Phase 9 J2 — découpage temporel chronométré pour les stations doubles
+  // partie 2 (Bug 3a). Absent (undefined) pour les 287 stations classiques :
+  // l'UI retombe sur la durée legacy 13 min unique. Présent pour
+  // RESCOS-64-P2 : 4 min « preparation » silencieuse + 9 min « presentation »
+  // examinateur (cf. shared/station-schema.ts:stationPhaseSchema).
+  phases?: Array<{ id: string; label: string; minutes: number; kind: "silent" | "examiner" }>;
+  // Phase 9 J2 — consigne candidat orientée présentation pour partie 2
+  // (Bug 3b). L'UI affiche `consigneCandidat` prioritairement à
+  // `patientDescription` quand il est présent (fallback). Absent (undefined)
+  // pour les 287 stations classiques.
+  consigneCandidat?: string;
+  // Phase 9 J3 — Bug 2 : si la station courante (P1) a une partie 2 dans
+  // le catalogue (lien `parentStationId` + suffixe -P2), on expose ici le
+  // shortId de la P2 pour que l'UI puisse afficher l'écran intermédiaire
+  // de transition automatique en fin de P1. Champ omis (undefined) pour :
+  //   • les 286 stations classiques sans P2
+  //   • RESCOS-64-P2 elle-même (pas de P3 dans le corpus J3)
+  // Calculé à la volée via `findChildStations(stationId)`. Aucun appel
+  // LLM, lecture O(n) du catalog en mémoire.
+  nextPartStationId?: string;
+  // Phase 9 J4 — Q-A10 : si la station courante est une P2 (i.e. son meta
+  // catalog porte `parentStationId`), on l'expose dans le brief HTTP pour
+  // que l'UI /evaluation puisse détecter le contexte « stations doubles »
+  // et lire le résultat P1 depuis sessionStorage `osce.eval.${parentStationId}`
+  // (rendu du bilan combiné, dette 7). Le champ est expressément distinct
+  // de `nextPartStationId` (qui pointe P1→P2 ; ici on pointe P2→P1). Champ
+  // omis (undefined) pour les 287 stations sans parent (286 classiques +
+  // RESCOS-64 P1). META_FIELDS_TO_STRIP retire ce champ du JSON station
+  // injecté au LLM patient (invariant Phase 8 J2 préservé) — on le
+  // recompose explicitement ici depuis le catalog (meta), pas depuis le
+  // payload station brut.
+  parentStationId?: string;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -140,6 +172,33 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
   const isMultiProfile =
     Array.isArray((station as { participants?: unknown }).participants) &&
     ((station as { participants: unknown[] }).participants).length >= 2;
+  // Phase 9 J2 — propagation phases + consigneCandidat (additifs stricts).
+  // Les champs sont absents pour les 287 stations historiques ; présents
+  // pour RESCOS-64-P2 (Patient_RESCOS_4.json partie 2). Aucun calcul ni
+  // valeur synthétisée : on relit tels quels depuis la fixture, puis on
+  // les omet de la réponse HTTP s'ils ne sont pas définis (undefined →
+  // sérialisation JSON les supprime, baseline byteLength des stations
+  // legacy strictement inchangée).
+  const rawPhases = (station as { phases?: unknown }).phases;
+  const phases = Array.isArray(rawPhases) ? (rawPhases as PatientBrief["phases"]) : undefined;
+  const consigneCandidat =
+    typeof (station as { consigneCandidat?: unknown }).consigneCandidat === "string"
+      ? ((station as { consigneCandidat: string }).consigneCandidat)
+      : undefined;
+  // Phase 9 J3 — calcul de `nextPartStationId` : on consulte le catalog
+  // pour trouver une station enfant (lien parentStationId + suffixe -P2$).
+  // En J3, seul RESCOS-64 → RESCOS-64-P2. Les 286 autres stations sans P2
+  // reçoivent `undefined` (champ omis du JSON HTTP, byteLength inchangé).
+  // Si plusieurs enfants existent (corpus futur), on prend le premier
+  // dans l'ordre du catalog (cohérent avec listStations() : tri stable).
+  const children = findChildStations(stationId);
+  const nextPartStationId = children.length > 0 ? children[0].id : undefined;
+  // Phase 9 J4 — Q-A10 : propagation `parentStationId` depuis le meta
+  // catalog (Phase 8 J1). Lecture O(1), pas de LLM. Présent uniquement
+  // pour les stations P2 (= 1/288 stations en J4 : RESCOS-64-P2). Pour
+  // les 287 autres stations, undefined → omis du JSON HTTP (baseline
+  // byteLength inchangée).
+  const parentStationId = meta?.parentStationId;
   return {
     stationId,
     setting: station.setting ?? "",
@@ -157,6 +216,10 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     // historique « Patient (voix IA) » reste suffisant.
     participants: isMultiProfile ? participants : undefined,
     defaultSpeakerId,
+    phases,
+    consigneCandidat,
+    nextPartStationId,
+    parentStationId,
   };
 }
 
@@ -253,6 +316,18 @@ export async function buildSystemPrompt(
   target?: Participant,
   allParticipants?: Participant[],
 ): Promise<string> {
+  // Phase 9 J1 — branche examinateur pour stations doubles partie 2
+  // (Bug 3c E2E Phase 8). Détection stricte par suffixe -P2$ (cf.
+  // extractShortId Phase 8 J2). Le flow examinateur N'INJECTE PAS le
+  // narratif patient (le candidat connaît déjà le cas et présente sa
+  // restitution clinique au spécialiste). Source unique des questions :
+  // `examinerQuestion` de chaque item p1-p15 dans la grille
+  // `presentation` côté Examinateur_*.json. Zéro effet sur les 287
+  // autres stations (mono-patient ou multi-profils).
+  if (/-P2$/.test(stationId)) {
+    return buildExaminerSystemPrompt(stationId);
+  }
+
   const { station, interlocutor } = await resolveStationInterlocutor(stationId);
 
   let useCaregiverPrompt: boolean;
@@ -340,6 +415,53 @@ export async function buildSystemPrompt(
     modeDirective +
     dataBlock
   );
+}
+
+// ─── Phase 9 J1 — flow examinateur (stations doubles partie 2) ────────────
+//
+// Le system prompt examinateur N'INJECTE PAS de bloc <station_data>
+// (zéro narratif patient — le candidat connaît déjà le cas) et N'UTILISE
+// PAS les directives patient simulé (specialty, lay vocabulary, legal
+// leak, mode voix/texte). Le template `examiner.md` cadre seul le rôle ;
+// la seule injection dynamique est la liste numérotée des 15 questions
+// examinateur (`{{examinerQuestions}}`).
+//
+// Source de vérité : le champ `examinerQuestion` de chaque item p1-p15
+// dans la grille `presentation` côté Examinateur_*.json (champ additif
+// Phase 9 J1, schéma optionnel).
+export async function buildExaminerSystemPrompt(stationId: string): Promise<string> {
+  const template = await loadPrompt("examiner");
+  const questions = await loadExaminerQuestions(stationId);
+  if (questions.length === 0) {
+    throw new Error(
+      `Phase 9 J1 — aucune examinerQuestion trouvée pour ${stationId}. ` +
+      `Vérifier la grille presentation côté Examinateur_*.json.`,
+    );
+  }
+  const formatted = questions.map((q, i) => `${i + 1}. ${q}`).join("\n");
+  return template.replace("{{examinerQuestions}}", formatted);
+}
+
+// Charge les 15 questions examinateur ordonnées depuis la grille
+// `presentation` du fichier Examinateur_*.json correspondant à la
+// station partie 2. Import dynamique de getEvaluatorStation pour éviter
+// le cycle patientService ↔ evaluatorService (evaluatorService importe
+// déjà `getLegalContext` depuis ce fichier).
+async function loadExaminerQuestions(stationId: string): Promise<string[]> {
+  const { getEvaluatorStation } = await import("./evaluatorService");
+  const evaluatorStation = await getEvaluatorStation(stationId);
+  const grille = (
+    evaluatorStation as {
+      grille?: { presentation?: Array<{ id: string; examinerQuestion?: string }> };
+    }
+  ).grille;
+  const items = grille?.presentation ?? [];
+  return items
+    .filter(
+      (item): item is { id: string; examinerQuestion: string } =>
+        typeof item.examinerQuestion === "string" && item.examinerQuestion.length > 0,
+    )
+    .map((item) => item.examinerQuestion);
 }
 
 // Bloc d'identité injecté quand le target est un participant `patient` —
@@ -442,6 +564,15 @@ const META_FIELDS_TO_STRIP = [
   // pour qu'aucun brief HTTP ni system prompt ne fuite l'arbre des
   // stations doubles.
   "parentStationId",
+  // Phase 9 J2 — `phases` et `consigneCandidat` sont des métadonnées
+  // UI (découpage chronométré + consigne candidat orientée présentation).
+  // Sans valeur narrative pour le LLM patient. Strippées par défense
+  // au cas où une fixture future combinerait `phases` ET flow patient
+  // simulé (RESCOS-64-P2 utilise actuellement le flow examinateur, qui
+  // n'injecte de toute façon pas de <station_data>). Le brief HTTP
+  // construit explicitement ces champs hors du chemin de strip.
+  "phases",
+  "consigneCandidat",
 ];
 
 // Phase 5 J3 — variante minimale du strip pour le chemin mono-patient
@@ -556,6 +687,10 @@ export interface ChatOptions {
   // Le client le repasse à chaque requête. `null`/absent à T0 ⇒ on retombe
   // sur le défaut de la station (cf. computeDefaultSpeakerId).
   currentSpeakerId?: string | null;
+  // Phase 9 J1 — discriminant flow conversationnel. Défaut "patient"
+  // (rétrocompat). En "examiner" : bypass addressRouter, bypass leak
+  // detection patient, system prompt examinateur via examiner.md.
+  conversationMode?: "patient" | "examiner";
 }
 
 // Phase 4 J2 — résultat d'un tour de chat patient. Discriminated union :
@@ -656,6 +791,11 @@ function buildClarificationOutcome(
 //   • soit un payload `clarification_needed` (cas multi-profils ambigu)
 //     SANS appel OpenAI — pas de tokens consommés sur ambigu.
 export async function runPatientChat(opts: ChatOptions): Promise<PatientChatOutcome> {
+  // Phase 9 J1 — flow examinateur : bypass routing/leak detection.
+  if (opts.conversationMode === "examiner") {
+    return runExaminerChat(opts);
+  }
+
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
@@ -729,6 +869,75 @@ export async function runPatientChat(opts: ChatOptions): Promise<PatientChatOutc
   }
 }
 
+// ─── Phase 9 J1 — runExaminerChat (non streaming) ──────────────────────────
+//
+// Flow examinateur OSCE (station double partie 2, shortId -P2) :
+//   • Pas de routing addressRouter (pas de multi-profils en mode examiner).
+//   • Pas de leak detection patient (l'examinateur n'est pas un patient).
+//   • System prompt = examiner.md + 15 questions injectées.
+//   • Bypass userMessage à T0 : si history vide ET userMessage vide,
+//     l'API OpenAI reçoit uniquement le message system, le LLM génère
+//     seul l'ouverture (= question 1 verbatim ou reformulation neutre).
+//   • speakerId/speakerRole : "examiner" / "patient" (placeholder
+//     ParticipantRole pour compat type ; le frontend distingue via
+//     speakerId === "examiner" ou via le shortId -P2 côté UI).
+async function runExaminerChat(opts: ChatOptions): Promise<PatientChatOutcome> {
+  const key = getOpenAIKey();
+  if (!key) throw new Error("OPENAI_API_KEY_MISSING");
+
+  const system = await buildSystemPrompt(opts.stationId, opts.mode);
+  const client = new OpenAI({ apiKey: key });
+  const model = opts.model ?? "gpt-4o-mini";
+  const started = Date.now();
+
+  const isOpening = opts.history.length === 0 && opts.userMessage.length === 0;
+  const messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
+    { role: "system", content: system },
+    ...opts.history,
+  ];
+  if (!isOpening) {
+    messages.push({ role: "user", content: opts.userMessage });
+  }
+
+  try {
+    const completion = await client.chat.completions.create({
+      model,
+      temperature: 0.7,
+      max_tokens: 400,
+      messages,
+    });
+    const reply = completion.choices[0]?.message?.content?.trim() ?? "";
+    void logRequest({
+      route: "/api/patient/chat",
+      stationId: opts.stationId,
+      model,
+      tokensIn: completion.usage?.prompt_tokens ?? 0,
+      tokensOut: completion.usage?.completion_tokens ?? 0,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok: true,
+    });
+    return {
+      type: "reply",
+      reply,
+      speakerId: "examiner",
+      speakerRole: "patient",
+    };
+  } catch (err) {
+    void logRequest({
+      route: "/api/patient/chat",
+      stationId: opts.stationId,
+      model,
+      tokensIn: 0,
+      tokensOut: 0,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok: false,
+    });
+    throw err;
+  }
+}
+
 // ─────────── Streaming ───────────
 
 // Détecte la fin d'une phrase : ponctuation terminale suivie d'un espace ou fin de texte.
@@ -772,6 +981,12 @@ export async function* streamPatientChat(
   opts: ChatOptions,
   signal?: AbortSignal,
 ): AsyncGenerator<StreamEvent> {
+  // Phase 9 J1 — flow examinateur SSE.
+  if (opts.conversationMode === "examiner") {
+    yield* streamExaminerChat(opts, signal);
+    return;
+  }
+
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
 
@@ -870,6 +1085,105 @@ export async function* streamPatientChat(
     const interlocutorTypeForLeaks: Interlocutor["type"] =
       target.role === "patient" ? "self" : "parent";
     logLeaksIfAny(opts.stationId, interlocutorTypeForLeaks, fullText);
+    yield { type: "done", fullText: fullText.trim() };
+  } catch (err) {
+    ok = false;
+    throw err;
+  } finally {
+    void logRequest({
+      route: "/api/patient/chat/stream",
+      stationId: opts.stationId,
+      model,
+      tokensIn,
+      tokensOut,
+      cachedTokens: 0,
+      latencyMs: Date.now() - started,
+      ok,
+    });
+  }
+}
+
+// ─── Phase 9 J1 — streamExaminerChat (SSE) ────────────────────────────────
+//
+// Variante streaming du flow examinateur. Émet la séquence :
+//   1. `speaker` (speakerId="examiner", speakerRole="patient" placeholder)
+//   2. `delta*` puis `sentence*` (TTS progressif côté client)
+//   3. `done`
+//
+// Aucun event `clarification_needed` ne peut être émis (le routing
+// multi-profils est bypassé — pas de target ambigu en mode examiner).
+async function* streamExaminerChat(
+  opts: ChatOptions,
+  signal?: AbortSignal,
+): AsyncGenerator<StreamEvent> {
+  const key = getOpenAIKey();
+  if (!key) throw new Error("OPENAI_API_KEY_MISSING");
+
+  const system = await buildSystemPrompt(opts.stationId, opts.mode);
+  const client = new OpenAI({ apiKey: key });
+  const model = opts.model ?? "gpt-4o-mini";
+  const started = Date.now();
+
+  yield {
+    type: "speaker",
+    speakerId: "examiner",
+    speakerRole: "patient",
+  };
+
+  const isOpening = opts.history.length === 0 && opts.userMessage.length === 0;
+  const messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
+    { role: "system", content: system },
+    ...opts.history,
+  ];
+  if (!isOpening) {
+    messages.push({ role: "user", content: opts.userMessage });
+  }
+
+  const stream = await client.chat.completions.create(
+    {
+      model,
+      temperature: 0.7,
+      max_tokens: 400,
+      stream: true,
+      stream_options: { include_usage: true },
+      messages,
+    },
+    { signal },
+  );
+
+  let fullText = "";
+  let pending = "";
+  let sentenceIndex = 0;
+  let tokensIn = 0;
+  let tokensOut = 0;
+  let ok = true;
+
+  try {
+    for await (const chunk of stream) {
+      if ((chunk as any).usage) {
+        tokensIn = (chunk as any).usage.prompt_tokens ?? 0;
+        tokensOut = (chunk as any).usage.completion_tokens ?? 0;
+      }
+      const delta = chunk.choices?.[0]?.delta?.content ?? "";
+      if (!delta) continue;
+      fullText += delta;
+      pending += delta;
+      yield { type: "delta", text: delta };
+
+      while (true) {
+        const match = pending.match(SENTENCE_END);
+        if (!match) break;
+        const endIdx = match.index! + match[1].length;
+        const candidate = pending.slice(0, endIdx).trim();
+        if (candidate.length < MIN_SENTENCE_LENGTH) break;
+        yield { type: "sentence", text: candidate, index: sentenceIndex++ };
+        pending = pending.slice(endIdx + match[2].length);
+      }
+    }
+    const tail = pending.trim();
+    if (tail.length > 0) {
+      yield { type: "sentence", text: tail, index: sentenceIndex++ };
+    }
     yield { type: "done", fullText: fullText.trim() };
   } catch (err) {
     ok = false;

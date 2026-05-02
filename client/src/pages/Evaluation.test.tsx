@@ -191,23 +191,30 @@ describe("Evaluation — pill stationType (Bug A hotfix)", () => {
   }
 });
 
-// Ce test reproduit EXACTEMENT le symptôme observé par le user en prod après
-// le 1er hotfix (3c5359f) : serveur stale qui renvoie seulement 4 sections
-// (sans Clôture) avec un weight Communication à 0.25. La fusion client-side
-// doit quand même rendre les 5 rangées avec les poids Phase 2 canoniques,
-// pas ceux que Sonnet a hallucinés.
-describe("Evaluation — résilience à un serveur stale (4 sections, weights Sonnet-hallucinés)", () => {
-  it("rend quand même 5 rangées avec les poids canoniques Phase 2", async () => {
+// Ce test reproduit le symptôme observé par le user en prod : serveur stale
+// qui renvoie seulement 4 sections (sans Clôture). La fusion client-side
+// doit synthétiser la rangée manquante via le fallback table v1.
+//
+// Phase 9 J4 — Bug 1 (Q-J4-1) : la priorité table-canonique vs existing.weight
+// est INVERSÉE. existing.weight (backend dynamique, rééchelonné legalContext
+// via getEffectiveAxisWeights) prime ; la table canonique ne sert plus que
+// de fallback pour les axes ABSENTS de sections. Le scénario « Sonnet
+// hallucine un poids ≠ canonique » n'est plus filtré par le front : le
+// backend formate déjà les poids dynamiquement depuis Phase 7 J2.
+describe("Evaluation — résilience à un serveur stale (axe Clôture absent)", () => {
+  it("rend quand même 5 rangées : Clôture synthétisée via fallback canonique", async () => {
     const staleResult: EvaluationResult = {
       markdown: "# Rapport\n",
       scores: {
         globalScore: 55,
         sections: [
-          // Stale server : ordre et weight Sonnet-hallucinés, Clôture absente.
+          // Stale server : ordre maintenu, Clôture absente. Poids Communication
+          // à 0 (cohérent avec table v1 pour anamnese_examen) — Phase 9 J4
+          // l'inversion buildDisplaySections rend ces poids tels quels.
           { key: "anamnese", name: "Anamnèse", weight: 0.25, score: 80 },
           { key: "examen", name: "Examen physique", weight: 0.25, score: 70 },
           { key: "management", name: "Management", weight: 0.25, score: 60 },
-          { key: "communication", name: "Communication", weight: 0.25, score: 8 },
+          { key: "communication", name: "Communication", weight: 0, score: 8 },
           // Pas de cloture !
         ],
         verdict: "À retravailler",
@@ -228,12 +235,15 @@ describe("Evaluation — résilience à un serveur stale (4 sections, weights So
     for (const axis of ["anamnese", "examen", "management", "cloture", "communication"] as const) {
       expect(screen.getByTestId(`score-${axis}`)).toBeDefined();
     }
-    // Clôture synthétisée : score 0, poids 25% (canonique anamnese_examen).
+    // Clôture synthétisée : score 0, poids 25% (canonique anamnese_examen,
+    // fallback Phase 9 J4 quand existing absent — comportement préservé).
     const cloture = screen.getByTestId("score-cloture");
     expect(cloture.textContent).toContain("Clôture");
     expect(cloture.textContent).toContain("poids 25%");
-    // Communication reprend son poids CANONIQUE (0), pas celui que Sonnet
-    // a halluciné (0.25). C'est la bulle garde-fou du bug observé en prod.
+    // Communication présente côté backend avec weight=0 → 0% rendu (poids
+    // dynamique respecté). Phase 9 J4 : la table canonique ne sert plus
+    // d'override, mais ici les deux convergent (table v1 = 0 sur
+    // anamnese_examen.communication).
     const comm = screen.getByTestId("score-communication");
     expect(comm.textContent).toContain("poids 0%");
     expect(comm.textContent).toContain("non évalué");
