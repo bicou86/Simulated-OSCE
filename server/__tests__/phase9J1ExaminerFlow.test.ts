@@ -235,11 +235,15 @@ describe("Phase 9 J1 — POST /api/patient/chat (conversationMode examiner)", ()
       conversationMode: "examiner",
     });
     expect(res.status).toBe(200);
+    // Phase 10 J3 dette 6 : speakerRole "patient" → "examiner" (alignement
+    // sémantique speakerId/speakerRole, type ConversationSpeakerRole). Avant
+    // J3 : placeholder ParticipantRole pour compat type ; depuis J3 : type
+    // élargi à 4 valeurs incluant "examiner".
     expect(res.body).toEqual({
       type: "reply",
       reply: "Pouvez-vous présenter brièvement la patiente ?",
       speakerId: "examiner",
-      speakerRole: "patient",
+      speakerRole: "examiner",
     });
     // Vérifie que le LLM a été appelé sans message user à T0 (system seul).
     expect(openaiChat).toHaveBeenCalledOnce();

@@ -25,6 +25,37 @@ import { z } from "zod";
 export const participantRoleSchema = z.enum(["patient", "accompanying", "witness"]);
 export type ParticipantRole = z.infer<typeof participantRoleSchema>;
 
+// Phase 10 J3 — dette 6 : alignement speakerRole côté flow examinateur.
+//
+// `ConversationSpeakerRole` est un type DISTINCT de `ParticipantRole`
+// (additif strict, Q-D6 option B validée user). Il étend l'enum de 3 à 4
+// valeurs en ajoutant "examiner" pour refléter exactement le speaker
+// renvoyé par les flows /api/patient/chat et /api/patient/chat/stream
+// quand `conversationMode === "examiner"` (stations doubles partie 2).
+//
+// Pourquoi un type distinct au lieu d'étendre ParticipantRole :
+//   • ParticipantRole décrit la composition statique d'une station OSCE
+//     (qui sont les profils présents — patient, accompagnant, témoin).
+//     Un examinateur n'est PAS un profil de la station ; c'est un rôle
+//     conversationnel runtime, propre au flow Phase 9 J1.
+//   • Étendre ParticipantRole risquerait de casser tout consommateur
+//     qui exhausting-switch sur les 3 valeurs (UI multi-profils, tests
+//     d'audit corpus, …). Le contrat `participantRoleSchema` reste
+//     strictement à 3 valeurs (invariant Phase 4 J1 préservé).
+//   • Avant J3, les flows examinateur retournaient `speakerRole: "patient"`
+//     (placeholder type-compat, cf. commentaire patientService.ts:881-883).
+//     C'est cette incohérence sémantique qui est résolue par J3.
+//
+// La compatibilité côté frontend est assurée par fallback : un client
+// pré-J3 qui voyait `speakerRole === "patient"` + `speakerId === "examiner"`
+// affichait déjà "Examinateur" via heuristique sur speakerId. Post-J3,
+// le client peut désormais utiliser `speakerRole === "examiner"`
+// directement, en conservant le fallback speakerId pour robustesse.
+export const conversationSpeakerRoleSchema = z.enum([
+  "patient", "accompanying", "witness", "examiner",
+]);
+export type ConversationSpeakerRole = z.infer<typeof conversationSpeakerRoleSchema>;
+
 // Registre lexical attendu : `medical` = soignant·e formé·e, `lay` = profane.
 // Sert au prompt routing et aux blacklists de jargon (cf. caregiver.md vs
 // patient.md). Tous les pilotes J1 sont en `lay`.

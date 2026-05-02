@@ -24,6 +24,7 @@ import {
 import {
   getStationParticipants,
   legalContextSchema,
+  type ConversationSpeakerRole,
   type LegalContext,
   type Participant,
   type ParticipantRole,
@@ -702,11 +703,19 @@ export interface PatientChatReply {
   type: "reply";
   reply: string;
   speakerId: string;
-  speakerRole: ParticipantRole;
+  // Phase 10 J3 — dette 6 : élargissement type ParticipantRole →
+  // ConversationSpeakerRole (additif strict, ajout "examiner"). Permet
+  // d'aligner speakerRole sur speakerId quand conversationMode="examiner".
+  // Les flows patient/multi-profils continuent de retourner les 3 valeurs
+  // historiques ("patient", "accompanying", "witness").
+  speakerRole: ConversationSpeakerRole;
 }
 export interface PatientChatClarification {
   type: "clarification_needed";
   reason: string;
+  // Le routeur d'adresse multi-profils retourne UNIQUEMENT des
+  // ParticipantRole (3 valeurs historiques) — un examinateur n'est pas
+  // candidat à clarification, le flow examinateur bypasse le routing.
   candidates: Array<{ id: string; name: string; role: ParticipantRole }>;
 }
 export type PatientChatOutcome = PatientChatReply | PatientChatClarification;
@@ -878,9 +887,15 @@ export async function runPatientChat(opts: ChatOptions): Promise<PatientChatOutc
 //   • Bypass userMessage à T0 : si history vide ET userMessage vide,
 //     l'API OpenAI reçoit uniquement le message system, le LLM génère
 //     seul l'ouverture (= question 1 verbatim ou reformulation neutre).
-//   • speakerId/speakerRole : "examiner" / "patient" (placeholder
-//     ParticipantRole pour compat type ; le frontend distingue via
-//     speakerId === "examiner" ou via le shortId -P2 côté UI).
+//   • speakerId/speakerRole : "examiner" / "examiner" (Phase 10 J3 dette 6).
+//     Avant J3 : speakerRole valait "patient" (placeholder ParticipantRole
+//     pour compat type, cohérence sémantique cassée). Depuis J3, le type
+//     est élargi à ConversationSpeakerRole (additif strict) qui inclut
+//     "examiner" — speakerId et speakerRole sont alignés. Le frontend
+//     peut désormais lire speakerRole directement, en conservant le
+//     fallback speakerId === "examiner" pour rétrocompat (clients
+//     pré-J3 qui voient un événement legacy avec speakerRole=="patient"
+//     + speakerId=="examiner" doivent toujours afficher "Examinateur").
 async function runExaminerChat(opts: ChatOptions): Promise<PatientChatOutcome> {
   const key = getOpenAIKey();
   if (!key) throw new Error("OPENAI_API_KEY_MISSING");
@@ -921,7 +936,9 @@ async function runExaminerChat(opts: ChatOptions): Promise<PatientChatOutcome> {
       type: "reply",
       reply,
       speakerId: "examiner",
-      speakerRole: "patient",
+      // Phase 10 J3 dette 6 : "patient" → "examiner" (alignement
+      // speakerId/speakerRole, type ConversationSpeakerRole).
+      speakerRole: "examiner",
     };
   } catch (err) {
     void logRequest({
@@ -962,10 +979,16 @@ export interface StreamEvent {
   // Phase 4 J2 — émis avant tout `delta` quand le routeur a tranché en
   // faveur d'un participant. Le client met à jour `currentSpeakerId` et
   // affiche le bon label ("Mère du patient (voix IA)" vs "Patient (voix IA)").
+  // Phase 10 J3 — dette 6 : élargi à ConversationSpeakerRole (ajout
+  // "examiner") pour aligner le speakerRole sur le speakerId quand le
+  // flow examinateur est actif. Compat type préservée pour les flows
+  // patient/multi-profils (sous-type strict de ConversationSpeakerRole).
   speakerId?: string;
-  speakerRole?: ParticipantRole;
+  speakerRole?: ConversationSpeakerRole;
   // Phase 4 J2 — émis seul (pas de delta/done associé) quand le routeur a
   // tranché « ambigu ». Aucun appel OpenAI n'est effectué dans ce cas.
+  // Le routeur multi-profils ne peut PAS produire de candidat "examiner"
+  // (le flow examinateur bypasse le routing) → ParticipantRole conservé.
   candidates?: Array<{ id: string; name: string; role: ParticipantRole }>;
   reason?: string;
 }
@@ -1106,7 +1129,9 @@ export async function* streamPatientChat(
 // ─── Phase 9 J1 — streamExaminerChat (SSE) ────────────────────────────────
 //
 // Variante streaming du flow examinateur. Émet la séquence :
-//   1. `speaker` (speakerId="examiner", speakerRole="patient" placeholder)
+//   1. `speaker` (speakerId="examiner", speakerRole="examiner" — Phase 10 J3
+//      dette 6, type ConversationSpeakerRole). Avant J3 : speakerRole valait
+//      "patient" placeholder ParticipantRole, incohérent avec speakerId.
 //   2. `delta*` puis `sentence*` (TTS progressif côté client)
 //   3. `done`
 //
@@ -1127,7 +1152,9 @@ async function* streamExaminerChat(
   yield {
     type: "speaker",
     speakerId: "examiner",
-    speakerRole: "patient",
+    // Phase 10 J3 dette 6 : "patient" → "examiner" (alignement
+    // speakerId/speakerRole, type ConversationSpeakerRole).
+    speakerRole: "examiner",
   };
 
   const isOpening = opts.history.length === 0 && opts.userMessage.length === 0;

@@ -42,6 +42,7 @@ import {
   type ExaminerLookupResult,
   type LabsLookupResult,
   type LabsLookupResolvedResult,
+  type ConversationSpeakerRoleClient,
   type ParticipantRoleClient,
   type PatientBrief,
   type TtsVoice,
@@ -71,8 +72,10 @@ type TranscriptTurn =
       // exploité pour le moment, le label "Étudiant / Médecin" reste
       // statique). Optionnel : les tours pré-J2 (tests, monoclient) n'en
       // portent pas, on retombe sur le label legacy.
+      // Phase 10 J3 dette 6 : élargi à ConversationSpeakerRoleClient pour
+      // supporter `speakerRole === "examiner"` côté flow examinateur.
       speakerId?: string;
-      speakerRole?: ParticipantRoleClient;
+      speakerRole?: ConversationSpeakerRoleClient;
     }
   | {
       role: "examiner";
@@ -225,7 +228,9 @@ export default function Simulation() {
   const [pendingClarification, setPendingClarification] = useState<Omit<ChatReplyClarification, "type"> | null>(null);
   // Phase 4 J2 — speaker tag pour la bulle de stream en cours (avant que
   // le tour ne soit committé en transcript final).
-  const [streamingSpeaker, setStreamingSpeaker] = useState<{ speakerId: string; speakerRole: ParticipantRoleClient } | null>(null);
+  // Phase 10 J3 dette 6 : élargi à ConversationSpeakerRoleClient pour
+  // supporter `speakerRole === "examiner"` côté flow examinateur.
+  const [streamingSpeaker, setStreamingSpeaker] = useState<{ speakerId: string; speakerRole: ConversationSpeakerRoleClient } | null>(null);
 
   const { isRecording, error: recorderError, start: startRec, stop: stopRec } = useMediaRecorder();
   // Voix TTS du patient — état initial = fallback preferredVoice ; résolu en fonction du
