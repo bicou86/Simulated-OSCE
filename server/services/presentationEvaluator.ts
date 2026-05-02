@@ -14,7 +14,8 @@
 //
 // SCORING — décisions issues des arbitrages Phase A J3 :
 //
-//   1) binaryOnly:true + items_attendus      → substring/keyword match, 1/0
+//   1) binaryOnly:true + items_attendus      → token-based keyword match
+//                                                 (Phase 10 J1 dette 2), 1/0
 //   2) binaryOnly:true sans items_attendus   → extraction diagnostic du `text`
 //      (5 diagnostics axe raisonnement)         via regex /Diagnostic[^:]+: (.+)/,
 //                                               puis match transcript, 1/0
@@ -168,18 +169,60 @@ function splitCsvItems(raw: string): string[] {
     .filter((s) => s.length > 0);
 }
 
-function detectMention(subItem: string, transcript: string): boolean {
-  const normItem = normalizeText(subItem);
-  const normTrans = normalizeText(transcript);
-  if (normItem.length === 0) return false;
-  if (normTrans.includes(normItem)) return true;
-  const keywords = normItem
+// ─── Phase 10 J1 — dette 2 : tokenize (matching token-based) ──────────────
+//
+// Normalise le texte (lowercase + NFD strip diacritics + alphanum/space)
+// puis le découpe sur les espaces en tokens non-vides. Source de vérité
+// unique pour le matching scoringRule, déterministe, ZÉRO LLM.
+//
+// Lié à dette 3 (J2) : un matching token-based connaît la position des
+// keywords dans la séquence de tokens du transcript et permettra à la
+// dette 3 de chercher des marqueurs de négation ("pas", "aucun", etc.)
+// dans le même syntagme. Le matching substring pré-J1 ne le permettait pas.
+//
+// Exemples :
+//   tokenize("Tabagisme actif à 35 UPA")  → ["tabagisme","actif","a","35","upa"]
+//   tokenize("Pas de fièvre, pas de TBC") → ["pas","de","fievre","pas","de","tbc"]
+//   tokenize("(Aggravation de) toux")     → ["aggravation","de","toux"]
+//   tokenize("")                          → []
+function tokenize(text: string): string[] {
+  return normalizeText(text)
     .split(/\s+/)
-    .filter((w) => w.length >= MIN_KEYWORD_LEN && !STOPWORDS.has(w));
+    .filter((t) => t.length > 0);
+}
+
+// ─── Phase 10 J1 — dette 2 : detectMention token-based ────────────────────
+//
+// Refactor du matching scoringRule de substring → token-based. Sémantique
+// préservée :
+//   • Tokenize l'item en keywords filtrés (≥ MIN_KEYWORD_LEN, hors STOPWORDS)
+//   • Match si ≥ KEYWORD_THRESHOLD (60%) des keywords sont présents dans
+//     le SET des tokens du transcript (égalité stricte, pas substring).
+//   • Si l'item ne génère AUCUN keyword (ex. "UPA" 3 chars) → fallback
+//     égalité tous tokens item ⊆ set tokens transcript.
+//
+// Bénéfice mesurable : élimine les faux positifs morphologiques substring
+// (ex. "fievre" matchait "fievreux" via includes pré-J1, désormais false).
+// Constantes MIN_KEYWORD_LEN, STOPWORDS, KEYWORD_THRESHOLD INCHANGÉES
+// (Phase 8 J3 actée par 1433 tests).
+//
+// Limite documentée Phase 8 J3 PRÉSERVÉE jusqu'à la dette 3 (J2) :
+// "pas de tuberculose" matche encore positivement "Tuberculose" car la
+// négation n'est pas détectée — fix prévu J2 sur fondations token-based.
+function detectMention(subItem: string, transcript: string): boolean {
+  const itemTokens = tokenize(subItem);
+  if (itemTokens.length === 0) return false;
+  const transTokens = new Set(tokenize(transcript));
+  const keywords = itemTokens.filter(
+    (t) => t.length >= MIN_KEYWORD_LEN && !STOPWORDS.has(t),
+  );
   if (keywords.length === 0) {
-    return normTrans.includes(normItem);
+    // Item court (ex. "UPA", "BK", "EP") : on exige égalité de TOUS les
+    // tokens item dans le set transcript (preservation rétrocompat avec
+    // ancien fallback `normTrans.includes(normItem)`).
+    return itemTokens.every((t) => transTokens.has(t));
   }
-  const matched = keywords.filter((k) => normTrans.includes(k));
+  const matched = keywords.filter((k) => transTokens.has(k));
   return matched.length >= Math.ceil(keywords.length * KEYWORD_THRESHOLD);
 }
 
@@ -417,7 +460,8 @@ function scoreItem(
     return baseReport({ skipped: true });
   }
 
-  // Cas binaryOnly:true AVEC items_attendus : substring match, 1/0.
+  // Cas binaryOnly:true AVEC items_attendus : token-based match (Phase 10
+  // J1 dette 2), 1/0.
   if (item.binaryOnly === true) {
     const target = itemsAttendus[0];
     const ok = detectMention(target, transcript);
@@ -546,6 +590,10 @@ export const __test__ = {
   aggregateAxis,
   STOPWORDS,
   KEYWORD_THRESHOLD,
+  // Phase 10 J1 — dette 2 : tokenize exposé pour tests unitaires
+  // (déterministe, idempotence, ponctuation, accents, chiffres).
+  tokenize,
+  MIN_KEYWORD_LEN,
   // Permet aux tests de re-set le set de dédup warnings entre tests.
   resetWarnings: () => warnedItems.clear(),
 };
