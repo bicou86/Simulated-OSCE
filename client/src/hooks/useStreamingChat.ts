@@ -15,7 +15,7 @@ import {
   ttsPatient,
   type ChatInput,
   type ChatReplyClarification,
-  type ParticipantRoleClient,
+  type ConversationSpeakerRoleClient,
   type TtsVoice,
 } from "@/lib/api";
 
@@ -26,7 +26,11 @@ export interface StreamingChatOptions {
   // Phase 4 J2 — déclenché dès l'event SSE `speaker` (avant tout delta).
   // Permet à l'UI de mettre à jour le label du tour en cours sans attendre
   // la fin de la réponse.
-  onSpeaker?: (speaker: { speakerId: string; speakerRole: ParticipantRoleClient }) => void;
+  // Phase 10 J3 dette 6 : speakerRole élargi à ConversationSpeakerRoleClient
+  // (4 valeurs : patient/accompanying/witness/examiner). Les flows
+  // multi-profils continuent de retourner les 3 valeurs historiques ; le
+  // flow examinateur retourne "examiner".
+  onSpeaker?: (speaker: { speakerId: string; speakerRole: ConversationSpeakerRoleClient }) => void;
   // Phase 4 J2 — le routeur n'a pas pu trancher : l'UI doit afficher un
   // panneau « À qui parlez-vous ? ». Aucun audio n'est joué dans ce cas.
   onClarification?: (payload: Omit<ChatReplyClarification, "type">) => void;
@@ -38,8 +42,9 @@ export interface StreamResult {
   // Phase 4 J2 — id/rôle du participant qui a réellement répondu sur ce
   // tour. `null` si le tour s'est terminé en clarification (pas de réponse
   // LLM produite).
+  // Phase 10 J3 dette 6 : speakerRole élargi à ConversationSpeakerRoleClient.
   speakerId: string | null;
-  speakerRole: ParticipantRoleClient | null;
+  speakerRole: ConversationSpeakerRoleClient | null;
   // Phase 4 J2 — le serveur a renvoyé un payload de clarification.
   clarification?: Omit<ChatReplyClarification, "type">;
 }
@@ -186,7 +191,7 @@ export function useStreamingChat(options: StreamingChatOptions) {
       let buffer = "";
       let fullText = "";
       let speakerId: string | null = null;
-      let speakerRole: ParticipantRoleClient | null = null;
+      let speakerRole: ConversationSpeakerRoleClient | null = null;
       let clarification: Omit<ChatReplyClarification, "type"> | undefined;
 
       while (true) {
@@ -221,7 +226,7 @@ export function useStreamingChat(options: StreamingChatOptions) {
             // courant pour que l'UI affiche le bon label (« Mère du patient »
             // vs « Patient ») avant le premier delta.
             speakerId = payload.speakerId ?? null;
-            speakerRole = (payload.speakerRole ?? null) as ParticipantRoleClient | null;
+            speakerRole = (payload.speakerRole ?? null) as ConversationSpeakerRoleClient | null;
             if (speakerId && speakerRole) {
               options.onSpeaker?.({ speakerId, speakerRole });
             }

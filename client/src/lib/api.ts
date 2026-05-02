@@ -168,15 +168,31 @@ export interface ChatInput {
 //     affiche un panneau avec boutons profils, AUCUN appel LLM consommé.
 export type ParticipantRoleClient = "patient" | "accompanying" | "witness";
 
+// Phase 10 J3 — dette 6 : miroir client de ConversationSpeakerRole
+// (shared/station-schema.ts). Étend ParticipantRoleClient en ajoutant
+// "examiner" pour aligner le `speakerRole` retourné par les flows
+// /api/patient/chat et /api/patient/chat/stream quand
+// `conversationMode === "examiner"`. Type DISTINCT de ParticipantRoleClient
+// (additif strict) — les composants UI multi-profils continuent de
+// switcher uniquement sur les 3 valeurs historiques (rétrocompat).
+export type ConversationSpeakerRoleClient =
+  | ParticipantRoleClient
+  | "examiner";
+
 export interface ChatReplyOk {
   type: "reply";
   reply: string;
   speakerId: string;
-  speakerRole: ParticipantRoleClient;
+  // Phase 10 J3 dette 6 : élargi ParticipantRoleClient → ConversationSpeakerRoleClient.
+  // Les flows multi-profils retournent toujours les 3 valeurs historiques ;
+  // le flow examinateur retourne "examiner" depuis Phase 10 J3.
+  speakerRole: ConversationSpeakerRoleClient;
 }
 export interface ChatReplyClarification {
   type: "clarification_needed";
   reason: string;
+  // Le routeur d'adresse multi-profils ne propose JAMAIS un examinateur
+  // (le flow examinateur bypasse le routing). ParticipantRoleClient strict.
   candidates: Array<{ id: string; name: string; role: ParticipantRoleClient }>;
 }
 export type ChatReply = ChatReplyOk | ChatReplyClarification;

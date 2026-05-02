@@ -6,15 +6,23 @@
 //     /api/evaluator/evaluate (Phase 2/3) ni /api/evaluation/legal (Phase 5).
 //   • Scoring 4 axes 25% chacun, isolé du scoring 6-axes (arbitrage
 //     utilisateur Phase 8 #4 : grille séparée, jamais agrégée).
-//   • Source de vérité = `grille` + `weights` du fichier Examinateur
+//   • Source de vérité UNIQUE = `grille` + `weights` du fichier Examinateur
 //     correspondant à la station partie 2 (ex. Examinateur_RESCOS_4.json
-//     pour RESCOS-64-P2). Le bloc `presentation` côté patient
-//     (Patient_RESCOS_4.json:3320-3447) est DORMANT et NON consommé ici
-//     (cf. dette Phase 9 : audit historique format object 14 entrées).
+//     pour RESCOS-64-P2 : 15 items p1-p15 avec champs `examinerQuestion`
+//     Phase 9 J1 + `scoringRule`/`items_attendus` Phase 8 J3).
+//
+//   • Le bloc `presentation` côté patient (Patient_RESCOS_4.json) a été
+//     SUPPRIMÉ Phase 10 J3 partie B (Dette 5) car dormant : dupliquait
+//     14 items mal formés (objet indexé p1-p13/p15 sans p14, vocabulaire
+//     question/reponse divergent, reponse:null jamais remplis), aucun
+//     consommateur runtime côté server/client/shared. La grille évaluateur
+//     reste la source unique consultée par presentationEvaluator (cf.
+//     getEvaluatorStation + grille.presentation accédés ligne ~530).
 //
 // SCORING — décisions issues des arbitrages Phase A J3 :
 //
-//   1) binaryOnly:true + items_attendus      → substring/keyword match, 1/0
+//   1) binaryOnly:true + items_attendus      → token-based keyword match
+//                                                 (Phase 10 J1 dette 2), 1/0
 //   2) binaryOnly:true sans items_attendus   → extraction diagnostic du `text`
 //      (5 diagnostics axe raisonnement)         via regex /Diagnostic[^:]+: (.+)/,
 //                                               puis match transcript, 1/0
@@ -168,18 +176,180 @@ function splitCsvItems(raw: string): string[] {
     .filter((s) => s.length > 0);
 }
 
-function detectMention(subItem: string, transcript: string): boolean {
-  const normItem = normalizeText(subItem);
-  const normTrans = normalizeText(transcript);
-  if (normItem.length === 0) return false;
-  if (normTrans.includes(normItem)) return true;
-  const keywords = normItem
+// ─── Phase 10 J1 — dette 2 : tokenize (matching token-based) ──────────────
+//
+// Normalise le texte (lowercase + NFD strip diacritics + alphanum/space)
+// puis le découpe sur les espaces en tokens non-vides. Source de vérité
+// unique pour le matching scoringRule, déterministe, ZÉRO LLM.
+//
+// Lié à dette 3 (J2) : un matching token-based connaît la position des
+// keywords dans la séquence de tokens du transcript et permettra à la
+// dette 3 de chercher des marqueurs de négation ("pas", "aucun", etc.)
+// dans le même syntagme. Le matching substring pré-J1 ne le permettait pas.
+//
+// Exemples :
+//   tokenize("Tabagisme actif à 35 UPA")  → ["tabagisme","actif","a","35","upa"]
+//   tokenize("Pas de fièvre, pas de TBC") → ["pas","de","fievre","pas","de","tbc"]
+//   tokenize("(Aggravation de) toux")     → ["aggravation","de","toux"]
+//   tokenize("")                          → []
+function tokenize(text: string): string[] {
+  return normalizeText(text)
     .split(/\s+/)
-    .filter((w) => w.length >= MIN_KEYWORD_LEN && !STOPWORDS.has(w));
-  if (keywords.length === 0) {
-    return normTrans.includes(normItem);
+    .filter((t) => t.length > 0);
+}
+
+// ─── Phase 10 J2 — dette 3 : marqueurs de négation transcript ─────────────
+//
+// Liste blanche déterministe des marqueurs grammaticaux (« pas », « non »…),
+// nominaux d'absence (« absence », « absent »…) et médicaux d'exclusion
+// (« négatif », « exclu »…). Stockée en forme post-normalizeText :
+// lowercase + sans diacritiques (ex. "negatif" pas "négatif"), cohérent
+// avec le tokenizer J1 (NFD strip).
+//
+// Source de vérité unique côté presentationEvaluator. Aucune mutation
+// runtime (Set readonly de fait, vérifié par test J2).
+//
+// Q-N1 validée utilisateur : 19 marqueurs cliniques élargis.
+const NEGATION_MARKERS = new Set<string>([
+  // Négations grammaticales standard
+  "pas", "non", "ni", "sans", "jamais",
+  "aucun", "aucune", "aucuns", "aucunes",
+  // Marqueurs nominaux d'absence
+  "absence", "absent", "absente", "absents", "absentes",
+  // Marqueurs médicaux d'exclusion
+  "negatif", "negative", "negatifs", "negatives",
+  "exclu", "exclue", "exclus", "exclues",
+  "nie", "nient",
+]);
+
+// ─── Phase 10 J2 — dette 3 : fenêtre de détection négation ───────────────
+//
+// Q-N2 validée : taille fenêtre = 4 tokens AVANT le keyword. Compromis :
+//   • plus petit (2) : casse « jamais X de Y » (marqueur trop loin)
+//   • plus grand (6+) : risque de relier des mots non liés
+// Q-N3 validée : asymétrique avant uniquement. La négation précède le
+// mot nié dans la quasi-totalité des cas en français (« pas de X »,
+// « aucun Y », « absence de Z »). Le cas marqueur APRÈS keyword (ex.
+// « tuberculose absente ») est ignoré volontairement par simplicité —
+// limite documentée et préservée comme telle dans les tests J2.
+const NEGATION_WINDOW_SIZE = 4;
+
+// Retourne tous les indices où `keyword` apparaît dans la séquence de
+// tokens du transcript. Un keyword apparaissant N fois retourne N
+// positions. Tableau vide si keyword absent. Source de vérité positionnelle
+// pour `isNegated` (J2).
+function findKeywordPositions(
+  keyword: string,
+  transcriptTokens: string[],
+): number[] {
+  const positions: number[] = [];
+  for (let i = 0; i < transcriptTokens.length; i++) {
+    if (transcriptTokens[i] === keyword) positions.push(i);
   }
-  const matched = keywords.filter((k) => normTrans.includes(k));
+  return positions;
+}
+
+// Détecte si `keyword` apparaît dans un contexte négatif dans la séquence
+// de tokens du transcript. Sémantique A-strict (Q-N5 validée) :
+//
+//   • Pour chaque occurrence de `keyword`, on regarde la fenêtre des
+//     `windowSize` tokens AVANT (asymétrique Q-N3) ; si l'un d'eux est
+//     un NEGATION_MARKER, l'occurrence est considérée niée.
+//   • Le keyword est globalement « nié » SSI TOUTES ses occurrences le
+//     sont. S'il existe au moins une occurrence non-niée ailleurs dans
+//     le transcript, le keyword est globalement non-nié.
+//   • Keyword absent → `false` (pas négation possible).
+//
+// Limite assumée (cf. simulation phase B Q-N5) : sur un transcript
+// composé artificiellement de tous les items_attendus (cas synthétique
+// du test « transcript parfait »), un keyword partagé entre un item
+// négatif (ex. r9 « pas de TVP ») et un item positif (ex. e9 « Bilan
+// angiologique veineux (TVP) ») a `transNeg=false`, ce qui mène à un
+// faux négatif sur l'item négatif. Acceptable car ces cas correspondent
+// à un candidat réel cohérent (mention positive dans un contexte +
+// argumentation négative dans un autre). Reportée en backlog Phase 11+
+// comme dette « Désambiguïsation positionnelle keywords partagés ».
+function isNegated(
+  keyword: string,
+  transcriptTokens: string[],
+  windowSize = NEGATION_WINDOW_SIZE,
+): boolean {
+  const positions = findKeywordPositions(keyword, transcriptTokens);
+  if (positions.length === 0) return false;
+  return positions.every((pos) => {
+    const start = Math.max(0, pos - windowSize);
+    for (let i = start; i < pos; i++) {
+      if (NEGATION_MARKERS.has(transcriptTokens[i])) return true;
+    }
+    return false;
+  });
+}
+
+// ─── Phase 10 J1 — dette 2 + Phase 10 J2 — dette 3 : detectMention ────────
+//
+// Refactor J1 : matching scoringRule substring → token-based. Sémantique :
+//   • Tokenize l'item en keywords filtrés (≥ MIN_KEYWORD_LEN, hors STOPWORDS)
+//   • Match si ≥ KEYWORD_THRESHOLD (60%) des keywords sont présents dans
+//     le SET des tokens du transcript (égalité stricte, pas substring).
+//   • Item court sans keyword : fallback égalité tous tokens ⊆ set.
+//
+// Refactor J2 (dette 3) : sémantique A-strict SYMÉTRIQUE. Un keyword
+// présent dans le set du transcript matche SSI son ÉTAT DE NÉGATION
+// est identique côté item et côté transcript :
+//   • Item « Tuberculose » + transcript « pas de tuberculose » :
+//     itemNeg(tuberculose)=false, transNeg(tuberculose)=true → mismatch
+//     → no match (corrigé J2)
+//   • Item « pas de fièvre » + transcript « pas de fièvre » :
+//     itemNeg(fievre)=true, transNeg(fievre)=true → match symétrique
+//     → match (préserve la sémantique pédagogique des items « négatifs »
+//     comme r6/r9/r12/r15)
+//   • Item « pas de fièvre » + transcript « il a de la fièvre » :
+//     itemNeg(fievre)=true, transNeg(fievre)=false → mismatch
+//     → no match (faux positif pédagogique évité)
+//
+// Bénéfices J2 :
+//   • « pas de tuberculose » ne matche plus « Tuberculose »
+//   • « aucune hémoptysie » ne matche plus « Hémoptysie »
+//   • « pas de fièvre » ne matche plus « fièvre »
+//
+// Limites assumées :
+//   • Q-N3 asymétrique avant : « tuberculose absente » matche encore
+//     (marqueur APRÈS le keyword, ignoré par construction).
+//   • Cas-limite synthétique : sur transcript artificiel concaténant
+//     items contradictoires partageant des keywords (ex. r9.tvp +
+//     e9.tvp), `isNegatedAny` global voit le keyword comme non-nié
+//     côté transcript → faux négatifs documentés (cf. relock test
+//     « transcript parfait » à 97.97). Reportée Phase 11+ comme
+//     dette « Désambiguïsation positionnelle keywords partagés ».
+//
+// Constantes MIN_KEYWORD_LEN, STOPWORDS, KEYWORD_THRESHOLD INCHANGÉES
+// depuis Phase 8 J3.
+function detectMention(subItem: string, transcript: string): boolean {
+  const itemTokens = tokenize(subItem);
+  if (itemTokens.length === 0) return false;
+  const transcriptTokens = tokenize(transcript);
+  const transTokens = new Set(transcriptTokens);
+  const keywords = itemTokens.filter(
+    (t) => t.length >= MIN_KEYWORD_LEN && !STOPWORDS.has(t),
+  );
+  if (keywords.length === 0) {
+    // Item court (ex. "UPA", "BK", "EP") : on exige égalité de TOUS les
+    // tokens item dans le set transcript ET états de négation symétriques
+    // côté item / côté transcript (A-strict J2).
+    return itemTokens.every(
+      (t) =>
+        transTokens.has(t) &&
+        isNegated(t, itemTokens) === isNegated(t, transcriptTokens),
+    );
+  }
+  // J2 A-strict : un keyword matche SSI présent ET états de négation
+  // symétriques. `isNegated` côté item travaille sur la séquence
+  // itemTokens (typiquement courte) ; côté transcript sur transcriptTokens.
+  const matched = keywords.filter(
+    (k) =>
+      transTokens.has(k) &&
+      isNegated(k, itemTokens) === isNegated(k, transcriptTokens),
+  );
   return matched.length >= Math.ceil(keywords.length * KEYWORD_THRESHOLD);
 }
 
@@ -417,7 +587,8 @@ function scoreItem(
     return baseReport({ skipped: true });
   }
 
-  // Cas binaryOnly:true AVEC items_attendus : substring match, 1/0.
+  // Cas binaryOnly:true AVEC items_attendus : token-based match (Phase 10
+  // J1 dette 2), 1/0.
   if (item.binaryOnly === true) {
     const target = itemsAttendus[0];
     const ok = detectMention(target, transcript);
@@ -546,6 +717,17 @@ export const __test__ = {
   aggregateAxis,
   STOPWORDS,
   KEYWORD_THRESHOLD,
+  // Phase 10 J1 — dette 2 : tokenize exposé pour tests unitaires
+  // (déterministe, idempotence, ponctuation, accents, chiffres).
+  tokenize,
+  MIN_KEYWORD_LEN,
+  // Phase 10 J2 — dette 3 : helpers détection négation A-strict.
+  // Constantes immuables (Set readonly de fait) + helpers positionnels
+  // pour tests unitaires + tests de non-régression detectMention.
+  NEGATION_MARKERS,
+  NEGATION_WINDOW_SIZE,
+  findKeywordPositions,
+  isNegated,
   // Permet aux tests de re-set le set de dédup warnings entre tests.
   resetWarnings: () => warnedItems.clear(),
 };
