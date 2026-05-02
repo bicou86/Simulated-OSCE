@@ -6,11 +6,18 @@
 //     /api/evaluator/evaluate (Phase 2/3) ni /api/evaluation/legal (Phase 5).
 //   • Scoring 4 axes 25% chacun, isolé du scoring 6-axes (arbitrage
 //     utilisateur Phase 8 #4 : grille séparée, jamais agrégée).
-//   • Source de vérité = `grille` + `weights` du fichier Examinateur
+//   • Source de vérité UNIQUE = `grille` + `weights` du fichier Examinateur
 //     correspondant à la station partie 2 (ex. Examinateur_RESCOS_4.json
-//     pour RESCOS-64-P2). Le bloc `presentation` côté patient
-//     (Patient_RESCOS_4.json:3320-3447) est DORMANT et NON consommé ici
-//     (cf. dette Phase 9 : audit historique format object 14 entrées).
+//     pour RESCOS-64-P2 : 15 items p1-p15 avec champs `examinerQuestion`
+//     Phase 9 J1 + `scoringRule`/`items_attendus` Phase 8 J3).
+//
+//   • Le bloc `presentation` côté patient (Patient_RESCOS_4.json) a été
+//     SUPPRIMÉ Phase 10 J3 partie B (Dette 5) car dormant : dupliquait
+//     14 items mal formés (objet indexé p1-p13/p15 sans p14, vocabulaire
+//     question/reponse divergent, reponse:null jamais remplis), aucun
+//     consommateur runtime côté server/client/shared. La grille évaluateur
+//     reste la source unique consultée par presentationEvaluator (cf.
+//     getEvaluatorStation + grille.presentation accédés ligne ~530).
 //
 // SCORING — décisions issues des arbitrages Phase A J3 :
 //
