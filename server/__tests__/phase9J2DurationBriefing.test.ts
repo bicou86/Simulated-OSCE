@@ -263,26 +263,33 @@ describe("Phase 9 J2 — endpoint /api/patient/:id/brief baselines", () => {
     expect(bytes).toBe(540);
   });
 
-  it("GET /api/patient/RESCOS-64-P2/brief : nouvelle baseline byteLength + phases présentes dans le payload", async () => {
+  it("GET /api/patient/RESCOS-64-P2/brief : nouvelle baseline byteLength Phase 9 J4 + phases présentes dans le payload", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
     expect(res.body.phases).toBeDefined();
     expect(res.body.phases.length).toBe(2);
     expect(res.body.consigneCandidat).toBeDefined();
-    // Nouvelle baseline UTF-8 post-J2 : 751 bytes (vs 362 baseline Phase 8 J2,
-    // delta +389 bytes = `phases[]` (~140) + `consigneCandidat` (~245) +
-    // serialisation JSON + virgules). À mettre à jour si la consigneCandidat
-    // ou le label des phases sont modifiés.
+    // Phase 9 J4 — baseline UTF-8 mise à jour 751 → 781 bytes (Q-A10 :
+    // ajout `parentStationId: "RESCOS-64"`, +30 bytes UTF-8 = `,
+    // "parentStationId":"RESCOS-64"`). À mettre à jour si la
+    // consigneCandidat, le label des phases ou le shortId du parent
+    // sont modifiés.
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(751);
+    expect(bytes).toBe(781);
   });
 
-  it("brief RESCOS-64-P2 : pas de fuite parentStationId dans le payload (META_FIELDS_TO_STRIP intact)", async () => {
+  it("brief RESCOS-64-P2 : parentStationId désormais exposé (Phase 9 J4 Q-A10)", async () => {
+    // Phase 8 J2 : on strippait `parentStationId` du brief HTTP par défense.
+    // Phase 9 J4 (Q-A10) : on l'expose explicitement pour les P2 — la dette
+    // 7 (bilan combiné UI) en a besoin pour lire le résultat P1 dans
+    // sessionStorage. La défense côté <station_data> injecté au LLM patient
+    // est inchangée (META_FIELDS_TO_STRIP / stripLegalContextOnly toujours
+    // actifs), donc le LLM ne verra jamais ce champ.
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
-    expect(res.body.parentStationId).toBeUndefined();
+    expect(res.body.parentStationId).toBe("RESCOS-64");
   });
 });
 

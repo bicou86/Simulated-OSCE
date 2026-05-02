@@ -145,16 +145,17 @@ describe("Phase 8 J2 — Brief HTTP partie 1 RESCOS-64 (non-régression)", () =>
 });
 
 describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (baseline)", () => {
-  it("getPatientBrief(« RESCOS-64-P2 ») = 751 bytes UTF-8 (baseline Phase 9 J2 actée, +389 vs Phase 8 J2)", async () => {
-    // Phase 9 J2 — baseline mise à jour de 362 → 751 bytes UTF-8 suite à
-    // l'ajout additif de `phases[]` (~140 bytes) et `consigneCandidat`
-    // (~245 bytes) dans la fixture Patient_RESCOS_4.json partie 2 (Bug
-    // 3a + Bug 3b). Cf. test phase9J2DurationBriefing.test.ts pour la
-    // baseline canonique post-J2.
+  it("getPatientBrief(« RESCOS-64-P2 ») = 781 bytes UTF-8 (baseline Phase 9 J4, +30 vs Phase 9 J2/J3 = ajout parentStationId Q-A10)", async () => {
+    // Phase 9 J4 — baseline mise à jour 751 → 781 bytes UTF-8 suite à
+    // l'ajout additif de `parentStationId: "RESCOS-64"` dans le brief P2
+    // (Q-A10 validée user). Le champ permet à /evaluation de détecter le
+    // contexte « stations doubles » et lire le résultat P1 dans
+    // sessionStorage `osce.eval.${parentStationId}` pour rendre le bilan
+    // combiné (dette 7).
     const brief = await getPatientBrief("RESCOS-64-P2");
     const json = JSON.stringify(brief);
     const bytes = Buffer.byteLength(json, "utf-8");
-    expect(bytes).toBe(751);
+    expect(bytes).toBe(781);
   });
 
   it("brief partie 2 : setting « Présentation de Mme Dumont au pneumologue »", async () => {
@@ -162,12 +163,14 @@ describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (baseline)", () => {
     expect(brief.setting).toBe("Présentation de Mme Dumont au pneumologue");
   });
 
-  it("brief partie 2 : stripping parentStationId (jamais dans le brief)", async () => {
+  it("brief partie 2 : parentStationId désormais exposé (Q-A10) — META_FIELDS_TO_STRIP côté <station_data> LLM patient inchangé", async () => {
     const brief = await getPatientBrief("RESCOS-64-P2");
-    const json = JSON.stringify(brief);
-    // Bien que parentStationId soit défini sur la fixture, il NE DOIT PAS
-    // apparaître dans le brief HTTP (META_FIELDS_TO_STRIP étendu Phase 8 J2).
-    expect(json).not.toContain("parentStationId");
+    // Phase 9 J4 (Q-A10) : on expose explicitement parentStationId dans le
+    // brief HTTP pour les P2. Le strip côté <station_data> injecté au LLM
+    // patient reste actif (cf. patientService.META_FIELDS_TO_STRIP), donc
+    // le LLM ne verra jamais ce champ. La défense d'isolation patient/LLM
+    // est inchangée ; seule la projection HTTP est élargie.
+    expect(brief.parentStationId).toBe("RESCOS-64");
   });
 
   it("brief partie 2 : stripping legalContext + medicoLegalReviewed (cohérence Phase 5/6)", async () => {
@@ -177,12 +180,12 @@ describe("Phase 8 J2 — Brief HTTP partie 2 RESCOS-64-P2 (baseline)", () => {
     expect(json).not.toContain("medicoLegalReviewed");
   });
 
-  it("GET /api/patient/RESCOS-64-P2/brief : status 200 + 751 bytes UTF-8 (baseline Phase 9 J2)", async () => {
+  it("GET /api/patient/RESCOS-64-P2/brief : status 200 + 781 bytes UTF-8 (baseline Phase 9 J4)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(751);
+    expect(bytes).toBe(781);
     // Le shortId est toujours stable côté client (pas de leak interne).
     expect(res.body.stationId).toBe("RESCOS-64-P2");
   });

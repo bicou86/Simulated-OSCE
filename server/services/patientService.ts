@@ -136,6 +136,18 @@ export interface PatientBrief {
   // Calculé à la volée via `findChildStations(stationId)`. Aucun appel
   // LLM, lecture O(n) du catalog en mémoire.
   nextPartStationId?: string;
+  // Phase 9 J4 — Q-A10 : si la station courante est une P2 (i.e. son meta
+  // catalog porte `parentStationId`), on l'expose dans le brief HTTP pour
+  // que l'UI /evaluation puisse détecter le contexte « stations doubles »
+  // et lire le résultat P1 depuis sessionStorage `osce.eval.${parentStationId}`
+  // (rendu du bilan combiné, dette 7). Le champ est expressément distinct
+  // de `nextPartStationId` (qui pointe P1→P2 ; ici on pointe P2→P1). Champ
+  // omis (undefined) pour les 287 stations sans parent (286 classiques +
+  // RESCOS-64 P1). META_FIELDS_TO_STRIP retire ce champ du JSON station
+  // injecté au LLM patient (invariant Phase 8 J2 préservé) — on le
+  // recompose explicitement ici depuis le catalog (meta), pas depuis le
+  // payload station brut.
+  parentStationId?: string;
 }
 
 // "Feuille de porte" + phrase d'ouverture — tout ce dont l'UI a besoin côté étudiant :
@@ -181,6 +193,12 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
   // dans l'ordre du catalog (cohérent avec listStations() : tri stable).
   const children = findChildStations(stationId);
   const nextPartStationId = children.length > 0 ? children[0].id : undefined;
+  // Phase 9 J4 — Q-A10 : propagation `parentStationId` depuis le meta
+  // catalog (Phase 8 J1). Lecture O(1), pas de LLM. Présent uniquement
+  // pour les stations P2 (= 1/288 stations en J4 : RESCOS-64-P2). Pour
+  // les 287 autres stations, undefined → omis du JSON HTTP (baseline
+  // byteLength inchangée).
+  const parentStationId = meta?.parentStationId;
   return {
     stationId,
     setting: station.setting ?? "",
@@ -201,6 +219,7 @@ export async function getPatientBrief(stationId: string): Promise<PatientBrief> 
     phases,
     consigneCandidat,
     nextPartStationId,
+    parentStationId,
   };
 }
 

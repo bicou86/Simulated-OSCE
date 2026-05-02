@@ -12,8 +12,10 @@
 //     682 bytes UTF-8 (vs 647 Phase 8 J2 : delta +35 = ajout
 //     `"nextPartStationId":"RESCOS-64-P2"`).
 //   • Baselines des autres stations strictement inchangées :
-//       RESCOS-64-P2 = 751 (Phase 9 J2), AMBOSS-24 = 528, USMLE-34 = 540,
-//       USMLE Triage 39 = 513, USMLE-9 = 509, RESCOS-72 = 717.
+//       RESCOS-64-P2 = 781 (Phase 9 J4 : +30 = ajout parentStationId,
+//         Q-A10 ; était 751 en Phase 9 J2/J3),
+//       AMBOSS-24 = 528, USMLE-34 = 540, USMLE Triage 39 = 513,
+//       USMLE-9 = 509, RESCOS-72 = 717.
 //   • Schéma additif strict : `nextPartStationId` n'apparaît dans le
 //     JSON brief HTTP que pour les stations P1 ayant une P2.
 //   • Zéro LLM dans la détection (heuristique pure : filtre
@@ -122,13 +124,16 @@ describe("Phase 9 J3 — endpoint /api/patient/:id/brief baselines post-J3", () 
     expect(bytes).toBe(682);
   });
 
-  it("GET /api/patient/RESCOS-64-P2/brief : 751 bytes UTF-8 (baseline Phase 9 J2 inchangée, nextPartStationId omis)", async () => {
+  it("GET /api/patient/RESCOS-64-P2/brief : 781 bytes UTF-8 (baseline Phase 9 J4, +30 vs J2/J3 = ajout parentStationId Q-A10)", async () => {
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
     expect(res.body.nextPartStationId).toBeUndefined();
+    // Phase 9 J4 : RESCOS-64-P2 expose désormais `parentStationId: "RESCOS-64"`
+    // (additif strict, ajout +30 bytes UTF-8 = `,"parentStationId":"RESCOS-64"`).
+    expect(res.body.parentStationId).toBe("RESCOS-64");
     const bytes = Buffer.byteLength(JSON.stringify(res.body), "utf-8");
-    expect(bytes).toBe(751);
+    expect(bytes).toBe(781);
   });
 
   it("GET /api/patient/AMBOSS-24/brief : 528 bytes UTF-8 (non-régression Phase 7 stricte)", async () => {
@@ -163,11 +168,18 @@ describe("Phase 9 J3 — endpoint /api/patient/:id/brief baselines post-J3", () 
     expect(bytes).toBe(717);
   });
 
-  it("brief partie 2 : pas de fuite parentStationId dans le payload (META_FIELDS_TO_STRIP intact)", async () => {
+  it("brief partie 2 : parentStationId désormais exposé (Phase 9 J4 Q-A10) — META_FIELDS_TO_STRIP côté <station_data> LLM patient inchangé", async () => {
+    // Phase 8 J2 : on strippait `parentStationId` du brief HTTP par défense.
+    // Phase 9 J4 (Q-A10 validée user) : on expose ce champ POUR LES P2
+    // uniquement, parce que la dette 7 (bilan combiné UI) en a besoin
+    // pour lire le résultat P1 dans sessionStorage. La défense côté
+    // injection LLM est inchangée : `parentStationId` reste dans
+    // META_FIELDS_TO_STRIP / stripLegalContextOnly côté <station_data>,
+    // donc le LLM patient ne voit jamais ce champ.
     const app = buildTestApp();
     const res = await request(app).get("/api/patient/RESCOS-64-P2/brief");
     expect(res.status).toBe(200);
-    expect(res.body.parentStationId).toBeUndefined();
+    expect(res.body.parentStationId).toBe("RESCOS-64");
   });
 });
 
