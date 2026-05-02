@@ -75,12 +75,19 @@ describe("Phase 8 J3 — detectMention (substring + keyword 60%)", () => {
     expect(f("Tuberculose", "Bonjour merci au revoir")).toBe(false);
   });
 
-  // Limite documentée Phase 9 : ne distingue pas affirmation/négation.
-  it("limite affirmation/négation : « pas de tuberculose » match positif (faux positif documenté)", () => {
-    expect(f("Tuberculose", "pas de tuberculose")).toBe(true);
+  // Phase 10 J2 (Dette 3) — bascule : la négation marqueur AVANT keyword
+  // est désormais détectée (A-strict symétrique). « pas de tuberculose »
+  // ne matche plus « Tuberculose ». Test inversé true → false.
+  it("CORRIGÉ Phase 10 J2 : « pas de tuberculose » NE matche PLUS « Tuberculose » (dette 3)", () => {
+    expect(f("Tuberculose", "pas de tuberculose")).toBe(false);
   });
 
-  it("limite : « tuberculose absente » match positif (faux positif documenté)", () => {
+  // Phase 10 J2 (Dette 3) — limite Q-N3 préservée : la négation est
+  // détectée UNIQUEMENT si le marqueur précède le keyword (asymétrique
+  // avant uniquement). « tuberculose absente » a le marqueur APRÈS, donc
+  // l'asymétrie laisse passer ce cas comme positif. Test conservé true,
+  // commentaire mis à jour pour refléter la sémantique J2.
+  it("LIMITE Q-N3 (asymétrique avant) : « tuberculose absente » matche encore « Tuberculose » (marqueur APRÈS keyword, ignoré)", () => {
     expect(f("Tuberculose", "tuberculose absente")).toBe(true);
   });
 
@@ -374,10 +381,35 @@ describe("Phase 8 J3 — evaluatePresentation (service)", () => {
     expect(p3!.max).toBe(2);
   });
 
-  it("transcript parfait (concat tous items_attendus + diagnostics + tokens p3) → weightedScore = 100", async () => {
-    // Construit le transcript "parfait" depuis la grille réelle. Cohérent
-    // avec les arbitrages utilisateur Phase A (β + B1 + C3 + recalibration
-    // + token mode).
+  it("transcript artificiel concaténant tous les items_attendus → weightedScore plafond 95.61 post-dette 3 (5 sub-items perdus, dont 2 mots-clés partagés r9.tvp/r15.cardiaque + 3 items 'clean' p9/r4/r13 pollués par marqueurs voisins)", async () => {
+    // HISTORIQUE Phase 10 J2 (Dette 3, négation détection A-strict)
+    // ─────────────────────────────────────────────────────────────
+    // Avant J2 (token-based brut, J1) : score = 100 (faux positifs
+    //   « pas de tuberculose » matchait « Tuberculose », etc.)
+    // Estimation simulation A-strict : 97.97 (2 mots-clés partagés
+    //   r9.tvp partagé avec e9 / r15.cardiaque partagé avec p12 —
+    //   signal pédagogique authentique : candidat fait du bon
+    //   raisonnement clinique différencié).
+    // Mesure runtime A-strict : 95.61 (= 97.97 − 3 items « clean »
+    //   pénalisés par pollution inter-items via parts.join(". ") :
+    //   p9 [pas/sudations de p8 → frequence/respiratoire de p9],
+    //   r4 [absence de r3 → tuberculose de r4 (extrait diag)],
+    //   r13 [pas de fievre de r12 → stenose/mitrale de r13]).
+    // Le gap 100→95.61 est artefact du transcript synthétique
+    // (concaténation brute via ". " strippé par normalizeText,
+    // contextes inter-items collés). Sur transcript candidat réel
+    // (items espacés, phrases longues isolantes), la pollution
+    // inter-items n'apparaît pas et A-strict se comporte
+    // correctement.
+    //
+    // Dette Phase 11+ documentée dans le commit J2 :
+    // « Désambiguïsation positionnelle keywords partagés
+    // (A-positional) » — refactor 150 lignes pour aligner chaque
+    // appel detectMention sur la zone du transcript correspondant
+    // à l'item courant. Bénéfice limité aux transcripts
+    // artificiels couvrant simultanément items contradictoires.
+    // Reportée : mauvais ratio coût (150 lignes) / bénéfice
+    // (cas-limite synthétique).
     const evalStation = await getEvaluatorStation("RESCOS-64-P2");
     const grille = (evalStation as { grille: Record<string, Array<{
       id: string; text: string; binaryOnly?: boolean;
@@ -410,7 +442,8 @@ describe("Phase 8 J3 — evaluatePresentation (service)", () => {
       stationId: "RESCOS-64-P2",
       transcript,
     });
-    expect(result.weightedScore).toBe(100);
+    // Q-N5 validée user : relock 100 → 95.61 (option (i), Phase 10 J2).
+    expect(result.weightedScore).toBeCloseTo(95.61, 2);
   });
 
   it("réponse JSON ne fuite pas de champs « id internes » au-delà de stationId/parentStationId", async () => {

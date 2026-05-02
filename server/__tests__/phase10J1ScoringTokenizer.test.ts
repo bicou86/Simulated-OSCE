@@ -129,10 +129,23 @@ describe("Phase 10 J1 — detectMention (token-based, seuil 60 % conservé)", ()
     expect(m("examen normal du patient", "examen normal sans particularité")).toBe(true);
   });
 
-  it("limite documentée Phase 8 J3 PRÉSERVÉE jusqu'à dette 3 J2 : « pas de tuberculose » match positif", () => {
-    // Faux positif négation toujours présent (dette 3 prévue J2 sur fondations
-    // token-based posées en J1).
-    expect(m("Tuberculose", "pas de tuberculose")).toBe(true);
+  it("CORRIGÉ Phase 10 J2 (dette 3) : « pas de tuberculose » NE matche PLUS « Tuberculose » (marqueur AVANT, asymétrie respectée)", () => {
+    // Phase 8 J3 (pré-J2) : faux positif documenté (substring match).
+    // Phase 10 J1 (token-based brut) : encore faux positif (négation
+    //   pas détectée, fondations posées pour J2).
+    // Phase 10 J2 (A-strict symétrique) : `pas` détecté dans la fenêtre 4
+    //   tokens AVANT `tuberculose` côté transcript ; côté item « Tuberculose »
+    //   pas de marqueur → mismatch → false. Faux positif corrigé.
+    expect(m("Tuberculose", "pas de tuberculose")).toBe(false);
+  });
+
+  it("LIMITE Q-N3 (asymétrique avant) PRÉSERVÉE : « tuberculose absente » matche encore « Tuberculose » (marqueur APRÈS keyword)", () => {
+    // Q-N3 validée user : `isNegated` est asymétrique avant uniquement
+    // (la négation précède le mot nié dans la quasi-totalité des cas en
+    // français). Le marqueur APRÈS keyword (« tuberculose absente ») est
+    // ignoré par construction. Limite acceptée et testée pour éviter
+    // toute régression future qui voudrait passer en symétrique
+    // bilatéral.
     expect(m("Tuberculose", "tuberculose absente")).toBe(true);
   });
 });
@@ -150,12 +163,19 @@ describe("Phase 10 J1 — non-régression evaluatePresentation (sémantique Phas
     expect(r.weightedScore).toBe(0);
   });
 
-  it("transcript parfait construit depuis la grille → weightedScore = 100 (parité Phase 8 J3)", async () => {
-    // Reproduit le test Phase 8 J3 « transcript parfait » : on prend tous les
-    // items_attendus + diagnostics extraits + tokens scoringRule mode token,
-    // on les concatène et on vérifie 100 %. Si le tokenizer J1 cassait quoi
-    // que ce soit sur les items multi-tokens (parenthèses, slash, accents),
-    // ce test fail.
+  it("transcript artificiel concaténant tous les items → weightedScore plafond 95.61 post-dette 3 J2 (relock historique : J1=100 sans négation, J2=95.61 avec négation A-strict)", async () => {
+    // HISTORIQUE :
+    //   • Phase 8 J3 (substring) + Phase 10 J1 (token-based brut) :
+    //     score = 100 sur ce transcript synthétique (faux positifs négation
+    //     toujours présents).
+    //   • Phase 10 J2 (A-strict symétrique) : relock à 95.61.
+    //     Cf. commentaire historique étendu dans phase8J3PresentationEvaluator.test.ts
+    //     pour le détail des 5 sub-items perdus (2 mots-clés partagés
+    //     r9.tvp/r15.cardiaque + 3 items « clean » p9/r4/r13 pollués
+    //     par marqueurs voisins via parts.join(". ")).
+    // Q-N5 validée user : artefact synthétique du test, pas régression
+    // algorithmique. Sur transcript candidat réel, A-strict se comporte
+    // correctement.
     const { getEvaluatorStation } = await import("../services/evaluatorService");
     const evalStation = await getEvaluatorStation("RESCOS-64-P2");
     type Item = { id: string; text: string; binaryOnly?: boolean; scoringRule?: string; items_attendus?: string[] };
@@ -184,7 +204,8 @@ describe("Phase 10 J1 — non-régression evaluatePresentation (sémantique Phas
     }
     const transcript = parts.join(". ") + ".";
     const r = await evaluatePresentation({ stationId: "RESCOS-64-P2", transcript });
-    expect(r.weightedScore).toBe(100);
+    // Q-N5 validée user (Phase 10 J2) : relock 100 → 95.61 (option (i)).
+    expect(r.weightedScore).toBeCloseTo(95.61, 2);
   });
 
   it("idempotence : 2 appels avec même input → résultat identique post-tokenizer", async () => {
