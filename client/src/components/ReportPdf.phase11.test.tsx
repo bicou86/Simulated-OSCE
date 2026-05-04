@@ -454,3 +454,48 @@ describe("Phase 11 J4-hotfix-4 — flags bisection RENDER_*", () => {
     vi.resetModules();
   });
 });
+
+// Phase 11 J4-hotfix-4 commit 2/3 — restructuration : 1 `<Page>` par
+// section pédagogique au lieu d'un empilement de `<View break>` sur la
+// même page. Cause root identifiée par bisection runtime exhaustive
+// (essais A à J sur AMBOSS-1) : avoir ≥ 2 `<View break>` consécutifs sur
+// la même `<Page wrap>` produit une cascade Yoga avec hauteur résiduelle
+// négative, propagée en overflow flottant lors du pdf().toBlob().
+//
+// Les Page primitives sont mockées en `<article>` (cf. mock en tête).
+describe("Phase 11 J4-hotfix-4 commit 2/3 — structure multi-Page du Document PDF", () => {
+  it("pedagogicalContent={null} : Document = 1 seule <Page> (rendu pré-Phase-11)", () => {
+    const { container } = render(<ReportPdf {...baseProps} pedagogicalContent={null} />);
+    const pages = container.querySelectorAll("article");
+    expect(pages.length).toBe(1);
+  });
+
+  it("pedagogicalContent complet (4 sections) : Document = 5 <Page> (1 standard + 4 pédagogiques)", () => {
+    const pedagogicalContent: PedagogicalContent = {
+      resume: {
+        titre: "Résumé",
+        sections: [{ titre: "S1", contenu: "C1" }],
+      },
+      presentationPatient: {
+        titre: "Présentation",
+        sections: [{ titre: "S2", contenu: "C2" }],
+      },
+      theoriePratique: {
+        titre: "Théorie",
+        sections: [{ titre: "S3", contenu: "C3" }],
+      },
+      images: [
+        {
+          data: "/pedagogical-images/p11-img.jpg",
+          title: "Img",
+          description: "Desc",
+        },
+      ],
+    };
+    const { container } = render(
+      <ReportPdf {...baseProps} pedagogicalContent={pedagogicalContent} />,
+    );
+    const pages = container.querySelectorAll("article");
+    expect(pages.length).toBe(5);
+  });
+});

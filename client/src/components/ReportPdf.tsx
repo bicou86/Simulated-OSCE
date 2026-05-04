@@ -1005,8 +1005,13 @@ interface PedagogicalTreeSectionProps {
 }
 
 // Rendu d'une grande section pédagogique (résumé / présentation / théorie).
-// Saut de page forcé en début (A25) via `<View break>`. Le titre racine
-// vient soit de `tree.titre` soit du `sectionTitle` fallback.
+// Phase 11 J4-hotfix-4 (commit 2/3) : le saut de page n'est plus géré ici
+// via `<View break>`. Chaque section vit désormais dans sa propre `<Page>`
+// (cf. `<ReportPdf>`) — l'ancien empilement de `<View break>` consécutifs
+// produisait une cascade Yoga avec hauteur résiduelle négative qui se
+// propageait en overflow flottant ("unsupported number: …e+21") au
+// pdf().toBlob(). Le titre racine vient soit de `tree.titre` soit du
+// `sectionTitle` fallback.
 function PedagogicalTreeSection({
   tree,
   sectionTitle,
@@ -1023,7 +1028,7 @@ function PedagogicalTreeSection({
   const legacyBody = safePedagogyText(tree.body);
 
   return (
-    <View break>
+    <View>
       {rootTitle ? <Text style={styles.pedagogySectionTitle}>{rootTitle}</Text> : null}
       {legacyBody ? <Text style={styles.pedagogyParagraph}>{legacyBody}</Text> : null}
       {sections.length > 0 ? (
@@ -1099,10 +1104,12 @@ interface PedagogicalImagesBlockProps {
   keyPrefix: string;
 }
 
-// Rendu de l'iconographie pédagogique en bloc unique. Saut de page forcé
-// (A25). Chaque image enveloppée dans `<View wrap={false}>` pour éviter
-// la coupure milieu-page (A27). Format : image + titre h3 (gras 11pt) +
-// description plain text 9pt.
+// Rendu de l'iconographie pédagogique en bloc unique. Phase 11 J4-hotfix-4
+// (commit 2/3) : le saut de page n'est plus géré par `<View break>` mais
+// par l'enrobage dans une `<Page>` dédiée (cf. `<ReportPdf>`). Chaque
+// image enveloppée dans `<View wrap={false}>` pour éviter la coupure
+// milieu-page (A27). Format : image + titre h3 (gras 11pt) + description
+// plain text 9pt.
 function PedagogicalImagesBlock({ images, keyPrefix }: PedagogicalImagesBlockProps) {
   if (!Array.isArray(images) || images.length === 0) return null;
   // Filtrage strict des entrées avec un `data` exploitable (string non
@@ -1113,7 +1120,7 @@ function PedagogicalImagesBlock({ images, keyPrefix }: PedagogicalImagesBlockPro
   );
   if (validImages.length === 0) return null;
   return (
-    <View break>
+    <View>
       <Text style={styles.pedagogySectionTitle}>Iconographie pédagogique</Text>
       {validImages.map((img, i) => {
         const safeTitle = safePedagogyText(img.title);
@@ -1233,42 +1240,67 @@ export function ReportPdf({
         <Text style={styles.sectionLabel}>Rapport détaillé</Text>
         <RenderedBlocks blocks={blocks} />
 
-        {/* Phase 11 J4 — sections pédagogiques additives (résumé / présentation /
-            théorie / iconographie). Branchement strictement conditionnel : si
-            `pedagogicalContent === null` ou si tous les sous-blocs sont absents,
-            ces nodes ne s'évaluent à rien et le PDF reste byte-identique au
-            rendu pré-Phase-11 (fallback A26). Saut de page forcé entre chaque
-            grande section via `<View break>` (A25). */}
-        {RENDER_RESUME && pedagogicalContent?.resume ? (
+        <PdfFooter label={pageFooterLabel} />
+      </Page>
+
+      {/* Phase 11 J4-hotfix-4 (commit 2/3) — sections pédagogiques additives
+          (résumé / présentation / théorie / iconographie). Branchement
+          strictement conditionnel : si `pedagogicalContent === null` ou si
+          tous les sous-blocs sont absents, AUCUNE `<Page>` additionnelle
+          n'est rendue et le Document reste à 1 seule page (fallback A26).
+
+          CAUSE ROOT (bisection runtime exhaustive sur AMBOSS-1) : avoir
+          ≥ 2 sections pédagogiques chacune commençant par `<View break>`
+          sur la même `<Page wrap>` produit une cascade Yoga avec hauteur
+          résiduelle négative, propagée en overflow flottant
+          ("unsupported number: -8.559289250201232e+21") lors du
+          pdf().toBlob(). Une seule section ne déclenche pas le bug car
+          il n'y a pas d'accumulation entre breaks.
+
+          FIX : 1 `<Page>` dédiée par section pédagogique au lieu de
+          `<View break>` consécutifs. Isolation Yoga complète, pagination
+          naturelle préservée, footer répété par page (`<View fixed>`).
+          Comportement visuel inchangé : chaque section commence en haut
+          d'une nouvelle page comme avant. */}
+      {RENDER_RESUME && pedagogicalContent?.resume ? (
+        <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.resume}
             sectionTitle="Synthèse pédagogique"
             keyPrefix="ped-resume"
           />
-        ) : null}
-        {RENDER_PRESENTATION && pedagogicalContent?.presentationPatient ? (
+          <PdfFooter label={pageFooterLabel} />
+        </Page>
+      ) : null}
+      {RENDER_PRESENTATION && pedagogicalContent?.presentationPatient ? (
+        <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.presentationPatient}
             sectionTitle="Présentation systématisée"
             keyPrefix="ped-presentation"
           />
-        ) : null}
-        {RENDER_THEORY && pedagogicalContent?.theoriePratique ? (
+          <PdfFooter label={pageFooterLabel} />
+        </Page>
+      ) : null}
+      {RENDER_THEORY && pedagogicalContent?.theoriePratique ? (
+        <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.theoriePratique}
             sectionTitle="Théorie pratique"
             keyPrefix="ped-theorie"
           />
-        ) : null}
-        {RENDER_IMAGES && pedagogicalContent?.images && pedagogicalContent.images.length > 0 ? (
+          <PdfFooter label={pageFooterLabel} />
+        </Page>
+      ) : null}
+      {RENDER_IMAGES && pedagogicalContent?.images && pedagogicalContent.images.length > 0 ? (
+        <Page size="A4" style={styles.page} wrap>
           <PedagogicalImagesBlock
             images={pedagogicalContent.images}
             keyPrefix="ped-images"
           />
-        ) : null}
-
-        <PdfFooter label={pageFooterLabel} />
-      </Page>
+          <PdfFooter label={pageFooterLabel} />
+        </Page>
+      ) : null}
     </Document>
   );
 }
