@@ -8,11 +8,13 @@ import {
 } from "lucide-react";
 import {
   ApiError, evaluate, evaluatePresentation, getEvaluationWeights,
+  getPatientPedagogy,
   PRESENTATION_AXES,
   type EvaluationResult, type EvaluationScores,
   type EvaluationWeightsResponse, type PatientBrief, type PresentationAxis,
   type PresentationEvaluation, type StationType,
 } from "@/lib/api";
+import type { PedagogicalContent } from "@shared/pedagogical-content-schema";
 import { useToast } from "@/hooks/use-toast";
 import { ReportPdf } from "@/components/ReportPdf";
 import { AccentedMarkdown } from "@/components/AccentedMarkdown";
@@ -229,6 +231,11 @@ export default function Evaluation() {
   // Seul P1 reste en sessionStorage `osce.eval.${parentStationId}`.
   const [p1Record, setP1Record] = useState<Part1EvaluationRecord | null>(null);
   const [weightsTable, setWeightsTable] = useState<EvaluationWeightsResponse | null>(null);
+  // Phase 11 J4 — bloc pédagogique fetché en parallèle de l'évaluation
+  // (A23). Restera `null` pour les 4 stations sans source pédagogique
+  // (RESCOS-64-P2, RESCOS-70, RESCOS-71, RESCOS-72) ou si le fetch
+  // échoue → fallback gracieux A26 (PDF byte-identique au pré-Phase-11).
+  const [pedagogicalContent, setPedagogicalContent] = useState<PedagogicalContent | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
   const [isExporting, setIsExporting] = useState(false);
@@ -251,6 +258,26 @@ export default function Evaluation() {
     })();
     return () => { cancelled = true; };
   }, []);
+
+  // Phase 11 J4 — fetch parallèle du bloc pédagogique (A23). Lancé au
+  // mount, en parallèle de l'évaluation. Réponse {pedagogicalContent: null}
+  // pour les 4 stations sans source pédagogique → fallback gracieux A26.
+  // Si le fetch échoue (réseau / 500), on conserve `null` ; le PDF reste
+  // strictement identique au rendu pré-Phase-11.
+  useEffect(() => {
+    if (!stationId) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await getPatientPedagogy(stationId);
+        if (!cancelled) setPedagogicalContent(res.pedagogicalContent);
+      } catch {
+        // Endpoint indisponible / station inconnue : on reste en mode
+        // dégradé silencieux (PDF pré-Phase-11 byte-identique).
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [stationId]);
 
   async function runEvaluation() {
     if (!session) return;
@@ -354,6 +381,7 @@ export default function Evaluation() {
           stationId={session.stationId}
           stationTitle=""
           generatedAt={new Date()}
+          pedagogicalContent={pedagogicalContent}
         />,
       ).toBlob();
       const url = URL.createObjectURL(blob);

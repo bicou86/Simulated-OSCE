@@ -4,10 +4,16 @@
 // avec palette de couleurs pédagogiques cohérente avec l'affichage web.
 
 import React from "react";
-import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Document, Image, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import type { EvaluationScores } from "@/lib/api";
 import { stripRedundantSections, classifyStatusCell } from "@/lib/reportFormatting";
 import { type AccentKind, tokenizeAccents } from "@/lib/reportAccents";
+import type {
+  PedagogicalContent,
+  PedagogicalImage,
+  PedagogicalSubsection,
+  PedagogicalTree,
+} from "@shared/pedagogical-content-schema";
 
 // ─────────── Palette centralisée ───────────
 
@@ -219,6 +225,36 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+
+  // Phase 11 J4 — sections pédagogiques (résumé / présentation / théorie /
+  // iconographie). Hiérarchie typographique récursive A24 :
+  //   • h1 racine (16pt) : bandeau "Synthèse pédagogique" etc.
+  //   • h2 (14pt) : titre racine d'une sous-section depth=0
+  //   • h3 (12pt) : depth=1
+  //   • h4 (11pt) : depth ≥ 2
+  //   • paragraphe (10pt) : `contenu`
+  //   • puces (10pt) : `points[]` avec caractère "•" (Helvetica supporte)
+  //   • images : maxWidth 480 / maxHeight 320, objectFit contain
+  pedagogySectionTitle: {
+    fontSize: 16,
+    fontFamily: "Helvetica-Bold",
+    color: colors.primary,
+    marginBottom: 14,
+    paddingBottom: 6,
+    borderBottomWidth: 2,
+    borderBottomColor: colors.primary,
+  },
+  pedagogyTitleH2: { fontSize: 14, fontFamily: "Helvetica-Bold", marginTop: 12, marginBottom: 6, color: colors.text },
+  pedagogyTitleH3: { fontSize: 12, fontFamily: "Helvetica-Bold", marginTop: 10, marginBottom: 5, color: colors.text },
+  pedagogyTitleH4: { fontSize: 11, fontFamily: "Helvetica-Bold", marginTop: 8, marginBottom: 4, color: colors.text },
+  pedagogyParagraph: { fontSize: 10, marginBottom: 6, lineHeight: 1.5 },
+  pedagogyBulletRow: { flexDirection: "row", marginBottom: 3 },
+  pedagogyBulletChar: { width: 12, fontSize: 10 },
+  pedagogyBulletText: { flex: 1, fontSize: 10, lineHeight: 1.5 },
+  pedagogyImageCard: { marginBottom: 14 },
+  pedagogyImage: { maxWidth: 480, maxHeight: 320, objectFit: "contain", marginBottom: 4 },
+  pedagogyImageTitle: { fontSize: 11, fontFamily: "Helvetica-Bold", marginTop: 4, marginBottom: 2, color: colors.text },
+  pedagogyImageDesc: { fontSize: 9, color: colors.muted, lineHeight: 1.4 },
 });
 
 // ─────────── Helpers : accentuation des textes ───────────
@@ -666,17 +702,335 @@ function RenderedBlocks({ blocks }: { blocks: Block[] }) {
   return <>{nodes}</>;
 }
 
+// ─────────── Phase 11 J4 — sections pédagogiques additives ───────────
+//
+// 3 sous-composants internes co-localisés, branchés conditionnellement
+// après le rapport markdown détaillé. Quand `pedagogicalContent === null`
+// ou que les 4 sous-blocs sont absents, AUCUNE section n'est rendue : le
+// PDF reste byte-identique au rendu pré-Phase-11 (fallback gracieux A26).
+//
+// Caractères Unicode utilisés : "•" (U+2022) bien rendu par Helvetica.
+// Les emojis (📚 🩺 📖 📷) sont intentionnellement ABSENTS du rendu PDF
+// car Helvetica ne contient aucun glyphe emoji — ils tombent en tofu
+// carré. On garde des libellés français explicites comme bandeau de
+// section.
+
+const PEDAGOGY_DEPTH_CAP = 4;
+
+// Champs canoniques connus du schéma de sous-section. Tout autre champ
+// (ex. `examensComplementaires`, `phrasesCles`, `rappelsTherapeutiques`)
+// est rendu comme sous-bloc supplémentaire via le passthrough A24.
+const SUBSECTION_KNOWN_KEYS = new Set([
+  "titre",
+  "contenu",
+  "points",
+  "subsections",
+]);
+
+// Champs canoniques d'un PedagogicalTree (ex. tree.sections, tree.titre).
+// Mêmes règles passthrough : on absorbe les variantes top-level
+// `theoriePratique` (8 variantes recensées).
+const TREE_KNOWN_KEYS = new Set([
+  "titre",
+  "sections",
+  "title",
+  "body",
+]);
+
+// Convertit une clé camelCase ou snake_case en libellé humain. Utilisé
+// pour rendre les champs passthrough comme titres de sous-blocs.
+function humanizeKey(key: string): string {
+  // camelCase → "camel Case", puis capitalise la première lettre.
+  const spaced = key.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/_/g, " ");
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+}
+
+// Style du titre selon la profondeur d'imbrication.
+function pedagogyTitleStyleForDepth(depth: number) {
+  if (depth <= 0) return styles.pedagogyTitleH2;
+  if (depth === 1) return styles.pedagogyTitleH3;
+  return styles.pedagogyTitleH4;
+}
+
+// Aplatit récursivement les sous-sections au-delà du cap (depth >= 4) en
+// concaténant tous les textes accessibles (titre + contenu + points). Le
+// résultat est rendu en un seul paragraphe pour respecter A24.
+function flattenSubsection(sub: PedagogicalSubsection): string {
+  const parts: string[] = [];
+  if (sub.titre) parts.push(sub.titre);
+  if (sub.contenu) parts.push(sub.contenu);
+  if (Array.isArray(sub.points)) parts.push(sub.points.join(" • "));
+  if (Array.isArray(sub.subsections)) {
+    for (const child of sub.subsections) parts.push(flattenSubsection(child));
+  }
+  // Champs passthrough : on les sérialise en best-effort.
+  for (const [key, value] of Object.entries(sub)) {
+    if (SUBSECTION_KNOWN_KEYS.has(key)) continue;
+    if (typeof value === "string") parts.push(`${humanizeKey(key)} : ${value}`);
+    else if (Array.isArray(value)) {
+      const strs = value.filter((v): v is string => typeof v === "string");
+      if (strs.length > 0) parts.push(`${humanizeKey(key)} : ${strs.join(" • ")}`);
+    }
+  }
+  return parts.filter(Boolean).join(" — ");
+}
+
+interface PedagogicalSubsectionRendererProps {
+  subsection: PedagogicalSubsection;
+  depth: number;
+  keyPrefix: string;
+}
+
+// Rendu récursif d'une sous-section pédagogique. Indentation +12pt par
+// niveau (paddingLeft = depth * 12). Cap récursion à
+// `PEDAGOGY_DEPTH_CAP` ; au-delà, aplatissement A24.
+function PedagogicalSubsectionRenderer({
+  subsection,
+  depth,
+  keyPrefix,
+}: PedagogicalSubsectionRendererProps) {
+  // Cap profondeur : si on est au cap et qu'il existe encore des sous-
+  // sections plus profondes, on rend le titre + un paragraphe aplati
+  // contenant la totalité du sous-arbre.
+  if (depth >= PEDAGOGY_DEPTH_CAP) {
+    const flat = flattenSubsection(subsection);
+    return (
+      <View style={{ paddingLeft: depth * 12, marginBottom: 6 }} wrap={false}>
+        {flat ? <Text style={styles.pedagogyParagraph}>{flat}</Text> : null}
+      </View>
+    );
+  }
+
+  const titleStyle = pedagogyTitleStyleForDepth(depth);
+
+  // Champs passthrough rendus comme sous-blocs supplémentaires (A24).
+  // Ex. `examensComplementaires`, `phrasesCles`. On les récupère dans
+  // l'ordre d'insertion JSON, après les champs canoniques.
+  const passthroughEntries: Array<[string, unknown]> = Object.entries(subsection).filter(
+    ([k]) => !SUBSECTION_KNOWN_KEYS.has(k),
+  );
+
+  return (
+    <View style={{ paddingLeft: depth * 12, marginBottom: 6 }}>
+      {subsection.titre ? <Text style={titleStyle}>{subsection.titre}</Text> : null}
+      {subsection.contenu ? (
+        <Text style={styles.pedagogyParagraph}>{subsection.contenu}</Text>
+      ) : null}
+      {Array.isArray(subsection.points) && subsection.points.length > 0 ? (
+        <View style={{ marginBottom: 6 }}>
+          {subsection.points.map((p, i) => (
+            <View key={`${keyPrefix}-pt${i}`} style={styles.pedagogyBulletRow} wrap={false}>
+              <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
+              <Text style={styles.pedagogyBulletText}>{p}</Text>
+            </View>
+          ))}
+        </View>
+      ) : null}
+      {Array.isArray(subsection.subsections) && subsection.subsections.length > 0
+        ? subsection.subsections.map((child, i) => (
+            <PedagogicalSubsectionRenderer
+              key={`${keyPrefix}-sub${i}`}
+              subsection={child}
+              depth={depth + 1}
+              keyPrefix={`${keyPrefix}-sub${i}`}
+            />
+          ))
+        : null}
+      {passthroughEntries.map(([key, value], i) => {
+        // Rendu d'une clé passthrough comme sous-bloc additionnel : titre h4
+        // (humanizeKey) + valeur formatée selon son type.
+        const subTitleStyle = pedagogyTitleStyleForDepth(Math.max(depth + 1, 2));
+        if (typeof value === "string") {
+          return (
+            <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4, marginBottom: 4 }}>
+              <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
+              <Text style={styles.pedagogyParagraph}>{value}</Text>
+            </View>
+          );
+        }
+        if (Array.isArray(value)) {
+          const stringPoints = value.filter((v): v is string => typeof v === "string");
+          if (stringPoints.length > 0) {
+            return (
+              <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4, marginBottom: 4 }}>
+                <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
+                {stringPoints.map((p, j) => (
+                  <View key={`${keyPrefix}-extra${i}-pt${j}`} style={styles.pedagogyBulletRow} wrap={false}>
+                    <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
+                    <Text style={styles.pedagogyBulletText}>{p}</Text>
+                  </View>
+                ))}
+              </View>
+            );
+          }
+          // Tableau d'objets imbriqués : on les rend comme sous-sections.
+          const subObjects = value.filter(
+            (v): v is PedagogicalSubsection => typeof v === "object" && v !== null && !Array.isArray(v),
+          );
+          if (subObjects.length > 0) {
+            return (
+              <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4 }}>
+                <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
+                {subObjects.map((child, j) => (
+                  <PedagogicalSubsectionRenderer
+                    key={`${keyPrefix}-extra${i}-obj${j}`}
+                    subsection={child}
+                    depth={depth + 1}
+                    keyPrefix={`${keyPrefix}-extra${i}-obj${j}`}
+                  />
+                ))}
+              </View>
+            );
+          }
+        }
+        return null;
+      })}
+    </View>
+  );
+}
+
+interface PedagogicalTreeSectionProps {
+  tree: PedagogicalTree;
+  sectionTitle: string;
+  keyPrefix: string;
+}
+
+// Rendu d'une grande section pédagogique (résumé / présentation / théorie).
+// Saut de page forcé en début (A25) via `<View break>`. Le titre racine
+// vient soit de `tree.titre` soit du `sectionTitle` fallback.
+function PedagogicalTreeSection({
+  tree,
+  sectionTitle,
+  keyPrefix,
+}: PedagogicalTreeSectionProps) {
+  const rootTitle = tree.titre || tree.title || sectionTitle;
+  // Champs racine passthrough (au-delà des canoniques TREE_KNOWN_KEYS).
+  // Ex. `theoriePratique.examensComplementaires`, `rappelsTherapeutiques`.
+  const passthroughEntries: Array<[string, unknown]> = Object.entries(tree).filter(
+    ([k]) => !TREE_KNOWN_KEYS.has(k),
+  );
+  const sections = Array.isArray(tree.sections) ? tree.sections : [];
+  const legacyBody = typeof tree.body === "string" ? tree.body : "";
+
+  return (
+    <View break>
+      <Text style={styles.pedagogySectionTitle}>{rootTitle}</Text>
+      {legacyBody ? <Text style={styles.pedagogyParagraph}>{legacyBody}</Text> : null}
+      {sections.length > 0 ? (
+        sections.map((sub, i) => (
+          <PedagogicalSubsectionRenderer
+            key={`${keyPrefix}-s${i}`}
+            subsection={sub}
+            depth={0}
+            keyPrefix={`${keyPrefix}-s${i}`}
+          />
+        ))
+      ) : null}
+      {passthroughEntries.map(([key, value], i) => {
+        // Variantes `theoriePratique` racine : rendues comme sous-blocs
+        // après les sections canoniques. Si la valeur est un tableau
+        // d'objets, on les rend comme sous-sections depth=0.
+        if (typeof value === "string") {
+          return (
+            <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
+              <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
+              <Text style={styles.pedagogyParagraph}>{value}</Text>
+            </View>
+          );
+        }
+        if (Array.isArray(value)) {
+          const stringPoints = value.filter((v): v is string => typeof v === "string");
+          if (stringPoints.length > 0) {
+            return (
+              <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
+                <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
+                {stringPoints.map((p, j) => (
+                  <View key={`${keyPrefix}-x${i}-pt${j}`} style={styles.pedagogyBulletRow} wrap={false}>
+                    <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
+                    <Text style={styles.pedagogyBulletText}>{p}</Text>
+                  </View>
+                ))}
+              </View>
+            );
+          }
+          const subObjects = value.filter(
+            (v): v is PedagogicalSubsection => typeof v === "object" && v !== null && !Array.isArray(v),
+          );
+          if (subObjects.length > 0) {
+            return (
+              <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
+                <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
+                {subObjects.map((child, j) => (
+                  <PedagogicalSubsectionRenderer
+                    key={`${keyPrefix}-x${i}-obj${j}`}
+                    subsection={child}
+                    depth={0}
+                    keyPrefix={`${keyPrefix}-x${i}-obj${j}`}
+                  />
+                ))}
+              </View>
+            );
+          }
+        }
+        return null;
+      })}
+    </View>
+  );
+}
+
+interface PedagogicalImagesBlockProps {
+  images: PedagogicalImage[];
+  keyPrefix: string;
+}
+
+// Rendu de l'iconographie pédagogique en bloc unique. Saut de page forcé
+// (A25). Chaque image enveloppée dans `<View wrap={false}>` pour éviter
+// la coupure milieu-page (A27). Format : image + titre h3 (gras 11pt) +
+// description plain text 9pt.
+function PedagogicalImagesBlock({ images, keyPrefix }: PedagogicalImagesBlockProps) {
+  if (!Array.isArray(images) || images.length === 0) return null;
+  return (
+    <View break>
+      <Text style={styles.pedagogySectionTitle}>Iconographie pédagogique</Text>
+      {images.map((img, i) => {
+        if (!img.data) return null;
+        const title = img.title ?? "";
+        const description = img.description ?? img.caption ?? "";
+        return (
+          <View key={`${keyPrefix}-img${i}`} style={styles.pedagogyImageCard} wrap={false}>
+            <Image src={img.data} style={styles.pedagogyImage} />
+            {title ? <Text style={styles.pedagogyImageTitle}>{title}</Text> : null}
+            {description ? <Text style={styles.pedagogyImageDesc}>{description}</Text> : null}
+          </View>
+        );
+      })}
+    </View>
+  );
+}
+
 // ─────────── Composant principal ───────────
 
-interface ReportPdfProps {
+export interface ReportPdfProps {
   scores: EvaluationScores;
   markdown: string;
   stationId: string;
   stationTitle: string;
   generatedAt: Date;
+  // Phase 11 J4 — bloc pédagogique additif. Quand null/undefined, le PDF
+  // reste strictement identique au rendu pré-Phase-11 (fallback gracieux
+  // A26). Toujours en DERNIÈRE position du contrat de props pour ne
+  // jamais déplacer une prop existante (schéma additif strict).
+  pedagogicalContent?: PedagogicalContent | null;
 }
 
-export function ReportPdf({ scores, markdown, stationId, stationTitle, generatedAt }: ReportPdfProps) {
+export function ReportPdf({
+  scores,
+  markdown,
+  stationId,
+  stationTitle,
+  generatedAt,
+  pedagogicalContent,
+}: ReportPdfProps) {
   // On supprime les redondances visuelles (score global, légende) côté PDF
   // également — la synthèse visuelle de la page 1 les remplace.
   const cleaned = stripRedundantSections(markdown);
@@ -725,6 +1079,40 @@ export function ReportPdf({ scores, markdown, stationId, stationTitle, generated
 
         <Text style={styles.sectionLabel}>Rapport détaillé</Text>
         <RenderedBlocks blocks={blocks} />
+
+        {/* Phase 11 J4 — sections pédagogiques additives (résumé / présentation /
+            théorie / iconographie). Branchement strictement conditionnel : si
+            `pedagogicalContent === null` ou si tous les sous-blocs sont absents,
+            ces nodes ne s'évaluent à rien et le PDF reste byte-identique au
+            rendu pré-Phase-11 (fallback A26). Saut de page forcé entre chaque
+            grande section via `<View break>` (A25). */}
+        {pedagogicalContent?.resume ? (
+          <PedagogicalTreeSection
+            tree={pedagogicalContent.resume}
+            sectionTitle="Synthèse pédagogique"
+            keyPrefix="ped-resume"
+          />
+        ) : null}
+        {pedagogicalContent?.presentationPatient ? (
+          <PedagogicalTreeSection
+            tree={pedagogicalContent.presentationPatient}
+            sectionTitle="Présentation systématisée"
+            keyPrefix="ped-presentation"
+          />
+        ) : null}
+        {pedagogicalContent?.theoriePratique ? (
+          <PedagogicalTreeSection
+            tree={pedagogicalContent.theoriePratique}
+            sectionTitle="Théorie pratique"
+            keyPrefix="ped-theorie"
+          />
+        ) : null}
+        {pedagogicalContent?.images && pedagogicalContent.images.length > 0 ? (
+          <PedagogicalImagesBlock
+            images={pedagogicalContent.images}
+            keyPrefix="ped-images"
+          />
+        ) : null}
 
         <PdfFooter label={pageFooterLabel} />
       </Page>

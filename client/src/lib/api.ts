@@ -285,6 +285,24 @@ export function getPatientBrief(stationId: string): Promise<PatientBrief> {
   return jsonFetch(`/api/patient/${encodeURIComponent(stationId)}/brief`, { method: "GET" });
 }
 
+// Phase 11 J4 — endpoint pédagogique additif. Consommé par la page
+// Évaluation EN PARALLÈLE de /api/evaluator/evaluate pour enrichir le PDF
+// post-évaluation avec 4 sections (résumé / présentation / théorie /
+// iconographie). Le backend strippe `pedagogicalContent` du payload LLM
+// patient (I13) et ne l'expose JAMAIS via /brief (I14) ; cet endpoint
+// est la seule porte d'entrée. Pour les 4 stations sans source pédagogique
+// (RESCOS-64-P2, RESCOS-70, RESCOS-71, RESCOS-72), `pedagogicalContent`
+// est null → fallback gracieux côté ReportPdf (rendu pré-Phase-11
+// strictement identique).
+export interface PedagogyResponse {
+  stationId: string;
+  pedagogicalContent: import("@shared/pedagogical-content-schema").PedagogicalContent | null;
+}
+
+export function getPatientPedagogy(stationId: string): Promise<PedagogyResponse> {
+  return jsonFetch(`/api/patient/${encodeURIComponent(stationId)}/pedagogy`, { method: "GET" });
+}
+
 export async function sttPatient(audio: Blob, filename = "audio.webm"): Promise<{ text: string }> {
   const form = new FormData();
   form.append("audio", audio, filename);
