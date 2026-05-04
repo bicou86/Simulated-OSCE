@@ -1,0 +1,628 @@
+{
+  "title": "AMBOSS-33 - Céphalée - Femme 55 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Carol Meyers, femme de 55 ans, consultant pour céphalée",
+    "vitals": {
+      "temperature": "38.7°C",
+      "ta": "145/95 mmHg",
+      "fc": "100 bpm",
+      "fr": "19/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une céphalée horrible"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la céphalée",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Toute ma tête fait mal]",
+            "Intensité (échelle 0-10) [Un 10]",
+            "Qualité [Je ne peux pas la décrire. C'est juste incroyablement douloureux]",
+            "Début [Ça a commencé il y a environ 2 heures]",
+            "Événements précipitants [J'étais dehors avec mon mari pour promener le chien et je suis tombée. Je ne me souviens pas si je suis tombée à cause du mal de tête ou si le mal de tête est venu parce que j'ai cogné ma tête dans la chute - tout était si soudain. Mon mari a dit que j'étais inconsciente pendant quelques secondes mais que je me suis réveillée après]",
+            "Progression/constant/intermittent [Le mal de tête a juste été horrible tout le temps]",
+            "Épisodes antérieurs [Rien de tel. J'ai eu un très mauvais mal de tête il y a environ 2 semaines, mais il est parti tout seul]",
+            "Irradiation [Ça fait mal jusqu'à mon cou]",
+            "Facteurs améliorants [Si je ne bouge pas]",
+            "Facteurs aggravants [Ça empire encore plus quand je bouge. Et les lumières vives ou les bruits forts empirent aussi]",
+            "Symptômes associés [J'ai mal au cœur et j'ai dû vomir une fois sur le chemin de l'hôpital]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour céphalée sévère aiguë",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre/frissons [J'étais malade avec de la fièvre la semaine dernière, mais ça semblait s'être amélioré ces derniers jours]",
+            "Palpitations [Oui]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleur thoracique [Non]",
+            "Dyspnée [Non]",
+            "Infections récentes [J'ai eu une infection des sinus la semaine dernière, quand j'avais aussi l'impression d'avoir de la fièvre. Ça venait juste de s'améliorer, pourtant]",
+            "Vertiges [Je me sens un peu étourdie]",
+            "Engourdissement [Non]",
+            "Picotements [Non]",
+            "Faiblesse [Non]",
+            "Vision altérée [Non]",
+            "Convulsions [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'hypertension artérielle"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Aucun. J'avais l'habitude de prendre quelque chose pour ma tension artérielle, mais l'ordonnance a expiré il y a quelques mois et je n'ai pas eu le temps de la renouveler"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Juste pour la naissance de mes deux enfants il y a longtemps]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Non]",
+            "Antécédents familiaux [Ma mère a des migraines et mon père a aussi de l'hypertension artérielle]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaille dans la vente, dans une boutique de mode]",
+            "Domicile [Je vis avec mon mari et notre chien]",
+            "Alcool [Non]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Non. Je ne fume plus]",
+            "Quantité avant d'arrêter [J'ai fumé environ 2 paquets par jour pendant environ 20 ans]",
+            "Exercice [Je promène le chien deux fois par jour pendant environ 20 minutes, mais c'est tout]",
+            "Alimentation [Je dirais que nous avons une alimentation équilibrée. Nous mangeons beaucoup de légumes de notre propre jardin]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête",
+            "Fond d'œil direct"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation du niveau de conscience",
+            "Évaluation de l'orientation dans le temps, l'espace et les personnes [Patient non orienté dans le temps]",
+            "Examen ciblé des nerfs crâniens",
+            "Méningisme [Méningisme présent]",
+            "Signe de Kernig [Positif]",
+            "Signe de Brudzinski [Positif]",
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la sensibilité",
+            "Examen ciblé des réflexes ostéo-tendineux",
+            "Examen ciblé de la marche",
+            "Test des mouvements alternés rapides",
+            "Test doigt-nez",
+            "Signe de Babinski",
+            "Test de Romberg"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Hémorragies intracrâniennes",
+                "items": [
+                  {
+                    "text": "Hémorragie sous-arachnoïdienne",
+                    "cause": "Arguments POUR:\n\t□ Céphalée en coup de tonnerre ('pire mal de tête de ma vie')\n\t□ Intensité maximale 10/10 d'emblée\n\t□ Signes d'irritation méningée : méningisme, photophobie, phonophobie\n\t□ Nausées/vomissements\n\t□ Signes de Kernig et Brudzinski positifs\n\t□ Fièvre présente (réaction inflammatoire)\n\t□ Facteurs de risque : tabagisme (40 PA), HTA non contrôlée\n\t□ Céphalée sentinelle probable il y a 2 semaines\n\t□ Perte de connaissance brève (chute)",
+                    "test": "→ CT cérébral sans contraste en urgence"
+                  },
+                  {
+                    "text": "Hémorragie intracérébrale (AVC hémorragique)",
+                    "cause": "Arguments POUR:\n\t□ Céphalée aiguë intense progressive\n\t□ Nausées/vomissements\n\t□ Altération état mental (désorientation temporelle)\n\t□ Facteurs de risque : tabagisme, HTA non contrôlée\n\t□ TA élevée à l'admission (145/95)\nArguments CONTRE:\n\t□ Pas de déficit neurologique focal\n\t□ Pas de convulsions\n\t□ Signes méningés très marqués plus typiques HSA",
+                    "test": "→ CT cérébral sans contraste"
+                  }
+                ]
+              },
+              {
+                "name": "Infections du système nerveux central",
+                "items": [
+                  {
+                    "text": "Méningite bactérienne",
+                    "cause": "Arguments POUR:\n\t□ Triade classique : fièvre + céphalée + méningisme (tous présents)\n\t□ Signes d'irritation méningée : photophobie, phonophobie\n\t□ Signes de Kernig et Brudzinski positifs\n\t□ Nausées/vomissements\n\t□ Sinusite récente (porte d'entrée bactérienne ascendante)\n\t□ Altération état mental\nArguments CONTRE:\n\t□ Céphalée 'coup de tonnerre' plus typique HSA\n\t□ Antécédent céphalée sentinelle",
+                    "test": "→ Ponction lombaire après CT (si pas HTIC)"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Migraine",
+                    "cause": "ATCD familiaux, mais présentation atypique pour migraine",
+                    "test": "→ Diagnostic d'exclusion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "CT cérébral sans contraste [meilleur test initial pour hémorragie sous-arachnoïdienne ; test de confirmation pour hémorragie intracérébrale]",
+            "NFS [Les GB seraient élevés dans la méningite. L'évaluation du nombre de plaquettes serait importante pour considérer les causes hémorragiques de céphalée secondaire et leur traitement opératoire]",
+            "Glucose, électrolytes [Le glucose sérique peut être comparé au glucose dans le liquide céphalo-rachidien après ponction lombaire]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires biologiques et microbiologiques",
+          "binaryOnly": false,
+          "details": [
+            "TP, TCA [pour évaluer les troubles de la coagulation]",
+            "Hémocultures [importantes à prélever avant l'antibiothérapie dans les cas de méningite pour identifier avec précision l'agent pathogène causal]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Ponction lombaire et imagerie spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "Ponction lombaire avec analyse du LCR [Les GR, GB et protéines sont augmentés dans le LCR après hémorragie sous-arachnoïdienne. Une xanthochromie peut être présente, ou une décoloration rougeâtre du LCR, tous deux dus à l'augmentation des GR dans le LCR. Dans la méningite, l'analyse du LCR montre des patterns spécifiques de concentration de glucose et de protéines ainsi que de numération cellulaire, selon l'agent pathogène causal (ex: bactérien, viral, fongique). Le CT devrait être effectué avant la ponction lombaire si une augmentation de la pression intracrânienne est suspectée]",
+            "Angiographie [peut être utilisée pour déterminer le site de saignement/anévrisme dans l'hémorragie sous-arachnoïdienne et pour détecter des malformations vasculaires dans l'hémorragie intracérébrale]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente",
+            "Ne pas répéter les manœuvres douloureuses pendant l'examen physique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Proposer d'aider la patiente à s'allonger",
+            "Proposer de diminuer l'éclairage dans la salle d'examen",
+            "Réaction appropriée au défi concernant le mari",
+            "Soutien émotionnel face à la gravité",
+            "Information sur l'urgence de la situation"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si hémorragie sous-arachnoïdienne confirmée",
+                "content": "• Admission en soins intensifs neurochirurgicaux\n• Contrôle TA: Nicardipine IV, cible PAS 140\n• Nimodipine: 60 mg × 6/j PO (prévention vasospasme)\n• Analgésie: Morphine IV titrée\n• Antiémétiques: Ondansétron 4 mg IV"
+              },
+              {
+                "title": "Prévention convulsions",
+                "content": "• Angiographie cérébrale urgente\n• Traitement anévrisme: Coiling ou clipping 72h"
+              },
+              {
+                "title": "Antibiothérapie empirique IMMÉDIATE",
+                "content": "• • Ceftria: 2g × 2/j IV\n• • + Vancomycine 15-: 20 mg/kg × 2/j IV\n• • + Ampicilline: 2g × 6/j IV (si 50 ans)\n• Dexaméthasone: 10 mg IV avant/avec 1ère dose ATB\n• Isolement respiratoire si méningocoque suspecté\n• Surveillance neurologique rapprochée"
+              },
+              {
+                "title": "Si hémorragie intracérébrale",
+                "content": "• Contrôle TA urgent: PAS 140 mmHg\n• Correction coagulopathie si présente\n• Osmothérapie si HTIC: Mannitol 20%\n• Neurochirurgie si hématome 30 mL"
+              },
+              {
+                "title": "Mesures immédiates communes",
+                "content": "• Voie veineuse, monitoring continu\n• Position demi-assise 30°\n• Environnement calme, peu éclairé\n• Oxygénothérapie: Oxygène si SpO2 94%"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme nécessitant action immédiate",
+            "items": [
+              {
+                "text": "Dégradation neurologique",
+                "description": "Score Glasgow en baisse → intubation, réanimation"
+              },
+              {
+                "text": "Signes d'engagement cérébral",
+                "description": "Mydriase, décérébration → mannitol, neurochirurgie urgente"
+              },
+              {
+                "text": "Hydrocéphalie aiguë",
+                "description": "Somnolence progressive → dérivation ventriculaire externe"
+              },
+              {
+                "text": "Vasospasme (J4-14)",
+                "description": "Déficit focal nouveau → angioplastie, triple-H thérapie"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Inquiétude pour le mari",
+          "content": "Interrompre l'examinateur pendant l'anamnèse et dire : [J'ai besoin d'appeler mon mari et lui dire où je suis ! Il est allé à la cafétéria juste avant que je sois appelée ici, et je suis sûre qu'il est mort d'inquiétude maintenant !]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Meyers, je comprends que vous aimeriez faire savoir à votre mari où vous êtes. N'hésitez pas à lui téléphoner, et il est plus que bienvenu de venir dans la salle si vous le souhaitez. Si vous n'arrivez pas à le joindre, je peux demander à l'une des infirmières de l'appeler par interphone dès que nous aurons terminé ici. Est-ce que ça vous convient ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Signe de Brudzinski",
+        "description": "La flexion passive du cou (A) entraîne une flexion spontanée des hanches (B) comme réflexe, ce qui soulage la tension douloureuse sur les méninges.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img1-Brudzinski sign.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Signe de Kernig",
+        "description": "Le signe de Kernig peut être évalué en utilisant deux méthodes. Dans la première méthode (A), la jambe étendue est élevée passivement au niveau de l'articulation de la hanche. S'il y a de la douleur, il y a une flexion réflexe du genou. Alternativement (B), le signe de Kernig peut être évalué en fléchissant la hanche et le genou à un angle de 90°. L'extension subséquente de la jambe provoque un étirement des racines nerveuses ou des méninges, ce qui peut entraîner de la douleur et une défense musculaire contre l'extension.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img2-Kernig sign.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne",
+        "description": "Une hémorragie sous-arachnoïdienne est le plus souvent causée par la rupture d'un anévrisme cérébral.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img3-Subarachnoid hemorrhage.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Hémorragie des noyaux gris centraux",
+        "description": "Hémorragie dans la région des noyaux gris centraux gauches provoquant un déplacement de la ligne médiane vers la droite. Les noyaux gris centraux sont alimentés par les artères lenticulostriées, qui proviennent de l'artère cérébrale moyenne. Une hémorragie d'une artère lenticulostriée (par exemple, due à une hypertension mal contrôlée ou à la rupture d'un microanévrisme de Charcot-Bouchard) entraîne une hémorragie des noyaux gris centraux.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img4-Basal ganglia hemorrhage.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (2)",
+        "description": "CT crâne (sans contraste ; plan axial ; images supérieures à inférieures : sections caudales à crâniennes du cerveau). Une atténuation accrue dans les citernes basales (superposition verte) et les scissures sylviennes (superposition bleue) indique une hémorragie sous-arachnoïdienne étendue. L'emplacement d'une zone arrondie focale (superposition rouge) d'hémorragie adjacente au pédoncule cérébral gauche suggère un possible anévrisme de l'artère communicante postérieure ou cérébrale postérieure. Une dilatation ventriculaire symétrique légère et une calcification physiologique de la faux du cerveau (superposition jaune) peuvent également être observées.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img5-Subarachnoid hemorrhage.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (3)",
+        "description": "CT crâne (sans contraste ; plan axial ; images supérieures à inférieures : sections caudales à crâniennes du cerveau). Une atténuation accrue dans les citernes basales (superposition verte) et les scissures sylviennes (superposition bleue) indique une hémorragie sous-arachnoïdienne étendue. L'emplacement d'une zone arrondie focale (superposition rouge) d'hémorragie adjacente au pédoncule cérébral gauche suggère un possible anévrisme de l'artère communicante postérieure ou cérébrale postérieure. Une dilatation ventriculaire symétrique légère et une calcification physiologique de la faux du cerveau (superposition jaune) peuvent également être observées.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img6-Subarachnoid hemorrhage.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (4)",
+        "description": "CT crâne (sans contraste ; plan axial). Des régions de haute atténuation (superposition verte) dans la citerne interpédonculaire, les scissures sylviennes et la fosse postérieure gauche représentent une hémorragie sous-arachnoïdienne aiguë. La tente du cervelet (superposition rouge) ne doit pas être mal interprétée comme du sang.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img7-Subarachnoid hemorrhage.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (5)",
+        "description": "CT crâne (sans contraste ; plan axial). Des régions de haute atténuation (superposition verte) dans la citerne interpédonculaire, les scissures sylviennes et la fosse postérieure gauche représentent une hémorragie sous-arachnoïdienne aiguë. La tente du cervelet (superposition rouge) ne doit pas être mal interprétée comme du sang.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img8-Subarachnoid hemorrhage.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Anévrisme rompu de l'artère cérébrale moyenne",
+        "description": "CT crâne (sans contraste ; plan axial). Une zone arrondie de haute atténuation (1) dans la région frontopariétale gauche indique une hémorragie intracérébrale provenant d'un anévrisme rompu de l'artère cérébrale moyenne gauche. Une hémorragie sous-arachnoïdienne étendue est présente dans les citernes basales (2), la scissure interhémisphérique (3), la scissure sylvienne droite (4), les scissures du lobe frontal gauche (5) et la fosse postérieure (6). La dilatation ventriculaire (superposition verte) est le résultat de l'obstruction du drainage du LCR.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img9-Ruptured middle cerebral artery aneurysm.jpg",
+        "id": "img9"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (6)",
+        "description": "CT crâne (sans contraste ; plan axial). De multiples zones de haute atténuation dans les citernes basales, les scissures sylviennes et les sillons (exemples indiqués par la superposition verte) sont caractéristiques d'une hémorragie sous-arachnoïdienne étendue.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img10-Subarachnoid hemorrhage.jpg",
+        "id": "img10"
+      },
+      {
+        "title": "Hémorragie intracérébrale, intraventriculaire et sous-arachnoïdienne",
+        "description": "CT crâne (sans contraste ; plan axial). Une hémorragie du lobe temporal gauche (superposition hachurée rouge) s'est étendue dans l'espace sous-arachnoïdien (superposition rouge) et le système ventriculaire (superposition hachurée verte). L'altération de la circulation du liquide céphalo-rachidien a entraîné une dilatation ventriculaire et un œdème périventriculaire (superposition verte). 1 = capsule interne ; 2 = noyau lenticulaire.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img11-Intracerebral, intraventricular, and subarachnoid hemorrhage.jpg",
+        "id": "img11"
+      },
+      {
+        "title": "Hémorragie sous-arachnoïdienne (7)",
+        "description": "CT crâne (sans contraste ; plan axial). Une région de haute atténuation (superposition verte) le long de la scissure interhémisphérique représente une hémorragie sous-arachnoïdienne aiguë. Une structure de plus grande hyperdensité dans le ventricule latéral droit est une calcification du plexus choroïde.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img12-Subarachnoid hemorrhage.jpg",
+        "id": "img12"
+      },
+      {
+        "title": "Hémorragie intracérébrale traumatique",
+        "description": "CT crâne (section axiale ; sans contraste IV : fenêtre cérébrale). Il y a de multiples hyperdensités intraparenchymateuses (superposition verte) dans les lobes frontotemporaux gauches et le lobe frontal droit, indiquant de multiples hémorragies intracérébrales. Des hyperdensités (lignes vertes) dans la région interhémisphérique et la région interpédonculaire de la citerne basale sont identifiables. Celles-ci sont compatibles avec une hémorragie sous-arachnoïdienne. Une ligne de fracture (flèche verte) est visible dans l'os frontal droit et un pneumocéphale, visualisé comme de l'air hypodense (encerclé) dans les tissus mous recouvrant le segment de fracture, indique une fracture ouverte. La région extracrânienne hyperdense dans les aspects antérolatéraux du cuir chevelu indique une hémorragie sous-galéale importante (superposition verte hachurée).",
+        "data": "grilles_generees/html/images/AMBOSS-33-img13-Traumatic intracerebral hemorrhage.jpg",
+        "id": "img13"
+      },
+      {
+        "title": "Hémorragie intracérébrale traumatique (2)",
+        "description": "CT crâne (section axiale ; sans contraste IV : fenêtre cérébrale). Il y a de multiples hyperdensités intraparenchymateuses (superposition verte) dans les lobes frontotemporaux gauches et le lobe frontal droit, indiquant de multiples hémorragies intracérébrales. Des hyperdensités (lignes vertes) dans la région interhémisphérique et la région interpédonculaire de la citerne basale sont identifiables. Celles-ci sont compatibles avec une hémorragie sous-arachnoïdienne. Une ligne de fracture (flèche verte) est visible dans l'os frontal droit et un pneumocéphale, visualisé comme de l'air hypodense (encerclé) dans les tissus mous recouvrant le segment de fracture, indique une fracture ouverte. La région extracrânienne hyperdense dans les aspects antérolatéraux du cuir chevelu indique une hémorragie sous-galéale importante (superposition verte hachurée).",
+        "data": "grilles_generees/html/images/AMBOSS-33-img14-Traumatic intracerebral hemorrhage.jpg",
+        "id": "img14"
+      },
+      {
+        "title": "Hématome intracérébral",
+        "description": "CT crâne (sans contraste ; plan axial). Un grand hématome hyperdense (superposition verte) dans l'aspect postérieur de l'hémisphère cérébral gauche est accompagné d'un œdème hypodense (superposition rouge), d'un effacement de la corne occipitale du ventricule latéral gauche et d'un déplacement de la ligne médiane (ligne pointillée et pointes de flèche). ROH : corne occipitale droite.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img15-Intracerebral hematoma.jpg",
+        "id": "img15"
+      },
+      {
+        "title": "Hématome intracérébral (2)",
+        "description": "CT crâne (sans contraste ; plan axial). Un grand hématome hyperdense (superposition verte) dans l'aspect postérieur de l'hémisphère cérébral gauche est accompagné d'un œdème hypodense (superposition rouge), d'un effacement de la corne occipitale du ventricule latéral gauche et d'un déplacement de la ligne médiane (ligne pointillée et pointes de flèche). ROH : corne occipitale droite.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img16-Intracerebral hematoma.jpg",
+        "id": "img16"
+      },
+      {
+        "title": "Hémorragie intracérébrale",
+        "description": "Série de CT crâniens (sans contraste ; section axiale ; de gauche à droite, vues caudales à crâniennes). Série supérieure : avant tréphination (procédure de trou de trépan). Une hyperdensité intraparenchymateuse (encerclée en vert) compatible avec un hématome intracérébral est visible dans le lobe temporal droit. Série inférieure : après tréphination. L'hématome a été évacué par un trou de trépan créé dans l'os temporal droit. Notez les poches d'air hypodenses (encerclées en rouge). Ceci est attendu après la tréphination, et l'air se résorbera avec le temps. (Les poches d'air mastoïdiennes visibles bilatéralement dans les deux images inférieures à gauche sont physiologiques.)",
+        "data": "grilles_generees/html/images/AMBOSS-33-img17-Intracerebral hemorrhage.jpg",
+        "id": "img17"
+      },
+      {
+        "title": "Prise en charge de la méningite",
+        "description": "Prise en charge de la méningite. BMP : panel métabolique de base ; CBC : numération formule sanguine ; CRP : protéine C-réactive ; CSF : liquide céphalo-rachidien ; DDx : diagnostics différentiels ; HSV : virus herpes simplex ; ICP : pression intracrânienne ; IV : intraveineux ; LP : ponction lombaire ; PCR : réaction en chaîne par polymérase ; VZV : virus varicelle-zona.",
+        "data": "grilles_generees/html/images/AMBOSS-33-img18-Management of meningitis.jpg",
+        "id": "img18"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Carol Meyers",
+      "age": "55 ans",
+      "contexte": "Femme avec céphalée en coup de tonnerre et signes méningés après chute",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une céphalée horrible.",
+        "autreChose": "C'est le pire mal de tête de ma vie."
+      },
+      "consignes": [
+        "Agir comme si vous aviez le pire mal de tête de votre vie. Cela empire encore plus quand vous êtes exposée à des lumières vives et des bruits forts.",
+        "Faire semblant d'être désorientée quant à l'heure et la date actuelles. Donner une réponse incorrecte à l'examinateur si on vous demande la date actuelle. Vous êtes incapable de vous rappeler le nom du président actuel des États-Unis.",
+        "Vous avez un cou très raide. Quand l'examinateur essaie de le fléchir pendant que vous êtes debout ou assise, dire que ça fait mal et résister à la flexion, ne permettant à votre tête d'être inclinée vers l'avant que légèrement et ne laissant pas votre menton toucher votre poitrine.",
+        "Quand vous êtes allongée et que l'examinateur essaie de lever votre tête pour que votre menton bouge vers votre poitrine, faire semblant d'avoir mal et plier vos jambes au niveau des hanches.",
+        "Quand vous êtes allongée et que l'examinateur lève votre jambe et essaie de la redresser, faire semblant d'avoir mal et la plier au niveau des hanches.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: CT, ponction lombaire) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Interrompre l'examinateur pendant l'anamnèse et dire 'J'ai besoin d'appeler mon mari et lui dire où je suis ! Il est allé à la cafétéria juste avant que je sois appelée ici, et je suis sûre qu'il est mort d'inquiétude maintenant !'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Céphalée brutale intensité 10/10",
+          "Début il y a 2 heures",
+          "Chute avec perte de connaissance brève",
+          "Douleur constante horrible",
+          "Irradiation jusqu'au cou"
+        ],
+        "symptomesAssocies": [
+          "Photophobie et phonophobie marquées",
+          "Nausées et vomissement × 1",
+          "Fièvre récente (infection sinus)",
+          "Céphalée sentinelle il y a 2 semaines",
+          "Désorientation temporelle",
+          "Raideur de nuque importante"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Expression de douleur intense constante",
+          "Protéger yeux de la lumière",
+          "Parler avec difficulté (douleur)",
+          "Confusion sur date/président",
+          "Anxiété pour localiser mari",
+          "Demander environnement calme/sombre"
+        ],
+        "durantStatus": [
+          "Raideur de nuque marquée (résistance flexion)",
+          "Signe de Brudzinski positif (flexion hanches)",
+          "Signe de Kernig positif (résistance extension)",
+          "Désorientation temporelle confirmée",
+          "Pas de déficit focal",
+          "Photophobie évidente lors examen"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme 55 ans avec URGENCE NEUROLOGIQUE : céphalée coup de tonnerre + signes méningés + fièvre = HSA vs méningite. Facteurs risque HSA majeurs : 40 PA tabac + HTA non contrôlée. Céphalée sentinelle il y a 2 semaines = fuite anévrismale probable. CT SANS CONTRASTE IMMÉDIAT (sensibilité 95-100% < 6h). Si CT négatif mais suspicion clinique forte → PL (xanthochromie). Nimodipine précoce si HSA. ATB empirique urgente si méningite suspectée (après hémocultures).",
+      "rolesInterventions": [
+        "CT cérébral : sang dans citernes basales = HSA",
+        "Angiographie : anévrisme communicante antérieure 8 mm",
+        "PL (si faite) : GR 50 000, xanthochromie présente",
+        "NFS : GB 15 000, plaquettes normales",
+        "Ionogramme : Na 135, glucose 7.2 mmol/L",
+        "TA monitoring : pics à 160/100 mmHg"
+      ],
+      "pointsCles": [
+        "Céphalée coup de tonnerre = HSA jusqu'à preuve contraire",
+        "CT sans contraste IMMÉDIAT (ne pas attendre)",
+        "Signes méningés + fièvre = considérer co-infection",
+        "Nimodipine systématique si HSA (prévention vasospasme)",
+        "Angiographie urgente pour localiser anévrisme",
+        "Mortalité HSA : 50% (25% avant hôpital)"
+      ],
+      "pieges": [
+        "Retarder imagerie pour examens biologiques",
+        "Faire PL avant CT (risque engagement si HTIC)",
+        "Négliger contrôle TA (re-saignement)",
+        "Oublier prévention vasospasme (nimodipine)",
+        "Minimiser céphalée sentinelle antérieure",
+        "Ne pas proposer environnement calme/sombre"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Hémorragie sous-arachnoïdienne (rupture anévrismale)"
+        },
+        {
+          "titre": "Hémorragie sous-arachnoïdienne",
+          "contenu": "Extravasation de sang dans l'espace sous-arachnoïdien :",
+          "points": [
+            "Étiologie : 85% rupture anévrisme, 10% périmésencéphalique",
+            "Incidence : 10/100 000/an, pic 50-60 ans, F > H",
+            "Mortalité : 50% (25% pré-hospitalier, 25% hospitalier)",
+            "Facteurs risque : HTA, tabac, alcool, cocaïne, ADPKD",
+            "Sites anévrismes : 30% ACoA, 25% ACoP, 20% ACM",
+            "Récidive hémorragique : 4% J1, puis 1-2%/j × 4 semaines"
+          ]
+        },
+        {
+          "titre": "Présentation clinique HSA",
+          "contenu": "Tableau dramatique caractéristique :",
+          "points": [
+            "Céphalée coup de tonnerre : brutale, maximale d'emblée",
+            "'Pire céphalée de ma vie' : pathognomonique",
+            "Signes méningés : photophobie, phonophobie, raideur nuque",
+            "Nausées/vomissements : 70% cas",
+            "Perte connaissance initiale : 50% cas",
+            "Céphalée sentinelle : 20-50% cas, 2-3 semaines avant",
+            "Complications précoces : hydrocéphalie, convulsions"
+          ]
+        },
+        {
+          "titre": "Diagnostic HSA",
+          "contenu": "Imagerie en urgence absolue :",
+          "points": [
+            "CT sans contraste : 1ère intention, sensibilité 95-100% < 6h",
+            "Aspect : hyperdensité citernes basales, sillons",
+            "Score Fisher : quantifie sang, prédit vasospasme",
+            "PL si CT négatif + forte suspicion : xanthochromie",
+            "Angio-CT/ARM : localise anévrisme (sensibilité 95%)",
+            "Angiographie conventionnelle : gold standard, thérapeutique"
+          ]
+        },
+        {
+          "titre": "Complications HSA",
+          "contenu": "Évolution triphasique redoutable :",
+          "points": [
+            "Phase aiguë (J0-3) : re-saignement (pic J1), hydrocéphalie",
+            "Phase subaiguë (J4-14) : vasospasme (pic J7), ischémie",
+            "Phase tardive : hydrocéphalie chronique, épilepsie",
+            "Vasospasme : 30% cas, cause majeure morbi-mortalité",
+            "Hyponatrémie : SIADH vs cerebral salt wasting",
+            "Complications systémiques : OAP neurogénique, arythmies"
+          ]
+        },
+        {
+          "titre": "Méningite bactérienne",
+          "contenu": "Urgence infectieuse du SNC :",
+          "points": [
+            "Agents : pneumocoque (50%), méningocoque (20%)",
+            "Mortalité : 20-30% malgré traitement",
+            "Portes entrée : ORL (sinusite), pulmonaire, septicémie",
+            "Triade classique : fièvre + céphalée + raideur nuque (44%)",
+            "LCR : pléiocytose PNN, protéines ↑, glucose ↓",
+            "Traitement : ATB empirique urgente < 1h"
+          ]
+        },
+        {
+          "titre": "Prise en charge HSA",
+          "contenu": "Stratégie multidisciplinaire urgente :",
+          "points": [
+            "Stabilisation : ABC, monitoring neuro-vasculaire",
+            "Contrôle TA : PAS < 140 avant sécurisation anévrisme",
+            "Nimodipine : 60 mg × 6/j PO × 21j (prévention vasospasme)",
+            "Analgésie : morphine titrée, éviter AINS",
+            "Traitement anévrisme < 72h : coiling > clipping",
+            "Surveillance : Doppler transcrânien quotidien (vasospasme)",
+            "Triple-H si vasospasme : hypertension, hypervolémie, hémodilution"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "HSA : nimodipine 60 mg × 6/j PO × 21 jours systématique",
+        "Contrôle TA : nicardipine IV, cible PAS < 140 mmHg",
+        "Analgésie : morphine 0.1 mg/kg titration, pas AINS",
+        "Anti-épileptique prophylactique : lévétiracétam 500 mg × 2/j",
+        "Prévention ulcère stress : IPP IV",
+        "Méningite empirique : C3G + vancomycine + ampicilline",
+        "Dexaméthasone 10 mg IV si méningite (avant/avec ATB)",
+        "DVE si hydrocéphalie aiguë symptomatique"
+      ],
+      "examensComplementaires": [
+        "CT cérébral sans contraste : URGENCE ABSOLUE",
+        "Si CT négatif < 6h : angio-CT ou angio-IRM",
+        "Si CT négatif > 6h : PL (xanthochromie, spectrophotométrie)",
+        "Angiographie 4 vaisseaux : localisation anévrisme",
+        "ECG : modifications ST, QT long (atteinte myocardique)",
+        "Rx thorax : OAP neurogénique possible",
+        "Ionogramme : hyponatrémie fréquente J3-10",
+        "Doppler transcrânien : surveillance vasospasme quotidien"
+      ]
+    }
+  }
+}

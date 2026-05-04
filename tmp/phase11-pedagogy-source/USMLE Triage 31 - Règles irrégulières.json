@@ -1,0 +1,524 @@
+{
+  "title": "USMLE Triage 31 - Règles irrégulières",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Erin Rivera, femme de 28 ans, se présente avec des plaintes de règles irrégulières depuis 2 mois",
+    "vitals": {
+      "ta": "138/72 mmHg",
+      "temperature": "37.2°C",
+      "fc": "76 bpm",
+      "fr": "16/min",
+      "imc": "30,2 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Mme Rivera, je suis le Dr Biggsby.",
+            "Je comprends que vous avez eu des règles irrégulières dernièrement.",
+            "Pouvez-vous m'en dire plus à ce sujet ?"
+          ],
+          "patientComment": "Règles bizarres depuis 2 mois [peu de règles], sous contraception [Ortho-Novum depuis 1 an], irrégularité malgré pilule [perturbé dernièrement]"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des troubles menstruels actuels",
+          "details": [
+            "Date des dernières règles [il y a quelques semaines, saignements sporadiques]",
+            "Cycle actuel [devrait avoir ses règles maintenant, auraient dû commencer hier]",
+            "Type de saignement [saignements sporadiques ici et là, pas vraies règles]",
+            "Durée des épisodes récents [2 jours il y a quelques semaines, 3-4 jours le mois dernier]"
+          ],
+          "exemplesPhrases": [
+            "Pouvez-vous me dire comment elles sont irrégulières.",
+            "Quand avez-vous eu vos dernières règles ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Cycle menstruel habituel et contraception",
+          "details": [
+            "Cycle habituel [27-28 jours sous contraception]",
+            "Durée habituelle des règles [environ 5 jours, parfois 4]",
+            "Flux habituel [plutôt constant sous pilule]",
+            "Régularité sous contraception [très régulières sous Ortho-Novum]"
+          ],
+          "exemplesPhrases": [
+            "Combien de temps y a-t-il habituellement entre vos règles ? Et combien de temps durent normalement vos règles ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Contraception et observance",
+          "details": [
+            "Type de contraception [Ortho-Novum depuis toujours]",
+            "Efficacité passée [règles régulières, bonnes pour migraines]",
+            "Observance récente [oubli week-end il y a 1 mois, oubli semaine dernière]",
+            "Gestion des oublis [prend le soir même si oubliée]"
+          ],
+          "exemplesPhrases": [
+            "Quelles pilules prenez-vous ? Avez-vous récemment oublié des pilules ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés aux règles",
+          "details": [
+            "Crampes menstruelles [quelques crampes il y a quelques semaines]",
+            "Intensité des crampes [ne l'empêchent pas de travailler]",
+            "Qualité du flux [comme des règles normales]",
+            "Utilisation de tampons [utilise des tampons]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu d'autres symptômes de vos règles comme, peut-être, des crampes ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Histoire sexuelle et contraception",
+          "details": [
+            "Activité sexuelle [sexuellement active, fiancée depuis 6 mois]",
+            "Statut relationnel [relation monogame mutuelle]",
+            "Nombre de partenaires [3 partenaires dans sa vie]",
+            "Antécédents de MST [nie MST personnelles et chez partenaires]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais vous poser quelques questions personnelles maintenant sur vos habitudes sexuelles.",
+            "Êtes-vous sexuellement active ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes gynécologiques associés",
+          "details": [
+            "Dyspareunie [nie douleurs pendant rapports]",
+            "Saignements post-coïtaux [nie saignements après rapports]",
+            "Pertes vaginales [nie pertes inhabituelles]",
+            "Infections vaginales [dernière infection à levures il y a 2 ans]",
+            "Écoulements mammaires [nie écoulements mammaires]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous des problèmes avec les rapports sexuels, comme de la douleur ? En dehors des saignements inhabituels, avez-vous d'autres pertes vaginales ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents gynécologiques et obstétricaux",
+          "details": [
+            "Grossesses antérieures [enceinte à 15 ans, IVG]",
+            "Frottis cervicaux [frottis anormal il y a 2 ans]",
+            "Suivi colposcopique [colposcopies, résolution spontanée]",
+            "Parité [G1P0]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu un frottis cervical anormal ? Avez-vous déjà été enceinte ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes systémiques et revue des systèmes",
+          "details": [
+            "Migraines [migraines, améliorées sous contraception]",
+            "Symptômes urinaires [nie dysurie, pollakiurie]",
+            "Symptômes digestifs [nie nausées, diarrhée]",
+            "Symptômes respiratoires [nie congestion thoracique]",
+            "État général [pas de maladies récentes]"
+          ],
+          "exemplesPhrases": [
+            "Je sais que vous avez des migraines.",
+            "En avez-vous eu une récemment ? D'autres problèmes comme de la congestion thoracique ou des nausées ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments et antécédents médicaux",
+          "details": [
+            "Contraception [Ortho-Novum quotidien]",
+            "Antidépresseurs [Celexa quotidien pour dépression]",
+            "Antalgiques [Motrin pour migraines, Imitrex inefficace]",
+            "Suppléments [nie suppléments ou aides diététiques]"
+          ],
+          "exemplesPhrases": [
+            "En dehors de l'Ortho-Novum, prenez-vous d'autres médicaments ? Prenez-vous d'autres médicaments pour les maux de tête ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes de vie et toxiques",
+          "details": [
+            "Tabac [ne fume plus, fumait socialement avant]",
+            "Alcool [consommation sociale occasionnelle, environ 1 verre/semaine]",
+            "Drogues [nie usage de drogues]",
+            "Changements de mode de vie [moins de sorties depuis fiançailles]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous maintenant ou avez-vous fumé dans le passé ? Qu'en est-il de l'alcool ?"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Diabète parental [les deux parents diabète type 2]",
+            "Traitement diabète [médicaments oraux, pas d'insuline]",
+            "Autres pathologies familiales [nie maladies cardiaques, HTA]",
+            "Fratrie [fille unique]"
+          ],
+          "exemplesPhrases": [
+            "Quelqu'un dans votre famille a-t-il une maladie héréditaire ou majeure ? Vos parents prennent-ils de l'insuline ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation et approche",
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux [noter si stables ou anormaux]",
+            "Expliquer l'examen au patient",
+            "Obtenir le consentement pour l'examen"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le voulez bien.",
+            "Laissez-moi juste me laver les mains."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la thyroïde",
+          "details": [
+            "Inspection du cou [recherche hypertrophie visible]",
+            "Palpation thyroïdienne [technique bimanuelle]",
+            "Déglutition [demander d'avaler pendant palpation]",
+            "Recherche de nodules [palpation systématique]"
+          ],
+          "patientComment": "Thyroïde normale, symétrique, non douloureuse. Pas de nodules ou d'hypertrophie",
+          "exemplesPhrases": [
+            "J'aimerais d'abord examiner votre glande thyroïde.",
+            "Y a-t-il de la douleur quand je palpe votre cou ici ?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen général ciblé",
+          "details": [
+            "Évaluation morphologique [noter IMC élevé]",
+            "Recherche signes d'hyperandrogénie [hirsutisme, acné]",
+            "Inspection générale [état général, coloration]",
+            "Autres examens selon orientation clinique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pelvien et mammaire (différé selon consignes)",
+          "details": [
+            "Examen pelvien [reporté selon consignes du cas]",
+            "Examen mammaire [reporté selon consignes du cas]",
+            "Prélèvements cervicaux [mentionnés dans le plan]",
+            "Frottis cervical [prévu dans le bilan]"
+          ],
+          "patientComment": "Examens pelvien et mammaire différés selon les consignes du cas"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Impression diagnostique et diagnostic différentiel",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes obstétricales",
+                "items": [
+                  {
+                    "text": "Grossesse",
+                    "cause": "Arguments POUR :\n\t□ Femme en âge de procréer\n\t□ Activité sexuelle\n\t□ Oublis de pilule contraceptive\n\t□ Saignements irréguliers\n\t□ Aménorrhée actuelle",
+                    "test": "→ β-hCG qualitatif"
+                  },
+                  {
+                    "text": "Avortement spontané",
+                    "cause": "Arguments POUR :\n\t□ Saignements irréguliers récents\n\t□ Crampes associées\n\t□ Activité sexuelle\nArguments CONTRE :\n\t□ Pas de test de grossesse positif connu",
+                    "test": "→ β-hCG, échographie pelvienne"
+                  }
+                ]
+              },
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Infection du col de l'utérus ou du vagin",
+                    "cause": "Arguments POUR :\n\t□ Saignements intermenstruels\n\t□ Activité sexuelle\n\t□ Antécédents de frottis anormal\nArguments CONTRE :\n\t□ Pas de pertes vaginales\n\t□ Pas de dyspareunie",
+                    "test": "→ Prélèvements cervicaux, recherche Chlamydia/Gonorrhée"
+                  }
+                ]
+              },
+              {
+                "name": "Causes endocriniennes",
+                "items": [
+                  {
+                    "text": "Syndrome des ovaires polykystiques (SOPK)",
+                    "cause": "Arguments POUR :\n\t□ Règles irrégulières\n\t□ IMC élevé (30,2 kg/m²)\n\t□ Femme jeune\nArguments CONTRE :\n\t□ Règles régulières sous pilule habituellement",
+                    "test": "→ Échographie pelvienne, bilan hormonal"
+                  },
+                  {
+                    "text": "Hyperprolactinémie",
+                    "cause": "Arguments POUR :\n\t□ Troubles menstruels\n\t□ Prise d'antidépresseur (Celexa)\nArguments CONTRE :\n\t□ Pas de galactorrhée\n\t□ Pas d'autres symptômes",
+                    "test": "→ Taux de prolactine"
+                  },
+                  {
+                    "text": "Dysfonction thyroïdienne",
+                    "cause": "Arguments POUR :\n\t□ Troubles menstruels\nArguments CONTRE :\n\t□ Examen thyroïdien normal\n\t□ Pas de symptômes thyroïdiens",
+                    "test": "→ TSH, T4 libre"
+                  }
+                ]
+              }
+            ]
+          },
+          "exemplesPhrases": [
+            "Il y a un certain nombre de choses qui peuvent causer vos règles irrégulières.",
+            "La première chose que j'aimerais savoir, c'est si vous êtes enceinte."
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Plan diagnostique immédiat",
+          "details": [
+            "Test de grossesse [β-hCG qualitatif au cabinet]",
+            "Examens pelvien et mammaire [avec prélèvements cervicaux]",
+            "Prélèvements microbiologiques [recherche MST, infections]",
+            "Frottis cervical [antécédent de frottis anormal]"
+          ],
+          "exemplesPhrases": [
+            "Pour le savoir, il y a un simple test sanguin que nous pouvons faire au cabinet aujourd'hui."
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Bilan biologique complémentaire",
+          "details": [
+            "Bilan hormonal [TSH, T4 libre]",
+            "Prolactinémie [surtout si prise d'antidépresseurs]",
+            "Bilan métabolique [si suspicion SOPK]",
+            "Optimisation prélèvements [même prise de sang pour plusieurs tests]"
+          ],
+          "exemplesPhrases": [
+            "Il y a d'autres possibilités que j'aimerais aussi tester en prenant des échantillons de sang.",
+            "Ce sera plus facile si nous faisons le test de grossesse et les autres tests à partir du même sang."
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Recherche d'infections génitales",
+          "details": [
+            "Prélèvements cervicaux [recherche MST]",
+            "Tests Chlamydia/Gonorrhée [sondes ADN]",
+            "Recherche autres infections [levures, parasites]",
+            "Montages microscopiques [état frais, KOH]"
+          ],
+          "exemplesPhrases": [
+            "Pour cela, j'aimerais faire un examen pelvien aujourd'hui et obtenir des prélèvements de votre col de l'utérus pour les tests."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Suivi du frottis cervical",
+          "details": [
+            "Indication frottis [antécédent de frottis anormal]",
+            "Surveillance recommandée [suivi après colposcopie]",
+            "Prélèvement simultané [profiter de l'examen pelvien]",
+            "Dépistage cervical [selon recommandations]"
+          ],
+          "exemplesPhrases": [
+            "Parce que vous avez eu un frottis anormal dans le passé, j'aimerais également obtenir un frottis cervical en même temps."
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Organisation des examens et préparation",
+          "content": "J'aimerais sortir maintenant et vous donner une chance de vous changer en blouse. Je vais également organiser ces tests avec mon infirmière. Y a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci.",
+          "exemplesPhrases": [
+            "J'aimerais sortir maintenant et vous donner une chance de vous changer en blouse.",
+            "Je vais également organiser ces tests avec mon infirmière."
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Erin Rivera",
+      "nom": "Erin Rivera",
+      "age": "28 ans",
+      "contexte": "Femme de 28 ans consultant pour règles irrégulières depuis 2 mois",
+      "motifConsultation": {
+        "plaintePrincipale": "Règles irrégulières depuis 2 mois",
+        "inquietude": "Règles bizarres malgré prise de contraception"
+      },
+      "histoireActuelle": {
+        "troublesMenstruels": [
+          "Règles bizarres depuis 2 mois",
+          "Peu de règles ces 2 derniers mois",
+          "Sous Ortho-Novum depuis 1 an (efficace habituellement)",
+          "Saignements sporadiques au lieu de vraies règles"
+        ],
+        "dernieresRegles": [
+          "Il y a quelques semaines : saignements sporadiques 2 jours",
+          "Mois dernier : saignements sporadiques 3-4 jours",
+          "Actuellement : devrait avoir ses règles (auraient dû commencer hier)",
+          "Pas de règles actuellement"
+        ],
+        "cycleHabituel": [
+          "Cycle de 27-28 jours sous contraception",
+          "Règles de 5 jours habituellement (parfois 4)",
+          "Flux constant sous pilule",
+          "Très régulières sous Ortho-Novum"
+        ],
+        "observanceContraception": [
+          "Oubli lors d'un week-end il y a 1 mois",
+          "Oubli la semaine dernière",
+          "Prend généralement le soir même si oubliée",
+          "Difficile à se rappeler parfois"
+        ]
+      },
+      "antecedents": {
+        "gynecologiques": [
+          "Frottis anormal il y a 2 ans",
+          "Colposcopies de suivi",
+          "Résolution spontanée",
+          "Examens annuels réguliers"
+        ],
+        "obstetricaux": [
+          "G1P0",
+          "Grossesse à 15 ans",
+          "IVG (décision familiale consensuelle)"
+        ],
+        "medicaux": [
+          "Migraines (améliorées sous contraception)",
+          "Dépression (traitée par Celexa)",
+          "Infections à levures occasionnelles (dernière il y a 2 ans)"
+        ],
+        "familiaux": [
+          "Parents : diabète type 2 (médicaments oraux)",
+          "Fille unique",
+          "Pas de maladies cardiaques ou HTA familiales"
+        ]
+      },
+      "historieSexuelle": {
+        "activite": "Sexuellement active",
+        "statut": "Fiancée depuis 6 mois",
+        "monogamie": "Relation monogame mutuelle",
+        "partenaires": "3 partenaires dans sa vie",
+        "mst": "Nie MST personnelles et chez partenaires",
+        "problemes": "Nie dyspareunie, saignements post-coïtaux"
+      },
+      "habitudes": {
+        "medicaments": [
+          "Ortho-Novum quotidien",
+          "Celexa quotidien",
+          "Motrin pour migraines (Imitrex inefficace)"
+        ],
+        "toxiques": [
+          "Tabac : fumait socialement, arrêté",
+          "Alcool : social, environ 1 verre/semaine",
+          "Drogues : nie"
+        ],
+        "vieActuelle": "Moins de sorties depuis fiançailles, mode de vie plus calme"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète mais coopérative",
+          "Ouverte aux questions personnelles",
+          "Fiancée heureuse (félicitations appréciées)",
+          "Consciente de ses antécédents médicaux"
+        ],
+        "reponses": [
+          "Sur les règles : 'Vraiment bizarres, pas beaucoup de règles ces 2 mois'",
+          "Sur la contraception : 'Elles fonctionnent bien, parfois difficiles à se rappeler'",
+          "Sur les fiançailles : 'Depuis six mois maintenant'",
+          "Sur l'IVG : 'Mes parents et moi avons convenu que c'était la meilleure chose'",
+          "Sur les habitudes : 'Je ne fais plus beaucoup la fête depuis que je suis fiancée'"
+        ],
+        "examenPhysique": [
+          "Accepte l'examen thyroïdien",
+          "Coopérative pour tous les examens",
+          "Accepte examen pelvien après explication"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Règles irrégulières chez femme jeune",
+      "pointsCles": [
+        "Grossesse = diagnostic à éliminer en priorité chez femme en âge de procréer",
+        "Oublis de contraception = facteur de risque majeur",
+        "IMC élevé (30,2) + troubles menstruels = évoquer SOPK",
+        "Antécédent de frottis anormal = nécessite suivi cervical",
+        "Celexa peut augmenter prolactine et perturber cycles"
+      ],
+      "pieges": [
+        "Ne pas se fier uniquement à la prise de contraception",
+        "Importance des oublis même occasionnels",
+        "Règles 'sous pilule' peuvent masquer grossesse débutante",
+        "Antécédent d'IVG ne protège pas d'une nouvelle grossesse",
+        "IMC élevé peut compliquer examen clinique"
+      ],
+      "diagnosticDifferentiel": [
+        "Grossesse (plus probable - test prioritaire)",
+        "Avortement spontané (si grossesse récente)",
+        "Infection cervico-vaginale (saignements intermenstruels)",
+        "SOPK (IMC élevé, cycles irréguliers)",
+        "Hyperprolactinémie (antidépresseur, troubles cycles)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie et Pratique - Métrorragies chez la femme jeune",
+      "sections": [
+        {
+          "titre": "Approche diagnostique des troubles menstruels",
+          "contenu": "Chez toute femme en âge de procréer avec troubles menstruels : éliminer grossesse en premier. L'interrogatoire sur l'observance contraceptive est crucial."
+        },
+        {
+          "titre": "Contraception orale et efficacité",
+          "contenu": "Efficacité de la pilule dépend de l'observance. Un oubli > 12h peut compromettre l'efficacité contraceptive et perturber les cycles."
+        },
+        {
+          "titre": "SOPK et troubles métaboliques",
+          "contenu": "Le SOPK est fréquent chez les femmes avec IMC élevé et cycles irréguliers. Diagnostic par échographie et dosages hormonaux."
+        }
+      ],
+      "examensComplementaires": [
+        "β-hCG qualitatif (test de grossesse prioritaire)",
+        "Examen pelvien avec prélèvements cervicaux",
+        "Recherche Chlamydia/Gonorrhée (PCR)",
+        "Frottis cervical (antécédent anormal)",
+        "TSH, T4 libre (troubles thyroïdiens)",
+        "Prolactinémie (hyperprolactinémie)",
+        "Échographie pelvienne si SOPK suspecté"
+      ],
+      "rappelsTherapeutiques": [
+        "Test de grossesse = examen systématique avant tout traitement",
+        "Prélèvements cervicaux avant tout traitement hormonal",
+        "Counseling contraceptif si observance défaillante",
+        "Suivi cytologique si antécédent de frottis anormal",
+        "Prise en charge du surpoids si SOPK confirmé"
+      ]
+    }
+  }
+}

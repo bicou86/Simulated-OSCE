@@ -1,0 +1,846 @@
+{
+  "title": "AMBOSS-14 - Douleur thoracique - Homme 45 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Max Harris, homme de 45 ans, consultant aux urgences pour douleur thoracique",
+    "vitals": {
+      "temperature": "37.9°C",
+      "ta": "135/75 mmHg",
+      "fc": "105 bpm",
+      "fr": "20/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une douleur dans la poitrine"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Du côté gauche]",
+            "Intensité (échelle 0-10) [Un 6]",
+            "Qualité [C'est une douleur sourde]",
+            "Début [Ça a commencé il y a 30 minutes]",
+            "Événements précipitants [Ça a commencé soudainement quand je courais pour attraper le bus]",
+            "Progression/constant/intermittent [La douleur est là tout le temps, et elle s'est aggravée depuis qu'elle a commencé]",
+            "Épisodes antérieurs [Aucun]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [Non]",
+            "Facteurs aggravants [Je pense que c'est peut-être un peu pire quand je bouge ou que je m'allonge]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "Je me sens essoufflé depuis que la douleur a commencé"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Je joue au football. J'ai été plaqué par un autre joueur hier]",
+            "Voyage récent [Non]",
+            "Gonflement des chevilles [Non]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [J'ai l'impression d'avoir peut-être de la fièvre aujourd'hui mais c'est le premier jour]",
+            "Fatigue [Non]",
+            "Palpitations [On dirait que mon cœur bat plus vite en ce moment. D'habitude, il ne bat aussi vite que quand je joue au football]",
+            "Éruption/changements cutanés [Non]",
+            "Toux [Non]",
+            "Infections récentes [J'ai eu le nez qui coulait il y a 2 semaines]",
+            "Vertiges [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "Mon médecin m'a dit que j'ai de l'hypertension, et mon cholestérol est un peu élevé aussi"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": false,
+          "patientComment": "Je prends des vitamines. Et je prends des médicaments sur ordonnance pour ma tension et mon cholestérol, mais j'ai oublié les noms. Un commence par un 'R' et un par un 'A'"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je travaille comme barman dans un club du centre-ville]",
+            "Domicile [Je vis seul. J'ai une petite amie]",
+            "Alcool [Non, je ne bois pas d'alcool]",
+            "Drogues illicites [Je prends des amphétamines de temps en temps]",
+            "Consommation d'amphétamines (durée, fréquence, dernière prise) [Depuis 5 ans, peut-être environ deux fois par semaine. J'ai pris 1 pilule hier après-midi]",
+            "Tabac [Oui. Un paquet par jour depuis 15 ans]",
+            "Exercice [Je cours une fois par semaine]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation de la distension jugulaire",
+            "Auscultation des artères carotides"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Palpation du choc de pointe",
+            "Palpation du pouls radial",
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation pulmonaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Recherche d'œdème prenant le godet"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes cardiovasculaires urgentes",
+                "items": [
+                  {
+                    "text": "Syndrome coronarien aigu (SCA)",
+                    "cause": "Arguments POUR:\n\t□ Douleur thoracique gauche induite par l'effort (course pour bus)\n\t□ Début aigu avec dyspnée et tachycardie\n\t□ Facteurs de risque multiples : HTA, hypercholestérolémie, amphétamines\n\t□ Tabac 15 PA (30 paquets-années)\n\t□ Âge 45 ans (risque cardiovasculaire augmente)\n\t□ Angor instable probable (nouvelle douleur = angor de novo)\n\t□ Consommation amphétamines = risque spasme coronaire",
+                    "test": "→ ECG immédiat + troponines sériées"
+                  },
+                  {
+                    "text": "Péricardite",
+                    "cause": "Arguments POUR:\n\t□ Douleur thoracique + dyspnée + tachypnée\n\t□ Douleur aggravée en décubitus\n\t□ Infection respiratoire haute il y a 2 semaines\n\t□ Fièvre légère aujourd'hui\nArguments CONTRE:\n\t□ Début très aigu à l'effort\n\t□ Pas d'amélioration en position penchée en avant\n\t□ Pas de frottement décrit",
+                    "test": "→ ECG (sus-décalage ST diffus) + échocardiographie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Contusion costale",
+                    "cause": "Arguments POUR:\n\t□ Traumatisme thoracique (plaquage football hier)\n\t□ Douleur aggravée par mouvements\nArguments CONTRE:\n\t□ Début retardé (24h après trauma)\n\t□ Survenue à l'effort\n\t□ Dyspnée associée",
+                    "test": "→ Radiographie thoracique"
+                  },
+                  {
+                    "text": "Pneumothorax",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de douleur pleurétique typique\n\t□ Début à l'effort",
+                    "test": "→ Radiographie thoracique"
+                  },
+                  {
+                    "text": "Embolie pulmonaire",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de facteurs de risque thromboemboliques",
+                    "test": "→ D-dimères si suspicion"
+                  },
+                  {
+                    "text": "Fracture costale",
+                    "cause": "Arguments CONTRE:\n\t□ Délai important après trauma",
+                    "test": "→ Radiographie série de côtes"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "ECG [pour évaluer les signes d'ischémie myocardique aiguë et de péricardite]",
+            "FSC [les leucocytes seraient élevés dans la péricardite]",
+            "Échocardiographie [peut montrer des signes d'épanchement péricardique dans la péricardite ; utile pour évaluer les anomalies de la cinétique pariétale, la fonction VG et les complications possibles chez les patients avec angor instable]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques et toxicologiques",
+          "binaryOnly": false,
+          "details": [
+            "Toxicologie urinaire [pour évaluer les amphétamines et autres drogues qui peuvent causer des douleurs thoraciques (ex: cocaïne)]",
+            "Troponine T, CK-MB [seraient élevées dans l'infarctus du myocarde et rarement dans la péricardite mais négatives dans l'angor instable]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens invasifs si indiqués",
+          "binaryOnly": false,
+          "details": [
+            "Coronarographie [pour détecter (et éventuellement traiter) une sténose coronarienne]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt des drogues illicites",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant les médicaments",
+            "Éducation sur les facteurs de risque cardiovasculaires"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge thérapeutique immédiate du SCA",
+                "content": "• Oxygénothérapie: Oxygène si SpO2 90% ou dyspnée\n• Nitroglycérine sublinguale 0.: 4mg (si TA 90 mmHg)\n• Aspirine: 300mg à croquer\n• Morphine 2-: 4mg IV si douleur persistante\n• Bêta-bloquants si pas de contre-indication\n• Statine haute intensité\n• Anticoagulation selon protocole: SCA"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Médicaments oubliés",
+          "content": "[Je ne connais pas les noms de mes médicaments, seulement la première lettre de chacun]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Harris, je devrai faire quelques tests avant de savoir exactement ce qui cause votre douleur thoracique. En tant que votre médecin, j'aimerais avoir une image plus complète de votre santé avant de décider de la meilleure marche à suivre. Une partie de ce processus consiste à découvrir quels médicaments vous prenez actuellement. À qui pourrais-je demander les noms de vos médicaments ? Peut-être votre pharmacien ou votre médecin traitant ? Ou avez-vous les boîtes de médicaments chez vous ? Entre-temps, sachant que l'un commence par 'R' et l'autre par 'A', il s'agit probablement du ramipril pour votre tension et de l'atorvastatine pour votre cholestérol, qui sont des médicaments très courants pour ces conditions."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Œdème prenant le godet du membre inférieur",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait précédemment été remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-14-img1-Pitting edema of lower leg.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Infarctus du myocarde antérieur avec sus-décalage ST (STEMI)",
+        "description": "ECG 12 dérivations (vitesse du papier : 25 mm/s). Rythme sinusal avec fréquence cardiaque d'environ 85/min. Axe cardiaque normal (dérivations I, II et III positives, mais difficile à interpréter à cause des modifications ST). Sus-décalage ST en V2-V6, aVL et légèrement en I. Sous-décalage ST réciproque dans les dérivations II, III et aVF.",
+        "data": "grilles_generees/html/images/AMBOSS-14-img2-Acute anterior ST-elevation myocardial infarction (STEMI).jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Péricardite aiguë",
+        "description": "ECG 12 dérivations (vitesse du papier : 25 mm/s). Tachycardie sinusale avec fréquence d'environ 107/min. Axe cardiaque normal (R > S dans I et aVF). Les ondes P ont une morphologie normale. Sous-décalages PR diffus avec sus-décalages ST réciproques concaves (mieux visibles en aVL) et sus-décalages PR en aVR. Noter l'encoche à la fin des complexes QRS (créant la morphologie en \"hameçon\" ; mieux visible en aVL). Onde T discordante en V1. Intervalle PR normal (environ 120 ms), intervalle QRS limite étroit (environ 80 ms), intervalle QT prolongé (environ 400 ms ; QTc = 534 ms). Ces résultats sont typiques du stade 1 de la péricardite aiguë.",
+        "data": "grilles_generees/html/images/AMBOSS-14-img3-Acute pericarditis.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Max Harris",
+      "age": "45 ans",
+      "contexte": "Barman consultant aux urgences pour douleur thoracique aiguë à l'effort",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur dans la poitrine.",
+        "autreChose": "Je me sens essoufflé depuis que la douleur a commencé."
+      },
+      "consignes": [
+        "Tenir votre poitrine gauche comme si vous aviez une douleur modérée dans cette zone.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: ECG) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Dire à l'examinateur que vous ne connaissez pas les noms de vos médicaments, seulement la première lettre de chacun (comme dans la checklist 'Antécédents médicaux' ci-dessus)."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur thoracique gauche début il y a 30 minutes",
+          "Survenue à l'effort (course pour attraper bus)",
+          "Douleur sourde, intensité 6/10",
+          "Constante et en aggravation",
+          "Aggravée par mouvements et décubitus"
+        ],
+        "symptomesAssocies": [
+          "Dyspnée depuis début douleur",
+          "Sensation de tachycardie",
+          "Impression fébrile aujourd'hui",
+          "Antécédent rhinite il y a 2 semaines",
+          "Traumatisme thoracique (football) hier"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Tenir main sur poitrine gauche",
+          "Respiration légèrement accélérée",
+          "Paraître inquiet mais coopératif",
+          "Demander clarifications termes médicaux",
+          "Mentionner oubli noms médicaments"
+        ],
+        "durantStatus": [
+          "Douleur modérée sans grimace excessive",
+          "Respiration régulière",
+          "Coopération totale à l'examen",
+          "Pas de signe de détresse majeure"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 45 ans avec probable syndrome coronarien aigu sur terrain à risque. Facteurs de risque cardiovasculaires multiples : HTA, dyslipidémie, tabac 15 PA, consommation amphétamines. Présentation typique d'angor instable (angor de novo) avec douleur d'effort. Amphétamines = risque de vasospasme coronaire et IDM. Diagnostic différentiel inclut péricardite post-virale.",
+      "rolesInterventions": [
+        "ECG : Sous-décalage ST V4-V6 suggérant ischémie latérale",
+        "Troponine T initiale : 0.02 ng/mL (limite normale)",
+        "Troponine T à 3h : 0.15 ng/mL (positive)",
+        "Toxicologie urinaire : Positive pour amphétamines",
+        "Radiographie thoracique : Normale",
+        "Échocardiographie : Hypokinésie segmentaire latérale"
+      ],
+      "pointsCles": [
+        "Amphétamines = urgence cardiologique (spasme coronaire, IDM)",
+        "Médicaments probables : Ramipril (IECA) et Atorvastatine (statine)",
+        "Angor de novo = angor instable = SCA",
+        "Troponine peut être normale initialement dans angor instable",
+        "Toujours faire toxicologie si suspicion drogue"
+      ],
+      "pieges": [
+        "Se focaliser sur traumatisme thoracique récent",
+        "Minimiser risque des amphétamines",
+        "Ne pas identifier les médicaments probables",
+        "Retarder ECG et monitoring",
+        "Oublier aspirine et protocole SCA"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Syndrome coronarien aigu (angor instable) induit par amphétamines"
+        },
+        {
+          "titre": "Syndrome coronarien aigu",
+          "contenu": "Continuum d'ischémie myocardique aiguë :",
+          "points": [
+            "Types : Angor instable, NSTEMI, STEMI",
+            "Angor instable : douleur au repos ou de novo ou crescendo",
+            "NSTEMI : nécrose sans sus-décalage ST (troponine +)",
+            "STEMI : nécrose avec sus-décalage ST",
+            "Mortalité : STEMI > NSTEMI > angor instable",
+            "Physiopathologie : rupture plaque, thrombose, spasme"
+          ]
+        },
+        {
+          "titre": "Amphétamines et système cardiovasculaire",
+          "contenu": "Mécanismes de cardiotoxicité :",
+          "points": [
+            "Libération catécholamines : tachycardie, HTA, vasospasme",
+            "Spasme coronaire : ischémie même sans athérosclérose",
+            "Augmentation demande O2 myocardique",
+            "Thrombose : activation plaquettaire",
+            "Cardiomyopathie chronique si usage prolongé",
+            "Risque IDM multiplié par 7 dans l'heure suivant prise"
+          ]
+        },
+        {
+          "titre": "Présentation clinique du SCA",
+          "contenu": "Triade classique variable :",
+          "points": [
+            "Douleur thoracique : oppression, serrement, brûlure",
+            "Irradiation : mâchoire, bras gauche, dos",
+            "Symptômes végétatifs : sueurs, nausées, anxiété",
+            "Équivalents : dyspnée isolée, syncope (sujet âgé)",
+            "Facteurs déclenchants : effort, stress, froid",
+            "Red flags : début brutal, repos, > 20 min"
+          ]
+        },
+        {
+          "titre": "Scores de risque dans le SCA",
+          "contenu": "Stratification pour orientation :",
+          "points": [
+            "TIMI score : 7 variables, risque à 14 jours",
+            "GRACE score : mortalité hospitalière et à 6 mois",
+            "HEART score : urgences, décision admission",
+            "Variables clés : âge, troponine, ECG, créatinine",
+            "Haut risque = coronarographie < 24h",
+            "Bas risque = test non invasif possible"
+          ]
+        },
+        {
+          "titre": "Prise en charge initiale du SCA",
+          "contenu": "Protocole standardisé urgent :",
+          "points": [
+            "1. Monitoring continu + voie veineuse",
+            "2. ECG 12 dérivations < 10 minutes",
+            "3. Aspirine 300mg à croquer immédiatement",
+            "4. Nitrés sublinguaux si TA > 90 mmHg",
+            "5. Morphine si douleur réfractaire",
+            "6. Bêta-bloquants précoces si pas CI",
+            "7. Double antiagrégation selon type SCA"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel péricardite",
+          "contenu": "Points de distinction avec SCA :",
+          "points": [
+            "Douleur : pleurétique, soulagée position assise",
+            "Contexte : post-viral (1-3 semaines)",
+            "ECG : sus-décalage ST diffus concave",
+            "Frottement péricardique : pathognomonique",
+            "Troponine : parfois légèrement positive",
+            "Échocardiographie : épanchement péricardique"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Aspirine 300mg à croquer puis 100mg/j à vie",
+        "Clopidogrel 600mg charge puis 75mg/j × 12 mois",
+        "Énoxaparine 1mg/kg SC BID ou HNF selon protocole",
+        "Atorvastatine 80mg/j (haute intensité)",
+        "Bêta-bloquant : métoprolol 25-50mg BID",
+        "IEC/ARA2 : ramipril 2.5-10mg/j",
+        "Nitrés action prolongée si angor résiduel",
+        "Sevrage amphétamines avec support psychiatrique"
+      ],
+      "examensComplementaires": [
+        "ECG sérié : Toutes les 30 min si douleur, recherche évolution ST",
+        "Troponine hs : T0, T3h, T6h (protocole 0/3h si haute sensibilité)",
+        "Bilan SCA : FSC, iono, urée/créat, glycémie, bilan lipidique",
+        "Radiographie thoracique : Éliminer autres causes, OAP",
+        "Échocardiographie : Fonction VG, cinétique segmentaire, complications",
+        "Coronarographie : Si NSTEMI/STEMI ou angor instable haut risque"
+      ]
+    },
+    "resume": {
+      "titre": "❤️ Syndrome coronarien aigu – Angor instable – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur rétrosternale oppressive, prolongée (>20 min)",
+                "Survenue au repos ou à faible effort",
+                "Irradiations : bras gauche, mâchoire, dos, épigastre",
+                "Moins bonne réponse ou absence de réponse aux nitrés"
+              ]
+            },
+            {
+              "titre": "Symptômes associés",
+              "points": [
+                "Sueurs, nausées, malaise",
+                "Dyspnée",
+                "Anxiété, sensation de mort imminente"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "ATCD coronariens",
+                "HTA, diabète, dyslipidémie",
+                "Tabagisme actif",
+                "Âge avancé, sexe masculin ou femme post-ménopausée",
+                "ATCD familiaux cardiovasculaires"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Souvent examen normal entre les crises",
+                "Durant l’accès : pâleur, sueurs, agitation",
+                "TA variable, pouls irrégulier possible",
+                "Signes d’insuffisance cardiaque (crépitants, B3, turgescence jugulaire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "ECG",
+              "points": [
+                "ST sous-décalé transitoire",
+                "Ondes T inversées",
+                "ECG normal possible"
+              ]
+            },
+            {
+              "titre": "Biomarqueurs",
+              "points": [
+                "Troponines négatives (≠ NSTEMI où elles sont positives)",
+                "Dosages répétés indispensables"
+              ]
+            },
+            {
+              "titre": "Autres bilans",
+              "points": [
+                "Bilan biologique standard (NFS, créatinine, glycémie, bilan lipidique)",
+                "Échocardiographie : anomalies segmentaires possibles"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Urgences initiales (monothérapie MONA)",
+              "points": [
+                "Monitoring, scope + O₂ si SpO₂ < 90 %",
+                "Accès veineux, constantes vitales",
+                "Aspirine 250–300 mg per os ou IV",
+                "Morphine si douleur persistante",
+                "Trinitrine sublinguale si PAS > 100 mmHg"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Antiplaquettaires : aspirine + inhibiteur P2Y12 (clopidogrel, ticagrelor)",
+                "Anticoagulation (fondaparinux, énoxaparine)",
+                "Bêtabloquants si pas de contre-indication",
+                "Statine forte dose",
+                "Stratégie invasive précoce : coronarographie ± angioplastie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Angor instable = douleur thoracique prolongée sans élévation de troponines",
+            "ECG peut être normal → répéter si doute",
+            "Troponines négatives différencient de NSTEMI",
+            "Prise en charge = antithrombotique + revascularisation",
+            "Toujours éliminer les diagnostics différentiels (EP, dissection aortique, péricardite)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur thoracique : début, durée, intensité, irradiation ?",
+                "Déclencheurs (repos, effort minime, émotions) ?",
+                "Facteurs de risque cardiovasculaires ?",
+                "ATCD d’angor ou d’infarctus ?",
+                "Soulagement par trinitrine ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, FR, SpO₂, T°)",
+                "ECG 12 dérivations (répéter si doute)",
+                "Dosages répétés de troponines",
+                "Biologie standard (NFS, iono, créat, glycémie, lipides)",
+                "Échocardiographie transthoracique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Urgence médicale : hospitalisation cardiologie/USIC",
+                "Double antiagrégation + anticoagulation",
+                "Coronarographie précoce selon risque"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur thoracique aiguë à l’effort (suspicion SCA – angor instable induit par amphétamines)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte, motif (homme 45 ans, douleur thoracique brutale à l’effort, urgences)",
+            "Caractériser la douleur → gauche, sourde, EVA 6/10, début 30 min, constante, aggravée par mouvement/décubitus, pas irradiation",
+            "Circonstances → effort (courir pour bus), pas d’épisodes antérieurs",
+            "Symptômes associés → dyspnée, tachycardie, fébricule, palpitations, pas de syncope",
+            "Contexte → trauma thorax hier (football), infection ORL 2 sem, fièvre légère",
+            "ATCD → HTA, dyslipidémie ; pas chir, pas allergies",
+            "Traitements → probablement Ramipril + Atorvastatine ; observance incomplète",
+            "Habitudes → tabac 15 PA, amphétamines (2x/sem, dernière prise hier), pas alcool",
+            "Examen clinique → FC 105, TA 135/75, FR 20, T° 37.9, patient anxieux, pas d’OMI, auscultation cardiaque/pulmonaire pauvre",
+            "Résumé + hypothèse principale : SCA – angor instable (de novo, induit amphétamines) ; DD : péricardite, contusion costale, pneumothorax, EP",
+            "Examens complémentaires → ECG urgent, troponines répétées, bilan biologique (NFS, iono, créat, lipides), échocardiographie, radiographie thorax, toxicologie urinaire",
+            "Prise en charge → MONA (Monitoring, O₂ si SpO₂ <90, Nitrés, Aspirine, Morphine si besoin), double anti-agrégation, anticoagulation, statine forte dose, bêtabloquant si pas CI, coronarographie précoce"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide SCA : « MONA-BAS »",
+            "elements": [
+              "M = Monitoring",
+              "O = Oxygène si SpO₂ < 90%",
+              "N = Nitrés",
+              "A = Aspirine",
+              "B = Bêtabloquant",
+              "A = Anticoagulant",
+              "S = Statine"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Max Harris, un homme de 45 ans, barman, qui consulte aux urgences pour une douleur thoracique apparue il y a environ 30 minutes. La douleur est localisée au côté gauche de la poitrine, de type sourde, notée à 6/10, constante, et elle s’est aggravée progressivement. Elle est survenue soudainement lorsqu’il a couru pour attraper son bus. Elle est légèrement majorée par les mouvements et lorsqu’il est couché. Il n’a jamais eu d’épisodes similaires auparavant et il n’y a pas d’irradiation.\n\nLes symptômes associés incluent une dyspnée depuis le début de la douleur et des palpitations. Il rapporte aussi une impression fébrile aujourd’hui, avec une température mesurée à 37.9 °C. Il a eu un rhume il y a 2 semaines et un traumatisme thoracique hier en jouant au football, mais la douleur actuelle est distincte.\n\nSes antécédents médicaux sont notables pour une hypertension et un cholestérol élevé. Il n’a pas de chirurgie ni d’allergie connues. Il prend habituellement deux traitements qu’il a du mal à nommer : un commence par « R » (probablement Ramipril) et l’autre par « A » (probablement Atorvastatine). \n\nSur le plan des habitudes, il vit seul, travaille comme barman, fume un paquet par jour depuis 15 ans, et consomme régulièrement des amphétamines depuis 5 ans, environ deux fois par semaine, la dernière prise ayant eu lieu hier. Il ne boit pas d’alcool.\n\nÀ l’examen, il est fébricule à 37.9 °C, tachycarde à 105/min, TA 135/75 mmHg, FR 20/min. Il est anxieux mais stable. Pas de signe de détresse respiratoire majeure, pas d’œdème, auscultation cardiaque et pulmonaire normale.\n\nEn résumé, il s’agit d’un homme de 45 ans, avec facteurs de risque cardiovasculaires multiples (HTA, dyslipidémie, tabac, amphétamines), consultant pour une douleur thoracique brutale à l’effort, de novo, constante, associée à dyspnée et tachycardie. Mon hypothèse principale est un syndrome coronarien aigu, probablement un angor instable de novo déclenché par la consommation d’amphétamines. Les diagnostics différentiels incluent une péricardite aiguë post-virale, une contusion costale, un pneumothorax, et une embolie pulmonaire.\n\nComme examens complémentaires, je demanderais en urgence un ECG, des troponines sériées (0h, 3h, 6h), un bilan biologique complet (NFS, ionogramme, créatinine, glycémie, bilan lipidique), une radiographie thoracique, une échocardiographie, et une toxicologie urinaire. \n\nLa prise en charge repose sur le protocole SCA : monitoring continu, oxygène si SpO₂ < 90 %, accès veineux, administration d’aspirine 300 mg à croquer immédiatement, nitrés sublinguaux si TA > 90 mmHg, morphine si douleur persistante, bêtabloquant si pas de contre-indication, statine forte dose, anticoagulation selon protocole, et orientation vers une coronarographie précoce. Enfin, il faudra insister sur l’arrêt immédiat du tabac et des amphétamines."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Harris, 45 ans, douleur thoracique gauche aiguë, EVA 6/10, début 30 min après effort.\n\nB (Background) : ATCD HTA, dyslipidémie, tabac 15 PA, consommation régulière amphétamines (dernière hier). Pas chir, pas allergies.\n\nA (Assessment) : Suspicion de SCA – angor instable (de novo). DD : péricardite, contusion costale, pneumothorax, EP.\n\nR (Recommendation) : ECG urgent, troponines répétées, bilan bio complet, Rx thorax, écho cardiaque, coronarographie précoce. PEC : Aspirine, nitrés, anticoagulation, statine forte dose, bêtabloquant, hospitalisation cardiologie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Types de SCA (mnémotechnique : INS)",
+              "points": [
+                "I = Infarctus STEMI (sus-décalage ST + troponine +)",
+                "N = NSTEMI (pas de sus-ST, troponine +)",
+                "S = angor instable (troponine -)"
+              ]
+            },
+            {
+              "titre": "👉 Amphétamines = 5 effets CV majeurs",
+              "points": [
+                "Tachycardie",
+                "HTA",
+                "Vasospasme coronaire",
+                "Augmentation demande O₂ myocardique",
+                "Activation plaquettaire → thrombose"
+              ]
+            },
+            {
+              "titre": "👉 Score TIMI (risque SCA, 7 items)",
+              "points": [
+                "Âge ≥ 65 ans",
+                "≥ 3 facteurs de risque CV",
+                "ATCD coronarien connu",
+                "Prise d’aspirine récente",
+                "≥ 2 épisodes angor/24h",
+                "Élévation troponine",
+                "ECG : ST - ≥ 0.5 mm"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Se laisser distraire par le traumatisme thoracique récent",
+                "Sous-estimer la toxicité des amphétamines",
+                "Oublier de demander troponines sériées",
+                "Ne pas citer la double antiagrégation",
+                "Omettre l’éducation et prévention secondaire (tabac, drogues)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "SCA – Angor instable",
+                  "reponse": {
+                    "pour": [
+                      "Douleur thoracique de novo, effort, constante",
+                      "Facteurs de risque multiples (HTA, dyslipidémie, tabac, amphétamines)",
+                      "Dyspnée associée",
+                      "Tachycardie, fébricule"
+                    ],
+                    "contre": [
+                      "Troponine initialement normale possible",
+                      "Pas d’irradiation"
+                    ]
+                  }
+                },
+                {
+                  "question": "Péricardite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur thoracique",
+                      "Infection ORL récente",
+                      "Fièvre légère"
+                    ],
+                    "contre": [
+                      "Douleur non soulagée en antéflexion",
+                      "Pas de frottement décrit",
+                      "Début brutal à l’effort"
+                    ]
+                  }
+                },
+                {
+                  "question": "Contusion costale",
+                  "reponse": {
+                    "pour": [
+                      "Traumatisme thoracique hier"
+                    ],
+                    "contre": [
+                      "Début douleur brutal après effort",
+                      "Douleur constante, non localisée à un point",
+                      "Dyspnée associée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumothorax",
+                  "reponse": {
+                    "contre": [
+                      "Pas de douleur pleurétique typique",
+                      "Pas de tympanisme, MV conservé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Embolie pulmonaire",
+                  "reponse": {
+                    "contre": [
+                      "Pas de facteur de risque thromboembolique",
+                      "Pas de douleur pleuritique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "ECG 12 dérivations immédiat",
+                    "Troponines sériées (0h, 3h, 6h)",
+                    "Bilan biologique : NFS, ionogramme, créatinine, glycémie, bilan lipidique",
+                    "Radiographie thorax",
+                    "Échocardiographie transthoracique",
+                    "Toxicologie urinaire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Syndrome coronarien aigu – angor instable (de novo), probable spasme coronaire induit amphétamines"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation USIC",
+                      "Monitoring, VVP",
+                      "Aspirine 300 mg à croquer",
+                      "Nitrés sublinguaux si TA > 90",
+                      "Morphine si douleur persistante",
+                      "Double anti-agrégation plaquettaire",
+                      "Anticoagulation (HBPM ou HNF)",
+                      "Statine forte dose",
+                      "Bêtabloquant si pas CI"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Coronarographie précoce (<24h si haut risque)",
+                    "Réévaluation troponines et ECG",
+                    "Éducation : arrêt amphétamines, tabac, hygiène de vie",
+                    "Suivi cardiologique long terme",
+                    "Prévention secondaire (IEC, statine, antiagrégants prolongés)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

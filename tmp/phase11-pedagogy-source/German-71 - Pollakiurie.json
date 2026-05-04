@@ -1,0 +1,340 @@
+{
+  "title": "German-71 - Pollakiurie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 55 ans, obèse, qui doit fréquemment aller aux toilettes et consulte son médecin de famille pour obtenir des conseils",
+    "vitals": {
+      "ta": "143/92 mmHg"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation du médecin",
+          "binaryOnly": true,
+          "details": [
+            "Se présenter avec nom, fonction et tâche"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Problème actuel",
+          "binaryOnly": false,
+          "details": [
+            "Identifier le motif de consultation",
+            "[Polyurie, doit constamment aller aux toilettes, même la nuit]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation des symptômes urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Urgence mictionnelle [non mentionnée spécifiquement]",
+            "Dysurie [non]",
+            "Couleur de l'urine [normale]",
+            "Début précis des symptômes"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Polydipsie et appétit",
+          "binaryOnly": false,
+          "details": [
+            "Habitudes de boisson [oui, beaucoup ! Jusqu'à 5 litres par jour]",
+            "Appétit [extrême]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Évolution du poids",
+          "binaryOnly": false,
+          "details": [
+            "[Réjouissant - a perdu 5 kg au cours des 2-3 derniers mois]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Autres symptômes urogénitaux",
+          "binaryOnly": false,
+          "details": [
+            "Incontinence [non]",
+            "Troubles de l'érection [peut-être oui]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Vertiges [non]",
+            "Douleurs [non]",
+            "Douleur thoracique/angine de poitrine [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Troubles sensitifs",
+            "Engourdissement des mains ou des pieds [pas remarqué]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Maladies antérieures [non]",
+            "Hospitalisations [non]",
+            "Chirurgies [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Mode de vie et habitudes",
+          "binaryOnly": false,
+          "details": [
+            "Habitudes alimentaires",
+            "Activités sportives [non]",
+            "Loisirs [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Substances et médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [oui]",
+            "Alcool [1 bière par jour]",
+            "Drogues [rarement]",
+            "Médicaments actuels [aucun]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Diabète sucré [mère et père]",
+            "Maladies cardiovasculaires [mère et père coronariens]",
+            "Autres maladies héréditaires"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Situation professionnelle",
+            "Situation familiale",
+            "[Non particulier]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque",
+            "Recherche de souffles",
+            "Rythme et fréquence"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire",
+            "Recherche de râles",
+            "Symétrie auscultatoire"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen ophtalmologique",
+          "binaryOnly": false,
+          "details": [
+            "Fond d'œil",
+            "Recherche de rétinopathie diabétique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen vasculaire périphérique",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des pouls périphériques",
+            "Recherche de signes d'artériopathie"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Test de la sensibilité",
+            "Sens vibratoire au diapason",
+            "Test au monofilament",
+            "Réflexes ostéo-tendineux"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Mesure de la tension artérielle",
+          "binaryOnly": false,
+          "details": [
+            "Prise de tension",
+            "[143/92 mmHg]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "binaryOnly": false,
+          "details": [
+            "Diabète sucré de type 2"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2-3 DD mentionnés",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Diabète sucré",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Glycémie à jeun, HbA1c"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, CRP, hémocultures si fièvre"
+                  },
+                  {
+                    "text": "Vessie hyperactive",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Polydipsie psychogène",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Diabète insipide",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Glycémie à jeun, HbA1c"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires - Biologie",
+          "binaryOnly": false,
+          "details": [
+            "Formule sanguine complète (FSC)",
+            "Glycémie à jeun",
+            "CRP",
+            "Nouvelle glycémie à jeun le lendemain"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires - Analyses urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Recherche de corps cétoniques",
+            "Recherche de glucose",
+            "Recherche de signes d'infection",
+            "Bandelette urinaire complète"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "details": [
+            "Changement de régime alimentaire",
+            "Contrôle du poids",
+            "Si échec : antidiabétiques oraux",
+            "Contrôle de la tension artérielle"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Gestion des complications potentielles",
+          "binaryOnly": false,
+          "details": [
+            "Évaluer la nécessité d'un transfert hospitalier",
+            "Suspicion de coma diabétique",
+            "Organiser le transfert si nécessaire"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Suivi et accompagnement",
+          "binaryOnly": false,
+          "details": [
+            "Rassurer le patient",
+            "Planifier des consultations régulières",
+            "Proposer un soutien continu",
+            "Éducation thérapeutique"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,506 @@
+{
+  "title": "RESCOS-51 - Oedèmes des MI",
+  "category": "RESCOS",
+  "subcategory": "Néphrologie - Pathologie glomérulaire",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 30 ans, avocate, consultant pour œdèmes des membres inférieurs apparus depuis une semaine",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Gonflement des pieds, des jambes et des cuisses"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des œdèmes",
+          "details": [
+            "Début [depuis une semaine]",
+            "Localisation [d'abord les pieds, puis les jambes et les cuisses]",
+            "Quantification [peine à fermer le pantalon, plus facilement essoufflée à l'effort]",
+            "Caractères néphrotiques [blancs, mous, symétriques, indolores, déclives]",
+            "Prise pondérale [début et importance]",
+            "Évolution dans la journée [pire le soir]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "details": [
+            "Urines mousseuses [protéinurie abondante]",
+            "Urines moins fréquentes et moins abondantes",
+            "Toux en position couchée [recherche d'épanchement pleural]",
+            "Dyspnée d'effort [essoufflement à l'effort]",
+            "Pas de douleur thoracique",
+            "Pas d'orthopnée nocturne"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche d'événements synchrones",
+          "details": [
+            "Infection récente [angine, pneumonie, infection urinaire]",
+            "Vaccination récente",
+            "Prise de nouveaux médicaments",
+            "Piqûre d'insecte ou morsure",
+            "Exposition à des toxiques",
+            "Voyage récent"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents personnels",
+          "details": [
+            "Antécédents rénaux [protéinurie, hématurie antérieures]",
+            "Maladies auto-immunes [lupus, etc.]",
+            "Diabète",
+            "Hypertension artérielle",
+            "Infections récurrentes",
+            "Cancers",
+            "Hépatites virales"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies rénales héréditaires",
+            "Diabète familial",
+            "Maladies auto-immunes",
+            "Hypertension artérielle"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments et habitudes",
+          "details": [
+            "Prise de médicaments [AINS, antibiotiques, etc.]",
+            "Contraception orale",
+            "Toxiques [tabac, alcool, drogues]",
+            "Allergies médicamenteuses"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Résultats d'examens antérieurs",
+          "details": [
+            "Dernière créatinine connue",
+            "Dernière analyse d'urine",
+            "Dernière tension artérielle",
+            "Bilan lipidique antérieur"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux et état général",
+          "details": [
+            "Tension artérielle [recherche HTA]",
+            "Fréquence cardiaque",
+            "Fréquence respiratoire",
+            "Température",
+            "Poids actuel et prise de poids récente",
+            "Taille et IMC"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection des œdèmes",
+          "details": [
+            "Localisation [membres inférieurs, lombaires, paupières]",
+            "Symétrie [bilatéraux et symétriques]",
+            "Couleur [blancs]",
+            "Aspect [mous]",
+            "Extension [pieds, jambes, cuisses]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation des œdèmes",
+          "details": [
+            "Recherche du signe du godet [pression maintenue laisse une dépression]",
+            "Caractère indolore",
+            "Température normale",
+            "Mesure de la circonférence des membres"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Recherche d'épanchements séreux",
+          "details": [
+            "Ascite: inspection, palpation, percussion [matité déclive]",
+            "Épanchement pleural: auscultation [absence murmure vésiculaire]",
+            "Percussion thoracique [matité basale]",
+            "Vibrations vocales [diminuées]",
+            "Épanchement péricardique [assourdissement bruits du cœur]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation des loges rénales",
+          "details": [
+            "Technique main droite [sous rebord costal, flanc droit]",
+            "Technique main gauche [même technique côté gauche]",
+            "Recherche de gros reins [polykystose]",
+            "Recherche de douleur à la palpation",
+            "Percussion des fosses lombaires [douleur?]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Signes cutanés et phanères",
+          "details": [
+            "Ongles [doubles bandes transversales blanches - hypoalbuminémie]",
+            "Peau [couleur jaune pâle, xanthomes si hyperlipidémie]",
+            "Cheveux [cassants, perte de cheveux]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque [souffle, galop]",
+            "Recherche signes d'insuffisance cardiaque",
+            "Turgescence jugulaire",
+            "Reflux hépato-jugulaire"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen abdominal",
+          "details": [
+            "Recherche ascite [matité déclive, signe du flot]",
+            "Hépatomégalie [insuffisance cardiaque droite?]",
+            "Masse abdominale",
+            "Circulation collatérale"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels du syndrome œdémateux",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour un syndrome œdémateux",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Syndrome néphrotique",
+                    "cause": "Arguments POUR:\n\t□ Œdèmes blancs, mous, symétriques\n\t□ Urines mousseuses (protéinurie)\n\t□ Femme jeune\n\t□ Début progressif\n\t□ Pas de signes cardiaques",
+                    "test": "→ Bandelette urinaire (protéinurie +++), créatinine, albumine, protéinurie 24h"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes rénales",
+                "items": [
+                  {
+                    "text": "Glomérulonéphrite aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'hématurie macroscopique\n\t□ Pas d'HTA décrite\n\t□ Pas d'infection récente",
+                    "test": "→ ASLO, complément, ANCA"
+                  },
+                  {
+                    "text": "Insuffisance rénale chronique",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Pas d'antécédents rénaux\n\t□ Début récent",
+                    "test": "→ Créatinine, DFG, échographie rénale"
+                  }
+                ]
+              },
+              {
+                "name": "Causes cardiaques",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque congestive",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Pas de dyspnée nocturne\n\t□ Pas de signes cardiaques\n\t□ Œdèmes blancs (vs cyanosés)",
+                    "test": "→ ECG, échocardiographie, BNP"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hépatiques",
+                "items": [
+                  {
+                    "text": "Cirrhose hépatique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédents hépatiques\n\t□ Pas d'ictère\n\t□ Pas de signes d'hypertension portale",
+                    "test": "→ Bilan hépatique, échographie abdominale"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Insuffisance veineuse",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Bilatéral symétrique\n\t□ Œdèmes blancs mous",
+                    "test": "→ Echo-Doppler veineux"
+                  },
+                  {
+                    "text": "Hypothyroïdie (myxœdème)",
+                    "cause": "Arguments CONTRE:\n\t□ Œdèmes prennent le godet\n\t□ Pas de signes d'hypothyroïdie",
+                    "test": "→ TSH, T4 libre"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "Bandelette urinaire: protéinurie +++, hématies négatives, leucocytes négatifs, nitrites négatifs",
+            "Protéinurie des 24h ou ratio protéinurie/créatininurie",
+            "Créatinine plasmatique et DFG",
+            "Albumine sérique (< 30 g/L dans syndrome néphrotique)",
+            "Bilan lipidique (hyperlipidémie compensatrice)",
+            "NFS, ionogramme sanguin"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Critères diagnostiques du syndrome néphrotique",
+          "details": [
+            "Protéinurie > 3 g/24h (ou > 3 g/g de créatinine)",
+            "Hypoalbuminémie < 30 g/L",
+            "Œdèmes cliniques",
+            "Hyperlipidémie (souvent associée)"
+          ],
+          "scoringRule": "Syndrome néphrotique = protéinurie > 3g/24h + hypoalbuminémie < 30g/L"
+        },
+        {
+          "id": "m4",
+          "text": "Bilan étiologique du syndrome néphrotique",
+          "details": [
+            "Sédiment urinaire (cylindres, hématies dysmorphiques)",
+            "Électrophorèse des protéines sériques et urinaires",
+            "Complément C3, C4",
+            "Anticorps anti-nucléaires (AAN) si suspicion lupus",
+            "Sérologies virales (VHB, VHC, VIH)",
+            "Glycémie à jeun (diabète)",
+            "Échographie rénale et des voies urinaires"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement symptomatique du syndrome néphrotique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Restriction sodée < 6g/j (< 2g de sodium)\n• Restriction hydrique si hyponatrémie\n• Repos avec surélévation des membres inférieurs\n• Bas de contention\n• Pesée quotidienne\n• Surveillance diurèse"
+              },
+              {
+                "title": "Traitement diurétique",
+                "content": "• Furosémide 40-80mg/j per os ou IV\n• Association possible avec thiazidique si résistance\n• Surveillance ionogramme, fonction rénale\n• Objectif: perte 0.5-1 kg/jour\n• Éviter hypovolémie brutale"
+              },
+              {
+                "title": "Prévention des complications",
+                "content": "• Anticoagulation si albumine < 20g/L (risque thrombotique)\n• Statine si hyperlipidémie sévère\n• Supplémentation vitamine D\n• Vaccination pneumocoque (risque infectieux)\n• IEC/ARA2 pour effet antiprotéinurique"
+              },
+              {
+                "title": "Traitement étiologique",
+                "content": "• Corticothérapie si glomérulonéphrite à lésions minimes\n• Immunosuppresseurs selon type histologique\n• Traitement spécifique si cause secondaire\n• Biopsie rénale pour déterminer le traitement"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Indications de la biopsie rénale",
+          "details": [
+            "Syndrome néphrotique de l'adulte (toujours)",
+            "Syndrome néphrotique de l'enfant si atypique",
+            "Insuffisance rénale associée",
+            "Hématurie macroscopique",
+            "HTA sévère",
+            "Signes extra-rénaux évocateurs de maladie systémique"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Complications du syndrome néphrotique",
+          "redflagsSection": {
+            "title": "Complications à rechercher",
+            "items": [
+              {
+                "text": "Thrombose veineuse rénale",
+                "description": "Douleur lombaire brutale, hématurie, aggravation fonction rénale"
+              },
+              {
+                "text": "Embolie pulmonaire",
+                "description": "Dyspnée brutale, douleur thoracique, hémoptysie"
+              },
+              {
+                "text": "Infections sévères",
+                "description": "Péritonite primitive, pneumonie (perte d'immunoglobulines)"
+              },
+              {
+                "text": "Insuffisance rénale aiguë",
+                "description": "Oligurie, créatinine en augmentation rapide"
+              },
+              {
+                "text": "Hypovolémie sévère",
+                "description": "Hypotension, tachycardie, oligurie (diurétiques excessifs)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos symptômes évoquent un syndrome néphrotique, c'est-à-dire que vos reins laissent passer trop de protéines dans les urines. Cela entraîne une baisse des protéines dans le sang et provoque ces œdèmes. Il faut faire des examens pour en trouver la cause et débuter un traitement."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est grave?]\n[Mes reins sont-ils abîmés?]\n[Vais-je avoir besoin de dialyse?]\n[Est-ce que je peux continuer à travailler?]\n[Combien de temps va durer le traitement?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "C'est une maladie sérieuse mais qui se traite bien dans la majorité des cas\nIl faut d'abord déterminer la cause par une biopsie rénale pour évaluer l'atteinte\nLa dialyse n'est nécessaire que dans de rares cas avec insuffisance rénale sévère\nVous pourrez continuer à travailler mais il faudra du repos pendant la phase aiguë\nLe traitement dure généralement plusieurs mois selon la cause"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Syndrome néphrotique",
+      "nom": "Patiente féminine",
+      "age": "30 ans",
+      "profession": "Avocate",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "Mes jambes ont gonflé, j'ai du mal à fermer mon pantalon",
+        "description": "Œdèmes des membres inférieurs depuis une semaine avec urines mousseuses"
+      },
+      "histoireActuelle": {
+        "oedemes": [
+          "Apparus depuis une semaine",
+          "D'abord les pieds",
+          "Puis les jambes et les cuisses",
+          "Peine à fermer le pantalon",
+          "Plus facilement essoufflée à l'effort",
+          "Toux en position couchée"
+        ],
+        "urines": [
+          "Remarqué urines mousseuses",
+          "Urines moins fréquentes",
+          "Urines moins abondantes",
+          "Pas d'urines rouges ou foncées"
+        ],
+        "symptomesAssocies": [
+          "Pas de fièvre",
+          "Pas de douleurs",
+          "Fatigue modérée",
+          "Pas de maux de tête"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Bonne santé habituelle, pas de maladies connues",
+        "chirurgicaux": "Aucune chirurgie",
+        "familiaux": "Pas de maladies rénales dans la famille",
+        "gynecologiques": "Contraception orale"
+      },
+      "habitudes": {
+        "tabac": "Non-fumeuse",
+        "alcool": "Occasionnel",
+        "medicaments": "Contraception orale seulement",
+        "allergies": "Aucune allergie connue"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète mais calme",
+          "Coopérative",
+          "Professionnelle dans ses réponses",
+          "Préoccupée par son travail"
+        ],
+        "signesPhysiques": [
+          "Œdèmes visibles des chevilles",
+          "Difficulté à enfiler ses chaussures",
+          "Respiration normale au repos",
+          "Légère dyspnée si fait quelques pas"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Syndrome néphrotique",
+      "pointsCles": [
+        "Syndrome néphrotique typique chez femme jeune",
+        "Œdèmes blancs, mous, symétriques, prenant le godet",
+        "Urines mousseuses = protéinurie massive",
+        "Recherche systématique épanchements séreux",
+        "Biopsie rénale indispensable chez l'adulte"
+      ],
+      "pieges": [
+        "Ne pas confondre avec insuffisance cardiaque",
+        "Rechercher systématiquement complications thrombotiques",
+        "Ne pas oublier l'examen des urines",
+        "Penser aux causes secondaires (lupus, diabète)",
+        "Éviter diurèse trop brutale (risque thrombose)"
+      ],
+      "techniquesExamen": [
+        "Signe du godet: pression maintenue 10 secondes",
+        "Palpation reins: patient en décubitus dorsal",
+        "Recherche ascite: matité déclive en décubitus latéral",
+        "Mesure TA aux deux bras",
+        "Peser le patient si possible"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Syndrome néphrotique",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Altération de la barrière de filtration glomérulaire\n• Perte massive de protéines dans les urines\n• Hypoalbuminémie → baisse pression oncotique\n• Rétention hydrosodée compensatrice\n• Hyperlipidémie réactionnelle (synthèse hépatique)"
+        },
+        {
+          "titre": "Étiologies principales",
+          "contenu": "PRIMITIVES:\n• Glomérulonéphrite à lésions minimes (enfant++)\n• Hyalinose segmentaire et focale\n• Glomérulonéphrite extramembraneuse\n• Glomérulonéphrite membranoproliférative\n\nSECONDAIRES:\n• Diabète (néphropathie diabétique)\n• Lupus érythémateux systémique\n• Amylose\n• Infections (VHB, VHC, VIH)\n• Médicaments (AINS, sels d'or)\n• Cancers (paranéoplasique)"
+        },
+        {
+          "titre": "Complications",
+          "contenu": "• Thromboses (veineuses > artérielles)\n• Infections (perte IgG, complément)\n• Insuffisance rénale aiguë fonctionnelle\n• Dyslipidémie athérogène\n• Dénutrition (perte protéique)\n• Anémie (perte transferrine, EPO)"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Restriction sodée stricte < 2g/j sodium",
+        "Diurétiques de l'anse (furosémide)",
+        "IEC/ARA2: effet antiprotéinurique",
+        "Anticoagulation préventive si albumine < 20g/L",
+        "Corticothérapie selon histologie",
+        "Immunosuppresseurs si corticorésistance",
+        "Traitement étiologique si cause secondaire"
+      ],
+      "examensComplementaires": [
+        "Bandelette urinaire: protéinurie +++ isolée typique",
+        "Protéinurie 24h: > 3g/24h (parfois > 10g/24h)",
+        "Albumine sérique: < 30g/L (souvent < 20g/L)",
+        "Cholestérol total et triglycérides: très augmentés",
+        "Créatinine et DFG: évaluer fonction rénale",
+        "Échographie rénale: reins augmentés de taille, hyperéchogènes",
+        "Biopsie rénale: diagnostic histologique indispensable"
+      ]
+    }
+  }
+}

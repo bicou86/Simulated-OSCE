@@ -1,0 +1,387 @@
+{
+  "title": "German-81 - Troubles de l'érection",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Häberli, 59 ans, consulte pour un problème personnel qu'il ne voulait pas dire à la secrétaire - patient connu depuis 20 ans",
+    "vitals": {
+      "ta": "150/95 mmHg"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation du médecin",
+          "binaryOnly": true,
+          "details": [
+            "Se présenter avec nom, fonction et tâche"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Exploration du problème principal",
+          "binaryOnly": true,
+          "details": [
+            "Plainte principale",
+            "[Ça ne fonctionne plus comme il faut en bas]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation temporelle du problème",
+          "binaryOnly": false,
+          "details": [
+            "Durée du problème [depuis longtemps, certainement 1 an]",
+            "[Maintenant ça dérange la femme et il a besoin de conseil]",
+            "Fréquence [maintenant toujours]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs [non]",
+            "Autres symptômes urogénitaux"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Fonction érectile",
+          "binaryOnly": false,
+          "details": [
+            "Érection possible [oui, mais ne tient que très brièvement]",
+            "Éjaculation possible [non, l'érection ne dure pas assez longtemps]",
+            "Libido préservée"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents cardiovasculaires",
+          "binaryOnly": false,
+          "details": [
+            "Maladies cardiaques [jusqu'à présent rien de connu - se sent bien]",
+            "Hypertension artérielle",
+            "Hypercholestérolémie [était élevée lors de la dernière consultation]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Autres antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Maladies rénales [non, rien de connu non plus]",
+            "Diabète sucré [non]",
+            "Autres maladies [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Perte de poids [non]",
+            "Sueurs nocturnes [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Traitement actuel [statine]",
+            "Autres médicaments [aucun]",
+            "Observance thérapeutique"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Bien-être psychologique et relationnel",
+          "binaryOnly": false,
+          "details": [
+            "État psychologique [bien]",
+            "Problèmes relationnels [aucun]",
+            "Stress professionnel ou personnel"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Habitudes alimentaires [aime manger, surtout la viande]",
+            "Activités sportives [tennis, promenades avec le chien]",
+            "Loisirs [Stammtisch (table des habitués)]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Substances",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [oui, 20 paquets-années]",
+            "Alcool [1 bière par jour environ]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "[Père décédé d'infarctus du myocarde]",
+            "[Mère a des rhumatismes]",
+            "[Frère a une angine de poitrine]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [marié, 4 enfants]",
+            "Profession [banquier]",
+            "Soutien social"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Hygiène et préparation",
+          "binaryOnly": false,
+          "details": [
+            "Désinfection des mains"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux et mesures anthropométriques",
+          "binaryOnly": false,
+          "details": [
+            "Mesure de la tension artérielle [150/95 mmHg]",
+            "Poids et calcul du BMI [BMI 28]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection générale",
+          "binaryOnly": false,
+          "details": [
+            "État cutané [normal]",
+            "Veines jugulaires [normales]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque [régulier, léger souffle sur la valve aortique]",
+            "Pouls [régulier]",
+            "Recherche de souffles vasculaires [pas de souffle sur l'aorte, artères rénales]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen vasculaire périphérique",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des pouls périphériques",
+            "[Pouls légèrement plus faibles aux membres inférieurs]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire [sans particularité]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Sensibilité [intacte]",
+            "Réflexes ostéo-tendineux"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Toucher rectal",
+          "binaryOnly": false,
+          "details": [
+            "Examen de la prostate",
+            "[Prostate légèrement augmentée de volume]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "details": [
+            "Dysfonction érectile"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels et étiologies",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 3 causes mentionnées",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Origine cardiovasculaire",
+                    "cause": "□ coronaropathie",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Origine psychogène",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Problème local",
+                    "cause": "Arguments POUR:\n\t□ hyperplasie bénigne de la prostate",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Carcinome prostatique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Diabète sucré",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Glycémie à jeun, HbA1c"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Identification des facteurs de risque",
+          "binaryOnly": false,
+          "details": [
+            "Maladie coronarienne",
+            "Surpoids",
+            "Sédentarité",
+            "Consommation d'alcool",
+            "Hypercholestérolémie",
+            "Tabagisme"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires - Biologie",
+          "binaryOnly": false,
+          "details": [
+            "Formule sanguine complète",
+            "Bilan lipidique (cholestérol)",
+            "Électrolytes",
+            "Glycémie"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens complémentaires - Autres",
+          "binaryOnly": false,
+          "details": [
+            "Analyse d'urine (exclure infection urinaire)",
+            "PSA si indiqué"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Bilan cardiologique",
+          "binaryOnly": false,
+          "details": [
+            "ECG",
+            "Échocardiographie",
+            "Radiographie thoracique si indiquée"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Prise en charge non médicamenteuse",
+          "binaryOnly": false,
+          "details": [
+            "Réduction pondérale",
+            "Régime pauvre en sel",
+            "Activité physique régulière",
+            "Arrêt du tabac"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Prise en charge médicamenteuse",
+          "binaryOnly": false,
+          "details": [
+            "Inhibiteurs de la phosphodiestérase 5 (Viagra®)",
+            "Après bilan cardiologique",
+            "Explication des modalités de prise",
+            "Contre-indications et précautions"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Suivi et accompagnement",
+          "binaryOnly": false,
+          "details": [
+            "Rendez-vous de contrôle dans 2 semaines",
+            "Évaluation de l'efficacité du traitement",
+            "Soutien psychologique si nécessaire",
+            "Implication du/de la partenaire si souhaité"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

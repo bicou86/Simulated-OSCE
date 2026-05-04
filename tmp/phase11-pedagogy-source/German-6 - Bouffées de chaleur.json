@@ -1,0 +1,504 @@
+{
+  "title": "German-6 - Bouffées de chaleur",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Anna Hibelig, 47 ans, consulte pour des bouffées de chaleur",
+    "vitals": {
+      "ta": "164/95 mmHg",
+      "fc": "70 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Caractéristiques temporelles des symptômes",
+          "binaryOnly": false,
+          "details": [
+            "Depuis quand [6 semaines]",
+            "Fréquence [quotidienne]",
+            "Durée des épisodes [30 minutes]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Facteurs déclenchants",
+          "binaryOnly": false,
+          "details": [
+            "Stress/excitation [non]",
+            "Alcool [non]",
+            "Aliments épicés [non interrogé]",
+            "Chaleur ambiante [non interrogé]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Modifications cutanées lors des épisodes",
+          "binaryOnly": false,
+          "details": [
+            "Coloration [tête rouge]",
+            "Reste du corps [pâle]",
+            "Extrémités [mains froides]",
+            "Prurit/démangeaisons [oui]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes végétatifs",
+          "binaryOnly": false,
+          "details": [
+            "Transpiration [forte transpiration]",
+            "Bouffées de chaleur [oui]",
+            "Frissons [non interrogé]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Faiblesse physique [aucune]",
+            "Fatigue [non interrogé]",
+            "Malaise [non interrogé]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes neuropsychiatriques",
+          "binaryOnly": false,
+          "details": [
+            "Agitation interne [forte anxiété]",
+            "Tremblements [oui]",
+            "Troubles du sommeil [non interrogé]",
+            "Irritabilité [non interrogé]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes gastro-intestinaux",
+          "binaryOnly": false,
+          "details": [
+            "Diarrhée [non]",
+            "Constipation [oui]",
+            "Nausées [oui]",
+            "Vomissements [non interrogé]",
+            "Crampes abdominales [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes respiratoires",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée [non]",
+            "Toux [non]",
+            "Wheezing [non interrogé]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes cardiovasculaires",
+          "binaryOnly": false,
+          "details": [
+            "Palpitations [oui, tachycardie]",
+            "Douleurs thoraciques [non interrogé]",
+            "Œdèmes [non interrogé]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [légères céphalées]",
+            "Vertiges [non interrogé]",
+            "Paresthésies [non interrogé]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes B",
+          "binaryOnly": false,
+          "details": [
+            "Perte de poids [5 kg en 6 mois]",
+            "Sueurs nocturnes [non]",
+            "Fièvre [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes urogénitaux",
+          "binaryOnly": false,
+          "details": [
+            "Nycturie [non]",
+            "Polyurie [non]",
+            "Troubles mictionnels [non interrogé]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes thyroïdiens",
+          "binaryOnly": false,
+          "details": [
+            "Intolérance à la chaleur [non interrogé]",
+            "Modifications oculaires [non interrogé]",
+            "Tremblements fins [non interrogé]",
+            "Goitre [non interrogé]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Statut gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Statut menstruel [saignements irréguliers mais conservés]",
+            "Âge [47 ans - périménopause probable]",
+            "Contraception [non interrogé]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Maladies cardiovasculaires [non précisé]",
+            "Maladies thyroïdiennes [non précisé]",
+            "Maladies rénales [non précisé]",
+            "Diabète [non précisé]",
+            "Cancer [non précisé]",
+            "Interventions chirurgicales [non précisé]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Médicaments actuels",
+          "binaryOnly": false,
+          "details": [
+            "[Aucun médicament]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "details": [
+            "[Acariens]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Alcool [1-2 verres de vin le week-end]",
+            "Tabac [non interrogé]",
+            "Drogues [non interrogé]",
+            "Activité physique [non interrogé]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "[Frère décédé d'un carcinome rénal]",
+            "Autres cancers familiaux [non interrogé]",
+            "Maladies cardiovasculaires [non interrogé]",
+            "Maladies endocriniennes [non interrogé]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [non précisé]",
+            "Situation familiale [non précisé]",
+            "Stress psychosocial [non évalué]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse générale ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Tension artérielle [164/95 mmHg - hypertension stade 2]",
+            "Fréquence cardiaque [70/min - normale]",
+            "Température [non mesurée]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque [normale]",
+            "Pouls périphériques [non examinés]",
+            "Signes d'insuffisance cardiaque [non recherchés]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire [normale]",
+            "Signes de détresse respiratoire [absents]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cutané",
+          "binaryOnly": false,
+          "details": [
+            "Modifications cutanées actuelles [aucune]",
+            "Télangiectasies [non recherchées]",
+            "Érythème [absent au moment de l'examen]",
+            "Flush observable [non présent durant la consultation]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Hépatomégalie [absente]",
+            "Splénomégalie [absente]",
+            "Masses abdominales [non palpées]",
+            "Douleur/défense [non évaluée]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen thyroïdien",
+          "binaryOnly": false,
+          "details": [
+            "Palpation thyroïdienne [non effectuée]",
+            "Signes d'hyperthyroïdie [non recherchés]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "État de conscience [normal]",
+            "Tremblements [non évalués à l'examen]",
+            "Réflexes [non testés]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": false,
+          "details": [
+            "[Phéochromocytome]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Ménopause/périménopause",
+            "Causes médicamenteuses",
+            "Phéochromocytome",
+            "Syndrome carcinoïde",
+            "Polyglobulie vraie",
+            "Abus d'alcool chronique",
+            "Syndrome de Cushing",
+            "Diabète sucré",
+            "Hypertension artérielle essentielle",
+            "Rosacée",
+            "Lupus érythémateux systémique",
+            "Dermatomyosite",
+            "Sténose/insuffisance mitrale",
+            "Œdème pulmonaire",
+            "État fébrile"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes endocriniennes",
+                "items": [
+                  {
+                    "text": "Phéochromocytome : triade classique",
+                    "cause": "Arguments POUR:\n\t□ céphalées, palpitations, sueurs, hypertension paroxystique → Métanéphrines urinaires/plasmatiques",
+                    "test": "→ Mesure TA répétée, MAPA, bilan HTA"
+                  },
+                  {
+                    "text": "Syndrome carcinoïde : flush, diarrhée, wheezing → Acide 5-hydroxyindolacétique urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ 5-HIAA urinaire, chromogranine A"
+                  },
+                  {
+                    "text": "Ménopause : âge compatible, troubles menstruels → FSH, LH, œstradiol",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ FSH, LH, œstradiol"
+                  }
+                ]
+              },
+              {
+                "name": "Causes métaboliques",
+                "items": [
+                  {
+                    "text": "Hyperthyroïdie : perte de poids, tachycardie, tremblements → TSH, T4 libre",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre, anticorps anti-récepteur TSH"
+                  },
+                  {
+                    "text": "Diabète : polyurie, polydipsie → Glycémie à jeun, HbA1c",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hématologiques",
+                "items": [
+                  {
+                    "text": "Polyglobulie : érythrose faciale, prurit aquagénique → NFS, érythropoïétine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Biologie sanguine",
+            "Dosages hormonaux spécifiques",
+            "Examens urinaires",
+            "Imagerie"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Examens de première intention",
+                "content": "• FSC complète avec plaquettes\n• TSH, T4 libre\n• Glycémie à jeun\n• VS, CRP\n• Ionogramme, créatinine\n• Bilan hépatique"
+              },
+              {
+                "title": "Examens spécifiques selon orientation",
+                "content": "• Métanéphrines urinaires sur 24h (phéochromocytome)\n• Acide 5-hydroxyindolacétique urinaire (syndrome carcinoïde)\n• FSH, LH, œstradiol (statut ménopausique)\n• Cortisol libre urinaire (Cushing)"
+              },
+              {
+                "title": "Examens complémentaires",
+                "content": "• ECG (recherche d'HVG, troubles du rythme)\n• Échographie abdominale\n• Si suspicion de phéochromocytome : IRM surrénalienne"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge de l'anxiété",
+          "binaryOnly": false,
+          "details": [
+            "Écoute empathique des inquiétudes",
+            "Rassurer sur l'antécédent familial de cancer rénal",
+            "Expliquer la démarche diagnostique",
+            "Proposer un suivi rapproché"
+          ],
+          "patientComment": "La patiente a une peur panique du cancer rénal suite au décès de son frère"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Surveillance tensionnelle rapprochée",
+            "Traitement antihypertenseur si nécessaire",
+            "Éviter les facteurs déclenchants",
+            "Conseils hygiéno-diététiques"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Orientation spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "Endocrinologue si suspicion endocrinienne",
+            "Gynécologue pour bilan ménopause",
+            "Hospitalisation si urgence hypertensive",
+            "Cardiologue si HTA sévère"
+          ],
+          "redflagsSection": [
+            {
+              "text": "TA > 180/110 mmHg avec signes d'atteinte d'organe"
+            },
+            {
+              "text": "Suspicion forte de phéochromocytome avec crise"
+            },
+            {
+              "text": "Altération de l'état général marquée"
+            },
+            {
+              "text": "Anxiété majeure avec risque suicidaire"
+            }
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Planification du suivi",
+          "binaryOnly": false,
+          "details": [
+            "Consultation de contrôle avec résultats",
+            "Carnet de surveillance tensionnelle",
+            "Journal des symptômes",
+            "Numéro d'urgence si aggravation"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge générale cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

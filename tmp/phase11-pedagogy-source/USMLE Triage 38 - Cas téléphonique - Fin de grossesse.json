@@ -1,0 +1,547 @@
+{
+  "title": "USMLE Triage 38 - Cas téléphonique - Fin de grossesse",
+  "context": {
+    "setting": "Consultation téléphonique - Service d'obstétrique",
+    "patient": "Clarice James, 21 ans, G1P0, enceinte de 35 semaines et 4 jours, appelle pour contractions - Suspicion travail prématuré et rupture membranes"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.4,
+      "title": "Anamnèse téléphonique obstétricale",
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et identification du problème obstétrical",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour, Madame James ? Je suis le Dr Feather.",
+            "Je suis le médecin de garde au service d'obstétrique ce soir.",
+            "Que puis-je faire pour vous ?"
+          ],
+          "patientComment": "Grossesse [très enceinte], incertitude [ne sait pas si en travail], contractions [crampes toutes les quelques minutes], orientation [médecin dit d'appeler si questions travail]"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des contractions utérines",
+          "details": [
+            "Type de douleur [crampes comme règles]",
+            "Début [nuit dernière]",
+            "Évolution [pas parties, devenues plus fréquentes]",
+            "Fréquence actuelle [toutes les 15 minutes environ]",
+            "Progression [toute la journée, de plus en plus fréquentes]"
+          ],
+          "exemplesPhrases": [
+            "Les contractions peuvent être ressenties différemment selon les personnes, mais elles sont généralement localisées dans le bas du bassin.",
+            "Comment sont les vôtres ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Contexte géographique et logistique",
+          "details": [
+            "Distance hôpital [environ demi-heure]",
+            "Première grossesse [premier bébé, ne sait pas quoi surveiller]",
+            "Appréhension [ne veut pas venir pour rien]",
+            "Trajet [ne veut pas faire tout ce trajet si inquiète pour rien]"
+          ],
+          "exemplesPhrases": [
+            "C'est compréhensible.",
+            "Ces sensations de crampes vont et viennent régulièrement ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Âge gestationnel et prématurité",
+          "details": [
+            "Date prévue accouchement [15 du mois prochain]",
+            "Calcul gestationnel [35 semaines et 4 jours]",
+            "Roue gestationnelle [utilise outil à domicile]",
+            "Précocité [un peu tôt]",
+            "Risque prématurité [bébé aura besoin soins spéciaux]"
+          ],
+          "exemplesPhrases": [
+            "À quel stade de votre grossesse êtes-vous ? C'est-à-dire, connaissez-vous votre date prévue d'accouchement ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Pertes vaginales et rupture membranes",
+          "details": [
+            "Pertes abondantes [beaucoup de pertes]",
+            "Changement caractère [pas truc blanc habituel]",
+            "Consistance liquide [un peu comme de l'eau]",
+            "Confusion initiale [pensé faire pipi sur moi]",
+            "Impact pratique [changé plusieurs fois sous-vêtements]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des pertes vaginales récemment ? Diriez-vous que c'est une perte de type aqueux comme l'eau du robinet ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Explication rupture prématurée membranes",
+          "details": [
+            "Mécanisme [poche amniotique peut se rompre trop tôt]",
+            "Présentation [perte des eaux comme fuite soudaine]",
+            "Fissure [petite fissure peut faire fuir petit à petit]",
+            "Risques [déclencher travail prématuré]",
+            "Infection [permettre bactéries pénétrer et infecter]"
+          ],
+          "exemplesPhrases": [
+            "Parfois, la poche amniotique autour du bébé peut se rompre, ou avoir une fissure, trop tôt."
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Saignements et mouvements fœtaux",
+          "details": [
+            "Saignements vaginaux [non, pas du tout]",
+            "Mouvements fœtaux [oui, c'est un garçon]",
+            "Activité récente [bougeait il y a peu de temps]",
+            "Vitalité fœtale [signes vie fœtale positifs]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des saignements vaginaux pendant cette grossesse ? Avez-vous pu sentir le bébé bouger ces dernières heures ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Suivi obstétrical et compliance",
+          "details": [
+            "Rendez-vous réguliers [oui, sauf dernier manqué]",
+            "Raison absence [en déplacement pour dernier]",
+            "Vaccinations [oui, tout fait]",
+            "Tests [oui, tout fait]",
+            "Résultats [médecin dit tout va bien]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des rendez-vous médicaux réguliers pendant cette grossesse ? Et y a-t-il eu des problèmes avec les tests dont votre médecin vous a parlé ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Sevrage tabagique pendant grossesse",
+          "details": [
+            "Arrêt tabac [arrêté de fumer pendant grossesse]",
+            "Timing [il y a environ un mois]",
+            "Efforts [avait essayé pendant toute grossesse]",
+            "Réussite [finalement réussi]",
+            "Félicitations médecin [c'est formidable]"
+          ],
+          "exemplesPhrases": [
+            "Eh bien, c'est formidable.",
+            "Félicitations.",
+            "Il y a combien de temps que vous avez arrêté ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Substances et mode de vie",
+          "details": [
+            "Alcool [non, pas bu depuis longtemps]",
+            "Planification grossesse [mari et moi essayions concevoir]",
+            "Précaution [ne savions pas quand concevoir]",
+            "Fièvre [je ne pense pas, pas pris température]",
+            "État général [ne me sens pas fiévreuse]"
+          ],
+          "exemplesPhrases": [
+            "Sur un sujet connexe, avez-vous consommé de l'alcool pendant cette grossesse ? Avez-vous eu de la fièvre récemment ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Contexte familial et soutien social",
+          "details": [
+            "Derniers rapports [il y a quelques mois]",
+            "Mari militaire [dans l'armée, déployé en mai]",
+            "Absence prolongée [ne reviendra pas avant an ou plus]",
+            "Solitude [ici sans lui]",
+            "Difficulté [père appelé au service avant voir naître bébé]"
+          ],
+          "exemplesPhrases": [
+            "Quand avez-vous eu des rapports sexuels pour la dernière fois ? Oh, je suis désolé d'entendre cela."
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Réseau de soutien disponible",
+          "details": [
+            "Mère [devait venir dans 2 semaines]",
+            "Distance [vit dans Montana, pas là maintenant]",
+            "Amie [meilleure amie peut aider]",
+            "Solution transitoire [jusqu'à ce que maman arrive]",
+            "Transport [amie là maintenant, peut conduire]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous quelqu'un pour vous aider après la naissance du bébé ? Votre amie peut-elle vous conduire à l'hôpital ce soir ?"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments et allergies",
+          "details": [
+            "Allergies [non, rien]",
+            "Médicaments [juste vitamines prénatales]",
+            "Aucun autre traitement [c'est tout]"
+          ],
+          "exemplesPhrases": [
+            "En attendant, êtes-vous allergique à des médicaments ? Prenez-vous des médicaments ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0,
+      "title": "Examen physique",
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Limitation consultation téléphonique",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "C'est difficile à dire sans vous examiner madame.",
+            "Quand vous arriverez, je pourrai faire un bon examen."
+          ],
+          "patientComment": "Pas d'examen physique possible [consultation téléphonique]"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.35,
+      "title": "Évaluation et orientation obstétricale",
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Nécessité d'évaluation hospitalière",
+          "details": [
+            "Limitation téléphone [difficile savoir sans examiner]",
+            "Tests spéciaux [moyens observer activité utérus]",
+            "Évaluation travail [tests peuvent dire si en travail]",
+            "Recommandation [venir bientôt pour être examinée]",
+            "Accord patiente [je vais préparer affaires et venir]"
+          ],
+          "exemplesPhrases": [
+            "La meilleure façon de le savoir est de venir, et nous vous examinerons ici.",
+            "Nous avons des tests spéciaux et des moyens d'observer l'activité que votre utérus pourrait avoir."
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel et évaluations nécessaires",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Complications membranes amniotiques",
+                "items": [
+                  {
+                    "text": "Rupture prématurée des membranes (PROM)",
+                    "cause": "Arguments POUR :\n\t□ Pertes liquides comme eau\n\t□ Changement caractère pertes\n\t□ Confusion avec miction\n\t□ Âge gestationnel 35+4 semaines\n\t□ Contractions associées",
+                    "test": "→ Examen spéculum stérile, test nitrazine, cristallisation"
+                  },
+                  {
+                    "text": "Rupture prolongée des membranes",
+                    "cause": "Arguments POUR :\n\t□ Pertes liquides continues\n\t□ Changements sous-vêtements répétés\n\t□ Fuite progressive possible\n\t□ Risque infectieux",
+                    "test": "→ Évaluation temps rupture, surveillance infection"
+                  }
+                ]
+              },
+              {
+                "name": "Activité utérine",
+                "items": [
+                  {
+                    "text": "Travail prématuré",
+                    "cause": "Arguments POUR :\n\t□ Contractions régulières 15 min\n\t□ Âge gestationnel 35+4 semaines\n\t□ Progression fréquence\n\t□ Possible PROM déclenchante\n\t□ Antécédent tabagisme",
+                    "test": "→ Monitoring utérin, examen col, échographie"
+                  },
+                  {
+                    "text": "Contractions Braxton-Hicks (faux travail)",
+                    "cause": "Arguments POUR :\n\t□ Primigeste (difficile différencier)\n\t□ Contractions irrégulières initialement\nArguments CONTRE :\n\t□ Progression régularité\n\t□ Pertes liquides associées",
+                    "test": "→ Monitoring utérin, évaluation col"
+                  }
+                ]
+              },
+              {
+                "name": "Infections génitales",
+                "items": [
+                  {
+                    "text": "Infection cervicale ou vaginale",
+                    "cause": "Arguments POUR :\n\t□ Pertes vaginales abondantes\n\t□ Changement caractère pertes\nArguments CONTRE :\n\t□ Pas de fièvre\n\t□ Pertes aqueuses pas purulentes",
+                    "test": "→ Prélèvements vaginaux, recherche infections"
+                  }
+                ]
+              }
+            ]
+          },
+          "exemplesPhrases": [
+            "Parfois, la poche amniotique autour du bébé peut se rompre, ou avoir une fissure, trop tôt.",
+            "Cela peut être un problème car ce liquide peut déclencher un travail prématuré."
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Plan d'évaluation hospitalière",
+          "details": [
+            "Échographie [essayer voir combien liquide autour bébé]",
+            "Monitoring utérin [placer sur moniteur pour période]",
+            "Détection contractions [essayer détecter contractions]",
+            "Évaluation complète [bon examen quand arrivera]",
+            "Préparation équipe [nous assurer être prêts]"
+          ],
+          "exemplesPhrases": [
+            "Quand vous arriverez, je pourrai faire un bon examen et aussi utiliser un appareil d'échographie pour essayer de voir combien de liquide se trouve autour du bébé."
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Risques spécifiques prématurité",
+          "details": [
+            "Bébé prématuré [possibilité avoir bébé prématuré]",
+            "Soins spéciaux [nouveau-né aura besoin soins spéciaux]",
+            "Lieu accouchement [meilleures chances survie ici hôpital]",
+            "Stade précoce [à ce stade précoce]",
+            "Urgence évaluation [bonne raison venir si doute]"
+          ],
+          "exemplesPhrases": [
+            "C'est un peu tôt.",
+            "La possibilité d'avoir un bébé prématuré est une autre bonne raison de venir si vous avez un doute."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Support social et ressources",
+          "details": [
+            "Travailleurs sociaux [hôpital dispose travailleurs sociaux]",
+            "Aide situations [peuvent aider dans telles situations]",
+            "Ressources communautaires [organiser ressources communautaires]",
+            "Faciliter période [faciliter cette période]",
+            "Discussion ultérieure [discuter davantage quand arriverez]"
+          ],
+          "exemplesPhrases": [
+            "Notre hôpital dispose également de travailleurs sociaux qui peuvent parfois aider dans de telles situations."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Transport sécurisé et recommandations",
+          "details": [
+            "Transport ami [amie peut conduire]",
+            "Conduite prudente [demander amie conduire prudemment]",
+            "Évaluation urgente [recommande vivement venir maintenant]",
+            "Préparation [préparer quelques affaires]",
+            "Accord final [oui, je viens maintenant]"
+          ],
+          "exemplesPhrases": [
+            "S'il vous plaît, demandez à votre amie de conduire prudemment.",
+            "Je vous recommande vivement de venir à l'hôpital maintenant pour que nous puissions vous évaluer."
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0.25,
+      "title": "Communication et orientation",
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Empathie et compréhension anxiété primigeste",
+          "content": "C'est compréhensible. Je ne veux pas venir pour de simples crampes et que vous me disiez que je m'inquiète pour rien. Mais c'est mon premier bébé, donc je ne sais pas non plus quoi surveiller. Il est parfois difficile de savoir si vous êtes en travail ou non.",
+          "exemplesPhrases": [
+            "C'est compréhensible.",
+            "Il est parfois difficile de savoir si vous êtes en travail ou non."
+          ]
+        },
+        {
+          "id": "c2",
+          "text": "Limitation consultation téléphonique et orientation",
+          "content": "Pensez-vous que je suis en travail ? C'est difficile à dire sans vous examiner madame. J'aimerais pouvoir vous le dire par téléphone, mais je ne peux pas. En écoutant la situation, je vous recommande vivement de venir à l'hôpital maintenant pour que nous puissions vous évaluer.",
+          "exemplesPhrases": [
+            "J'aimerais pouvoir vous le dire par téléphone, mais je ne peux pas."
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Clarice James",
+      "nom": "Clarice James",
+      "age": "21 ans",
+      "contexte": "Primigeste (G1P0) à 35+4 semaines avec suspicion travail prématuré et rupture membranes",
+      "motifConsultation": {
+        "plaintePrincipale": "Contractions et pertes liquides",
+        "incertitude": "Ne sait pas si en travail",
+        "orientation": "Médecin dit d'appeler si questions"
+      },
+      "grossesseActuelle": {
+        "gestite": "G1P0 (première grossesse)",
+        "ageGestationnel": "35 semaines et 4 jours",
+        "datePrevu": "15 du mois prochain",
+        "sexeBebe": "Garçon",
+        "suivi": "Régulier sauf dernier RV manqué (déplacement)"
+      },
+      "symptomesActuels": {
+        "contractions": [
+          "Début : nuit dernière",
+          "Évolution : de temps en temps puis plus fréquentes",
+          "Fréquence actuelle : toutes les 15 minutes",
+          "Sensation : comme crampes de règles",
+          "Progression : toute la journée"
+        ],
+        "pertesVaginales": [
+          "Changement récent : pas truc blanc habituel",
+          "Consistance : liquide comme eau",
+          "Abondance : changé plusieurs fois sous-vêtements",
+          "Confusion : pensé faire pipi sur moi",
+          "Persistance : continue malgré efforts"
+        ],
+        "autresSymptomes": [
+          "Mouvements fœtaux : oui, récents",
+          "Saignements : non, pas du tout",
+          "Fièvre : non, pas pris température",
+          "État général : ne se sent pas fiévreuse"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "grossesse": [
+          "Première grossesse",
+          "Suivi régulier bon",
+          "Tests et vaccinations : tout fait",
+          "Résultats : médecin dit tout va bien"
+        ],
+        "habitudesVie": [
+          "Tabac : arrêté il y a 1 mois (essayait toute grossesse)",
+          "Alcool : non, arrêté depuis essai conception",
+          "Médicaments : vitamines prénatales seulement",
+          "Allergies : aucune"
+        ]
+      },
+      "contexteSocial": {
+        "mariMilitaire": [
+          "Dans armée, déployé en mai",
+          "Absent : ne reviendra pas avant an",
+          "Derniers rapports : il y a quelques mois",
+          "Solitude : ici sans lui"
+        ],
+        "supportDisponible": [
+          "Mère : devait venir dans 2 semaines (Montana)",
+          "Amie : là maintenant, peut conduire",
+          "Solution : amie aide jusqu'arrivée mère",
+          "Transport : amie sait situation"
+        ]
+      },
+      "preoccupationsLogistiques": {
+        "distance": [
+          "Hôpital : environ demi-heure",
+          "Appréhension : ne veut pas venir pour rien",
+          "Trajet : ne veut pas faire si inquiète pour rien",
+          "Première grossesse : ne sait pas quoi surveiller"
+        ]
+      },
+      "simulation": {
+        "tonAnxiete": [
+          "Inquiète mais raisonnable",
+          "Première grossesse = incertitude",
+          "Ne veut pas déranger pour rien",
+          "Écoute conseils médicaux"
+        ],
+        "cooperationMedicale": [
+          "Répond à toutes questions",
+          "Accepte recommandation hospitalisation",
+          "Prête à venir immédiatement",
+          "Fait confiance médecin"
+        ],
+        "reponsesTitypiques": [
+          "Sur contractions : 'Comme crampes de règles'",
+          "Sur pertes : 'Un peu comme de l'eau'",
+          "Sur distance : 'Je vis à demi-heure'",
+          "Sur premier bébé : 'Je ne sais pas quoi surveiller'",
+          "Sur mari : 'Il est dans l'armée, déployé'",
+          "Sur venue : 'Je vais préparer affaires et venir'"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Urgence obstétricale par téléphone",
+      "pointsCles": [
+        "Primigeste 35+4 semaines avec contractions régulières",
+        "Suspicion forte rupture prématurée membranes (PROM)",
+        "Risque travail prématuré avec complications néonatales",
+        "Contexte social difficile (mari militaire absent)",
+        "Orientation hospitalière urgente justifiée"
+      ],
+      "factrisques": [
+        "Prématurité (35+4 semaines)",
+        "Rupture membranes (infection, travail)",
+        "Primigeste (inexpérience)",
+        "Antécédent tabagisme récent",
+        "Isolement social relatif"
+      ],
+      "urgencesObstetricales": [
+        "Rupture prématurée membranes",
+        "Travail prématuré",
+        "Chorioamniotite",
+        "Détresse fœtale",
+        "Accouchement prématuré"
+      ],
+      "objectifsApprentissage": [
+        "Triage téléphonique obstétrical",
+        "Reconnaissance PROM et travail prématuré",
+        "Communication empathique primigeste",
+        "Gestion contexte social difficile",
+        "Orientation appropriée urgente"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie et Pratique - Urgence obstétricale téléphonique",
+      "sections": [
+        {
+          "titre": "Triage téléphonique obstétrical",
+          "contenu": "Évaluation contractions, pertes vaginales, mouvements fœtaux. Seuil abaissé orientation si prématurité ou rupture membranes suspectée."
+        },
+        {
+          "titre": "Rupture prématurée membranes (PROM)",
+          "contenu": "Pertes aqueuses + contractions = PROM probable. Risques : infection, travail prématuré. Confirmation par examen spéculum, tests nitrazine/cristallisation."
+        },
+        {
+          "titre": "Travail prématuré et prématurité",
+          "contenu": "35+4 semaines = prématurité modérée. Soins néonataux spécialisés nécessaires. Facteurs risque : tabac, PROM, primigeste."
+        }
+      ],
+      "examensComplementaires": [
+        "Examen spéculum stérile (confirmation PROM)",
+        "Test nitrazine et cristallisation liquide",
+        "Index liquide amniotique (échographie)",
+        "Monitoring fœtal et utérin (20 min)",
+        "Examen col utérin (progression travail)"
+      ],
+      "rappelsTherapeutiques": [
+        "Orientation hospitalière urgente si PROM",
+        "Monitoring continu si travail prématuré",
+        "Corticothérapie anténatale si possible",
+        "Antibioprophylaxie si PROM",
+        "Support psychosocial contexte difficile"
+      ]
+    },
+    "notePatient": {
+      "titre": "Note du patient - Consultation téléphonique",
+      "anamnese": "Femme de 21 ans G1P0 à 35 4/7 semaines de grossesse rapportée avec contractions régulières rapportées et possible rupture des membranes. Contractions rapportées toutes les 15 min. Nie les saignements vaginaux. Rapporte des mouvements fœtaux positifs. Antécédents de tabagisme pendant la grossesse mais nie la consommation d'alcool. Antécédents obstétricaux rapportés comme visites régulières sans anomalie antérieure bien qu'elle ait manqué son dernier rendez-vous. Pas de fièvre rapportée ou de maladie récente. La patiente a déclaré qu'une amie fiable la transporterait, ce qui représente environ ½ heure de trajet jusqu'à l'hôpital. Le père du bébé (mari) indisponible pour le soutien en raison d'obligations militaires.",
+      "medicaments": "Vitamines prénatales",
+      "examenPhysique": "Pas d'examen physique",
+      "diagnosticDifferentiel": [
+        "Rupture prématurée des membranes",
+        "Rupture prolongée des membranes",
+        "Travail prématuré",
+        "Contractions de Braxton-Hicks (faux travail)",
+        "Infection cervicale ou vaginale"
+      ],
+      "bilanDiagnostique": [
+        "Examen au spéculum stérile (évaluer présence liquide amniotique, test cristallisation, test nitrazine)",
+        "Index du liquide amniotique (échographie)",
+        "Examen du col utérin",
+        "Test de réactivité fœtale (enregistrement activité utérine et rythme cardiaque fœtal 20 min)",
+        "Prélèvements vaginaux si suspicion infection"
+      ]
+    }
+  }
+}

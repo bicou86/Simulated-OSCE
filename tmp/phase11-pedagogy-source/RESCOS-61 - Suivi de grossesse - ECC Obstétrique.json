@@ -1,0 +1,569 @@
+{
+  "title": "RESCOS-61 - Suivi de grossesse - ECC Obstétrique",
+  "context": {
+    "setting": "Service de gynécologie-obstétrique",
+    "patient": "Patiente enceinte consultant pour suivi de grossesse ou symptomatologie obstétricale",
+    "vitals": {
+      "ta": "120/80 mmHg",
+      "fc": "80 bpm",
+      "temperature": "37.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation et caractérisation selon le terme",
+          "details": [
+            "1er trimestre [douleurs, saignements, pertes vaginales, nausées, troubles urinaires]",
+            "2ème trimestre [mouvements fœtaux 18-20 SA, contractions, douleurs abdominales, signes pré-éclampsie]",
+            "3ème trimestre [idem 2ème + risque accru pré-éclampsie, travail, thromboembolie]",
+            "Post-partum [infections, saignements, douleurs, troubles périnéaux, dépression, allaitement]"
+          ],
+          "scoringRule": "Au moins trois éléments selon terme = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des symptômes principaux",
+          "details": [
+            "Douleurs [localisation, irradiation, qualité, facteurs déclenchants/aggravants]",
+            "Saignements [quantité, spontané/provoqué, contexte]",
+            "Pertes vaginales [aspect, couleur, odeur, démangeaisons, brûlures]",
+            "Contractions utérines [fréquence, durée, intensité, évolution]",
+            "Symptômes associés [fièvre, frissons, fatigue]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de signes d'alarme obstétricaux",
+          "details": [
+            "Symptômes pré-éclampsie [céphalées, troubles visuels, barre épigastrique, œdèmes, prise poids rapide]",
+            "Signes de cholestase gravidique [prurit, lésions de grattage]",
+            "Signes thromboemboliques [dyspnée, douleurs thoraciques, douleurs membres inférieurs]",
+            "Symptômes infectieux [fièvre, frissons, pertes malodorantes]",
+            "Diminution mouvements fœtaux [perception maternelle, inquiétudes]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents gynéco-obstétricaux",
+          "details": [
+            "Gestité et parité [nombre grossesses, fausses couches, IVG]",
+            "Accouchements antérieurs [terme, voie, complications, poids naissance]",
+            "Antécédents gynécologiques [IST, pathologies, dernier contrôle/cytologie]",
+            "Rapports sexuels [partenaires, protection, IST]",
+            "Contraception antérieure"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux et chirurgicaux",
+          "details": [
+            "Pathologies chroniques [HTA, diabète, thromboembolie, anémie, obésité]",
+            "Interventions chirurgicales [année, indication, voie d'abord]",
+            "Hospitalisations antérieures",
+            "Allergies [substances, type de réaction]",
+            "Traitements actuels"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies héréditaires [consanguinité, pathologies génétiques]",
+            "Thromboembolies veineuses [âge d'apparition, contexte familial]",
+            "Pathologies cardiovasculaires [diabète, HTA, AVC]",
+            "Cancers [sein, utérus, col, digestifs - degré parenté, âge diagnostic]",
+            "Complications obstétricales familiales"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse socioprofessionnelle et habitudes",
+          "details": [
+            "Activité professionnelle [exposition, pénibilité, arrêt]",
+            "Situation familiale [partenaire, enfants à charge, soutien]",
+            "Habitudes de vie [tabac, alcool, drogues, activité physique]",
+            "Conditions de logement [salubrité, sécurité]",
+            "Violences [actuelles, antérieures, dépistage systématique]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Suivi de grossesse actuelle",
+          "details": [
+            "Terme de grossesse [DDR, échographie de datation, correction si ≥5j]",
+            "Échographies et dépistages [datation, morphologie, croissance, DPNI]",
+            "Sérologies [HIV, syphilis, hépatites, toxoplasmose, CMV, rubéole]",
+            "Vaccinations [grippe, coqueluche]",
+            "Examens complémentaires [HGPO, streptocoque B, formule sanguine]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche obstétricale systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux et état général",
+          "details": [
+            "Tension artérielle [recherche HTA gravidique]",
+            "Pouls et température",
+            "Fréquence respiratoire et saturation si nécessaire",
+            "Poids actuel et prise de poids [courbe pondérale]",
+            "État général [pâleur, ictère, œdèmes]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen physique général orienté",
+          "details": [
+            "Auscultation cardio-pulmonaire [au 1er contrôle puis selon plainte]",
+            "Examen des seins [début grossesse si FDR, post-partum systématique]",
+            "Membres inférieurs [œdèmes, varices, signes thromboemboliques]",
+            "Réflexes ostéotendineux [recherche hyperréflexie si pré-éclampsie]",
+            "Ganglions [aires accessibles, adénopathies]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal obstétrical",
+          "details": [
+            "Inspection abdomen [cicatrices, vergetures, pigmentation]",
+            "Hauteur utérine [mesure symphyse-fond utérin, courbe]",
+            "Manœuvres de Leopold [3ème trimestre - présentation, dos fœtal]",
+            "Palpation contractions utérines [fréquence, intensité, durée]",
+            "Auscultation bruits du cœur fœtal [Doppler dès 12 SA]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal général",
+          "details": [
+            "Auscultation abdominale [bruits hydroaériques]",
+            "Palpation abdominale [défense, détente, organomégalies]",
+            "Points douloureux [Murphy, McBurney selon contexte]",
+            "Percussion des loges rénales [douleurs lombaires]",
+            "Recherche d'ascite si contexte pathologique"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen gynécologique",
+          "details": [
+            "Examen au spéculum [1er contrôle, puis si saignements/pertes/liquide]",
+            "Inspection vulvaire [lésions, malformations, mutilations si risque]",
+            "Toucher vaginal [si contractions <34 SA, après spéculum, CI si placenta prævia]",
+            "Évaluation col utérin [longueur, dilatation, consistance]",
+            "Prélèvements selon indications [infections, fibronectine, rupture membranes]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation vitalité fœtale",
+          "details": [
+            "Auscultation Doppler [dès 12 SA, rythme cardiaque fœtal]",
+            "Cardiotocogramme [dès 24 SA si indications spécifiques]",
+            "Mouvements fœtaux perçus [interrogatoire maternel]",
+            "Échographie fœtale [selon indications cliniques]",
+            "Biométries fœtales [courbes de croissance, percentiles]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Recherche de complications spécifiques selon le terme",
+          "details": [
+            "Pré-éclampsie [TA, réflexes, œdèmes, protéinurie]",
+            "Menace accouchement prématuré [contractions, modification cervicale]",
+            "Rupture prématurée membranes [liquide, tests spécifiques]",
+            "Retard croissance [hauteur utérine, biométries]",
+            "Présentation siège [manœuvres Leopold, confirmation échographique]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - examen obstétrical spécialisé",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évaluation du terme et de la situation obstétricale",
+          "details": [
+            "Calcul précis du terme [DDR, échographie datation, cohérence]",
+            "Classification selon trimestre [pathologies spécifiques à chaque période]",
+            "Évaluation vitalité fœtale [mouvements, rythme cardiaque]",
+            "Appréciation urgence [signes d'alarme, hospitalisation nécessaire]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel selon la symptomatologie",
+          "ddSection": {
+            "title": "Diagnostics différentiels selon le terme de grossesse",
+            "categories": [
+              {
+                "name": "1er trimestre",
+                "items": [
+                  {
+                    "text": "Fausse couche menacée/en cours",
+                    "cause": "Arguments POUR:\n\t□ Saignements vaginaux\n\t□ Douleurs pelviennes\n\t□ Col fermé/ouvert\n\t□ Activité cardiaque fœtale",
+                    "test": "→ β-hCG, échographie pelvienne, examen au spéculum"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "Arguments POUR:\n\t□ Douleurs latéralisées\n\t□ Saignements minimes\n\t□ β-hCG non évolutive\n\t□ Masse annexielle",
+                    "test": "→ β-hCG sériées, échographie endovaginale"
+                  }
+                ]
+              },
+              {
+                "name": "2ème/3ème trimestre",
+                "items": [
+                  {
+                    "text": "Pré-éclampsie",
+                    "cause": "Arguments POUR:\n\t□ HTA ≥140/90 mmHg\n\t□ Protéinurie\n\t□ Céphalées, troubles visuels\n\t□ Œdèmes, prise poids rapide",
+                    "test": "→ Protéinurie, bilan pré-éclampsie complet"
+                  },
+                  {
+                    "text": "Menace accouchement prématuré",
+                    "cause": "Arguments POUR:\n\t□ Contractions régulières <37 SA\n\t□ Modifications cervicales\n\t□ Facteurs de risque\n\t□ Rupture membranes",
+                    "test": "→ Toucher vaginal, fibronectine, échographie cervicale"
+                  }
+                ]
+              },
+              {
+                "name": "Post-partum",
+                "items": [
+                  {
+                    "text": "Endométrite puerpérale",
+                    "cause": "Arguments POUR:\n\t□ Fièvre >38.5°C\n\t□ Douleurs utérines\n\t□ Lochies malodorantes\n\t□ Facteurs de risque",
+                    "test": "→ Examen clinique, prélèvements, hémocultures"
+                  },
+                  {
+                    "text": "Hémorragie du post-partum",
+                    "cause": "Arguments POUR:\n\t□ Saignements abondants\n\t□ Instabilité hémodynamique\n\t□ Anémie aiguë\n\t□ Contexte à risque",
+                    "test": "→ NFS, coagulation, échographie pelvienne"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics selon terme = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires spécialisés",
+          "details": [
+            "Bandelette urinaire [infection, protéinurie, glucose, cétones]",
+            "Prélèvements vaginaux [infections, fibronectine, rupture membranes]",
+            "Échographies [fœtale, croissance, Doppler selon indications]",
+            "Cardiotocogramme [surveillance fœtale, contractions]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Bilan biologique selon les indications",
+          "details": [
+            "Bilan infectieux [NFS, CRP, hémocultures si fièvre]",
+            "Bilan pré-éclampsie [fonction rénale, hépatique, coagulation, protéinurie]",
+            "Bilan anémie [Hb, ferritine, B12, folates]",
+            "Groupe sanguin [2 déterminations, recherche agglutinines irrégulières]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique immédiate",
+          "details": [
+            "Mesures générales [repos, position, hydratation]",
+            "Traitement symptomatique [antalgiques, antiémétiques adaptés grossesse]",
+            "Tocolyse si menace accouchement prématuré [β2-mimétiques, antagonistes Ca2+]",
+            "Corticothérapie [maturation pulmonaire fœtale 24-34 SA]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Surveillance maternelle et fœtale",
+          "details": [
+            "Monitoring maternel [TA, protéinurie, symptômes pré-éclampsie]",
+            "Surveillance fœtale [RCF, mouvements, croissance]",
+            "Surveillance biologique [selon pathologie, évolutivité]",
+            "Critères d'hospitalisation [urgence, surveillance rapprochée]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Prévention et conseils",
+          "details": [
+            "Conseils hygiéno-diététiques [alimentation, activité physique, repos]",
+            "Prévention infections [hygiène, vaccinations, dépistages]",
+            "Éducation signes d'alarme [quand consulter en urgence]",
+            "Soutien psychologique [adaptation grossesse, anxiété]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Planification du suivi et orientation",
+          "details": [
+            "Programmation consultations [rythme selon terme et pathologie]",
+            "Orientation spécialisée [médecine fœtale, anesthésie, pédiatrie]",
+            "Préparation accouchement [projet naissance, analgésie, voie d'accouchement]",
+            "Coordination équipe [sage-femme, obstétricien, autres spécialistes]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge obstétricale globale",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Patiente enceinte",
+      "age": "Variable selon le cas",
+      "contexte": "Patiente enceinte consultant pour suivi de grossesse ou symptomatologie spécifique selon le terme",
+      "motifConsultation": {
+        "plaintePrincipale": "Variable selon le scénario clinique et le terme de grossesse",
+        "autreChose": "Adapter selon la pathologie obstétricale simulée"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Adapter selon le terme de grossesse et la pathologie",
+          "1er trimestre : nausées, saignements, douleurs pelviennes",
+          "2ème trimestre : mouvements fœtaux, contractions, signes pré-éclampsie",
+          "3ème trimestre : contractions, douleurs, préparation accouchement",
+          "Post-partum : douleurs, saignements, troubles allaitement"
+        ],
+        "symptomesAssocies": [
+          "Adapter selon la pathologie simulée",
+          "Signes généraux : fièvre, fatigue, œdèmes",
+          "Symptômes pré-éclampsie : céphalées, troubles visuels",
+          "Signes infectieux : pertes, brûlures, fièvre",
+          "Troubles fœtaux : diminution mouvements"
+        ],
+        "circonstances": [
+          "Mode d'apparition des symptômes",
+          "Facteurs déclenchants ou aggravants",
+          "Évolution depuis le début",
+          "Retentissement sur activités quotidiennes"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Adapter selon le scénario pédagogique",
+        "Pathologies chroniques pertinentes",
+        "Antécédents gynéco-obstétricaux",
+        "Interventions chirurgicales antérieures"
+      ],
+      "antecedentsFamiliaux": [
+        "Pathologies héréditaires pertinentes",
+        "Complications obstétricales familiales",
+        "Maladies thromboemboliques",
+        "Diabète, HTA, pathologies cardiovasculaires"
+      ],
+      "habitudes": {
+        "tabac": "Adapter selon objectifs pédagogiques",
+        "alcool": "Consommation avant/pendant grossesse",
+        "activite": "Niveau d'activité physique habituel",
+        "profession": "Expositions professionnelles éventuelles"
+      },
+      "traitements": {
+        "actuels": [
+          "Compléments vitaminiques (acide folique, fer)",
+          "Traitements chroniques adaptés à la grossesse",
+          "Autres selon pathologie simulée"
+        ],
+        "observance": "Bonne ou adapter selon objectifs"
+      },
+      "grossesseActuelle": {
+        "terme": "Selon le scénario pédagogique",
+        "suivi": "Régulier avec gynécologue/sage-femme",
+        "examens": "Échographies et dépistages selon terme",
+        "complications": "Selon pathologie simulée"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Adapter selon pathologie et terme",
+          "Expressions d'inquiétude appropriées",
+          "Questions pertinentes de la patiente",
+          "Comportement selon gravité simulée"
+        ],
+        "durantExamen": [
+          "Signes physiques cohérents avec pathologie",
+          "Collaboration à l'examen",
+          "Réactions appropriées aux manœuvres",
+          "Manifestations selon terme de grossesse"
+        ],
+        "questionsAPoser": [
+          "Est-ce que mon bébé va bien ?",
+          "Est-ce normal à mon terme ?",
+          "Dois-je m'inquiéter pour l'accouchement ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Synthèse adaptée selon le cas clinique simulé, incluant terme, pathologie, facteurs de risque et éléments pertinents pour l'évaluation.",
+      "pointsCles": [
+        "Anamnèse obstétricale complète selon le terme",
+        "Caractérisation appropriée des symptômes",
+        "Recherche systématique signes d'alarme",
+        "Antécédents gynéco-obstétricaux détaillés",
+        "Examen obstétrical spécialisé (hauteur utérine, Leopold)",
+        "Évaluation vitalité fœtale selon terme",
+        "Diagnostic différentiel selon trimestre",
+        "Examens complémentaires adaptés aux indications",
+        "Prise en charge thérapeutique appropriée",
+        "Surveillance maternelle et fœtale"
+      ],
+      "pieges": [
+        "Anamnèse incomplète selon le terme de grossesse",
+        "Ne pas rechercher les signes de pré-éclampsie",
+        "Omettre l'évaluation de la vitalité fœtale",
+        "Mauvaise technique des manœuvres de Leopold",
+        "Ne pas caractériser les contractions utérines",
+        "Oublier l'examen au spéculum si indications",
+        "Ne pas calculer précisément le terme",
+        "Sous-estimer l'urgence obstétricale",
+        "Examens complémentaires inappropriés au terme",
+        "Ne pas informer sur les signes d'alarme"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en obstétrique",
+      "sections": [
+        {
+          "titre": "Physiologie de la grossesse",
+          "contenu": "Adaptations maternelles et développement fœtal selon les trimestres.",
+          "points": [
+            "Modifications cardiovasculaires : ↑VolSang, ↓RP, ↑DC",
+            "Adaptations respiratoires : ↑ ventilation minute, ↓CRF",
+            "Changements rénaux : ↑ DFG, glycosurie physiologique",
+            "Modifications hématologiques : anémie dilutionnelle",
+            "Adaptations endocriniennes : hCG, progestérone, œstrogènes",
+            "Développement fœtal : organogenèse, croissance, maturation",
+            "Modifications utérines : hypertrophie, vascularisation"
+          ]
+        },
+        {
+          "titre": "Pathologies du 1er trimestre",
+          "contenu": "Principales complications précoces de la grossesse.",
+          "points": [
+            "Fausses couches : 15-20% grossesses, causes multiples",
+            "Grossesse extra-utérine : 1-2%, urgence chirurgicale",
+            "Hyperémèse gravidique : nausées/vomissements sévères",
+            "Môle hydatiforme : prolifération trophoblastique anormale",
+            "Infections TORCH : toxoplasmose, rubéole, CMV, herpès",
+            "Anémie précoce : besoins augmentés en fer/folates",
+            "Exposition médicamenteuse : tératogénicité période critique"
+          ]
+        },
+        {
+          "titre": "Complications du 2ème et 3ème trimestre",
+          "contenu": "Pathologies spécifiques de la grossesse avancée.",
+          "points": [
+            "Pré-éclampsie : HTA + protéinurie, 3-5% grossesses",
+            "Retard croissance intra-utérin : <10e percentile",
+            "Placenta prævia : insertion basse, saignements",
+            "Hématome rétroplacentaire : urgence obstétricale",
+            "Menace accouchement prématuré : <37 SA",
+            "Rupture prématurée membranes : risque infectieux",
+            "Cholestase gravidique : prurit, risque fœtal"
+          ]
+        },
+        {
+          "titre": "Surveillance fœtale",
+          "contenu": "Méthodes d'évaluation du bien-être fœtal.",
+          "points": [
+            "Mouvements fœtaux : perception 18-20 SA, surveillance",
+            "Rythme cardiaque fœtal : Doppler dès 12 SA",
+            "Cardiotocographie : RCF + contractions, dès 24 SA",
+            "Échographie : biométries, Doppler, liquide amniotique",
+            "Score de Manning : profil biophysique fœtal",
+            "Doppler utérin : dépistage pré-éclampsie, RCIU",
+            "pH au scalp : surveillance per-partum si besoin"
+          ]
+        },
+        {
+          "titre": "Examens de dépistage et diagnostic prénatal",
+          "contenu": "Stratégies de dépistage des anomalies fœtales.",
+          "points": [
+            "Dépistage 1er trimestre : clarté nucale + marqueurs sériques",
+            "DPNI : ADN fœtal circulant, trisomies 13-18-21",
+            "Échographie morphologique : 20-22 SA, malformations",
+            "Amniocentèse : 15-18 SA, caryotype fœtal",
+            "Choriocentèse : 10-13 SA, diagnostic génétique précoce",
+            "Dépistage diabète : HGPO 24-28 SA",
+            "Dépistage streptocoque B : 35-37 SA"
+          ]
+        },
+        {
+          "titre": "Techniques d'examen obstétrical",
+          "contenu": "Méthodes spécialisées d'évaluation maternelle et fœtale.",
+          "points": [
+            "Hauteur utérine : symphyse-fond, courbe croissance",
+            "Manœuvres Leopold : présentation, position, engagement",
+            "Toucher vaginal : col, bassin, présentation",
+            "Examen au spéculum : col, prélèvements, saignements",
+            "Cardiotocographie : interprétation RCF et contractions",
+            "Échographie : voies abdominale et endovaginale",
+            "Tests de rupture membranes : pH, fern test, amnisure"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Supplémentation acide folique : 400µg/j avant conception et 1er trimestre",
+        "Supplémentation fer : 30-60mg/j si anémie ou carence",
+        "Tocolyse : β2-mimétiques, inhibiteurs calciques, atosiban",
+        "Corticothérapie : bétaméthasone 12mg IM x2 24-34 SA",
+        "Antibioprophylaxie : ampicilline si streptocoque B+",
+        "Traitement HTA : méthyldopa, labétalol, nifédipine",
+        "Antiémétiques : doxylamine, métoclopramide, ondansétron"
+      ],
+      "examensComplementaires": [
+        "Échographie obstétricale : croissance, morphologie, Doppler",
+        "Cardiotocographie : surveillance RCF et activité utérine",
+        "Bandelette urinaire : protéines, leucocytes, nitrites, glucose",
+        "Bilan pré-éclampsie : créatinine, urates, transaminases, plaquettes",
+        "NFS : hémoglobine, plaquettes, surveillance anémie",
+        "Prélèvements vaginaux : infections, fibronectine, streptocoque B",
+        "HGPO : dépistage diabète gestationnel 24-28 SA"
+      ]
+    }
+  }
+}

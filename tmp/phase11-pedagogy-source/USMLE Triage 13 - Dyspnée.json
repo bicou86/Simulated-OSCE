@@ -1,0 +1,688 @@
+{
+  "title": "USMLE Triage 13 - Dyspnée",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Albert Baxter, homme de 65 ans, se présente au service des urgences avec une dyspnée croissante.",
+    "vitals": {
+      "ta": "146/92 mmHg",
+      "fc": "70 bpm",
+      "fr": "20/min",
+      "temperature": "37.2°C",
+      "sao2": "96% en air ambiant"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Monsieur Baxter, je suis le Dr Stromly.",
+            "Je comprends que vous avez eu des difficultés respiratoires récemment. Pourriez-vous m'en dire plus ?",
+            "Je peux imaginer que c'est le cas."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Chronologie et évolution de la dyspnée",
+          "details": [
+            "Début [augmente depuis la semaine dernière]",
+            "Aggravation récente [pire ces derniers jours]",
+            "Caractère nocturne prépondérant [pire la nuit]",
+            "Fatigue diurne associée [épuisé après réveil]",
+            "Limitation fonctionnelle [difficile de fonctionner]",
+            "Première occurrence [jamais eu ça avant]"
+          ],
+          "exemplesPhrases": [
+            "Depuis combien de temps ressentez-vous cela ?",
+            "Cela vous est-il déjà arrivé auparavant ou est-ce la première fois ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Dyspnée d'effort et orthopnée",
+          "details": [
+            "Dyspnée effort [arrêt nécessaire à la poste]",
+            "Effort minime suffisant [porter boîte lourde]",
+            "Dyspnée décubitus [principalement allongé]",
+            "Orthopnée retardée [pas immédiatement, prend un moment]",
+            "Position sommeil [3 oreillers pour RGO]",
+            "Réveil nocturne si glisse [dyspnée si roule hors oreillers]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu du mal à respirer quand vous faites un petit effort pendant la journée aussi, ou est-ce principalement quand vous vous allongez ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Douleur thoracique associée",
+          "details": [
+            "Présence récente [oui ces derniers jours]",
+            "Type [pression plus que douleur]",
+            "Localisation [paroi thoracique gauche]",
+            "Caractère inspiratoire [lourd surtout à l'inspiration]",
+            "Relation effort [seulement quand bouge beaucoup]",
+            "Différence RGO [pas comme brûlures habituelles]",
+            "Intensité [3-4/10]",
+            "Durée [depuis 2 jours]",
+            "Irradiation [non, reste localisée]",
+            "Amélioration repos [pas là au repos]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des douleurs thoraciques avec cela ?",
+            "Depuis combien de temps diriez-vous que cela dure ?",
+            "Cette sensation irradie-t-elle vers vos bras ou vers votre cou ?",
+            "Est-ce que quelque chose l'améliore ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes respiratoires associés",
+          "details": [
+            "Sifflements [oui, parfois se lève avec ça]",
+            "Timing sifflements [la nuit, si roule hors oreillers]",
+            "Début récent [depuis semaine dernière]",
+            "Toux nocturne [oui, avec tout ça]",
+            "Type toux [sèche]",
+            "Absence fièvre [non, pas pris température]",
+            "Absence expectoration [toux sèche]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'autres symptômes, comme des sifflements quand vous respirez ?",
+            "Avez-vous eu d'autres symptômes en plus de ceux dont nous avons déjà parlé ?",
+            "Avez-vous eu de la fièvre, ou crachez-vous quelque chose avec cette toux ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Signes de rétention hydrique",
+          "details": [
+            "Œdème mains [gonflées depuis un moment]",
+            "Œdème jambes [aussi gonflées]",
+            "Minimisation initiale [pas fait grand cas]",
+            "Absence cyanose [jamais viré au bleu]",
+            "Prise poids [quelques kilos au fil des ans]",
+            "Évolution récente [plus dans derniers mois]",
+            "Inquiétude œdèmes [préoccupe maintenant]",
+            "Absence douleur jambes [non, pas de douleur]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'autres problèmes comme le gonflement de vos mains et pieds ou le fait de devenir bleu ?",
+            "Qu'en est-il d'une augmentation de votre tour de taille ou d'une prise de poids ?",
+            "Avez-vous des douleurs dans vos jambes ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux et respiratoires",
+          "details": [
+            "BPCO diagnostiquée [médecin dit due au tabac]",
+            "Tabagisme [30 ans, 1.5-2 paquets/jour]",
+            "Sevrage [arrêté il y a 2 ans]",
+            "Albutérol [utilisation au besoin seulement]",
+            "Usage récent [hier et avant-hier]",
+            "Inefficacité actuelle [pas d'amélioration]",
+            "Expiration possible [renouvellement ancien]",
+            "Évitement nocturne [empêche de dormir]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu des problèmes respiratoires auparavant ?",
+            "Pour revenir à l'époque où vous fumiez et ce que votre médecin vous a dit quand vous avez arrêté, avez-vous déjà dû prendre un médicament pour des problèmes respiratoires ?",
+            "L'avez-vous pris récemment ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments et comorbidités",
+          "details": [
+            "Aténolol [tension artérielle]",
+            "Lisinopril [tension artérielle]",
+            "Lovastatine [cholestérol]",
+            "Albutérol [problèmes pulmonaires]",
+            "Oméprazole [brûlures estomac/reflux]",
+            "Insuline [diabète]",
+            "Aspirine [quotidienne]",
+            "Schéma insuline [Ordinaire 15u matin, 20u soir]",
+            "Insuline glargine [30u soir, changé il y a 2 mois]",
+            "Glycémies élevées [170-180 typiquement]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous pris autre chose en plus de ce médicament inhalé ? D'autres médicaments du tout ?",
+            "Laissez-moi vous demander quel est votre schéma pour prendre cette insuline ?",
+            "Quels sont quelques exemples de vos lectures typiques de glycémie ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Complications diabétiques et autres problèmes",
+          "details": [
+            "Pas hospitalisation diabète [jamais été à l'hôpital]",
+            "Surveillance rénale [tests urine réguliers]",
+            "Pas problème rénal [pas de problème jusqu'à présent]",
+            "HTA [hypertension artérielle]",
+            "Hypercholestérolémie [cholestérol élevé]",
+            "Diabète [insulinodépendant]",
+            "RGO [reflux gastro-œsophagien]",
+            "BPCO [bronchopneumopathie]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des problèmes dus au diabète ? Comme être admis à l'hôpital ou votre médecin a-t-il déjà mentionné des problèmes oculaires ou rénaux ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents chirurgicaux et allergies",
+          "details": [
+            "Hernies inguinales [bilatérales]",
+            "Récidive hernie [côté droit refait]",
+            "Appendicectomie [appendice enlevé]",
+            "Chirurgies anciennes [il y a des années]",
+            "Allergie sulfamides [éruption cutanée]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu une chirurgie ?",
+            "Êtes-vous allergique à quelque chose ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et antécédents familiaux",
+          "details": [
+            "Alcool [ne boit plus]",
+            "Tante [mélanome]",
+            "Père [décédé cancer poumon à 71 ans]",
+            "Mère [décédée cancer sein à 62 ans]",
+            "Frères [diabète tous les deux]",
+            "Frère [crise cardiaque à 62 ans, survécu]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il de la consommation d'alcool ?",
+            "Y a-t-il des problèmes de santé majeurs dans votre famille ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux",
+            "Expliquer l'examen au patient",
+            "Débuter par examen du cou"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si vous le voulez bien.",
+            "Laissez-moi juste me laver les mains.",
+            "J'aimerais d'abord commencer par examiner votre cou..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du cou et système veineux",
+          "details": [
+            "Chaînes ganglionnaires [pas d'adénopathie]",
+            "Auscultation carotidienne [pas de souffle]",
+            "Distension veineuse jugulaire [DVJ modérée]",
+            "Reflux hépato-jugulaire [positif]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire complet",
+          "details": [
+            "Auscultation 4 foyers [rythme régulier]",
+            "B1/B2 [normaux]",
+            "B3 [présent]",
+            "Absence frottement [confirmée]",
+            "Absence souffle [confirmée]",
+            "Pouls périphériques [normaux et symétriques]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation des œdèmes",
+          "details": [
+            "Œdème membres inférieurs [prenant godet 2+]",
+            "Œdème mains [prenant godet 1+]",
+            "Région lombaire [pas d'œdème]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire détaillé",
+          "details": [
+            "Auscultation 6 zones postérieures [bons bruits]",
+            "Râles bases bilatérales [1/3 distance champs postérieurs]",
+            "Absence ronchus [confirmée]",
+            "Absence sifflements [confirmée]",
+            "Égophonie [négative]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal",
+          "details": [
+            "Percussion foie [taille normale]",
+            "Absence hépato-splénomégalie [confirmée]",
+            "Recherche ascite [onde liquidienne négative]",
+            "Auscultation [bruits intestinaux normaux]",
+            "Palpation [sans sensibilité ni masses]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de dyspnée aiguë sur chronique",
+            "categories": [
+              {
+                "name": "Causes cardiaques (très probable)",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque congestive (ICC)",
+                    "cause": "Arguments POUR:\n\t□ Dyspnée paroxystique nocturne (DPN)\n\t□ Orthopnée avec 3 oreillers\n\t□ Dyspnée d'effort progressive\n\t□ Œdème périphérique (mains 1+, MI 2+)\n\t□ DVJ modérée + reflux hépato-jugulaire\n\t□ B3 à l'auscultation (galop)\n\t□ Râles bilatéraux aux bases\n\t□ Facteurs de risque : HTA, diabète, âge\n\t□ Pression thoracique à l'effort",
+                    "test": "→ Radiographie thoracique, ECG, BNP/NT-proBNP, échocardiographie"
+                  },
+                  {
+                    "text": "Syndrome coronarien aigu (SCA)",
+                    "cause": "Arguments POUR:\n\t□ Douleur/pression thoracique gauche\n\t□ Aggravation à l'effort\n\t□ Diabète (présentation atypique)\n\t□ Facteurs de risque CV multiples\n\t□ HTA non contrôlée (146/92)\nArguments CONTRE:\n\t□ Douleur faible intensité (3-4/10)\n\t□ Pas d'irradiation\n\t□ Amélioration au repos",
+                    "test": "→ ECG urgent, troponines sériées, radiographie thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes respiratoires",
+                "items": [
+                  {
+                    "text": "Exacerbation aiguë de BPCO",
+                    "cause": "Arguments POUR:\n\t□ BPCO connue\n\t□ Tabagisme lourd (30 ans)\n\t□ Toux sèche associée\n\t□ Sifflements nocturnes\n\t□ Albutérol inefficace\nArguments CONTRE:\n\t□ Absence fièvre\n\t□ Pas d'expectoration\n\t□ Râles plutôt que sibilants\n\t□ Signes congestifs prédominants",
+                    "test": "→ Gazométrie artérielle, radiographie thoracique, spirométrie différée"
+                  },
+                  {
+                    "text": "Pneumonie communautaire",
+                    "cause": "Arguments POUR:\n\t□ Râles localisés bases\n\t□ Toux récente\n\t□ Dyspnée aiguë\nArguments CONTRE:\n\t□ Apyrexie (37.2°C)\n\t□ Toux non productive\n\t□ Signes congestifs associés\n\t□ Évolution progressive",
+                    "test": "→ Radiographie thoracique, NFS, CRP, hémocultures si fièvre"
+                  }
+                ]
+              },
+              {
+                "name": "Causes vasculaires",
+                "items": [
+                  {
+                    "text": "Embolie pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Dyspnée aiguë\n\t□ Douleur thoracique pleuritique\n\t□ Œdème MI (TVP possible)\nArguments CONTRE:\n\t□ Saturation normale (96%)\n\t□ Œdème bilatéral symétrique\n\t□ Signes ICC prédominants\n\t□ Évolution progressive",
+                    "test": "→ D-dimères, angio-CT thoracique si probabilité élevée"
+                  }
+                ]
+              },
+              {
+                "name": "Causes métaboliques",
+                "items": [
+                  {
+                    "text": "Acidocétose diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète mal contrôlé (170-180)\n\t□ Polypnée compensatrice\nArguments CONTRE:\n\t□ Pas de syndrome polyuro-polydipsique\n\t□ État général conservé\n\t□ Signes congestifs prédominants",
+                    "test": "→ Glycémie, gazométrie, corps cétoniques"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques urgents",
+          "details": [
+            "ECG 12 dérivations (immédiat)",
+            "Radiographie thoracique (cardiomégalie, œdème)",
+            "Troponines sériées (0h, 3h, 6h)",
+            "BNP ou NT-proBNP (diagnostic ICC)",
+            "NFS, ionogramme, créatinine",
+            "Glycémie capillaire",
+            "Gazométrie artérielle si détresse"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge thérapeutique initiale",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de l'insuffisance cardiaque aiguë",
+                "content": "• Position demi-assise\n• Oxygénothérapie si SpO2 < 94%\n• Furosémide 40-80mg IV\n• Nitroglycérine sublinguale si PA > 110 systolique\n• Surveillance étroite : PA, FC, SpO2, diurèse\n• Restriction hydrosodée"
+              },
+              {
+                "title": "Gestion du syndrome coronarien",
+                "content": "• Aspirine 300mg à croquer (si pas pris)\n• Nitroglycérine sublinguale 0.4mg × 3\n• Morphine 2-4mg IV si douleur persistante\n• Bêtabloquant si pas de contre-indication\n• Statine haute dose\n• Anticoagulation selon protocole"
+              },
+              {
+                "title": "Optimisation du traitement de fond",
+                "content": "• Ajustement IEC/ARA2 (lisinopril)\n• Introduction/majoration bêtabloquant (aténolol)\n• Spironolactone si ICC confirmée\n• Optimisation diabète (insuline)\n• Éducation thérapeutique\n• Vaccination grippe/pneumocoque"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Communication diagnostique initiale",
+          "details": [
+            "Explication ICC probable et mécanismes",
+            "Discussion SCA possible chez diabétique",
+            "Importance des examens urgents",
+            "Nécessité probable d'hospitalisation",
+            "Rassurer sur prise en charge"
+          ],
+          "exemplesPhrases": [
+            "Monsieur Baxter, après avoir discuté avec vous et effectué votre examen physique, il y a plusieurs possibilités qui pourraient être à l'œuvre causant vos symptômes.",
+            "Une possibilité est que vous ayez une maladie appelée insuffisance cardiaque congestive, qui est l'incapacité de votre cœur à pomper correctement le sang vers le corps.",
+            "C'est grave dans la mesure où lorsque le cœur ralentit et arrête de pomper efficacement le sang hors des poumons et dans le corps, du liquide peut s'accumuler dans ces endroits.",
+            "Une autre possibilité est que vous ayez effectivement eu une petite crise cardiaque.",
+            "Chez les personnes diabétiques, les chances de ressentir réellement une crise cardiaque de la manière typique diminuent."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Plan d'investigation approfondie",
+          "details": [
+            "Échocardiographie transthoracique (fonction VG)",
+            "Coronarographie si troponines positives",
+            "Holter ECG si arythmie suspectée",
+            "Test d'effort après stabilisation",
+            "Bilan rénal et électrolytique complet"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Admission en cardiologie/médecine",
+            "Monitoring cardiaque continu",
+            "Bilan entrées/sorties stricts",
+            "Pesée quotidienne",
+            "Oxymétrie continue",
+            "Réévaluation clinique fréquente"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Red flags et complications",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant une escalade thérapeutique",
+            "items": [
+              {
+                "text": "Œdème aigu du poumon",
+                "description": "Orthopnée sévère, râles diffus, désaturation → VNI/intubation"
+              },
+              {
+                "text": "Choc cardiogénique",
+                "description": "Hypotension, oligurie, marbrures → inotropes, assistance circulatoire"
+              },
+              {
+                "text": "Arythmie ventriculaire",
+                "description": "TV/FV sur monitoring → cardioversion/défibrillation"
+              },
+              {
+                "text": "SCA ST+",
+                "description": "Sus-décalage ST → coronarographie urgente"
+              },
+              {
+                "text": "Insuffisance rénale aiguë",
+                "description": "Créatinine en hausse → adaptation thérapeutique"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan immédiat",
+          "content": "Monsieur Baxter, après avoir discuté avec vous et effectué votre examen physique, il y a plusieurs possibilités qui pourraient être à l'œuvre causant vos symptômes. Une possibilité est que vous ayez une maladie appelée insuffisance cardiaque congestive, qui est l'incapacité de votre cœur à pomper correctement le sang vers le corps. Cela arrive chez de nombreuses personnes pour diverses raisons allant de l'hypertension artérielle à la maladie artérielle du cœur à même une crise cardiaque. C'est grave dans la mesure où lorsque le cœur ralentit et arrête de pomper efficacement le sang hors des poumons et dans le corps, du liquide peut s'accumuler dans ces endroits, causant des symptômes comme des problèmes respiratoires ou un gonflement des jambes inférieures. C'est peut-être ce qui vous arrive. Pour évaluer cela, j'aurai besoin d'obtenir une radiographie de votre poitrine et des analyses de sang. Une autre possibilité est que vous ayez effectivement eu une petite crise cardiaque. En fait, cela pourrait conduire à l'insuffisance cardiaque que je viens de décrire. Chez les personnes diabétiques, les chances de ressentir réellement une crise cardiaque de la manière typique diminuent à cause des problèmes que la maladie cause avec les nerfs. Ainsi, vous pourriez même ne pas l'avoir su. Pour cette possibilité, j'aimerais obtenir un ECG, ou une image électrique de votre cœur, et d'autres analyses de sang. Il y a aussi d'autres possibilités, que je peux également évaluer avec les analyses de sang et les tests que je vais obtenir. Permettez-moi de sortir et d'organiser ces tests afin que nous puissions mieux déterminer ce qui pourrait se passer.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Est-ce que je vais mourir, docteur ? J'ai vraiment du mal à respirer et j'ai peur.]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends votre inquiétude, Monsieur Baxter, et c'est normal d'avoir peur quand on a du mal à respirer. Nous allons faire tout notre possible pour vous aider. Les symptômes que vous avez peuvent être traités efficacement. Nous allons commencer le traitement immédiatement pendant que nous faisons les examens pour confirmer le diagnostic. Vous êtes au bon endroit et nous allons prendre soin de vous."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Homme de 65 ans avec dyspnée progressive sur fond de multiples FDR cardiovasculaires",
+        "Présentation classique d'ICC : DPN, orthopnée, œdèmes, B3, râles",
+        "Diabétique avec présentation atypique possible de SCA",
+        "BPCO sous-jacente compliquant le tableau",
+        "HTA non contrôlée malgré bithérapie",
+        "Examen physique révélateur : DVJ, RHJ+, B3, œdèmes",
+        "Urgence médicale nécessitant prise en charge rapide"
+      ],
+      "pieges": [
+        "Minimiser la gravité chez un diabétique (neuropathie)",
+        "Ne pas reconnaître les signes d'ICC droite et gauche",
+        "Oublier le SCA malgré présentation atypique",
+        "Attribuer tous les symptômes à la BPCO",
+        "Ne pas quantifier la limitation fonctionnelle",
+        "Omettre l'ECG urgent devant douleur thoracique",
+        "Sous-estimer le risque de décompensation rapide",
+        "Ne pas adapter le traitement de fond"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Albert Baxter",
+      "age": "65 ans",
+      "contexte": "Retraité avec multiples comorbidités, se présente aux urgences pour dyspnée progressive",
+      "motifConsultation": {
+        "plaintePrincipale": "Difficultés respiratoires croissantes",
+        "autreChose": "Sensation de manquer d'air, halètement"
+      },
+      "histoireActuelle": {
+        "dyspnee": [
+          "Augmente depuis une semaine",
+          "Pire ces derniers jours",
+          "Sensation de ne pas avoir assez d'air",
+          "Halètement inconfortable",
+          "Pire la nuit que le jour",
+          "Fatigue extrême dans la journée",
+          "Difficile de fonctionner hors du fauteuil"
+        ],
+        "orthopnee": [
+          "Dyspnée en position allongée",
+          "Pas immédiatement mais après un moment",
+          "Dort avec 3 oreillers (pour RGO aussi)",
+          "Se réveille si glisse des oreillers",
+          "Avec sifflements quand se réveille"
+        ],
+        "dyspneeEffort": [
+          "Essoufflement à l'effort minime",
+          "Arrêt nécessaire à la poste avec boîte",
+          "Jamais eu besoin de s'arrêter avant",
+          "Limitation fonctionnelle nouvelle"
+        ],
+        "douleurThoracique": [
+          "Pression plus que douleur",
+          "Localisation thorax gauche",
+          "Sensation de lourdeur",
+          "Surtout à l'inspiration",
+          "Présente à l'effort seulement",
+          "Depuis 2 jours (vendredi)",
+          "Intensité 3-4/10",
+          "Pas d'irradiation",
+          "Soulagée par le repos"
+        ]
+      },
+      "symptomesAssocies": {
+        "respiratoires": [
+          "Sifflements nocturnes nouveaux",
+          "Toux sèche associée",
+          "Pas de fièvre",
+          "Pas d'expectoration",
+          "Impression d'avoir un rhume"
+        ],
+        "systemiques": [
+          "Œdème des mains",
+          "Œdème des jambes",
+          "Prise de poids récente",
+          "Plus dans les derniers mois",
+          "Jamais de cyanose",
+          "Pas de troubles cognitifs",
+          "Pas de vertiges"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "cardiovasculaires": [
+          "Hypertension artérielle",
+          "Traitement aténolol + lisinopril"
+        ],
+        "metaboliques": [
+          "Diabète insulinodépendant",
+          "Glycémies 170-180 habituellement",
+          "Insuline ordinaire 15u matin, 20u soir",
+          "Glargine 30u soir (changé il y a 2 mois)",
+          "Hypercholestérolémie sous lovastatine"
+        ],
+        "respiratoires": [
+          "BPCO diagnostiquée",
+          "Ex-fumeur (arrêt il y a 2 ans)",
+          "30 ans à 1.5-2 paquets/jour",
+          "Albutérol au besoin"
+        ],
+        "digestifs": [
+          "RGO chronique",
+          "Traitement oméprazole"
+        ]
+      },
+      "traitements": {
+        "actuels": [
+          "Aténolol (HTA)",
+          "Lisinopril (HTA)",
+          "Lovastatine (cholestérol)",
+          "Albutérol inhalé (au besoin)",
+          "Oméprazole (RGO)",
+          "Insuline (voir schéma)",
+          "Aspirine quotidienne"
+        ],
+        "observance": [
+          "Bonne observance générale",
+          "Albutérol périmé possible",
+          "Évite la nuit (insomnie)"
+        ]
+      },
+      "chirurgies": {
+        "hernies": [
+          "Réparations bilatérales",
+          "Récidive côté droit refaite",
+          "Il y a des années"
+        ],
+        "autres": [
+          "Appendicectomie ancienne"
+        ]
+      },
+      "allergies": {
+        "medicamenteuses": [
+          "Sulfamides → éruption cutanée"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "Arrêt il y a 2 ans",
+          "60 paquets-années au total",
+          "Félicitations méritées pour arrêt"
+        ],
+        "alcool": [
+          "Ne boit plus"
+        ]
+      },
+      "histoireFamiliale": {
+        "cancers": [
+          "Tante : mélanome",
+          "Père : cancer poumon à 71 ans",
+          "Mère : cancer sein à 62 ans"
+        ],
+        "cardiovasculaire": [
+          "Frère : IDM à 62 ans (survécu)"
+        ],
+        "metabolique": [
+          "Deux frères diabétiques"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Anxieux mais coopératif",
+          "Essoufflé au repos",
+          "Phrases courtes",
+          "Position assise préférée",
+          "Minimise parfois symptômes"
+        ],
+        "durantEntretien": [
+          "Dyspnée visible",
+          "Respiration laborieuse",
+          "Pauses pour reprendre souffle",
+          "Gestes montrant localisation douleur",
+          "Inquiétude croissante"
+        ],
+        "durantExamen": [
+          "Coopératif malgré dyspnée",
+          "Difficultés position allongée",
+          "Préfère rester assis",
+          "Toux occasionnelle à l'auscultation"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Insuffisance cardiaque aiguë",
+      "sections": [
+        {
+          "titre": "Critères diagnostiques ICC (Framingham)",
+          "contenu": "Critères majeurs : DPN/orthopnée, DVJ, râles pulmonaires, cardiomégalie, OAP, B3, RHJ+, perte poids >4.5kg. Critères mineurs : œdèmes MI, toux nocturne, dyspnée effort, hépatomégalie, épanchement pleural, FC >120. Diagnostic : 2 majeurs ou 1 majeur + 2 mineurs."
+        },
+        {
+          "titre": "Classification NYHA de la dyspnée",
+          "contenu": "Classe I : Pas de limitation. Classe II : Limitation légère, dyspnée efforts importants. Classe III : Limitation marquée, dyspnée efforts modérés. Classe IV : Dyspnée au repos. Patient probablement NYHA III évoluant vers IV."
+        },
+        {
+          "titre": "Présentation atypique du SCA chez le diabétique",
+          "contenu": "Neuropathie autonome → douleur atypique/absente. Équivalents angineux : dyspnée, fatigue, malaise. Mortalité plus élevée. ECG systématique devant toute décompensation. Seuil bas pour troponines. Angioplastie si SCA confirmé."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "ICC aiguë : Position assise, O2 si besoin, diurétiques IV, vasodilatateurs si PA permet",
+        "SCA : MONA (Morphine, O2, Nitrés, Aspirine) + anticoagulation + reperfusion",
+        "Optimisation post-aiguë : IEC/ARA2, BB, ARM, éducation thérapeutique",
+        "Surveillance : Poids quotidien, restriction sodée, compliance médicamenteuse",
+        "Prévention : Contrôle FDR CV, vaccination, réhabilitation cardiaque"
+      ],
+      "examensComplementaires": [
+        "ECG 12D : Recherche ischémie, HVG, arythmie, QRS larges",
+        "Radiographie thoracique : Index cardio-thoracique, redistribution vasculaire, lignes B",
+        "BNP/NT-proBNP : >100/300 pg/mL suggère ICC, valeur pronostique",
+        "Troponines : Élévation dans 30% ICC aiguë, pronostic défavorable",
+        "Échocardiographie : FEVG, dysfonction diastolique, valvulopathies, HTAP",
+        "Coronarographie : Si SCA ou ICC ischémique suspectée"
+      ]
+    }
+  }
+}

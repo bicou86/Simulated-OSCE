@@ -1,0 +1,907 @@
+{
+  "title": "USMLE-13 - Douleurs abdominales - Femme 48 ans",
+  "context": {
+    "setting": "Clinique médicale",
+    "patient": "Sharon Smith, 48 ans, consulte en raison de douleurs abdominales",
+    "vitals": {
+      "ta": "135/70 mmHg",
+      "temperature": "36.9°C",
+      "fr": "16/min",
+      "fc": "76 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Douleur abdominale"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a deux semaines]",
+            "Constant/intermittent [Eh bien, je n'ai pas tout le temps mal. Ça va et ça vient]",
+            "Fréquence [Au moins une fois par jour]",
+            "Progression [Ça devient pire]",
+            "Intensité [Quand j'ai mal, c'est 7/10, et ça peut redescendre à 0]",
+            "Localisation [C'est ici (montre l'épigastre)]",
+            "Irradiation [Non]",
+            "Qualité [Brûlure]",
+            "Facteurs atténuants [La nourriture, les antiacides, et le lait]",
+            "Facteurs aggravants [Les repas lourds et la faim]",
+            "Types de nourriture qui aggravent la douleur [Les repas lourds et gras, comme la pizza]",
+            "Relation entre la nourriture et la douleur [Eh bien, en général, la douleur diminue ou disparaît complètement quand je mange, mais elle revient après 2-3 heures]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes digestifs associés",
+          "binaryOnly": false,
+          "details": [
+            "Épisodes similaires dans le passé [Non]",
+            "Nausées/vomissements [Parfois je me sens nauséeuse quand j'ai mal. Hier, j'ai vomi pour la première fois]",
+            "Description du vomi [C'était un liquide jaune acide]",
+            "Sang dans le vomi [Non]",
+            "Diarrhée/constipation [Non]",
+            "Changements de poids [Non]",
+            "Changements d'appétit [Non]",
+            "Changement de la couleur des selles [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Antiacide, ibuprofène (2 comprimés 2 à 3 fois par jour si demandé)"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai eu une infection urinaire il y a un an, traitée avec de l'amoxicilline, et de l'arthrose dans les deux genoux, pour laquelle je prends de l'ibuprofène"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "2 césariennes"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est décédé à 55 ans d'un cancer du pancréas. Ma mère est en vie et en bonne santé"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Femme au foyer]",
+            "Consommation d'alcool [Non]",
+            "Usage de drogues illicites [Non]",
+            "Tabagisme [Non]",
+            "Activité sexuelle [Avec mon mari (rires)]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Aspect général",
+          "binaryOnly": true,
+          "patientComment": "La patiente ne semble pas en détresse aiguë"
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normaux, pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Thorax indolore]",
+            "Auscultation [Bruits respiratoires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Détendu, cicatrice de césarienne]",
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Palpation superficielle [Souple et indolore]",
+            "Palpation profonde [Douleur épigastrique sans détente]",
+            "Signe de Murphy [Positif]",
+            "Recherche d'organomégalie [Pas d'hépato-splénomégalie]",
+            "Percussion [Normale]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes gastro-intestinales",
+                "items": [
+                  {
+                    "text": "Maladie ulcéreuse peptique",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique brûlante\n\t□ Soulagée par la nourriture, antiacides et lait\n\t□ Aggravée par la faim\n\t□ Réapparaît 2-3 heures après les repas\n\t□ Utilisation d'AINS (ibuprofène pour arthrose)\n\t□ Vomissement liquide jaune acide\nFacteurs de risque:\n\t□ Femme de 48 ans\n\t□ Prise chronique d'AINS",
+                    "test": "→ Gastroscopie avec biopsies, Test H. pylori"
+                  },
+                  {
+                    "text": "Cholécystite/Lithiase biliaire",
+                    "cause": "Arguments POUR:\n\t□ Femme de 48 ans (4F)\n\t□ Douleur aggravée par les repas lourds et gras\n\t□ Nausées et vomissements\n\t□ Signe de Murphy positif à l'examen\n\t□ Douleur épigastrique\nArguments CONTRE:\n\t□ Douleur soulagée par la nourriture\n\t□ Pas d'irradiation scapulaire droite\n\t□ Caractère intermittent",
+                    "test": "→ US abdominal, bilan hépatique complet"
+                  },
+                  {
+                    "text": "Gastrite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Utilisation régulière d'AINS\n\t□ Douleur épigastrique\n\t□ Nausées et vomissements\n\t□ Amélioration initiale avec antiacides\nArguments CONTRE:\n\t□ Durée prolongée (2 semaines)\n\t□ Caractère rythmé par les repas",
+                    "test": "→ Gastroscopie"
+                  }
+                ]
+              },
+              {
+                "name": "Causes pancréatiques",
+                "items": [
+                  {
+                    "text": "Pancréatite chronique débutante",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Aggravée par repas gras\n\t□ Nausées\nArguments CONTRE:\n\t□ Pas de consommation d'alcool\n\t□ Pas d'irradiation dorsale\n\t□ Amélioration avec antiacides",
+                    "test": "→ Lipase, amylase, CT abdominal"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques à exclure",
+                "items": [
+                  {
+                    "text": "Cancer du pancréas",
+                    "cause": "Arguments POUR:\n\t□ Antécédent familial fort (père décédé à 55 ans)\n\t□ Douleur épigastrique\nArguments CONTRE:\n\t□ Âge relativement jeune (48 ans)\n\t□ Pas de perte de poids\n\t□ Pas d'ictère\n\t□ Douleur intermittente\n\t□ Amélioration avec nourriture",
+                    "test": "→ CA 19-9, CT abdominal avec protocole pancréatique"
+                  },
+                  {
+                    "text": "Cancer gastrique",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique persistante\n\t□ Nausées et vomissements\nArguments CONTRE:\n\t□ Pas de perte de poids\n\t□ Pas de satiété précoce\n\t□ Évolution courte (2 semaines)",
+                    "test": "→ Gastroscopie avec biopsies multiples"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "NFS (recherche anémie, saignement occulte)",
+            "Test H. pylori (antigène dans les selles ou test respiratoire)",
+            "Bilan hépatique complet (ASAT, ALAT, bilirubine, phosphatases alcalines, GGT)",
+            "Lipase, amylase",
+            "Test FIT (recherche de sang occulte dans les selles)",
+            "Ionogramme, urée, créatinine"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires selon évolution",
+          "binaryOnly": false,
+          "details": [
+            "Gastroscopie avec biopsies (dans les 2-4 semaines)",
+            "US abdominal (lithiase biliaire, pancréas)",
+            "Examen rectal avec recherche de sang occulte",
+            "CT abdominal si suspicion de pathologie pancréatique",
+            "CA 19-9 si forte suspicion néoplasique",
+            "ECG (facteurs de risque cardiovasculaire)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique",
+                "content": "• IPP : oméprazole 40mg/jour à jeun\n• Antiacides : hydroxyde d'aluminium/magnésium PRN\n• Arrêt immédiat de l'ibuprofène\n• Alternative antalgique : paracétamol 1g x3-4/jour\n• Antiémétiques si nausées : métoclopramide 10mg x3/jour"
+              },
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Repas fractionnés (5-6 petits repas/jour)\n• Éviter aliments irritants (épicés, acides, gras)\n• Éviter jeûne prolongé\n• Limiter café, thé, boissons gazeuses\n• Position semi-assise après repas\n• Éviter repas 3h avant coucher"
+              },
+              {
+                "title": "Si H. pylori positif",
+                "content": "• Trithérapie 14 jours :\n- IPP double dose (oméprazole 40mg x2/j)\n- Amoxicilline 1g x2/j\n- Clarithromycine 500mg x2/j\n• Alternative si allergie pénicilline :\n- IPP + métronidazole + clarithromycine\n• Contrôle éradication obligatoire à 4-6 semaines"
+              },
+              {
+                "title": "Surveillance et suivi",
+                "content": "• Réévaluation clinique dans 2 semaines\n• Gastroscopie si persistance malgré traitement\n• Surveillance effet secondaire IPP long terme\n• Éducation sur alternatives aux AINS\n• Dépistage cancer pancréas si indiqué (antécédent familial)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Signes nécessitant une réévaluation urgente",
+            "items": [
+              {
+                "text": "Hématémèse ou méléna",
+                "description": "→ Hémorragie digestive haute, hospitalisation urgente"
+              },
+              {
+                "text": "Douleur abdominale brutale généralisée",
+                "description": "→ Perforation d'ulcère, chirurgie urgente"
+              },
+              {
+                "text": "Perte de poids inexpliquée",
+                "description": "→ Néoplasie possible, investigations approfondies"
+              },
+              {
+                "text": "Ictère ou urines foncées",
+                "description": "→ Obstruction biliaire, imagerie urgente"
+              },
+              {
+                "text": "Vomissements incoercibles",
+                "description": "→ Sténose pylorique, hospitalisation"
+              },
+              {
+                "text": "Anémie sévère",
+                "description": "→ Saignement chronique, endoscopie urgente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Communication avec la patiente",
+          "details": [
+            "Explication claire des hypothèses diagnostiques",
+            "Rassurer sur faible probabilité de cancer du pancréas",
+            "Importance de l'arrêt des AINS",
+            "Plan d'investigation par étapes",
+            "Demander si elle a des questions ou préoccupations"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Smith, plusieurs troubles peuvent causer une douleur similaire à celle que vous décrivez. Ce type de douleur est le plus souvent dû à un ulcère, une infection abdominale, ou un calcul biliaire. Nous devrons effectuer des tests pour confirmer le diagnostic et exclure des maladies plus graves. Ces tests incluront un examen rectal, une échographie abdominale, des analyses de sang, et peut-être une gastroscopie, qui examine votre estomac à l'aide d'une petite caméra introduite par la bouche. Une fois le diagnostic posé, nous pourrons traiter votre condition et soulager votre douleur. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "Mon père avait un cancer du pancréas. Est-ce que je pourrais l'avoir aussi ?"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Il est très peu probable que vous ayez un cancer du pancréas, car vos symptômes ne correspondent pas à ceux de cette maladie. Cependant, nous allons effectuer des tests sanguins et radiologiques pour exclure cette possibilité."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Sharon Smith",
+      "age": "48 ans",
+      "contexte": "Femme de 48 ans, mariée avec 4 enfants, venant à la clinique pour douleurs abdominales",
+      "motifConsultation": {
+        "plaintePrincipale": "Douleur abdominale.",
+        "autreChose": "J'ai mal à l'estomac depuis deux semaines."
+      },
+      "consignes": [
+        "Montrez l'épigastre avec votre main quand on vous demande la localisation de la douleur.",
+        "Exprimez de la douleur lors de la palpation épigastrique (grimace, retrait).",
+        "Montrez une douleur à la palpation de l'hypocondre droit lors de l'inspiration profonde (signe de Murphy positif).",
+        "Paraissez soulagée quand vous parlez de la nourriture qui améliore la douleur.",
+        "Riez légèrement quand vous mentionnez l'activité sexuelle avec votre mari.",
+        "Si l'échographie est mentionnée, demandez : 'Qu'est-ce qu'une échographie ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur épigastrique depuis 2 semaines",
+          "Douleur brûlante",
+          "Intensité 7/10 au maximum, peut descendre à 0",
+          "Va et vient, au moins une fois par jour",
+          "S'aggrave progressivement"
+        ],
+        "symptomesAssocies": [
+          "Nausées occasionnelles avec la douleur",
+          "Un épisode de vomissement hier (liquide jaune acide)",
+          "Pas de sang dans le vomi",
+          "Pas de changement de poids",
+          "Pas de changement d'appétit",
+          "Selles normales, pas de changement de couleur"
+        ],
+        "facteursDeclenchants": [
+          "Faim aggrave la douleur",
+          "Repas lourds et gras aggravent (pizza)",
+          "Douleur réapparaît 2-3 heures après les repas"
+        ],
+        "facteursAmeliorants": [
+          "Nourriture soulage temporairement",
+          "Antiacides ont aidé au début",
+          "Lait améliore la douleur"
+        ]
+      },
+      "anamneseSystemes": {
+        "medicale": [
+          "Infection urinaire il y a un an (amoxicilline)",
+          "Arthrose des deux genoux",
+          "Prend ibuprofène 2 comprimés 2-3 fois/jour pour l'arthrose",
+          "Pas d'épisodes similaires dans le passé"
+        ],
+        "chirurgicale": [
+          "2 césariennes",
+          "Pas d'autres chirurgies"
+        ],
+        "familiale": [
+          "Père décédé à 55 ans d'un cancer du pancréas",
+          "Mère en vie et en bonne santé",
+          "4 enfants en bonne santé"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Antiacides, ibuprofène (2 comprimés 2-3 fois/jour)",
+        "tabac": "Non",
+        "alcool": "Non",
+        "profession": "Femme au foyer",
+        "drogues": "Non",
+        "allergies": "Aucune allergie médicamenteuse"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Main posée sur l'épigastre",
+          "Expression faciale montrant l'inconfort",
+          "Gestuelle pour montrer la zone douloureuse",
+          "Soulagement visible quand vous parlez de ce qui améliore"
+        ],
+        "durantStatus": [
+          "Douleur à la palpation épigastrique",
+          "Signe de Murphy positif (arrêt inspiratoire)",
+          "Pas de défense abdominale",
+          "Abdomen souple en dehors de l'épigastre",
+          "Coopération totale à l'examen"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 48 ans présentant une douleur épigastrique évoluant depuis 2 semaines, rythmée par les repas, soulagée par la nourriture et les antiacides. Utilisation chronique d'AINS pour arthrose. Signe de Murphy positif à l'examen. Antécédent familial de cancer du pancréas. Diagnostic différentiel entre ulcère peptique (probable vu AINS et amélioration par nourriture), cholécystite (Murphy+), et gastrite.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e demande des résultats :",
+        "• Test H. pylori : mentionner résultat positif ou négatif selon scénario",
+        "• NFS : normale ou légère anémie si saignement occulte",
+        "• Bilan hépatique : normal sauf si cholécystite",
+        "• Lipase : normale (exclut pancréatite)",
+        "• Test FIT : peut être positif si ulcère saignant"
+      ],
+      "pointsCles": [
+        "Utilisation chronique d'AINS = facteur de risque majeur d'ulcère",
+        "Douleur soulagée par nourriture = typique d'ulcère duodénal",
+        "Signe de Murphy positif = penser cholécystite",
+        "Antécédent familial cancer pancréas = surveillance mais peu probable ici",
+        "Arrêt des AINS essentiel dans la prise en charge",
+        "Test H. pylori et gastroscopie indiqués"
+      ],
+      "pieges": [
+        "Ne pas demander les médicaments actuels (AINS)",
+        "Oublier l'antécédent familial de cancer du pancréas",
+        "Ne pas effectuer le signe de Murphy",
+        "Omettre l'examen rectal pour recherche de méléna",
+        "Ne pas proposer l'arrêt des AINS",
+        "Oublier le test H. pylori"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Ulcère peptique probable sur utilisation chronique d'AINS avec possible infection H. pylori. Diagnostic différentiel incluant cholécystite vu le signe de Murphy positif."
+        },
+        {
+          "titre": "Maladie ulcéreuse peptique",
+          "contenu": "Ulcération de la muqueuse gastrique ou duodénale :",
+          "points": [
+            "Prévalence : 5-10% de la population",
+            "Causes principales : H. pylori (60-90%) et AINS (10-25%)",
+            "Localisation : 4x plus fréquent au duodénum qu'à l'estomac",
+            "Symptômes : douleur épigastrique rythmée par repas",
+            "Ulcère duodénal : soulagé par nourriture, douleur 2-3h après repas",
+            "Ulcère gastrique : aggravé par nourriture immédiatement"
+          ]
+        },
+        {
+          "titre": "Rôle des AINS dans l'ulcère",
+          "contenu": "Mécanisme physiopathologique des AINS :",
+          "points": [
+            "Inhibition COX-1 → diminution prostaglandines protectrices",
+            "Altération barrière muqueuse gastrique",
+            "Diminution flux sanguin muqueux",
+            "Risque multiplié par 4-6 vs population générale",
+            "Risque augmenté avec : âge >65 ans, antécédent ulcère, corticoïdes",
+            "Co-prescription IPP réduit risque de 70%"
+          ]
+        },
+        {
+          "titre": "Helicobacter pylori",
+          "contenu": "Bactérie spiralée Gram négatif :",
+          "points": [
+            "Prévalence : 50% population mondiale, 20-30% pays développés",
+            "Transmission : oro-orale ou féco-orale, enfance",
+            "Mécanisme : uréase → ammoniaque → neutralise acidité",
+            "90% ulcères duodénaux, 60-70% ulcères gastriques",
+            "Risque cancer gastrique multiplié par 3-6",
+            "Éradication diminue récidive ulcère de 60% à <5%"
+          ]
+        },
+        {
+          "titre": "Cholécystite vs ulcère",
+          "contenu": "Éléments différentiels importants :",
+          "points": [
+            "Cholécystite : douleur HCD > épigastre, colique",
+            "Murphy+ : arrêt inspiratoire à palpation vésicule",
+            "Déclenchée par repas gras, dure 30min-6h",
+            "Ulcère : douleur épigastre, brûlure, rythmée",
+            "Les deux peuvent coexister (20% cholélithiase asymptomatique)",
+            "US abdominale différencie facilement"
+          ]
+        },
+        {
+          "titre": "Complications de l'ulcère",
+          "contenu": "Surveillance des complications potentielles :",
+          "points": [
+            "Hémorragie (15-20%) : hématémèse, méléna, anémie",
+            "Perforation (5%) : douleur brutale, péritonite",
+            "Sténose pylorique (2%) : vomissements, satiété précoce",
+            "Pénétration (rare) : dans pancréas, douleur dorsale",
+            "Mortalité globale : 2-3% (surtout hémorragie)",
+            "AINS + H. pylori = risque synergique"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique",
+          "contenu": "Stratégie d'investigation recommandée :",
+          "points": [
+            "Test H. pylori non invasif en première intention",
+            "Gastroscopie si : âge >45 ans, signes alarme, échec traitement",
+            "US abdominal si suspicion biliaire (Murphy+)",
+            "Test FIT/sang occulte si suspicion saignement",
+            "Arrêt IPP 2 semaines avant test H. pylori",
+            "Biopsies antrales et fundiques si gastroscopie"
+          ]
+        },
+        {
+          "titre": "Prise en charge thérapeutique",
+          "contenu": "Traitement adapté à l'étiologie :",
+          "points": [
+            "Arrêt définitif AINS ou switch COX-2 sélectif",
+            "IPP 4-8 semaines (cicatrisation 90-95%)",
+            "Si H. pylori+ : trithérapie 14 jours",
+            "Contrôle éradication obligatoire à 4-6 semaines",
+            "Maintenance IPP si AINS obligatoires",
+            "Modification habitudes : repas réguliers, arrêt tabac"
+          ]
+        },
+        {
+          "titre": "Cancer du pancréas - Dépistage",
+          "contenu": "Considérations vu l'antécédent familial :",
+          "points": [
+            "Risque relatif x2-3 si parent 1er degré",
+            "Âge moyen diagnostic : 70 ans",
+            "Symptômes tardifs : douleur, ictère, perte poids",
+            "Pas de dépistage systématique recommandé",
+            "Surveillance si ≥2 parents ou syndrome familial",
+            "IRM/MRCP annuelle si très haut risque"
+          ]
+        },
+        {
+          "titre": "Messages clés du cas",
+          "points": [
+            "AINS + douleur épigastrique = ulcère jusqu'à preuve contraire",
+            "Arrêt AINS prioritaire dans prise en charge",
+            "Test H. pylori systématique avant traitement",
+            "Murphy+ impose échographie biliaire",
+            "Gastroscopie si persistance malgré traitement",
+            "Rassurer sur cancer pancréas mais expliquer surveillance",
+            "Importance observance et contrôle éradication H. pylori"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "IPP première intention : oméprazole 40mg/j × 4-8 semaines",
+        "Trithérapie H. pylori : IPP + amoxicilline 1g×2 + clarithromycine 500mg×2 × 14j",
+        "Alternative allergie : IPP + métronidazole 500mg×2 + clarithromycine × 14j",
+        "Quadrithérapie si échec : IPP + bismuth + métronidazole + tétracycline × 14j",
+        "Antalgiques : paracétamol, éviter AINS",
+        "Prophylaxie si AINS obligatoires : IPP au long cours"
+      ],
+      "examensComplementaires": [
+        "Test H. pylori non invasif : antigène selles (Se 94%, Sp 92%) ou test respiratoire urée-13C (Se 95%, Sp 95%)",
+        "Gastroscopie : visualisation directe, biopsies pour H. pylori et histologie, test uréase rapide",
+        "US abdominal : première ligne si Murphy+, lithiase (Se 95%, Sp 98%), épaississement paroi vésiculaire",
+        "NFS : recherche anémie ferriprive si saignement occulte",
+        "Test FIT : plus sensible que gaïac pour sang occulte",
+        "Lipase/amylase : normale (exclut pancréatite)"
+      ]
+    },
+    "resume": {
+      "titre": "🩺 Ulcère gastrique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Douleur épigastrique post-prandiale (souvent 30 min à 1h après les repas)",
+                "Sensation de brûlure ou de crampe « en étau »",
+                "Satiété précoce, ballonnements",
+                "Nausées, vomissements",
+                "RGO, éructations",
+                "Perte d'appétit, amaigrissement"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Prise chronique d'AINS ou aspirine",
+                "Tabagisme, alcool",
+                "Infection à Helicobacter pylori",
+                "Stress physiologique (hospitalisation, brûlures, sepsis)",
+                "Antécédents de PUD (ulcère peptique)",
+                "Âge > 60 ans ou ATCD familial de cancer gastrique"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte (red flags)",
+              "points": [
+                "Amaigrissement inexpliqué",
+                "Vomissements persistants",
+                "Méléna, hématémèse",
+                "Dysphagie, odynophagie",
+                "Anémie ou fatigue"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à l’inspection et palpation abdominale",
+              "points": [
+                "Douleur à la palpation épigastrique",
+                "Signe de défense (en cas de perforation)",
+                "Signes de déshydratation ou d'anémie (pâleur, tachycardie)"
+              ]
+            },
+            {
+              "titre": "Complications à rechercher",
+              "points": [
+                "Hémorragie digestive (méléna, hypotension)",
+                "Perforation (abdomen aigu, défense)",
+                "Sténose pylorique (vomissements tardifs, dilatation gastrique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "NFS : recherche anémie",
+                "CRP, VS : inflammation",
+                "H. pylori : test respiratoire à l’urée, antigène fécal ou biopsie",
+                "FOBT (sang occulte dans les selles)",
+                "Bilan hépatique et rénal selon contexte"
+              ]
+            },
+            {
+              "titre": "Imagerie et endoscopie",
+              "points": [
+                "Endoscopie œsogastroduodénale (EGD) = examen clé",
+                "Biopsies systématiques pour éliminer cancer",
+                "Recherche de signes de complications : saignement, perforation",
+                "Échographie ou scanner abdo si suspicion de complication (perforation, masse)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Arrêt des AINS, tabac, alcool",
+                "Alimentation fractionnée, sans irritants gastriques",
+                "Éducation du patient"
+              ]
+            },
+            {
+              "titre": "Traitement médical",
+              "points": [
+                "IPP (oméprazole, ésoméprazole) pendant 4–8 semaines",
+                "Éradication d’H. pylori si test positif : trithérapie (IPP + amoxicilline + clarithromycine)",
+                "Antiacides ou sucralfate selon les cas"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Contrôle endoscopique à 8–12 semaines si ulcère gastrique (pour vérifier cicatrisation)",
+                "Contrôle de l’éradication H. pylori 4 semaines après traitement",
+                "Surveillance clinique : récidives, complications"
+              ]
+            },
+            {
+              "titre": "Indications chirurgicales",
+              "points": [
+                "Complications (perforation, hémorragie sévère, sténose)",
+                "Résistance au traitement médical",
+                "Ulcère malin ou doute sur tumeur"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Ulcère gastrique : douleur après les repas + amaigrissement",
+            "Rechercher systématiquement prise AINS / H. pylori",
+            "Endoscopie avec biopsies systématique pour exclure cancer",
+            "IPP + éradication H. pylori si positif",
+            "Surveillance endoscopique obligatoire pour ulcère gastrique"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur épigastrique post-prandiale ? Depuis combien de temps ?",
+                "Facteurs aggravants : AINS, tabac, alcool ?",
+                "Signes d’alarme : amaigrissement, vomissements persistants, méléna, hématémèse ?",
+                "Antécédents familiaux de cancer gastrique ?",
+                "ATCD d’ulcère ou infection à H. pylori ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, FR)",
+                "Recherche pâleur, signes d’anémie ou déshydratation",
+                "Palpation épigastrique (douleur, défense)",
+                "Endoscopie œsogastroduodénale avec biopsies",
+                "Biologie : NFS, CRP, test H. pylori"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Arrêt AINS, tabac, alcool + mesures hygiéno-diététiques",
+                "IPP 4–8 semaines ± éradication H. pylori si positif",
+                "Contrôle endoscopique obligatoire pour confirmer cicatrisation et exclure cancer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur épigastrique chronique (ulcère peptique vs cholécystite)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (douleur abdominale épigastrique depuis 2 semaines)",
+            "Caractériser douleur → brûlure, intermittente, EVA 7/10 max, soulagée par repas/lait/antiacides, aggravée par faim et repas lourds",
+            "Évolution → s’aggrave, réapparaît 2-3h après repas",
+            "Symptômes associés → nausées, vomissement bilieux (sans sang), pas de diarrhée, pas de perte de poids",
+            "ATCD → arthrose (ibuprofène chronique), 2 césariennes, père cancer pancréas",
+            "Examen clinique → douleur épigastrique à palpation, signe de Murphy positif, pas de défense, pas d’hépato-splénomégalie",
+            "Résumé + hypothèse principale (ulcère peptique sous AINS ± H. pylori) + DD (cholécystite/lithiase, gastrite, pancréatite, cancer pancréas)",
+            "Examens complémentaires → NFS, bilan hépatique, lipase/amylase, test H. pylori, écho abdo, endoscopie si persistance",
+            "Prise en charge → arrêt AINS, IPP, test et traitement H. pylori, conseils hygiéno-diététiques"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : AINS",
+            "elements": [
+              "A = Antiacides soulagent",
+              "I = Ibuprofène chronique (facteur de risque ulcère)",
+              "N = Nourriture soulage mais douleur revient après 2-3h",
+              "S = Signe de Murphy positif (penser aussi lithiase)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Sharon Smith, une femme de 48 ans, femme au foyer, qui consulte pour une douleur abdominale évoluant depuis environ deux semaines. Elle décrit une douleur de type brûlure localisée à l’épigastre, d’intensité allant jusqu’à 7 sur 10, intermittente, qui survient au moins une fois par jour. Elle précise que la douleur est soulagée lorsqu’elle mange, par le lait ou les antiacides, mais qu’elle réapparaît deux à trois heures après le repas. Elle note que les repas lourds et gras, comme la pizza, ou les périodes de jeûne aggravent ses symptômes.\n\nElle rapporte parfois des nausées associées, et a eu un épisode de vomissement hier, de liquide jaune acide sans sang. Elle nie diarrhée, constipation, perte de poids ou changement d’appétit. Dans ses antécédents, on note une arthrose des genoux traitée par ibuprofène 2 à 3 fois par jour, une infection urinaire ancienne, et deux césariennes. Pas d’allergies. Dans sa famille, son père est décédé d’un cancer du pancréas à 55 ans, ce qui l’inquiète.\n\nÀ l’examen clinique, Mme Smith n’est pas en détresse. L’auscultation cardio-pulmonaire est normale. L’abdomen est souple, non défense, mais douloureux à la palpation de l’épigastre. Le signe de Murphy est positif. Pas d’hépato-splénomégalie, pas de masse abdominale.\n\nEn résumé, nous avons une femme de 48 ans présentant une douleur épigastrique à type de brûlure, rythmée par les repas, soulagée par la nourriture mais récidivant après quelques heures, dans un contexte de prise chronique d’AINS. Mon hypothèse principale est un ulcère peptique favorisé par les AINS et possiblement H. pylori. Les diagnostics différentiels incluent une gastrite aiguë, une cholécystite/lithiase biliaire (vu le signe de Murphy et la relation aux repas gras), plus rarement une pancréatite chronique ou un cancer gastrique/pancréatique.\n\nComme examens complémentaires, je demanderais une NFS pour rechercher une anémie, un test H. pylori (antigène selles ou test respiratoire), un bilan hépatique complet, une lipase/amylase, et une échographie abdominale pour explorer la vésicule. En cas de persistance, une gastroscopie avec biopsies sera indiquée.\n\nEn termes de prise en charge immédiate, il est essentiel d’arrêter l’ibuprofène, de mettre en place un traitement par IPP (oméprazole), d’ajuster l’antalgie par paracétamol, et de proposer des mesures hygiéno-diététiques (repas fractionnés, éviter épices, café, alcool). Si H. pylori est positif, une trithérapie d’éradication sera proposée. Je rassurerais la patiente en expliquant que le cancer du pancréas est peu probable ici mais qu’un bilan est nécessaire pour l’exclure."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Smith, 48 ans, présente des douleurs épigastriques intermittentes depuis 2 semaines.\n\nB (Background) : Arthrose traitée par ibuprofène chronique, père cancer pancréas, 2 césariennes.\n\nA (Assessment) : Suspicion ulcère peptique lié aux AINS ± H. pylori. DD : gastrite, cholécystite/lithiase, pancréatite, cancer gastrique/pancréas.\n\nR (Recommendation) : Arrêt AINS, mise sous IPP, test H. pylori, NFS, bilan hépatique, lipase, écho abdo, gastroscopie si persistance."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Ulcère peptique : DUO",
+              "points": [
+                "D = Douleur épigastrique",
+                "U = Ulcère duodénal : soulagé par nourriture, revient après 2-3h",
+                "O = Origine AINS/H. pylori"
+              ]
+            },
+            {
+              "titre": "👉 Cholécystite : 4F",
+              "points": [
+                "Female",
+                "Forty (âge autour de 40-50 ans)",
+                "Fat (surpoids)",
+                "Fertile (grossesses antérieures, césariennes)"
+              ]
+            },
+            {
+              "titre": "👉 Pièges ECOS",
+              "points": [
+                "Oublier de demander médicaments (AINS)",
+                "Ne pas rechercher ATCD familiaux de cancer pancréas",
+                "Ne pas examiner vésicule biliaire (Murphy)",
+                "Oublier test H. pylori"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Ulcère peptique",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique brûlante",
+                      "Soulagée par nourriture/antiacides",
+                      "Réapparaît 2-3h après repas",
+                      "AINS chroniques"
+                    ],
+                    "contre": [
+                      "Pas d’hémorragie digestive visible",
+                      "Pas de perte de poids"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholécystite/lithiase biliaire",
+                  "reponse": {
+                    "pour": [
+                      "Douleur aggravée par repas gras",
+                      "Naussées/vomissements",
+                      "Signe de Murphy positif"
+                    ],
+                    "contre": [
+                      "Douleur soulagée par repas",
+                      "Pas d’irradiation scapulaire"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer pancréas",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique",
+                      "ATCD familial"
+                    ],
+                    "contre": [
+                      "Âge relativement jeune",
+                      "Pas de perte de poids",
+                      "Pas d’ictère"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS (anémie ?)",
+                    "Test H. pylori",
+                    "Bilan hépatique",
+                    "Lipase, amylase",
+                    "Échographie abdominale",
+                    "Gastroscopie avec biopsies si persistance"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Ulcère peptique probable lié aux AINS ± H. pylori ; DD cholécystite"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Arrêt AINS",
+                      "IPP (oméprazole 40 mg/j)",
+                      "Antalgie par paracétamol",
+                      "Antiacides si besoin",
+                      "Mesures hygiéno-diététiques"
+                    ],
+                    "specifique": [
+                      "Éradication H. pylori si positif",
+                      "Gastroscopie si symptômes persistants"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation à 2 semaines",
+                    "Contrôle éradication H. pylori à 4-6 semaines",
+                    "Gastroscopie de contrôle si ulcère gastrique",
+                    "Surveillance complications (hémorragie, perforation)",
+                    "Éducation sur alternatives aux AINS"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

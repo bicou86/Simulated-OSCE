@@ -1,0 +1,482 @@
+{
+  "title": "RESCOS-2 - Adénopathie sus-claviculaire",
+  "category": "RESCOS",
+  "subcategory": "Hématologie - Système lymphatique",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 35 ans consultant pour une grosseur sus-claviculaire gauche et lourdeur épigastrique",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Grosseur au-dessus de la clavicule gauche et lourdeur dans l'estomac"
+        },
+        {
+          "id": "a2",
+          "text": "Caractéristiques de la plainte principale",
+          "details": [
+            "Durée des symptômes [depuis quand?]",
+            "Date d'apparition des ganglions [progressive ou brutale?]",
+            "Cinétique de croissance [augmentation de taille?]",
+            "Douleurs associées [ganglion douloureux ou indolore?]",
+            "Taille actuelle [œuf de pigeon]",
+            "Localisation précise [sus-claviculaire gauche]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes d'accompagnement",
+          "details": [
+            "Amaigrissement [perte de poids récente?]",
+            "Anorexie [perte d'appétit?]",
+            "Asthénie [fatigue inhabituelle?]",
+            "Sueurs nocturnes [réveils trempé?]",
+            "Prurit [démangeaisons généralisées?]",
+            "Température [fièvre, frissons?]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes B (lymphome)",
+          "details": [
+            "Fièvre > 38°C sans cause infectieuse",
+            "Sueurs nocturnes profuses",
+            "Perte de poids > 10% en 6 mois"
+          ],
+          "scoringRule": "Présence de symptômes B = facteur pronostique défavorable"
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes digestifs",
+          "details": [
+            "Lourdeur épigastrique [depuis quand?]",
+            "Dysphagie [difficulté à avaler?]",
+            "Régurgitations [remontées acides?]",
+            "Douleurs abdominales [localisation?]",
+            "Modification du transit [constipation, diarrhée?]",
+            "Méléna ou rectorragies [sang dans les selles?]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractéristiques du patient",
+          "details": [
+            "Âge [35 ans]",
+            "Habitudes de vie [tabac, alcool?]",
+            "Anamnèse sexuelle [partenaires multiples?]",
+            "Facteurs de risque VIH [toxicomanie IV?]",
+            "Animaux à la maison [chat pour toxoplasmose?]",
+            "Prise de médicaments [antiépileptiques?]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux et chirurgicaux",
+          "details": [
+            "Maladies infectieuses récentes",
+            "Tuberculose ou contact",
+            "Maladies auto-immunes",
+            "Cancers personnels ou familiaux",
+            "Immunosuppression",
+            "Chirurgies antérieures"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Exposition et voyages",
+          "details": [
+            "Voyages récents [zones endémiques?]",
+            "Contact avec malades",
+            "Exposition professionnelle",
+            "Vaccinations à jour"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen des ganglions sus-claviculaires",
+          "details": [
+            "Position du patient [assis, debout derrière ou devant]",
+            "Palpation avec pulpe des doigts",
+            "Recherche ganglions occipitaux",
+            "Puis région auriculaire postérieure et inférieure",
+            "Chaînes ganglionnaires cervicales",
+            "Ganglions sous-mentonniers et sous-maxillaires"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Caractéristiques du ganglion sus-claviculaire gauche (ganglion de Troisier)",
+          "details": [
+            "Taille [œuf de pigeon = 3-4 cm]",
+            "Consistance [dur, ferme, mou?]",
+            "Mobilité [fixé ou mobile?]",
+            "Sensibilité [douloureux ou indolore?]",
+            "Surface [lisse ou irrégulière?]",
+            "Adhérence aux plans profonds"
+          ],
+          "scoringRule": "Ganglion de Troisier = rechercher cancer digestif (estomac++)"
+        },
+        {
+          "id": "e3",
+          "text": "Examen des autres aires ganglionnaires",
+          "details": [
+            "Aires sous-claviculaires [palpation symétrique]",
+            "Ganglions épitrochléens",
+            "Ganglions axillaires [patient détendu, bras du patient sur épaule médecin]",
+            "Ganglions inguinaux [décubitus dorsal]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation de la rate",
+          "details": [
+            "Inspection préalable",
+            "Auscultation préalable",
+            "Technique décubitus dorsal [main postérieure loge rénale, main antérieure sous rebord costal]",
+            "Faire inspirer le patient [diaphragme descend la rate]",
+            "Technique décubitus latéral droit si nécessaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Recherche d'une splénomégalie",
+          "details": [
+            "Rate normale non palpable",
+            "Si palpable: mesurer débord sous-costal",
+            "Percussion de la rate [matité]",
+            "Recherche syndrome tumoral associé"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen général",
+          "details": [
+            "État général [altéré?]",
+            "Pâleur cutanéo-muqueuse",
+            "Ictère conjonctival",
+            "Lésions cutanées [purpura, érythème]",
+            "Hépatomégalie",
+            "Masse abdominale"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen ORL et stomatologique",
+          "details": [
+            "Cavité buccale [lésions, aphtes]",
+            "Pharynx [angine, amygdales]",
+            "État dentaire [foyers infectieux]",
+            "Thyroïde [goitre, nodules]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels des adénopathies",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques selon la localisation",
+            "categories": [
+              {
+                "name": "Adénopathie sus-claviculaire gauche (Troisier)",
+                "items": [
+                  {
+                    "text": "Cancer gastrique",
+                    "cause": "Arguments POUR:\n\t□ Ganglion de Troisier pathognomonique\n\t□ Lourdeur épigastrique\n\t□ Âge compatible\n\t□ Drainage lymphatique de l'estomac",
+                    "test": "→ Fibroscopie œso-gastro-duodénale, biopsie"
+                  },
+                  {
+                    "text": "Cancer du pancréas",
+                    "cause": "Arguments POUR:\n\t□ Drainage lymphatique\n\t□ Symptômes digestifs\nArguments CONTRE:\n\t□ Âge jeune",
+                    "test": "→ CT abdominal, CA 19-9"
+                  },
+                  {
+                    "text": "Cancer pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Localisation sus-claviculaire\n\t□ Possible métastase\nArguments CONTRE:\n\t□ Pas de symptômes respiratoires",
+                    "test": "→ Radiographie thoracique, CT thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hématologiques",
+                "items": [
+                  {
+                    "text": "Lymphome hodgkinien",
+                    "cause": "Arguments POUR:\n\t□ Âge compatible (pic 20-30 ans)\n\t□ Ganglion sus-claviculaire\n\t□ Possibles symptômes B",
+                    "test": "→ Biopsie ganglionnaire, NFS, LDH, β2-microglobuline"
+                  },
+                  {
+                    "text": "Lymphome non hodgkinien",
+                    "cause": "Arguments POUR:\n\t□ Adénopathie périphérique\n\t□ Possible splénomégalie associée",
+                    "test": "→ Biopsie ganglionnaire, immunophénotypage"
+                  },
+                  {
+                    "text": "Leucémie lymphoïde chronique",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune (habituellement > 60 ans)\n\t□ Pas de polyadénopathie décrite",
+                    "test": "→ NFS avec frottis, immunophénotypage"
+                  }
+                ]
+              },
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Tuberculose ganglionnaire",
+                    "cause": "Arguments POUR:\n\t□ Possible dans tous les territoires\n\t□ Symptômes généraux possibles",
+                    "test": "→ IDR/Quantiféron, biopsie avec PCR et culture"
+                  },
+                  {
+                    "text": "Infection VIH",
+                    "cause": "Arguments POUR:\n\t□ Âge et facteurs de risque\n\t□ Adénopathies généralisées possibles",
+                    "test": "→ Sérologie VIH après consentement"
+                  },
+                  {
+                    "text": "Mononucléose infectieuse (EBV)",
+                    "cause": "Arguments CONTRE:\n\t□ Localisation atypique\n\t□ Pas d'angine décrite",
+                    "test": "→ MNI test, sérologie EBV"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "NFS avec plaquettes et frottis",
+            "VS, CRP",
+            "Ionogramme, créatinine",
+            "Bilan hépatique (ASAT, ALAT, PAL, GGT, bilirubine)",
+            "LDH, β2-microglobuline",
+            "Protéinogramme",
+            "Radiographie thoracique face et profil"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires orientés",
+          "details": [
+            "Fibroscopie œso-gastro-duodénale si suspicion cancer gastrique",
+            "CT thoraco-abdomino-pelvien",
+            "Échographie abdominale et cervicale",
+            "Sérologies virales (VIH, EBV, CMV, hépatites)",
+            "IDR ou Quantiféron Gold",
+            "Marqueurs tumoraux selon orientation"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Biopsie ganglionnaire",
+          "details": [
+            "Indication: adénopathie > 2cm persistante",
+            "Biopsie-exérèse chirurgicale préférable",
+            "Cytoponction à l'aiguille fine insuffisante",
+            "Analyse histologique",
+            "Immunohistochimie",
+            "Cytogénétique si lymphome"
+          ],
+          "scoringRule": "Biopsie ganglionnaire = gold standard diagnostique"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge selon l'étiologie",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si cancer digestif confirmé",
+                "content": "• Bilan d'extension complet\n• Discussion en RCP oncologique\n• Chirurgie si résécable\n• Chimiothérapie néoadjuvante ou adjuvante\n• Soins de support"
+              },
+              {
+                "title": "Si lymphome confirmé",
+                "content": "• Stadification Ann Arbor\n• Bilan d'extension (TEP-scan)\n• Chimiothérapie selon protocole\n• Radiothérapie si localisé\n• Surveillance régulière"
+              },
+              {
+                "title": "Si cause infectieuse",
+                "content": "• Traitement antibiotique adapté\n• Antituberculeux si tuberculose\n• Antirétroviraux si VIH\n• Surveillance de la régression"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme nécessitant une prise en charge urgente",
+          "redflagsSection": {
+            "title": "Red flags des adénopathies",
+            "items": [
+              {
+                "text": "Syndrome cave supérieur",
+                "description": "Œdème en pèlerine, circulation collatérale thoracique"
+              },
+              {
+                "text": "Compression médullaire",
+                "description": "Déficit neurologique, troubles sphinctériens"
+              },
+              {
+                "text": "Syndrome de lyse tumorale",
+                "description": "Hyperuricémie, hyperkaliémie, hyperphosphatémie"
+              },
+              {
+                "text": "Adénopathie > 3cm dure et fixée",
+                "description": "Forte suspicion de malignité"
+              },
+              {
+                "text": "Altération rapide de l'état général",
+                "description": "Amaigrissement > 10%, asthénie sévère"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vous avez un ganglion anormalement gros au-dessus de la clavicule gauche. Cette localisation particulière, associée à vos troubles digestifs, nécessite des examens complémentaires pour en déterminer la cause. Il peut s'agir d'une infection, d'une inflammation ou d'une autre pathologie qu'il faut identifier."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est un cancer?]\n[Pourquoi j'ai mal à l'estomac?]\n[Est-ce que c'est contagieux?]\n[Combien de temps pour avoir les résultats?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Plusieurs causes sont possibles, les examens vont nous orienter\nLe ganglion peut être lié à vos troubles digestifs, nous allons explorer cette piste\nLa plupart des causes ne sont pas contagieuses, mais nous vérifierons\nLes premiers résultats sanguins seront disponibles dans 2-3 jours, la biopsie prendra plus de temps"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Adénopathie",
+      "nom": "M. Ni",
+      "age": "35 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une boule au-dessus de la clavicule gauche",
+        "description": "Grosseur de la taille d'un œuf de pigeon sus-claviculaire gauche avec lourdeur épigastrique"
+      },
+      "histoireActuelle": {
+        "ganglion": [
+          "Apparu progressivement",
+          "Taille d'un œuf de pigeon",
+          "Au-dessus de la clavicule gauche",
+          "Non douloureux",
+          "Pas de changement de couleur de la peau"
+        ],
+        "symptomesDigestifs": [
+          "Lourdeur dans l'estomac",
+          "Sensation de pesanteur après les repas",
+          "Pas de vomissements",
+          "Pas de sang dans les selles"
+        ],
+        "symptomesGeneraux": [
+          "Fatigue depuis quelques semaines si demandé",
+          "Pas de fièvre",
+          "Pas de sueurs nocturnes importantes",
+          "Perte de poids possible (2-3 kg) si demandé"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Aucun antécédent particulier",
+        "chirurgicaux": "Aucune chirurgie",
+        "familiaux": "Parents en bonne santé si demandé"
+      },
+      "habitudes": {
+        "tabac": "Non-fumeur ou occasionnel",
+        "alcool": "Consommation sociale",
+        "profession": "Employé de bureau",
+        "voyages": "Pas de voyage récent"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet mais coopératif",
+          "Minimise les symptômes digestifs",
+          "Préoccupé par la grosseur"
+        ],
+        "signesPhysiques": [
+          "Montre la localisation du ganglion",
+          "Pas de signe de détresse",
+          "État général conservé"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Adénopathie sus-claviculaire",
+      "pointsCles": [
+        "Ganglion de Troisier = forte suspicion de cancer digestif (estomac++)",
+        "Localisation sus-claviculaire gauche très spécifique",
+        "Association avec symptômes digestifs évocatrice",
+        "Âge jeune mais n'exclut pas une néoplasie",
+        "Biopsie ganglionnaire indispensable"
+      ],
+      "pieges": [
+        "Ne pas minimiser une adénopathie sus-claviculaire",
+        "Toujours examiner toutes les aires ganglionnaires",
+        "Ne pas oublier la palpation de la rate",
+        "Rechercher systématiquement les symptômes B",
+        "Penser aux causes infectieuses même si localisation atypique"
+      ],
+      "techniquesExamen": [
+        "Patient assis pour ganglions cervicaux",
+        "Se placer derrière le patient",
+        "Palpation douce avec pulpe des doigts",
+        "Comparer les deux côtés",
+        "Ne pas oublier les ganglions épitrochléens"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Système lymphatique",
+      "sections": [
+        {
+          "titre": "Adénopathies localisées",
+          "contenu": "• Infection du territoire de drainage\n• Ganglion inguinal: pathologie membres inférieurs, région génitale\n• Ganglion cervical: ORL, thyroïde\n• Ganglion axillaire: sein, membre supérieur\n• Ganglion sus-claviculaire: thorax, abdomen (Troisier à gauche = estomac)"
+        },
+        {
+          "titre": "Adénopathies généralisées",
+          "contenu": "• Causes infectieuses: EBV, CMV, VIH, toxoplasmose\n• Causes hématologiques: lymphomes, leucémies\n• Causes auto-immunes: LED, polyarthrite rhumatoïde\n• Causes médicamenteuses: phénytoïne, allopurinol"
+        },
+        {
+          "titre": "Splénomégalie",
+          "contenu": "• Causes hématologiques: syndromes myéloprolifératifs et lymphoprolifératifs\n• Causes infectieuses: EBV, paludisme, leishmaniose\n• Hypertension portale: cirrhose\n• Maladies de surcharge: Gaucher\n• Rate vasculaire: insuffisance cardiaque droite"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Surveillance simple si adénopathie < 1cm, mobile, élastique",
+        "Antibiothérapie d'épreuve si contexte infectieux",
+        "Biopsie-exérèse si > 2cm ou persistance > 4 semaines",
+        "Chimiothérapie selon protocole si lymphome",
+        "Chirurgie + chimiothérapie si cancer solide",
+        "Traitement spécifique si tuberculose ou VIH"
+      ],
+      "examensComplementaires": [
+        "NFS: hyperlymphocytose (LLC, lymphome), pancytopénie",
+        "Frottis sanguin: cellules anormales, blastes",
+        "LDH: élevée dans lymphomes et cancers",
+        "β2-microglobuline: marqueur pronostique lymphome",
+        "Échographie: structure ganglionnaire, vascularisation",
+        "CT TAP: bilan d'extension, autres adénopathies",
+        "TEP-scan: staging lymphome, recherche primitif",
+        "Biopsie ganglionnaire: diagnostic de certitude"
+      ]
+    }
+  }
+}

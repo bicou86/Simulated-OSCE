@@ -1,0 +1,615 @@
+{
+  "title": "German-44 - Erythème",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Kählin, 27 ans, consulte suite à l'apparition d'un érythème cutané",
+    "vitals": {
+      "ta": "127/82 mmHg",
+      "fc": "73 bpm",
+      "temperature": "37.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Désinfection des mains, présentation avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Exploration du symptôme principal",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques de l'érythème",
+          "details": [
+            "Douleur [Non douloureux]",
+            "Sensation de brûlure [Pas de brûlure]",
+            "Prurit [Pas de démangeaisons]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution temporelle et facteurs déclenchants",
+          "details": [
+            "Durée [Depuis environ 3 semaines]",
+            "Facteur déclenchant [Aucun déclencheur identifié]",
+            "Évolution [Progressif]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents d'épisodes similaires",
+          "patientComment": "Non, premier épisode"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes associés",
+          "details": [
+            "Fatigue/asthénie [Un peu fatiguée]",
+            "Arthralgies [Légères douleurs articulaires]",
+            "Céphalées [Céphalées fréquentes]",
+            "Perte de poids [Possible]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Revue des systèmes",
+          "patientComment": "Rien de particulier"
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [5 paquets-années]",
+            "Alcool [Occasionnel]",
+            "Drogues [Cannabis rarement]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments actuels",
+          "patientComment": "Contraception orale combinée"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux et chirurgicaux",
+          "patientComment": "Amygdalectomie dans l'enfance, sinon rien"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "patientComment": "Grands-parents hypertendus après 65 ans, grand-père avec goutte"
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse sociale",
+          "patientComment": "Vit avec son compagnon, travaille au bureau"
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse de voyage et exposition solaire",
+          "details": [
+            "Voyage récent [Retour d'Italie il y a 2 semaines]",
+            "Évolution pendant le voyage [Érythème plus marqué en vacances]",
+            "Fièvre au retour [Pas de fièvre remarquée]",
+            "Exposition solaire [Oui, pendant les vacances]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "État des yeux [Légèrement secs et rouges]",
+            "Muqueuses [Rosées]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cutané détaillé",
+          "details": [
+            "Description de l'érythème",
+            "Localisation",
+            "Aspect"
+          ],
+          "patientComment": "Érythème rouge légèrement squameux au niveau du dos - voir image en annexe"
+        },
+        {
+          "id": "e3",
+          "text": "Examen articulaire",
+          "details": [
+            "Douleur à la palpation [Articulations légèrement douloureuses à la pression]",
+            "Épanchement articulaire [Pas d'épanchement]",
+            "Limitation des mouvements [Non]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardio-pulmonaire",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique",
+          "patientComment": "Pas d'anomalie"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes évocateurs de lupus",
+          "details": [
+            "Éruption malaire",
+            "Ulcérations buccales",
+            "Alopécie",
+            "Phénomène de Raynaud"
+          ],
+          "patientComment": "Tous absents"
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Lupus érythémateux cutané (CLE)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Dermatoses inflammatoires",
+                "items": [
+                  {
+                    "text": "Psoriasis",
+                    "cause": "Arguments POUR:\n\t□ Plaques érythémato-squameuses bien délimitées\n\t□ Localisations typiques (coudes, genoux)\n\t□ Antécédents familiaux possibles",
+                    "test": "→ Diagnostic clinique, biopsie si doute"
+                  },
+                  {
+                    "text": "Photodermatose",
+                    "cause": "Arguments POUR:\n\t□ Éruption liée à l'exposition solaire\n\t□ Amélioration à l'ombre\n\t□ Récidive à chaque exposition",
+                    "test": "→ Phototests, dosage porphyrines si suspicion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "Biologie sanguine [VS, CRP, anticorps anti-nucléaires (ANA), hémoglobine]",
+            "Analyse d'urine [Bandelette urinaire - recherche protéinurie/hématurie]",
+            "Fonction rénale [Créatinine, urée]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Justification des examens",
+          "details": [
+            "Recherche de signes de lupus systémique",
+            "Évaluation de l'inflammation",
+            "Dépistage d'atteinte rénale (néphrite lupique)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Protection solaire stricte : Éviter l'exposition solaire, crème solaire SPF 50+, vêtements couvrants"
+              },
+              {
+                "title": "Traitement topique",
+                "content": "• Corticostéroïdes topiques : Application locale sur les lésions actives × Selon évolution\n• Inhibiteurs de la calcineurine : Alternative aux corticoïdes, surtout pour le visage × Traitement au long cours possible"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Information sur l'évolution possible",
+          "redflagsSection": [
+            {
+              "text": "Évolution vers lupus systémique"
+            },
+            {
+              "text": "Signes d'alerte"
+            }
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et suivi recommandés",
+          "details": [
+            "Contrôle dans 4-6 semaines avec résultats",
+            "Surveillance biologique régulière si ANA positifs",
+            "Examen des autres systèmes à chaque consultation",
+            "Référence en dermatologie si évolution défavorable"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Image clinique - Érythème cutané",
+        "description": "Photographie montrant un érythème rouge légèrement squameux typique du lupus érythémateux cutané au niveau du dos",
+        "data": "grilles_generees/images/erytheme-img.jpg"
+      }
+    ],
+    "resume": {
+      "titre": "🌺 Lupus érythémateux cutané – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Éruptions cutanées photosensibles, souvent après exposition solaire",
+                "Prurit ou sensation de brûlure possible",
+                "Atteinte chronique ou récidivante",
+                "Contexte de maladies auto-immunes parfois associé"
+              ]
+            },
+            {
+              "titre": "Facteurs favorisants",
+              "points": [
+                "Exposition aux UV (UVA/UVB)",
+                "Tabagisme",
+                "Médicaments (terbinafine, hydrochlorothiazide, etc.)",
+                "Terrain auto-immun"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Formes cliniques principales",
+              "points": [
+                "Forme aiguë : érythème en « aile de papillon » non cicatriciel",
+                "Forme subaiguë : plaques annulaires ou psoriasiformes, dépigmentations résiduelles",
+                "Forme chronique (discoïde) : plaques érythémateuses squameuses bien limitées avec cicatrices atrophiques, parfois alopécie cicatricielle",
+                "Forme intermittente (tumidus) : plaques rouges indurées, non cicatricielles"
+              ]
+            },
+            {
+              "titre": "Localisations fréquentes",
+              "points": [
+                "Visage (nez, pommettes)",
+                "Cuir chevelu (risque alopécie cicatricielle)",
+                "Zones photo-exposées : bras, décolleté, tronc"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "ANA parfois positifs mais moins fréquents que dans le SLE",
+                "Anti-SSA/Ro fréquents dans les formes subaiguës",
+                "Anti-dsDNA et anti-Sm rares sauf si atteinte systémique associée"
+              ]
+            },
+            {
+              "titre": "Histologie",
+              "points": [
+                "Biopsie cutanée : dépôt en bande (lupus band test) limité aux zones atteintes (≠ SLE)",
+                "Interface dermatite avec infiltrat lymphocytaire"
+              ]
+            },
+            {
+              "titre": "Différentiels",
+              "points": [
+                "Rosacée",
+                "Psoriasis",
+                "Dermatite séborrhéique",
+                "Photodermatose polymorphe"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Photoprotection stricte (crèmes SPF 50+, vêtements protecteurs)",
+                "Arrêt du tabac",
+                "Éviter médicaments inducteurs"
+              ]
+            },
+            {
+              "titre": "Traitement topique",
+              "points": [
+                "Corticostéroïdes topiques",
+                "Inhibiteurs de calcineurine (tacrolimus, off-label)",
+                "± Vitamine D topique"
+              ]
+            },
+            {
+              "titre": "Traitement systémique",
+              "points": [
+                "Hydroxychloroquine (1ère intention si atteinte étendue ou réfractaire)",
+                "Corticostéroïdes systémiques ou immunosuppresseurs (cas sévères, atypiques ou systémiques)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Photosensibilité + lésions cutanées chroniques = évoquer lupus cutané",
+            "Biopsie cutanée confirme le diagnostic",
+            "Toujours rechercher signes de passage en lupus systémique",
+            "Hydroxychloroquine = traitement de fond de référence",
+            "Photoprotection = mesure essentielle de prévention"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand les lésions cutanées sont-elles présentes ?",
+                "Relation avec exposition solaire ?",
+                "Prurit, brûlure, douleur cutanée ?",
+                "Antécédents familiaux ou personnels de maladies auto-immunes ?",
+                "Prise de médicaments inducteurs ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection cutanée complète",
+                "Biopsie cutanée si diagnostic incertain",
+                "Sérologie auto-immune (ANA, anti-SSA/Ro, anti-dsDNA)",
+                "Recherche atteinte systémique (urines, créat, hémogramme)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Photoprotection + arrêt tabac",
+                "Corticothérapie topique ± hydroxychloroquine",
+                "Surveillance pour dépister évolution vers lupus systémique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Érythème cutané chronique photosensible (suspicion de lupus érythémateux cutané)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (femme 27 ans, érythème cutané chronique depuis 3 semaines)",
+            "Caractériser l’éruption → localisation dos, rouge légèrement squameuse, non douloureuse, non prurigineuse",
+            "Évolution → progressive, aggravée au soleil (voyage Italie), pas d’épisodes antérieurs",
+            "Symptômes associés → fatigue, céphalées fréquentes, arthralgies diffuses, légère perte de poids",
+            "ATCD → amygdalectomie, contraception orale, tabac 5 PA, cannabis occasionnel",
+            "ATCD familiaux → HTA tardive, goutte grand-père",
+            "Habitudes → vie de couple, emploi de bureau, voyage récent Italie avec exposition solaire",
+            "Examen clinique → érythème rouge squameux au dos, muqueuses normales, articulations sensibles mais sans épanchement, pas de signes de lupus systémique (Raynaud, alopécie, ulcérations absentes)",
+            "Résumé + hypothèse principale : lupus érythémateux cutané (forme subaiguë) ; DD : psoriasis, photodermatose",
+            "Examens complémentaires → ANA, anti-SSA/Ro, VS/CRP, hémogramme, créatinine, BU, ± biopsie cutanée",
+            "Prise en charge → photoprotection stricte, arrêt tabac, corticoïdes topiques, ± inhibiteurs de la calcineurine, suivi rapproché, hydroxychloroquine si atteinte persistante ou étendue"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide LUPUS",
+            "elements": [
+              "L = Lésions cutanées photosensibles",
+              "U = UV déclencheur",
+              "P = Plaques squameuses rouges",
+              "U = Urines (protéinurie/hématurie à rechercher)",
+              "S = Surveillance évolutive vers lupus systémique"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Kählin, une femme de 27 ans, secrétaire, qui consulte pour un érythème cutané évoluant depuis environ 3 semaines. L’éruption est localisée au niveau du dos, décrite comme rouge, légèrement squameuse, non douloureuse et non prurigineuse. Elle est apparue de manière progressive, sans facteur déclenchant clair, mais la patiente rapporte une aggravation nette pendant ses vacances en Italie, avec exposition solaire importante.\n\nC’est la première fois qu’elle présente ce type de problème cutané. Elle décrit par ailleurs une fatigue inhabituelle, des céphalées fréquentes, de légères douleurs articulaires diffuses et une perte de poids modérée.\n\nSes antécédents incluent une amygdalectomie dans l’enfance. Elle prend une contraception orale combinée. Pas d’autres traitements. Elle fume environ 5 paquets-années, consomme de l’alcool de façon occasionnelle et du cannabis rare. Sa famille est globalement en bonne santé, hormis des grands-parents hypertendus après 65 ans et un grand-père atteint de goutte. Elle vit avec son compagnon et travaille en bureau.\n\nÀ l’examen, on observe un érythème rouge légèrement squameux au niveau du dos. Pas de lésions typiques de lupus systémique comme une éruption malaire, pas d’ulcérations buccales, pas d’alopécie, pas de Raynaud. Ses articulations sont sensibles à la palpation mais sans épanchement ni limitation. Les muqueuses sont normales, l’examen cardio-pulmonaire et neurologique est sans particularité.\n\nEn résumé, il s’agit d’une jeune femme avec une lésion cutanée chronique photosensible, des arthralgies et une asthénie. Mon hypothèse principale est un lupus érythémateux cutané (probablement subaigu). Les diagnostics différentiels incluent un psoriasis (plaque érythémato-squameuse mais localisations typiques absentes) et une photodermatose (mais la persistance est inhabituelle).\n\nComme examens complémentaires, je demanderais un bilan immunologique (ANA, anti-SSA/Ro, ± anti-dsDNA si suspicion systémique), un hémogramme, VS/CRP, créatinine, une bandelette urinaire pour dépister une atteinte rénale, et éventuellement une biopsie cutanée si doute diagnostique. \n\nLa prise en charge repose sur des mesures générales (photoprotection stricte, arrêt tabac), un traitement topique par corticoïdes ou inhibiteurs de la calcineurine, et en cas d’atteinte persistante ou étendue, l’introduction d’hydroxychloroquine. Un suivi rapproché est nécessaire pour dépister une éventuelle évolution vers un lupus systémique."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Kählin, 27 ans, présente un érythème cutané rouge squameux chronique depuis 3 semaines, aggravé au soleil.\n\nB (Background) : Pas de maladies chroniques, contraception orale, tabac 5 PA, voyage récent Italie avec forte exposition solaire.\n\nA (Assessment) : Suspicion lupus érythémateux cutané subaigu. DD : psoriasis, photodermatose.\n\nR (Recommendation) : Bilan immunologique (ANA, anti-SSA/Ro), hémogramme, créatinine, BU, biopsie cutanée si doute. PEC : photoprotection, arrêt tabac, corticoïdes topiques, suivi rapproché, hydroxychloroquine si atteinte persistante."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Formes cliniques de lupus cutané",
+              "points": [
+                "Aigu : érythème malaire en aile de papillon",
+                "Subaigu : plaques annulaires/psoriasiformes, dépigmentations résiduelles",
+                "Chronique discoïde : plaques squameuses avec cicatrices atrophiques, risque alopécie cicatricielle",
+                "Tumidus : plaques rouges indurées, non cicatricielles"
+              ]
+            },
+            {
+              "titre": "👉 Signes d’alarme pour lupus systémique",
+              "points": [
+                "Atteinte rénale (protéinurie, hématurie)",
+                "Atteinte neurologique (convulsions, troubles cognitifs)",
+                "Arthrites franches",
+                "Cytopénies inexpliquées"
+              ]
+            },
+            {
+              "titre": "👉 PEC pratique",
+              "points": [
+                "Photoprotection SPF 50+",
+                "Corticothérapie topique",
+                "Inhibiteurs de la calcineurine si visage",
+                "Hydroxychloroquine si étendu/persistant",
+                "Surveillance biologique régulière"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas confondre avec psoriasis ou photodermatose",
+                "Toujours relier à exposition solaire",
+                "Ne pas oublier BU/créat pour dépistage néphrite lupique",
+                "Toujours évoquer le risque d’évolution vers lupus systémique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Lupus érythémateux cutané",
+                  "reponse": {
+                    "pour": [
+                      "Érythème squameux chronique, non prurigineux",
+                      "Aggravation après exposition solaire",
+                      "Arthralgies, céphalées, fatigue associées",
+                      "Atteinte jeune femme"
+                    ],
+                    "contre": [
+                      "Pas de lésions malaires",
+                      "Pas de signes systémiques sévères"
+                    ]
+                  }
+                },
+                {
+                  "question": "Psoriasis",
+                  "reponse": {
+                    "pour": [
+                      "Plaques squameuses rouges"
+                    ],
+                    "contre": [
+                      "Pas de localisations typiques (coudes, genoux, cuir chevelu)",
+                      "Pas d’antécédents familiaux"
+                    ]
+                  }
+                },
+                {
+                  "question": "Photodermatose",
+                  "reponse": {
+                    "pour": [
+                      "Éruption aggravée par exposition solaire"
+                    ],
+                    "contre": [
+                      "Persistance inhabituelle après fin d’exposition",
+                      "Pas de prurit important"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "ANA, anti-SSA/Ro, ± anti-dsDNA",
+                    "VS/CRP",
+                    "Hémogramme",
+                    "Créatinine, urée",
+                    "Bandelette urinaire",
+                    "Biopsie cutanée si doute diagnostique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Lupus érythémateux cutané (forme subaiguë probable)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Photoprotection stricte",
+                      "Corticothérapie topique",
+                      "Inhibiteurs de la calcineurine si visage"
+                    ],
+                    "specifique": [
+                      "Hydroxychloroquine si atteinte persistante ou étendue",
+                      "Corticoïdes systémiques ou immunosuppresseurs si formes sévères"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle à 4-6 semaines",
+                    "Surveillance biologique régulière si ANA positifs",
+                    "Dépistage atteinte systémique à chaque consultation",
+                    "Référence en dermatologie si évolution défavorable"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

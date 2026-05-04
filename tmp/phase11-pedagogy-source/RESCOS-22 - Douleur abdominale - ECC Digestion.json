@@ -1,0 +1,846 @@
+{
+  "title": "RESCOS-22 - Douleur abdominale - ECC Digestion",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M./Mme Taylor Dubois, 24 ans, instituteur/institutrice au collège, célibataire, de retour de voyage au Sénégal, consulte pour douleurs abdominales et diarrhées",
+    "vitals": {
+      "ta": "110/70 mmHg",
+      "fc": "95 bpm",
+      "fr": "18/min",
+      "temperature": "38.5°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur abdominale",
+          "details": [
+            "Localisation [tout le ventre, montrer avec main à plat, nombril et bas ventre]",
+            "Irradiation [pas d'irradiation spécifique]",
+            "Début et progression [il y a 2 jours, sans facteur déclenchant]",
+            "Caractère [constante avec crampes intermittentes]",
+            "Intensité [5/10 sur échelle de douleur]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Facteurs déclenchants, aggravants et calmants",
+          "details": [
+            "Facteurs déclenchants [aucun facteur identifié]",
+            "Facteurs aggravants [ingestion de liquides]",
+            "Facteurs calmants [émission de selles diarrhéiques]",
+            "Position antalgique [aucune position spécifique]",
+            "Évolution temporelle [douleur progressive depuis 2 jours]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse du transit intestinal et aspect des selles",
+          "details": [
+            "Fréquence des selles [environ 10 fois par jour]",
+            "Aspect des selles [liquides comme de l'eau]",
+            "Odeur [selles malodorantes]",
+            "Présence de glaires, sang, pus [à explorer selon protocole]",
+            "Horaire [à préciser: matinal, post-prandial, nocturne]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés digestifs",
+          "details": [
+            "Vomissements [alimentaires au début, maintenant glaires]",
+            "Perte d'appétit [rien mangé depuis 2 jours]",
+            "Perte de poids [2 kg depuis début symptômes]",
+            "Hoquet, éructations [à explorer]",
+            "Dernières selles normales [avant l'épisode]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux et signes de déshydratation",
+          "details": [
+            "Fièvre [38.5°C depuis hier]",
+            "Asthénie [se sent affaibli·e]",
+            "Troubles du sommeil [dort mal]",
+            "Soif et apports hydriques [boit très peu car vomissements]",
+            "État général [dégradation progressive]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a6",
+          "text": "Recherche de complications et symptômes d'alarme",
+          "details": [
+            "Troubles urinaires [pas de brûlures en urinant]",
+            "Signes d'occlusion [ballonnements, arrêt gaz/selles]",
+            "Douleur à la détente [équivalent douleur à la toux]",
+            "Signes de péritonisme [défense, contracture]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents et contexte épidémiologique",
+          "details": [
+            "Antécédents similaires [grippes intestinales et indigestions, mais jamais si longtemps]",
+            "Voyage récent [retour du Sénégal, tout s'est bien passé]",
+            "Contage [pas de contact avec personnes symptomatiques]",
+            "Antécédents familiaux [parents et frère en bonne santé]",
+            "Médicaments et habitudes [pas de médicaments, alcool occasionnel]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse gynécologique (si applicable)",
+          "details": [
+            "Dernières règles [il y a 2 semaines, normales et régulières]",
+            "Contraception [contraception orale]",
+            "Risque de grossesse [à évaluer selon contexte]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche digestive systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale et signes vitaux",
+          "details": [
+            "État général [agitation vs prostration]",
+            "Signes vitaux complets [pouls, TA, respiration, température]",
+            "Signes de déshydratation [langue, pli cutané]",
+            "Recherche d'ictère [sclères et peau]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Inspection abdominale systématique",
+          "details": [
+            "Identification des 4 quadrants et 9 régions",
+            "Abdomen plat vs distendu, symétrique vs asymétrique",
+            "Recherche de cicatrices chirurgicales",
+            "Observation lors de la respiration [amplitude, symétrie]",
+            "Réaction à la toux [douleur équivalente à la détente]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Auscultation pendant au moins 1 minute",
+            "Auscultation de part et d'autre de l'ombilic",
+            "Évaluation de la fréquence des bruits intestinaux",
+            "Tonalité des bruits [métalliques = distension]",
+            "Intensité des bruits intestinaux"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Percussion abdominale",
+          "details": [
+            "Technique correcte [main à plat, percussion avec doigt]",
+            "Tympanisme [normal épigastre, ailleurs = distension gazeuse]",
+            "Matité [liquide, organes, masses]",
+            "Flèche hépatique [percussion ligne médio-claviculaire droite]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Palpation superficielle de l'abdomen",
+          "details": [
+            "Commencer à l'opposé de la zone douloureuse",
+            "Palpation avec main à plat dans chaque région",
+            "Évaluation du tonus pariétal spontané",
+            "Recherche de douleur localisée",
+            "Recherche de défense ou contracture"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Palpation profonde et recherche de masses",
+          "details": [
+            "Recherche de masses [taille, consistance, mobilité]",
+            "Palpation de l'aorte abdominale",
+            "Douleur à l'ébranlement et à la détente",
+            "Évaluation de la douleur provoquée"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Palpation des organes (foie, rate, reins)",
+          "details": [
+            "Palpation du bord inférieur du foie",
+            "Palpation de la rate [décubitus dorsal et latéral droit]",
+            "Palpation bimanuelle des loges rénales",
+            "Mention du toucher rectal si indiqué"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - séquence inspection-auscultation-percussion-palpation",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal et différentiel",
+          "details": [
+            "Évoque gastro-entérite aiguë",
+            "Probablement d'origine infectieuse",
+            "Contexte de voyage en zone tropicale",
+            "Diagnostic différentiel [intoxication alimentaire, parasitose]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Évaluation de la sévérité et des complications",
+          "details": [
+            "Évaluation du degré de déshydratation",
+            "Recherche de signes de choc [hypotension, tachycardie]",
+            "Évaluation de la perte pondérale [2 kg en 2 jours]",
+            "Exclusion de complications [péritonite, occlusion]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m3",
+          "text": "Proposition d'examens complémentaires",
+          "details": [
+            "Bilan biologique [ionogramme, NFS, CRP]",
+            "Coproculture et recherche de parasites",
+            "Bandelette urinaire",
+            "Imagerie abdominale si doute diagnostique"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique immédiate",
+          "details": [
+            "Réhydratation [orale si possible, IV si nécessaire]",
+            "Correction des pertes électrolytiques",
+            "Traitement symptomatique [antiémétiques]",
+            "Repos digestif initial puis réalimentation progressive"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement spécifique et antibiotiques",
+          "details": [
+            "Indication d'antibiothérapie [selon contexte et sévérité]",
+            "Choix antibiotique adapté [fluoroquinolones]",
+            "Traitement antiparasitaire si indiqué",
+            "Probiotiques pour restaurer flore intestinale"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Conseils diététiques et de prévention",
+          "details": [
+            "Réalimentation progressive [BRAT diet]",
+            "Conseils d'hygiène [lavage des mains]",
+            "Éviction professionnelle si nécessaire",
+            "Prévention pour futurs voyages"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Critères d'hospitalisation [déshydratation sévère, intolérance orale]",
+            "Surveillance clinique [poids, diurèse, état général]",
+            "Critères d'amélioration [diminution fréquence selles]",
+            "Planification du suivi ambulatoire"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Information du patient et éducation",
+          "details": [
+            "Explication du diagnostic et évolution probable",
+            "Signes d'alarme nécessitant reconsultation",
+            "Importance de la compliance thérapeutique",
+            "Conseils pour la reprise du travail"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - approche globale de la gastro-entérite",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient·e standardisé·e",
+      "nom": "Taylor Dubois",
+      "age": "24 ans",
+      "contexte": "Instituteur/institutrice à plein temps dans un collège, célibataire, sans enfant, de retour de voyage au Sénégal",
+      "motifConsultation": {
+        "plaintePrincipale": "Douleur abdominale de plus en plus forte avec diarrhées",
+        "autreChose": "Je me sens de plus en plus faible et j'ai perdu du poids"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs abdominales depuis 2 jours",
+          "Localisées dans tout le ventre (montrer avec main à plat)",
+          "Début sans facteur déclenchant identifié",
+          "Douleur constante évaluée à 5/10",
+          "Crampes intermittentes soulagées par émission de selles"
+        ],
+        "symptomesAssocies": [
+          "Diarrhées liquides comme de l'eau, malodorantes",
+          "Environ 10 selles par jour",
+          "Vomissements : alimentaires au début, maintenant glaires",
+          "Fièvre à 38.5°C depuis hier",
+          "Perte de poids de 2 kg depuis le début"
+        ],
+        "circonstances": [
+          "Début il y a 2 jours, progression des symptômes",
+          "N'a rien mangé depuis 2 jours",
+          "Boit très peu car cela provoque vomissements",
+          "Se sent affaibli·e et dort mal",
+          "De retour de voyage au Sénégal où tout s'est bien passé"
+        ],
+        "facteursDeclenchants": [
+          "Aucun facteur déclenchant identifié",
+          "Voyage récent au Sénégal",
+          "Pas de repas suspect particulier"
+        ],
+        "inquietudes": [
+          "N'a jamais eu quelque chose d'aussi long",
+          "Inquiètude sur la perte de poids rapide",
+          "Préoccupation pour le travail (instituteur/trice)"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Alimentation habituelle équilibrée",
+        "alcool": "Occasionnellement le samedi soir, sinon jamais",
+        "tabac": "Ne fume pas",
+        "medicaments": "Ne prend pas de médicaments",
+        "activitePhysique": "Activité normale pour l'âge"
+      },
+      "antecedentsPersonnels": [
+        "Bonne santé habituelle",
+        "Déjà eu des 'grippes intestinales' et indigestions",
+        "Mais jamais pour si longtemps",
+        "Pas d'antécédents chirurgicaux"
+      ],
+      "antecedentsFamiliaux": [
+        "Parents en bonne santé",
+        "Frère unique en bonne santé",
+        "Pas d'antécédents familiaux particuliers"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Instituteur/institutrice à plein temps dans un collège",
+        "etatCivil": "Célibataire",
+        "enfants": "Sans enfant",
+        "voyage": "Retour récent du Sénégal",
+        "contage": "Pas de contact avec personnes symptomatiques"
+      },
+      "informationsGynecologiques": {
+        "dernieresRegles": "Il y a 2 semaines, normales et régulières",
+        "contraception": "Contraception orale",
+        "grossesse": "Pas de risque de grossesse"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude fatiguée mais coopérative",
+          "Montre la douleur avec la main à plat sur tout l'abdomen",
+          "Exprime la faiblesse et la préoccupation",
+          "Mentionne spontanément le voyage au Sénégal"
+        ],
+        "durantExamen": [
+          "Coopératif/ve mais inconfortable",
+          "Douleur diffuse à la palpation abdominale",
+          "Pas de défense ni de contracture",
+          "Signes discrets de déshydratation"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est lié à mon voyage au Sénégal ?",
+          "Combien de temps cela va-t-il durer ?",
+          "Quand est-ce que je pourrai retourner travailler ?"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur la durée inhabituelle des symptômes",
+        "Mentionner la perte de poids si pas demandée",
+        "Préciser l'aspect des selles et vomissements",
+        "Évoquer le voyage au Sénégal",
+        "Exprimer l'inquiétude pour le travail"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Taylor Dubois, 24 ans, instituteur/trice, célibataire. Gastro-entérite aiguë depuis 2 jours avec diarrhées profuses (10 selles/j), vomissements, fièvre 38.5°C. Perte de poids 2 kg. Retour récent voyage Sénégal. Signes de déshydratation modérée. Pas de signes de péritonisme.",
+      "rolesInterventions": [
+        "Évaluer la qualité de la caractérisation de la douleur abdominale",
+        "Observer la recherche systématique des symptômes digestifs",
+        "Noter la technique d'examen abdominal (inspection-auscultation-percussion-palpation)",
+        "Vérifier l'évaluation du degré de déshydratation",
+        "Évaluer la prise en charge thérapeutique et les conseils"
+      ],
+      "pointsCles": [
+        "Gastro-entérite aiguë post-voyage tropical",
+        "Déshydratation modérée avec perte pondérale",
+        "Technique d'examen abdominal systématique",
+        "Différenciation avec pathologies plus graves",
+        "Évaluation critères d'hospitalisation",
+        "Traitement symptomatique et spécifique",
+        "Conseils diététiques et d'hygiène",
+        "Prévention pour futurs voyages"
+      ],
+      "pieges": [
+        "Ne pas évaluer le degré de déshydratation",
+        "Omettre l'anamnèse de voyage détaillée",
+        "Mauvaise séquence d'examen abdominal",
+        "Ne pas rechercher signes de complications",
+        "Sous-estimer l'importance de la réhydratation",
+        "Oublier les conseils d'éviction professionnelle",
+        "Ne pas proposer d'examens microbiologiques",
+        "Manquer les critères d'hospitalisation",
+        "Ne pas donner de conseils préventifs",
+        "Omettre l'information sur signes d'alarme"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en gastro-entérologie",
+      "sections": [
+        {
+          "titre": "Diarrhée aiguë : définition et classification",
+          "contenu": "La diarrhée se définit par plus de 3 selles liquides par 24h ou un poids >300g/24h.",
+          "points": [
+            "Diarrhée aiguë : <14 jours, chronique : >4 semaines",
+            "Diarrhée sécrétoire : volontaire, aqueuse, sans leucocytes",
+            "Diarrhée invasive : sanglante, avec leucocytes, fièvre",
+            "Causes infectieuses : virales, bactériennes, parasitaires",
+            "Causes non infectieuses : médicaments, toxiques",
+            "Facteurs de risque : voyage, immunodépression, âge",
+            "Complications : déshydratation, choc, insuffisance rénale"
+          ]
+        },
+        {
+          "titre": "Gastro-entérite du voyageur",
+          "contenu": "Diarrhée survenant pendant ou dans les 10 jours suivant un voyage.",
+          "points": [
+            "Incidence : 20-40% des voyageurs selon destination",
+            "Zones à haut risque : Afrique, Asie du Sud, Amérique latine",
+            "Agents principaux : E. coli entérotoxinogène, Campylobacter",
+            "Parasites : Giardia, Entamoeba histolytica",
+            "Virus : Norovirus, Rotavirus",
+            "Durée habituelle : 3-7 jours",
+            "Prévention : hygiène alimentaire et hydrique"
+          ]
+        },
+        {
+          "titre": "Évaluation clinique de la déshydratation",
+          "contenu": "Reconnaissance des signes cliniques de perte hydro-électrolytique.",
+          "points": [
+            "Déshydratation légère : <3% poids corporel, soif",
+            "Déshydratation modérée : 3-9%, pli cutané, tachycardie",
+            "Déshydratation sévère : >9%, choc, troubles conscience",
+            "Signes cliniques : pli cutané, sécheresse muqueuses",
+            "Signes biologiques : hémoconcentration, créatinine",
+            "Pertes hydriques : 100-200 mL/selle liquide",
+            "Pertes électrolytiques : sodium, potassium, bicarbonates"
+          ]
+        },
+        {
+          "titre": "Examen abdominal systématique",
+          "contenu": "Technique d'examen physique de l'abdomen selon séquence standardisée.",
+          "points": [
+            "Séquence obligatoire : inspection-auscultation-percussion-palpation",
+            "4 quadrants : QSD, QSG, QID, QIG",
+            "9 régions : épigastre, hypochondres, flancs, périombilical, fosses iliaques, hypogastre",
+            "Inspection : distension, asymétrie, cicatrices, hernies",
+            "Auscultation : bruits intestinaux, souffles vasculaires",
+            "Percussion : tympanisme, matité, flèche hépatique",
+            "Palpation : superficielle puis profonde, défense, masses"
+          ]
+        },
+        {
+          "titre": "Signes d'alarme en gastro-entérologie",
+          "contenu": "Reconnaissance des complications nécessitant prise en charge urgente.",
+          "points": [
+            "Signes de péritonisme : défense, contracture, douleur détente",
+            "Signes d'occlusion : vomissements fécaloïdes, arrêt matières/gaz",
+            "Hémorragie digestive : méléna, hématémèse, instabilité",
+            "Déshydratation sévère : troubles conscience, anurie",
+            "Sepsis : fièvre, tachycardie, hypotension",
+            "Diarrhée sanglante : colite inflammatoire, infection invasive",
+            "Immunodépression : risque infections opportunistes"
+          ]
+        },
+        {
+          "titre": "Prise en charge thérapeutique",
+          "contenu": "Traitement symptomatique et spécifique des diarrhées infectieuses.",
+          "points": [
+            "Réhydratation : priorité absolue, orale ou intraveineuse",
+            "SRO : solution de réhydratation orale, 75 mEq Na/L",
+            "Réhydratation IV : Ringer lactate si intolérance orale",
+            "Antiémétiques : ondansétron si vomissements importants",
+            "Antidiarrhéiques : lopéramide sauf si fièvre/sang",
+            "Antibiotiques : fluoroquinolones si fièvre/sang/immunodépression",
+            "Probiotiques : restoration flore intestinale"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Réhydratation orale : SRO 75 mEq Na/L, 50-100 mL/kg/24h",
+        "Réhydratation IV : Ringer lactate 20-30 mL/kg puis selon pertes",
+        "Antibiothérapie : ciprofloxacine 500mg x2/j ou azithromycine 1g J1",
+        "Antiémétiques : ondansétron 4-8mg IV/8h si vomissements",
+        "Antispasmodiques : phloroglucinol 80mg x3/j",
+        "Probiotiques : Saccharomyces boulardii ou Lactobacillus",
+        "Réalimentation progressive : BRAT diet (banane, riz, pomme, toast)"
+      ],
+      "examensComplementaires": [
+        "Ionogramme sanguin : Na, K, Cl, bicarbonates, fonction rénale",
+        "NFS : hémoconcentration, leucocytose si infection bactérienne",
+        "CRP : marqueur inflammatoire, élevée si infection invasive",
+        "Coproculture : recherche bactéries pathogènes (Salmonella, Shigella)",
+        "Parasitologie des selles : recherche parasites et kystes",
+        "Leucocytes fécaux : présents si diarrhée inflammatoire",
+        "Toxines de C. difficile : si contexte d'antibiothérapie récente",
+        "Bandelette urinaire : éliminer infection urinaire associée"
+      ]
+    },
+    "resume": {
+      "titre": "⚠️ Diarrhée aiguë post-voyage – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "≥ 3 selles non moulées/24h d’apparition aiguë",
+                "Douleurs abdominales ou crampes",
+                "Nausées, parfois vomissements",
+                "Fièvre légère possible",
+                "Déshydratation si sévère"
+              ]
+            },
+            {
+              "titre": "Contexte évocateur",
+              "points": [
+                "Retour de voyage en zone endémique (Afrique, Asie, Amérique latine)",
+                "Ingestion d’eau ou aliments suspects (crudités, glaçons, street food)",
+                "Voyageurs en groupe, cas similaires dans l’entourage",
+                "Absence d’antécédents digestifs chroniques"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes physiques",
+              "points": [
+                "Signes de déshydratation (pli cutané, muqueuses sèches, hypotension orthostatique, tachycardie)",
+                "Température variable (afebrile ou fébricule)",
+                "Abdomen souple, sensible, sans défense ni contracture",
+                "Auscultation : bruits hydroaériques souvent augmentés"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens complémentaires",
+          "subsections": [
+            {
+              "titre": "Indications limitées",
+              "points": [
+                "Non systématiques si forme légère et non compliquée",
+                "Coproculture ± recherche de parasites si diarrhée prolongée (> 7 jours), sang dans les selles, ou forme sévère",
+                "Bilan hydro-électrolytique si signes de déshydratation importante"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures de première intention",
+              "points": [
+                "Réhydratation orale (solutions de réhydratation) ou IV si sévère",
+                "Alimentation adaptée : reprise progressive, éviter les irritants",
+                "Antalgiques simples (éviter AINS)"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Pas d’antibiotique si forme légère",
+                "Antibiothérapie réservée aux formes modérées à sévères (altération activité, fièvre, sang) : ciprofloxacine ou azithromycine (zones Asie)",
+                "Loperamide possible en association si non fébrile et sans sang dans les selles"
+              ]
+            },
+            {
+              "titre": "Prévention secondaire",
+              "points": [
+                "Hygiène alimentaire et hydrique en voyage",
+                "Éviter l’automédication anarchique par antibiotiques",
+                "Information sur le risque de récidive"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Diarrhée aiguë post-voyage = suspecter diarrhée du voyageur (ETEC ++)",
+            "Recherche systématique des signes de déshydratation",
+            "Traitement principal = réhydratation, antibiotiques réservés aux formes sévères",
+            "Pas d’examens complémentaires systématiques",
+            "Loperamide uniquement si pas de sang ni fièvre"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Début, fréquence, aspect des selles (sang, glaires, aqueuses)",
+                "Présence de fièvre, douleurs abdominales, vomissements",
+                "Voyage récent (lieu, durée, alimentation, eau, glaçons)",
+                "Cas similaires dans l’entourage",
+                "Signes de gravité : soif, oligurie, vertiges, malaise"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, FR, température)",
+                "Évaluation de la déshydratation",
+                "Abdomen souple, sans défense ni contracture",
+                "Auscultation des bruits hydroaériques"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Réhydratation orale ou IV selon gravité",
+                "Symptomatique : alimentation adaptée, antalgiques simples, lopéramide si pas de sang/fièvre",
+                "Antibiotiques réservés aux formes modérées/sévères (ciprofloxacine ou azithromycine en Asie)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale et diarrhées (suspicion de gastro-entérite du voyageur)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, contexte de voyage, motif de consultation",
+            "Douleur abdominale → diffuse, crampes, constante 5/10, début il y a 2 jours",
+            "Symptômes associés → diarrhées liquides abondantes, fièvre 38.5 °C, vomissements, perte de poids",
+            "Anamnèse du transit → 10 selles/jour, liquides, malodorantes",
+            "ATCD → bonne santé, grippes intestinales passées mais jamais aussi longues, pas de chirurgie",
+            "Habitudes → alimentation équilibrée, pas de tabac, alcool rare",
+            "Examen clinique ciblé → abdomen souple douloureux, pas de défense/contracture, signes discrets de déshydratation",
+            "Résumé + hypothèse principale : gastro-entérite infectieuse du voyageur ; DD : intoxication alimentaire, parasitose, colite infectieuse invasive, infection urinaire",
+            "Examens complémentaires → NFS, CRP, ionogramme, coproculture ± parasitologie, BU",
+            "Prise en charge → réhydratation orale/IV, correction hydro-électrolytique, antiémétiques, réalimentation progressive, ATB si sévère"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DIARRHÉE",
+            "elements": [
+              "D = Début, durée",
+              "I = Intensité et fréquence",
+              "A = Aspect (sang, glaires, aqueux)",
+              "R = Récidives, antécédents",
+              "R = Retour de voyage",
+              "H = Hydratation (signes de déshydratation)",
+              "É = Examens de selles",
+              "E = Éliminer complications"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Taylor Dubois, 24 ans, instituteur/trice, célibataire, qui consulte aux urgences pour douleurs abdominales et diarrhées depuis 2 jours. La douleur est diffuse, de type crampes abdominales, constante d’intensité modérée (5/10), sans irradiation, soulagée transitoirement par l’émission de selles. Elle est aggravée par la prise de liquides.\n\nLes symptômes associés comprennent environ 10 selles par jour, très liquides, malodorantes, accompagnées de nausées et de vomissements (alimentaires au début puis muqueux). Le patient rapporte une perte de poids de 2 kg en 2 jours, une anorexie, une grande fatigue et une fièvre à 38.5 °C. Il boit très peu car cela entraîne des vomissements. Il décrit une dégradation progressive de son état général.\n\nSes antécédents médicaux sont inexistants, hormis quelques épisodes de grippes intestinales rapides. Pas d’antécédents chirurgicaux, pas de traitement chronique, pas d’allergies. Ses parents et son frère sont en bonne santé. Dans ses habitudes de vie, il a une alimentation équilibrée, ne fume pas, consomme de l’alcool occasionnellement.\n\nDans le contexte, il revient d’un voyage au Sénégal, sans souvenir de repas suspect particulier ni de contage connu. Ses dernières règles datent de 2 semaines, contraception orale, pas de risque de grossesse.\n\nÀ l’examen, on retrouve un patient fébrile à 38.5 °C, FC 95, TA 110/70, FR 18. Il est fatigué, légèrement déshydraté avec muqueuses sèches, pli cutané discret. L’abdomen est souple, douloureux de façon diffuse, sans défense ni contracture. Les bruits hydroaériques sont présents et normaux.\n\nEn résumé, il s’agit d’un patient jeune, de retour de voyage en zone tropicale, avec diarrhées liquides abondantes, douleurs abdominales diffuses, fièvre et signes discrets de déshydratation. Mon hypothèse principale est une gastro-entérite infectieuse du voyageur. Les diagnostics différentiels incluent une parasitose (Giardia, Entamoeba), une intoxication alimentaire bactérienne (Salmonella, Shigella, E. coli), une colite infectieuse invasive, ou plus rarement une infection urinaire atypique.\n\nComme examens complémentaires, je demanderais un ionogramme sanguin, une NFS, une CRP, une coproculture et un examen parasitologique des selles. Une bandelette urinaire complète le bilan. Une imagerie abdominale n’est indiquée qu’en cas de doute diagnostique ou de suspicion de complication.\n\nEn termes de prise en charge, la priorité est la réhydratation, orale avec SRO si tolérée, ou IV si vomissements importants. On corrige les pertes électrolytiques. Un traitement symptomatique par antiémétiques est prescrit. Une réalimentation progressive est introduite. Une antibiothérapie peut être envisagée si la forme est sévère (fièvre persistante, sang dans les selles, patient immunodéprimé) avec ciprofloxacine ou azithromycine selon la zone géographique. Enfin, des conseils diététiques, d’hygiène et de prévention pour les futurs voyages doivent être donnés."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Taylor Dubois, 24 ans, revient du Sénégal, présente depuis 2 jours douleurs abdominales diffuses avec diarrhées liquides abondantes.\n\nB (Background) : Pas d’antécédents notables, pas de traitement, alimentation équilibrée, pas de contage connu. Voyage récent en Afrique.\n\nA (Assessment) : Gastro-entérite infectieuse probable du voyageur. DD : intoxication alimentaire, parasitose, colite infectieuse.\n\nR (Recommendation) : NFS, CRP, ionogramme, coproculture et parasitologie des selles, réhydratation orale/IV, traitement symptomatique, antibiothérapie si sévère."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes de déshydratation",
+              "points": [
+                "Pli cutané",
+                "Muqueuses sèches",
+                "Oligurie",
+                "Soif intense",
+                "Asthénie"
+              ]
+            },
+            {
+              "titre": "👉 Diarrhée du voyageur – agents fréquents",
+              "points": [
+                "E. coli entérotoxinogène (ETEC)",
+                "Campylobacter",
+                "Giardia lamblia",
+                "Entamoeba histolytica",
+                "Norovirus"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier de rechercher signes de gravité (déshydratation sévère, sang, sepsis)",
+                "Ne pas oublier de demander le contexte de voyage",
+                "Ne pas oublier de vérifier la tolérance orale",
+                "Éviter de prescrire systématiquement des antibiotiques",
+                "Informer sur mesures préventives"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Gastro-entérite infectieuse (voyageur)",
+                  "reponse": {
+                    "pour": [
+                      "Retour du Sénégal",
+                      "Diarrhée liquide abondante",
+                      "Fièvre 38.5 °C",
+                      "Douleurs diffuses crampiformes",
+                      "Signes de déshydratation",
+                      "Pas d’antécédents digestifs chroniques"
+                    ],
+                    "contre": [
+                      "Pas de sang ni glaires",
+                      "Durée courte (2 jours)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Parasitose (Giardia, Entamoeba)",
+                  "reponse": {
+                    "pour": [
+                      "Voyage zone tropicale",
+                      "Diarrhée aqueuse",
+                      "Perte de poids"
+                    ],
+                    "contre": [
+                      "Durée brève (2 jours, parasitoses plutôt subaiguës/chroniques)",
+                      "Pas de glaires sanglantes"
+                    ]
+                  }
+                },
+                {
+                  "question": "Intoxication alimentaire bactérienne",
+                  "reponse": {
+                    "pour": [
+                      "Diarrhée abondante",
+                      "Vomissements initiaux",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Pas de repas suspect identifié",
+                      "Durée déjà >48h"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Ionogramme sanguin",
+                    "NFS",
+                    "CRP",
+                    "Coproculture",
+                    "Parasitologie des selles",
+                    "Bandelette urinaire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Gastro-entérite aiguë probable du voyageur"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Réhydratation orale avec SRO si tolérance, IV si vomissements",
+                      "Correction hydro-électrolytique",
+                      "Antalgiques simples, antiémétiques",
+                      "Réalimentation progressive",
+                      "Antibiothérapie uniquement si forme sévère (ciprofloxacine ou azithromycine selon contexte)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance hydratation et poids",
+                    "Contrôle clinique à 48h",
+                    "Éviction professionnelle si diarrhée persistante",
+                    "Conseils hygiène et alimentation en voyage"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

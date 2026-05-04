@@ -1,0 +1,579 @@
+{
+  "title": "German-25 - Douleur au talon",
+  "context": {
+    "setting": "Service d'urgence d'un hôpital régional",
+    "patient": "M. Müller, 30 ans, se présente aux urgences pour de fortes douleurs au talon",
+    "vitals": {
+      "ta": "120/80 mmHg",
+      "fc": "50 bpm",
+      "temperature": "36.5°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Localisation précise de la douleur",
+          "details": [
+            "[En haut du talon]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution temporelle",
+          "details": [
+            "[Depuis 4 semaines]",
+            "[Augmentation progressive]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a4",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Aiguë]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a5",
+          "text": "Irradiation",
+          "details": [
+            "[Nulle part]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs aggravants/atténuants",
+          "details": [
+            "[Améliorée par le repos]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a7",
+          "text": "Douleur à l'effort vs au repos",
+          "details": [
+            "[Sous charge/à l'effort]",
+            "[Hier, soudainement douloureuse même en position assise]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a8",
+          "text": "Retentissement sur les activités quotidiennes",
+          "details": [
+            "[N'est plus allé au travail]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a9",
+          "text": "Type de chaussures portées",
+          "details": [
+            "[Au travail: toujours des talons hauts]",
+            "[En loisir: toujours les mêmes baskets]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a10",
+          "text": "Notion de traumatisme",
+          "details": [
+            "[Aucun traumatisme connu]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a11",
+          "text": "Autres plaintes articulaires",
+          "details": [
+            "[Première apparition]",
+            "[Pas d'autres plaintes]",
+            "[Pas d'autres arthralgies]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a12",
+          "text": "Activités sportives",
+          "details": [
+            "[Joue beaucoup au squash]",
+            "[Ski en hiver]",
+            "[Ancien volleyeur presque professionnel]",
+            "[Week-end d'entraînement il y a 3 semaines]",
+            "[Symptômes aggravés après]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents médicaux",
+          "details": [
+            "[Aucun]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "[Aucun]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Activité professionnelle",
+          "details": [
+            "[Vendeur dans un magasin d'articles ménagers]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Marié]",
+            "[2 enfants]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Rien de particulier concernant les problèmes orthopédiques]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et complète"
+          ],
+          "scoringRule": "Bien conduite = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Analyse de la marche",
+          "details": [
+            "Marche normale",
+            "Marche sur les orteils",
+            "Marche sur les talons",
+            "Évaluation des axes du bassin",
+            "Évaluation des axes des jambes",
+            "Évaluation des axes de l'arrière-pied",
+            "Évaluation de la musculature"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e2",
+          "text": "Inspection globale du pied en position debout",
+          "details": [
+            "Recherche de pied étalé (Spreizfuss)",
+            "Recherche de pied plat (Senkfuss)",
+            "Recherche de pied valgus (Knickfuss)",
+            "Recherche de pied creux (Hohlfuss)",
+            "Recherche de pied bot (Klumpfuss)",
+            "Abduction du médio-pied (signe 'too-many-toes')",
+            "Forme des orteils (marteau, griffe)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e3",
+          "text": "Inspection de la plante du pied en position assise",
+          "details": [
+            "Recherche d'hyperkératose",
+            "Recherche d'exanthèmes",
+            "Recherche de mycoses"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e4",
+          "text": "Palpation systématique",
+          "details": [
+            "Articulation tibio-tarsienne",
+            "Test de Gänslen",
+            "Tendon d'Achille (recherche de nodules, points douloureux)",
+            "Tendon du tibial postérieur",
+            "Fascia plantaire"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e5",
+          "text": "Examen de la mobilité articulaire",
+          "details": [
+            "Extension/flexion de la cheville",
+            "Inversion/éversion",
+            "Pronation/supination"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e6",
+          "text": "Examen fonctionnel - Tests de force",
+          "details": [
+            "Contraction résistive isométrique de l'extenseur de l'hallux",
+            "Test des muscles péroniers",
+            "Test de montée sur la pointe des pieds (heel rise test)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e7",
+          "text": "Tests ligamentaires",
+          "details": [
+            "Stabilité des ligaments collatéraux latéraux",
+            "Test du tiroir antérieur",
+            "Test de varus-valgus"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e8",
+          "text": "Tests neurologiques",
+          "details": [
+            "Signe de Tinel sur le nerf tibial postérieur",
+            "Sensibilité plantaire",
+            "Réflexe achilléen"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e9",
+          "text": "Test de Thompson",
+          "details": [
+            "Compression du mollet pour évaluer l'intégrité du tendon d'Achille"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e10",
+          "text": "Pouls périphériques",
+          "details": [
+            "Pouls tibial postérieur",
+            "Pouls pédieux"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e11",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et systématique"
+          ],
+          "scoringRule": "Complet et bien structuré = 2 pts (oui), suffisant = 1 pt (±), insuffisant = 0 pt (non)"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Tendinopathie d'insertion du tendon d'Achille",
+          "binaryOnly": false
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2)",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Tendinopathie du tibial postérieur",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Fasciite plantaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Fracture de fatigue du calcanéum",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, CT si complexe"
+                  },
+                  {
+                    "text": "Bursite rétrocalcanéenne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome de Haglund",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Rupture partielle du tendon d'Achille",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Radiographie du talon (profil et face) pour exclure fracture ou calcifications",
+            "Échographie du tendon d'Achille",
+            "IRM si suspicion de rupture partielle ou si échec du traitement conservateur"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m4",
+          "text": "Traitement médicamenteux",
+          "details": [
+            "AINS (ex: ibuprofène 600mg 3x/jour ou diclofénac)",
+            "Antalgiques si nécessaire",
+            "Application locale d'anti-inflammatoires"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m5",
+          "text": "Traitement non médicamenteux",
+          "details": [
+            "Repos relatif et arrêt temporaire du sport",
+            "Adaptation des chaussures (éviter talons hauts, semelles amortissantes)",
+            "Talonnette de décharge",
+            "Application de glace (cryothérapie)",
+            "Étirements progressifs du triceps sural"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m6",
+          "text": "Mesures socio-professionnelles",
+          "details": [
+            "Arrêt de travail temporaire",
+            "Interdiction de sport pendant 4-6 semaines",
+            "Adaptation du poste de travail (éviter station debout prolongée)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m7",
+          "text": "Prise en charge à moyen terme",
+          "details": [
+            "Physiothérapie (renforcement excentrique, ondes de choc)",
+            "Rééducation progressive",
+            "Correction des troubles statiques du pied si nécessaire",
+            "Infiltration de corticoïdes péri-tendineuse (pas intra-tendineuse)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m8",
+          "text": "Information et conseils au patient",
+          "details": [
+            "Explication du diagnostic et du mécanisme lésionnel",
+            "Importance du repos et du traitement",
+            "Évolution généralement favorable en 6-12 semaines",
+            "Prévention des récidives (échauffement, étirements, chaussures adaptées)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m9",
+          "text": "Suivi",
+          "details": [
+            "Contrôle clinique dans 2-3 semaines",
+            "Évaluation de l'efficacité du traitement",
+            "Orientation vers spécialiste si échec du traitement conservateur"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète et adaptée"
+          ],
+          "scoringRule": "Complète et structurée = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦶 Tendinopathie d’insertion du tendon d’Achille – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur postérieure du talon, au point d’insertion du tendon sur le calcanéus",
+                "Douleur à l’effort, surtout lors de la marche ou de la course",
+                "Douleur matinale ou après une période de repos (raideur au premier pas)",
+                "Évolution chronique, par poussées"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Sportifs (course à pied, sports avec sauts/répétition de poussée sur l’avant-pied)",
+                "Surmenage ou augmentation brutale de l’activité physique",
+                "Chaussures inadaptées (rigides au talon, talons plats)",
+                "Troubles statiques du pied (pied creux, pied plat)",
+                "Âge > 40 ans (dégénérescence tendineuse)",
+                "Surpoids"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Tuméfaction et épaississement localisé du tendon au point d’insertion",
+                "Rougeur ou chaleur locale possible",
+                "Déviation du talon ou troubles de statique associés"
+              ]
+            },
+            {
+              "titre": "Palpation",
+              "points": [
+                "Douleur élective à la pression de l’insertion calcanéenne",
+                "Épaississement nodulaire possible",
+                "Douleur majorée lors de la mise en tension du tendon"
+              ]
+            },
+            {
+              "titre": "Tests fonctionnels",
+              "points": [
+                "Douleur déclenchée à la flexion plantaire contrariée",
+                "Raideur du mollet",
+                "Marche sur la pointe des pieds douloureuse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Diagnostic surtout clinique",
+                "Échographie : épaississement, irrégularité du tendon, enthésopathie, bursite rétrocalcanéenne",
+                "IRM en cas de doute ou avant chirurgie",
+                "Radiographie : parfois ostéophytes ou calcifications au point d’insertion"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, adaptation de l’activité sportive",
+                "Glace après effort",
+                "Antalgiques ± AINS courts en phase douloureuse",
+                "Étirements du triceps sural et exercices excentriques du tendon d’Achille",
+                "Semelles orthopédiques (talonnettes, correction troubles statiques)",
+                "Chaussures adaptées avec talon légèrement surélevé"
+              ]
+            },
+            {
+              "titre": "Traitements de 2e ligne",
+              "points": [
+                "Kinésithérapie (renforcement, ondes de choc)",
+                "Infiltrations locales (PRP, corticoïdes autour mais jamais intratendineux)",
+                "Immobilisation temporaire dans les cas sévères"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "En cas d’échec du traitement médical prolongé (> 6–12 mois)",
+                "Gestes possibles : débridement, résection ostéophytes, réparation tendineuse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur postérieure du talon = penser tendinopathie d’insertion achilléenne",
+            "Diagnostic clinique, écho utile pour confirmer",
+            "Traitement conservateur = pilier (repos, excentriques, semelles)",
+            "Infiltration cortisonée intratendineuse contre-indiquée (risque rupture)",
+            "Chirurgie seulement en cas d’échec prolongé"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur au talon ? Début brutal ou progressif ?",
+                "Activité sportive ou professionnelle sollicitant le tendon ?",
+                "Douleur au lever (raideur matinale) ?",
+                "Chaussures adaptées ou récentes ?",
+                "ATCD de tendinopathie ou rupture tendineuse ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection du talon : tuméfaction, rougeur",
+                "Palpation insertion calcanéenne",
+                "Test de mise en tension du tendon (flexion plantaire contrariée)",
+                "Échographie (± IRM si doute ou forme chronique résistante)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic clinique ± écho",
+                "Traitement conservateur systématique (repos relatif, excentriques, semelles, kinésithérapie)",
+                "Escalade thérapeutique : ondes de choc, infiltration PRP, chirurgie si échec"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

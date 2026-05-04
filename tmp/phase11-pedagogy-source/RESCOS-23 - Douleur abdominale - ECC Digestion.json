@@ -1,0 +1,882 @@
+{
+  "title": "RESCOS-23 - Douleur abdominale - ECC Digestion",
+  "context": {
+    "setting": "Cabinet de gastro-entérologie",
+    "patient": "Mme Patricia Postal, 45 ans, mariée, guichetière à la poste, mère de 3 enfants, consulte pour douleur biliaire évoluant depuis 3 jours",
+    "vitals": {
+      "ta": "125/80 mmHg",
+      "fc": "78 bpm",
+      "fr": "16/min",
+      "temperature": "37.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur biliaire",
+          "details": [
+            "Localisation [haut du ventre à droite, hypochondre droit]",
+            "Irradiation [région de l'omoplate droite]",
+            "Début et progression [il y a 3 jours, réveil avec douleur, progressive]",
+            "Caractère [douleur lancinante puis continue]",
+            "Intensité [franchement intolérable ce matin]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Facteurs aggravants et déclenchants",
+          "details": [
+            "Facteurs aggravants [inspiration profonde, mouvements brusques]",
+            "Facteurs déclenchants [aucun facteur alimentaire identifié]",
+            "Position antalgique [pas de position spécifique]",
+            "Effet du traitement [Panadol fait baisser température mais pas douleur]",
+            "Évolution temporelle [aggravation progressive sur 3 jours]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés digestifs",
+          "details": [
+            "Nausées [présentes depuis le début]",
+            "Perte d'appétit [plus faim depuis 3 jours]",
+            "Vomissements [à explorer]",
+            "Dégoût pour la nourriture [présent]",
+            "Hoquet, éructations [à explorer]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes généraux et signes d'alarme",
+          "details": [
+            "Fièvre [37.9°C ce matin]",
+            "Frissons [à explorer pour angiocholite]",
+            "Impact fonctionnel [a pu poursuivre activités initialement]",
+            "Ictère [à rechercher cliniquement]",
+            "Altération état général [dégoût alimentaire]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Transit et fonction digestive",
+          "details": [
+            "Transit conservé [selles normales]",
+            "Aspect des selles [normales, pas de décoloration]",
+            "Troubles urinaires [à explorer]",
+            "Dernière prise alimentaire [grignoté pain seulement]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels et facteurs de risque",
+          "details": [
+            "Épisodes similaires antérieurs [première fois ce genre de douleur]",
+            "Surpoids [excès de poids d'une vingtaine de kilos]",
+            "Régime en cours [prévoit faire du sport]",
+            "Bonne santé habituelle",
+            "Pas de médicaments réguliers"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents familiaux et habitudes",
+          "details": [
+            "Antécédents familiaux [mère avait 'crises de foie']",
+            "Père avec cholestérol élevé",
+            "Tabagisme [ne fume pas]",
+            "Alcool [ne boit pour ainsi dire jamais]",
+            "Activité physique [sédentaire, guichetière]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse socioprofessionnelle et impact",
+          "details": [
+            "Profession [guichetière à la poste]",
+            "Situation familiale [mariée, 3 enfants 18, 15, 13 ans]",
+            "Impact professionnel [à évaluer]",
+            "Contexte psychosocial [famille nombreuse]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche biliaire systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale et recherche d'ictère",
+          "details": [
+            "Inspection de la peau [recherche ictère cutané]",
+            "Examen des sclères [recherche ictère scléral]",
+            "État général [évaluation faciès]",
+            "Signes vitaux complets"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Recherche des signes d'insuffisance hépatocellulaire",
+          "details": [
+            "Angiomes stellaires [inspection thorax, visage]",
+            "Erythrose palmaire [éminence thénar et hypothénar]",
+            "Gynécomastie [si applicable]",
+            "Ongles blancs [inspection des phanères]",
+            "Ecchymoses [troubles de coagulation]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Recherche des signes d'hypertension portale",
+          "details": [
+            "Collatérales porto-systémiques [épigastriques = tête de méduse]",
+            "Splénomégalie [palpation de la rate]",
+            "Ascite [recherche par percussion]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Recherche des signes de cholestase chronique",
+          "details": [
+            "Lésions de grattage [prurit chronique]",
+            "Xanthélasma [dépôts lipidiques]",
+            "Hyperpigmentation cutanée"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen spécialisé du foie",
+          "details": [
+            "Flèche hépatique [percussion ligne médio-claviculaire droite]",
+            "Palpation du bord inférieur du foie [technique bimanuelle]",
+            "Signe de Murphy [douleur palpation région vésiculaire]",
+            "Caractéristiques du foie palpé [taille, consistance, surface]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Palpation de la rate",
+          "details": [
+            "Décubitus dorsal [main loge rénale, palpation sous rebord costal]",
+            "Décubitus latéral droit [45-90°, inspiration profonde]",
+            "Technique bimanuelle correcte",
+            "Évaluation taille et consistance si palpable"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Recherche d'ascite",
+          "details": [
+            "Matité déclive à la percussion",
+            "Patient couché : percussion ligne horizontale ombilic",
+            "Patient tourné 30-45° : recherche déplacement limite",
+            "Technique de matité déclive correcte"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Palpation des reins",
+          "details": [
+            "Palpation bimanuelle [main postérieure entre côtes et crête iliaque]",
+            "Main antérieure sous rebord costal",
+            "Palpation lors inspiration profonde",
+            "Évaluation pôle inférieur rein droit"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e9",
+          "text": "Examen abdominal général",
+          "details": [
+            "Séquence inspection-auscultation-percussion-palpation",
+            "4 quadrants et 9 régions de l'abdomen",
+            "Technique de percussion et palpation correcte"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e10",
+          "text": "Technique d'examen en général - spécialisée hépatobiliaire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal et classification",
+          "details": [
+            "Évoque colique hépatique/cholécystite",
+            "Classification selon durée [>6h = cholécystite]",
+            "Différenciation avec angiocholite [fièvre, ictère]",
+            "Facteurs de risque [âge, sexe, surpoids]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Évaluation de la sévérité et complications",
+          "details": [
+            "Recherche signes de cholécystite [fièvre, Murphy]",
+            "Exclusion angiocholite [triade de Charcot]",
+            "Évaluation retentissement général",
+            "Recherche signes de péritonite"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m3",
+          "text": "Proposition d'examens complémentaires",
+          "details": [
+            "Échographie abdominale [première intention]",
+            "Bilan biologique [transaminases, bilirubine, PAL, GGT]",
+            "NFS, CRP [syndrome inflammatoire]",
+            "Lipasémie [diagnostic différentiel pancréatite]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique immédiate",
+          "details": [
+            "Antalgiques [AINS ou morphiniques]",
+            "Antispasmodiques [phloroglucinol]",
+            "Antiémétiques si vomissements",
+            "Mise à jeun initiale"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement spécifique selon diagnostic",
+          "details": [
+            "Cholécystectomie [traitement définitif]",
+            "Timing chirurgical [précoce vs différée]",
+            "Antibiothérapie si cholécystite",
+            "CPRE si angiocholite"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Conseils diététiques et préventifs",
+          "details": [
+            "Régime pauvre en graisses",
+            "Perte de poids progressive",
+            "Repas fractionnés",
+            "Éviter jeûne prolongé"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Critères d'hospitalisation [fièvre, vomissements, douleur intense]",
+            "Surveillance clinique [température, douleur]",
+            "Signes d'alarme [ictère, fièvre élevée]",
+            "Suivi ambulatoire programmé"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Information du patient et planification",
+          "details": [
+            "Explication du diagnostic probable",
+            "Information sur évolution et traitement",
+            "Conseils pour récidive [facteurs déclenchants]",
+            "Planification chirurgicale si indiquée"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - approche globale pathologie biliaire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Patricia Postal",
+      "age": "45 ans",
+      "contexte": "Guichetière à la poste, mariée, mère de 3 enfants (18, 15, 13 ans), surpoids d'une vingtaine de kilos",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur terrible dans le haut du ventre à droite depuis 3 jours",
+        "autreChose": "La douleur est devenue franchement intolérable ce matin"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Réveil il y a 3 jours avec douleur lancinante haut ventre droit",
+          "A pu poursuivre activités habituelles initialement",
+          "Douleur progressive jusqu'à devenir intolérable ce matin",
+          "Irradiation dans la région de l'omoplate droite",
+          "Douleur continue, pas de coliques"
+        ],
+        "symptomesAssocies": [
+          "Plus d'appétit depuis 3 jours",
+          "Nausées présentes",
+          "Dégoût pour la nourriture",
+          "N'a pas mangé de vrai repas, juste grignoté du pain",
+          "Température 37.9°C ce matin"
+        ],
+        "circonstances": [
+          "Première fois ce genre de douleur",
+          "Douleur augmente à l'inspiration profonde",
+          "Douleur augmente quand on la bouscule",
+          "Panadol fait baisser température mais pas la douleur"
+        ],
+        "facteursDeclenchants": [
+          "Aucun facteur déclenchant alimentaire identifié",
+          "Pas de repas particulièrement gras",
+          "Début spontané au réveil"
+        ],
+        "inquietudes": [
+          "Douleur devient intolérable",
+          "Ne peut plus travailler dans cet état",
+          "Se souvient des 'crises de foie' de sa mère"
+        ]
+      },
+      "habitudes": {
+        "activitePhysique": "Ne fait pas de sport, travail sédentaire",
+        "poids": "Excès de poids d'une vingtaine de kilos, au régime",
+        "tabac": "Ne fume pas",
+        "alcool": "Ne boit pour ainsi dire jamais",
+        "medicaments": "Ne prend pas de médicaments",
+        "alimentation": "Prévoit de faire du sport pour maigrir"
+      },
+      "antecedentsPersonnels": [
+        "Bonne santé habituelle",
+        "Pas d'antécédents chirurgicaux",
+        "Jamais eu de problème similaire",
+        "Pas de pathologie connue"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère avait des 'crises de foie' (terme utilisé)",
+        "Père a du cholestérol élevé",
+        "Deux sœurs en bonne santé"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Guichetière à la poste",
+        "etatCivil": "Mariée",
+        "enfants": "3 enfants de 18, 15 et 13 ans",
+        "preoccupations": "Doit pouvoir travailler, responsabilités familiales",
+        "etatEsprit": "Inquiète de l'intensité de la douleur"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Position légèrement antalgique, main sur hypochondre droit",
+          "Exprime l'intensité de la douleur",
+          "Mentionne spontanément les 'crises de foie' de la mère",
+          "Précise que c'est la première fois"
+        ],
+        "durantExamen": [
+          "Coopérative mais appréhensive",
+          "Douleur à la palpation hypochondre droit",
+          "Signe de Murphy positif si recherché",
+          "Pas de signe d'ictère à simuler"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est la même chose que les crises de foie de ma mère ?",
+          "Est-ce que c'est grave ? Faut-il opérer ?",
+          "Combien de temps cela va-t-il durer ?"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur l'aggravation progressive de la douleur",
+        "Mentionner l'irradiation dans l'omoplate si pas demandée",
+        "Préciser l'effet de l'inspiration profonde",
+        "Évoquer les antécédents familiaux de 'crises de foie'",
+        "Exprimer l'inquiétude liée à l'intensité"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Patricia Postal, 45 ans, guichetière, mariée, 3 enfants. Colique hépatique évoluant vers cholécystite depuis 3 jours. Douleur hypochondre droit irradiant omoplate, fébricule 37.9°C. FDR: femme, 45 ans, surpoids 20 kg. ATCD familiaux: mère 'crises de foie', père hypercholestérolémie.",
+      "rolesInterventions": [
+        "Évaluer la qualité de la caractérisation de la douleur biliaire",
+        "Observer la recherche des signes d'insuffisance hépatique",
+        "Noter la technique d'examen hépatobiliaire spécialisé",
+        "Vérifier la différenciation colique/cholécystite/angiocholite",
+        "Évaluer la proposition de prise en charge thérapeutique"
+      ],
+      "pointsCles": [
+        "Colique hépatique évoluant vers cholécystite aiguë",
+        "Facteurs de risque classiques (femme, 45 ans, surpoids)",
+        "Technique d'examen hépatobiliaire spécialisé",
+        "Signe de Murphy et recherche complications",
+        "Différenciation avec angiocholite (triade Charcot)",
+        "Indication échographie abdominale urgente",
+        "Prise en charge antalgique et chirurgicale",
+        "Conseils diététiques et préventifs"
+      ],
+      "pieges": [
+        "Ne pas différencier colique simple et cholécystite",
+        "Omettre la recherche du signe de Murphy",
+        "Ne pas rechercher l'ictère systématiquement",
+        "Manquer les signes d'insuffisance hépatique",
+        "Technique incorrecte de palpation du foie",
+        "Ne pas évaluer la flèche hépatique",
+        "Oublier la recherche d'ascite",
+        "Ne pas proposer échographie en première intention",
+        "Sous-estimer l'indication chirurgicale",
+        "Ne pas donner conseils diététiques préventifs"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en pathologie hépatobiliaire",
+      "sections": [
+        {
+          "titre": "Physiopathologie de la lithiase biliaire",
+          "contenu": "Formation de calculs dans la vésicule biliaire par déséquilibre de la composition biliaire.",
+          "points": [
+            "Facteurs de risque : 4F (Female, Forty, Fat, Fertile)",
+            "Calculs cholestéroliques : 80% des cas, sursaturation bile",
+            "Calculs pigmentaires : bilirubine, hémolyse, infections",
+            "Stase biliaire : grossesse, jeûne, nutrition parentérale",
+            "Facteurs génétiques et ethniques",
+            "Prévalence : 10-15% population adulte occidentale",
+            "Histoire naturelle : 80% asymptomatiques"
+          ]
+        },
+        {
+          "titre": "Classification des douleurs biliaires",
+          "contenu": "Différenciation clinique selon sévérité et complications.",
+          "points": [
+            "Colique hépatique simple : <6h, pas de fièvre",
+            "Siège épigastrique ou hypochondre droit",
+            "Irradiation classique : omoplate droite, en ceinture",
+            "Cholécystite aiguë : >6h, fièvre, Murphy positif",
+            "Angiocholite : triade Charcot (douleur, fièvre, ictère)",
+            "Facteurs déclenchants : repas gras, stress, jeûne",
+            "Évolution possible vers complications graves"
+          ]
+        },
+        {
+          "titre": "Signes d'insuffisance hépatocellulaire",
+          "contenu": "Manifestations cliniques de dysfonction hépatique chronique.",
+          "points": [
+            "Angiomes stellaires : dilatations artériolaires cutanées",
+            "Erythrose palmaire : rougeur éminences thénar/hypothénar",
+            "Gynécomastie : déséquilibre hormonal (homme)",
+            "Ongles blancs : hypoalbuminémie",
+            "Ecchymoses : troubles coagulation, thrombopénie",
+            "Atrophie musculaire : dénutrition protéique",
+            "Foetor hepaticus : haleine caractéristique"
+          ]
+        },
+        {
+          "titre": "Signes d'hypertension portale",
+          "contenu": "Conséquences de l'augmentation de pression dans le système porte.",
+          "points": [
+            "Circulation collatérale : tête de méduse épigastrique",
+            "Varices œsophagiennes : risque hémorragique majeur",
+            "Splénomégalie : séquestration plaquettaire",
+            "Ascite : hypoalbuminémie + hyperaldostéronisme",
+            "Hémorroïdes : collatérales porto-caves inférieures",
+            "Encéphalopathie hépatique : accumulation ammoniaque",
+            "Syndrome hépato-rénal : insuffisance rénale fonctionnelle"
+          ]
+        },
+        {
+          "titre": "Techniques d'examen hépatobiliaire",
+          "contenu": "Méthodes spécialisées d'évaluation clinique du foie et voies biliaires.",
+          "points": [
+            "Flèche hépatique : percussion ligne médio-claviculaire (8-12 cm)",
+            "Palpation foie : mains à plat, inspiration profonde",
+            "Signe de Murphy : douleur inspiration profonde + palpation",
+            "Palpation rate : décubitus dorsal et latéral droit",
+            "Recherche ascite : matité déclive, percussion dynamique",
+            "Manœuvre de Courvoisier : vésicule palpable + ictère",
+            "Ballottement rénal : palpation bimanuelle"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique des douleurs biliaires",
+          "contenu": "Stratégie d'investigation selon présentation clinique.",
+          "points": [
+            "Échographie abdominale : examen de première intention",
+            "Sensibilité calculs vésiculaires : >95%",
+            "Signes échographiques cholécystite : épaississement paroi",
+            "Tomodensitométrie : si complications suspectées",
+            "CPRE : exploration voies biliaires, thérapeutique",
+            "Cholangio-IRM : alternative non invasive CPRE",
+            "Échoendoscopie : petits calculs cholédoque"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antalgiques : AINS (diclofénac 75mg IM) ou morphiniques",
+        "Antispasmodiques : phloroglucinol 80mg IV",
+        "Antiémétiques : métoclopramide 10mg IV",
+        "Cholécystectomie laparoscopique : traitement de référence",
+        "Timing chirurgical : précoce (<72h) vs différée (6-12 sem)",
+        "Antibiothérapie : amoxicilline-clavulanate si cholécystite",
+        "CPRE + sphinctérotomie : si lithiase cholédoque"
+      ],
+      "examensComplementaires": [
+        "Échographie abdominale : calculs, épaississement pariétal",
+        "Transaminases : ALAT, ASAT (cytolyse hépatique)",
+        "Bilirubine totale et conjuguée : cholestase",
+        "Phosphatases alcalines, GGT : cholestase",
+        "NFS : leucocytose si cholécystite",
+        "CRP : syndrome inflammatoire",
+        "Lipasémie : diagnostic différentiel pancréatite",
+        "TP, fibrinogène : fonction hépatique"
+      ]
+    },
+    "resume": {
+      "titre": "⚠️ Colique hépatique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur de l’hypochondre droit ou épigastrique",
+                "Douleur constante, souvent postprandiale (repas gras), durant < 6h",
+                "Irradiation possible vers l’épaule droite ou le dos",
+                "Nausées, vomissements fréquents",
+                "Ballonnements, dyspepsie"
+              ]
+            },
+            {
+              "titre": "Contexte évocateur",
+              "points": [
+                "ATCD de lithiase biliaire",
+                "Facteurs de risque : femme, >40 ans, obésité, multiparité",
+                "Absence de fièvre, d’ictère ou de syndrome infectieux (sinon complication)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes physiques",
+              "points": [
+                "Douleur provoquée à la palpation de l’hypochondre droit",
+                "Pas de fièvre, pas de signe de Murphy franc",
+                "Pas d’ictère (sinon suspicion de complication)",
+                "Abdomen souple, sans défense ni contracture"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens complémentaires",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "En principe normale",
+                "Biologie utile surtout pour exclure une complication (cholécystite, cholangite, pancréatite)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : examen de 1re intention, visualise les calculs",
+                "Recherche de dilatation des voies biliaires ou signes de complication",
+                "Scanner ou IRM biliaire si doute diagnostique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures immédiates",
+              "points": [
+                "Mise à jeun (NPO)",
+                "Antalgiques (AINS en 1re intention, morphiniques si besoin)",
+                "Spasmolytiques possibles",
+                "Réhydratation IV si vomissements"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Colique simple : traitement symptomatique",
+                "Cholécystectomie laparoscopique prophylactique proposée en cas de crises répétées",
+                "Consultation chirurgicale en externe si douleur récurrente ou invalidante"
+              ]
+            },
+            {
+              "titre": "Prévention",
+              "points": [
+                "Régime pauvre en graisses",
+                "Correction des facteurs de risque (perte de poids progressive, éviter jeûne prolongé)",
+                "Informer sur les signes de complications (fièvre, ictère, douleur > 6h)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur postprandiale HCD < 6h = colique hépatique",
+            "Absence de fièvre et ictère : différencie d’une complication",
+            "Échographie = examen clé",
+            "Traitement symptomatique par AINS en urgence",
+            "Cholécystectomie si crises répétées"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur HCD/épigastrique postprandiale ?",
+                "Durée de la douleur (< 6h) ?",
+                "Irradiation épaule droite/dos ?",
+                "Nausées, vomissements associés ?",
+                "Fièvre, ictère, douleur > 6h (suspicion complication) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, T°, SpO₂",
+                "Palpation HCD : douleur mais pas de Murphy franc",
+                "Inspection : absence d’ictère cutanéo-muqueux",
+                "Abdomen souple sans défense ni contracture"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Mise à jeun + antalgiques (AINS en 1re intention)",
+                "Échographie abdominale pour confirmer la lithiase",
+                "Chirurgie prophylactique (cholécystectomie) si crises récidivantes"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale (suspicion de cholécystite aiguë lithiasique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation (douleur HCD depuis 3 jours, aggravée ce matin)",
+            "Caractériser la douleur → HCD, irradiation omoplate droite, lancinante puis continue, EVA élevée",
+            "Chronologie → début brutal au réveil, évolution progressive, intolérable ce matin",
+            "Facteurs aggravants/soulageants → inspiration profonde, mouvements brusques, aucun repas gras identifié, Panadol inefficace",
+            "Symptômes associés → nausées, anorexie, dégoût alimentaire, fébricule (37.9 °C)",
+            "ATCD → surpoids (20 kg), pas de chirurgie, bonne santé habituelle, ATCD familiaux (mère crises de foie, père hypercholestérolémie)",
+            "Habitudes → travail sédentaire, pas de tabac, alcool très rare, pas de médicaments",
+            "Examen clinique ciblé → sensibilité HCD, signe de Murphy positif, pas d’ictère, abdomen souple",
+            "Résumé + hypothèse principale : cholécystite aiguë lithiasique ; DD : colique hépatique simple, angiocholite, pancréatite biliaire, hépatite",
+            "Examens complémentaires → NFS, CRP, bilan hépatique, lipase, échographie abdominale",
+            "Prise en charge → hospitalisation, mise à jeun, perfusion, antalgiques, antibiothérapie, préparation cholécystectomie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 5F (facteurs de risque lithiases biliaires)",
+            "elements": [
+              "Female",
+              "Forty",
+              "Fat",
+              "Fertile",
+              "Family history"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Patricia Postal, une femme de 45 ans, guichetière, mariée, mère de 3 enfants, qui consulte pour une douleur abdominale évoluant depuis 3 jours. Elle rapporte qu’elle s’est réveillée il y a 3 jours avec une douleur lancinante dans l’hypochondre droit, qui a progressivement augmenté, et qui est devenue franchement intolérable ce matin. La douleur est constante, irradiant dans la région de l’omoplate droite, aggravée par l’inspiration profonde et les mouvements. Aucun facteur alimentaire n’a été identifié, en particulier pas de repas gras déclencheur. Les antalgiques simples (paracétamol) ont fait baisser légèrement la fièvre mais pas la douleur.\n\nLes symptômes associés comprennent une perte d’appétit depuis 3 jours, des nausées, un dégoût alimentaire, sans vomissements rapportés. Elle a eu une température de 37.9 °C ce matin. Pas de diarrhée, pas de sang dans les selles, pas de troubles urinaires.\n\nPour ses antécédents, c’est une patiente en surpoids d’une vingtaine de kilos, en bonne santé habituelle, sans chirurgie antérieure ni traitement chronique. Elle ne fume pas, ne boit quasiment jamais d’alcool. Sa mère avait ce qu’elle appelait des « crises de foie », et son père présente une hypercholestérolémie.\n\nÀ l’examen clinique, la patiente est légèrement fébrile, TA 125/80, FC 78, FR 16. Elle est algique, main posée sur l’hypochondre droit. L’examen abdominal montre une douleur vive à la palpation de l’HCD, avec un signe de Murphy positif. Pas de signe d’ictère. L’abdomen est souple, sans défense ni contracture.\n\nEn résumé, il s’agit d’une femme de 45 ans, en surpoids, présentant depuis 3 jours une douleur de l’HCD continue irradiant à l’omoplate droite, fébricule, nausées, anorexie et signe de Murphy positif. Mon hypothèse principale est une cholécystite aiguë lithiasique. Les diagnostics différentiels incluent une colique hépatique simple (mais durée >6h et fébricule orientent vers cholécystite), une angiocholite (mais absence d’ictère et de fièvre élevée), une pancréatite biliaire (mais absence d’irradiation en barre et de vomissements répétés), et une hépatite aiguë.\n\nComme examens complémentaires, je demanderais une NFS, CRP, bilan hépatique (ASAT, ALAT, PAL, GGT, bilirubine), lipase pour exclure pancréatite, et une échographie abdominale qui est l’examen clé.\n\nEn termes de prise en charge, c’est une urgence relative : hospitalisation, mise à jeun, réhydratation IV, antalgiques adaptés, antiémétiques, antibiothérapie IV si suspicion infectieuse, et préparation d’une cholécystectomie laparoscopique dans les 72 heures."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Postal, 45 ans, douleur de l’hypochondre droit depuis 3 jours, aggravée et intolérable ce matin.\n\nB (Background) : Surpoids, ATCD familiaux de coliques biliaires, pas de chirurgie ni traitement chronique, pas de tabac ni alcool.\n\nA (Assessment) : Suspicion de cholécystite aiguë lithiasique. DD : colique hépatique simple, angiocholite, pancréatite, hépatite aiguë.\n\nR (Recommendation) : NFS, CRP, bilan hépatique, lipase, échographie abdominale, hospitalisation, mise à jeun, antalgiques IV, antibiothérapie, cholécystectomie laparoscopique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Facteurs de risque : 5F",
+              "points": [
+                "Female",
+                "Forty",
+                "Fat",
+                "Fertile",
+                "Family history"
+              ]
+            },
+            {
+              "titre": "👉 Triade de Charcot (angiocholite)",
+              "points": [
+                "Douleur HCD",
+                "Fièvre",
+                "Ictère"
+              ]
+            },
+            {
+              "titre": "👉 Colique hépatique vs cholécystite",
+              "points": [
+                "Colique hépatique = <6h, pas de fièvre",
+                "Cholécystite = >6h, fièvre, Murphy positif"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas confondre colique hépatique et cholécystite",
+                "Toujours rechercher un ictère (signe de complication)",
+                "Ne pas oublier lipase pour éliminer pancréatite",
+                "Bien examiner avec recherche du signe de Murphy"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cholécystite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD continue > 6h",
+                      "Irradiation omoplate droite",
+                      "Fièvre 37.9 °C",
+                      "Nausées, anorexie",
+                      "Signe de Murphy positif",
+                      "Facteurs de risque (5F)"
+                    ],
+                    "contre": [
+                      "Pas d’ictère franc",
+                      "Fièvre modérée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colique hépatique simple",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD",
+                      "ATCD familiaux de coliques biliaires"
+                    ],
+                    "contre": [
+                      "Durée > 6h",
+                      "Présence de fébricule",
+                      "Signe de Murphy positif"
+                    ]
+                  }
+                },
+                {
+                  "question": "Angiocholite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Pas d’ictère",
+                      "Pas de fièvre élevée ou frissons",
+                      "Pas de sepsis"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pancréatite biliaire",
+                  "reponse": {
+                    "pour": [
+                      "Douleur abdominale haute",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Pas d’irradiation en barre",
+                      "Pas de vomissements abondants",
+                      "Douleur localisée HCD et non épigastre"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP",
+                    "Bilan hépatique (ASAT, ALAT, PAL, GGT, bilirubine)",
+                    "Lipase",
+                    "Échographie abdominale (examen clé)",
+                    "± Scanner si doute diagnostique ou complications"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cholécystite aiguë lithiasique"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Mise à jeun, perfusion IV",
+                      "Analgésie adaptée",
+                      "Antiémétiques",
+                      "Antibiothérapie IV si suspicion infectieuse",
+                      "Préparation à cholécystectomie laparoscopique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique et biologique régulière",
+                    "Cholécystectomie dans les 72h",
+                    "Conseils diététiques : éviter repas gras",
+                    "Prévention des récidives"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

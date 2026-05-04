@@ -1,0 +1,653 @@
+{
+  "title": "USMLE-8 - Suivi diabète - Homme de 56 ans",
+  "context": {
+    "setting": "Clinique",
+    "patient": "Raymond Stern, 56 ans, se présente à la clinique pour un suivi de son diabète",
+    "vitals": {
+      "ta": "139/85 mmHg",
+      "fc": "75 bpm",
+      "fr": "15/min",
+      "temperature": "36.7°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je suis ici pour un contrôle de mon diabète. La dernière fois que j'ai vu mon médecin, c'était il y a 6 mois"
+        },
+        {
+          "id": "a2",
+          "text": "Histoire du diabète",
+          "binaryOnly": false,
+          "details": [
+            "Durée [J'ai du diabète sucré depuis 25 ans]",
+            "Type de diabète [Type 2]",
+            "Dernier contrôle [Il y a 6 mois]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Traitement actuel et observance",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments [Insuline NPH, 20 unités le matin et 15 unités le soir]",
+            "Observance [Je ne manque jamais une dose]",
+            "Effets secondaires [Aucun]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Surveillance glycémique",
+          "binaryOnly": false,
+          "details": [
+            "Fréquence de surveillance [Je vérifie ma glycémie deux fois par semaine à la maison]",
+            "Dernière glycémie [Il y a trois jours, et elle était de 135]",
+            "Valeurs habituelles [Elle varie généralement entre 120 et 145]",
+            "Dernier HbA1c [Il y a 6 mois, et il était de 7%]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes d'hypoglycémie",
+          "binaryOnly": false,
+          "details": [
+            "Palpitations/sueurs [Parfois, je sens que mon cœur bat plus vite, et je commence à transpirer]",
+            "Circonstances [Cela arrive rarement si je saute un repas]",
+            "Résolution [Je me sens mieux après avoir bu du jus d'orange]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Complications du diabète",
+          "binaryOnly": false,
+          "details": [
+            "Neuropathie [J'ai des picotements et des engourdissements dans les pieds tout le temps, surtout la nuit, et cela s'est aggravé au cours des deux derniers mois]",
+            "Rétinopathie [Il y a un an, et il n'y avait aucun signe de maladie oculaire diabétique]",
+            "Néphropathie [Non évoquée]",
+            "Infections des pieds [Non]",
+            "Problèmes de vision [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Dysfonction érectile",
+          "binaryOnly": false,
+          "details": [
+            "Problème [Je ne fais plus mon 'travail' comme avant]",
+            "Description [Je n'arrive pas à avoir d'érection, docteur. Je ne me réveille même plus avec des érections]",
+            "Durée [Depuis un ou deux ans]",
+            "Libido [Bonne]",
+            "Impact relationnel [Ma femme comprend et me soutient. Ils m'ont dit que c'était à cause du diabète. C'est vrai ?]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "État général [Bien]",
+            "Poids [Non, pas de changements]",
+            "Appétit [Non, pas de changements]",
+            "Polyurie/polydipsie [Non]",
+            "Symptômes cardiaques [Parfois palpitations, voir hypoglycémie]",
+            "Symptômes pulmonaires [Non]",
+            "Symptômes abdominaux [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Régime alimentaire [Je mange tout ce que ma femme cuisine : viande, légumes, etc. Je ne suis pas de régime particulier]",
+            "Exercice physique [Non]",
+            "Occupation [Employé de bureau]",
+            "Stress [Non, ma femme est formidable, et je suis très heureux dans mon travail]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Substances",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme [Non]",
+            "Alcool [Oui, du whisky le week-end]",
+            "CAGE [Non (à toutes les 4 questions)]",
+            "Drogues illicites [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Insuline, lovastatine, aspirine, aténolol"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Crise cardiaque l'année dernière ; cholestérol élevé depuis 2 ans"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est décédé à 60 ans d'un AVC. Ma mère est en bonne santé"
+        },
+        {
+          "id": "a15",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général",
+          "binaryOnly": true,
+          "patientComment": "Le patient n'est pas en détresse"
+        },
+        {
+          "id": "e2",
+          "text": "Examen ORL-Ophtalmologique",
+          "binaryOnly": false,
+          "details": [
+            "Pupilles [Pupilles iso-iso]",
+            "Fond d'œil [Pas d'anomalies au fond d'œil]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation carotidienne [Pas de souffles carotidiens]",
+            "Turgescence jugulaire [Pas de TJ]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection/palpation [Impulsion apicale non déplacée]",
+            "Auscultation [RR et FC normales ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits respiratoires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité, pas de souffles]",
+            "Palpation [Détendu, souple et indolore]",
+            "Percussion [Pas d'organomégalie]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des pieds [Pas d'œdème, pas de lésions cutanées]",
+            "Pouls périphériques [Pouls pédieux 2+ ddc]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Force musculaire [5/5 dans les membres inférieurs ddc]",
+            "Sensibilité [Réduction de la sensibilité aux piqué-touché, aux vibrations, et à la proprioception dans les membres inférieurs ddc]",
+            "ROT [Symétriques, 2+ au niveau des genoux, réflexe achilléen absents ddc]",
+            "Signe de Babinski [Négatif ddc]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Complications aiguës du diabète",
+                "items": [
+                  {
+                    "text": "Hypoglycémie induite par l'insuline",
+                    "cause": "Arguments POUR:\n\t□ Épisodes de palpitations et sueurs\n\t□ Survient après avoir sauté des repas\n\t□ Résolution avec jus d'orange (sucre rapide)\n\t□ Contrôle glycémique strict (120-145 mg/dL)\n\t□ Insuline biquotidienne",
+                    "test": "→ Glycémie capillaire pendant épisode, carnet glycémique"
+                  }
+                ]
+              },
+              {
+                "name": "Complications chroniques du diabète",
+                "items": [
+                  {
+                    "text": "Neuropathie périphérique diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète depuis 25 ans\n\t□ Paresthésies bilatérales des pieds\n\t□ Aggravation nocturne typique\n\t□ Distribution en chaussette\n\t□ Perte de sensibilité confirmée à l'examen\n\t□ Absence de réflexes achilléens",
+                    "test": "→ ENMG, dosage vitamine B12, TSH"
+                  },
+                  {
+                    "text": "Dysfonction érectile d'origine diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète de longue durée\n\t□ Absence d'érections matinales (organicité)\n\t□ Libido conservée\n\t□ Neuropathie périphérique associée\n\t□ Maladie cardiovasculaire (ATCD IDM)\n\t□ Médicaments contributifs (aténolol)",
+                    "test": "→ Testostérone, PSA, US-Doppler pénien"
+                  },
+                  {
+                    "text": "Néphropathie diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète ancien (25 ans)\n\t□ HTA limite (139/85)\n\t□ Autres complications microvasculaires\nArguments CONTRE:\n\t□ Pas de symptômes urinaires",
+                    "test": "→ Créatinine, DFG, microalbuminurie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes de neuropathie à éliminer",
+                "items": [
+                  {
+                    "text": "Neuropathie alcoolique",
+                    "cause": "Arguments POUR:\n\t□ Consommation de whisky\n\t□ Paresthésies distales\nArguments CONTRE:\n\t□ CAGE négatif\n\t□ Consommation modérée (weekend)",
+                    "test": "→ Bilan hépatique, vitamine B1"
+                  },
+                  {
+                    "text": "Carence en vitamine B12",
+                    "cause": "Arguments POUR:\n\t□ Neuropathie périphérique\n\t□ Réflexes diminués\nArguments CONTRE:\n\t□ Pas de signes hématologiques\n\t□ Pas de troubles cognitifs",
+                    "test": "→ Vitamine B12, homocystéine"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires immédiats",
+          "binaryOnly": false,
+          "details": [
+            "Glycémie à jeun et HbA1c",
+            "Bilan rénal : créatinine, urée, DFG calculé",
+            "Microalbuminurie sur échantillon",
+            "Bilan lipidique complet",
+            "Enzymes hépatiques (ASAT, ALAT, GGT)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires secondaires",
+          "binaryOnly": false,
+          "details": [
+            "ENMG si neuropathie atypique",
+            "Vitamine B12, folates, TSH",
+            "Testostérone totale et libre, PSA",
+            "US-Doppler pénien si dysfonction érectile persistante",
+            "ECG de repos (ATCD IDM)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Optimisation du traitement diabétique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Ajustement thérapeutique",
+                "content": "• Revoir schéma insulinique (envisager analogues)\n• Objectif HbA1c < 7% si possible\n• Éviter hypoglycémies répétées\n• Envisager capteur de glucose continu\n• Éducation sur adaptation des doses"
+              },
+              {
+                "title": "Prévention cardiovasculaire",
+                "content": "• Maintenir aspirine 81-100 mg/j\n• Statine haute intensité (atorvastatine 40-80 mg)\n• Objectif LDL < 70 mg/dL\n• Contrôle tensionnel < 130/80\n• IEC/ARA2 si microalbuminurie"
+              },
+              {
+                "title": "Prise en charge des complications",
+                "content": "• Neuropathie : gabapentine ou prégabaline\n• Dysfonction érectile : inhibiteurs PDE5\n• Soins podologiques réguliers\n• Chaussures adaptées\n• Auto-examen quotidien des pieds"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Modifications du mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Régime diabétique structuré avec diététicien",
+            "Comptage des glucides si insuline prandiale",
+            "Activité physique 150 min/semaine",
+            "Perte de poids si surcharge pondérale",
+            "Limitation alcool (risque hypoglycémie)",
+            "Arrêt tabac si applicable"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Éducation et surveillance",
+          "binaryOnly": false,
+          "details": [
+            "Reconnaissance/traitement des hypoglycémies",
+            "Kit glucagon pour l'entourage",
+            "Carnet de surveillance glycémique",
+            "Examen ophtalmologique annuel",
+            "Vaccination antigrippale et antipneumococcique",
+            "Suivi podologique tous les 3-6 mois"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Complications à dépister",
+            "items": [
+              {
+                "text": "Hypoglycémie sévère",
+                "description": "→ Confusion, convulsions, coma = Glucagon IM, appel 144"
+              },
+              {
+                "text": "Pied diabétique",
+                "description": "→ Plaie, rougeur, chaleur = Consultation urgente, risque amputation"
+              },
+              {
+                "text": "Acidocétose diabétique",
+                "description": "→ Nausées, vomissements, haleine cétonique = Urgences"
+              },
+              {
+                "text": "Syndrome coronarien aigu",
+                "description": "→ Douleur thoracique, dyspnée = ECG urgent (ATCD IDM)"
+              },
+              {
+                "text": "Rétinopathie proliférante",
+                "description": "→ Baisse vision brutale = Ophtalmologue urgent"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Stern, les palpitations et la transpiration que vous avez ressenties sont probablement dues à des épisodes d'hypoglycémie, qui peuvent survenir en raison d'une dose d'insuline plus élevée que la normale ou du fait de sauter ou de retarder des repas. Les engourdissements que vous décrivez dans vos pieds sont probablement liés à l'effet du diabète sur votre système nerveux ; un meilleur contrôle de votre glycémie pourrait aider à améliorer ce problème. De nombreux facteurs, y compris le diabète, peuvent causer les difficultés érectiles que vous décrivez. Je vais devoir réaliser un examen de votre région génitale et effectuer des analyses de sang. À un moment donné, nous pourrions également devoir réaliser des tests plus complexes pour identifier la cause de vos problèmes. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Vais-je perdre mes pieds, docteur ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "L'amputation est une option de dernier recours pour les patients diabétiques qui développent une infection des pieds, et heureusement, nous n'en sommes pas à ce stade. Les lésions nerveuses dans vos pieds sont inconfortables, mais elles ne conduiront pas à une amputation tant que vous prenez les mesures nécessaires pour protéger vos pieds des blessures. Si nous continuons à bien contrôler votre glycémie et votre cholestérol, nous devrions pouvoir éviter l'amputation. Nous discuterons plus en détail de la manière de faire cela plus tard dans la visite."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Raymond Stern",
+      "age": "56 ans",
+      "contexte": "Homme diabétique venant pour suivi de routine",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis ici pour un contrôle de mon diabète.",
+        "autreChose": "La dernière fois que j'ai vu mon médecin, c'était il y a 6 mois."
+      },
+      "consignes": [
+        "Faites semblant de ne pas avoir de sensation aux piqué-touché dans les deux pieds.",
+        "Montrez une perte de la sensibilité vibratoire et proprioceptive (distribution en chaussette).",
+        "Simulez un réflexe rotulien normal mais un réflexe achilléen absent.",
+        "Paraissez légèrement inquiet quand vous parlez de vos pieds.",
+        "Montrez de la gêne en parlant de la dysfonction érectile."
+      ],
+      "histoireActuelle": {
+        "diabete": [
+          "Diabète depuis 25 ans",
+          "Insuline NPH 20U matin, 15U soir",
+          "Très observant du traitement",
+          "Contrôle glycémique 2x/semaine",
+          "Glycémies entre 120-145 mg/dL"
+        ],
+        "hypoglycemie": [
+          "Épisodes occasionnels si saute repas",
+          "Palpitations et sueurs",
+          "Résolution avec jus d'orange",
+          "Reconnaît bien les signes"
+        ],
+        "neuropathie": [
+          "Picotements et engourdissements pieds",
+          "Constant, pire la nuit",
+          "Aggravation depuis 2 mois",
+          "Inquiet de perdre ses pieds"
+        ],
+        "dysfonctionErectile": [
+          "Plus d'érections depuis 1-2 ans",
+          "Pas d'érections matinales",
+          "Libido conservée",
+          "Femme compréhensive et soutenante"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Mange ce que cuisine sa femme, pas de régime",
+        "exercice": "Aucun exercice physique",
+        "alcool": "Whisky le weekend, CAGE négatif",
+        "tabac": "Non-fumeur",
+        "profession": "Employé de bureau"
+      },
+      "antecedents": [
+        "Infarctus du myocarde il y a 1 an",
+        "Hypercholestérolémie depuis 2 ans",
+        "Père décédé d'AVC à 60 ans",
+        "Pas de chirurgie"
+      ],
+      "medicaments": [
+        "Insuline NPH",
+        "Lovastatine",
+        "Aspirine",
+        "Aténolol"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Être coopératif et poli",
+          "Montrer de l'inquiétude pour les pieds",
+          "Gêne pour parler de dysfonction érectile",
+          "Minimiser la consommation d'alcool"
+        ],
+        "durantStatus": [
+          "Pas de sensibilité aux pieds (piqué-touché)",
+          "Pas de perception des vibrations aux chevilles",
+          "Réflexes rotuliens présents",
+          "Réflexes achilléens absents",
+          "Reste des examens normaux"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patient de 56 ans, diabétique type 2 depuis 25 ans sous insuline. ATCD IDM il y a 1 an, dyslipidémie. Présente complications microvasculaires (neuropathie périphérique) et dysfonction érectile multifactorielle. Hypoglycémies occasionnelles par repas sautés. HbA1c 7% acceptable mais perfectible. Examen : neuropathie sensitive distale confirmée.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e demande :",
+        "• Glycémie capillaire : 142 mg/dL",
+        "• HbA1c actuelle : 7.2%",
+        "• Microalbuminurie : 45 mg/g créatinine (légèrement élevée)",
+        "• Créatinine : 1.1 mg/dL (DFG 72 mL/min)",
+        "• Si examen génital demandé : normal, pas de plaques"
+      ],
+      "pointsCles": [
+        "Diabète avec complications multiples nécessitant approche globale",
+        "Hypoglycémies iatrogènes fréquentes chez diabétiques anciens",
+        "Neuropathie diabétique = complication microvasculaire irréversible",
+        "Dysfonction érectile multifactorielle (diabète + médicaments + vasculaire)",
+        "Prévention tertiaire essentielle (pieds, yeux, reins, cœur)"
+      ],
+      "pieges": [
+        "Ne pas reconnaître les hypoglycémies",
+        "Oublier l'examen des pieds",
+        "Ne pas aborder la dysfonction érectile",
+        "Ignorer le risque cardiovasculaire élevé",
+        "Ne pas dépister toutes les complications"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Diabète type 2 ancien avec complications microvasculaires (neuropathie périphérique) et macrovasculaires (cardiopathie ischémique), hypoglycémies récurrentes et dysfonction érectile"
+        },
+        {
+          "titre": "Neuropathie diabétique périphérique",
+          "contenu": "Complication microvasculaire fréquente :",
+          "points": [
+            "Prévalence : 50% après 25 ans de diabète",
+            "Polyneuropathie distale symétrique la plus fréquente",
+            "Distribution en chaussette/gant",
+            "Symptômes : paresthésies, douleurs, hypoesthésie",
+            "Aggravation nocturne typique",
+            "Risque : ulcères, infections, amputations"
+          ]
+        },
+        {
+          "titre": "Hypoglycémie chez le diabétique",
+          "contenu": "Complication aiguë du traitement :",
+          "points": [
+            "Seuil : glycémie < 70 mg/dL (3.9 mmol/L)",
+            "Symptômes adrénergiques : sueurs, palpitations, tremblements",
+            "Symptômes neuroglycopéniques : confusion, convulsions, coma",
+            "Causes : surdosage insuline, repas sauté, exercice, alcool",
+            "Traitement : règle du 15-15 (15g sucre, recontrôle 15 min)",
+            "Prévention : éducation, adaptation doses, collations"
+          ]
+        },
+        {
+          "titre": "Dysfonction érectile diabétique",
+          "contenu": "Complication fréquente multifactorielle :",
+          "points": [
+            "Prévalence : 35-75% des diabétiques",
+            "Mécanismes : neuropathie, vasculopathie, hypogonadisme",
+            "Facteurs aggravants : âge, durée diabète, HbA1c, tabac",
+            "Médicaments contributifs : β-bloquants, diurétiques, statines",
+            "Absence érections matinales = organicité",
+            "Traitement : IPDE5, pompe à vide, prothèses"
+          ]
+        },
+        {
+          "titre": "Objectifs thérapeutiques du diabète",
+          "contenu": "Individualisation selon profil :",
+          "points": [
+            "HbA1c < 7% pour la plupart des adultes",
+            "HbA1c < 6.5% si récent, sans complications",
+            "HbA1c < 8% si âgé, complications, hypoglycémies",
+            "Glycémie à jeun : 80-130 mg/dL",
+            "Glycémie post-prandiale : < 180 mg/dL",
+            "Éviter hypoglycémies (surtout si CV)"
+          ]
+        },
+        {
+          "titre": "Surveillance des complications",
+          "contenu": "Dépistage systématique annuel :",
+          "points": [
+            "Rétinopathie : fond d'œil ou rétinographie",
+            "Néphropathie : microalbuminurie, créatinine, DFG",
+            "Neuropathie : monofilament, diapason, réflexes",
+            "Macroangiopathie : ECG, bilan lipidique, TA",
+            "Pied diabétique : examen complet, pouls, sensibilité",
+            "Dépression : fréquente, à rechercher"
+          ]
+        },
+        {
+          "titre": "Prise en charge de la neuropathie",
+          "contenu": "Approche multimodale :",
+          "points": [
+            "Équilibre glycémique optimal (ralentit progression)",
+            "Antalgiques : gabapentine, prégabaline, duloxétine",
+            "Antidépresseurs tricycliques : amitriptyline",
+            "Topiques : capsaïcine, lidocaïne patch",
+            "Soins podologiques préventifs",
+            "Éducation : auto-examen quotidien des pieds"
+          ]
+        },
+        {
+          "titre": "Prévention cardiovasculaire",
+          "contenu": "Approche multifactorielle obligatoire :",
+          "points": [
+            "Contrôle glycémique : HbA1c < 7%",
+            "TA < 130/80 mmHg (IEC/ARA2 première ligne)",
+            "LDL < 70 mg/dL (statine haute intensité)",
+            "Antiagrégant : aspirine si ATCD CV",
+            "Arrêt tabac impératif",
+            "Activité physique régulière",
+            "Perte pondérale si surpoids"
+          ]
+        },
+        {
+          "titre": "Insulinothérapie dans le DT2",
+          "contenu": "Schémas évolutifs :",
+          "points": [
+            "Basale seule : NPH ou analogues lents",
+            "Basal-plus : basale + 1 bolus principal repas",
+            "Basal-bolus : basale + bolus à chaque repas",
+            "Prémix : insulines biphasiques 2-3x/jour",
+            "Adaptation selon profil glycémique",
+            "Rotation sites injection obligatoire"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "Le diabète ancien nécessite une approche globale des complications",
+            "Les hypoglycémies sont fréquentes et dangereuses (CV)",
+            "La neuropathie diabétique est irréversible mais sa progression peut être ralentie",
+            "La dysfonction érectile diabétique est traitable",
+            "La prévention du pied diabétique est essentielle",
+            "L'éducation thérapeutique améliore le pronostic"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Hypoglycémie : 15g glucose, puis collation complexe",
+        "Neuropathie : gabapentine 300-3600 mg/j en 3 prises",
+        "Dysfonction érectile : sildénafil 50-100 mg à la demande",
+        "Prévention CV : aspirine 81 mg, atorvastatine 40-80 mg",
+        "Néphroprotection : IEC/ARA2 si microalbuminurie"
+      ],
+      "examensComplementaires": [
+        "HbA1c : tous les 3 mois si déséquilibré",
+        "Microalbuminurie : annuelle (30-300 mg/g = début néphropathie)",
+        "Fond d'œil : annuel ou tous les 2 ans si normal",
+        "ECG : annuel vu ATCD IDM",
+        "Bilan lipidique : annuel (objectif LDL < 70 mg/dL)"
+      ]
+    }
+  }
+}

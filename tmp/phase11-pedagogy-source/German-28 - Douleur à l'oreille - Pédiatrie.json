@@ -1,0 +1,383 @@
+{
+  "title": "German-28 - Douleur à l'oreille - Pédiatrie",
+  "context": {
+    "setting": "Service d'urgences pédiatriques",
+    "patient": "Une mère se présente aux urgences avec sa fille de 3 ans. L'enfant a de la fièvre et pleure beaucoup."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte pour identifier le problème actuel",
+          "details": [
+            "[L'enfant pleure et a de la fièvre]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation temporelle des symptômes",
+          "details": [
+            "Début des symptômes [Depuis 2 jours]",
+            "Évolution/aggravation [Toujours pareil]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes auriculaires spécifiques",
+          "details": [
+            "Hypoacousie [Rien remarqué]",
+            "Otorrhée (cérumen, sang, pus) [Non]",
+            "Douleur [Probablement, elle se touche l'oreille]",
+            "Acouphènes ou vertiges [Je ne sais pas]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "details": [
+            "Fièvre [Oui]",
+            "Toux [Non]",
+            "Rhinorrhée [Oui]",
+            "Vomissements [Non]",
+            "Autres symptômes"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents ORL de l'enfant",
+          "details": [
+            "Épisodes antérieurs d'otite [Une fois déjà]",
+            "Autres maladies ORL",
+            "Chirurgies ORL"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux généraux",
+          "details": [
+            "Maladies chroniques [Aucune]",
+            "Hospitalisations antérieures",
+            "Allergies connues"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Statut vaccinal",
+          "details": [
+            "[Selon le schéma vaccinal]",
+            "Vaccin pneumocoque à jour"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Traitements déjà administrés",
+          "details": [
+            "Médicaments donnés [Paracétamol]",
+            "Lavage nasal [NaCl]",
+            "Efficacité [Pas d'amélioration durable]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Contexte épidémiologique",
+          "details": [
+            "État de santé de la famille [Famille en bonne santé]",
+            "Fréquentation de collectivité [Va à la crèche]",
+            "Fratrie [Pas de frères et sœurs]",
+            "Cas similaires dans l'entourage"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse par systèmes",
+          "details": [
+            "Système respiratoire",
+            "Système digestif",
+            "Système cardiovasculaire",
+            "Système neurologique"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "État général de l'enfant",
+          "details": [
+            "Hydratation",
+            "Alimentation/appétit",
+            "Comportement/jeu",
+            "Sommeil"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents périnataux si pertinents",
+          "details": [
+            "Déroulement de la grossesse",
+            "Accouchement",
+            "Période néonatale"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse adaptée à l'enfant",
+            "Questions pertinentes posées",
+            "Exploration des diagnostics différentiels"
+          ],
+          "scoringRule": "Complète et ciblée = 2 pts, Suffisante = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'oreille externe",
+          "details": [
+            "Pavillon auriculaire [Normal]",
+            "Région rétro-auriculaire",
+            "Signes inflammatoires externes"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation auriculaire",
+          "details": [
+            "Douleur à la pression du tragus [L'enfant pleure]",
+            "Douleur à la traction du pavillon [L'enfant pleure]",
+            "Palpation mastoïdienne"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Otoscopie bilatérale",
+          "details": [
+            "Tympan droit [Rouge]",
+            "Tympan gauche [Rouge]",
+            "Présence d'épanchement",
+            "État du conduit auditif externe"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen de l'oropharynx",
+          "details": [
+            "Pharynx [Rouge]",
+            "Amygdales",
+            "Présence d'exsudat",
+            "[Sinon sans particularité]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation des aires ganglionnaires",
+          "details": [
+            "Ganglions cervicaux [Légèrement augmentés]",
+            "Ganglions rétro-auriculaires",
+            "Ganglions sous-mandibulaires"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Auscultation cardiopulmonaire",
+          "details": [
+            "Auscultation pulmonaire [Normal]",
+            "Auscultation cardiaque [Normal]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen abdominal",
+          "details": [
+            "Palpation abdominale [Normal]",
+            "Recherche d'hépatomégalie",
+            "Recherche de splénomégalie"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Recherche de signes de gravité",
+          "details": [
+            "Douleur à la percussion mastoïdienne",
+            "Décollement du pavillon",
+            "Signes méningés",
+            "État de conscience"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen systématique et complet",
+            "Techniques adaptées à l'enfant",
+            "Interprétation correcte des signes"
+          ],
+          "scoringRule": "Méthodique et adapté = 2 pts, Suffisant = 1 pt, Insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "L'étudiant énonce le diagnostic principal",
+          "details": [
+            "Otite moyenne aiguë"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "L'étudiant évoque les diagnostics différentiels pertinents",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes otologiques",
+                "items": [
+                  {
+                    "text": "Otite moyenne aiguë virale → Évolution clinique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Otite moyenne aiguë bactérienne → Critères cliniques, évolution",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Otite externe → Douleur au pavillon, conduit inflammatoire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes non otologiques",
+                "items": [
+                  {
+                    "text": "Pharyngite/angine → Test rapide streptocoque si indiqué",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, test d'effort, coronarographie"
+                  },
+                  {
+                    "text": "Douleur dentaire irradiée → Examen dentaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Adénite cervicale → Palpation ganglionnaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Tympan rouge par pleurs intenses → Contexte clinique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Corps étranger auriculaire → Otoscopie soigneuse",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          },
+          "scoringRule": "Au moins 2-3 diagnostics différentiels = 2 pts"
+        },
+        {
+          "id": "m3",
+          "text": "L'étudiant propose les examens complémentaires appropriés",
+          "details": [
+            "En général, pas d'examens nécessaires si clinique claire",
+            "Bilan biologique si signes de gravité",
+            "Test rapide streptocoque si suspicion d'angine associée",
+            "Tympanométrie si doute diagnostique"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "L'étudiant propose une stratégie thérapeutique adaptée",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Otite moyenne aiguë unilatérale",
+                "content": "• Surveillance active (watchful waiting)\n• Analgésie : paracétamol 15 mg/kg/dose, max 4x/jour\n• Antipyrexie si fièvre\n• Contrôle clinique à 48-72h\n• Prescription différée d'antibiotiques"
+              },
+              {
+                "title": "Otite moyenne aiguë bilatérale ou < 2 ans",
+                "content": "• Antibiothérapie d'emblée\n• Amoxicilline 80-90 mg/kg/jour en 2-3 prises\n• Durée : 5-7 jours selon l'âge\n• Alternative si allergie : céfuroxime ou azithromycine"
+              },
+              {
+                "title": "Mesures adjuvantes",
+                "content": "• Lavage nasal au sérum physiologique\n• Position semi-assise pour dormir\n• Hydratation adéquate\n• Éviter l'exposition au tabac"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "L'étudiant informe sur les complications possibles",
+          "details": [
+            "Mastoïdite",
+            "Paralysie faciale périphérique (par œdème)",
+            "Thrombose du sinus latéral",
+            "Complications intracrâniennes (méningite, abcès cérébral)"
+          ],
+          "scoringRule": "Mention des complications graves = 2 pts"
+        },
+        {
+          "id": "m6",
+          "text": "L'étudiant organise le suivi",
+          "details": [
+            "Contrôle à 48-72h si surveillance",
+            "Contrôle à 1 semaine si antibiotiques",
+            "Critères de reconsultation urgente",
+            "Prévention des récidives"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "L'étudiant donne des conseils aux parents",
+          "details": [
+            "Surveillance des signes d'alarme",
+            "Administration correcte des médicaments",
+            "Importance de l'observance si antibiotiques",
+            "Mesures de confort"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Approche adaptée à la pédiatrie",
+            "Communication avec les parents",
+            "Prise en charge evidence-based"
+          ],
+          "scoringRule": "Excellente prise en charge = 2 pts, Correcte = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

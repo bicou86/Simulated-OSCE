@@ -1,0 +1,445 @@
+{
+  "title": "German-61 - Malaise",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M. Münster, 65 ans, se présente aux urgences car il a fait un malaise avec perte de connaissance"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai perdu connaissance, c'est arrivé soudainement"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de l'épisode syncopal",
+          "details": [
+            "Prodromes [non, soudain sans signes avant-coureurs]",
+            "Durée de la perte de connaissance",
+            "Récupération (rapide ou progressive)",
+            "Confusion post-critique"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Fréquence et récurrence",
+          "details": [
+            "Nombre d'épisodes [dans les 3 dernières semaines, déjà 2 fois]",
+            "Premier épisode (date)",
+            "Augmentation de la fréquence",
+            "Circonstances similaires"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes cardiovasculaires associés",
+          "details": [
+            "Palpitations avant/après",
+            "Douleurs thoraciques",
+            "Sensation de battements irréguliers",
+            "Pause cardiaque ressentie"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes généraux récents",
+          "details": [
+            "Fatigue inhabituelle [dernièrement plus fatigué]",
+            "Faiblesse générale [oui]",
+            "Diminution de la tolérance à l'effort",
+            "Modifications récentes"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes respiratoires",
+          "details": [
+            "Dyspnée d'effort [ne peut plus faire de vélo aussi bien]",
+            "Dyspnée de repos",
+            "Orthopnée",
+            "Dyspnée paroxystique nocturne"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes neurologiques",
+          "details": [
+            "Vertiges [oui]",
+            "Troubles visuels avant la syncope",
+            "Céphalées",
+            "Déficit neurologique focal"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Circonstances déclenchantes",
+          "details": [
+            "Position lors de la syncope",
+            "Effort physique",
+            "Émotion forte",
+            "Miction, défécation, toux"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes B",
+          "details": [
+            "Fièvre",
+            "Sueurs nocturnes",
+            "Perte de poids",
+            "Anorexie"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Diabète [oui]",
+            "Hypertension [oui]",
+            "Dyslipidémie",
+            "Tabagisme [30 paquets-années]",
+            "Obésité"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et substances",
+          "details": [
+            "Tabac actuel [1 paquet/jour depuis 30 ans]",
+            "Alcool [de temps en temps]",
+            "Café",
+            "Drogues illicites [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "details": [
+            "Antihypertenseurs [Valsartan]",
+            "Antidiabétiques",
+            "Autres traitements",
+            "Observance thérapeutique"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Allergies médicamenteuses",
+          "details": [
+            "Allergies connues",
+            "Intolérances",
+            "Réactions antérieures"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Maladies cardiovasculaires [hypertension]",
+            "Diabète [oui]",
+            "Maladies respiratoires",
+            "Autres pathologies chroniques"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents chirurgicaux",
+          "details": [
+            "Interventions antérieures",
+            "Complications post-opératoires",
+            "Anesthésies antérieures"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Mort subite familiale",
+            "Maladies cardiaques [père décédé d'infarctus à 59 ans]",
+            "Troubles du rythme familiaux",
+            "État de santé de la mère [en bonne santé]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Contexte social et professionnel",
+          "details": [
+            "Profession [banquier retraité]",
+            "Niveau d'activité actuel",
+            "Stress récent",
+            "Support social"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée syncope cardiaque"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux et état général",
+          "details": [
+            "État de conscience actuel",
+            "Pression artérielle",
+            "Saturation en oxygène",
+            "Température"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiaque approfondi",
+          "details": [
+            "Fréquence cardiaque [bradycardie à 40 bpm]",
+            "Régularité du rythme",
+            "Auscultation des bruits cardiaques [normaux]",
+            "Recherche de souffles"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation des pouls périphériques",
+          "details": [
+            "Pouls carotidiens (bilatéral)",
+            "Pouls radiaux (synchronisme)",
+            "Pouls fémoraux",
+            "Pouls pédieux"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Recherche de signes d'insuffisance cardiaque",
+          "details": [
+            "Turgescence jugulaire",
+            "Reflux hépato-jugulaire",
+            "Œdèmes des membres inférieurs",
+            "Hépatomégalie"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation bilatérale",
+            "Recherche de râles crépitants",
+            "Signes de congestion",
+            "Épanchement pleural"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique de dépistage",
+          "details": [
+            "État de conscience (score de Glasgow)",
+            "Déficit focal",
+            "Réflexes ostéo-tendineux",
+            "Signes méningés"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen vasculaire",
+          "details": [
+            "Auscultation carotidienne (souffles)",
+            "Palpation aortique",
+            "Recherche d'anévrisme",
+            "Signes d'artériopathie"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Inspection générale",
+          "details": [
+            "Coloration cutanée",
+            "Signes de traumatisme (chute)",
+            "Morsure de langue",
+            "Perte d'urines"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen cardiovasculaire complet orienté syncope"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "Trouble du rythme cardiaque : bloc auriculo-ventriculaire",
+            "Type de bloc AV suspecté",
+            "Sévérité évaluée",
+            "Risque vital immédiat"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Syncope vasovagale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syncope orthostatique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Autres troubles de conduction",
+                    "cause": "□ bloc de branche, bloc sino-auriculaire",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Bradycardie sinusale sévère",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syncope réflexe",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Embolie pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ D-dimères, angio-CT thoracique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "ECG - Réalisation et interprétation",
+          "details": [
+            "ECG 12 dérivations en urgence",
+            "Identification du bloc AV type Mobitz",
+            "Analyse de l'intervalle PR",
+            "Recherche d'autres anomalies"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens biologiques urgents",
+          "details": [
+            "Troponine [négative]",
+            "BNP/NT-proBNP [négatif]",
+            "Ionogramme et fonction rénale",
+            "NFS",
+            "TSH si indication"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens complémentaires cardiologiques",
+          "details": [
+            "Échocardiographie (exclure infarctus, cardiomyopathie)",
+            "Monitoring ECG continu",
+            "Holter ECG 24h si sortie",
+            "Test d'effort différé"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Mise sous scope cardiaque",
+            "Voie veineuse périphérique",
+            "Oxygénothérapie si besoin",
+            "Atropine prête si bradycardie symptomatique"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Traitement définitif",
+          "details": [
+            "Indication de stimulateur cardiaque permanent",
+            "Type de pacemaker approprié",
+            "Délai d'implantation",
+            "Pacing temporaire si nécessaire"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Révision du traitement médicamenteux",
+          "details": [
+            "Arrêt des médicaments bradycardisants",
+            "Adaptation du Valsartan",
+            "Gestion des antidiabétiques",
+            "Prévention secondaire cardiovasculaire"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Éducation et prévention",
+          "details": [
+            "Explication de la pathologie",
+            "Signes d'alarme à reconnaître",
+            "Conduite automobile temporairement interdite",
+            "Port de la carte de porteur de pacemaker"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Organisation du suivi",
+          "details": [
+            "Consultation cardiologie urgente",
+            "Suivi post-implantation",
+            "Contrôles réguliers du pacemaker",
+            "Coordination avec le médecin traitant"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge urgente d'un bloc AV symptomatique complète"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "ECG - Bloc AV de type Mobitz",
+        "description": "ECG montrant un bloc AV avec intervalles PR progressivement allongés et complexes QRS manqués, caractéristiques d'un bloc de Mobitz",
+        "data": "grilles_generees/images/syncope-img.jpg"
+      }
+    ]
+  }
+}

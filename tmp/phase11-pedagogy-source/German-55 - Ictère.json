@@ -1,0 +1,405 @@
+{
+  "title": "German-55 - Ictère",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Hamidi, 28 ans, employé de restauration rapide, se présente chez son médecin traitant car il a remarqué qu'il était devenu jaune",
+    "vitals": {
+      "temperature": "37,3°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "patientComment": "Je suis devenu jaune, mes collègues l'ont remarqué"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques de l'ictère",
+          "details": [
+            "Début et évolution [depuis avant-hier, progressif]",
+            "Localisation [yeux et visage d'abord, puis les mains]",
+            "Progression [s'aggrave progressivement]",
+            "Coloration des sclérotiques [oui, mes yeux sont jaunes]"
+          ],
+          "patientComment": "Détails sur l'ictère"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes digestifs",
+          "details": [
+            "Douleurs abdominales [parfois légères douleurs épigastriques]",
+            "Nausées/vomissements [non actuellement]",
+            "Troubles du transit [transit normal]",
+            "Ballonnements [non]"
+          ],
+          "patientComment": "Symptômes digestifs"
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques des selles et urines",
+          "details": [
+            "Couleur des selles [normale, pas décolorées]",
+            "Consistance des selles [normale]",
+            "Couleur des urines [plus foncées, comme du thé]",
+            "Fréquence urinaire [normale]"
+          ],
+          "patientComment": "Aspect des selles et urines"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre/frissons [pas de vraie fièvre, mais ne me sens pas bien]",
+            "Asthénie [oui, très fatigué]",
+            "Perte de poids [non]",
+            "Sueurs nocturnes [non]",
+            "Anorexie [moins d'appétit depuis quelques jours]"
+          ],
+          "patientComment": "État général"
+        },
+        {
+          "id": "a7",
+          "text": "Événements récents",
+          "details": [
+            "Maladie récente [grippe intestinale il y a 2 semaines avec vomissements et diarrhée]",
+            "Prise médicamenteuse [paracétamol pour la fièvre à ce moment-là]",
+            "Traumatisme [non]",
+            "Stress particulier [non]"
+          ],
+          "patientComment": "Événements des dernières semaines"
+        },
+        {
+          "id": "a8",
+          "text": "Prurit",
+          "patientComment": "Non, pas de démangeaisons"
+        },
+        {
+          "id": "a9",
+          "text": "Signes d'hépatopathie chronique",
+          "details": [
+            "Ascite",
+            "Œdèmes des membres inférieurs",
+            "Circulation collatérale",
+            "Gynécomastie"
+          ],
+          "patientComment": "Aucun signe d'hépatopathie chronique"
+        },
+        {
+          "id": "a10",
+          "text": "Facteurs de risque hépatiques",
+          "details": [
+            "Consommation d'alcool [non, ne boit pas]",
+            "Toxicomanie IV [non, jamais]",
+            "Tatouages/piercings [non]",
+            "Transfusions [non]",
+            "Rapports sexuels à risque [non, en couple stable]"
+          ],
+          "patientComment": "Facteurs de risque"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Diabète",
+            "Maladies hépatiques",
+            "Chirurgies abdominales",
+            "Lithiase biliaire"
+          ],
+          "patientComment": "Aucun antécédent médical particulier"
+        },
+        {
+          "id": "a12",
+          "text": "Médicaments et allergies",
+          "details": [
+            "Traitements en cours",
+            "Allergies médicamenteuses",
+            "Phytothérapie",
+            "Compléments alimentaires"
+          ],
+          "patientComment": "Aucun médicament régulier, aucune allergie connue"
+        },
+        {
+          "id": "a13",
+          "text": "Statut vaccinal",
+          "details": [
+            "Vaccination hépatite A",
+            "Vaccination hépatite B"
+          ],
+          "patientComment": "Non vacciné contre les hépatites"
+        },
+        {
+          "id": "a14",
+          "text": "Voyages récents",
+          "details": [
+            "Destination [en Algérie chez la famille]",
+            "Durée du séjour [3 semaines, retour il y a 1 mois]",
+            "Conditions sanitaires [correctes, chez la famille]",
+            "Alimentation sur place [nourriture locale, eau du robinet]"
+          ],
+          "patientComment": "Voyage familial"
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies hépatiques familiales",
+            "Cancers digestifs",
+            "Maladies génétiques"
+          ],
+          "patientComment": "Frère en Algérie a la tuberculose, sinon rien de particulier"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Profession",
+            "Conditions de vie",
+            "Statut en Suisse"
+          ],
+          "patientComment": "Employé chez McDonald's, en Suisse depuis 8 ans, vit avec sa petite amie"
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général et signes vitaux",
+          "details": [
+            "État général",
+            "Température",
+            "Tension artérielle",
+            "Fréquence cardiaque"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cutanéo-muqueux",
+          "details": [
+            "Ictère conjonctival",
+            "Ictère cutané (localisation)",
+            "Signes cutanés d'hépatopathie (angiomes stellaires, érythrose palmaire)",
+            "Traces de grattage"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal complet",
+          "details": [
+            "Inspection (distension, circulation collatérale)",
+            "Palpation hépatique (taille, consistance, bord)",
+            "Palpation splénique",
+            "Recherche d'ascite (matité déclive)",
+            "Douleur à la palpation (Murphy)"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ganglionnaire",
+          "details": [
+            "Aires cervicales",
+            "Aires axillaires",
+            "Aires inguinales",
+            "Ganglion de Troisier"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardio-pulmonaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Auscultation pulmonaire",
+            "Recherche d'œdèmes périphériques"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique sommaire",
+          "details": [
+            "État de conscience",
+            "Astérixis (flapping tremor)",
+            "Réflexes ostéo-tendineux"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "patientComment": "Hépatite aiguë virale A (contexte épidémiologique)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 4 diagnostics = 2 pts, 2-3 diagnostics = 1 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Hépatite B ou C aiguë",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hépatite médicamenteuse",
+                    "cause": "□ paracétamol",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome de Gilbert",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Lithiase biliaire/cholédocienne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal sans contraste, US rénal"
+                  },
+                  {
+                    "text": "Hépatite E",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Leptospirose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques de première intention",
+          "details": [
+            "Bilan hépatique complet (ASAT, ALAT, GGT, PAL, bilirubine totale/conjuguée)",
+            "NFS, plaquettes",
+            "TP, TCA (fonction hépatique)",
+            "Créatinine, ionogramme"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Sérologies virales",
+          "details": [
+            "IgM anti-VHA",
+            "Ag HBs, Ac anti-HBc IgM",
+            "Ac anti-VHC",
+            "Ac anti-VHE si indiqué"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Échographie abdominale",
+            "Recherche de lithiase",
+            "Évaluation du parenchyme hépatique",
+            "Voies biliaires"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Repos\n• Hydratation adéquate\n• Éviction de l'alcool stricte\n• Éviction du paracétamol et hépatotoxiques\n• Alimentation normale selon tolérance"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Antiémétiques si nausées\n• Pas d'AINS ni de paracétamol\n• Surveillance clinique"
+              },
+              {
+                "title": "Mesures de prévention",
+                "content": "• Déclaration obligatoire si hépatite A confirmée\n• Éviction professionnelle (manipulation alimentaire)\n• Mesures d'hygiène renforcées\n• Vaccination de l'entourage si hépatite A"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "TP < 50%",
+            "Encéphalopathie hépatique",
+            "Vomissements incoercibles",
+            "Contexte social défavorable",
+            "Doute diagnostique"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Suivi et pronostic",
+          "details": [
+            "Contrôle biologique à 1 semaine",
+            "Normalisation attendue en 4-6 semaines",
+            "Guérison complète habituelle pour hépatite A",
+            "Vaccination ultérieure hépatites A et B"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Information du patient",
+          "details": [
+            "Explication du diagnostic probable",
+            "Évolution favorable habituelle",
+            "Mesures d'hygiène",
+            "Arrêt de travail nécessaire",
+            "Signes d'alarme à surveiller"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

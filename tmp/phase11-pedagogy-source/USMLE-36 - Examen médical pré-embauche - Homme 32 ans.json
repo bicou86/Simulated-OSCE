@@ -1,0 +1,596 @@
+{
+  "title": "USMLE-36 - Examen médical pré-embauche - Homme 32 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Frank Emanuel, 32 ans, se présente au cabinet pour un examen médical pré-embauche demandé par son futur employeur",
+    "vitals": {
+      "ta": "130/85 mmHg",
+      "fc": "70 bpm",
+      "fr": "15/min",
+      "temperature": "36.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Examen médical pré-embauche"
+        },
+        {
+          "id": "a2",
+          "text": "Plaintes médicales actuelles",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes cardiovasculaires",
+          "binaryOnly": false,
+          "details": [
+            "Douleur thoracique actuelle ou passée [Non]",
+            "Essoufflement actuel ou passé [Non]",
+            "Palpitations ou bradycardie [Non]",
+            "Œdème des membres inférieurs [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Perte de conscience ou crises d'épilepsie [Non]",
+            "Céphalées [Non]",
+            "Faiblesse ou engourdissement [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Exploration de la toux chronique",
+          "binaryOnly": false,
+          "details": [
+            "Présence de toux [Oui]",
+            "Début de la toux [J'ai cette toux depuis des années]",
+            "Changements dans la toux au cours de la journée [Aucun]",
+            "Progression de la toux [Elle est la même]",
+            "Toux nocturne [Non]",
+            "Sibilances [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractéristiques des expectorations",
+          "binaryOnly": false,
+          "details": [
+            "Production d'expectorations [Oui]",
+            "Quantité [Environ une demi-cuillère à café ; stable]",
+            "Couleur [Mucus blanc]",
+            "Odeur [Aucune]",
+            "Hémoptysie [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes infectieux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre ou frissons [Aucun]",
+            "Sueurs nocturnes [Non]",
+            "Exposition à la tuberculose [Non]",
+            "Dernier test de Mantoux [Je n'ai jamais fait ce test]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Histoire de voyage et immigration",
+          "binaryOnly": true,
+          "patientComment": "J'ai émigré d'Afrique il y a un mois"
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Douleur ou gonflement articulaire [Non]",
+            "Nausées ou vomissements [Non]",
+            "Douleur abdominale [Non]",
+            "Diarrhée ou constipation [Non]",
+            "Changements de poids [Non]",
+            "Changements d'appétit [Non]",
+            "Changements de couleur des selles [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a14",
+          "text": "Statut vaccinal",
+          "binaryOnly": true,
+          "patientComment": "Mes vaccinations sont à jour. J'ai mes papiers à la maison ; je peux vous les faxer"
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Je travaillais dans une mine de charbon chez moi. Je postule pour un nouvel emploi]",
+            "Consommation d'alcool [Non]",
+            "Drogues illicites [Non]",
+            "Tabac [Oui, un paquet par jour depuis 10 ans]",
+            "Activité sexuelle [Oui, avec ma femme]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Aspect général",
+          "binaryOnly": true,
+          "patientComment": "Le patient est bien orienté et ne semble pas en détresse aiguë"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la bouche et de la gorge [Bouche et pharynx normaux]",
+            "Palpation des ganglions lymphatiques [Pas de lymphadénopathie]",
+            "Jugulaires [Pas de turgescence jugulaire]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normaux ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Murmures vésiculaires clairs bilatéralement ; pas de ronchi, râles, ou sibilances]",
+            "Palpation [Frémitus normal]",
+            "Percussion [Normal]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Palpation [Détendu, souple et indolore, pas d'hépato-splénomégalie]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "patientComment": "Pas de hippocratisme digital, cyanose, ou œdème"
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Nerfs crâniens [II-XII intacts]",
+            "Examen moteur [Force 5/5 dans tous les groupes musculaires]",
+            "ROT [Symétriques]",
+            "Marche [Normale]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies respiratoires chroniques",
+                "items": [
+                  {
+                    "text": "BPCO/Bronchite chronique",
+                    "cause": "Arguments POUR:\n\t□ Toux chronique depuis des années\n\t□ Production d'expectorations (mucus blanc)\n\t□ Tabagisme 10 paquets-années\n\t□ Exposition professionnelle (mine de charbon)\n\t□ Âge compatible (32 ans)\nArguments CONTRE:\n\t□ Pas de dyspnée\n\t□ Examen pulmonaire normal",
+                    "test": "→ Radiographie thoracique, spirométrie"
+                  },
+                  {
+                    "text": "Pneumoconiose des mineurs de charbon",
+                    "cause": "Arguments POUR:\n\t□ Travail dans mine de charbon\n\t□ Toux chronique\n\t□ Exposition à poussière de charbon et silice\n\t□ Immigration récente (pratiques de sécurité variables)\nArguments CONTRE:\n\t□ Jeune âge pour pneumoconiose avancée\n\t□ Examen pulmonaire normal",
+                    "test": "→ Radiographie thoracique, CT thoracique haute résolution si anomalie"
+                  }
+                ]
+              },
+              {
+                "name": "Maladies infectieuses",
+                "items": [
+                  {
+                    "text": "Tuberculose pulmonaire latente ou active",
+                    "cause": "Arguments POUR:\n\t□ Immigration récente d'Afrique (zone endémique)\n\t□ Toux chronique\n\t□ Jamais testé pour tuberculose\n\t□ Exposition professionnelle (mine = environnement confiné)\nArguments CONTRE:\n\t□ Pas de symptômes systémiques (fièvre, sueurs nocturnes)\n\t□ Pas d'hémoptysie\n\t□ Pas de perte de poids\n\t□ Expectorations blanches (non purulentes)",
+                    "test": "→ Test de Mantoux ou QuantiFERON, radiographie thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes de toux chronique",
+                "items": [
+                  {
+                    "text": "Reflux gastro-œsophagien (RGO)",
+                    "cause": "Arguments POUR:\n\t□ Toux chronique isolée possible\n\t□ Pas de symptômes pulmonaires associés\nArguments CONTRE:\n\t□ Production d'expectorations\n\t□ Pas de symptômes digestifs\n\t□ Pas de toux nocturne",
+                    "test": "→ Essai thérapeutique IPP si autres causes exclues"
+                  },
+                  {
+                    "text": "Asthme professionnel",
+                    "cause": "Arguments POUR:\n\t□ Exposition professionnelle irritants\n\t□ Toux chronique\nArguments CONTRE:\n\t□ Pas de sibilances\n\t□ Pas de variabilité des symptômes\n\t□ Pas de dyspnée",
+                    "test": "→ Spirométrie avec test de réversibilité"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires prioritaires",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique face et profil",
+            "Test de Mantoux ou QuantiFERON-Gold",
+            "FSC (recherche anémie, leucocytose)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires secondaires",
+          "binaryOnly": false,
+          "details": [
+            "Spirométrie si radiographie anormale",
+            "Examen des expectorations (BAAR, culture) si test TB positif",
+            "CT thoracique si suspicion pneumoconiose"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Recommandations préventives",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Sevrage tabagique",
+                "content": "• Conseil d'arrêt ferme et clair\n• Évaluation motivation (score de Fagerström)\n• Substituts nicotiniques\n• Suivi rapproché\n• Support comportemental"
+              },
+              {
+                "title": "Prévention professionnelle",
+                "content": "• Évaluation poste de travail futur\n• Port d'équipements de protection si exposition\n• Surveillance médicale régulière\n• Déclaration maladie professionnelle si indiquée"
+              },
+              {
+                "title": "Dépistage tuberculose",
+                "content": "• Test obligatoire avant embauche\n• Si positif : exclusion TB active\n• Traitement prophylactique si TB latente\n• Information collègues si TB active"
+              },
+              {
+                "title": "Vaccinations",
+                "content": "• Vérifier carnet de vaccination\n• Mise à jour selon calendrier local\n• Vaccination grippe annuelle recommandée\n• Vaccination COVID-19 si indiquée"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Certificat d'aptitude au travail",
+          "binaryOnly": false,
+          "details": [
+            "Aptitude temporaire en attente des résultats",
+            "Réévaluation après examens complémentaires",
+            "Restrictions possibles selon poste",
+            "Suivi médical du travail recommandé"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Emanuel, votre examen clinique est normal, mais votre toux peut soulever des inquiétudes quant à certains problèmes médicaux potentiels. Nous devons faire quelques tests pour nous assurer que vous n'avez pas de maladies graves, et si nous trouvons quelque chose, nous le traiterons immédiatement. Étant donné que vous venez d'arriver d'Afrique et que vous n'avez jamais été testé pour la tuberculose, nous devons exclure cette maladie pulmonaire, non seulement parce qu'elle est dangereuse pour vous, mais aussi parce que vous pourriez la transmettre à vos futurs collègues. L'autre point que je souhaite aborder est votre tabagisme. Cela augmente votre risque de maladies cardiaques et pulmonaires, et je vous encourage fortement à arrêter de fumer. Avez-vous des questions ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Est-ce que vous pensez qu'ils vont m'embaucher ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Les employeurs demandent souvent des examens médicaux pour s'assurer que les futurs employés sont aptes à occuper le poste et pour déterminer s'ils ont des conditions médicales pouvant être dangereuses pour les autres dans l'environnement de travail. Je vais vous poser quelques questions et réaliser un examen clinique, et selon ce que je trouve, je pourrai ou non demander des tests supplémentaires. J'espère que tout ira bien."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Frank Emanuel",
+      "age": "32 ans",
+      "contexte": "Homme immigrant récent se présentant pour examen médical pré-embauche",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens pour l'examen médical demandé par mon futur employeur.",
+        "autreChose": "J'ai tous mes papiers de vaccination à la maison."
+      },
+      "consignes": [
+        "Asseyez-vous sur le lit.",
+        "Tenez le formulaire de demande d'examen clinique dans votre main.",
+        "Soyez coopératif et poli.",
+        "Mentionnez votre toux seulement si on vous demande.",
+        "Paraissez en bonne santé générale."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Aucune plainte active",
+          "Examen de routine pour emploi",
+          "Se sent bien"
+        ],
+        "symptomesAssocies": [
+          "Toux chronique depuis des années",
+          "Expectorations blanches stables",
+          "Pas de symptômes systémiques",
+          "Pas de limitation fonctionnelle"
+        ],
+        "contexteProfessionnel": [
+          "Mineur de charbon en Afrique",
+          "Exposition poussière de charbon",
+          "Immigration il y a 1 mois",
+          "Cherche nouvel emploi"
+        ],
+        "reponseAuxSymptomes": [
+          "Considère toux comme normale",
+          "Pas consulté pour cela",
+          "Pas d'inquiétude particulière"
+        ],
+        "representationMaladie": [
+          "Pense que c'est lié au travail",
+          "Espère que ça n'empêchera pas l'embauche",
+          "Motivé pour nouveau départ"
+        ]
+      },
+      "anamneseSystemes": {
+        "respiratoire": [
+          "Toux productive chronique",
+          "Mucus blanc",
+          "Pas de dyspnée",
+          "Pas d'hémoptysie"
+        ],
+        "general": [
+          "Pas de fièvre",
+          "Pas de sueurs nocturnes",
+          "Poids stable",
+          "Bon appétit"
+        ],
+        "autres": [
+          "Pas de symptômes cardiaques",
+          "Pas de symptômes neurologiques",
+          "Pas de symptômes digestifs"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "tabac": "1 paquet/jour depuis 10 ans",
+        "alcool": "Non",
+        "profession": "Ex-mineur de charbon",
+        "activite_sexuelle": "Avec épouse seulement",
+        "drogues": "Jamais"
+      },
+      "histoireMedicale": [
+        "Aucun ATCD médical",
+        "Aucun ATCD chirurgical",
+        "Vaccinations à jour selon lui",
+        "Jamais testé pour TB"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Répondre de manière directe",
+          "Montrer formulaire si demandé",
+          "Être optimiste sur emploi",
+          "Minimiser la toux"
+        ],
+        "durantStatus": [
+          "Respirer normalement",
+          "Pas de signes pathologiques",
+          "Coopérer pour tous examens",
+          "Tousser si demandé"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 32 ans, immigrant africain récent, ex-mineur de charbon, consultant pour aptitude au travail. Toux chronique productive non explorée, probablement multifactorielle (tabac + exposition professionnelle). Risque de TB latente vu origine géographique. Examen clinique normal mais nécessite bilan pneumologique et dépistage TB avant embauche. Tabagisme actif nécessitant sevrage.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e dit vouloir faire :",
+        "• Radiographie thoracique : mentionner qu'elle est indispensable",
+        "• Test TB : confirmer obligation légale pré-embauche",
+        "• Spirométrie : peut attendre résultats radiographie",
+        "• Certificat : aptitude temporaire en attendant résultats"
+      ],
+      "pointsCles": [
+        "Dépistage TB obligatoire avant embauche",
+        "Toux chronique nécessite exploration minimum",
+        "Exposition professionnelle = surveillance spécifique",
+        "Tabagisme = conseil minimal systématique",
+        "Aptitude conditionnelle aux résultats"
+      ],
+      "pieges": [
+        "Oublier le dépistage tuberculose",
+        "Ne pas explorer la toux chronique",
+        "Donner aptitude définitive d'emblée",
+        "Ne pas conseiller sevrage tabagique",
+        "Négliger l'exposition professionnelle"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Toux chronique multifactorielle chez mineur avec dépistage pré-embauche"
+        },
+        {
+          "titre": "Examen médical pré-embauche",
+          "contenu": "Objectifs et cadre légal :",
+          "points": [
+            "Vérifier aptitude au poste de travail",
+            "Dépister maladies transmissibles",
+            "Identifier contre-indications médicales",
+            "Établir état de santé de référence",
+            "Obligations légales variables selon pays",
+            "Respect confidentialité vs sécurité collective"
+          ]
+        },
+        {
+          "titre": "Pneumoconiose des mineurs",
+          "contenu": "Maladie professionnelle par inhalation :",
+          "points": [
+            "Exposition poussières de charbon + silice",
+            "Latence 10-20 ans habituellement",
+            "Forme simple souvent asymptomatique",
+            "Forme compliquée : fibrose massive",
+            "Risque accru si tabagisme associé",
+            "Surveillance radiologique régulière"
+          ]
+        },
+        {
+          "titre": "Tuberculose et immigration",
+          "contenu": "Considérations épidémiologiques :",
+          "points": [
+            "Prévalence élevée Afrique subsaharienne",
+            "Distinction TB latente vs active cruciale",
+            "Tests : Mantoux vs QuantiFERON",
+            "QuantiFERON plus spécifique (pas BCG)",
+            "Traitement prophylaxique si latente",
+            "Déclaration obligatoire si active"
+          ]
+        },
+        {
+          "titre": "BPCO du mineur-fumeur",
+          "contenu": "Double exposition synergique :",
+          "points": [
+            "Tabac + poussières = risque multiplié",
+            "Apparition précoce possible (30-40 ans)",
+            "Composante restrictive + obstructive",
+            "Déclin accéléré fonction pulmonaire",
+            "Sevrage tabagique prioritaire",
+            "Changement profession parfois nécessaire"
+          ]
+        },
+        {
+          "titre": "Approche toux chronique",
+          "contenu": "Démarche systématique :",
+          "points": [
+            "Définition : >8 semaines",
+            "Causes fréquentes : tabac, RGO, rhinosinusite",
+            "Radiographie thoracique systématique",
+            "Spirométrie si radiographie normale",
+            "Essais thérapeutiques séquentiels",
+            "CT thoracique si échec exploration initiale"
+          ]
+        },
+        {
+          "titre": "Aspects médico-légaux",
+          "contenu": "Responsabilités du médecin :",
+          "points": [
+            "Aptitude ne peut être discriminatoire",
+            "Obligation moyens pas résultat",
+            "Secret médical vs information employeur",
+            "Mention restrictions/aménagements seulement",
+            "Possibilité aptitude temporaire/conditionnelle",
+            "Recours possible du travailleur"
+          ]
+        },
+        {
+          "titre": "Prévention en milieu professionnel",
+          "contenu": "Mesures de protection :",
+          "points": [
+            "Hiérarchie : élimination > substitution > EPI",
+            "Port masque anti-poussières obligatoire",
+            "Surveillance médicale régulière",
+            "Spirométrie de référence puis suivi",
+            "Information sur risques professionnels",
+            "Déclaration maladie professionnelle"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Homme de 32 ans, immigrant africain récent, ex-mineur fumeur consultant pour aptitude au travail. Toux chronique productive nécessitant exploration pour éliminer TB (obligatoire), pneumoconiose débutante et BPCO. L'examen clinique normal est rassurant mais insuffisant. Bilan paraclinique indispensable avant certificat d'aptitude définitif."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Le dépistage pré-embauche protège individu et collectivité",
+            "La TB doit être systématiquement recherchée chez immigrants",
+            "L'exposition professionnelle passée impacte la santé future",
+            "Le tabagisme aggrave toutes les pneumopathies professionnelles",
+            "L'aptitude médicale doit être éclairée par examens appropriés",
+            "La prévention reste prioritaire en santé au travail"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "TB latente : isoniazide 300mg/j × 9 mois",
+        "Alternative : rifampicine 600mg/j × 4 mois",
+        "Sevrage tabagique : substituts nicotiniques",
+        "BPCO légère : bronchodilatateurs courte durée si besoin",
+        "Vaccination grippe annuelle recommandée"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique : recherche infiltrats, nodules, fibrose",
+        "Test Mantoux : positif si ≥10mm (≥5mm si immunodéprimé)",
+        "QuantiFERON : positif si ≥0.35 UI/mL",
+        "Spirométrie : VEMS/CVF <0.7 = obstruction",
+        "BAAR crachats : 3 échantillons si suspicion TB active"
+      ]
+    }
+  }
+}

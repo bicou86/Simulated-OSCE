@@ -1,0 +1,754 @@
+{
+  "title": "RESCOS-28 - Douleur à la hanche",
+  "category": "RESCOS",
+  "subcategory": "Rhumatologie - Pathologie mécanique",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 55 ans consultant pour douleur de hanche droite à la marche et à l'effort",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleur à la hanche qui part vers le genou"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur - critères mécaniques",
+          "details": [
+            "Localisation [hanche droite irradiant vers le genou]",
+            "Type de douleur [mécanique]",
+            "Début progressif [il y a environ 6 mois]",
+            "Horaire mécanique [douleur à l'effort, soulagée par le repos]",
+            "Pas de douleur nocturne inflammatoire",
+            "Dérouillage matinal court [< 30 minutes]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Facteurs déclenchants et soulageants",
+          "details": [
+            "Douleur à la marche et à l'effort",
+            "Part du pli inguinal et irradie dans la cuisse et souvent vers le genou",
+            "Pas de tuméfaction du genou",
+            "Généralement absente au repos et pendant la nuit",
+            "Réactivée par la marche et les autres activités en charge",
+            "Activités sportives (tennis, course à pied, pratiqués ~1x/semaine)"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution de la douleur",
+          "details": [
+            "Apparue très progressivement [6 mois]",
+            "La pratique de sports n'était que peu gênée au début",
+            "Depuis quelques semaines, n'est plus possible",
+            "Progression de l'impotence fonctionnelle"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Traitement essayé",
+          "details": [
+            "Douleur partiellement calmée par l'aspirine",
+            "Autres anti-inflammatoires [effet partiel]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents et facteurs de risque",
+          "details": [
+            "Pas d'accident ou traumatisme",
+            "Pas d'autres articulations douloureuses",
+            "Pas de maladies récemment",
+            "Pas d'autres médicaments",
+            "Pas de rhumatisme connu dans la famille"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Recherche de signes inflammatoires systémiques",
+          "details": [
+            "Pas de fièvre",
+            "Pas de sueurs nocturnes",
+            "Pas d'amaigrissement",
+            "Pas d'asthénie importante"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de la marche et posture",
+          "details": [
+            "Marche avec boiterie de Duchenne [bascule du bassin]",
+            "Signe de Trendelenburg [utilisation moyen auxiliaire pour se déplacer]",
+            "Déformation membre inférieur en rotation asymétrique",
+            "État cutané normal",
+            "Cicatrices [absentes]",
+            "Tuméfaction [absente]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation de la hanche",
+          "details": [
+            "Repères anatomiques: crête iliaque, épine iliaque antéro-supérieure",
+            "Pubis, ligament inguinal, symphyse pubienne",
+            "Muscles rectus femoris (droit fémoral), quadriceps",
+            "Insertion des adducteurs",
+            "Grand trochanter [muscle tenseur du fascia lata, bandelette ilio-tibiale]",
+            "Épine iliaque postéro-supérieure, sacrum, muscle grand glutéal"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Recherche de points douloureux",
+          "details": [
+            "Chaleur [absente]",
+            "Tuméfaction [absente]",
+            "Douleur à la palpation profonde [reproduction de la plainte]",
+            "Crépitations possibles"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen fonctionnel - Mobilité passive",
+          "details": [
+            "Flexion [135° normale, limitée ici]",
+            "Abduction [45° normale, limitée ici]",
+            "Adduction [20° normale]",
+            "Rotation interne [30° normale, limitée ici]",
+            "Rotation externe [40° normale]",
+            "Extension [10° normale]"
+          ],
+          "scoringRule": "Limitation précoce de la rotation interne et de l'abduction"
+        },
+        {
+          "id": "e5",
+          "text": "Examen fonctionnel - Mobilité active",
+          "details": [
+            "Pas ou peu d'examen actif nécessaire",
+            "Mesures d'amplitudes si changements de position",
+            "Démarche logique pour éviter allers-retours position"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Tests de force musculaire",
+          "details": [
+            "Fléchisseurs de hanche",
+            "Extenseurs de hanche",
+            "Abducteurs (moyen fessier)",
+            "Adducteurs",
+            "Rotateurs internes",
+            "Rotateurs externes"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Tests spécifiques de la hanche",
+          "details": [
+            "Test FABER (Flexion-Abduction-External-Rotation)",
+            "Distance inter-malléolaire en position du lotus",
+            "Test FADIR (Flexion-Adduction-Internal-Rotation) pour conflit fémoro-acétabulaire",
+            "Force des abducteurs [recherche faiblesse ou rupture]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Mesure de l'inégalité de longueur des membres",
+          "details": [
+            "Mesure vraie: épine iliaque antéro-supérieure à malléole interne",
+            "Mesure apparente: ombilic à malléole interne",
+            "Recherche d'une bascule du bassin"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour une douleur de hanche",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Coxarthrose (arthrose de hanche)",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans\n\t□ Douleur mécanique typique\n\t□ Début progressif\n\t□ Irradiation inguino-crurale\n\t□ Limitation rotation interne et abduction\n\t□ Absence de signes inflammatoires",
+                    "test": "→ Radiographie bassin face + hanche profil"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels articulaires",
+                "items": [
+                  {
+                    "text": "Coxite inflammatoire (polyarthrite rhumatoïde)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de douleur nocturne\n\t□ Pas de raideur matinale > 30 min\n\t□ Pas d'autres articulations atteintes\n\t□ Pas de signes systémiques",
+                    "test": "→ VS, CRP, facteur rhumatoïde, anti-CCP"
+                  },
+                  {
+                    "text": "Nécrose aseptique de la tête fémorale",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de facteurs de risque (corticoïdes, alcool)\n\t□ Début progressif (vs brutal)",
+                    "test": "→ IRM de hanche si suspicion"
+                  },
+                  {
+                    "text": "Conflit fémoro-acétabulaire",
+                    "cause": "Arguments POSSIBLES:\n\t□ Âge compatible\n\t□ Activités sportives\n\t□ Test FADIR positif possible",
+                    "test": "→ Arthro-IRM ou arthroscanner"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels péri-articulaires",
+                "items": [
+                  {
+                    "text": "Bursite trochantérienne",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur inguinale (vs latérale)\n\t□ Pas de douleur à la palpation du grand trochanter",
+                    "test": "→ Échographie si doute"
+                  },
+                  {
+                    "text": "Tendinopathie des fléchisseurs de hanche",
+                    "cause": "Arguments CONTRE:\n\t□ Limitation articulaire présente\n\t□ Douleur articulaire profonde",
+                    "test": "→ Échographie, IRM"
+                  },
+                  {
+                    "text": "Cruralgie (L3-L4)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de lombalgie associée\n\t□ Limitation articulaire de hanche\n\t□ Pas de signes neurologiques",
+                    "test": "→ Examen neurologique, IRM lombaire"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "details": [
+            "Radiographie bassin face debout",
+            "Radiographie hanche face et profil (faux profil de Lequesne)",
+            "Signes radiologiques: pincement articulaire, ostéophytes, géodes, condensation",
+            "Biologie si doute inflammatoire: NFS, VS, CRP",
+            "IRM si radiographie normale et forte suspicion clinique"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Classification de la coxarthrose",
+          "details": [
+            "Primitive: idiopathique, liée à l'âge",
+            "Secondaire: dysplasie, traumatisme, nécrose",
+            "Stades radiologiques (Kellgren-Lawrence)",
+            "Stade 1: ostéophytes débutants",
+            "Stade 2: pincement articulaire débutant",
+            "Stade 3: pincement marqué, géodes",
+            "Stade 4: disparition interligne, déformations"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures non médicamenteuses",
+                "content": "• Éducation thérapeutique\n• Perte de poids si surcharge pondérale\n• Activité physique adaptée (natation, vélo)\n• Éviter sports à impact\n• Kinésithérapie: renforcement musculaire, étirements\n• Aides techniques: canne côté opposé"
+              },
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• Paracétamol 1g x3-4/j en première intention\n• AINS per os ou topiques si insuffisant\n• Antalgiques palier 2 si échec\n• Infiltrations intra-articulaires corticoïdes (max 3/an)\n• Viscosupplémentation (acide hyaluronique) discutée"
+              },
+              {
+                "title": "Traitement chirurgical",
+                "content": "• Indication si échec traitement médical bien conduit > 6 mois\n• Douleur invalidante et/ou limitation fonctionnelle importante\n• Prothèse totale de hanche (PTH)\n• Excellent pronostic fonctionnel\n• Durée de vie prothèse: 15-20 ans"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Évaluation régulière de la douleur (EVA)",
+            "Évaluation fonctionnelle (périmètre de marche)",
+            "Indices fonctionnels (WOMAC, Lequesne)",
+            "Radiographie annuelle si évolutive",
+            "Adaptation thérapeutique selon évolution"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Complications et évolution",
+          "details": [
+            "Évolution généralement lente sur plusieurs années",
+            "Aggravation progressive de l'impotence fonctionnelle",
+            "Raideur articulaire progressive",
+            "Amyotrophie quadricipitale",
+            "Retentissement sur articulations adjacentes",
+            "Impact sur qualité de vie"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vous souffrez probablement d'arthrose de la hanche, c'est une usure progressive du cartilage de l'articulation. C'est fréquent après 50 ans et lié à l'utilisation normale de l'articulation avec les activités sportives. Ce n'est pas une maladie inflammatoire."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que je vais devoir arrêter le sport?]\n[Vais-je avoir besoin d'une prothèse?]\n[Est-ce que ça va empirer?]\n[Y a-t-il des traitements efficaces?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Il faut adapter vos activités sportives, privilégier la natation et le vélo plutôt que la course\nLa prothèse n'est envisagée qu'en cas d'échec du traitement médical après plusieurs mois\nL'évolution est généralement lente, on peut ralentir la progression avec le traitement\nOui, la combinaison médicaments, kinésithérapie et adaptation des activités est efficace"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Coxarthrose",
+      "nom": "Patiente féminine",
+      "age": "55 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal à la hanche droite quand je marche",
+        "description": "Douleur de hanche irradiant vers le genou lors de la marche et des activités sportives"
+      },
+      "histoireActuelle": {
+        "douleur": [
+          "Début il y a 6 mois environ, très progressif",
+          "Part du pli de l'aine et descend dans la cuisse",
+          "Irradie souvent jusqu'au genou",
+          "Pas de gonflement du genou",
+          "Absente au repos et la nuit",
+          "Réveillée par la marche et le sport"
+        ],
+        "evolution": [
+          "Au début, peu gênant pour le tennis et la course",
+          "Pratique sportive environ 1 fois par semaine",
+          "Depuis quelques semaines, sport impossible",
+          "Douleur de plus en plus limitante"
+        ],
+        "traitement": [
+          "Aspirine calme partiellement",
+          "Autres anti-inflammatoires essayés avec effet partiel"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Aucun traumatisme, pas d'autres douleurs articulaires",
+        "familiaux": "Pas de rhumatisme dans la famille"
+      },
+      "habitudes": {
+        "sport": "Tennis et course à pied, environ 1x/semaine avant",
+        "profession": "Non précisée",
+        "medicaments": "Seulement anti-inflammatoires au besoin"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète de devoir arrêter le sport",
+          "Coopérative pour l'examen",
+          "Minimise un peu la gêne"
+        ],
+        "signesPhysiques": [
+          "Boiterie légère à la marche",
+          "Évite l'appui prolongé côté droit",
+          "Grimace lors de la mobilisation de la hanche"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Coxarthrose",
+      "pointsCles": [
+        "Douleur mécanique typique de coxarthrose",
+        "Irradiation inguino-crurale caractéristique",
+        "Limitation précoce rotation interne et abduction",
+        "Absence de signes inflammatoires systémiques",
+        "Évolution progressive sur 6 mois"
+      ],
+      "pieges": [
+        "Ne pas confondre avec une coxite inflammatoire",
+        "Penser à examiner le rachis lombaire (diagnostic différentiel)",
+        "Vérifier l'absence de signes neurologiques",
+        "Ne pas oublier de mesurer l'inégalité de longueur",
+        "Tester la force des abducteurs (moyen fessier)"
+      ],
+      "techniquesExamen": [
+        "Patient en décubitus dorsal pour mobilité passive",
+        "Flexion hanche et genou à 90° pour rotations",
+        "Patient en décubitus latéral pour abduction",
+        "Test FABER: très sensible pour pathologie de hanche",
+        "Mesures comparatives avec côté sain"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Coxarthrose",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Dégradation progressive du cartilage articulaire\n• Remodelage osseux avec ostéophytes\n• Inflammation synoviale secondaire\n• Fibrose capsulaire progressive\n• Facteurs de risque: âge, surcharge, dysplasie"
+        },
+        {
+          "titre": "Critères diagnostiques",
+          "contenu": "• Douleur mécanique de hanche\n• Limitation rotation interne < 15°\n• Raideur matinale < 60 minutes\n• Âge > 50 ans\n• VS < 20 mm/h si dosée"
+        },
+        {
+          "titre": "Diagnostic différentiel mécanique vs inflammatoire",
+          "contenu": "MÉCANIQUE:\n• Douleur d'effort\n• Soulagée par repos\n• Dérouillage < 30 min\n• Aggravation dans la journée\n\nINFLAMMATOIRE:\n• Douleur de repos et nocturne\n• Raideur matinale > 30 min\n• Amélioration avec activité\n• Signes systémiques"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Approche multimodale indispensable",
+        "Paracétamol reste le traitement de première ligne",
+        "AINS avec protection gastrique si nécessaire",
+        "Infiltrations: maximum 3 par an",
+        "Kinésithérapie: renforcement des abducteurs crucial",
+        "PTH: excellent résultat fonctionnel, survie > 95% à 10 ans"
+      ],
+      "examensComplementaires": [
+        "Radiographie standard: examen de première intention",
+        "Clichés: bassin face debout + faux profil de Lequesne",
+        "Signes cardinaux: pincement, ostéophytes, géodes, condensation",
+        "IRM: si discordance radio-clinique ou diagnostic différentiel",
+        "Arthroscanner: bilan pré-opératoire ou conflit fémoro-acétabulaire",
+        "Biologie: normale sauf si pathologie inflammatoire associée"
+      ]
+    },
+    "resume": {
+      "titre": "🦴 Coxarthrose (arthrose de hanche) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptomatologie",
+              "points": [
+                "Douleur mécanique progressive (hanche/aine, parfois genou)",
+                "Raideur matinale < 30 min",
+                "Douleur augmentée à la marche, escaliers, terrain en pente",
+                "Soulagement au repos",
+                "Boiterie possible"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Âge avancé",
+                "Surpoids/obésité",
+                "Surmenage articulaire (sport, travail physique)",
+                "ATCD traumatique ou dysplasie de hanche",
+                "ATCD familiaux d’arthrose"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes fonctionnels",
+              "points": [
+                "Boiterie antalgique",
+                "Limitation de la mobilité : surtout rotation interne et abduction",
+                "Douleur à la mobilisation passive",
+                "Amyotrophie quadriceps/fessiers si chronique"
+              ]
+            },
+            {
+              "titre": "Signes d’évolution",
+              "points": [
+                "Raideur progressive",
+                "Inégalité de longueur des membres (stade avancé)",
+                "Attitude vicieuse en flexion/rotation externe"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie bassin + hanches face et profil",
+                "Pincement de l’interligne articulaire",
+                "Ostéophytes",
+                "Sclérose sous-chondrale",
+                "Géodes osseuses"
+              ]
+            },
+            {
+              "titre": "Biologie",
+              "points": [
+                "Pas de syndrome inflammatoire (≠ arthrite)",
+                "Examens sanguins normaux"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures non pharmacologiques",
+              "points": [
+                "Éducation thérapeutique, perte de poids",
+                "Adaptation activité physique (éviter sport d’impact, favoriser natation/vélo)",
+                "Aides techniques (cannes, semelles)"
+              ]
+            },
+            {
+              "titre": "Traitement médical",
+              "points": [
+                "Antalgiques (paracétamol en 1ère intention)",
+                "AINS si poussées douloureuses",
+                "Infiltrations intra-articulaires (corticoïdes ou acide hyaluronique)"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Indiqué si échec du traitement conservateur",
+                "Prothèse totale de hanche (arthroplastie)",
+                "Excellents résultats sur douleur et mobilité"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur mécanique de hanche chez adulte > 50 ans → penser coxarthrose",
+            "IRM non nécessaire, diagnostic radioclinique",
+            "PEC initiale : hygiène de vie + antalgiques ± infiltrations",
+            "Arthroplastie si handicap fonctionnel majeur",
+            "Surveillance régulière de l’évolution"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur : localisation, horaire (mécanique/inflammatoire) ?",
+                "Raideur matinale ?",
+                "Facteurs aggravants : marche, escaliers, terrain irrégulier ?",
+                "ATCD traumatiques, dysplasie, surpoids ?",
+                "Impact sur vie quotidienne (marche, activités, sommeil) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen clinique mobilité hanche (rotation interne, abduction)",
+                "Radiographie bassin + hanches",
+                "Pas de biologie spécifique sauf éliminer autre cause"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Hygiène de vie : perte poids + adaptation activité",
+                "Traitement symptomatique : antalgiques ± infiltrations",
+                "Chirurgie (prothèse totale hanche) si échec conservateur"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur de hanche (Coxarthrose probable)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif : douleur hanche droite à la marche",
+            "Caractériser la douleur → localisation inguinale irradiant genou, mécanique, progressive depuis 6 mois",
+            "Facteurs aggravants/soulageants → effort, marche, sport aggravent ; repos soulage",
+            "Évolution → gêne croissante, sport impossible récemment",
+            "Traitements essayés → aspirine, AINS (efficacité partielle)",
+            "ATCD médicaux/familiaux → aucun traumatisme, pas de rhumatisme connu",
+            "Signes généraux → absents (pas de fièvre, sueurs, amaigrissement)",
+            "Examen clinique → boiterie, limitation rotation interne et abduction, douleur mobilisation passive",
+            "Hypothèse principale → coxarthrose",
+            "Diagnostics différentiels → coxite inflammatoire, nécrose tête fémorale, conflit fémoro-acétabulaire, bursite trochantérienne, cruralgie",
+            "Examens complémentaires → radio bassin + hanches face et profil, biologie si doute, IRM si suspicion autre",
+            "PEC → hygiène de vie, antalgiques ± AINS, kinésithérapie, infiltrations, chirurgie si échec"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : HANCHO",
+            "elements": [
+              "H = Horaire mécanique",
+              "A = Âge > 50 ans",
+              "N = Nette limitation rotation interne",
+              "C = Contexte effort/soulagement repos",
+              "H = Handicap fonctionnel progressif",
+              "O = Ostéophytes/pincement sur radio"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme X, 55 ans, qui consulte pour des douleurs de la hanche droite évoluant depuis environ 6 mois. La douleur est localisée dans le pli de l’aine, irradiant souvent jusqu’au genou. Elle est typiquement mécanique : déclenchée par la marche, les escaliers, le sport, et soulagée par le repos. Elle n’est pas présente la nuit, il n’y a pas de dérouillage matinal prolongé, seulement une raideur de quelques minutes. \n\nAu début, la patiente pouvait encore pratiquer le tennis et la course une fois par semaine. Mais depuis quelques semaines, elle ne peut plus faire de sport et la marche devient de plus en plus difficile. Elle a essayé l’aspirine et d’autres anti-inflammatoires, avec un soulagement partiel. \n\nElle n’a pas d’antécédents traumatiques, pas d’autres articulations atteintes, pas d’antécédents familiaux de rhumatismes. Pas de fièvre, pas de sueurs nocturnes, pas de perte de poids. \n\nÀ l’examen, on note une boiterie de Duchenne, une douleur à la mobilisation passive de la hanche droite, et surtout une limitation précoce de la rotation interne et de l’abduction. Pas de tuméfaction ni de rougeur. \n\nEn résumé, il s’agit d’une femme de 55 ans présentant une douleur mécanique chronique de la hanche droite, irradiant au genou, avec limitation de la rotation interne. Mon hypothèse principale est une coxarthrose. Les diagnostics différentiels incluent une coxite inflammatoire (mais absence de douleur nocturne et de syndrome inflammatoire), une nécrose aseptique de la tête fémorale (pas de facteurs de risque, début progressif), un conflit fémoro-acétabulaire (possible vu le sport), une bursite trochantérienne (mais douleur latérale), une cruralgie (mais pas de signes neurologiques). \n\nJe demanderais une radiographie du bassin face debout et de la hanche droite face et profil, à la recherche d’un pincement articulaire, ostéophytes, géodes ou condensation. Si doute, je compléterais par une biologie (NFS, VS, CRP) et éventuellement une IRM. \n\nLa prise en charge repose d’abord sur des mesures non médicamenteuses : perte de poids si nécessaire, adaptation des activités physiques (favoriser vélo, natation), kinésithérapie pour renforcer la musculature, et utilisation d’une canne si besoin. Sur le plan médical, le paracétamol est le traitement de première intention, les AINS sont utilisés en poussée douloureuse, et on peut envisager des infiltrations intra-articulaires. Enfin, si échec du traitement médical bien conduit et limitation fonctionnelle majeure, la prothèse totale de hanche est indiquée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme X, 55 ans, douleur mécanique hanche droite depuis 6 mois, irradiant au genou, aggravée à la marche, sport impossible.\n\nB (Background) : Pas d’ATCD traumatique ou familial, essais AINS partiellement efficaces, pas de signes inflammatoires.\n\nA (Assessment) : Coxarthrose probable. DD : coxite inflammatoire, nécrose tête fémorale, conflit fémoro-acétabulaire, bursite trochantérienne, cruralgie.\n\nR (Recommendation) : Radiographie bassin + hanche, traitement hygiéno-diététique, antalgiques, AINS si besoin, kiné, infiltrations, chirurgie si échec conservateur."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Mécanique vs Inflammatoire",
+              "points": [
+                "Mécanique : douleur effort, soulagée repos, dérouillage < 30 min",
+                "Inflammatoire : douleur repos/nocturne, dérouillage > 30 min, amélioration à l’effort"
+              ]
+            },
+            {
+              "titre": "👉 4 signes radiologiques d’arthrose",
+              "points": [
+                "Pincement de l’interligne articulaire",
+                "Ostéophytes",
+                "Sclérose sous-chondrale",
+                "Géodes"
+              ]
+            },
+            {
+              "titre": "👉 Stades de Kellgren-Lawrence",
+              "points": [
+                "1 : ostéophytes débutants",
+                "2 : pincement débutant",
+                "3 : pincement marqué, géodes",
+                "4 : disparition interligne, déformations"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Confondre irradiation au genou avec une pathologie du genou",
+                "Oublier de tester rotation interne et abduction",
+                "Oublier diagnostic différentiel inflammatoire",
+                "Ne pas proposer d’imagerie simple (radio avant IRM)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Diagnostic",
+              "questions": [
+                {
+                  "question": "Quels sont les arguments pour la coxarthrose ?",
+                  "reponse": [
+                    "Âge > 50 ans",
+                    "Douleur mécanique typique (effort, repos soulage)",
+                    "Irradiation inguino-crurale",
+                    "Limitation rotation interne et abduction",
+                    "Absence de signes inflammatoires",
+                    "Évolution progressive"
+                  ]
+                },
+                {
+                  "question": "Quels diagnostics différentiels faut-il évoquer ?",
+                  "reponse": [
+                    "Coxite inflammatoire (PR, spondyloarthrite)",
+                    "Nécrose aseptique de la tête fémorale",
+                    "Conflit fémoro-acétabulaire",
+                    "Bursite trochantérienne",
+                    "Tendinopathie psoas/adducteurs",
+                    "Cruralgie (L3-L4)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens prescrivez-vous ?",
+                  "reponse": [
+                    "Radiographie bassin face debout",
+                    "Hanche face et profil",
+                    "Biologie (NFS, VS, CRP) si doute inflammatoire",
+                    "IRM si radio normale et forte suspicion"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Quel est le traitement initial ?",
+                  "reponse": [
+                    "Mesures hygiéno-diététiques (perte poids, adaptation activités)",
+                    "Paracétamol",
+                    "AINS si poussée douloureuse",
+                    "Kinésithérapie (renforcement abducteurs)",
+                    "Infiltrations corticoïdes si douleurs persistantes"
+                  ]
+                },
+                {
+                  "question": "Quelles sont les indications chirurgicales ?",
+                  "reponse": [
+                    "Douleur invalidante",
+                    "Impôtence fonctionnelle majeure",
+                    "Échec traitement médical bien conduit > 6 mois",
+                    "Prothèse totale de hanche = référence"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "4. Suivi et pronostic",
+              "questions": [
+                {
+                  "question": "Comment assurer le suivi ?",
+                  "reponse": [
+                    "Évaluation douleur et fonction (EVA, périmètre marche, scores WOMAC/Lequesne)",
+                    "Radiographie si aggravation",
+                    "Adapter traitement selon évolution"
+                  ]
+                },
+                {
+                  "question": "Quel est le pronostic ?",
+                  "reponse": [
+                    "Évolution lente, aggravation progressive",
+                    "Prothèse totale de hanche = excellent pronostic fonctionnel",
+                    "Durée de vie prothèse 15-20 ans"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,876 @@
+{
+  "title": "RESCOS-14 - Diarrhées",
+  "context": {
+    "setting": "Urgences",
+    "patient": "Madame Landolt, 37 ans, se présente aux urgences pour des rectorragies depuis quelques semaines.",
+    "vitals": {
+      "ta": "112/62 mmHg",
+      "fc": "105 bpm",
+      "fr": "14/min",
+      "temperature": "38.4°C",
+      "sao2": "98%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la plainte principale",
+          "details": [
+            "Localisation de la douleur [quadrant inférieur gauche]",
+            "Type de douleur [crampiforme]",
+            "Intensité [7/10 au maximum]",
+            "Durée et fréquence [4 semaines, > 10 épisodes/jour]",
+            "Facteurs aggravants [prise alimentaire]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des rectorragies",
+          "details": [
+            "Présence de sang frais [oui]",
+            "Quantité et fréquence [10 épisodes/jour]",
+            "Glaires [oui]",
+            "Diarrhées nocturnes [oui]",
+            "Ténesmes et urgences fécales [oui]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "details": [
+            "Perte de poids [3.5 kg en 4 semaines]",
+            "Inappétence [oui]",
+            "Nausées et vomissements [depuis 3 jours, postprandiaux]",
+            "Fatigue [oui]",
+            "Palpitations [oui]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Retentissement fonctionnel",
+          "details": [
+            "Impact socioprofessionnel [port de protections au travail]",
+            "Isolement social [ne sort plus, ne voit plus d'amis]",
+            "Adaptation comportementale [évite de manger par appréhension]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents et facteurs de risque",
+          "details": [
+            "Voyage récent [Tanzanie il y a 2 mois]",
+            "Relations sexuelles non protégées [vaginales et anales]",
+            "Consommation d'aliments à risque [légumes et fruits non cuits]",
+            "Tabagisme [ancien, 8 UPA]",
+            "Médicaments gastrotoxiques [Diclofénac]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse systémique",
+          "details": [
+            "Pas de symptômes urinaires",
+            "Pas de douleurs articulaires",
+            "Pas d'atteinte cutanée",
+            "Pas d'atteinte oculaire",
+            "Pas de notion de contage"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse médicale et chirurgicale",
+          "details": [
+            "Reflux gastro-œsophagien [oui]",
+            "Lombalgies chroniques [depuis 4 mois]",
+            "Appendicectomie [dans l'enfance]",
+            "Cure de tunnel carpien [2020]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux et état général",
+          "details": [
+            "Prise des signes vitaux",
+            "Évaluation de l'état général",
+            "Recherche de signes de déshydratation"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal",
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation des bruits intestinaux",
+            "Palpation des 4 quadrants",
+            "Recherche de défense ou détente",
+            "Recherche de masses"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Recherche de complications",
+          "details": [
+            "Signes de péritonite",
+            "Signes de mégacôlon toxique",
+            "État hémodynamique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Recherche de manifestations extra-intestinales",
+          "details": [
+            "Examen cutané [érythème noueux, pyoderma]",
+            "Examen articulaire [arthrite]",
+            "Examen oculaire si indiqué [uvéite, épisclérite]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Toucher rectal",
+          "details": [
+            "Inspection de la marge anale",
+            "Recherche de sang frais",
+            "Évaluation du tonus sphinctérien",
+            "Palpation rectale"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale",
+          "details": [
+            "Rectocolite ulcéro-hémorragique (RCUH)",
+            "Justification basée sur les symptômes",
+            "Explication adaptée à la patiente"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "details": [
+            "Maladie de Crohn",
+            "Colite infectieuse (bactérienne, parasitaire)",
+            "Colite médicamenteuse (AINS)",
+            "Carcinome colorectal"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Bilan biologique (FSC, CRP, électrolytes, fonction rénale)",
+            "Cultures de selles et parasitologie",
+            "Calprotectine fécale",
+            "Colonoscopie avec biopsies"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Critères d'hospitalisation évalués [≥ 6 selles sanglantes/jour]",
+            "Réhydratation IV",
+            "Corticothérapie IV si colite sévère",
+            "Arrêt des AINS"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Plan de suivi",
+          "details": [
+            "Consultation gastro-entérologie",
+            "Surveillance des complications",
+            "Protocole de dépistage du cancer colorectal",
+            "Soutien psychologique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Communication avec la patiente",
+          "details": [
+            "Réponse à la question sur le cancer [risque accru mais surveillance]",
+            "Explication du caractère chronique de la maladie",
+            "Rassurance sur les options thérapeutiques",
+            "Information sur les groupes de soutien"
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Lésions cutanées associées aux MICI",
+        "description": "Illustration de l'érythème noueux et du pyoderma gangrenosum, manifestations cutanées possibles dans les maladies inflammatoires chroniques de l'intestin",
+        "filename": "grilles_generees/html/images/diarrhées-1-img1.jpg"
+      },
+      {
+        "id": "img2",
+        "title": "Causes d'hémorragie digestive basse",
+        "description": "Classification des causes d'hémorragie digestive basse selon leur origine : anatomique, vasculaire, inflammatoire, néoplasique, iatrogène, ano-rectale, grêle/HDH",
+        "filename": "grilles_generees/html/images/diarrhées-1-img2.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Giulia Landolt",
+      "age": "37 ans",
+      "contexte": "Cheffe de projet chez Nestlé consultant aux urgences pour rectorragies",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai du sang dans les selles",
+        "autreChose": "C'est vraiment le sang qui m'inquiète"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs abdominales crampiformes",
+          "Localisation : Quadrant inférieur gauche + rectalgies",
+          "Intensité : 7/10 au maximum",
+          "Durée : 4 semaines",
+          "Facteur aggravant : Prise alimentaire"
+        ],
+        "symptomesAssocies": [
+          "Diarrhées glaireuses et sanglantes (diurnes et nocturnes)",
+          "> 10 épisodes par jour",
+          "Ténesmes et urgences fécales",
+          "Nausées quotidiennes postprandiales depuis 3 jours",
+          "Vomissements à la prise alimentaire depuis 3 jours",
+          "Perte de poids de 3.5 kg en 4 semaines",
+          "Fatigue",
+          "Palpitations",
+          "Sensation de peine à respirer"
+        ],
+        "reponseAuxSymptomes": [
+          "Ne mange plus par appréhension des diarrhées",
+          "Porte des protections (couches pour adulte) au travail"
+        ],
+        "representationMaladie": [
+          "Mort imminente",
+          "Cancer"
+        ],
+        "questions": [
+          "Ai-je un cancer ? (à poser au plus tard au moment de la sonnerie '2 minutes restantes')"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Perte de poids involontaire de 3.5 kg en 4 semaines sur inappétence",
+          "Pas d'état fébrile objectivé, ni de frissons"
+        ],
+        "cardiovasculaire": [
+          "Actuellement ressent des palpitations"
+        ],
+        "digestive": [
+          "Cf. anamnèse actuelle"
+        ],
+        "osteoarticulaire": [
+          "Pas de douleur articulaire (DD : arthrite, spondylite ankylosante qui peuvent être associées aux MICI)"
+        ],
+        "genitourinaire": [
+          "Pas de brûlures mictionnelles ou algurie",
+          "Pas de pollakiurie (besoin fréquent d'uriner)",
+          "Quantité d'urine normale",
+          "Ne sait pas si sang dans les urines car mélangées à la diarrhée (mais pas de sang sur le papier quand elle s'essuie)"
+        ],
+        "gynecologique": [
+          "Pas d'écoulement ou d'odeur nauséabonde perçue",
+          "Stérilet en cuivre de longue date",
+          "Règles régulières de quantité normale",
+          "Ménarche à 12 ans",
+          "N'a jamais été enceinte, ne souhaite pas d'enfant"
+        ],
+        "dermatologique": [
+          "Pas d'atteinte cutanée (DD : érythème noueux, pyoderma gangrenosum qui peuvent être associés aux MICI)"
+        ],
+        "ophtalmologique": [
+          "Pas d'atteinte (DD : uvéite et épisclérite qui peuvent être associées aux MICI)"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Omnivore, équilibré. Durant le voyage en Tanzanie, a mangé des légumes et fruits non cuits sans y faire particulièrement attention",
+        "activitePhysique": "Tennis 1x/semaine",
+        "sommeil": "Perturbé par les symptômes",
+        "tabac": "Ancien, 1/2 paquet par jour de 16 à 32 ans = 8 UPA",
+        "alcool": "1-2 verres/semaine",
+        "drogues": "Non",
+        "sexualite": "Relations sexuelles non protégées avec partenaire stable",
+        "medicaments": "Voltaren retard 75mg max 3x/j en réserve, Dafalgan 1g max 4x/j en réserve, Nexium en réserve"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Célibataire, a rencontré un nouveau compagnon lors d'un voyage en Tanzanie il y a deux mois (habite en France)",
+        "Relations sexuelles vaginales et anales non protégées avec lui en début de relation",
+        "Ne l'a plus revu depuis 1 mois en raison de ses diarrhées",
+        "Restent en contact, lui n'a jamais présenté de symptôme",
+        "Comorbidités : Lombalgies chroniques non déficitaires depuis 4 mois, reflux gastro-œsophagiens récurrents, stérilet en cuivre depuis 2016",
+        "Antécédents : Cure de tunnel carpien à droite en 2020, appendicectomie dans l'enfance (environ 12 ans)"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Cheffe de projet chez Nestlé",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Célibataire",
+        "etatEsprit": "Fatiguée, inquiète (peur du cancer)"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Fatigue visible",
+          "Étudiant empathique : Précise retentissement socioprofessionnel (porte des protections au travail et chez elle, urgences fécales, ne se rend plus chez des amis, ne sort plus en dehors du travail)",
+          "Étudiant non-empathique : Ne mentionne pas tous les aspects 'gênants' sauf si demandé directement"
+        ],
+        "durantStatus": [
+          "Douleurs du quadrant inférieur gauche à la palpation"
+        ]
+      },
+      "informationADonner": "Conséquences sociales : Ne se rend plus chez des amis, ne sort plus en dehors du travail"
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Mme Landolt, 37 ans, cheffe de projet chez Nestlé, se présente aux urgences pour rectorragies depuis 3-4 semaines. Diarrhées sanglantes (10 épisodes/jour) avec ténesmes et urgences fécales. Douleurs abdominales crampiformes au QIG. Perte de poids 3.5 kg, inappétence. Nausées/vomissements depuis 3 jours. Retentissement socioprofessionnel majeur. Voyage Tanzanie il y a 2 mois. Tabagisme ancien 8 UPA. Médication : AINS pour lombalgies.",
+      "rolesInterventions": [
+        "Pas d'intervention nécessaire"
+      ],
+      "pointsCles": [
+        "Rectorragies avec diarrhées glaireuses évoluant depuis 4 semaines",
+        "Critères de gravité : > 10 selles/jour, fièvre, tachycardie",
+        "Retentissement majeur sur la qualité de vie",
+        "Voyage récent en Tanzanie (DD infectieux)",
+        "Prise d'AINS (DD colite médicamenteuse)",
+        "Question sur le cancer à gérer avec empathie"
+      ],
+      "pieges": [
+        "Ne pas oublier l'anamnèse sexuelle (IST possible)",
+        "Rechercher systématiquement les manifestations extra-intestinales des MICI",
+        "Évaluer les critères d'hospitalisation",
+        "Ne pas banaliser l'impact psychosocial",
+        "Penser aux complications (mégacôlon toxique)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la rectocolite ulcéro-hémorragique",
+      "sections": [
+        {
+          "titre": "Évaluation des douleurs abdominales",
+          "contenu": "Motif de consultation très fréquent aux urgences (environ 25% des patients). L'anamnèse est clef pour orienter le diagnostic.",
+          "points": [
+            "Caractérisation de la douleur : siège, type, intensité, évolution, facteurs modulateurs",
+            "Signes d'accompagnement : fièvre, troubles du transit, nausées/vomissements",
+            "Recherche de signes de gravité : défense, contracture, état de choc",
+            "Antécédents : chirurgicaux, médicamenteux (AINS), voyages récents"
+          ]
+        },
+        {
+          "titre": "Rectocolite ulcéro-hémorragique (RCUH)",
+          "contenu": "Maladie inflammatoire chronique de l'intestin affectant les muqueuses rectales et pouvant s'étendre au côlon. Touche principalement les 15-30 ans.",
+          "points": [
+            "Symptômes typiques : diarrhée sanglante (90%), urgences fécales, ténesmes",
+            "Symptômes systémiques : asthénie, fièvre, perte de poids, anémie",
+            "Manifestations extra-intestinales (25%) : articulaires, ophtalmologiques, cutanées",
+            "Évolution par poussées et rémissions",
+            "Diagnostic : colonoscopie avec biopsies"
+          ]
+        },
+        {
+          "titre": "Complications de la RCUH",
+          "contenu": "La surveillance est essentielle pour prévenir et détecter précocement les complications potentiellement graves.",
+          "points": [
+            "Cancer colorectal : risque accru, nécessité de surveillance endoscopique",
+            "Mégacôlon toxique : dilatation colique ≥ 6 cm avec toxicité systémique (urgence)",
+            "Perforation colique",
+            "Hémorragie massive",
+            "Cholangite sclérosante primitive (association)"
+          ]
+        },
+        {
+          "titre": "Critères d'hospitalisation",
+          "contenu": "L'évaluation de la sévérité détermine le lieu de prise en charge.",
+          "points": [
+            "Colite aiguë sévère : ≥ 6 selles sanglantes/jour ET toxicité systémique",
+            "Signes de toxicité : fièvre > 38°C, FC > 90 bpm, Hb < 10.5 g/dL",
+            "Complications suspectées",
+            "Échec du traitement ambulatoire",
+            "Impossibilité de s'alimenter/s'hydrater"
+          ]
+        },
+        {
+          "titre": "Prise en charge thérapeutique",
+          "contenu": "Le traitement dépend de la sévérité et de l'extension de la maladie.",
+          "points": [
+            "Forme légère à modérée : 5-ASA (mésalazine) topique et/ou orale",
+            "Forme sévère : corticothérapie IV haute dose + réhydratation",
+            "Traitement d'entretien : 5-ASA, immunosuppresseurs si nécessaire",
+            "Biothérapies (anti-TNF, anti-intégrines) si échec conventionnel",
+            "Chirurgie : colectomie si échec médical ou complication"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Arrêt impératif des AINS",
+        "Corticothérapie IV si hospitalisation : méthylprednisolone 60 mg/j",
+        "Réhydratation et correction des troubles électrolytiques",
+        "Prophylaxie thromboembolique si hospitalisation",
+        "Supplémentation en fer si anémie",
+        "Support nutritionnel si dénutrition",
+        "Prise en charge psychologique du retentissement"
+      ],
+      "examensComplementaires": [
+        "FSC : recherche anémie, syndrome inflammatoire",
+        "CRP : marqueur d'inflammation",
+        "Électrolytes : Na, K, recherche de déshydratation",
+        "Fonction rénale : créatinine",
+        "Albumine : évaluation nutritionnelle",
+        "Cultures de selles : éliminer une cause infectieuse",
+        "Parasitologie des selles : si voyage récent",
+        "Calprotectine fécale : marqueur d'inflammation intestinale",
+        "Colonoscopie avec biopsies : gold standard diagnostique",
+        "Radiographie abdominale si suspicion de mégacôlon"
+      ]
+    },
+    "ddSection": {
+      "title": "Diagnostics différentiels des rectorragies avec diarrhées",
+      "categories": [
+        {
+          "name": "Maladies inflammatoires",
+          "items": [
+            {
+              "text": "Rectocolite ulcéro-hémorragique (RCUH)",
+              "cause": "Arguments POUR:\n\t□ Femme jeune (37 ans)\n\t□ Diarrhées sanglantes et glaireuses\n\t□ Ténesmes et urgences fécales\n\t□ Évolution subaiguë (4 semaines)\n\t□ Diarrhées nocturnes\n\t□ Symptômes systémiques (perte de poids, fatigue)",
+              "test": "→ Colonoscopie avec biopsies, calprotectine fécale"
+            },
+            {
+              "text": "Maladie de Crohn",
+              "cause": "Arguments POUR:\n\t□ MICI possible\n\t□ Douleurs abdominales\nArguments CONTRE:\n\t□ Localisation rectale prédominante\n\t□ Pas de fistules ou abcès\n\t□ Pas d'atteinte péri-anale",
+              "test": "→ Colonoscopie + iléoscopie, IRM entéro"
+            }
+          ]
+        },
+        {
+          "name": "Causes infectieuses",
+          "items": [
+            {
+              "text": "Colite infectieuse bactérienne",
+              "cause": "Arguments POUR:\n\t□ Voyage récent en Tanzanie\n\t□ Consommation d'aliments à risque\n\t□ Fièvre\nArguments CONTRE:\n\t□ Durée prolongée (4 semaines)\n\t□ Pas de contage dans l'entourage",
+              "test": "→ Cultures de selles, recherche Shigella, Salmonella, Campylobacter, E. coli"
+            },
+            {
+              "text": "Colite parasitaire (amibiase)",
+              "cause": "Arguments POUR:\n\t□ Voyage en zone endémique\n\t□ Diarrhées sanglantes\nArguments CONTRE:\n\t□ Pas de douleur du flanc droit typique\n\t□ Évolution prolongée",
+              "test": "→ Parasitologie des selles x3, sérologie amibienne"
+            },
+            {
+              "text": "IST rectale (gonorrhée, chlamydia)",
+              "cause": "Arguments POUR:\n\t□ Relations anales non protégées récentes\n\t□ Nouveau partenaire\nArguments CONTRE:\n\t□ Partenaire asymptomatique\n\t□ Diarrhées profuses inhabituelles",
+              "test": "→ PCR gonocoque/chlamydia sur prélèvement rectal"
+            }
+          ]
+        },
+        {
+          "name": "Causes médicamenteuses",
+          "items": [
+            {
+              "text": "Colite aux AINS",
+              "cause": "Arguments POUR:\n\t□ Prise de Diclofénac\n\t□ Pour lombalgies chroniques\nArguments CONTRE:\n\t□ Prise 'en réserve' seulement\n\t□ Symptômes très sévères pour une colite aux AINS",
+              "test": "→ Arrêt des AINS, évolution clinique"
+            }
+          ]
+        },
+        {
+          "name": "Causes néoplasiques",
+          "items": [
+            {
+              "text": "Carcinome colorectal",
+              "cause": "Arguments POUR:\n\t□ Rectorragies\n\t□ Modification du transit\n\t□ Perte de poids\nArguments CONTRE:\n\t□ Âge jeune (37 ans)\n\t□ Évolution rapide\n\t□ Diarrhées profuses",
+              "test": "→ Colonoscopie avec biopsies"
+            }
+          ]
+        },
+        {
+          "name": "Causes proctologiques",
+          "items": [
+            {
+              "text": "Maladie hémorroïdaire",
+              "cause": "Arguments CONTRE:\n\t□ Sang mélangé aux selles\n\t□ Diarrhées glaireuses\n\t□ Symptômes systémiques\n\t□ Pas de sang isolé sur le papier",
+              "test": "→ Anuscopie"
+            }
+          ]
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🩸 Rectocolite ulcéro-hémorragique (RCUH) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Diarrhées chroniques sanglantes ± glaireuses",
+                "Épreintes et ténesmes",
+                "Douleurs abdominales diffuses ou coliques",
+                "Urgences défécatoires"
+              ]
+            },
+            {
+              "titre": "Signes extra-digestifs",
+              "points": [
+                "Arthralgies ou arthrites périphériques",
+                "Manifestations cutanées (érythème noueux, pyoderma gangrenosum)",
+                "Atteintes oculaires (uvéite, épisclérite)",
+                "Atteintes hépato-biliaires (cholangite sclérosante primitive)"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Adulte jeune (20–40 ans) souvent atteint",
+                "ATCD familiaux de MICI",
+                "Évolution par poussées entrecoupées de rémissions"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes abdominaux",
+              "points": [
+                "Douleur diffuse ou localisée au cadre colique",
+                "Sensibilité abdominale",
+                "Ballonnement possible"
+              ]
+            },
+            {
+              "titre": "Signes de gravité",
+              "points": [
+                "Fièvre, tachycardie, altération de l’état général",
+                "Déshydratation (diarrhées abondantes)",
+                "Signe de complication : défense abdominale (perforation), météorisme avec tympanisme diffus (mégacôlon toxique)"
+              ]
+            },
+            {
+              "titre": "Examen extra-digestif",
+              "points": [
+                "Rechercher arthrites, lésions cutanées, atteintes oculaires",
+                "Examen hépatique (hépatomégalie, ictère rare)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Syndrome inflammatoire : CRP, VS",
+                "Anémie ferriprive ou inflammatoire",
+                "Hypoalbuminémie en cas de forme sévère"
+              ]
+            },
+            {
+              "titre": "Explorations spécifiques",
+              "points": [
+                "Coloscopie avec biopsies = examen de référence",
+                "Aspect typique : muqueuse érythémateuse, ulcérée, saignante au contact, atteinte continue et distale",
+                "Histologie : ulcérations, infiltrat inflammatoire, abcès cryptiques"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Scanner ou IRM abdominal si complications suspectées (perforation, mégacôlon toxique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement de la poussée",
+              "points": [
+                "Formes légères à modérées : 5-ASA (sulfasalazine, mésalazine) per os et/ou local (suppositoires, lavements)",
+                "Formes sévères : corticothérapie systémique (IV si hospitalisation)",
+                "Antibiotiques si suspicion complication infectieuse"
+              ]
+            },
+            {
+              "titre": "Traitement d’entretien",
+              "points": [
+                "5-ASA au long cours",
+                "Immunosuppresseurs (azathioprine, 6-mercaptopurine) si corticodépendance",
+                "Biothérapies (anti-TNF, anti-intégrines, anti-IL-12/23) si formes sévères ou réfractaires"
+              ]
+            },
+            {
+              "titre": "Prise en charge des complications",
+              "points": [
+                "Mégacôlon toxique : colectomie en urgence si non réponse au traitement médical",
+                "Risque accru de cancer colorectal → surveillance coloscopique régulière"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "RCUH = diarrhées sanglantes chroniques + atteinte rectale obligatoire",
+            "Coloscopie avec biopsies = diagnostic de certitude",
+            "Évolution par poussées et rémissions",
+            "5-ASA = traitement de fond de référence",
+            "Surveillance régulière pour dépistage du cancer colorectal"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Diarrhées sanglantes ? Depuis combien de temps ?",
+                "Douleurs abdominales ? Caractère et localisation ?",
+                "Urgence défécatoire, ténesme ?",
+                "ATCD familiaux de MICI ou cancer colorectal ?",
+                "Manifestations extra-digestives (articulaires, cutanées, oculaires) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, SpO₂)",
+                "Coloscopie avec biopsies (diagnostic de certitude)",
+                "Biologie : NFS, CRP, VS, albumine",
+                "Recherche complications (scanner si mégacôlon toxique)",
+                "Surveillance coloscopique régulière (risque cancer)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Diagnostic par coloscopie avec biopsies",
+                "Traitement poussée : 5-ASA ± corticoïdes si sévère",
+                "Entretien par 5-ASA ± immunosuppresseurs/biothérapies et surveillance colique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Diarrhées sanglantes chroniques (suspicion rectocolite ulcéro-hémorragique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (rectorragies et diarrhées sanglantes chroniques)",
+            "Caractériser diarrhées → durée (4 semaines), >10/jour, glaireuses, nocturnes, ténesmes",
+            "Caractériser rectorragies → sang frais, mélangé, abondance, glaires associées",
+            "Douleurs abdominales → QIG, crampiformes, 7/10, aggravées repas",
+            "Signes associés → perte de poids (3,5 kg), inappétence, nausées/vomissements, fatigue, palpitations",
+            "Facteurs de risque → voyage Tanzanie (DD infectieux), prise AINS, sexualité à risque (DD IST)",
+            "ATCD médicaux → reflux, lombalgies, appendicectomie, tunnel carpien",
+            "Habitudes de vie → ex-tabac, alcool modéré, alimentation avec aliments crus lors du voyage",
+            "Examen clinique → constantes (TA 112/62, FC 105, T° 38,4), abdomen QIG sensible, TR sang frais, rechercher complications (mégacôlon toxique)",
+            "Résumé + hypothèse principale (RCUH) + diagnostics différentiels (Crohn, colite infectieuse, colite médicamenteuse, cancer colorectal, IST)",
+            "Examens complémentaires → NFS, CRP, ionogramme, calprotectine fécale, cultures/parasitologie selles, colonoscopie avec biopsies",
+            "Prise en charge → hospitalisation si sévère (>6 selles sanglantes/jour + fièvre), réhydratation, arrêt AINS, corticothérapie IV si sévère"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : RECTO",
+            "elements": [
+              "R = Rectorragies chroniques",
+              "E = Episodes fréquents > 6/j",
+              "C = Complications : mégacôlon, cancer colorectal",
+              "T = Ténesmes et urgences",
+              "O = Origine inflammatoire (MICI)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Giulia Landolt, une femme de 37 ans, cheffe de projet, qui consulte aux urgences pour des rectorragies évoluant depuis environ 4 semaines.\n\nElle décrit des diarrhées sanglantes et glaireuses, plus de 10 épisodes par jour, y compris la nuit, associées à des ténesmes et urgences fécales. Les douleurs abdominales sont localisées en fosse iliaque gauche, de type crampiforme, notées à 7/10, aggravées par les repas. Depuis 3 jours, elle présente nausées et vomissements postprandiaux.\n\nElle rapporte une perte de poids involontaire de 3,5 kg en 1 mois, une inappétence, une fatigue marquée et des palpitations. Ces symptômes ont un fort retentissement socioprofessionnel : elle porte des protections au travail, ne sort plus de chez elle et évite de manger par crainte des diarrhées. Elle est inquiète d’avoir un cancer.\n\nDans ses antécédents, on note un reflux gastro-œsophagien, des lombalgies chroniques, une appendicectomie et une chirurgie du canal carpien. Elle a voyagé en Tanzanie 2 mois plus tôt, où elle a consommé des fruits et légumes crus. Elle a eu des relations sexuelles anales et vaginales non protégées avec un nouveau partenaire. Ancienne fumeuse (8 UPA), consommation modérée d’alcool.\n\nÀ l’examen, la patiente est fébrile à 38,4 °C, tachycarde à 105, TA 112/62. L’abdomen est sensible au QIG sans défense. Le TR retrouve du sang rouge frais. Pas de manifestations extra-digestives objectivées, mais elles doivent être systématiquement recherchées.\n\nEn résumé, il s’agit d’une femme jeune avec diarrhées sanglantes et glaireuses abondantes, ténesmes, perte de poids et syndrome inflammatoire probable. Mon hypothèse principale est une rectocolite ulcéro-hémorragique (RCUH). Les diagnostics différentiels incluent la maladie de Crohn, une colite infectieuse bactérienne ou parasitaire (contexte voyage), une colite médicamenteuse (AINS), un carcinome colorectal ou une IST rectale.\n\nComme examens complémentaires, je demanderais une NFS, CRP, électrolytes, créatinine, albumine, cultures et parasitologie de selles, calprotectine fécale, et surtout une colonoscopie avec biopsies qui permettrait de confirmer le diagnostic.\n\nEn termes de prise en charge, vu la sévérité (>10 selles sanglantes/j, fièvre, tachycardie), une hospitalisation est indiquée. Elle bénéficiera d’une réhydratation IV, d’une corticothérapie IV à forte dose si confirmation, d’un arrêt des AINS, et d’un support nutritionnel. Une prophylaxie thromboembolique est à envisager. Enfin, il faut aborder l’aspect psychologique, en rassurant sur le fait qu’il s’agit probablement d’une MICI et non directement d’un cancer, mais qu’une surveillance est nécessaire."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Landolt, 37 ans, présente diarrhées sanglantes glaireuses >10/j depuis 1 mois, avec douleurs QIG et fièvre.\n\nB (Background) : ATCD reflux, lombalgies, appendicectomie, AINS, voyage Tanzanie, relations sexuelles non protégées, ex-tabac.\n\nA (Assessment) : Suspicion forte rectocolite ulcéro-hémorragique. DD : Crohn, colite infectieuse bactérienne/parasitaires, colite médicamenteuse, cancer colorectal, IST rectale.\n\nR (Recommendation) : NFS/CRP/électrolytes, cultures et parasitologie selles, calprotectine fécale, colonoscopie biopsies. PEC hospitalière : réhydratation, corticothérapie IV si sévère, arrêt AINS, soutien nutritionnel et psychologique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes typiques de RCUH",
+              "points": [
+                "Diarrhée sanglante chronique",
+                "Urgences défécatoires et ténesmes",
+                "Atteinte rectale obligatoire",
+                "Évolution par poussées et rémissions"
+              ]
+            },
+            {
+              "titre": "👉 Complications graves",
+              "points": [
+                "Mégacôlon toxique",
+                "Cancer colorectal (risque accru)",
+                "Perforation colique",
+                "Hémorragie massive"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier manifestations extra-digestives (cutanées, articulaires, oculaires)",
+                "Évaluer les critères d’hospitalisation",
+                "Ne pas banaliser impact psychosocial",
+                "Éliminer causes infectieuses (voyage, IST, AINS)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Rectocolite ulcéro-hémorragique",
+                  "reponse": {
+                    "pour": [
+                      "Femme jeune",
+                      "Diarrhées sanglantes glaireuses abondantes",
+                      "Ténesmes, urgences fécales",
+                      "Atteinte rectale obligatoire",
+                      "Évolution subaiguë avec syndrome inflammatoire"
+                    ],
+                    "contre": [
+                      "Pas encore de manifestations extra-digestives"
+                    ]
+                  }
+                },
+                {
+                  "question": "Maladie de Crohn",
+                  "reponse": {
+                    "pour": [
+                      "MICI possible",
+                      "Douleurs abdominales"
+                    ],
+                    "contre": [
+                      "Pas de fistules",
+                      "Pas d’atteinte iléale ou péri-anale typique",
+                      "Atteinte continue plutôt rectale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colite infectieuse",
+                  "reponse": {
+                    "pour": [
+                      "Voyage en Tanzanie",
+                      "Consommation aliments crus",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Durée prolongée (4 semaines)",
+                      "Pas de contage familial"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colite médicamenteuse (AINS)",
+                  "reponse": {
+                    "pour": [
+                      "Diclofénac pris pour lombalgies"
+                    ],
+                    "contre": [
+                      "Prise occasionnelle",
+                      "Symptômes trop sévères"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer colorectal",
+                  "reponse": {
+                    "pour": [
+                      "Rectorragies",
+                      "Perte de poids"
+                    ],
+                    "contre": [
+                      "Âge jeune",
+                      "Évolution rapide",
+                      "Diarrhées profuses"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP, électrolytes, albumine",
+                    "Cultures de selles, parasitologie",
+                    "Calprotectine fécale",
+                    "Colonoscopie avec biopsies",
+                    "Radiographie abdominale si suspicion mégacôlon toxique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Rectocolite ulcéro-hémorragique confirmée par colonoscopie et biopsies"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation si sévère",
+                      "Réhydratation IV",
+                      "Corticothérapie IV (méthylprednisolone 60 mg/j)",
+                      "Arrêt AINS",
+                      "Correction troubles électrolytiques",
+                      "Prophylaxie thromboembolique"
+                    ],
+                    "entretien": [
+                      "5-ASA au long cours",
+                      "Immunosuppresseurs si corticodépendance",
+                      "Biothérapies si formes sévères/réfractaires"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation gastro-entérologie",
+                    "Surveillance coloscopique régulière (risque cancer colorectal)",
+                    "Prise en charge psychologique",
+                    "Support nutritionnel si dénutrition"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

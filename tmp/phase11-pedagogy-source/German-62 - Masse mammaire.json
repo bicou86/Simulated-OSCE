@@ -1,0 +1,288 @@
+{
+  "title": "German-62 - Masse mammaire",
+  "context": {
+    "setting": "Cabinet de gynécologie",
+    "patient": "Mme Fischer, 51 ans, enseignante, se présente pour son contrôle gynécologique annuel et signale avoir découvert un nodule mammaire",
+    "vitals": {
+      "ta": "Normale",
+      "fc": "Normale",
+      "temperature": "Normale"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "patientComment": "Nodule découvert dans le sein gauche lors du contrôle annuel"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques du nodule",
+          "details": [
+            "Date de découverte [il y a 1 semaine]",
+            "Localisation précise [en haut à gauche près de l'aisselle]",
+            "Taille [taille d'une pulpe de doigt]",
+            "Consistance [plutôt ferme]",
+            "Mobilité [ne sait pas]"
+          ],
+          "patientComment": "Caractéristiques détaillées du nodule"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Douleurs mammaires [non]",
+            "Écoulement mamelonnaire [non]",
+            "Rougeur/chaleur locale [non]",
+            "Infection récente [aucune]",
+            "Symptômes B [aucun]"
+          ],
+          "patientComment": "Absence de symptômes associés"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse gynécologique",
+          "details": [
+            "Ménarche [à 12 ans]",
+            "Statut ménopausique [depuis environ 1 an, saignements très irréguliers, avant réguliers]",
+            "Bouffées de chaleur [non]",
+            "Troubles du sommeil [parfois]",
+            "Évolution pondérale [poids constant, 80 kg pour 1,65 m]"
+          ],
+          "patientComment": "Histoire gynécologique"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse obstétricale",
+          "details": [
+            "Nombre de grossesses [deux grossesses sans complications avec accouchements normaux]",
+            "Nombre d'enfants [2 enfants en bonne santé]",
+            "Fausses couches [1 fausse couche précoce]"
+          ],
+          "patientComment": "Histoire obstétricale"
+        },
+        {
+          "id": "a7",
+          "text": "Activité sexuelle et contraception",
+          "details": [
+            "Activité sexuelle actuelle [oui, avec compagnon depuis 2 ans]",
+            "Contraception antérieure [pilule environ 10 ans jusqu'à 30 ans]",
+            "Contraception actuelle [stérilet depuis]"
+          ],
+          "patientComment": "Vie sexuelle et contraception"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Maladies mammaires antérieures [aucune]",
+            "Maladies gynécologiques [aucune]",
+            "Interventions chirurgicales [aucune]"
+          ],
+          "patientComment": "Absence d'antécédents pathologiques significatifs"
+        },
+        {
+          "id": "a9",
+          "text": "Médication actuelle",
+          "patientComment": "Aucune, y compris pas d'hormones"
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes de vie et allergies",
+          "details": [
+            "Consommation de substances [aucune]",
+            "Allergies connues [graminées, pollens]",
+            "Habitudes alimentaires [beaucoup de légumes et viande, souvent plats préparés à cause du travail]"
+          ],
+          "patientComment": "Mode de vie"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Antécédents parentaux [père AVC, mère diabète]",
+            "Cancer du sein familial [sœur cancer du sein à 55 ans]",
+            "Mutation génétique connue [non]"
+          ],
+          "patientComment": "Histoire familiale"
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse sociale",
+          "patientComment": "Divorcée, 2 enfants, enseignante primaire, beaucoup de stress et jamais de vacances"
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "patientComment": "Tous normaux"
+        },
+        {
+          "id": "e2",
+          "text": "Examen des seins",
+          "details": [
+            "Inspection en différentes positions",
+            "Palpation systématique des deux seins",
+            "Expression des mamelons"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen gynécologique mentionné",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Palpation des ganglions lymphatiques",
+          "details": [
+            "Ganglions axillaires",
+            "Ganglions sus-claviculaires",
+            "Ganglions sous-claviculaires"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "patientComment": "Carcinome mammaire ou lésion précancéreuse"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 3 diagnostics différentiels = 2 pts",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Fibroadénome",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Mastopathie fibrokystique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Ganglion lymphatique intramammaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Kyste mammaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Lipome",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques proposés",
+          "details": [
+            "Mammographie bilatérale",
+            "Échographie mammaire (US)",
+            "Biopsie sous contrôle échographique (US)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement en cas de cancer confirmé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement chirurgical",
+                "content": "• Chirurgie conservatrice si possible\n• Ou mastectomie selon l'extension\n• Avec ou sans curage ganglionnaire axillaire\n• Technique du ganglion sentinelle si applicable"
+              },
+              {
+                "title": "Traitement adjuvant",
+                "content": "• Radiothérapie post-opératoire\n• Chimiothérapie selon le stade et les récepteurs\n• Hormonothérapie si récepteurs hormonaux positifs"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Explications complémentaires sur demande de la patiente",
+          "details": [
+            "Méthode du ganglion sentinelle",
+            "Complications du curage axillaire (lymphœdème)",
+            "Justification de la radiothérapie adjuvante",
+            "Durée et organisation du traitement"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Orientation spécialisée",
+          "patientComment": "Référer à un centre du sein spécialisé pour exploration complémentaire et prise en charge multidisciplinaire"
+        },
+        {
+          "id": "m7",
+          "text": "Soutien psychologique",
+          "details": [
+            "Reconnaître l'anxiété de la patiente",
+            "Proposer un soutien psycho-oncologique",
+            "Informer sur les groupes de soutien"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

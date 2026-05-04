@@ -1,0 +1,534 @@
+{
+  "title": "RESCOS-65 - Tremblements - ECC Neurologie",
+  "context": {
+    "setting": "Service de neurologie",
+    "patient": "Homme de 64 ans présentant un tremblement unilatéral de repos de la main droite",
+    "vitals": {
+      "ta": "135/80 mmHg",
+      "fc": "68 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation du tremblement",
+          "details": [
+            "Localisation [main droite, doigts, poignet, propagation]",
+            "Circonstances d'apparition [repos, action, attitude]",
+            "Fréquence [4-6 Hz typique du repos]",
+            "Amplitude [fine, grossière, évolution]",
+            "Facteurs modulateurs [stress, fatigue, émotion, concentration]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Évolution temporelle et progression",
+          "details": [
+            "Date d'apparition [début insidieux, évolution lente]",
+            "Progression [unilatérale → bilatérale, asymétrique]",
+            "Fluctuations [horaires, saisonnières, médicamenteuses]",
+            "Retentissement fonctionnel [écriture, préhension fine]",
+            "Gêne sociale [isolement, embarras en public]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes moteurs associés",
+          "details": [
+            "Raideur musculaire [roue dentée, rigidité plastique]",
+            "Ralentissement moteur [bradykinésie, akinésie]",
+            "Troubles de la marche [petits pas, freezing, festination]",
+            "Troubles posturaux [instabilité, réflexes de rattrapage]",
+            "Micrographie [diminution taille écriture]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes non moteurs",
+          "details": [
+            "Troubles de l'olfaction [anosmie, hyposmie]",
+            "Troubles du sommeil [RBD, insomnie, somnolence diurne]",
+            "Troubles cognitifs [ralentissement, troubles exécutifs]",
+            "Troubles de l'humeur [dépression, anxiété, apathie]",
+            "Troubles digestifs [constipation, troubles déglutition]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents et facteurs de risque",
+          "details": [
+            "Antécédents familiaux [maladie de Parkinson, tremblements]",
+            "Traumatisme crânien [sévère, récent]",
+            "Expositions toxiques [MPTP, pesticides, solvants]",
+            "Infections [encéphalite, COVID-19]",
+            "Troubles vasculaires cérébraux [AVC, ischémie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments et substances",
+          "details": [
+            "Neuroleptiques [halopéridol, rispéridone, olanzapine]",
+            "Antiémétiques [métoclopramide, dompéridone]",
+            "Antidépresseurs [ISRS, tricycliques]",
+            "Antiépileptiques [valproïne, phénytoïne]",
+            "Substances [alcool, café, sevrage]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - approche des mouvements anormaux",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Observation et caractérisation du tremblement",
+          "details": [
+            "Tremblement de repos [disparaît lors du mouvement volontaire]",
+            "Asymétrie [prédominance unilatérale droite]",
+            "Fréquence [4-6 Hz, comptage sur 10 secondes]",
+            "Amplitude [millimétrique à centimétrique]",
+            "Manœuvres d'activation [calcul mental, marche]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen du tonus musculaire",
+          "details": [
+            "Rigidité plastique [résistance continue, cire]",
+            "Phénomène de la roue dentée [à-coups, intermittent]",
+            "Asymétrie tonique [plus marquée côté tremblement]",
+            "Manœuvre de Froment [renforcement controlatéral]",
+            "Test du ballottement [genou, moins ample si rigidité]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Évaluation de la bradykinésie",
+          "details": [
+            "Mouvements alternés rapides [piano, tap des doigts]",
+            "Ouverture-fermeture mains [amplitude, rythme, fatigue]",
+            "Mouvements pieds [tapping, amplitude décroissante]",
+            "Mimique faciale [hypomimie, clignements rares]",
+            "Déglutition [bradykinésie oro-faciale]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen de la marche et posture",
+          "details": [
+            "Démarche [petits pas, festination, traînant]",
+            "Ballant des bras [diminué du côté atteint]",
+            "Demi-tour [en bloc, nombreux petits pas]",
+            "Posture [attitude fléchie, camptocormie]",
+            "Freezing [blocage initiation marche]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Tests des réflexes posturaux",
+          "details": [
+            "Test de la poussée [réflexes de rattrapage]",
+            "Réflexe de rétropulsion [instabilité arrière]",
+            "Station unipodale [équilibre statique]",
+            "Réactions parachute [protection chute]",
+            "Adaptation posturale [changements position]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche d'autres mouvements anormaux",
+          "details": [
+            "Dyskinésies [chorée, athétose, dystonie]",
+            "Tics [suppressibles, prédictibles]",
+            "Myoclonies [secousses brèves, brutales]",
+            "Tremblements autres [action, attitude, intention]",
+            "Mouvements stéréotypés [répétitifs, rythmés]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique général",
+          "details": [
+            "Fonctions supérieures [MMSE, fluences, horloge]",
+            "Nerfs crâniens [olfaction, oculomotricité, facial]",
+            "Force musculaire [pas de déficit pyramidal]",
+            "Sensibilité [conservée, pas d'atteinte]",
+            "Réflexes [normaux, pas de Babinski]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - évaluation mouvements anormaux",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic syndromique - syndrome parkinsonien",
+          "details": [
+            "Triade de Parkinson [tremblements, rigidité, bradykinésie]",
+            "Asymétrie initiale [typique maladie de Parkinson]",
+            "Tremblement de repos [4-6 Hz, disparaît au mouvement]",
+            "Absence signes atypiques [pas de pyramidal, pas de cérebelleux]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic étiologique - causes de syndrome parkinsonien",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Parkinson idiopathique",
+                "items": [
+                  {
+                    "text": "Maladie de Parkinson",
+                    "cause": "Arguments POUR:\n\t□ Début unilatéral asymétrique\n\t□ Tremblement de repos 4-6 Hz\n\t□ Réponse L-DOPA excellente\n\t□ Évolution lente progressive\n\t□ Pas de signes atypiques",
+                    "test": "→ Test thérapeutique L-DOPA, DaTscan"
+                  }
+                ]
+              },
+              {
+                "name": "Syndromes parkinsoniens atypiques",
+                "items": [
+                  {
+                    "text": "Atrophie multisystémique (AMS)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de syndrome pyramidal\n\t□ Pas de dysautonomie\n\t□ Pas d'ataxie cérébelleuse",
+                    "test": "→ IRM cérébrale, MIBG cardiaque"
+                  },
+                  {
+                    "text": "Paralysie supranucléaire progressive",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de trouble oculomotricité\n\t□ Pas d'instabilité posturale précoce\n\t□ Pas de syndrome frontal",
+                    "test": "→ IRM cérébrale, tau-PET"
+                  }
+                ]
+              },
+              {
+                "name": "Causes secondaires",
+                "items": [
+                  {
+                    "text": "Parkinsonisme médicamenteux",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de neuroleptiques\n\t□ Début progressif\n\t□ Asymétrie marquée",
+                    "test": "→ Arrêt médicament suspect, DaTscan"
+                  },
+                  {
+                    "text": "Parkinsonisme vasculaire",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'AVC\n\t□ Membre inférieur non prédominant\n\t□ Évolution progressive",
+                    "test": "→ IRM cérébrale T2, FLAIR"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics évoqués = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires diagnostiques",
+          "details": [
+            "DaTscan [scintigraphie transporteur dopamine]",
+            "IRM cérébrale [atrophies, lésions vasculaires]",
+            "Test thérapeutique L-DOPA [réponse >30% = Parkinson]",
+            "Tests olfactifs [hyposmie fréquente Parkinson]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement dopaminergique - première intention",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Jeune patient (<65 ans)",
+                "content": "• Agonistes dopaminergiques : Ropinirole 0.25mg x3/j → 6-8mg/j, ou pramipexole 0.125mg x3/j → 1.5mg x3/j × Première intention, moins de dyskinésies\n• Inhibiteurs MAO-B : Rasagiline 1mg/j ou sélégiline 5mg x2/j × Monothérapie stade débutant"
+              },
+              {
+                "title": "Patient âgé (>65 ans)",
+                "content": "• L-DOPA/Carbidopa : 100/25mg x3/j → 400-600mg L-DOPA/j × Traitement de référence, efficacité optimale"
+              }
+            ]
+          },
+          "scoringRule": "Choix thérapeutique adapté à l'âge = oui, partiellement = ±, inadapté = non"
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et adaptation thérapeutique",
+          "details": [
+            "Évaluation efficacité [UPDRS, qualité de vie]",
+            "Surveillance effets secondaires [nausées, hallucinations, TOC]",
+            "Adaptation posologique [titration progressive]",
+            "Prévention complications [dyskinésies, fluctuations]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge non médicamenteuse",
+          "details": [
+            "Kinésithérapie [maintien mobilité, exercices spécifiques]",
+            "Orthophonie [dysarthrie, troubles déglutition]",
+            "Ergothérapie [aménagements, aides techniques]",
+            "Activité physique [marche, vélo, natation]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Information patient et famille",
+          "details": [
+            "Explication diagnostic [maladie chronique évolutive]",
+            "Pronostic [évolution lente, traitements efficaces]",
+            "Conseils hygiène de vie [exercice, sommeil]",
+            "Associations patients [France Parkinson, soutien]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Suivi spécialisé et long terme",
+          "details": [
+            "Neurologie [adaptation traitement, complications]",
+            "Surveillance complications [dyskinésies, fluctuations]",
+            "Neurochirurgie [stimulation profonde si indiquée]",
+            "Évaluation neuropsychologique [troubles cognitifs]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge maladie de Parkinson",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Homme de 64 ans",
+      "age": "64 ans",
+      "contexte": "Homme actif de 64 ans consultant pour tremblement de la main droite",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai un tremblement de la main droite qui me gêne de plus en plus",
+        "autreChose": "Ma femme dit que je bouge moins vite qu'avant"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Tremblement main droite depuis 18 mois environ",
+          "Début insidieux, progressif",
+          "Surtout au repos, disparaît lors de l'utilisation",
+          "Gêne croissante pour l'écriture",
+          "Embarras en public, tend à cacher la main"
+        ],
+        "symptomesAssocies": [
+          "Sensation de raideur main et avant-bras droit",
+          "Écriture plus petite qu'avant",
+          "Mouvements plus lents selon l'épouse",
+          "Difficulté boutonnage, activités fines",
+          "Pas de troubles de la marche actuellement"
+        ],
+        "circonstances": [
+          "Remarqué d'abord par l'épouse",
+          "Aggravation par le stress, émotions",
+          "Amélioration par l'alcool (noté occasionnellement)",
+          "Pire en fin de journée, fatigue"
+        ],
+        "facteursDeclenchants": [
+          "Stress au travail (cadre commercial)",
+          "Contrariétés, situations tendues",
+          "Fatigue, manque de sommeil",
+          "Situations sociales (restaurant, réunions)"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Bonne santé générale",
+        "Hypertension artérielle légère",
+        "Pas d'antécédent neurologique",
+        "Pas de traumatisme crânien"
+      ],
+      "antecedentsFamiliaux": [
+        "Père avec tremblements des mains (âge avancé)",
+        "Grand-père paternel 'maladie de Parkinson' (selon famille)",
+        "Mère décédée AVC à 78 ans"
+      ],
+      "traitements": {
+        "actuels": [
+          "Enalapril 10mg/j pour HTA",
+          "Aucun autre traitement régulier"
+        ],
+        "anterieurs": [
+          "Jamais de neuroleptiques",
+          "Pas d'antidépresseurs",
+          "Pas de médicaments neurologiques"
+        ]
+      },
+      "habitudes": {
+        "profession": "Cadre commercial, nombreux déplacements",
+        "tabac": "Ex-fumeur depuis 5 ans (20 PA)",
+        "alcool": "Consommation sociale modérée",
+        "activite": "Golf abandonné (gêne par tremblements)",
+        "sommeil": "Sommeil correct, pas de troubles"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Tremblement visible main droite au repos",
+          "Tend à cacher la main ou la poser",
+          "Exprime gêne professionnelle et sociale",
+          "Inquiet sur évolution (références Parkinson famille)"
+        ],
+        "durantExamen": [
+          "Tremblement repos 4-5 Hz main droite",
+          "Rigidité discrète côté droit",
+          "Bradykinésie tests alternés rapides",
+          "Micrographie si fait écrire",
+          "Pas d'instabilité posturale"
+        ],
+        "questionsAPoser": [
+          "Est-ce que j'ai la maladie de Parkinson ?",
+          "Est-ce héréditaire ? Mes enfants risquent-ils l'avoir ?",
+          "Vais-je finir en fauteuil roulant ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Homme 64 ans, cadre commercial. Syndrome parkinsonien débutant : tremblement repos main droite depuis 18 mois, rigidité, bradykinésie. Début unilatéral asymétrique. ATCD familiaux tremblements/Parkinson. Gêne fonctionnelle croissante. Évoque maladie de Parkinson débutante.",
+      "pointsCles": [
+        "Syndrome parkinsonien unilatéral asymétrique débutant",
+        "Triade de Parkinson : tremblement repos + rigidité + bradykinésie",
+        "Début typique maladie de Parkinson (âge, asymétrie)",
+        "Antécédents familiaux compatibles",
+        "Retentissement fonctionnel et social",
+        "Indication test thérapeutique L-DOPA",
+        "Choix thérapeutique selon l'âge (agonistes vs L-DOPA)",
+        "Importance prise en charge multidisciplinaire"
+      ],
+      "pieges": [
+        "Ne pas différencier tremblement repos vs action",
+        "Manquer l'évaluation de la bradykinésie",
+        "Ne pas rechercher la rigidité plastique",
+        "Omettre l'examen de la marche et posture",
+        "Ne pas évaluer l'asymétrie du syndrome",
+        "Sous-estimer l'importance des antécédents familiaux",
+        "Ne pas proposer d'examens complémentaires (DaTscan)",
+        "Choix thérapeutique inapproprié selon l'âge",
+        "Ne pas informer sur l'évolution et pronostic"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique de la maladie de Parkinson",
+      "sections": [
+        {
+          "titre": "Physiopathologie de la maladie de Parkinson",
+          "contenu": "Dégénérescence des neurones dopaminergiques de la substance noire.",
+          "points": [
+            "Perte neurones dopaminergiques : substantia nigra pars compacta",
+            "Corps de Lewy : inclusions α-synucléine intraneuronal",
+            "Déséquilibre dopamine/acétylcholine : circuits moteurs",
+            "Voies nigrostriées : putamen, noyau caudé",
+            "Seuil symptomatique : 70-80% perte neuronale",
+            "Progression rostro-caudale : tronc cérébral → cortex",
+            "Stades de Braak : extension topographique lésions"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques de la maladie de Parkinson",
+          "contenu": "Diagnostic clinique selon critères MDS (Movement Disorder Society).",
+          "points": [
+            "Critères essentiels : bradykinésie + 1 autre signe cardinal",
+            "Tremblement repos : 4-6 Hz, asymétrique, réémergent",
+            "Rigidité : plastique, roue dentée, asymétrique",
+            "Critères supportifs : réponse L-DOPA, hyposmie, RBD",
+            "Critères d'exclusion : signes atypiques, médicaments",
+            "Évolution : asymétrie persistante, progression lente",
+            "Red flags : chutes, dysautonomie, démence précoces"
+          ]
+        },
+        {
+          "titre": "Classification des tremblements",
+          "contenu": "Différenciation selon les circonstances d'apparition.",
+          "points": [
+            "Tremblement repos : 4-6 Hz, disparaît au mouvement",
+            "Tremblement action : kinétique, positionnel",
+            "Tremblement intention : augmente près du but (cérébelleux)",
+            "Tremblement essentiel : postural 6-8 Hz, bilatéral",
+            "Tremblement psychogène : variable, distractible",
+            "Tremblement médicamenteux : β2-agonistes, théophylline",
+            "Tremblement dystonique : asymétrique, irrégulier"
+          ]
+        },
+        {
+          "titre": "Syndromes parkinsoniens atypiques",
+          "contenu": "Différenciation clinique des parkinsonismes non-Parkinson.",
+          "points": [
+            "AMS : dysautonomie, ataxie, syndrome pyramidal",
+            "PSP : paralysie regard vertical, instabilité axiale",
+            "DCB : apraxie, dystonie, syndrome alien hand",
+            "Réponse L-DOPA : excellente Parkinson, pauvre atypiques",
+            "Évolution : Parkinson lente, atypiques rapides",
+            "Symétrie : Parkinson asymétrique, atypiques symétriques",
+            "Pronostic : Parkinson favorable, atypiques péjoratif"
+          ]
+        },
+        {
+          "titre": "Stratégies thérapeutiques dans Parkinson",
+          "contenu": "Choix traitement selon âge, sévérité, profil patient.",
+          "points": [
+            "Patient jeune <65 ans : agonistes dopaminergiques",
+            "Patient âgé >65 ans : L-DOPA première intention",
+            "Monothérapie : rasagiline, agonistes formes légères",
+            "Complications motrices : fluctuations, dyskinésies",
+            "Traitement avancé : pompes, stimulation cérébrale",
+            "Symptômes non-moteurs : depression, troubles sommeil",
+            "Neuroprotection : exercice physique, antioxydants"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "L-DOPA/Carbidopa : 100/25mg x3/j → 400-800mg/j L-DOPA",
+        "Ropinirole : 0.25mg x3/j → 6-8mg/j (augmentation hebdomadaire)",
+        "Pramipexole : 0.125mg x3/j → 1.5mg x3/j (augmentation graduelle)",
+        "Rasagiline : 1mg/j monothérapie ou adjuvant L-DOPA",
+        "Entacapone : 200mg avec chaque prise L-DOPA si fluctuations",
+        "Amantadine : 100mg x2/j, dyskinésies et tremblements",
+        "Stimulation cérébrale profonde : NST si complications motrices"
+      ],
+      "examensComplementaires": [
+        "DaTscan : scintigraphie transporteur dopamine, confirme diagnostic",
+        "IRM cérébrale : éliminer causes secondaires, atrophies",
+        "MIBG cardiaque : dénervation sympathique (Parkinson vs AMS)",
+        "Test olfactif : hyposmie 90% Parkinson vs tremblements essentiels",
+        "Polysomnographie : RBD précède Parkinson de 10-15 ans",
+        "Tests neuropsychologiques : troubles exécutifs, mémoire",
+        "Test thérapeutique L-DOPA : amélioration >30% = Parkinson"
+      ]
+    }
+  }
+}

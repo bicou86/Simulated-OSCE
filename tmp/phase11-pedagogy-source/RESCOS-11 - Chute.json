@@ -1,0 +1,197 @@
+{
+  "title": "RESCOS-11 - Chute",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Mme Frascarolo, 24 ans, se présente avec une douleur et impotence au membre supérieur gauche après une chute",
+    "vitals": {
+      "ta": "160/85 mmHg",
+      "fc": "98 bpm",
+      "temperature": "36.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Douleur et impotence au membre supérieur gauche après une chute"
+        },
+        {
+          "id": "a2",
+          "text": "Mécanisme du traumatisme",
+          "details": [
+            "Circonstance [Chute]",
+            "Énergie [Faible/moyenne/haute énergie]",
+            "Position lors de la réception [Bras tendu, coude en extension]",
+            "Autres blessures que coude [Non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la douleur",
+          "details": [
+            "Localisation [Coude gauche]",
+            "Intensité [7-8/10]",
+            "Qualité [Douleur aiguë, lancinante]",
+            "Évolution [Constante depuis la chute]",
+            "Irradiation [Vers l'avant-bras]",
+            "Facteurs atténuants/aggravants [Aggravée par le mouvement, soulagée au repos]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Présence de symptômes neuro-vasculaires associés au trauma",
+          "details": [
+            "Impotence [Oui, ne peut pas mobiliser le coude]",
+            "Symptômes neuro-vasculaires [Paresthésies? Perte de sensibilité? Faiblesse distale?]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Santé actuelle",
+          "details": [
+            "Maladies actuelles [Aucune]",
+            "Médicaments [Aucun]",
+            "Allergies [Aucune]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Impact du traumatisme sur le quotidien de la patiente",
+          "details": [
+            "Membre dominant [Droitière ou gauchère?]",
+            "Activités quotidiennes affectées [Travail, loisirs, AVQ]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "binaryOnly": false,
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Observation avec comparaison des deux membres supérieurs",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Palpation des deux membres supérieurs",
+          "details": [
+            "Coudes [Recherche de douleur, déformation, crépitations]",
+            "Bras et épaules [Exclusion de lésions associées]",
+            "Avant-bras et poignets [Exclusion de lésions associées]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Perfusion distale des 2 membres supérieurs, avec comparaison",
+          "details": [
+            "Pouls périphériques [Radial, ulnaire]",
+            "Temps de recoloration ou gradient thermique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Sensibilité sur les terrains des nerfs",
+          "details": [
+            "Radial [Tabatière anatomique]",
+            "Médian [Pulpe index]",
+            "Ulnaire [Pulpe auriculaire]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Motricité sur les terrains des nerfs",
+          "details": [
+            "Radial [Extension pouce/poignet]",
+            "Médian [Opposition pouce]",
+            "Ulnaire [Écartement des doigts]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "binaryOnly": false,
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Demande une radiographie du coude gauche avec les incidences",
+          "details": [
+            "Face",
+            "Profil"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Demande un examen CT-scan ou l'a évoqué dans la suite de la prise en charge",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Évalue le risque de grossesse avant de proposer des examens radiologiques",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Analyse de la radiographie, identifie",
+          "details": [
+            "Luxation [Oui/Non]",
+            "Fracture de la tête radiale [Oui/Non]",
+            "Fracture du processus coronoïde [Oui/Non]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Propose une antalgie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Référer au spécialiste [Orthopédie]",
+            "Immobilisation du membre [Attelle, écharpe]"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évoque une possible prise en charge chirurgicale",
+          "binaryOnly": true
+        },
+        {
+          "id": "m8",
+          "text": "Management en général",
+          "binaryOnly": false,
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  }
+}

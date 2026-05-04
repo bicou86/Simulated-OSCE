@@ -1,0 +1,566 @@
+{
+  "title": "German-23 - Douleur au genou",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Martin, 25 ans, se présente chez son médecin de famille pour des douleurs au genou droit"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes actuels",
+          "details": [
+            "[Douleurs au genou droit]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution temporelle",
+          "details": [
+            "[Depuis 3 jours]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a4",
+          "text": "Facteur déclenchant/circonstances",
+          "details": [
+            "[Mouvement de rotation au tennis]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a5",
+          "text": "Évolution depuis le début",
+          "details": [
+            "[A continué à jouer au tennis]",
+            "[Douleur persistante]",
+            "[Pas d'amélioration]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a6",
+          "text": "Localisation précise de la douleur",
+          "details": [
+            "[Dans le genou]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a7",
+          "text": "Intensité de la douleur (échelle 0-10)",
+          "details": [
+            "[3-4/10]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a8",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Lancinante]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a9",
+          "text": "Présence de gonflement",
+          "details": [
+            "[Au maximum un peu]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a10",
+          "text": "Irradiation de la douleur",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a11",
+          "text": "Douleur au repos",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a12",
+          "text": "Capacité de marche/mobilité",
+          "details": [
+            "[Doit boiter légèrement]",
+            "[Douleur à l'appui]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a13",
+          "text": "Limitation des mouvements",
+          "details": [
+            "[Oui, ne peut plus marcher normalement]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a14",
+          "text": "Auto-traitement déjà entrepris",
+          "details": [
+            "[Légèrement bandé]",
+            "[Pas de pommade ni d'antalgiques]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a15",
+          "text": "Symptômes associés (fièvre, signes d'infection)",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a16",
+          "text": "Morsure de tique",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a17",
+          "text": "Douleurs dans d'autres articulations",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a18",
+          "text": "Antécédents de pathologie du genou",
+          "details": [
+            "[Rupture du ligament collatéral médial il y a 3 ans]",
+            "[Traitement conservateur]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a19",
+          "text": "Antécédents personnels",
+          "patientComment": "Rupture du ligament collatéral médial genou droit il y a 3 ans, traitement conservateur",
+          "binaryOnly": true
+        },
+        {
+          "id": "a20",
+          "text": "Habitudes et mode de vie",
+          "details": [
+            "[Aucune substance nocive]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a21",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Pilule contraceptive]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Mère avec gonarthrose]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a23",
+          "text": "Anamnèse sociale et professionnelle",
+          "details": [
+            "[Étudiante]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a24",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien structurée"
+          ],
+          "scoringRule": "Bien conduite = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "Axes des membres inférieurs [légère position en varus]",
+            "Longueur des jambes et position du bassin [symétrique]",
+            "Analyse de la marche [légère boiterie d'esquive à droite]",
+            "Recherche de gonflement et rotule dansante [minimal, sinon pas de gonflement des tissus mous]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e2",
+          "text": "Palpation systématique",
+          "details": [
+            "Structures osseuses (tubérosité tibiale antérieure, rotule, condyles fémoraux)",
+            "Interligne articulaire [sensibilité à la pression sur l'interligne articulaire médial]",
+            "Ligaments collatéraux",
+            "Tendon rotulien",
+            "Recherche d'épanchement (signe du glaçon)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e3",
+          "text": "Examen fonctionnel - Mobilité articulaire",
+          "details": [
+            "Flexion-extension active et passive",
+            "Méthode Neutre-Zéro [160-0-5 = normal]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e4",
+          "text": "Tests des ligaments croisés",
+          "details": [
+            "Ligament croisé antérieur - Test de Lachman [normal]",
+            "Ligament croisé postérieur - Test du tiroir postérieur, Gravity-Sign [normal]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e5",
+          "text": "Tests méniscaux",
+          "details": [
+            "Test de Steinmann I [douleurs médiales lors de la rotation externe]",
+            "Test de McMurray [douleurs médiales lors de la rotation externe]",
+            "Test d'Apley (Grinding test) [douleurs médiales lors de la rotation externe]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e6",
+          "text": "Test de stabilité ligamentaire collatérale",
+          "details": [
+            "Stress varus-valgus en extension complète [pas d'ouverture]",
+            "Stress varus-valgus en flexion 20-30° [pas d'ouverture]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e7",
+          "text": "Examen de l'appareil extenseur",
+          "details": [
+            "Palpation du tubercule des adducteurs [non douloureux]",
+            "Test d'appréhension pour luxation patellaire en flexion 30° [normal]",
+            "Mobilité de la rotule"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e8",
+          "text": "Test de force musculaire",
+          "details": [
+            "Flexion/extension contre résistance [normal]",
+            "Quadriceps et ischio-jambiers"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation vasculo-nerveuse périphérique",
+          "details": [
+            "Pouls pédieux et tibial postérieur",
+            "Sensibilité",
+            "Motricité distale",
+            "[intact]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et systématique"
+          ],
+          "scoringRule": "Complet et bien structuré = 2 pts (oui), suffisant = 1 pt (±), insuffisant = 0 pt (non)"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Lésion méniscale médiale du genou droit",
+          "binaryOnly": false
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2)",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Lésion du ligament collatéral médial",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Contusion osseuse",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome de surcharge sans lésion structurelle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Chondropathie rotulienne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Plica médiale symptomatique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Radiographie du genou (face/profil) pour exclure une lésion osseuse",
+            "IRM du genou pour confirmation diagnostique",
+            "Éventuellement arthroscopie diagnostique et thérapeutique"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m4",
+          "text": "Traitement aigu",
+          "details": [
+            "Protocole RICE (repos, glace, compression, élévation)",
+            "AINS (ex: ibuprofène 600mg 3x/jour)",
+            "Antalgiques si nécessaire",
+            "Décharge partielle avec cannes anglaises",
+            "Immobilisation relative (attelle articulée si nécessaire)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge à moyen terme",
+          "details": [
+            "Référence à l'orthopédiste",
+            "Physiothérapie pour renforcement musculaire et proprioception",
+            "Décision thérapeutique selon IRM: conservateur vs chirurgical",
+            "Si chirurgie: suture méniscale, résection partielle ou remplacement selon lésion"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m6",
+          "text": "Information du patient",
+          "details": [
+            "Explication du diagnostic probable",
+            "Évolution attendue",
+            "Importance du repos sportif temporaire",
+            "Plan de traitement proposé"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m7",
+          "text": "Suivi",
+          "details": [
+            "Contrôle clinique dans 1-2 semaines",
+            "Adaptation du traitement selon évolution",
+            "Certificat médical pour arrêt sportif"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète et adaptée"
+          ],
+          "scoringRule": "Complète et structurée = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦵 Lésions méniscales du genou – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Circonstances de survenue",
+              "points": [
+                "Traumatisme en torsion du genou en charge (sport, pivot, accroupissement)",
+                "Chez le sujet jeune : lésion traumatique",
+                "Chez le sujet âgé : lésion dégénérative sur genou arthrosique"
+              ]
+            },
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur localisée à l’interligne articulaire (médial ou latéral)",
+                "Craquements, ressauts mécaniques",
+                "Épanchement articulaire modéré",
+                "Blocage ou sensation d’accrochage du genou",
+                "Difficulté à s’accroupir ou à pivoter"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Activités sportives avec pivot (football, rugby, basket)",
+                "Travail sollicitant accroupissement répété",
+                "Âge > 40 ans avec dégénérescence méniscale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Genou discretement tuméfié (épanchement)",
+                "Pas de déformation majeure"
+              ]
+            },
+            {
+              "titre": "Palpation",
+              "points": [
+                "Douleur élective à la palpation de l’interligne articulaire",
+                "Épanchement modéré possible"
+              ]
+            },
+            {
+              "titre": "Tests spécifiques",
+              "points": [
+                "Test de McMurray : douleur/ressaut à la rotation et flexion",
+                "Test d’Apley (grinding test) : douleur à la rotation en compression",
+                "Test de Thessaly : douleur en appui monopodal avec rotation du genou fléchi à 20°",
+                "Blocage méniscal franc si lésion instable"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "IRM = examen de référence pour confirmer la lésion méniscale",
+                "Radiographie standard genou (face, profil, schuss) pour éliminer arthrose associée",
+                "Arthro-IRM ou arthroscanner si IRM non disponible"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, glaçage, AINS/antalgiques",
+                "Rééducation : renforcement quadriceps, proprioception",
+                "Indiqué pour lésions dégénératives non invalidantes"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Arthroscopie avec méniscectomie partielle ou suture méniscale",
+                "Indiqué si blocage mécanique, douleurs persistantes malgré traitement médical",
+                "Préserver au maximum le ménisque pour limiter risque d’arthrose secondaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur élective de l’interligne + tests méniscaux positifs = suspicion forte",
+            "IRM = examen clé pour confirmation",
+            "Blocage méniscal = indication chirurgicale",
+            "Toujours différencier lésion traumatique (jeune) vs dégénérative (âgé)",
+            "Conserver au maximum le tissu méniscal (méniscectomie partielle, suture)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Circonstances du traumatisme ? torsion, pivot, accroupissement ?",
+                "Douleur localisée ? Craquements ou blocages ?",
+                "Évolution : douleur persistante, récidivante ?",
+                "ATCD sportifs ou arthrose du genou ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection et recherche d’épanchement",
+                "Palpation interligne articulaire",
+                "Tests méniscaux : McMurray, Apley, Thessaly",
+                "IRM du genou ± radiographie standard"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Évoquer une lésion méniscale devant douleur interligne + tests positifs",
+                "Confirmer par IRM",
+                "Traitement conservateur si non invalidant, chirurgie si blocage ou gêne persistante"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

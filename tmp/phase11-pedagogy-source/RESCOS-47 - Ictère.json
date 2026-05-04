@@ -1,0 +1,856 @@
+{
+  "title": "RESCOS-47 - Ictère",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "Mme Anne Quantini, 58 ans, vendeuse en fleuristerie, consulte pour jaunisse apparue depuis une semaine",
+    "vitals": {
+      "ta": "134/85 mmHg",
+      "fc": "83 bpm",
+      "fr": "14/min",
+      "temperature": "37.2°C",
+      "sao2": "97%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Ictère",
+          "details": [
+            "Début [il y a une semaine]",
+            "Localisation [visage surtout, mais aussi tout le corps]",
+            "Facteurs aggravants [aucun]",
+            "Facteurs atténuants [aucun]",
+            "Constant vs Fluctuant [constant, n'a jamais disparu]",
+            "Contexte d'apparition [rien de particulier]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Ictère - précisions",
+          "details": [
+            "Symptômes associés [selles grasses et jaunes, perte de poids, perte d'appétit]",
+            "Premier épisode vs récurrent [premier épisode]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse générale",
+          "details": [
+            "Perte de poids [oui, 20 kilos sur une année]",
+            "Fièvre [non]",
+            "Sudations nocturnes [oui, transpire la nuit]",
+            "Frissons [non]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Anamnèse digestive",
+          "details": [
+            "Douleur abdominale [non]",
+            "Nausées et vomissements [non]",
+            "Fréquence des selles [2x/jour]",
+            "Sang dans les selles [non]",
+            "Couleur des selles [selles grasses et jaunes qui flottent]",
+            "Dysphagie [non]"
+          ],
+          "scoringRule": "Au moins cinq = oui, un à quatre = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse uro-génitale",
+          "details": [
+            "Couleur des urines [à explorer]",
+            "Sang dans les urines [à explorer]",
+            "Dernières règles [ménopausée]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels",
+          "details": [
+            "Médicaux [prothèse totale de genou droite à 54 ans]",
+            "Chirurgicaux [prothèse genou]",
+            "Allergies [à explorer]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "DD : hépatites",
+          "details": [
+            "Vaccins hépatites A et B [vaccinée A et B]",
+            "Drogues IV [pas de drogues IV]",
+            "Rapports sexuels à risque [pas de rapports à risque]",
+            "Voyages dans des zones endémiques [ancien voyage en Asie avec vaccination]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Père décédé d'un cancer du pancréas diagnostiqué après ictère",
+            "Mère décédée d'un AVC"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes",
+          "details": [
+            "Alimentaires [non-équilibrée: trop gras et sucré, pas assez légumes/fruits]",
+            "Médicaments [à explorer]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation du status",
+          "details": [
+            "Position de l'étudiant à droite du patient",
+            "Jambes du patient décroisées et bras le long du corps",
+            "Tête du patient légèrement surélevée"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation",
+          "details": [
+            "Auscultation avant palpation",
+            "4 quadrants"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Percussion",
+          "details": [
+            "4 quadrants",
+            "Percussion du foie afin d'en délimiter la hauteur"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Palpation superficielle",
+          "details": [
+            "4 quadrants",
+            "Contact visuel maintenu"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "L'étudiant évoque le toucher rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Palpation profonde",
+          "details": [
+            "4 quadrants",
+            "Rate",
+            "Reins",
+            "Contact visuel maintenu",
+            "Foie"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e7",
+          "text": "Tests spécifiques",
+          "details": [
+            "Défense ET détente",
+            "Signe de Murphy"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évoque le diagnostic principal de néoplasie des voies biliaires/pancréatique",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque un diagnostic différentiel cohérent",
+          "details": [
+            "Néoplasie pancréatique",
+            "Cholangite/cholecystite",
+            "Pancréatite",
+            "Hépatite",
+            "Hémolyse"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m3",
+          "text": "Propose des examens complémentaires appropriés",
+          "details": [
+            "Laboratoire (bilirubine totale et directe, transaminases, PAL, GGT)",
+            "Échographie abdominale",
+            "CT abdominale avec contraste",
+            "ERCP/MRCP si indiqué"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Informe la patiente de l'hypothèse diagnostique",
+          "details": [
+            "Explique la suspicion de problème au niveau du foie/voies biliaires",
+            "Mentionne la nécessité d'examens complémentaires"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m5",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "asterixis",
+        "title": "Astérixis (flapping tremor)",
+        "description": "Signe neurologique caractéristique de l'encéphalopathie hépatique - tremblement d'attitude avec chute intermittente des mains",
+        "filename": "ictère-1-img1.jpg"
+      },
+      {
+        "id": "ictere-scleraire",
+        "title": "Ictère scléral",
+        "description": "Coloration jaunâtre des sclérotiques, signe précoce et sensible d'hyperbilirubinémie",
+        "filename": "ictère-1-img2.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Anne Quantini",
+      "age": "58 ans",
+      "contexte": "Vendeuse en fleuristerie, divorcée, vit seule, inquiète car son père est décédé d'un cancer du pancréas",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma fille m'a amenée à consulter car elle dit que je suis jaune depuis une semaine",
+        "autreChose": "Je me sens aussi plus fatiguée que d'habitude"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Jaunisse visible à l'œil nu depuis une semaine",
+          "Localisation au visage surtout, mais aussi tout le corps",
+          "Plus visible au niveau des yeux et du visage",
+          "Constant, n'a jamais disparu depuis l'apparition",
+          "Rien de particulier comme circonstance de survenue"
+        ],
+        "symptomesAssocies": [
+          "Selles grasses et jaunes qui flottent dans les toilettes",
+          "Grande quantité de selles à chaque passage (2x/jour)",
+          "Développement progressif sur une année (crescendo)",
+          "Perte de poids importante (20 kilos sur une année)",
+          "Perte d'appétit et dégoût des aliments",
+          "Mange très peu maintenant"
+        ],
+        "circonstances": [
+          "Symptômes digestifs progressifs sur une année",
+          "A mis cela sur le compte du vieillissement et de la ménopause",
+          "Jaunisse remarquée par sa fille qui l'a poussée à consulter"
+        ],
+        "reponseAuxSymptomes": [
+          "Essaie de ne pas y penser car cela génère beaucoup d'anxiété",
+          "Très inquiète à cause de l'histoire de son père"
+        ],
+        "inquietudes": [
+          "Très anxieuse car son père est décédé d'un cancer du pancréas",
+          "Le cancer de son père avait été diagnostiqué après une jaunisse similaire",
+          "Peur d'avoir la même maladie que son père"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Fatigue chronique depuis 1 année",
+          "Perte de poids de 20 kg sur une année",
+          "Transpiration nocturne",
+          "Perte d'appétit et dégoût des aliments"
+        ],
+        "digestive": [
+          "Selles grasses, jaunes, flottantes",
+          "Fréquence 2x/jour",
+          "Grande quantité à chaque passage",
+          "Pas de douleur abdominale",
+          "Pas de nausées ou vomissements"
+        ],
+        "dermatologique": [
+          "Jaunisse généralisée",
+          "Plus marquée au visage et aux yeux"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun traitement régulier",
+        "alimentation": "Non-équilibrée: trop d'aliments gras et sucrés (viennoiseries, frites, charcuterie), pas assez de légumes et fruits",
+        "activitePhysique": "Sédentaire",
+        "sommeil": "Sans plainte particulière",
+        "tabac": "Fume 2 paquets par jour depuis 40 ans",
+        "alcool": "Non",
+        "drogues": "Pas de drogues intraveineuses ou autres",
+        "sexualite": "Pas de rapports sexuels à risque"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle autrefois",
+        "Baisse de l'état général depuis une année",
+        "Prothèse totale de genou droite à 54 ans",
+        "Vaccins à jour, y compris hépatites A et B",
+        "Vaccination hépatite A pour voyage en Asie",
+        "Vaccination hépatite B dans le cadre du plan vaccinal",
+        "Pas de facteurs de risque pour hépatite C"
+      ],
+      "antecedentsFamiliaux": [
+        "Père récemment décédé d'un cancer pancréatique diagnostiqué suite à un ictère",
+        "Mère décédée d'un accident vasculaire cérébral",
+        "Une fille en bonne santé générale"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Vendeuse dans une boutique de fleuriste depuis 20 ans",
+        "hobbies": "Promenades",
+        "poids": "Surpoids, mais perte de 20 kg récente",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Divorcée, vit seule",
+        "etatEsprit": "Très inquiète et anxieuse"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude inquiète et anxieuse",
+          "Évite parfois le regard quand on parle de cancer",
+          "Devient émotionnelle en parlant de son père"
+        ],
+        "durantExamen": [
+          "Coopérative",
+          "Légèrement tendue à la palpation abdominale"
+        ],
+        "questionsAPoser": [
+          "Alors, qu'est-ce que vous pensez que j'ai ? (à la fin de l'examen si l'étudiant ne le mentionne pas spontanément)"
+        ]
+      },
+      "informationADonner": [
+        "À la sonnerie des deux minutes restantes: 'Il y a autre chose : mon papa est décédé d'un cancer du pancréas et il avait perdu beaucoup de poids, comme moi, j'ai perdu 20 kg cette année...'",
+        "Insister sur l'inquiétude liée à l'antécédent paternel",
+        "Mentionner la perte de poids si pas demandée spontanément"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Mme Quantini, 58 ans, vendeuse, consulte pour ictère d'une semaine. Symptômes B sur une année: perte de poids 20 kg, perte d'appétit, sudations nocturnes. Selles grasses et jaunes. ATCD familial: père décédé cancer pancréas avec ictère. Tabagisme 80 UPA. Tableau évocateur de néoplasie pancréato-biliaire.",
+      "rolesInterventions": [
+        "Aucune intervention directe nécessaire",
+        "Observer l'anamnèse ciblée sur l'ictère",
+        "Évaluer la recherche des symptômes B",
+        "Noter l'exploration des antécédents familiaux",
+        "Vérifier la proposition d'examens complémentaires appropriés"
+      ],
+      "pointsCles": [
+        "Ictère chez femme de 58 ans avec symptômes B",
+        "Triade classique: ictère + perte de poids + anorexie",
+        "ATCD familial significatif: père décédé cancer pancréas",
+        "Facteurs de risque: âge, tabagisme, antécédents familiaux",
+        "Ictère indolore chez patient âgé évoque cancer pancréatique",
+        "Selles grasses (stéatorrhée) évoquent insuffisance pancréatique",
+        "Nécessité examens d'imagerie urgents",
+        "Importance soutien psychologique (anxiété familiale)"
+      ],
+      "pieges": [
+        "Ne pas rechercher les symptômes B (perte de poids)",
+        "Omettre l'anamnèse familiale détaillée",
+        "Ne pas caractériser les selles (stéatorrhée)",
+        "Oublier l'impact psychologique de l'ATCD paternel",
+        "Ne pas proposer d'imagerie appropriée",
+        "Sous-estimer l'urgence diagnostique",
+        "Ne pas évoquer le diagnostic de néoplasie",
+        "Omettre l'examen abdominal complet"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'ictère et les néoplasies pancréato-biliaires",
+      "sections": [
+        {
+          "titre": "Physiopathologie de l'ictère",
+          "contenu": "L'ictère résulte d'une hyperbilirubinémie avec coloration jaune des téguments.",
+          "points": [
+            "Bilirubine non conjuguée (indirecte): hémolyse, dysérythropoïèse",
+            "Bilirubine conjuguée (directe): atteinte hépatique ou post-hépatique",
+            "Seuil de visibilité: bilirubine >50 μmol/L (3 mg/dL)",
+            "Ictère scléral: signe précoce et sensible",
+            "Circuit entéro-hépatique des acides biliaires",
+            "Stercobilinogène: pigment normal des selles",
+            "Urobilinogène: élimination urinaire partielle"
+          ]
+        },
+        {
+          "titre": "Classification étiologique de l'ictère",
+          "contenu": "Distinction selon le type de bilirubine prédominante.",
+          "points": [
+            "Ictère à bilirubine indirecte: hémolyse, Gilbert, Crigler-Najjar",
+            "Ictère à bilirubine directe: atteinte hépatique ou biliaire",
+            "Causes hépatiques: hépatite, cirrhose, médicaments",
+            "Causes post-hépatiques: lithiase, tumeurs, sténoses",
+            "Cholestase: diminution écoulement biliaire",
+            "Signes associés: prurit, selles décolorées, urines foncées"
+          ]
+        },
+        {
+          "titre": "Cancer du pancréas",
+          "contenu": "Néoplasie de mauvais pronostic, souvent diagnostiquée tardivement.",
+          "points": [
+            "Incidence: 10-15/100 000 habitants/an",
+            "Mortalité élevée: survie 5 ans <5%",
+            "Âge moyen: 65 ans, légère prédominance masculine",
+            "Facteurs de risque: tabac, diabète, pancréatite chronique",
+            "Antécédents familiaux: risque x2-3",
+            "Localisation: 70% tête du pancréas",
+            "Histologie: 95% adénocarcinomes canalaires"
+          ]
+        },
+        {
+          "titre": "Présentation clinique cancer pancréas",
+          "contenu": "Symptomatologie souvent tardive et non spécifique.",
+          "points": [
+            "Triade classique: ictère + douleur + perte de poids",
+            "Ictère indolore (signe de Courvoisier-Terrier)",
+            "Douleur épigastrique irradiant dans le dos",
+            "Symptômes B: perte de poids, anorexie, asthénie",
+            "Stéatorrhée: insuffisance pancréatique exocrine",
+            "Diabète d'apparition récente chez sujet âgé",
+            "Thrombose veineuse (syndrome de Trousseau)"
+          ]
+        },
+        {
+          "titre": "Diagnostic du cancer pancréatique",
+          "contenu": "Approche multimodale associant biologie et imagerie.",
+          "points": [
+            "Biologie: bilirubine directe élevée, PAL, GGT",
+            "Marqueurs tumoraux: CA 19-9 (non spécifique)",
+            "Échographie abdominale: examen de première intention",
+            "CT abdominale triphasique: gold standard",
+            "IRM/MRCP: alternative si contre-indication CT",
+            "Échoendoscopie: évaluation résécabilité",
+            "Biopsie: confirmation histologique si nécessaire"
+          ]
+        },
+        {
+          "titre": "Prise en charge et pronostic",
+          "contenu": "Traitement multimodal selon le stade de la maladie.",
+          "points": [
+            "Chirurgie: seul traitement curatif (20% des cas)",
+            "Whipple: duodéno-pancréatectomie céphalique",
+            "Chimiothérapie: FOLFIRINOX, gemcitabine",
+            "Soins palliatifs: majorité des cas",
+            "Dérivation biliaire: ictère obstructif",
+            "Prise en charge douleur: morphiniques",
+            "Support nutritionnel: enzymes pancréatiques"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Drainage biliaire: ERCP avec pose de prothèse",
+        "Dérivation chirurgicale: hépatico-jéjunostomie",
+        "Chimiothérapie 1ère ligne: FOLFIRINOX si bon état général",
+        "Alternative: gemcitabine + nab-paclitaxel",
+        "Enzymes pancréatiques: Creon 25000-50000 UI/repas",
+        "Analgésie: morphine à libération prolongée",
+        "Antiémétiques: ondansétron, métoclopramide"
+      ],
+      "examensComplementaires": [
+        "Bilan hépatique: bilirubine totale/directe, ALAT, ASAT, PAL, GGT",
+        "Marqueurs tumoraux: CA 19-9, CEA",
+        "Échographie abdominale: voies biliaires, masse pancréatique",
+        "CT abdominale triphasique: évaluation complète",
+        "IRM abdominale + MRCP: voies biliaires",
+        "Échoendoscopie: stadification locale",
+        "TEP-scan: recherche métastases",
+        "Biopsie guidée si résécabilité douteuse"
+      ]
+    },
+    "resume": {
+      "titre": "💛 Ictère et néoplasies pancréato-biliaires – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Ictère cutanéo-muqueux progressif",
+                "Prurit généralisé",
+                "Selles décolorées (acholiques), urines foncées",
+                "Douleur abdominale vague (hypochondre droit ou épigastre)",
+                "Amaigrissement, anorexie, asthénie"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Âge > 50 ans",
+                "Tabac et alcool",
+                "Antécédents familiaux de cancer pancréatique ou biliaire",
+                "Maladies chroniques : pancréatite chronique, cholangite sclérosante primitive",
+                "Exposition professionnelle (amines aromatiques, solvants)"
+              ]
+            },
+            {
+              "titre": "Complications ou signes d’évolution",
+              "points": [
+                "Douleur épigastrique transfixiante irradiant dans le dos (pancréas)",
+                "Masse abdominale palpable",
+                "Épisodes d’angiocholite (fièvre, douleurs, ictère)",
+                "Altération de l’état général"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Ictère conjonctival et cutané franc",
+                "Grattage cutané (lésions de prurit)",
+                "Amaigrissement visible"
+              ]
+            },
+            {
+              "titre": "Palpation abdominale",
+              "points": [
+                "Hépatomégalie ou masse palpable",
+                "Vésicule de Courvoisier-Terrier (vésicule distendue, non douloureuse, palpable dans l’ictère obstructif tumoral)",
+                "Ascite possible (métastases péritonéales)"
+              ]
+            },
+            {
+              "titre": "Autres signes",
+              "points": [
+                "Adénopathies sus-claviculaires (Troisier)",
+                "Signes d’anémie ou cachexie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Cholestase : augmentation bilirubine conjuguée, PAL, GGT",
+                "Cytolyse modérée possible (ALAT/ASAT)",
+                "CA 19-9 parfois élevé (marqueur tumoral, suivi mais non spécifique)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : dilatation voies biliaires intra- et/ou extra-hépatiques, masse pancréatique ou biliaire",
+                "Scanner TAP injecté = examen de référence pour bilan d’extension (pancréas, voies biliaires, foie, ganglions)",
+                "IRM biliaire (cholangio-IRM) pour préciser obstruction biliaire",
+                "Echoendoscopie avec biopsie (confirmation histologique)"
+              ]
+            },
+            {
+              "titre": "Autres examens",
+              "points": [
+                "CPRE : diagnostic et geste thérapeutique (drainage, mise en place de prothèse)",
+                "Biopsie ou cytologie : confirmation du diagnostic histologique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Hospitalisation pour bilan et stabilisation",
+                "Correction troubles hydro-électrolytiques et nutritionnels",
+                "Drainage biliaire endoscopique (CPRE) si ictère cholestatique sévère ou angiocholite"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Chirurgie curative si tumeur résécable : duodénopancréatectomie céphalique (Whipple) pour cancer tête du pancréas, résection biliaire/hépatique pour cholangiocarcinome",
+                "Chimiothérapie ± radiothérapie selon type histologique et stade",
+                "Traitement palliatif : endoprothèse biliaire, chimiothérapie systémique, soins de support"
+              ]
+            },
+            {
+              "titre": "Prise en charge globale",
+              "points": [
+                "Contrôle douleur (antalgiques, morphiniques si besoin)",
+                "Prise en charge nutritionnelle",
+                "Soins de support (psychologique, soins palliatifs si avancé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Ictère cholestatique progressif avec prurit = évoquer obstruction néoplasique",
+            "Échographie puis scanner TAP injecté = examens clés",
+            "Confirmation histologique indispensable avant traitement oncologique",
+            "Drainage biliaire (CPRE) si ictère sévère ou angiocholite",
+            "Chirurgie curative possible si tumeur localisée sans métastase"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand ictère ? Progressif ou brutal ?",
+                "Prurit ? Coloration urines/selles ?",
+                "Douleur abdominale (épigastrique, HCD) ? Irradiations ?",
+                "Amaigrissement, anorexie, fatigue ?",
+                "ATCD pancréatite, cholangite, cancer ? Consommation alcool/tabac ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen complet : ictère, amaigrissement, masse abdominale, Troisier",
+                "Biologie hépatique : bilirubine, PAL, GGT, transaminases",
+                "Échographie abdominale",
+                "Scanner TAP injecté pour bilan d’extension",
+                "IRM biliaire ± échoendoscopie avec biopsie"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Identifier obstruction biliaire néoplasique (imagerie + histologie)",
+                "Soulager l’ictère/prurit par drainage biliaire endoscopique si nécessaire",
+                "Discussion multidisciplinaire : chirurgie curative si résécable, sinon traitement palliatif"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Ictère progressif avec amaigrissement (suspicion néoplasie pancréato-biliaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (ictère depuis 1 semaine)",
+            "Caractériser ictère → début progressif, constant, localisation visage + yeux puis diffus",
+            "Symptômes associés → selles grasses et jaunes, perte d’appétit, amaigrissement 20 kg/an, fatigue, sudations nocturnes",
+            "Contexte familial → père décédé d’un cancer du pancréas diagnostiqué après ictère",
+            "Habitudes de vie → tabagisme chronique 80 UPA, alimentation déséquilibrée, pas d’alcool ni drogues",
+            "ATCD médicaux/chirurgicaux → prothèse genou, vaccins hépatites A et B",
+            "Examen clinique → inspection : ictère conjonctival et cutané, amaigrissement ; palpation abdominale : masse, hépatomégalie, vésicule palpable (Courvoisier) ; TR à évoquer",
+            "Résumé + hypothèse principale (cancer pancréatique) + diagnostics différentiels (cholangite lithiasique, hépatite, hémolyse, autres tumeurs biliaires)",
+            "Examens complémentaires → bilan hépatique complet (bilirubine directe, PAL, GGT, transaminases), échographie abdominale, scanner TAP injecté, cholangio-IRM, échoendoscopie avec biopsie",
+            "Prise en charge → hospitalisation, imagerie urgente, drainage biliaire si ictère cholestatique sévère, orientation oncologique"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : JAUNE",
+            "elements": [
+              "J = Jaunisse (ictère scléral/cutané)",
+              "A = Amaigrissement et anorexie",
+              "U = Urines foncées, selles décolorées",
+              "N = Néoplasie pancréas à évoquer si ictère indolore",
+              "E = Examens complémentaires (écho, scanner, biopsie)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Anne Quantini, une femme de 58 ans, vendeuse en fleuristerie, qui consulte car sa fille a remarqué depuis une semaine qu’elle avait la peau et les yeux jaunes. Elle décrit un ictère apparu progressivement, constant, qui ne disparaît pas. Elle rapporte également une perte d’appétit, un amaigrissement très important de 20 kilos en un an, des selles grasses et jaunâtres flottantes dans les toilettes, et des sueurs nocturnes. Elle se sent aussi plus fatiguée que d’habitude. Elle n’a pas eu de douleurs abdominales, pas de fièvre, pas de vomissements.\n\nDans ses antécédents, on note une prothèse de genou droit, aucun traitement chronique, et elle est vaccinée contre les hépatites A et B. Elle fume deux paquets par jour depuis 40 ans, ne boit pas d’alcool et n’a pas d’antécédents d’IST ni de voyages à risque récents. Sa mère est décédée d’un AVC et son père d’un cancer du pancréas qui avait débuté par un ictère.\n\nÀ l’examen, Mme Quantini présente un ictère cutanéo-muqueux franc, une altération de l’état général, un amaigrissement visible. L’abdomen est souple, sans défense, mais une palpation attentive rechercherait une masse ou une hépatomégalie, et une vésicule palpable non douloureuse pourrait signer un syndrome de Courvoisier-Terrier. Pas de fièvre ni de signes de sepsis.\n\nEn résumé, il s’agit d’une femme de 58 ans avec un ictère progressif, stéatorrhée, perte de poids majeure et antécédent familial de cancer pancréatique. Mon hypothèse principale est une néoplasie pancréato-biliaire, probablement un adénocarcinome de la tête du pancréas. Les diagnostics différentiels incluent une cholangite lithiasique, une hépatite virale ou toxique, une cirrhose ou une hémolyse, mais le tableau est surtout évocateur d’une tumeur obstructive.\n\nComme examens complémentaires, je demanderais en première intention un bilan biologique hépatique (bilirubine conjuguée, PAL, GGT, transaminases), une échographie abdominale pour rechercher une dilatation des voies biliaires, suivie d’un scanner TAP injecté. Une IRM biliaire ou une échoendoscopie avec biopsie seraient discutées pour confirmer le diagnostic et évaluer la résécabilité.\n\nEn termes de prise en charge immédiate, une hospitalisation est indiquée. La priorité est d’obtenir rapidement une imagerie et de discuter un drainage biliaire endoscopique si l’ictère est sévère ou s’il existe un prurit important. La patiente doit être adressée en oncologie digestive et en chirurgie pour une éventuelle résection si la tumeur est localisée. Un soutien psychologique est essentiel vu son inquiétude liée au décès paternel."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Quantini, 58 ans, ictère progressif depuis 1 semaine, avec perte de poids de 20 kg sur 1 an.\n\nB (Background) : Fumeuse chronique 80 UPA, père décédé d’un cancer du pancréas, ATCD médicaux simples (prothèse genou).\n\nA (Assessment) : Suspicion forte de néoplasie pancréato-biliaire (probablement tête du pancréas). DD : cholangite lithiasique, hépatite, hémolyse.\n\nR (Recommendation) : Bilan hépatique, échographie abdominale, scanner TAP injecté, orientation spécialisée (oncologie digestive/chirurgie), envisager drainage biliaire si ictère sévère."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade classique cancer pancréas",
+              "points": [
+                "Ictère indolore",
+                "Amaigrissement",
+                "Anorexie"
+              ]
+            },
+            {
+              "titre": "👉 Syndrome de Courvoisier-Terrier",
+              "points": [
+                "Ictère progressif",
+                "Vésicule palpable et indolore",
+                "Évoque obstruction néoplasique (tumeur tête pancréas)"
+              ]
+            },
+            {
+              "titre": "👉 Facteurs de risque cancer pancréas",
+              "points": [
+                "Tabac (facteur principal)",
+                "Antécédents familiaux",
+                "Pancréatite chronique",
+                "Âge > 50 ans"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier de rechercher perte de poids et symptômes B",
+                "Ne pas explorer les antécédents familiaux",
+                "Ne pas proposer imagerie abdominale",
+                "Oublier le diagnostic différentiel (hépatites, hémolyse)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer pancréato-biliaire",
+                  "reponse": {
+                    "pour": [
+                      "Ictère progressif indolore",
+                      "Perte de poids majeure",
+                      "Anorexie, stéatorrhée",
+                      "ATCD familial cancer pancréas",
+                      "Tabagisme chronique"
+                    ],
+                    "contre": [
+                      "Pas de douleurs abdominales typiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholangite lithiasique",
+                  "reponse": {
+                    "pour": [
+                      "Ictère possible",
+                      "Fréquent en pratique"
+                    ],
+                    "contre": [
+                      "Absence de douleurs coliques biliaires",
+                      "Pas de fièvre ni frissons (Charcot)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hépatite virale/toxique",
+                  "reponse": {
+                    "pour": [
+                      "Ictère et fatigue"
+                    ],
+                    "contre": [
+                      "Pas de contexte infectieux ni toxique",
+                      "Pas de cytolyse marquée connue"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hémolyse",
+                  "reponse": {
+                    "pour": [
+                      "Ictère possible"
+                    ],
+                    "contre": [
+                      "Pas d’anémie connue",
+                      "Selles grasses orientent vers cholestase"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bilan hépatique (bilirubine directe, PAL, GGT, transaminases)",
+                    "Échographie abdominale",
+                    "Scanner TAP injecté",
+                    "IRM biliaire",
+                    "Échoendoscopie avec biopsie",
+                    "Marqueurs tumoraux (CA 19-9)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Néoplasie pancréato-biliaire (probablement adénocarcinome de la tête du pancréas)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Drainage biliaire si ictère sévère/prurit",
+                      "Correction troubles hydro-électrolytiques"
+                    ],
+                    "specifique": [
+                      "Chirurgie si résécable (Whipple)",
+                      "Chimiothérapie (FOLFIRINOX, gemcitabine)",
+                      "Soins de support : analgésie, nutrition, soutien psychologique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation oncologie et chirurgie digestive",
+                    "Surveillance imagerie et biologie",
+                    "Soins de support si maladie avancée",
+                    "Suivi psychologique (anxiété liée au décès paternel)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,932 @@
+{
+  "title": "AMBOSS-31 - Toux - Homme 58 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Antonio Ray, homme de 58 ans, consultant pour toux",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "135/80 mmHg",
+      "fc": "80 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une toux qui ne part tout simplement pas"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la toux et des expectorations",
+          "binaryOnly": false,
+          "details": [
+            "Productive [Oui, je crache des glaires]",
+            "Couleur [Foncée et parfois rouge]",
+            "Sang [Je pense que c'est du sang, en fait. Ça me fait peur]",
+            "Volume [Oh, je dirais environ 1/2 à 1 cuillère à café chaque fois que je tousse vraiment]",
+            "Début [Il y a environ 4 semaines]",
+            "Évolution temporelle [C'est là tout le temps, mais surtout pire le matin, je dirais]",
+            "Événements précipitants [J'ai eu un rhume il y a 4 semaines, mais je me suis remis du nez qui coule et tout, et seule la toux a persisté]",
+            "Progression [J'ai l'impression que ça s'aggrave]",
+            "Épisodes antérieurs [J'ai eu une toux de fumeur le matin depuis quelques années maintenant. Mais au cours des 4 dernières semaines, c'est devenu vraiment mauvais et je l'ai toute la journée]",
+            "Fréquence [Quotidienne]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Aucun]",
+            "Symptômes associés [Non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour toux chronique et hémoptysie",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Oui, j'ai travaillé en Inde pendant les 3 dernières années]",
+            "Fièvre/frissons [J'ai eu l'impression que j'avais peut-être de la fièvre de temps en temps au cours des dernières semaines, oui]",
+            "Sueurs nocturnes [Je transpire aussi plus que d'habitude la nuit. Je dois même me lever et changer mon pyjama]",
+            "Fatigue [Oui, je me suis senti plus fatigué que d'habitude ces dernières semaines]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleur thoracique [Parfois j'ai une douleur du côté droit de ma poitrine]",
+            "Douleur aggravée par respiration profonde [Oui]",
+            "Dyspnée [Oui, en faisant de la randonnée ou en montant les escaliers jusqu'à mon appartement au troisième étage]",
+            "Troubles du sommeil [Parfois je me réveille trempé de sueur. À part ça, je dors bien]",
+            "Appétit [Correct, je suppose]",
+            "Variations pondérales [J'ai perdu 5 kg (11 livres) au cours des 3 derniers mois]",
+            "Perte de poids intentionnelle [Non]",
+            "Infections récentes [Aucune autre que le rhume il y a 4 semaines]",
+            "Symptômes d'infection respiratoire haute [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Exposition à la tuberculose et dépistage",
+          "binaryOnly": false,
+          "details": [
+            "Exposition à la tuberculose [J'ai travaillé en Inde dans un orphelinat pendant 3 ans. Je suis rentré il y a 6 mois. Certains des enfants avaient la tuberculose, je pense]",
+            "Dernier test tuberculinique [Mon dernier test tuberculinique remonte à des années, et à l'époque il était normal]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Expositions environnementales et symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Exposition aux animaux [Non]",
+            "Exposition aux moisissures [Pas que je sache]",
+            "Faiblesse musculaire [Pas que j'aie remarqué - à part être fatigué tout le temps]",
+            "Picotements/engourdissements [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Bronchite chronique"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "details": [
+            "Médicaments actuels [Inhalateur de salmétérol et inhalateur d'ipratropium]",
+            "Efficacité contre symptômes actuels [Non, ils ne semblent plus aider du tout]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Aucune]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Pas depuis mon retour d'Inde]",
+            "Antécédents familiaux [Mon père est mort d'un cancer du poumon]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je suis travailleur humanitaire médical]",
+            "Domicile [Je vis seul, mais j'ai une petite amie]",
+            "Alcool [Non]",
+            "Drogues récréatives [Aucune]",
+            "Tabac [Oui, je fume. J'ai fumé 2 paquets par jour pendant les 30 dernières années environ, tout comme mon père]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen du dos",
+          "binaryOnly": true,
+          "details": [
+            "Examen de la colonne vertébrale"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Percussion des champs pulmonaires",
+            "Auscultation pulmonaire",
+            "Examen du frémissement",
+            "Inspection du mouchoir du patient [Mouchoir sanglant (évidence d'hémoptysie)]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des mains [Hippocratisme digital]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies néoplasiques",
+                "items": [
+                  {
+                    "text": "Cancer du poumon",
+                    "cause": "Arguments POUR:\n\t□ Gros fumeur : 60 paquets-années (2 PA × 30 ans)\n\t□ Âge dans la tranche d'incidence maximale (50-70 ans)\n\t□ Antécédent familial positif (père décédé cancer poumon)\n\t□ Symptômes B classiques : perte de poids involontaire 5 kg, sueurs nocturnes, fatigue\n\t□ Nouvelle toux progressive + hémoptysie\n\t□ Hippocratisme digital (signe paranéoplasique)\n\t□ Douleur thoracique pleurale droite\n\t□ Aggravation malgré traitement BPCO",
+                    "test": "→ Radiographie thoracique, CT thoracique, cytologie expectoration"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies infectieuses",
+                "items": [
+                  {
+                    "text": "Tuberculose pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Exposition directe : orphelinat Inde 3 ans (TB endémique)\n\t□ Contact avec enfants tuberculeux confirmés\n\t□ Retour récent (6 mois) d'Inde\n\t□ Toux chronique > 3 semaines avec hémoptysie\n\t□ Symptômes constitutionnels : sueurs nocturnes profuses, perte de poids, fièvre vespérale\n\t□ Douleur pleurale (pleurésie tuberculeuse possible)\nArguments CONTRE:\n\t□ PPD ancien négatif (mais peut se positiver)",
+                    "test": "→ Coloration Ziehl-Neelsen, culture mycobactéries, QuantiFERON"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies respiratoires chroniques",
+                "items": [
+                  {
+                    "text": "Exacerbation de BPCO",
+                    "cause": "Arguments POUR:\n\t□ BPCO connue (bronchite chronique)\n\t□ Tabagisme lourd 60 PA\n\t□ Aggravation post-infectieuse (rhume)\n\t□ Toux productive chronique matinale\n\t□ Dyspnée d'effort\n\t□ Échec traitement bronchodilatateur\nArguments CONTRE:\n\t□ Hémoptysie inhabituelle\n\t□ Symptômes B marqués\n\t□ Durée prolongée (4 semaines)",
+                    "test": "→ Spirométrie, gazométrie artérielle"
+                  },
+                  {
+                    "text": "Bronchectasies",
+                    "cause": "Arguments POUR:\n\t□ Toux productive chronique\n\t□ Hémoptysie récurrente\n\t□ Infections respiratoires répétées\nArguments CONTRE:\n\t□ Pas d'expectorations purulentes abondantes décrites",
+                    "test": "→ CT thoracique haute résolution"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Pneumonie atypique",
+                    "cause": "Post-voyage, symptômes persistants",
+                    "test": "→ Radiographie, sérologies atypiques"
+                  },
+                  {
+                    "text": "Vascularite (polyangéite microscopique)",
+                    "cause": "Hémoptysie, symptômes systémiques",
+                    "test": "→ ANCA, fonction rénale"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Oxymétrie de pouls [pour déterminer le degré de détresse respiratoire]",
+            "Gazométrie artérielle [pour déterminer si une acidose respiratoire est présente]",
+            "Radiographie thoracique [pour dépister le cancer du poumon et la tuberculose pulmonaire ; pourrait aussi fournir une imagerie d'autres causes potentielles d'hémoptysie, comme la pneumonie et les bronchectasies ; devrait être comparée avec une radiographie antérieure si disponible]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens microbiologiques",
+          "binaryOnly": false,
+          "details": [
+            "Coloration de Gram des expectorations, microscopie avec coloration acido-résistante, cytologie, et culture de routine et mycobactérienne [La coloration de Gram et les cultures des expectorations pourraient déterminer une cause mycobactérienne ou bactérienne pour la toux de ce patient. La cytologie pourrait être utile si une malignité est présente]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens biologiques et imagerie avancée",
+          "binaryOnly": false,
+          "details": [
+            "NFS avec formule [Une leucocytose suggère une infection sous-jacente. Une formule leucocytaire avec déviation gauche peut aider à déterminer si une infection est bactérienne ou virale]",
+            "CT thoracique [indiqué pour évaluer la probabilité de malignité si aucune radiographie thoracique antérieure n'est disponible pour ce patient ou si une nouvelle lésion est détectée sur la radiographie]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi sur les coûts",
+            "Orientation vers services sociaux",
+            "Soutien émotionnel face à l'inquiétude",
+            "Information sur l'urgence du diagnostic"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si cancer du poumon confirmé",
+                "content": "• Stadification urgente: CT thoraco-abdomino-pelvien\n• PET scan pour bilan d'extension\n• Biopsie pour typage histologique\n• Référence oncologie pour chimio/radiothérapie\n• Soins de support: Analgésie, nutrition\n• Arrêt tabac impératif"
+              },
+              {
+                "title": "Si tuberculose pulmonaire confirmée",
+                "content": "• Isolement respiratoire immédiat\n• Quadrithérapie RIPE\n• Rifampicine: 600 mg/j + Isoniazide 300 mg/j\n• Pyrazinamide: 25 mg/kg/j + Ethambutol 15 mg/kg/j\n• Vitamine B6 prophylaxie neuropathie\n• Déclaration obligatoire, enquête entourage"
+              },
+              {
+                "title": "Si exacerbation BPCO",
+                "content": "• Corticoïdes: Prednisolone 40 mg × 5j\n• Antibiotiques si critères Anthonisen\n• Bronchodilatateurs nébulisés\n• Oxygénothérapie: si hypoxémie\n• Ventilation non invasive si acidose"
+              },
+              {
+                "title": "Mesures immédiates",
+                "content": "• Hospitalisation pour investigations\n• Isolement si suspicion TB\n• Arrêt tabac urgent (60 PA!)\n• Support psychologique\n• Évaluation sociale (coûts)"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme nécessitant action immédiate",
+            "items": [
+              {
+                "text": "Hémoptysie massive",
+                "description": "> 200 mL/24h ou instabilité hémodynamique → réanimation"
+              },
+              {
+                "text": "Détresse respiratoire aiguë",
+                "description": "SpO2 < 90%, tirage, cyanose → oxygène, soins intensifs"
+              },
+              {
+                "text": "Syndrome cave supérieur",
+                "description": "Œdème facial, veines jugulaires → urgence oncologique"
+              },
+              {
+                "text": "Signes neurologiques",
+                "description": "Syndrome Pancoast, Lambert-Eaton → imagerie cérébrale"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Préoccupation financière",
+          "content": "[Pouvez-vous pas juste me prescrire des médicaments ? Je ne peux vraiment pas me permettre des tests coûteux !]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Ray, je comprends votre préoccupation. Je ne sais pas maintenant ce qui cause exactement votre toux. Il y a une possibilité que vous ayez une infection grave ou une autre maladie qui peut vous causer beaucoup de tort si elle n'est pas traitée correctement. J'aimerais faire quelques tests pour déterminer exactement ce qui cause vos symptômes et pour déterminer le bon traitement pour vous. Concernant les coûts de ces tests, j'aimerais vous mettre en contact avec nos travailleurs sociaux. Je suis optimiste qu'ils pourront vous fournir de l'aide et peuvent discuter de toute question financière avec vous. Est-ce que ça vous intéresserait ? Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Hippocratisme digital",
+        "description": "Les doigts présentent des symptômes d'hippocratisme digital sévère. L'extrémité distale du doigt est épaissie, avec une convexité accrue du lit unguu00e9al.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img1-Digital clubbing.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Lésion pulmonaire cavitaire (1/2)",
+        "description": "Radiographie thoracique (vue PA) d'un patient atteint d'un carcinome pulmonaire. Une lésion cavitaire contenant un niveau hydro-aérique (ligne rouge) est visible dans le lobe moyen droit, qui est également opacifié (superposition verte) par une consolidation de l'espace aérien. La consolidation jouxte la scissure mineure (ligne pointillée noire) et obscurcit le bord cardiaque droit (signe de la silhouette). Les principales considérations diagnostiques pour la lésion cavitaire seraient un abcès ou un carcinome cavitaire. Ligne pointillée blanche : emplacement approximatif du bord cardiaque droit.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img2-Cavitary lung lesion (1:2).jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Lésion pulmonaire cavitaire (2/2)",
+        "description": "Radiographie thoracique (vue latérale). Une lésion cavitaire contenant un niveau hydro-aérique (ligne rouge) est visible dans le lobe moyen droit, qui est opacifié par une consolidation de l'espace aérien (superposition verte). La consolidation jouxte la scissure mineure en haut et la scissure majeure droite en bas. Les scissures sont légèrement déplacées vers la consolidation, compatible avec une perte de volume concomitante. UL : lobe supérieur ; ML : lobe moyen ; LL : lobe inférieur ; Lignes pointillées blanche et noire : scissures mineure et majeure.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img3-Cavitary lung lesion (2:2).jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Tuberculose pulmonaire du lobe supérieur gauche",
+        "description": "Radiographie thoracique (vue PA ; vue latérale). Une consolidation hétérogène partiellement circonscrite est présente dans le lobe supérieur gauche. La consolidation représentait une tuberculose du parenchyme pulmonaire.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img4-Pulmonary tuberculosis in the left upper lobe.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Pneumonie du lobe supérieur gauche (1/2)",
+        "description": "Radiographie thoracique (vue PA). Une grande zone d'opacification (superposition verte) dans le poumon gauche obscurcit les vaisseaux pulmonaires, le bord cardiaque gauche et le hile gauche. Des bronchogrammes aériens sont visibles (indiqués par des lignes rouges), compatibles avec la présence d'une maladie de l'espace aérien. La non-visualisation du hile limite la capacité d'évaluer une masse centrale.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img5-Left upper lobe pneumonia 1:2.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Pneumonie du lobe supérieur gauche (2/2)",
+        "description": "Radiographie thoracique (vue PA). Une grande zone d'opacification (superposition verte) dans le poumon gauche obscurcit les vaisseaux pulmonaires, le bord cardiaque gauche et le hile gauche. Des bronchogrammes aériens sont visibles (indiqués par des lignes rouges), compatibles avec la présence d'une maladie de l'espace aérien. La non-visualisation du hile limite la capacité d'évaluer une masse centrale.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img6-Left upper lobe pneumonia 1:2.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Culture de Mycobacterium tuberculosis",
+        "description": "Culture de M. tuberculosis dans une boîte de Pétri sur gélose. Après 3-4 semaines d'incubation, des colonies rugueuses caractéristiques, en forme de chou-fleur, blanc-jaunâtre apparaissent. La paroi cellulaire complexe, cireuse et riche en lipides de M. tuberculosis est difficile à surmonter pour les nutriments, c'est pourquoi le temps de réduplication s'élève à 12-18 heures et l'incubation dure au moins 3-4 semaines.",
+        "data": "grilles_generees/html/images/AMBOSS-31-img7-Mycobacterium tuberculosis culture.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Évaluation des nodules pulmonaires solitaires",
+        "description": "Évaluation des nodules pulmonaires solitaires",
+        "data": "grilles_generees/html/images/AMBOSS-31-img8-Evaluation of solitary pulmonary nodules.jpg",
+        "id": "img8"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Antonio Ray",
+      "age": "58 ans",
+      "contexte": "Travailleur humanitaire médical avec toux chronique et hémoptysie après séjour en Inde",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une toux qui ne part tout simplement pas.",
+        "autreChose": "Et je crache du sang."
+      },
+      "consignes": [
+        "Tousser dans un mouchoir de temps en temps.",
+        "Si l'examinateur vous demande de montrer le mouchoir dans lequel vous toussez, montrer un mouchoir avec du (faux) sang dessus.",
+        "Vous êtes effrayé par votre état et avez peur de recevoir de mauvaises nouvelles du médecin.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: CT) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Pouvez-vous pas juste me prescrire des médicaments ? Je ne peux vraiment pas me permettre des tests coûteux !'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux productive depuis 4 semaines",
+          "Expectorations foncées teintées de sang",
+          "Aggravation matinale",
+          "Toux de fumeur préexistante empirée",
+          "Volume hémoptysie : 1/2-1 cuillère à café"
+        ],
+        "symptomesAssocies": [
+          "Sueurs nocturnes profuses (change pyjama)",
+          "Perte de poids 5 kg en 3 mois",
+          "Fièvre intermittente vespérale",
+          "Fatigue progressive",
+          "Douleur thoracique droite pleurale",
+          "Dyspnée d'effort (escaliers 3e étage)"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer anxiété évidente sur diagnostic",
+          "Tousser périodiquement dans mouchoir",
+          "Insister sur préoccupations financières",
+          "Mentionner exposition TB en Inde",
+          "Exprimer peur du cancer (père décédé)",
+          "Minimiser tabagisme malgré 60 PA"
+        ],
+        "durantStatus": [
+          "Présenter mouchoir avec sang si demandé",
+          "Hippocratisme digital visible",
+          "Pas de détresse respiratoire aiguë",
+          "Coopérer pour examen thoracique",
+          "Possibles anomalies auscultatoires",
+          "Pas d'adénopathies évidentes"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 58 ans avec TRIPLE RISQUE : cancer poumon (60 PA + ATCD familial + hippocratisme), TB (exposition directe Inde 3 ans), BPCO exacerbée. Hémoptysie + symptômes B = URGENCE diagnostique. Hippocratisme digital = signe d'alarme majeur (cancer 80%). Radiographie thoracique IMMÉDIATE, isolement si suspicion TB. Score Wells cancer poumon élevé. Arrêt tabac crucial mais diagnostic prioritaire. Support social pour coûts essentiels.",
+      "rolesInterventions": [
+        "Oxymétrie : SpO2 94% air ambiant",
+        "Radiographie : masse hilaire droite + adénopathies",
+        "Coloration Ziehl : BAAR négatifs (× 3)",
+        "NFS : Hb 11.2 g/dL, leucocytes 12 000",
+        "Cytologie crachat : cellules suspectes",
+        "Si CT demandé : masse 4 cm lobe supérieur droit"
+      ],
+      "pointsCles": [
+        "Hémoptysie + symptômes B = bilan urgent cancer/TB",
+        "Hippocratisme = signe paranéoplasique majeur",
+        "60 PA = risque cancer poumon très élevé",
+        "Exposition TB Inde = isolement préventif",
+        "Radiographie thoracique première urgence",
+        "Support social crucial (travailleur humanitaire = revenus limités)"
+      ],
+      "pieges": [
+        "Minimiser hémoptysie (toujours grave > 50 ans)",
+        "Oublier isolement respiratoire si TB possible",
+        "Retarder imagerie pour raisons financières",
+        "Ne pas reconnaître hippocratisme digital",
+        "Traiter comme simple exacerbation BPCO",
+        "Négliger impact psychologique (peur cancer)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Cancer bronchopulmonaire (forte suspicion)"
+        },
+        {
+          "titre": "Cancer du poumon",
+          "contenu": "Première cause de mortalité par cancer mondiale :",
+          "points": [
+            "Épidémiologie : incidence maximale 50-70 ans, H > F",
+            "Facteur de risque principal : tabac (85-90% cas)",
+            "Risque relatif : × 20-30 si > 40 PA",
+            "Types histologiques : CPNPC 85% (adéno, épidermoïde, grandes cellules), CPPC 15%",
+            "Survie 5 ans : 15-20% tous stades confondus",
+            "Dépistage : CT faible dose si 55-80 ans + 30 PA"
+          ]
+        },
+        {
+          "titre": "Présentation clinique cancer poumon",
+          "contenu": "Symptômes locaux, systémiques et paranéoplasiques :",
+          "points": [
+            "Symptômes respiratoires : toux (75%), hémoptysie (30%), dyspnée",
+            "Changement toux chronique = signe d'alarme",
+            "Symptômes B : perte poids (50%), fatigue, fièvre",
+            "Douleur thoracique : pleurale ou pariétale (25%)",
+            "Syndromes paranéoplasiques : hippocratisme (30%), SIADH, Lambert-Eaton",
+            "Métastases : os, cerveau, foie, surrénales",
+            "Complications : syndrome cave supérieur, Pancoast"
+          ]
+        },
+        {
+          "titre": "Tuberculose pulmonaire",
+          "contenu": "Infection mycobactérienne endémique zones tropicales :",
+          "points": [
+            "Agent : Mycobacterium tuberculosis, transmission aérienne",
+            "Incidence Inde : 200/100 000 (vs 5/100 000 pays développés)",
+            "TB primaire : souvent asymptomatique, complexe primaire",
+            "TB post-primaire : réactivation, cavernes apicales",
+            "Symptômes : toux > 3 sem, hémoptysie, sueurs nocturnes",
+            "Diagnostic : Ziehl × 3, culture 6-8 semaines, PCR",
+            "QuantiFERON : alternative IDR, pas faux positifs BCG"
+          ]
+        },
+        {
+          "titre": "Hémoptysie",
+          "contenu": "Expectoration de sang provenant des voies respiratoires :",
+          "points": [
+            "Causes fréquentes : bronchite (20%), cancer (20%), TB (10%)",
+            "Massive : > 200 mL/24h ou instabilité → urgence vitale",
+            "Origine : 90% bronchiques (vascularisation systémique HP)",
+            "Évaluation : quantifier, différencier hématémèse",
+            "Bilan : radiographie, CT, bronchoscopie si persiste",
+            "Mortalité hémoptysie massive : 30-50% sans traitement"
+          ]
+        },
+        {
+          "titre": "BPCO",
+          "contenu": "Obstruction bronchique progressive irréversible :",
+          "points": [
+            "Définition : VEMS/CVF < 0.7 post-bronchodilatateur",
+            "Facteurs risque : tabac (90%), α1-antitrypsine, pollution",
+            "Phénotypes : emphysème (pink puffer) vs bronchite chronique (blue bloater)",
+            "Exacerbations : infectieuses (50%), pollution, non-observance",
+            "Critères Anthonisen : dyspnée + volume/purulence expectorations",
+            "Complications : insuffisance respiratoire, cœur pulmonaire"
+          ]
+        },
+        {
+          "titre": "Hippocratisme digital",
+          "contenu": "Déformation en baguettes de tambour des doigts :",
+          "points": [
+            "Mécanisme : shunts artério-veineux, VEGF, hypoxie",
+            "Causes respiratoires : cancer (80%), bronchectasies, fibrose",
+            "Causes cardiaques : cardiopathies cyanogènes, endocardite",
+            "Angle de Lovibond > 180° (normal < 160°)",
+            "Test de Schamroth : disparition losange",
+            "Valeur prédictive cancer poumon si nouveau : très élevée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Cancer poumon : chirurgie si localisé, chimio-radiothérapie si avancé",
+        "Protocoles CPNPC : cisplatine + pemetrexed/gemcitabine",
+        "Immunothérapie : pembrolizumab si PD-L1 > 50%",
+        "TB : RIPE 2 mois puis RI 4 mois (total 6 mois)",
+        "Doses TB : R 10 mg/kg, H 5 mg/kg, Z 25 mg/kg, E 15 mg/kg",
+        "BPCO : LABA + LAMA, corticoïdes inhalés si ACOS",
+        "Sevrage tabagique : substituts nicotiniques + varénicline",
+        "Soins palliatifs précoces si cancer avancé : survie améliorée"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique face + profil : première intention",
+        "CT thoracique avec contraste : staging si masse",
+        "Bronchoscopie + biopsies : diagnostic histologique",
+        "PET scan : bilan extension si cancer confirmé",
+        "Coloration Ziehl-Neelsen × 3 matins consécutifs",
+        "Culture mycobactéries : 6-8 semaines, antibiogramme",
+        "QuantiFERON-Gold : alternative IDR, résultat 24h",
+        "Marqueurs tumoraux : CEA, CYFRA 21-1 (suivi, pas diagnostic)"
+      ]
+    },
+    "resume": {
+      "titre": "🫁 Toux – Diagnostic final : Cancer pulmonaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes respiratoires",
+              "points": [
+                "Toux chronique ± hémoptysie",
+                "Dyspnée progressive",
+                "Douleur thoracique",
+                "Sifflements respiratoires"
+              ]
+            },
+            {
+              "titre": "Symptômes systémiques ou extra-pulmonaires",
+              "points": [
+                "Perte de poids, fatigue, fièvre",
+                "Dysphagie (compression œsophagienne)",
+                "Enrouement (atteinte du nerf laryngé récurrent)",
+                "Infections respiratoires récidivantes",
+                "Syndrome cave supérieur (œdème tête/cou, cyanose)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Tabagisme (actuel ou passé)",
+                "Exposition professionnelle (amiante, silice, radon)",
+                "Âge > 45 ans",
+                "ATCD familiaux ou personnels de néoplasie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Râles localisés, matité à la percussion",
+                "Syndrome cave supérieur",
+                "Clubbing digital (hippocratisme)",
+                "Signes de métastases : hépatomégalie, douleurs osseuses",
+                "Troubles neurologiques si atteinte cérébrale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie thoracique (1ère intention)",
+                "Scanner thoracique injecté : caractérisation du nodule ou masse",
+                "PET-Scan pour le bilan d'extension",
+                "IRM cérébrale si signes neurologiques"
+              ]
+            },
+            {
+              "titre": "Biopsie et analyse histologique",
+              "points": [
+                "Fibroscopie avec biopsie transbronchique pour les lésions centrales",
+                "Ponction transthoracique guidée pour lésions périphériques",
+                "Analyse immunohistochimique et recherche de mutations (EGFR, ALK, PD-L1, etc.)"
+              ]
+            },
+            {
+              "titre": "Bilans biologiques",
+              "points": [
+                "NFS : anémie ou thrombopénie",
+                "Bilan hépatique et phosphatases alcalines (métastases)",
+                "LDH : parfois augmenté"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Stratégie thérapeutique",
+              "points": [
+                "Référer en pneumo-oncologie",
+                "Chirurgie si tumeur localisée (souvent NSCLC)",
+                "Chimiothérapie ± immunothérapie ± radiothérapie selon le stade et le type histologique",
+                "Traitement des complications (pleurésie maligne, syndrome cave)"
+              ]
+            },
+            {
+              "titre": "Support symptomatique",
+              "points": [
+                "Oxygénothérapie si hypoxie",
+                "Antalgiques (palier selon douleur)",
+                "Antitussifs si toux invalidante",
+                "Kinésithérapie respiratoire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toux chronique chez un patient tabagique = toujours penser au cancer",
+            "Red flags : hémoptysie, amaigrissement, enrouement, infections récidivantes",
+            "Radiographie thoracique normale n’exclut pas un cancer → scanner si suspicion",
+            "Biopsie indispensable pour confirmer le diagnostic",
+            "Référer précocement en oncologie"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Ancienneté de la toux ? Modification récente ?",
+                "Présence d’hémoptysie, dyspnée, douleur thoracique ?",
+                "Perte de poids, fatigue, anorexie ?",
+                "Facteurs de risque : tabac, exposition professionnelle (amiante, radon) ?",
+                "Antécédents de cancer ou de maladies pulmonaires ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : FC, FR, SpO₂, TA, T°",
+                "Examen pulmonaire : râles, matité, sibilants localisés",
+                "Radiographie thoracique",
+                "Scanner thoracique injecté si anomalie ou suspicion persistante",
+                "Biopsie (fibroscopie ou ponction) pour confirmation histologique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Imagerie thoracique systématique si toux chronique avec facteurs de risque",
+                "Confirmation histologique obligatoire avant traitement",
+                "Orientation rapide en pneumo-oncologie pour discussion multidisciplinaire"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux chronique avec hémoptysie (Cancer pulmonaire probable)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser la toux → durée, productive ou non, hémoptysie, évolution",
+            "Symptômes associés → fièvre, sueurs nocturnes, perte de poids, dyspnée, douleur thoracique",
+            "Facteurs de risque → tabac, exposition TB, ATCD familiaux",
+            "ATCD médicaux (BPCO), traitements en cours, efficacité",
+            "Examen clinique → constantes, auscultation pulmonaire, hippocratisme digital, adénopathies",
+            "Résumé + hypothèse principale (cancer poumon) + DD (TB, BPCO, bronchectasies, infections)",
+            "Examens complémentaires → radio thorax, CT scan, cytologie crachat, tests TB",
+            "PEC initiale → isolement si suspicion TB, hospitalisation, prise en charge multidisciplinaire"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : CANCER",
+            "elements": [
+              "C = Cough (toux persistante)",
+              "A = Amaigrissement",
+              "N = Nocturnal sweats",
+              "C = Crachat sanglant",
+              "E = Exposition TB/tabac",
+              "R = Risque familial"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Antonio Ray, 58 ans, travailleur humanitaire, qui consulte pour une toux productive persistante depuis environ quatre semaines, compliquée depuis quelques jours d’hémoptysie.\n\nLa toux a commencé après un rhume, mais au lieu de s’améliorer elle s’est aggravée. Les expectorations sont foncées, parfois striées de sang, en quantité variable, environ une demi à une cuillère à café par effort de toux, surtout le matin. Il rapporte aussi des sueurs nocturnes abondantes qui l’obligent à se changer, une perte de poids non intentionnelle de 5 kilos en trois mois, une fatigue croissante et des douleurs thoraciques du côté droit, aggravées par les inspirations profondes. Depuis peu, il est également essoufflé à l’effort.\n\nPour ses antécédents, il a une bronchite chronique et il est tabagique à 60 paquets-années. Son père est décédé d’un cancer du poumon. Il a aussi séjourné longtemps en Inde dans le cadre de son travail, avec des contacts probables à la tuberculose. Il n’a pas d’allergies connues. Son traitement habituel est un inhalateur combinant salmétérol et ipratropium, mais qui n’apporte pas d’amélioration.\n\nÀ l’examen ses constantes sont stables : une tension artérielle à 135/80, une fréquence cardiaque à 80 par minute, une température à 37 et une saturation à 94 % à l’air ambiant. On observe un hippocratisme digital et la présence de crachats sanglants. L’auscultation pulmonaire est discrètement asymétrique, mais il n’y a pas de détresse respiratoire.\n\nEn résumé, il s’agit d’un homme de 58 ans, gros fumeur, qui présente une toux chronique avec hémoptysie, sueurs nocturnes, perte de poids et hippocratisme digital. Mon hypothèse principale est un cancer bronchopulmonaire. Les diagnostics différentiels incluent une tuberculose, une exacerbation de BPCO ou des bronchectasies.\n\nComme examens complémentaires, je demanderais une radiographie thoracique immédiate, puis un scanner thoracique injecté. J’ajouterais une cytologie des crachats, une biopsie bronchique et un test tuberculose. Sur le plan biologique, une NFS, un bilan inflammatoire et des gaz du sang.\n\nEn termes de prise en charge immédiate, je proposerais une hospitalisation, un isolement respiratoire si suspicion de tuberculose, une orientation en pneumologie et en oncologie, ainsi qu’un arrêt du tabac et un accompagnement psychologique."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Homme de 58 ans, consulte pour toux productive avec hémoptysie depuis 4 semaines.\n\nB (Background) : Tabagisme 60 PA, bronchite chronique connue, exposition TB en Inde, père décédé cancer poumon.\n\nA (Assessment) : Suspicion forte de cancer pulmonaire, DD : tuberculose, exacerbation BPCO.\n\nR (Recommendation) : Radiographie thorax immédiate, isolement TB, CT scan + cytologie, orientation pneumo/oncologie, hospitalisation."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Red flags toux chronique",
+              "points": [
+                "Hémoptysie",
+                "Amaigrissement",
+                "Sueurs nocturnes",
+                "Hippocratisme digital",
+                "Changement de caractère d’une toux de fumeur"
+              ]
+            },
+            {
+              "titre": "⚠️ Diagnostic différentiel toux chronique (4 grands)",
+              "points": [
+                "Cancer bronchopulmonaire",
+                "Tuberculose",
+                "BPCO / asthme",
+                "Bronchectasies / infections chroniques"
+              ]
+            },
+            {
+              "titre": "Hémoptysie massive = urgence",
+              "points": [
+                "> 200 mL/24h",
+                "Risque vital : appel réa immédiat"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer du poumon",
+                  "reponse": {
+                    "pour": [
+                      "Fumeur 60 PA",
+                      "ATCD familial (père cancer poumon)",
+                      "Âge 58 ans",
+                      "Hémoptysie",
+                      "Sueurs nocturnes + amaigrissement",
+                      "Hippocratisme digital"
+                    ],
+                    "contre": [
+                      "Aucune franche, mais diagnostic à confirmer histologiquement"
+                    ]
+                  }
+                },
+                {
+                  "question": "Tuberculose pulmonaire",
+                  "reponse": {
+                    "pour": [
+                      "Séjour prolongé en Inde avec contacts TB",
+                      "Symptômes B (fièvre, sueurs, perte de poids)",
+                      "Toux chronique > 3 sem avec hémoptysie"
+                    ],
+                    "contre": [
+                      "Retour depuis 6 mois, pas de PPD récent positif"
+                    ]
+                  }
+                },
+                {
+                  "question": "BPCO exacerbée",
+                  "reponse": {
+                    "pour": [
+                      "Bronchite chronique connue",
+                      "Tabagisme lourd",
+                      "Aggravation après rhume"
+                    ],
+                    "contre": [
+                      "Hémoptysie inhabituelle",
+                      "Symptômes B atypiques"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "Radiographie thoracique (immédiate)",
+                    "CT thoracique injecté",
+                    "Cytologie des crachats, biopsie bronchique",
+                    "Coloration Ziehl, culture mycobactéries, QuantiFERON",
+                    "NFS, gazométrie artérielle"
+                  ],
+                  "analyse": "👉 Analyse orale : « La radio élimine une urgence et recherche une masse. Le scanner et la cytologie confirment le cancer, les tests microbiologiques excluent TB. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cancer bronchopulmonaire probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Isolement si suspicion TB",
+                      "Hospitalisation",
+                      "Arrêt tabac immédiat",
+                      "Imagerie + biopsie pour confirmation",
+                      "Orientation oncologie"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Stadification (CT TAP, PET scan, échoendoscopie)",
+                    "Discussion RCP oncologique",
+                    "Traitement curatif (chirurgie si localisé, chimio/immuno selon stade)",
+                    "Soins de support (antalgie, kiné respi, support psycho-social)",
+                    "Surveillance régulière post-thérapeutique"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au triptyque « Voir – Prouver – Traiter » : Voir (imagerie), Prouver (biopsie), Traiter (oncologie)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

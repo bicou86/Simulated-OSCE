@@ -1,0 +1,530 @@
+{
+  "title": "RESCOS-66 - Troubles de l'équilibre - ECC Neurologie",
+  "context": {
+    "setting": "Service de neurologie",
+    "patient": "Femme de 74 ans présentant des troubles de l'équilibre avec amaigrissement de 8 kg en 6 mois",
+    "vitals": {
+      "ta": "120/70 mmHg",
+      "fc": "72 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation des troubles de l'équilibre",
+          "details": [
+            "Type de déséquilibre [instabilité marche, vertiges, chutes]",
+            "Circonstances d'apparition [marche, changement position, obscurité]",
+            "Évolution temporelle [progressive, fluctuante, épisodique]",
+            "Facteurs aggravants [fatigue, stress, médicaments]",
+            "Retentissement fonctionnel [limitation activités, peur de chuter]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Analyse de l'amaigrissement",
+          "details": [
+            "Perte de poids chiffrée [8 kg en 6 mois, involontaire]",
+            "Modification de l'appétit [anorexie, dégoût alimentaire]",
+            "Troubles de la déglutition [fausses routes, dysphagie]",
+            "Troubles digestifs [nausées, vomissements, transit]",
+            "Contexte psychologique [dépression, isolement social]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes neurologiques associés",
+          "details": [
+            "Troubles cognitifs [mémoire, concentration, orientation]",
+            "Troubles moteurs [faiblesse, raideur, tremblements]",
+            "Troubles sensitifs [fourmillements, engourdissements]",
+            "Troubles visuels [diplopie, baisse acuité, champ visuel]",
+            "Troubles de la parole [dysarthrie, dysphonie]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de signes d'alarme oncologique",
+          "details": [
+            "Altération état général [asthénie, fièvre, sueurs]",
+            "Douleurs [osseuses, abdominales, thoraciques]",
+            "Antécédents néoplasiques [personnels, familiaux]",
+            "Symptômes spécifiques d'organe [toux, dyspnée, troubles transit]",
+            "Facteurs de risque [tabac, alcool, expositions]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents et comorbidités",
+          "details": [
+            "Maladies neurodégénératives [Parkinson, Alzheimer, SEP]",
+            "Pathologies cardiovasculaires [AVC, cardiopathies]",
+            "Troubles métaboliques [diabète, dysthyroïdie]",
+            "Maladies auto-immunes [lupus, vascularites]",
+            "Chirurgies antérieures [neurochirurgie, ORL]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments et toxiques",
+          "details": [
+            "Psychotropes [benzodiazépines, antidépresseurs, neuroleptiques]",
+            "Antiépileptiques [phénytoïne, carbamazépine]",
+            "Antihypertenseurs [risque hypotension orthostatique]",
+            "Oto-toxiques [aminosides, diurétiques de l'anse]",
+            "Alcoolisme [consommation, sevrage, carences vitaminiques]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - approche des troubles de l'équilibre",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évaluation de l'état général et nutritionnel",
+          "details": [
+            "Poids et taille [IMC, dénutrition]",
+            "État d'hydratation [pli cutané, muqueuses]",
+            "Pâleur [anémie, néoplasie]",
+            "Adénopathies [aires ganglionnaires]",
+            "Signes vitaux [température, TA couchée/debout]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la statique et de la marche",
+          "details": [
+            "Station debout [Romberg, élargissement polygone sustentation]",
+            "Marche spontanée [démarche, vitesse, régularité]",
+            "Demi-tour [nombre de pas, hésitation, instabilité]",
+            "Marche sur ligne droite [écarts, corrections]",
+            "Marche yeux fermés [aggravation instabilité]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la coordination cérébelleuse",
+          "details": [
+            "Épreuves index-nez [dysmétrie, tremblement intentionnel]",
+            "Épreuves talon-genou [ataxie membres inférieurs]",
+            "Mouvements alternés rapides [adiadococinésie]",
+            "Écriture [micrographie, tremblements]",
+            "Dysarthrie cérébelleuse [parole scandée, explosive]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen du système extrapyramidal",
+          "details": [
+            "Tonus musculaire [rigidité, roue dentée]",
+            "Tremblements [repos, action, attitude]",
+            "Bradykinésie [lenteur initiation, exécution mouvements]",
+            "Réflexes posturaux [test de la poussée]",
+            "Micrographie, hypomimie faciale"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen de la sensibilité proprioceptive",
+          "details": [
+            "Sensibilité positionnelle [gros orteils, doigts]",
+            "Sensibilité vibratoire [diapason 128 Hz, niveau]",
+            "Romberg [aggravation yeux fermés]",
+            "Marche aveugle [démarche talonnante]",
+            "Pseudo-athétose [mouvements involontaires]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Examen vestibulaire et oculomoteur",
+          "details": [
+            "Nystagmus [spontané, provoqué, direction]",
+            "Mouvements oculaires [saccades, poursuite lente]",
+            "Manœuvre de Dix-Hallpike [VPPB]",
+            "Head impulse test [atteinte vestibulaire périphérique]",
+            "Coordination œil-tête [VOR, instabilité du regard]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique général",
+          "details": [
+            "Fonctions supérieures [MMSE, orientation, mémoire]",
+            "Nerfs crâniens [VII, IX-X, XII]",
+            "Force musculaire [testing analytique]",
+            "Réflexes ostéotendineux [asymétrie, vivacité]",
+            "Signes pyramidaux [Babinski, réflexes de libération]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - évaluation troubles équilibre",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic syndromique des troubles de l'équilibre",
+          "details": [
+            "Ataxie cérébelleuse [dysmétrie, adiadococinésie]",
+            "Ataxie sensitive [Romberg, marche talonnante]",
+            "Syndrome extrapyramidal [rigidité, bradykinésie]",
+            "Atteinte vestibulaire [nystagmus, vertiges]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic étiologique - causes des troubles de l'équilibre",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes neurodégénératives",
+                "items": [
+                  {
+                    "text": "Maladie de Parkinson",
+                    "cause": "Arguments POUR:\n\t□ Tremblements de repos\n\t□ Rigidité, bradykinésie\n\t□ Instabilité posturale\n\t□ Réponse à la L-DOPA",
+                    "test": "→ DaTscan, test thérapeutique L-DOPA"
+                  },
+                  {
+                    "text": "Atrophie multisystémique",
+                    "cause": "Arguments POUR:\n\t□ Syndrome pyramidal + extrapyramidal\n\t□ Dysautonomie\n\t□ Ataxie cérébelleuse",
+                    "test": "→ IRM cérébrale, MIBG cardiaque"
+                  }
+                ]
+              },
+              {
+                "name": "Causes tumorales",
+                "items": [
+                  {
+                    "text": "Métastases cérébelleuses",
+                    "cause": "Arguments POUR:\n\t□ Amaigrissement 8 kg\n\t□ Âge 74 ans\n\t□ Ataxie d'apparition récente\n\t□ Altération état général",
+                    "test": "→ IRM cérébrale, bilan d'extension"
+                  },
+                  {
+                    "text": "Syndrome paranéoplasique",
+                    "cause": "Arguments POUR:\n\t□ Dégénérescence cérébelleuse\n\t□ Anticorps anti-Yo, anti-Hu\n\t□ Ataxie subaiguë",
+                    "test": "→ Anticorps paranéoplasiques, TEP-scan"
+                  }
+                ]
+              },
+              {
+                "name": "Causes métaboliques",
+                "items": [
+                  {
+                    "text": "Carence vitamine B12",
+                    "cause": "Arguments POUR:\n\t□ Ataxie sensitive\n\t□ Neuropathie périphérique\n\t□ Troubles cognitifs",
+                    "test": "→ Vitamine B12, folates, acide méthylmalonique"
+                  },
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "Arguments POUR:\n\t□ Ataxie cérébelleuse\n\t□ Ralentissement psychomoteur\n\t□ Myxœdème",
+                    "test": "→ TSH, T4 libre"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins quatre diagnostics évoqués = oui, trois = ±, deux ou moins = non"
+        },
+        {
+          "id": "m3",
+          "text": "Bilan étiologique de l'amaigrissement",
+          "details": [
+            "Recherche néoplasique [TEP-scan, marqueurs tumoraux]",
+            "Bilan inflammatoire [VS, CRP, électrophorèse]",
+            "Endoscopies digestives [FOGD, coloscopie]",
+            "Bilan thyroïdien [TSH, T3, T4]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires neurologiques",
+          "details": [
+            "IRM cérébrale [lésions cérébelleuses, métastases]",
+            "Électromyogramme [neuropathie périphérique]",
+            "Ponction lombaire [syndrome inflammatoire, infectieux]",
+            "Anticorps paranéoplasiques [anti-Yo, anti-Hu, anti-Ri]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge symptomatique",
+          "details": [
+            "Rééducation équilibre [kinésithérapie, plateformes]",
+            "Aides techniques [canne, déambulateur]",
+            "Aménagement domicile [barres d'appui, éclairage]",
+            "Support nutritionnel [compléments, diététicien]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Traitement étiologique selon la cause",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitements spécifiques",
+                "content": "• L-DOPA : Si maladie de Parkinson, 100-600mg/j × Test thérapeutique 3 mois\n• Vitamine B12 : 1000µg IM si carence, puis relais oral × Correction progressive sur 6 mois\n• Lévothyroxine : Si hypothyroïdie, 25-100µg/j × Augmentation progressive"
+              }
+            ]
+          },
+          "scoringRule": "Au moins deux traitements appropriés = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m7",
+          "text": "Prévention des chutes et sécurité",
+          "details": [
+            "Évaluation risque de chute [échelle de Morse]",
+            "Révision médicamenteuse [psychotropes, hypotenseurs]",
+            "Correction déficits sensoriels [vue, audition]",
+            "Programme d'exercices adaptés [Tai-Chi, équilibre]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Surveillance et orientation",
+          "details": [
+            "Suivi neurologique spécialisé [évolution, traitement]",
+            "Oncologie [si suspicion néoplasique]",
+            "Gériatrie [évaluation globale, fragilité]",
+            "Rééducation fonctionnelle [maintien autonomie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge troubles équilibre",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Femme de 74 ans",
+      "age": "74 ans",
+      "contexte": "Retraitée présentant des troubles de l'équilibre progressifs avec amaigrissement important",
+      "motifConsultation": {
+        "plaintePrincipale": "Je ne tiens plus debout correctement et j'ai perdu beaucoup de poids",
+        "autreChose": "Ma famille s'inquiète car je chute de plus en plus souvent"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Troubles de l'équilibre progressifs depuis 8 mois",
+          "Instabilité à la marche, sensation d'ébriété",
+          "Chutes répétées, surtout dans l'obscurité",
+          "Difficultés croissantes pour se lever d'une chaise",
+          "Peur de sortir seule, isolement progressif"
+        ],
+        "symptomesAssocies": [
+          "Amaigrissement de 8 kg en 6 mois (65→57 kg)",
+          "Perte d'appétit progressive",
+          "Fatigue générale, moins d'énergie",
+          "Difficultés de concentration",
+          "Pas de troubles visuels ou auditifs nets"
+        ],
+        "circonstances": [
+          "Début insidieux, aggravation progressive",
+          "Première chute il y a 4 mois (sans blessure)",
+          "Arrêt progressif des activités (jardinage, courses)",
+          "Famille de plus en plus inquiète"
+        ],
+        "facteursDeclenchants": [
+          "Aggravation dans l'obscurité",
+          "Pire en fin de journée (fatigue)",
+          "Amélioration relative au repos",
+          "Pas de relation avec les repas ou positions"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Hypertension artérielle bien contrôlée",
+        "Ostéoporose traitée par calcium/vitamine D",
+        "Pas d'antécédent neurologique",
+        "Pas d'antécédent oncologique personnel"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère décédée maladie d'Alzheimer à 82 ans",
+        "Père décédé cancer du poumon à 75 ans",
+        "Une sœur avec maladie de Parkinson"
+      ],
+      "traitements": {
+        "actuels": [
+          "Amlodipine 5mg/j",
+          "Calcium 1g + vitamine D 800UI/j",
+          "Paracétamol si douleurs"
+        ],
+        "observance": "Bonne observance habituelle"
+      },
+      "habitudes": {
+        "activite": "Retraitée, jardinage abandonné récemment",
+        "tabac": "Non fumeuse",
+        "alcool": "Très occasionnel",
+        "alimentation": "Appétit diminué, repas moins copieux"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Position prudente dans le fauteuil",
+          "Exprime son inquiétude et celle de sa famille",
+          "Mentionne la peur de chuter",
+          "Évoque l'isolement social progressif"
+        ],
+        "durantExamen": [
+          "Démarche prudente, élargissement du polygone",
+          "Romberg positif (instabilité yeux fermés)",
+          "Léger tremblement des mains à l'action",
+          "Troubles discrets de la coordination"
+        ],
+        "questionsAPoser": [
+          "Est-ce que j'ai une maladie grave ?",
+          "Est-ce que cela peut être un cancer ?",
+          "Vais-je pouvoir rester chez moi ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Femme 74 ans. Syndrome d'instabilité posturale progressif sur 8 mois + amaigrissement 8 kg. Chutes répétées, restriction activités. ATCD: HTA, ostéoporose. AF: Parkinson (sœur), Alzheimer (mère). Évoque cause neurodégénérative vs néoplasique.",
+      "pointsCles": [
+        "Syndrome d'instabilité posturale chronique progressif",
+        "Amaigrissement significatif (12% poids corporel)",
+        "Antécédents familiaux neurologiques (Parkinson, Alzheimer)",
+        "Retentissement fonctionnel majeur (isolement, chutes)",
+        "Diagnostic différentiel: neurodégénératif vs paranéoplasique",
+        "Bilan étiologique urgent (IRM, bilan oncologique)",
+        "Évaluation chutes et prévention accidents",
+        "Prise en charge multidisciplinaire nécessaire"
+      ],
+      "pieges": [
+        "Attribuer les troubles à l'âge sans recherche étiologique",
+        "Ne pas quantifier l'amaigrissement",
+        "Manquer l'examen de la coordination cérébelleuse",
+        "Omettre l'évaluation du risque de chute",
+        "Ne pas rechercher une cause paranéoplasique",
+        "Sous-estimer l'importance des antécédents familiaux",
+        "Ne pas évaluer le retentissement psychologique",
+        "Retard dans les investigations complémentaires",
+        "Ne pas organiser la prise en charge multidisciplinaire"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique des troubles de l'équilibre",
+      "sections": [
+        {
+          "titre": "Physiologie de l'équilibre",
+          "contenu": "L'équilibre résulte de l'intégration de trois systèmes sensoriels.",
+          "points": [
+            "Système vestibulaire : détection mouvements tête",
+            "Système visuel : orientation spatiale, obstacles",
+            "Système proprioceptif : position segments corporels",
+            "Intégration centrale : cervelet, tronc cérébral, cortex",
+            "Réponses motrices : ajustements posturaux, réflexes",
+            "Anticipation : stratégies motrices préventives",
+            "Plasticité : compensation déficits sensoriels"
+          ]
+        },
+        {
+          "titre": "Syndromes ataxiques",
+          "contenu": "Classification selon le niveau lésionnel et mécanismes.",
+          "points": [
+            "Ataxie cérébelleuse : dysmétrie, adiadococinésie, hypermétrie",
+            "Ataxie sensitive : Romberg+, marche talonnante, pseudo-athétose",
+            "Ataxie vestibulaire : nystagmus, vertiges, déséquilibre latéralisé",
+            "Ataxie frontale : troubles initiation marche, apraxie marche",
+            "Ataxie mixte : combinaison plusieurs mécanismes",
+            "Signes associés : dysarthrie, troubles oculomoteurs",
+            "Évolution : aiguë vs chronique, progressive vs stable"
+          ]
+        },
+        {
+          "titre": "Causes des troubles de l'équilibre chez la personne âgée",
+          "contenu": "Étiologies multifactorielles fréquentes après 65 ans.",
+          "points": [
+            "Neurodégénératives : Parkinson, atrophie multisystémique",
+            "Vasculaires : leucoaraïose, infarctus cérébraux",
+            "Néoplasiques : métastases, syndromes paranéoplasiques",
+            "Métaboliques : diabète, hypothyroïdie, carences B12",
+            "Médicamenteuses : psychotropes, antiépileptiques",
+            "Sensorielles : presbytie, presbyacousie, neuropathies",
+            "Orthopédiques : arthrose, déconditionnement musculaire"
+          ]
+        },
+        {
+          "titre": "Évaluation clinique des troubles de l'équilibre",
+          "contenu": "Tests standardisés pour objectiver les déficits.",
+          "points": [
+            "Station unipodale : <5 secondes = pathologique",
+            "Test de Romberg : ataxie sensitive si positif",
+            "Marche en tandem : 10 pas alignés, ataxie si <8",
+            "Test chronométré lever-marcher (TUG) : >20 sec = risque chute",
+            "Échelle d'équilibre de Berg : 56 points max",
+            "Test de poussée : réflexes posturaux",
+            "Posturographie : analyse quantitative instabilité"
+          ]
+        },
+        {
+          "titre": "Syndromes paranéoplasiques neurologiques",
+          "contenu": "Manifestations neurologiques des cancers sans métastases.",
+          "points": [
+            "Dégénérescence cérébelleuse : ataxie subaiguë, anti-Yo",
+            "Encéphalite limbique : troubles mnésiques, anti-Hu",
+            "Syndrome de Lambert-Eaton : faiblesse musculaire",
+            "Neuropathies périphériques : sensitives, motrices",
+            "Myasthénie : fatigabilité, ptosis, anticorps anti-RACh",
+            "Cancers associés : poumon, ovaire, sein, lymphomes",
+            "Diagnostic : anticorps spécifiques, recherche tumeur"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Rééducation vestibulaire : exercices adaptation, habituation",
+        "Kinésithérapie : renforcement, proprioception, équilibre",
+        "Aides techniques : cannes, déambulateurs, barres d'appui",
+        "L-DOPA : test thérapeutique si syndrome parkinsonien",
+        "Vitamine B12 : 1000µg IM puis 1000µg/j PO si carence",
+        "Révision médicamenteuse : arrêt psychotropes si possible",
+        "Correction déficits sensoriels : lunettes, prothèses auditives"
+      ],
+      "examensComplementaires": [
+        "IRM cérébrale : atrophie, lésions cérébelleuses, métastases",
+        "Vidéonystagmographie : exploration vestibulaire complète",
+        "Posturographie : analyse quantitative instabilité",
+        "EMG : neuropathies périphériques, myopathies",
+        "TEP-scan : recherche néoplasie primitive si paranéoplasique",
+        "Anticorps paranéoplasiques : anti-Yo, anti-Hu, anti-Ri",
+        "Bilan métabolique : B12, folates, TSH, glycémie"
+      ]
+    }
+  }
+}

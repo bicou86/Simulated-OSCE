@@ -1,0 +1,820 @@
+{
+  "title": "USMLE Triage 1 - Perte de Vision",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Elmer Michaelson, un homme de 71 ans, se présente avec des plaintes concernant une aggravation de sa vision.",
+    "vitals": {
+      "ta": "152/94 mmHg",
+      "fc": "70 bpm",
+      "fr": "12/min",
+      "temperature": "36.6°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour, Monsieur Michaelson, je suis le Dr Klein, je suis heureux de vous voir aujourd'hui.",
+            "Je comprends que vous êtes venu en raison de changements récents de votre vision."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation - Question ouverte",
+          "binaryOnly": true,
+          "details": [
+            "Pouvez-vous m'en dire davantage sur vos changements de vision ? [vision s'aggrave depuis des années]"
+          ],
+          "exemplesPhrases": [
+            "Pouvez-vous m'en dire davantage à ce sujet ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la perte de vision",
+          "details": [
+            "Début et progression [quelques années, progressive]",
+            "Vision périphérique vs centrale [les deux sont affectés]",
+            "Vision de près vs de loin [difficultés pour les deux]",
+            "Vision nocturne [vraiment difficile la nuit]",
+            "Bilatéralité [les deux yeux pareils]",
+            "Utilisation de lunettes [verres progressifs depuis 10-15 ans]"
+          ],
+          "exemplesPhrases": [
+            "D'accord, monsieur, depuis combien de temps diriez-vous que votre vision a vraiment commencé à s'aggraver ?",
+            "Quand vous dites 'C'est difficile de voir', est-ce difficile de voir en périphérie, ou sur les bords de votre vision, ou est-ce plus difficile quand vous regardez directement quelque chose ?",
+            "Quand vous regardez directement un objet, ou peut-être quand vous lisez, les mots sont-ils nets ?",
+            "Sentez-vous que ce manque de vision affecte les deux yeux de la même manière ou l'un est-il pire que l'autre ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Impact fonctionnel",
+          "details": [
+            "Difficulté à lire [oui, doit tenir le journal loin]",
+            "Utilisation d'aides visuelles [loupe achetée par sa femme, mais embarras à l'utiliser]",
+            "Perception des mouvements latéraux [ne voit pas les petits-enfants arriver du côté]",
+            "Impact sur les activités quotidiennes [regarde moins la télé, lit moins]"
+          ],
+          "exemplesPhrases": [
+            "Ce problème de vision vous a-t-il empêché de lire ?",
+            "Je suis désolé d'entendre cela, bien que je puisse comprendre pourquoi vous ne voudriez pas utiliser cette loupe. Je ferai de mon mieux pour trouver la cause de ce qui se passe, mais permettez-moi de vous encourager à utiliser ces appareils s'ils vous aident à lire."
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "details": [
+            "Douleur oculaire [non]",
+            "Céphalées [non]",
+            "Halos ou flashs lumineux [non mentionné]",
+            "Diplopie [non mentionné]"
+          ],
+          "exemplesPhrases": [
+            "Avec ce changement de vision, avez-vous eu des douleurs oculaires ou des céphalées ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents ophtalmologiques",
+          "details": [
+            "Suivi ophtalmologique [habituellement tous les 2 ans]",
+            "Dernier contrôle [il y a environ 3 ans]",
+            "Maladies oculaires connues [aucune]",
+            "Chirurgies oculaires [jamais]",
+            "Myopie connue [oui, depuis 30 ans]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous été vu par un optométriste ou un ophtalmologiste depuis ?",
+            "Cet ophtalmologiste vous a-t-il déjà dit que vous aviez une maladie oculaire, ou avez-vous déjà eu une chirurgie oculaire ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Gestion du diabète",
+          "details": [
+            "Type de diabète [nécessite insuline]",
+            "Contrôle glycémique [teste 2 fois/semaine]",
+            "Valeurs glycémiques [120-170 mg/dL]",
+            "Schéma insulinique [Insuline ordinaire 20U matin et soir, Glargine 15U le soir]",
+            "Journal glycémique [oui mais pas apporté]",
+            "Dernier suivi diabétologique [environ 3 ans]",
+            "Observance [ajuste lui-même les doses, évite de se piquer souvent]"
+          ],
+          "exemplesPhrases": [
+            "Je sais que vous avez mentionné que vous avez du diabète. Prenez-vous de l'insuline ?",
+            "Vous testez-vous régulièrement ?",
+            "À quelle fréquence vous testez-vous ?",
+            "Vous souvenez-vous à peu près de vos taux de glycémie ?",
+            "Retournez-vous ensuite vérifier pour vous assurer que votre niveau est redescendu ?",
+            "C'est vrai. Je veux m'assurer que vous restiez parmi nous longtemps aussi."
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Autres antécédents médicaux",
+          "details": [
+            "Hypertension artérielle [oui]",
+            "Hypercholestérolémie [oui]",
+            "Problèmes gastriques [RGO]",
+            "Hospitalisations [cholécystectomie, hernie, fracture jambe, luxation épaule]",
+            "Chirurgies [vésicule biliaire, hernie, jambe, amygdales, hémorroïdes]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments actuels",
+          "details": [
+            "Antihypertenseurs [bénazépril, métoprolol]",
+            "Hypolipémiant [atorvastatine]",
+            "Antisécrétoire [rabéprazole]",
+            "Antiacides [occasionnels]",
+            "Insulines [ordinaire 20U x2/j, glargine 15U le soir]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Allergies",
+          "details": [
+            "Allergies médicamenteuses [aucune]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [jamais fumé]",
+            "Alcool [plus maintenant, consommation modérée dans le passé]",
+            "Activité physique [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Histoire familiale",
+          "details": [
+            "Fille avec diabète [type 2, sous pilules]",
+            "Frère décédé [infarctus du myocarde à 75 ans]",
+            "Autres pathologies familiales [non mentionnées]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Contexte social",
+          "details": [
+            "Situation maritale [marié depuis 49 ans avec Selma]",
+            "Épouse [diabète et hypertension aussi]",
+            "Petits-enfants [mentionnés, courent partout]",
+            "Autonomie [vit avec sa femme, semble autonome]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Expliquer l'examen au patient",
+            "Commenter les signes vitaux"
+          ],
+          "exemplesPhrases": [
+            "D'accord, j'aimerais faire un examen physique maintenant, si vous le permettez. Laissez-moi juste me laver les mains.",
+            "D'abord, j'aimerais examiner vos yeux..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen ophtalmologique externe",
+          "details": [
+            "Inspection des paupières et conjonctives",
+            "Évaluation de la symétrie oculaire",
+            "Recherche d'anomalies externes"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Acuité visuelle",
+          "details": [
+            "Test avec tableau de Snellen [20/30 bilatéralement avec correction]",
+            "Test avec lunettes du patient",
+            "Documentation de l'acuité pour chaque œil"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Champs visuels",
+          "details": [
+            "Test de la vision périphérique par confrontation",
+            "Évaluation des quadrants visuels",
+            "Recherche de scotomes"
+          ],
+          "exemplesPhrases": [
+            "Je vais lever mes doigts et les amener lentement vers le centre de votre vision, veuillez me dire quand vous les voyez."
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Motilité oculaire",
+          "details": [
+            "Test des six positions cardinales du regard",
+            "Recherche de nystagmus",
+            "Évaluation de la poursuite oculaire [muscles oculomoteurs intacts]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Réflexes pupillaires",
+          "details": [
+            "Réflexe photomoteur direct",
+            "Réflexe consensuel",
+            "Accommodation [PERRLA - Pupils Equal, Round, Reactive to Light and Accommodation]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen du fond d'œil",
+          "details": [
+            "Utilisation de l'ophtalmoscope",
+            "Examen de la chambre antérieure/cristallin",
+            "Évaluation de la rétine [apparence normale]",
+            "Rapport excavation/disque [normal]",
+            "Recherche d'anomalies vasculaires [aucune]",
+            "Recherche d'hémorragies ou exsudats [aucune]"
+          ],
+          "exemplesPhrases": [
+            "Je sais que cette lumière peut être vive et cet examen est inconfortable à cause de cela. Veuillez supporter avec moi, cependant, car il est vraiment important que je voie clairement le fond de votre œil."
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Communication pendant l'examen",
+          "details": [
+            "Prévenir de la gêne liée à la lumière vive",
+            "Expliquer chaque étape de l'examen",
+            "Rassurer le patient pendant les manœuvres"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de la perte de vision progressive",
+            "categories": [
+              {
+                "name": "Causes prioritaires liées au diabète",
+                "items": [
+                  {
+                    "text": "Rétinopathie diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète mal contrôlé (HbA1c probablement élevée)\n\t□ Glycémies 120-170 mg/dL\n\t□ Pas d'examen ophtalmologique depuis 3 ans\n\t□ Perte progressive bilatérale\n\t□ Vision centrale et périphérique affectées",
+                    "test": "→ Examen du fond d'œil dilaté, angiographie rétinienne"
+                  },
+                  {
+                    "text": "Œdème maculaire diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète de longue durée\n\t□ Difficulté de lecture\n\t□ Vision centrale affectée\nArguments CONTRE:\n\t□ Pas d'œdème visible à l'examen (mais examen non dilaté)",
+                    "test": "→ OCT (tomographie par cohérence optique)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes liées à l'âge",
+                "items": [
+                  {
+                    "text": "Glaucome",
+                    "cause": "Arguments POUR:\n\t□ Âge avancé (71 ans)\n\t□ Perte de vision périphérique\n\t□ Progression lente\n\t□ Diabète et HTA (facteurs de risque)\nArguments CONTRE:\n\t□ Rapport excavation/disque normal",
+                    "test": "→ Tonométrie, périmétrie de Goldmann, gonioscopie"
+                  },
+                  {
+                    "text": "Cataracte",
+                    "cause": "Arguments POUR:\n\t□ Âge avancé\n\t□ Vision trouble progressive\n\t□ Difficulté vision nocturne\n\t□ Diabète (facteur de risque)\nArguments CONTRE:\n\t□ Pas d'opacité cristallinienne notée",
+                    "test": "→ Examen à la lampe à fente"
+                  },
+                  {
+                    "text": "Dégénérescence maculaire liée à l'âge (DMLA)",
+                    "cause": "Arguments POUR:\n\t□ Âge > 70 ans\n\t□ Difficulté de lecture\n\t□ Vision centrale affectée\nArguments CONTRE:\n\t□ Vision périphérique aussi affectée\n\t□ Pas de drusen notés",
+                    "test": "→ Test de la grille d'Amsler, OCT, angiographie"
+                  },
+                  {
+                    "text": "Presbytie",
+                    "cause": "Arguments POUR:\n\t□ Âge approprié\n\t□ Doit tenir les objets loin pour lire\n\t□ Porte déjà des verres progressifs\nArguments CONTRE:\n\t□ N'explique pas la perte périphérique\n\t□ Progression récente malgré correction",
+                    "test": "→ Réfraction, test de vision de près"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires immédiats",
+          "details": [
+            "Examen ophtalmologique avec dilatation pupillaire",
+            "Tonométrie (mesure de la pression intraoculaire)",
+            "Périmétrie de Goldmann (champs visuels)",
+            "Test de la grille d'Amsler",
+            "HbA1c pour évaluer le contrôle diabétique"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Optimisation du contrôle diabétique",
+                "content": "• Référer à un diabétologue pour ajustement du traitement\n• Éducation sur l'importance du contrôle glycémique strict\n• Objectif HbA1c < 7% si possible\n• Auto-surveillance glycémique plus fréquente (au moins 4x/jour)\n• Révision du schéma insulinique"
+              },
+              {
+                "title": "Suivi ophtalmologique spécialisé",
+                "content": "• Référence urgente à un ophtalmologiste\n• Examens annuels obligatoires pour diabétiques\n• Surveillance de la progression\n• Traitement laser si rétinopathie confirmée\n• Injections intravitréennes si œdème maculaire"
+              },
+              {
+                "title": "Mesures de soutien",
+                "content": "• Encourager l'utilisation de la loupe\n• Évaluation pour autres aides visuelles\n• Éclairage optimal à domicile\n• Sécurité à domicile (prévention des chutes)\n• Support psychologique si besoin"
+              },
+              {
+                "title": "Contrôle des facteurs de risque",
+                "content": "• Optimisation du contrôle tensionnel (TA < 130/80)\n• Maintien du contrôle lipidique\n• Prévention cardiovasculaire globale"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "details": [
+            "Expliquer les diagnostics possibles en termes simples",
+            "Rassurer sur la possibilité de traitement",
+            "Importance du suivi régulier",
+            "Expliquer les tests à venir (dilatation pupillaire)",
+            "Répondre aux questions et préoccupations"
+          ],
+          "exemplesPhrases": [
+            "Monsieur Michaelson, il y a plusieurs possibilités qui pourraient expliquer votre perte de vision.",
+            "Le glaucome est une maladie qui pourrait être en jeu ici et résulte d'une pression élevée dans vos yeux.",
+            "J'aimerais faire des tests oculaires spécialisés sur vous.",
+            "Cela vous rendra sensible aux lumières vives pendant quelques heures après l'examen, mais c'est vraiment la meilleure façon pour moi de faire l'examen."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Plan de suivi",
+          "details": [
+            "Rendez-vous avec ophtalmologiste dans les 2 semaines",
+            "Suivi avec diabétologue dans le mois",
+            "Réévaluation après résultats des examens",
+            "Éducation sur les signes d'alarme (perte visuelle soudaine)",
+            "Coordination des soins entre spécialistes"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan",
+          "content": "Monsieur Michaelson, il y a plusieurs possibilités qui pourraient expliquer votre perte de vision. Malheureusement, il y a plusieurs raisons pour lesquelles vous pourriez ressentir cela parce que vous avez du diabète, de l'hypertension artérielle, et êtes un peu plus âgé ; ce sont des facteurs de risque. Tous ces facteurs peuvent contribuer à des maladies qui affectent la vision. Le glaucome est une maladie qui pourrait être en jeu ici et résulte d'une pression élevée dans vos yeux. Il existe un moyen assez simple de déterminer la pression dans vos yeux et c'est par une machine qui souffle rapidement une petite bouffée d'air sur l'œil lui-même. Elle détermine la pression par la façon dont l'œil répond, et le test ne prend qu'un instant à compléter, j'aimerais faire cela aujourd'hui. Une autre possibilité est que vous souffriez de quelque chose appelé rétinopathie diabétique, qui cause certains changements et problèmes à l'arrière de l'œil dus à un diabète non contrôlé à long terme. Pour ces possibilités et quelques autres, j'aimerais faire des tests oculaires spécialisés sur vous. Certains de ces tests impliqueront que je mette des gouttes dans vos yeux pour dilater les pupilles ; c'est principalement pour avoir une meilleure vue de l'arrière de vos yeux. Cela vous rendra sensible aux lumières vives pendant quelques heures après l'examen, mais c'est vraiment la meilleure façon pour moi de faire l'examen. J'aimerais faire ces tests aujourd'hui, si vous le permettez. S'il y a quoi que ce soit que je vois à cet examen, alors je vous demanderai d'aller voir un ophtalmologiste spécialisé pour un autre contrôle. Parce que vous êtes diabétique, c'est une bonne idée d'y aller de toute façon et d'être évalué pour des problèmes oculaires comme vous le faisiez. Permettez-moi de sortir et d'arranger cela avec mon infirmière.\n\nAvant de partir, y a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Est-ce que je vais devenir aveugle ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Non, avec un bon suivi et traitement, nous pouvons souvent stabiliser ou ralentir la progression. L'important est d'agir maintenant."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Patient diabétique avec contrôle glycémique sous-optimal",
+        "Absence de suivi ophtalmologique depuis 3 ans malgré le diabète",
+        "Perte visuelle progressive bilatérale touchant vision centrale et périphérique",
+        "Facteurs de risque multiples : âge, diabète, HTA",
+        "Compliance thérapeutique questionnable (teste glycémie 2x/semaine seulement)",
+        "Barrière psychosociale : embarras à utiliser les aides visuelles"
+      ],
+      "pieges": [
+        "Ne pas oublier d'explorer le contrôle diabétique en détail",
+        "Le patient minimise ses problèmes - poser des questions spécifiques",
+        "L'examen du fond d'œil non dilaté peut manquer des pathologies",
+        "Ne pas se limiter à la presbytie malgré l'âge",
+        "Explorer l'impact fonctionnel et psychosocial",
+        "Vérifier la compréhension du patient sur l'importance du suivi"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Elmer Michaelson",
+      "age": "71 ans",
+      "contexte": "Homme âgé diabétique avec perte visuelle progressive",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma vision s'aggrave",
+        "autreChose": "J'ai du mal à voir, surtout la nuit"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Vision qui se dégrade progressivement depuis 3 ans",
+          "Difficulté à voir en périphérie et au centre",
+          "Vision nocturne particulièrement difficile",
+          "Doit tenir les objets loin pour lire",
+          "Ne peut plus voir ses petits-enfants arriver du côté"
+        ],
+        "Attitude": [
+          "Minimise ses problèmes ('Je vieillis, c'est normal')",
+          "Embarrassé d'utiliser la loupe",
+          "Résistant aux piqûres fréquentes pour glycémie",
+          "Dit 'Je ne suis pas encore mort' concernant son diabète"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Diabète insulino-requérant",
+          "Hypertension artérielle",
+          "Hypercholestérolémie",
+          "RGO (reflux gastro-œsophagien)",
+          "Myopie depuis 30 ans"
+        ],
+        "chirurgicaux": [
+          "Cholécystectomie il y a 5 ans",
+          "Hernie post-opératoire",
+          "Fracture de jambe (accident il y a 15 ans)",
+          "Luxation d'épaule (même accident)",
+          "Amygdalectomie dans l'enfance",
+          "Hémorroïdectomie il y a 5 ans"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Insuline ordinaire 20 unités matin et soir",
+          "Insuline glargine 15 unités le soir",
+          "Bénazépril (pour l'HTA)",
+          "Métoprolol (pour l'HTA)",
+          "Atorvastatine (pour le cholestérol)",
+          "Rabéprazole (pour le RGO)",
+          "Antiacides occasionnels"
+        ],
+        "observance": "Ajuste lui-même ses doses d'insuline, évite de se piquer souvent"
+      },
+      "habitudes": {
+        "tabac": "N'a jamais fumé, n'aime pas ça",
+        "alcool": "Plus maintenant, buvait modérément quand plus jeune"
+      },
+      "contexteSocial": {
+        "famille": "Marié depuis 49 ans avec Selma qui a aussi diabète et HTA",
+        "petitsEnfants": "A des petits-enfants qui 'courent partout'",
+        "autonomie": "Vit avec sa femme, elle fait les courses"
+      },
+      "simulation": {
+        "durantConsultation": [
+          "Porter des lunettes à verres épais",
+          "Plisser les yeux quand on vous montre quelque chose",
+          "Demander à tenir les documents plus loin",
+          "Montrer de la frustration quand on parle de la loupe",
+          "Être réticent à admettre la mauvaise compliance diabétique"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Perte de vision chez le diabétique",
+      "sections": [
+        {
+          "titre": "Rétinopathie diabétique",
+          "contenu": "Complication microvasculaire la plus fréquente du diabète. Stades : non proliférante (micro-anévrismes, hémorragies, exsudats) et proliférante (néovascularisation). Facteurs de risque : durée du diabète, mauvais contrôle glycémique, HTA."
+        },
+        {
+          "titre": "Recommandations de dépistage",
+          "contenu": "Diabète type 1 : premier examen 5 ans après diagnostic puis annuel. Diabète type 2 : dès le diagnostic puis annuel. Plus fréquent si rétinopathie présente."
+        },
+        {
+          "titre": "Autres complications oculaires du diabète",
+          "contenu": "Cataracte précoce, glaucome néovasculaire, neuropathie optique, paralysies oculomotrices."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Photocoagulation laser pour rétinopathie proliférante",
+        "Injections anti-VEGF pour œdème maculaire",
+        "Vitrectomie si hémorragie vitréenne ou décollement rétinien",
+        "Contrôle glycémique strict (HbA1c < 7%)",
+        "Contrôle tensionnel optimal (< 130/80 mmHg)"
+      ],
+      "examensComplementaires": [
+        "Fond d'œil dilaté : gold standard pour dépistage rétinopathie",
+        "OCT : évalue l'épaisseur maculaire, détecte œdème",
+        "Angiographie à la fluorescéine : évalue perfusion rétinienne",
+        "Tonométrie : mesure pression intraoculaire (glaucome)",
+        "Périmétrie : évalue champs visuels"
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Rétinopathie diabétique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes visuels (souvent absents au début)",
+              "points": [
+                "Baisse progressive de l'acuité visuelle",
+                "Vision floue, déformation des lignes droites (maculopathie)",
+                "Perte brutale de la vision (hémorragie, décollement de rétine)",
+                "Myodésopsies (corps flottants), photopsies"
+              ]
+            },
+            {
+              "titre": "Contexte diabétique",
+              "points": [
+                "Durée du diabète (risque ↗ avec le temps)",
+                "Contrôle glycémique (HbA1c)",
+                "Comorbidités associées : HTA, dyslipidémie",
+                "Adhésion au suivi ophtalmologique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique et diagnostic",
+          "subsections": [
+            {
+              "titre": "Examen ophtalmologique (réalisé par spécialiste)",
+              "points": [
+                "Fond d'œil dilaté : base du diagnostic"
+              ]
+            },
+            {
+              "titre": "Classification",
+              "tableau": {
+                "colonnes": ["Type", "Lésions typiques", "Suivi"],
+                "lignes": [
+                  ["NPDR (non-proliférante) légère/modérée", "Microanévrysmes, hémorragies, exsudats", "Examen tous les 6–12 mois"],
+                  ["NPDR sévère", "+ Ischémie (beading veineux, anomalies microvasculaires)", "Traitement possible"],
+                  ["RDP (proliférante)", "Néovascularisation", "Traitement immédiat"],
+                  ["Maculopathie diabétique", "Œdème maculaire (OCT)", "Peut être isolée ou associée"]
+                ]
+              }
+            },
+            {
+              "titre": "Examens complémentaires",
+              "points": [
+                "OCT (maculopathie)",
+                "Angiographie à la fluorescéine",
+                "Recherche complications associées (Néphropathie, neuropathie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "🔹 Générale",
+              "points": [
+                "Optimisation du diabète :",
+                "• Glycémie (éviter correction trop rapide si grossesse)",
+                "• HTA : contrôle strict",
+                "• Dyslipidémie : statine si indiquée",
+                "Dépistage régulier :",
+                "• 1 fois/an si diabète stable",
+                "• Tous les 1–2 mois en cas de forme sévère"
+              ]
+            },
+            {
+              "titre": "🔹 Spécifique (selon stade)",
+              "tableau": {
+                "colonnes": ["Forme", "Traitement"],
+                "lignes": [
+                  ["NPDR légère/modérée", "Surveillance uniquement"],
+                  ["NPDR sévère", "PRP (panphotocoagulation) ± anti-VEGF"],
+                  ["Rétinopathie proliférante", "PRP et/ou anti-VEGF (équivalents)"],
+                  ["Œdème maculaire central", "Injections intra-vitréennes anti-VEGF"],
+                  ["Œdème non central", "Laser focal ou anti-VEGF selon cas"],
+                  ["Forme compliquée (ex. décollement rétinien)", "Vitrectomie"]
+                ]
+              },
+              "points": [
+                "PRP = Laser en une séance (meilleur suivi)",
+                "Anti-VEGF = Réservé aux patients motivés, bon suivi"
+              ]
+            },
+            {
+              "titre": "🔹 Support",
+              "points": [
+                "Rééducation visuelle si handicap sévère",
+                "Évaluation aptitude à la conduite"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Importance du dépistage systématique annuel, même en l'absence de symptômes",
+            "Toujours penser à la prévention secondaire : contrôle glycémique, HTA, LDL",
+            "Savoir expliquer les stades de la maladie et l'impact du traitement",
+            "Adapter l'information aux profils de patients à risque de non-observance"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Perte de vision progressive (Homme 71 ans, diabétique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, antécédents, motif de consultation",
+            "Symptôme actuel → début, évolution, caractéristiques, bilatéralité, impact fonctionnel",
+            "ATCD / traitements → médicaux, chirurgicaux, ophtalmo, familiaux, habitudes",
+            "Examen clinique → acuité, champs visuels, PERRLA, fond d'œil",
+            "Résumé en 1 phrase",
+            "Hypothèses diagnostiques (2–3 prioritaires + arguments pour/contre)",
+            "Examens complémentaires immédiats",
+            "Prise en charge et suivi"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo révision rapide : MAPS",
+            "elements": [
+              "Motif",
+              "Antécédents",
+              "Points de l'examen",
+              "Suites"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s'agit d'un homme de 71 ans, diabétique insulino-dépendant, hypertendu et dyslipidémique, qui consulte pour une perte de vision progressive, bilatérale, évoluant depuis environ 3 ans.\n\nLe patient rapporte une vision de plus en plus floue, touchant à la fois la vision centrale et périphérique, avec des difficultés de lecture et surtout de vision nocturne. Il ne distingue plus ses petits-enfants lorsqu'ils arrivent du côté. Il doit tenir le journal à distance pour lire et utilise parfois une loupe mais avec réticence.\n\nIl n'a pas de douleur oculaire, pas de céphalées, pas de diplopie ni de halos. Son dernier contrôle ophtalmologique remonte à plus de 3 ans.\n\nÀ l'examen, l'acuité visuelle corrigée est de 20/30 bilatéralement, les champs visuels montrent un rétrécissement périphérique, les réflexes pupillaires sont normaux et le fond d'œil sans anomalie évidente, mais non dilaté.\n\nEn résumé, il s'agit d'un patient âgé, diabétique mal équilibré et mal suivi, présentant une perte de vision bilatérale, progressive, touchant la vision centrale et périphérique, évoquant en premier lieu une rétinopathie diabétique avec œdème maculaire possible.\n\nLes diagnostics différentiels incluent un glaucome, une cataracte, ou une DMLA.\n\nJe propose un examen ophtalmologique avec dilatation pupillaire, une OCT maculaire, une tonométrie et une périmétrie, ainsi qu'un dosage de l'HbA1c. La prise en charge repose sur l'optimisation du contrôle glycémique, le suivi ophtalmologique régulier, et éventuellement un traitement laser ou par injections intravitréennes si indiqué."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Homme de 71 ans, diabétique, présente une perte de vision progressive bilatérale depuis plusieurs années.\n\nB (Background) : Facteurs de risque : diabète mal contrôlé, HTA, dyslipidémie ; dernier suivi ophtalmo > 3 ans.\n\nA (Assessment) : Vision centrale et périphérique touchées, impact fonctionnel majeur. Hypothèse : rétinopathie diabétique avec œdème maculaire. DD : glaucome, cataracte, DMLA.\n\nR (Recommendation) : Fond d'œil dilaté, OCT, tonométrie, HbA1c ; optimisation du contrôle diabétique, référence urgente à l'ophtalmologiste.",
+          "mnemo": {
+            "titre": "👉 Mnémo express : SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Pour le diabétique et sa vision → ŒIL",
+              "points": [
+                "Œdème maculaire diabétique",
+                "Isoler la rétinopathie diabétique",
+                "Laser ou anti-VEGF si confirmé"
+              ]
+            },
+            {
+              "titre": "Dépistage ophtalmo diabétique",
+              "points": [
+                "Diabète type 1 → 5 ans après diagnostic puis annuel",
+                "Diabète type 2 → dès le diagnostic puis annuel"
+              ]
+            },
+            {
+              "titre": "Examens essentiels → TOP",
+              "points": [
+                "Tonométrie (pression)",
+                "OCT maculaire",
+                "Périmétrie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Rétinopathie diabétique / œdème maculaire",
+                  "reponse": {
+                    "pour": [
+                      "Diabète ancien mal contrôlé",
+                      "Perte bilatérale",
+                      "Vision centrale et périphérique atteintes",
+                      "Pas de suivi récent"
+                    ],
+                    "contre": [
+                      "Fond d'œil non dilaté normal (limité)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Glaucome",
+                  "reponse": {
+                    "pour": [
+                      "Âge",
+                      "HTA",
+                      "Perte périphérique lente"
+                    ],
+                    "contre": [
+                      "Excavation/disque normal",
+                      "PIO non mesurée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cataracte",
+                  "reponse": {
+                    "pour": [
+                      "Âge",
+                      "Vision trouble nocturne"
+                    ],
+                    "contre": [
+                      "Pas d'opacité cristallinienne décrite"
+                    ]
+                  }
+                },
+                {
+                  "question": "DMLA",
+                  "reponse": {
+                    "pour": [
+                      "Âge >70",
+                      "Lecture difficile"
+                    ],
+                    "contre": [
+                      "Atteinte périphérique",
+                      "Pas de drusen visibles"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Examens à demander",
+                  "reponse": [
+                    "Fond d'œil dilaté",
+                    "OCT maculaire",
+                    "Tonométrie",
+                    "Périmétrie visuelle",
+                    "HbA1c"
+                  ],
+                  "analyse": "👉 Analyse orale : « Ces examens permettent de confirmer une rétinopathie diabétique, d'évaluer un œdème maculaire, d'exclure un glaucome et d'adapter la prise en charge. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Rétinopathie diabétique probable avec atteinte maculaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Optimiser contrôle glycémique (HbA1c < 7 %)",
+                      "Référer en ophtalmologie pour laser ou anti-VEGF si indiqué",
+                      "Optimiser TA et cholestérol",
+                      "Aides visuelles et sécurité domestique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation ophtalmo annuelle (ou plus rapprochée)",
+                    "Diabétologue dans le mois",
+                    "Éducation sur signes d'alarme (baisse brutale de vision)"
+                  ],
+                  "astuce": "👉 Astuce révision : pense au triptyque « Voir – Sucre – Suivi » : Voir → examens ophtalmo réguliers, Sucre → HbA1c <7%, Suivi → coordination diabétologue + ophtalmologiste"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

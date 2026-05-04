@@ -1,0 +1,989 @@
+{
+  "title": "AMBOSS-34 - Perte de vision - Homme 66 ans",
+  "context": {
+    "setting": "Clinique de soins urgents",
+    "patient": "Earl Griffin, homme de 66 ans, consultant pour perte de vision",
+    "vitals": {
+      "temperature": "36.7°C",
+      "ta": "143/94 mmHg",
+      "fc": "70 bpm",
+      "fr": "17/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je ne peux pas voir de mon œil gauche"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la perte de vision",
+          "binaryOnly": false,
+          "details": [
+            "Début [Ça a commencé il y a environ 2 heures]",
+            "Constante/intermittente [C'est resté comme ça tout le temps]",
+            "Événements précipitants [Je ne me souviens de rien de spécial, non]",
+            "Progression [Au début, c'était comme un voile sur mon œil qui devenait de plus en plus sombre. Maintenant ça n'a pas changé depuis environ une heure]",
+            "Épisodes antérieurs [J'ai déjà eu ça, oui. Peut-être 5 ou 6 fois au cours des 6 derniers mois. Mais ça partait toujours après environ 10 minutes]",
+            "Fréquence [C'est peut-être devenu un peu plus fréquent. Je pense que j'ai eu 2 épisodes dans les 2 dernières semaines]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Je ne pense pas]",
+            "Symptômes associés [J'ai aussi mal à la tête]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la céphalée associée",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Toute ma tête]",
+            "Intensité (sur une échelle de 0-10) [Je dirais un 4-5]",
+            "Qualité [C'est comme si quelqu'un serrait ma tête]",
+            "Début [J'ai des maux de tête par intermittence presque tous les deux jours depuis 8 mois]",
+            "Événements précipitants [Rien auquel je puisse penser]",
+            "Progression/constante/intermittente [Ils ont été vraiment mauvais depuis qu'ils ont commencé]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [Parfois je prends de l'ibuprofène]",
+            "Facteurs aggravants [Pas vraiment, non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques pour perte de vision récurrente et céphalée",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Je suis toujours fatigué. Ça vient avec l'âge]",
+            "Palpitations [Oui, c'est difficile à décrire mais parfois j'ai l'impression que mon pouls n'a pas un rythme normal]",
+            "Éruption cutanée/changements cutanés [Pas que j'aie remarqué]",
+            "Toux [Oui, j'ai une toux depuis 3 ans, surtout le matin]",
+            "Essoufflement [Parfois, quand je marche trop vite]",
+            "Problèmes urinaires [Non]",
+            "Problèmes intestinaux [Non]",
+            "Problèmes de sommeil [Je pense que je dors bien, je dors généralement 6 ou 7 heures par nuit]",
+            "Appétit [Mon appétit a connu des jours meilleurs]",
+            "Changements de poids [Non]",
+            "Infections récentes [Non]",
+            "Vertiges [Non]",
+            "Chutes [Oui, une fois il y a environ 2 semaines. Ma jambe droite a soudainement lâché et je suis tombé]",
+            "Faiblesse [Ma main droite a commencé à se sentir un peu faible juste avant que vous arriviez]",
+            "Engourdissement [Je ne pense pas]",
+            "Picotements [Non]",
+            "Convulsion [Non]",
+            "Problèmes d'élocution [Pas habituellement. Je ne sais pas ce qui ne va pas avec moi aujourd'hui. Vous devez penser que je suis abruti. Je veux dire... stupide]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'hypertension et du diabète"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'hydrochlorothiazide et de la metformine. Et puis de l'ibuprofène pour mes maux de tête de temps en temps"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai eu mon appendice enlevé quand j'étais à l'école primaire]",
+            "Antécédents chirurgicaux [Seulement mon appendice]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Non]",
+            "Antécédents familiaux [Mon père est mort d'un cancer du poumon]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je suis un enseignant d'école primaire à la retraite]",
+            "Domicile [Je vis avec ma femme. Ma fille et ma petite-fille de 5 ans ont emménagé avec nous il y a environ 8 mois parce qu'elle a perdu son emploi et divorce. C'est le chaos total. Ce n'est vraiment pas étonnant que j'aie toujours mal à la tête]",
+            "Alcool [Seulement si nous sortons dîner, peut-être tous les deux mois]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Oui. Je fume environ un paquet par jour. Je pense que j'ai commencé quand j'avais 13 ans]",
+            "Exercice [Non, pas vraiment]",
+            "Alimentation [Ma femme cuisine. Nous mangeons généralement des biscuits et de la sauce pour le petit-déjeuner, un sandwich pour le déjeuner, et une sorte de viande avec des haricots, du maïs ou de la purée de pommes de terre pour le dîner]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête",
+            "Évaluation de l'acuité visuelle (échelle de Snellen) [Acuité visuelle basse (< 20/200) à gauche]",
+            "Fundoscopie directe",
+            "Examen du champ visuel [Déficit du champ visuel à gauche]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation des artères carotides"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Palpation du pouls radial",
+            "Auscultation du cœur"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation des poumons"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation du niveau de conscience",
+            "Examen de l'orientation dans le temps, l'espace et les personnes",
+            "Évaluation du langage [Aphasie motrice]",
+            "Examen ciblé des nerfs crâniens",
+            "Signe de Kernig",
+            "Signe de Brudzinski",
+            "Méningisme",
+            "Examen ciblé des mouvements passifs et actifs [Force musculaire gradée 1/5 dans la main droite]",
+            "Examen ciblé de la sensibilité [Sensibilité diminuée de la main droite et de l'avant-bras inférieur]",
+            "Examen ciblé des réflexes ostéotendineux",
+            "Examen ciblé de la marche",
+            "Test d'alternance rapide des mouvements",
+            "Test doigt-nez",
+            "Signe de Babinski",
+            "Test de Romberg"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes vasculaires prioritaires",
+                "items": [
+                  {
+                    "text": "AVC ischémique",
+                    "cause": "Arguments POUR:\n\t□ Symptômes neurologiques focaux aigus (perte de vision côté G, aphasie motrice, faiblesse main D)\n\t□ Multiples facteurs de risque d'AVC (tabagisme, HTA, diabète, FA possible, > 65 ans, homme)\n\t□ Sténose carotidienne possible avec thromboembolie → hypoperfusion artère ophtalmique G (perte vision œil G) + division supérieure ACM G (faiblesse main D, déficit sensitif, aphasie)\n\t□ Symptômes évoluent avec aggravation progressive",
+                    "test": "→ CT cérébral sans contraste (examen initial le plus important)"
+                  },
+                  {
+                    "text": "Accident ischémique transitoire (AIT)",
+                    "cause": "Arguments POUR:\n\t□ Cause probable des épisodes neurologiques antérieurs (5-6 fois, résolution en 10 min)\n\t□ Fréquence croissante (2 épisodes en 2 semaines)\nArguments CONTRE:\n\t□ Durée actuelle (2 heures et continue) suggère AVC plutôt qu'AIT (définition < 24h, typiquement < 1h)",
+                    "test": "→ IRM cérébrale (identifie ischémie plus tôt que CT)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Néoplasie intracrânienne",
+                    "cause": "Arguments POUR:\n\t□ Patient âgé avec céphalées récentes (8 mois)\n\t□ Fatigue récente et perte d'appétit\n\t□ Tabagisme + ATCD familial cancer poumon (métastases cérébrales possibles)\nArguments CONTRE:\n\t□ Symptômes focaux transitoires plus typiques d'AIT qu'une tumeur en croissance constante ; stress familial récent explique mieux les céphalées (céphalées de tension)",
+                    "test": "→ IRM cérébrale avec contraste (meilleure pour anomalies tissus mous)"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Migraine",
+                    "cause": "Peut causer déficits neurologiques focaux, mais présentation atypique",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Hémorragie intracérébrale",
+                    "cause": "HTA + diabète sont facteurs de risque, mais absence de céphalée sévère brutale",
+                    "test": "→ CT cérébral sans contraste"
+                  },
+                  {
+                    "text": "Hémorragie sous-arachnoïdienne",
+                    "cause": "Peu probable sans céphalée en coup de tonnerre",
+                    "test": "→ CT cérébral sans contraste"
+                  },
+                  {
+                    "text": "Troubles convulsifs",
+                    "cause": "Peuvent causer déficits focaux post-ictaux",
+                    "test": "→ EEG si suspicion"
+                  },
+                  {
+                    "text": "Méningite",
+                    "cause": "Peu probable sans fièvre ni méningisme",
+                    "test": "→ PL si suspicion clinique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Oxymétrie de pouls [pour exclure troubles respiratoires comme cause des déficits neurologiques et évaluer le statut en oxygène]",
+            "ECG et monitoring cardiaque [pour exclure fibrillation auriculaire comme cause d'AVC et évaluer une ischémie cardiaque aiguë]",
+            "NFS [pour évaluer un trouble plaquettaire potentiel et la probabilité d'infection systémique (leucocytose)]",
+            "TP, TCA [pour évaluer si le patient est éligible à la thrombolyse et la probabilité d'AVC hémorragique]",
+            "Électrolytes, glucose sérique [pour exclure hyper-/hypoglycémie et/ou déséquilibre électrolytique comme cause des déficits neurologiques]",
+            "Troponine [prédit les complications neurologiques et le pronostic de l'AVC]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Imagerie cérébrale",
+          "binaryOnly": false,
+          "details": [
+            "CT cérébral sans contraste [gold standard et imagerie initiale la plus importante en cas de suspicion d'AVC]",
+            "IRM cérébrale [identifie l'ischémie plus tôt que le CT ; meilleure modalité d'imagerie pour déterminer les anomalies des tissus mous et la vascularisation, comme dans les néoplasies intracrâniennes]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Réaction appropriée au défi concernant la peur de mourir"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Position demi-assise 30°: (optimiser perfusion cérébrale)\n• Oxygénothérapie: Oxygène si SpO2 94%\n• Monitoring continu: (PA, FC, SpO2, Glasgow, NIHSS)\n• Deux voies veineuses périphériques\n• Glycémie capillaire immédiate\n• NPO (nil per os): NPO jusqu'à évaluation déglutition\n• Thrombolyse IV (si 4.5h du début)\n• Alteplase 0.: 9 mg/kg (max 90 mg)\n• 10% en bolus: IV sur 1 min\n• 90% restant en perfusion: IV sur 60 min\n• Contre-indications: AVC hémorragique, chirurgie récente, INR 1.7 ; Surveillance neurologique q15min × 2h, puis q30min × 6h\n• Thrombectomie mécanique (si 6-24h)"
+              },
+              {
+                "title": "Si occlusion gros vaisseau (ACM, ACI, basilaire)",
+                "content": "• Peut être faite seule ou après thrombolyse: IV\n• Améliore significativement le pronostic fonctionnel\n• Contrôle tensionnel"
+              },
+              {
+                "title": "Si pas de thrombolyse",
+                "content": "• Éviter chutes brutales PA: (risque hypoperfusion)\n• Antiagrégation plaquettaire\n• Aspirine: 325 mg PO/PR dans les 48h\n• Retarder 24h si thrombolyse effectuée\n• Double antiagrégation si AIT à haut risque"
+              },
+              {
+                "title": "Prévention secondaire",
+                "content": "• Statine haute intensité (atorvastatine: 80 mg) ; Anticoagulation si FA documentée (après 14j si AVC étendu)"
+              },
+              {
+                "title": "Contrôle facteurs de risque (HTA, diabète, tabac)",
+                "content": "• Endartériectomie carotidienne si sténose 70%\n• Réhabilitation précoce\n• Évaluation orthophonie (aphasie, déglutition)\n• Physiothérapie dans les 48h\n• Ergothérapie pour autonomie"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Transformation hémorragique",
+                "description": "Post-thrombolyse 6%, surveillance neurologique stricte"
+              },
+              {
+                "text": "Œdème cérébral malin",
+                "description": "AVC ACM étendu, pic J2-5, craniectomie décompressive"
+              },
+              {
+                "text": "Extension de l'infarctus",
+                "description": "Détérioration neurologique progressive → réévaluer imagerie"
+              },
+              {
+                "text": "Pneumonie d'aspiration",
+                "description": "30% des AVC, test déglutition obligatoire"
+              },
+              {
+                "text": "Crise hypertensive",
+                "description": "PA > 220/120 → risque transformation hémorragique"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Peur de mourir",
+          "content": "[Est-ce que je vais mourir ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Griffin, je comprends que ce doit être une expérience effrayante pour vous, et je suis content que vous soyez venu me voir aujourd'hui. Je vais devoir faire quelques tests et obtenir des images avant de pouvoir vous dire plus en détail ce qui se passe. Cependant, je peux vous promettre que vous êtes entre de bonnes mains, et que nous allons faire tout ce qui est en notre pouvoir pour prendre le meilleur soin de vous. Si vous souhaitez avoir un membre de votre famille ou un ami ici pour vous soutenir, je serais heureux de les contacter pour vous. Et si vous avez des questions ou des préoccupations pendant que vous êtes ici, assurez-vous de nous le faire savoir. Il est important pour nous que vous vous sentiez à l'aise et informé. Je vous promets aussi que nous ne prendrons aucune mesure avec laquelle vous n'êtes pas d'accord."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Lésions hyperintenses dans l'infarctus cérébelleux",
+        "description": "IRM crâne (FLAIR pondéré T2 ; plan coronal) d'un patient atteint de polycémie vera. De petites lésions hyperintenses (superpositions vertes) dans le cervelet gauche (Ce ; contour vert) non associées à un effet de masse sont compatibles avec un infarctus.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img1-Hyperintense lesions in cerebellar infarction.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Métastase cérébrale dans le carcinome pulmonaire",
+        "description": "IRM crâne (pondéré T2 ; sans contraste ; plan axial) d'un patient atteint de carcinome pulmonaire. Une masse solitaire, bien circonscrite, principalement hyperintense (superposition hachurée) dans le lobe occipital gauche est accompagnée d'un œdème périfocal (superposition verte). La lésion est compatible avec une métastase cérébrale.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img2-Cerebral metastasis in lung carcinoma 2:2.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Glioblastome bilatéral (gliome papillon)",
+        "description": "IRM pondérée T1 avec contraste, vue frontale : rehaussement en guirlande bihémisphérique. Il y a un rehaussement périphérique de l'agent de contraste avec nécrose centrale. Le troisième ventricule est situé au centre. La tumeur déplace la corne postérieure du ventricule latéral. Diagnostic : glioblastome bilatéral (gliome papillon).",
+        "data": "grilles_generees/html/images/AMBOSS-34-img3-Bilateral glioblastoma (butterfly glioma).jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Large infarctus cérébral hémisphérique gauche",
+        "description": "CT crâne (sans contraste ; plan axial). Une hypodensité diffuse (superposition verte) impliquant les distributions des artères cérébrales antérieure, moyenne et postérieure gauches est accompagnée d'un effacement des sillons et d'une perte de différenciation entre la substance grise et blanche. Il y a un léger effet de masse sur la faux du cerveau (ligne bleue) et le ventricule latéral gauche (superposition rouge).",
+        "data": "grilles_generees/html/images/AMBOSS-34-img4-Large left hemispheric cerebral infarct.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Vascularisation artérielle du cortex cérébral",
+        "description": "Vascularisation artérielle du cortex cérébral. Vue latérale.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img5-Arterial supply of the cerebral cortex.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Vascularisation artérielle du cortex cérébral (2)",
+        "description": "Vascularisation artérielle du cortex cérébral. Section sagittale.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img6-Arterial supply of the cerebral cortex.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Vascularisation artérielle du cortex cérébral (3)",
+        "description": "Vascularisation artérielle du cortex cérébral. Section axiale ; vue ventrale.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img7-Arterial supply of the cerebral cortex.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Cercle de Willis",
+        "description": "Le cercle de Willis est représenté en rouge clair avec les principales artères du cerveau en rouge foncé.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img8-Circle of Willis.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Vue latérale des aires importantes du cerveau",
+        "description": "Vue latérale des zones importantes du cerveau. Le cortex moteur primaire, dans le lobe frontal, est l'origine des fibres du faisceau pyramidal. Les cortex auditifs primaire et secondaire, où l'information auditive est traitée, sont situés dans le lobe temporal. Le cortex visuel primaire est situé au pôle occipital et est entouré par le cortex visuel secondaire. Différentes fonctions convergent dans les zones d'association. Les exemples les plus connus sont les aires motrices (Broca) et sensorielles (Wernicke) du langage, qui sont communément situées dans l'hémisphère dominant.",
+        "data": "grilles_generees/html/images/AMBOSS-34-img9-Lateral view of important areas of the brain.jpg",
+        "id": "img9"
+      },
+      {
+        "title": "Homoncules corticaux",
+        "description": "Les homoncules corticaux montrent l'arrangement somatotopique des différentes parties du corps dans le cortex. Notez que la part relative de cortex dédiée aux divers membres et organes n'est pas la même pour le cortex moteur primaire (gauche) et le cortex somatosensoriel primaire (droite). Presque toutes ces zones corticales sont alimentées par l'artère cérébrale moyenne (ACM) et ses branches. Seule la zone près de la zone corticale parasagittale est alimentée par l'artère cérébrale antérieure (ACA) et ses branches (zone rouge).",
+        "data": "grilles_generees/html/images/AMBOSS-34-img10-Cortical homunculi.jpg",
+        "id": "img10"
+      },
+      {
+        "title": "Prise en charge de l'AVC",
+        "description": "Prise en charge de l'AVC",
+        "data": "grilles_generees/html/images/AMBOSS-34-img11-Management of stroke.jpg",
+        "id": "img11"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Earl Griffin",
+      "age": "66 ans",
+      "contexte": "Homme avec perte de vision aiguë et déficits neurologiques focaux",
+      "motifConsultation": {
+        "plaintePrincipale": "Je ne peux pas voir de mon œil gauche.",
+        "autreChose": "J'ai aussi mal à la tête et ma main droite est faible."
+      },
+      "consignes": [
+        "Agissez comme si vous pouviez voir très peu du côté gauche, où tout apparaît sombre et flou. Si l'examinateur teste votre champ visuel gauche en vous demandant de regarder droit devant puis en tenant son doigt sur votre côté gauche et en le déplaçant lentement devant votre nez, faites semblant de ne pas voir le doigt jusqu'à ce qu'il soit presque devant votre nez.",
+        "Utilisez de mauvais mots de temps en temps (par ex., 'femme' au lieu d''épouse' quand on vous demande vos conditions de vie) et faites semblant d'avoir du mal à trouver les bons mots. Agissez frustré quand vous faites ces erreurs.",
+        "Faites semblant d'avoir une faiblesse dans votre main droite. Quand l'examinateur vous demande de serrer sa main, serrez à peine. S'il/elle vous demande de lever votre main droite, levez-la à peine.",
+        "Faites semblant d'avoir une sensibilité diminuée dans votre main droite et votre avant-bras inférieur droit. Quand l'examinateur vous demande si vous pouvez le/la sentir vous toucher dans ces zones, dites 'à peine'.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., CT) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demandez 'Est-ce que je vais mourir ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Perte de vision œil gauche depuis 2 heures",
+          "Début comme un voile qui s'assombrit progressivement",
+          "Maintenant stable depuis 1 heure",
+          "Épisodes similaires antérieurs (5-6 fois en 6 mois)",
+          "Résolution habituelle en 10 minutes",
+          "Fréquence croissante (2 épisodes en 2 semaines)"
+        ],
+        "symptomesAssocies": [
+          "Céphalée modérée (4-5/10), sensation de serrement",
+          "Céphalées récurrentes depuis 8 mois",
+          "Faiblesse main droite (début récent)",
+          "Déficit sensitif main/avant-bras droit",
+          "Aphasie (mauvais mots, frustration)",
+          "Chute il y a 2 semaines (jambe droite)",
+          "Palpitations (rythme irrégulier)",
+          "Toux chronique matinale (3 ans)",
+          "Dyspnée d'effort"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Défaut champ visuel gauche évident",
+          "Paraphasies verbales occasionnelles",
+          "Frustration lors des erreurs de langage",
+          "Inquiétude sur le pronostic vital",
+          "Demander clarification termes médicaux",
+          "Mentionner stress familial récent"
+        ],
+        "durantStatus": [
+          "Acuité visuelle < 20/200 œil gauche",
+          "Hémianopsie ou quadranopsie gauche",
+          "Force 1/5 main droite",
+          "Hypoesthésie main/avant-bras droit",
+          "Aphasie motrice légère",
+          "Coopération pour tous les tests"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 66 ans avec déficits neurologiques focaux évolutifs = AVC jusqu'à preuve du contraire. Présentation classique : amaurose fugace récurrente (AIT carotidiens) → AVC constitué territoire ACM gauche. Facteurs de risque majeurs : HTA, diabète, tabagisme lourd, FA probable. Évolution temporelle critique : symptômes visuels → moteurs → sensitifs → langage = progression thrombus. Fenêtre thérapeutique : 2h depuis début = éligible thrombolyse si pas de CI. Localisation : carotide gauche → ophtalmique (vision) + ACM supérieure (main, langage).",
+      "rolesInterventions": [
+        "Acuité visuelle : < 20/200 œil gauche, 20/20 œil droit",
+        "Champ visuel : hémianopsie homonyme gauche",
+        "Fundoscopie : pas d'œdème papillaire, AV normaux",
+        "Auscultation carotides : souffle carotidien gauche",
+        "ECG : FA avec réponse ventriculaire contrôlée",
+        "NIHSS : score 8 (vision 2, moteur 3, sensitif 1, langage 2)"
+      ],
+      "pointsCles": [
+        "AIT récurrents = risque AVC imminent (20% à 90 jours)",
+        "Amaurose fugace = AIT carotidien typique",
+        "Crescendo TIA = urgence neurologique absolue",
+        "Fenêtre thrombolyse : 4.5h (idéal < 2h)",
+        "Thrombectomie : jusqu'à 24h si pénombre viable",
+        "FA + AVC = anticoagulation après phase aiguë"
+      ],
+      "pieges": [
+        "Minimiser les AIT répétés (haut risque AVC)",
+        "Attribuer symptômes à 'l'âge' ou stress",
+        "Retarder imagerie (chaque minute compte)",
+        "Oublier glycémie (peut mimer AVC)",
+        "Négliger l'aphasie (signe localisation)",
+        "Manquer la FA à l'ECG"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "AVC ischémique du territoire de l'ACM gauche avec probable sténose carotidienne"
+        },
+        {
+          "titre": "Accidents ischémiques transitoires (AIT)",
+          "contenu": "Déficits neurologiques focaux temporaires par ischémie cérébrale :",
+          "points": [
+            "Définition : déficit < 24h (typiquement < 1h) sans infarctus",
+            "Incidence : 200-500/100,000/an",
+            "Mécanismes : embolique 50%, hémodynamique 25%, lacunaire 25%",
+            "Risque AVC : 10% à 48h, 20% à 90 jours",
+            "Score ABCD2 : Age, BP, Clinical, Duration, Diabetes",
+            "Haut risque : score ≥ 4, AIT répétés, sténose carotide > 50%"
+          ]
+        },
+        {
+          "titre": "Amaurose fugace",
+          "contenu": "Perte de vision monoculaire transitoire :",
+          "points": [
+            "Mécanisme : embolie artère ophtalmique (branche carotide interne)",
+            "Description : 'rideau qui descend' ou 'voile'",
+            "Durée : typiquement 2-30 minutes",
+            "Étiologie : sténose carotide 50%, cardio-embolique 25%",
+            "Examen : souvent normal, parfois plaque de Hollenhorst",
+            "Pronostic : risque AVC 2%/an si traité, 10%/an si non traité"
+          ]
+        },
+        {
+          "titre": "Territoires vasculaires cérébraux",
+          "contenu": "Distribution anatomique et syndromes cliniques :",
+          "points": [
+            "ACM supérieure : face/bras > jambe, aphasie (hémisphère dominant)",
+            "ACM inférieure : hémianopsie, négligence (hémisphère mineur)",
+            "ACA : jambe > bras, troubles comportementaux",
+            "ACP : hémianopsie avec épargne maculaire, alexie",
+            "Vertébro-basilaire : vertiges, ataxie, diplopie, dysphagie",
+            "Lacunaires : moteur pur, sensitif pur, ataxie-hémiparésie"
+          ]
+        },
+        {
+          "titre": "Thrombolyse intraveineuse",
+          "contenu": "Traitement de reperfusion en phase aiguë :",
+          "points": [
+            "Fenêtre : 0-4.5h (bénéfice maximal < 90 min)",
+            "NNT : 3 si < 90 min, 7 si 3-4.5h",
+            "Contre-indications : AVC hémorragique, chirurgie < 14j",
+            "CI relatives : AVC étendu, INR > 1.7, plaquettes < 100k",
+            "Complications : hémorragie symptomatique 6%, angioœdème 5%",
+            "Surveillance : neuro q15min × 2h, PA < 180/105"
+          ]
+        },
+        {
+          "titre": "Thrombectomie mécanique",
+          "contenu": "Extraction endovasculaire du thrombus :",
+          "points": [
+            "Indications : occlusion gros vaisseau, NIHSS ≥ 6, mRS < 2",
+            "Fenêtre : 0-6h standard, jusqu'à 24h si mismatch",
+            "NNT : 2.6 pour indépendance fonctionnelle",
+            "Taux recanalisation : 80-90% (TICI 2b/3)",
+            "Peut être fait après ou sans thrombolyse IV",
+            "Complications : hémorragie 5%, embolie distale 5%"
+          ]
+        },
+        {
+          "titre": "Évaluation étiologique de l'AVC",
+          "contenu": "Bilan pour déterminer le mécanisme et la prévention :",
+          "points": [
+            "Classification TOAST : cardio-embolique, athérosclérose, lacunaire",
+            "Echo carotides : sténose > 50% = indication chirurgicale",
+            "ECG/Holter : FA dans 25% des AVC cryptogéniques",
+            "Échocardiographie : thrombus, valvulopathie, FOP",
+            "Angio-CT/ARM : dissection, vasculite chez le jeune",
+            "Bilan thrombophilie : si < 50 ans sans cause évidente"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Thrombolyse IV : alteplase 0.9 mg/kg (10% bolus, 90% sur 60 min)",
+        "Antiagrégation : aspirine 325 mg J1 (si pas thrombolyse)",
+        "Double antiagrégation 21j si AIT mineur/AVC mineur",
+        "Statine haute dose : atorvastatine 80 mg dès J1",
+        "Contrôle PA : permettre HTA permissive sauf si thrombolyse",
+        "Anticoagulation si FA : débuter J3-14 selon taille infarctus",
+        "Endartériectomie : si sténose symptomatique > 70%",
+        "Stenting carotidien : si haut risque chirurgical"
+      ],
+      "examensComplementaires": [
+        "CT cérébral sans contraste : urgent, exclut hémorragie",
+        "IRM diffusion : plus sensible, montre ischémie précoce",
+        "Angio-CT cou/tête : localise occlusion pour thrombectomie",
+        "Perfusion CT/IRM : évalue pénombre (tissu à sauver)",
+        "ECG 12 dérivations : FA, IDM concomitant",
+        "Monitoring cardiaque 24-48h : FA paroxystique",
+        "Echo-doppler carotides : sténose, plaque instable",
+        "Échocardiographie : source cardio-embolique",
+        "Holter 30 jours : si AVC cryptogénique"
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Résumé ECOS – AVC ischémique",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Objectifs",
+              "points": [
+                "Heure de début des symptômes (ou \"last seen well\") → essentielle pour la thrombolyse",
+                "Description de l'apparition :",
+                "• Brutale, souvent au repos"
+              ]
+            },
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Hémiparésie, aphasie, trouble de la vision, dysarthrie, vertiges, diplopie"
+              ]
+            },
+            {
+              "titre": "Signes d'alarme",
+              "points": [
+                "Confusion, perte de conscience, céphalée sévère (évoquer hémorragie)"
+              ]
+            },
+            {
+              "titre": "Antécédents",
+              "points": [
+                "AVC/AIT, FA, HTA, diabète, dyslipidémie, tabac, cardiopathie"
+              ]
+            },
+            {
+              "titre": "Diagnostic différentiel",
+              "points": [
+                "Hypoglycémie (à exclure d'emblée)",
+                "Crise d'épilepsie",
+                "Migraine avec aura",
+                "Paralysie de Todd"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Neurologique",
+              "points": [
+                "Déficit focal : hémiplégie, aphasie, hémianopsie latérale homonyme",
+                "NIHSS (score de sévérité de l'AVC)",
+                "Signes de localisation : cérébrale antérieure/postérieure",
+                "État de conscience : GCS, troubles cognitifs"
+              ]
+            },
+            {
+              "titre": "Général",
+              "points": [
+                "Signes de gravité : bradycardie, bradypnée, hyperthermie",
+                "Paramètres vitaux : TA, SpO₂, FC, T°"
+              ]
+            },
+            {
+              "titre": "À ne pas oublier",
+              "points": [
+                "Glycémie capillaire immédiate",
+                "Recherche de signes de hernie cérébrale : anisocorie, troubles du GCS"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens d'urgence",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Scanner cérébral sans injection en urgence → exclure une hémorragie",
+                "IRM cérébrale si disponible, surtout pour AVC mineurs ou douteux",
+                "Angio-CT / Perfusion (si suspicion de thrombose de gros vaisseau)"
+              ]
+            },
+            {
+              "titre": "Bilan biologique (ne pas retarder le traitement)",
+              "points": [
+                "Glycémie",
+                "NFS, plaquettes, TP/INR, TCA",
+                "Ionogramme, créat, ECG (FA ?)",
+                "Groupage si geste invasif prévu"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🚨 Prise en charge initiale (en salle d'urgence)",
+          "subsections": [
+            {
+              "titre": "📌 Premiers gestes",
+              "points": [
+                "Appeler neurologie / équipe AVC",
+                "Oxygène si SpO₂ < 94 %",
+                "Voie veineuse périphérique",
+                "Scope + monitoring TA",
+                "Glycémie capillaire",
+                "Évaluer indication à la thrombolyse IV (alteplase)",
+                "• Si ≤ 4h30 du début des symptômes",
+                "• CI : anticoagulants, saignement actif, AVC récent…",
+                "Thrombectomie mécanique si occlusion proximale de gros vaisseau < 6h (jusqu'à 24h selon imagerie)"
+              ]
+            },
+            {
+              "titre": "🩸 Gestion de la PA",
+              "points": [
+                "Si thrombolyse envisagée : TA < 185/110 mmHg",
+                "Si pas de thrombolyse : ne pas traiter si TA < 220/120 mmHg (permissive)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🛌 Après stabilisation",
+          "subsections": [
+            {
+              "titre": "Unité neuro-vasculaire ou USI",
+              "points": [
+                "Prévention secondaire :",
+                "• Aspirine 160–300 mg (sauf si thrombolyse → après 24h)",
+                "• Statines haute intensité",
+                "• Étiologie à rechercher (ECG, Holter, écho cardiaque, doppler TSA)"
+              ]
+            },
+            {
+              "titre": "Surveillance des complications",
+              "points": [
+                "Récidive, œdème cérébral, transformation hémorragique",
+                "Dysphagie (→ test avant réalimentation)",
+                "Pneumopathie de déglutition, TVP"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Identifier immédiatement les symptômes évocateurs et déterminer le délai d'apparition",
+            "Appeler neurologie sans délai → ne jamais retarder la thrombolyse",
+            "Savoir interpréter un ECG (FA ?) et discuter des CI à la thrombolyse",
+            "Distinguer AVC ischémique vs hémorragique → scanner sans injection en 1ʳᵉ intention",
+            "Expliquer au patient et à l'entourage le pronostic, la prise en charge et la prévention secondaire"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Perte de vision – Homme 66 ans",
+      "sections": [
+        {
+          "titre": "🧩 Rappel systématisé – Checklist mentale",
+          "points": [
+            "Intro : âge, antécédents, motif de consultation",
+            "Anamnèse actuelle : début, évolution, symptômes associés, ATCD similaires",
+            "Antécédents : médicaux, chirurgicaux, familiaux, traitements, habitudes",
+            "Examen clinique : constantes, status ciblé",
+            "Résumé en une phrase",
+            "Hypothèses diagnostiques (principal + différentiels)",
+            "Examens complémentaires urgents",
+            "Prise en charge immédiate",
+            "Complications / suivi"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo ICE",
+            "elements": [
+              "Intro",
+              "Cliniques",
+              "Exams/Évolution"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 minutes)",
+          "contenu": "Il s'agit d'un homme de 66 ans, hypertendu et diabétique, grand fumeur, qui consulte pour une perte de vision de l'œil gauche évoluant depuis environ 2 heures. Le patient décrit un voile progressif devenu sombre et persistant. Il rapporte des épisodes similaires de courte durée dans le passé, compatibles avec des AIT amaurose fugace.\n\nLes symptômes actuels s'accompagnent d'une céphalée diffuse modérée, d'une faiblesse et hypoesthésie de la main droite, ainsi que de difficultés d'élocution.\n\nÀ l'examen, l'acuité visuelle est < 20/200 à gauche, avec déficit du champ visuel gauche. On note une aphasie motrice légère, une force musculaire 1/5 et une hypoesthésie de la main droite. Les constantes sont stables.\n\nEn résumé, il s'agit d'un patient de 66 ans avec facteurs de risque cardiovasculaires multiples, présentant une perte de vision gauche persistante, associée à des déficits neurologiques focaux progressifs, évoquant un AVC ischémique du territoire carotidien gauche.\n\nLes diagnostics différentiels incluent un AIT, une néoplasie intracrânienne, une migraine avec aura atypique ou plus rarement une hémorragie cérébrale.\n\nJe demande immédiatement un scanner cérébral sans injection pour exclure une hémorragie, une IRM de diffusion, un ECG et bilan biologique de routine. En parallèle, je mets en place le monitoring, une voie veineuse, un contrôle glycémique, et je discute une thrombolyse IV car le délai est inférieur à 4,5 heures."
+        },
+        {
+          "titre": "⚡ Version express – SBAR (30 sec)",
+          "contenu": "Situation : Patient de 66 ans, HTA et diabète, consulte pour perte de vision gauche depuis 2h.\n\nBackground : Fumeur, AIT similaires dans le passé.\n\nAssessment : Défauts neurologiques focaux : perte visuelle gauche, aphasie motrice, faiblesse main droite. AVC ischémique probable territoire ACM gauche.\n\nRecommendation : Scanner cérébral urgent, bilan AVC, mise en place monitoring et discussion thrombolyse.",
+          "mnemo": {
+            "titre": "👉 Mnémo SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / Mnémos",
+          "subsections": [
+            {
+              "titre": "VITE pour AVC",
+              "points": [
+                "Vérifier glycémie (pas oublier hypoglycémie mimant AVC)",
+                "Imagerie cérébrale urgente (CT)",
+                "Thrombolyse si < 4,5h (ou thrombectomie si gros vaisseau)",
+                "ECG pour FA"
+              ]
+            },
+            {
+              "titre": "Score ABCD² pour AIT",
+              "points": [
+                "Age",
+                "Blood pressure",
+                "Clinical features",
+                "Duration",
+                "Diabetes"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour / contre le diagnostic principal et DD",
+              "questions": [
+                {
+                  "question": "AVC ischémique",
+                  "reponse": {
+                    "pour": [
+                      "Déficit focal brutal persistant (vision, langage, motricité)",
+                      "Facteurs de risque",
+                      "Antécédents AIT"
+                    ],
+                    "contre": [
+                      "Aucun vraiment pertinent ici"
+                    ]
+                  }
+                },
+                {
+                  "question": "AIT",
+                  "reponse": {
+                    "pour": [
+                      "Épisodes antérieurs transitoires"
+                    ],
+                    "contre": [
+                      "Durée actuelle > 2h = plutôt AVC constitué"
+                    ]
+                  }
+                },
+                {
+                  "question": "Néoplasie",
+                  "reponse": {
+                    "pour": [
+                      "Céphalées chroniques",
+                      "Tabac",
+                      "ATCD familial cancer"
+                    ],
+                    "contre": [
+                      "Symptômes aigus et progressifs = plus évocateur AVC"
+                    ]
+                  }
+                },
+                {
+                  "question": "Migraine avec aura",
+                  "reponse": {
+                    "pour": [
+                      "Céphalées récurrentes"
+                    ],
+                    "contre": [
+                      "Déficit prolongé",
+                      "Patient âgé",
+                      "Atypique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires et analyse",
+              "questions": [
+                {
+                  "question": "À demander immédiatement",
+                  "reponse": [
+                    "CT cérébral sans contraste",
+                    "IRM",
+                    "Bilan bio (NFS, glycémie, coag)",
+                    "ECG",
+                    "Doppler carotides"
+                  ]
+                },
+                {
+                  "question": "Résultats donnés par examinateur",
+                  "resultats": [
+                    "CT : pas d'hémorragie → compatible ischémie",
+                    "ECG : FA",
+                    "Biologie : glycémie normale, TP/TCA normaux"
+                  ],
+                  "analyse": "👉 Analyse : AVC ischémique cardio-embolique probable, lié à fibrillation auriculaire + sténose carotidienne possible"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "AVC ischémique territoire ACM gauche"
+                },
+                {
+                  "question": "Traitement aigu",
+                  "reponse": {
+                    "immediat": [
+                      "Monitoring, voie veineuse, glycémie",
+                      "Thrombolyse IV si < 4,5h et pas de CI",
+                      "Thrombectomie si gros vaisseau occlus",
+                      "Pas d'anti-agrégant avant 24h si thrombolyse"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi / complications",
+                  "reponse": {
+                    "preventionSecondaire": [
+                      "Statine haute dose",
+                      "Antiagrégant ou anticoagulation si FA"
+                    ],
+                    "rehabilitation": [
+                      "Orthophonie",
+                      "Kinésithérapie",
+                      "Ergothérapie"
+                    ],
+                    "complications": [
+                      "Transformation hémorragique",
+                      "Œdème cérébral malin",
+                      "Pneumonie d'aspiration"
+                    ],
+                    "astuce": "👉 Astuce révision : pense à la triade AVC aigu = Imaging – Time – Reperfusion"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

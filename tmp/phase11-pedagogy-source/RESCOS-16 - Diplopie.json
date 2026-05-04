@@ -1,0 +1,801 @@
+{
+  "title": "RESCOS-16 - Diplopie",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Mme Mia Graf, 26 ans, avocate, se présente pour ptose bilatérale et diplopie fluctuante depuis hier matin."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation des symptômes",
+          "details": [
+            "Faiblesse [faiblesse musculaire généralisée, fatigabilité]",
+            "Ptose [bilatérale, depuis hier, fluctuante]",
+            "Diplopie [vision double fluctuante, absente pendant la consultation]",
+            "Trouble respiratoire [discrètement tachypnéique]"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a2",
+          "text": "Exploration d'autres symptômes neurologiques",
+          "details": [
+            "Troubles sensitifs [non]",
+            "Baisse d'acuité visuelle [non]",
+            "Céphalées [non]",
+            "Trouble du langage (dysarthrie ou aphasie) [non]",
+            "Vertiges [non]",
+            "Fasciculations [non]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Cinétique d'évolution",
+          "details": [
+            "Début [il y a 2 mois]",
+            "Évolution [fluctuant]",
+            "Dégradation récente [depuis hier]",
+            "Horaire spécifique [pire en fin de journée]"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a4",
+          "text": "Anamnèse systémique",
+          "details": [
+            "Fièvre [non]",
+            "Infection récente [infection urinaire actuelle]",
+            "Atteinte d'autres systèmes (digestif, cutané, perte de poids récente etc) [non]",
+            "Consommation de conserves artisanales [non]",
+            "Plaie/blessure récente [non]"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Contexte",
+          "details": [
+            "Antécédents médico-chirurgicaux [aucun]",
+            "Médicaments [Ciprofloxacine 500mg 2x/j depuis la veille]",
+            "Anamnèse familiale",
+            "Allergies [aucune]",
+            "Habitus"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "NC III IV VI",
+          "details": [
+            "Observation de ptose [ptose œil gauche]",
+            "Constate la ptose à bascule",
+            "Oculomotricité [normale actuellement]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "NC II III",
+          "details": [
+            "Champs visuels",
+            "Acuité visuelle",
+            "Réflexes photomoteurs directs ET croisés"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "NC V VII VIII",
+          "details": [
+            "Sensibilité de la face aux territoires V1, V2 & V3",
+            "Motricité de la face",
+            "Test auditif"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "NC XI - motricité de la tête & du cou [tête tombante, muscles cervicaux M2-M3]",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "NC IX XII",
+          "details": [
+            "Évaluation de la motricité de la langue",
+            "Inspection de la luette"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Tests spécifiques à la myasthénie",
+          "details": [
+            "Ice Pack Test [positif avec amélioration complète de la ptose]",
+            "Simpson [positif après 10 secondes - diplopie verticale et aggravation ptose]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Force",
+          "details": [
+            "Épreuves de stabilisation [bras tendus avec chute du membre supérieur droit]",
+            "Force segmentaire aux 4 membres [globalement M4, M2 si effort prolongé]",
+            "Recherche fatigabilité"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Réflexes",
+          "details": [
+            "Réflexes ostéotendineux [normovifs et symétriques]",
+            "Réflexes cutanés plantaires [Babinski en flexion bilatéral]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e9",
+          "text": "Dépistage trouble sensitif [sans particularité]",
+          "binaryOnly": true
+        },
+        {
+          "id": "e10",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale - myasthénie grave",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Botulisme",
+            "Syndrome de Lambert Eaton",
+            "Sclérose latérale amyotrophique (SLA - Maladie de Charcot)",
+            "Syndrome de Guillain-Barré",
+            "Atteinte du tronc cérébral"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Dosage anticorps anti RAch",
+            "ENMG",
+            "CT à la recherche Thymome"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Mise en route d'un traitement",
+          "details": [
+            "Pyridostigmine",
+            "Corticothérapie",
+            "Échanges plasmatiques"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m5",
+          "text": "Suite de prise en charge - propose",
+          "details": [
+            "Hospitalisation",
+            "Contrôle et monitoring de l'atteinte respiratoire"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Mia Graf",
+      "age": "26 ans",
+      "contexte": "Avocate à 80%, travaille occasionnellement comme patiente simulée pour la FBM",
+      "motifConsultation": {
+        "plaintePrincipale": "Depuis hier, j'ai les yeux qui tombent et je vois parfois double",
+        "autreChose": "J'ai l'impression d'être très faible, de manquer de force"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Paupières lourdes depuis hier matin",
+          "Ptose bilatérale fluctuante",
+          "Diplopie (vision double) fluctuante",
+          "N'arrive par moment plus à ouvrir les yeux",
+          "Installation progressive",
+          "Symptômes fluctuent beaucoup d'un moment à l'autre"
+        ],
+        "symptomesAssocies": [
+          "Faiblesse musculaire généralisée",
+          "Fatigabilité des muscles",
+          "Tête tombante",
+          "Légèrement tachypnéique",
+          "Pas de troubles sensitifs",
+          "Pas de troubles cognitifs"
+        ],
+        "evolution": [
+          "Symptômes présents depuis 2 mois de manière discrète",
+          "Très fluctuants (principalement en fin de journée)",
+          "Aggravation franche depuis hier matin",
+          "Durée variable : parfois quelques minutes seulement",
+          "Progression discrète sur 2 mois",
+          "Péjoration majeure hier après prise de Ciprofloxacine"
+        ],
+        "facteursModulateurs": [
+          "Facteur déclenchant : Ciprofloxacine pour infection urinaire",
+          "Aggravation : en fin de journée",
+          "Amélioration : au repos",
+          "Amélioration au froid (Ice Pack Test positif)"
+        ],
+        "questions": [
+          "J'ai peur que ce soit grave et de perdre la vue, c'est pour ça que je suis là"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Pas de perte de poids récente",
+          "Pas de sudation nocturne",
+          "Pas d'état fébrile récent"
+        ],
+        "genitourinaire": [
+          "Dysurie depuis 4 jours",
+          "Augmentation fréquence mictionnelle à 7-8x/j",
+          "Diagnostic d'infection urinaire simple par MT hier",
+          "Prescription de Ciprofloxacine"
+        ],
+        "neurologique": [
+          "Pas de céphalées",
+          "Pas de vertiges",
+          "Pas de troubles du langage",
+          "Pas de fasciculations",
+          "Pas de baisse d'acuité visuelle"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Saine et équilibrée, n'a pas consommé de conserves artisanales",
+        "activitePhysique": "Randonnée",
+        "sommeil": "Normal",
+        "tabac": "Non",
+        "alcool": "Occasionnel",
+        "drogues": "Non",
+        "medicaments": "Ciprofloxacine 500mg 2x/j depuis la veille"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Pas d'antécédents médico-chirurgicaux",
+        "Pas d'allergies connues",
+        "Pas de traitements au long cours",
+        "Infection urinaire actuelle"
+      ],
+      "antecedentsFamiliaux": [
+        "Non contributifs"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Avocate à 80%",
+        "hobbies": "Randonnée, travaille occasionnellement comme patiente simulée pour la FBM",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Non précisée",
+        "etatCivil": "Célibataire",
+        "enfants": "Aucun",
+        "situationSocioEconomique": "Stable",
+        "origine": "Non précisée",
+        "etatEsprit": "Vive d'esprit, cherche à comprendre et à aider le médecin"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Discrètement tachypnéique",
+          "Ptose de l'œil gauche",
+          "Tête tombante",
+          "Concise et précise dans les réponses",
+          "Pas de jargon médical"
+        ],
+        "durantExamen": [
+          "Fonctions supérieures : normales",
+          "Nerfs crâniens : tête tombante avec muscles cervicaux M2-M3",
+          "Ptose initialement complète à gauche, puis amélioration mais passage à droite (ptose à bascule)",
+          "Oculomotricité normale (symptômes résolus pendant consultation)",
+          "Force : bras tendus avec chute sans creusement ni pronation du membre supérieur droit",
+          "Force globalement M4 (si effort prolongé, M2)",
+          "Réflexes : normovifs et symétriques",
+          "Réflexe cutané plantaire (Babinski) en flexion des deux côtés",
+          "Sensibilité : sans particularité"
+        ],
+        "testsSpecifiques": [
+          "Test de Simpson : positif après 10 secondes (diplopie verticale et aggravation de la ptose)",
+          "Ice Pack Test : positif avec amélioration complète de la ptose (indication donnée par l'expert)"
+        ]
+      },
+      "informationADonner": "Aucune information spécifique à donner après un certain temps."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Mme Graf, 26 ans, avocate, consulte pour ptose bilatérale et diplopie fluctuante depuis hier. Symptômes présents depuis 2 mois mais aggravation franche après prise de Ciprofloxacine pour infection urinaire. Atteinte motrice pure fluctuante avec phénomène de bascule, tête tombante, tétraparésie sans signes centraux ou sensitifs.",
+      "rolesInterventions": [
+        "Donner l'indication pour l'Ice Pack Test si le candidat le propose",
+        "Observer la réalisation des tests spécifiques (Simpson, Ice Pack)",
+        "Noter la reconnaissance du facteur déclenchant (Ciprofloxacine)",
+        "Vérifier l'identification de l'urgence respiratoire potentielle"
+      ],
+      "pointsCles": [
+        "Myasthénie grave typique avec atteinte oculaire et généralisée",
+        "Facteur déclenchant : Ciprofloxacine (contre-indiquée dans la myasthénie)",
+        "Syndrome moteur pur avec fluctuations pathognomoniques",
+        "Phénomène de bascule de la ptose",
+        "Tests spécifiques positifs (Simpson et Ice Pack)",
+        "Risque d'atteinte respiratoire à surveiller",
+        "Diagnostic différentiel : autres atteintes de la jonction neuromusculaire"
+      ],
+      "pieges": [
+        "Ne pas identifier le rôle de la Ciprofloxacine",
+        "Manquer les tests spécifiques (Simpson, Ice Pack)",
+        "Ne pas reconnaître l'urgence respiratoire potentielle",
+        "Confondre avec une atteinte centrale ou périphérique",
+        "Oublier le dosage des anticorps anti-récepteurs à l'acétylcholine",
+        "Ne pas proposer l'hospitalisation pour surveillance"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la myasthénie grave",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "La myasthénie grave est une maladie auto-immune de la jonction neuromusculaire.",
+          "points": [
+            "Anticorps anti-récepteurs à l'acétylcholine (85% des cas)",
+            "Blocage de la transmission neuromusculaire",
+            "Faiblesse musculaire fluctuante et fatigabilité",
+            "Atteinte préférentielle des muscles oculaires et bulbaires",
+            "Association avec thymome dans 10-15% des cas",
+            "Prédominance féminine chez les jeunes adultes"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "contenu": "Les symptômes caractéristiques fluctuent et s'aggravent à l'effort.",
+          "points": [
+            "Ptose palpébrale fluctuante, souvent asymétrique",
+            "Diplopie binoculaire variable",
+            "Faiblesse des muscles proximaux",
+            "Fatigabilité pathologique à l'effort répété",
+            "Atteinte bulbaire : dysarthrie, dysphagie",
+            "Atteinte respiratoire possible (crise myasthénique)",
+            "Aggravation vespérale typique"
+          ]
+        },
+        {
+          "titre": "Tests diagnostiques cliniques",
+          "contenu": "Plusieurs tests simples peuvent orienter le diagnostic au lit du patient.",
+          "points": [
+            "Test de Simpson : fatigue oculaire au regard soutenu vers le haut",
+            "Ice Pack Test : amélioration de la ptose par application de glace",
+            "Test à l'anticholinestérasique (Tensilon/néostigmine)",
+            "Recherche de fatigabilité : épreuves répétées",
+            "Phénomène de Mary Walker : ptose alternée",
+            "Signe du rideau : ptose s'aggravant progressivement"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "Le diagnostic repose sur des examens spécialisés.",
+          "points": [
+            "Anticorps anti-récepteurs à l'acétylcholine (anti-RACh)",
+            "Anticorps anti-MuSK si anti-RACh négatifs",
+            "ENMG : décrément à la stimulation répétitive",
+            "CT thoracique : recherche de thymome",
+            "Fonction thyroïdienne (association possible)",
+            "Bilan auto-immun si indiqué"
+          ]
+        },
+        {
+          "titre": "Facteurs aggravants",
+          "contenu": "Certains médicaments et situations peuvent décompenser la myasthénie.",
+          "points": [
+            "Antibiotiques : aminosides, fluoroquinolones (Ciprofloxacine), macrolides",
+            "Bêta-bloquants et inhibiteurs calciques",
+            "Curares et anesthésiques",
+            "Quinine et dérivés",
+            "Infections et stress",
+            "Grossesse (variable)",
+            "Hyperthyroïdie"
+          ]
+        },
+        {
+          "titre": "Traitement",
+          "contenu": "La prise en charge est adaptée à la sévérité et comprend plusieurs modalités.",
+          "points": [
+            "Anticholinestérasiques : pyridostigmine (Mestinon)",
+            "Corticothérapie : prednisone avec schéma progressif",
+            "Immunosuppresseurs : azathioprine, mycophenolate",
+            "Immunoglobulines IV ou plasmaphorèse en urgence",
+            "Thymectomie si thymome ou patient jeune",
+            "Rituximab dans les formes réfractaires",
+            "Éviction des médicaments contre-indiqués"
+          ]
+        },
+        {
+          "titre": "Crise myasthénique",
+          "contenu": "L'atteinte respiratoire constitue une urgence vitale.",
+          "points": [
+            "Faiblesse des muscles respiratoires",
+            "Capacité vitale < 20 ml/kg",
+            "Toux inefficace",
+            "Indication d'intubation précoce",
+            "Traitement par IgIV ou plasmaphorèse",
+            "Surveillance en réanimation",
+            "Recherche et traitement du facteur déclenchant"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Pyridostigmine (Mestinon) : 60mg 3-6x/j PO, adapter selon réponse",
+        "Prednisone : débuter à 10-20mg/j, augmenter progressivement",
+        "Azathioprine : 2-3mg/kg/j en traitement d'épargne corticoïde",
+        "IgIV : 0.4g/kg/j pendant 5 jours ou 1g/kg/j pendant 2 jours",
+        "Plasmaphorèse : 5 échanges sur 10 jours",
+        "Néostigmine IV : 0.5-1mg en test diagnostique",
+        "Atropine : toujours disponible si test aux anticholinestérasiques"
+      ],
+      "examensComplementaires": [
+        "Anticorps anti-récepteurs à l'acétylcholine (anti-RACh)",
+        "Anticorps anti-MuSK et anti-LRP4 si anti-RACh négatifs",
+        "ENMG avec stimulation répétitive à 3Hz",
+        "ENMG fibre unique (jitter augmenté)",
+        "CT ou IRM thoracique (recherche thymome)",
+        "Fonction thyroïdienne (TSH, T4)",
+        "Gazométrie si dyspnée",
+        "Spirométrie avec capacité vitale"
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Myasthénie Grave – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes cardinaux",
+              "points": [
+                "Fatigabilité musculaire fluctuante, aggravée à l'effort, améliorée par le repos",
+                "Atteinte oculaire (fréquent en début) : ptosis unilatéral ou bilatéral, diplopie variable",
+                "Atteinte bulbaire : dysarthrie, dysphagie, faiblesse masticatoire",
+                "Atteinte des muscles proximaux : difficulté à se coiffer, monter les escaliers",
+                "Dyspnée (en cas d'atteinte respiratoire)",
+                "Fluctuation diurne possible"
+              ]
+            },
+            {
+              "titre": "Facteurs aggravants",
+              "points": [
+                "Médicaments (aminosides, fluoroquinolones, β-bloquants…)",
+                "Infection, stress, chirurgie, grossesse",
+                "Corticothérapie (risque de crise initiale)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Tests de fatigabilité",
+              "points": [
+                "Test à la glace : amélioration ptosis après 2 min",
+                "Simpson test : fatigue en regardant vers le haut",
+                "Cogan lid twitch : secousse palpébrale après regard vers le bas"
+              ]
+            },
+            {
+              "titre": "Signes cliniques",
+              "points": [
+                "Parfois normal au repos",
+                "Ptosis asymétrique, diplopie, faiblesse faciale",
+                "Réflexes tendineux normaux",
+                "Pas de troubles sensitifs"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens biologiques et paracliniques",
+              "tableau": {
+                "colonnes": ["Examen", "Objectif", "Spécificité"],
+                "lignes": [
+                  ["Anti-AchR", "1ʳᵉ intention", "Spécifique (85% des cas)"],
+                  ["Anti-MuSK, anti-LRP4", "Si AchR négatif", "Formes séronégatives"],
+                  ["EMG (stimulation répétée)", "Réponse décrémentielle", "Confirmation diagnostique"],
+                  ["TDM thorax", "Recherche thymome", "10-15% des cas"],
+                  ["Épreuve à l'édrophonium", "Test pharmacologique", "Obsolète"]
+                ]
+              },
+              "points": [
+                "Penser aux maladies associées auto-immunes (ex. : Hashimoto, lupus)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "🟢 Traitement symptomatique",
+              "points": [
+                "Pyridostigmine (inhibiteur de l'acétylcholinestérase)",
+                "• 1ʳᵉ intention",
+                "• Amélioration transitoire des symptômes"
+              ]
+            },
+            {
+              "titre": "🟡 Immunosuppression",
+              "points": [
+                "Si réponse insuffisante ou formes généralisées :",
+                "• Corticostéroïdes",
+                "• ± Azathioprine, mycophénolate, ciclosporine",
+                "• Rituximab si anti-MuSK",
+                "⚠️ Les corticoïdes peuvent initialement aggraver les symptômes → introduction progressive sous surveillance"
+              ]
+            },
+            {
+              "titre": "🔴 Crise myasthénique",
+              "tableau": {
+                "colonnes": ["Critère", "Seuil d'urgence"],
+                "lignes": [
+                  ["Capacité vitale", "< 20 ml/kg"],
+                  ["VEMS", "< 30%"],
+                  ["Pression inspiratoire max", "< 40 cmH₂O"]
+                ]
+              },
+              "points": [
+                "Urgence vitale avec atteinte respiratoire",
+                "• Hospitalisation en USI",
+                "• IVIg ou plasmaphérèse",
+                "• Ventilation assistée si besoin"
+              ]
+            },
+            {
+              "titre": "🩻 Thymectomie",
+              "points": [
+                "Indiquée si thymome confirmé",
+                "À discuter même sans thymome (efficacité chez AChR+)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toujours penser à la fatigabilité musculaire fluctuante",
+            "Savoir tester les signes cliniques oculaires typiques",
+            "Ne pas oublier le scanner thoracique (thymome ?)",
+            "Éviter les médicaments aggravants (ATB, anesthésiques, β-bloquants…)",
+            "Urgence si troubles respiratoires ou dysphagie aiguë → appel neurologie + réanimation"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Diplopie (Myasthénie grave)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Symptôme principal → début, mode d'installation, fluctuation, aggravants/soulagements",
+            "Signes associés → faiblesse généralisée, dysphagie, troubles respiratoires",
+            "ATCD, traitements, déclencheurs récents (ex. antibiotiques contre-indiqués)",
+            "Examen clinique ciblé → nerfs crâniens, ptose, oculomotricité, tests spécifiques (Simpson, Ice Pack)",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → Ac anti-RAch, ENMG, CT thorax",
+            "Prise en charge immédiate → monitoring respi, hospitalisation, traitement spécifique"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : FATIGUE",
+            "elements": [
+              "Fluctuation",
+              "Atteinte musculaire (oculaire, bulbaire, respi)",
+              "Tests spécifiques (Simpson, Ice Pack)",
+              "Identification facteur déclenchant (ex. Ciprofloxacine 🚫)",
+              "Gros DD (botulisme, Lambert-Eaton, SLA, AVC tronc)",
+              "Urgence respi à surveiller",
+              "Examens + traitement"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s'agit de Mme Mia Graf, 26 ans, avocate, en bonne santé habituelle, qui consulte aux urgences pour une ptose palpébrale bilatérale fluctuante et une diplopie apparue depuis hier matin, aggravées en fin de journée.\n\nElle décrit aussi une faiblesse musculaire généralisée fluctuante, une fatigabilité rapide, et une sensation de tête lourde. Depuis hier, elle est légèrement dyspnéique. Pas de céphalées, pas de troubles sensitifs, pas de déficit moteur permanent, pas de troubles du langage.\n\nContexte : bonne santé, pas d'ATCD. Depuis 4 jours : infection urinaire, traitée depuis hier par ciprofloxacine, ce qui a coïncidé avec une aggravation franche des symptômes. Pas de tabac, pas de drogues, alcool occasionnel.\n\nÀ l'examen : ptose fluctuante à bascule, aggravée par le test de Simpson, améliorée par l'Ice Pack Test. Force musculaire globale M4, chute du bras droit à la manœuvre des bras tendus, aggravée si effort prolongé. Réflexes normaux, sensibilité conservée.\n\nEn résumé, il s'agit d'une jeune femme avec une fatigabilité musculaire fluctuante, atteinte oculaire et céphalique, aggravée par la ciprofloxacine.\n\nHypothèse principale : myasthénie grave.\n\nDiagnostics différentiels : botulisme, Lambert-Eaton, SLA, Guillain-Barré, atteinte du tronc cérébral.\n\nExamens complémentaires : dosage anticorps anti-RAch (± anti-MuSK), ENMG, scanner thoracique (thymome), gazométrie artérielle et spirométrie (fonction respi), bilan thyroïdien.\n\nPrise en charge immédiate : hospitalisation pour surveillance respiratoire, arrêt ciprofloxacine, mise sous pyridostigmine, envisager corticothérapie. En cas de crise : IgIV ou plasmaphérèse. Une thymectomie sera discutée si thymome."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Graf, 26 ans, présente depuis hier une ptose fluctuante et diplopie.\n\nB (Background) : Infection urinaire traitée depuis hier par ciprofloxacine → aggravation nette. Pas d'ATCD.\n\nA (Assessment) : Suspicion de myasthénie grave avec début d'atteinte respiratoire. DD : botulisme, Lambert-Eaton, SLA.\n\nR (Recommendation) : Arrêt ciprofloxacine, hospitalisation avec monitoring respi, mise sous pyridostigmine, examens confirmatoires (Ac anti-RAch, ENMG, CT thorax).",
+          "mnemo": {
+            "titre": "👉 Mnémo express : SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Myasthénie = 3F",
+              "points": [
+                "Fluctuation",
+                "Fatigabilité",
+                "Faiblesse musculaire oculaire/bulbaire"
+              ]
+            },
+            {
+              "titre": "Facteurs aggravants → ABCD",
+              "points": [
+                "Antibiotiques (aminosides, fluoroquinolones, macrolides)",
+                "Bêta-bloquants / Bloqueurs calciques",
+                "Curares, anesthésiques",
+                "Dérivés de quinine"
+              ]
+            },
+            {
+              "titre": "Urgence respi → 20-30-40 (critères de crise myasthénique)",
+              "points": [
+                "CV < 20 ml/kg",
+                "VEMS < 30 %",
+                "PI max < 40 cmH₂O"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Myasthénie grave",
+                  "reponse": {
+                    "pour": [
+                      "Ptose fluctuante",
+                      "Diplopie variable",
+                      "Fatigabilité musculaire",
+                      "Tests Simpson/Ice Pack positifs",
+                      "Pas de troubles sensitifs",
+                      "Déclencheur médicamenteux (ciprofloxacine)"
+                    ],
+                    "contre": [
+                      "Âge jeune sans ATCD auto-immuns (mais typique chez la femme jeune)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Botulisme",
+                  "reponse": {
+                    "pour": [
+                      "Atteinte bilatérale",
+                      "Faiblesse descendante"
+                    ],
+                    "contre": [
+                      "Pas de troubles digestifs",
+                      "Pas de consommation de conserves",
+                      "Fluctuation atypique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Lambert-Eaton",
+                  "reponse": {
+                    "pour": [
+                      "Faiblesse musculaire"
+                    ],
+                    "contre": [
+                      "Associé aux cancers (poumon)",
+                      "Réflexes abolis puis facilités",
+                      "Âge jeune"
+                    ]
+                  }
+                },
+                {
+                  "question": "SLA",
+                  "reponse": {
+                    "pour": [
+                      "Faiblesse musculaire"
+                    ],
+                    "contre": [
+                      "Atteinte motoneurone sup/inf",
+                      "Pas fluctuante",
+                      "Progressive sur mois/années"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Examens à demander",
+                  "reponse": [
+                    "Anticorps anti-RAch ± anti-MuSK",
+                    "ENMG avec stimulation répétitive",
+                    "CT thorax (recherche thymome)",
+                    "Gazométrie artérielle",
+                    "Spirométrie (capacité vitale)"
+                  ],
+                  "analyse": "👉 Analyse orale : « Ces examens confirment le diagnostic et recherchent une cause associée (thymome). La spirométrie évalue le risque de crise myasthénique. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Myasthénie grave généralisée"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Arrêt ciprofloxacine",
+                      "Pyridostigmine en première ligne",
+                      "Corticoïdes si forme généralisée",
+                      "IgIV ou plasmaphérèse si crise",
+                      "Thymectomie si thymome"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance respiratoire rapprochée",
+                    "Suivi neurologique spécialisé",
+                    "Dépistage auto-immun associé",
+                    "Education sur signes de crise"
+                  ],
+                  "astuce": "👉 Astuce révision : Penser au trio « Voir – Respirer – Traiter » : Voir → ptose/diplopie, Respirer → surveiller fonction respiratoire, Traiter → pyridostigmine + immunosuppression"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

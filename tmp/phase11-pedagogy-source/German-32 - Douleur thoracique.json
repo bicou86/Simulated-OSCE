@@ -1,0 +1,384 @@
+{
+  "title": "German-32 - Douleur thoracique",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Homme de 23 ans se présentant avec douleur thoracique aiguë",
+    "vitals": {
+      "ta": "114/76 mmHg",
+      "fc": "83 bpm",
+      "fr": "20/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification des symptômes",
+          "details": [
+            "[Douleurs dans la poitrine]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution",
+          "details": [
+            "[Depuis quelques heures, s'aggrave constamment]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Sourde, oppressante, légèrement ondulante]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Localisation de la douleur",
+          "details": [
+            "[Centre de la poitrine, plutôt à droite]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Intensité de la douleur",
+          "details": [
+            "[7/10]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Douleur liée à la respiration",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Irradiation de la douleur",
+          "details": [
+            "[Un peu dans la nuque]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "[Toujours aussi intense]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Traumatisme thoracique",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Événement déclenchant",
+          "details": [
+            "[A commencé pendant le basketball]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes associés",
+          "details": [
+            "Dyspnée [légère]",
+            "Perte de connaissance [non]",
+            "Toux [non]",
+            "Infection récente [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents cardiaques",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Asthme",
+          "details": [
+            "[Dans l'enfance, maintenant seulement très rarement]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents de TVP/EP",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Facteurs de risque d'embolie pulmonaire (Score de Wells)",
+          "details": [
+            "Œdème/douleur du mollet [non]",
+            "Voyage récent [non]",
+            "Chirurgie récente [non]",
+            "Cancer actif [non]",
+            "Antécédents familiaux de thrombophilie [non]"
+          ],
+          "scoringRule": "Score de Wells = 0 point"
+        },
+        {
+          "id": "a17",
+          "text": "Signes généraux",
+          "details": [
+            "[Pas de perte de poids, pas de fièvre, pas de sueurs nocturnes]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Antécédents personnels",
+          "details": [
+            "[Sans particularité]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Habitudes de vie",
+          "details": [
+            "[Environ 5 cigarettes par jour]",
+            "[Alcool le week-end]",
+            "[Pas de drogues]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Ventolin rarement si besoin]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Allergies",
+          "details": [
+            "[Pollen]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Mère : asthme]",
+            "[Père : en bonne santé]",
+            "[Fratrie : en bonne santé]"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Étudiant]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée sur le pneumothorax spontané du jeune adulte"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "[Un peu pâle, bouche normale]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "État cardiopulmonaire",
+          "details": [
+            "[Tachycardie/tachypnée]",
+            "[Murmure vésiculaire normal à gauche]",
+            "[Murmure vésiculaire absent à droite]",
+            "[Percussion hypersonore à droite]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection des jambes",
+          "details": [
+            "[Normal]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Signes spécifiques du pneumothorax",
+          "details": [
+            "Asymétrie thoracique",
+            "Diminution de l'ampliation thoracique du côté atteint",
+            "Déviation trachéale (si pneumothorax sous tension)"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé avec mise en évidence des signes classiques du pneumothorax"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic de suspicion principal",
+          "details": [
+            "[Pneumothorax spontané]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Pneumothorax spontané primaire",
+            "Embolie pulmonaire",
+            "Crise d'asthme",
+            "Douleur musculosquelettique",
+            "Cardiomyopathie/myocardite"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes pulmonaires",
+                "items": [
+                  {
+                    "text": "Pneumothorax spontané primaire → Radiographie thoracique, US thoracique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CT thoracique"
+                  },
+                  {
+                    "text": "Crise d'asthme → Spirométrie, test de réversibilité",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Spirométrie avec test de réversibilité, peak flow"
+                  },
+                  {
+                    "text": "Pneumonie atypique → Radiographie, CRP, FSC",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CRP, hémocultures"
+                  }
+                ]
+              },
+              {
+                "name": "Causes cardiovasculaires",
+                "items": [
+                  {
+                    "text": "Embolie pulmonaire → D-dimères, angio-CT si positif",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ D-dimères, angio-CT thoracique"
+                  },
+                  {
+                    "text": "Myocardite/péricardite → ECG, troponine, échocardiographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, échocardiographie, CRP"
+                  }
+                ]
+              },
+              {
+                "name": "Causes pariétales",
+                "items": [
+                  {
+                    "text": "Douleur musculosquelettique → Examen clinique, test antalgique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Radiographie thoracique (image typique de pneumothorax)",
+            "Biologie : FSC, CRP, troponine, CK",
+            "Gazométrie artérielle",
+            "ECG",
+            "US thoracique si doute diagnostique"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "details": [
+            "Oxygénothérapie haut débit",
+            "Analgésie adaptée",
+            "Surveillance monitoring cardio-respiratoire",
+            "Si pneumothorax < 2cm : observation",
+            "Si pneumothorax > 2cm ou symptomatique : drainage thoracique"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement du pneumothorax spontané",
+                "content": "• Pneumothorax < 15-20% et asymptomatique : observation + O2\n• Pneumothorax > 20% ou symptomatique : drainage par cathéter ou drain thoracique\n• Position demi-assise\n• Analgésie : paracétamol ± AINS\n• Surveillance radiologique à 6h et 24h"
+              },
+              {
+                "title": "Prévention des récidives",
+                "content": "• Arrêt du tabac impératif (réduit le risque de 4x)\n• Éviter les efforts de Valsalva\n• Pas de plongée sous-marine définitivement\n• Pas d'aviation pendant 6 semaines\n• Information sur les signes de récidive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "Pneumothorax > 20%",
+            "Pneumothorax symptomatique",
+            "Pneumothorax bilatéral",
+            "Pneumothorax sous tension",
+            "Comorbidités pulmonaires"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information du patient",
+          "details": [
+            "Expliquer le diagnostic et le mécanisme",
+            "Risque de récidive (30% à 2 ans)",
+            "Importance de l'arrêt du tabac",
+            "Signes d'alarme nécessitant une reconsultation urgente"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge adaptée avec stratification selon la taille et la symptomatologie"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

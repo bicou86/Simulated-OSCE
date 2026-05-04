@@ -1,0 +1,589 @@
+{
+  "title": "German-43 - Eruption cutanée",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Timmy, 6 ans, est amené par sa mère en raison d'une éruption cutanée"
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Se présente avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Exploration du symptôme principal : éruption cutanée",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Évolution temporelle de l'éruption",
+          "patientComment": "Depuis hier après-midi"
+        },
+        {
+          "id": "a4",
+          "text": "Localisation de l'éruption",
+          "patientComment": "Tête, cou et tronc"
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de l'éruption",
+          "details": [
+            "Prurit [Pas de démangeaisons]",
+            "Texture au toucher [Se sent comme du papier de verre]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes associés",
+          "details": [
+            "Fièvre et frissons [Depuis 3 jours, pense que c'est une grippe]",
+            "Mal de gorge [Oui, surtout douleur à la déglutition]",
+            "Changements linguaux [Langue rouge soudainement]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "État général et symptômes systémiques",
+          "details": [
+            "Comportement général [Enfant plaintif]",
+            "Céphalées [Mal de tête]",
+            "Problèmes respiratoires [Respiration normale]",
+            "Autres symptômes systémiques [Pas d'autres problèmes]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Allergies connues",
+          "patientComment": "Abeille"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux et traitements",
+          "details": [
+            "Médicaments actuels [Non]",
+            "Maladies antérieures [Non]",
+            "Interventions chirurgicales [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Statut vaccinal",
+          "patientComment": "Tous les vaccins sauf rougeole"
+        },
+        {
+          "id": "a11",
+          "text": "Examens préventifs récents",
+          "patientComment": "Oui, normal il y a 6 mois"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "patientComment": "Personne dans la famille n'a eu cela"
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse sociale et exposition",
+          "details": [
+            "Fréquentation collective [Va à la crèche]",
+            "Contacts malades [Pas certain si quelqu'un à la crèche a eu cela]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse pédiatrique ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évaluation des signes de déshydratation",
+          "details": [
+            "Diurèse [Normale]",
+            "Fontanelle [Non déprimée]",
+            "Yeux enfoncés [Non]",
+            "Muqueuses sèches [Non]",
+            "Pli cutané [Normal]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cutané détaillé",
+          "patientComment": "Voir image en annexe"
+        },
+        {
+          "id": "e3",
+          "text": "Examen ORL",
+          "details": [
+            "Aspect de la langue [Langue framboise]",
+            "État des amygdales [Amygdales inflammées]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation pulmonaire",
+          "patientComment": "Normale"
+        },
+        {
+          "id": "e5",
+          "text": "Recherche de signes de gravité",
+          "details": [
+            "État de conscience",
+            "Signes méningés",
+            "Signes de choc"
+          ],
+          "patientComment": "Tous absents"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen pédiatrique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Scarlatine"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Maladies éruptives virales",
+                "items": [
+                  {
+                    "text": "Rougeole : Prodrome moins sévère, éruption différente",
+                    "cause": "Arguments POUR:\n\t□ macules puis papules descendantes, signe de Koplik",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Varicelle : Éruption prurigineuse vésiculeuse, lésions d'âges différents, début au tronc",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Rubéole : Prodrome plus doux, éruption discrète rose pâle, adénopathies rétro-auriculaires",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "Test rapide streptocoque [Pour confirmer streptocoque groupe A]",
+            "Culture bactériologique [Si test rapide négatif mais forte suspicion clinique]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antibiotique",
+                "content": "• Pénicilline V ou amoxicilline : Traitement de première ligne × 10 jours"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Antipyrétiques : Paracétamol ou ibuprofène pour fièvre et douleur\n• Hydratation : Encourager les boissons fraîches"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Mesures préventives et prophylaxie",
+          "details": [
+            "Prophylaxie de l'entourage [Pas de prophylaxie de l'entourage nécessaire]",
+            "Éviction scolaire [24-48h après début de l'antibiothérapie]",
+            "Mesures d'hygiène [Lavage des mains, éviter partage d'ustensiles]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information aux parents et surveillance",
+          "details": [
+            "Explication de la maladie",
+            "Importance de l'observance du traitement",
+            "Signes d'alerte (complications)",
+            "Quand reconsulter"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Planification du suivi",
+          "details": [
+            "Surveillance de l'efficacité du traitement",
+            "Vérification de la disparition des symptômes",
+            "Dépistage des complications tardives (glomérulonéphrite, RAA)"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge pédiatrique cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Image clinique - Éruption scarlatiniforme",
+        "description": "Photographie montrant l'éruption cutanée érythémateuse généralisée avec aspect 'papier de verre' typique de la scarlatine chez un enfant",
+        "data": "grilles_generees/images/eruption-cutanee-ii-img.jpg"
+      }
+    ],
+    "resume": {
+      "titre": "🌡️ Scarlatine – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Fièvre brutale élevée",
+                "Angine avec odynophagie",
+                "Éruption cutanée diffuse (après 12–48 h)",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Infection à Streptococcus pyogenes (GAS, groupe A)",
+                "Transmission par gouttelettes (fortement contagieuse)",
+                "Âge : enfants 3–10 ans le plus souvent"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes caractéristiques",
+              "points": [
+                "Angine érythémato-pultacée",
+                "Langue saburrale puis « langue framboisée »",
+                "Éruption érythémateuse diffuse, micropapuleuse, accentuée dans les plis (signe de Pastia)",
+                "Desquamation secondaire après quelques jours",
+                "Faciès pâle autour de la bouche (signe de Filatov)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Tests rapides et biologie",
+              "points": [
+                "Test de diagnostic rapide Streptocoque A (TDR)",
+                "Culture de gorge si doute",
+                "NFS : hyperleucocytose fréquente"
+              ]
+            },
+            {
+              "titre": "Différentiels à éliminer",
+              "points": [
+                "Rougeole",
+                "Rubéole",
+                "Mononucléose infectieuse",
+                "Kawasaki"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement antibiotique",
+              "points": [
+                "1ère intention : Pénicilline V per os 10 jours",
+                "Alternative : Amoxicilline per os 10 jours",
+                "En cas d’allergie : macrolide (clarithromycine, azithromycine)"
+              ]
+            },
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "Antipyrétiques (paracétamol, ibuprofène)",
+                "Hydratation, repos",
+                "Éviter l’école/collectivité jusqu’à 24h après début antibiothérapie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Éruption + angine + fièvre = penser scarlatine",
+            "Diagnostic confirmé par test rapide Streptocoque A",
+            "Antibiothérapie systématique (réduit complications et contagiosité)",
+            "Surveillance complications : RAA, glomérulonéphrite post-streptococcique",
+            "Retour en collectivité possible après 24 h d’antibiotique"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand la fièvre est apparue ?",
+                "Présence de maux de gorge, odynophagie ?",
+                "Apparition d’une éruption cutanée récente ?",
+                "Contact avec d’autres enfants malades ?",
+                "ATCD d’allergie aux antibiotiques ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, SpO₂)",
+                "Inspection gorge et pharynx",
+                "Recherche éruption + signes typiques (Pastia, Filatov, langue framboisée)",
+                "Test de diagnostic rapide Streptocoque A",
+                "NFS si besoin"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antibiothérapie systématique (pénicilline/amoxicilline)",
+                "Symptomatique (antipyrétiques, hydratation, repos)",
+                "Exclusion scolaire/collective jusqu’à 24 h après début ATB"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Éruption cutanée fébrile chez l’enfant (suspicion de scarlatine)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (enfant 6 ans amené par sa mère pour éruption cutanée + fièvre)",
+            "Caractériser l’éruption → début hier, localisation tête/cou/tronc, aspect micropapuleux rugueux type « papier de verre », non prurigineux",
+            "Symptômes associés → fièvre 39 °C depuis 3 jours, frissons, odynophagie, langue framboisée, céphalées",
+            "ATCD → pas de maladies chroniques, pas d’interventions, pas de traitement actuel, allergie abeille",
+            "Vaccins → complets sauf rougeole",
+            "Habitudes/exposition → crèche, contacts malades incertains",
+            "Examen clinique → enfant fébrile, amygdales inflammées, langue framboisée, éruption diffuse, pas de déshydratation, pas de signes de gravité",
+            "Résumé + hypothèse principale : scarlatine (Streptocoque A)",
+            "Diagnostics différentiels → rougeole, varicelle, rubéole, Kawasaki",
+            "Examens complémentaires → test rapide streptocoque A, culture gorge si doute",
+            "Prise en charge → antibiothérapie systématique (pénicilline V/amoxicilline 10 j), antipyrétiques, hydratation, éviction scolaire 24h après ATB"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide Scarlatine = FAR",
+            "elements": [
+              "F = Fièvre élevée brutale",
+              "A = Angine odynophagie + amygdales inflammées",
+              "R = Rash diffus type papier de verre"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Timmy, un garçon de 6 ans, amené par sa mère pour une éruption cutanée apparue hier. L’éruption a débuté sur la tête et le cou, puis s’est étendue au tronc. La mère décrit une sensation au toucher comme du « papier de verre ». L’enfant n’a pas de démangeaisons. \n\nIl présente depuis 3 jours une fièvre élevée avec frissons et un mal de gorge important, surtout à la déglutition. La langue est devenue rouge depuis hier. Il se plaint également de céphalées, mais sa respiration est normale. Pas d’autres symptômes. \n\nSes antécédents sont sans particularité : pas de maladies chroniques ni de chirurgies, pas de traitement en cours. Il a une allergie connue aux piqûres d’abeille. Les vaccinations sont complètes sauf pour la rougeole. Il fréquente la crèche, mais on ne sait pas s’il y a eu des cas similaires. Son dernier bilan pédiatrique il y a 6 mois était normal. \n\nÀ l’examen, l’enfant est fébrile, un peu plaintif. Il présente une éruption diffuse micropapuleuse érythémateuse, prédominant sur le tronc et les plis. Les amygdales sont inflammées, la langue est framboisée. L’auscultation pulmonaire est normale, pas de signe de déshydratation, pas de signes de gravité neurologiques ou circulatoires. \n\nEn résumé, il s’agit d’un enfant de 6 ans avec fièvre élevée, odynophagie, langue framboisée, exanthème scarlatiniforme. Le tableau est très évocateur d’une scarlatine. Les diagnostics différentiels incluent la rougeole (prodrome catarrhal, taches de Koplik, exanthème maculo-papuleux descendant), la varicelle (vésicules prurigineuses d’âge différent), la rubéole (exanthème plus discret, adénopathies rétro-auriculaires) et la maladie de Kawasaki (fièvre prolongée, adénopathies, conjonctivite, atteinte des extrémités). \n\nComme examens complémentaires, je demanderais un test rapide streptocoque A. En cas de négativité avec forte suspicion clinique, une culture de gorge serait indiquée. \n\nLa prise en charge repose sur une antibiothérapie systématique : pénicilline V ou amoxicilline pendant 10 jours. En cas d’allergie, un macrolide peut être utilisé. Le traitement symptomatique inclut le paracétamol ou l’ibuprofène pour la fièvre et la douleur, ainsi qu’une bonne hydratation. L’éviction scolaire est nécessaire jusqu’à 24h après le début de l’antibiothérapie. Les parents doivent être informés de l’importance de l’observance et des signes d’alerte (dyspnée, aggravation, persistance de la fièvre). Enfin, il faut surveiller les complications tardives (glomérulonéphrite post-streptococcique, RAA)."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Timmy, 6 ans, éruption cutanée fébrile apparue hier, associée à angine.\n\nB (Background) : ATCD sans particularité, vaccins complets sauf rougeole, allergie abeille, crèche.\n\nA (Assessment) : Suspicion de scarlatine (Streptocoque A). DD : rougeole, varicelle, rubéole, Kawasaki.\n\nR (Recommendation) : TDR Streptocoque A, culture gorge si doute. PEC : pénicilline V/amoxicilline 10 jours, antipyrétiques, hydratation, éviction scolaire 24h après ATB, surveillance complications (RAA, glomérulonéphrite)."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes typiques scarlatine",
+              "points": [
+                "Exanthème micropapuleux rugueux (« papier de verre »)",
+                "Langue framboisée",
+                "Angine érythémateuse",
+                "Signe de Pastia (accentuation plis)",
+                "Signe de Filatov (pâleur péri-buccale)"
+              ]
+            },
+            {
+              "titre": "👉 Différencier scarlatine vs rougeole",
+              "points": [
+                "Scarlatine : fièvre + angine + rash rugueux",
+                "Rougeole : catarrhe oculo-nasal, taches de Koplik, rash maculo-papuleux descendant"
+              ]
+            },
+            {
+              "titre": "👉 Complications post-streptococciques",
+              "points": [
+                "Rhumatisme articulaire aigu",
+                "Glomérulonéphrite post-streptococcique",
+                "Otite, sinusite"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier de confirmer par test rapide",
+                "Ne pas sous-estimer le risque de complications tardives",
+                "Ne pas proposer de prophylaxie à l’entourage",
+                "Rassurer les parents sur le retour en crèche après 24h d’ATB"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Scarlatine",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée brutale",
+                      "Odynophagie + angine",
+                      "Éruption rugueuse type papier de verre",
+                      "Langue framboisée",
+                      "Âge typique (3-10 ans)",
+                      "Contexte de collectivité (crèche)"
+                    ],
+                    "contre": [
+                      "Pas d’argument fort contre"
+                    ]
+                  }
+                },
+                {
+                  "question": "Rougeole",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre, exanthème, enfant non vacciné rougeole"
+                    ],
+                    "contre": [
+                      "Pas de catarrhe oculo-nasal",
+                      "Pas de taches de Koplik",
+                      "Éruption non descendante mais diffuse"
+                    ]
+                  }
+                },
+                {
+                  "question": "Varicelle",
+                  "reponse": {
+                    "pour": [
+                      "Exanthème fébrile"
+                    ],
+                    "contre": [
+                      "Pas de vésicules d’âge différent",
+                      "Pas de prurit"
+                    ]
+                  }
+                },
+                {
+                  "question": "Rubéole",
+                  "reponse": {
+                    "contre": [
+                      "Fièvre plus faible habituellement",
+                      "Éruption plus discrète",
+                      "Pas d’adénopathies rétro-auriculaires"
+                    ]
+                  }
+                },
+                {
+                  "question": "Kawasaki",
+                  "reponse": {
+                    "contre": [
+                      "Fièvre < 5 jours",
+                      "Pas d’atteinte conjonctivale",
+                      "Pas d’atteinte des extrémités"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Test de diagnostic rapide Streptocoque A",
+                    "Culture de gorge si TDR négatif mais forte suspicion",
+                    "NFS ± CRP selon contexte"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Scarlatine (Streptococcus pyogenes, groupe A)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Pénicilline V ou amoxicilline 10 jours",
+                      "Macrolide si allergie",
+                      "Antipyrétiques",
+                      "Hydratation"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique à 48h",
+                    "Contrôle disparition symptômes",
+                    "Informer parents des complications tardives (RAA, GNA post-strepto)",
+                    "Retour crèche après 24h d’ATB"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

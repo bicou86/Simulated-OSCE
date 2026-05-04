@@ -1,0 +1,716 @@
+{
+  "title": "German-24 - Douleur au poignet",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Timoni, 66 ans, se présente chez son médecin de famille pour des problèmes au poignet"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes principaux",
+          "details": [
+            "[Douleurs étranges au poignet et fourmillements]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Localisation précise",
+          "details": [
+            "[Poignet]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a4",
+          "text": "Intensité de la douleur (échelle 0-10)",
+          "details": [
+            "[Difficile à dire, environ 5]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a5",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Électrisante]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "details": [
+            "[En principe non, parfois dans l'avant-bras]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs améliorant/aggravant",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a8",
+          "text": "Évolution temporelle et début",
+          "details": [
+            "[Depuis longtemps déjà]",
+            "[Plus prononcé le matin]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a9",
+          "text": "Troubles sensitifs",
+          "details": [
+            "[Pouce, index et majeur]",
+            "[Face radiale de l'annulaire aussi]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a10",
+          "text": "Traumatisme actuel ou ancien",
+          "details": [
+            "[Fracture de côte il y a 10 ans, sinon rien]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a11",
+          "text": "Durée des symptômes",
+          "details": [
+            "[Depuis quelques années, maintenant plus intense]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a12",
+          "text": "Déficit fonctionnel",
+          "details": [
+            "[C'est gênant]",
+            "[Plus autant de force qu'avant]",
+            "[Surtout au niveau du pouce]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a13",
+          "text": "Activités et habitudes",
+          "details": [
+            "[Lecture, cuisine, tricot, piano...]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a14",
+          "text": "Maladies systémiques",
+          "details": [
+            "[Diabète de type 2]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a15",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Metformine]",
+            "[Valériane pour dormir]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "[Non!]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Père: maladie coronarienne]",
+            "[Mère: diabète]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse sociale et professionnelle",
+          "details": [
+            "[Secrétaire retraitée]",
+            "[Grand-mère de 9 petits-enfants]",
+            "[Mariée]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et complète"
+          ],
+          "scoringRule": "Bien conduite = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Désinfection des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Inspection",
+          "details": [
+            "Recherche de rougeur",
+            "Recherche de gonflement",
+            "État de la peau",
+            "Position antalgique",
+            "Évaluation de la musculature [légère atrophie thénarienne]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e3",
+          "text": "Palpation",
+          "details": [
+            "[Pas de douleur au toucher normal]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e4",
+          "text": "Test de Tinel",
+          "details": [
+            "Percussion du canal carpien",
+            "[Positif]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e5",
+          "text": "Test de Phalen",
+          "details": [
+            "Flexion du poignet maintenue 1 minute",
+            "[Douleur et/ou engourdissement → positif]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation de la sensibilité",
+          "details": [
+            "Discrimination à deux points",
+            "Sensibilité au toucher léger",
+            "Distribution du nerf médian (pouce, index, majeur, face radiale de l'annulaire)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation de la force",
+          "details": [
+            "Opposition du pouce",
+            "Abduction du pouce contre résistance",
+            "Force de préhension globale"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e8",
+          "text": "Amplitude des mouvements",
+          "details": [
+            "Flexion/extension du poignet",
+            "Déviation radiale/ulnaire",
+            "Pronation/supination"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e9",
+          "text": "Tests complémentaires",
+          "details": [
+            "Test de compression directe du canal carpien (test de Durkan)",
+            "Test de l'élévation des bras (test de Roos)",
+            "Recherche du signe de la bouteille de Lüthy"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et systématique"
+          ],
+          "scoringRule": "Complet et bien structuré = 2 pts (oui), suffisant = 1 pt (±), insuffisant = 0 pt (non)"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Syndrome du canal carpien (syndrome de compression du nerf médian)",
+          "binaryOnly": false
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Radiculopathie cervicale C6-C7",
+                    "cause": "□ hernie discale cervicale",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome du muscle rond pronateur",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome de compression du nerf ulnaire",
+                    "cause": "□ rare",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Polyneuropathie diabétique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Ténosynovite des fléchisseurs",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Arthrose du poignet",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, IRM si nécessaire"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Facteurs de risque du syndrome du canal carpien",
+          "details": [
+            "Travail manuel répétitif",
+            "Grossesse",
+            "Insuffisance rénale",
+            "Diabète",
+            "Hypothyroïdie",
+            "Polyarthrite rhumatoïde",
+            "Abus d'alcool",
+            "Amyloïdose"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires",
+          "details": [
+            "Radiographie du poignet (pour exclure arthrose ou anomalie osseuse)",
+            "Électromyographie (EMG) et étude de conduction nerveuse",
+            "Bilan biologique: glycémie, TSH",
+            "Échographie du canal carpien (optionnel)"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m5",
+          "text": "Traitement conservateur",
+          "details": [
+            "AINS (ibuprofène, diclofénac)",
+            "Application de froid",
+            "Immobilisation temporaire avec attelle de poignet",
+            "Port d'attelle nocturne en position neutre",
+            "Adaptation ergonomique du poste de travail",
+            "Infiltration de corticoïdes dans le canal carpien"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m6",
+          "text": "Traitement chirurgical",
+          "details": [
+            "Section du rétinaculum des fléchisseurs",
+            "Technique ouverte ou endoscopique",
+            "Indication si échec du traitement conservateur après 3-6 mois",
+            "Indication en cas de déficit moteur ou sensitif sévère"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m7",
+          "text": "Information et conseils au patient",
+          "details": [
+            "Explication du diagnostic",
+            "Évolution généralement favorable avec traitement",
+            "Importance du repos et de l'ergonomie",
+            "Exercices d'étirement et de mobilisation"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m8",
+          "text": "Suivi",
+          "details": [
+            "Contrôle clinique dans 4-6 semaines",
+            "Évaluation de l'efficacité du traitement conservateur",
+            "Orientation vers spécialiste si nécessaire"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète et adaptée"
+          ],
+          "scoringRule": "Complète et structurée = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "✋ Syndrome du canal carpien – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Paresthésies nocturnes des 3 premiers doigts (pouce, index, majeur ± moitié de l’annulaire)",
+                "Douleur irradiant vers l’avant-bras, parfois jusqu’à l’épaule",
+                "Engourdissement, maladresse (lâchage d’objets)",
+                "Symptômes aggravés par les mouvements répétitifs ou la flexion prolongée du poignet"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Travail manuel répétitif, utilisation d’outils vibrants",
+                "Femme d’âge moyen, grossesse",
+                "Diabète, hypothyroïdie, polyarthrite rhumatoïde",
+                "Antécédent de traumatisme du poignet"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Symptômes intermittents au début",
+                "Puis persistance diurne avec baisse de la sensibilité",
+                "Stades avancés : amyotrophie thénarienne, faiblesse musculaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Épaule et avant-bras normaux",
+                "Amyotrophie thénarienne aux stades évolués"
+              ]
+            },
+            {
+              "titre": "Tests de provocation",
+              "points": [
+                "Signe de Tinel : paresthésies déclenchées à la percussion du canal carpien",
+                "Test de Phalen : paresthésies lors de la flexion forcée du poignet pendant 1 min",
+                "Test de Durkan : compression directe du canal carpien reproduit les symptômes"
+              ]
+            },
+            {
+              "titre": "Examen sensitivo-moteur",
+              "points": [
+                "Diminution de la sensibilité territoire nerf médian",
+                "Faiblesse de l’opposition du pouce (court abducteur, opposant du pouce)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Electroneuromyogramme (ENMG)",
+              "points": [
+                "Examen de référence pour confirmer le diagnostic",
+                "Montre un ralentissement de la conduction sensitive et motrice du nerf médian"
+              ]
+            },
+            {
+              "titre": "Autres examens",
+              "points": [
+                "Pas systématiques",
+                "Échographie : épaississement du nerf médian ou cause compressive",
+                "Biologie si suspicion cause secondaire (TSH, glycémie, bilan inflammatoire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Attelle nocturne en position neutre du poignet",
+                "Adaptation professionnelle, réduction des gestes répétitifs",
+                "Antalgiques ± infiltration cortisonée dans le canal carpien"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Libération du nerf médian par section du ligament annulaire antérieur",
+                "Indiqué si échec du traitement conservateur ou déficit neurologique objectif",
+                "Amélioration rapide des symptômes dans la majorité des cas"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Paresthésies nocturnes et territoire du nerf médian = évocateur",
+            "Test de Phalen et Tinel utiles au lit du patient",
+            "ENMG = confirmation diagnostique et évaluation de la sévérité",
+            "Attelle nocturne et infiltration = traitement initial",
+            "Chirurgie si forme sévère ou résistante"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Localisation exacte des fourmillements ? Doigts atteints ?",
+                "Caractère nocturne ou déclenché par certaines positions ?",
+                "Retentissement fonctionnel : lâchage d’objets, gêne professionnelle ?",
+                "ATCD (diabète, hypothyroïdie, polyarthrite, grossesse, travail manuel répétitif) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : amyotrophie thénarienne",
+                "Tests : Tinel, Phalen, Durkan",
+                "Examen sensitivo-moteur du pouce et doigts",
+                "ENMG pour confirmer et classer la sévérité"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Suspicion clinique → confirmer par ENMG",
+                "Débuter traitement conservateur (attelle nocturne, infiltration, adaptation travail)",
+                "Chirurgie si déficit neurologique ou résistance au traitement"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "presentationPatient": {
+    "titre": "📑 Fiche ECOS – Cas : Douleur au poignet (Syndrome du canal carpien)",
+    "sections": [
+      {
+        "titre": "🧩 Checklist mentale (présentation systématisée)",
+        "points": [
+          "Intro → âge, profession, motif de consultation",
+          "Caractériser la douleur → localisation, type (électrisante), intensité (EVA 5/10), durée, évolution",
+          "Troubles sensitifs → paresthésies pouce, index, majeur, face radiale annulaire",
+          "Facteurs aggravants/soulageants → nocturnes, liés aux activités répétitives",
+          "Retentissement fonctionnel → perte de force du pouce, maladresse, gêne quotidienne",
+          "Examen clinique → inspection (amyotrophie thénar), tests Tinel/Phalen/Durkan, sensibilité, force, mobilité",
+          "Résumé + hypothèse principale + diagnostics différentiels",
+          "Examens complémentaires → ENMG, radio poignet, bilan biologique (glycémie, TSH)",
+          "Prise en charge → traitement conservateur (attelle, AINS, infiltration), chirurgie si échec"
+        ],
+        "mnemo": {
+          "titre": "👉 Mnémo rapide : HAND",
+          "elements": [
+            "H = Hypoesthésie territoire médian",
+            "A = Amyotrophie thénar",
+            "N = Nocturnal symptoms",
+            "D = Diagnostic confirmé par ENMG"
+          ]
+        }
+      },
+      {
+        "titre": "🎤 Version longue (≈2-3 min)",
+        "contenu": "Il s’agit de Mme Timoni, une femme de 66 ans, secrétaire retraitée, qui consulte pour des douleurs et des fourmillements au poignet droit évoluant depuis plusieurs années, avec une aggravation progressive.\n\nElle décrit ses douleurs comme des décharges électriques, localisées au poignet, irradiant parfois dans l’avant-bras. Elles sont évaluées à 5/10, plus intenses le matin et lors de certaines activités manuelles. Elle rapporte aussi des engourdissements des doigts, notamment du pouce, de l’index, du majeur et de la moitié radiale de l’annulaire.\n\nLes symptômes sont de plus en plus gênants au quotidien, avec une perte de force au niveau du pouce et une maladresse dans les gestes fins, par exemple pour tenir un livre ou tricoter. Aucun traumatisme récent n’est rapporté. Ses antécédents médicaux incluent un diabète de type 2 traité par metformine. Elle ne fume pas, ne consomme pas d’alcool, et vit avec son mari. Son père avait une maladie coronarienne et sa mère un diabète.\n\nÀ l’examen, l’inspection montre une légère atrophie thénarienne. Pas de rougeur ni de gonflement. La palpation est indolore. Le test de Tinel est positif, tout comme le test de Phalen, qui reproduit les paresthésies. La sensibilité est diminuée dans le territoire du nerf médian. La force d’opposition et d’abduction du pouce est réduite. Les autres mouvements du poignet restent conservés.\n\nEn résumé, il s’agit d’une femme de 66 ans, diabétique, avec des douleurs chroniques du poignet, des paresthésies nocturnes dans le territoire du nerf médian, une perte de force du pouce, et des tests de provocation positifs. Mon hypothèse principale est un syndrome du canal carpien. Les diagnostics différentiels incluent une radiculopathie cervicale C6-C7, une compression du nerf ulnaire, une polyneuropathie diabétique ou une ténosynovite.\n\nComme examens complémentaires, je demanderais un ENMG, qui est l’examen de référence pour confirmer le diagnostic et en évaluer la sévérité. On peut compléter par une radiographie pour éliminer une cause osseuse, et un bilan biologique avec glycémie et TSH.\n\nEn termes de prise en charge, je proposerais un traitement conservateur en première intention : attelle nocturne en position neutre du poignet, adaptation ergonomique, éventuellement une infiltration cortisonée. Les AINS peuvent être utilisés en cas de douleur. Si les symptômes persistent au-delà de 3 à 6 mois ou s’il existe un déficit moteur marqué, une prise en charge chirurgicale par libération du nerf médian est indiquée."
+      },
+      {
+        "titre": "⚡ Version express (SBAR, 30 sec)",
+        "contenu": "S (Situation) : Mme Timoni, 66 ans, présente des douleurs et paresthésies chroniques du poignet droit.\n\nB (Background) : Diabète de type 2, retraitée, symptômes évoluant depuis plusieurs années, aggravés le matin et avec les gestes répétitifs.\n\nA (Assessment) : Suspicion de syndrome du canal carpien. DD : radiculopathie cervicale, compression nerf ulnaire, polyneuropathie diabétique, ténosynovite.\n\nR (Recommendation) : ENMG pour confirmation, attelle nocturne, AINS, infiltration cortisonée. Chirurgie si échec du traitement conservateur."
+      },
+      {
+        "titre": "🎲 Touches ludiques / mnémos",
+        "subsections": [
+          {
+            "titre": "👉 Syndrome du canal carpien = \"MEDIAN\"",
+            "points": [
+              "M = Main : engourdissements pouce, index, majeur",
+              "E = Electric pain, électrisante",
+              "D = Douleur nocturne",
+              "I = Incapacité fonctionnelle (perte de force pouce)",
+              "A = Amyotrophie thénar",
+              "N = Nerve conduction slowing (ENMG)"
+            ]
+          },
+          {
+            "titre": "👉 Tests de provocation",
+            "points": [
+              "Tinel : percussion → fourmillements",
+              "Phalen : flexion 1 min → engourdissements",
+              "Durkan : compression canal carpien → symptômes"
+            ]
+          },
+          {
+            "titre": "⚠️ Pièges ECOS",
+            "points": [
+              "Confondre avec polyneuropathie diabétique",
+              "Négliger examen sensitif précis",
+              "Oublier de tester la force du pouce",
+              "Prescrire chirurgie trop tôt sans essai conservateur"
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+        "subsections": [
+          {
+            "titre": "1. Arguments pour et contre chaque hypothèse",
+            "questions": [
+              {
+                "question": "Syndrome du canal carpien",
+                "reponse": {
+                  "pour": [
+                    "Paresthésies territoire nerf médian",
+                    "Douleur électrisante, nocturne",
+                    "Tests Tinel et Phalen positifs",
+                    "Amyotrophie thénar"
+                  ],
+                  "contre": [
+                    "Pas de cause traumatique récente"
+                  ]
+                }
+              },
+              {
+                "question": "Radiculopathie cervicale",
+                "reponse": {
+                  "pour": [
+                    "Douleur irradiant parfois dans l’avant-bras"
+                  ],
+                  "contre": [
+                    "Distribution nerf médian typique",
+                    "Pas de douleur cervicale",
+                    "Pas de déficit moteur proximal"
+                  ]
+                }
+              },
+              {
+                "question": "Polyneuropathie diabétique",
+                "reponse": {
+                  "pour": [
+                    "Diabète connu",
+                    "Paresthésies possibles"
+                  ],
+                  "contre": [
+                    "Atteinte généralement symétrique et distale",
+                    "Pas limitée au poignet"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "titre": "2. Examens complémentaires immédiats",
+            "questions": [
+              {
+                "question": "Quels examens demanderiez-vous ?",
+                "reponse": [
+                  "ENMG (ralentissement conduction nerf médian)",
+                  "Radiographie du poignet si suspicion arthrose",
+                  "Bilan glycémie et TSH",
+                  "Échographie du canal carpien si doute"
+                ]
+              }
+            ]
+          },
+          {
+            "titre": "3. Diagnostic définitif, traitement, suivi",
+            "questions": [
+              {
+                "question": "Diagnostic",
+                "reponse": "Syndrome du canal carpien confirmé par ENMG"
+              },
+              {
+                "question": "Traitement",
+                "reponse": {
+                  "immediat": [
+                    "Attelle nocturne poignet neutre",
+                    "AINS si douleur",
+                    "Infiltration corticoïdes si persistance"
+                  ],
+                  "apresEchec": [
+                    "Chirurgie libération canal carpien (section rétinaculum fléchisseurs)"
+                  ]
+                }
+              },
+              {
+                "question": "Suivi",
+                "reponse": [
+                  "Contrôle clinique à 4-6 semaines",
+                  "Évaluation efficacité attelle/infiltration",
+                  "Orientation vers chirurgie si déficit moteur persistant",
+                  "Surveillance diabète comme facteur aggravant"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

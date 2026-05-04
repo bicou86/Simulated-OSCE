@@ -1,0 +1,544 @@
+{
+  "title": "USMLE Triage 32 - Fièvre chez l'enfant",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Bobby Swennis, garçon de 9 ans, se présente avec sa mère pour une fièvre évoluant depuis 1 jour",
+    "vitals": {
+      "ta": "116/62 mmHg",
+      "temperature": "37.7°C (99.9°F)",
+      "fc": "78 bpm",
+      "fr": "16/min"
+    },
+    "note": "Cas impliquant un enfant simulé"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique avec l'enfant et le parent",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Madame Swennis, ravi de vous voir aujourd'hui.",
+            "Voici Bobby, je présume.",
+            "Comment vas-tu, Bobby ? Je suis le Dr Nordman."
+          ],
+          "patientComment": "Reconnaissance de l'enfant [Bien], présentation au parent [temperature récemment], exposition au froid [beaucoup sorti après l'école]"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fièvre",
+          "details": [
+            "Début et durée [fièvre hier soir et toute la journée d'hier]",
+            "Mesures à domicile [102°F (38,9°C) sous la langue hier, 102,1°F ce matin]",
+            "Site de mesure [température sublinguale]",
+            "Réponse au traitement [Tylenol efficace pour le sommeil et la fièvre]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous pris sa température à la maison ? Où cette température a-t-elle été prise ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes ORL et respiratoires",
+          "details": [
+            "Mal de gorge [dit qu'il a mal à la gorge le matin]",
+            "Rhinorrhée [nez qui coule depuis un moment]",
+            "Congestion [nez bouché il y a 2 semaines]",
+            "Otalgie [peut-être un peu mal dans oreille gauche]",
+            "Otorrhée [nie écoulements auriculaires]"
+          ],
+          "exemplesPhrases": [
+            "S'est-il plaint de ne pas se sentir bien à part cette fièvre ? A-t-il dit qu'il avait mal aux oreilles ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes systémiques et état général",
+          "details": [
+            "Léthargie [air épuisé, ne voulait pas sortir jouer]",
+            "Appétit [n'a pas beaucoup mangé au dîner]",
+            "Nausées/vomissements [nie nausées et vomissements]",
+            "Diarrhée [nie diarrhée]",
+            "Activité [diminution de l'activité habituelle]"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il eu d'autres problèmes comme des nausées ou des vomissements ? A-t-il eu de la diarrhée récemment ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Contexte épidémiologique familial",
+          "details": [
+            "Maladie familiale [toute la famille a eu la même chose il y a 2 semaines]",
+            "Personnes affectées [mère, père, grand frère, petite sœur]",
+            "Source [un des enfants l'a ramené de l'école]",
+            "Bébé épargné [le bébé n'est pas tombé malade]"
+          ],
+          "exemplesPhrases": [
+            "Vous avez mentionné d'autres personnes dans la maison avec une maladie similaire ; qui spécifiquement ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents ORL et infections",
+          "details": [
+            "Otites antérieures [environ 5 otites quand tout-petit]",
+            "Aérateurs transtympaniques [envisagés mais pas posés car arrêt des otites]",
+            "Infections urinaires [nie antécédents d'infections urinaires]",
+            "Autres infections [pas d'autres infections notables]"
+          ],
+          "exemplesPhrases": [
+            "A-t-il déjà eu une otite ? Et une infection urinaire ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux et chirurgicaux",
+          "details": [
+            "Chirurgie [réparation hernie ombilicale vers 2 ans]",
+            "Hospitalisations [rentré le soir même, pas d'hospitalisation]",
+            "Traumatismes récents [nie accidents ou blessures récents]",
+            "Développement [courbe de croissance normale, développement normal]"
+          ],
+          "exemplesPhrases": [
+            "A-t-il déjà vu le médecin pour quelque chose de sérieux dans sa vie ? A-t-il eu un type de retard de développement ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Vaccinations et prévention",
+          "details": [
+            "Statut vaccinal [vaccinations à jour]",
+            "Compliance vaccinale [a reçu tous ses vaccins]",
+            "Exposition tabagique [père arrêté de fumer, grands-parents fumeurs mais visites rares]",
+            "Environnement [pas d'exposition régulière à la fumée]"
+          ],
+          "exemplesPhrases": [
+            "A-t-il reçu tous ses vaccins jusqu'à présent ? Est-ce que quelqu'un fume à la maison ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments et traitements actuels",
+          "details": [
+            "Traitement symptomatique [2 doses de Tylenol (hier et aujourd'hui)]",
+            "Efficacité [Tylenol efficace donc pas besoin d'autre chose]",
+            "Autres médicaments [nie autres médicaments]",
+            "Suppléments [multivitamine à croquer avec petit-déjeuner]"
+          ],
+          "exemplesPhrases": [
+            "Vous aviez mentionné les deux doses de Tylenol aujourd'hui et hier.",
+            "A-t-il reçu d'autres doses ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Allergies et antécédents familiaux",
+          "details": [
+            "Allergies médicamenteuses [pas d'allergies connues]",
+            "Allergies alimentaires [pas d'allergies connues]",
+            "Antécédents familiaux [parents et grands-parents en bonne santé]",
+            "Cancers familiaux [suspicion cancer col utérin grand-mère, finalement négatif]"
+          ],
+          "exemplesPhrases": [
+            "Et les allergies ? Est-il allergique à quelque chose ? Y a-t-il des maladies importantes dans la famille ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation et approche pédiatrique",
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux [température légèrement augmentée]",
+            "Approche adaptée à l'enfant [demander permission à Bobby]",
+            "Expliquer l'examen de manière ludique"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant.",
+            "Bobby, penses-tu que je pourrais jeter un coup d'œil dans ta bouche juste une minute ?"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen ORL complet",
+          "details": [
+            "Examen des yeux [PERRLA, examen externe normal]",
+            "Otoscopie bilatérale [oreille gauche : érythème, bombement, niveau air/liquide]",
+            "Pneumo-otoscopie [tester mobilité tympanique avec poire]",
+            "Examen nasal [normal sans érythème]",
+            "Examen pharyngé [érythème pharyngé, gonflement amygdalien, exsudats]"
+          ],
+          "patientComment": "ORL : Yeux normaux, PERRLA. Oreille gauche : MT bombée, érythème, épanchement, mobilité diminuée. Oreille droite normale. Nez normal. Gorge : érythème pharyngé, gonflement amygdalien symétrique, exsudats positifs",
+          "exemplesPhrases": [
+            "Oh là, quand je regarde dans tes oreilles, je vois du brocoli qui pousse là-dedans ! Est-ce que ce brocoli fait mal !?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cervical et neurologique",
+          "details": [
+            "Palpation ganglionnaire [adénopathies cervicales antérieures dispersées]",
+            "Symétrie cervicale [recherche adénopathies]",
+            "Signes méningés [Kernig et Brudzinski négatifs]",
+            "Raideur de nuque [pas de raideur de nuque]"
+          ],
+          "patientComment": "Cou : Adénopathies cervicales antérieures légères. Signes de Kernig/Brudzinski négatifs. Pas de raideur de nuque"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation postérieure [6 points sur champs postérieurs]",
+            "Recherche de ronchi/râles [si présents, tester égophonie]",
+            "Fremitus tactile [si anomalies auscultatoires]",
+            "Évaluation des signes de détresse respiratoire"
+          ],
+          "patientComment": "Poumons : Clairs à l'auscultation bilatérale. Pas de sibilants, ronchi ou râles"
+        },
+        {
+          "id": "e5",
+          "text": "Examen cutané",
+          "details": [
+            "Inspection générale de la peau [avec aide de la mère]",
+            "Recherche d'éruptions [examen systématique]",
+            "Zones focales d'érythème [recherche de signes infectieux]",
+            "État général cutané [coloration, hydratation]"
+          ],
+          "patientComment": "Peau normale, pas de lésions, éruptions ou zones focales d'érythème"
+        },
+        {
+          "id": "e6",
+          "text": "Interaction avec l'enfant pendant l'examen",
+          "details": [
+            "Questions directes à l'enfant [Est-ce que ça fait mal quand tu avales ?]",
+            "Approche ludique [plaisanteries sur brocoli dans oreilles]",
+            "Rassurance pendant l'examen [commentaires positifs]",
+            "Validation des sensations de l'enfant"
+          ],
+          "exemplesPhrases": [
+            "Est-ce que ça fait mal quand tu avales ? Oh là, quand je regarde dans tes oreilles, je vois du brocoli qui pousse là-dedans !"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Impression diagnostique et diagnostic différentiel",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections ORL",
+                "items": [
+                  {
+                    "text": "Otite moyenne",
+                    "cause": "Arguments POUR :\n\t□ Otalgie oreille gauche\n\t□ Érythème et bombement tympanique\n\t□ Niveau air/liquide\n\t□ Mobilité tympanique diminuée\n\t□ Antécédents d'otites récurrentes",
+                    "test": "→ Examen otoscopique, pneumo-otoscopie"
+                  },
+                  {
+                    "text": "Pharyngite streptococcique",
+                    "cause": "Arguments POUR :\n\t□ Érythème pharyngé\n\t□ Gonflement amygdalien\n\t□ Exsudats amygdaliens\n\t□ Adénopathies cervicales\n\t□ Fièvre",
+                    "test": "→ Test antigénique rapide streptocoque, culture pharyngée"
+                  }
+                ]
+              },
+              {
+                "name": "Infections virales",
+                "items": [
+                  {
+                    "text": "Pharyngite virale",
+                    "cause": "Arguments POUR :\n\t□ Contexte épidémiologique familial\n\t□ Symptômes rhinopharyngés\n\t□ Évolution progressive sur 2 semaines\nArguments CONTRE :\n\t□ Exsudats amygdaliens",
+                    "test": "→ Test antigénique grippe, diagnostic clinique"
+                  },
+                  {
+                    "text": "Syndrome grippal",
+                    "cause": "Arguments POUR :\n\t□ Saison grippale\n\t□ Fièvre et myalgies\n\t□ Contexte familial\n\t□ Fatigue importante",
+                    "test": "→ Test antigénique influenza"
+                  }
+                ]
+              },
+              {
+                "name": "Autres infections",
+                "items": [
+                  {
+                    "text": "Bronchite",
+                    "cause": "Arguments POUR :\n\t□ Contexte viral\n\t□ Toux (mentionnée dans contexte familial)\nArguments CONTRE :\n\t□ Auscultation pulmonaire normale",
+                    "test": "→ Examen clinique, auscultation"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "Arguments POUR :\n\t□ Fièvre chez l'enfant\nArguments CONTRE :\n\t□ Pas de symptômes urinaires\n\t□ Pas d'antécédents d'IU",
+                    "test": "→ Analyse d'urine et culture"
+                  }
+                ]
+              }
+            ]
+          },
+          "exemplesPhrases": [
+            "Bobby présente plusieurs aspects qui pourraient lui causer une température élevée.",
+            "Dans le cadre de mon investigation, je recherche des zones qui pourraient être infectées."
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Évaluation de l'otite moyenne",
+          "details": [
+            "Signes otoscopiques [rougeur, bombement tympanique]",
+            "Épanchement rétro-tympanique [niveau air/liquide visible]",
+            "Mobilité tympanique [diminuée à la pneumo-otoscopie]",
+            "Corrélation clinique [otalgie, fièvre, antécédents d'otites]"
+          ],
+          "exemplesPhrases": [
+            "Bobby a une certaine rougeur de cette oreille gauche et certaines caractéristiques qui suggèrent une otite moyenne."
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Évaluation de la pharyngite",
+          "details": [
+            "Examen pharyngé [érythème pharyngé postérieur]",
+            "Hypertrophie amygdalienne [gonflement amygdalien symétrique]",
+            "Exsudats [présence d'exsudats amygdaliens]",
+            "Adénopathies [ganglions cervicaux palpables]"
+          ],
+          "exemplesPhrases": [
+            "Il a des amygdales gonflées qui pourraient également être une source d'infection."
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Plan diagnostique pour angine streptococcique",
+          "details": [
+            "Test rapide streptocoque [prélèvement pharyngé]",
+            "Importance du diagnostic [prévention complications]",
+            "Complications possibles [problèmes cardiaques, rénaux]",
+            "Traitement préventif [antibiotiques si positif]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais obtenir un prélèvement de sa gorge pour vérifier une raison courante d'infection bactérienne appelée 'angine streptococcique'."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Bilan complémentaire et suivi",
+          "details": [
+            "Test grippe [prélèvement nasal en saison grippale]",
+            "Analyse d'urine [investigation fièvre chez enfant]",
+            "Suivi téléphonique [appel dans quelques jours pour résultats]",
+            "Pronostic rassurant [Bobby ira bien]"
+          ],
+          "exemplesPhrases": [
+            "Puisque c'est la saison de la grippe, j'aimerais prendre un autre prélèvement de son nez pour tester la grippe.",
+            "Je vous appellerai dans quelques jours avec tous les résultats."
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Rassurance et organisation du suivi",
+          "content": "Dans l'ensemble, je pense que Bobby ira bien, mais j'aimerais m'en assurer avec ces tests. Je vous appellerai dans quelques jours avec tous les résultats pour que nous puissions en discuter. Veuillez m'excuser pendant que je sors organiser cela. Y a-t-il un autre aspect de la santé de Bobby dont nous n'avons pas déjà discuté ? D'accord alors, merci.",
+          "exemplesPhrases": [
+            "Dans l'ensemble, je pense que Bobby ira bien, mais j'aimerais m'en assurer avec ces tests."
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la mère et l'enfant standardisés - Bobby Swennis",
+      "nom": "Bobby Swennis",
+      "age": "9 ans",
+      "contexte": "Garçon de 9 ans avec fièvre depuis 1 jour, accompagné de sa mère",
+      "motifConsultation": {
+        "plaintePrincipale": "Fièvre depuis hier",
+        "inquietudeMere": "Exposition au froid, pense à grippe"
+      },
+      "histoireActuelle": {
+        "fievre": [
+          "Début hier soir",
+          "Température 102°F (38,9°C) sous langue hier",
+          "Température 102,1°F ce matin",
+          "Réponse au Tylenol (aide sommeil)"
+        ],
+        "symptomesORL": [
+          "Mal de gorge le matin",
+          "Nez qui coule depuis un moment",
+          "Nez bouché il y a 2 semaines",
+          "Peut-être mal oreille gauche (Bobby hésite)"
+        ],
+        "symptomesSystemiques": [
+          "Air épuisé et chaud",
+          "Ne voulait pas sortir jouer",
+          "Diminution appétit (peu mangé au dîner)",
+          "Pas de nausées/vomissements/diarrhée"
+        ],
+        "contexteEpidemiologique": [
+          "Toute la famille malade il y a 2 semaines",
+          "Ramené de l'école par un des enfants",
+          "Bébé pas malade (Dieu merci)",
+          "Exposition fréquente au froid après école"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "5 otites récurrentes quand tout-petit",
+          "Aérateurs envisagés mais pas posés",
+          "Développement normal",
+          "Courbe de croissance normale"
+        ],
+        "chirurgicaux": [
+          "Réparation hernie ombilicale vers 2 ans",
+          "Retour domicile le soir même"
+        ],
+        "vaccinations": "À jour pour l'âge",
+        "familiaux": [
+          "Parents et grands-parents en bonne santé",
+          "Suspicion cancer col utérin grand-mère (finalement négatif)"
+        ]
+      },
+      "environnement": {
+        "tabac": [
+          "Père arrêté de fumer avec premier enfant",
+          "Grands-parents fumeurs mais visites rares (2x/an)",
+          "Pas d'exposition régulière"
+        ],
+        "medicaments": [
+          "Tylenol 2 doses (hier et ce matin)",
+          "Multivitamine quotidienne avec petit-déjeuner"
+        ],
+        "allergies": "Pas d'allergies connues"
+      },
+      "simulation": {
+        "attitudeMere": [
+          "Inquiète mais rassurée par efficacité Tylenol",
+          "Pense que c'est à cause exposition au froid",
+          "Coopérative et détaillée dans anamnèse",
+          "Reconnaissante que bébé ne soit pas malade"
+        ],
+        "attitudeBobby": [
+          "Enfant de 9 ans coopératif mais laconique",
+          "Répond brièvement : 'Bien', 'Non'",
+          "Hésite sur douleur oreille ('Peut-être un peu')",
+          "Indique oreille gauche quand questionné"
+        ],
+        "interactionMereEnfant": [
+          "Mère pose questions à Bobby pour confirmation",
+          "Bobby répond aux questions directes du médecin",
+          "Interaction naturelle famille",
+          "Mère aide pour déshabillage si nécessaire"
+        ],
+        "examenPhysique": [
+          "Bobby accepte examen avec approche ludique",
+          "Réagit positivement aux plaisanteries",
+          "Coopère pour tous les examens ORL",
+          "Mère aide pour examen cutané"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Fièvre chez l'enfant de 9 ans",
+      "pointsCles": [
+        "Otite moyenne : diagnostic évident (érythème, bombement, épanchement)",
+        "Pharyngite avec exsudats : nécessite recherche streptocoque",
+        "Antécédents d'otites récurrentes : facteur de risque",
+        "Contexte épidémiologique familial : orientation virale",
+        "Approche pédiatrique : interaction avec enfant et parent"
+      ],
+      "pieges": [
+        "Ne pas se limiter à un seul diagnostic (otite ET pharyngite)",
+        "Importance test streptocoque malgré contexte viral",
+        "Examen otoscopique bilatéral obligatoire",
+        "Recherche systématique infection urinaire chez enfant fébrile",
+        "Approche adaptée à l'âge (9 ans = communication directe possible)"
+      ],
+      "diagnosticDifferentiel": [
+        "Otite moyenne (diagnostic certain)",
+        "Pharyngite streptococcique (exsudats = test obligatoire)",
+        "Pharyngite virale (contexte épidémiologique)",
+        "Syndrome grippal (saison, contexte familial)",
+        "Infection urinaire (fièvre enfant)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie et Pratique - Fièvre chez l'enfant",
+      "sections": [
+        {
+          "titre": "Otite moyenne chez l'enfant",
+          "contenu": "Diagnostic otoscopique : érythème + bombement + épanchement + mobilité diminuée. Fréquente chez enfants avec antécédents d'otites récurrentes."
+        },
+        {
+          "titre": "Pharyngite streptococcique",
+          "contenu": "Critères de Centor : fièvre + exsudats + adénopathies + absence de toux. Test rapide obligatoire si ≥2 critères. Prévention rhumatisme articulaire aigu."
+        },
+        {
+          "titre": "Approche de la fièvre pédiatrique",
+          "contenu": "Recherche systématique foyer infectieux : ORL, pulmonaire, urinaire. Attention signes de gravité : détresse respiratoire, déshydratation, troubles conscience."
+        }
+      ],
+      "examensComplementaires": [
+        "Test antigénique rapide streptocoque (prélèvement pharyngé)",
+        "Test antigénique grippe (prélèvement nasal)",
+        "Analyse d'urine et culture (ECBU)",
+        "Otoscopie avec pneumo-otoscopie",
+        "Auscultation pulmonaire complète"
+      ],
+      "rappelsTherapeutiques": [
+        "Otite moyenne : antibiotiques selon âge et sévérité",
+        "Pharyngite streptococcique : pénicilline V ou amoxicilline",
+        "Pharyngite virale : traitement symptomatique",
+        "Paracétamol : 15 mg/kg toutes les 6h",
+        "Surveillance clinique et réévaluation si aggravation"
+      ]
+    },
+    "tableauClinique": {
+      "titre": "Affections respiratoires courantes chez l'enfant",
+      "contenu": [
+        {
+          "affection": "Bronchiolite",
+          "age": "<1 an",
+          "signes": "Pâle, coryza, toux, tirage, tachypnée",
+          "auscultation": "Sibilants et crépitants diffus"
+        },
+        {
+          "affection": "Croup",
+          "age": "1-2 ans",
+          "signes": "Stridor, voix rauque, toux aboyante",
+          "auscultation": "Claire"
+        },
+        {
+          "affection": "Asthme",
+          "age": ">1 an",
+          "signes": "Tachypnée, tirage, sibilants audibles",
+          "auscultation": "Sibilants, entrée d'air variable"
+        },
+        {
+          "affection": "Pneumonie (nourrisson)",
+          "age": "Nourrisson",
+          "signes": "Tachypnée, tirage, fièvre, geignement",
+          "auscultation": "Peut être claire, murmure diminué, crépitants"
+        },
+        {
+          "affection": "Pneumonie (enfant)",
+          "age": "Enfant",
+          "signes": "Tachypnée, tirage, fièvre, douleur abdominale",
+          "auscultation": "Crépitants et souffle tubaire localisés"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "title": "German-63 - Ménopause",
+  "context": {
+    "setting": "Consultation gynécologique",
+    "patient": "Mme X, 55 ans, consulte car elle a le sentiment d'être entrée en ménopause"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "binaryOnly": false,
+          "patientComment": "J'ai l'impression d'être entrée dans la ménopause"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse menstruelle",
+          "binaryOnly": false,
+          "details": [
+            "Date des dernières règles [il y a 1 an et demi]",
+            "Régularité antérieure [déjà irrégulières avant]",
+            "Autres saignements vaginaux [aucun]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes vasomoteurs",
+          "binaryOnly": false,
+          "details": [
+            "Bouffées de chaleur [chaleur ascendante]",
+            "Sueurs [transpiration excessive]",
+            "Fréquence et moment [plusieurs fois par semaine, le soir]",
+            "Durée [quelques minutes]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Palpitations",
+          "binaryOnly": false,
+          "patientComment": "Plusieurs fois par semaine le soir pendant quelques minutes"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes uro-génitaux",
+          "binaryOnly": false,
+          "details": [
+            "Sécheresse vaginale [sensation de sécheresse]",
+            "Dyspareunie [douleurs lors des rapports sexuels]",
+            "Troubles mictionnels [envies fréquentes d'uriner]",
+            "Incontinence urinaire [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Sexualité",
+          "binaryOnly": false,
+          "details": [
+            "Libido [diminuée]",
+            "Qualité des rapports [douloureux]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes psychologiques",
+          "binaryOnly": false,
+          "details": [
+            "Humeur [souvent abattue, triste, pleure facilement]",
+            "Tension intérieure [oui]",
+            "Agressivité [oui]",
+            "Anxiété [oui]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Fonction cognitive",
+          "binaryOnly": false,
+          "details": [
+            "Concentration [difficultés de concentration]",
+            "Mémoire [problèmes de mémoire]",
+            "Performance générale [pas de baisse]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Troubles du sommeil",
+          "binaryOnly": false,
+          "patientComment": "Non, pas de troubles du sommeil"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes ostéo-articulaires",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs articulaires [douleurs type rhumatismales]",
+            "Antécédents de fractures [aucun]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse gynéco-obstétricale",
+          "binaryOnly": false,
+          "details": [
+            "Parité [3 grossesses, 1 mort in utero, 3 accouchements par voie basse]",
+            "Ménarche [à 15 ans]",
+            "Cycles antérieurs [réguliers, tous les 25 jours pendant 3 jours]",
+            "Contraception [ligature tubaire]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Interventions chirurgicales [appendicectomie, cholécystectomie, ligature tubaire]",
+            "Pathologies chroniques [aucune]",
+            "Traitements actuels [aucun]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Alimentation [végétarienne]",
+            "Tabac [non]",
+            "Alcool [non]",
+            "Drogues [non]",
+            "Activité physique [vélo, jardinage]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Revue des systèmes",
+          "binaryOnly": false,
+          "details": [
+            "Symptômes B (fièvre, perte de poids, sueurs nocturnes) [non]",
+            "Autres symptômes [aucun]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Cancers familiaux [non]",
+            "Maladies cardiovasculaires [non]",
+            "Ostéoporose familiale [non]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "patientComment": "Mariée, 2 fils"
+        },
+        {
+          "id": "a18",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen général",
+          "binaryOnly": false,
+          "details": [
+            "État général",
+            "Poids et taille",
+            "IMC"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de l'appareil locomoteur",
+          "binaryOnly": false,
+          "details": [
+            "Examen de la colonne vertébrale",
+            "Recherche de diminution de taille",
+            "Recherche de cyphose dorsale",
+            "Évaluation du risque d'ostéoporose"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen mammaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des seins",
+            "Palpation mammaire bilatérale",
+            "Palpation des aires ganglionnaires axillaires"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Examen vulvaire (atrophie, sécheresse)",
+            "Examen au spéculum",
+            "Inspection du col utérin",
+            "Palpation bimanuelle"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Prélèvements",
+          "binaryOnly": false,
+          "details": [
+            "Frottis cervico-vaginal",
+            "Prélèvements microbiologiques si indiqués"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Utilisation correcte de la terminologie",
+          "binaryOnly": false,
+          "details": [
+            "Ménopause : arrêt définitif des règles depuis 12 mois",
+            "Périménopause : période de transition avant la ménopause",
+            "Climatère : ensemble de la période de transition"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Dosage FSH (> 30 UI/L)",
+            "Dosage œstradiol (< 50 pg/mL)",
+            "Bilan lipidique",
+            "Glycémie à jeun",
+            "TSH",
+            "Mammographie de dépistage",
+            "Densitométrie osseuse (DMO)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Traitement hormonal de la ménopause (THM)",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Indications du THM",
+                "content": "• Symptômes climatériques invalidants\n• Syndrome génito-urinaire de la ménopause\n• Prévention de l'ostéoporose chez femmes à risque\n• Ménopause précoce (< 40 ans)"
+              },
+              {
+                "title": "Modalités du THM",
+                "content": "• Œstrogènes + progestatifs (utérus intact)\n• Schéma continu ou séquentiel\n• Voie orale, transdermique ou vaginale\n• Dose minimale efficace\n• Durée : 3-5 ans en général"
+              },
+              {
+                "title": "Bénéfices potentiels",
+                "content": "• Amélioration des symptômes vasomoteurs\n• Amélioration de la qualité de vie\n• Protection osseuse\n• Amélioration du syndrome génito-urinaire\n• Effets cardiovasculaires protecteurs si début précoce"
+              },
+              {
+                "title": "Risques et effets secondaires",
+                "content": "• Risque thromboembolique augmenté\n• Risque de cancer du sein (après 5 ans)\n• Risque de cancer de l'endomètre (œstrogènes seuls)\n• Risque d'AVC\n• Mastodynie, nausées, céphalées"
+              },
+              {
+                "title": "Contre-indications",
+                "content": "• Antécédent de cancer hormono-dépendant\n• Maladie thromboembolique active\n• Saignements génitaux non explorés\n• Insuffisance hépatique sévère\n• Porphyrie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Alternatives non hormonales",
+          "binaryOnly": false,
+          "details": [
+            "ISRS/IRSN pour bouffées de chaleur",
+            "Gabapentine, clonidine",
+            "Phyto-œstrogènes (efficacité limitée)",
+            "Acupuncture, yoga, méditation",
+            "Lubrifiants et hydratants vaginaux"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prévention et prise en charge de l'ostéoporose",
+          "binaryOnly": false,
+          "details": [
+            "Calcium 1000-1200 mg/jour",
+            "Vitamine D 800-1000 UI/jour",
+            "Activité physique régulière avec mise en charge",
+            "Arrêt du tabac",
+            "Limitation de l'alcool",
+            "Prévention des chutes",
+            "Bisphosphonates si ostéoporose avérée"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseils pour la gestion des symptômes",
+          "binaryOnly": false,
+          "details": [
+            "Bouffées de chaleur : vêtements légers, éviter déclencheurs",
+            "Sécheresse vaginale : lubrifiants, hydratants locaux",
+            "Troubles psychologiques : soutien, thérapie si besoin",
+            "Hygiène de vie : alimentation équilibrée, exercice"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Suivi et surveillance",
+          "binaryOnly": false,
+          "details": [
+            "Réévaluation annuelle du rapport bénéfice/risque du THM",
+            "Mammographie tous les 2 ans",
+            "Frottis selon recommandations",
+            "DMO selon facteurs de risque",
+            "Surveillance tensionnelle et métabolique"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

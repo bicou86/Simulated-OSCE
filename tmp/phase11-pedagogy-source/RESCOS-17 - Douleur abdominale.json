@@ -1,0 +1,728 @@
+{
+  "title": "RESCOS-17 - Douleur abdominale",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M. Jacques Dupont, 39 ans, consulte pour des douleurs abdominales"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur",
+          "details": [
+            "Localisation [en bas du ventre à droite (fosse iliaque droite)]",
+            "Qualité [comme un coup de couteau]",
+            "Intensité [10/10 (pires douleurs de ma vie)]",
+            "Irradiation [vers les parties génitales, jusque dans la verge]",
+            "Facteurs aggravant/soulageant [rien ne soulage vraiment la douleur]"
+          ],
+          "scoringRule": "Les cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a2",
+          "text": "Chronologie de la douleur",
+          "details": [
+            "Début/durée [a commencé il y a 8 heures]",
+            "Fluctuation [la douleur a fluctué mais est restée intense depuis apparition]",
+            "Circonstances de survenue [je dormais et la douleur m'a réveillé]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse actuelle - présence de",
+          "details": [
+            "Fièvre [non]",
+            "Frissons [non]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Par système - urinaire",
+          "details": [
+            "Quantité d'urine [normale]",
+            "Fréquence mictionnelle [4x/jour]",
+            "Couleur de l'urine [couleur normale]",
+            "Présence de sang [pas de sang dans les urines]",
+            "Douleur à la miction [pas de douleur mictionnelle]"
+          ],
+          "scoringRule": "Les cinq = oui, deux à quatre = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Par système - digestif",
+          "details": [
+            "Nausées [oui, état nauséeux]",
+            "Vomissements [non, pas de vomissement]",
+            "Consistance des selles",
+            "Fréquence du transit",
+            "Couleur des selles",
+            "Présence de sang dans les selles"
+          ],
+          "scoringRule": "Les six = oui, quatre à cinq = ±, aucun à trois = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies / comorbidités [bonne santé habituelle, pas d'antécédents médicaux notables]",
+            "Hospitalisations / opérations [pas d'hospitalisation ou d'opération]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes",
+          "details": [
+            "Alcool [2 verres de vin par jour]",
+            "Tabac [non]",
+            "Diète [mange souvent dans un fast-food en rentrant tard le soir et ne s'hydrate généralement pas assez]",
+            "Médicaments [vous ne prenez pas de médicaments]",
+            "Drogues [aucune]"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Status abdominal - installation",
+          "details": [
+            "Bras & jambes décroisées",
+            "Tête légèrement surélevée",
+            "Abdomen entièrement visible (premier bouton du pantalon déboutonné ou patient en sous-vêtements)",
+            "Se place à droite du patient"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "e2",
+          "text": "Status abdominal - auscultation",
+          "details": [
+            "Les 4 quadrants",
+            "Auscultation avant toute autre partie du status"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Status abdominal - percussion",
+          "details": [
+            "Les 4 quadrants",
+            "Délimite la taille du foie en percutant (ou autre technique appropriée)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Status abdominal - palpation",
+          "details": [
+            "Superficielle [PAS de douleur à la palpation du ventre]",
+            "Profonde",
+            "Détente"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "Status abdominal - tests spécifiques",
+          "details": [
+            "Palpation du point de McBurney",
+            "Signe du Psoas",
+            "Signe de Murphy"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Loge rénales",
+          "details": [
+            "Palpation",
+            "Percussion [énorme douleur (« sauter au plafond ») lorsqu'il tape le dos à droite mais pas à gauche]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Evoque un toucher rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e8",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale",
+          "binaryOnly": true,
+          "patientComment": "Colique néphrétique simple (néphrolithiase)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "scoringRule": "Au moins deux diagnostics pertinents = oui, un diagnostic = ±, aucun = non",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Origine uro-génitale",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Douleur lombaire\n\t□ Possible irradiation\nArguments CONTRE:\n\t□ Absence de fièvre\n\t□ Absence de frissons\n\t□ Pas de symptômes urinaires",
+                    "test": "→ Bandelette urinaire, ECBU, bilan inflammatoire"
+                  },
+                  {
+                    "text": "Infarctus ou hématome rénal",
+                    "cause": "Arguments POUR:\n\t□ Douleur brutale\n\t□ Localisation lombaire possible\nArguments CONTRE:\n\t□ Pas d'hématurie mentionnée\n\t□ Pas de contexte traumatique",
+                    "test": "→ US rénal, CT abdominal"
+                  },
+                  {
+                    "text": "Torsion testiculaire",
+                    "cause": "Arguments POUR:\n\t□ Irradiation vers les parties génitales\n\t□ Douleur intense\nArguments CONTRE:\n\t□ Âge (39 ans)\n\t□ Localisation initiale abdominale\n\t□ Durée (8 heures)",
+                    "test": "→ Examen testiculaire, US testiculaire en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Origine digestive",
+                "items": [
+                  {
+                    "text": "Appendicite",
+                    "cause": "Arguments POUR:\n\t□ Douleur fosse iliaque droite\n\t□ Nausées\n\t□ Intensité de la douleur\nArguments CONTRE:\n\t□ Absence de fièvre\n\t□ Pas de douleur à la palpation abdominale\n\t□ Irradiation atypique",
+                    "test": "→ Bilan inflammatoire, US ou CT abdominal"
+                  },
+                  {
+                    "text": "Cholécystite",
+                    "cause": "Arguments POUR:\n\t□ Douleur intense\n\t□ Nausées\nArguments CONTRE:\n\t□ Localisation (FID et non hypochondre droit)\n\t□ Signe de Murphy négatif",
+                    "test": "→ US abdominal, bilan hépatique"
+                  },
+                  {
+                    "text": "Iléus",
+                    "cause": "Arguments POUR:\n\t□ Douleur abdominale intense\n\t□ Nausées\nArguments CONTRE:\n\t□ Pas de vomissements\n\t□ Transit non mentionné comme anormal",
+                    "test": "→ ASP, CT abdominal"
+                  }
+                ]
+              },
+              {
+                "name": "Origine vasculaire",
+                "items": [
+                  {
+                    "text": "Dissection aortique",
+                    "cause": "Arguments POUR:\n\t□ Douleur brutale intense\n\t□ Irradiation possible\nArguments CONTRE:\n\t□ Âge relativement jeune\n\t□ Localisation basse\n\t□ Pas de signes hémodynamiques",
+                    "test": "→ Angio-CT en urgence"
+                  },
+                  {
+                    "text": "Anévrisme de l'aorte abdominale",
+                    "cause": "Arguments POUR:\n\t□ Douleur abdominale intense\nArguments CONTRE:\n\t□ Âge (39 ans)\n\t□ Pas de masse pulsatile décrite",
+                    "test": "→ US abdominal, CT abdominal"
+                  }
+                ]
+              },
+              {
+                "name": "Origine pulmonaire",
+                "items": [
+                  {
+                    "text": "Embolie pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Douleur brutale\nArguments CONTRE:\n\t□ Pas de dyspnée\n\t□ Localisation abdominale\n\t□ Pas de facteurs de risque mentionnés",
+                    "test": "→ D-dimères, angio-CT thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Origine ostéo-articulaire",
+                "items": [
+                  {
+                    "text": "Hernie discale",
+                    "cause": "Arguments POUR:\n\t□ Irradiation possible\n\t□ Position antalgique recherchée\nArguments CONTRE:\n\t□ Localisation initiale abdominale\n\t□ Pas de troubles neurologiques",
+                    "test": "→ Examen neurologique, IRM lombaire"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "Imagerie (US/CT) pour déterminer la meilleure prise en charge",
+            "Bandelette urinaire / analyse d'urine",
+            "Bilan sanguin (formule sanguine, fonction rénale, CRP)"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Antalgie proposée",
+          "binaryOnly": true,
+          "patientComment": "AINS en première intention (supériorité démontrée par rapport aux opioïdes pour la colique néphrétique)"
+        },
+        {
+          "id": "m5",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Arbre décisionnel - Prise en charge de la colique néphrétique aux urgences",
+        "description": "Algorithme de prise en charge tiré de la Revue Médicale Suisse",
+        "filename": "grilles_generees/html/images/douleur-abdo-1-img1.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Jacques Dupont",
+      "age": "39 ans",
+      "contexte": "Chef de personnel d'un restaurant, consultant aux urgences pour douleur abdominale intense",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai très mal en bas du ventre",
+        "autreChose": "Je ne suis pas du genre à m'inquiéter pour un rien de manière générale. Mais là ça fait très mal"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur intense",
+          "Localisation : En bas du ventre à droite (Fosse iliaque droite)",
+          "Qualité : Comme un coup de couteau",
+          "Quantité/intensité : 10/10 (\"pires douleurs de ma vie\")",
+          "Irradiation : Vers les parties génitales, jusque dans la verge",
+          "Chronologie : A commencé il y a 8 heures",
+          "Fluctuation : La douleur a fluctué mais est restée intense depuis apparition",
+          "Circonstances de survenue : Je dormais et la douleur m'a réveillée",
+          "Facteurs atténuants : Rien, notamment pas de position soulageant vraiment la douleur",
+          "Facteurs aggravants : La douleur est déjà tellement forte que vous n'avez rien remarqué qui l'empire"
+        ],
+        "symptomesAssocies": [
+          "Nausées"
+        ],
+        "reponseAuxSymptomes": [
+          "Vous avez pris de l'Ibuprofène qui n'a eu aucun impact sur la douleur",
+          "Puis vous vous êtes décidé à appeler votre médecin traitant qui vous a conseillé de consulter aux Urgences"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Pas de fièvre",
+          "Pas de diaphorèse",
+          "Pas de perte de poids involontaire récente",
+          "État général préservé hormis les douleurs qui provoquent une agitation (vous ne tenez pas en place)"
+        ],
+        "pulmonaire": [
+          "Pas de dyspnée",
+          "Pas de toux",
+          "Pas d'expectoration",
+          "Pas de perte de goût ou d'odorat"
+        ],
+        "neurologique": [
+          "Pas de vertiges",
+          "Pas de céphalée",
+          "Pas de trouble de la vision",
+          "Pas de perte de force ou de sensibilité"
+        ],
+        "digestive": [
+          "État nauséeux mais pas de vomissement"
+        ],
+        "genitourinaire": [
+          "Urine : Normale",
+          "Fréquence = 4x/jour",
+          "Couleur normale",
+          "Pas de douleur mictionnelle",
+          "Pas de sang dans les urines"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Vous ne prenez pas de médicaments",
+        "alimentation": "Mange souvent dans un fast-food en rentrant tard le soir et ne s'hydrate généralement pas assez",
+        "activitePhysique": "Vélo le week-end",
+        "sommeil": "Bon",
+        "tabac": "Non",
+        "alcool": "2 verres de vin par jour",
+        "drogues": "Aucune",
+        "sexualite": "Pas d'activité sexuelle depuis 2 ans"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Pas d'antécédents médicaux notables",
+        "Pas d'hospitalisation ou d'opération",
+        "Pas d'allergie",
+        "Vaccins à jour",
+        "L'anamnèse familiale est sans particularité"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Chef de personnel d'un restaurant de taille moyenne",
+        "hobbies": "Cinéma",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Divorcé",
+        "etatEsprit": "Très agité à cause de la douleur"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Agitation : due à la douleur (vous bougez beaucoup)",
+          "Douleur dans le bas du ventre à droite : (grimacez de douleur) [Rappel : pire douleur de votre vie]"
+        ],
+        "durantStatus": [
+          "Au début du Status abdominal, croisez vos jambes et tenez-vous le flanc droit avec les mains (position non optimale)",
+          "PAS de douleur à la palpation du ventre",
+          "Énorme douleur (« sauter au plafond ») lorsqu'il tape le dos à droite mais pas à gauche (loges rénales)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Cette vignette concerne Monsieur Jacques Dupont (39 ans), en bonne santé habituelle. Il y a 8 heures, une douleur au flanc droit qui se propage jusque dans le pénis est apparue brutalement. Parallèlement, il ressent également des nausées.",
+      "rolesInterventions": [
+        "Aucune intervention de l'expert n'est nécessaire dans cette station"
+      ],
+      "pointsCles": [
+        "Le tableau est extrêmement typique d'une colique néphrétique",
+        "Cette dernière peut aussi engendrer des troubles du transit (notamment constipation)",
+        "Il est important de bien caractériser la douleur",
+        "Il est important de rechercher des symptômes urinaires, notamment une hématurie",
+        "Un examen complet de l'abdomen s'impose. Ne pas oublier le toucher rectal !",
+        "Un manque d'hydratation précède souvent une colique néphrétique"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Dans ce cas très typique, il faut faire une imagerie (US/CT) pour déterminer la meilleure prise en charge"
+        },
+        {
+          "titre": "Caractérisation de la douleur",
+          "contenu": "Il est important de bien caractériser la douleur. Dans ce cas, on peut déjà être bien orienté juste par ces informations."
+        },
+        {
+          "titre": "Symptômes urinaires",
+          "contenu": "Il est important de rechercher des symptômes urinaires, notamment une hématurie qui peut être présente lors d'une colique néphrétique."
+        },
+        {
+          "titre": "Examen clinique",
+          "contenu": "Status : au vu du tableau clinique et du diagnostic différentiel possible, un examen complet de l'abdomen s'impose. Ne pas oublier le toucher rectal !"
+        },
+        {
+          "titre": "Management de la douleur",
+          "contenu": "Au niveau du management, il faut toujours penser à la douleur du patient dans la prise en charge. Dans ce cas, l'évocation de douleurs 10/10 (\"Pires douleur de ma vie\") doit faire penser à proposer une antalgie d'office.",
+          "points": [
+            "Dans le cas de la colique néphrétique, les AINS ont montré leur supériorité par rapport aux traitements opioïdes"
+          ]
+        },
+        {
+          "titre": "Facteur prédisposant",
+          "contenu": "Remarque : un manque d'hydratation précède souvent une colique néphrétique."
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🟠 Colique néphrétique simple – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur lombaire unilatérale, brutale, très intense, de type colique",
+                "Irradiation vers l’aine, les organes génitaux ou le périnée",
+                "Agitation (patient qui ne tient pas en place)",
+                "Hématurie macroscopique ou microscopique",
+                "Nausées, vomissements (dus à la douleur)",
+                "Pollakiurie, brûlures mictionnelles si calcul distal"
+              ]
+            },
+            {
+              "titre": "Antécédents et facteurs favorisants",
+              "points": [
+                "ATCD de lithiase urinaire",
+                "Déshydratation, épisodes de chaleur",
+                "Alimentation riche en protéines animales ou sels",
+                "ATCD familiaux de lithiase",
+                "Médicaments lithogènes (ex : indinavir, topiramate)"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte à rechercher",
+              "points": [
+                "Fièvre, frissons (signe de complication infectieuse)",
+                "Contexte immunodéprimé ou rein unique",
+                "Douleur non calmée par les antalgiques usuels",
+                "Anurie ou oligurie (signe d'obstruction bilatérale ou rein unique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation",
+              "points": [
+                "Patient agité, cherche une position antalgique",
+                "Sensibilité ou douleur à la percussion de la fosse lombaire",
+                "Absence de défense ou de contracture abdominale (exclut péritonite)"
+              ]
+            },
+            {
+              "titre": "Recherche de complications",
+              "points": [
+                "Fièvre ≥ 38 °C (complication infectieuse possible)",
+                "Signes de déshydratation",
+                "Palpation d'une masse lombaire (pyonéphrose ?)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens biologiques",
+              "points": [
+                "BU : hématurie fréquente, leucocyturie ±",
+                "Créatinine ± urée (fonction rénale)",
+                "CRP, NFS si suspicion d'infection",
+                "ECBU si signes urinaires ou fièvre"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Scanner abdomino-pelvien sans injection = examen de référence",
+                "Échographie : alternative en 1re intention chez la femme enceinte ou l’enfant"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "Antalgiques : AINS en 1re intention (ex : kétoprofène IV)",
+                "Antispasmodiques ±",
+                "Hydratation per os si absence d’obstruction majeure",
+                "Antibiotiques si infection associée"
+              ]
+            },
+            {
+              "titre": "Prise en charge spécifique",
+              "points": [
+                "Calcul ≤ 5 mm : traitement médical expulsif (ex : tamsulosine)",
+                "Surveillance ambulatoire si non compliqué",
+                "Urologie si : fièvre, anurie, douleur résistante, calcul > 10 mm, rein unique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Penser à la colique néphrétique devant douleur lombaire aiguë + agitation",
+            "Scanner abdomino-pelvien sans injection = gold standard",
+            "BU systématique, recherche hématurie",
+            "AINS = traitement de 1re intention sauf contre-indication",
+            "Toujours exclure une complication : fièvre, anurie, infection, rein unique"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale aiguë (Colique néphrétique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif, contexte",
+            "Caractériser la douleur → début, localisation, irradiation, intensité, facteurs déclenchants/soulageants",
+            "Symptômes associés → digestifs, urinaires, génitaux, fièvre",
+            "ATCD médicaux et chirurgicaux",
+            "Habitudes de vie (tabac, alcool, hydratation, alimentation, médicaments)",
+            "Examen clinique → abdomen, fosses lombaires, organes génitaux, TR",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → BU, NFS, CRP, créat, imagerie",
+            "Prise en charge → antalgie, hydratation, orientation urologique si compliqué"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo : DOULEUR",
+            "elements": [
+              "D = Début brutal",
+              "O = Onde (colique, fluctuations)",
+              "U = Urinaire (BU, ECBU, créat)",
+              "L = Localisation lombaire irradiant génital",
+              "E = Examen clinique complet (abdomen, TR)",
+              "U = Urgences : exclure fièvre/anurie",
+              "R = Radiologie (scanner sans injection)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Jacques Dupont, 39 ans, chef de personnel dans un restaurant, en bonne santé habituelle, qui consulte aux urgences pour une douleur abdominale intense.\n\nLa douleur a débuté brutalement il y a 8 heures, localisée en fosse iliaque droite avec irradiation vers les parties génitales jusque dans la verge. Il décrit une douleur de type coup de couteau, très intense, évaluée à 10 sur 10, et dit que c’est la pire douleur de sa vie. Elle a fluctué mais reste très intense, sans facteur clairement soulageant. C’est cette douleur qui l’a réveillé dans la nuit. Il rapporte aussi des nausées mais pas de vomissements.\n\nIl n’a pas de fièvre ni de frissons. Pas de brûlure mictionnelle, pas de sang visible dans les urines, pas de troubles digestifs majeurs en dehors de la nausée. Ses urines sont d’aspect normal, il urine environ 4 fois par jour. \n\nPour ses antécédents, il est en bonne santé habituelle, sans hospitalisation ni opération. Pas de traitement régulier, pas d’allergie connue. Côté habitudes de vie, il boit 2 verres de vin par jour, ne fume pas et ne consomme pas de drogues. Il reconnaît manger souvent dans des fast-foods en rentrant tard le soir et boire peu d’eau dans la journée. Pas d’activité sexuelle depuis deux ans.\n\nÀ l’examen clinique, le patient est agité, se tortille sur la chaise et ne tient pas en place à cause de la douleur. Les constantes sont correctes, sans fièvre. L’abdomen est souple, non douloureux à la palpation, sans défense ni contracture. Le signe de Murphy est négatif. En revanche, la percussion de la fosse lombaire droite déclenche une douleur très vive, alors que le côté gauche est indolore. Pas de masse palpable. Les organes génitaux externes sont normaux, sans anomalie ni torsion testiculaire. \n\nEn résumé, il s’agit d’un homme jeune avec une douleur lombaire brutale, irradiant aux organes génitaux, très intense et fluctuante, sans fièvre, avec douleur vive à la percussion de la fosse lombaire droite. Mon hypothèse principale est une colique néphrétique droite. Les diagnostics différentiels incluent une appendicite, une pyélonéphrite, une torsion testiculaire, une dissection aortique ou plus rarement une cholécystite atypique.\n\nComme examens complémentaires, je demanderais une bandelette urinaire et un ECBU, un bilan sanguin avec NFS, CRP, créatinine, et une imagerie, idéalement un scanner abdomino-pelvien sans injection qui est l’examen de référence. Une échographie rénale pourrait être faite en première intention.\n\nEn termes de prise en charge immédiate, je commencerais par une antalgie adaptée, en privilégiant les AINS en intraveineux si pas de contre-indication, associés à une bonne hydratation. En cas de complication — fièvre, anurie, rein unique ou douleur réfractaire —, une prise en charge urologique urgente serait nécessaire."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Jacques Dupont, 39 ans, consulte pour une douleur abdominale brutale très intense depuis 8 heures.\n\nB (Background) : En bonne santé, pas d’ATCD, pas de traitements. Douleur fosse iliaque droite irradiant aux organes génitaux, nausées associées. Pas de fièvre ni signes urinaires.\n\nA (Assessment) : Hypothèse principale : colique néphrétique droite. DD : appendicite, pyélonéphrite, torsion testiculaire, dissection aortique.\n\nR (Recommendation) : Antalgie IV par AINS, bilan sanguin, BU + ECBU, scanner abdomino-pelvien sans injection, hydratation, avis urologie si complication."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Mnémo des DD : APPUYER",
+              "points": [
+                "A = Appendicite",
+                "P = Pyélonéphrite",
+                "P = Pathologie vasculaire (dissection, AAA)",
+                "U = Uro (colique néphrétique, torsion testiculaire)",
+                "Y = Yersiniose (iléite)",
+                "E = Entérocolite/Iléus",
+                "R = Rachis (hernie discale)"
+              ]
+            },
+            {
+              "titre": "👉 Antalgie colique néphrétique",
+              "points": [
+                "1ʳᵉ intention = AINS IV",
+                "2ᵉ intention = opioïdes",
+                "Hydratation",
+                "⚠️ Attention infection → ATB + drainage urgent"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Colique néphrétique",
+                  "reponse": {
+                    "pour": [
+                      "Douleur brutale, très intense, fluctuante",
+                      "Irradiation vers les organes génitaux",
+                      "Douleur vive à la percussion fosse lombaire droite",
+                      "Agitation typique"
+                    ],
+                    "contre": [
+                      "Pas d’hématurie macroscopique rapportée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Appendicite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur fosse iliaque droite",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de défense abdominale",
+                      "Irradiation atypique vers organes génitaux"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pyélonéphrite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur lombaire",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Pas de fièvre ni frissons",
+                      "Pas de troubles urinaires"
+                    ]
+                  }
+                },
+                {
+                  "question": "Torsion testiculaire",
+                  "reponse": {
+                    "pour": [
+                      "Douleur irradiant aux organes génitaux"
+                    ],
+                    "contre": [
+                      "Douleur initiale abdominale",
+                      "Examen testiculaire normal",
+                      "Âge atypique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bandelette urinaire et ECBU",
+                    "NFS, CRP, créatinine",
+                    "Scanner abdomino-pelvien sans injection (gold standard)",
+                    "Échographie rénale si scanner indisponible ou femme enceinte"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Colique néphrétique droite"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "AINS IV en 1ʳᵉ intention",
+                      "Hydratation",
+                      "Opioïdes si douleurs résistantes",
+                      "ATB + drainage si fièvre/infection"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance douleur et diurèse",
+                    "Suivi urologique si calcul volumineux ou compliquant",
+                    "Prévention secondaire : hydratation, régime adapté",
+                    "Contrôle imagerie si expulsion incertaine"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

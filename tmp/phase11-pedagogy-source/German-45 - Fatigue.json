@@ -1,0 +1,320 @@
+{
+  "title": "German-45 - Fatigue",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 42 ans (IMC 29 kg/m²) consultant pour fatigue persistante",
+    "vitals": {
+      "ta": "148/89 mmHg",
+      "fc": "76 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Se présente avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'introduction → Symptôme principal",
+          "patientComment": "Toujours si fatigué, épuisé le matin",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Évolution temporelle",
+          "patientComment": "Depuis plusieurs semaines"
+        },
+        {
+          "id": "a4",
+          "text": "Évolution dans la journée",
+          "patientComment": "Toujours à peu près aussi fatigué"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs déclenchants identifiés",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a6",
+          "text": "Exploration du sommeil - Qualité",
+          "details": [
+            "Qualité subjective [Bonne]",
+            "Durée de sommeil [7 heures]",
+            "Problèmes d'endormissement [Non]",
+            "Problèmes de maintien du sommeil [Non]",
+            "Activités avant le coucher [Télévision]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Caractéristiques du sommeil et somnolence",
+          "details": [
+            "Sommeil réparateur [Non]",
+            "Somnolence diurne [Oui, s'est déjà endormi à son bureau]",
+            "Situations à risque [Bureau, conduite automobile]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Signes évocateurs de syndrome d'apnée du sommeil",
+          "details": [
+            "Ronflement [Oui]",
+            "Pauses respiratoires nocturnes [Oui, sa femme l'a remarqué]",
+            "Céphalées matinales [Oui]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "État psychique et humeur",
+          "details": [
+            "Changements d'humeur [Non]",
+            "Satisfaction avec la vie actuelle [Bien, mais stress au bureau]",
+            "Manque d'élan/motivation [Un peu, car simplement si fatigué]",
+            "Capacité de concentration [Légèrement altérée]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Performance et activités quotidiennes",
+          "details": [
+            "Performance physique et mentale [Réduite]",
+            "Déroulement journée type [Bureau, courses, dîner en famille]",
+            "Activité physique régulière [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes associés",
+          "details": [
+            "Fièvre, infection [Non]",
+            "Perte/prise de poids [Non]",
+            "Polyurie/polydipsie [Non mentionné]",
+            "Troubles digestifs, sang dans les selles [Non]",
+            "Troubles mictionnels [Sans particularité]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes alimentaires et consommation",
+          "patientComment": "Repas copieux, 1-2 verres de vin chaque soir"
+        },
+        {
+          "id": "a13",
+          "text": "Automédication déjà tentée",
+          "patientComment": "Un peu de repos, pas de pommade ou antalgiques"
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents personnels",
+          "details": [
+            "Médicaux [Reflux gastro-œsophagien]",
+            "Psychiatriques/neurologiques [Non]",
+            "Événement marquant récent [Non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes de vie (noxes)",
+          "details": [
+            "Tabac [20 paquets-années]",
+            "Alcool [1-2 verres de vin chaque soir]",
+            "Drogues [Non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Médicaments actuels",
+          "patientComment": "IPP (inhibiteur de la pompe à protons)"
+        },
+        {
+          "id": "a17",
+          "text": "Antécédents familiaux",
+          "patientComment": "Père sous traitement antihypertenseur"
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse sociale et professionnelle",
+          "patientComment": "Employé de bureau, marié, 2 enfants"
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée sur la fatigue et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen cardio-pulmonaire",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique sommaire",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e4",
+          "text": "Mesure de la tension artérielle",
+          "patientComment": "148/89 mmHg - élevée"
+        },
+        {
+          "id": "e5",
+          "text": "Inspection ORL",
+          "details": [
+            "Évaluation des voies aériennes supérieures",
+            "Recherche d'hypertrophie amygdalienne",
+            "Évaluation du palais"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation morphologique",
+          "details": [
+            "IMC calculé (29 kg/m² - surpoids)",
+            "Circonférence cervicale",
+            "Morphologie faciale"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Syndrome d'apnée obstructive du sommeil"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes endocriniennes",
+                "items": [
+                  {
+                    "text": "Hypothyroïdie : Fatigue, prise de poids, bradycardie, constipation, peau sèche",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  },
+                  {
+                    "text": "Diabète mellitus : Fatigue, polyurie, polydipsie, perte de poids, infections récurrentes",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Glycémie à jeun, HbA1c"
+                  }
+                ]
+              },
+              {
+                "name": "Causes psychiatriques",
+                "items": [
+                  {
+                    "text": "Dépression : Humeur dépressive, anhédonie, troubles du sommeil, troubles cognitifs",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Évaluation psychiatrique, bilan thyroïdien"
+                  },
+                  {
+                    "text": "Syndrome de surmenage professionnel : Stress au travail, épuisement émotionnel, dépersonnalisation",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "Biologie [NFS, CRP, créatinine, potassium, ferritine, TSH, glycémie]",
+            "Gazométrie artérielle [Recherche hypoxémie/hypercapnie]",
+            "ECG [Recherche troubles du rythme, hypertrophie]",
+            "Radiographie thoracique [Bilan cardio-pulmonaire]",
+            "Polysomnographie [Référence au pneumologue pour étude du sommeil]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Information sur les risques et complications",
+          "details": [
+            "Risque cardiovasculaire augmenté",
+            "Hypertension artérielle",
+            "Risque d'infarctus du myocarde",
+            "Risque d'accident vasculaire cérébral"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Réduction pondérale : Objectif IMC < 25 kg/m²\n• Arrêt de l'alcool le soir : Éviter la consommation avant le coucher\n• Sevrage tabagique : Arrêt complet du tabac"
+              },
+              {
+                "title": "Traitement spécifique",
+                "content": "• CPAP (ventilation en pression positive continue) : Traitement de référence, utilisation nocturne\n• Orthèse d'avancée mandibulaire : Alternative à la CPAP dans certains cas\n• Chirurgie ORL : Élargissement de l'espace rétro-lingual si indication"
+              },
+              {
+                "title": "Traitement de l'hypertension",
+                "content": "• Antihypertenseurs : Contrôle tensionnel nécessaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Planification du suivi",
+          "details": [
+            "Consultation pneumologique pour polysomnographie",
+            "Suivi tensionnel régulier",
+            "Réévaluation après mise en place du traitement"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

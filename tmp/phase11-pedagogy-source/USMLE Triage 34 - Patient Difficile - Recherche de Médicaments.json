@@ -1,0 +1,565 @@
+{
+  "title": "USMLE Triage 34 - Patient Difficile - Recherche de Médicaments",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Vince Casner, homme de 49 ans, s'est présenté pour des douleurs dorsales",
+    "vitals": {
+      "ta": "130/82 mmHg",
+      "temperature": "37.0°C",
+      "fc": "62 bpm",
+      "fr": "12/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour M.",
+            "Casner, je suis le Dr Morgan.",
+            "Je comprends que vous avez des douleurs dorsales récemment.",
+            "Veuillez m'en dire plus."
+          ],
+          "patientComment": "Douleurs dorsales [dos bloqué], récidivant [tous les mois ou deux], intense [ne peut pas bouger], médecin habituel indisponible [pas disponible avant lundi]"
+        },
+        {
+          "id": "a2",
+          "text": "Mécanisme de la blessure et circonstances",
+          "details": [
+            "Moment de la blessure [hier, vendredi]",
+            "Mécanisme [soulevait raccords à environ 90 cm du sol]",
+            "Description de l'incident [figé en position, su immédiatement]",
+            "Profession [contremaître J&T Construction]",
+            "Traitement initial [Tylenol comme prescrit par médecin]"
+          ],
+          "exemplesPhrases": [
+            "Je vois que vous souffrez.",
+            "Quand vous êtes-vous fait cela ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Antécédents de douleurs dorsales et pattern récurrent",
+          "details": [
+            "Durée du problème [depuis environ 10 ans]",
+            "Fréquence des épisodes [tous les mois ou deux]",
+            "Attitude vis-à-vis médecins [n'aime pas aller chez médecin]",
+            "Tolérance habituelle [supporte la douleur, haute tolérance]",
+            "Traitement habituel [médecin donne quelques comprimés, repos au lit]"
+          ],
+          "exemplesPhrases": [
+            "Depuis combien de temps avez-vous ce problème ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents d'imagerie et résultats",
+          "details": [
+            "Imagerie antérieure [radiographies, scanner, IRM à Kansas City]",
+            "Résultats rapportés [hernie discale 2 niveaux, dégénérescence discale]",
+            "Commentaire médical [je ne peux pas croire que vous travaillez encore]",
+            "Déménagement [quitté Kansas City il y a 9 mois]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu des radiographies ou d'autres examens de votre dos ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractérisation de la douleur actuelle",
+          "details": [
+            "Irradiation [parfois dans jambe droite]",
+            "Localisation [fait mal des deux côtés, descend arrière jambe]",
+            "Distribution [jusqu'au milieu cuisse postérieure]",
+            "Intensité [échelle 11/10, pire douleur avec haute tolérance]"
+          ],
+          "exemplesPhrases": [
+            "Cette douleur irradie-t-elle dans vos jambes ? Sur une échelle de 0 à 10, où évalueriez-vous votre douleur ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes neurologiques et incohérences",
+          "details": [
+            "Problèmes moteurs [parfois ne peut bouger jambe droite]",
+            "Épisode récent [semaine dernière, pendant déjeuner]",
+            "Incohérence temporelle [pas de douleurs dorsales à ce moment]",
+            "Symptômes actuels [nie problèmes moteurs cette fois]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des problèmes pour bouger cette jambe ? Aviez-vous des douleurs dorsales à ce moment-là ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes systémiques et fièvre",
+          "details": [
+            "Fièvre subjective [pense avoir eu fièvre]",
+            "Absence de mesure [pas pris température]",
+            "Chronologie [après blessure]",
+            "Description vague [impression d'avoir fièvre]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu de la fièvre depuis que vous vous êtes blessé le dos ? Quelle était votre température ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Historique des traitements et recherche spécifique de médicaments",
+          "details": [
+            "Traitements actuels [Tylenol inefficace]",
+            "Réticence affichée [essaie de ne rien prendre]",
+            "Liste exhaustive [tout essayé : Motrin, gabapentine, prégabaline, tramadol]",
+            "Relaxants musculaires [cyclobenzaprine et autres]",
+            "Injections [essayées sans succès]",
+            "Allergie rapportée [hydrocodone cause vomissements]",
+            "Médicament efficace [petit comprimé rose - Percocet]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous pris quelque chose pour votre douleur ? Quels médicaments avez-vous essayés ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Techniques de manipulation pour obtenir opioïdes",
+          "details": [
+            "Fait nommer le médicament [pamicet ou namicet → Percocet]",
+            "Réticence feinte [déteste prendre ces trucs]",
+            "Exclusivité du traitement [seule chose qui fonctionne]",
+            "Inefficacité autres traitements [kétorolac ne fait rien]",
+            "Injections stéroïdes [essayées sans succès]"
+          ],
+          "exemplesPhrases": [
+            "S'agissait-il du Percocet ? Avez-vous essayé le kétorolac ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux et suivi spécialisé",
+          "details": [
+            "Hypertension [traitement par aténolol]",
+            "Autres antécédents [nie autres problèmes médicaux]",
+            "Référence orthopédique [référence à Kansas City manquée]",
+            "Promesse médecin [va référer prochaine fois]",
+            "Chirurgies [extraction dents de sagesse seulement]",
+            "Allergies [hydrocodone cause vomissements]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà été vu par un chirurgien orthopédiste ? Avez-vous des allergies ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux et habitudes de vie",
+          "details": [
+            "Antécédents familiaux [famille en bonne santé]",
+            "Perception familiale [se demandent pourquoi va chez médecin]",
+            "Tabac [fumait, arrêté il y a 10 ans]",
+            "Alcool [1-2 bières pendant football, pas régulièrement]",
+            "Attitude santé [réticent aux soins médicaux]"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il eu des problèmes similaires dans votre famille ? Qu'en est-il du tabac ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation et commentaire des signes vitaux",
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux [signes vitaux normaux]",
+            "Expliquer l'examen au patient",
+            "Approche professionnelle patient difficile"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant.",
+            "Il semble que vos signes vitaux soient normaux."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen dorsal structurel",
+          "details": [
+            "Inspection [érythème, œdème, déformation, spasme]",
+            "Localisation douleur [patient pointe niveau L4, bilatéral]",
+            "Palpation processus épineux [pas de sensibilité médiane]",
+            "Palpation périvertébrale [sensibilité importante zone générale]",
+            "Hauteurs épines ischiatiques [approximativement égales]"
+          ],
+          "patientComment": "Patient pointe niveau L4, douleur bilatérale. Pas de sensibilité processus épineux médians. Sensibilité périvertébrale importante. Hauteurs épines ischiatiques égales"
+        },
+        {
+          "id": "e3",
+          "text": "Tests d'amplitude de mouvement rachidien",
+          "details": [
+            "Flexion/extension [non limitée par douleur]",
+            "Rotation [amplitude normale chaque côté]",
+            "Flexion latérale [amplitude normale]",
+            "Communication pendant tests [déterminer manœuvres douloureuses]",
+            "Test charge axiale [positif pour douleur lombaire]"
+          ],
+          "patientComment": "Flexion/extension non limitées. Rotation et amplitude latérale normales. Test charge axiale positif"
+        },
+        {
+          "id": "e4",
+          "text": "Tests neurologiques spécialisés",
+          "details": [
+            "Test Lasègue ipsilatéral [positif en décubitus, négatif assis]",
+            "Test Lasègue controlatéral [non spécifié]",
+            "Test FABER [négatif bilatéralement]",
+            "Incohérence des tests [résultats différents selon position]"
+          ],
+          "patientComment": "Test lever jambe tendue ipsilatéral droit positif en décubitus, négatif en position assise. Test FABER négatif bilatéralement"
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique des membres inférieurs",
+          "details": [
+            "Sensibilité tactile [normale bilatérale]",
+            "Tests piqué/mousse [normaux]",
+            "Proprioception [normale]",
+            "Réflexes ostéotendineux [normaux]",
+            "Force motrice [évaluation]"
+          ],
+          "patientComment": "Sensibilité tactile normale, piqué/mousse normal, proprioception normale, réflexes normaux"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation de la démarche",
+          "details": [
+            "Démarche spontanée [quelque peu altérée par douleur]",
+            "Marche sur talons [normale]",
+            "Marche sur orteils [normale]",
+            "Questions pendant examen [engourdissements, difficultés marche]"
+          ],
+          "patientComment": "Démarche quelque peu altérée à cause douleur, mais marche normale sur talons/orteils",
+          "exemplesPhrases": [
+            "Avez-vous des engourdissements ou des picotements ici ? Avez-vous eu des difficultés à marcher ?"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Reconnaissance du comportement de recherche de médicaments",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Troubles comportementaux",
+                "items": [
+                  {
+                    "text": "Comportement de recherche de médicaments",
+                    "cause": "Arguments POUR :\n\t□ Demande spécifique Percocet\n\t□ Fait nommer le médicament par médecin\n\t□ Prétend réticence aux médicaments\n\t□ Exclusivité d'un seul traitement\n\t□ Incohérences dans symptômes\n\t□ Pattern récurrent consultations",
+                    "test": "→ Vérification base données prescriptions, évaluation comportementale"
+                  },
+                  {
+                    "text": "Simulation",
+                    "cause": "Arguments POUR :\n\t□ Incohérences tests neurologiques\n\t□ Lasègue positif décubitus, négatif assis\n\t□ Symptômes disproportionnés\n\t□ Examen neurologique normal",
+                    "test": "→ Tests de Waddell, observation comportementale"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies rachidiennes organiques",
+                "items": [
+                  {
+                    "text": "Spasme musculaire dorsal",
+                    "cause": "Arguments POUR :\n\t□ Mécanisme traumatique\n\t□ Sensibilité périvertébrale\n\t□ Limitation fonctionnelle\nArguments CONTRE :\n\t□ Amplitude mouvement normale\n\t□ Pas de limitation flexion/extension",
+                    "test": "→ Radiographies lombaires, examen clinique"
+                  },
+                  {
+                    "text": "Protrusion discale intervertébrale",
+                    "cause": "Arguments POUR :\n\t□ Antécédents hernie discale\n\t□ Irradiation sciatique droite\n\t□ Mécanisme traumatique\nArguments CONTRE :\n\t□ Examen neurologique normal\n\t□ Incohérences tests neurologiques",
+                    "test": "→ IRM lombaire si cliniquement justifiée"
+                  },
+                  {
+                    "text": "Rupture discale intervertébrale",
+                    "cause": "Arguments POUR :\n\t□ Antécédents dégénérescence discale\n\t□ Traumatisme en flexion/soulèvement\nArguments CONTRE :\n\t□ Pas de déficit neurologique\n\t□ Tests neurologiques normaux",
+                    "test": "→ IRM lombaire, évaluation neurologique"
+                  }
+                ]
+              }
+            ]
+          },
+          "exemplesPhrases": [
+            "Il y a plusieurs possibilités qui pourraient être à l'origine de votre douleur dorsale."
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Explication physiopathologique des spasmes musculaires",
+          "details": [
+            "Muscles posturaux [contrôle inconscient par cerveau]",
+            "Fonction automatique [maintien debout sans y penser]",
+            "Spasmes involontaires [en dehors du contrôle conscient]",
+            "Mécanisme douloureux [spasmes peuvent être très douloureux]"
+          ],
+          "exemplesPhrases": [
+            "La cause la plus commune est un spasme des muscles dorsaux.",
+            "Les muscles dorsaux sont contrôlés par nos fonctions cérébrales supérieures."
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Évaluation des dommages structurels discaux",
+          "details": [
+            "Problèmes discaux [dommages structurels possibles]",
+            "Mécanisme lésionnel [protrusion ou rupture discale]",
+            "Compression nerveuse [pression sur nerfs sortants]",
+            "Corrélation clinique [douleur irradiante dans jambes]"
+          ],
+          "exemplesPhrases": [
+            "Une autre possibilité est que vous ayez causé des dommages structurels à l'un des disques entre les vertèbres."
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Plan d'imagerie et justification",
+          "details": [
+            "Radiographies lombaires [évaluation espaces intervertébraux]",
+            "Limitation radiographies [pas optimal pour nerfs]",
+            "Meilleur examen urgences [problèmes osseux sérieux]",
+            "IRM future [si radiographies normales, via médecin traitant]",
+            "Exclusion fractures [fracture vertébrale possible]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais prendre des radiographies de votre dos pour déterminer si les espaces entre les vertèbres semblent corrects."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Évitement de prescription d'opioïdes",
+          "details": [
+            "Pas de promesse traitement spécifique [éviter engagement]",
+            "Pas d'allusion médicaments [ne pas encourager]",
+            "Focus sur diagnostic [priorité aux examens]",
+            "Référence au médecin traitant [continuité des soins]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais sortir maintenant et prescrire cette radiographie.",
+            "Ensuite, je reviendrai immédiatement pour en discuter avec vous."
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Organisation du suivi et attente des résultats",
+          "content": "J'aimerais sortir maintenant et prescrire cette radiographie avec mon infirmière. Ensuite, attendez-vous à revenir dans cette salle jusqu'à ce que les résultats soient prêts. Quand ils le seront, je reviendrai immédiatement pour en discuter avec vous. Y a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci.",
+          "exemplesPhrases": [
+            "J'aimerais sortir maintenant et prescrire cette radiographie avec mon infirmière."
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Recherche de médicaments - Vince Casner",
+      "nom": "Vince Casner",
+      "age": "49 ans",
+      "contexte": "Homme de 49 ans en recherche active d'opioïdes (Percocet) via simulation de douleurs dorsales",
+      "motifConsultation": {
+        "plaintePrincipale": "Douleurs dorsales sévères",
+        "strategieManipulation": "Recherche spécifique de Percocet"
+      },
+      "techniqueRechercheMedicaments": {
+        "reticenceFeinte": [
+          "Prétend ne pas aimer prendre médicaments",
+          "Dit avoir haute tolérance à la douleur",
+          "Évite normalement médecins",
+          "Supporte habituellement la douleur"
+        ],
+        "manipulationMedicament": [
+          "Fait nommer Percocet par médecin",
+          "Dit 'pamicet ou namicet ou quelque chose'",
+          "Prétend que seul Percocet fonctionne",
+          "Liste exhaustive autres traitements inefficaces"
+        ],
+        "exclusiviteTraitement": [
+          "Percocet seule chose efficace",
+          "Tous autres médicaments inefficaces",
+          "Hydrocodone cause vomissements",
+          "Kétorolac ne fait rien"
+        ],
+        "etablirConfiance": [
+          "Répète qu'il déteste médicaments",
+          "Emphasise réticence personnelle",
+          "Mentionne que famille évite médecins",
+          "Se présente comme patient responsable"
+        ]
+      },
+      "histoireMedicale": {
+        "antecedentsRapportes": [
+          "10 ans de problèmes dorsaux",
+          "Épisodes récurrents tous 1-2 mois",
+          "IRM montrant hernie discale 2 niveaux",
+          "Dégénérescence discale multiple",
+          "Référence orthopédique manquée (déménagement)"
+        ],
+        "incohérencessymptomes": [
+          "Problème moteur semaine dernière sans douleur dorsale",
+          "Test Lasègue différent selon position",
+          "Examen neurologique normal malgré plaintes",
+          "Amplitude mouvement normale malgré douleur sévère"
+        ]
+      },
+      "presentationClinique": {
+        "douleurRapportee": [
+          "Intensité 11/10",
+          "Irradiation jambe droite",
+          "Bilatérale lombaire",
+          "Figé en position lors traumatisme"
+        ],
+        "comportementDouleur": [
+          "Démarche légèrement altérée",
+          "Coopératif pour tous examens",
+          "Pas de limitation réelle mouvements",
+          "Sensibilité périvertébrale à la palpation"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Coopératif et poli",
+          "Légèrement défensif si remis en question",
+          "Insiste sur légitimité de la douleur",
+          "Mentionne médecin habituel comme référence"
+        ],
+        "reponsesTitypiques": [
+          "Sur médicaments: 'Je déteste prendre ces trucs'",
+          "Sur douleur: 'J'ai une tolérance vraiment élevée'",
+          "Sur Percocet: 'C'est la seule chose qui fonctionne'",
+          "Sur autres traitements: 'J'ai tout essayé'",
+          "Sur médecins: 'Je n'aime pas aller chez médecin'"
+        ],
+        "signesAlerte": [
+          "Demande médicament spécifique",
+          "Connaît noms multiples médicaments",
+          "Histoire trop détaillée des échecs",
+          "Incohérences examen clinique"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Détection recherche de médicaments",
+      "pointsCles": [
+        "Patient drug-seeking avec technique sophistiquée",
+        "Utilise stratégie de faire nommer le médicament par médecin",
+        "Incohérences multiples entre anamnèse et examen",
+        "Tests neurologiques inconsistants (Lasègue positif/négatif)",
+        "Réticence feinte aux médicaments = red flag majeur"
+      ],
+      "signesAlarme": [
+        "Demande médicament spécifique (Percocet)",
+        "Fait nommer médicament par médecin",
+        "Prétend réticence aux médicaments",
+        "Liste exhaustive échecs thérapeutiques",
+        "Incohérences tests cliniques",
+        "Intensité douleur disproportionnée (11/10)",
+        "Consultation urgences pour problème chronique"
+      ],
+      "techniqueEvaluation": [
+        "Observation comportementale systématique",
+        "Tests neurologiques multiples/répétés",
+        "Vérification base données prescriptions",
+        "Contact médecin traitant si possible",
+        "Documentation précise incohérences"
+      ],
+      "prisEnCharge": [
+        "Éviter prescription opioïdes",
+        "Ne pas promettre traitement spécifique",
+        "Focus sur diagnostic différentiel",
+        "Référence médecin traitant",
+        "Alternative thérapeutique non-opioïde"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie et Pratique - Drug-seeking behavior",
+      "sections": [
+        {
+          "titre": "Reconnaissance du comportement drug-seeking",
+          "contenu": "Patients développent techniques sophistiquées : réticence feinte, faire nommer médicament, exclusivité traitement, incohérences cliniques. Évaluation systématique nécessaire."
+        },
+        {
+          "titre": "Tests cliniques de simulation",
+          "contenu": "Tests de Waddell, incohérences Lasègue selon position, amplitude mouvement normale malgré douleur sévère. Documentation précise essentielle."
+        },
+        {
+          "titre": "Gestion thérapeutique",
+          "contenu": "Éviter prescription opioïdes, alternatives non-addictives, référence appropriée, documentation complète. Focus sur sécurité et continuité soins."
+        }
+      ],
+      "examensComplementaires": [
+        "Radiographies lombaires (évaluation structurelle)",
+        "Vérification base données prescriptions",
+        "Contact médecin traitant habituel",
+        "Tests de simulation (Waddell)",
+        "IRM seulement si justification clinique claire"
+      ],
+      "rappelsTherapeutiques": [
+        "Éviter prescription opioïdes si suspicion drug-seeking",
+        "Alternatives : AINS, relaxants musculaires, physiothérapie",
+        "Documentation détaillée comportement et incohérences",
+        "Référence médecin traitant pour continuité",
+        "Information patient sur alternatives thérapeutiques"
+      ]
+    },
+    "signesAlerte": {
+      "titre": "Red flags du comportement drug-seeking",
+      "contenu": [
+        {
+          "categorie": "Demandes spécifiques",
+          "signes": [
+            "Demande médicament précis par nom",
+            "Fait nommer médicament par médecin",
+            "Prétend que seul un médicament fonctionne",
+            "Connaît dosages et noms commerciaux"
+          ]
+        },
+        {
+          "categorie": "Comportement paradoxal",
+          "signes": [
+            "Prétend réticence aux médicaments",
+            "Dit avoir haute tolérance douleur",
+            "Évite habituellement médecins",
+            "Urgence pour problème chronique"
+          ]
+        },
+        {
+          "categorie": "Incohérences cliniques",
+          "signes": [
+            "Symptômes disproportionnés à l'examen",
+            "Tests neurologiques inconsistants",
+            "Amplitude mouvement normale malgré douleur",
+            "Comportement non cohérent avec douleur rapportée"
+          ]
+        },
+        {
+          "categorie": "Histoire suspecte",
+          "signes": [
+            "Liste exhaustive échecs thérapeutiques",
+            "Allergies convenables aux alternatives",
+            "Médecin habituel indisponible",
+            "Imagerie antérieure non disponible"
+          ]
+        }
+      ]
+    }
+  }
+}

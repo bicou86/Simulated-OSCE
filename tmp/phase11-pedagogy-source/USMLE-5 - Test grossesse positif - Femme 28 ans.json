@@ -1,0 +1,635 @@
+{
+  "title": "USMLE-5 - Test de grossesse positif - Femme de 28 ans",
+  "context": {
+    "setting": "Clinique",
+    "patient": "Tanya Parker, 28 ans, se présente à la clinique avec un test de grossesse positif",
+    "vitals": {
+      "ta": "120/70 mmHg",
+      "fc": "76 bpm",
+      "fr": "14/min",
+      "temperature": "37°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Test de grossesse positif"
+        },
+        {
+          "id": "a2",
+          "text": "Histoire menstruelle",
+          "binaryOnly": false,
+          "details": [
+            "Dernières règles [Il y a six semaines, et c'était juste de légers saignements]",
+            "Régularité habituelle [Mes règles ont toujours été régulières]",
+            "Durée habituelle [Mes règles durent 3-4 jours et surviennent à la même période chaque mois]",
+            "Flux habituel [Habituellement, j'ai un flux modéré et j'utilise 4-5 serviettes par jour]",
+            "Dernière période anormale [Le mois dernier, j'ai eu des saignements pendant seulement 1 ou 2 jours]",
+            "Ménarche [À l'âge de 14 ans]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes de grossesse",
+          "binaryOnly": false,
+          "details": [
+            "Nausées/vomissements [Je me sens nauséeuse ces derniers temps, mais je n'ai pas vomi]",
+            "Changements d'appétit [Je n'ai pas envie de manger à cause de la nausée, surtout avec certaines odeurs de nourriture]",
+            "Fatigue [Oui. Je suis vraiment facilement fatiguée en faisant mes activités quotidiennes]",
+            "Changements mammaires [Mes seins sont un peu plus pleins qu'avant]",
+            "Sensation de ballonnement [Je me sens ballonnée tout le temps]",
+            "Changements de poids [Je n'ai pas vérifié mon poids récemment]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Fréquence urinaire [Je sens que je dois aller aux toilettes fréquemment maintenant]",
+            "Dysurie ou prurit [Je n'ai pas de brûlure ni de démangeaison]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Autres symptômes gynécologiques",
+          "binaryOnly": false,
+          "details": [
+            "Douleur avec les règles [Non]",
+            "Saignements entre les règles [Non]",
+            "Saignements post-coïtaux [Non]",
+            "Douleur abdominale [Non]",
+            "Écoulement mammaire [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Histoire obstétrique et gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Grossesses/fausses couches [Aucune]",
+            "Contraception [Mon mari se retire avant l'éjaculation]",
+            "Dernier frottis [Il y a huit mois, et il était normal]",
+            "Historique de IST [Aucune]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Vie sexuelle",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle/partenaires [Je n'ai des relations sexuelles qu'avec mon mari]",
+            "Violence domestique [Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Planification de la grossesse",
+          "binaryOnly": false,
+          "details": [
+            "Grossesse planifiée [Non]",
+            "Grossesse désirée [Incertaine]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [Non]",
+            "Essoufflement [Non]",
+            "Changements cutanés [Je n'ai rien remarqué]",
+            "Habitudes intestinales [Une fois par jour]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Exercice [Normalement, je cours 8 km par jour, mais dernièrement j'ai dû réduire parce que je me sens fatiguée tout le temps]",
+            "Occupation [Étudiante diplômée]",
+            "Alcool [Occasionnellement 1 ou 2 bières par semaine]",
+            "Drogues illicites [Aucune]",
+            "Tabagisme [Aucun]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Multivitamines"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Mon appendice a été retiré quand j'avais 20 ans"
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Père [Diabétique]",
+            "Mère [Problèmes de thyroïde et d'obésité]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général",
+          "binaryOnly": true,
+          "patientComment": "La patiente semble confortable"
+        },
+        {
+          "id": "e2",
+          "text": "Examen ORL-Ophtalmo",
+          "binaryOnly": false,
+          "details": [
+            "Tête [Normocéphalique, atraumatique]",
+            "Pupilles [Pupilles iso-iso]",
+            "Conjonctives [Pas d'ictère, pas de pâleur]",
+            "Bouche et oropharynx [Normaux]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection/palpation de la thyroïde [Pas d'augmentation de la thyroïde]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normales ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits respiratoires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Palpation [Détendu, souple et indolore, pas de défense ni d'hépatosplénomégalie]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen de la peau",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la pigmentation [Pas de changements notables]",
+            "Recherche de pâleur [Pas de pâleur]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Diagnostic le plus probable",
+                "items": [
+                  {
+                    "text": "Grossesse intra-utérine normale",
+                    "cause": "Arguments POUR:\n\t□ Aménorrhée depuis 6 semaines\n\t□ Test de grossesse positif\n\t□ Signes sympathiques de grossesse (nausées, fatigue)\n\t□ Congestion mammaire bilatérale\n\t□ Augmentation de la fréquence urinaire\n\t□ Sensibilité aux odeurs",
+                    "test": "→ β-hCG quantitatif, échographie pelvienne"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics à éliminer",
+                "items": [
+                  {
+                    "text": "Grossesse extra-utérine (GEU)",
+                    "cause": "Arguments POUR:\n\t□ Test de grossesse positif\n\t□ Aménorrhée\n\t□ Saignements légers inhabituels le mois dernier\nArguments CONTRE:\n\t□ Absence de douleur abdominale\n\t□ Absence de métrorragies actuelles\n\t□ Signes vitaux stables",
+                    "test": "→ β-hCG sériés, échographie pelvienne urgente si suspicion"
+                  },
+                  {
+                    "text": "Grossesse molaire",
+                    "cause": "Arguments POUR:\n\t□ Test de grossesse positif\n\t□ Nausées importantes\nArguments CONTRE:\n\t□ Pas d'hyperémèse gravidique\n\t□ Pas de saignements vaginaux\n\t□ Pas de signes d'hyperthyroïdie",
+                    "test": "→ β-hCG (très élevé si môle), échographie pelvienne"
+                  },
+                  {
+                    "text": "Fausse couche précoce",
+                    "cause": "Arguments POUR:\n\t□ Saignements légers le mois dernier\nArguments CONTRE:\n\t□ Pas de douleurs pelviennes\n\t□ Pas de saignements actuels\n\t□ Symptômes de grossesse persistants",
+                    "test": "→ β-hCG sériés, échographie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires immédiats",
+          "binaryOnly": false,
+          "details": [
+            "Β-hCG urinaire de confirmation",
+            "Β-hCG quantitatif sérique si doute",
+            "Échographie pelvienne (transvaginale si précoce)",
+            "Examen pelvien et mammaire"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Bilan prénatal initial",
+          "binaryOnly": false,
+          "details": [
+            "Groupe sanguin, Rh, recherche d'agglutinines irrégulières (RAI)",
+            "NFS complète",
+            "Sérologies : rubéole, toxoplasmose, syphilis (VDRL/RPR), VIH, hépatite B et C",
+            "TSH",
+            "Glycémie à jeun",
+            "Analyse et culture d'urine",
+            "Frottis cervical si > 1 an",
+            "Dépistage IST (chlamydia, gonocoque)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseils et prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Supplémentation",
+                "content": "• Acide folique 400-800 μg/jour (prévention anomalies tube neural)\n• Vitamines prénatales avec fer\n• Vitamine D si carence"
+              },
+              {
+                "title": "Modifications du mode de vie",
+                "content": "• Arrêt immédiat de l'alcool\n• Éviter exercices intenses (adapter l'activité physique)\n• Limiter caféine < 200mg/jour\n• Alimentation équilibrée\n• Éviter fromages non pasteurisés, charcuterie"
+              },
+              {
+                "title": "Symptômes de grossesse",
+                "content": "• Nausées : repas fractionnés, gingembre, vitamine B6\n• Fatigue : repos adapté, siestes courtes\n• Seins sensibles : soutien-gorge de maintien"
+              },
+              {
+                "title": "Suivi prénatal",
+                "content": "• Consultation mensuelle jusqu'à 28 SA\n• Puis toutes les 2 semaines jusqu'à 36 SA\n• Puis hebdomadaire jusqu'à l'accouchement\n• Échographies à 12, 20 et 32 SA"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Counseling et options",
+          "binaryOnly": false,
+          "details": [
+            "Discussion sur la grossesse non planifiée",
+            "Information sur les options (poursuite, adoption, IVG)",
+            "Soutien psychologique si besoin",
+            "Impliquer le conjoint selon le souhait de la patiente",
+            "Ressources et accompagnement disponibles"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Signes nécessitant une consultation urgente",
+            "items": [
+              {
+                "text": "Douleur pelvienne intense",
+                "description": "→ Suspicion de GEU, consultation urgente"
+              },
+              {
+                "text": "Saignements vaginaux abondants",
+                "description": "→ Risque de fausse couche, urgences obstétricales"
+              },
+              {
+                "text": "Vomissements incoercibles",
+                "description": "→ Hyperémèse gravidique, risque de déshydratation"
+              },
+              {
+                "text": "Fièvre > 38°C",
+                "description": "→ Recherche d'infection, risque pour la grossesse"
+              },
+              {
+                "text": "Douleur abdominale aiguë avec malaise",
+                "description": "→ GEU rompue possible, urgence vitale"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Parker, d'après mes observations et ce que vous m'avez dit, il semble que vous soyez enceinte. Je vais devoir refaire un test de grossesse urinaire pour confirmer le diagnostic. Vos dernières règles pourraient ne pas avoir été de vraies règles menstruelles, car des saignements peuvent fréquemment survenir au premier trimestre. Malheureusement, les méthodes naturelles de contraception, comme le retrait avant l'éjaculation, ne sont pas très efficaces. Nous devrons également réaliser une échographie pelvienne pour estimer l'âge du fœtus et la date prévue d'accouchement. Si vous êtes enceinte, nous vérifierons d'autres analyses de sang, un frottis, et quelques cultures vaginales que nous effectuons systématiquement à chaque grossesse. Pour l'instant, je vous recommande d'arrêter la consommation d'alcool et d'éviter les exercices intenses et l'excès de caféine. Je vais vous donner des multivitamines prénatales à prendre par voie orale, et nous programmerons vos futures visites prénatales. Je serai en mesure de vous conseiller davantage dès que nous aurons reçu ces tests. Avez-vous des questions ou des préoccupations ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Nous n'avions pas prévu d'avoir un bébé si tôt après le mariage. Que devrais-je faire, docteur ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Je comprends votre inquiétude concernant cette grossesse non planifiée. Je vous suggère d'en discuter avec votre mari. En tant que votre médecin, je tiens à vous assurer que je suis ici pour vous soutenir et vous conseiller dans la décision que vous prendrez. Si vous le souhaitez, je serais heureux de discuter de vos options avec vous deux."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Tanya Parker",
+      "age": "28 ans",
+      "contexte": "Femme mariée se présentant avec un test de grossesse positif",
+      "motifConsultation": {
+        "plaintePrincipale": "Test de grossesse positif.",
+        "autreChose": "J'ai fait le test car mes règles sont en retard."
+      },
+      "consignes": [
+        "Si on vous le demande, dites au médecin que vous vous sentez fatiguée tout le temps.",
+        "Montrer de l'ambivalence concernant la grossesse.",
+        "Paraître un peu anxieuse mais coopérative.",
+        "Mentionner la fatigue seulement si on vous interroge sur les symptômes généraux."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Test de grossesse positif fait à la maison",
+          "Dernières règles il y a 6 semaines (très légères)",
+          "Règles habituellement régulières",
+          "Pas de règles ce mois-ci"
+        ],
+        "symptomesAssocies": [
+          "Nausées sans vomissements",
+          "Fatigue importante",
+          "Seins plus pleins",
+          "Sensation de ballonnement",
+          "Fréquence urinaire augmentée",
+          "Sensibilité aux odeurs"
+        ],
+        "reponseAuxSymptomes": [
+          "J'ai fait un test de grossesse qui était positif",
+          "Je viens confirmer et savoir quoi faire"
+        ],
+        "representationMaladie": [
+          "Je pense être enceinte mais nous n'avions pas prévu cela si tôt"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Fatigue facile aux activités quotidiennes",
+          "Pas de fièvre",
+          "Pas de perte de poids"
+        ],
+        "gynecologique": [
+          "Pas de douleurs pelviennes",
+          "Pas de saignements anormaux actuels",
+          "Règles du mois dernier inhabituellement légères"
+        ],
+        "digestive": [
+          "Nausées surtout avec certaines odeurs",
+          "Perte d'appétit",
+          "Transit normal"
+        ],
+        "urinaire": [
+          "Pollakiurie",
+          "Pas de brûlures mictionnelles"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Multivitamines seulement",
+        "contraception": "Coït interrompu (retrait)",
+        "tabac": "Non-fumeuse",
+        "alcool": "1-2 bières par semaine occasionnellement",
+        "exercice": "Habituellement 8 km de course/jour, réduit récemment",
+        "profession": "Étudiante diplômée"
+      },
+      "histoireMedicale": [
+        "Appendicectomie à 20 ans",
+        "Pas d'autres antécédents médicaux",
+        "G0P0 (jamais enceinte)",
+        "Dernier frottis il y a 8 mois, normal"
+      ],
+      "histoireFamiliale": [
+        "Père diabétique",
+        "Mère avec problèmes thyroïdiens et obésité"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Paraître légèrement anxieuse",
+          "Poser la main sur le ventre occasionnellement",
+          "Montrer de l'ambivalence sur la grossesse",
+          "Mentionner la fatigue si interrogée"
+        ],
+        "durantStatus": [
+          "Coopérer complètement à l'examen",
+          "Pas de douleur à la palpation",
+          "Paraître en bonne santé générale"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patiente de 28 ans, G0P0, mariée, consultant pour test de grossesse positif. DDR il y a 6 semaines (saignements légers inhabituels). Symptômes de grossesse présents : nausées, fatigue, congestion mammaire, pollakiurie. Contraception par coït interrompu. Grossesse non planifiée, patiente ambivalente. Pas d'ATCD médicaux significatifs. Examen clinique normal.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e demande :",
+        "• Test de grossesse urinaire : positif",
+        "• β-hCG quantitatif : 5,200 mUI/mL (compatible avec 5-6 semaines)",
+        "• Échographie pelvienne : sac gestationnel intra-utérin visible, embryon avec activité cardiaque",
+        "• Examen pelvien : col fermé, utérus augmenté de taille compatible avec 6 SA"
+      ],
+      "pointsCles": [
+        "Toujours confirmer la localisation intra-utérine de la grossesse",
+        "Le counseling non directif est essentiel pour une grossesse non planifiée",
+        "Les saignements du premier trimestre sont fréquents (25-30%)",
+        "L'acide folique doit être débuté immédiatement",
+        "Le bilan prénatal complet doit être prescrit dès la première visite"
+      ],
+      "pieges": [
+        "Ne pas rechercher une GEU systématiquement",
+        "Oublier de demander si la grossesse est désirée",
+        "Ne pas aborder la question de la violence domestique",
+        "Omettre les conseils hygiéno-diététiques",
+        "Ne pas prescrire l'acide folique"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Grossesse intra-utérine précoce d'environ 6 semaines d'aménorrhée"
+        },
+        {
+          "titre": "Physiologie de la grossesse précoce",
+          "contenu": "Modifications hormonales et leurs manifestations :",
+          "points": [
+            "β-hCG : double toutes les 48h en début de grossesse normale",
+            "Progestérone : responsable de la fatigue et des nausées",
+            "Œstrogènes : congestion mammaire, sensibilité olfactive",
+            "Relaxine : augmentation de la laxité ligamentaire",
+            "Volume plasmatique : augmentation dès 6 SA → pollakiurie"
+          ]
+        },
+        {
+          "titre": "Datation de la grossesse",
+          "contenu": "Méthodes et importance :",
+          "points": [
+            "DDR (date dernières règles) : premier jour des dernières règles",
+            "Échographie du 1er trimestre : la plus précise (± 5 jours)",
+            "Longueur cranio-caudale (LCC) entre 11-14 SA",
+            "Date présumée accouchement = DDR + 280 jours",
+            "Correction si cycles irréguliers ou contraception récente"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel du 1er trimestre",
+          "contenu": "Pathologies à éliminer devant un test positif :",
+          "points": [
+            "GEU : 2% des grossesses, urgence si rupture",
+            "Môle hydatiforme : rare, β-hCG très élevé",
+            "Grossesse biochimique : fausse couche très précoce",
+            "Grossesse hétérotopique : rare sauf si PMA",
+            "Kyste ovarien : peut donner faux positif (rare)"
+          ]
+        },
+        {
+          "titre": "Bilan du premier trimestre",
+          "contenu": "Examens obligatoires et recommandés :",
+          "points": [
+            "Obligatoires : groupe-Rh-RAI, sérologies (rubéole, toxo, syphilis, VIH, VHB)",
+            "Recommandés : TSH, glycémie, NFS, sérologie VHC",
+            "Frottis si > 1 an du dernier",
+            "ECBU systématique (bactériurie asymptomatique)",
+            "Échographie de datation entre 11-14 SA"
+          ]
+        },
+        {
+          "titre": "Supplémentation et prévention",
+          "contenu": "Recommandations essentielles :",
+          "points": [
+            "Acide folique 400 μg/j (5 mg si antécédent ou épilepsie)",
+            "Vitamine D : 1000 UI/j si carence",
+            "Fer : seulement si anémie prouvée",
+            "Iode : 150-200 μg/j dans zones carencées",
+            "Calcium : seulement si apports < 1g/j"
+          ]
+        },
+        {
+          "titre": "Conseils hygiéno-diététiques",
+          "contenu": "Modifications du mode de vie :",
+          "points": [
+            "Alcool : tolérance zéro",
+            "Tabac : arrêt complet, aide au sevrage",
+            "Caféine : < 200 mg/j (2 tasses café)",
+            "Listériose : éviter fromages au lait cru, charcuterie",
+            "Toxoplasmose : viande bien cuite, laver végétaux",
+            "Activité physique : maintenir activité modérée adaptée"
+          ]
+        },
+        {
+          "titre": "Grossesse non planifiée",
+          "contenu": "Approche et counseling :",
+          "points": [
+            "Écoute active et non-jugement",
+            "Explorer les sentiments ambivalents",
+            "Information sur toutes les options",
+            "Respect du choix de la patiente",
+            "Soutien psychologique si besoin",
+            "Impliquer le partenaire selon souhait"
+          ]
+        },
+        {
+          "titre": "Symptômes du premier trimestre",
+          "contenu": "Prise en charge des symptômes courants :",
+          "points": [
+            "Nausées : fractionnement repas, gingembre, B6 10-25mg TID",
+            "Vomissements sévères : doxylamine + B6, hospitalisation si déshydratation",
+            "Fatigue : siestes, adaptation activités",
+            "Constipation : hydratation, fibres, activité physique",
+            "Seins douloureux : soutien-gorge adapté"
+          ]
+        },
+        {
+          "titre": "Surveillance prénatale",
+          "contenu": "Calendrier des consultations :",
+          "points": [
+            "1ère consultation : avant 10 SA idéalement",
+            "Consultations mensuelles jusqu'à 28 SA",
+            "Toutes les 2 semaines de 28 à 36 SA",
+            "Hebdomadaires après 36 SA",
+            "7 consultations minimum + 3 échographies"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "Confirmer systématiquement la localisation intra-utérine",
+            "L'acide folique est urgent pour prévenir les anomalies du tube neural",
+            "Le counseling non directif respecte l'autonomie de la patiente",
+            "Les symptômes du 1er trimestre sont fréquents et généralement bénins",
+            "La surveillance prénatale précoce améliore les outcomes",
+            "Tolérance zéro pour alcool et tabac pendant la grossesse"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Acide folique : 400 μg/j minimum dès le désir de grossesse",
+        "Nausées : vitamine B6 10-25 mg TID, doxylamine 10 mg si échec",
+        "Constipation : psyllium, lactulose si besoin",
+        "Supplémentation fer : seulement si Hb < 11 g/dL",
+        "Vitamine D : 1000 UI/j en prévention"
+      ],
+      "examensComplementaires": [
+        "β-hCG : double toutes les 48h si grossesse normale",
+        "Échographie précoce : sac gestationnel visible si β-hCG > 1500",
+        "Progestérone : > 25 ng/mL suggère grossesse viable",
+        "TSH : cible < 2.5 mUI/L au 1er trimestre",
+        "Rubéole IgG : immunité si > 10 UI/mL"
+      ]
+    }
+  }
+}

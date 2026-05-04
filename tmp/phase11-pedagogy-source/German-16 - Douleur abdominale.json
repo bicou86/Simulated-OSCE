@@ -1,0 +1,248 @@
+{
+  "title": "German-16 - Douleur abdominale",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Jeune fille de 16 ans se présente chez le médecin de famille pour des douleurs abdominales. Vous connaissez la patiente et sa famille depuis des années."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Douleurs"
+        },
+        {
+          "id": "a3",
+          "text": "Qualité de la douleur",
+          "patientComment": "Hm, je ne sais pas"
+        },
+        {
+          "id": "a4",
+          "text": "Sévérité (échelle 1-10)",
+          "patientComment": "Parfois comme ci, parfois comme ça"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs d'amélioration ou d'aggravation",
+          "patientComment": "S'allonger aide"
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Localisation et durée",
+          "patientComment": "Au ventre, depuis des semaines, de temps en temps"
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes associés",
+          "details": [
+            "Fièvre [Non]",
+            "Vomissements [Non]",
+            "Diarrhée [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Dysurie",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Vertiges",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a11",
+          "text": "Menstruation",
+          "patientComment": "Oui, depuis 3 ans, régulière, sans problèmes"
+        },
+        {
+          "id": "a12",
+          "text": "Revue des systèmes",
+          "details": [
+            "Migraine",
+            "Épilepsie"
+          ],
+          "patientComment": "En bonne santé"
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse médicamenteuse",
+          "patientComment": "Non - maaaaais, elle aimerait prendre la pilule"
+        },
+        {
+          "id": "a14",
+          "text": "Consommation de substances",
+          "patientComment": "Ne fume pas, boit parfois une bière le week-end, pas de drogues"
+        },
+        {
+          "id": "a15",
+          "text": "Activités sportives et loisirs",
+          "patientComment": "Handball, piano, scouts, beaucoup d'amis"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "details": [
+            "Hypertension artérielle [Rien de connu]",
+            "Diabète [Rien de connu]",
+            "Maladies rénales [Rien de connu]",
+            "Infarctus du myocarde [Rien de connu]",
+            "Troubles de la coagulation [Rien de connu]",
+            "Embolies [Rien de connu]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "patientComment": "Petit ami depuis 4 mois, il a 18 ans, les parents ne le savent pas"
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète avec identification du motif réel de consultation (contraception)"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Désinfection des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Prise de la tension artérielle",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Inspection générale",
+          "patientComment": "Jeune fille de poids normal, peu d'acné"
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiaque et prise du pouls",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e6",
+          "text": "Auscultation pulmonaire",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation de la capacité de discernement",
+          "details": [
+            "Évaluation pendant l'entretien"
+          ],
+          "patientComment": "Oui, capable de discernement"
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique adapté avec évaluation appropriée de la capacité de discernement"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic suspecté",
+          "details": [
+            "Hidden agenda (demande cachée)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "patientComment": "La patiente dit que ce n'est pas si grave et qu'elle n'a pas besoin d'analgésiques ou d'examens complémentaires",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Douleurs abdominales non spécifiques",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Prescription médicamenteuse",
+          "details": [
+            "Pilule contraceptive combinée",
+            "Explication sur la prise : 1ère pilule le 1er jour des règles",
+            "Puis 3 semaines chaque jour",
+            "Puis 1 semaine de pause"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Information sur les effets secondaires",
+          "details": [
+            "Effets secondaires bénins",
+            "Situations d'urgence"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseils et éducation",
+          "details": [
+            "Protection contre les infections sexuellement transmissibles non assurée par la pilule [Chlamydia, VIH → préservatifs nécessaires]",
+            "Contraception post-coïtale mentionnée en cas de grossesse possible [pilule oubliée]",
+            "Recommandation de contrôle chez le gynécologue",
+            "Promesse de secret médical, mais encouragement à parler avec les parents",
+            "Si pilule oubliée 1x : préservatif pendant 7-14 jours",
+            "Attention en cas de diarrhée/vomissements, antibiotiques, millepertuis, pamplemousse"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec conseils adaptés à l'adolescente et respect de la confidentialité"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

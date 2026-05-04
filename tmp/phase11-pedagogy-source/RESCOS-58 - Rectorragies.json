@@ -1,0 +1,517 @@
+{
+  "title": "RESCOS-58 - Rectorragies",
+  "context": {
+    "setting": "Urgences d'un hôpital périphérique",
+    "patient": "M./Mme Delacrétaz, 52 ans, directeur/trice d'une boîte de consulting, se présente pour la présence de sang dans les selles depuis 3 jours.",
+    "vitals": {
+      "ta": "120/75 mmHg",
+      "fc": "115 bpm",
+      "sao2": "98%",
+      "fr": "15/min",
+      "temperature": "37.2°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Hématochésie",
+          "details": [
+            "Chronologie (depuis quand ?) [il y a 3 jours]",
+            "Sang rouge ou noir [sang rouge]",
+            "Fréquence des selles [3 selles avec sang/jour]",
+            "1er épisode [oui, n'a jamais eu ça avant]"
+          ],
+          "scoringRule": "4 items = oui, 2-3 items = ±, 0-1 item = non"
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes de gravité",
+          "details": [
+            "Perte de connaissance [non]",
+            "Fatigabilité inhabituelle [oui, épuisé(e)]",
+            "Hypotension orthostatique [vertiges quand se lève rapidement]",
+            "Essoufflement [oui dans les escaliers]",
+            "Anémie",
+            "Tachycardie [légèrement tachycarde]",
+            "Dyspnée [modérée à l'effort]"
+          ],
+          "scoringRule": "3 ou plus = oui, 1 ou 2 = ±, 0 = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes digestifs associés",
+          "details": [
+            "Trouble du transit (diarrhée/constipation) [alternance depuis quelques semaines]",
+            "Nausées [non]",
+            "Vomissements [non]",
+            "Douleurs [aucune douleur abdominale ni anale]"
+          ],
+          "scoringRule": "4 ou 5 items = oui, 2 ou 3 = ±, 0 ou 1 = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes systémiques",
+          "details": [
+            "Fièvre [non]",
+            "Frissons [non]",
+            "Perte de poids (quantifié) [possible 2 kg, pantalons moins serrés]"
+          ],
+          "scoringRule": "Les 3 = oui, 1 ou 2 = ±, 0 = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux-chirurgicaux",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Habitudes : Tabac / OH / Quantité",
+          "details": [
+            "Tabac [presque 2 paquets/jour depuis 25 ans]",
+            "Alcool [occasionnel et social, 2 verres 3x/semaine]",
+            "Drogues [non]"
+          ],
+          "scoringRule": "Les 3 = oui, incomplet = ±, 0 = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse familiale",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection abdominale : cicatrices anciennes, orifice hernie, aspect général",
+          "scoringRule": "Les 3 = oui, un à 2 = ±, pas effectué = non"
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Bruits dans les 4 quadrants",
+            "Souffles vasculaires (aorte, a. iliaques et a. rénales)"
+          ],
+          "scoringRule": "Oui / NON"
+        },
+        {
+          "id": "e3",
+          "text": "Percussion",
+          "details": [
+            "4 quadrants",
+            "Effectué dans les 4 quadrants = oui",
+            "Pas ou incomplètement effectué = non"
+          ],
+          "scoringRule": "Oui / NON"
+        },
+        {
+          "id": "e4",
+          "text": "Percussion du foie (de haut en bas, sur la ligne médioclaviculaire, mesure de la taille)",
+          "scoringRule": "Effectué correctement = oui, mal ou pas effectué = non"
+        },
+        {
+          "id": "e5",
+          "text": "Palpation superficielle",
+          "details": [
+            "Effectué dans les 4 quadrants = oui",
+            "Pas ou incomplètement effectué = non"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Palpation profonde bimanuelle",
+          "details": [
+            "Effectué dans les 4 quadrants = oui",
+            "Pas ou incomplètement effectué = non"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Recherche signes péritonéaux : Défense / Détente",
+          "details": [
+            "Oui = les 2",
+            "Non = pas ou incomplètement effectué"
+          ],
+          "scoringRule": "Oui = les 2, non = pas ou incomplètement effectué"
+        },
+        {
+          "id": "e8",
+          "text": "Toucher rectal",
+          "details": [
+            "Proposé / évoqué par le /la candidat·e"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e9",
+          "text": "Examen clinique en général : réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale : Cancer rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Arguments hypothèse diagnostique principale",
+          "details": [
+            "Rectorragies",
+            "Masse polypoïde au TR",
+            "Perte pondérale",
+            "Alternance du transit",
+            "Asthénie",
+            "Faiblesse",
+            "Tabagisme actif",
+            "Absence de douleurs"
+          ],
+          "scoringRule": "7-8 éléments = oui, 4-6 éléments = ±, 3 ou moins = non"
+        },
+        {
+          "id": "m3",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Cancer du rectum",
+            "Cancer du côlon",
+            "Diverticulose colique",
+            "Ulcère gastroduodénal",
+            "Hémorroïdes ou autre problème proctologique (fissure)"
+          ],
+          "scoringRule": "2 = oui, 1 ou autres ne figurant pas dans la liste mais pertinent = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Arguments : Prise AINS + aspirine, ATCD d'ulcère, possible anémie",
+          "scoringRule": "Q2 : « Quels sont les examens complémentaires que vous proposez ? »"
+        },
+        {
+          "id": "m5",
+          "text": "Laboratoire",
+          "details": [
+            "Formule sanguine simple",
+            "Crase",
+            "Tests hépatiques",
+            "Créatinine"
+          ],
+          "scoringRule": "3 éléments = oui, 1 élément = ±, pas demandé = non"
+        },
+        {
+          "id": "m6",
+          "text": "Propose une endoscopie digestive",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance hémoglobine et/ou transfusion",
+          "details": [
+            "Au moins 1 = oui, aucun = 0"
+          ],
+          "scoringRule": "Q3 : « Que proposez-vous comme suite de prise en charge thérapeutique ? »"
+        },
+        {
+          "id": "m8",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Delacrétaz",
+      "age": "52 ans",
+      "contexte": "Directeur/trice d'une boîte de consulting, marié(e), 2 enfants de 25 et 21 ans",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens aux urgences parce qu'il y a du sang quand je vais aux toilettes",
+        "autreChose": "Depuis ce matin j'ai aussi des étourdissements, je suis essoufflé(e) en montant les escaliers"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Sang dans les selles depuis 3 jours",
+          "Beaucoup de sang (tache de 10 cm de diamètre dans les toilettes)",
+          "3 selles avec sang par jour",
+          "Sang rouge vif",
+          "Jamais eu de selles noires",
+          "Pas de sang entre les selles",
+          "Pas de mucus",
+          "Pas de douleurs au ventre ni à l'anus",
+          "N'a jamais eu ça auparavant"
+        ],
+        "symptomesAssocies": [
+          "Fatigue inhabituelle (épuisé.e)",
+          "Vertiges quand se lève rapidement (depuis ce matin)",
+          "Essoufflement modéré à l'effort (escaliers)",
+          "Peine à suivre mon horaire habituel",
+          "Alternance diarrhée-constipation depuis quelques semaines",
+          "Appétit conservé",
+          "Perte de 2 kg possible (pantalons moins serrés)"
+        ],
+        "representationMaladie": [
+          "Anxieux car son père est décédé d'un cancer généralisé à 72 ans",
+          "Cause initiale du cancer paternel non connue",
+          "Un peu inquiet/ète"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Possible perte de 2 kg ces dernières semaines",
+          "Pas de fièvre",
+          "Pas de sueurs nocturnes",
+          "Fatigue inhabituelle (épuisé.e)"
+        ],
+        "cardiovasculaire": [
+          "Rien de particulier"
+        ],
+        "pulmonaire": [
+          "Dyspnée d'effort",
+          "Pas de toux",
+          "Pas d'expectorations",
+          "Pas d'hémoptysie"
+        ],
+        "digestive": [
+          "Pas de nausée",
+          "Pas de vomissement",
+          "Environ 3 selles sanguinolentes/jour les 3 derniers jours",
+          "Jamais de selles noires",
+          "Pas de douleur au ventre"
+        ],
+        "genitourinaire": [
+          "Pas d'écoulement",
+          "Pas de brûlure mictionnelle"
+        ],
+        "neurologique": [
+          "Vertiges quand se lève rapidement (depuis ce matin)"
+        ],
+        "ophtalmologique": [
+          "Pas de trouble visuel"
+        ],
+        "hemorragique": [
+          "Ne saigne pas quand se brosse les dents",
+          "Pas d'épistaxis",
+          "Pas d'hématurie",
+          "Pas d'hématomes ni pétéchies"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Normale",
+        "activitePhysique": "Jardinage",
+        "sommeil": "Normal",
+        "tabac": "Presque 2 paquets/jours depuis 25 ans",
+        "alcool": "Occasionnel et social, 2 verres de vin 3x/semaine et un peu plus le weekend",
+        "drogues": "Non",
+        "medicaments": "Aspirine cardio 1x/jour, AINS occasionnel (n'en a pas pris ces derniers jours)"
+      },
+      "histoireMedicale": [
+        "Notion d'ulcère ancien traité médicalement il y a un an",
+        "Traité par un médicament dont a oublié le nom (inhibiteur de pompe à protons)",
+        "Avait rapidement complètement soulagé",
+        "AINS au besoin pour des maux de dos",
+        "Récemment commencé aspirine en prophylaxie cardiaque",
+        "Pas de chirurgie",
+        "Aucune allergie"
+      ],
+      "antecedentsFamiliaux": [
+        "Père : décédé d'un cancer généralisé, 72 ans",
+        "Mère : se porte bien",
+        "Fratrie : 1 sœur, architecte à Lausanne en bonne santé",
+        "Pas de maladie hémorragique dans la famille"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Directeur/-trice d'une boîte de consulting",
+        "hobbies": "Jardinage",
+        "poids": "Normal",
+        "taille": "178cm",
+        "imc": "28",
+        "orientationSexuelle": "Non précisée",
+        "etatCivil": "Marié(e)",
+        "enfants": "2 enfants de 25 et 21 ans",
+        "situationSocioEconomique": "Stable",
+        "origine": "Non précisée",
+        "etatEsprit": "Un peu angoissé(e), inquiet/ète"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Assis(e) sur une chaise",
+          "Calme",
+          "Un peu nerveux/euse",
+          "Pas de douleur",
+          "État général conservé"
+        ],
+        "durantExamen": [
+          "Légèrement tachycarde (donner la carte si ausculte le cœur ou prend le pouls)",
+          "Examen pulmonaire normal",
+          "Examen digestif sans particularité",
+          "Masse polypoïde au TR (à dire par examinateur/trice)"
+        ]
+      },
+      "informationADonner": "J'ai eu de la peine à suivre mon horaire habituel, je me sens épuisé(e) (troisième partie de la réponse d'introduction). Information donnée par l'examinateur/trice si toucher rectal évoqué : 'le toucher rectal montre une masse polypoïde'."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Delacrétaz, 52 ans, directeur/trice consulting, consulte pour rectorragies depuis 3 jours avec étourdissements et dyspnée d'effort depuis ce matin. Alternance diarrhée-constipation récente, perte pondérale possible. ATCD ulcère traité par IPP, tabagisme important, sous aspirine et AINS. Père décédé cancer généralisé. Masse polypoïde au TR.",
+      "rolesInterventions": [
+        "Si candidat évoque ou propose toucher rectal : dire 'le toucher rectal montre une masse polypoïde'",
+        "Interrompre après 9 minutes si le candidat n'a pas encore pris congé",
+        "Poser les questions Q1, Q2, Q3 dans l'ordre si le candidat présente spontanément le cas"
+      ],
+      "pointsCles": [
+        "Cancer rectal très probable (masse au TR + rectorragies)",
+        "Facteurs de risque : tabagisme, âge, ATCD familial possible",
+        "Signes d'anémie aiguë (tachycardie, dyspnée, vertiges)",
+        "Aspirine et AINS comme facteurs aggravants",
+        "Nécessité d'exploration endoscopique urgente",
+        "Surveillance hémodynamique importante"
+      ],
+      "pieges": [
+        "Ne pas évoquer le toucher rectal",
+        "Oublier l'impact des antiagrégants/AINS",
+        "Ne pas reconnaître les signes d'anémie",
+        "Se focaliser uniquement sur l'ulcère (ATCD)",
+        "Omettre la coloscopie dans le bilan",
+        "Ne pas proposer de surveillance/hospitalisation"
+      ],
+      "questionsExpert": [
+        "Q1 : Quelle est votre hypothèse diagnostique et donnez 2 diagnostics différentiels en argumentant vos hypothèses",
+        "Q2 : Quels sont les examens complémentaires que vous proposez ?",
+        "Q3 : Que proposez-vous comme suite de prise en charge thérapeutique ?"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur les rectorragies",
+      "sections": [
+        {
+          "titre": "Définition et classification",
+          "contenu": "Les rectorragies sont définies comme l'émission de sang rouge par l'anus.",
+          "points": [
+            "Hématochésie : sang rouge vif (origine basse)",
+            "Méléna : selles noires goudronnées (origine haute)",
+            "Rectorragies abondantes : retentissement hémodynamique",
+            "Rectorragies minimes : traces sur papier toilette",
+            "Distinguer du sang mélangé aux selles vs en surface",
+            "Importance de la quantification des pertes"
+          ]
+        },
+        {
+          "titre": "Étiologies principales",
+          "contenu": "Les causes de rectorragies varient selon l'âge et le contexte clinique.",
+          "points": [
+            "Cancer colorectal : > 50 ans, modification du transit",
+            "Diverticulose colique : hémorragie abondante, indolore",
+            "Hémorroïdes : sang rouge sur papier, prurit anal",
+            "Fissure anale : douleur à la défécation",
+            "Angiodysplasies : sujets âgés, récidivantes",
+            "Maladies inflammatoires intestinales : jeunes, diarrhée",
+            "Polypes coliques : souvent asymptomatiques"
+          ]
+        },
+        {
+          "titre": "Facteurs de gravité",
+          "contenu": "L'évaluation de la gravité guide la prise en charge urgente.",
+          "points": [
+            "Instabilité hémodynamique : hypotension, tachycardie",
+            "Signes d'anémie aiguë : pâleur, dyspnée, vertiges",
+            "Abondance du saignement : > 100ml",
+            "Terrain : âge, comorbidités, anticoagulation",
+            "Récidive hémorragique",
+            "Hémoglobine < 8 g/dl"
+          ]
+        },
+        {
+          "titre": "Examen clinique",
+          "contenu": "L'examen doit être complet et systématique.",
+          "points": [
+            "Évaluation hémodynamique : pouls, TA, orthostatisme",
+            "Recherche signes d'anémie : pâleur, tachycardie",
+            "Examen abdominal complet : masse, douleur",
+            "Inspection anale : hémorroïdes, fissure",
+            "Toucher rectal OBLIGATOIRE : masse, méléna",
+            "Recherche signes de maladie systémique"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "Le bilan paraclinique dépend du contexte et de l'urgence.",
+          "points": [
+            "NFS : hémoglobine, hématocrite",
+            "Coagulation : TP, TCA si anticoagulation",
+            "Groupe sanguin, RAI si transfusion envisagée",
+            "Ionogramme, fonction rénale",
+            "Coloscopie : examen de référence",
+            "Angioscanner si hémorragie active",
+            "Rectosigmoïdoscopie si lésion basse suspectée"
+          ]
+        },
+        {
+          "titre": "Prise en charge thérapeutique",
+          "contenu": "Le traitement dépend de la cause et de la gravité.",
+          "points": [
+            "Stabilisation hémodynamique : voie veineuse, remplissage",
+            "Arrêt antiagrégants/AINS si possible",
+            "Transfusion si Hb < 7-8 g/dl ou instabilité",
+            "Surveillance continue : scope, diurèse",
+            "Traitement étiologique selon endoscopie",
+            "Chirurgie si échec du traitement médical",
+            "Embolisation si angiodysplasie"
+          ]
+        },
+        {
+          "titre": "Cancer colorectal",
+          "contenu": "Première cause à évoquer après 50 ans devant des rectorragies.",
+          "points": [
+            "Facteurs de risque : âge, tabac, ATCD familiaux",
+            "Signes d'alarme : modification transit, AEG, anémie",
+            "Localisation : 70% rectosigmoïde",
+            "Diagnostic : coloscopie avec biopsies",
+            "Bilan d'extension : scanner TAP, ACE",
+            "Traitement : chirurgie +/- chimiothérapie",
+            "Pronostic selon stade TNM"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Remplissage vasculaire : cristalloïdes 20ml/kg",
+        "Transfusion si Hb < 7g/dl ou signes de mauvaise tolérance",
+        "Arrêt aspirine si hémorragie sévère",
+        "IPP IV si suspicion origine haute",
+        "Antibioprophylaxie si geste endoscopique",
+        "Préparation colique pour coloscopie",
+        "Surveillance : Hb/6-12h, constantes/2-4h"
+      ],
+      "examensComplementaires": [
+        "NFS, plaquettes en urgence",
+        "TP, TCA, fibrinogène",
+        "Groupe sanguin, phénotype, RAI",
+        "Ionogramme, urée, créatinine",
+        "Bilan hépatique si suspicion cirrhose",
+        "Coloscopie totale (gold standard)",
+        "Angioscanner si saignement actif",
+        "Rectosigmoïdoscopie si urgence",
+        "Capsule endoscopique si bilan négatif"
+      ]
+    }
+  }
+}

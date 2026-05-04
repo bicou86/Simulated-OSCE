@@ -1,0 +1,359 @@
+{
+  "title": "German-53 - Hypertension",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Schneider, 56 ans, secrétaire, se présente chez son médecin traitant après avoir découvert une tension artérielle élevée lors d'automesure à domicile",
+    "vitals": {
+      "ta": "162/92 mmHg (mesurée au cabinet)"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "patientComment": "J'ai mesuré ma tension chez moi et elle était très élevée, je suis inquiète"
+        },
+        {
+          "id": "a3",
+          "text": "Circonstances de découverte",
+          "details": [
+            "Contexte de la mesure [après beaucoup de stress au bureau]",
+            "Appareil utilisé [ancien appareil de ma mère]",
+            "Valeurs relevées [entre 160-170 de maximum et 90-95 de minimum]",
+            "Fréquence des mesures [plusieurs fois par semaine]",
+            "Depuis quand [depuis environ 1 mois]"
+          ],
+          "patientComment": "Détails sur la découverte"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Céphalées [oui, mal de tête derrière le matin]",
+            "Acouphènes [non]",
+            "Vertiges [non]",
+            "Épistaxis [non]",
+            "Douleurs thoraciques [non]",
+            "Dyspnée [non]",
+            "Palpitations [parfois le cœur bat fort]",
+            "Troubles visuels [non]"
+          ],
+          "patientComment": "Symptômes ressentis"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents cardiovasculaires",
+          "details": [
+            "Maladies cardiaques",
+            "Angine de poitrine",
+            "Infarctus",
+            "AVC/AIT",
+            "Claudication intermittente"
+          ],
+          "patientComment": "Aucun antécédent cardiovasculaire"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents métaboliques et rénaux",
+          "details": [
+            "Diabète [non]",
+            "Dyslipidémie [non testé récemment]",
+            "Maladies rénales [non]",
+            "Hyperuricémie [non]"
+          ],
+          "patientComment": "Aucune maladie métabolique connue"
+        },
+        {
+          "id": "a7",
+          "text": "Statut hormonal",
+          "details": [
+            "Statut ménopausique [ménopausée depuis 3 ans]",
+            "Traitement hormonal substitutif [non]",
+            "Contraception antérieure [pilule jusqu'à 45 ans]"
+          ],
+          "patientComment": "Statut hormonal"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments actuels",
+          "details": [
+            "Antihypertenseurs",
+            "Autres médicaments réguliers",
+            "Médicaments pouvant augmenter la TA"
+          ],
+          "patientComment": "Aucun médicament actuellement"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes de vie",
+          "details": [
+            "Alimentation [j'aime bien saler mes plats]",
+            "Consommation d'alcool [1-2 verres de vin le weekend]",
+            "Tabagisme [non, jamais fumé]",
+            "Activité physique [peu, travail sédentaire]",
+            "Gestion du stress [beaucoup de stress au travail actuellement]"
+          ],
+          "patientComment": "Mode de vie"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Hypertension familiale [mère et père hypertendus]",
+            "Maladies cardiovasculaires [père infarctus à 65 ans]",
+            "Diabète [mère diabétique type 2]",
+            "Maladies rénales [non]",
+            "AVC [grand-mère AVC à 78 ans]"
+          ],
+          "patientComment": "Histoire familiale"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Profession",
+            "Situation familiale",
+            "Niveau de stress"
+          ],
+          "patientComment": "Secrétaire de direction, mariée, 2 enfants adultes, beaucoup de pression au travail"
+        },
+        {
+          "id": "a12",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesure correcte de la tension artérielle",
+          "details": [
+            "Position assise, repos 5 minutes",
+            "Bras à hauteur du cœur",
+            "Brassard adapté",
+            "Mesure aux deux bras",
+            "Plusieurs mesures"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque (rythme, souffles)",
+            "Recherche de souffles vasculaires (carotides, abdomen)",
+            "Palpation des pouls périphériques",
+            "Recherche d'œdèmes des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Recherche de signes d'HTA secondaire",
+          "details": [
+            "Inspection (faciès cushingoïde)",
+            "Palpation abdominale (masses, souffle rénal)",
+            "Recherche de signes d'hyperthyroïdie",
+            "Examen de la thyroïde"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation du retentissement",
+          "details": [
+            "Auscultation pulmonaire",
+            "Fond d'œil (ou mentionner la nécessité)",
+            "Examen neurologique sommaire",
+            "Recherche de protéinurie (bandelette)"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Données anthropométriques",
+          "details": [
+            "Poids et taille",
+            "Calcul de l'IMC",
+            "Tour de taille",
+            "Évaluation de l'obésité abdominale"
+          ],
+          "patientComment": "IMC à 28, léger surpoids, tour de taille 92 cm"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Hypertension artérielle essentielle grade 2 nouvellement diagnostiquée"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels d'HTA secondaire",
+          "scoringRule": "Au moins 4 causes = 2 pts, 2-3 causes = 1 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Causes rénales",
+                    "cause": "□ néphropathie, sténose artère rénale",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes endocriniennes",
+                    "cause": "□ phéochromocytome, Conn, Cushing",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes vasculaires",
+                    "cause": "□ coarctation aorte",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes médicamenteuses",
+                    "cause": "□ pilule, AINS, corticoïdes",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome d'apnée du sommeil",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hyperparathyroïdie primaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Facteurs de risque cardiovasculaire identifiés",
+          "details": [
+            "Âge (femme > 55 ans)",
+            "Antécédents familiaux",
+            "Surpoids",
+            "Sédentarité",
+            "Consommation de sel élevée",
+            "Stress"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires",
+          "details": [
+            "Bilan biologique (NFS, ionogramme, créatinine, glycémie)",
+            "Bilan lipidique complet",
+            "TSH",
+            "Analyse d'urine (protéinurie, hématurie)",
+            "ECG de repos",
+            "MAPA ou automesure tensionnelle"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens de retentissement",
+          "details": [
+            "Échocardiographie",
+            "Fond d'œil",
+            "Écho-Doppler des artères rénales si suspicion",
+            "Radiographie thoracique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Mesures hygiéno-diététiques",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures diététiques",
+                "content": "• Réduction de la consommation de sel (< 6g/jour)\n• Régime DASH riche en fruits et légumes\n• Réduction pondérale (objectif IMC < 25)\n• Limitation de l'alcool (< 2 verres/jour)"
+              },
+              {
+                "title": "Activité physique",
+                "content": "• Activité aérobie régulière (30 min/jour, 5 jours/semaine)\n• Marche rapide, natation, vélo\n• Exercices de résistance 2 fois/semaine"
+              },
+              {
+                "title": "Gestion du stress",
+                "content": "• Techniques de relaxation\n• Yoga, méditation\n• Organisation du travail\n• Soutien psychologique si nécessaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Stratégie médicamenteuse",
+          "details": [
+            "Confirmation par MAPA avant traitement",
+            "Si confirmé : IEC ou ARA2 en première intention",
+            "Alternative : diurétique thiazidique ou inhibiteur calcique",
+            "Bithérapie si objectif non atteint",
+            "Surveillance de la fonction rénale et kaliémie"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Objectifs thérapeutiques",
+          "details": [
+            "TA < 140/90 mmHg en consultation",
+            "TA < 135/85 mmHg en automesure",
+            "Réduction du risque cardiovasculaire global"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Suivi et éducation",
+          "details": [
+            "Contrôle dans 1 mois",
+            "Éducation à l'automesure",
+            "Importance de l'observance",
+            "Carnet de suivi tensionnel",
+            "Consultation annuelle systématique"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

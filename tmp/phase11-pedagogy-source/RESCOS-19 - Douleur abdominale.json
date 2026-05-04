@@ -1,0 +1,767 @@
+{
+  "title": "RESCOS-19 - Douleur abdominale",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "M. Simon Portmann, 64 ans, consulte ce jour à votre cabinet en raison d'urines foncées"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation des douleurs",
+          "details": [
+            "Localisation [épigastre et hypochondre droit]",
+            "Irradiation [non]",
+            "Qualité [difficile de les qualifier... 'Comme ma cholécystite, il y a 3 ans.']",
+            "Intensité [7/10 au maximum]",
+            "Facteurs aggravants [nihil]",
+            "Facteurs soulageants [nihil]"
+          ],
+          "scoringRule": "Les six = oui, cinq = ±, aucun à quatre = non"
+        },
+        {
+          "id": "a2",
+          "text": "Chronologie des douleurs",
+          "details": [
+            "Début [apparition brutale il y a 2 jours]",
+            "Progression [douleurs se sont amendées au bout de 30 H]",
+            "Circonstances de survenue [en journée, après un repas]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "État général",
+          "details": [
+            "Fièvre et frissons [non]",
+            "Fatigue [non]",
+            "Forme (perte de poids) [non]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a4",
+          "text": "Système digestif",
+          "details": [
+            "Nausées [oui, nausées]",
+            "Vomissements [non, sans vomissement]",
+            "Consistance des selles [normale]",
+            "Dernier transit [pas de troubles du transit]",
+            "Couleur des selles [couleur normale]",
+            "Sang dans les selles [non]"
+          ],
+          "scoringRule": "Les six = oui, cinq = ±, aucun à quatre = non"
+        },
+        {
+          "id": "a5",
+          "text": "Système urinaire",
+          "details": [
+            "Hématurie [non]",
+            "Dysurie [pas de dysurie]",
+            "Algurie [pas d'algurie]",
+            "Pollakiurie [ni de pollakiurie]",
+            "Couleur des urines [urine brun foncé]",
+            "Quantité d'urine [normale]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels",
+          "details": [
+            "Diète [omnivore]",
+            "Médicaments [EXFORGE HCT cpr pell 6mg/160mg/12.5mg (1-0-0) depuis une dizaine d'années]",
+            "Alcool [non]",
+            "Tabac [1 paquet/jour depuis ses 19 ans, tentative de sevrage infructueuses au moment de la mise en place de la thérapie anti-hypertensive]",
+            "Drogues [non]"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents personnels",
+          "details": [
+            "Comorbidités [HTA suivie et traitée depuis 10 ans, lithiases vésiculaire symptomatique + cholédocienne, RGO en 2001, polypes coliques 2014 et 2018]",
+            "Hospitalisations / opérations [cholécystectomie en 2017, ERCP infructueux pour calcul résiduel 5j après l'opération de 2017, appendicectomie dans l'enfance]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Status abdominal - installation",
+          "details": [
+            "Bras & jambes décroisées",
+            "Tête légèrement surélevée",
+            "Abdomen entièrement visible (premier bouton du pantalon déboutonné ou patient en sous-vêtements)",
+            "Se place à droite du patient"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation",
+          "details": [
+            "Les 4 quadrants",
+            "Auscultation avant toute autre partie du status"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Percussion",
+          "details": [
+            "Les 4 quadrants",
+            "Délimite la taille du foie en percutant (ou autre technique appropriée)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Palpation",
+          "details": [
+            "Superficielle",
+            "Profonde",
+            "Détente"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Signe de Murphy",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "DD : appendicite",
+          "details": [
+            "Palpation du point de McBurney",
+            "Signe du Psoas"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Loges rénales",
+          "details": [
+            "Percussion",
+            "Palpation"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Évoque le toucher rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e9",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Mentionne l'hypothèse diagnostique cholélithiase / cholédocholithiase",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque un diagnostic différentiel plausible",
+          "details": [
+            "Cholécystite",
+            "Cholangite",
+            "Néoplasie",
+            "Gastrite / inflammation du tube digestif",
+            "Hépatite",
+            "Stase biliaire sur compression néoplasique (p.ex. cancer pancréatique)"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes biliaires",
+                "items": [
+                  {
+                    "text": "Cholécystite",
+                    "cause": "Arguments POUR:\n\t□ Douleur hypochondre droit\n\t□ Antécédent de lithiases\n\t□ Comparaison avec épisode antérieur\nArguments CONTRE:\n\t□ Cholécystectomie en 2017\n\t□ Résolution spontanée des douleurs",
+                    "test": "→ US abdominal pour rechercher cholécystite sur moignon"
+                  },
+                  {
+                    "text": "Cholangite",
+                    "cause": "Arguments POUR:\n\t□ Douleur hypochondre droit\n\t□ Ictère (léger)\n\t□ Antécédent de calcul résiduel\nArguments CONTRE:\n\t□ Absence de fièvre\n\t□ Pas de triade de Charcot complète\n\t□ État général conservé",
+                    "test": "→ Bilan infectieux (NFS, CRP), hémocultures, US abdominal"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hépatiques",
+                "items": [
+                  {
+                    "text": "Hépatite",
+                    "cause": "Arguments POUR:\n\t□ Douleur hypochondre droit\n\t□ Ictère\n\t□ Urines foncées\nArguments CONTRE:\n\t□ Évolution rapide avec résolution\n\t□ Pas de contexte infectieux\n\t□ Pas de prise médicamenteuse nouvelle",
+                    "test": "→ Transaminases, sérologies hépatites, bilan auto-immun"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Stase biliaire sur compression néoplasique",
+                    "cause": "Arguments POUR:\n\t□ Âge (64 ans)\n\t□ Ictère progressif\n\t□ Urines foncées\nArguments CONTRE:\n\t□ Évolution aiguë\n\t□ Résolution spontanée\n\t□ Pas de perte de poids",
+                    "test": "→ CT abdominal avec injection, CA 19-9, IRM bilio-pancréatique"
+                  },
+                  {
+                    "text": "Cancer pancréatique",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Ictère\n\t□ Âge à risque\nArguments CONTRE:\n\t□ Évolution aiguë et résolutive\n\t□ Pas d'altération de l'état général\n\t□ Pas de diabète récent",
+                    "test": "→ CT pancréatique, CA 19-9, écho-endoscopie"
+                  }
+                ]
+              },
+              {
+                "name": "Causes digestives",
+                "items": [
+                  {
+                    "text": "Gastrite",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Nausées\n\t□ Antécédent de RGO\nArguments CONTRE:\n\t□ Ictère\n\t□ Urines foncées\n\t□ Localisation aussi hypochondre droit",
+                    "test": "→ Gastroscopie si persistance"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Bilan sanguin - Valeurs de laboratoire",
+        "description": "Résultats d'analyses sanguines avec valeurs de référence",
+        "filename": "grilles_generees/html/images/douleur-abdo-3-img1.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Simon Portmann",
+      "age": "64 ans",
+      "contexte": "Homme d'affaires consultant au cabinet du généraliste pour urines foncées",
+      "motifConsultation": {
+        "plaintePrincipale": "Mes urines sont très foncées",
+        "autreChose": "J'ai aussi eu mal au ventre ces derniers jours mais maintenant ça va mieux"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs abdominales",
+          "Localisation : Épigastre et hypochondre droit",
+          "Qualité : Difficile de les qualifier... 'Comme ma cholécystite, il y a 3 ans.'",
+          "Quantité/intensité : 7/10 au maximum",
+          "Irradiation : Non",
+          "Chronologie : Apparition brutale, présentes en journée et la nuit (insomniantes)",
+          "Développement : Douleurs se sont amendées au bout de 30 H",
+          "Circonstances de survenue : En journée, après un repas",
+          "Facteurs atténuants : Nihil",
+          "Facteurs déclenchants/aggravants : Ne met ni la prise alimentaire, ni la position, ni la respiration en relation avec ses douleurs"
+        ],
+        "symptomesAssocies": [
+          "Nausées",
+          "Urines marrons"
+        ],
+        "reponseAuxSymptomes": [
+          "A bu des bouillons et mangé un peu de pain",
+          "Repos"
+        ],
+        "representationMaladie": [
+          "Soulagé de ne plus avoir mal. Banalise les douleurs. Le plus alarmant, à ses yeux, sont ses urines"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Patient en bon état général",
+          "Pas d'état fébrile",
+          "Pas de perte de poids",
+          "Pas de fatigue"
+        ],
+        "digestive": [
+          "Nausées, sans vomissement",
+          "Pas de troubles du transit",
+          "Selles de couleur normale",
+          "Les douleurs ne sont pas en relation avec la prise alimentaire"
+        ],
+        "urinaire": [
+          "Urine brun foncé",
+          "Pas de dysurie",
+          "Pas d'algurie",
+          "Ni de pollakiurie",
+          "Pas d'écoulement urétral"
+        ],
+        "cardiovasculaire": [
+          "Pas de DRS",
+          "Pas de palpitations",
+          "Pas de dyspnée"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "EXFORGE HCT cpr pell 6mg/160mg/12.5mg (1-0-0) depuis une dizaine d'années",
+        "alimentation": "Omnivore",
+        "tabac": "1 paquet/jour depuis ses 19 ans, tentative de sevrage infructueuses au moment de la mise en place de la thérapie anti-hypertensive",
+        "alcool": "Non",
+        "drogues": "Non"
+      },
+      "histoireMedicale": [
+        "HTA suivie et traitée : EXFORGE HCT cpr pell 6mg/160mg/12.5mg (1-0-0) depuis une dizaine d'années",
+        "Lithiases vésiculaire symptomatique + cholédocienne, cholécystectomie en 2017",
+        "ERCP infructueux pour calcul résiduel 5j après l'opération de 2017",
+        "Polypes coliques 2014 et 2018",
+        "RGO en 2001",
+        "Appendicectomie dans l'enfance",
+        "Anamnèse familiale (AF) : positive pour un diabète de type 2 chez son père, HTA chez sa sœur",
+        "Pas d'allergies connues. Vaccins à jour"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Homme d'affaires",
+        "poids": "Surpoids (BMI 25-30)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Marié",
+        "etatEsprit": "Anxieux"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Inquiet"
+        ],
+        "durantStatus": [
+          "Pas de douleurs au moment de la consultation"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Il s'agit d'un homme de 64 ans connu pour une HTA traitée par Exforge (Amlodipine + Valsartan). Il y a deux jours, Monsieur Portmann présentait de fortes douleurs de l'hypochondre droit et de l'épigastre sans irradiation. Les douleurs étaient d'apparition brutale. Il les note à 7/10 à leur paroxysme. Elles ne sont pas en relation avec la prise alimentaire, la respiration ou la position. Rien ne les pallie. Il n'a par ailleurs pris aucun médicament. Le patient ne parvient pas à qualifier ses douleurs. Les douleurs étaient constantes; présentes en journée et insomniantes également, douleurs amendées au bout de 30 heures environ. Absence de douleurs au moment de la consultation. Nous sommes à une douzaine d'heures des dernières douleurs. Le patient n'est pas inquiet quant à ses douleurs mais il s'alarme d'observer des urines foncées depuis son épisode de colique.",
+      "rolesInterventions": [
+        "Informer que le patient est légèrement ictérique au moment de l'inspection"
+      ],
+      "pointsCles": [
+        "Patient avec antécédent de cholécystectomie pour lithiases",
+        "ERCP infructueux pour calcul résiduel après chirurgie",
+        "Présentation typique de cholédocholithiase au décours",
+        "Urines foncées = signe de cholestase",
+        "Ictère léger visible à l'inspection"
+      ],
+      "pieges": [
+        "Ne pas oublier d'inspecter la coloration cutanée (ictère)",
+        "Penser à demander la couleur des selles",
+        "Ne pas négliger l'antécédent de calcul résiduel post-cholécystectomie",
+        "Évoquer les complications possibles (cholangite, pancréatite)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Définition",
+          "contenu": "La cholédocholithiase se caractérise par la présence de calculs biliaires dans les voies biliaires (VB)."
+        },
+        {
+          "titre": "Manifestations cliniques",
+          "contenu": "Les patients atteints de cholédocholithiase présentent généralement des douleurs de type biliaire et des tests paracliniques qui révèlent une cholestase (c'est-à-dire une bilirubine et une phosphatase alcaline élevées). Les patients atteints de cholédocholithiase non compliquée sont généralement afébriles et présentent une numération globulaire complète et des taux d'enzymes pancréatiques normaux. Il n'est pas rare que les patients soient asymptomatiques. Chez ces patients, le diagnostic peut être suspecté en raison d'un bilan hépatique perturbé, d'anomalies observées lors d'études d'imagerie (incidentalome), ou lorsqu'un cholangiogramme peropératoire obtenu lors d'une cholécystectomie suggère la présence d'un calcul du canal cholédoque."
+        },
+        {
+          "titre": "Complications",
+          "contenu": "Les complications majeures sont :",
+          "points": [
+            "La pancréatite : N/V, amylase et lipase élevées (par définition plus de trois fois la limite supérieure de la normale), et/ou des résultats d'imagerie suggérant",
+            "La cholangite : présentation de la triade de Charcot = fièvre, douleur abdominale, ictère et d'une leucocytose; si un état de choc et une altération de l'état de conscience s'ajoutent à la triade, on parle alors de pentade de Reynolds"
+          ]
+        },
+        {
+          "titre": "Épidémiologie",
+          "contenu": "On estime que 5 à 20 % des patients sont atteints de cholédocholithiase au moment de la cholécystectomie. L'incidence augmente avec l'âge."
+        },
+        {
+          "titre": "Facteurs de risques pour les calculs biliaires : 5Fs",
+          "contenu": "(Female, Fair, over Forty, Fertile, Fat)",
+          "points": [
+            "Âge et sexe féminin",
+            "Grossesse",
+            "Diabète",
+            "Dyslipidémie",
+            "Obésité et perte de poids rapide",
+            "Certains médicaments, notamment : fibrates, ceftriaxone, analogues somatostatine, thérapie hormonale de substitution, contraception orale"
+          ]
+        },
+        {
+          "titre": "Diagnostic - Laboratoire",
+          "contenu": "Au début de l'obstruction biliaire, ALAT et ASAT sont généralement élevées. Dans un second temps, les tests hépatiques sont typiquement élevés démontrant une cholestase avec des augmentations de la bilirubine sérique, de la phosphatase alcaline et de la gamma-glutamyl transpeptidase (GGT) dépassant les élévations d'ALAT et d'ASAT sériques. Comme les tests hépatiques peuvent être élevés en raison d'une grande variété d'étiologies, la valeur prédictive positive (VPP) des tests hépatiques élevés est faible. En revanche, la valeur prédictive négative (VPN) des tests hépatiques normaux est élevée. Ainsi, les tests hépatiques normaux jouent un rôle plus important dans l'exclusion de la cholédolithiase que les tests hépatiques élevés dans le diagnostic des calculs.",
+          "points": [
+            "L'amélioration des tests sanguins hépatiques combinée à la résolution des symptômes suggère qu'un patient atteint de cholédolithiase a spontanément passé le calcul biliaire",
+            "Les urines foncées du patient font partie des manifestations extra-hépatiques de la cholestase : urines foncées, selles décolorées et prurit"
+          ]
+        },
+        {
+          "titre": "Imagerie",
+          "contenu": "L'imagerie de choix est l'échographie transabdominale (non-invasif, non irradiant, facilement disponible, peu coûteux). Elle permettra notamment d'évaluer la dilatation des voies biliaires intra et/ou extra-hépatiques et le pancréas (Wirsung)."
+        },
+        {
+          "titre": "Traitement",
+          "contenu": "L'indication à un ERCP peut être posée pour éviter les complications précédemment mentionnées."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Prise en charge de la douleur : antalgiques adaptés",
+        "Antibiothérapie si suspicion de cholangite",
+        "ERCP thérapeutique pour extraction du calcul",
+        "Surveillance biologique : bilan hépatique, lipases"
+      ],
+      "examensComplementaires": [
+        "Bilan hépatique complet : ASAT, ALAT, GGT, phosphatases alcalines, bilirubine totale et conjuguée",
+        "NFS, CRP en cas de suspicion de complication infectieuse",
+        "Lipases/amylases pour exclure une pancréatite",
+        "US abdominal : première ligne, évalue la dilatation des voies biliaires",
+        "Cholangio-IRM si échographie non contributive",
+        "ERCP à visée diagnostique et thérapeutique"
+      ]
+    },
+    "resume": {
+      "titre": "🫁 Cholélithiase / Cholédocholithiase – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur de l'hypochondre droit, postprandiale, irradiant vers l'épaule droite ou le dos",
+                "Crises de colique hépatique (durée < 6h)",
+                "Nausées, vomissements",
+                "Ictère intermittent si migration lithiasique (signe de choledocholithiasie)",
+                "Fièvre en cas de complication (cholangite, cholecystite)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Femme, > 40 ans, obésité, multiparité",
+                "Jeûne prolongé ou perte de poids rapide",
+                "Traitement œstrogénique",
+                "Drépanocytose ou hémolyse chronique (lithiase pigmentaire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes cliniques à rechercher",
+              "points": [
+                "Douleur à la palpation de l'hypochondre droit",
+                "Signe de Murphy positif (douleur à l'inspiration lors de la palpation sous-costale droite)",
+                "Fièvre, ictère conjonctival (évoque une complication)",
+                "Rechercher un état septique si suspicion de cholangite"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens complémentaires",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Bilan hépatique : ↑ bilirubine, GGT, PAL en cas d’obstacle biliaire",
+                "NFS : hyperleucocytose si complication infectieuse",
+                "Lipase : à doser si douleur pancréatique (rechercher une pancréatite)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale en 1re intention : visualise les lithiases vésiculaires et la dilatation des voies biliaires",
+                "IRM cholangio ou EUS si suspicion de choledocholithiasie avec écho négative",
+                "CPRE si forte suspicion ou en vue de traitement (extraction de calculs)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Cholélithiase non compliquée",
+              "points": [
+                "Traitement symptomatique : antispasmodiques, antalgiques (AINS), repos digestif",
+                "Cholécystectomie laparoscopique en ambulatoire si symptômes répétés",
+                "Régime pauvre en graisses"
+              ]
+            },
+            {
+              "titre": "Cholédocholithiase",
+              "points": [
+                "Hospitalisation",
+                "CPRE avec sphinctérotomie et extraction des calculs",
+                "Cholécystectomie secondaire (à distance ou en urgence selon les cas)"
+              ]
+            },
+            {
+              "titre": "Complications associées",
+              "points": [
+                "Cholangite : triade de Charcot (fièvre, douleur HD, ictère) → antibiothérapie IV + drainage biliaire",
+                "Pancréatite biliaire : repos digestif, surveillance, extraction de calcul si indication",
+                "Cholécystite aiguë : cholécystectomie en urgence (24–48h)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur postprandiale de l’HCD avec signes digestifs = penser à une lithiase",
+            "Signe de Murphy positif : orientation vers une cholécystite",
+            "Ictère + douleur HCD = évoquer une choledocholithiasie",
+            "Échographie abdominale systématique en 1re intention",
+            "CPRE diagnostique et thérapeutique en cas de choledocholithiasie",
+            "Cholécystectomie indiquée si lithiase symptomatique ou complication"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur HCD postprandiale ? Irradiation épaule/dos ?",
+                "Durée et caractère colique (< 6h) ?",
+                "Présence de fièvre, frissons, ictère ?",
+                "ATCD lithiasiques, cholécystectomie, hémopathie ?",
+                "Prise alimentaire récente (repas gras) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, FR, T°, SpO₂",
+                "Inspection : ictère cutanéo-muqueux",
+                "Palpation HCD : douleur, défense, signe de Murphy",
+                "Recherche fièvre et frissons (cholangite)",
+                "Évaluer état général et signes de sepsis"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Échographie abdominale en 1re intention (diagnostic positif et complications)",
+                "Cholélithiase simple : traitement symptomatique + cholécystectomie programmée",
+                "Cholédocholithiase : hospitalisation + CPRE thérapeutique, puis cholécystectomie"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale (suspicion de cholédocholithiase)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation (urines foncées, douleurs récentes HCD/épigastre)",
+            "Caractériser la douleur → HCD/épigastre, brutale, 7/10, durée ~30h, pas d’irradiation",
+            "Symptômes associés → nausées, ictère discret, urines brun foncé, pas de fièvre ni frissons",
+            "ATCD → cholécystectomie 2017, calcul résiduel (ERCP infructueux), HTA, polypes coliques, tabagisme chronique",
+            "Médicaments → Exforge HCT",
+            "Habitudes → tabac 1 paquet/j, pas d’alcool",
+            "Examen clinique ciblé → inspection : ictère léger, palpation HCD ± sensible, pas de Murphy, pas de McBurney",
+            "Résumé + hypothèse principale : cholédocholithiase post-cholécystectomie ; DD : cholécystite moignon, cholangite, hépatite, cancer pancréas/VB, gastrite",
+            "Examens complémentaires → Bilan hépatique, NFS-CRP, lipase, US abdominal, ± IRM biliaire, CPRE",
+            "Prise en charge → hospitalisation, bilan bio, imagerie, CPRE thérapeutique si calcul résiduel, prévention complications"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 5F (facteurs de risque lithiases biliaires)",
+            "elements": [
+              "Female",
+              "Fat",
+              "Forty",
+              "Fertile",
+              "Fair"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Simon Portmann, un homme de 64 ans, homme d’affaires, qui consulte pour urines foncées depuis quelques jours. Il rapporte avoir eu il y a deux jours une douleur brutale de l’épigastre et de l’hypochondre droit, sans irradiation, évaluée à 7/10, qui a persisté environ 30 heures puis s’est spontanément amendée. Cette douleur n’était ni influencée par les repas, ni par la position, ni par la respiration. Il n’a pas eu de vomissements mais présente des nausées. Depuis, il s’inquiète surtout de la coloration très foncée de ses urines.\n\nÀ l’interrogatoire, il ne rapporte pas de fièvre, pas de frissons, pas de perte de poids, pas de fatigue. Le transit intestinal est normal, sans diarrhée, sans sang, sans selles décolorées rapportées. Les urines sont brun foncé. Pas de dysurie, pas de brûlures mictionnelles.\n\nConcernant ses antécédents, il est hypertendu, traité depuis 10 ans par Exforge HCT. Il a des antécédents de lithiases vésiculaires et cholédociennes, avec cholécystectomie en 2017 et une tentative infructueuse d’ERCP pour un calcul résiduel. Il a également des polypes coliques réséqués, un RGO ancien, et a été opéré d’une appendicectomie dans l’enfance. Il fume 1 paquet/jour, n’a pas réussi à sevrer le tabac, ne boit pas d’alcool. Pas d’allergies connues.\n\nÀ l’examen, il est en bon état général, sans douleur abdominale actuelle. On note un ictère discret conjonctival, l’abdomen est souple, pas de défense ni de signe de Murphy. Pas de douleur des loges rénales ni en fosse iliaque droite.\n\nEn résumé, il s’agit d’un homme de 64 ans avec antécédent de cholécystectomie et calcul résiduel, présentant une crise douloureuse de l’hypochondre droit résolutive, compliquée d’ictère discret et d’urines foncées. Mon hypothèse principale est une cholédocholithiase. Les diagnostics différentiels incluent une cholangite (mais absence de fièvre), une cholécystite du moignon, une hépatite aiguë, une stase biliaire sur compression néoplasique, un cancer pancréatique ou une gastrite.\n\nJe demanderais en urgence un bilan hépatique complet (ASAT, ALAT, PAL, GGT, bilirubine totale et conjuguée), NFS et CRP, lipase pour éliminer une pancréatite, et une échographie abdominale. Selon les résultats, une cholangio-IRM ou une CPRE pourraient être indiquées.\n\nEn termes de prise en charge, ce patient doit être hospitalisé, surveillé, avec une prise en charge symptomatique (antalgiques, antiémétiques). Une antibiothérapie IV serait indiquée si suspicion de cholangite. Le traitement curatif consiste en une CPRE avec sphinctérotomie et extraction du calcul, suivie éventuellement d’une prise en charge chirurgicale complémentaire si nécessaire."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Portmann, 64 ans, présente depuis 2 jours une douleur brutale HCD/épigastre résolutive et consulte pour urines foncées.\n\nB (Background) : ATCD de cholécystectomie 2017, calcul résiduel post-op, HTA, tabac 1 paquet/j.\n\nA (Assessment) : Suspicion de cholédocholithiase. DD : cholangite, cholécystite moignon, hépatite, cancer pancréas/VB, gastrite.\n\nR (Recommendation) : Bilan hépatique, NFS-CRP, lipase, échographie abdominale, hospitalisation, CPRE thérapeutique si confirmation."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade de Charcot (cholangite)",
+              "points": [
+                "Douleur HCD",
+                "Fièvre",
+                "Ictère"
+              ]
+            },
+            {
+              "titre": "👉 Pentade de Reynolds (cholangite grave)",
+              "points": [
+                "Triade de Charcot",
+                "Choc septique",
+                "Troubles de conscience"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier d’inspecter la coloration cutanéo-muqueuse (ictère)",
+                "Toujours demander la couleur des selles (selles décolorées = cholestase)",
+                "Ne pas négliger l’ATCD de calcul résiduel",
+                "Évoquer complications : cholangite, pancréatite"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cholédocholithiase",
+                  "reponse": {
+                    "pour": [
+                      "ATCD lithiasique, cholécystectomie",
+                      "Douleur HCD brutale et résolutive",
+                      "Ictère discret, urines foncées",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de persistance douloureuse actuelle"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholangite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD",
+                      "Ictère"
+                    ],
+                    "contre": [
+                      "Absence de fièvre",
+                      "Pas de sepsis",
+                      "État général conservé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hépatite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD",
+                      "Ictère",
+                      "Urines foncées"
+                    ],
+                    "contre": [
+                      "Pas de contexte infectieux",
+                      "Pas de prise médicamenteuse nouvelle",
+                      "Évolution aiguë et résolutive"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer pancréatique",
+                  "reponse": {
+                    "pour": [
+                      "Âge (64 ans)",
+                      "Ictère, douleur épigastrique"
+                    ],
+                    "contre": [
+                      "Évolution aiguë et non progressive",
+                      "Pas de perte de poids",
+                      "Pas d’altération de l’état général"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bilan hépatique : ASAT, ALAT, PAL, GGT, bilirubine",
+                    "NFS, CRP",
+                    "Lipase/amylase",
+                    "Échographie abdominale en 1re intention",
+                    "± Cholangio-IRM ou CPRE selon résultats"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cholédocholithiase probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Antalgiques adaptés",
+                      "Surveillance biologique et clinique",
+                      "Antibiothérapie IV si cholangite",
+                      "CPRE thérapeutique pour extraction du calcul"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation biologique (bilan hépatique, lipases)",
+                    "Surveillance des complications (cholangite, pancréatite)",
+                    "Cholécystectomie déjà faite, suivi gastro-entérologie",
+                    "Surveillance imagerie si doute néoplasique"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

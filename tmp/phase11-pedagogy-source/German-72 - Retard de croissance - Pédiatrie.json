@@ -1,0 +1,743 @@
+{
+  "title": "German-72 - Retard de croissance - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Une mère consulte avec son nourrisson de 9 mois car elle a l'impression que son enfant ne grandit plus."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Paramètres de naissance",
+          "binaryOnly": false,
+          "details": [
+            "Taille à la naissance [52 cm]",
+            "Poids à la naissance [3,5 kg]",
+            "Périmètre crânien à la naissance [34 cm]",
+            "Terme de naissance [40 semaines]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Paramètres actuels",
+          "binaryOnly": false,
+          "details": [
+            "Taille actuelle [Voir courbe de croissance, P3]",
+            "Poids actuel [Voir courbe de croissance, P3]",
+            "Périmètre crânien actuel [Dans les normes]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Données anthropométriques parentales",
+          "binaryOnly": false,
+          "details": [
+            "Taille de la mère [165 cm]",
+            "Taille du père [175 cm]",
+            "Taille cible calculée [(165 + 175)/2 - 6,5 = 163,5 cm pour une fille]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse obstétricale",
+          "binaryOnly": false,
+          "details": [
+            "Déroulement de la grossesse [Sans complication]",
+            "Infections pendant la grossesse [Aucune]",
+            "Exposition à des substances toxiques [Aucune]",
+            "Mode d'accouchement [Accouchement spontané]",
+            "Adaptation post-natale [Normale]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Complications post-partum",
+          "binaryOnly": false,
+          "details": [
+            "Ictère prolongé [Non]",
+            "Hypotonie [Non]",
+            "Séjour en néonatologie [Non, rentrée à domicile après 4 jours]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse infectieuse",
+          "binaryOnly": false,
+          "details": [
+            "Épisodes fébriles récents [Aucun]",
+            "Pleurs excessifs [Non]",
+            "Changement de comportement [Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse alimentaire",
+          "binaryOnly": false,
+          "details": [
+            "Allaitement [Allaitement maternel exclusif jusqu'à 6 mois]",
+            "Introduction de la diversification [Début avec pomme et pomme de terre]",
+            "Alimentation actuelle [Mange déjà de la nourriture de table]",
+            "Appétit [Normal]",
+            "Vomissements après les repas [Non]",
+            "Régurgitations [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Signes d'intolérance alimentaire",
+          "binaryOnly": false,
+          "details": [
+            "Pâleur après les repas [Non]",
+            "Sueurs après alimentation [Non]",
+            "Épisodes d'hypoglycémie [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse digestive",
+          "binaryOnly": false,
+          "details": [
+            "Transit intestinal [Normal]",
+            "Consistance des selles [Normale]",
+            "Fréquence des selles [1-2 fois par jour]",
+            "Couleur des selles [Normale]",
+            "Diarrhée chronique [Non]",
+            "Constipation [Non]",
+            "Ballonnements [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Revue des systèmes",
+          "binaryOnly": false,
+          "details": [
+            "Coloration cutanée [Normale]",
+            "État de la peau [Normal]",
+            "Respiration [Normale]",
+            "Mictions [Normales]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Vaccinations et infections",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour selon le schéma vaccinal]",
+            "Infections récurrentes [Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse du développement",
+          "binaryOnly": false,
+          "details": [
+            "Développement moteur [Adapté à l'âge - rampe, position assise stable]",
+            "Développement langagier [Dit mama/papa de manière non spécifique]",
+            "Interaction sociale [Normale]",
+            "Préhension [Pince pouce-index acquise]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Exposition à des toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme passif [Non]",
+            "Alcool pendant la grossesse [Non]",
+            "Drogues [Non]",
+            "Médicaments [Aucun]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Retard de croissance familial [Non]",
+            "Puberté tardive chez les parents [Père avec puberté très tardive]",
+            "Maladies digestives [Maladie cœliaque dans la famille]",
+            "Maladies endocriniennes [Non]",
+            "Maladies génétiques [Non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [Stable]",
+            "Conditions de vie [Bonnes]",
+            "Garde de l'enfant [Par les parents]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen général - Recherche d'anomalies morphologiques",
+          "binaryOnly": false,
+          "details": [
+            "Faciès particulier [Non]",
+            "Pterygium colli [Non]",
+            "Implantation des cheveux [Normale]",
+            "Palais ogival [Non]",
+            "Thorax en bouclier [Non]",
+            "Distance intermamillaire [Normale]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes évocateurs de syndromes génétiques",
+          "binaryOnly": false,
+          "details": [
+            "Signes de trisomie 21 [Absents]",
+            "Signes de syndrome de Turner [Absents]",
+            "Disproportion segmentaire (achondroplasie) [Absente]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation cardio-pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Bruits du cœur [Normaux]",
+            "Souffle cardiaque [Absent]",
+            "Auscultation pulmonaire [Normale]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation abdominale",
+          "binaryOnly": false,
+          "details": [
+            "Hépatomégalie [Non]",
+            "Splénomégalie [Non]",
+            "Masses abdominales [Non]",
+            "Sensibilité [Non]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des ganglions",
+          "binaryOnly": false,
+          "details": [
+            "Adénopathies [Non]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation neurologique du nourrisson",
+          "binaryOnly": false,
+          "details": [
+            "Tonus [Normal]",
+            "Mouvements spontanés [Symétriques]",
+            "Réflexes archaïques [Appropriés pour l'âge]",
+            "Attention et éveil [Normaux]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation du développement psychomoteur",
+          "binaryOnly": false,
+          "details": [
+            "Position assise [Acquise]",
+            "Ramper/quatre pattes [En cours d'acquisition]",
+            "Préhension [Pince pouce-index présente]",
+            "Transfert d'objets entre les mains [Oui]",
+            "Vocalisation [Babillage, dit mama/papa non spécifique]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Signes de malnutrition",
+          "binaryOnly": false,
+          "details": [
+            "Fonte musculaire [Non]",
+            "Œdèmes [Non]",
+            "Cheveux cassants ou décolorés [Non]",
+            "Peau sèche [Non]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "binaryOnly": false,
+          "details": [
+            "[Maladie cœliaque]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Causes nutritionnelles [Malnutrition, carence d'apport]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Bilan biologique spécifique"
+                  },
+                  {
+                    "text": "Maladies digestives chroniques [Maladie de Crohn, mucoviscidose]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes endocriniennes [Déficit en hormone de croissance, hypothyroïdie, insuffisance surrénalienne]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  },
+                  {
+                    "text": "Maladies chroniques [Insuffisance rénale chronique, cardiopathie]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes génétiques [Syndromes génétiques]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Retard de croissance constitutionnel [Antécédents familiaux]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Anticorps anti-transglutaminase (IgA)",
+            "IgA totales",
+            "FSC",
+            "VS, CRP",
+            "Fonction rénale (urée, créatinine)",
+            "Ionogramme",
+            "TSH",
+            "Albumine",
+            "Analyse d'urine"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens spécifiques selon orientation",
+          "binaryOnly": false,
+          "details": [
+            "Endoscopie avec biopsies duodénales (si suspicion de maladie cœliaque)",
+            "Âge osseux",
+            "Test de la sueur (si suspicion de mucoviscidose)",
+            "Caryotype (si suspicion de syndrome génétique)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge nutritionnelle immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation diététique détaillée",
+            "Conseils nutritionnels adaptés",
+            "Enrichissement alimentaire si nécessaire",
+            "Supplémentation vitaminique selon besoins"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement spécifique",
+          "binaryOnly": false,
+          "details": [
+            "Si maladie cœliaque confirmée : régime sans gluten strict",
+            "Éviction des aliments contenant du gluten",
+            "Éducation nutritionnelle de la famille",
+            "Suivi par diététicien spécialisé"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Autres options thérapeutiques",
+          "binaryOnly": false,
+          "details": [
+            "Hormone de croissance (uniquement si déficit prouvé)",
+            "Stéroïdes anabolisants (très rarement, uniquement en cas de souffrance psychologique majeure)"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Suivi proposé",
+          "binaryOnly": false,
+          "details": [
+            "Surveillance régulière des courbes de croissance",
+            "Contrôle pondéral mensuel",
+            "Réévaluation clinique dans 3 mois",
+            "Ajustement thérapeutique selon évolution"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Information et soutien aux parents",
+          "binaryOnly": false,
+          "details": [
+            "Explication de la démarche diagnostique",
+            "Rassurer sur le pronostic si prise en charge adaptée",
+            "Importance de l'observance du traitement",
+            "Soutien psychologique si nécessaire"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🌾 Maladie cœliaque – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Diarrhée chronique, parfois stéatorrhée",
+                "Ballonnements, douleurs abdominales",
+                "Nausées, vomissements",
+                "Perte d’appétit, perte de poids"
+              ]
+            },
+            {
+              "titre": "Manifestations extra-digestives",
+              "points": [
+                "Fatigue, irritabilité, dépression",
+                "Anémie ferriprive",
+                "Troubles osseux (ostéoporose, hypocalcémie)",
+                "Neuropathie périphérique (paresthésies, ataxie)",
+                "Dermatite herpétiforme",
+                "Retard de croissance ou puberté chez l’enfant",
+                "Infertilité ou fausses couches à répétition"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque et associations",
+              "points": [
+                "Antécédents familiaux de maladie cœliaque",
+                "Autres maladies auto-immunes (thyroïdite, diabète de type 1)",
+                "Syndromes génétiques : Turner, Down"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Points à rechercher",
+              "points": [
+                "Signes de malnutrition (IMC, fonte musculaire)",
+                "Signes carentiels : pâleur, glossite, troubles neurologiques",
+                "Douleurs abdominales à la palpation",
+                "Éruption cutanée (dermatite herpétiforme)",
+                "Retard staturo-pondéral chez l’enfant"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Anticorps anti-transglutaminase IgA (tTG-IgA)",
+                "IgA totales (dépister déficit en IgA)",
+                "Anticorps anti-endomysium IgA (EMA)",
+                "Carences : fer, B12, folates, calcium, vitamine D"
+              ]
+            },
+            {
+              "titre": "Confirmation par endoscopie",
+              "points": [
+                "Biopsies duodénales : atrophie villositaire, hyperplasie cryptique",
+                "Endoscopie indiquée avant tout régime sans gluten"
+              ]
+            },
+            {
+              "titre": "Autres examens",
+              "points": [
+                "Évaluation de la densité osseuse (ostéodensitométrie)",
+                "Bilan hépatique (hépatopathies associées)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement diététique",
+              "points": [
+                "Régime strict sans gluten à vie (exclusion : blé, orge, seigle, épeautre)",
+                "Aliments autorisés : riz, maïs, pommes de terre, soja, millet",
+                "Réintroduction des produits laitiers après 6 mois si intolérance secondaire au lactose"
+              ]
+            },
+            {
+              "titre": "Soutien nutritionnel",
+              "points": [
+                "Supplémentation en cas de carences (fer, B12, folates, calcium, vit. D)",
+                "Suivi de la croissance chez l’enfant",
+                "Surveillance nutritionnelle et osseuse (ostéoporose)"
+              ]
+            },
+            {
+              "titre": "Éducation et suivi",
+              "points": [
+                "Consultation diététicien",
+                "Support psychologique et groupes de soutien",
+                "Éviter même les traces de gluten (alimentation, médicaments)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Diarrhée chronique + carences = penser à maladie cœliaque",
+            "Demander systématiquement les anticorps tTG-IgA + IgA totales",
+            "Biopsies duodénales nécessaires avant de débuter le régime",
+            "Traitement = régime sans gluten à vie",
+            "Surveillance des carences et du risque d’ostéoporose"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Retard de croissance (suspicion maladie cœliaque)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation, contexte",
+            "Paramètres de naissance et de croissance actuelle",
+            "Alimentation → allaitement, diversification, appétit",
+            "Symptômes digestifs → diarrhée, selles grasses, vomissements",
+            "Symptômes extra-digestifs → irritabilité, fatigue, pâleur, retard psychomoteur",
+            "ATCD familiaux : maladie cœliaque, endocrinopathies, retards pubertaires",
+            "Examen clinique → poids, taille, périmètre crânien, recherche signes carentiels",
+            "Résumé + hypothèse principale + DD (cœliaque, Crohn, mucoviscidose, endocrinien…)",
+            "Examens complémentaires → sérologie cœliaque, IgA totales, FSC, CRP, TSH, ± endoscopie",
+            "Prise en charge → diététique, suivi croissance, éducation parentale"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : GROWTH",
+            "elements": [
+              "G = Gluten ?",
+              "R = Retard staturo-pondéral",
+              "O = Ostéoporose / os fragiles",
+              "W = Weight loss (perte de poids / appétit ↓)",
+              "T = Troubles digestifs (diarrhée, stéatorrhée)",
+              "H = Hemoglobin ↓ (anémie ferriprive)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit d’un nourrisson de 9 mois, amené par sa mère car elle a remarqué qu’il ne grandissait plus correctement. \n\nÀ la naissance, il mesurait 52 cm, pesait 3,5 kilos et avait un périmètre crânien de 34 cm. La grossesse et l’accouchement se sont déroulés sans complications, et l’adaptation post-natale était normale. Actuellement, sa taille et son poids se situent autour du 3e percentile, alors que son périmètre crânien reste dans les normes. \n\nIl a été allaité exclusivement au sein jusqu’à 6 mois. La diversification a débuté avec pomme et pomme de terre, et depuis peu il mange aussi de la nourriture de table. Son appétit est décrit comme normal, il ne vomit pas, n’a pas de régurgitations, et son transit est régulier avec des selles normales, 1 à 2 fois par jour. Pas de diarrhée chronique ni de constipation.\n\nSon développement est adapté à l’âge : il rampe, s’assoit sans soutien, commence à babiller « mama/papa », fait la pince pouce-index et interagit normalement. Les vaccinations sont à jour. L’examen clinique ne montre pas de signes de malnutrition, ni d’anomalies morphologiques, ni de souffle cardiaque ou d’hépatosplénomégalie.\n\nSur le plan familial, il n’y a pas d’antécédent de retard de croissance, mais le père a eu une puberté très tardive, et il existe un antécédent de maladie cœliaque dans la famille. Pas d’exposition à tabac, alcool ou toxiques. \n\nEn résumé, il s’agit d’un nourrisson de 9 mois avec un retard staturo-pondéral, sans autre signe clinique majeur, dans un contexte familial évocateur de maladie cœliaque. Mon hypothèse principale est une maladie cœliaque débutante. Les diagnostics différentiels incluent une cause nutritionnelle simple, une maladie inflammatoire chronique intestinale, une mucoviscidose, une hypothyroïdie congénitale, une insuffisance rénale chronique ou un retard de croissance constitutionnel.\n\nComme examens complémentaires, je demanderais une FSC avec VS et CRP, une sérologie cœliaque (anticorps anti-transglutaminase IgA) avec dosage des IgA totales, une TSH et une T4 libre, un ionogramme et une créatinine, ainsi qu’une analyse d’urine. En cas de sérologie positive, une endoscopie avec biopsies duodénales confirmerait le diagnostic.\n\nEn termes de prise en charge, je proposerais une évaluation diététique, un enrichissement alimentaire si nécessaire, et si la maladie cœliaque est confirmée, la mise en place d’un régime strict sans gluten à vie, associé à un suivi diététique, une surveillance des courbes de croissance et un accompagnement éducatif des parents."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Nourrisson de 9 mois présenté par sa mère pour retard de croissance.\n\nB (Background) : Paramètres de naissance normaux, croissance cassée à 9 mois, développement psychomoteur normal, alimentation diversifiée avec appétit conservé, antécédent familial de maladie cœliaque.\n\nA (Assessment) : Suspicion de maladie cœliaque débutante. DD : malnutrition simple, Crohn, mucoviscidose, hypothyroïdie, retard constitutionnel.\n\nR (Recommendation) : FSC, CRP, anticorps anti-transglutaminase IgA + IgA totales, TSH/T4, bilan rénal, ± endoscopie avec biopsies, suivi diététique et surveillance de la croissance."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Maladie cœliaque = 3C",
+              "points": [
+                "Croissance cassée",
+                "Carences nutritionnelles",
+                "Céréales = déclencheur"
+              ]
+            },
+            {
+              "titre": "👉 Retard staturo-pondéral : 3 grandes causes",
+              "points": [
+                "Organique (digestif, endocrinien, rénal)",
+                "Génétique (syndrome, retard constitutionnel)",
+                "Environnemental (carence, psychosocial)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier de demander les paramètres de naissance et les courbes",
+                "Ne pas conclure trop vite à une cause psychosociale",
+                "Toujours demander sérologie cœliaque si cassure de croissance"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Maladie cœliaque",
+                  "reponse": {
+                    "pour": [
+                      "Retard staturo-pondéral isolé",
+                      "Antécédent familial positif",
+                      "Appétit conservé mais croissance cassée"
+                    ],
+                    "contre": [
+                      "Absence de diarrhée ou de stéatorrhée pour l’instant"
+                    ]
+                  }
+                },
+                {
+                  "question": "Retard de croissance constitutionnel",
+                  "reponse": {
+                    "pour": [
+                      "Puberté très tardive du père"
+                    ],
+                    "contre": [
+                      "Cassure de croissance précoce (d’habitude vers la puberté)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Malnutrition simple",
+                  "reponse": {
+                    "contre": [
+                      "Appétit normal",
+                      "Diversification correcte",
+                      "Pas de contexte social défavorable"
+                    ]
+                  }
+                },
+                {
+                  "question": "Mucoviscidose",
+                  "reponse": {
+                    "pour": [
+                      "Retard staturo-pondéral"
+                    ],
+                    "contre": [
+                      "Pas d’infections respiratoires",
+                      "Transit normal"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hypothyroïdie",
+                  "reponse": {
+                    "pour": [
+                      "Cassure croissance possible"
+                    ],
+                    "contre": [
+                      "Développement neuro normal",
+                      "Pas de signes cliniques d’hypothyroïdie"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "FSC, VS, CRP",
+                    "Anticorps anti-transglutaminase IgA + IgA totales",
+                    "TSH, T4 libre",
+                    "Ionogramme, urée, créatinine",
+                    "Analyse d’urine",
+                    "Endoscopie avec biopsies si sérologie positive"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Suspicion de maladie cœliaque débutante avec cassure de croissance"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Évaluation et enrichissement alimentaire",
+                      "Si confirmé : régime sans gluten strict",
+                      "Suivi diététique spécialisé",
+                      "Supplémentation vitaminique si carence"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle mensuel du poids et de la taille",
+                    "Surveillance des courbes de croissance",
+                    "Sérologie de contrôle",
+                    "Éducation parentale et accompagnement psychologique si besoin"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

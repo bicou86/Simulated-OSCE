@@ -1,0 +1,873 @@
+{
+  "title": "AMBOSS-9 - Douleurs dorsales - Homme 71 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Kevin Baker, homme de 71 ans, consultant aux urgences pour douleurs dorsales",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "125/80 mmHg",
+      "fc": "68 bpm",
+      "fr": "14/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai mal au dos"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur dorsale",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Mon bas du dos me fait mal]",
+            "Intensité (échelle 0-10) [2/10 quand je suis allongé immobile, 6/10 quand je plie le dos ou quand je tousse]",
+            "Qualité [C'est une douleur lancinante]",
+            "Début [Ça a commencé hier]",
+            "Événements précipitants [Je ne sais pas. Je déchargeais des courses de mon pick-up quand ça a soudainement commencé]",
+            "Progression/constant/intermittent [Non, ça a été la même douleur atroce tout le temps]",
+            "Épisodes antérieurs [J'ai eu mal au dos au fil des ans, mais jamais comme ça]",
+            "Irradiation [Parfois je ressens aussi la douleur dans ma cuisse droite]",
+            "Facteurs améliorants [J'ai pris du Tylenol, mais ça n'a pas beaucoup aidé. À part ça, ça aide si je m'allonge et évite les mouvements brusques]",
+            "Facteurs aggravants [Ça empire quand je tousse ou quand je me penche en avant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques - Drapeaux rouges",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Non]",
+            "Éruption/changements cutanés (sur le dos) [Non]",
+            "Toux [Non]",
+            "Douleurs articulaires [À part mon mal de dos, non]",
+            "Problèmes urinaires [Non]",
+            "Problèmes intestinaux [Non]",
+            "Appétit [Mon appétit a été normal]",
+            "Variations pondérales [Non]",
+            "Infections récentes [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Recherche de symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Sensation de picotements [Non]",
+            "Faiblesse musculaire [Non]",
+            "Engourdissement (particulièrement membres inférieurs) [Non]",
+            "Dysfonction érectile [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai un diabète de type 2"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai eu mes hémorroïdes enlevées il y a 3 ans"
+        },
+        {
+          "id": "a8",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments actuels [J'ai pris du Tylenol en vente libre ces derniers jours à cause du mal de dos, et de l'insuline pour le diabète]",
+            "Quantité de Tylenol [Je dirais trois comprimés de 500 mg depuis hier]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "patientComment": "Mon père avait un cancer de la prostate"
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis un enseignant à la retraite]",
+            "Domicile [Je vis seul. Je suis divorcé et j'ai un enfant adulte]",
+            "Alcool [Un verre de vin rouge le week-end]",
+            "Drogues illicites [Jamais]",
+            "Tabac [Je fume un paquet de cigarettes par jour depuis 40 ans]",
+            "Exercice [Non]",
+            "Alimentation [Je pense qu'elle est assez normale. Je mange de la viande, du poisson et des légumes ; principalement des repas faits maison]"
+          ]
+        },
+        {
+          "id": "a12b",
+          "text": "Histoire sexuelle",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Avec qui [Ma petite amie]",
+            "Nombre de partenaires dans l'année [J'ai couché avec 2 femmes au cours de l'année passée]",
+            "Protection [J'utilise toujours des préservatifs]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du dos",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du dos",
+            "Examen de la colonne vertébrale [Sensibilité vertébrale à la palpation sur L2-L4]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Test de Lasègue (élévation jambe tendue)",
+          "binaryOnly": true,
+          "patientComment": "Négatif"
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la sensibilité",
+            "Examen ciblé des réflexes ostéo-tendineux",
+            "Examen ciblé de la marche [Marche lentement à cause de la douleur dorsale]",
+            "Signe de Babinski"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes mécaniques/dégénératives",
+                "items": [
+                  {
+                    "text": "Hernie discale",
+                    "cause": "Arguments POUR:\n\t□ Douleur lombaire aiguë sévère lancinante\n\t□ Irradiation dans le dermatome (cuisse droite)\n\t□ Augmentation avec toux/flexion (manœuvre de Valsalva)\n\t□ Amélioration au repos allongé\n\t□ Antécédents de lombalgie chronique moins sévère\n\t□ Effort physique déclenchant (déchargement pick-up)\nArguments CONTRE:\n\t□ Absence de déficit neurologique\n\t□ Lasègue négatif (mais peut être négatif chez personne âgée)",
+                    "test": "→ IRM rachis lombaire"
+                  },
+                  {
+                    "text": "Fracture vertébrale pathologique",
+                    "cause": "Arguments POUR:\n\t□ Âge > 70 ans (risque ostéoporose)\n\t□ Tabagisme prolongé (facteur de risque ostéoporose)\n\t□ Absence d'exercice physique\n\t□ Sensibilité vertébrale localisée L2-L4\n\t□ Antécédents familiaux cancer prostate (métastases possibles)\n\t□ Douleur aiguë sans traumatisme majeur\nArguments CONTRE:\n\t□ Irradiation typique\n\t□ Pas de symptômes constitutionnels",
+                    "test": "→ Radiographie + CT rachis"
+                  },
+                  {
+                    "text": "Entorse musculaire",
+                    "cause": "Arguments POUR:\n\t□ Effort physique déclenchant\n\t□ Lasègue négatif\n\t□ Cause la plus fréquente de lombalgie\nArguments CONTRE:\n\t□ Irradiation dans la cuisse\n\t□ Sensibilité vertébrale (plutôt paravertébrale attendue)",
+                    "test": "→ Examen clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Métastases osseuses",
+                    "cause": "Arguments POUR:\n\t□ Antécédents familiaux cancer prostate\n\t□ Tabagisme (risque cancer poumon)\n\t□ Âge 71 ans\nArguments CONTRE:\n\t□ Absence de perte de poids\n\t□ Sueurs nocturnes\n\t□ Symptômes urinaires",
+                    "test": "→ IRM + scintigraphie osseuse"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Spondylolisthésis dégénératif",
+                    "cause": "Arguments POUR : Âge, douleur mécanique\nArguments CONTRE:\n\t□ Début aigu",
+                    "test": "→ Radiographie dynamique"
+                  },
+                  {
+                    "text": "Sténose spinale",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de claudication neurogène\n\t□ Début aigu",
+                    "test": "→ IRM rachis"
+                  },
+                  {
+                    "text": "Abcès épidural spinal",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas d'immunosuppression",
+                    "test": "→ IRM avec gadolinium"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen rectal [Les lésions des fibres nerveuses L3-S5 (syndrome de la queue de cheval) et S3-S5 (syndrome du cône médullaire) peuvent causer une diminution du tonus rectal]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "IRM du rachis [pour confirmer une hernie discale et évaluer les signes d'ostéoporose ou de métastases osseuses]",
+            "Radiographie du rachis [pour évaluer les lésions dégénératives et inflammatoires de la colonne vertébrale ainsi que les signes d'ostéoporose ou de métastases osseuses]",
+            "CT du rachis [pour localiser une fracture vertébrale et évaluer la stabilité]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens spécialisés",
+          "binaryOnly": false,
+          "details": [
+            "Absorptiométrie biphotonique (DEXA) [pour calculer la densité minérale osseuse. Recommandation générale pour les femmes ≥ 65 ans et les hommes ≥ 70 ans]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les pratiques sexuelles sûres",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant la dépendance aux antalgiques"
+          ],
+          "redflagsSection": {
+            "title": "Drapeaux rouges de la lombalgie",
+            "items": [
+              {
+                "text": "Syndrome de la queue de cheval",
+                "description": "Rétention/incontinence fécale ou urinaire, anesthésie en selle"
+              },
+              {
+                "text": "Déficit neurologique progressif",
+                "description": "Faiblesse progressive, déficit localisé à une racine nerveuse"
+              },
+              {
+                "text": "Suspicion de malignité",
+                "description": "Antécédents ou risque élevé de cancer, perte de poids, sueurs nocturnes"
+              },
+              {
+                "text": "Infection",
+                "description": "Fièvre, immunosuppression, usage de drogues IV"
+              },
+              {
+                "text": "Fracture",
+                "description": "Traumatisme, ostéoporose, usage de corticoïdes"
+              }
+            ]
+          },
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement conservateur de la hernie discale lombaire",
+                "content": "• Analgésie multimodale: Paracétamol 1g × 4/j + AINS (ibuprofène 400 mg × 3/j)\n• Myorelaxants si spasmes: Tizanidine 2-4 mg × 2-3/j\n• Maintien activité physique adaptée: (éviter repos strict)\n• Physiothérapie active: Renforcement musculature paravertébrale\n• Exercices de McKenzie et étirements quotidiens\n• Application chaleur locale pour détente musculaire"
+              },
+              {
+                "title": "Traitement de la radiculopathie L3-L4",
+                "content": "• Gabapentine: 300 mg progressivement jusqu'à 900 mg × 3/j\n• Prégabaline: 75 mg × 2/j jusqu'à 150 mg × 2/j\n• Bloc radiculaire sélectif L: 3 guidé par imagerie\n• Réévaluation à 4-6 semaines"
+              },
+              {
+                "title": "Indications chirurgicales",
+                "content": "• Techniques: Microdiscectomie, laminectomie décompressive\n• Réhabilitation post-opératoire précoce essentielle"
+              },
+              {
+                "title": "Prévention des récidives et adaptation du mode de vie",
+                "content": "• École du dos: Apprentissage postures et gestes\n• Perte de poids si IMC 25 kg/m²\n• Renforcement musculaire régulier: (gainage, natation)\n• Ergonomie du poste de travail\n• Arrêt tabac: (favorise dégénérescence discale)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Peur de la dépendance aux antalgiques",
+          "content": "[J'ai peur de devenir dépendant aux médicaments contre la douleur]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Baker, je comprends que vous avez peur de devenir dépendant aux médicaments contre la douleur. Il est important de bien traiter la douleur car cela aide le processus de guérison et peut prévenir le développement de douleurs chroniques. Laissez-moi vous rassurer que prendre des médicaments contre la douleur pendant une courte période est très peu susceptible de causer une dépendance. Nous pouvons aussi vous prescrire un médicament contre la douleur avec un faible potentiel addictif. Pour vous assurer de ne pas développer de dépendance au médicament, il est important que vous preniez le médicament exactement comme prescrit et que vous me parliez si vous sentez que vous avez besoin de plus ou d'un médicament différent."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Fractures vertébrales dues à l'ostéoporose",
+        "description": "Représentation schématique des fractures vertébrales ostéoporotiques typiques : vertèbre en poisson, cuniféorme et compressée. Les fractures vertébrales peuvent réduire la hauteur de la colonne vertébrale, ce qui entraîne des plis cutanés transversaux triangulaires typiques.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img1-Vertebral fractures due to osteoporosis.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Tests d'élévation de la jambe tendue",
+        "description": "Tests d'élévation de la jambe tendue : Illustrations des différentes techniques pour évaluer l'irritation des racines nerveuses lombaires.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img2-Straight leg raise tests.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Carte des dermatomes",
+        "description": "Représentation schématique des dermatomes du corps (zones de peau innervées par une seule racine spinale sensorielle). Note : Presque toutes les cartes de dermatomes se réfèrent aux publications de Head et Campbell (1900), Foerster (1933), ou Keegan et Garrett (1948), qui diffèrent significativement dans certaines zones. Après examen attentif de la littérature actuelle, cette illustration est basée sur le travail de Keegan et Garrett, car il est le plus susceptible d'être basé sur une méthodologie valide et corrèle avec les résultats cliniques établis.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img3-Dermatome map.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Lésions dégénératives et inflammatoires du rachis",
+        "description": "Lésions dégénératives et inflammatoires du rachis. Les lésions dégénératives résultent de l'usure et sont associées à l'âge avancé. Les lésions inflammatoires surviennent dans des maladies comme la spondylarthrite ankylosante et le psoriasis. S'il y a une érosion sous-chondrale ou une destruction du corps vertébral, considérer une infection bactérienne ou une tumeur comme étiologies possibles.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img4-Degenerative and inflammatory lesions of the spine.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Fracture-tassement cunéiforme thoracique",
+        "description": "Radiographie du rachis thoracique (vue latérale) d'un patient avec ostéoporose. Il y a une fracture par insuffisance du corps vertébral T7, qui est cuniforme antérieurement (superposition verte) et accompagnée d'une subluxation antérieure (flèche) du corps vertébral T6. Les déformations par compression cuniforme sont fréquemment ostéoporotiques, bien qu'elles puissent alternativement être pathologiques (secondaires à une lésion osseuse focale) ou traumatiques. Contours pointillés rouges : vertèbres normales.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img5-Thoracic wedge compression fracture.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Discopathie dégénérative avec extrusion discale",
+        "description": "IRM du rachis lombaire (pondération T2 ; plan sagittal). Des disques dégénérés hypointenses (superposition rouge) en L4-5 et L5-S1 sont accompagnés d'un rétrécissement de l'espace discal. Une extrusion discale (contour blanc pointillé) en L4-5 a migré supérieurement derrière le corps vertébral L4 et rétrécit le sac thécal (pointe de flèche).",
+        "data": "grilles_generees/html/images/AMBOSS-9-img6-Degenerative disk disease with disk extrusion.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Fracture-éclatement du corps vertébral T12",
+        "description": "CT du rachis thoracique (niveau T12 ; gauche : plan sagittal ; droite : plan axial ; fenêtre osseuse). Une fracture par compression du plateau supérieur (superposition et lignes rouges) est accompagnée d'une disruption corticale et d'une rétropulsion (flèche) dans le canal rachidien. Les fractures-éclatement résultent de forces de compression axiale de haute énergie accompagnées de degrés variables de flexion et/ou rotation. Elles peuvent être des fractures stables ou instables.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img7-Burst fracture of T12 vertebral body.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Fractures vertébrales aiguës et chroniques",
+        "description": "IRM du rachis lombaire (gauche : image STIR ; droite : pondération T1 ; plan sagittal). Des déformations par compression des vertèbres T8, T10 et L4 (superpositions vertes) sont visibles. Les fractures T8 et T10 sont hyperintenses sur l'image STIR, indiquant qu'elles sont récentes. Le plateau supérieur compressé de L4 est iso- à hypointense, indiquant une déformation ancienne ou chronique. L'apparence hypointense du disque intervertébral L2-3 (cercle vert) sur l'image STIR indique une dégénérescence discale.",
+        "data": "grilles_generees/html/images/AMBOSS-9-img8-Acute and chronic vertebral fractures.jpg",
+        "id": "img8"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Kevin Baker",
+      "age": "71 ans",
+      "contexte": "Enseignant retraité consultant aux urgences pour lombalgie aiguë",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal au dos.",
+        "autreChose": "C'est vraiment douloureux, surtout quand je bouge."
+      },
+      "consignes": [
+        "Agir de manière grincheuse. Vous êtes agacé quand votre dos est examiné parce que c'est douloureux.",
+        "Quand l'examinateur entre dans la pièce, asseyez-vous sur le bord de la chaise d'examen et essayez de vous pencher en arrière autant que possible.",
+        "Si l'examinateur ne propose pas d'incliner la chaise après que vous ayez mentionné que s'allonger soulage votre douleur, répondez seulement par des phrases très courtes ou par 'oui' et 'non' si possible.",
+        "Faites semblant d'avoir mal au dos quand l'examinateur palpe votre bas du dos. Dites à l'examinateur de faire attention quand il/elle examine votre dos.",
+        "Marchez lentement et avec prudence à cause du mal de dos.",
+        "Si l'examinateur soulève votre jambe dans le cadre d'un test clinique (test de Lasègue), faites seulement semblant d'avoir mal si votre jambe est levée > 80°.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: IRM) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Quand l'examinateur explique ses impressions, dire 'J'ai peur de devenir dépendant aux médicaments contre la douleur.'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Lombalgie aiguë depuis hier",
+          "Douleur lancinante 6/10 à la mobilisation, 2/10 au repos",
+          "Irradiation dans la cuisse droite",
+          "Déclenchée en déchargeant le pick-up",
+          "Aggravée par toux et flexion",
+          "Soulagée par position allongée"
+        ],
+        "symptomesAssocies": [
+          "Pas de déficit neurologique",
+          "Pas de troubles sphinctériens",
+          "Pas de symptômes constitutionnels",
+          "Antécédents de lombalgie chronique moins sévère"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer de l'irritabilité due à la douleur",
+          "Position antalgique (penché en arrière)",
+          "Réticence à bouger",
+          "Devenir moins coopératif si pas d'aide pour s'allonger",
+          "Inquiétude sur la dépendance aux antalgiques"
+        ],
+        "durantStatus": [
+          "Douleur à la palpation L2-L4",
+          "Marche lente et prudente",
+          "Test de Lasègue négatif jusqu'à 80°",
+          "Pas de déficit neurologique objectif"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 71 ans avec lombalgie aiguë sur fond de lombalgie chronique. Facteurs de risque multiples : âge avancé, tabagisme prolongé, sédentarité, diabète. Tableau clinique typique de hernie discale mais attention aux diagnostics différentiels vu l'âge et les facteurs de risque.",
+      "rolesInterventions": [
+        "Examen neurologique : Force 5/5, ROT symétriques, sensibilité normale",
+        "Examen rectal : Tonus sphinctérien normal",
+        "IRM rachis : Hernie discale L3-L4 avec compression radiculaire droite",
+        "Radiographie : Signes de discopathie dégénérative, ostéopénie",
+        "DEXA scan : T-score -2.1 (ostéopénie)"
+      ],
+      "pointsCles": [
+        "Toujours rechercher les drapeaux rouges chez patient > 70 ans",
+        "Lasègue peut être faussement négatif chez la personne âgée",
+        "Hernie discale reste possible malgré l'âge",
+        "Évaluer systématiquement le risque de fracture pathologique",
+        "Ne pas oublier l'examen rectal (syndrome queue de cheval)"
+      ],
+      "pieges": [
+        "Se limiter au diagnostic d'entorse musculaire",
+        "Oublier le dépistage ostéoporose chez homme > 70 ans",
+        "Ne pas explorer les facteurs de risque néoplasiques",
+        "Minimiser l'importance de l'irradiation",
+        "Ne pas conseiller sur tabac et activité physique"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Hernie discale lombaire L3-L4 avec radiculopathie"
+        },
+        {
+          "titre": "Hernie discale lombaire",
+          "contenu": "Pathologie fréquente du rachis avec protrusion du nucleus pulposus :",
+          "points": [
+            "Prévalence : 2-3% population, pic 30-50 ans mais possible à tout âge",
+            "Localisation : L4-L5 (40%), L5-S1 (40%), L3-L4 (15%)",
+            "Mécanisme : dégénérescence discale + effort en flexion/rotation",
+            "Symptômes : lombalgie + radiculalgie dans dermatome correspondant",
+            "Signes : Lasègue positif (sensibilité 90% < 60 ans, 50% > 60 ans)",
+            "Évolution : 90% résolution spontanée en 6-12 semaines"
+          ]
+        },
+        {
+          "titre": "Fractures vertébrales ostéoporotiques",
+          "contenu": "Première cause de fracture chez personne âgée :",
+          "points": [
+            "Incidence : 25% femmes > 70 ans, 15% hommes > 70 ans",
+            "Facteurs de risque : âge, tabac, corticoïdes, hypogonadisme, inactivité",
+            "Présentation : douleur aiguë après effort minime, perte taille",
+            "Localisation : jonction thoraco-lombaire (T11-L2) la plus fréquente",
+            "Diagnostic : radiographie (diminution hauteur > 20%), IRM si doute",
+            "Complications : cyphose, douleur chronique, nouvelles fractures"
+          ]
+        },
+        {
+          "titre": "Métastases vertébrales",
+          "contenu": "Localisation la plus fréquente des métastases osseuses :",
+          "points": [
+            "Cancers primaires : prostate, sein, poumon, rein, thyroïde",
+            "Présentation : douleur progressive, nocturne, non mécanique",
+            "Signes d'alarme : perte poids, sueurs nocturnes, douleur repos",
+            "Localisation : vertèbres thoraciques > lombaires > cervicales",
+            "Diagnostic : IRM (sensibilité 95%), scintigraphie osseuse",
+            "Complications : fracture pathologique, compression médullaire"
+          ]
+        },
+        {
+          "titre": "Examen clinique de la lombalgie",
+          "contenu": "Approche systématique pour identifier la cause :",
+          "points": [
+            "Inspection : attitude antalgique, déformation rachidienne",
+            "Palpation : épineuses (fracture) vs paravertébrale (musculaire)",
+            "Mobilité : limitation segmentaire suggère cause mécanique",
+            "Lasègue : positif si douleur < 70° (irritation L5 ou S1)",
+            "Neurologique : force, sensibilité, ROT par racine",
+            "Drapeaux rouges : toujours vérifier syndrome queue de cheval"
+          ]
+        },
+        {
+          "titre": "Imagerie de la lombalgie",
+          "contenu": "Indications et choix de la modalité :",
+          "points": [
+            "Radiographie : première ligne si trauma, > 70 ans, corticoïdes",
+            "IRM : gold standard pour hernie discale et pathologie médullaire",
+            "CT : meilleur pour os (fracture, lyse isthmique)",
+            "Indications IRM urgente : déficit neurologique, suspicion infection/tumeur",
+            "Pas d'imagerie si lombalgie simple < 6 semaines sans drapeaux rouges",
+            "DEXA : hommes > 70 ans ou > 50 ans avec facteurs de risque"
+          ]
+        },
+        {
+          "titre": "Prise en charge de la lombalgie aiguë",
+          "contenu": "Approche multimodale basée sur l'évidence :",
+          "points": [
+            "Éducation : évolution favorable habituelle, maintien activités",
+            "Analgésie : paracétamol, AINS, opioïdes faibles si nécessaire",
+            "Activité : éviter repos au lit, reprendre activités progressivement",
+            "Physiothérapie : après phase aiguë si persistance",
+            "Infiltrations : corticoïdes épiduraux si radiculopathie réfractaire",
+            "Chirurgie : si déficit neurologique progressif ou échec 6-12 semaines"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Paracétamol 1g QID première ligne (attention dose maximale diabétique)",
+        "AINS : Ibuprofène 400-600mg TID avec protection gastrique si > 65 ans",
+        "Myorelaxants : Cyclobenzaprine 5-10mg TID si spasmes",
+        "Opioïdes : Tramadol 50mg Q6H si douleur sévère (prudence personne âgée)",
+        "Gabapentine 300mg TID si composante neuropathique",
+        "Corticoïdes épiduraux si échec traitement conservateur",
+        "Prévention ostéoporose : Vitamine D + calcium si DEXA anormal"
+      ],
+      "examensComplementaires": [
+        "IRM rachis lombaire sans gadolinium : Visualise disques, racines, canal",
+        "Radiographie rachis F+P debout : Fractures, alignement, dégénérescence",
+        "DEXA scan : T-score < -1 = ostéopénie, < -2.5 = ostéoporose",
+        "EMG/VCN : Si doute clinique sur radiculopathie vs neuropathie",
+        "Bilan phospho-calcique : Si ostéopénie (Ca, PO4, PTH, 25-OH-D3)",
+        "PSA : Homme > 50 ans avec facteurs risque cancer prostate"
+      ]
+    },
+    "resume": {
+      "titre": "🦴 Hernie discale lombaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptomatologie typique",
+              "points": [
+                "Lombalgie aiguë ou chronique avec irradiation radiculaire (sciatalgie)",
+                "Douleur augmentée à la flexion, à l’effort, en position assise",
+                "Soulagement en décubitus",
+                "Parfois paresthésies, engourdissements ou faiblesse motrice"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte (red flags)",
+              "points": [
+                "Troubles sphinctériens (rétention urinaire, incontinence)",
+                "Anesthésie en selle",
+                "Déficit moteur progressif",
+                "Douleur nocturne ou fébricule (suspicion de tumeur/infection)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Tests cliniques",
+              "points": [
+                "Lasègue (straight leg raise) positif : douleur irradiant dans le territoire radiculaire",
+                "Bragard : reproduction douleur à dorsiflexion pied après Lasègue",
+                "Crossed Lasègue : douleur controlatérale (spécifique)"
+              ]
+            },
+            {
+              "titre": "Atteintes radiculaires typiques",
+              "points": [
+                "L4 : déficit extension genou, hypoesthésie face antéro-médiale jambe, ROT rotulien ↓",
+                "L5 : déficit dorsiflexion pied (steppage), hypoesthésie dos pied/gros orteil",
+                "S1 : déficit flexion plantaire, hypoesthésie bord externe pied, ROT achilléen ↓"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "IRM lombaire : examen de référence, visualise hernie, compression radiculaire",
+                "Scanner lombaire si IRM contre-indiquée"
+              ]
+            },
+            {
+              "titre": "Autres",
+              "points": [
+                "EMG utile pour différencier neuropathie périphérique vs radiculopathie",
+                "Pas d’imagerie systématique si absence de red flags"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Conservateur (1ère intention)",
+              "points": [
+                "Repos relatif (éviter immobilisation prolongée)",
+                "Antalgiques, AINS ± myorelaxants",
+                "Kinésithérapie (renforcement, posture)",
+                "Infiltrations épidurales corticoïdes si douleur persistante"
+              ]
+            },
+            {
+              "titre": "Chirurgical",
+              "points": [
+                "Indications : déficit moteur progressif, syndrome de la queue de cheval, douleur invalidante > 6–8 semaines malgré traitement",
+                "Technique : discectomie ± microchirurgie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur radiculaire typique déclenchée par flexion = hernie discale probable",
+            "Tests de Lasègue/Bragard = outils simples de confirmation",
+            "Red flags = urgence neurochirurgicale (queue de cheval, déficit moteur)",
+            "IRM lombaire = examen clé si indication chirurgicale ou red flags",
+            "PEC initiale = conservatrice (antalgiques, kiné), chirurgie si échec ou urgence"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Début et évolution de la douleur lombaire ?",
+                "Douleur irradiant jambe ? Territoire précis ?",
+                "Facteurs aggravants : flexion, assise prolongée ?",
+                "Déficit moteur ou sensitif associé ?",
+                "Troubles urinaires, sexuels, ou anesthésie en selle ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen neurologique complet (force, sensibilité, ROT)",
+                "Tests de Lasègue, Bragard, Lasègue croisé",
+                "IRM lombaire si red flags ou avant chirurgie",
+                "EMG si doute diagnostique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antalgiques + kinésithérapie en 1ère intention",
+                "Surveillance des signes neurologiques",
+                "Référer en neurochirurgie si red flags ou échec du traitement conservateur"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleurs dorsales aiguës chez un homme de 71 ans",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif (lombalgie aiguë depuis hier)",
+            "Caractériser la douleur → localisation lombaire, lancinante, 6/10 à l’effort, 2/10 au repos, irradiation cuisse droite, déclenchée en déchargeant des courses, aggravée par toux/flexion, soulagée allongé",
+            "Symptômes associés → aucun, pas de troubles urinaires/intestinaux, pas de déficit sensitif/moteur",
+            "ATCD médicaux : diabète type 2 ; chirurgicaux : hémorroïdectomie ; familiaux : père cancer prostate",
+            "Mode de vie → tabac 40 paquets-année, sédentaire, alcool modéré",
+            "Examen clinique → douleur palpation L2-L4, Lasègue négatif, marche lente douloureuse, pas de déficit neuro",
+            "Diagnostics principaux → hernie discale L3-L4 probable ; DD : fracture ostéoporotique, métastase osseuse, entorse musculaire",
+            "Examens → IRM lombaire (hernie, métastase, fracture), radio lombaire, CT si suspicion fracture, DEXA (ostéopénie/ostéoporose), PSA si suspicion prostatique",
+            "PEC → antalgiques + AINS, repos relatif, kinésithérapie, éducation (activité + tabac), surveillance red flags, chirurgie si déficit neurologique ou échec"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DORSAL",
+            "elements": [
+              "D = Douleur mécanique typique",
+              "O = Ostéoporose à rechercher >70 ans",
+              "R = Red flags (queue de cheval, métastases, infection)",
+              "S = Sciatalgie (irradiation radiculaire)",
+              "A = Antalgiques + activité adaptée",
+              "L = Lombalgie fréquente mais attention aux pièges"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Voici M. Kevin Baker, 71 ans, enseignant retraité, venu aux urgences pour un mal de dos apparu hier. Il décrit une douleur lancinante du bas du dos, qui a commencé en déchargeant des courses de son pick-up. Elle est continue, modérée à 2/10 au repos mais monte à 6/10 quand il tousse, se penche ou se mobilise. La douleur irradie parfois dans la cuisse droite. Il dit avoir eu des douleurs de dos par le passé, mais jamais aussi intenses. La position allongée lui procure un certain soulagement. Le paracétamol a eu peu d’effet.\n\nIl n’a pas de fièvre, pas de frissons, pas de sueurs nocturnes, pas de perte de poids, ni de troubles urinaires ou intestinaux. Pas de déficit sensitif, pas de faiblesse ni de paresthésies. À noter ses antécédents de diabète de type 2 traité par insuline, une chirurgie d’hémorroïdes, et une consommation tabagique importante (1 paquet/jour depuis 40 ans). Son père a eu un cancer de la prostate. Il vit seul, boit occasionnellement du vin, ne pratique pas d’activité physique régulière.\n\nÀ l’examen, les constantes sont stables. Le dos est sensible à la palpation entre L2 et L4. Le test de Lasègue est négatif. La marche est lente et prudente à cause de la douleur. L’examen neurologique est normal, sans déficit moteur ni sensitif, ROT symétriques, tonus rectal normal.\n\nEn résumé, il s’agit d’une lombalgie aiguë mécanique avec irradiation radiculaire, survenue après effort, dans un contexte de terrain à risque (âge, tabac, diabète, ATCD familial cancer). L’hypothèse principale est une hernie discale L3-L4, confirmée par IRM. Les diagnostics différentiels incluent une fracture vertébrale ostéoporotique ou pathologique, une entorse musculaire et des métastases osseuses.\n\nLes examens pertinents sont : IRM lombaire, radiographie du rachis, CT si suspicion fracture, DEXA (ostéopénie fréquente à cet âge), bilan PSA si suspicion néoplasique. \n\nLa prise en charge repose sur des antalgiques adaptés (paracétamol, AINS, éventuellement myorelaxants), un maintien d’activité adaptée (éviter le repos strict), une kinésithérapie de renforcement, un suivi attentif des red flags. La chirurgie n’est indiquée qu’en cas de déficit neurologique ou d’échec du traitement conservateur après plusieurs semaines. Une prévention secondaire inclut l’éducation posturale, la rééducation et l’arrêt du tabac."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Baker, 71 ans, lombalgie aiguë lancinante depuis hier après effort, irradiant cuisse droite.\n\nB (Background) : ATCD diabète type 2, tabac chronique, père cancer prostate. Chirurgie hémorroïdes. Pas d’allergies.\n\nA (Assessment) : Lombalgie mécanique, suspicion hernie discale L3-L4. DD : fracture ostéoporotique, métastase, entorse.\n\nR (Recommendation) : IRM rachis lombaire, radio/CT, DEXA, antalgiques + AINS, kinésithérapie, surveillance red flags."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Red flags lombalgie",
+              "points": [
+                "Syndrome queue de cheval : anesthésie en selle, rétention/incontinence",
+                "Déficit moteur progressif",
+                "Fièvre, infection, immunosuppression",
+                "Cancer connu ou suspicion",
+                "Traumatisme ou ostéoporose"
+              ]
+            },
+            {
+              "titre": "👉 Sciatique radiculaire typique",
+              "points": [
+                "Douleur postérieure jambe → L5 ou S1",
+                "Douleur antérieure cuisse → L3 ou L4",
+                "Douleur aggravée à la toux ou Valsalva"
+              ]
+            },
+            {
+              "titre": "👉 PEC initiale lombalgie",
+              "points": [
+                "Paracétamol ± AINS",
+                "Maintien activité",
+                "Pas d’imagerie si pas de red flags",
+                "Chirurgie si déficit neurologique"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier d’examiner sphincters/anesthésie en selle",
+                "Négliger ostéoporose chez homme >70 ans",
+                "Se limiter au diagnostic d’entorse musculaire",
+                "Ignorer ATCD familial cancer (prostate)",
+                "Rassurer mais rester vigilant sur red flags"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Hypothèses diagnostiques",
+              "questions": [
+                {
+                  "question": "Quels diagnostics évoquez-vous ?",
+                  "reponse": [
+                    "Hernie discale L3-L4",
+                    "Fracture vertébrale ostéoporotique",
+                    "Métastase vertébrale (prostate/poumon)",
+                    "Entorse musculaire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens réalisez-vous en première intention ?",
+                  "reponse": [
+                    "IRM lombaire",
+                    "Radiographie rachis lombaire",
+                    "CT si fracture suspectée",
+                    "DEXA (ostéopénie/ostéoporose)",
+                    "PSA si suspicion cancer"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Quel est le traitement initial ?",
+                  "reponse": [
+                    "Paracétamol, AINS, myorelaxants si spasmes",
+                    "Repos relatif, éviter alitement prolongé",
+                    "Kinésithérapie de renforcement",
+                    "Éducation posturale"
+                  ]
+                },
+                {
+                  "question": "Quand envisager la chirurgie ?",
+                  "reponse": [
+                    "Déficit neurologique progressif",
+                    "Syndrome de la queue de cheval",
+                    "Douleur invalidante >6–8 semaines malgré traitement"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "4. Prévention secondaire",
+              "questions": [
+                {
+                  "question": "Quelles mesures proposer au long terme ?",
+                  "reponse": [
+                    "Arrêt du tabac",
+                    "Maintien activité physique régulière",
+                    "Renforcement musculaire",
+                    "Prévention ostéoporose (vit D + calcium, DEXA suivi)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

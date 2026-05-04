@@ -1,0 +1,913 @@
+{
+  "title": "USMLE-37 - Sang dans les selles - Homme 55 ans",
+  "context": {
+    "setting": "Clinique de médecine générale",
+    "patient": "Kenneth Klein, 55 ans, se présente à la clinique en se plaignant de la présence de sang dans ses selles",
+    "vitals": {
+      "ta": "130/80 mmHg",
+      "fc": "76 bpm",
+      "fr": "16/min",
+      "temperature": "36.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Sang dans les selles"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du saignement",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a un mois]",
+            "Fréquence [Chaque fois que j'ai une selle, je vois du sang mélangé dedans]",
+            "Chronologie du sang [Le sang est mélangé avec les selles marron]",
+            "Couleur du sang [Rouge vif]",
+            "Douleur lors de la défécation [Non]",
+            "Méléna [Non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Troubles du transit intestinal",
+          "binaryOnly": false,
+          "details": [
+            "Constipation chronique [Eh bien, j'ai eu de la constipation pendant longtemps, et je continue à prendre des laxatifs. Au début, ils m'apportaient un certain soulagement, mais maintenant, ils ne me servent plus du tout]",
+            "Fréquence des selles [J'ai eu 2 selles par semaine au cours des 6 derniers mois]",
+            "Diarrhée récente [J'ai eu de la diarrhée ces 2 derniers jours]",
+            "Fréquence de la diarrhée [Trois fois par jour]",
+            "Description de la diarrhée [Liquide, marron, mélangée avec du sang]",
+            "Urgence défécatoire [Non]",
+            "Ténesme [Un peu]",
+            "Mucus dans les selles [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre ou frissons [Non]",
+            "Douleur abdominale [Non]",
+            "Nausées ou vomissements [Non]",
+            "Changements de poids [J'ai perdu environ 4,5 kg au cours des 6 derniers mois]",
+            "Changements d'appétit [Mon appétit est resté le même]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque et habitudes",
+          "binaryOnly": false,
+          "details": [
+            "Régime alimentaire [Je mange beaucoup de malbouffe. Je ne mange jamais de légumes]",
+            "Voyages récents [Non, mais je pense partir en voyage avec ma famille la semaine prochaine. Pensez-vous que je devrais rester à la maison ?]",
+            "Contact avec personnes malades [Non]",
+            "Exercice physique [Je marche une demi-heure tous les jours]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes urinaires",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Non. J'avais l'habitude de prendre beaucoup de laxatifs (Dulcolax), mais j'ai arrêté tous les médicaments lorsque la diarrhée a commencé"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai eu une bronchite il y a 3 semaines ; elle a été traitée avec de l'amoxicilline"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Hémorroïdes réséquées il y a 4 ans"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est décédé à 55 ans d'un cancer du côlon. Ma mère est vivante et en bonne santé"
+        },
+        {
+          "id": "a11",
+          "text": "Mode de vie et habitudes",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Avocat]",
+            "Consommation d'alcool [Non]",
+            "Drogues illicites [Non]",
+            "Tabac [Non]",
+            "Activité sexuelle [Avec ma femme]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Aspect général",
+          "binaryOnly": true,
+          "patientComment": "Le patient ne semble pas en détresse aiguë"
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux",
+          "binaryOnly": true,
+          "patientComment": "Normaux"
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normaux ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits respiratoires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Palpation [Détendu, souple et indolore]",
+            "Percussion [Pas d'hépato-splénomégalie]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Mention de l'examen rectal",
+          "binaryOnly": true,
+          "patientComment": "L'examen rectal sera effectué après discussion avec le patient"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies malignes",
+                "items": [
+                  {
+                    "text": "Cancer colorectal",
+                    "cause": "Arguments POUR:\n\t□ Âge 55 ans (risque augmenté)\n\t□ ATCD familial (père décédé à 55 ans de CCR)\n\t□ Sang mélangé aux selles depuis 1 mois\n\t□ Changement du transit (constipation → diarrhée)\n\t□ Perte de poids involontaire de 4,5 kg\n\t□ Ténesme\n\t□ Régime pauvre en fibres\nArguments CONTRE:\n\t□ Appétit conservé",
+                    "test": "→ Coloscopie totale urgente avec biopsies"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies bénignes",
+                "items": [
+                  {
+                    "text": "Hémorroïdes",
+                    "cause": "Arguments POUR:\n\t□ ATCD d'hémorroïdes opérées\n\t□ Sang rouge vif\n\t□ Constipation chronique (facteur favorisant)\n\t□ Utilisation prolongée de laxatifs\nArguments CONTRE:\n\t□ Sang mélangé aux selles (pas typique)\n\t□ Pas de douleur à la défécation\n\t□ Perte de poids associée",
+                    "test": "→ Examen rectal, anuscopie"
+                  },
+                  {
+                    "text": "Diverticulose compliquée",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans\n\t□ Régime pauvre en fibres\n\t□ Constipation chronique\n\t□ Saignement rouge vif possible\nArguments CONTRE:\n\t□ Saignement habituellement abondant et intermittent\n\t□ Pas de douleur abdominale\n\t□ Pas de fièvre",
+                    "test": "→ Coloscopie, CT abdominal si suspicion diverticulite"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies infectieuses",
+                "items": [
+                  {
+                    "text": "Colite à Clostridium difficile",
+                    "cause": "Arguments POUR:\n\t□ Antibiothérapie récente (amoxicilline il y a 3 semaines)\n\t□ Diarrhée aiguë depuis 2 jours\n\t□ Profession exposée (avocat = stress)\nArguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de douleur abdominale\n\t□ Sang visible rare dans C. difficile\n\t□ Délai court après antibiotiques",
+                    "test": "→ PCR C. difficile dans les selles, toxines A/B"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Maladie inflammatoire chronique de l'intestin (MICI)",
+                    "cause": "Arguments POUR:\n\t□ Diarrhée sanglante\n\t□ Ténesme\n\t□ Perte de poids\nArguments CONTRE:\n\t□ Début tardif (55 ans)\n\t□ Pas de douleur abdominale\n\t□ Pas de symptômes extra-intestinaux\n\t□ Evolution courte (1 mois)",
+                    "test": "→ Coloscopie avec biopsies étagées, calprotectine fécale"
+                  },
+                  {
+                    "text": "Angiodysplasie",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans\n\t□ Saignement rouge vif\nArguments CONTRE:\n\t□ Saignement habituellement intermittent\n\t□ N'explique pas les autres symptômes",
+                    "test": "→ Coloscopie, angiographie si nécessaire"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen rectal avec toucher rectal",
+            "Test FIT (recherche de sang occulte dans les selles)",
+            "FSC (recherche anémie)",
+            "Ionogramme, urée, créatinine",
+            "CRP, VS"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires prioritaires",
+          "binaryOnly": false,
+          "details": [
+            "Coloscopie totale avec biopsies (dans les 2 semaines)",
+            "PCR C. difficile et toxines dans les selles",
+            "Coproculture avec recherche de leucocytes fécaux",
+            "Calprotectine fécale si suspicion MICI"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge symptomatique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Arrêt des laxatifs\n• Hydratation orale suffisante\n• Régime sans résidus temporaire\n• Surveillance des signes vitaux\n• Éducation signes d'alarme"
+              },
+              {
+                "title": "Si colite à C. difficile confirmée",
+                "content": "• Vancomycine orale 125mg × 4/jour × 10 jours\n• Ou fidaxomicine 200mg × 2/jour × 10 jours\n• Isolement contact\n• Probiotiques après traitement\n• Éviter antidiarrhéiques"
+              },
+              {
+                "title": "Conseils diététiques",
+                "content": "• Augmentation progressive des fibres\n• Hydratation 1,5-2L/jour\n• Légumes et fruits quotidiens\n• Réduction viande rouge\n• Éviter aliments transformés"
+              },
+              {
+                "title": "Dépistage familial",
+                "content": "• Coloscopie pour les apparentés au 1er degré\n• Début 10 ans avant âge diagnostic du parent\n• Ou à 40 ans (le plus précoce)\n• Conseil génétique si syndrome familial"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Signes nécessitant une consultation urgente",
+            "items": [
+              {
+                "text": "Hémorragie massive",
+                "description": "→ Urgences, réanimation, endoscopie urgente"
+              },
+              {
+                "text": "Douleur abdominale intense",
+                "description": "→ Perforation, ischémie, urgence chirurgicale"
+              },
+              {
+                "text": "Fièvre élevée",
+                "description": "→ Colite sévère, mégacôlon toxique"
+              },
+              {
+                "text": "Signes de choc",
+                "description": "→ Hypotension, tachycardie, pâleur = urgence vitale"
+              },
+              {
+                "text": "Occlusion intestinale",
+                "description": "→ Arrêt matières/gaz, distension = urgence chirurgicale"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Klein, les symptômes que vous décrivez peuvent être dus à des problèmes facilement traitables, comme des hémorroïdes, une infection dans votre côlon ou une diverticulose. Cependant, ils peuvent également être le signe d'une maladie plus grave, comme un cancer colorectal. Il est crucial que nous effectuions des analyses de sang, un examen des selles, et probablement une coloscopie, qui consiste à examiner votre côlon à l'aide d'un tube fin contenant une caméra. Je vais également devoir effectuer un examen rectal aujourd'hui. Une fois que nous aurons posé un diagnostic, nous devrions être en mesure de traiter votre problème. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Mon père avait un cancer du côlon. Est-ce que je pourrais l'avoir aussi ?] [Que signifie ce mot 'coloscopie' ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "C'est une possibilité. Parlez-moi davantage des symptômes que vous avez et qui vous inquiètent par rapport au cancer. / La coloscopie est un examen qui permet de voir l'intérieur de votre côlon avec une petite caméra au bout d'un tube flexible. C'est le meilleur moyen de détecter d'éventuels polypes ou tumeurs."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Kenneth Klein",
+      "age": "55 ans",
+      "contexte": "Homme marié avec deux enfants, avocat, consultant pour rectorragies",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai du sang dans mes selles depuis un mois.",
+        "autreChose": "Je suis inquiet car mon père est mort du cancer du côlon."
+      },
+      "consignes": [
+        "Si la coloscopie est mentionnée, demandez : 'Que signifie ce mot ?'",
+        "Paraissez inquiet mais pas en détresse aiguë.",
+        "Mentionnez votre voyage prévu la semaine prochaine.",
+        "Insistez sur l'inefficacité des laxatifs.",
+        "Montrez de l'anxiété concernant le cancer."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Sang rouge vif mélangé aux selles",
+          "Présent à chaque selle depuis 1 mois",
+          "Pas de douleur associée"
+        ],
+        "symptomesAssocies": [
+          "Constipation chronique 6 mois (2 selles/semaine)",
+          "Diarrhée récente depuis 2 jours",
+          "Perte de poids 4,5 kg en 6 mois",
+          "Ténesme léger",
+          "Appétit conservé"
+        ],
+        "facteursDeclenchants": [
+          "Usage prolongé de laxatifs",
+          "Antibiothérapie récente",
+          "Régime pauvre en fibres"
+        ],
+        "reponseAuxSymptomes": [
+          "Arrêt des laxatifs avec diarrhée",
+          "Inquiétude croissante",
+          "Report du voyage ?"
+        ],
+        "representationMaladie": [
+          "Peur du cancer comme son père",
+          "Espoir que ce soit bénin",
+          "Veut des réponses rapides"
+        ]
+      },
+      "anamneseSystemes": {
+        "digestif": [
+          "Pas de douleur abdominale",
+          "Pas de nausées/vomissements",
+          "Pas de méléna",
+          "Transit très perturbé"
+        ],
+        "general": [
+          "Pas de fièvre",
+          "Perte de poids involontaire",
+          "Fatigue modérée"
+        ],
+        "urinaire": [
+          "Aucun symptôme urinaire"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Dulcolax (arrêté récemment)",
+        "tabac": "Non-fumeur",
+        "alcool": "Non",
+        "alimentation": "Malbouffe, pas de légumes",
+        "exercice": "Marche 30 min/jour",
+        "profession": "Avocat (stress++)",
+        "drogues": "Jamais"
+      },
+      "histoireMedicale": [
+        "Bronchite traitée amoxicilline il y a 3 semaines",
+        "Hémorroïdes opérées il y a 4 ans",
+        "Père décédé cancer côlon à 55 ans"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Anxiété palpable",
+          "Questions sur le pronostic",
+          "Préoccupation voyage famille",
+          "Recherche réassurance"
+        ],
+        "durantStatus": [
+          "Abdomen souple",
+          "Aucune douleur à la palpation",
+          "Coopératif mais tendu",
+          "Appréhension examen rectal"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 55 ans présentant une rectorragie évoluant depuis 1 mois avec contexte de constipation chronique, perte de poids et ATCD familial de cancer colorectal. Antibiothérapie récente compliquant le tableau avec diarrhée. Forte suspicion de néoplasie colique nécessitant coloscopie urgente. Diagnostic différentiel inclut colite à C. difficile vu antibiothérapie récente.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e dit vouloir faire :",
+        "• Toucher rectal : confirmer nécessité absolue",
+        "• Test sang occulte : mentionner qu'il est inutile si sang visible",
+        "• Coloscopie : délai maximal 2 semaines",
+        "• Lavement baryté : obsolète, préférer coloscopie"
+      ],
+      "pointsCles": [
+        "ATCD familial = dépistage aurait dû débuter à 45 ans",
+        "Sang mélangé aux selles = origine colique probable",
+        "Perte de poids = drapeau rouge pour malignité",
+        "Antibiothérapie récente = penser C. difficile",
+        "Coloscopie totale obligatoire à 55 ans avec ces symptômes"
+      ],
+      "pieges": [
+        "Banaliser le saignement (hémorroïdes)",
+        "Oublier l'ATCD familial crucial",
+        "Ne pas faire le toucher rectal",
+        "Retarder la coloscopie",
+        "Négliger le risque de C. difficile"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Rectorragie chronique sur terrain à risque nécessitant exclusion urgente d'un cancer colorectal"
+        },
+        {
+          "titre": "Cancer colorectal",
+          "contenu": "Troisième cancer le plus fréquent :",
+          "points": [
+            "Incidence augmente après 50 ans",
+            "Facteurs de risque : âge, ATCD familiaux, MICI, polypose",
+            "Séquence adénome-carcinome (10-15 ans)",
+            "Localisation : 70% côlon gauche et rectum",
+            "Symptômes selon localisation (droite = anémie, gauche = troubles transit)",
+            "Survie 5 ans : 90% stade I, 10% stade IV"
+          ]
+        },
+        {
+          "titre": "Hémorragie digestive basse",
+          "contenu": "Approche diagnostique systématique :",
+          "points": [
+            "Sang rouge = origine anale, rectale ou colique gauche",
+            "Méléna = origine haute ou côlon droit",
+            "Volume et fréquence orientent gravité",
+            "Âge > 50 ans = coloscopie systématique",
+            "Causes fréquentes : diverticules, angiodysplasie, cancer, hémorroïdes",
+            "Mortalité < 5% si prise en charge appropriée"
+          ]
+        },
+        {
+          "titre": "Dépistage familial CCR",
+          "contenu": "Recommandations selon risque :",
+          "points": [
+            "Risque moyen : coloscopie à 50 ans",
+            "ATCD familial 1er degré < 60 ans : début à 40 ans ou 10 ans avant",
+            "≥ 2 apparentés 1er degré : début à 40 ans",
+            "Syndrome Lynch : début 20-25 ans",
+            "PAF : début 10-12 ans",
+            "Intervalle : tous les 5-10 ans si normal"
+          ]
+        },
+        {
+          "titre": "Colite à C. difficile",
+          "contenu": "Infection nosocomiale majeure :",
+          "points": [
+            "1ère cause diarrhée post-antibiotiques",
+            "Délai : 3 jours à 8 semaines post-ATB",
+            "Facteurs risque : âge, ATB, IPP, hospitalisation",
+            "Spectre : diarrhée simple → colite fulminante",
+            "Diagnostic : PCR plus sensible que toxines",
+            "Récidive 20-30% des cas"
+          ]
+        },
+        {
+          "titre": "Prise en charge rectorragie",
+          "contenu": "Stratégie selon présentation :",
+          "points": [
+            "Évaluation hémodynamique prioritaire",
+            "Toucher rectal systématique",
+            "Coloscopie : gold standard diagnostic",
+            "Préparation colique si état stable",
+            "Biopsies multiples si lésion suspecte",
+            "Scanner si coloscopie incomplète"
+          ]
+        },
+        {
+          "titre": "Aspects nutritionnels CCR",
+          "contenu": "Prévention par l'alimentation :",
+          "points": [
+            "Fibres : réduction risque 10% par 10g/jour",
+            "Viande rouge : augmentation risque 17% par 100g/jour",
+            "Charcuterie : augmentation risque 18% par 50g/jour",
+            "Calcium et vitamine D : effet protecteur",
+            "Alcool et tabac : facteurs de risque",
+            "Activité physique : réduction risque 25%"
+          ]
+        },
+        {
+          "titre": "Pronostic et surveillance",
+          "contenu": "Après traitement CCR :",
+          "points": [
+            "Stade I-II : survie 5 ans > 80%",
+            "Stade III : survie 5 ans 40-70%",
+            "Surveillance : coloscopie à 1 an puis tous 3-5 ans",
+            "ACE tous 3-6 mois × 5 ans",
+            "Scanner TAP annuel × 3 ans si stade II-III",
+            "Récidive : 80% dans les 2 premières années"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Patient de 55 ans à très haut risque de CCR (ATCD familial, âge, symptômes d'alarme) nécessitant coloscopie urgente. La présentation avec rectorragie, modification du transit et perte de poids est hautement suspecte. L'antibiothérapie récente complique le tableau avec possibilité de C. difficile surajouté. Le retard de dépistage (aurait dû débuter à 45 ans) aggrave le pronostic potentiel."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Toute rectorragie après 50 ans = cancer jusqu'à preuve du contraire",
+            "L'ATCD familial modifie drastiquement la stratégie de dépistage",
+            "La coloscopie ne doit pas être retardée devant des signes d'alarme",
+            "Le régime alimentaire influence significativement le risque",
+            "La détection précoce transforme le pronostic",
+            "L'éducation familiale sur le dépistage est cruciale"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "C. difficile : vancomycine 125mg × 4/j × 10j (1ère ligne)",
+        "Alternative : fidaxomicine 200mg × 2/j × 10j",
+        "Fer si anémie : fer(II) 100-200mg/j",
+        "Préparation colique : PEG 4L la veille",
+        "Chimio adjuvante stade III : FOLFOX ou CAPOX"
+      ],
+      "examensComplementaires": [
+        "Coloscopie : sensibilité 95% pour lésions > 1cm",
+        "FIT : seuil 100 ng/mL, Se 79%, Sp 94%",
+        "ACE : N < 5 ng/mL, élevé dans 70% CCR",
+        "CT colonographie : alternative si coloscopie impossible",
+        "Calprotectine : N < 50 μg/g, élevée si inflammation"
+      ]
+    },
+    "resume": {
+      "titre": "🧬 Cancer colorectal – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes d’appel",
+              "points": [
+                "Rectorragies ou hématochézie",
+                "Troubles du transit récents (constipation, diarrhée, alternance)",
+                "Sensation de masse rectale ou ténesme",
+                "Douleurs abdominales ou rectales",
+                "Anémie ferriprive (fatigue, dyspnée d’effort, pâleur)"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Âge > 50 ans",
+                "Antécédents familiaux de cancer colorectal ou polypes adénomateux",
+                "Syndromes héréditaires : HNPCC (Lynch), polypose adénomateuse familiale",
+                "MICI (rectocolite hémorragique, maladie de Crohn colique)",
+                "Facteurs environnementaux : alimentation riche en graisses/viandes rouges, sédentarité, tabac, alcool"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Symptômes souvent insidieux et intermittents",
+                "Découverte parfois au stade métastatique (foie, poumon, péritoine)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen abdominal et rectal",
+              "points": [
+                "Palpation abdominale : recherche masse ou hépatomégalie (métastases)",
+                "TR : masse rectale palpable, saignement",
+                "Recherche d’adénopathies sus-claviculaires (ganglion de Troisier)"
+              ]
+            },
+            {
+              "titre": "Signes de complications",
+              "points": [
+                "Occlusion intestinale (distension abdominale, vomissements, arrêt gaz/selles)",
+                "Perforation (péritonite)",
+                "Hémorragie digestive basse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de confirmation",
+              "points": [
+                "Coloscopie totale avec biopsies = examen de référence",
+                "Anatomopathologie : adénocarcinome dans la majorité des cas"
+              ]
+            },
+            {
+              "titre": "Bilan d’extension",
+              "points": [
+                "Scanner thoraco-abdomino-pelvien (métastases hépatiques, pulmonaires, péritonéales)",
+                "IRM rectale pour cancers du rectum (staging local)",
+                "Marqueur tumoral CEA (suivi, non diagnostic)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement curatif",
+              "points": [
+                "Chirurgie : hémicolectomie droite/gauche, sigmoïdectomie, amputation abdomino-périnéale (rectum bas)",
+                "Curage ganglionnaire systématique",
+                "Résection de métastases si résécables"
+              ]
+            },
+            {
+              "titre": "Traitements complémentaires",
+              "points": [
+                "Chimiothérapie adjuvante selon stade (FOLFOX, CAPOX)",
+                "Radiochimiothérapie néoadjuvante pour cancers du rectum localement avancés",
+                "Thérapies ciblées (anti-EGFR, anti-VEGF) en métastatique"
+              ]
+            },
+            {
+              "titre": "Prise en charge globale",
+              "points": [
+                "Surveillance endoscopique post-thérapeutique",
+                "Dépistage familial si facteur génétique",
+                "Soins de support (douleur, nutrition, psychologique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toute rectorragie après 50 ans = coloscopie obligatoire",
+            "Anémie ferriprive inexpliquée = cancer colorectal jusqu’à preuve du contraire",
+            "Coloscopie avec biopsie = diagnostic de certitude",
+            "Chirurgie = traitement principal",
+            "Radiochimiothérapie néoadjuvante pour cancer du rectum avancé"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Troubles du transit récents ? Rectorragies ?",
+                "Perte de poids, asthénie, anorexie ?",
+                "ATCD familiaux de cancer colorectal ou polypes ?",
+                "Antécédents personnels de MICI, polypes ?",
+                "Facteurs de risque : alimentation, tabac, alcool ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "TR systématique",
+                "Coloscopie totale avec biopsies",
+                "Scanner TAP pour bilan d’extension",
+                "IRM rectale si localisation rectale",
+                "Bilan biologique : NFS, ferritine, CEA"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par coloscopie + biopsie",
+                "Chirurgie avec exérèse tumorale + curage ganglionnaire",
+                "Radiochimiothérapie pour rectum avancé, chimio ± thérapies ciblées si métastatique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Rectorragie chronique (suspicion cancer colorectal vs autres causes)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (sang dans les selles)",
+            "Caractériser saignement → durée (1 mois), fréquence (chaque selle), aspect (sang mélangé), couleur (rouge vif), douleur ?",
+            "Troubles du transit → constipation chronique, diarrhée récente, ténesme",
+            "Signes associés → perte de poids 4,5 kg, appétit conservé, fatigue ?",
+            "Facteurs de risque → ATCD familial cancer colorectal, régime pauvre en fibres, >50 ans",
+            "ATCD médicaux → hémorroïdes opérées, bronchite récente traitée ATB",
+            "Examen clinique → constantes normales, abdomen souple, TR obligatoire",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → NFS/ferritine, coloscopie totale avec biopsies, PCR C. difficile si diarrhée post-ATB",
+            "Prise en charge → PEC urgente si cancer suspecté, isolement si C. difficile, suivi nutritionnel et familial"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : SANG",
+            "elements": [
+              "S = Sang mêlé aux selles",
+              "A = ATCD familial (père cancer colorectal)",
+              "N = Nouvelle modification du transit",
+              "G = Graisse/fibres absentes (facteur risque alimentaire)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Kenneth Klein, un homme de 55 ans, avocat, qui consulte pour du sang dans ses selles depuis environ un mois.\n\nIl décrit la présence de sang rouge vif, entremêlé aux selles brunes, observé à chaque selle. Il ne ressent pas de douleur lors de la défécation et n’a pas eu de méléna. Ses troubles du transit sont anciens, avec une constipation chronique de plusieurs mois (2 selles par semaine, sous laxatifs inefficaces). Depuis 2 jours, il présente une diarrhée aqueuse, environ trois selles par jour, toujours mélangées de sang, accompagnées d’un ténesme léger mais sans mucus.\n\nIl n’a pas eu de fièvre, pas de douleur abdominale ni de nausées. Il rapporte une perte de poids involontaire de 4,5 kg en 6 mois, sans perte d’appétit. Ses habitudes alimentaires sont pauvres en fibres, essentiellement de la malbouffe. Il ne fume pas, ne boit pas d’alcool et marche quotidiennement.\n\nDans ses antécédents, il a eu des hémorroïdes opérées il y a 4 ans et une bronchite traitée récemment par amoxicilline. Son père est décédé à 55 ans d’un cancer du côlon, ce qui le rend particulièrement anxieux. Il s’inquiète de son voyage prévu avec sa famille la semaine prochaine.\n\nÀ l’examen, il est en bon état général, sans détresse. Ses constantes sont normales (TA 130/80, FC 76, FR 16, T° 36,9). L’abdomen est souple et indolore, sans masse ni organomégalie. Le toucher rectal reste à réaliser.\n\nEn résumé, il s’agit d’un homme de 55 ans, avec rectorragies persistantes depuis 1 mois, troubles du transit, perte de poids et ATCD familial fort. Mon hypothèse principale est un cancer colorectal. Les diagnostics différentiels incluent une récidive d’hémorroïdes, une diverticulose, une colite à C. difficile (vu antibiothérapie récente), une MICI ou une angiodysplasie.\n\nComme examens complémentaires, je demanderais en urgence une NFS/ferritine, une coloscopie totale avec biopsies, et selon l’évolution une PCR C. difficile. La prise en charge inclura la préparation colique, une discussion multidisciplinaire en cas de cancer confirmé, et des mesures hygiéno-diététiques et de dépistage familial."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Klein, 55 ans, présente sang dans les selles depuis 1 mois, diarrhée récente, perte de poids.\n\nB (Background) : Constipation chronique, hémorroïdes opérées, ATB récent, père décédé CCR à 55 ans, régime pauvre en fibres.\n\nA (Assessment) : Suspicion forte cancer colorectal. DD : hémorroïdes récidivantes, diverticulose, colite à C. difficile, MICI, angiodysplasie.\n\nR (Recommendation) : NFS/ferritine, coloscopie totale avec biopsies sous 2 semaines, TR immédiat. PEC multidisciplinaire si cancer, traitement C. difficile si confirmé."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes d’alarme CCR",
+              "points": [
+                "Âge > 50 ans",
+                "ATCD familial CCR",
+                "Modification récente du transit",
+                "Sang mêlé aux selles",
+                "Perte de poids"
+              ]
+            },
+            {
+              "titre": "👉 Diagnostic différentiel rapide",
+              "points": [
+                "Hémorroïdes : sang rouge en surface, douleur possible",
+                "Diverticulose : saignement intermittent, abondant",
+                "Colite à C. difficile : diarrhée post-ATB, toxines",
+                "MICI : diarrhée chronique avec mucus, jeunes patients",
+                "Angiodysplasie : saignement intermittent, âge avancé"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Banaliser le saignement vu ATCD hémorroïdes",
+                "Oublier le TR systématique",
+                "Retarder la coloscopie",
+                "Négliger le risque infectieux post-ATB"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer colorectal",
+                  "reponse": {
+                    "pour": [
+                      "Âge 55 ans",
+                      "ATCD familial 1er degré CCR",
+                      "Rectorragies mélangées aux selles",
+                      "Modification transit",
+                      "Perte de poids"
+                    ],
+                    "contre": [
+                      "Appétit conservé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hémorroïdes",
+                  "reponse": {
+                    "pour": [
+                      "ATCD hémorroïdes",
+                      "Sang rouge vif",
+                      "Constipation chronique"
+                    ],
+                    "contre": [
+                      "Sang mélangé aux selles",
+                      "Perte de poids",
+                      "Pas de douleur anale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colite à C. difficile",
+                  "reponse": {
+                    "pour": [
+                      "ATB récent",
+                      "Diarrhée sanglante aiguë"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Sang visible rare"
+                    ]
+                  }
+                },
+                {
+                  "question": "MICI",
+                  "reponse": {
+                    "pour": [
+                      "Diarrhée sanglante",
+                      "Ténesme"
+                    ],
+                    "contre": [
+                      "Âge tardif",
+                      "Pas de douleur abdominale",
+                      "Évolution courte"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Toucher rectal",
+                    "NFS, ferritine",
+                    "Coloscopie totale avec biopsies",
+                    "PCR C. difficile si diarrhée persistante",
+                    "Coproculture si suspicion infectieuse"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Suspicion forte cancer colorectal, confirmation coloscopie + biopsies"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hydratation, arrêt laxatifs",
+                      "Éducation signes alarme",
+                      "PEC colite infectieuse si confirmée"
+                    ],
+                    "specifique": [
+                      "Chirurgie curative si CCR confirmé",
+                      "Chimiothérapie adjuvante selon stade",
+                      "Radiochimiothérapie si rectum"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique + biologique",
+                    "Coloscopie post-opératoire",
+                    "Scanner TAP selon protocole",
+                    "Dépistage familial (coloscopie à 40 ans ou 10 ans avant cas index)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

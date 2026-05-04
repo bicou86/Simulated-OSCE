@@ -1,0 +1,499 @@
+{
+  "title": "German-75 - Toux",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Andrea Hollenstein, 34 ans, infirmière, se présente pour une toux persistante"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une toux qui ne part pas depuis 6 semaines"
+        },
+        {
+          "id": "a3",
+          "text": "Épisodes antérieurs de toux ou problèmes respiratoires",
+          "details": [
+            "Bronchites récurrentes [de temps en temps]",
+            "Fréquence des épisodes",
+            "Sévérité antérieure",
+            "Traitements utilisés"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation temporelle de la toux actuelle",
+          "details": [
+            "Début [il y a 6 semaines]",
+            "Évolution [s'aggrave progressivement]",
+            "Prédominance horaire",
+            "Caractère continu ou paroxystique"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de la toux et des expectorations",
+          "details": [
+            "Type de toux [productive]",
+            "Aspect des expectorations [blanchâtres]",
+            "Quantité",
+            "Odeur"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Hémoptysie",
+          "details": [
+            "Présence de sang [non]",
+            "Quantité si présente",
+            "Aspect (strié, franc)",
+            "Fréquence"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes respiratoires associés",
+          "details": [
+            "Dyspnée [non]",
+            "Sifflements respiratoires [non]",
+            "Douleurs thoraciques [non]",
+            "Sensation d'oppression"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "Facteurs aggravants [aucun]",
+            "Facteurs améliorants [aucun]",
+            "Position",
+            "Activité physique"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes ORL associés",
+          "details": [
+            "Rhinite",
+            "Pharyngite",
+            "Écoulement post-nasal [non]",
+            "Douleurs sinusiennes"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes généraux - Performance",
+          "details": [
+            "Baisse de performance [oui]",
+            "Fatigue inhabituelle",
+            "Tolérance à l'effort diminuée",
+            "Impact sur le travail"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes généraux - Signes B",
+          "details": [
+            "Perte de poids [6 kg en 2 mois]",
+            "Fièvre [parfois légère]",
+            "Sueurs nocturnes [augmentées, remarquées]",
+            "Anorexie"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes cardiovasculaires",
+          "details": [
+            "Palpitations [non]",
+            "Œdèmes [non]",
+            "Orthopnée",
+            "Dyspnée paroxystique nocturne"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes gastro-œsophagiens",
+          "details": [
+            "Reflux gastro-œsophagien [oui, souvent après les repas]",
+            "Pyrosis",
+            "Régurgitations",
+            "Dysphagie"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Exposition professionnelle et contages",
+          "details": [
+            "Contact avec patients tuberculeux [patient tuberculeux au service il y a quelques mois]",
+            "Autres expositions antérieures [oui, déjà d'autres cas]",
+            "Protection utilisée",
+            "Dépistages antérieurs"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Exposition environnementale",
+          "details": [
+            "Poussières/irritants [aucune]",
+            "Animaux",
+            "Moisissures",
+            "Tabagisme passif"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Maladies chroniques [aucune]",
+            "Immunosuppression",
+            "Hospitalisations",
+            "Chirurgies"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Traitements médicamenteux",
+          "details": [
+            "Médicaments actuels [aucun]",
+            "IEC (toux médicamenteuse)",
+            "Immunosuppresseurs",
+            "Antibiotiques récents"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "Tabagisme [15 paquets-années]",
+            "Alcool [non]",
+            "Drogues [non]",
+            "Exposition professionnelle aux toxiques"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "details": [
+            "Allergies connues [graminées, pollens]",
+            "Manifestations allergiques",
+            "Traitements antiallergiques",
+            "Tests allergologiques antérieurs"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies pulmonaires familiales [grand-père décédé d'un cancer bronchique]",
+            "Tuberculose familiale",
+            "Allergies familiales",
+            "Maladies génétiques"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Contexte social",
+          "details": [
+            "Situation familiale [vit seule]",
+            "Profession [infirmière]",
+            "Conditions de logement",
+            "Voyages récents"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée tuberculose"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "details": [
+            "Pression artérielle [134/80 mmHg]",
+            "Fréquence cardiaque [70/min]",
+            "Température [38.0°C]",
+            "Fréquence respiratoire [18/min]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiaque",
+          "details": [
+            "Palpation du précordium",
+            "Auscultation cardiaque",
+            "Recherche de signes d'insuffisance cardiaque droite",
+            "Pouls périphériques"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire - Inspection",
+          "details": [
+            "Symétrie thoracique",
+            "Utilisation des muscles accessoires",
+            "Type de respiration",
+            "Déformations"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire - Palpation",
+          "details": [
+            "Vibrations vocales (frémitus)",
+            "Points douloureux",
+            "Adénopathies sus-claviculaires",
+            "Ampliation thoracique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire - Percussion",
+          "details": [
+            "Percussion systématique",
+            "Recherche de matité",
+            "Comparaison bilatérale",
+            "Limites pulmonaires"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen pulmonaire - Auscultation",
+          "details": [
+            "Auscultation antérieure systématique",
+            "Auscultation postérieure systématique",
+            "Bruits surajoutés",
+            "Modifications du murmure vésiculaire"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des extrémités",
+          "details": [
+            "Recherche d'hippocratisme digital",
+            "Recherche de cyanose",
+            "État des ongles",
+            "Température des extrémités"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Inspection veineuse",
+          "details": [
+            "Turgescence des veines jugulaires",
+            "Reflux hépato-jugulaire",
+            "Circulation collatérale"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Recherche d'œdèmes",
+          "details": [
+            "Œdèmes des membres inférieurs",
+            "Signe du godet",
+            "Symétrie",
+            "Ascension"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Examen ORL",
+          "details": [
+            "Inspection de la gorge",
+            "Otoscopie",
+            "Rhinoscopie antérieure",
+            "Palpation sinusienne"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Palpation des aires ganglionnaires",
+          "details": [
+            "Ganglions cervicaux",
+            "Ganglions sus-claviculaires",
+            "Ganglions axillaires",
+            "Autres territoires"
+          ]
+        },
+        {
+          "id": "e12",
+          "text": "Examen abdominal",
+          "details": [
+            "Inspection",
+            "Auscultation",
+            "Palpation (hépatomégalie, splénomégalie)",
+            "Percussion"
+          ]
+        },
+        {
+          "id": "e13",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen complet orienté pathologie respiratoire"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "details": [
+            "Tuberculose pulmonaire",
+            "Justification épidémiologique",
+            "Justification clinique",
+            "Degré de contagiosité"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Asthme par allergie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Spirométrie avec test de réversibilité, peak flow"
+                  },
+                  {
+                    "text": "Reflux gastro-œsophagien",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie, gastroscopie"
+                  },
+                  {
+                    "text": "Bronchite chronique",
+                    "cause": "Arguments POUR:\n\t□ tabagisme",
+                    "test": "→ Radiographie thoracique, spirométrie"
+                  },
+                  {
+                    "text": "Néoplasie pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Sarcoïdose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques pour la tuberculose",
+          "details": [
+            "Radiographie thoracique",
+            "Test de Mantoux/IGRA",
+            "Culture des expectorations (3 échantillons)",
+            "PCR tuberculose"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Reconnaissance radiologique",
+          "details": [
+            "Identification des lésions tuberculeuses",
+            "Localisation (apex)",
+            "Cavernes",
+            "Infiltrats"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Autres examens complémentaires",
+          "details": [
+            "NFS, CRP",
+            "Fonction hépatique et rénale (pré-thérapeutique)",
+            "Sérologie VIH",
+            "Test de grossesse si femme en âge de procréer"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement antituberculeux",
+          "details": [
+            "Quadrithérapie initiale (RHEZ)",
+            "Durée du traitement (6 mois minimum)",
+            "Surveillance des effets secondaires",
+            "DOT (Directly Observed Therapy)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Mesures d'isolement et de santé publique",
+          "details": [
+            "Hospitalisation en chambre d'isolement respiratoire",
+            "Port du masque FFP2",
+            "Déclaration obligatoire",
+            "Enquête d'entourage"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Information et éducation du patient",
+          "details": [
+            "Explication de la maladie",
+            "Importance de l'observance",
+            "Durée du traitement",
+            "Mesures de protection de l'entourage"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Suivi prévu",
+          "details": [
+            "Contrôles réguliers",
+            "Surveillance de l'efficacité",
+            "Dépistage des effets secondaires",
+            "Suivi de l'observance"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète d'une suspicion de tuberculose"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Radiographie thoracique - Tuberculose",
+        "description": "Radiographie de face montrant des infiltrats apicaux typiques de tuberculose pulmonaire",
+        "data": "grilles_generees/images/toux-i-img.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,847 @@
+{
+  "title": "AMBOSS-5 - Nausées - Femme 19 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Sophia Benedikt, femme de 19 ans, consultante pour des nausées",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "122/68 mmHg",
+      "fc": "75 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je me sens malade de l'estomac tout le temps"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des nausées et vomissements",
+          "binaryOnly": false,
+          "details": [
+            "Vomissements [Je dois vomir 1 à 2 fois la plupart des jours]",
+            "Couleur [Cela arrive plus quand mon estomac est vide, donc c'est généralement clair]",
+            "Sang [Non]",
+            "Début [Ça dure depuis 10 jours environ]",
+            "Constant/intermittent [C'est pire le matin, mais je dirais que je me sens assez mal toute la journée]",
+            "Événements précipitants [Aucun]",
+            "Progression [Je pense que ça empire]",
+            "Épisodes antérieurs [Non, jamais]",
+            "Facteurs améliorants [En fait, ça aide si je mange un petit quelque chose quand je sens les nausées arriver. N'est-ce pas étrange ?]",
+            "Facteurs aggravants [Les odeurs fortes semblent aggraver]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "patientComment": "Oui, en fait, maintenant que vous demandez. J'ai dû uriner tout le temps depuis 1 à 2 semaines et vraiment soudainement parfois"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Gêne urinaire [Non]",
+            "Voyage récent [Non]",
+            "Œdème des chevilles [Quoi ? Non]",
+            "Fièvre/frissons [Non]",
+            "Fatigue [Oui, j'ai été vraiment fatiguée]",
+            "Éruption/changements cutanés [Non]",
+            "Douleurs articulaires [Non]",
+            "Troubles du transit [Non]",
+            "Appétit [Je n'ai pas d'appétit, mais si je mange, je me sens mieux. La seule chose que j'ai vraiment envie pour une raison quelconque, ce sont les bananes]",
+            "Variations pondérales [Je ne suis pas sûre. Je n'ai pas de balance, mais je me sens ballonnée]",
+            "Infections récentes [Non]",
+            "Douleurs abdominales [Hmm, mon estomac me fait un peu mal depuis 4-5 jours. C'est presque comme des crampes menstruelles, mais je n'ai pas mes règles]",
+            "Douleurs dorsales [Non]",
+            "Augmentation/sensibilité des seins [J'aimerais bien]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Je ne peux pas porter de bijoux avec du nickel car cela me donne une mauvaise éruption"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Parents [Mes parents vont tous les deux bien]",
+            "Fratrie [Ma petite sœur a le syndrome de Down]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [J'obtiens mon baccalauréat en mathématiques]",
+            "Domicile [Je vis dans un appartement avec une colocataire]",
+            "Alcool [Je n'aime pas boire. L'alcool me donne toujours de mauvais maux de tête]",
+            "Drogues illicites [Non, je pense que c'est stupide]",
+            "Tabac [Non]",
+            "Alimentation [Je mange principalement à la cafétéria de mon école]",
+            "Contacts malades [Ma colocataire a été vraiment malade de l'estomac il y a 3 semaines pendant environ 2 jours. J'ai probablement ce qu'elle avait]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Histoire sexuelle et gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Avec qui [Mon petit ami]",
+            "Hommes ou femmes [Hommes]",
+            "Nombre de partenaires dans l'année [Cinq]",
+            "Protection [Parfois. Mais j'ai un implant contraceptif donc ce n'est pas vraiment important]",
+            "Quand l'implant a-t-il été posé [Il y a environ 4 ans]",
+            "IST antérieures [Non]",
+            "Douleurs pendant les rapports [Hmm, un peu la dernière fois que j'ai eu des rapports sexuels]",
+            "Dernières règles [Je dirais il y a environ 6 semaines ? Peut-être un peu plus]",
+            "Ménarche [Quand j'avais 12 ans]",
+            "Durée des règles [2-3 jours]",
+            "Règles régulières [Oui. Habituellement toutes les 4 semaines, mais je suppose que cette fois ce n'est pas aussi régulier]",
+            "Combien de tampons par jour [J'utilise des serviettes. Mais peut-être 3 ?]",
+            "Pertes vaginales [Un peu plus que la quantité habituelle ces derniers temps. Mais c'est toujours la même couleur]",
+            "Démangeaisons vaginales [Non]",
+            "Grossesses [Jamais !]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du dos",
+          "binaryOnly": true,
+          "details": [
+            "Examen de la sensibilité de l'angle costo-vertébral"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Légère sensibilité à la palpation dans les quadrants inférieurs droit et gauche]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Signes d'appendicite",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes gynécologiques (priorité élevée)",
+                "items": [
+                  {
+                    "text": "Grossesse normale",
+                    "cause": "Arguments POUR:\n\t□ Dernières règles il y a 6+ semaines (cycle habituellement régulier de 4 semaines)\n\t□ Nausées matinales (pires le matin)\n\t□ Vomissements 1-2x/jour\n\t□ Amélioration en mangeant\n\t□ Aggravation par les odeurs fortes\n\t□ Envies spécifiques (bananes)\n\t□ Pollakiurie urgente\n\t□ Fatigue\n\t□ Sensation de ballonnement\n\t□ Implant posé il y a 4 ans (efficacité diminuée)\n\t□ Protection inconstante",
+                    "test": "→ Test β-hCG sérique + US pelvienne"
+                  },
+                  {
+                    "text": "Maladie inflammatoire pelvienne (MIP)",
+                    "cause": "Arguments POUR:\n\t□ Femme jeune sexuellement active\n\t□ Multiples partenaires (5 dans l'année)\n\t□ Protection inconstante\n\t□ Dyspareunie récente\n\t□ Douleurs pelviennes bilatérales\n\t□ Pertes vaginales augmentées\n\t□ Nausées/vomissements\n\t□ Pollakiurie\nArguments CONTRE:\n\t□ Pas de fièvre",
+                    "test": "→ Examen pelvien + prélèvements cervicaux"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "Arguments POUR:\n\t□ Symptômes de grossesse précoce\n\t□ Douleurs pelviennes\n\t□ Implant contraceptif (risque légèrement augmenté)\nArguments CONTRE:\n\t□ Douleurs bilatérales (habituellement unilatérales dans GEU)",
+                    "test": "→ β-hCG + US transvaginale"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "Arguments POUR:\n\t□ Pollakiurie urgente\n\t□ Sensibilité sus-pubienne\nArguments CONTRE:\n\t□ Pas de dysurie",
+                    "test": "→ Analyse d'urine + culture"
+                  },
+                  {
+                    "text": "Cervicite",
+                    "cause": "Arguments POUR:\n\t□ Pertes vaginales augmentées\n\t□ Multiples partenaires\nArguments CONTRE:\n\t□ Pas de changement de couleur des pertes",
+                    "test": "→ Examen pelvien + prélèvements"
+                  },
+                  {
+                    "text": "Appendicite",
+                    "cause": "Arguments POUR:\n\t□ Douleurs abdominales\nArguments CONTRE:\n\t□ Douleurs bilatérales\n\t□ Pas de fièvre",
+                    "test": "→ Examen clinique + US/CT si suspicion"
+                  },
+                  {
+                    "text": "Hyperemesis gravidarum",
+                    "cause": "Si grossesse confirmée et vomissements sévères",
+                    "test": "→ Bilan électrolytique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen pelvien [obligatoire chez toute femme avec symptômes gynécologiques]",
+            "Prélèvements cervicaux et urétraux pour PCR gonocoque et chlamydia [confirme les organismes causaux les plus probables de MIP]",
+            "Analyse d'urine [pour exclure une infection urinaire]",
+            "β-hCG sérique [peut détecter une grossesse 6-9 jours après la fécondation, plus sensible que le test urinaire]",
+            "FSC, VS, électrolytes [Leucocytose et VS élevée peuvent indiquer une cause infectieuse. Vomissements récurrents nécessitent bilan électrolytique]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "US abdominale [pour évaluer grossesse normale et extra-utérine et autres causes de douleurs abdominales basses (abcès, appendicite)]",
+            "US transvaginale [pour évaluer grossesse normale et extra-utérine]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les pratiques sexuelles sûres",
+            "Réaction appropriée au défi concernant la grossesse"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge des nausées de grossesse",
+                "content": "• Gingembre\n• Vitamine B6 (pyridoxine): 10-25 mg × 3/j ; Doxylamine + pyridoxine (Diclectin) si insuffisant\n• Métoclopramide ou ondansétron si réfractaire\n• Éviter odeurs fortes, aliments gras"
+              },
+              {
+                "title": "Hyperemesis gravidarum sévère",
+                "content": "• Hospitalisation si perte poids  5% ou cétonurie\n• Réhydratation IV: Ringer lactate ou NaCl 0.9%\n• Supplémentation: Thiamine (B1) 100mg IM/IV\n• Antiémétiques IV: Ondansétron 4-8mg x3/j\n• Corticoïdes si échec: Prednisolone 40mg/j x3j\n• Surveillance: Ionogramme, fonction rénale, cétones"
+              },
+              {
+                "title": "Suivi de grossesse précoce",
+                "content": "• Supplémentation acide folique × 400 μg/jour dès confirmation\n• Échographie de datation: 11-13 SA pour biométrie\n• Recherche facteurs de risque: Prise médicamenteuse, alcool\n• Information sur dépistages proposés: (trisomie 21)\n• Contraception post-partum à discuter précocement"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Si l'examinateur dit que vous pourriez être enceinte",
+          "content": "[Si l'examinateur dit que vous pourriez être enceinte, agissez bouleversée et dites que ce n'est pas possible]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mlle Benedikt, je comprends votre choc et votre surprise d'apprendre que vous pourriez être enceinte. Je vois que ce n'est pas quelque chose que vous vous attendiez à entendre. Puisque ce n'est qu'une des plusieurs explications possibles pour vos symptômes, faisons d'abord quelques tests avant de tirer des conclusions, puis regardons les résultats ensemble. Je peux vous assurer que quels que soient les résultats, je serai là pour décider avec vous des prochaines étapes."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Pertes cervicales dans la gonorrhée (vue au spéculum)",
+        "description": "La surface du col utérin est recouverte de pertes purulentes blanc-jaunâtre. L'orifice externe de l'utérus est inflammé et rouge. Ces résultats sont compatibles avec la gonorrhée.",
+        "data": "grilles_generees/html/images/AMBOSS-5-img1-Cervical discharge in gonorrhea (speculum view).jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Échographie du premier trimestre, signe du double sac",
+        "description": "Échographie pelvienne (sac gestationnel). L'embryon (superposition verte), ou pôle fœtal, mesure 3 mm, ce qui correspond à un âge gestationnel estimé d'environ 5 semaines. Le sac vitellin (superposition rouge) est visible adjacent à l'embryon. Superposition bleue : signe du double sac ; E : endomètre.",
+        "data": "grilles_generees/html/images/AMBOSS-5-img2-First trimester ultrasound, double sac sign.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Signe de l'anneau tubaire (signe du blob) de grossesse ectopique",
+        "description": "Échographie pelvienne (transvaginale ; plan oblique). Dans l'annexe droite, une grossesse ectopique est visible sous forme d'une masse arrondie adjacente à l'ovaire droit. Des échos sont visibles dans le liquide de l'espace péritonéal, indiquant un hémopéritoine avec du sang coagulé. Une petite structure linéaire hyperéchogène située centralement dans la cavité endométriale représente la portion visible d'un DIU.",
+        "data": "grilles_generees/html/images/AMBOSS-5-img3-Tubal ring sign (blob sign) of ectopic pregnancy.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Sophia Benedikt",
+      "age": "19 ans",
+      "contexte": "Étudiante en mathématiques consultant au cabinet médical pour nausées persistantes",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens malade de l'estomac tout le temps.",
+        "autreChose": "Ça dure depuis environ 10 jours et ça empire."
+      },
+      "consignes": [
+        "Vous pensez que les médecins sont surestimés et ne croyez pas vraiment aux conclusions que l'examinateur tire sur votre état.",
+        "Quand l'examinateur appuie sur les parties inférieures droite et gauche de votre abdomen, dites que ça fait un peu mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Si l'examinateur dit que vous pourriez être enceinte, agissez bouleversée et dites que ce n'est pas possible."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Nausées depuis 10 jours",
+          "Vomissements 1-2 fois par jour",
+          "Pire le matin mais persistant toute la journée",
+          "Amélioration en mangeant",
+          "Aggravation par les odeurs fortes",
+          "Envies de bananes"
+        ],
+        "symptomesAssocies": [
+          "Pollakiurie urgente depuis 1-2 semaines",
+          "Fatigue importante",
+          "Sensation de ballonnement",
+          "Crampes abdominales depuis 4-5 jours",
+          "Augmentation des pertes vaginales"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer du scepticisme face aux questions médicales",
+          "Demander des clarifications pour tout terme médical",
+          "Être surprise par la suggestion de grossesse",
+          "Mentionner l'implant contraceptif avec confiance"
+        ],
+        "durantStatus": [
+          "Légère douleur à la palpation des quadrants inférieurs",
+          "Coopération normale pour l'examen",
+          "Pas de signes de péritonite"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Étudiante de 19 ans avec nausées matinales, pollakiurie et aménorrhée de 6 semaines. Implant contraceptif posé il y a 4 ans (efficacité potentiellement diminuée). Multiples partenaires sexuels avec protection inconstante. Tableau clinique très évocateur de grossesse précoce malgré contraception.",
+      "rolesInterventions": [
+        "Test de grossesse : β-hCG positif à 2500 UI/L",
+        "Examen pelvien : col bleuâtre (signe de Chadwick), utérus légèrement augmenté",
+        "US transvaginale : sac gestationnel intra-utérin visible"
+      ],
+      "pointsCles": [
+        "Toute femme en âge de procréer avec nausées = test de grossesse",
+        "L'implant contraceptif n'est pas infaillible après 3-4 ans",
+        "Les symptômes classiques de grossesse sont présents",
+        "La patiente nie la possibilité de grossesse (défi psychologique)",
+        "Importance d'exclure une grossesse extra-utérine"
+      ],
+      "pieges": [
+        "Se fier uniquement à la contraception par implant",
+        "Ne pas faire de test de grossesse systématique",
+        "Ignorer les signes classiques de grossesse",
+        "Mauvaise gestion du déni de grossesse",
+        "Oublier d'exclure une GEU ou MIP"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Grossesse précoce probable malgré implant contraceptif"
+        },
+        {
+          "titre": "Nausées et vomissements de la grossesse",
+          "contenu": "Symptôme le plus fréquent du premier trimestre :",
+          "points": [
+            "Touche 70-80% des femmes enceintes",
+            "Début typique : 4-7 semaines de gestation",
+            "Pic : 8-12 semaines, résolution habituelle vers 16-20 semaines",
+            "Nausées matinales classiques mais peuvent persister toute la journée",
+            "Facteurs aggravants : odeurs, estomac vide, fatigue",
+            "Hyperemesis gravidarum : forme sévère (3% des grossesses)"
+          ]
+        },
+        {
+          "titre": "Efficacité de l'implant contraceptif",
+          "contenu": "Nexplanon/Implanon : contraception réversible de longue durée :",
+          "points": [
+            "Efficacité théorique : > 99% pendant 3 ans",
+            "Durée approuvée : 3 ans (certaines études montrent efficacité jusqu'à 5 ans)",
+            "Après 4 ans : efficacité diminuée, risque de grossesse augmenté",
+            "Mécanisme : libération continue d'étonogestrel",
+            "Échecs possibles : pose incorrecte, interactions médicamenteuses, poids élevé",
+            "Recommandation : remplacement après 3 ans"
+          ]
+        },
+        {
+          "titre": "Signes et symptômes de grossesse précoce",
+          "contenu": "Tableau clinique caractéristique présent chez cette patiente :",
+          "points": [
+            "Aménorrhée : signe le plus fiable (6 semaines ici)",
+            "Nausées/vomissements : 70-80% des grossesses",
+            "Pollakiurie : compression vésicale par utérus gravide",
+            "Fatigue : augmentation de la progestérone",
+            "Sensibilité mammaire : stimulation hormonale",
+            "Envies alimentaires : modifications gustatives hormonales",
+            "Crampes pelviennes légères : implantation et croissance utérine"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel des nausées chez la jeune femme",
+          "contenu": "Toujours penser grossesse en premier :",
+          "points": [
+            "Grossesse (normale ou pathologique) : test β-hCG systématique",
+            "MIP : fièvre, douleurs pelviennes, pertes purulentes",
+            "Gastro-entérite : diarrhée associée, contexte épidémique",
+            "Infection urinaire : dysurie, douleurs sus-pubiennes",
+            "Appendicite : douleur focalisée FID, défense",
+            "Troubles fonctionnels : stress, anxiété (diagnostic d'exclusion)"
+          ]
+        },
+        {
+          "titre": "Grossesse extra-utérine (GEU)",
+          "contenu": "Urgence à toujours exclure :",
+          "points": [
+            "1-2% des grossesses, première cause de mortalité T1",
+            "Facteurs de risque : MIP, chirurgie tubaire, GEU antérieure",
+            "Contraception par implant : risque relatif légèrement augmenté",
+            "Triade classique : aménorrhée, douleurs, métrorragies",
+            "Diagnostic : β-hCG + US transvaginale",
+            "Seuil discriminatoire : β-hCG > 1500-2000 UI/L sans sac intra-utérin"
+          ]
+        },
+        {
+          "titre": "Approche de la patiente niant une grossesse possible",
+          "contenu": "Défi psychologique fréquent nécessitant tact et empathie :",
+          "points": [
+            "Valider les émotions : choc, déni, anxiété sont normaux",
+            "Expliquer la possibilité malgré contraception",
+            "Proposer le test comme première étape diagnostique",
+            "Assurer confidentialité et soutien",
+            "Explorer les options si grossesse confirmée",
+            "Ne pas juger, rester neutre et professionnel"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Grossesse confirmée : Supplémentation en acide folique 0.4mg/j",
+        "Nausées légères : Mesures hygiéno-diététiques (repas fractionnés, gingembre)",
+        "Nausées modérées : Doxylamine + pyridoxine (Diclectin)",
+        "Hyperemesis gravidarum : Hospitalisation, réhydratation IV, antiémétiques",
+        "Retrait de l'implant si grossesse désirée ou consultation planning familial"
+      ],
+      "examensComplementaires": [
+        "β-hCG sérique : Double tous les 48h en grossesse normale précoce",
+        "US transvaginale : Sac gestationnel visible si β-hCG > 1500-2000 UI/L",
+        "US abdominale : Moins sensible mais acceptable si refus transvaginale",
+        "Analyse d'urine : Exclure infection urinaire concomitante",
+        "FSC, ionogramme si vomissements importants"
+      ]
+    },
+    "resume": {
+      "titre": "🤰 Nausées et vomissements gravidiques – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Nausées matinales (souvent dès la 5e-6e SA, pic à 9 SA)",
+                "Vomissements modérés sans impact sévère sur l’état général",
+                "Pas de fièvre, ni de douleurs abdominales intenses",
+                "Pas d’hématémèse, ni de perte de poids marquée"
+              ]
+            },
+            {
+              "titre": "Contexte de grossesse",
+              "points": [
+                "Aménorrhée récente",
+                "Test de grossesse positif",
+                "Grossesse désirée ou non",
+                "Antécédents d’hyperémèse gravidarum ou nausées sévères",
+                "Grossesse multiple : plus fréquent"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Éléments rassurants",
+              "points": [
+                "État général conservé",
+                "PA et FC normaux, pas de signes de déshydratation",
+                "Pas de sensibilité abdominale localisée",
+                "Poids stable ou perte < 5 % du poids initial"
+              ]
+            },
+            {
+              "titre": "Points de vigilance",
+              "points": [
+                "Recherche de signes de gravité : tachycardie, hypotension orthostatique",
+                "Évaluation de l’hydratation, de l’état neurologique",
+                "Surveillance du poids si vomissements répétés"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de confirmation",
+              "points": [
+                "β-HCG urinaire ou plasmatique pour confirmer la grossesse",
+                "Échographie pelvienne (datation, viabilité, exclusion GEU ou molaire)"
+              ]
+            },
+            {
+              "titre": "Si suspicion d’hyperémèse gravidarum",
+              "points": [
+                "Ionogramme sanguin : rechercher hyponatrémie, hypokaliémie",
+                "Cétonurie (signe de jeûne prolongé)",
+                "Bilan hépatique si vomissements sévères"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures hygiéno-diététiques",
+              "points": [
+                "Repas fractionnés, éviter aliments gras ou épicés",
+                "Hydratation régulière (petites quantités fréquentes)",
+                "Gingembre, tisanes, éviter les odeurs déclenchantes"
+              ]
+            },
+            {
+              "titre": "Traitement médicamenteux (si gêne fonctionnelle)",
+              "points": [
+                "1ère intention : doxylamine + pyridoxine (Vit. B6)",
+                "Alternatives : métoclopramide, ondansétron (2e ligne)",
+                "Antihistaminiques (méclozine)",
+                "Surveillance avant traitement par antiémétiques"
+              ]
+            },
+            {
+              "titre": "Cas sévères (hyperémèse)",
+              "points": [
+                "Hospitalisation",
+                "Réhydratation IV, correction des troubles ioniques",
+                "Traitement antiémétique IV",
+                "Surveillance pondérale et biologique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Nausées fréquentes au 1er trimestre = souvent bénignes",
+            "Rechercher systématiquement signes de gravité",
+            "Penser à β-HCG en cas de nausées chez femme en âge de procréer",
+            "Exclure grossesse extra-utérine ou molaire au moindre doute",
+            "Adapter le traitement à la sévérité des symptômes"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Âge gestationnel ? Aménorrhée depuis quand ?",
+                "Nausées/vomissements : fréquence, intensité, impact sur alimentation ?",
+                "Perte de poids récente ?",
+                "Signes associés : douleurs abdominales, métrorragies, fièvre ?",
+                "ATCD : hyperémèse gravidarum, grossesse multiple ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, T°, SpO₂",
+                "Évaluation de l’hydratation (muqueuses, pli cutané, diurèse)",
+                "Surveillance du poids",
+                "Examen abdominal (recherche sensibilité, défense)",
+                "Échographie pelvienne pour confirmer viabilité et exclure GEU ou molaire"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Mesures hygiéno-diététiques (repas fractionnés, hydratation, éviter odeurs)",
+                "Traitement antiémétique adapté (doxylamine-pyridoxine en 1ère intention)",
+                "Hospitalisation si hyperémèse : réhydratation IV, correction ionique, surveillance"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Nausées persistantes (grossesse précoce)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractériser nausées/vomissements : début, fréquence, évolution, facteurs aggravants/soulageants",
+            "Symptômes associés → pollakiurie, fatigue, aménorrhée, douleurs pelviennes",
+            "ATCD médicaux, chirurgicaux, gynéco/obstétricaux",
+            "Contraception, fiabilité, cycles menstruels",
+            "Examen clinique → constantes, abdomen, pelvien si nécessaire",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires urgents → β-hCG, échographie pelvienne, NFS/ionogramme si vomissements sévères",
+            "Prise en charge → mesures hygiéno-diététiques, antiémétiques, suivi grossesse"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : PREGNANT",
+            "elements": [
+              "P = Pollakiurie",
+              "R = Retard de règles",
+              "E = Envies alimentaires (bananes ici)",
+              "G = GI symptoms (nausées, vomissements)",
+              "N = Nipple/breast changes (sensibilité, parfois absente au début)",
+              "A = Aménorrhée",
+              "N = Nausées matinales typiques",
+              "T = Test β-hCG systématique"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mlle Sophia Benedikt, une étudiante de 19 ans, qui consulte pour des nausées persistantes depuis une dizaine de jours. \n\nElle explique qu’elle se sent nauséeuse pratiquement toute la journée, avec des vomissements une à deux fois par jour. Les symptômes sont pires le matin, mais persistent ensuite. Elle remarque que manger quelque chose, notamment des bananes dont elle a particulièrement envie, améliore un peu ses symptômes. En revanche, les odeurs fortes les aggravent. Elle dit que cela empire progressivement.\n\nDepuis une à deux semaines, elle urine très fréquemment, parfois de façon urgente, et elle se sent beaucoup plus fatiguée que d’habitude. Elle décrit aussi une sensation de ballonnement et des douleurs abdominales diffuses de type crampes depuis 4 à 5 jours, qu’elle compare à des douleurs menstruelles. Elle précise ne pas avoir eu ses règles depuis environ 6 semaines, alors que ses cycles sont habituellement réguliers toutes les 4 semaines.\n\nPour ses antécédents, elle n’a pas de maladies connues, pas d’antécédents chirurgicaux, pas d’allergies médicamenteuses. Elle a un implant contraceptif posé il y a environ 4 ans et utilise la protection de manière inconstante. Elle n’a jamais été enceinte. Elle est sexuellement active avec son petit ami actuel et a eu plusieurs partenaires au cours de l’année écoulée. Elle nie tout antécédent d’IST. Son dernier frottis date de moins d’un an et était normal.\n\nElle ne fume pas, ne consomme pas d’alcool ni de drogues. Elle vit avec une colocataire et dit que son mode de vie est sain.\n\nÀ l’examen, ses constantes sont normales : température 37 °C, TA 122/68, pouls 75, FR 16. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est souple, légèrement sensible à la palpation dans les quadrants inférieurs, sans défense ni contracture. Pas de signes de déshydratation clinique.\n\nEn résumé, il s’agit d’une jeune femme de 19 ans, avec aménorrhée de 6 semaines, nausées et vomissements typiques, pollakiurie, fatigue et douleurs pelviennes légères, dans un contexte d’implant contraceptif ancien et de protection inconstante. Mon hypothèse principale est une grossesse intra-utérine précoce. Les diagnostics différentiels incluent une grossesse extra-utérine, une maladie inflammatoire pelvienne, une infection urinaire ou une appendicite.\n\nComme examens complémentaires, je demanderais en urgence un test β-hCG plasmatique, une échographie pelvienne transvaginale pour confirmer la localisation et la viabilité de la grossesse, ainsi qu’une NFS et un ionogramme si les vomissements persistent. Un examen pelvien avec prélèvements cervicaux serait indiqué si suspicion d’infection associée.\n\nEn termes de prise en charge, je commencerais par rassurer la patiente, proposer des mesures hygiéno-diététiques simples (repas fractionnés, éviter les odeurs déclenchantes, hydratation régulière), puis un traitement antiémétique si besoin (pyridoxine ± doxylamine). Je mettrais en place une supplémentation en acide folique et organiserais un suivi gynécologique pour confirmer et surveiller l’évolution de la grossesse."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Sophia Benedikt, 19 ans, consulte pour nausées et vomissements persistants depuis 10 jours.\n\nB (Background) : Cycles habituellement réguliers, aménorrhée de 6 semaines, implant contraceptif posé il y a 4 ans, protection inconstante.\n\nA (Assessment) : Suspicion de grossesse intra-utérine précoce. DD : GEU, MIP, infection urinaire, appendicite.\n\nR (Recommendation) : β-hCG plasmatique, échographie pelvienne, NFS/ionogramme si vomissements sévères, mise en place suivi gynécologique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Grossesse précoce = les 3N",
+              "points": [
+                "Nausées",
+                "No rules (aménorrhée)",
+                "Nycturie/pollakiurie"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque de GEU → RISK",
+              "points": [
+                "R = Rapport sexuel non protégé (IST antérieures)",
+                "I = Implant contraceptif (risque légèrement ↑)",
+                "S = Surgery tubaire",
+                "K = Kyste/antécédents GEU"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas proposer de test de grossesse chez une femme en âge de procréer",
+                "Croire à tort que l’implant contraceptif exclut une grossesse",
+                "Oublier d’exclure GEU ou MIP",
+                "Ignorer le vécu psychologique d’une grossesse imprévue"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Grossesse intra-utérine précoce",
+                  "reponse": {
+                    "pour": [
+                      "Aménorrhée de 6 semaines",
+                      "Nausées matinales typiques",
+                      "Vomissements 1-2/jour",
+                      "Pollakiurie",
+                      "Fatigue",
+                      "Envies alimentaires inhabituelles"
+                    ],
+                    "contre": [
+                      "Contraception par implant (mais posé il y a 4 ans → efficacité réduite)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Grossesse extra-utérine",
+                  "reponse": {
+                    "pour": [
+                      "Symptômes de grossesse précoce",
+                      "Douleurs pelviennes"
+                    ],
+                    "contre": [
+                      "Douleurs bilatérales et diffuses",
+                      "Pas de métrorragies rapportées"
+                    ]
+                  }
+                },
+                {
+                  "question": "Maladie inflammatoire pelvienne",
+                  "reponse": {
+                    "pour": [
+                      "Multipartenariat",
+                      "Dyspareunie récente",
+                      "Pertes vaginales augmentées"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de douleurs pelviennes marquées"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infection urinaire",
+                  "reponse": {
+                    "pour": [
+                      "Pollakiurie"
+                    ],
+                    "contre": [
+                      "Pas de brûlures mictionnelles",
+                      "Pas de fièvre"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "β-hCG plasmatique (diagnostic de certitude)",
+                    "Échographie pelvienne transvaginale",
+                    "NFS, ionogramme si vomissements importants",
+                    "Analyse d’urine ± ECBU",
+                    "Examen pelvien avec prélèvements cervicaux si suspicion d’IST"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Grossesse intra-utérine précoce"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Mesures hygiéno-diététiques",
+                      "Antiémétiques si nécessaire (pyridoxine ± doxylamine)",
+                      "Acide folique systématique",
+                      "Réassurance et explications claires"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation gynécologique précoce",
+                    "Échographie de datation à 11-13 SA",
+                    "Dépistages proposés (trisomie, infections)",
+                    "Éducation sur signes d’alerte (GEU, hyperemesis gravidarum)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

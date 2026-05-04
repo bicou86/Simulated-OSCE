@@ -1,0 +1,337 @@
+{
+  "title": "German-11 - Chute",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Monsieur Faller, 89 ans, amené par l'ambulance aux urgences car il a chuté à domicile. Une voisine l'a trouvé et a appelé l'ambulance. Il est orienté et éveillé et peut vous renseigner lui-même sur ce qui s'est passé.",
+    "vitals": {
+      "ta": "102/80 mmHg",
+      "fc": "80 bpm",
+      "temperature": "37.8°C",
+      "sao2": "Bonne"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Événement",
+          "patientComment": "Chute à domicile",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Temporalité",
+          "patientComment": "Il y a 2 heures",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Premier épisode",
+          "patientComment": "Non, déjà chuté environ 2-3 fois",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Douleurs",
+          "patientComment": "À la main un peu → petite ecchymose + bosse à la tête",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Perte de connaissance",
+          "patientComment": "Non, a trébuché, sans obstacle",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Fièvre",
+          "patientComment": "Non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Sensation de malaise",
+          "patientComment": "Non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Vision",
+          "patientComment": "Plus comme avant, mais lecture encore possible",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments",
+          "patientComment": "Somnifère la nuit, sinon seulement les habituels",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Autres symptômes",
+          "details": [
+            "Faiblesse",
+            "Troubles sensitifs",
+            "Céphalées",
+            "Vertiges",
+            "Palpitations",
+            "Dyspnée"
+          ],
+          "patientComment": "Aucun",
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Diabète [depuis 15 ans, HbA1c 6.7% sous sulfonylurée]",
+            "Gonarthrose bilatérale",
+            "Hypertension artérielle",
+            "Problème cardiaque"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "details": [
+            "Tramadol",
+            "Somnifère",
+            "Sulfonylurée",
+            "Aspirine"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a14",
+          "text": "Maladies récentes/Hospitalisations",
+          "patientComment": "Aucune",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes alimentaires",
+          "patientComment": "Repas de midi du service de portage",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Toxiques",
+          "patientComment": "Non-fumeur, pas d'alcool, pas de drogues",
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Condition physique",
+          "patientComment": "Peut s'habiller seul, monte encore les escaliers de son appartement, besoin d'aide pour préparer repas, se laver, nettoyer et faire les courses",
+          "binaryOnly": true
+        },
+        {
+          "id": "a18",
+          "text": "Allergies",
+          "patientComment": "Aucune",
+          "binaryOnly": true
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse familiale",
+          "patientComment": "Sans particularité",
+          "binaryOnly": true
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse sociale",
+          "patientComment": "Vit seul au dernier étage, aide à domicile 2x/jour, veuf, sans enfants",
+          "binaryOnly": true
+        },
+        {
+          "id": "a21",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Status cardiaque et pulmonaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Neurostatus",
+          "details": [
+            "Ataxie",
+            "Tests cérébelleux",
+            "Sensibilité",
+            "Motricité"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "e3",
+          "text": "Test de vision",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels - Chute chez patient âgé",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Avec perte de connaissance",
+                "items": [
+                  {
+                    "text": "Causes cardiaques",
+                    "cause": "□ Sténose aortique\n□ Bloc AV\n□ Tachycardie\n□ Bradycardie",
+                    "test": "→ ECG, échocardiographie, Holter"
+                  },
+                  {
+                    "text": "Causes neurocardiogènes",
+                    "cause": "□ Hypotension orthostatique",
+                    "test": "→ Test d'orthostatisme, tilt-test"
+                  },
+                  {
+                    "text": "Causes neurologiques",
+                    "cause": "□ Épilepsie\n□ Hémorragie cérébrale",
+                    "test": "→ EEG, CT cérébral, IRM cérébrale"
+                  },
+                  {
+                    "text": "Cause métabolique",
+                    "cause": "□ Hypoglycémie",
+                    "test": "→ Glycémie capillaire, bilan métabolique"
+                  }
+                ]
+              },
+              {
+                "name": "Sans perte de connaissance",
+                "items": [
+                  {
+                    "text": "Causes mécaniques",
+                    "cause": "□ Trébuchement",
+                    "test": "→ Examen clinique, évaluation environnement"
+                  },
+                  {
+                    "text": "Polyneuropathie",
+                    "cause": "□ Diabète\n□ Alcool",
+                    "test": "→ EMG, glycémie, vitamine B12"
+                  },
+                  {
+                    "text": "Ataxie",
+                    "cause": "□ Cérébelleuse\n□ Spinale",
+                    "test": "→ IRM cérébrale et médullaire"
+                  },
+                  {
+                    "text": "Autres causes neurologiques",
+                    "cause": "□ Hydrocéphalie à pression normale\n□ Carence en vitamine B12\n□ Encéphalopathie de Wernicke",
+                    "test": "→ IRM cérébrale, vitamine B12, thiamine"
+                  },
+                  {
+                    "text": "Troubles visuels",
+                    "cause": "□ Baisse d'acuité visuelle",
+                    "test": "→ Examen ophtalmologique"
+                  },
+                  {
+                    "text": "Médicaments",
+                    "cause": "□ Benzodiazépines\n□ Opiacés",
+                    "test": "→ Révision du traitement"
+                  },
+                  {
+                    "text": "AVC/AIT avec faiblesse",
+                    "cause": "□ Déficit neurologique focal",
+                    "test": "→ CT cérébral, IRM cérébrale"
+                  },
+                  {
+                    "text": "Tumeurs",
+                    "cause": "□ Cérébrales\n□ Médullaires",
+                    "test": "→ IRM cérébrale et médullaire"
+                  },
+                  {
+                    "text": "Inflammation",
+                    "cause": "□ Processus inflammatoire",
+                    "test": "→ VS, CRP, bilan inflammatoire"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins six causes = 2 pts, trois à cinq = 1 pt, moins de trois = 0 pt"
+        },
+        {
+          "id": "m2",
+          "text": "Examens de laboratoire",
+          "details": [
+            "NFS",
+            "Marqueurs inflammatoires",
+            "Vitamine B12",
+            "Glycémie"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "ECG",
+            "Radiographie thoracique"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Bilan urinaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Imagerie cérébrale",
+          "patientComment": "CT/IRM cérébral (exclusion hémorragie, tumeur, etc.)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Échographie des carotides",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

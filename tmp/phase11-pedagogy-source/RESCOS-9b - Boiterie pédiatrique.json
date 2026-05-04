@@ -1,0 +1,798 @@
+{
+  "title": "RESCOS-9b - Boiterie pédiatrique - Fillette de 2 ans",
+  "context": {
+    "setting": "Urgences d'un hôpital pédiatrique",
+    "patient": "Charlotte Borloz, 2 ans, amenée par son parent pour boiterie fébrile",
+    "vitals": {
+      "ta": "100/46 mmHg",
+      "fc": "98 bpm",
+      "fr": "22/min",
+      "temperature": "39.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Ma fille, Charlotte, boite"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la boiterie",
+          "details": [
+            "Début [Il y a 7 jours]",
+            "Durée [Depuis 7 jours, de plus en plus]",
+            "Evolution [De pire en pire, chaque jour c'est pire]",
+            "Localisation [Hanche gauche]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la hanche",
+          "details": [
+            "Rougeur [Pas observée par les parents]",
+            "Chaleur [Parents pas sûrs]",
+            "Œdème [Parents pas sûrs]",
+            "Perte de fonction [Ne veut plus poser le pied gauche par terre aujourd'hui]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Atteinte d'une autre articulation",
+          "details": [
+            "Actuellement [Non]",
+            "Dans le passé [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents de traumatismes des membres inférieurs",
+          "details": [
+            "Récents [Non]",
+            "Anciens [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractérisation des douleurs",
+          "details": [
+            "Durée [Depuis 7 jours]",
+            "Intensité [Pas de pleurs, pas de douleur perçue si on la laisse tranquille, difficile à juger]",
+            "Réponse aux antalgiques [Un peu mieux avec du Dafalgan au début, mais maintenant ça ne fait plus rien]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Caractérisation de la fièvre",
+          "details": [
+            "Durée [Depuis 4 jours]",
+            "Intensité [Jusqu'à 39.6°C, plusieurs pics par jour]",
+            "Réponse au fébrifuges [Baisse avec Dafalgan 180mg per os mais remonte après]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Caractérisation de la rhinorrhée",
+          "details": [
+            "Début [Depuis 3 jours]",
+            "Couleur/aspect des sécrétions [Sécrétions claires, non-purulentes]",
+            "Toux associée [Non, pas de toux]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Présence d'éruptions cutanées",
+          "patientComment": "Non, pas d'éruption"
+        },
+        {
+          "id": "a10",
+          "text": "État général",
+          "details": [
+            "Activités [Moins active, veut être portée]",
+            "Apathie [Non, mais plus grincheuse et irritable que d'habitude]",
+            "Comportement [Plus grincheuse et irritable que d'habitude]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents similaires",
+          "details": [
+            "Chez la patiente [Non]",
+            "Dans la famille [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Maladies [Aucune, fille en bonne santé habituellement]",
+            "Chirurgies [Aucune]",
+            "Hospitalisations [Aucune]",
+            "Médicaments [Aucun médicament au long cours, seulement Dafalgan actuellement]",
+            "Vaccins [Vaccinée selon calendrier, à jour]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux",
+          "patientComment": "Rien de particulier"
+        },
+        {
+          "id": "a14",
+          "text": "Développement de l'enfant",
+          "details": [
+            "Grossesse [Sans particularité]",
+            "Événements néonataux [Accouchement et période périnatale sans particularité]",
+            "Croissance [Croissance normale]",
+            "Développement psycho-moteur [Bon développement de l'enfant]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse systématique",
+          "details": [
+            "Digestive [Pas de diarrhée ni vomissement]",
+            "Pulmonaire [Pas de toux]",
+            "Ostéo-articulaire [Boiterie décrite]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général",
+          "details": [
+            "Cutané [Pas d'éruption]",
+            "ORL [Rhinorrhée claire, reste sp]",
+            "CV [sp]",
+            "Resp [sp]",
+            "Abdo [sp]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen ostéo-articulaire",
+          "details": [
+            "Pas de rougeur ni chaleur ni œdème des articulations",
+            "Douleur à la mobilisation passive de la hanche gauche",
+            "Limitation d'abduction et rotation interne",
+            "Flexion, extension, adduction et rotation externes possibles mais douloureuses"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique",
+          "details": [
+            "Nerfs crâniens sp",
+            "Tonus, motricité sp",
+            "Sensibilité, coordination des 4 membres sp",
+            "Pas de signes méningés"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal - Arthrite septique de la hanche",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Ostéomyélite du fémur",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée persistante\n\t□ Douleur progressive\n\t□ Refus d'appui",
+                    "test": "→ Radiographie, IRM ou CT selon clinique"
+                  },
+                  {
+                    "text": "Arthrite septique de la hanche",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée\n\t□ Refus d'appui\n\t□ Limitation douloureuse des mouvements\n\t□ Position antalgique avec flexion, légère abduction et rotation externe",
+                    "test": "→ US de hanche, ponction articulaire"
+                  }
+                ]
+              },
+              {
+                "name": "Causes inflammatoires",
+                "items": [
+                  {
+                    "text": "Synovite aiguë transitoire (rhume de hanche)",
+                    "cause": "Arguments POUR:\n\t□ Âge compatible (2-10 ans)\n\t□ Contexte viral (rhinorrhée)\n\t□ Boiterie",
+                    "test": "→ US de hanche, exclusion des autres causes"
+                  },
+                  {
+                    "text": "Arthrite juvénile",
+                    "cause": "Arguments CONTRE:\n\t□ Absence d'antécédents\n\t□ Pas d'atteinte d'autres articulations\n\t□ Début aigu",
+                    "test": "→ Bilan inflammatoire, anticorps"
+                  }
+                ]
+              },
+              {
+                "name": "Causes orthopédiques",
+                "items": [
+                  {
+                    "text": "Maladie de Legg-Calvé-Perthes (ostéochondrite primitive)",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune (pic 4-8 ans)\n\t□ Fièvre élevée inhabituelle\n\t□ Début aigu",
+                    "test": "→ Radiographie, IRM"
+                  },
+                  {
+                    "text": "Tumeur osseuse",
+                    "cause": "Arguments CONTRE:\n\t□ Évolution rapide sur 7 jours\n\t□ Contexte fébrile",
+                    "test": "→ Radiographie, IRM"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Investigations complémentaires - bilan sanguin",
+          "details": [
+            "FSC",
+            "CRP",
+            "VS",
+            "Hémoculture"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Investigations complémentaires - imagerie",
+          "details": [
+            "Radiographie bassin face et hanche axiale",
+            "US de hanche (plus IRM ou CT selon clinique)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge - propose une hospitalisation ou de référer la patiente en orthopédie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement urgent",
+                "content": "- Antibiothérapie intraveineuse après prélèvements\n- Antalgie adaptée\n- Mise au repos de l'articulation"
+              },
+              {
+                "title": "Traitement définitif",
+                "content": "- Ponction-biopsie du liquide articulaire pour analyse\n- Frottis gorge Kingella kingae\n- Consultation orthopédique ou chirurgicale urgente\n- Rinçage, nettoyage et drainage de l'articulation si confirmé"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Informer le parent du diagnostic principal retenu et de deux autres diagnostics différentiels",
+          "content": "« Madame/Monsieur, je suspecte que Charlotte ait une arthrite septique de la hanche, c'est-à-dire une infection de l'articulation. C'est une urgence qui nécessite une hospitalisation immédiate. Il pourrait aussi s'agir d'une infection de l'os (ostéomyélite) ou d'une inflammation transitoire de la hanche liée au rhume qu'elle a eu. »"
+        },
+        {
+          "id": "c2",
+          "text": "Informer Mme/M Borloz de la suite des examens complémentaires envisagés",
+          "content": "« Nous allons faire une prise de sang pour chercher des signes d'infection, une radiographie et une échographie de la hanche. Si l'infection se confirme, Charlotte devra recevoir des antibiotiques par perfusion et peut-être avoir une ponction de l'articulation. »"
+        },
+        {
+          "id": "c3",
+          "text": "Informer Mme/M Borloz de la suite de la prise en charge immédiate",
+          "content": "« Charlotte va être hospitalisée immédiatement. Un chirurgien orthopédiste pédiatrique va venir l'examiner rapidement. Le traitement antibiotique sera débuté après les prélèvements. Je comprends votre inquiétude, mais nous allons tout faire pour soigner rapidement Charlotte. »"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient simulé - Parent de Charlotte",
+      "nom": "Parent de Charlotte Borloz",
+      "age": "Parent d'une fillette de 2 ans",
+      "contexte": "Urgences d'un hôpital pédiatrique",
+      "etatEsprit": "Inquiet-e pour votre fille",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma fille, Charlotte, boite",
+        "autreChose": "Elle ne marche pas comme il faut. Elle ne veut pas utiliser la jambe gauche ni poser le pied par terre maintenant."
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": "Boiterie et refus de poser le pied gauche par terre",
+        "chronologie": "Débuté il y a 7 jours, boîte de plus en plus, marche moins. Depuis aujourd'hui, ne veut plus marcher, veut être portée. Pas de différence entre le matin ou le soir.",
+        "douleur": [
+          "Localisation: Hanche gauche, peut-être vers la cuisse et le pli de l'aine gauche",
+          "Intensité: Pas de pleurs, pas de douleur perçue si on la laisse tranquille (difficile à juger)",
+          "Facteurs aggravants: Le temps qui passe, chaque jour c'est pire",
+          "Facteurs atténuants: Un peu mieux avec du Dafalgan au début, mais maintenant ça ne fait plus rien"
+        ],
+        "symptomesAssocies": [
+          "Fièvre à 39.6°C depuis 4 jours, plusieurs pics par jour. Baisse avec Dafalgan mais remonte",
+          "Plus grincheuse et irritable que d'habitude",
+          "Nez qui coule avec sécrétions claires depuis 3 jours",
+          "Demande à être portée"
+        ],
+        "circonstances": "Elle s'est réveillée le matin il y a 7 jours et a commencé à boiter"
+      },
+      "antecedents": {
+        "medicaux": "Fille en bonne santé habituellement, sans maladie, ni médicament",
+        "chirurgicaux": "Aucun",
+        "familiaux": "Rien de particulier",
+        "vaccinations": "Vaccinée et suivie par une pédiatre qui est actuellement en vacances",
+        "developpement": "Grossesse, accouchement, période périnatale sans particularité, bon développement de l'enfant, croissance normale"
+      },
+      "traitements": {
+        "actuels": [
+          "Dafalgan 180mg per os pour la fièvre et la douleur"
+        ],
+        "allergies": []
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Fièvre à 39.6°C mesurée depuis 4 jours, plusieurs pics par jour"
+        ],
+        "pulmonaire": [
+          "Pas de toux"
+        ],
+        "digestive": [
+          "Pas de diarrhée ni vomissement"
+        ],
+        "osteoArticulaire": [
+          "Boiterie décrite"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "État d'inquiétude pour votre fille durant tout l'entretien"
+        ],
+        "reponseStandard": "Je ne sais pas ce qui lui arrive mais je m'inquiète"
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert évaluateur",
+      "pointsCles": [
+        "La boiterie est un motif de consultation fréquent aux Urgences Pédiatriques",
+        "L'arthrite septique de la hanche est une urgence orthopédique à exclure dans la boiterie fébrile",
+        "L'âge détermine le diagnostic différentiel",
+        "Pour cet enfant de 2 ans, le plus fréquent est la synovite aiguë transitoire, mais les autres diagnostics différentiels importants sont: luxation congénitale de hanche, ostéochondrite primitive (Maladie de Legg-Perthes-Calvé), l'ostéomyélite, arthrite réactive, maladie rhumatologique, leucémie, tumeur"
+      ],
+      "epidemiologie": [
+        "Aux États-Unis: 0.12-0.18 per 100000 enfants présentent une arthrite septique de la hanche",
+        "Dans les arthrites septiques chez les enfants, le genou et la hanche sont les articulations les plus fréquemment touchées"
+      ],
+      "mecanisme": "L'articulation est infectée par dissémination hématologique, extension contiguë, ou infection directe du compartiment articulaire",
+      "bacteries": "Les bactéries responsables sont plus fréquemment Staph Aureus, Strep Pneumoniae, Strep de Groupe B, et Kingella kingae",
+      "clinique": [
+        "Boiterie antalgique jusqu'au refus de charger la jambe",
+        "Position antalgique avec flexion, légère abduction et rotation externe",
+        "L'enfant résiste aux mouvements passifs en raison des douleurs",
+        "Pas forcément signes locaux",
+        "Fièvre mais pas toujours"
+      ],
+      "bilan": {
+        "premierTemps": "Bilan sanguin: FSC, CRP, VS, Hémoculture, éventuellement sérologies Lyme",
+        "imagerie": "Radiographies bassin face et hanche axiale, US (plus IRM ou CT selon clinique), Frottis gorge Kingella kingae",
+        "deuxiemeTemps": "Ponction-biopsie du liquide articulaire"
+      },
+      "traitement": [
+        "Antibiothérapie intraveineuse",
+        "Consultation orthopédique ou chirurgicale avec rinçage, nettoyage et drainage de l'articulation"
+      ],
+      "complications": [
+        "Ostéomyélite",
+        "Ostéonécrose",
+        "Destruction du cartilage articulaire",
+        "Différence de la longueur des jambes",
+        "Sepsis"
+      ],
+      "rolesInterventions": [
+        "Donner la carte du résumé de l'examen physique quand demandée"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques sur l'arthrite septique pédiatrique",
+      "sections": [
+        {
+          "titre": "Épidémiologie",
+          "contenu": "L'arthrite septique de la hanche est une urgence orthopédique à exclure dans toute boiterie fébrile chez l'enfant. L'incidence est de 0.12-0.18 per 100000 enfants aux États-Unis. Le genou et la hanche sont les articulations les plus fréquemment touchées chez l'enfant."
+        },
+        {
+          "titre": "Diagnostic différentiel selon l'âge",
+          "points": [
+            "< 3 ans: Arthrite septique, ostéomyélite, fracture sur maltraitance",
+            "3-10 ans: Synovite aiguë transitoire (rhume de hanche), arthrite septique, maladie de Legg-Calvé-Perthes",
+            "> 10 ans: Épiphysiolyse, arthrite juvénile, ostéochondrite"
+          ]
+        },
+        {
+          "titre": "Critères de Kocher",
+          "contenu": "Pour différencier arthrite septique et synovite transitoire:\n- Fièvre > 38.5°C\n- Refus d'appui\n- VS > 40 mm/h\n- Leucocytes > 12 G/L\n\nProbabilité d'arthrite septique selon le nombre de critères:\n0 critère: < 0.2%\n1 critère: 3%\n2 critères: 40%\n3 critères: 93%\n4 critères: 99%"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antibiothérapie IV empirique après prélèvements: Flucloxacilline + Gentamicine ou Céfuroxime",
+        "Durée totale d'antibiothérapie: 3-6 semaines (IV puis PO)",
+        "Drainage articulaire urgent: arthrotomie ou arthroscopie selon l'expertise locale"
+      ],
+      "examensComplementaires": [
+        "US de hanche: Sensibilité > 90% pour détecter un épanchement articulaire",
+        "Ponction articulaire: Gold standard - analyse du liquide (cellularité, Gram, culture)",
+        "IRM: Si doute sur ostéomyélite associée ou abcès des parties molles",
+        "Frottis pharyngé pour Kingella kingae: Germe fastidieux, difficile à cultiver"
+      ]
+    },
+    "resume": {
+      "titre": "🦴 Boiterie fébrile chez l’enfant – Arthrite septique de hanche – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes à rechercher",
+              "points": [
+                "Boiterie aiguë, refus de marcher ou boiterie douloureuse",
+                "Fièvre souvent présente (> 38,5°C)",
+                "Douleur de hanche ou de cuisse (parfois genou par irradiation)",
+                "Début souvent rapide (en heures)",
+                "Refus de mobilisation de la hanche (en flexion, rotation interne)"
+              ]
+            },
+            {
+              "titre": "Contexte clinique",
+              "points": [
+                "Âge : surtout < 3 ans",
+                "ATCD d'infection récente (ORL, cutanée)",
+                "Traumatisme mineur parfois évoqué",
+                "Vaccination incomplète (Haemophilus, pneumocoque)",
+                "Recherche de point d’entrée infectieux"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes locaux",
+              "points": [
+                "Douleur à la mobilisation passive de la hanche",
+                "Position antalgique (flexion, abduction, rotation externe)",
+                "Refus de mise en charge",
+                "Raideur et limitation des amplitudes"
+              ]
+            },
+            {
+              "titre": "Signes généraux",
+              "points": [
+                "Fièvre",
+                "Altération de l’état général",
+                "Irritabilité chez le nourrisson"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "CRP > 20 mg/L, hyperleucocytose (> 12 000/mm³)",
+                "VS souvent élevée",
+                "Hémocultures (avant ATB)",
+                "Ponction articulaire (si suspicion forte ou écho positive)",
+                "Examen direct, culture, PCR sur liquide articulaire"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie de hanche : épanchement articulaire (diagnostic rapide, non invasif)",
+                "Radiographie bassin : pour éliminer d’autres causes (Perthes, fractures, etc.)",
+                "IRM : en cas de doute, pour étendre le bilan à l’os (ostéomyélite associée)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Hospitalisation immédiate",
+                "Repos strict, mise au lit sans appui",
+                "ATB probabiliste IV après ponction/hémocultures : céfotaxime + oxacilline (ou vancomycine si suspicion MRSA)",
+                "Antalgiques (paracétamol ± morphine)"
+              ]
+            },
+            {
+              "titre": "Chirurgie",
+              "points": [
+                "Ponction-évacuation articulaire (souvent nécessaire d’emblée)",
+                "Arthrotomie ou lavage articulaire en cas d'échec ou forme sévère"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Adaptation de l’ATB selon germes (durée totale ~3-4 semaines)",
+                "Kinésithérapie après phase aiguë",
+                "Surveillance de la croissance osseuse (complications possibles : épiphysiolyse, nécrose, inégalité des membres)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toute boiterie fébrile chez l’enfant = arthrite septique jusqu’à preuve du contraire",
+            "Examen de la hanche bilatéral systématique",
+            "Échographie rapide = outil clé de triage",
+            "Ponction articulaire si épanchement + fièvre",
+            "ATB IV en urgence, sans attendre les résultats de culture",
+            "Ne pas oublier de faire les hémocultures"
+          ]
+        },
+        {
+          "titre": "✅ Points clés 🚶‍♂️ Boiterie de l’enfant",
+          "points": [
+            "Âge = élément clé pour orienter diagnostic",
+            "Arthrite septique = diagnostic à éliminer en premier (urgence absolue)",
+            "Synovite transitoire = cause bénigne la plus fréquente (3–8 ans)",
+            "SCFE = à ne pas manquer chez l’ado en surpoids",
+            "Tout enfant fébrile avec boiterie = hospitalisation immédiate"
+          ],
+          "tableau_comparatif": {
+            "colonnes": ["Âge", "Diagnostic principal", "Symptômes clés", "Points d’alerte", "Conduite rapide ECOS"],
+            "lignes": [
+              {
+                "Âge": "0–3 ans",
+                "Diagnostic principal": "Arthrite septique, ostéomyélite",
+                "Symptômes clés": "Fièvre, AEG, boiterie brutale, impotence fonctionnelle",
+                "Points d’alerte": "Risque vital et fonctionnel",
+                "Conduite rapide ECOS": "Hospitaliser en urgence, NFS/CRP/VS, imagerie, ponction articulaire, ATB IV"
+              },
+              {
+                "Âge": "3–8 ans",
+                "Diagnostic principal": "Synovite transitoire, Legg-Calvé-Perthes",
+                "Symptômes clés": "Boiterie ± douleur hanche/genou, contexte viral récent, pas ou peu de fièvre",
+                "Points d’alerte": "Fièvre élevée, CRP ↑ → suspecter arthrite septique",
+                "Conduite rapide ECOS": "Échographie hanche, repos + AINS, surveillance rapprochée"
+              },
+              {
+                "Âge": "9–15 ans",
+                "Diagnostic principal": "Épiphysiolyse fémorale supérieure (SCFE), tumeurs osseuses",
+                "Symptômes clés": "Ado en surpoids, douleur hanche/genou, boiterie progressive",
+                "Points d’alerte": "Impotence brutale, AEG, douleur nocturne",
+                "Conduite rapide ECOS": "IRM/radio bassin, hospitalisation si SCFE, avis ortho rapide"
+              },
+              {
+                "Âge": "Tout âge",
+                "Diagnostic principal": "Traumatisme, tumeurs, AIJ",
+                "Symptômes clés": "Douleur localisée, parfois nocturne, tuméfaction",
+                "Points d’alerte": "Fièvre persistante, masse, AEG",
+                "Conduite rapide ECOS": "Imagerie ciblée, hospitalisation si doute néoplasique ou infectieux"
+              }
+            ]
+          }
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS 🚶‍♂️ Boiterie de l’enfant",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Âge et début de la boiterie ?",
+                "Douleur localisée où ? Irradie vers genou ?",
+                "Fièvre ou AEG ?",
+                "ATCD trauma récent ?",
+                "ATCD infectieux ou viraux récents ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen hanche/genou/pied bilatéral",
+                "Mobilité hanche (rotation interne)",
+                "Radiographies ciblées",
+                "Échographie hanche",
+                "Biologie (NFS, CRP, VS) si doute infectieux"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Éliminer arthrite septique (urgence)",
+                "Adapter examens selon âge et contexte",
+                "Hospitaliser si doute diagnostic ou signes de gravité"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Boiterie fébrile (Arthrite septique de hanche)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (boiterie, refus appui, fièvre)",
+            "Histoire → début, évolution, intensité, contexte infectieux",
+            "Douleur → localisation, intensité, facteurs aggravants/soulageants",
+            "Fièvre → durée, pics, réponse aux antipyrétiques",
+            "ATCD traumatiques ? infectieux ? médicaux ?",
+            "Examen → mobilité hanche, douleur passive, état général, autres articulations",
+            "Résumé → suspicion principale + DD",
+            "Examens → FSC, CRP, VS, hémocultures, radio bassin, US hanche, ponction si épanchement",
+            "Prise en charge → hospitalisation, ATB IV après prélèvements, drainage si besoin"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo KOCHER (critères arthrite septique)",
+            "elements": [
+              "K = Kick fever > 38.5°C",
+              "O = One leg (refus d’appui)",
+              "C = CRP/VS élevées",
+              "H = Hyperleuco > 12 G/L"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Charlotte Borloz, une fillette de 2 ans, amenée aux urgences par sa maman pour une boiterie fébrile. \n\nLa boiterie a commencé il y a 7 jours, de façon progressive, et s’est aggravée chaque jour. Aujourd’hui, Charlotte ne veut plus poser le pied gauche au sol et demande constamment à être portée. La douleur est difficile à évaluer car elle ne pleure pas si on la laisse tranquille, mais dès qu’on mobilise sa jambe, elle se plaint. \n\nDepuis 4 jours, elle a de la fièvre, jusqu’à 39,6°C avec plusieurs pics par jour. La température baisse un peu avec le Dafalgan, mais remonte ensuite. Sa maman rapporte aussi qu’elle est plus grincheuse et irritable que d’habitude. Elle présente une rhinorrhée claire depuis 3 jours, sans toux associée. Pas de diarrhée, pas de vomissements, pas d’éruption cutanée. \n\nDans ses antécédents, Charlotte est une enfant en bonne santé habituelle, sans maladies chroniques ni chirurgies. Les vaccins sont à jour. Pas d’antécédents familiaux particuliers, pas de traumatismes récents. La grossesse, la naissance et le développement se sont déroulés normalement. \n\nÀ l’examen, Charlotte est fébrile à 39,9°C. Sa tension est 100/46, sa fréquence cardiaque 98 par minute, sa fréquence respiratoire 22. L’état général est altéré avec irritabilité. Pas d’éruption, pas de signe cutané particulier. Au niveau ostéo-articulaire, la hanche gauche est douloureuse à la mobilisation passive, surtout en abduction et rotation interne. Les autres mouvements sont possibles mais douloureux. Pas de rougeur ni chaleur visibles. Les autres articulations sont libres. Le reste de l’examen est normal, pas de signe neurologique ni abdominal. \n\nEn résumé, il s’agit d’une fillette de 2 ans avec boiterie aiguë, fièvre élevée persistante, et limitation douloureuse de la hanche gauche. Mon hypothèse principale est une arthrite septique de hanche, une urgence orthopédique. Les diagnostics différentiels incluent une ostéomyélite du fémur, une synovite aiguë transitoire post-virale, ou plus rarement une maladie de Legg-Calvé-Perthes ou une tumeur osseuse. \n\nComme examens complémentaires, je demanderais immédiatement une prise de sang avec FSC, CRP, VS et hémocultures, ainsi qu’une radiographie du bassin et une échographie de la hanche gauche. Si l’échographie montre un épanchement, une ponction articulaire doit être réalisée pour analyse du liquide synovial. \n\nEn termes de prise en charge, je proposerais une hospitalisation immédiate en pédiatrie avec avis orthopédique urgent. Une antibiothérapie intraveineuse sera débutée après les prélèvements, associée à des antalgiques. En cas de confirmation, un drainage articulaire chirurgical est souvent nécessaire."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Charlotte, 2 ans, consulte pour boiterie fébrile, refus d’appui jambe gauche.\n\nB (Background) : Symptômes évoluant depuis 7 jours, fièvre élevée persistante depuis 4 jours, pas de traumatisme. ATCD néant, vaccins à jour.\n\nA (Assessment) : Suspicion d’arthrite septique de la hanche gauche. DD : ostéomyélite, synovite transitoire, Perthes.\n\nR (Recommendation) : Hospitalisation immédiate, bilan infectieux et imagerie, ponction articulaire si épanchement, antibiothérapie IV après prélèvements, avis orthopédie/chirurgie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Critères de Kocher",
+              "points": [
+                "Fièvre > 38,5°C",
+                "Refus d’appui",
+                "VS > 40",
+                "Leucocytes > 12 G/L",
+                "→ 3-4 critères = arthrite septique très probable"
+              ]
+            },
+            {
+              "titre": "👉 Mnémo RED HIP",
+              "points": [
+                "R = Refus d’appui",
+                "E = Épanchement visible à l’écho",
+                "D = Douleur passive",
+                "H = High fever",
+                "I = Inflammation (CRP, VS)",
+                "P = Ponction nécessaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Arthrite septique",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée persistante",
+                      "Boiterie refus d’appui",
+                      "Douleur et limitation passive hanche gauche",
+                      "Évolution rapide sur quelques jours"
+                    ],
+                    "contre": [
+                      "Pas de rougeur ni chaleur cutanée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Synovite aiguë transitoire",
+                  "reponse": {
+                    "pour": [
+                      "Âge compatible (2 ans)",
+                      "Contexte viral (rhinorrhée claire)"
+                    ],
+                    "contre": [
+                      "Fièvre élevée inhabituelle",
+                      "Durée prolongée (7 jours)",
+                      "Altération état général"
+                    ]
+                  }
+                },
+                {
+                  "question": "Ostéomyélite",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée",
+                      "Douleur osseuse possible",
+                      "Refus d’appui"
+                    ],
+                    "contre": [
+                      "Mobilisation passive articulaire douloureuse plutôt qu’os localisé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Maladie de Perthes",
+                  "reponse": {
+                    "contre": [
+                      "Âge trop jeune (pic 4-8 ans)",
+                      "Fièvre élevée atypique",
+                      "Évolution brutale"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "FSC, CRP, VS, hémocultures",
+                    "Radiographie bassin face et hanche",
+                    "Échographie hanche (détecte épanchement)",
+                    "Ponction articulaire si épanchement"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Arthrite septique de la hanche gauche"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "ATB IV probabiliste après prélèvements",
+                      "Antalgiques",
+                      "Ponction ou drainage chirurgical de la hanche"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Durée ATB IV puis relais PO (3-6 semaines au total)",
+                    "Surveillance CRP et clinique",
+                    "Kinésithérapie à distance",
+                    "Surveillance croissance hanche (complications : nécrose, inégalité longueur des jambes)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

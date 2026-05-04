@@ -1,0 +1,481 @@
+{
+  "title": "RESCOS-53 - Parésie facio-brachiale - ECC Neurologie",
+  "context": {
+    "setting": "Service de neurologie",
+    "patient": "Homme de 79 ans présentant une parésie facio-brachiale droite d'apparition brutale avec troubles de la parole",
+    "vitals": {
+      "ta": "150/85 mmHg",
+      "fc": "78 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de l'épisode neurologique aigu",
+          "details": [
+            "Mode d'installation [brutal, progressif, fluctuant]",
+            "Heure précise de début [permettant chronologie thérapeutique]",
+            "Circonstances de découverte [témoin présent, activité en cours]",
+            "Évolution depuis le début [stable, aggravation, amélioration]",
+            "Premiers symptômes remarqués [faiblesse, parole, asymétrie faciale]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Analyse sémiologique détaillée",
+          "details": [
+            "Troubles moteurs [hémiparésie droite, topographie facio-brachiale]",
+            "Troubles de la parole [dysarthrie, aphasie, manque du mot]",
+            "Troubles sensitifs associés [hémi-hypoesthésie, négligence]",
+            "Troubles visuels [hémianopsie, diplopie, troubles oculomoteurs]",
+            "Autres déficits neurologiques [coordination, équilibre]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension artérielle [valeurs habituelles, traitement]",
+            "Diabète [type, équilibre, complications]",
+            "Hypercholestérolémie [bilan lipidique récent]",
+            "Tabagisme [actuel, sevré, quantification]",
+            "Fibrillation auriculaire [ECG récents, anticoagulation]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents neurologiques et vasculaires",
+          "details": [
+            "AVC ou AIT antérieurs [nombre, localisation, séquelles]",
+            "Pathologies carotidiennes [sténoses, chirurgie]",
+            "Cardiopathies emboligènes [valvulopathies, FA, prothèses]",
+            "Maladies hémorragiques [troubles coagulation, anticoagulants]",
+            "Traumatismes crâniens récents"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Médicaments et traitements en cours",
+          "details": [
+            "Anticoagulants [type, posologie, dernière prise]",
+            "Antiagrégants plaquettaires [aspirine, clopidogrel]",
+            "Antihypertenseurs [classes, observance]",
+            "Antidiabétiques [insuline, ADO, contrôle glycémique]",
+            "Autres traitements [hormones, contraception]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a6",
+          "text": "Signes fonctionnels associés et état antérieur",
+          "details": [
+            "Céphalées [intensité, caractère, localisation]",
+            "Nausées, vomissements [signes d'HTIC]",
+            "Troubles de la conscience [obnubilation, confusion]",
+            "État fonctionnel antérieur [autonomie, démence]",
+            "Qualité de vie et projet thérapeutique"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - approche neurologique vasculaire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évaluation de l'état de conscience et fonctions supérieures",
+          "details": [
+            "Score de Glasgow [ouverture yeux, réponse verbale, motrice]",
+            "Orientation temporo-spatiale [date, lieu, personne]",
+            "Attention et concentration [calcul mental, répétition]",
+            "Langage [compréhension, expression, dénomination, répétition]",
+            "Reconnaissance visuelle et négligence [hémi-négligence gauche]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen des nerfs crâniens",
+          "details": [
+            "Nerf facial (VII) [paralysie faciale centrale vs périphérique]",
+            "Nerfs oculomoteurs (III, IV, VI) [mouvements oculaires, pupilles]",
+            "Nerf trijumeau (V) [sensibilité faciale, réflexe cornéen]",
+            "Nerfs bulbaires (IX, X, XII) [déglutition, phonation, langue]",
+            "Champ visuel [hémianopsie homonyme, quadranopsie]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la motricité",
+          "details": [
+            "Testing musculaire analytique [force 0-5, topographie déficit]",
+            "Manœuvre de Barré [membres supérieurs et inférieurs]",
+            "Tonus musculaire [spasticité, hypotonie, rigidité]",
+            "Réflexes ostéotendineux [asymétrie, vivacité, diffusion]",
+            "Réflexes cutanés [Babinski, réflexes cutanés abdominaux]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen de la sensibilité",
+          "details": [
+            "Sensibilité tactile superficielle [hémi-hypoesthésie]",
+            "Sensibilité douloureuse [piqûre, asymétrie]",
+            "Sensibilité proprioceptive [position articulations]",
+            "Sensibilité vibratoire [diapason, niveau lésionnel]",
+            "Discrimination tactile [graphesthésie, stéréognosie]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen de la coordination et équilibre",
+          "details": [
+            "Épreuves index-nez et talon-genou [ataxie, dysmétrie]",
+            "Mouvements alternés rapides [adiadococinésie]",
+            "Station debout [Romberg, élargissement polygone]",
+            "Marche et demi-tour [hémiparésie, fauchage]",
+            "Dystonie, mouvements anormaux [chorée, ballisme]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes méningés et d'HTIC",
+          "details": [
+            "Raideur de nuque [flexion passive du cou]",
+            "Signes de Kernig et Brudzinski",
+            "Photophobie et phonophobie",
+            "Œdème papillaire [fond d'œil si possible]",
+            "Signes végétatifs [bradycardie, HTA, troubles respiratoires]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen cardiovasculaire orienté",
+          "details": [
+            "Auscultation cardiaque [rythme, souffles, galop]",
+            "Auscultation carotidienne [souffles vasculaires]",
+            "Pouls périphériques [asymétrie, abolition]",
+            "Signes d'insuffisance cardiaque [OMI, crépitants]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - examen neurologique systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic topographique et syndromique",
+          "details": [
+            "Syndrome facio-brachial droit [topographie corticale]",
+            "Localisation : territoire sylvien superficiel gauche",
+            "Différenciation centrale vs périphérique [épargne front]",
+            "Évaluation sévérité [NIHSS, score de Rankin]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic étiologique - AVC ischémique vs hémorragique",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "AVC ischémique",
+                "items": [
+                  {
+                    "text": "Infarctus sylvien superficiel",
+                    "cause": "Arguments POUR:\n\t□ Début brutal\n\t□ Territoire vasculaire cohérent\n\t□ Facteurs de risque cardiovasculaire\n\t□ Âge avancé",
+                    "test": "→ CT cérébral (éliminer hémorragie), IRM diffusion"
+                  }
+                ]
+              },
+              {
+                "name": "AVC hémorragique",
+                "items": [
+                  {
+                    "text": "Hématome intraparenchymateux",
+                    "cause": "Arguments POUR:\n\t□ HTA non contrôlée\n\t□ Anticoagulants\n\t□ Angiopathie amyloïde (âge)",
+                    "test": "→ CT cérébral sans contraste en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Hémorragie sous-arachnoïdienne",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de céphalée explosive\n\t□ Tableau focal pur",
+                    "test": "→ CT cérébral, PL si doute"
+                  },
+                  {
+                    "text": "Tumeur cérébrale",
+                    "cause": "Arguments CONTRE:\n\t□ Début trop brutal\n\t□ Pas de céphalées progressives",
+                    "test": "→ IRM cérébrale avec gadolinium"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics évoqués = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Urgence thérapeutique - thrombolyse",
+          "details": [
+            "Fenêtre thérapeutique [<4.5h pour IV, <6h pour mécanique]",
+            "Critères d'inclusion thrombolyse [âge, sévérité, délai]",
+            "Critères d'exclusion [hémorragie, chirurgie récente, INR]",
+            "Score NIHSS et évaluation bénéfice/risque"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires en urgence",
+          "details": [
+            "CT cérébral sans contraste [éliminer hémorragie]",
+            "Bilan biologique [glycémie, NFS, coagulation, créatinine]",
+            "ECG [fibrillation auriculaire, ischémie]",
+            "IRM cérébrale avec diffusion [si disponible rapidement]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge aiguë et surveillance",
+          "details": [
+            "Monitoring neurologique [conscience, déficits, Glasgow]",
+            "Surveillance cardiorespiratoire [TA, FC, SaO2]",
+            "Position demi-assise [30°, prévention pneumopathie]",
+            "Contrôle glycémique [éviter hypo/hyperglycémie]",
+            "Contrôle tensionnel [prudent si thrombolyse envisagée]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m6",
+          "text": "Recherche étiologique de l'AVC ischémique",
+          "details": [
+            "Écho-Doppler des troncs supra-aortiques [sténose carotidienne]",
+            "Échocardiographie [source embolique cardiaque]",
+            "Holter ECG [fibrillation auriculaire paroxystique]",
+            "Bilan thrombophilie si sujet jeune"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Prévention secondaire",
+          "details": [
+            "Antiagrégation plaquettaire [aspirine 75-100mg]",
+            "Statine [atorvastatine 80mg si pas de contre-indication]",
+            "Contrôle facteurs de risque [HTA, diabète, tabac]",
+            "Rééducation précoce [kinésithérapie, orthophonie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Pronostic et planification de sortie",
+          "details": [
+            "Évaluation fonctionnelle [Rankin, Barthel, autonomie]",
+            "Orientation [domicile, SSR, institution]",
+            "Information famille [pronostic, évolution, prévention]",
+            "Suivi spécialisé [neurologie, cardiologie selon étiologie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge AVC aigu",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Homme de 79 ans",
+      "age": "79 ans",
+      "contexte": "Patient présentant une hémiparésie facio-brachiale droite d'apparition brutale avec troubles de la parole",
+      "motifConsultation": {
+        "plaintePrincipale": "Impossible de lever le bras droit et de parler normalement depuis ce matin",
+        "autreChose": "Le côté droit de mon visage est tombé"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Début brutal ce matin vers 8h30 au petit-déjeuner",
+          "Faiblesse brutale du bras droit, impossibilité de le lever",
+          "Chute de la cuillère de la main droite",
+          "Asymétrie faciale remarquée par l'épouse",
+          "Difficultés d'élocution, parole pâteuse"
+        ],
+        "symptomesAssocies": [
+          "Pas de céphalées particulières",
+          "Pas de troubles visuels",
+          "Pas de nausées ni vomissements",
+          "Pas de troubles de la conscience",
+          "Marche possible mais difficile"
+        ],
+        "circonstances": [
+          "Survenue au petit-déjeuner, en présence de l'épouse",
+          "Aucun facteur déclenchant identifié",
+          "Pas d'effort physique particulier",
+          "Nuit normale, réveil habituel"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Hypertension artérielle traitée depuis 15 ans",
+        "Hypercholestérolémie sous statine",
+        "Ex-fumeur (arrêt il y a 10 ans, 30 PA)",
+        "Pas d'antécédent d'AVC ou cardiopathie connue"
+      ],
+      "traitements": {
+        "actuels": [
+          "Amlodipine 5mg/jour",
+          "Périndopril 5mg/jour",
+          "Atorvastatine 20mg/jour"
+        ],
+        "observance": "Bonne observance habituelle",
+        "allergies": [
+          "Aucune allergie connue"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Ex-fumeur depuis 10 ans (30 paquets-années)",
+        "alcool": "Consommation sociale modérée",
+        "activite": "Retraité, jardinage, promenades"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Parole légèrement pâteuse mais compréhensible",
+          "Coopératif mais inquiet",
+          "Utilise spontanément la main gauche",
+          "Mentionne l'inquiétude de l'épouse"
+        ],
+        "durantExamen": [
+          "Asymétrie faciale discrète (hémiparésie faciale centrale)",
+          "Faiblesse bras droit (4/5) prédominant distalement",
+          "Réflexes vifs à droite, Babinski droit présent",
+          "Pas de troubles sensitifs nets"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est un AVC docteur ?",
+          "Est-ce que je vais récupérer ?",
+          "Faut-il m'hospitaliser ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Homme 79 ans, ex-fumeur, HTA, hypercholestérolémie. Hémiparésie facio-brachiale droite + dysarthrie d'apparition brutale à 8h30. Évoque AVC sylvien superficiel gauche. Fenêtre thérapeutique pour thrombolyse selon bilan.",
+      "pointsCles": [
+        "Syndrome facio-brachial droit d'apparition brutale",
+        "Topographie sylvienne superficielle gauche",
+        "Évaluation urgente pour thrombolyse (<4.5h)",
+        "Facteurs de risque cardiovasculaire présents",
+        "Diagnostic différentiel AVC ischémique vs hémorragique",
+        "Importance timing et fenêtre thérapeutique",
+        "Examen neurologique systématique et score NIHSS",
+        "Recherche étiologique pour prévention secondaire"
+      ],
+      "pieges": [
+        "Ne pas reconnaître l'urgence thérapeutique",
+        "Omettre l'évaluation de la fenêtre de thrombolyse",
+        "Mauvaise évaluation topographique (cortical vs sous-cortical)",
+        "Ne pas différencier paralysie faciale centrale vs périphérique",
+        "Oublier l'examen des nerfs crâniens",
+        "Ne pas rechercher les facteurs de risque cardiovasculaire",
+        "Retard dans la réalisation du CT cérébral",
+        "Ne pas planifier la recherche étiologique",
+        "Sous-estimer l'importance de la prévention secondaire"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en neurologie vasculaire",
+      "sections": [
+        {
+          "titre": "Physiopathologie de l'AVC ischémique",
+          "contenu": "Occlusion artérielle entraînant ischémie puis nécrose du territoire vasculaire concerné.",
+          "points": [
+            "Mécanismes : thrombose in situ, embolie, hypoperfusion",
+            "Facteurs de risque : âge, HTA, diabète, tabac, FA",
+            "Cascade ischémique : déplétion énergétique → mort cellulaire",
+            "Zone de pénombre : tissu viable mais à risque",
+            "Œdème cytotoxique puis vasogénique",
+            "Fenêtre thérapeutique : 4.5h IV, 6-24h mécanique"
+          ]
+        },
+        {
+          "titre": "Syndromes vasculaires cérébraux",
+          "contenu": "Corrélation anatomoclinique selon le territoire artériel atteint.",
+          "points": [
+            "Artère cérébrale moyenne : hémiparésie facio-brachiale",
+            "Sylvien superficiel : cortical, aphasie si dominant",
+            "Sylvien profond : hémiparésie proportionnelle",
+            "Artère cérébrale antérieure : parésie crurale",
+            "Artère cérébrale postérieure : hémianopsie",
+            "Territoire vertébro-basilaire : ataxie, diplopie",
+            "Lacunes : syndromes sous-corticaux purs"
+          ]
+        },
+        {
+          "titre": "Évaluation clinique de l'AVC",
+          "contenu": "Scores standardisés pour évaluer sévérité et pronostic.",
+          "points": [
+            "Score NIHSS : 0-42, sévérité AVC aigu",
+            "Échelle de Rankin modifiée : handicap fonctionnel",
+            "Index de Barthel : autonomie activités quotidiennes",
+            "Glasgow Coma Scale : niveau de conscience",
+            "Évaluation cognitive : MoCA, MMSE",
+            "Temps crucials : last seen normal, symptômes",
+            "Critères inclusion/exclusion thrombolyse"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Thrombolyse IV : rtPA 0.9mg/kg (max 90mg) si <4.5h",
+        "Thrombectomie mécanique : <6h (24h si imagerie favorable)",
+        "Antiagrégation : aspirine 75-100mg/j en prévention secondaire",
+        "Statine : atorvastatine 80mg si pas de contre-indication",
+        "Contrôle TA : <140/90 mmHg à distance (prudence phase aiguë)",
+        "Rééducation précoce : kinésithérapie, orthophonie, ergothérapie"
+      ],
+      "examensComplementaires": [
+        "CT cérébral sans contraste : éliminer hémorragie, signes précoces",
+        "IRM diffusion : ischémie aiguë, mismatch diffusion-perfusion",
+        "Angio-CT ou angio-IRM : occlusion proximale, collatérales",
+        "Écho-Doppler TSA : sténose carotidienne >50%",
+        "Échocardiographie : source embolique, endocardite",
+        "Holter ECG : fibrillation auriculaire paroxystique",
+        "Bilan biologique : glycémie, coagulation, marqueurs cardiovasculaires"
+      ]
+    }
+  }
+}

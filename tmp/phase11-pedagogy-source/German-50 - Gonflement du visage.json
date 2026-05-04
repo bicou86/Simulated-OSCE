@@ -1,0 +1,510 @@
+{
+  "title": "German-50 - Gonflement du visage",
+  "context": {
+    "setting": "Consultation ambulatoire de permanence",
+    "patient": "Femme africaine de 45 ans, obèse, consultant pour gonflement facial récent surtout au niveau des paupières",
+    "vitals": {
+      "ta": "Normale",
+      "fc": "Normale",
+      "temperature": "Normale"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes principaux",
+          "binaryOnly": false,
+          "details": [
+            "Œdèmes palpébraux [oui, principalement]",
+            "Fatigue [oui, présente]",
+            "Œdèmes des jambes [oui, également présents]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Chronologie des symptômes",
+          "binaryOnly": false,
+          "details": [
+            "Œdèmes palpébraux [depuis avant-hier]",
+            "Fatigue [depuis plus longtemps]",
+            "Progression [rapide pour les paupières]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Premier épisode",
+          "binaryOnly": false,
+          "details": [
+            "[Oui, première fois]",
+            "[Jamais eu d'œdèmes faciaux auparavant]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés - Douleur",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs faciales [non]",
+            "Douleurs abdominales [non]",
+            "Douleurs lombaires [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Problèmes mictionnels [non]",
+            "Dysurie [non]",
+            "Pollakiurie [non]",
+            "Hématurie [non interrogé]",
+            "Mousseuse [non interrogé]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Signes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Prise de poids récente [non interrogé]",
+            "Perte d'appétit [non interrogé]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents récents importants",
+          "binaryOnly": false,
+          "details": [
+            "[Thrombose veineuse profonde il y a 4 semaines]",
+            "Hospitalisation récente [oui, pour TVP]",
+            "Complications [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux - Oncologiques",
+          "binaryOnly": false,
+          "details": [
+            "Cancer actuel [non]",
+            "Antécédent de cancer [non]",
+            "Dépistages à jour [non interrogé]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux - Infectieux",
+          "binaryOnly": false,
+          "details": [
+            "Hépatite B ou C [non]",
+            "VIH [non]",
+            "Autres infections chroniques [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux - Auto-immuns",
+          "binaryOnly": false,
+          "details": [
+            "[Lupus érythémateux disséminé diagnostiqué en 2006]",
+            "Traitement actuel [aucun médicament actuellement]",
+            "Suivi [non précisé]",
+            "Dernière poussée [non précisé]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Autres antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Diabète [non interrogé]",
+            "Hypertension [non interrogé]",
+            "Maladies rénales antérieures [non]",
+            "Maladies cardiaques [non interrogé]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "binaryOnly": false,
+          "details": [
+            "[Marcoumar (warfarine) pour la TVP]",
+            "Posologie [non précisée]",
+            "Observance [bonne présumée]",
+            "INR récent [non interrogé]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": false,
+          "details": [
+            "[Aucune allergie connue]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Alcool [non]",
+            "Tabac [non]",
+            "Drogues [non]",
+            "Régime alimentaire [non précisé]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "[Frère avec maladie rénale]",
+            "Type de maladie rénale [non précisé]",
+            "Autres maladies familiales [non interrogé]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [vit avec mari et 3 enfants]",
+            "Logement [appartement]",
+            "Profession [vendeuse dans une épicerie]",
+            "Stress/soucis actuels [non interrogé]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Origine et statut migratoire",
+          "binaryOnly": false,
+          "details": [
+            "[Femme africaine]",
+            "Pays d'origine [non précisé]",
+            "Durée en Suisse [non précisée]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse générale ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Tension artérielle [normale]",
+            "Fréquence cardiaque [normale]",
+            "Température [normale]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection et palpation du visage",
+          "binaryOnly": false,
+          "details": [
+            "Œdèmes palpébraux [présents, bilatéraux]",
+            "Consistance [mou, prend le godet]",
+            "Couleur cutanée [normale]",
+            "Autres signes faciaux [non]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [obésité notée]",
+            "Palpation [souple, indolore]",
+            "Ascite [non recherchée]",
+            "Hépatomégalie [non]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation rénale",
+          "binaryOnly": false,
+          "details": [
+            "Fosses lombaires [non douloureuses]",
+            "Reins palpables [non]",
+            "Contact lombaire [négatif]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation cardio-pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire [normale]",
+            "Auscultation cardiaque [normale]",
+            "Signes de surcharge [non]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Inspection des veines jugulaires",
+          "binaryOnly": false,
+          "details": [
+            "Turgescence jugulaire [non]",
+            "Reflux hépato-jugulaire [non testé]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des membres inférieurs",
+          "binaryOnly": false,
+          "details": [
+            "[Œdèmes légers présents]",
+            "Bilatéraux [oui]",
+            "Prenant le godet [oui]",
+            "Signes de TVP [non]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen cutané",
+          "binaryOnly": false,
+          "details": [
+            "Éruption cutanée [non]",
+            "Lésions de lupus [non observées]",
+            "Purpura [non]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": false,
+          "details": [
+            "[Syndrome néphrotique]",
+            "[Glomérulosclérose segmentaire et focale (GSFS) possible]",
+            "[Néphrite lupique possible]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Syndrome néphrotique",
+            "Néphrite lupique",
+            "Glomérulonéphrite post-infectieuse",
+            "Insuffisance cardiaque",
+            "Hypoprotidémie d'autre origine",
+            "Angioœdème",
+            "Hypothyroïdie"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "En faveur du syndrome néphrotique",
+                "items": [
+                  {
+                    "text": "Œdèmes faciaux prédominants le matin",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Œdèmes des membres inférieurs associés",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Antécédent de lupus",
+                    "cause": "□ risque de néphrite",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Antécédent familial de maladie rénale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Contre d'autres diagnostics",
+                "items": [
+                  {
+                    "text": "Pas de dyspnée",
+                    "cause": "□ contre insuffisance cardiaque",
+                    "test": "→ NT-proBNP, échocardiographie"
+                  },
+                  {
+                    "text": "Pas de prurit ni d'urticaire",
+                    "cause": "□ contre angioœdème",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Évolution progressive",
+                    "cause": "□ contre réaction allergique",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Bandelette urinaire [protéinurie à rechercher]",
+            "Sédiment urinaire",
+            "Rapport protéine/créatinine urinaire"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Bilan biologique complémentaire",
+          "binaryOnly": false,
+          "details": [
+            "Fonction rénale (créatinine, urée, DFG)",
+            "Protidémie et albuminémie",
+            "Bilan lipidique",
+            "NFS, VS, CRP"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Examens de première intention",
+                "content": "• Bandelette urinaire (protéinurie ++++)\n• Créatinine, urée, ionogramme\n• Protidémie, albuminémie\n• Protéinurie des 24h ou ratio protéine/créatinine\n• Sédiment urinaire (cylindres)"
+              },
+              {
+                "title": "Examens spécifiques au lupus",
+                "content": "• Anticorps anti-ADN natif\n• Complément C3, C4\n• Anticorps anti-nucléaires (si non fait récemment)\n• Anti-C1q (néphrite lupique)"
+              },
+              {
+                "title": "Autres examens selon contexte",
+                "content": "• Échographie rénale\n• Sérologies hépatites B, C, VIH\n• Électrophorèse des protéines\n• TSH"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Reconnaissance du syndrome néphrotique",
+          "binaryOnly": false,
+          "details": [
+            "Protéinurie > 3.5 g/24h",
+            "Hypoalbuminémie < 30 g/L",
+            "Œdèmes",
+            "Hyperlipidémie fréquente"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement initial",
+          "binaryOnly": false,
+          "details": [
+            "Restriction sodée",
+            "Restriction hydrique si hyponatrémie",
+            "Diurétiques de l'anse si œdèmes importants",
+            "[Évaluer les inhibiteurs de l'ECA/ARA2]"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance de l'anticoagulation",
+          "binaryOnly": false,
+          "details": [
+            "Vérifier l'INR (patient sous Marcoumar)",
+            "Risque thrombotique augmenté dans le syndrome néphrotique",
+            "Adapter la posologie si nécessaire"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Orientation spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "[Référence urgente au néphrologue]",
+            "[Biopsie rénale à discuter]",
+            "Suivi conjoint avec rhumatologue (lupus)"
+          ],
+          "redflagsSection": [
+            {
+              "text": "Insuffisance rénale aiguë"
+            },
+            {
+              "text": "Syndrome néphrotique sévère avec anasarque"
+            },
+            {
+              "text": "Complications thromboemboliques"
+            },
+            {
+              "text": "Signes de glomérulonéphrite rapidement progressive"
+            },
+            {
+              "text": "Hypertension sévère"
+            }
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Information et éducation du patient",
+          "binaryOnly": false,
+          "details": [
+            "Explication du diagnostic suspecté",
+            "Importance du suivi néphrologique",
+            "Surveillance du poids et des œdèmes",
+            "Signes d'alerte à surveiller"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Plan de suivi",
+          "binaryOnly": false,
+          "details": [
+            "Consultation néphrologie dans les 24-48h",
+            "Contrôle biologique rapproché",
+            "Surveillance de la fonction rénale",
+            "Ajustement thérapeutique selon résultats"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge générale cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

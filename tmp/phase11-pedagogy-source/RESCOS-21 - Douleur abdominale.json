@@ -1,0 +1,882 @@
+{
+  "title": "RESCOS-21 - Douleur abdominale",
+  "category": "RESCOS",
+  "subcategory": "Gastro-entérologie - Urgence abdominale",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Homme de 35 ans, Monsieur Billroth, consultant pour douleur épigastrique brutale en coup de poignard",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleur brutale épigastrique en coup de poignard il y a XX h YY min"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur abdominale",
+          "details": [
+            "Début [brutal, en coup de poignard]",
+            "Horaire [XX h YY min précisément]",
+            "Localisation [épigastrique]",
+            "Type [coup de poignard, puis constante]",
+            "Intensité [très violente, échelle analogique]",
+            "Évolution [continue depuis le début]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques spécifiques de la douleur",
+          "details": [
+            "Coliques [muscle lisse circulaire]",
+            "Continues [syndrome péritonitique]",
+            "Irradiation [coupe la respiration]",
+            "Sans irradiation actuellement",
+            "Exacerbée par [respiration profonde, toux, mouvements, secousses du transport]",
+            "Non calmée par [prise de lait]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Nausées",
+            "Vomissements",
+            "Troubles du transit",
+            "Fièvre",
+            "Frissons",
+            "Arrêt des matières et des gaz [péritonite]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents de maladie ulcéreuse",
+          "details": [
+            "Maladie ulcéreuse connue [oui]",
+            "Sensation de faim douloureuse",
+            "Brûlure épigastrique [depuis plusieurs années]",
+            "Rythmée par les repas",
+            "Réveils nocturnes à 02h [ulcère duodénal]",
+            "Calmée par alimentation ou lait",
+            "Printemps et automne [recrudescence saisonnière]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Traitement antérieur",
+          "details": [
+            "Ranitidine [anti-H2] prescrite",
+            "Prise irrégulière [mauvaise observance]",
+            "Interruption du traitement antibiotique d'éradication",
+            "Intolérance après 48 heures",
+            "Automédication fréquente [antiacides]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs de risque ulcéreux",
+          "details": [
+            "Calculs biliaires ou urinaires",
+            "Ulcère gastro-duodénal connu",
+            "Stress professionnel",
+            "Tabagisme",
+            "Consommation d'AINS",
+            "Consommation d'alcool",
+            "Antécédents familiaux d'ulcère"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Troubles urinaires associés",
+          "details": [
+            "Dysurie [difficulté mictionnelle]",
+            "Pollakiurie [mictions fréquentes]",
+            "Hématurie [sang dans urines]",
+            "Volume des urines",
+            "Fréquence mictionnelle",
+            "Odeur anormale"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale - Ambiance",
+          "details": [
+            "Agitation ou prostration",
+            "Position antalgique [immobile, jambes fléchies]",
+            "Faciès douloureux, crispé",
+            "Pâleur, sueurs froides",
+            "État de choc [pouls filant, hypotension]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux",
+          "details": [
+            "Pulsations [tachycardie]",
+            "Tension artérielle [hypotension si choc]",
+            "Rythme respiratoire [superficiel, limité par douleur]",
+            "Amplitude respiratoire [diminuée]",
+            "Température [fièvre si péritonite]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cutané et muqueux",
+          "details": [
+            "Peau [ictère, angiomes stellaires, vergetures pourpres]",
+            "Langue [hydratation, papilles]",
+            "Signes de dénutrition",
+            "Signes de déshydratation"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Inspection abdominale",
+          "details": [
+            "Morphologie [plat vs distendu]",
+            "Symétrie vs asymétrie",
+            "Cicatrices [laparoscopie difficilement visibles]",
+            "Hernies [ombilicales, inguinales, crurales]",
+            "Veines superficielles",
+            "Respiration abdominale [absente si péritonite]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Patience [attendre au moins 1 minute]",
+            "Silence abdominal [signe de péritonite]",
+            "Bruits intestinaux [absents ou diminués]",
+            "Tonalité [bruits métalliques si distension]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Percussion abdominale",
+          "details": [
+            "Tympanisme diffus [pneumopéritoine]",
+            "Disparition de la matité pré-hépatique [air libre]",
+            "Matité déclive [épanchement liquidien]",
+            "Douleur à la percussion [rebond]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation superficielle",
+          "details": [
+            "Défense généralisée [ventre de bois]",
+            "Contracture abdominale [permanente, invincible]",
+            "Hyperesthésie cutanée",
+            "Douleur maximale épigastrique",
+            "Extension de la contracture"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Palpation profonde",
+          "details": [
+            "Impossible si contracture",
+            "Recherche masse si possible",
+            "Foie et rate [si palpables]",
+            "Points douloureux spécifiques",
+            "Douleur à l'ébranlement [signe du rebond]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Signes péritonéaux spécifiques",
+          "details": [
+            "Contracture abdominale généralisée [ventre de bois]",
+            "Signe du rebond positif [douleur au relâchement]",
+            "Douleur à la décompression brutale",
+            "Douleur à la toux",
+            "Douleur à la percussion du talon",
+            "Position antalgique en chien de fusil"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Touchers pelviens",
+          "details": [
+            "Toucher rectal [douleur du cul-de-sac de Douglas]",
+            "Bombement douloureux",
+            "Recherche de sang",
+            "Toucher vaginal [si femme]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels de l'abdomen aigu",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour un abdomen aigu",
+            "categories": [
+              {
+                "name": "Diagnostic principal - Urgence chirurgicale",
+                "items": [
+                  {
+                    "text": "Perforation d'ulcère gastro-duodénal",
+                    "cause": "Arguments POUR:\n\t□ Douleur en coup de poignard épigastrique\n\t□ Antécédents d'ulcère connu\n\t□ Contracture abdominale (ventre de bois)\n\t□ Disparition matité pré-hépatique\n\t□ Silence abdominal",
+                    "test": "→ ASP debout/thorax (pneumopéritoine), CT abdominal en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Autres perforations digestives",
+                "items": [
+                  {
+                    "text": "Perforation colique (diverticulite, cancer)",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune pour diverticulite\n\t□ Douleur épigastrique (vs FIG/FID)\n\t□ Pas de troubles du transit préalables",
+                    "test": "→ CT abdominal avec injection"
+                  },
+                  {
+                    "text": "Perforation appendiculaire",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur épigastrique (vs FID)\n\t□ Début brutal (vs progressif)\n\t□ Pas de migration de la douleur",
+                    "test": "→ Échographie, CT si doute"
+                  }
+                ]
+              },
+              {
+                "name": "Urgences vasculaires",
+                "items": [
+                  {
+                    "text": "Infarctus mésentérique",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Pas de facteur de risque cardiovasculaire\n\t□ Contracture d'emblée",
+                    "test": "→ Angio-CT mésentérique"
+                  },
+                  {
+                    "text": "Rupture d'anévrisme aortique",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Pas de masse pulsatile\n\t□ Localisation épigastrique pure",
+                    "test": "→ CT aortique en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Autres urgences abdominales",
+                "items": [
+                  {
+                    "text": "Pancréatite aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Contracture généralisée\n\t□ Pas d'irradiation transfixiante\n\t□ Coup de poignard (vs douleur en barre)",
+                    "test": "→ Lipase, CT pancréatique"
+                  },
+                  {
+                    "text": "Cholécystite aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur épigastrique (vs HCD)\n\t□ Contracture généralisée\n\t□ Pas de Murphy",
+                    "test": "→ Échographie biliaire"
+                  },
+                  {
+                    "text": "Colique néphrétique compliquée",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'irradiation lombaire\n\t□ Contracture abdominale\n\t□ Patient immobile (vs agité)",
+                    "test": "→ CT abdomino-pelvien sans injection"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires en urgence",
+          "details": [
+            "ASP debout face (ou thorax debout): croissant gazeux sous-diaphragmatique",
+            "CT abdominal sans et avec injection: pneumopéritoine, liquide libre",
+            "NFS: hyperleucocytose, hémoconcentration",
+            "Ionogramme, urée, créatinine: déshydratation, insuffisance rénale",
+            "Bilan préopératoire: groupe sanguin, RAI, TP, TCA",
+            "Gazométrie artérielle: acidose métabolique si choc"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Signes radiologiques de pneumopéritoine",
+          "details": [
+            "ASP/Thorax debout: croissant gazeux sous les coupoles",
+            "Signe de Rigler: double contour des anses (air des deux côtés)",
+            "Ligament falciforme visible",
+            "Air péri-hépatique",
+            "CT: sensibilité maximale pour air libre",
+            "Recherche du site de perforation"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge initiale d'urgence",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Réanimation et stabilisation",
+                "content": "• Voie veineuse périphérique de gros calibre x2\n• Remplissage vasculaire: cristalloïdes 20ml/kg\n• Oxygénothérapie si besoin\n• Sonde naso-gastrique en aspiration\n• Sonde urinaire: surveillance diurèse\n• Monitoring continu des signes vitaux"
+              },
+              {
+                "title": "Analgésie",
+                "content": "• Morphine IV titrée\n• Paracétamol IV 1g/6h\n• Antispasmodiques contre-indiqués\n• Position antalgique respectée\n• NE PAS retarder le diagnostic"
+              },
+              {
+                "title": "Antibiothérapie probabiliste",
+                "content": "• Amoxicilline-acide clavulanique 2g IV\n• + Gentamicine 5mg/kg IV\n• Alternative: C3G + métronidazole\n• Débutée avant le bloc opératoire\n• Couverture BGN et anaérobies"
+              },
+              {
+                "title": "Traitement anti-ulcéreux",
+                "content": "• IPP haute dose IV: oméprazole 80mg bolus puis 8mg/h\n• Maintien pH gastrique > 6\n• Prévention récidive hémorragique\n• Cicatrisation ulcère résiduel"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Traitement chirurgical en urgence",
+          "details": [
+            "Indication formelle: péritonite généralisée",
+            "Laparotomie ou laparoscopie selon expertise",
+            "Suture simple de la perforation",
+            "Épiplooplastie (patch épiploïque)",
+            "Toilette péritonéale abondante",
+            "Drainage de la cavité péritonéale",
+            "Biopsie des berges (éliminer cancer)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Complications et surveillance",
+          "redflagsSection": {
+            "title": "Complications à surveiller",
+            "items": [
+              {
+                "text": "Choc septique",
+                "description": "Hypotension réfractaire, défaillance multi-organes"
+              },
+              {
+                "text": "Abcès intra-abdominal",
+                "description": "Fièvre persistante post-opératoire, syndrome inflammatoire"
+              },
+              {
+                "text": "Péritonite tertiaire",
+                "description": "Infection péritonéale persistante malgré traitement"
+              },
+              {
+                "text": "Fistule digestive",
+                "description": "Lâchage de suture, écoulement digestif"
+              },
+              {
+                "text": "Syndrome compartimental abdominal",
+                "description": "Hypertension intra-abdominale, défaillance d'organes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Traitement post-opératoire et prévention",
+          "details": [
+            "IPP per os 8 semaines minimum",
+            "Éradication H. pylori si positive",
+            "- Trithérapie: IPP + amoxicilline + clarithromycine 14j",
+            "- Quadrithérapie si échec: IPP + bismuth + tétracycline + métronidazole",
+            "Arrêt AINS, aspirine si possible",
+            "Sevrage tabagique impératif",
+            "Contrôle endoscopique à 6-8 semaines",
+            "Surveillance cicatrisation et biopsies"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Votre douleur brutale et l'examen suggèrent fortement une perforation de votre ulcère. C'est une urgence chirurgicale. L'ulcère a créé un trou dans la paroi de l'estomac ou du duodénum, laissant passer le contenu digestif dans l'abdomen, causant une péritonite. Il faut opérer en urgence."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est grave?]\n[Vais-je mourir?]\n[L'opération est-elle obligatoire?]\n[Combien de temps vais-je rester à l'hôpital?]\n[Pourquoi mon ulcère s'est-il perforé?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "C'est une urgence sérieuse mais le traitement chirurgical rapide a un excellent pronostic\nAvec une prise en charge rapide, le risque vital est très faible\nL'opération est indispensable pour fermer la perforation et nettoyer l'abdomen\nL'hospitalisation dure généralement 5-7 jours si tout se passe bien\nLa perforation survient quand l'ulcère s'approfondit, souvent lors d'un stress ou arrêt de traitement"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Perforation ulcéreuse",
+      "nom": "Monsieur Billroth",
+      "age": "35 ans",
+      "contexte": "Service des urgences",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur atroce au creux de l'estomac, comme un coup de poignard",
+        "description": "Douleur épigastrique brutale en coup de poignard survenue il y a quelques heures"
+      },
+      "histoireActuelle": {
+        "douleurAigue": [
+          "Début brutal en coup de poignard",
+          "Heure précise mémorisée",
+          "Localisation épigastrique",
+          "Douleur constante depuis",
+          "Très violente, insupportable",
+          "Coupe la respiration"
+        ],
+        "facteursDeclenchants": [
+          "Exacerbée par respiration profonde",
+          "Aggravée par la toux",
+          "Pire avec les mouvements",
+          "Secousses du transport très douloureuses",
+          "Aucune position de soulagement"
+        ],
+        "antecedentsUlcere": [
+          "Brûlures d'estomac depuis des années",
+          "Douleurs de faim",
+          "Réveils nocturnes vers 2h du matin",
+          "Soulagé par le lait habituellement",
+          "Recrudescence printemps et automne"
+        ],
+        "traitement": [
+          "Ranitidine prescrite",
+          "Prise irrégulière",
+          "Antibiotiques pour H. pylori",
+          "Arrêtés après 48h pour intolérance",
+          "Automédication fréquente avec antiacides"
+        ]
+      },
+      "symptomesAssocies": {
+        "digestifs": [
+          "Nausées importantes",
+          "Vomissements",
+          "Arrêt des gaz",
+          "Pas de selles depuis la douleur"
+        ],
+        "generaux": [
+          "Sensation de malaise",
+          "Sueurs froides",
+          "Sensation de mort imminente"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Position en chien de fusil",
+          "Immobile, évite tout mouvement",
+          "Respiration superficielle",
+          "Faciès crispé de douleur",
+          "Mains croisées sur l'épigastre"
+        ],
+        "signesPhysiques": [
+          "Pâleur",
+          "Sueurs visibles",
+          "Abdomen immobile à la respiration",
+          "Se plaint à la moindre mobilisation"
+        ],
+        "durantExamen": [
+          "Abdomen dur comme du bois",
+          "Crie à la palpation même superficielle",
+          "Douleur maximale épigastrique",
+          "Empêche l'examen approfondi"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Perforation ulcéreuse",
+      "pointsCles": [
+        "Douleur en coup de poignard = perforation jusqu'à preuve du contraire",
+        "Contracture généralisée (ventre de bois) = péritonite",
+        "Disparition matité pré-hépatique = pneumopéritoine",
+        "Silence abdominal = iléus réflexe",
+        "Urgence chirurgicale absolue"
+      ],
+      "pieges": [
+        "Ne pas retarder la prise en charge pour examens",
+        "Morphine n'empêche pas le diagnostic",
+        "ASP normal n'élimine pas le diagnostic (10-20%)",
+        "Perforation bouchée peut donner tableau incomplet",
+        "Toujours biopsier les berges (cancer perforé)"
+      ],
+      "techniquesExamen": [
+        "Palpation très douce initialement",
+        "Recherche disparition matité hépatique: percussion",
+        "Signe du rebond: décompression brutale",
+        "Test de la toux: fait tousser le patient",
+        "Percussion du talon: douleur abdominale déclenchée"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Perforation ulcéreuse",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Ulcère peptique traverse toute la paroi\n• Libération contenu gastro-duodénal dans péritoine\n• Péritonite chimique puis bactérienne\n• 10% des ulcères se compliquent de perforation\n• Localisation: face antérieure duodénum (60%), estomac (20%)"
+        },
+        {
+          "titre": "Tableau clinique typique",
+          "contenu": "TRIADE DE PERFORATION:\n1. Douleur en coup de poignard\n2. Contracture abdominale généralisée\n3. Disparition matité pré-hépatique\n\nPHASES ÉVOLUTIVES:\n• Phase 1 (0-2h): douleur brutale, état de choc\n• Phase 2 (2-12h): accalmie trompeuse\n• Phase 3 (>12h): péritonite généralisée"
+        },
+        {
+          "titre": "Formes cliniques",
+          "contenu": "• Perforation bouchée: tableau incomplet\n• Perforation postérieure: rétropéritonite\n• Perforation couverte: épiploon bouche l'orifice\n• Perforation chez le vieillard: tableau atténué\n• Perforation sous IPP: symptômes masqués"
+        },
+        {
+          "titre": "Facteurs de mauvais pronostic",
+          "contenu": "• Âge > 70 ans\n• Comorbidités sévères\n• Retard diagnostic > 24h\n• Choc à l'admission\n• Perforation gastrique > duodénale\n• Score de Boey élevé"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Réanimation préopératoire agressive",
+        "Antibiothérapie précoce large spectre",
+        "Chirurgie en urgence < 6h idéalement",
+        "Suture simple + épiplooplastie (gold standard)",
+        "Vagotomie-pyloroplastie abandonnée",
+        "Laparoscopie si expertise disponible",
+        "IPP haute dose post-opératoire",
+        "Éradication H. pylori systématique"
+      ],
+      "examensComplementaires": [
+        "ASP debout: pneumopéritoine 80% des cas",
+        "CT abdominal: sensibilité 98% pour air libre",
+        "Biologie: hyperleucocytose, hémoconcentration",
+        "Lipase: normale (vs pancréatite)",
+        "ECG: éliminer IDM (DD épigastralgie)",
+        "Groupe, RAI, bilan préop en urgence"
+      ]
+    },
+    "resume": {
+      "titre": "⚠️ Ulcère gastro-duodénal perforé – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur abdominale brutale, intense, souvent épigastrique puis diffuse",
+                "Douleur en coup de poignard, persistante",
+                "Nausées, vomissements possibles",
+                "Arrêt des gaz et des selles (iléus réflexe)"
+              ]
+            },
+            {
+              "titre": "Contexte évocateur",
+              "points": [
+                "Antécédents d’ulcère gastrique ou duodénal",
+                "Prise d’AINS, corticoïdes",
+                "Alcool, tabac",
+                "Absence d’antécédent abdominal aigu connu"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes physiques",
+              "points": [
+                "Abdomen en bois (contracture généralisée)",
+                "Douleur à la palpation diffuse",
+                "Disparition de la matité hépatique (pneumopéritoine)",
+                "Tachycardie, hypotension, signes de choc",
+                "Fièvre possible (péritonite secondaire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens complémentaires",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Leucocytose neutrophile",
+                "Signe de déshydratation ou d’hypovolémie (urée, créatinine ↑)",
+                "Recherche de troubles électrolytiques"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie thorax/abdomen debout : pneumopéritoine (air sous diaphragme)",
+                "Scanner abdomino-pelvien avec contraste : examen de référence (perforation, fuite, liquide libre, étiologie)",
+                "Échographie : alternative si contre-indication au scanner"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Mise à jeun stricte",
+                "Voie veineuse, remplissage IV, correction hydro-électrolytique",
+                "Oxygénothérapie si besoin",
+                "Antibiothérapie à large spectre IV",
+                "IPP IV"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Indication chirurgicale en urgence (péritonite)",
+                "Laparotomie ou laparoscopie",
+                "Fermeture du perforation (patch épiploïque de Graham si petite perforation duodénale)",
+                "Résection gastrique en cas d’ulcère gastrique perforé suspect de malignité"
+              ]
+            },
+            {
+              "titre": "Suivi post-opératoire",
+              "points": [
+                "Surveillance en soins continus ou réanimation si choc septique",
+                "Contrôle des bilans biologiques et hydriques",
+                "Eradication d’Helicobacter pylori secondairement",
+                "Prévention secondaire : sevrage AINS/alcool/tabac, traitement anti-sécrétoire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur abdominale brutale + abdomen en bois = perforation digestive jusqu’à preuve du contraire",
+            "Le pneumopéritoine au scanner ou à la radio est diagnostic",
+            "C’est une urgence chirurgicale absolue",
+            "Prise en charge initiale = réanimation + antibiotiques + chirurgie",
+            "Les ulcères antérieurs perforent, les postérieurs saignent"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Début brutal de la douleur ? Type coup de poignard ?",
+                "Localisation initiale (épigastrique) puis diffusion",
+                "Antécédents d’ulcère, AINS, corticoïdes, tabac, alcool",
+                "Nausées, vomissements, arrêt gaz/selles",
+                "Signes de gravité : malaise, hypotension, état de choc"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, FR, SpO₂, température",
+                "Inspection/auscultation : silence abdominal",
+                "Palpation : défense ou contracture généralisée",
+                "Percussion : disparition matité hépatique",
+                "Rechercher signes de choc hypovolémique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Réanimation initiale : perfusion IV, oxygène, antibiothérapie, IPP",
+                "Confirmation diagnostique par imagerie (radio ou scanner)",
+                "Chirurgie en urgence (laparoscopie/laparotomie, patch de Graham ou résection selon contexte)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale (suspicion de perforation ulcéreuse)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation (douleur épigastrique brutale en coup de poignard)",
+            "Caractériser la douleur → début brutal, épigastrique, type coup de poignard puis constante, très intense, aggravée par mouvements/toux/respiration, non soulagée par lait",
+            "Symptômes associés → nausées, vomissements, arrêt gaz/selles, malaise, sueurs froides",
+            "ATCD → ulcère gastro-duodénal connu, brûlures épigastriques chroniques, mauvaise observance traitement anti-H2, échec d’éradication H. pylori, tabac, AINS/alcool ?",
+            "Examen clinique ciblé → abdomen en bois, contracture généralisée, disparition matité hépatique, silence auscultatoire, faciès douloureux",
+            "Résumé + hypothèse principale : perforation d’ulcère gastro-duodénal compliquée de péritonite ; DD : perforation colique, appendiculaire, pancréatite, AAA, infarctus mésentérique",
+            "Examens complémentaires → ASP ou radio thorax debout (croissant gazeux), scanner abdomino-pelvien avec injection, biologie (NFS, iono, urée, créat, bilan préop), gazométrie",
+            "Prise en charge → hospitalisation, réanimation initiale, voie veineuse, remplissage, oxygène, antalgiques morphine, IPP IV, antibiothérapie IV, chirurgie urgente (suture + patch épiploïque)"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : TRIade perforation",
+            "elements": [
+              "Douleur brutale en coup de poignard",
+              "Contracture abdominale généralisée (ventre de bois)",
+              "Disparition de la matité hépatique"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Billroth, un homme de 35 ans, qui consulte aux urgences pour une douleur épigastrique brutale. Il décrit une douleur en coup de poignard apparue il y a quelques heures, d’intensité maximale, insupportable, qui coupe la respiration. La douleur est constante depuis son apparition, exacerbée par la respiration, la toux, les mouvements et les secousses du transport. Aucune position ne la soulage, et elle n’est pas calmée par le lait, contrairement à ses douleurs habituelles d’ulcère.\n\nLes symptômes associés incluent des nausées, des vomissements, un arrêt des gaz et des selles depuis le début de la douleur. Le patient rapporte un malaise général, des sueurs froides et une sensation de mort imminente.\n\nConcernant ses antécédents, il est connu pour un ulcère duodénal ancien avec brûlures épigastriques depuis plusieurs années, douleurs de faim nocturnes, améliorées par la prise de lait. Son traitement par ranitidine était pris de manière irrégulière, et il avait interrompu l’éradication d’Helicobacter pylori après 48 heures pour intolérance. Il consomme du tabac et prend parfois des anti-inflammatoires.\n\nÀ l’examen, le patient est en position antalgique en chien de fusil, immobile, avec un faciès crispé. Il est pâle, en sueur, avec respiration superficielle. À la palpation, l’abdomen est dur comme du bois avec une contracture généralisée, douleur maximale épigastrique, empêchant tout examen approfondi. La percussion révèle une disparition de la matité hépatique, traduisant un pneumopéritoine. L’auscultation retrouve un silence abdominal.\n\nEn résumé, il s’agit d’un homme jeune avec antécédents d’ulcère, présentant une douleur épigastrique brutale en coup de poignard, un abdomen en bois, un silence abdominal et une disparition de la matité hépatique. Mon hypothèse principale est une perforation d’ulcère gastro-duodénal avec péritonite généralisée. Les diagnostics différentiels incluent une pancréatite aiguë, une perforation appendiculaire ou colique, un infarctus mésentérique ou une rupture d’anévrisme aortique.\n\nComme examens complémentaires, je demanderais un ASP ou un thorax debout à la recherche d’un pneumopéritoine, un scanner abdominal avec injection pour confirmer la perforation et localiser le site, ainsi qu’un bilan biologique complet : NFS, ionogramme, urée, créatinine, bilan de coagulation, groupe sanguin et RAI. Une gazométrie artérielle permet de dépister une acidose métabolique.\n\nEn termes de prise en charge, il s’agit d’une urgence chirurgicale absolue : mise en place de deux voies veineuses de gros calibre, remplissage vasculaire, oxygénothérapie, sonde nasogastrique, sonde urinaire, antibiothérapie IV large spectre, IPP IV à forte dose, antalgiques morphiniques titrés. Le traitement est chirurgical avec une suture simple de la perforation associée à un patch épiploïque de Graham et une toilette péritonéale abondante. Un prélèvement et une biopsie des berges doivent être réalisés pour exclure une cause néoplasique."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Billroth, 35 ans, présente une douleur épigastrique brutale en coup de poignard, persistante depuis quelques heures.\n\nB (Background) : Ulcère duodénal connu, mauvaise observance thérapeutique, échec d’éradication H. pylori, tabac, prise d’AINS.\n\nA (Assessment) : Tableau typique de perforation d’ulcère avec abdomen en bois et pneumopéritoine probable. DD : pancréatite aiguë, perforation colique, appendiculaire, infarctus mésentérique, rupture AAA.\n\nR (Recommendation) : Hospitalisation en urgence, scanner abdominal, bilan préopératoire, réanimation initiale (VVP, remplissage, O₂, antibiotiques, IPP IV), chirurgie immédiate (suture + patch épiploïque)."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade de perforation",
+              "points": [
+                "Douleur brutale en coup de poignard",
+                "Contracture abdominale généralisée",
+                "Disparition matité hépatique"
+              ]
+            },
+            {
+              "titre": "👉 Ulcères antérieurs vs postérieurs",
+              "points": [
+                "Antérieurs → perforent",
+                "Postérieurs → saignent"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Un ASP normal n’élimine pas une perforation (10-20 %)",
+                "Morphine n’empêche pas le diagnostic",
+                "Perforation bouchée : tableau clinique incomplet",
+                "Toujours biopsier les berges de l’ulcère pour éliminer cancer",
+                "Ne pas retarder chirurgie pour examens inutiles"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Perforation d’ulcère gastro-duodénal",
+                  "reponse": {
+                    "pour": [
+                      "Douleur brutale en coup de poignard",
+                      "Antécédent d’ulcère",
+                      "Contracture abdominale généralisée (ventre de bois)",
+                      "Disparition matité hépatique",
+                      "Silence abdominal"
+                    ],
+                    "contre": [
+                      "Âge relativement jeune (mais pas exclusif)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pancréatite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique",
+                      "Nausées/vomissements"
+                    ],
+                    "contre": [
+                      "Douleur en barre et non en coup de poignard",
+                      "Pas d’irradiation transfixiante",
+                      "Contracture généralisée atypique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Appendicite perforée",
+                  "reponse": {
+                    "contre": [
+                      "Localisation épigastrique initiale",
+                      "Début brutal vs progressif",
+                      "Pas de migration douleur FID"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infarctus mésentérique",
+                  "reponse": {
+                    "contre": [
+                      "Âge jeune",
+                      "Pas de facteur cardiovasculaire",
+                      "Contracture d’emblée (vs douleurs + ventre souple)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Rupture d’anévrisme aortique",
+                  "reponse": {
+                    "contre": [
+                      "Âge jeune",
+                      "Pas de masse pulsatile",
+                      "Douleur purement épigastrique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "ASP ou thorax debout (croissant gazeux sous diaphragme)",
+                    "Scanner abdomino-pelvien avec injection (examen de référence)",
+                    "NFS, ionogramme, urée, créatinine",
+                    "Bilan préopératoire : groupe, RAI, TP, TCA",
+                    "Gazométrie artérielle"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Perforation d’ulcère gastro-duodénal compliquée de péritonite généralisée"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation en urgence",
+                      "Mise à jeun, sonde nasogastrique",
+                      "Deux VVP gros calibre, remplissage IV",
+                      "Oxygène, monitoring",
+                      "Morphine IV titrée",
+                      "IPP IV haute dose",
+                      "Antibiothérapie IV large spectre",
+                      "Chirurgie urgente : suture + patch épiploïque de Graham, toilette péritonéale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance en post-op immédiat (soins continus)",
+                    "Contrôle biologique (NFS, iono, CRP)",
+                    "IPP prolongé 8 semaines",
+                    "Éradication H. pylori si positive",
+                    "Endoscopie de contrôle à 6-8 semaines",
+                    "Sevrage tabac et arrêt AINS"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

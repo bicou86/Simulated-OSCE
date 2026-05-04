@@ -1,0 +1,807 @@
+{
+  "title": "RESCOS-38 - Douleurs articulaires",
+  "category": "RESCOS",
+  "subcategory": "Rhumatologie - Pathologie inflammatoire",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 45 ans consultant pour douleurs articulaires symétriques des mains et des genoux",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleurs du poignet droit qui sont devenues symétriques, touchant les articulations des doigts et des genoux"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur - critères inflammatoires",
+          "details": [
+            "Début [depuis 6 mois]",
+            "Localisation [poignet droit initial, puis bilatéral]",
+            "Extension [métacarpo-phalangiennes et interphalangiennes proximales]",
+            "Atteinte symétrique [les deux mains de façon égale]",
+            "Type inflammatoire [douleur de repos et nocturne]",
+            "Horaire inflammatoire [pire la nuit et au réveil]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Raideur matinale caractéristique",
+          "details": [
+            "Raideur matinale importante [> 30 minutes]",
+            "Durée environ 2 heures",
+            "Difficultés pour mouvoir les articulations le matin",
+            "Amélioration progressive avec l'activité",
+            "Mouvements plus faciles et douleurs diminuent après-midi"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Tuméfaction articulaire [remarquée aux doigts]",
+            "Difficultés pour mettre ou enlever ses bagues",
+            "Douleurs des coudes et des genoux également",
+            "Douleurs non calmées par le repos",
+            "Réveillée en fin de nuit par les douleurs"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "details": [
+            "Asthénie [depuis quelques mois]",
+            "Pas de fièvre",
+            "Pas de perte de poids",
+            "Pas d'anorexie"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Traitement essayé",
+          "details": [
+            "Anti-inflammatoires (antalgiques) [effet partiel sur les symptômes]",
+            "Pas d'amélioration complète",
+            "Nécessité de prise régulière"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents et terrain",
+          "details": [
+            "Pas de rachialgie",
+            "Pas de problèmes cutanés ou muqueux",
+            "Pas de plaintes digestives",
+            "Antécédents personnels et familiaux sans particularité"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs de risque et exposition",
+          "details": [
+            "Sexe féminin",
+            "Âge 45 ans (pic d'incidence 40-60 ans)",
+            "Recherche tabagisme [facteur de risque]",
+            "Recherche stress psychosocial",
+            "Recherche infections récentes"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "État général conservé",
+            "Pas de pâleur",
+            "Pas d'amaigrissement visible",
+            "Attitude antalgique des mains"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des mains et poignets",
+          "details": [
+            "Tuméfaction des articulations MCP [métacarpo-phalangiennes]",
+            "Tuméfaction des articulations IPP [interphalangiennes proximales]",
+            "Aspect fusiforme des doigts",
+            "Synovite du poignet [gonflement dorsal]",
+            "Chaleur locale",
+            "Pas de déformation fixée (stade précoce)"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation articulaire des mains",
+          "details": [
+            "Douleur à la pression des MCP",
+            "Douleur à la pression des IPP",
+            "Squeeze test positif [compression latérale des MCP]",
+            "Synovite palpable [épaississement synovial]",
+            "Ténosynovite des fléchisseurs/extenseurs possible"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Mobilité articulaire des mains",
+          "details": [
+            "Limitation de la flexion des doigts",
+            "Limitation de l'extension",
+            "Déficit de fermeture du poing",
+            "Douleur à la mobilisation passive",
+            "Raideur matinale objective lors de l'examen matinal"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des autres articulations",
+          "details": [
+            "Genoux: épanchement articulaire possible",
+            "Coudes: synovite, nodules rhumatoïdes [rechercher]",
+            "Épaules: limitation des mouvements",
+            "Pieds: douleur des MTP [métatarso-phalangiennes]",
+            "Rachis cervical: recherche subluxation C1-C2"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de manifestations extra-articulaires",
+          "details": [
+            "Nodules rhumatoïdes [faces d'extension]",
+            "Syndrome sec [yeux, bouche]",
+            "Vascularite [purpura, ulcères]",
+            "Atteinte pulmonaire [auscultation]",
+            "Syndrome de Raynaud"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Tests fonctionnels spécifiques",
+          "details": [
+            "Force de préhension [dynamomètre si disponible]",
+            "Test de Finkelstein [tendinite De Quervain associée]",
+            "Test de Phalen [syndrome canal carpien secondaire]",
+            "Évaluation fonctionnelle globale"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels des polyarthrites",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour une polyarthrite",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Polyarthrite rhumatoïde",
+                    "cause": "Arguments POUR:\n\t□ Polyarthrite symétrique\n\t□ Atteinte MCP et IPP\n\t□ Raideur matinale > 2h\n\t□ Caractère inflammatoire\n\t□ Évolution > 6 semaines\n\t□ Femme d'âge moyen",
+                    "test": "→ FR, anti-CCP, VS, CRP, radiographies mains/pieds"
+                  }
+                ]
+              },
+              {
+                "name": "Autres arthrites inflammatoires",
+                "items": [
+                  {
+                    "text": "Lupus érythémateux systémique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de signes cutanés\n\t□ Pas de photosensibilité\n\t□ Pas d'atteinte rénale\n\t□ Arthrite non érosive",
+                    "test": "→ AAN, anti-DNA, complément"
+                  },
+                  {
+                    "text": "Arthrite psoriasique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de psoriasis cutané\n\t□ Pas d'atteinte unguéale\n\t□ Distribution symétrique (vs asymétrique)",
+                    "test": "→ Recherche psoriasis, radiographies"
+                  },
+                  {
+                    "text": "Syndrome de Sjögren",
+                    "cause": "Arguments POSSIBLES:\n\t□ Polyarthrite\n\t□ Asthénie\nArguments CONTRE:\n\t□ Pas de syndrome sec décrit",
+                    "test": "→ Anti-SSA/SSB, test de Schirmer"
+                  },
+                  {
+                    "text": "Spondylarthrite périphérique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de rachialgie inflammatoire\n\t□ Pas d'enthésite\n\t□ Distribution symétrique",
+                    "test": "→ HLA-B27, IRM sacro-iliaques"
+                  }
+                ]
+              },
+              {
+                "name": "Arthrites microcristallines",
+                "items": [
+                  {
+                    "text": "Chondrocalcinose articulaire",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Polyarthrite chronique (vs crises)\n\t□ Atteinte des petites articulations",
+                    "test": "→ Radiographies genoux/poignets (liseré calcique)"
+                  },
+                  {
+                    "text": "Goutte polyarticulaire",
+                    "cause": "Arguments CONTRE:\n\t□ Femme\n\t□ Pas de crises typiques\n\t□ Atteinte symétrique",
+                    "test": "→ Uricémie, ponction articulaire"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Critères diagnostiques ACR/EULAR 2010",
+          "details": [
+            "Atteinte articulaire (0-5 points)",
+            "- 2-10 grandes articulations: 1 point",
+            "- 1-3 petites articulations: 2 points",
+            "- 4-10 petites articulations: 3 points",
+            "- >10 articulations: 5 points",
+            "Sérologie (0-3 points)",
+            "- FR ou anti-CCP faiblement positifs: 2 points",
+            "- FR ou anti-CCP fortement positifs: 3 points",
+            "Durée > 6 semaines: 1 point",
+            "Syndrome inflammatoire (VS ou CRP élevées): 1 point"
+          ],
+          "scoringRule": "Score ≥ 6/10 = Polyarthrite rhumatoïde"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "Biologie inflammatoire: VS, CRP",
+            "Auto-anticorps: Facteur rhumatoïde (FR), Anti-CCP",
+            "NFS: recherche anémie inflammatoire",
+            "Bilan hépatique et rénal (pré-thérapeutique)",
+            "Radiographies mains/poignets face et pieds face",
+            "Radiographie thorax (bilan pré-thérapeutique)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement de la polyarthrite rhumatoïde",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique initial",
+                "content": "• AINS avec protection gastrique\n• Corticothérapie faible dose (< 10mg/j prednisolone)\n• Antalgiques selon EVA\n• Repos articulaire en poussée\n• Attelles de repos nocturnes"
+              },
+              {
+                "title": "Traitement de fond (DMARDs)",
+                "content": "• Méthotrexate 15-25mg/semaine (1ère ligne)\n• + Acide folique 5-10mg/semaine\n• Si échec/intolérance: léflunomide ou sulfasalazine\n• Association possible méthotrexate + hydroxychloroquine\n• Objectif: rémission ou faible activité"
+              },
+              {
+                "title": "Biothérapies (si échec DMARDs)",
+                "content": "• Anti-TNFα (adalimumab, étanercept, infliximab)\n• Anti-IL6 (tocilizumab)\n• Anti-CD20 (rituximab)\n• Inhibiteur JAK (baricitinib, tofacitinib)\n• Toujours en association avec méthotrexate"
+              },
+              {
+                "title": "Prise en charge globale",
+                "content": "• Éducation thérapeutique\n• Kinésithérapie: maintien amplitudes, renforcement\n• Ergothérapie: aides techniques, protection articulaire\n• Soutien psychologique\n• Prise en charge socioprofessionnelle"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Score d'activité DAS28 tous les 3 mois",
+            "Objectif: rémission (DAS28 < 2.6)",
+            "Surveillance tolérance traitement",
+            "NFS, bilan hépatique sous méthotrexate",
+            "Radiographies annuelles (progression structurale)",
+            "Dépistage complications: ostéoporose, infections"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Pronostic et complications",
+          "details": [
+            "Évolution par poussées-rémissions",
+            "Destruction articulaire progressive sans traitement",
+            "Déformations: déviation cubitale, col de cygne",
+            "Handicap fonctionnel possible",
+            "Manifestations systémiques: vascularite, amylose",
+            "Sur-risque cardiovasculaire",
+            "Meilleur pronostic avec traitement précoce"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos symptômes évoquent une polyarthrite rhumatoïde, une maladie inflammatoire des articulations. C'est une maladie auto-immune où votre système immunitaire attaque vos propres articulations. Il est important de débuter rapidement un traitement pour éviter les dommages articulaires."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est grave?]\n[Vais-je être handicapée?]\n[Est-ce héréditaire?]\n[Peut-on guérir?]\n[Quels sont les effets secondaires du traitement?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "C'est une maladie chronique mais les traitements actuels sont très efficaces\nAvec un traitement précoce et adapté, on peut éviter le handicap dans la majorité des cas\nIl y a une petite composante génétique mais ce n'est pas une maladie héréditaire directe\nOn ne guérit pas mais on peut obtenir une rémission durable avec le traitement\nLes traitements sont bien tolérés, nous surveillerons régulièrement pour prévenir les effets secondaires"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Polyarthrite rhumatoïde",
+      "nom": "Patiente féminine",
+      "age": "45 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal aux articulations des mains et des genoux depuis plusieurs mois",
+        "description": "Douleurs articulaires symétriques inflammatoires avec raideur matinale importante"
+      },
+      "histoireActuelle": {
+        "debut": [
+          "Commencé il y a 6 mois par le poignet droit",
+          "Rapidement devenu symétrique",
+          "Touche les deux mains de façon égale",
+          "Extension aux genoux"
+        ],
+        "caracteristiques": [
+          "Douleurs des articulations MCP et IPP",
+          "Tuméfaction articulaire remarquée",
+          "Difficultés pour mettre/enlever les bagues",
+          "Douleurs des coudes aussi"
+        ],
+        "horaire": [
+          "Douleurs non calmées par le repos",
+          "Réveillée en fin de nuit par les douleurs",
+          "Raideur matinale d'environ 2 heures",
+          "Difficultés pour bouger les articulations le matin",
+          "Amélioration dans l'après-midi"
+        ],
+        "symptomesGeneraux": [
+          "Fatigue depuis quelques mois",
+          "Pas de fièvre",
+          "Pas de perte de poids"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Aucune maladie particulière",
+        "familiaux": "Sans particularité",
+        "chirurgicaux": "Aucun"
+      },
+      "traitements": {
+        "actuels": "Anti-inflammatoires avec effet partiel seulement"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète de l'évolution",
+          "Fatiguée par les douleurs nocturnes",
+          "Motivée pour un traitement efficace"
+        ],
+        "signesPhysiques": [
+          "Mains légèrement gonflées au niveau MCP et IPP",
+          "Difficultés pour fermer complètement le poing",
+          "Mouvements lents et prudents des mains",
+          "Se frotte les mains pour soulager la raideur"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Polyarthrite rhumatoïde",
+      "pointsCles": [
+        "Polyarthrite symétrique typique",
+        "Atteinte élective MCP et IPP",
+        "Raideur matinale prolongée (2h)",
+        "Évolution > 6 semaines",
+        "Terrain: femme 45 ans"
+      ],
+      "pieges": [
+        "Ne pas oublier l'examen des pieds",
+        "Rechercher les nodules rhumatoïdes",
+        "Évaluer le retentissement fonctionnel",
+        "Éliminer un lupus (jeune femme)",
+        "Vérifier l'absence de psoriasis"
+      ],
+      "criteresDiagnostiques": [
+        "Score ACR/EULAR ≥ 6/10",
+        "FR et anti-CCP: haute spécificité",
+        "Syndrome inflammatoire biologique",
+        "Érosions précoces possibles à 6 mois"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Polyarthrite rhumatoïde",
+      "sections": [
+        {
+          "titre": "Épidémiologie",
+          "contenu": "• Prévalence: 0.5-1% population\n• Ratio F/H = 3/1\n• Pic d'incidence: 40-60 ans\n• Facteurs de risque: génétique (HLA-DR4), tabac, parodontite\n• Évolution variable: 20% formes sévères"
+        },
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Maladie auto-immune systémique\n• Synovite inflammatoire chronique\n• Production auto-anticorps (FR, anti-CCP)\n• Pannus synovial destructeur\n• Cytokines pro-inflammatoires (TNF, IL-6)"
+        },
+        {
+          "titre": "Atteintes articulaires",
+          "contenu": "• Synovite symétrique additive\n• MCP, IPP, poignets (respecte IPD)\n• Ténosynovites fréquentes\n• Déformations: boutonnière, col de cygne\n• Subluxation atloïdo-axoïdienne (C1-C2)"
+        },
+        {
+          "titre": "Manifestations extra-articulaires",
+          "contenu": "• Nodules rhumatoïdes (20-30%)\n• Syndrome sec secondaire\n• Atteinte pulmonaire: fibrose, nodules\n• Vascularite rhumatoïde\n• Risque cardiovasculaire augmenté\n• Syndrome de Felty (PR + splénomégalie + neutropénie)"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Stratégie Treat to Target: objectif rémission",
+        "Window of opportunity: traitement < 3 mois idéal",
+        "Méthotrexate = gold standard (70% répondeurs)",
+        "Biothérapies si échec: anti-TNF en première ligne",
+        "Corticoïdes: sevrage progressif visé",
+        "Vaccination avant immunosuppresseurs",
+        "Prévention ostéoporose cortico-induite"
+      ],
+      "examensComplementaires": [
+        "FR: sensible (70%) mais peu spécifique",
+        "Anti-CCP: très spécifique (95%), valeur pronostique",
+        "VS, CRP: activité inflammatoire",
+        "Radiographies: érosions, pincement, déminéralisation",
+        "Échographie: synovites infra-cliniques, érosions précoces",
+        "IRM: œdème osseux, valeur pronostique"
+      ]
+    },
+    "resume": {
+      "titre": "🦴 Polyarthrite rhumatoïde – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleurs articulaires inflammatoires (repos, fin de nuit, réveils nocturnes)",
+                "Raideur matinale > 30 minutes",
+                "Atteinte bilatérale et symétrique (métacarpophalangiennes, interphalangiennes proximales, poignets)",
+                "Fatigue, asthénie, altération de l’état général possible"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Femme jeune ou d’âge moyen (30–50 ans)",
+                "Antécédents familiaux de maladies auto-immunes",
+                "Tabagisme (facteur de risque et de sévérité)"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Début insidieux, progression chronique par poussées",
+                "Peut évoluer vers des déformations articulaires irréversibles"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes articulaires",
+              "points": [
+                "Synovite bilatérale et symétrique",
+                "Articulations douloureuses, tuméfiées, chaudes mais non rouges",
+                "Poignets, MCP et IPP le plus souvent atteintes",
+                "Raideur et diminution de mobilité"
+              ]
+            },
+            {
+              "titre": "Signes évolutifs",
+              "points": [
+                "Déformations en coup de vent cubital, col de cygne, boutonnière (stades avancés)",
+                "Atteinte des grosses articulations possible (genoux, chevilles, coudes)",
+                "Syndrome du canal carpien"
+              ]
+            },
+            {
+              "titre": "Manifestations extra-articulaires",
+              "points": [
+                "Nodules rhumatoïdes sous-cutanés",
+                "Atteintes pulmonaires (fibrose, nodules), cardiaques, oculaires (sclérite)",
+                "Syndrome de Sjögren secondaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Syndrome inflammatoire (VS, CRP)",
+                "Facteur rhumatoïde et anticorps anti-CCP positifs (spécifiques)",
+                "Bilan pré-thérapeutique (hémogramme, transaminases, sérologies infectieuses)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographies mains et poignets : érosions, pincement articulaire, ostéopénie juxta-articulaire",
+                "Échographie ou IRM utiles pour détection précoce de synovite/érosions"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement de fond (DMARDs)",
+              "points": [
+                "Méthotrexate en première intention",
+                "Leflunomide, sulfasalazine, hydroxychloroquine si contre-indication ou association",
+                "Biothérapies (anti-TNF, anti-IL6, anti-CD20) en cas d’échec"
+              ]
+            },
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "AINS en phase de poussée (court terme)",
+                "Corticothérapie faible dose pour contrôler l’inflammation en relais",
+                "Antalgiques selon intensité de la douleur"
+              ]
+            },
+            {
+              "titre": "Prise en charge globale",
+              "points": [
+                "Kinésithérapie : entretien de la mobilité articulaire",
+                "Ergothérapie : adaptation des gestes quotidiens",
+                "Sevrage tabagique",
+                "Surveillance régulière (clinique, biologique, radiologique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Arthrite bilatérale et symétrique, prédominant aux petites articulations",
+            "Raideur matinale > 30 minutes = signe distinctif",
+            "Facteur rhumatoïde et anti-CCP = arguments diagnostiques",
+            "Traitement précoce par DMARDs pour éviter les destructions articulaires",
+            "Toujours rechercher atteintes extra-articulaires (poumon, cœur, œil)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur articulaire depuis quand ? Début brutal ou progressif ?",
+                "Raideur matinale, durée > 30 min ?",
+                "Atteinte bilatérale et symétrique ?",
+                "Fatigue, amaigrissement, fièvre ?",
+                "ATCD familiaux de maladies auto-immunes ? Tabac ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection et palpation : articulations tuméfiées, chaudes, douloureuses",
+                "Évaluer mobilité et présence de déformations",
+                "Recherche de nodules rhumatoïdes",
+                "Biologie : VS, CRP, FR, anti-CCP",
+                "Radiographie mains/poignets"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic avec clinique + biologie + imagerie",
+                "Introduire précocement un DMARD (méthotrexate 1ère intention)",
+                "PEC multidisciplinaire (rhumatologie, kiné, suivi biologique et radiologique)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleurs articulaires symétriques (Polyarthrite rhumatoïde probable) – Femme de 45 ans",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (douleurs articulaires des mains et genoux)",
+            "Caractériser douleur → début progressif (6 mois), symétrique, MCP + IPP + poignets, horaire inflammatoire (nuit, repos, réveil)",
+            "Raideur matinale → > 2h, s’améliore dans la journée",
+            "Symptômes associés → tuméfaction, bagues serrées, réveils nocturnes, fatigue",
+            "Pas de fièvre, pas de perte de poids, pas d’atteinte cutanée ou digestive",
+            "Examen clinique → synovite MCP, IPP, poignets, chaleur locale, squeeze test +, mobilité diminuée, pas de déformation fixée",
+            "Hypothèse principale → polyarthrite rhumatoïde débutante",
+            "Diagnostics différentiels → lupus, arthrite psoriasique, syndrome de Sjögren, spondylarthrite, arthrites microcristallines",
+            "Examens complémentaires → VS/CRP, FR, anti-CCP, NFS, bilan hépatique/rénal, radios mains/pieds, Rx thorax",
+            "PEC → AINS/corticoïdes faible dose, introduction précoce DMARD (méthotrexate), kinésithérapie, suivi rhumatologie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : INFLAMME",
+            "elements": [
+              "I = Inflammatoire (douleur repos, nocturne)",
+              "N = Nocturne",
+              "F = Fatigue, asthénie",
+              "L = Longue raideur matinale (>30min)",
+              "A = Atteinte symétrique petites articulations",
+              "M = Multiples articulations (>6)",
+              "M = Main (MCP/IPP)",
+              "E = Évolution chronique > 6 semaines"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme X, une femme de 45 ans, qui consulte pour des douleurs articulaires évoluant depuis environ 6 mois. Les symptômes ont débuté par le poignet droit, puis se sont rapidement étendus aux deux mains, de manière bilatérale et symétrique. Actuellement, elle décrit des douleurs touchant les articulations métacarpo-phalangiennes, interphalangiennes proximales et les poignets, ainsi que les genoux. Les douleurs sont inflammatoires : présentes au repos, plus marquées en deuxième partie de nuit, responsables de réveils nocturnes, et particulièrement gênantes au réveil. Elle rapporte une raideur matinale importante durant environ 2 heures, avec amélioration progressive au cours de la journée et des mouvements plus fluides dans l’après-midi.\n\nElle note que ses doigts sont gonflés et qu’elle a des difficultés à mettre ou enlever ses bagues. Elle a aussi remarqué une fatigue générale depuis quelques mois. Pas de fièvre, pas de perte de poids ni de symptômes digestifs ou cutanés. Ses antécédents personnels et familiaux sont sans particularité. Elle a essayé des anti-inflammatoires avec un effet partiel mais insuffisant, nécessitant une prise régulière.\n\nÀ l’examen, l’état général est conservé. On retrouve une tuméfaction symétrique des MCP et IPP, un aspect fusiforme des doigts, une synovite des poignets avec chaleur locale. Le squeeze test est positif. La mobilité est réduite avec déficit de fermeture du poing. Pas de déformations fixées à ce stade. Les genoux présentent un possible épanchement articulaire. Pas de nodules rhumatoïdes ni de syndrome sec objectivés.\n\nEn résumé, il s’agit d’une femme de 45 ans présentant une polyarthrite inflammatoire symétrique évoluant depuis 6 mois, avec atteinte des petites articulations et raideur matinale prolongée. Mon hypothèse principale est une polyarthrite rhumatoïde débutante. Les diagnostics différentiels incluent lupus, arthrite psoriasique, syndrome de Sjögren, spondylarthrite périphérique et arthrites microcristallines.\n\nJe demanderais comme examens : VS, CRP, facteur rhumatoïde, anticorps anti-CCP, NFS, bilan hépatique et rénal, radiographies mains/pieds et thorax. La prise en charge repose sur le traitement symptomatique par AINS ± corticothérapie faible dose, et surtout l’introduction rapide d’un traitement de fond type méthotrexate, associé à une prise en charge globale (kinésithérapie, ergothérapie, sevrage tabac, suivi multidisciplinaire)."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Femme 45 ans, douleurs articulaires mains et genoux depuis 6 mois.\n\nB (Background) : Début au poignet droit puis bilatéral, douleurs inflammatoires, raideur matinale 2h, fatigue, pas d’ATCD significatif.\n\nA (Assessment) : Suspicion polyarthrite rhumatoïde. DD : lupus, arthrite psoriasique, Sjögren, spondylarthrite, arthrites microcristallines.\n\nR (Recommendation) : Bilan biologique (VS, CRP, FR, anti-CCP), imagerie (radios mains/pieds), initiation DMARD (méthotrexate), orientation rhumatologie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes distinctifs de PR",
+              "points": [
+                "Arthrite bilatérale et symétrique",
+                "Atteinte MCP, IPP, poignets",
+                "Raideur matinale > 30 min",
+                "Douleur nocturne et repos",
+                "Évolution > 6 semaines"
+              ]
+            },
+            {
+              "titre": "👉 Critères ACR/EULAR 2010",
+              "points": [
+                "Atteinte articulaire (0-5 points)",
+                "Sérologie FR/anti-CCP (0-3 points)",
+                "Durée > 6 semaines (1 point)",
+                "Syndrome inflammatoire (1 point)",
+                "≥6 points = PR"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier examen des pieds et genoux",
+                "Rechercher systématiquement nodules rhumatoïdes",
+                "Éliminer lupus et psoriasis",
+                "Évaluer retentissement fonctionnel",
+                "Penser au sur-risque cardiovasculaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre les hypothèses",
+              "questions": [
+                {
+                  "question": "Polyarthrite rhumatoïde",
+                  "reponse": {
+                    "pour": [
+                      "Femme 45 ans",
+                      "Polyarthrite symétrique MCP, IPP, poignets",
+                      "Raideur matinale > 2h",
+                      "Caractère inflammatoire",
+                      "Évolution > 6 semaines"
+                    ],
+                    "contre": [
+                      "Pas encore de déformations fixées"
+                    ]
+                  }
+                },
+                {
+                  "question": "Lupus",
+                  "reponse": {
+                    "pour": [
+                      "Femme jeune",
+                      "Polyarthrite possible"
+                    ],
+                    "contre": [
+                      "Pas d’atteinte cutanée (photosensibilité, rash)",
+                      "Pas de manifestations rénales",
+                      "Arthrite non érosive"
+                    ]
+                  }
+                },
+                {
+                  "question": "Arthrite psoriasique",
+                  "reponse": {
+                    "contre": [
+                      "Pas de psoriasis cutané ou unguéal",
+                      "Distribution asymétrique habituellement"
+                    ]
+                  }
+                },
+                {
+                  "question": "Sjögren",
+                  "reponse": {
+                    "pour": [
+                      "Polyarthrite possible",
+                      "Asthénie"
+                    ],
+                    "contre": [
+                      "Pas de syndrome sec"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "VS, CRP",
+                    "FR, anti-CCP",
+                    "NFS",
+                    "Bilan hépatique et rénal",
+                    "Radiographies mains/pieds",
+                    "Rx thorax pré-thérapeutique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Quels traitements proposeriez-vous ?",
+                  "reponse": [
+                    "Symptomatique : AINS, corticoïdes faible dose",
+                    "De fond : Méthotrexate (1ère ligne) + acide folique",
+                    "Alternatives : léflunomide, sulfasalazine, hydroxychloroquine",
+                    "Biothérapies si échec (anti-TNF, anti-IL6, anti-CD20)"
+                  ]
+                },
+                {
+                  "question": "Quelles mesures associées ?",
+                  "reponse": [
+                    "Kinésithérapie pour mobilité",
+                    "Ergothérapie",
+                    "Éducation thérapeutique",
+                    "Sevrage tabagique",
+                    "Surveillance DAS28 et tolérance traitement"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "4. Pronostic",
+              "questions": [
+                {
+                  "question": "Quel est le pronostic de la polyarthrite rhumatoïde ?",
+                  "reponse": [
+                    "Maladie chronique évoluant par poussées",
+                    "Sans traitement → destructions et déformations articulaires",
+                    "Avec traitement précoce → rémission possible dans majorité des cas",
+                    "Sur-risque cardiovasculaire à prendre en compte"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

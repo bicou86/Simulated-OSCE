@@ -1,0 +1,795 @@
+{
+  "title": "RESCOS-18 - Douleur abdominale",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "Mme Katia Marguet, 39 ans, consulte pour des douleurs abdominales. Elle est connue pour des problèmes de poids avec un BMI à 32.5 kg/m²",
+    "vitals": {
+      "ta": "143/82 mmHg",
+      "sao2": "98 %",
+      "temperature": "37.8°C",
+      "imc": "32.5 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur",
+          "details": [
+            "Localisation [douleur dans le haut du ventre à droite]",
+            "Quantité [6/10]",
+            "Qualité [écrasement]",
+            "Irradiation [vers l'épaule droite]",
+            "Chronologie [début brutal de la douleur la nuit dernière. Douleur constante qui ne part pas]",
+            "Facteurs aggravants/soulageants [aucun facteur atténuant, aucun facteur aggravant]"
+          ],
+          "scoringRule": "Les six = oui, quatre à cinq = ±, aucun à trois = non"
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes associés - fièvre",
+          "details": [
+            "Début/chronologie [état subfébrile à 37.8°C apparu en même temps que les douleurs]",
+            "Intensité [37.8°C]",
+            "Fluctuation",
+            "Présence de frissons",
+            "Présence de transpiration"
+          ],
+          "scoringRule": "Les cinq = oui, deux à quatre = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés - nausées",
+          "details": [
+            "Présence de nausée [nausées depuis le début des douleurs]",
+            "Présence de vomissement [non, pas de vomissements]",
+            "Début/durée des nausées [depuis le début des douleurs]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes similaires par le passé",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse par système - digestives (selles)",
+          "details": [
+            "Quantité [normale]",
+            "Fréquence [1x à selle/jour]",
+            "Couleur [couleur habituelle]",
+            "Présence de sang [non]"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents",
+          "details": [
+            "Médicaux (maladies) [syndrome métabolique : hypertension artérielle, diabète de type 2 non insulino-requérant, surpoids]",
+            "Hospitalisations [seules hospitalisations dans le cadre des accouchements]",
+            "Opérations [accouchement ayant nécessité une césarienne]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes - alimentation",
+          "details": [
+            "Alimentation habituelle [très variable, pas toujours sain]",
+            "Contenu du dernier repas [raclette le soir d'avant]",
+            "Consommation d'alcool [1-2 verres de vin rouge le soir]",
+            "Allergies [aucune allergie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Glucophage (metformin) 500mg 2x/j [08:00-20:00], Atorvastatine 20mg 1x/j [08:00], Amlodipine 5mg 1x/j [08:00]"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Installation du patient",
+          "details": [
+            "Jambes décroisées",
+            "Bras le long du corps",
+            "Tête légèrement surélevée",
+            "Abdomen visible en entier (si nécessaire, premier bouton du pantalon enlevé)",
+            "Se positionne à droite de la patiente"
+          ],
+          "scoringRule": "Les cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Ausculte les 4 quadrants",
+            "Auscultation avant toute autre partie de l'examen clinique"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Percussion",
+          "details": [
+            "Des 4 quadrants",
+            "Délimitation de la taille du foie à la percussion (ou autre technique appropriée)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Palpation",
+          "details": [
+            "Superficielle [légère douleur]",
+            "Profonde (à deux mains) [franche douleur, surtout au cadrant haut-droit]",
+            "Teste la détente",
+            "Commence par le côté non douloureux"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Tests spécifiques",
+          "details": [
+            "Signe de Murphy [positif : bloquez votre inspiration et grimacez de douleur]",
+            "Palpation du point de McBurney [ne pas simuler de douleur]",
+            "Signe du Psoas"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Evoque un toucher rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Mentionne une cholécystite comme hypothèse diagnostique principale",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Evoque un diagnostic différentiel plausible",
+          "details": [
+            "Cholangite",
+            "Pancréatite",
+            "Appendicite",
+            "Hépatite",
+            "Pyélonéphrite",
+            "Trouble gynécologique"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes hépatobiliaires",
+                "items": [
+                  {
+                    "text": "Cholangite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Douleur hypochondre droit\n\t□ Contexte de lithiase possible\nArguments CONTRE:\n\t□ Absence d'ictère (triade de Charcot incomplète)\n\t□ État général préservé\n\t□ Pas de signes de sepsis",
+                    "test": "→ Bilan hépatique complet, hémocultures, US abdominal"
+                  },
+                  {
+                    "text": "Hépatite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Douleur hypochondre droit\n\t□ État subfébrile\nArguments CONTRE:\n\t□ Absence d'ictère\n\t□ Pas de notion d'exposition virale\n\t□ Signe de Murphy positif",
+                    "test": "→ Transaminases, sérologies hépatites, US hépatique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes pancréatiques",
+                "items": [
+                  {
+                    "text": "Pancréatite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Douleur abdominale haute\n\t□ Nausées\n\t□ Repas gras (raclette) comme facteur déclenchant\n\t□ Consommation d'alcool (2 verres/jour)\nArguments CONTRE:\n\t□ Douleur à droite et non en barre\n\t□ Irradiation vers l'épaule et non le dos\n\t□ Intensité modérée (6/10)",
+                    "test": "→ Lipases, amylases, CT abdominal si suspicion forte"
+                  }
+                ]
+              },
+              {
+                "name": "Causes appendiculaires",
+                "items": [
+                  {
+                    "text": "Appendicite",
+                    "cause": "Arguments POUR:\n\t□ Douleur abdominale\n\t□ Fièvre\n\t□ Nausées\nArguments CONTRE:\n\t□ Localisation haute et non en FID\n\t□ Début brutal et non progressif\n\t□ Point de McBurney non douloureux",
+                    "test": "→ NFS, CRP, US ou CT abdominal"
+                  }
+                ]
+              },
+              {
+                "name": "Causes urinaires",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Douleur latéralisée\nArguments CONTRE:\n\t□ Pas de symptômes urinaires (dysurie, pollakiurie)\n\t□ Loges rénales non douloureuses\n\t□ Localisation antérieure",
+                    "test": "→ Bandelette urinaire, ECBU, US rénal"
+                  }
+                ]
+              },
+              {
+                "name": "Causes gynécologiques",
+                "items": [
+                  {
+                    "text": "Torsion/kyste ovarien",
+                    "cause": "Arguments POUR:\n\t□ Femme en âge de procréer\n\t□ Douleur abdominale brutale\nArguments CONTRE:\n\t□ Localisation haute\n\t□ Règles régulières\n\t□ Signe de Murphy positif",
+                    "test": "→ βHCG, US pelvienne"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "Arguments POUR:\n\t□ Femme en âge de procréer\n\t□ Douleur abdominale\nArguments CONTRE:\n\t□ Mari vasectomisé\n\t□ Règles régulières\n\t□ Localisation haute",
+                    "test": "→ βHCG en urgence, US pelvienne"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Katia Marguet",
+      "age": "39 ans",
+      "contexte": "Employée de commerce consultant au cabinet du généraliste pour douleur abdominale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai eu très mal au ventre cette nuit",
+        "autreChose": "C'est pas passé tout seul, alors mon mari m'a amenée à l'hôpital ce matin"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur abdominale",
+          "Localisation : Douleur dans le haut du ventre à droite",
+          "Qualité : Écrasement",
+          "Quantité/intensité : 6/10",
+          "Irradiation : Vers l'épaule droite",
+          "Chronologie : Début brutal de la douleur la nuit dernière. Douleur constante qui ne part pas",
+          "Développement : Très rapide, en quelques minutes",
+          "Circonstances de survenue : Quelques heures après le repas (raclette), on allait se mettre au lit",
+          "Facteurs atténuants : Aucun",
+          "Facteurs aggravants : Aucun"
+        ],
+        "symptomesAssocies": [
+          "État subfébrile à 37.8°C apparu en même temps que les douleurs",
+          "Nausées depuis le début des douleurs mais pas de vomissements",
+          "Note : à ne mentionner seulement si le médecin pose des questions précises sur la fièvre ou les nausées/vomissements"
+        ],
+        "reponseAuxSymptomes": [
+          "A été consulter chez le médecin traitant"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "État subfébrile",
+          "Pas de trouble de l'état de conscience",
+          "Pas de perte de poids récente"
+        ],
+        "cardiovasculaire": [
+          "Pas de palpitation",
+          "Pas d'œdème"
+        ],
+        "pulmonaire": [
+          "Pas de peine à respirer",
+          "Pas de toux"
+        ],
+        "neurologique": [
+          "Pas de vertiges",
+          "Pas de paresthésie"
+        ],
+        "digestive": [
+          "Normale : 1x à selle/jour, couleur et quantité habituelles",
+          "Nausées mais pas de vomissement"
+        ],
+        "genitourinaire": [
+          "Pas de dysurie",
+          "Pas de pollakiurie"
+        ],
+        "gynecologique": [
+          "Règles régulières"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Glucophage (metformin) 500mg 2x/j [08:00-20:00], Atorvastatine 20mg 1x/j [08:00], Amlodipine 5mg 1x/j [08:00]. Note : vous connaissez bien vos médicaments et les récitez spontanément au médecin si il/elle le demande",
+        "alimentation": "Raclette le soir d'avant, le reste du temps, très variable pas toujours sain",
+        "activitePhysique": "Fais du vélo 1 fois par semaine",
+        "sommeil": "Satisfaisant, 8h en moyenne",
+        "tabac": "Occasionnellement (3 cig. par mois)",
+        "alcool": "1-2 verres de vin rouge le soir",
+        "drogues": "Aucune",
+        "sexualite": "Rapports non protégés réguliers avec son mari (qui a fait une vasectomie après la naissance du dernier enfant il y a 4 ans)"
+      },
+      "informationsPersonnelles": {
+        "profession": "Employée de commerce",
+        "hobbies": "Séries, bières artisanales",
+        "poids": "Surpoids (BMI 25-30)",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Mariée",
+        "etatEsprit": "Douleur dans le haut du ventre à droite (grimace douloureuse de temps en temps)"
+      },
+      "histoireMedicale": [
+        "Patiente connue pour un syndrome métabolique (hypertension artérielle, diabète de type 2 non insulino-requérant, surpoids)",
+        "Mère de 4 enfants, tous en bonne santé",
+        "Seules hospitalisations dans le cadre des accouchements, notamment un accouchement ayant nécessité une césarienne",
+        "Pas d'allergie",
+        "Vaccins à jour",
+        "L'anamnèse familiale est sans particularité"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Douleur dans le haut du ventre à droite (grimace douloureuse de temps en temps)"
+        ],
+        "durantStatus": [
+          "Légère douleur lorsque l'étudiant palpe superficiellement et franche douleur lorsqu'il palpe profondément votre ventre, surtout au cadrant haut-droit",
+          "Lorsqu'il glisse ses mains sous vos côtes alors qu'il vous a demandé d'inspirer à fond : bloquez votre inspiration et grimacez de douleur [signe de Murphy positif]",
+          "Quand il tape sur le dos [sur les loges rénales] et quand il appuie sur le bas du ventre à droite (au point de McBurney) : ne pas simuler de douleur"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "L'entretien auquel vous assisterez concerne Madame Katia Marguet (39 ans) atteinte d'un syndrome métabolique. Hier, quelques heures après son repas du soir (raclette), des douleurs sont survenues brutalement dans le haut du ventre à droite. Une fièvre est apparue en parallèle en plus de nausées (mais elle n'a pas vomi). Voyant que cela ne passait pas, elle a décidé de consulter son médecin généraliste.",
+      "rolesInterventions": [
+        "Vous n'avez pas à intervenir dans cette station"
+      ],
+      "pointsCles": [
+        "Le tableau est typique d'une cholécystite aiguë",
+        "La patiente présente au moins 4 des \"5F\" classiques : Female, Fat (BMI > 30), Forty, Fertile",
+        "Signe de Murphy positif très évocateur",
+        "Repas gras (raclette) comme facteur déclenchant",
+        "Syndrome métabolique comme terrain favorisant"
+      ],
+      "pieges": [
+        "Ne pas oublier d'examiner la taille du foie",
+        "Penser à la consommation d'alcool (facteur de risque pour pancréatite)",
+        "Attention au diagnostic différentiel de cholangite (triade de Charcot)",
+        "Ne pas négliger les causes gynécologiques chez une femme en âge de procréer"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Cholécystite aiguë",
+          "contenu": "Inflammation de la vésicule biliaire, le plus souvent secondaire à une obstruction du canal cystique par un calcul.",
+          "points": [
+            "Incidence : pathologie fréquente, 3e urgence chirurgicale digestive",
+            "Physiopathologie : obstruction → distension → inflammation → infection possible",
+            "Mortalité : 0.1-0.5% si non compliquée, jusqu'à 30% si perforation"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque - Les \"5F\"",
+          "contenu": "Mnémotechnique classique pour les facteurs de risque de lithiase biliaire :",
+          "points": [
+            "Fair : plus prévalent dans la population caucasienne",
+            "Female : prédominance féminine (2-3:1)",
+            "Fat : BMI > 30 kg/m²",
+            "Forty : vers la quarantaine",
+            "Fertile : multiparité (≥ 2 enfants)"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "points": [
+            "Douleur hypochondre droit constante > 6 heures",
+            "Irradiation possible vers l'épaule droite ou le dos",
+            "Signe de Murphy : arrêt inspiratoire lors de la palpation sous-costale droite",
+            "Fièvre dans 30-50% des cas",
+            "Nausées/vomissements fréquents",
+            "Déclenchement typique après repas gras"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "points": [
+            "Biologie : hyperleucocytose, CRP ↑, bilan hépatique (recherche cholestase)",
+            "US abdominal : examen de choix, épaississement pariétal > 3mm, liquide péri-vésiculaire",
+            "CT abdominal : si doute diagnostique ou complications",
+            "Cholangio-IRM : si suspicion de lithiase de la VBP"
+          ]
+        },
+        {
+          "titre": "Diagnostics différentiels principaux",
+          "points": [
+            "Cholangite : triade de Charcot (fièvre + douleur + ictère), urgence ++",
+            "Pancréatite : douleur en barre, lipases ↑↑",
+            "Hépatite aiguë : transaminases ↑↑↑",
+            "Colique hépatique simple : douleur < 6h, pas de fièvre",
+            "Causes extra-digestives : pyélonéphrite, pneumonie basale droite"
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "points": [
+            "Hospitalisation systématique",
+            "Mise à jeun, réhydratation IV",
+            "Antalgie : AINS ou morphiniques selon intensité",
+            "Antibiothérapie si signes infectieux : C3G + métronidazole",
+            "Cholécystectomie dans les 72h idéalement",
+            "Si terrain fragile : drainage percutané possible"
+          ]
+        },
+        {
+          "titre": "Complications",
+          "points": [
+            "Cholécystite gangréneuse",
+            "Perforation vésiculaire → péritonite biliaire",
+            "Abcès péri-vésiculaire",
+            "Fistule bilio-digestive",
+            "Iléus biliaire (rare)"
+          ]
+        },
+        {
+          "titre": "Points clés pour l'ECOS",
+          "contenu": "Quand vous êtes à un ECOS où on vous demande de pratiquer des anamnèses et status ciblés, pensez aux DD afin de mieux identifier ce qui est nécessaire pour augmenter ou diminuer la probabilité d'un diagnostic."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antalgie : Kétorolac 30mg IV ou Morphine selon EVA",
+        "Antibiothérapie : Ceftriaxone 2g/j + Métronidazole 500mg 3x/j",
+        "Antiémétiques : Ondansétron 4-8mg IV si nécessaire",
+        "Réhydratation : NaCl 0.9% selon pertes",
+        "IPP si terrain à risque ulcéreux (AINS)"
+      ],
+      "examensComplementaires": [
+        "NFS : hyperleucocytose > 10 G/L dans 60% des cas",
+        "CRP : élévation dans 80% des cas",
+        "Bilan hépatique : recherche cholestase (GGT, PAL ↑)",
+        "Lipases : normales (DD pancréatite)",
+        "US abdominal : sensibilité 95%, spécificité 98%"
+      ]
+    },
+    "resume": {
+      "titre": "🧪 Cholécystite aiguë – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur de l'hypochondre droit (intense, continue, irradiant à l'épaule droite ou l’omoplate)",
+                "Fièvre ± frissons",
+                "Nausées, vomissements",
+                "Anorexie",
+                "Début souvent postprandial (après repas riche en graisses)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Antécédents de lithiase biliaire",
+                "Femme, âge > 40 ans, obésité, grossesse",
+                "Jeûne prolongé, alimentation parentérale",
+                "Pathologies critiques (cholé. acalculée)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes cliniques clés",
+              "points": [
+                "Fièvre modérée",
+                "Douleur à la palpation de l’HCD",
+                "Signe de Murphy positif (arrêt inspiratoire à la palpation)",
+                "Défense localisée ou douleur à la percussion",
+                "± ictère modéré (si obstacle biliaire associé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Syndrome inflammatoire (CRP ↑, hyperleucocytose)",
+                "ASAT/ALAT, GGT, PAL, bilirubine ± modifiés si obstacle biliaire",
+                "Lipase si doute sur pancréatite associée"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : examen de choix",
+                "Signes échographiques : épaississement pariétal, distension, lithiase enclavée, halo péri-vésiculaire",
+                "Scanner si doute diagnostic ou complications",
+                "IRM biliaire (MRCP) si suspicion de lithiase associée du cholédoque"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Hospitalisation",
+                "Jeûne, perfusion IV, antalgiques (paracétamol, ± morphine), antiémétiques",
+                "Antibiothérapie IV empirique (ex : céphalosporine + métronidazole)",
+                "Surveillance des signes de gravité (sepsis, péritonite)"
+              ]
+            },
+            {
+              "titre": "Chirurgie",
+              "points": [
+                "Cholécystectomie laparoscopique en urgence (≤72h) si patient stable",
+                "Si contre-indication chirurgicale : drainage vésiculaire (choléystostomie percutanée)",
+                "Cholécystectomie différée si amélioration après traitement médical chez patient à risque"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Réévaluation clinique et biologique régulière",
+                "Prévention récidive : cholécystectomie même différée si épisode aigu résolu"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur HCD + fièvre + Murphy positif = évoquer cholécystite aiguë",
+            "Échographie abdo = examen clé",
+            "Antibiothérapie IV rapide, jeûne, antalgiques",
+            "Chirurgie dans les 72h si possible",
+            "Attention aux formes graves : sepsis, gangrène, perforation"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur HCD continue, irradiant à l’épaule ou omoplate ?",
+                "Fièvre, frissons, nausées, vomissements ?",
+                "Antécédents de lithiase biliaire ou épisodes similaires ?",
+                "Facteurs de risque : femme, >40 ans, obésité, jeûne prolongé ?",
+                "Signes de gravité : malaise, confusion, sepsis ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, FR, SpO₂, T°",
+                "Inspection : ictère cutanéo-muqueux éventuel",
+                "Palpation HCD : douleur, défense, signe de Murphy",
+                "Recherche de péritonite (perforation possible)",
+                "Évaluer état général et signes de sepsis"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Hospitalisation + jeûne + perfusion IV + antibiothérapie IV empirique",
+                "Échographie abdominale (diagnostic positif et recherche complications)",
+                "Cholécystectomie laparoscopique en urgence ≤72h (ou drainage si CI)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale (suspicion de cholécystite aiguë)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD (syndrome métabolique), motif de consultation",
+            "Caractériser la douleur → HCD, brutale, constante, irradiation épaule droite, EVA 6/10",
+            "Symptômes associés → fièvre 37.8°C, nausées sans vomissements",
+            "ATCD médicaux : HTA, diabète type 2, surpoids ; chirurgicaux : césarienne ; familiaux : RAS",
+            "Traitements → metformine, atorvastatine, amlodipine",
+            "Habitudes → repas gras (raclette), alcool modéré, tabac occasionnel",
+            "Examen clinique ciblé → sensibilité HCD, signe de Murphy positif, pas de douleur rénale ni appendiculaire",
+            "Résumé + hypothèse principale : cholécystite aiguë ; DD : cholangite, pancréatite, appendicite, hépatite, pyélonéphrite, cause gynécologique",
+            "Examens complémentaires → NFS, CRP, bilan hépatique, lipase, échographie abdo",
+            "Prise en charge → hospitalisation, jeûne, perfusion, antalgiques, antibiothérapie IV, cholécystectomie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 5F (facteurs de risque lithiases biliaires)",
+            "elements": [
+              "Female",
+              "Fat (IMC >30)",
+              "Forty (≈ quarantaine)",
+              "Fertile (4 enfants, multiparité)",
+              "Fair (population caucasienne)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Katia Marguet, une femme de 39 ans, employée de commerce, connue pour un syndrome métabolique comprenant une hypertension artérielle, un diabète de type 2 non insulino-requérant et un surpoids avec un IMC à 32.5. Elle consulte aujourd’hui pour des douleurs abdominales apparues brutalement la nuit dernière.\n\nLa douleur est localisée dans l’hypochondre droit, décrite comme un écrasement, d’intensité 6/10, constante et sans facteur aggravant ni soulageant. Elle irradie vers l’épaule droite. La douleur est apparue quelques heures après un repas gras, en l’occurrence une raclette, et persiste depuis.\n\nElle a présenté un état subfébrile à 37.8 °C et des nausées depuis le début de la douleur, mais pas de vomissements. Pas de diarrhée, pas de sang dans les selles, pas de symptômes urinaires, règles régulières.\n\nPour ses antécédents, elle est connue pour un syndrome métabolique, a déjà eu une césarienne, pas d’allergies, vaccinations à jour. Ses traitements sont la metformine, l’atorvastatine et l’amlodipine. Elle consomme 1–2 verres de vin par jour, fume occasionnellement, et son mari est vasectomisé.\n\nÀ l’examen clinique, la patiente présente une douleur à la palpation superficielle et surtout profonde de l’hypochondre droit, avec un signe de Murphy franc, entraînant un blocage inspiratoire. Pas de douleur lombaire ni au point de McBurney.\n\nEn résumé, il s’agit d’une femme obèse, avec facteurs de risque biliaires, présentant une douleur brutale et continue de l’hypochondre droit irradiant à l’épaule droite, fébricule, nausées et un signe de Murphy positif. Mon hypothèse principale est une cholécystite aiguë lithiasique. Les diagnostics différentiels incluent une cholangite, une pancréatite biliaire, une hépatite aiguë, une appendicite haute, une pyélonéphrite ou une cause gynécologique comme une torsion ovarienne.\n\nComme examens complémentaires, je demanderais une NFS, CRP, bilan hépatique (ASAT, ALAT, PAL, GGT, bilirubine), lipase et une échographie abdominale en première intention. Selon les résultats, un scanner ou une IRM biliaire pourraient compléter.\n\nEn termes de prise en charge, je propose une hospitalisation, un jeûne strict, une réhydratation IV, une analgésie adaptée, des antiémétiques, et une antibiothérapie IV empirique. Le traitement définitif est une cholécystectomie laparoscopique, idéalement dans les 72 heures."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Marguet, 39 ans, douleur brutale et persistante de l’hypochondre droit depuis la nuit dernière.\n\nB (Background) : Syndrome métabolique (HTA, diabète, obésité), césarienne antérieure, pas d’allergies, repas gras déclencheur.\n\nA (Assessment) : Suspicion de cholécystite aiguë. DD : cholangite, pancréatite, hépatite, appendicite, pyélonéphrite, torsion ovarienne.\n\nR (Recommendation) : Bilan biologique (NFS, CRP, bilan hépatique, lipase), échographie abdominale, hospitalisation, jeûne, perfusion, antalgiques, antibiothérapie, préparation à cholécystectomie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Facteurs de risque lithiases biliaires : 5F",
+              "points": [
+                "Female",
+                "Fat",
+                "Forty",
+                "Fertile",
+                "Fair"
+              ]
+            },
+            {
+              "titre": "👉 Signe de Murphy : MURPHY",
+              "points": [
+                "Main sous le rebord costal droit",
+                "UR (respiration profonde)",
+                "Positif = blocage inspiratoire par douleur",
+                "Hypochondre droit ciblé"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier la triade de Charcot pour la cholangite",
+                "Toujours doser la lipase pour exclure pancréatite",
+                "Examiner la sphère gynécologique chez une femme jeune",
+                "Bien caractériser irradiation → épaule (cholécystite) vs dos (pancréatite)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cholécystite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD brutale et persistante > 6h",
+                      "Irradiation épaule droite",
+                      "Fièvre 37.8°C",
+                      "Nausées",
+                      "Signe de Murphy positif",
+                      "Facteurs de risque (5F)"
+                    ],
+                    "contre": [
+                      "Pas d’ictère franc",
+                      "Fièvre modérée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pancréatite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur abdominale haute",
+                      "Repas gras comme facteur déclenchant",
+                      "Consommation d’alcool"
+                    ],
+                    "contre": [
+                      "Douleur localisée à droite et non en barre",
+                      "Irradiation épaule et non dos",
+                      "Intensité modérée (6/10)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholangite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Pas d’ictère",
+                      "Pas de signes de sepsis"
+                    ]
+                  }
+                },
+                {
+                  "question": "Appendicite",
+                  "reponse": {
+                    "contre": [
+                      "Douleur haute et non en FID",
+                      "Début brutal et non progressif",
+                      "Point de McBurney non douloureux"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP",
+                    "Bilan hépatique (ASAT, ALAT, PAL, GGT, bilirubine)",
+                    "Lipase (DD pancréatite)",
+                    "Échographie abdominale (examen clé)",
+                    "± Scanner ou IRM biliaire selon contexte"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cholécystite aiguë lithiasique probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Jeûne, perfusion IV",
+                      "Antalgiques IV adaptés",
+                      "Antiémétiques",
+                      "Antibiothérapie IV empirique (C3G + métronidazole)",
+                      "Préparation à cholécystectomie laparoscopique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique et biologique rapprochée",
+                    "Cholécystectomie idéalement dans les 72h",
+                    "Suivi post-op et prévention récidive"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,846 @@
+{
+  "title": "AMBOSS-1 - Douleurs abdominales - Femme 47 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Marcia Billings, femme de 47 ans, consultante pour des douleurs abdominales",
+    "vitals": {
+      "temperature": "37.5°C",
+      "ta": "116/70 mmHg",
+      "fc": "102 bpm",
+      "fr": "20/min",
+      "imc": "30 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Douleurs dans mon ventre"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Au milieu et dans la partie supérieure droite de mon abdomen]",
+            "Intensité [8-9/10]",
+            "Qualité [Douleur sourde]",
+            "Début [Il y a 12 heures, peu après le dîner d'hier]",
+            "Évolution temporelle [Douleur constante depuis hier soir, qui s'aggrave]",
+            "Irradiation [Douleur très forte qui irradie dans le dos et aussi dans l'épaule droite]",
+            "Facteurs améliorants [J'ai essayé une bouillotte chaude sans effet. Se pencher en avant ou se coucher sur le côté semble aider un peu]",
+            "Facteurs aggravants [Les mouvements et se coucher sur le dos]",
+            "Épisodes antérieurs similaires [Jamais comme ça. J'ai déjà eu des douleurs d'estomac après les repas, mais elles passaient toujours en quelques heures]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Nausées [après le dîner]",
+            "Vomissements [trois fois la nuit dernière]",
+            "Caractéristiques des vomissements [D'abord le contenu du dîner, puis seulement un liquide jaune. Pas de sang visible]",
+            "Fièvre [sensation de fièvre légère]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [camping à Yosemite il y a 4 mois]",
+            "Fatigue [juste la fatigue de courir après les enfants]",
+            "Éruption cutanée [absent]",
+            "Ictère [absent]",
+            "Troubles urinaires [absents]",
+            "Modifications de la couleur des urines [absentes]",
+            "Troubles du transit [absents]",
+            "Modifications de la couleur des selles [absentes]",
+            "Sang dans les selles [absent]",
+            "Appétit [normal avant cet épisode]",
+            "Variations pondérales [non remarquées]",
+            "Infections récentes [absentes]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Mon médecin me dit juste que je devrais perdre du poids"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Antiacides [parfois la nuit quand je n'arrive pas à dormir à cause des brûlures d'estomac]",
+            "Fréquence [quelques fois par mois, après un gros dîner tard le soir. Mais quand je prends les antiacides, ça passe et je peux dormir]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Seulement pour la naissance de chacun de mes 2 enfants"
+        },
+        {
+          "id": "a10",
+          "text": "Contacts malades",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Père [Décédé d'un AVC à 65 ans]",
+            "Mère [Vivante avec calculs biliaires]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Consultante en finance]",
+            "Domicile [Je vis avec mon mari et mes 2 enfants. C'est parfois chaotique, mais on s'en sort bien ensemble]",
+            "Tabac [Jamais]",
+            "Alcool [1 à 2 verres de vin avec le dîner la plupart des soirs. J'en ai bu un peu plus que ça ces 2 derniers jours parce que nous avions des invités]",
+            "Questions CAGE - Besoin de réduire [Non]",
+            "Questions CAGE - Agacée par les critiques [Non]",
+            "Questions CAGE - Culpabilité [Non]",
+            "Questions CAGE - Besoin de boire le matin [Non]",
+            "Drogues illicites [Jamais]",
+            "Exercice physique [Je n'arrive pas à trouver le temps]",
+            "Régime alimentaire [Je cuisine ce que les enfants aiment manger le mieux - macaronis au fromage, spaghettis aux boulettes de viande - de la nourriture réconfortante comme ça]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des sclérotiques [recherche d'ictère]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Douleur à la palpation de l'épigastre et de l'hypocondre droit]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Signe de Murphy",
+          "binaryOnly": false,
+          "patientComment": "Signe de Murphy positif - arrêt brutal de l'inspiration lors de la palpation de l'hypocondre droit en inspirant profondément"
+        },
+        {
+          "id": "e7",
+          "text": "Examen cutané",
+          "binaryOnly": true,
+          "patientComment": "Examen de la peau"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologie biliaire (priorité élevée)",
+                "items": [
+                  {
+                    "text": "Cholécystite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Douleur constante et prolongée > 6 heures\n\t□ Douleur épigastrique et hypocondre droit\n\t□ Aggravation post-prandiale\n\t□ Nausées et vomissements\n\t□ Signe de Murphy positif (caractéristique)\n\t□ Fébricule\n\t□ Facteurs de risque : 6F (Fat, Female, Fertile, Forty, Fair, Family history)\n\t□ Antécédents familiaux de lithiase biliaire (mère)",
+                    "test": "→ US abdominale (meilleur examen initial)"
+                  },
+                  {
+                    "text": "Pancréatite biliaire",
+                    "cause": "Arguments POUR:\n\t□ Irradiation dorsale caractéristique\n\t□ Amélioration en position antéfléchie\n\t□ Nausées et vomissements après repas\n\t□ Douleur épigastrique\n\t□ Facteurs de risque de lithiase (6F)\n\t□ Cependant : Signe de Murphy positif moins typique",
+                    "test": "→ Lipase, amylase + US abdominale"
+                  },
+                  {
+                    "text": "Choledocholithiasis",
+                    "cause": "Arguments POUR:\n\t□ Facteurs de risque de lithiase (6F)\n\t□ Épisodes antérieurs post-prandiaux régressifs\n\t□ Douleur hypocondre droit\n\t□ Nausées et vomissements\n\t□ Cependant : Douleur habituellement colique (non constante)\n\t□ Signe de Murphy absent en forme non compliquée",
+                    "test": "→ Bilan de cholestase + US abdominale ± ERCP"
+                  }
+                ]
+              },
+              {
+                "name": "Autres diagnostics à éliminer",
+                "items": [
+                  {
+                    "text": "Angiocholite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Triade de Charcot possible (fièvre, ictère, douleur)",
+                    "test": "→ Hémocultures + bilan inflammatoire + ERCP"
+                  },
+                  {
+                    "text": "Hépatite aiguë (A, B, C)",
+                    "cause": "Arguments POUR:\n\t□ Nausées et vomissements\n\t□ Douleur abdominale",
+                    "test": "→ Transaminases + sérologies virales"
+                  },
+                  {
+                    "text": "RGO, gastrite, ulcères gastro-intestinaux",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Relation avec les repas\n\t□ Antécédents de brûlures d'estomac",
+                    "test": "→ Endoscopie digestive haute"
+                  },
+                  {
+                    "text": "Lithiase rénale",
+                    "cause": "Arguments POUR:\n\t□ Douleur irradiant vers le dos",
+                    "test": "→ CT abdominal sans contraste"
+                  },
+                  {
+                    "text": "Infarctus du myocarde postérieur",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Nausées et vomissements",
+                    "test": "→ ECG + troponines"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires initiaux",
+          "binaryOnly": false,
+          "details": [
+            "US abdominale [meilleur examen initial pour les calculs biliaires et pancréatite biliaire suspectée]",
+            "Bilan hépatique complet [phosphatases alcalines (PAL), Gamma-GT, bilirubine totale et directe]",
+            "Transaminases [ASAT, ALAT pour évaluer l'atteinte hépatocellulaire]",
+            "Enzymes pancréatiques [amylase, lipase - marqueurs importants d'inflammation pancréatique]",
+            "FSC [recherche de leucocytose, surtout si cholécystite ou pancréatite biliaire]",
+            "Ionogramme et calcium [calcium est un marqueur pronostique important dans la pancréatite]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de seconde ligne",
+          "binaryOnly": false,
+          "details": [
+            "CT abdominal [pas utilisé routinièrement pour les diagnostics principaux suspectés, mais peut être utilisé dans la pancréatite aiguë pour évaluer la sévérité et les complications]",
+            "ERCP [peut être à la fois diagnostique et thérapeutique, car elle peut aider à visualiser et extraire les calculs biliaires des voies biliaires]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et défis",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les options de soutien pour les changements de poids et d'alimentation",
+            "Réaction appropriée au défi concernant le poids"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge immédiate de la cholécystite aiguë",
+                "content": "• NPO (nil per os)\n• Réhydratation IV: NaCl 0.9% ou Ringer lactate\n• Analgésie: paracétamol IV, AINS si pas de CI\n• Antispasmodiques: phloroglucinol (Spasfon®) 80 mg × 3/j\n• Antiémétiques si nausées: métoclopramide"
+              },
+              {
+                "title": "Antibiothérapie si signes infectieux",
+                "content": "• 1ère ligne: amoxicilline-acide clavulanique 1g × 3/j IV\n• Si allergie: ciprofloxacine + métronidazole\n• Durée: 5-7 jours\n• Adapter selon antibiogramme si hémocultures positives"
+              },
+              {
+                "title": "Traitement chirurgical",
+                "content": "• Cholécystectomie laparoscopique: gold standard\n• Timing optimal: dans les 72h (cholécystectomie précoce)\n• Réduction durée hospitalisation et complications\n• Préparation: bilan préopératoire, arrêt anticoagulants si besoin\n• Alternative si CI chirurgie: drainage percutané cholécystostomie"
+              },
+              {
+                "title": "Mesures préventives post-opératoires",
+                "content": "• Régime pauvre en graisses temporairement\n• Éviter aliments déclencheurs: fritures, œufs, chocolat\n• Supplémentation enzymes digestives si maldigestion\n• Dépistage lithiase résiduelle voie biliaire principale\n• Suivi hépatique si anomalies biologiques persistantes"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Questions difficiles à poser",
+          "content": "[Vous dites que je suis grosse ?!]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Billings, je comprends que vous puissiez être sensible à propos de votre poids, et ce n'est pas mon intention de vous faire la morale. Je peux vous assurer qu'en tant que votre médecin, je souhaite que vous soyez en meilleure santé possible, et il est de mon devoir de chercher des moyens pour que nous y arrivions ensemble. Seriez-vous intéressée à discuter de quelques options sur comment nous pouvons faire cela ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Signe de Murphy",
+        "description": "Technique d'examen pour détecter une cholécystite aiguë. (1) L'examinateur positionne ses mains dans l'hypocondre droit sous l'arc costal droit pendant que le patient expire. (2) Pendant l'inspiration, le foie et la vésicule biliaire sont poussés vers le bas vers la main de l'examinateur. Si le patient ressent une douleur et arrête donc l'inspiration, le signe de Murphy est positif. Un signe de Murphy positif peut indiquer une cholécystite aiguë.",
+        "data": "grilles_generees/html/images/AMBOSS-1-img1-Murphy's sign.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Sludge biliaire tumoral",
+        "description": "Échographie de l'hypocondre droit (plan oblique). Une masse hétérogène lobulée avec faible échogénicité (superposition hachurée verte) dans la portion déclive du canal cholédoque dilaté (12,1 mm, superposition verte) ne produit pas d'ombre acoustique. Les voies biliaires intrahépatiques ne sont pas dilatées. Le sludge tumoral peut simuler une tumeur biliaire. L'absence de flux sanguin dans le sludge au Doppler couleur peut parfois aider à distinguer le sludge d'une tumeur. L : foie ; superposition bleue : veine porte.",
+        "data": "grilles_generees/html/images/AMBOSS-1-img2-Tumefactive biliary sludge.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Calculs vésiculaires et épaississement pariétal",
+        "description": "Échographie de la vésicule biliaire (plan longitudinal). Un renforcement acoustique (superposition verte) est visible en distal de la vésicule biliaire sauf là où de multiples petits calculs hyperéchogènes déclives (superposition jaune) réfléchissent le faisceau ultrasonore et projettent une ombre acoustique (superposition hachurée verte). Le sludge biliaire (superposition hachurée jaune) est légèrement hyperéchogène par rapport à la bile anéchogène. La paroi vésiculaire est épaissie (taille normale : 1-2 mm) et présente un aspect stratifié (superposition rouge), avec œdème hypoéchogène central. Ces résultats chez un patient avec caractéristiques cliniques typiques de douleur de l'hypocondre droit indiquent fortement une cholécystite aiguë calculeuse. Les résultats supplémentaires qui soutiendraient un diagnostic de cholécystite incluent un calcul obstructif, signe de Murphy positif, liquide péricholécystique, dilatation vésiculaire et hyperémie de la paroi vésiculaire au Doppler couleur. G : vésicule biliaire ; L : foie.",
+        "data": "grilles_generees/html/images/AMBOSS-1-img3-Gallbladder calculi and wall thickening.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Pancréatite aiguë",
+        "description": "CT abdominal (avec contraste ; plan axial) d'un patient avec pancréatite aiguë biliaire. L'infiltration graisseuse et fasciale (superposition jaune) en avant du pancréas (P) indique une inflammation péripancréatique. La vésicule biliaire (contour jaune) contient des calculs (exemples indiqués par superposition rouge) et du sludge. De plus, le canal cholédoque (superposition verte) est légèrement dilaté. Le passage d'un calcul vésiculaire à travers le canal cholédoque peut entraîner une pancréatite aiguë. A : aorte ; Vc : veine cave ascendante ; L : foie ; Sp : rate ; Flèche rouge : artère hépatique ; Contour vert : estomac.",
+        "data": "grilles_generees/html/images/AMBOSS-1-img4-Acute pancreatitis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Vue endoscopique de la papille duodénale majeure",
+        "description": "La papille duodénale majeure désigne l'ouverture de l'ampoule de Vater (où le canal cholédoque et le canal pancréatique se rejoignent) dans la 2e partie du duodénum. L'ouverture est entourée par le sphincter d'Oddi. Lors d'une cholangiopancréatographie rétrograde endoscopique (ERCP), la papille duodénale majeure est utilisée pour accéder au système biliaire ; l'injection de produit de contraste dans l'ampoule de Vater permet la visualisation du canal pancréatique et de l'arbre biliaire.",
+        "data": "grilles_generees/html/images/AMBOSS-1-img5-Endoscopic view of the major duodenal papilla.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Marcia Billings",
+      "age": "47 ans",
+      "contexte": "Femme se présentant aux urgences pour douleurs abdominales",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai des douleurs dans mon ventre.",
+        "autreChose": "C'est vraiment douloureux et ça m'inquiète."
+      },
+      "consignes": [
+        "S'asseoir penchée en avant et agir comme si vous aviez des douleurs abdominales sévères.",
+        "Pointer le milieu et la partie supérieure droite de votre abdomen quand l'examinateur vous demande la localisation de votre douleur.",
+        "Dire à l'examinateur que la douleur est particulièrement forte quand il appuie sur le milieu et la partie supérieure droite de votre abdomen.",
+        "Quand l'examinateur vous demande de respirer pendant qu'il appuie sur la partie supérieure droite de votre abdomen, commencer à respirer puis s'arrêter soudainement à cause de la douleur sévère.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Si l'examinateur mentionne votre poids pendant la consultation, agissez de manière offensée et dites : 'Vous dites que je suis grosse ?!'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs abdominales",
+          "Localisation : Milieu et partie supérieure droite de l'abdomen",
+          "Qualité : Douleur sourde",
+          "Quantité/intensité : 8-9/10",
+          "Chronologie : Début il y a 12 heures, peu après le dîner d'hier",
+          "Développement : N'a pas vraiment disparu depuis hier soir, s'aggrave",
+          "Circonstances de survenue : Commencé assez vite après le dîner d'hier",
+          "Facteurs atténuants : Bouillotte chaude n'a rien fait. Se pencher en avant ou se coucher sur le côté semble aider un peu",
+          "Facteurs déclenchants/aggravants : Bouger et se coucher sur le dos",
+          "Épisodes antérieurs : Jamais comme ça. J'ai eu des douleurs d'estomac après les repas avant, mais ça passait toujours en quelques heures"
+        ],
+        "symptomesAssocies": [
+          "Nausées après le dîner",
+          "Vomissements trois fois la nuit dernière",
+          "Sensation de fièvre légère"
+        ],
+        "reponseAuxSymptomes": [
+          "Je suis venue directement aux urgences car j'étais très inquiète"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Se tenir penchée en avant",
+          "Visage algique",
+          "Pointer l'épigastre et l'hypocondre droit quand demandé"
+        ],
+        "durantStatus": [
+          "Douleur marquée à la palpation épigastrique et hypocondre droit",
+          "Signe de Murphy positif avec arrêt inspiratoire"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patiente de 47 ans consultant aux urgences pour douleurs abdominales aiguës évoluant depuis 12 heures. Douleur épigastrique et hypocondre droit, d'intensité 8-9/10, constante, irradiant vers le dos et l'épaule droite, associée à nausées, vomissements et fébricule. Facteurs de risque de lithiase biliaire présents (6F). Signe de Murphy positif à l'examen.",
+      "rolesInterventions": [
+        "US abdominale : donner le résultat montrant des calculs vésiculaires avec épaississement pariétal",
+        "Analyses sanguines : donner les résultats avec leucocytose et élévation des PAL/Gamma-GT",
+        "ECG : donner un résultat normal si demandé"
+      ],
+      "pointsCles": [
+        "La présentation suggère fortement une cholécystite aiguë",
+        "Le signe de Murphy est caractéristique mais pas pathognomonique",
+        "L'US abdominale est l'examen de choix en première intention",
+        "Les facteurs de risque (6F) sont importants à rechercher",
+        "Ne pas oublier les diagnostics différentiels potentiellement graves"
+      ],
+      "pieges": [
+        "Se concentrer uniquement sur le RGO à cause des antécédents de brûlures d'estomac",
+        "Oublier d'examiner les sclérotiques (recherche d'ictère)",
+        "Ne pas rechercher le signe de Murphy",
+        "Mauvaise gestion du défi concernant le poids"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Cholécystite aiguë probablement liée à une lithiase biliaire"
+        },
+        {
+          "titre": "Présentation clinique de la cholécystite aiguë",
+          "contenu": "Cette patiente décrit une douleur épigastrique et au quadrant supérieur droit. Les diagnostics différentiels courants pour cette région incluent la cholélithiase, la cholécystite, l'hépatite aiguë, la pancréatite et les ulcères duodénaux.",
+          "points": [
+            "Douleur constante et prolongée (> 6 heures) plus typique de la cholécystite que de la cholélithiase",
+            "La colique biliaire irradie typiquement vers l'épaule droite",
+            "Malgré son nom, la colique biliaire est une douleur sourde qui est constante plutôt que colique",
+            "La colique biliaire est souvent plus intense après les repas",
+            "Une douleur sévère et prolongée au quadrant supérieur droit > 6 heures est plus typique de la cholécystite que de la cholélithiase ou de la cholédocolithiase"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque de la lithiase biliaire",
+          "contenu": "Les facteurs de risque de cholélithiase peuvent être mémorisés avec les 6 F :",
+          "points": [
+            "Fat (obésité) - présent chez cette patiente (IMC 30)",
+            "Female (femme) - présent",
+            "Fertile (fertilité/multiparité) - présent (2 enfants)",
+            "Forty (quarantaine) - présent (47 ans)",
+            "Fair-skinned (peau claire) - non précisé",
+            "Family history (antécédents familiaux) - présent (mère avec calculs biliaires)"
+          ]
+        },
+        {
+          "titre": "Signe de Murphy",
+          "contenu": "Le signe de Murphy est un signe clinique important pour le diagnostic de cholécystite aiguë :",
+          "points": [
+            "Technique : Palpation sous le rebord costal droit pendant inspiration profonde",
+            "Positif : Arrêt brutal de l'inspiration à cause de la douleur",
+            "Sensibilité d'environ 65% pour la cholécystite aiguë",
+            "Spécificité d'environ 87%",
+            "Peut être absent chez les patients âgés ou immunodéprimés"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel",
+          "contenu": "Plusieurs diagnostics doivent être considérés devant cette présentation :",
+          "points": [
+            "Pancréatite biliaire : Douleur irradiant vers le dos, amélioration en position antéfléchie",
+            "Cholédocolithiase : Douleur habituellement colique, ictère possible",
+            "Hépatite aiguë : Élévation marquée des transaminases",
+            "RGO/ulcère : Relation avec les repas, soulagement par antiacides",
+            "Il est important de poser des questions sur les voyages pour évaluer le risque d'hépatite A et autres affections gastro-intestinales"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "L'approche diagnostique doit être systématique :",
+          "points": [
+            "US abdominale : Examen de choix, détecte calculs et épaississement pariétal",
+            "Bilan hépatique : PAL, Gamma-GT, bilirubine (signes de cholestase)",
+            "Transaminases : ASAT, ALAT (atteinte hépatocellulaire)",
+            "Enzymes pancréatiques : Amylase, lipase (pancréatite associée)",
+            "FSC : Recherche de leucocytose",
+            "L'ictère est un signe important de cholestase avec urine foncée et selles pâles"
+          ]
+        },
+        {
+          "titre": "Particularités physiopathologiques",
+          "contenu": "Comprendre la physiopathologie aide au diagnostic :",
+          "points": [
+            "La douleur de la pancréatite peut être soulagée en se penchant en avant (déplace le contenu intra-abdominal, réduisant la pression sur le pancréas enflammé)",
+            "L'irradiation vers l'épaule droite s'explique par l'innervation phrénique",
+            "La cholélithiase peut évoluer vers cholécystite, pancréatite biliaire, et cholédocolithiase",
+            "L'obésité est un facteur de risque du RGO, mais les symptômes de cette patiente ne correspondent pas"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Cholécystite aiguë : Jeûne, analgésie, antibiotiques si signes infectieux",
+        "Cholécystectomie laparoscopique : Traitement de référence, idéalement dans les 72h",
+        "Traitement conservateur possible si haut risque opératoire",
+        "Drainage percutané si cholécystite compliquée et contre-indication chirurgicale"
+      ],
+      "examensComplementaires": [
+        "US abdominale : Sensibilité 88% pour détection des calculs, évalue épaississement pariétal",
+        "IRM/CPERM : Si US non concluante ou suspicion de cholédocolithiase",
+        "CT abdominal : Moins sensible pour les calculs, utile si complications suspectées",
+        "Scintigraphie HIDA : Évalue la perméabilité du canal cystique, rarement utilisée"
+      ]
+    },
+    "resume": {
+      "titre": "🧪 Cholécystite aiguë – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur de l'hypochondre droit (intense, continue, irradiant à l'épaule droite ou l’omoplate)",
+                "Fièvre ± frissons",
+                "Nausées, vomissements",
+                "Anorexie",
+                "Début souvent postprandial (après repas riche en graisses)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Antécédents de lithiase biliaire",
+                "Femme, âge > 40 ans, obésité, grossesse",
+                "Jeûne prolongé, alimentation parentérale",
+                "Pathologies critiques (cholé. acalculée)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes cliniques clés",
+              "points": [
+                "Fièvre modérée",
+                "Douleur à la palpation de l’HCD",
+                "Signe de Murphy positif (arrêt inspiratoire à la palpation)",
+                "Défense localisée ou douleur à la percussion",
+                "± ictère modéré (si obstacle biliaire associé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Syndrome inflammatoire (CRP ↑, hyperleucocytose)",
+                "ASAT/ALAT, GGT, PAL, bilirubine ± modifiés si obstacle biliaire",
+                "Lipase si doute sur pancréatite associée"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : examen de choix",
+                "Signes échographiques : épaississement pariétal, distension, lithiase enclavée, halo péri-vésiculaire",
+                "Scanner si doute diagnostic ou complications",
+                "IRM biliaire (MRCP) si suspicion de lithiase associée du cholédoque"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Hospitalisation",
+                "Jeûne, perfusion IV, antalgiques (paracétamol, ± morphine), antiémétiques",
+                "Antibiothérapie IV empirique (ex : céphalosporine + métronidazole)",
+                "Surveillance des signes de gravité (sepsis, péritonite)"
+              ]
+            },
+            {
+              "titre": "Chirurgie",
+              "points": [
+                "Cholécystectomie laparoscopique en urgence (≤72h) si patient stable",
+                "Si contre-indication chirurgicale : drainage vésiculaire (choléystostomie percutanée)",
+                "Cholécystectomie différée si amélioration après traitement médical chez patient à risque"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Réévaluation clinique et biologique régulière",
+                "Prévention récidive : cholécystectomie même différée si épisode aigu résolu"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur HCD + fièvre + Murphy positif = évoquer cholécystite aiguë",
+            "Échographie abdo = examen clé",
+            "Antibiothérapie IV rapide, jeûne, antalgiques",
+            "Chirurgie dans les 72h si possible",
+            "Attention aux formes graves : sepsis, gangrène, perforation"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur HCD continue, irradiant à l’épaule/omoplate ?",
+                "Fièvre, frissons, nausées, vomissements ?",
+                "ATCD de lithiase biliaire ?",
+                "Facteurs de risque : femme > 40 ans, obésité, grossesse, jeûne prolongé ?",
+                "Signes de gravité : malaise, sepsis, confusion ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, FR, SpO₂, T°",
+                "Inspection : ictère cutanéo-muqueux ?",
+                "Palpation HCD : douleur, signe de Murphy positif",
+                "Recherche défense localisée / signes de péritonite",
+                "Évaluer état général et sepsis"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Hospitalisation + jeûne + perfusion IV + antibiothérapie IV",
+                "Échographie abdominale pour confirmer le diagnostic",
+                "Cholécystectomie laparoscopique en urgence ≤72h (ou drainage si CI)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleurs abdominales (cholécystite aiguë probable)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser la douleur → localisation, début, durée, irradiation, facteurs aggravants/soulageants",
+            "Symptômes associés → nausées, vomissements, fièvre, transit, ictère",
+            "ATCD médicaux, chirurgicaux, familiaux, traitements",
+            "Examen clinique ciblé → palpation HCD, signe de Murphy, fièvre",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → échographie abdo, bilan hépatique, lipase/amylase, FSC",
+            "Prise en charge → hospitalisation, jeûne, perfusion, antalgiques, ATB, chirurgie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 6F (facteurs de risque lithiases biliaires)",
+            "elements": [
+              "Fat (obésité)",
+              "Female",
+              "Fertile (grossesses multiples)",
+              "Forty (âge >40)",
+              "Fair (peau claire)",
+              "Family history (ATCD familiaux)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Marcia Billings, une femme de 47 ans, consultante en finance, qui se présente aux urgences pour des douleurs abdominales apparues hier soir.\n\nLa douleur a débuté environ une heure après le dîner. Elle est localisée au milieu et dans la partie supérieure droite de l’abdomen, d’intensité 8 à 9 sur 10, décrite comme sourde mais constante, et elle s’est aggravée progressivement depuis. Elle irradie vers le dos et l’épaule droite. Elle s’aggrave avec les mouvements et en position allongée sur le dos, et elle est légèrement soulagée lorsqu’elle se penche en avant ou se couche sur le côté. Elle a essayé une bouillotte chaude sans effet. Elle rapporte n’avoir jamais eu de douleur aussi intense auparavant, même si elle avait déjà eu de simples douleurs digestives passagères après les repas.\n\nLes symptômes associés incluent des nausées après le dîner et trois vomissements dans la nuit, d’abord alimentaires puis bilieux, sans sang. Elle a ressenti une fièvre légère mais non mesurée. Pas de diarrhée, pas de sang dans les selles, pas de troubles urinaires ni d’ictère.\n\nPour ses antécédents, elle n’a pas de maladie chronique connue, à part un surpoids. Elle n’a jamais été opérée, n’a pas d’allergies connues, et prend seulement des antiacides de temps en temps pour brûlures d’estomac. Ses antécédents familiaux sont notables pour une mère avec calculs biliaires et un père décédé d’un AVC à 65 ans.\n\nCôté mode de vie, elle vit avec son mari et ses deux enfants. Elle ne fume pas, boit régulièrement un à deux verres de vin au dîner, parfois davantage en cas de réception. Elle ne consomme pas de drogues. Elle fait peu d’activité physique et suit un régime alimentaire riche en plats gras et copieux, souvent adaptés aux goûts de ses enfants.\n\nÀ l’examen, la patiente est fébrile à 37,5 °C, tachycarde à 102/min, TA correcte à 116/70, FR à 20. L’IMC est de 30. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est sensible à la palpation de l’épigastre et de l’hypochondre droit, avec un signe de Murphy positif. Pas de défense généralisée ni d’ictère clinique.\n\nEn résumé, il s’agit d’une femme de 47 ans, obèse, avec douleurs intenses de l’hypochondre droit irradiant à l’épaule droite, nausées, vomissements et signe de Murphy positif. Mon hypothèse principale est une cholécystite aiguë lithiasique. Les diagnostics différentiels incluent une pancréatite biliaire, une cholédocolithiase, une hépatite aiguë, un ulcère gastrique ou duodénal, une colique néphrétique ou un infarctus postérieur.\n\nComme examens complémentaires, je demanderais en première intention une échographie abdominale, un bilan hépatique (PAL, GGT, bilirubine), des transaminases, une lipase et une FSC. Un ionogramme et un calcium complètent le bilan. En cas de doute ou complication, un scanner abdominal peut être indiqué.\n\nEn termes de prise en charge immédiate, je proposerais une hospitalisation, un jeûne strict, une réhydratation IV, des antalgiques adaptés, des antiémétiques et une antibiothérapie empirique si signes infectieux. Le traitement définitif est une cholécystectomie laparoscopique, idéalement dans les 72 heures."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Billings, 47 ans, douleurs aiguës de l’hypochondre droit apparues hier soir.\n\nB (Background) : Surpoids, mère avec antécédent de calculs biliaires, pas de chirurgie antérieure, pas d’allergies.\n\nA (Assessment) : Suspicion de cholécystite aiguë lithiasique. DD : pancréatite biliaire, cholédocolithiase, ulcère, infarctus postérieur.\n\nR (Recommendation) : US abdominale, bilan hépatique et pancréatique, FSC, hospitalisation, jeûne, perfusion, antalgiques, préparation à une cholécystectomie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Facteurs de risque lithiase biliaire → 6F",
+              "points": [
+                "Fat",
+                "Female",
+                "Fertile",
+                "Forty",
+                "Fair",
+                "Family history"
+              ]
+            },
+            {
+              "titre": "Signe de Murphy = MURPHY",
+              "points": [
+                "Mur : Main sous le rebord costal droit",
+                "Resp : Inspiration profonde",
+                "Positif : Arrêt brutal de l’inspiration par douleur",
+                "Hypocondre droit ciblé"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas se limiter au RGO à cause de l’histoire de brûlures",
+                "Toujours examiner les sclérotiques (ictère ?)",
+                "Toujours rechercher un signe de Murphy",
+                "Bien gérer la sensibilité du patient si on évoque son poids"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cholécystite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD continue > 6h",
+                      "Irradiation à l’épaule droite",
+                      "Nausées/vomissements",
+                      "Fébricule",
+                      "Signe de Murphy positif",
+                      "Facteurs de risque (6F)",
+                      "Antécédent familial de calculs biliaires"
+                    ],
+                    "contre": [
+                      "Pas d’ictère franc",
+                      "Fièvre modérée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pancréatite biliaire",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique irradiant dans le dos",
+                      "Soulagement en antéflexion"
+                    ],
+                    "contre": [
+                      "Signe de Murphy positif",
+                      "Douleur surtout HCD",
+                      "Pas d’alcoolisme chronique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholédocolithiase",
+                  "reponse": {
+                    "pour": [
+                      "Douleur HCD postprandiale",
+                      "Nausées/vomissements"
+                    ],
+                    "contre": [
+                      "Douleur constante et non colique",
+                      "Pas d’ictère",
+                      "Signe de Murphy positif"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Échographie abdominale (examen clé)",
+                    "Bilan hépatique (PAL, GGT, bilirubine)",
+                    "ASAT, ALAT",
+                    "Amylase, lipase",
+                    "FSC",
+                    "Ionogramme, calcium"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cholécystite aiguë lithiasique"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Jeûne, perfusion IV",
+                      "Analgésie IV",
+                      "Antiémétiques",
+                      "Antibiothérapie IV empirique si infectieux",
+                      "Préparation cholécystectomie laparoscopique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation clinique et biologique régulière",
+                    "Cholécystectomie idéalement dans les 72h",
+                    "Prévention récidive par chirurgie même différée si épisode aigu résolu"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

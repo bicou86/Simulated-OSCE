@@ -1,0 +1,562 @@
+{
+  "title": "USMLE Triage 7 - Céphalées",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Jon McIntyre, un homme de 27 ans, se présente au service des urgences pour évaluation de céphalées et fièvre.",
+    "vitals": {
+      "ta": "154/90 mmHg",
+      "fc": "94 bpm",
+      "fr": "16/min",
+      "temperature": "38.1°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour M. McIntyre, je suis le Dr Dobson.",
+            "Je comprends que vous avez eu de la fièvre et des maux de tête récemment ? Pouvez-vous m'en parler ?",
+            "Je suis désolé d'apprendre que vous vous sentez ainsi. Est-ce que cela aiderait si je baissais les lumières ?"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des céphalées",
+          "details": [
+            "Début [progressif il y a 3 jours]",
+            "Intensité [pire mal de tête de sa vie]",
+            "Localisation [partout, commencé à l'arrière]",
+            "Type [global, constant]",
+            "Évolution [augmentation progressive]",
+            "Inefficacité du Tylenol [habituellement efficace]"
+          ],
+          "exemplesPhrases": [
+            "Parlez-moi de ce mal de tête. Est-il apparu progressivement il y a 3 jours ou soudainement ?",
+            "Le mal de tête est-il sur toute votre tête ou d'un côté ou de l'autre ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés neurologiques",
+          "details": [
+            "Photophobie [oui, lumière aggrave]",
+            "Phonophobie [oui, bruits des presses aggravent]",
+            "Raideur nucale [oui, à l'arrière du cou]",
+            "Nausées et vomissements [vomi dîner hier soir]",
+            "Vertiges [non]",
+            "Confusion [non, orientation préservée]"
+          ],
+          "exemplesPhrases": [
+            "Je sais que la lumière fait mal à vos yeux, mais qu'en est-il des bruits forts ?",
+            "Qu'en est-il de toute raideur dans votre cou ? Est-ce que ça fait mal de bouger votre tête ?",
+            "Une confusion quelconque ? Une impression de ne pas être tout à fait sûr de ce qui se passe ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes neurologiques focaux",
+          "details": [
+            "Déficit sensitif [non]",
+            "Déficit moteur [non]",
+            "Troubles de la parole [non évalué]",
+            "Troubles visuels [non mentionnés]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous senti que la sensation dans vos bras, jambes, ou n'importe où a diminué ?",
+            "Des difficultés à bouger un côté de votre corps, comme vos bras ou jambes ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes fébriles et généraux",
+          "details": [
+            "Fièvre [depuis hier après-midi]",
+            "Frissons et sueurs [transpiration des draps]",
+            "Courbatures [oui]",
+            "Appétit [diminué, n'a rien mangé]",
+            "Absence au travail [à cause des symptômes]"
+          ],
+          "exemplesPhrases": [
+            "Parlez-moi de la fièvre. Je comprends que vous avez eu des périodes de chaud et de froid, mais quand cela a-t-il commencé ?",
+            "Avez-vous pris votre température à la maison ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents récents et exposition",
+          "details": [
+            "Rhume récent [il y a 2 semaines avec toux productive]",
+            "Récupération complète [pris environ 1 semaine]",
+            "Pas d'exposition à maladie similaire [frère va bien]",
+            "Pas d'éruption cutanée [non]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'une toux récente ou d'une congestion thoracique ?",
+            "Avez-vous craché quelque chose avec le rhume ?",
+            "Avez-vous été en contact avec quelqu'un avec des symptômes comme ceux-ci ou de la fièvre ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Profession [industrie imprimerie, exposition au bruit]",
+            "Santé générale [plutôt en bonne santé]",
+            "Céphalées habituelles [rares, liées à la fatigue/bruit]",
+            "Traumatisme récent [main cognée sur presse, pas grave]",
+            "Appendicectomie [il y a 6 ans, seule hospitalisation]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu une maladie similaire ?",
+            "Pour quelles autres choses avez-vous vu le médecin dans votre vie ?",
+            "Avez-vous eu des chirurgies dans votre vie ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments et allergies",
+          "details": [
+            "Médicaments [Tylenol occasionnel seulement]",
+            "Suppléments [poudre de protéine de lactosérum]",
+            "Allergies [aucune connue]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous des médicaments ?",
+            "Qu'en est-il des suppléments alimentaires ?",
+            "Êtes-vous allergique à quelque chose ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [non, nuit aux entraînements]",
+            "Alcool [3-4 bières/semaine, weekends]",
+            "Drogues [marijuana au lycée seulement]",
+            "Activité physique [s'entraîne beaucoup]",
+            "Mode de vie sain [priorité]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ?",
+            "Combien de bières par semaine diriez-vous ?",
+            "Avez-vous déjà consommé d'autres types de drogues ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Histoire familiale et contexte social",
+          "details": [
+            "Père [décédé accident de voiture à 60 ans]",
+            "Mère [en bonne santé, vit seule]",
+            "Frère Jim [vit avec lui, étudiant, en bonne santé]",
+            "Sœur [autre côté de ville, en bonne santé]",
+            "Pas de maladies familiales importantes"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il des maladies majeures dans votre famille ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Expliquer l'examen au patient",
+            "Commenter les signes vitaux"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si cela ne vous dérange pas.",
+            "Laissez-moi juste me laver les mains.",
+            "J'aimerais d'abord commencer par examiner vos yeux..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "details": [
+            "Palpation du crâne [normale, atraumatique]",
+            "Sensibilité nucale postérieure [à rechercher]",
+            "Palpation ganglionnaire cervicale [pas d'adénopathie]",
+            "Amplitude de mouvement cervical [douleur en flexion]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Signes méningés",
+          "details": [
+            "Signe de Kernig [positif]",
+            "Signe de Brudzinski [indéterminé]",
+            "Raideur nucale [positive]",
+            "Flexion forcée du cou [douloureuse]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ophtalmologique",
+          "details": [
+            "Réflexes pupillaires [PERRLA]",
+            "Examen du fond d'œil [disques optiques normaux]",
+            "Recherche d'œdème papillaire [absent]",
+            "Recherche d'hémorragies rétiniennes [absentes]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen ORL",
+          "details": [
+            "Otoscopie bilatérale [tympans gris nacré normaux]",
+            "Examen nasal [normal]",
+            "Examen pharyngé [normal]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation 6 points bilatéraux [clairs bilatéralement]",
+            "Recherche de foyer infectieux [absent]",
+            "Pas de râles/sibilances/frottements"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique complet",
+          "details": [
+            "Nerfs crâniens II-XII [intacts]",
+            "Force motrice [5/5 partout]",
+            "Sensibilité tactile [intacte]",
+            "Proprioception [normale]",
+            "Réflexes ostéotendineux [2+ symétriques]",
+            "Signes de Babinski [normaux]",
+            "Test de Romberg [normal]",
+            "Test doigt-nez [normal]",
+            "Marche normale [incluant talons/pointes]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen cutané",
+          "details": [
+            "Recherche d'éruption pétéchiale [absente]",
+            "Inspection torse et membres [normale]",
+            "Recherche de signes cutanés de méningococcémie [absents]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels des céphalées fébriles avec signes méningés",
+            "categories": [
+              {
+                "name": "Infections du SNC (priorité absolue)",
+                "items": [
+                  {
+                    "text": "Méningite bactérienne",
+                    "cause": "Arguments POUR:\n\t□ Triade : céphalées + fièvre + raideur nucale\n\t□ Signe de Kernig positif\n\t□ Photophobie/phonophobie\n\t□ Nausées/vomissements\n\t□ 'Pire céphalée de sa vie'\n\t□ Progression sur 3 jours\n\t□ Homme jeune (pic d'incidence)\nArguments CONTRE:\n\t□ Progression relativement lente\n\t□ Pas de confusion/altération conscience",
+                    "test": "→ PL urgente (après CT si signes HTIC), hémocultures"
+                  },
+                  {
+                    "text": "Méningite virale",
+                    "cause": "Arguments POUR:\n\t□ Antécédent d'IVRS il y a 2 semaines\n\t□ Syndrome méningé complet\n\t□ Évolution moins fulminante\n\t□ Pas d'altération de conscience\nArguments CONTRE:\n\t□ Intensité des symptômes\n\t□ Hypertension (possible HTIC)",
+                    "test": "→ PL avec PCR virales, analyse LCR"
+                  },
+                  {
+                    "text": "Encéphalite",
+                    "cause": "Arguments POUR:\n\t□ Céphalées sévères\n\t□ Fièvre\n\t□ Antécédent viral récent\nArguments CONTRE:\n\t□ Pas de troubles de conscience\n\t□ Pas de déficits neurologiques focaux\n\t□ Comportement normal",
+                    "test": "→ IRM cérébrale, PL avec PCR HSV"
+                  }
+                ]
+              },
+              {
+                "name": "Hémorragies intracrâniennes",
+                "items": [
+                  {
+                    "text": "Hémorragie sous-arachnoïdienne",
+                    "cause": "Arguments POUR:\n\t□ Céphalée brutale 'pire de sa vie'\n\t□ Raideur nucale\n\t□ Nausées/vomissements\n\t□ Photophobie\nArguments CONTRE:\n\t□ Début progressif (non brutal)\n\t□ Fièvre associée\n\t□ Âge jeune sans facteurs de risque",
+                    "test": "→ CT cérébral sans contraste en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Céphalées vasculaires sévères",
+                    "cause": "Arguments POUR:\n\t□ Photophobie/phonophobie\n\t□ Nausées/vomissements\nArguments CONTRE:\n\t□ Fièvre associée\n\t□ Raideur nucale\n\t□ Signes méningés positifs\n\t□ Pas d'ATCD migraineux",
+                    "test": "→ Diagnostic d'exclusion après PL normale"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens d'urgence absolue",
+          "details": [
+            "CT cérébral sans contraste (éliminer HTIC/HSA)",
+            "Ponction lombaire avec analyse complète LCR",
+            "Hémocultures avant antibiotiques",
+            "Coloration de Gram et culture LCR"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques complémentaires",
+          "details": [
+            "NFS avec formule différentielle",
+            "Bilan métabolique complet",
+            "Coagulation (TP/TCK) avant PL",
+            "Lactates sériques",
+            "CRP, procalcitonine"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique d'urgence",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antibiotique empirique immédiat",
+                "content": "• Ceftriaxone 2g IV toutes les 12h\n• + Vancomycine 15-20 mg/kg IV toutes les 8-12h\n• + Dexaméthasone 0,15 mg/kg IV toutes les 6h\n• Débuter AVANT PL si retard > 30 min\n• Hémocultures avant antibiotiques si possible"
+              },
+              {
+                "title": "Mesures de support",
+                "content": "• Voie veineuse périphérique de bon calibre\n• Monitoring cardiaque continu\n• Paracétamol IV pour fièvre/céphalées\n• Position demi-assise si pas d'HTIC\n• Hydratation prudente (surveiller HTIC)\n• Isolation gouttelettes en attente résultats"
+              },
+              {
+                "title": "Surveillance rapprochée",
+                "content": "• Signes vitaux toutes les 15 minutes\n• Examen neurologique horaire\n• Score de Glasgow\n• Recherche de purpura/pétéchies\n• Diurèse horaire\n• Préparation transfert en réanimation si besoin"
+              },
+              {
+                "title": "Prophylaxie des contacts",
+                "content": "• Identifier contacts proches\n• Antibioprophylaxie si méningocoque\n• Rifampicine 600mg 2x/jour x 2 jours\n• Ou ceftriaxone 250mg IM dose unique\n• Information des contacts"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication d'urgence",
+          "details": [
+            "Explication de la gravité potentielle",
+            "Nécessité des examens invasifs (PL)",
+            "Pronostic dépendant de la précocité du traitement",
+            "Information famille/contacts",
+            "Consentement éclairé pour PL"
+          ],
+          "exemplesPhrases": [
+            "M. McIntyre, vos symptômes m'inquiètent pour une infection particulière que vous pourriez avoir impliquant le sac et le liquide qui entoure la moelle épinière et le cerveau appelée méningite.",
+            "C'est potentiellement une mauvaise infection et une que je pense que nous devons vraiment tester.",
+            "Pour obtenir le liquide spinal, je devrai faire une procédure sur vous qui implique de placer une aiguille dans la partie inférieure de votre dos."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Red flags et complications",
+          "redflagsSection": {
+            "title": "Signes de complications nécessitant réanimation immédiate",
+            "items": [
+              {
+                "text": "Altération de la conscience",
+                "description": "Glasgow < 13, confusion, agitation"
+              },
+              {
+                "text": "Signes d'HTIC",
+                "description": "Céphalées en projectile, vomissements, bradycardie"
+              },
+              {
+                "text": "Purpura fulminans",
+                "description": "Choc septique méningococcique"
+              },
+              {
+                "text": "Déficits neurologiques focaux",
+                "description": "AVC compliquant la méningite"
+              },
+              {
+                "text": "Instabilité hémodynamique",
+                "description": "Choc septique, troubles du rythme"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan d'urgence",
+          "content": "M. McIntyre, vos symptômes m'inquiètent pour une infection particulière que vous pourriez avoir impliquant le sac et le liquide qui entoure la moelle épinière et le cerveau appelée méningite. C'est potentiellement une mauvaise infection et une que je pense que nous devons vraiment tester. L'aspect de cette infection qui la rend particulièrement dangereuse est qu'elle est si proche et implique le cerveau et la moelle épinière, qui sont des tissus très importants dans votre corps. Vos symptômes pourraient également impliquer un autre type d'anomalie cérébrale qui pourrait impliquer un saignement du cerveau lui-même, bien que je pense que c'est moins probable. Ce sont les deux conditions les plus graves et urgentes que j'aimerais tester, et pour ce faire j'aimerais obtenir un scanner et puis du liquide de autour de votre moelle épinière. Le scanner peut me montrer s'il y a un saignement ou d'autres anomalies du cerveau, et le liquide spinal peut être analysé pour des signes montrant une infection. Pour obtenir le liquide spinal, je devrai faire une procédure sur vous qui implique de placer une aiguille dans la partie inférieure de votre dos. Cela peut être quelque peu inconfortable, mais c'est vraiment nécessaire pour savoir s'il y a une infection là. Je voudrai obtenir ce scanner d'abord, cependant. Aussi, je veux obtenir du sang de votre veine pour des tests supplémentaires. Permettez-moi de sortir et d'organiser ces tests.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Est-ce que je vais mourir ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends votre inquiétude. La méningite est effectivement une infection sérieuse, mais avec un diagnostic et un traitement rapides, la plupart des patients se rétablissent complètement. C'est pourquoi nous agissons si vite pour faire ces tests et commencer le traitement."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Homme de 27 ans avec triade méningée classique",
+        "Céphalées + fièvre + raideur nucale avec signes méningés positifs",
+        "Urgence diagnostique et thérapeutique absolue",
+        "Signe de Kernig positif confirmant irritation méningée",
+        "Antécédent d'IVRS récente comme facteur prédisposant",
+        "Photophobie/phonophobie marquées",
+        "Hypertension possiblement liée à HTIC",
+        "Absence de déficits neurologiques focaux"
+      ],
+      "pieges": [
+        "Retarder l'antibiothérapie en attendant les résultats",
+        "Oublier les hémocultures avant antibiotiques",
+        "Ne pas faire de CT avant PL si signes d'HTIC",
+        "Sous-estimer la gravité malgré conscience préservée",
+        "Oublier l'isolement et la prophylaxie des contacts",
+        "Ne pas rechercher de purpura/pétéchies",
+        "Retarder le traitement pour confirmer le diagnostic"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Jon McIntyre",
+      "age": "27 ans",
+      "contexte": "Ouvrier en imprimerie avec méningite probable",
+      "motifConsultation": {
+        "plaintePrincipale": "Maux de tête et fièvre",
+        "autreChose": "Je ne vais vraiment pas bien"
+      },
+      "histoireActuelle": {
+        "cephalees": [
+          "Depuis 3 jours, progressives",
+          "Pire mal de tête de sa vie",
+          "Commencé à l'arrière, maintenant partout",
+          "Tylenol inefficace (habituellement efficace)",
+          "Photophobie et phonophobie marquées"
+        ],
+        "fievre": [
+          "Depuis hier après-midi",
+          "Frissons et sueurs nocturnes",
+          "Transpiration des draps",
+          "Courbatures généralisées"
+        ],
+        "symptomesAssocies": [
+          "Raideur nucale à l'arrière",
+          "Nausées avec vomissement hier soir",
+          "Perte d'appétit",
+          "Absence au travail"
+        ],
+        "attitude": [
+          "Parle doucement (céphalées)",
+          "Évite les mouvements brusques de tête",
+          "Inquiet mais coopératif",
+          "Demande à baisser les lumières"
+        ]
+      },
+      "antecedentsRecents": {
+        "rhume": "Il y a 2 semaines avec toux productive, récupération complète en 1 semaine",
+        "exposition": "Frère Jim vit avec lui, va bien",
+        "travail": "Industrie imprimerie, presses bruyantes"
+      },
+      "antecedents": {
+        "medicaux": [
+          "Généralement en bonne santé",
+          "Céphalées rares (fatigue/bruit)",
+          "Traumatisme main récent (mineur)"
+        ],
+        "chirurgicaux": [
+          "Appendicectomie il y a 6 ans (seule hospitalisation)"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Tylenol occasionnel",
+          "Poudre de protéines (lactosérum)"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Non (nuit aux entraînements)",
+        "alcool": "3-4 bières/semaine, weekends",
+        "drogues": "Marijuana au lycée seulement",
+        "sport": "S'entraîne beaucoup, mode de vie sain"
+      },
+      "contexteSocial": {
+        "famille": "Frère Jim (étudiant), mère seule en bonne santé, sœur en ville",
+        "pere": "Décédé accident voiture à 60 ans",
+        "logement": "Vit avec son frère Jim"
+      },
+      "simulation": {
+        "durantConsultation": [
+          "Parler doucement, éviter lumières vives",
+          "Se tenir la tête occasionnellement",
+          "Mouvement lent et prudent du cou",
+          "Montrer inconfort aux questions sur raideur nucale",
+          "Paraître fatigué et malade"
+        ],
+        "durantExamen": [
+          "Photophobie marquée à l'examen ophtalmoscopique",
+          "Douleur à la flexion du cou",
+          "Résistance lors des tests de Kernig/Brudzinski",
+          "Coopératif malgré inconfort"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Méningites",
+      "sections": [
+        {
+          "titre": "Triade méningée classique",
+          "contenu": "Céphalées + fièvre + raideur nucale présente chez seulement 44% des patients. Signes méningés : Kernig (douleur à l'extension du genou, cuisse fléchie), Brudzinski (flexion involontaire des genoux lors de la flexion du cou)."
+        },
+        {
+          "titre": "Méningite bactérienne de l'adulte",
+          "contenu": "Urgence médicale absolue. Mortalité 10-20% malgré traitement. Germes : Pneumocoque (40%), Méningocoque (25%), Listeria (>50 ans). Complications : HTIC, hydrocéphalie, AVC, convulsions, choc septique."
+        },
+        {
+          "titre": "Analyse du LCR",
+          "contenu": "Bactérienne : PO>30 cmH2O, PMN>1000, protéines>1g/L, glucose<2,2 mM. Virale : lymphocytes prédominants, protéines modérément élevées, glucose normale. Aspect trouble = bactérienne jusqu'à preuve contraire."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antibiotiques IV immédiat : ceftriaxone + vancomycine",
+        "Dexaméthasone 15 min avant/avec première dose antibiotique",
+        "Traitement adapté selon antibiogramme : pénicilline G si sensible",
+        "Durée : 7 jours pneumocoque, 5-7 jours méningocoque",
+        "Prophylaxie contacts si méningocoque : rifampicine ou ceftriaxone"
+      ],
+      "examensComplementaires": [
+        "CT cérébral avant PL si : coma, déficits focaux, œdème papillaire",
+        "PL urgente : aspect, cytologie, biochimie, bactériologie",
+        "Hémocultures avant antibiotiques",
+        "Antigènes solubles urinaires (pneumocoque, méningocoque)",
+        "PCR méningocoque si traitement antibiotique préalable"
+      ]
+    }
+  }
+}

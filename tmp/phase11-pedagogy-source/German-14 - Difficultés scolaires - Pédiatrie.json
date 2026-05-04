@@ -1,0 +1,425 @@
+{
+  "title": "German-14 - Difficultés scolaires - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Schellenberger, 35 ans, vient vous consulter en cabinet de médecine générale. Elle vous fait part de ses inquiétudes concernant son fils."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Problème principal",
+          "binaryOnly": false,
+          "details": [
+            "[Difficultés scolaires et comportementales]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Âge du fils",
+          "binaryOnly": false,
+          "details": [
+            "[8 ans]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Début et évolution de la symptomatologie",
+          "binaryOnly": false,
+          "details": [
+            "Quand ont commencé les difficultés ? [Depuis environ 2 ans]",
+            "Évolution progressive ou soudaine ? [Aggravation progressive]",
+            "Événement déclencheur ? [Aucun événement particulier]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Sommeil",
+          "binaryOnly": false,
+          "details": [
+            "Heure du coucher et du lever [Coucher difficile, s'endort tard vers 22h-23h]",
+            "Qualité du sommeil [Réveils nocturnes fréquents]",
+            "Cauchemars ou terreurs nocturnes [Occasionnels]",
+            "Ronflement ou apnées [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Comportement à l'école",
+          "binaryOnly": false,
+          "details": [
+            "Résultats scolaires [Notes en baisse]",
+            "Devoirs [Oublie souvent ses devoirs]",
+            "Relation avec les enseignants [Conflits avec l'enseignant]",
+            "Comportement en classe [Perturbe la classe]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Comportement à la maison",
+          "binaryOnly": false,
+          "details": [
+            "Respect des règles [Opposition constante]",
+            "Disputes et opposition [N'écoute pas]",
+            "Relations familiales [Disputes fréquentes avec la fratrie]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Attention et concentration",
+          "binaryOnly": false,
+          "details": [
+            "Capacité à se concentrer sur une tâche [Ne termine jamais ce qu'il commence]",
+            "Distractibilité [Très distrait]",
+            "Oublis fréquents [Perd constamment ses affaires]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Hyperactivité motrice",
+          "binaryOnly": false,
+          "details": [
+            "Agitation [Toujours en mouvement]",
+            "Incapacité à rester assis [Ne peut pas rester assis pendant les repas]",
+            "Parle excessivement [Parle sans arrêt]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Impulsivité",
+          "binaryOnly": false,
+          "details": [
+            "Interrompt les autres [Coupe constamment la parole]",
+            "Agit sans réfléchir [Décisions irréfléchies]",
+            "Difficultés à attendre son tour [N'attend pas son tour]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Relations sociales",
+          "binaryOnly": false,
+          "details": [
+            "Amitiés [Peu d'amis]",
+            "Jeux avec les autres enfants [Conflits fréquents]",
+            "Comportements agressifs [Parfois bagarre]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Activités de loisirs",
+          "binaryOnly": false,
+          "details": [
+            "Sports pratiqués [Football arrêté car trop agité]",
+            "Hobbies [Jeux vidéo principalement]",
+            "Temps d'écran [3-4 heures par jour]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Fratrie",
+          "binaryOnly": false,
+          "details": [
+            "[Une sœur de 6 ans, sans problème]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Habitudes alimentaires",
+          "binaryOnly": false,
+          "details": [
+            "Boissons sucrées [Beaucoup de Coca-Cola, 3-4 canettes par jour]",
+            "Régime alimentaire [Alimentation déséquilibrée]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Affect et humeur",
+          "binaryOnly": false,
+          "details": [
+            "Tristesse [Souvent frustré]",
+            "Anxiété [Présente]",
+            "Estime de soi [Faible, se dit \"nul\"]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Développement psychomoteur",
+          "binaryOnly": false,
+          "details": [
+            "Âge de la marche [13 mois]",
+            "Développement du langage [Normal]",
+            "Acquisition de la propreté [Normal]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Grossesse et accouchement",
+          "binaryOnly": false,
+          "details": [
+            "Déroulement de la grossesse [Grossesse normale]",
+            "Complications [Aucune]",
+            "Poids de naissance [3,2 kg]",
+            "Terme [À terme]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Antécédents personnels",
+          "binaryOnly": false,
+          "details": [
+            "Épilepsie [Non]",
+            "Traumatisme crânien [Non]",
+            "Déficit intellectuel [Non]",
+            "Troubles sensoriels [Non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "TDAH dans la famille [Oncle paternel diagnostiqué TDAH]",
+            "Troubles de l'apprentissage [Père avait des difficultés scolaires similaires]",
+            "Troubles psychiatriques [Aucun]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Médicaments et substances",
+          "binaryOnly": false,
+          "details": [
+            "[Aucun médicament, pas d'exposition à des toxiques]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen clinique général",
+          "binaryOnly": false,
+          "details": [
+            "État général [Bon]",
+            "Paramètres vitaux [Normaux]",
+            "Poids et taille (courbes de croissance) [Dans les normes]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen neurologique de base",
+          "binaryOnly": false,
+          "details": [
+            "Réflexes [Normaux et symétriques]",
+            "Tonus [Normal]",
+            "Coordination motrice [Légère maladresse]",
+            "Mouvements anormaux [Aucun]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Évaluation du comportement pendant la consultation",
+          "binaryOnly": false,
+          "details": [
+            "Agitation [Bouge constamment sur sa chaise]",
+            "Capacité d'attention [Difficultés à maintenir le contact visuel]",
+            "Interaction avec l'examinateur [Interrompt fréquemment]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen sensoriel",
+          "binaryOnly": false,
+          "details": [
+            "Vision [Normale]",
+            "Audition [Normale]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Recherche de signes d'hyperthyroïdie",
+          "binaryOnly": false,
+          "details": [
+            "Thyroïde [Non palpable]",
+            "Tremblements [Absents]",
+            "Tachycardie [Non]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": false,
+          "details": [
+            "[Trouble du déficit de l'attention avec hyperactivité (TDAH)]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "[Trouble des conduites]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Trouble oppositionnel avec provocation]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Troubles anxieux]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Troubles de l'humeur]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Troubles du spectre autistique]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Troubles d'apprentissage spécifiques]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Bilan biologique avec TSH",
+            "Bilan ferrique (ferritine)",
+            "Glycémie",
+            "Évaluation psychométrique si indiquée"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Entretien direct avec l'enfant",
+            "Contact avec l'enseignant",
+            "Questionnaires standardisés (Conners, SNAP-IV)",
+            "Conseils hygiéno-diététiques (réduction Coca-Cola, temps d'écran)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Orientation spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "Pédopsychiatre pour évaluation approfondie",
+            "Psychologue pour bilan cognitif si nécessaire",
+            "Orthophoniste si troubles associés"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement médicamenteux",
+          "binaryOnly": false,
+          "details": [
+            "Discussion sur méthylphénidate (Ritaline®, Concerta®)",
+            "Alternative : atomoxétine",
+            "Après confirmation diagnostique par spécialiste"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Question de la mère sur la Ritaline",
+          "binaryOnly": false,
+          "patientComment": "La Ritaline perturbe-t-elle le développement naturel de l'enfant ?"
+        },
+        {
+          "id": "m8",
+          "text": "Réponse appropriée sur le traitement",
+          "binaryOnly": false,
+          "details": [
+            "Amélioration du développement chez les enfants TDAH traités",
+            "Normalisation des fonctions cérébrales altérées",
+            "Meilleurs résultats scolaires et sociaux",
+            "Surveillance régulière nécessaire"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Approches non médicamenteuses",
+          "binaryOnly": false,
+          "details": [
+            "Thérapie comportementale",
+            "Guidance parentale",
+            "Aménagements scolaires",
+            "Activité physique régulière"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Suivi proposé",
+          "binaryOnly": false,
+          "details": [
+            "Consultation de contrôle dans 4-6 semaines",
+            "Coordination avec le pédopsychiatre",
+            "Réévaluation régulière"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

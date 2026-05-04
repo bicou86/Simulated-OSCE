@@ -1,0 +1,311 @@
+{
+  "title": "German-18 - Douleur abdominale",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Femme de 28 ans se présente avec des douleurs abdominales aiguës aux urgences.",
+    "vitals": {
+      "ta": "118/79 mmHg",
+      "fc": "80 bpm",
+      "fr": "16/min",
+      "temperature": "38.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Soudainement des douleurs abdominales si fortes"
+        },
+        {
+          "id": "a3",
+          "text": "Début des symptômes",
+          "patientComment": "Depuis quelques heures"
+        },
+        {
+          "id": "a4",
+          "text": "Localisation",
+          "patientComment": "En bas à droite"
+        },
+        {
+          "id": "a5",
+          "text": "Migration de la douleur",
+          "patientComment": "Toujours au même endroit"
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Mode de début",
+          "patientComment": "Soudain, juste comme ça"
+        },
+        {
+          "id": "a8",
+          "text": "Fréquence et périodicité",
+          "patientComment": "Continu"
+        },
+        {
+          "id": "a9",
+          "text": "Intensité",
+          "patientComment": "7/10"
+        },
+        {
+          "id": "a10",
+          "text": "Caractère de la douleur",
+          "patientComment": "Piquante"
+        },
+        {
+          "id": "a11",
+          "text": "Facteurs aggravants ou soulageants",
+          "patientComment": "Un peu mieux en position allongée"
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes associés",
+          "patientComment": "J'ai quelques sueurs..."
+        },
+        {
+          "id": "a13",
+          "text": "Fièvre",
+          "patientComment": "Quelqu'un vient juste de mesurer"
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes digestifs",
+          "details": [
+            "Transit intestinal et gaz [Normal]",
+            "Nausées/Vomissements [Non]",
+            "Diarrhée/Constipation [Non]",
+            "Sang dans les vomissements [Non]",
+            "Sang dans les selles [Non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse gynécologique",
+          "details": [
+            "Grossesse [Non]",
+            "Nouveau partenaire sexuel [Oui]",
+            "Symptômes vaginaux [Pertes jaunâtres ces derniers jours]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédent de chirurgie abdominale",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse de voyage",
+          "details": [
+            "Voyage récent [À clarifier]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse de l'entourage",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a19",
+          "text": "Symptômes généraux",
+          "details": [
+            "Perte de poids [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fièvre prolongée [Non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse personnelle",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a21",
+          "text": "Consommation de substances",
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a22",
+          "text": "Médication actuelle",
+          "patientComment": "Pilule contraceptive"
+        },
+        {
+          "id": "a23",
+          "text": "Allergies",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a24",
+          "text": "Anamnèse sociale",
+          "patientComment": "Éducatrice en maternelle, nouveau copain depuis quelques semaines"
+        },
+        {
+          "id": "a25",
+          "text": "Anamnèse familiale",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a26",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète avec identification des facteurs de risque d'infection pelvienne"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection",
+          "details": [
+            "Teint [Un peu pâle]",
+            "État général [Sinon normal]",
+            "Abdomen [Normal]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation abdominale",
+          "patientComment": "Bruits intestinaux rares"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation abdominale",
+          "patientComment": "Sensibilité à la pression dans le quadrant inférieur droit, pas de douleur au relâchement"
+        },
+        {
+          "id": "e4",
+          "text": "Signes péritonéaux",
+          "patientComment": "Normaux"
+        },
+        {
+          "id": "e5",
+          "text": "Toucher rectal",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e6",
+          "text": "Palpation des ganglions lymphatiques",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e7",
+          "text": "Recherche de signes hémorragiques",
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen abdominal complet avec recherche appropriée de signes d'infection pelvienne"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic suspecté",
+          "details": [
+            "Annexite aiguë (salpingite)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 2-3 diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Appendicite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ US abdominal, CT abdominal, CRP"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ β-HCG, US pelvienne"
+                  },
+                  {
+                    "text": "Kyste ovarien",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ US pelvienne, marqueurs tumoraux si suspecte"
+                  },
+                  {
+                    "text": "Torsion d'ovaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Analyses sanguines [FSC, CRP]",
+            "Test de grossesse",
+            "Échographie abdominale/vaginale",
+            "Consultation gynécologique pour examen au spéculum avec prélèvement",
+            "Recherche de Chlamydia/Gonocoque",
+            "Examen bimanuel"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "details": [
+            "Doxycycline / Azithromycine",
+            "Traitement du partenaire [Obligatoire !]",
+            "Chirurgie en cas d'abcès ou autres complications"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Information de la patiente",
+          "details": [
+            "Information sur les complications possibles [Infertilité]",
+            "Douleurs pelviennes chroniques possibles",
+            "Risque accru de grossesse extra-utérine"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec traitement adapté et information sur l'importance du traitement du partenaire"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

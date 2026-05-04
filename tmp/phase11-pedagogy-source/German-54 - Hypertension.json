@@ -1,0 +1,340 @@
+{
+  "title": "German-54 - Hypertension",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Keller, 67 ans, retraitée, se présente pour un contrôle de suivi de son hypertension artérielle connue",
+    "vitals": {
+      "ta": "175/105 mmHg",
+      "fc": "88 bpm",
+      "temperature": "36,8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "patientComment": "Contrôle de mon hypertension, j'ai mesuré ma tension et elle est encore élevée"
+        },
+        {
+          "id": "a3",
+          "text": "Évolution de l'hypertension",
+          "details": [
+            "Hypertension connue depuis quand [depuis 10 ans]",
+            "Valeurs tensionnelles habituelles [souvent autour de 160/95]",
+            "Contrôle régulier [oui, tous les 3 mois]",
+            "Compliance au traitement [j'oublie parfois mes médicaments]"
+          ],
+          "patientComment": "Histoire de l'hypertension"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes actuels",
+          "details": [
+            "Céphalées [oui, surtout le matin]",
+            "Vertiges [parfois en me levant]",
+            "Dyspnée d'effort [oui, en montant les escaliers]",
+            "Douleurs thoraciques [non]",
+            "Palpitations [rarement]",
+            "Œdèmes [chevilles gonflées le soir]",
+            "Troubles visuels [non]"
+          ],
+          "patientComment": "Symptômes ressentis"
+        },
+        {
+          "id": "a5",
+          "text": "Médicaments actuels",
+          "details": [
+            "Antihypertenseurs prescrits [Ramipril et Hydrochlorothiazide]",
+            "Posologie [Ramipril 10mg le matin, HCT 25mg le matin]",
+            "Observance thérapeutique [j'oublie parfois, peut-être 2-3 fois par semaine]",
+            "Effets secondaires [toux sèche parfois, urines fréquentes]"
+          ],
+          "patientComment": "Traitement actuel"
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs d'aggravation",
+          "details": [
+            "Stress récent [mari hospitalisé récemment]",
+            "Modification du régime alimentaire [mange plus salé depuis que je cuisine seule]",
+            "Prise de poids [2-3 kg ces derniers mois]",
+            "Consommation de sel [j'aime bien saler]",
+            "Autres médicaments [ibuprofène pour mes douleurs articulaires]"
+          ],
+          "patientComment": "Facteurs récents"
+        },
+        {
+          "id": "a7",
+          "text": "Complications cardiovasculaires",
+          "details": [
+            "Antécédents d'AVC/AIT",
+            "Cardiopathie ischémique",
+            "Insuffisance cardiaque",
+            "Artériopathie périphérique",
+            "Néphropathie"
+          ],
+          "patientComment": "Aucune complication connue jusqu'à présent"
+        },
+        {
+          "id": "a8",
+          "text": "Comorbidités",
+          "details": [
+            "Diabète [non]",
+            "Dyslipidémie [cholestérol un peu élevé]",
+            "Obésité [IMC à 28]",
+            "Syndrome d'apnée du sommeil [mon mari dit que je ronfle]",
+            "Insuffisance rénale [non]"
+          ],
+          "patientComment": "Comorbidités"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes de vie",
+          "details": [
+            "Activité physique [peu, famille et amis mais pas de sport]",
+            "Alimentation [cuisine traditionnelle, beaucoup de sel]",
+            "Consommation d'alcool [1 verre de vin aux repas]",
+            "Tabagisme [non, jamais fumé]"
+          ],
+          "patientComment": "Mode de vie"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux cardiovasculaires",
+          "details": [
+            "Hypertension familiale",
+            "Infarctus du myocarde",
+            "AVC",
+            "Diabète",
+            "Néphropathie"
+          ],
+          "patientComment": "Parents tous deux décédés d'infarctus du myocarde"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse sociale",
+          "patientComment": "Mariée, pas d'enfants, ancienne vendeuse dans une boutique de vêtements, retraitée depuis 2 ans"
+        },
+        {
+          "id": "a12",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Hygiène et préparation",
+          "details": [
+            "Désinfection des mains",
+            "Installation correcte du patient"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Mesure correcte de la tension artérielle",
+          "details": [
+            "Repos 5 minutes avant mesure",
+            "Position assise correcte",
+            "Brassard adapté",
+            "Mesure aux deux bras",
+            "Au moins 2 mesures"
+          ],
+          "patientComment": "TA confirmée élevée à 175/105 mmHg"
+        },
+        {
+          "id": "e3",
+          "text": "Évaluation générale",
+          "details": [
+            "État général",
+            "Poids et taille (IMC)",
+            "Tour de taille"
+          ],
+          "patientComment": "IMC 28, légère obésité abdominale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Recherche de souffle",
+            "Recherche de B3/B4",
+            "Pouls périphériques"
+          ],
+          "patientComment": "Rythme régulier, B3 audible, pas de souffle"
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation pulmonaire",
+            "Recherche de râles",
+            "Signes d'insuffisance cardiaque"
+          ],
+          "patientComment": "Râles crépitants aux bases"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche d'œdèmes",
+          "details": [
+            "Œdèmes des membres inférieurs",
+            "Signe du godet",
+            "Bilatéralité"
+          ],
+          "patientComment": "Œdèmes bilatéraux prenant le godet"
+        },
+        {
+          "id": "e7",
+          "text": "Examen des organes cibles",
+          "details": [
+            "Fond d'œil (ou mention)",
+            "Examen neurologique sommaire",
+            "Palpation rénale",
+            "Recherche de souffles vasculaires"
+          ],
+          "patientComment": "Fond d'œil normal, reins non palpables"
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Hypertension artérielle non contrôlée avec début d'insuffisance cardiaque"
+        },
+        {
+          "id": "m2",
+          "text": "Facteurs de décompensation identifiés",
+          "details": [
+            "Mauvaise observance thérapeutique",
+            "Prise d'AINS",
+            "Augmentation de la consommation de sel",
+            "Stress psychosocial",
+            "Prise de poids"
+          ],
+          "scoringRule": "Au moins 4 facteurs = 2 pts, 2-3 facteurs = 1 pt"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "details": [
+            "ECG",
+            "Bilan biologique (ionogramme, créatinine)",
+            "BNP ou NT-proBNP",
+            "Radiographie thoracique",
+            "Échocardiographie"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Adaptation thérapeutique immédiate",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Optimisation du traitement",
+                "content": "• Augmenter la dose de Ramipril à 10mg x 2/jour\n• Ajouter un antagoniste calcique (Amlodipine 5mg)\n• Remplacer HCT par Furosémide 40mg si œdèmes\n• Arrêt immédiat des AINS"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Restriction sodée stricte (< 3g/jour)\n• Pesée quotidienne\n• Surveillance de la diurèse\n• Limiter les apports hydriques si nécessaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Éducation thérapeutique renforcée",
+          "details": [
+            "Importance de l'observance",
+            "Utilisation d'un pilulier",
+            "Reconnaissance des signes d'alarme",
+            "Automesure tensionnelle",
+            "Carnet de suivi"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Mesures hygiéno-diététiques",
+          "details": [
+            "Régime sans sel strict",
+            "Réduction pondérale progressive",
+            "Activité physique adaptée",
+            "Gestion du stress",
+            "Éviter les médicaments néphrotoxiques"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "TA > 180/110 avec signes de souffrance",
+            "Insuffisance cardiaque décompensée",
+            "Suspicion d'urgence hypertensive",
+            "Mauvaise réponse au traitement"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Plan de suivi",
+          "details": [
+            "Contrôle dans 1 semaine",
+            "Puis tous les 15 jours jusqu'à stabilisation",
+            "Surveillance fonction rénale et ionogramme",
+            "Ajustement thérapeutique selon évolution",
+            "Référence cardiologue si nécessaire"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Information et motivation du patient",
+          "details": [
+            "Expliquer les risques de l'HTA non contrôlée",
+            "Importance du traitement à vie",
+            "Bénéfices attendus",
+            "Impliquer l'entourage",
+            "Groupe de soutien si nécessaire"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,747 @@
+{
+  "title": "RESCOS-10 - Céphalée",
+  "context": {
+    "setting": "Urgences",
+    "patient": "Mme Iris Ducommun, 23 ans, étudiante, consulte aux urgences pour une céphalée.",
+    "vitals": {
+      "ta": "132/76 mmHg",
+      "fc": "89 bpm",
+      "fr": "22/min",
+      "temperature": "36.7°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la céphalée",
+          "details": [
+            "Localisation [holocrânienne]",
+            "Qualité [compressive]",
+            "Intensité [8/10, pire douleur jamais ressentie]",
+            "Début [il y a 48h au réveil]",
+            "Évolution [douleur ne fait qu'augmenter]",
+            "Durée [continue]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Drapeaux rouges - céphalée",
+          "details": [
+            "Céphalée nouvelle/différente [oui, inhabituelle par rapport aux migraines]",
+            "Céphalée décrite comme la pire",
+            "Céphalée en coup de tonnerre",
+            "Céphalée déclenchée par effort/exercice/activité sexuelle",
+            "Céphalée déclenchée/aggravée par Valsalva ou position"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "details": [
+            "Nausées/vomissements [un vomissement alimentaire ce matin]",
+            "Photophobie/phonophobie",
+            "Symptômes neurologiques [hypoesthésie bras droit découverte au status]",
+            "Fièvre [non]",
+            "Éruption cutanée [non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents neurologiques",
+          "details": [
+            "Migraines chroniques [depuis 2019]",
+            "Caractéristiques des migraines habituelles [normalement unilatérale droite]",
+            "Traitement habituel [Sumatriptan 50mg]",
+            "Efficacité du traitement actuel [aucun effet sur cette céphalée]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque vasculaire",
+          "details": [
+            "Contraception orale [Elyfem 20]",
+            "Tabagisme [2 cigarettes/jour depuis 5 ans]",
+            "Antécédents familiaux vasculaires",
+            "HTA/diabète/dyslipidémie"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Contexte",
+          "details": [
+            "Grossesse/post-partum [non, dernières règles il y a 1 semaine]",
+            "Immunosuppression/cancer [non]",
+            "Traumatisme crânien récent [non]",
+            "Voyage/contage [non]",
+            "Vaccins [à jour]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse par système",
+          "details": [
+            "État général [fatiguée, perte d'appétit]",
+            "Système digestif [un vomissement alimentaire]",
+            "Système gynécologique [règles régulières]",
+            "État psychique [angoissée]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen général",
+          "details": [
+            "État de conscience/niveau attentionnel",
+            "Signes vitaux [TA, FC, FR, T°]",
+            "Aspect général [se tient la tête, visage algique]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen neurologique - nerfs crâniens",
+          "details": [
+            "Acuité visuelle",
+            "Champs visuels",
+            "Réflexes pupillaires",
+            "Oculomotricité",
+            "Sensibilité faciale",
+            "Motricité faciale"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique - voies longues",
+          "details": [
+            "Force motrice 4 membres",
+            "Sensibilité [hypoesthésie latérale bras droit]",
+            "Réflexes ostéotendineux",
+            "Réflexe cutané plantaire"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Recherche de méningisme",
+          "details": [
+            "Raideur de nuque",
+            "Signe de Kernig",
+            "Signe de Brudzinski"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen vasculaire",
+          "details": [
+            "Palpation artères temporales",
+            "Auscultation carotidienne",
+            "Recherche de souffle vasculaire"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Autres examens pertinents",
+          "details": [
+            "Fond d'œil/œdème papillaire",
+            "Démarche et épreuves cérébelleuses",
+            "Recherche d'un rash cutané"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale",
+          "details": [
+            "Thrombose veineuse cérébrale"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "AVC ischémique/hémorragique",
+            "Migraine avec aura",
+            "Méningite/encéphalite",
+            "Hémorragie sous-arachnoïdienne",
+            "Dissection artérielle",
+            "Hypertension intracrânienne"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires - laboratoire",
+          "details": [
+            "FSC, CRP/VS",
+            "Coagulation (TP, PTT)",
+            "D-dimères",
+            "Fonction rénale, ionogramme",
+            "Test de grossesse si doute"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires - imagerie",
+          "details": [
+            "CT cérébral en urgence",
+            "CT avec temps veineux/angio-CT",
+            "IRM cérébrale si disponible",
+            "Veinographie par résonance magnétique"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Voie veineuse périphérique",
+            "Analgésie adaptée",
+            "Antiémétiques si nécessaire",
+            "Surveillance neurologique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement spécifique si thrombose confirmée",
+          "details": [
+            "Anticoagulation par HBPM dose thérapeutique",
+            "Même si lésion hémorragique",
+            "Hospitalisation",
+            "Arrêt contraception orale"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Réponse aux demandes de la patiente",
+          "details": [
+            "Certificat médical pour examen",
+            "Explication du diagnostic suspecté",
+            "Rassurer sur la prise en charge"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Management en général"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Céphalées justifiant une neuro-imagerie",
+        "description": "La neuro-imagerie est importante dans la démarche diagnostique, mais différents examens radiologiques et modalités d’examen s’offrent au praticien ; il s’agit alors de choisir le bon examen en fonction de la suspicion clinique. HSA : hémorragie sous-arachnoïdienne ; TVC : thrombose veineuse cérébrale ; HSD : hématome sous-dural.",
+        "data": "grilles_generees/html/images/céphalée-1-img1a.jpg"
+      },
+      {
+        "title": "Imagerie médicale en cas de céphalées",
+        "description": "Avant d’effectuer une neuro-imagerie pour des céphalées, il est important de considérer plusieurs facteurs, en particulier la pathologie intracrânienne suspectée et le degré d’urgence à l’investiguer.",
+        "data": "grilles_generees/html/images/céphalée-1-img1b.jpg"
+      },
+      {
+        "title": "Angio-CT veineux",
+        "description": "Reconstruction veineuse montrant un défaut de remplissage du sinus sagittal supérieur confirmant la thrombose. Le CT natif peut montrer des signes indirects de TVC (hyperdensité spontanée du sinus, infarctus hémorragique parenchymateux), mais n’est que peu sensible en raison de la variabilité anatomique des sinus veineux et 30% des lésions peuvent être manquées, il faut donc compléter par les séquences veineuses (phlébo-CT), permettant d’objectiver les défauts de remplissage du sinus, typique de la TVC.",
+        "data": "grilles_generees/html/images/céphalée-1-img2.jpg"
+      },
+      {
+        "title": "Laboratoire",
+        "description": "CRP ou VS (Céphalée inaugurale si > 50 ans). FSC et Hémocultures (Si suspicion méningite / autre pathologie infectieuse). Crase (Si suspicion d’hémorragie / de pathologie chirurgicale).",
+        "data": "grilles_generees/html/images/céphalée-1-img3.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Iris Ducommun",
+      "age": "23 ans",
+      "contexte": "Étudiante consultant aux urgences pour céphalée",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens vous voir car j'ai mal à la tête.",
+        "autreChose": "J'ai besoin d'un certificat médical car je ne me sens pas capable d'effectuer mon examen demain."
+      },
+      "consignes": [
+        "Vous pouvez être assez ouverte sur le fait que vous êtes connue pour des migraines et le mentionner spontanément durant l'entretien."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Céphalée",
+          "Localisation : Holo crânienne",
+          "Qualité : Compressive",
+          "Quantité/intensité : Initialement 3/10 et actuellement 8/10. C'est la pire douleur jamais ressentie qui est d'allure inhabituelle",
+          "Chronologie : Début il y a 48h au réveil, en continue",
+          "Développement : Douleur ne fait qu'augmenter",
+          "Circonstances de survenue : Au réveil",
+          "Facteurs atténuants : Aucun",
+          "Facteurs déclenchants/aggravants : Aucun"
+        ],
+        "symptomesAssocies": [
+          "Un vomissement alimentaire"
+        ],
+        "reponseAuxSymptomes": [
+          "Elle se couche et se repose"
+        ],
+        "representationMaladie": [
+          "Elle a peur d'avoir une méningite"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Baisse de l'état général : fatiguée et perte d'appétit"
+        ],
+        "neurologique": [
+          "Céphalée compressive"
+        ],
+        "digestive": [
+          "Un vomissement alimentaire ce matin"
+        ],
+        "gynecologique": [
+          "Dernières règles il y a 1 semaine",
+          "Elle n'a jamais été enceinte et ne pense pas l'être actuellement (dernier rapport il y a 1 an)"
+        ],
+        "psychiatrique": [
+          "Angoissée"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Sumatriptan 50 mg (anti migraineux) en réserve, Paracétamol 1g en réserve, Ibuprofène 400 mg en réserve",
+        "tabac": "2 cigarettes par jour depuis 5 ans",
+        "alcool": "Occasionnellement",
+        "sexualite": "Hétérosexuelle. Dernier rapport sexuel il y a 1 an."
+      },
+      "histoireMedicale": [
+        "Migraines chroniques depuis 2019",
+        "Appendicectomie en 2005"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Elle doit se tenir la tête avec un visage algique"
+        ],
+        "durantStatus": [
+          "Lors du status neurologique :",
+          "- Hypoesthésie au niveau latéral du bras droit, ne respectant pas de dermatome précis. La patiente est surprise car ne l'avait pas remarqué.",
+          "- Le reste du status neurologique est sans particularité."
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patiente de 23 ans, connue pour des migraines chroniques, qui consulte pour une céphalée évoluant depuis 48h et ne cédant pas aux antalgiques. C'est une douleur holocrânienne, compressive, qui est apparue au réveil sans facteur déclenchant. Elle est inhabituelle de part sa localisation et son intensité qui est plus élevée que ses migraines habituelles. La douleur ne fait que d'augmenter progressivement, sans facteur soulageant ni aggravant.\n\nCette céphalée est associée à un déficit sensitif du membre supérieur droit et à un vomissement alimentaire ce jour. Il n'y a pas eu de mouvement anormaux ni d'état fébrile. Il n'y a pas de notion de contage ni de voyage.\n\nC'est une patiente en bonne santé habituelle, qui a comme traitement habituel un contraceptif oral (Elyfem 20) et du Sumatriptan 50 mg (anti-migraineux) en réserve. Elle fume 2 cigarettes par jour depuis 5 ans. Ses dernières règles datent d'il y a une semaine.\n\nVaccins à jour. Pas d'allergie.\n\nNous attendons du médecin qu'il évalue cette céphalée en investiguant les red flags, qu'il effectue un examen clinique ciblé et qu'il propose des examens paracliniques afin d'étailler son diagnostic principal.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e dit vouloir faire :",
+        "• une analyse sanguine : demander de préciser quels examens (cf. grille de correction), puis donner la feuille \"analyse sanguine\" quelque soit la réponse du médecin",
+        "• une imagerie cérébrale : donner la feuille avec l'imagerie cérébrale"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Thrombose veineuse cérébrale."
+        },
+        {
+          "titre": "Définition et épidémiologie d'une céphalée",
+          "contenu": "Les céphalées sont des maux de tête, de durée et d'allure variables entre chaque individu. Elles représentent 2% des motifs de consultations aux urgences en Suisse, soit la 5e cause de consultation en médecine interne générale. Elles touchent plusieurs millions de personnes à travers le monde chaque année."
+        },
+        {
+          "titre": "Anamnèse",
+          "contenu": "Il est important d'évaluer l'évolution, l'intensité et la caractérisation des douleurs. Il faut savoir si le/la patient(e) a déjà expérimenté cette douleur par le passé et à quel point elle l'handicape dans sa vie quotidienne.\n\nL'anamnèse de base face à des céphalées doit permettre d'identifier des drapeaux rouges, c'est-à-dire des signes de gravité devant nous aiguiller sur une céphalée secondaire à une pathologie sévère, voir mortelle. Les questions clés sont celles-ci :",
+          "points": [
+            "Céphalée nouvelle/différente : localisation, durée, intensité",
+            "Céphalée décrite comme la pire",
+            "Céphalée en coup de tonnerre = explosive (max)",
+            "Céphalée déclenchée par effort, exercice, activité sexuelle",
+            "Céphalée déclenchée/aggravée par Valsalva ou position"
+          ]
+        },
+        {
+          "titre": "Symptômes associés à rechercher",
+          "contenu": "Il faut également demander si cette céphalée est associée à :",
+          "points": [
+            "Des symptômes neurologiques récents inhabituels",
+            "Des douleurs ceintures, claudication mâchoire, myalgie, sensibilité temporale",
+            "Une perte pondérale"
+          ]
+        },
+        {
+          "titre": "Contexte à évaluer",
+          "contenu": "Il faut également s'intéresser aux contexte dans laquelle cette céphalée apparait, notamment :",
+          "points": [
+            "HIV / immunosuppression",
+            "grossesse /post-partum",
+            "cancer",
+            "anticoagulation",
+            "manipulation ou trauma nuque",
+            "traumatisme crânien (simple ou compliqué)"
+          ]
+        },
+        {
+          "titre": "Examen clinique",
+          "contenu": "Celui-ci doit être guidé par l'anamnèse et les éventuels drapeaux rouges mis en évidence. L'examen de base comporte :",
+          "points": [
+            "Signes vitaux (T°, TA, FC)",
+            "Auscultation cardio-pulmonaire et carotidienne",
+            "Palpation artères temporales (> 50 ans)"
+          ]
+        },
+        {
+          "titre": "Examen neurologique",
+          "contenu": "Celui-ci doit être associé à l'examen neurologique suivant :",
+          "points": [
+            "Niveau de conscience, niveau attentionnel",
+            "Aphasie, amnésie, héminégligence",
+            "Nerfs crâniens",
+            "Voies longues",
+            "Démarche et épreuves cérébelleuses",
+            "Recherche de méningisme (Signe de Kernig et de Brudzinski)",
+            "Examen du fond d'œil"
+          ]
+        },
+        {
+          "titre": "Drapeaux rouges à l'examen clinique",
+          "contenu": "Il faut être attentifs aux drapeaux rouges qui se remarquent lors de l'examen clinique :",
+          "points": [
+            "Rash",
+            "Méningisme",
+            "HTA ou hypertension maligne",
+            "Anomalies examen neurologique",
+            "Déclenchée ou aggravée par Valsalva",
+            "État fébrile sans autre foyer clinique"
+          ]
+        },
+        {
+          "titre": "Diagnostics différentiels sans signe de gravité",
+          "points": [
+            "Céphalée de tension : Elles représentent 25% des céphalées. C'est une douleur holocrânienne, compressive, sans déficit neurologique associé. Elles durent entre 30 min jusqu'à 7 jours.",
+            "Migraines : Elles représentent 15% des céphalées. La douleur est unilatérale, pulsatile associée à des photophonophobies, des nausées ou des vomissements."
+          ]
+        },
+        {
+          "titre": "Diagnostics différentiels avec drapeaux rouges",
+          "points": [
+            "Infectieux : méningite, encéphalite, méningo-encéphalite, abcès cérébral, sinusite...",
+            "Vasculaire : AVC, dissection (carotidienne, vertébrale), thrombose veineuse, HSA, Artérite temporale (maladie de Horton)...",
+            "Neurologique : néoplasie, névralgie du trijumeau, céphalée en grappe, céphalée post-traumatique..."
+          ]
+        },
+        {
+          "titre": "Examens paracliniques",
+          "contenu": "Dans le cadre d'une céphalée sans critère de gravité, aucun examen clinique est recommandé. A contrario, il est recommandé de faire une imagerie cérébrale et/ou une analyse sanguine."
+        },
+        {
+          "titre": "Laboratoire",
+          "points": [
+            "CRP ou VS – Céphalée inaugurale si > 50 ans",
+            "Si suspicion méningite / autre pathologie infectieuse – Formule sanguine – Hémocultures",
+            "Crase – Suspicion d'hémorragie – Suspicion de pathologie chirurgicale"
+          ]
+        },
+        {
+          "titre": "Imagerie cérébrale",
+          "contenu": "Dans le cas de présence de drapeaux rouges et/ou d'un patient instable, un CT-scan cérébral est indiqué en urgence. Une IRM cérébrale peut également être réalisée mais demande souvent un délai plus long que le scanner. Si nous suspectons une cause vasculaire, nous pouvons demander un scanner avec injection de produit de contraste, en s'intéressant à un temps artériel/veineux.\n\nAttention : lors de suspicion de méningite, une ponction lombaire est recommandée avant le scanner cérébral sauf si le patient est instable hémodynamiquement ou qu'une lésion cérébrale sévère est suspectée."
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "La patiente présente plusieurs critères de gravité : c'est une céphalée nouvelle, décrite comme pire que d'habitude. De plus, elle présente une anomalie à l'examen clinique avec une hypoesthésie du membre supérieur droit. Ces éléments doivent motiver une prise en charge rapide avec l'organisation d'une imagerie cérébrale en urgence (CT-scan).\n\nConcernant le diagnostic, le fait que ce soit une femme jeune avec des facteurs de risque thrombotiques (contraceptif oral et tabac) doit faire évoquer une thrombose veineuse cérébrale. Une recherche de D-dimères est donc recommandées mais ne doit pas retarder l'imagerie cérébrale."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "La thrombose veineuse cérébrale est une cause importante d'AVC du sujet jeune et d'âge moyen.",
+            "Le tableau clinique initial est protéiforme et on doit évoquer le diagnostic devant un tableau de céphalées tenaces plus ou moins associées à des crises d'épilepsie et/ou des déficits neurologiques focaux, à fortiori chez un patient jeune.",
+            "Dans les analyses sanguines, des D-dimères peuvent être augmentés et doivent être faits (sauf si les symptômes durent depuis > 1 semaine).",
+            "Le diagnostic radiologique est essentiel et repose sur une imagerie précise : scanner cérébral et IRM cérébrale sans et avec injection. L'étude des temps veineux (MRV, CT scanner veineux) permet d'authentifier la topographie et l'extension de la thrombose.",
+            "Le traitement repose sur l'anticoagulation immédiate par de l'héparine à bas poids moléculaire (HBPM) à dosage thérapeutique. même en cas de lésion parenchymateuse hémorragique.",
+            "Le pronostic à long terme est favorable pour 80% des patients."
+          ]
+        },
+        {
+          "titre": "Tableau récapitulatif des symptômes/signes et suspicions cliniques",
+          "contenu": "Symptômes/signes → Suspicion clinique\n• Brutale, «en coup de tonnerre» → HSA\n• «Pire céphalée» → HSA, TVC\n• Femme enceinte ou post-partum, état procoagulable → TVC\n• Crise convulsive inaugurale → Masse intracrânienne, TVC, infection\n• Anomalie nouvelle au status neurologique → Masse intracrânienne, hypertension intracrânienne\n• Ptose, myosis → Dissection de l'artère carotide\n• État fébrile/immuno-suppression → Infection du système nerveux central, sinusite, lymphome\n• Douleur aux mouvements des yeux, baisse de l'acuité visuelle → Névrite optique\n• Traumatisme crânien → HSD"
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Thrombose veineuse cérébrale (TVC) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Céphalée (90 %, parfois seul symptôme) : aiguë, subaiguë ou chronique, peut imiter une migraine",
+                "Signes d’HTIC : nausées, vomissements, vision floue, diplopie, somnolence",
+                "Déficit focal : hémiparésie, aphasie, trouble visuel",
+                "Crises d’épilepsie : 40 %",
+                "Troubles du comportement : confusion, délire"
+              ]
+            },
+            {
+              "titre": "Terrain à risque",
+              "points": [
+                "Jeune femme, surtout post-partum",
+                "Contraception orale, grossesse",
+                "Cancer, infections ORL (formes septiques)",
+                "SAPL, lupus, autres MAI",
+                "Traumatisme crânien, neurochirurgie",
+                "Thrombophilie congénitale/acquise"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes neurologiques variables",
+              "points": [
+                "Œdème papillaire bilatéral",
+                "Déficit moteur ou sensitif focal",
+                "Troubles de conscience (coma si forme grave)",
+                "Paralysies oculomotrices (sinus caverneux)",
+                "Cavernous sinus syndrome : exophtalmie, ptosis, chémosis, hypoesthésie V1-V2, atteinte III-IV-VI"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "IRM cérébrale + angio-IRM veineuse (MRV) = référence",
+                "TDM + angio-TDM veineuse si IRM indisponible",
+                "TDM simple souvent normale (70 %)",
+                "Signe du delta vide (empty delta sign)",
+                "Thrombus intraluminal, œdème, hémorragie parenchymateuse"
+              ]
+            },
+            {
+              "titre": "Biologie",
+              "points": [
+                "D-dimères souvent ↑ mais non spécifiques",
+                "Bilan thrombophilie (SAPL, Facteur V Leiden, déficits C/S, ATIII) après phase aiguë",
+                "Bilan infectieux si suspicion septicémie",
+                "FSC, coagulation, créatinine, bilan hépatique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Urgence",
+              "points": [
+                "Hospitalisation en soins intensifs / neurologie",
+                "Anticoagulation immédiate (HNF IV ou HBPM), même si hémorragie",
+                "Relais AVK ou AOD (cas sélectionnés)"
+              ]
+            },
+            {
+              "titre": "Traitement étiologique",
+              "points": [
+                "ATB si septicémie",
+                "Arrêt contraception orale",
+                "Correction troubles métaboliques"
+              ]
+            },
+            {
+              "titre": "Si aggravation",
+              "points": [
+                "Thrombolyse / thrombectomie veineuse (rare, rescue)",
+                "Craniectomie décompressive si engagement"
+              ]
+            },
+            {
+              "titre": "Support",
+              "points": [
+                "Anti-crise si épilepsie",
+                "Contrôle HTIC (antalgiques, tête surélevée, hyperventilation)",
+                "Surveillance neurologique rapprochée (GCS, champs visuels, motricité)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Céphalée atypique + déficit focal = penser TVC",
+            "Facteurs de risque : contraception, post-partum, MAI, cancer",
+            "IRM + MRV = gold standard",
+            "Anticoagulation d’emblée, même si hémorragie",
+            "Surveillance neuro intensive"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Céphalée inhabituelle sévère (TVC)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, sexe, motif (céphalée inhabituelle, sévère)",
+            "Symptôme principal → début, intensité, caractère atypique vs migraine",
+            "Signes associés → déficit focal, crises, HTIC, conscience",
+            "Terrain à risque → contraception, post-partum, ATCD thrombo/MAI",
+            "Examen clinique → papille, déficit neuro, conscience, atteinte oculomotrice",
+            "Résumé + hypothèse (TVC) + DD (HSA, tumeur, migraine, AVC ischémique)",
+            "Examens complémentaires → IRM + MRV, bilan biologique",
+            "Prise en charge → anticoagulation immédiate, hospitalisation"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : HEAD",
+            "elements": [
+              "Headache atypique",
+              "Examen neuro variable",
+              "Atteinte facteurs Risque (contraception, post-partum)",
+              "Diagnostic = IRM/MRV"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Iris Ducommun, 23 ans, sans ATCD notables, qui consulte pour une céphalée inhabituelle, intense et continue depuis 48 h, non similaire à ses céphalées habituelles. Elle décrit des nausées, une vision floue transitoire et s’est sentie confuse par moments.\n\nPas de fièvre, pas de raideur méningée, pas d’aura migraineuse typique. Pas de traumatisme crânien. Elle prend une contraception orale depuis 3 ans. Pas de tabac, pas d’alcool excessif.\n\nÀ l’examen : patiente consciente, céphalée importante, œdème papillaire bilatéral, déficit moteur discret du bras droit, pas de syndrome méningé. Pas de foyer infectieux ORL évident.\n\nEn résumé, il s’agit d’une jeune femme présentant une céphalée inhabituelle et sévère, associée à un déficit focal et des facteurs de risque (contraception orale).\n\nHypothèse principale : thrombose veineuse cérébrale.\n\nDD : hémorragie sous-arachnoïdienne, tumeur cérébrale, migraine atypique, AVC ischémique artériel.\n\nExamens à demander : IRM cérébrale avec angio-IRM veineuse, bilan biologique de base, D-dimères, bilan infectieux si suspicion de septicémie.\n\nPrise en charge immédiate : hospitalisation, anticoagulation curative d’emblée, arrêt contraception orale, traitement symptomatique (antalgiques, anti-crises si besoin), surveillance neurologique rapprochée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Ducommun, 23 ans, présente une céphalée inhabituelle, sévère, depuis 48 h.\n\nB (Background) : Pas d’ATCD, contraception orale. Céphalée atypique, nausées, vision floue, confusion.\n\nA (Assessment) : Suspicion de thrombose veineuse cérébrale (céphalée + déficit focal + facteur de risque). DD : HSA, tumeur, migraine atypique, AVC ischémique.\n\nR (Recommendation) : Hospitalisation, IRM cérébrale avec angio-IRM veineuse, bilan biologique, anticoagulation immédiate même si hémorragie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "TVC = 3C",
+              "points": [
+                "Céphalée atypique",
+                "Confusion / Crises",
+                "Contraception orale (facteur risque majeur)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque → 4P",
+              "points": [
+                "Post-partum",
+                "Pillule (contraception orale)",
+                "Phlébite / Thrombophilie",
+                "Pathologies auto-immunes"
+              ]
+            },
+            {
+              "titre": "Imagerie → MRV = Must",
+              "points": [
+                "IRM + MRV = diagnostic clé",
+                "TDM souvent normale",
+                "Signe du delta vide"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre",
+              "questions": [
+                {
+                  "question": "TVC",
+                  "reponse": {
+                    "pour": [
+                      "Céphalée atypique, inhabituelle",
+                      "Œdème papillaire bilatéral",
+                      "Déficit focal",
+                      "Contraception orale"
+                    ],
+                    "contre": [
+                      "Pas de fièvre ni contexte infectieux clair (mais possible en forme septique)"
+                    ]
+                  }
+                },
+                {
+                  "question": "HSA",
+                  "reponse": {
+                    "pour": [
+                      "Céphalée brutale"
+                    ],
+                    "contre": [
+                      "Pas de début en coup de tonnerre",
+                      "Pas de raideur méningée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Migraine",
+                  "reponse": {
+                    "pour": [
+                      "Céphalée",
+                      "Femme jeune"
+                    ],
+                    "contre": [
+                      "Céphalée inhabituelle",
+                      "Pas d’aura habituelle",
+                      "Signes focaux persistants"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "IRM cérébrale + angio-IRM veineuse (gold standard)",
+                    "TDM cérébrale + angio-TDM si IRM indisponible",
+                    "D-dimères",
+                    "Bilan thrombophilie (après phase aiguë)",
+                    "Bilan infectieux si septicémie suspectée"
+                  ],
+                  "analyse": "👉 « L’IRM avec séquence veineuse est l’examen clé. La biologie sert à rechercher facteurs favorisants ou septicémie. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Traitement immédiat ?",
+                  "reponse": [
+                    "Anticoagulation curative immédiate (HNF IV ou HBPM), même si hémorragie",
+                    "Hospitalisation en soins intensifs/neurologie",
+                    "Arrêt contraception orale",
+                    "Traitement symptomatique (antalgiques, anti-crises si besoin)"
+                  ]
+                },
+                {
+                  "question": "Traitements de recours ?",
+                  "reponse": [
+                    "Thrombolyse ou thrombectomie veineuse si aggravation",
+                    "Craniectomie décompressive en cas d’engagement"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

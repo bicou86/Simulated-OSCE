@@ -1,0 +1,397 @@
+{
+  "title": "RESCOS-13 - Dépression",
+  "context": {
+    "setting": "Urgences psychiatriques du CHUV",
+    "patient": "Mme/M. Anne/Steve Peters, 20 ans, est amené(e) par sa mère qui est très inquiète par rapport à son comportement."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.4,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Exploration des symptômes dépressifs",
+          "details": [
+            "Humeur triste [depuis 1 mois, mélancolique]",
+            "Anhédonie [perte d'intérêt pour tout]",
+            "Fatigue/perte d'énergie [très fatigué la journée]",
+            "Troubles du sommeil [insomnie d'endormissement]",
+            "Troubles de l'appétit [perte d'appétit depuis 1 mois]",
+            "Isolement social [ne voit plus amis ni famille]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Facteurs déclenchants",
+          "details": [
+            "Rupture amoureuse [il y a 1 mois, relation de 3 ans]",
+            "Déménagement récent [il y a 2 mois à Lausanne]",
+            "Difficultés scolaires [études ne plaisent pas]",
+            "Isolement social [peu d'amis à Lausanne]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Évaluation du risque suicidaire - Idéation",
+          "details": [
+            "Présence d'idées suicidaires [oui, depuis 3 jours]",
+            "Fréquence des pensées suicidaires",
+            "Intensité du désir de mort",
+            "Ambivalence face à la mort"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation du risque suicidaire - Planification",
+          "details": [
+            "Scénario établi [oui, pont de Bessières]",
+            "Moyen choisi [saut + injection NovoRapid 600 unités]",
+            "Date prévue [lundi prochain, 2h du matin]",
+            "Accessibilité des moyens [NovoRapid volé au père]",
+            "Préparatifs effectués [escabeau prévu]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents psychiatriques",
+          "details": [
+            "Tentative de suicide antérieure [oui, à 15 ans avec benzodiazépines]",
+            "Diagnostic antérieur [trouble de personnalité borderline]",
+            "Suivis psychiatriques antérieurs",
+            "Hospitalisations psychiatriques"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Suicide dans la famille [grand-père par pendaison]",
+            "Troubles psychiatriques familiaux",
+            "Antécédents médicaux [père diabétique type II]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes et consommations",
+          "details": [
+            "Alcool [augmentation, 3 bières/soir depuis 1 mois]",
+            "Drogues",
+            "Tabac",
+            "Changements récents dans les habitudes"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes associés",
+          "details": [
+            "Douleur thoracique [point, 2-3/10, lié au stress]",
+            "Anxiété",
+            "Autres symptômes somatiques"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Évaluation du fonctionnement",
+          "details": [
+            "Fonctionnement social [isolement, ne voit plus personne]",
+            "Fonctionnement scolaire [n'va plus aux cours]",
+            "Activités quotidiennes [abandon des hobbies]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0,
+      "criteria": []
+    },
+    "management": {
+      "weight": 0.35,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique principale",
+          "details": [
+            "Épisode dépressif majeur avec risque suicidaire élevé"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "details": [
+            "Trouble de la personnalité borderline",
+            "Trouble bipolaire",
+            "Trouble de l'adaptation",
+            "Trouble lié aux substances"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Évaluation du risque suicidaire selon RUD",
+          "details": [
+            "Risque [ATCD, âge, isolement, rupture]",
+            "Urgence [scénario établi avec date]",
+            "Dangerosité [moyens létaux accessibles]",
+            "Conclusion: risque élevé"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Hospitalisation en psychiatrie",
+            "Mesures de protection",
+            "Retrait des moyens létaux",
+            "Surveillance rapprochée"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Plan thérapeutique",
+          "details": [
+            "Traitement antidépresseur",
+            "Psychothérapie",
+            "Soutien psychosocial",
+            "Implication de la famille"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Communication avec le patient",
+          "details": [
+            "Explication du diagnostic",
+            "Validation de la souffrance",
+            "Explication de la nécessité d'hospitalisation",
+            "Alliance thérapeutique"
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Anne/Steve Peters",
+      "age": "20 ans",
+      "contexte": "Étudiant(e) en lettres amené(e) aux urgences psychiatriques par sa mère",
+      "motifConsultation": {
+        "plaintePrincipale": "C'est ma mère qui m'a amenée parce qu'elle dit que je ne suis plus moi-même",
+        "autreChose": "J'en ai marre de cette vie, elle a aucun sens"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Crise existentielle",
+          "Humeur très triste depuis 1 mois, presque mélancolique",
+          "Perte du sens de la vie",
+          "Perte de tout intérêt ou envie"
+        ],
+        "symptomesAssocies": [
+          "Tristesse profonde",
+          "Perte d'envie dans tout",
+          "Fatigue importante la journée",
+          "Difficultés d'endormissement",
+          "Perte d'appétit depuis 1 mois",
+          "Isolement social (ne voit plus amis ni famille)",
+          "Abandon des hobbies",
+          "N'va plus aux cours"
+        ],
+        "douleur": [
+          "Douleur thoracique 'comme un point'",
+          "Intensité : 2-3/10",
+          "Durée : quelques heures puis disparaît",
+          "Plusieurs épisodes par jour",
+          "Apparition subite, surtout quand pense à ses problèmes",
+          "S'atténue avec la distraction"
+        ],
+        "facteursDeclenchants": [
+          "Rupture amoureuse il y a 1 mois (relation de 3 ans)",
+          "A vu son ex avec quelqu'un d'autre récemment",
+          "Déménagement récent à Lausanne (il y a 2 mois)",
+          "Peu d'amis à Lausanne, se sent seul(e)",
+          "Études ne plaisent pas",
+          "Ne sait plus quoi faire de sa vie professionnelle"
+        ],
+        "ideationSuicidaire": [
+          "Pensées suicidaires depuis 3 jours",
+          "Scénario établi : pont de Bessières",
+          "Date prévue : lundi prochain à 2h du matin",
+          "Moyen : saut + injection 600 unités NovoRapid",
+          "Préparatifs : escabeau prévu pour franchir barrière",
+          "NovoRapid volé au père diabétique"
+        ],
+        "questions": [
+          "Il y a absolument rien qui va dans ma vie, ma vie c'est de la merde (si demande de détailler)",
+          "Ça fait un mois que ça ne va plus, depuis que mon ex m'a quitté(e)..."
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Perte d'appétit depuis 1 mois",
+          "Fatigue importante",
+          "Troubles du sommeil"
+        ],
+        "psychiatrique": [
+          "Antécédent de tentative de suicide à 15 ans (benzodiazépines)",
+          "Diagnostiqué(e) 'borderline' lors de cet événement",
+          "Relations tumultueuses (passionnelles ou conflictuelles)",
+          "Décrit(e) comme impulsif(ve)"
+        ],
+        "cardiovasculaire": [
+          "Douleur thoracique liée au stress"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Bonne autrefois (mange de tout), perte d'appétit depuis 1 mois",
+        "activitePhysique": "Autrefois actif(ve), ce n'est plus le cas depuis 1 mois",
+        "sommeil": "Difficultés d'endormissement le soir",
+        "tabac": "Non mentionné",
+        "alcool": "Consommation en augmentation depuis 1 mois, actuellement 3 bières tous les soirs",
+        "drogues": "Non mentionné",
+        "medicaments": "Aucun médicament actuel"
+      },
+      "histoireMedicale": [
+        "Tentative de suicide à 15 ans par prise de benzodiazépines",
+        "Aucune séquelle particulière suite à cet épisode",
+        "Diagnostiqué(e) 'borderline' lors de cet événement",
+        "Pas d'autres hospitalisations",
+        "Pas d'allergies connues"
+      ],
+      "antecedentsFamiliaux": [
+        "Grand-père suicidé par pendaison",
+        "Père diabétique type II insulino-dépendant"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Étudiant(e) en lettres",
+        "hobbies": "Sortir avec les amis, jouer aux jeux vidéos, Beachvolley",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel(le)",
+        "etatCivil": "Célibataire",
+        "etatEsprit": "Attitude mélancolique"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Avoir l'air déprimé(e)",
+          "Regarder le sol de façon mélancolique",
+          "Garder les bras le long du corps, pendus",
+          "Discours monotone",
+          "Ne rien cacher et répondre sincèrement aux questions sans tourner autour du pot"
+        ]
+      },
+      "informationADonner": "Autrefois plutôt quelqu'un de social, joyeux(se) et avec plein d'énergie. Vos proches ne vous reconnaissent plus. Important : ne pas mentionner les facteurs déclenchants les uns après les autres, c'est au médecin d'aller les chercher."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Peters, 20 ans, étudiant(e) en lettres, amené(e) aux urgences psychiatriques par sa mère. Déménagé à Lausanne il y a 2 mois. Humeur triste depuis 1 mois (mélancolique), anhédonie, isolement social, fatigue, insomnie, perte d'appétit. Facteurs déclenchants : rupture amoureuse récente, isolement social, insatisfaction études. Idéation suicidaire active avec scénario établi (pont de Bessières + injection insuline). ATCD : TS à 15 ans, trouble personnalité borderline. ATCD familiaux : grand-père suicidé.",
+      "rolesInterventions": [
+        "Aucune intervention nécessaire"
+      ],
+      "pointsCles": [
+        "Épisode dépressif majeur avec idéation suicidaire active",
+        "Risque suicidaire élevé selon RUD (Risque, Urgence, Dangerosité)",
+        "Antécédent de tentative de suicide",
+        "Scénario suicidaire établi avec moyens létaux accessibles",
+        "Trouble de personnalité borderline sous-jacent",
+        "Facteurs de stress psychosociaux multiples"
+      ],
+      "pieges": [
+        "Ne pas minimiser le risque suicidaire",
+        "Explorer systématiquement le scénario suicidaire (RUD)",
+        "Évaluer la dangerosité des moyens choisis",
+        "Ne pas oublier d'explorer les antécédents psychiatriques",
+        "Proposer une hospitalisation vu le risque élevé"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'évaluation psychiatrique et le risque suicidaire",
+      "sections": [
+        {
+          "titre": "Évaluation psychiatrique complète",
+          "contenu": "L'évaluation clinique psychiatrique doit être systématique et structurée.",
+          "points": [
+            "Apparence : âge apparent, tenue, hygiène, vigilance",
+            "Orientation : temps, espace, personne, situation",
+            "Attention : partagée, fluctuante, somnolence",
+            "Attitude : calme, collaborant, oppositionnel, repli sur soi",
+            "Activité psychomotrice : agitation, ralentissement, tics",
+            "Thymie : neutre, haute, triste, colérique",
+            "Affects : congruents, discordants, pauvres, labiles",
+            "Discours : riche, pauvre, rapide, lent, logorrhéique",
+            "Cours de la pensée : cohérent, organisé, ralenti, digressif",
+            "Contenu de la pensée : logique ou délirant",
+            "Éléments psychotiques : hallucinations, troubles du moi",
+            "Jugement et autocritique",
+            "Fonctions cognitives et mémoire"
+          ]
+        },
+        {
+          "titre": "Critères du trouble dépressif majeur",
+          "contenu": "Au moins 5 symptômes pendant au moins 2 semaines, incluant obligatoirement humeur dépressive ou anhédonie.",
+          "points": [
+            "Humeur dépressive la plupart du jour",
+            "Diminution marquée de l'intérêt ou du plaisir (anhédonie)",
+            "Perte ou gain de poids significatif",
+            "Insomnie ou hypersomnie",
+            "Agitation ou ralentissement psychomoteur",
+            "Fatigue ou perte d'énergie",
+            "Sentiment de dévalorisation ou culpabilité excessive",
+            "Diminution de la capacité de concentration",
+            "Pensées de mort récurrentes, idées suicidaires"
+          ]
+        },
+        {
+          "titre": "Évaluation du risque suicidaire (RUD)",
+          "contenu": "Méthode systématique d'évaluation du risque suicidaire.",
+          "points": [
+            "RISQUE : antécédents de TS, sexe masculin, âge, précarité sociale, comorbidité psychiatrique, impulsivité, consommation substances",
+            "URGENCE : scénario établi ? Lieu ? Date ? Moyen ?",
+            "DANGEROSITÉ : létalité et disponibilité du moyen choisi",
+            "Évaluation globale : faible, moyen, élevé",
+            "Décision : ambulatoire, hospitalisation, urgence"
+          ]
+        },
+        {
+          "titre": "Trouble de personnalité borderline",
+          "contenu": "Trouble caractérisé par l'instabilité des relations, de l'image de soi et des affects.",
+          "points": [
+            "Relations interpersonnelles instables et intenses",
+            "Efforts effrénés pour éviter l'abandon",
+            "Perturbation de l'identité",
+            "Impulsivité dans au moins 2 domaines dommageables",
+            "Comportements suicidaires ou automutilations répétés",
+            "Instabilité affective avec réactivité marquée",
+            "Sentiments chroniques de vide",
+            "Colères intenses et inappropriées",
+            "Idéation paranoïde ou symptômes dissociatifs transitoires"
+          ]
+        },
+        {
+          "titre": "Prise en charge immédiate",
+          "contenu": "Face à un risque suicidaire élevé, la prise en charge doit être rapide et sécurisée.",
+          "points": [
+            "Hospitalisation en psychiatrie si risque élevé",
+            "Retrait des moyens létaux",
+            "Surveillance rapprochée",
+            "Alliance thérapeutique",
+            "Information et soutien à la famille",
+            "Plan de sécurité si ambulatoire",
+            "Traitement antidépresseur avec surveillance",
+            "Psychothérapie adaptée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antidépresseurs : surveillance accrue du risque suicidaire en début de traitement",
+        "Psychothérapie : TCC, thérapie dialectique comportementale pour borderline",
+        "Hospitalisation : critère principal = sécurité du patient",
+        "Contrat de non-suicide : efficacité limitée, ne remplace pas l'évaluation clinique",
+        "Implication famille : avec accord du patient, soutien essentiel"
+      ],
+      "examensComplementaires": [
+        "Bilan biologique standard si première évaluation",
+        "TSH pour éliminer hypothyroïdie",
+        "Toxicologie urinaire si suspicion consommation",
+        "ECG si prescription antidépresseurs",
+        "Imagerie cérébrale non systématique sauf signes neurologiques"
+      ]
+    }
+  }
+}

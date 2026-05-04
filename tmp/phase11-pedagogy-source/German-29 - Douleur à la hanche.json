@@ -1,0 +1,615 @@
+{
+  "title": "German-29 - Douleur à la hanche",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Müller, 42 ans, se présente chez le médecin généraliste pour douleurs de hanche",
+    "vitals": {
+      "ta": "110/73 mmHg",
+      "fc": "70 bpm",
+      "fr": "13/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte - motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleurs de hanche"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la douleur (OPQRST)",
+          "details": [
+            "Localisation précise [aine gauche]",
+            "Irradiation [dans le genou gauche]",
+            "Type/qualité de douleur [sourde]",
+            "Intensité sur échelle [5/10]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution temporelle",
+          "details": [
+            "Début [insidieux - lent, légèrement croissant]",
+            "Durée [depuis environ 1 mois]",
+            "Évolution [permanente/constante]",
+            "Épisodes antérieurs [non]",
+            "Douleurs nocturnes [aucune]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "Facteurs aggravants [lors de la marche, en position debout]",
+            "Facteurs améliorants [en position assise, couchée]",
+            "Position antalgique [position assise ou couchée]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Recherche d'événement déclenchant",
+          "details": [
+            "Traumatisme récent [non]",
+            "Effort physique inhabituel [ne sait pas]",
+            "Chute ou accident [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes associés locomoteurs",
+          "details": [
+            "Boiterie [légère boiterie gauche en soirée]",
+            "Raideur matinale [non mentionnée]",
+            "Blocages articulaires [non]",
+            "Dérobements [non]",
+            "Gonflement articulaire [non]",
+            "Limitation fonctionnelle [pas remarquée]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Signes généraux et drapeaux rouges",
+          "details": [
+            "Fièvre [non]",
+            "Perte de poids inexpliquée [non]",
+            "Sueurs nocturnes [non]",
+            "Asthénie importante [non]",
+            "Douleurs multiples articulaires [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents personnels médicaux",
+          "details": [
+            "Maladies chroniques [transplantation rénale pour maladie polykystique il y a 10 ans]",
+            "Antécédents chirurgicaux [appendicectomie dans l'enfance]",
+            "Fractures antérieures [non]",
+            "Pathologies rhumatismales [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Traitement actuel et allergies",
+          "details": [
+            "Immunosuppresseurs [Prednisone 7,5mg/j, Azathioprine, Cyclophosphamide]",
+            "Antalgiques [Paracétamol pour les douleurs]",
+            "Allergies médicamenteuses [aucune]",
+            "Autres traitements [non mentionnés]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Facteurs de risque et habitudes",
+          "details": [
+            "Tabagisme [non]",
+            "Consommation d'alcool [non]",
+            "Toxicomanie [non]",
+            "Activité physique habituelle",
+            "Profession et sollicitation physique"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Contexte particulier du patient",
+          "details": [
+            "Immunosuppression [oui - transplantation rénale]",
+            "Risque infectieux augmenté",
+            "Corticothérapie au long cours [Prednisone]",
+            "Antécédents néoplasiques [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux",
+          "patientComment": "Père également maladie polykystique, décédé d'hémorragie cérébrale",
+          "details": [
+            "Pathologies héréditaires",
+            "Maladies rhumatismales familiales",
+            "Néoplasies familiales"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Contexte psychosocial",
+          "details": [
+            "Situation professionnelle et capacité de travail",
+            "Stress et charge psychologique",
+            "Retentissement sur les activités quotidiennes",
+            "Support social"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse par systèmes",
+          "details": [
+            "Symptômes urinaires [non]",
+            "Symptômes digestifs [non]",
+            "Symptômes neurologiques [non]",
+            "Symptômes vasculaires [non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et systématique bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Observation de la marche et de la posture",
+          "details": [
+            "Analyse de la démarche [légère boiterie de décharge]",
+            "Phase d'appui et de balancement",
+            "Utilisation d'aide à la marche [non]",
+            "Signe de Trendelenburg en position debout [négatif]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection de la hanche (bilatérale comparative)",
+          "details": [
+            "Recherche de déformation [absente]",
+            "Gonflement localisé [absent]",
+            "Rougeur cutanée [absente]",
+            "Position spontanée du membre",
+            "Amyotrophie [non visible]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation systématique",
+          "details": [
+            "Palpation du pli inguinal [douleur à la pression sur ligament inguinal]",
+            "Palpation du grand trochanter [non douloureux]",
+            "Recherche de chaleur locale [absente]",
+            "Palpation des reliefs osseux",
+            "Recherche d'adénopathies inguinales [absentes]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Mobilisation passive - amplitudes articulaires",
+          "details": [
+            "Flexion de hanche [normale, douleur en fin de course]",
+            "Extension de hanche [normale, douleur en fin de course]",
+            "Abduction [normale]",
+            "Adduction [normale]",
+            "Rotation interne [limitée]",
+            "Rotation externe [normale]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Tests spécifiques de la hanche",
+          "details": [
+            "Test FADIR (impingement) [négatif]",
+            "Test FABER/Patrick (signe du 4) [distance genou-sol augmentée environ 15 cm]",
+            "Test de Thomas (flexum de hanche) [négatif]",
+            "Test d'Ober (bandelette ilio-tibiale) [négatif]",
+            "Log roll test [positif si douleur]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation musculaire et neurologique",
+          "details": [
+            "Force des fléchisseurs de hanche",
+            "Force des abducteurs (moyen fessier)",
+            "Force des rotateurs",
+            "Réflexes ostéo-tendineux membres inférieurs",
+            "Sensibilité du territoire L2-L3"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen du rachis lombaire",
+          "details": [
+            "Mobilité rachidienne",
+            "Points douloureux paravertébraux",
+            "Test de Lasègue [négatif]",
+            "Test de Léri [négatif]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen comparatif controlatéral",
+          "details": [
+            "Comparaison des amplitudes",
+            "Comparaison de la force",
+            "Recherche d'asymétrie",
+            "Mesure de l'inégalité de longueur des membres"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen vasculaire des membres inférieurs",
+          "details": [
+            "Palpation des pouls périphériques",
+            "Recherche de signes d'insuffisance artérielle",
+            "Recherche de varices"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique complet et méthodique bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "patientComment": "Nécrose aseptique de la tête fémorale (ostéonécrose)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 5 diagnostics pertinents = 2 pts, 3-4 = 1 pt, moins de 3 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Coxarthrose",
+                    "cause": "□ arthrose de hanche",
+                    "test": "→ Radiographie bassin face + hanche profil"
+                  },
+                  {
+                    "text": "Arthrite septique",
+                    "cause": "□ contexte d'immunosuppression",
+                    "test": "→ Radiographie, ponction articulaire si épanchement"
+                  },
+                  {
+                    "text": "Arthrite réactive",
+                    "cause": "□ syndrome de Reiter",
+                    "test": "→ Radiographie, ponction articulaire si épanchement"
+                  },
+                  {
+                    "text": "Tendinopathie des adducteurs",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Bursite trochantérienne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ US, IRM si doute"
+                  },
+                  {
+                    "text": "Conflit fémoro-acétabulaire",
+                    "cause": "□ FAI",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Fracture de contrainte du col fémoral",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, CT ou IRM si doute"
+                  },
+                  {
+                    "text": "Pathologie lombaire avec irradiation",
+                    "cause": "□ L2-L3",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tumeur osseuse primitive ou métastase",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Algodystrophie de hanche",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires d'imagerie",
+          "details": [
+            "Radiographie bassin face + hanche face/profil [signes d'ostéolyse et ostéosclérose côte à côte]",
+            "IRM de hanche [gold standard pour nécrose - suspicion de nécrose de la tête fémorale]",
+            "Échographie de hanche [recherche épanchement articulaire - négatif]",
+            "Scintigraphie osseuse si IRM contre-indiquée"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens biologiques",
+          "details": [
+            "NFS, CRP, VS [exclusion processus inflammatoire]",
+            "Hémocultures si fièvre (arthrite septique)",
+            "Ponction articulaire si épanchement",
+            "Bilan phosphocalcique",
+            "Fonction rénale (patient transplanté)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• ATTENTION : Pas d'AINS chez patient transplanté rénal !\n• Tramadol 50-100mg jusqu'à 400mg/j (1g = 1,5 gouttes/j)\n• Paracétamol 1g x 3-4/j (max 4g/j)\n• Gabapentine si composante neuropathique\n• Maintien de l'immunosuppression"
+              },
+              {
+                "title": "Traitement conservateur",
+                "content": "• Mise en décharge partielle avec cannes\n• Physiothérapie (mobilisation douce, renforcement)\n• Sports adaptés (natation, vélo sans résistance)\n• Perte de poids si surcharge pondérale\n• Éducation thérapeutique"
+              },
+              {
+                "title": "Options chirurgicales selon stade",
+                "content": "• Stade précoce : forage osseux (core decompression)\n• Stade intermédiaire : ostéotomie de réorientation\n• Stade avancé : prothèse totale de hanche\n• Greffe osseuse vascularisée (cas sélectionnés)"
+              },
+              {
+                "title": "Mesures préventives",
+                "content": "• Réduction minimale de la corticothérapie si possible\n• Éviter l'alcool (facteur de risque)\n• Surveillance régulière de la hanche controlatérale\n• Prévention des chutes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Classification et stadification",
+          "details": [
+            "Classification de Ficat et Arlet",
+            "Évaluation IRM (œdème médullaire, ligne de démarcation)",
+            "Étendue de la nécrose",
+            "Atteinte de la surface articulaire"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et pronostic",
+          "details": [
+            "Contrôle clinique à 1 mois",
+            "Imagerie de contrôle selon évolution",
+            "Surveillance de la hanche controlatérale (risque bilatéral 40-70%)",
+            "Information sur l'évolution naturelle",
+            "Critères de détérioration"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Coordination des soins",
+          "details": [
+            "Collaboration avec néphrologue (ajustement immunosuppression)",
+            "Référence en orthopédie si indication chirurgicale",
+            "Suivi multidisciplinaire",
+            "Rééducation fonctionnelle adaptée"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Éducation du patient",
+          "redflagsSection": [
+            {
+              "text": "Augmentation brutale de la douleur"
+            },
+            {
+              "text": "Impossibilité de poser le pied"
+            },
+            {
+              "text": "Fièvre (risque infectieux sous immunosuppression)"
+            },
+            {
+              "text": "Déformation visible"
+            },
+            {
+              "text": "Douleur nocturne invalidante"
+            },
+            {
+              "text": "Apparition de symptômes controlatéraux"
+            }
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge adaptée au contexte particulier du patient"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦴 Nécrose aseptique de la tête fémorale (ostéonécrose) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur de la hanche, inguinale ou fessière",
+                "Irradiations vers la cuisse ou le genou",
+                "Douleur mécanique initialement (marche, effort) puis mixte avec douleurs nocturnes",
+                "Boiterie progressive"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Corticothérapie prolongée ou forte dose",
+                "Alcoolisme chronique",
+                "Drépanocytose",
+                "Traumatisme antérieur (fracture col fémur, luxation de hanche)",
+                "Maladies systémiques (lupus, VIH, transplantations)"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Phase silencieuse au début (asymptomatique)",
+                "Progression vers effondrement de la tête fémorale",
+                "Risque d’arthrose secondaire rapide"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation",
+              "points": [
+                "Boiterie (signe de Trendelenburg possible)",
+                "Pas de tuméfaction locale"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Limitation douloureuse de la rotation interne de la hanche",
+                "Limitation secondaire de la flexion et abduction",
+                "Raideur articulaire aux stades avancés"
+              ]
+            },
+            {
+              "titre": "Tests fonctionnels",
+              "points": [
+                "Douleur déclenchée en appui monopodal",
+                "Test de rotation interne particulièrement sensible"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie standard : normale aux stades précoces, puis aspect de séquelle (signe du croissant, effondrement de la tête)",
+                "IRM : examen de référence, détecte la nécrose précocement",
+                "Scanner : utile pour bilan pré-chirurgical",
+                "Scintigraphie osseuse : alternative si IRM non disponible"
+              ]
+            },
+            {
+              "titre": "Biologie",
+              "points": [
+                "Pas de marqueur spécifique",
+                "Examens orientés selon cause (NFS pour drépanocytose, bilan hépatique, VIH, etc.)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Décharge partielle avec cannes ou béquilles",
+                "Antalgiques ± AINS",
+                "Bisphosphonates ou autres traitements médicamenteux (efficacité variable)",
+                "Surveillance radiologique et clinique"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Forage décompressif (stades précoces sans effondrement)",
+                "Ostéotomies correctrices dans certains cas",
+                "Prothèse totale de hanche si effondrement ou arthrose secondaire avancée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur de hanche avec limitation rotation interne = signe précoce",
+            "IRM = examen le plus sensible aux stades initiaux",
+            "Facteurs de risque : corticoïdes, alcool, drépanocytose",
+            "Évolution vers arthrose secondaire rapide si non traitée",
+            "Chirurgie (PTG) souvent nécessaire aux stades évolués"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur de hanche ? Caractère mécanique ou mixte ?",
+                "Irradiation vers genou ou cuisse ?",
+                "ATCD : corticothérapie, alcoolisme, drépanocytose, traumatisme de hanche ?",
+                "Retentissement fonctionnel (marche, activités quotidiennes) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen de la hanche : mobilité, douleur rotation interne",
+                "Radiographie bassin + hanches (face et profil)",
+                "IRM pour confirmation et bilan lésionnel",
+                "Examens complémentaires selon cause (NFS, sérologies, bilan hépatique)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "IRM précoce pour confirmer diagnostic",
+                "Traitement conservateur possible si stade précoce (décharge, antalgiques, forage décompressif)",
+                "Prothèse totale de hanche si effondrement/arthrose secondaire"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

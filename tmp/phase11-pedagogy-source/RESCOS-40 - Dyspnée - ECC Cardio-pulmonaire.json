@@ -1,0 +1,567 @@
+{
+  "title": "RESCOS-40 - Dyspnée - ECC Cardio-pulmonaire",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. E. Soufflé, 64 ans, chômeur, consultant pour dyspnée progressive sur 6 mois avec décompensation cardiaque",
+    "vitals": {
+      "ta": "100/60 mmHg",
+      "fc": "96 bpm",
+      "fr": "20/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la dyspnée",
+          "details": [
+            "Évolution temporelle [progressive sur 6 mois]",
+            "Circonstances [effort, repos, position]",
+            "Orthopnée [présente depuis 2 mois]",
+            "Dyspnée paroxystique nocturne [présente depuis 2 mois]",
+            "Quantification [stade NYHA, échelle MRC]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Recherche d'éléments discriminants cardiaques vs respiratoires",
+          "details": [
+            "Éléments cardiaques [orthopnée, DPN, œdèmes vespéraux, nycturie 2x/nuit]",
+            "Éléments respiratoires [toux nocturne, bronchite chronique]",
+            "Prise de poids récente [non pesé]",
+            "Position de sommeil [nombre d'oreillers]",
+            "Tolérance à l'effort antérieure"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés cardiovasculaires",
+          "details": [
+            "Douleurs thoraciques [angor absent]",
+            "Palpitations [rythme régulier]",
+            "Syncopes ou lipothymies [absentes]",
+            "Claudication intermittente [absente]",
+            "Œdèmes membres inférieurs [présents, surtout droit]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés respiratoires",
+          "details": [
+            "Toux chronique [bronchite depuis des années]",
+            "Expectorations [caractéristiques, quantité]",
+            "Hémoptysie [présence ou absence]",
+            "Sifflements respiratoires",
+            "Infections respiratoires récurrentes"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Tabagisme [80 UPA - gros fumeur]",
+            "Hypertension artérielle [TA 100/60]",
+            "Diabète [non mentionné]",
+            "Dyslipidémie [non mentionnée]",
+            "Antécédents familiaux cardiovasculaires"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux pertinents",
+          "details": [
+            "Pathologies cardiaques préexistantes [aucune, pas de RAA]",
+            "Pathologies respiratoires [bronchite chronique]",
+            "Hospitalisations antérieures",
+            "Interventions chirurgicales",
+            "Allergies médicamenteuses"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes et mode de vie",
+          "details": [
+            "Tabac [80 UPA - facteur de risque mixte]",
+            "Alcool [consommation niée]",
+            "Activité physique [sédentaire, chômeur]",
+            "Médicaments actuels [aucun]",
+            "Expositions professionnelles [emplois non qualifiés multiples]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Contexte psychosocial",
+          "details": [
+            "Situation professionnelle [chômeur fin de droits]",
+            "Situation financière [aide sociale + soutien fils]",
+            "Isolement social [vit seul?]",
+            "Stress et anxiété [patient inquiet]",
+            "Observance thérapeutique potentielle"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a9",
+          "text": "Intégration anamnèse cardio-respiratoire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale intégrée",
+          "details": [
+            "État général [moyen, patient inquiet]",
+            "Fréquence respiratoire [20/min]",
+            "Coloration cutanée [pas de cyanose]",
+            "Pouls jugulaire [12 cm à 60°, élevé]",
+            "Tirage sus-sternal [présence/absence]",
+            "Extrémités [cyanose périphérique, froideur]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire - position couchée 45°",
+          "details": [
+            "Inspection aire cardiaque et pouls jugulaire",
+            "Palpation précordiale et choc de pointe",
+            "Palpation pouls carotidien [montée lente]",
+            "Auscultation 4 foyers en décubitus dorsal",
+            "Recherche B3/B4 en décubitus latéral gauche"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation cardiaque - bruits pathologiques",
+          "details": [
+            "B1 et B2 [inaudibles]",
+            "Souffle systolique aortique [3/6 râpeux, irradiation carotides]",
+            "Souffle systolique mitral [2/6 apex → aisselle]",
+            "Galop B3 ou B4 [à rechercher]",
+            "Frottement péricardique [absent]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen respiratoire - position assise",
+          "details": [
+            "Inspection mouvements respiratoires [type respiration]",
+            "Inspection forme thorax [diamètre AP élargi]",
+            "Palpation ampliation thoracique",
+            "Palpation vibrations vocales",
+            "Percussion postérieure et antérieure"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation pulmonaire - bruits pathologiques",
+          "details": [
+            "Murmure vésiculaire [symétrie, intensité]",
+            "Sibilances expiratoires [présentes]",
+            "Râles crépitants [bases pulmonaires bilatéraux]",
+            "Ronchi [présence/absence]",
+            "Expiration prolongée [discrètement]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Signes périphériques d'insuffisance cardiaque",
+          "details": [
+            "Œdèmes membres inférieurs [jusqu'aux cuisses, godet]",
+            "Reflux hépato-jugulaire [à rechercher]",
+            "Hépatomégalie [palpation foie]",
+            "Ascite [matité déclive]",
+            "Pouls périphériques [tous palpables sans souffle]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e7",
+          "text": "Intégration de l'examen physique",
+          "details": [
+            "Séquence optimale pour confort patient",
+            "Passage fluide entre positions",
+            "Examen complet sans répétitions inutiles",
+            "Éléments prioritaires selon contexte"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen intégré cardio-respiratoire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Synthèse diagnostique principale",
+          "details": [
+            "Insuffisance cardiaque décompensée",
+            "Sténose aortique sévère [vitesse 4.4 m/s, gradient 50 mmHg]",
+            "Insuffisance mitrale modérée",
+            "Dysfonction VG sévère [FE 30%]",
+            "Possible syndrome obstructif associé"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel dyspnée cardio-pulmonaire",
+          "ddSection": {
+            "title": "Diagnostics différentiels de la dyspnée",
+            "categories": [
+              {
+                "name": "Causes cardiaques",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque gauche sur valvulopathie",
+                    "cause": "Arguments POUR:\n\t□ Orthopnée et DPN\n\t□ Œdèmes périphériques\n\t□ Nycturie\n\t□ Pouls jugulaire élevé\n\t□ Râles crépitants bases",
+                    "test": "→ Échocardiographie, radiographie thorax, BNP"
+                  },
+                  {
+                    "text": "Insuffisance cardiaque droite (cœur pulmonaire)",
+                    "cause": "Arguments POUR:\n\t□ Œdèmes prédominant à droite\n\t□ Turgescence jugulaire\n\t□ BPCO possible (tabac 80 UPA)",
+                    "test": "→ Échocardiographie, cathétérisme droit"
+                  }
+                ]
+              },
+              {
+                "name": "Causes respiratoires",
+                "items": [
+                  {
+                    "text": "BPCO avec exacerbation",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme majeur 80 UPA\n\t□ Bronchite chronique\n\t□ Thorax distendu\n\t□ Sibilances expiratoires\n\t□ Expiration prolongée",
+                    "test": "→ Spirométrie, gazométrie, radiographie"
+                  }
+                ]
+              },
+              {
+                "name": "Causes mixtes",
+                "items": [
+                  {
+                    "text": "Insuffisance cardio-respiratoire globale",
+                    "cause": "Arguments POUR:\n\t□ Signes cardiaques ET respiratoires\n\t□ Facteurs de risque mixtes\n\t□ Décompensation récente\n\t□ Râles + sibilances",
+                    "test": "→ Bilan complet cardio-respiratoire"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics discutés = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires cardiaques",
+          "details": [
+            "ECG [HVG, rythme sinusal]",
+            "Radiographie thorax [cardiomégalie, lignes Kerley B]",
+            "Échocardiographie [sténose aortique 0.5 cm², FE 30%]",
+            "BNP ou NT-proBNP",
+            "Coronarographie si chirurgie envisagée"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires respiratoires",
+          "details": [
+            "Spirométrie [syndrome obstructif?]",
+            "Gazométrie artérielle [hypoxémie, hypercapnie]",
+            "Test de marche 6 minutes",
+            "Scanner thoracique si indication",
+            "Polysomnographie si suspicion SAOS"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge de l'insuffisance cardiaque",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médical aigu",
+                "content": "• Diurétiques de l'anse : Furosémide IV pour décongestion × Adaptation selon diurèse et poids\n• IEC/ARA2 : Si TA le permet, titration prudente × Traitement au long cours\n• Bêtabloquants : Introduction prudente post-stabilisation × Augmentation progressive"
+              },
+              {
+                "title": "Traitement chirurgical",
+                "content": "• Remplacement valvulaire aortique : Indication formelle si sténose sévère symptomatique × Évaluation risque opératoire"
+              }
+            ]
+          },
+          "scoringRule": "Traitement adapté et complet = oui, partiel = ±, insuffisant = non"
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge respiratoire",
+          "details": [
+            "Oxygénothérapie si hypoxémie",
+            "Bronchodilatateurs si obstruction",
+            "Sevrage tabagique impératif",
+            "Kinésithérapie respiratoire",
+            "Vaccination grippe/pneumocoque"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Hospitalisation pour décompensation aiguë",
+            "Monitoring poids quotidien",
+            "Surveillance diurèse et ionogramme",
+            "Évaluation pré-opératoire si chirurgie",
+            "Suivi multidisciplinaire cardio-pneumo"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m8",
+          "text": "Aspects psychosociaux et éducation",
+          "details": [
+            "Soutien psychologique [patient inquiet]",
+            "Aide sociale [situation précaire]",
+            "Éducation thérapeutique [observance, signes alarme]",
+            "Aménagement domicile si besoin",
+            "Coordination avec médecin traitant"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management intégré cardio-respiratoire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé - M. E. Soufflé",
+      "nom": "M. E. Soufflé",
+      "age": "64 ans",
+      "contexte": "Homme de 64 ans, chômeur en fin de droits, vivant d'aide sociale et soutien familial limité",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis de plus en plus essoufflé depuis 6 mois",
+        "autreChose": "Je me réveille la nuit pour respirer et mes chevilles ont gonflé"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Dyspnée d'effort progressive depuis 6 mois",
+          "Orthopnée depuis 2 mois (nombre d'oreillers?)",
+          "Dyspnée paroxystique nocturne depuis 2 mois",
+          "Réveils nocturnes avec sensation d'étouffement",
+          "Amélioration en position assise au bord du lit"
+        ],
+        "symptomesAssocies": [
+          "Toux nocturne récente",
+          "Œdèmes des chevilles (surtout droite)",
+          "Nycturie 2 fois par nuit",
+          "Pas de douleurs thoraciques",
+          "Pas de claudication intermittente"
+        ],
+        "circonstances": [
+          "Aggravation progressive",
+          "Limitation importante des activités",
+          "Difficulté à monter les escaliers",
+          "Essoufflement pour activités quotidiennes"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Aucun antécédent médical notable",
+        "Pas de rhumatisme articulaire aigu",
+        "Bronchite chronique depuis des années",
+        "Pas d'hospitalisations antérieures"
+      ],
+      "habitudes": {
+        "tabac": "Gros fumeur - 80 UPA (paquets-années)",
+        "alcool": "Consommation niée (mais à réévaluer)",
+        "medicaments": "Aucun traitement actuel",
+        "activite": "Sédentaire, sans emploi",
+        "alimentation": "Précaire vu situation financière"
+      },
+      "contexteSocial": {
+        "profession": "Multiples emplois non qualifiés, actuellement chômeur",
+        "situation": "Fin de droits, aide sociale",
+        "famille": "Petit soutien financier du fils",
+        "logement": "Conditions probablement précaires",
+        "isolement": "Patient apparaît socialement isolé"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Patient inquiet mais coopératif",
+          "Dyspnée légère au repos en parlant",
+          "Position semi-assise préférée",
+          "Minimise possiblement consommation alcool",
+          "Exprime inquiétudes sur sa santé"
+        ],
+        "durantExamen": [
+          "État général moyen",
+          "FR 20/min, pas de cyanose",
+          "Pouls jugulaire visible position semi-assise",
+          "Œdèmes bilatéraux prenant le godet",
+          "Coopératif pour changements position"
+        ],
+        "questionsAPoser": [
+          "Qu'est-ce que j'ai docteur ?",
+          "Est-ce que c'est grave ?",
+          "Vais-je devoir être hospitalisé ?",
+          "Qui va payer les médicaments ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Cas M. E. Soufflé",
+      "dossierMedical": "Patient 64 ans, tabagisme majeur 80 UPA, situation sociale précaire. Insuffisance cardiaque décompensée sur sténose aortique sévère (0.5 cm²) + IM modérée. FE 30%. BPCO probable associée. Contexte psychosocial difficile.",
+      "rolesInterventions": [
+        "Observer l'intégration anamnèse cardio-respiratoire",
+        "Évaluer la discrimination causes cardiaques vs pulmonaires",
+        "Vérifier l'examen physique intégré et séquencé",
+        "Noter la reconnaissance des souffles pathologiques",
+        "Apprécier la prise en compte du contexte psychosocial"
+      ],
+      "pointsCles": [
+        "Dyspnée mixte cardio-respiratoire",
+        "Sténose aortique sévère symptomatique",
+        "Insuffisance cardiaque à FE réduite (30%)",
+        "Tabagisme majeur avec BPCO probable",
+        "Signes congestifs droits et gauches",
+        "Contexte social précaire impactant prise en charge",
+        "Indication chirurgicale à évaluer",
+        "Nécessité approche multidisciplinaire"
+      ],
+      "pieges": [
+        "Se focaliser uniquement sur un système",
+        "Manquer l'intégration cardio-respiratoire",
+        "Ne pas reconnaître la sévérité de la sténose aortique",
+        "Sous-estimer l'impact du contexte social",
+        "Omettre l'examen en positions multiples",
+        "Ne pas rechercher tous les souffles",
+        "Oublier les signes périphériques d'IC",
+        "Ne pas quantifier la dyspnée (NYHA)",
+        "Manquer les facteurs de risque mixtes"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique - Intégration cardio-respiratoire",
+      "sections": [
+        {
+          "titre": "Dyspnée : symptôme non spécifique",
+          "contenu": "La dyspnée peut avoir des origines multiples nécessitant une approche intégrée.",
+          "points": [
+            "Causes cardiaques : IC gauche, droite, valvulopathies",
+            "Causes pulmonaires : BPCO, asthme, pneumopathies",
+            "Causes mixtes : décompensation cardio-respiratoire",
+            "Autres : anémie, acidose, anxiété, déconditionnement",
+            "Importance de l'anamnèse discriminante",
+            "Examen physique systématique et intégré",
+            "Examens complémentaires orientés"
+          ]
+        },
+        {
+          "titre": "Éléments discriminants à l'anamnèse",
+          "contenu": "Recherche d'indices orientant vers origine cardiaque ou respiratoire.",
+          "points": [
+            "Origine cardiaque : orthopnée, DPN, œdèmes, nycturie",
+            "Origine respiratoire : toux chronique, expectorations",
+            "Facteurs de risque CV : HTA, diabète, tabac, dyslipidémie",
+            "Facteurs de risque respiratoires : tabac, expositions",
+            "Caractère relatif : cœur pulmonaire, fatigue diaphragme",
+            "Évolution temporelle : aiguë vs chronique",
+            "Facteurs déclenchants et aggravants"
+          ]
+        },
+        {
+          "titre": "Examen physique intégré",
+          "contenu": "Séquence optimisée pour confort patient et efficacité diagnostique.",
+          "points": [
+            "Inspection générale : FR, cyanose, tirage, œdèmes",
+            "Position couchée 45° : examen cardiovasculaire",
+            "Position assise : examen respiratoire complet",
+            "Recherche signes IC : jugulaires, reflux HJ, œdèmes",
+            "Auscultation intégrée : cœur et poumons",
+            "Évaluation retentissement : TA, pouls, extrémités",
+            "Adaptation selon tolérance patient"
+          ]
+        },
+        {
+          "titre": "Valvulopathies et insuffisance cardiaque",
+          "contenu": "La sténose aortique sévère est une cause majeure d'IC.",
+          "points": [
+            "Sténose aortique sévère : surface <1 cm², gradient >40 mmHg",
+            "Symptômes : dyspnée, angor, syncope (triade classique)",
+            "Souffle systolique râpeux irradiant carotides",
+            "Montée carotidienne lente et retardée (parvus et tardus)",
+            "Dysfonction VG : remodelage puis dilatation",
+            "Indication chirurgicale si symptomatique",
+            "Pronostic sombre sans traitement"
+          ]
+        },
+        {
+          "titre": "BPCO et cœur pulmonaire",
+          "contenu": "L'association BPCO-cardiopathie est fréquente chez le fumeur.",
+          "points": [
+            "Tabac : facteur de risque commun CV et respiratoire",
+            "BPCO → HTAP → cœur pulmonaire chronique",
+            "Signes IC droite : œdèmes, TJ, hépatomégalie",
+            "Thorax distendu, expiration prolongée, sibilances",
+            "Hypoxémie chronique → polyglobulie",
+            "Exacerbations : facteur décompensation cardiaque",
+            "Traitement : O2, bronchodilatateurs, diurétiques"
+          ]
+        },
+        {
+          "titre": "Prise en charge intégrée",
+          "contenu": "Approche multidisciplinaire cardio-pneumologique indispensable.",
+          "points": [
+            "Traitement IC : diurétiques, IEC, BB, chirurgie valve",
+            "Traitement BPCO : bronchodilatateurs, corticoïdes",
+            "Oxygénothérapie si hypoxémie",
+            "Réhabilitation cardio-respiratoire",
+            "Sevrage tabagique impératif",
+            "Vaccinations : grippe, pneumocoque",
+            "Suivi multidisciplinaire coordonné"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Diurétiques de l'anse : furosémide 40-80mg/j, surveillance K+/créat",
+        "IEC/ARA2 : périndopril 2-8mg/j si TA tolère",
+        "Bêtabloquants : bisoprolol 1.25-10mg/j, titration prudente",
+        "Spironolactone : 25mg/j si IC sévère",
+        "Bronchodilatateurs : salbutamol PRN, tiotropium si BPCO",
+        "Oxygénothérapie : si PaO2 <55 mmHg ou <60 avec signes IC droite",
+        "Chirurgie valve aortique : indication formelle si sténose sévère symptomatique"
+      ],
+      "examensComplementaires": [
+        "ECG : HVG, troubles repolarisation, arythmies",
+        "Radiographie thorax : cardiomégalie, œdème pulmonaire, distension",
+        "Échocardiographie : fonction VG, valvulopathies, PAPS",
+        "BNP/NT-proBNP : diagnostic et pronostic IC",
+        "Spirométrie : VEMS/CVF, réversibilité",
+        "Gazométrie : hypoxémie, hypercapnie, acidose",
+        "Test marche 6 min : capacité fonctionnelle"
+      ]
+    }
+  }
+}

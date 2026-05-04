@@ -1,0 +1,353 @@
+{
+  "title": "German-67 - Perte auditive",
+  "context": {
+    "setting": "Consultation ORL d'urgence",
+    "patient": "M. Dumont, 40 ans, se présente en urgence à la consultation ORL car il n'entend plus rien. Il est complètement désespéré."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte",
+          "binaryOnly": true,
+          "details": [
+            "Qu'est-ce qui vous amène aujourd'hui ? [Hein ? Je ne vous entends pas]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la perte auditive",
+          "details": [
+            "Apparition temporelle [soudaine]",
+            "Évolution temporelle [pas d'aggravation]",
+            "Latéralisation [gauche > droite]",
+            "Intensité de la perte auditive [sévère à gauche]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés ORL",
+          "details": [
+            "Sécrétions auriculaires (cérumen, sang, pus) [non]",
+            "Douleurs auriculaires [non]",
+            "Acouphènes [temporairement, pas en ce moment]",
+            "Vertiges [non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Toux [non]",
+            "Rhinite [non]",
+            "Vomissements [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs déclenchants et traumatismes",
+          "details": [
+            "Facteur déclenchant identifiable [aucune idée]",
+            "Traumatisme récent [non]",
+            "Situation particulière [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents ORL et exposition",
+          "details": [
+            "Antécédents de maladies auriculaires [non]",
+            "Exposition professionnelle au bruit [clients qui crient, sinon plutôt calme]",
+            "Traumatismes auditifs antérieurs [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse médicamenteuse",
+          "details": [
+            "Médicaments actuels [aucun]",
+            "Médicaments ototoxiques [non]",
+            "Automédication récente [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse systémique",
+          "details": [
+            "Hypertension artérielle [non]",
+            "Diabète [non]",
+            "Troubles neurologiques [non]",
+            "Facteurs psychosociaux [stress professionnel important]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse sociale et professionnelle",
+          "details": [
+            "Profession [avocat]",
+            "Situation familiale [célibataire]",
+            "Stress professionnel [beaucoup de travail]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Allergies",
+          "details": [
+            "Allergies connues [non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Surdité familiale [non]",
+            "Autres pathologies ORL familiales [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'oreille",
+          "details": [
+            "Inspection du pavillon auriculaire [sans particularité]",
+            "Inspection du conduit auditif externe visible [sans particularité]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation de l'oreille et recherche d'adénopathies",
+          "details": [
+            "Palpation du tragus [indolore]",
+            "Traction du pavillon auriculaire [indolore]",
+            "Palpation mastoïdienne [indolore]",
+            "Recherche d'adénopathies cervicales [absentes]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Otoscopie bilatérale",
+          "details": [
+            "Conduit auditif externe droit [normal]",
+            "Tympan droit [normal]",
+            "Conduit auditif externe gauche [normal]",
+            "Tympan gauche [normal]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Tests auditifs au diapason",
+          "details": [
+            "Test de Weber [latéralisation vers la droite]",
+            "Test de Rinne à droite [positif]",
+            "Test de Rinne à gauche [positif]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Test de la voix chuchotée",
+          "details": [
+            "Oreille droite [normale]",
+            "Oreille gauche [très diminuée]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen de l'équilibre et coordination",
+          "details": [
+            "Équilibre statique [normal]",
+            "Marche [normale]",
+            "Recherche de nystagmus [absent]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "Surdité brusque idiopathique gauche",
+            "Surdité de perception unilatérale gauche"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de la perte auditive",
+            "categories": [
+              {
+                "name": "Oreille externe et moyenne",
+                "items": [
+                  {
+                    "text": "Bouchon de cérumen",
+                    "cause": "□ Sensation d'oreille bouchée\n□ Surdité de transmission\nArguments CONTRE:\n\t□ Surdité de perception\n\t□ Installation brutale",
+                    "test": "→ Otoscopie"
+                  },
+                  {
+                    "text": "Corps étranger",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de notion de traumatisme\n\t□ Surdité de perception",
+                    "test": "→ Otoscopie"
+                  },
+                  {
+                    "text": "Perforation tympanique traumatique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de traumatisme\n\t□ Tympan normal à l'otoscopie",
+                    "test": "→ Otoscopie, tympanométrie"
+                  },
+                  {
+                    "text": "Otite moyenne aiguë avec épanchement",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de douleur\n\t□ Pas de fièvre\n\t□ Surdité de perception",
+                    "test": "→ Otoscopie, tympanométrie"
+                  },
+                  {
+                    "text": "Otite moyenne séreuse",
+                    "cause": "Arguments CONTRE:\n\t□ Surdité de perception\n\t□ Installation brutale\n\t□ Tympan normal",
+                    "test": "→ Otoscopie, tympanométrie, audiométrie"
+                  }
+                ]
+              },
+              {
+                "name": "Oreille interne et voie auditive",
+                "items": [
+                  {
+                    "text": "Insuffisance circulatoire cochléaire aiguë (surdité brusque)",
+                    "cause": "□ Installation brutale\n□ Surdité de perception\n□ Unilatérale\n□ Sans cause évidente\n□ Acouphènes associés",
+                    "test": "→ Audiométrie tonale et vocale en urgence"
+                  },
+                  {
+                    "text": "Labyrinthite virale",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de vertiges importants\n\t□ Pas de contexte viral",
+                    "test": "→ Examen vestibulaire, audiométrie"
+                  },
+                  {
+                    "text": "Réaction toxique de l'oreille interne",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de prise médicamenteuse ototoxique\n\t□ Unilatérale",
+                    "test": "→ Anamnèse médicamenteuse"
+                  },
+                  {
+                    "text": "Traumatisme acoustique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'exposition sonore récente\n\t□ Unilatérale",
+                    "test": "→ Anamnèse, audiométrie"
+                  },
+                  {
+                    "text": "Traumatisme crânien avec fracture du rocher",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de traumatisme\n\t□ Pas de signes associés",
+                    "test": "→ CT scan temporal si suspicion"
+                  },
+                  {
+                    "text": "Maladie de Ménière",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de vertiges rotatoires\n\t□ Pas de plénitude auriculaire\n\t□ Installation brutale",
+                    "test": "→ Audiométrie, tests vestibulaires"
+                  }
+                ]
+              },
+              {
+                "name": "Causes centrales",
+                "items": [
+                  {
+                    "text": "Schwannome vestibulaire",
+                    "cause": "Arguments CONTRE:\n\t□ Installation brutale\n\t□ Pas de signes neurologiques\nArguments POUR:\n\t□ Surdité unilatérale",
+                    "test": "→ IRM cérébrale et du conduit auditif interne"
+                  },
+                  {
+                    "text": "Sclérose en plaques",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédents neurologiques\n\t□ Pas d'autres signes",
+                    "test": "→ IRM cérébrale, PL si suspicion"
+                  },
+                  {
+                    "text": "Pathologies du système nerveux central",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de signes neurologiques associés\n\t□ Atteinte périphérique",
+                    "test": "→ Examen neurologique, imagerie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Audiométrie tonale en urgence",
+            "Audiométrie vocale",
+            "Tympanométrie",
+            "Diagnostic vestibulaire (nystagmus, épreuve calorique)",
+            "Bilan biologique (NFS, CRP, VS, glycémie)",
+            "Recherche d'hypertension artérielle",
+            "Recherche d'hyperlipidémie",
+            "IRM cérébrale et du conduit auditif interne si pas d'amélioration"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médical",
+                "content": "• Corticothérapie systémique haute dose (prednisolone 1mg/kg/j)\n• Hémodilution (pentoxifylline ou hydroxyéthylamidon)\n• Hospitalisation pour réduction du stress\n• Repos auditif"
+              },
+              {
+                "title": "Surveillance",
+                "content": "• Contrôle audiométrique à J3, J7\n• Adaptation thérapeutique selon évolution"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Information du patient et pronostic",
+          "details": [
+            "Récupération complète dans 60% des cas",
+            "Récupération partielle dans 20% des cas",
+            "Possibilité de récidive",
+            "Importance du traitement précoce",
+            "Nécessité d'un suivi audiométrique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

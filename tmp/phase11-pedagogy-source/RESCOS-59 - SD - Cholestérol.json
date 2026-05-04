@@ -1,0 +1,248 @@
+{
+  "title": "RESCOS-59 - SD - Cholestérol",
+  "category": "RESCOS",
+  "subcategory": "Communication - Décision médicale partagée",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Patient avec découverte récente d'un cholestérol élevé",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Établir le partenariat (Team Talk)",
+          "details": [
+            "Expliciter qu'il y a un choix à faire [hygiène de vie vs statines]",
+            "Notion de partenariat [travaillons ensemble pour trouver la meilleure solution]",
+            "Offrir du soutien [je suis là pour vous accompagner]",
+            "Demander ce qui est important pour le patient"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Explorer le contexte du patient",
+          "details": [
+            "Facteurs de risque cardiovasculaire",
+            "Mode de vie actuel [alimentation, exercice]",
+            "Antécédents familiaux",
+            "Médicaments actuels",
+            "Expériences passées avec médicaments"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Évaluer les connaissances et représentations",
+          "details": [
+            "Que savez-vous sur le cholestérol?",
+            "Connaissances sur les statines",
+            "Sources d'information du patient",
+            "Croyances et préoccupations",
+            "Attentes thérapeutiques"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Présentation des options (Option Talk)",
+          "details": [
+            "Lister clairement les options disponibles",
+            "Option 1: Mesures hygiéno-diététiques seules",
+            "Option 2: Traitement par statine",
+            "Option 3: Combinaison des deux approches",
+            "Possibilité de différer la décision"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Communication des risques absolus",
+          "details": [
+            "Risque cardiovasculaire de base du patient",
+            "Réduction absolue du risque avec statines",
+            "Nombre nécessaire à traiter (NNT)",
+            "Éviter les pourcentages relatifs seuls",
+            "Utilisation d'aides visuelles si disponibles"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Bénéfices des options",
+          "details": [
+            "Hygiène de vie: bénéfices globaux sur santé",
+            "Statines: réduction risque cardiovasculaire",
+            "Effets sur qualité de vie",
+            "Délai d'apparition des bénéfices",
+            "Réversibilité des choix"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Risques et inconvénients",
+          "details": [
+            "Effets secondaires des statines [myalgies 5-10%]",
+            "Contraintes de l'hygiène de vie",
+            "Prise quotidienne de médicament",
+            "Surveillance biologique",
+            "Coûts financiers"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Explorer valeurs et préférences (Decision Talk)",
+          "details": [
+            "Qu'est-ce qui compte le plus pour vous?",
+            "Préférence médicaments vs changements mode de vie",
+            "Impact sur activités quotidiennes",
+            "Tolérance au risque",
+            "Contraintes personnelles et professionnelles"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Vérifier la compréhension",
+          "details": [
+            "Reformulation par le patient",
+            "Questions du patient",
+            "Clarification des malentendus",
+            "Répétition des points clés si nécessaire",
+            "Utilisation du teach-back"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Accompagner la décision",
+          "details": [
+            "Résumer les points saillants pour le patient",
+            "Aider à peser le pour et le contre",
+            "Respecter le rythme du patient",
+            "Proposer un temps de réflexion si besoin",
+            "Éviter de diriger vers une option"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Plan d'action",
+          "details": [
+            "Décision prise ou différée",
+            "Modalités de mise en œuvre",
+            "Suivi programmé",
+            "Réévaluation possible",
+            "Documentation de la discussion"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Utilisation d'outils d'aide à la décision",
+          "details": [
+            "Calculateurs de risque cardiovasculaire",
+            "Aides visuelles (pictogrammes)",
+            "Fiches d'information patient",
+            "Sites web validés (ex: Mayo Clinic)",
+            "Documentation remise au patient"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Phrases types pour la décision partagée",
+          "content": "Nous avons deux options principales pour gérer votre cholestérol, explorons-les ensemble\nIl n'y a pas de bonne ou mauvaise décision, cela dépend de ce qui est important pour vous\nPrenez le temps qu'il vous faut pour réfléchir, nous pouvons en rediscuter\nQu'est-ce qui vous préoccupe le plus dans les options que nous avons discutées?\nComment voyez-vous l'intégration de ce traitement dans votre vie quotidienne?"
+        },
+        {
+          "id": "c2",
+          "text": "Questions difficiles du patient",
+          "content": "[Que feriez-vous à ma place?]\n[Est-ce que je vais mourir si je ne prends pas de statines?]\n[Les statines sont-elles dangereuses?]\n[Puis-je arrêter quand je veux?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Je ne peux pas décider à votre place, mais je peux vous aider à clarifier vos priorités\nLe risque existe mais reste modéré; les statines le réduisent d'environ X% en absolu\nLes statines sont généralement bien tolérées, environ 5-10% ont des effets musculaires\nOui, c'est réversible, on peut toujours réévaluer et ajuster notre approche"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Décision cholestérol",
+      "contexte": "Cabinet médical, découverte récente d'hypercholestérolémie",
+      "rolePatient": "Patient de 55 ans, actif professionnellement",
+      "attitude": [
+        "Ambivalent face aux médicaments",
+        "Préoccupé par les effets secondaires",
+        "Intéressé par les alternatives naturelles",
+        "Besoin de comprendre les chiffres",
+        "Souhaite impliquer son/sa conjoint(e)"
+      ],
+      "questionsTypiques": [
+        "Est-ce vraiment nécessaire de prendre des médicaments?",
+        "J'ai lu sur internet que les statines sont dangereuses",
+        "Combien de temps devrai-je les prendre?",
+        "Et si je change mon alimentation d'abord?",
+        "Quel est mon risque réel?"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation - SDM",
+      "criteresSHARE": [
+        "Seek: Recherche de la participation du patient",
+        "Help: Aide à explorer et comparer les options",
+        "Assess: Évaluation des valeurs et préférences",
+        "Reach: Parvenir à une décision commune",
+        "Evaluate: Évaluation de la décision"
+      ],
+      "erreursCourantes": [
+        "Présenter uniquement les risques relatifs",
+        "Pousser vers une option préférée",
+        "Ne pas vérifier la compréhension",
+        "Décider trop rapidement",
+        "Ignorer les préoccupations du patient"
+      ],
+      "bonnePratique": [
+        "Utiliser les risques absolus",
+        "Présenter toutes les options de façon neutre",
+        "Adapter au niveau de littératie du patient",
+        "Accepter de différer la décision",
+        "Documenter le processus décisionnel"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Décision médicale partagée",
+      "sections": [
+        {
+          "titre": "Modèle en 3 étapes",
+          "contenu": "1. Team Talk: Établir le partenariat\n2. Option Talk: Présenter les alternatives\n3. Decision Talk: Intégrer les préférences"
+        },
+        {
+          "titre": "Pertinence du SDM",
+          "contenu": "• Recommandations faibles (balance étroite)\n• Incertitude sur les effets\n• Valeurs et préférences variables\n• Maladies chroniques\n• Options équivalentes"
+        },
+        {
+          "titre": "Communication du risque",
+          "contenu": "• Risques absolus > risques relatifs\n• Fréquences naturelles (X sur 100)\n• Horizons temporels clairs\n• Aides visuelles (pictogrammes)\n• Éviter le framing effect"
+        }
+      ],
+      "evidenceSDM": [
+        "Amélioration des connaissances (+13%)",
+        "Perception plus précise des risques (+82%)",
+        "Meilleure congruence avec valeurs (+52%)",
+        "Réduction du conflit décisionnel (-7%)",
+        "Pas d'allongement systématique consultation (+2 min)",
+        "Satisfaction accrue des patients"
+      ]
+    }
+  }
+}

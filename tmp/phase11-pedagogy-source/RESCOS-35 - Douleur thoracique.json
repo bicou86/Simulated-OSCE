@@ -1,0 +1,801 @@
+{
+  "title": "RESCOS-35 - Douleur thoracique",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "Mme Jacqueline Rochat, 74 ans, retraitée, consulte pour dyspnée aiguë depuis ce matin",
+    "vitals": {
+      "ta": "130/90 mmHg",
+      "fc": "110 bpm",
+      "fr": "23/min",
+      "temperature": "37.7°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Dyspnée",
+          "details": [
+            "Condition de survenue [en sortant du lit]",
+            "Classification [NYHA IV : ne peut plus monter un étage, s'essouffle après 3 pas]",
+            "Chronologie [débuté ce matin, progressivement empirée]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a2",
+          "text": "Douleur thoracique - caractérisation",
+          "details": [
+            "Localisation [zone de 5 cm au-dessus du mamelon droit]",
+            "Quantité [4-5/10]",
+            "Qualité [comme un point de côté]",
+            "Irradiation [aucune]",
+            "Facteurs aggravants [respiro-dépendante]",
+            "Facteurs atténuants [aucun]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Douleur thoracique - évolution temporelle",
+          "details": [
+            "Chronologie [douleur vive ce matin au réveil vers 6h30]",
+            "Évolution [stable depuis]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Toux [toux sèche, ne crache rien]",
+            "Douleurs ou œdèmes des membres inférieurs [jambe droite gonflée il y a 2 semaines]",
+            "Crachats [non]",
+            "Hémoptysie [non]",
+            "Orthopnée [non mentionnée]",
+            "Palpitations [non mentionnées]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents et comorbidités",
+          "details": [
+            "Maladies [ostéoporose, pneumonie à 47 ans]",
+            "Hospitalisations [pour pneumonie]",
+            "Médicaments [Calcimagon D3, Atorvastatine, Lisinopril]",
+            "Allergies [à demander]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs de risque",
+          "details": [
+            "Tabagisme [1/2 paquet/jour depuis 16 ans - 29 UPA]",
+            "Voyages récents [à demander]",
+            "Chirurgie/immobilisation récente [non]",
+            "Médicaments [atorvastatine, lisinopril]",
+            "Antécédents d'embolie pulmonaire/angine de poitrine/AVC [à explorer]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Représentation de la maladie",
+          "details": [
+            "Peur d'un cancer pulmonaire comme son mari"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen pulmonaire - inspection et percussion",
+          "details": [
+            "Percussion",
+            "Ampliation thoracique"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire - auscultation",
+          "details": [
+            "Plages postérieures (min 4)",
+            "Plages latérales des deux côtés",
+            "Réalise l'examen en comparant systématiquement les deux côtés"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen général",
+          "details": [
+            "Extrémités dont les ongles",
+            "Langue"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Aortique",
+            "Pulmonaire",
+            "Mitral",
+            "Tricuspide"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen vasculaire périphérique",
+          "details": [
+            "Pouls périphériques aux 4 extrémités",
+            "Temps de recoloration des extrémités",
+            "Recherche de souffle carotidien",
+            "Recherche de souffles fémoraux",
+            "Recherche de souffle abdominal"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes d'insuffisance cardiaque",
+          "details": [
+            "Œdèmes des membres inférieurs (signe du godet)",
+            "Turgescence jugulaire",
+            "Reflux hépato-jugulaire"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen clinique en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Indique à la patiente qu'elle devrait se rendre rapidement à l'hôpital",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque le diagnostic d'embolie pulmonaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Évoque un diagnostic différentiel cohérent",
+          "details": [
+            "Infarctus du myocarde",
+            "Pneumothorax",
+            "Œdème aigu pulmonaire",
+            "Pneumonie/bronchite"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "algo-ep-1",
+        "title": "Algorithme diagnostique de l'embolie pulmonaire - Probabilité faible à modérée",
+        "description": "Arbre décisionnel pour le diagnostic d'embolie pulmonaire en cas de suspicion sans choc ni hypotension",
+        "filename": "douleur-thoracique-2-img1.jpg"
+      },
+      {
+        "id": "algo-ep-2",
+        "title": "Algorithme diagnostique de l'embolie pulmonaire - Probabilité élevée ou instabilité",
+        "description": "Arbre décisionnel pour le diagnostic d'embolie pulmonaire en cas de forte suspicion ou d'instabilité hémodynamique",
+        "filename": "douleur-thoracique-2-img2.jpg"
+      },
+      {
+        "id": "grille-evaluation",
+        "title": "Score de Genève",
+        "description": "Score clinique pour le diagnostic d’embolie pulmonaire",
+        "filename": "douleur-thoracique-2-img3.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Jacqueline Rochat",
+      "age": "74 ans",
+      "contexte": "Retraitée, ancienne enseignante en secondaire, veuve depuis 1 an, consulte pour dyspnée aiguë",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai de la peine à respirer",
+        "autreChose": "C'est très handicapant cette peine à respirer"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Dyspnée aiguë débutée en sortant du lit ce matin",
+          "Progressivement empirée au fil de la matinée",
+          "Ne peut plus monter un étage",
+          "S'essouffle après 3 pas de marche (NYHA IV)",
+          "Facteurs atténuants : s'asseoir, le repos",
+          "Facteurs aggravants : effort, marche, escaliers"
+        ],
+        "symptomesAssocies": [
+          "Douleur thoracique (à ne mentionner que si demandé spécifiquement)",
+          "Toux sèche depuis ce matin",
+          "État général diminué depuis 2 semaines",
+          "Se sent plus fatiguée que d'habitude"
+        ],
+        "circonstances": [
+          "Symptômes apparus en sortant du lit ce matin",
+          "Antécédent important : jambe droite douloureuse et enflée il y a 2 semaines",
+          "Résolution lente en une semaine",
+          "N'a pas consulté pour cela"
+        ],
+        "reponseAuxSymptomes": [
+          "A pris un Dafalgan qui n'a pas soulagé"
+        ],
+        "inquietudes": [
+          "Peur d'un cancer pulmonaire comme son mari"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "État général diminué depuis 2 semaines",
+          "Se sent plus fatiguée que d'habitude"
+        ],
+        "cardiovasculaire": [
+          "Pas de palpitations mentionnées",
+          "Pas d'orthopnée spécifiquement"
+        ],
+        "respiratoire": [
+          "Dyspnée d'effort majeure",
+          "Toux sèche"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Calcimagon D3 Forte (ostéoporose), Atorvastatine, Lisinopril",
+        "alimentation": "Saine et variée",
+        "activitePhysique": "Sédentaire",
+        "sommeil": "Bon",
+        "tabac": "1/2 paquet par jour depuis l'âge de 16 ans (29 UPA)",
+        "alcool": "Plus de consommation depuis plus de 10 ans",
+        "drogues": "Aucune",
+        "sexualite": "Ne souhaite pas en parler"
+      },
+      "histoireMedicale": [
+        "Bonne santé générale pour son âge",
+        "Ostéoporose",
+        "Appendicectomie",
+        "Pneumonie simple à 47 ans",
+        "Jambe droite douloureuse et enflée il y a 2 semaines (non consultée)",
+        "Vaccins à jour"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère décédée à 70 ans d'un problème au cœur",
+        "Père décédé à 64 ans d'un cancer des poumons",
+        "Un frère décédé il y a 2 ans dans un accident de voiture",
+        "Époux décédé d'un cancer pulmonaire il y a 1 an"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Retraitée, ancienne enseignante en secondaire",
+        "hobbies": "S'occuper des petits enfants et discuter avec les voisins",
+        "poids": "Surpoids (BMI 25-30)",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Veuve",
+        "etatEsprit": "Légèrement anxieuse"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Difficulté respiratoire légère au repos",
+          "Difficulté respiratoire marquée dès le moindre effort",
+          "Toucher le thorax droit avec grimace (ne pas mentionner spontanément)",
+          "Toux sèche environ 1x/minute",
+          "Légère anxiété"
+        ],
+        "questionsAPoser": [
+          "Est-ce que je peux rentrer chez moi ? (à poser dans les 2 dernières minutes si le médecin ne propose pas spontanément la prise en charge)"
+        ]
+      },
+      "informationADonner": "La douleur thoracique ne doit être mentionnée que si le médecin pose spécifiquement des questions à ce sujet, PAS spontanément."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Mme Rochat, 74 ans, retraitée, consulte pour dyspnée aiguë NYHA IV depuis ce matin avec douleur thoracique pleuritique. Antécédent de TVP il y a 2 semaines (jambe droite gonflée, non consultée). Tabagisme 29 UPA. Tableau très typique d'embolie pulmonaire.",
+      "rolesInterventions": [
+        "Aucune intervention directe nécessaire",
+        "Observer l'anamnèse et l'examen clinique",
+        "Évaluer la reconnaissance du diagnostic",
+        "Noter la proposition d'hospitalisation"
+      ],
+      "pointsCles": [
+        "Embolie pulmonaire chez patiente à risque",
+        "Triade classique : dyspnée aiguë + douleur pleuritique + antécédent de TVP",
+        "Facteurs de risque : âge, tabagisme, sédentarité, TVP récente",
+        "Urgence médicale nécessitant hospitalisation",
+        "Diagnostic différentiel important à exclure : infarctus",
+        "Importance de l'anamnèse ciblée sur facteurs de risque",
+        "Examen clinique souvent normal dans l'EP"
+      ],
+      "pieges": [
+        "Ne pas rechercher l'antécédent de TVP récente",
+        "Omettre les facteurs de risque thromboemboliques",
+        "Ne pas caractériser précisément la dyspnée",
+        "Oublier de mentionner la nécessité d'hospitalisation",
+        "Ne pas évoquer le diagnostic d'embolie pulmonaire",
+        "Sous-estimer la gravité potentielle",
+        "Ne pas explorer les symptômes associés"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'embolie pulmonaire",
+      "sections": [
+        {
+          "titre": "Épidémiologie et physiopathologie",
+          "contenu": "L'embolie pulmonaire est une urgence médicale fréquente.",
+          "points": [
+            "Incidence : 60-70/100 000 habitants/an",
+            "Mortalité élevée si non traitée (30%)",
+            "Origine : thrombose veineuse profonde dans 90% des cas",
+            "Migration d'un thrombus vers circulation pulmonaire",
+            "Obstruction artérielle pulmonaire",
+            "Augmentation résistances vasculaires pulmonaires",
+            "Dysfonction cardiaque droite possible"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque",
+          "contenu": "Triade de Virchow : stase, hypercoagulabilité, lésion endothéliale.",
+          "points": [
+            "Âge > 65 ans",
+            "Immobilisation prolongée (> 3 jours)",
+            "Chirurgie récente (< 4 semaines)",
+            "Antécédent de TVP/EP",
+            "Cancer actif",
+            "Insuffisance cardiaque ou respiratoire",
+            "Contraception œstroprogestative",
+            "Grossesse et post-partum",
+            "Thrombophilie héréditaire",
+            "Tabagisme, obésité"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "contenu": "Tableau clinique très variable, souvent non spécifique.",
+          "points": [
+            "Dyspnée aiguë (85% des cas)",
+            "Douleur thoracique pleuritique (65%)",
+            "Toux (45%)",
+            "Hémoptysie (30%)",
+            "Douleur membre inférieur (25%)",
+            "Syncope (10%)",
+            "Fièvre possible",
+            "Examen souvent normal"
+          ]
+        },
+        {
+          "titre": "Évaluation de la probabilité clinique",
+          "contenu": "Scores cliniques pour stratifier le risque.",
+          "points": [
+            "Score de Wells pour EP",
+            "Score de Genève révisé",
+            "Probabilité faible, intermédiaire, élevée",
+            "Permet d'orienter la stratégie diagnostique",
+            "Intègre symptômes, facteurs de risque, examen",
+            "TVP cliniquement probable : +3 points (Wells)",
+            "EP plus probable qu'autre diagnostic : +3 points"
+          ]
+        },
+        {
+          "titre": "Stratégie diagnostique",
+          "contenu": "Approche séquentielle selon probabilité clinique.",
+          "points": [
+            "Probabilité faible/intermédiaire : D-dimères",
+            "D-dimères négatifs : EP exclue",
+            "D-dimères positifs : angio-CT thoracique",
+            "Probabilité élevée : angio-CT directement",
+            "Échocardiographie si instabilité",
+            "Scintigraphie si contre-indication CT",
+            "Angiographie si doute persistant"
+          ]
+        },
+        {
+          "titre": "Prise en charge thérapeutique",
+          "contenu": "Anticoagulation immédiate selon le risque.",
+          "points": [
+            "Anticoagulation immédiate si probabilité élevée",
+            "Héparine non fractionnée ou HBPM",
+            "AOD (rivaroxaban, apixaban) possibles",
+            "Thrombolyse si EP grave",
+            "Embolectomie chirurgicale exceptionnelle",
+            "Surveillance étroite première 24-48h",
+            "Durée traitement : minimum 3 mois"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Héparine non fractionnée : bolus 80 UI/kg puis 18 UI/kg/h",
+        "HBPM : énoxaparine 1mg/kg x2/j SC",
+        "Rivaroxaban : 15mg x2/j 21j puis 20mg/j",
+        "Apixaban : 10mg x2/j 7j puis 5mg x2/j",
+        "Thrombolyse : altéplase 100mg/2h IV",
+        "Surveillance : plaquettes, fonction rénale",
+        "Filtre cave si contre-indication anticoagulation"
+      ],
+      "examensComplementaires": [
+        "D-dimères : seuil 500 μg/L (ajusté âge si > 50 ans)",
+        "Angio-CT thoracique : gold standard",
+        "Gazométrie artérielle : hypocapnie, hypoxémie",
+        "ECG : tachycardie, signes cœur pulmonaire aigu",
+        "Radiographie thorax : souvent normale",
+        "Échographie cardiaque : dilatation VD",
+        "Échographie veineuse membres : recherche TVP",
+        "Troponines : marqueur pronostique"
+      ]
+    },
+    "resume": {
+      "titre": "🫀 Embolie pulmonaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Dyspnée brutale ou inexpliquée",
+                "Douleur thoracique de type pleurale",
+                "Toux ± hémoptysie",
+                "Palpitations, syncope possible"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Immobilisation récente, chirurgie, traumatisme",
+                "ATCD de TVP ou EP",
+                "Cancer actif",
+                "Grossesse, post-partum",
+                "Contraceptifs hormonaux, thrombophilies"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Tachypnée, tachycardie",
+                "Hypotension ou état de choc (EP massive)",
+                "Saturation O₂ basse malgré O₂",
+                "Signes de TVP (œdème, douleur, chaleur unilatérale du mollet)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Stratification clinique",
+              "points": [
+                "Wells score ou Genève modifié pour probabilité clinique",
+                "Score bas/intermédiaire : dosage D-dimères",
+                "Score élevé : imagerie directe"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Angio-CT pulmonaire (examen de référence)",
+                "Scintigraphie ventilation/perfusion si contre-indication au scanner",
+                "Écho-doppler veineux des MI si suspicion de TVP"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires",
+              "points": [
+                "Gaz du sang : hypoxémie, hypocapnie fréquente",
+                "ECG : tachycardie sinusale, S1Q3T3, signes de cœur pulmonaire aigu",
+                "Échocardiographie : dilatation VD (si EP massive)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Stabilisation initiale",
+              "points": [
+                "Oxygénothérapie",
+                "Remplissage prudent si hypotension",
+                "Vasopresseurs si choc (noradrénaline)"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Anticoagulation immédiate (héparine de bas poids moléculaire ou fondaparinux, puis relais AVK ou AOD)",
+                "Thrombolyse IV si EP massive avec instabilité hémodynamique",
+                "Embolectomie chirurgicale ou thrombectomie percutanée si thrombolyse contre-indiquée",
+                "Anticoagulation prolongée (≥3 mois, plus longue si facteur persistant ou récidive)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Dyspnée brutale + facteurs de risque = penser à EP",
+            "Utiliser un score clinique (Wells/Genève) pour guider la démarche",
+            "D-dimères utiles uniquement si probabilité clinique faible ou intermédiaire",
+            "Angio-CT est l’examen de choix",
+            "EP massive avec choc = indication de thrombolyse"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Installation brutale de la dyspnée ou douleur thoracique ?",
+                "Hémoptysie, syncope, palpitations ?",
+                "Immobilisation, chirurgie, grossesse, cancer, ATCD TVP/EP ?",
+                "Facteurs de risque thrombotiques (tabac, pilule, thrombophilie familiale) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, FR, SpO₂, T°)",
+                "ECG + gaz du sang",
+                "Score clinique (Wells/Genève) ± D-dimères",
+                "Angio-CT pulmonaire (ou scintigraphie V/Q si CI)",
+                "Écho-Doppler MI pour rechercher une TVP"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Oxygénation + stabilisation hémodynamique",
+                "Anticoagulation immédiate",
+                "Thrombolyse si instabilité hémodynamique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Dyspnée aiguë avec douleur thoracique (suspicion d’embolie pulmonaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (dyspnée aiguë ce matin, NYHA IV, douleur thoracique pleuritique si questionnée)",
+            "Caractériser la dyspnée → brutale, depuis ce matin, aggravée par effort, NYHA IV",
+            "Caractériser la douleur thoracique → point de côté sous-mammaire droit, respiro-dépendante, EVA 4-5/10",
+            "Symptômes associés → toux sèche, fatigue, jambe droite gonflée il y a 2 semaines",
+            "ATCD → ostéoporose, pneumonie à 47 ans, appendicectomie, aucun cancer",
+            "Traitements → Atorvastatine, Lisinopril, Calcimagon D3",
+            "Facteurs de risque → âge, tabagisme 29 UPA, sédentarité, TVP récente non explorée",
+            "Examen clinique → FR 23, FC 110, T° 37.7°C, TA 130/90 ; auscultation peu spécifique, pas de crépitants, suspicion EP",
+            "Résumé + hypothèse principale : EP probable ; DD : SCA, pneumothorax, OAP, pneumonie",
+            "Examens complémentaires → gaz du sang, ECG, D-dimères, angio-CT pulmonaire, écho veineuse MI, radio thorax",
+            "Prise en charge → hospitalisation urgente, oxygène, VVP, anticoagulation curative immédiate si probabilité forte, monitoring"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : EP = « SOUFFLE »",
+            "elements": [
+              "S = Souffle court (dyspnée brutale)",
+              "O = Origine thrombotique (TVP récente)",
+              "U = Unilatéral (jambe gonflée)",
+              "F = Facteurs de risque (âge, tabac, sédentarité)",
+              "F = Fièvre modérée possible",
+              "L = Localisation douleur pleuritique",
+              "E = ECG anomalies (tachycardie, S1Q3T3 possible)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Jacqueline Rochat, une femme de 74 ans, retraitée, qui consulte pour une dyspnée apparue ce matin. Elle explique qu’en sortant du lit, elle s’est sentie rapidement essoufflée, et que la situation s’est aggravée dans la matinée. Actuellement, elle est incapable de monter un étage et s’essouffle après seulement 3 pas, ce qui correspond à une dyspnée NYHA IV. Elle décrit que s’asseoir et se reposer améliorent légèrement les symptômes, mais que le moindre effort les aggrave fortement. Elle a pris du Dafalgan ce matin sans amélioration.\n\nLorsqu’on l’interroge spécifiquement sur la douleur, elle décrit une douleur thoracique localisée, de type point de côté, au-dessus du mamelon droit, d’intensité modérée (4-5/10), aggravée par l’inspiration profonde, sans irradiation.\n\nElle rapporte aussi une toux sèche depuis ce matin, et dit être plus fatiguée que d’habitude depuis environ deux semaines. Elle se rappelle qu’il y a deux semaines, sa jambe droite avait gonflé et était douloureuse pendant quelques jours, mais elle n’a pas consulté et cela s’est résolu progressivement.\n\nSes antécédents incluent une ostéoporose, une pneumonie simple à 47 ans, une appendicectomie ancienne, et une bonne santé générale pour son âge. Ses traitements sont Calcimagon D3, Atorvastatine et Lisinopril. Elle fume encore un demi-paquet par jour depuis l’âge de 16 ans, soit environ 29 UPA, et est sédentaire. Pas d’alcool depuis 10 ans. Son mari est décédé récemment d’un cancer pulmonaire, ce qui nourrit sa peur actuelle d’en avoir un.\n\nÀ l’examen, la patiente est anxieuse, tachycarde à 110/min, tachypnéique à 23/min, TA correcte à 130/90, température 37.7 °C. Elle présente une dyspnée marquée au moindre effort, une toux sèche. L’auscultation pulmonaire est pauvre, sans crépitants francs ; l’auscultation cardiaque ne montre pas de souffle. Pas de signes francs d’insuffisance cardiaque droite à ce stade.\n\nEn résumé, il s’agit d’une femme âgée, avec des facteurs de risque thromboemboliques (âge, tabac, sédentarité, suspicion de TVP récente), présentant une dyspnée brutale NYHA IV et une douleur thoracique pleuritique. Mon hypothèse principale est une embolie pulmonaire. Les diagnostics différentiels incluent un infarctus du myocarde, un pneumothorax, un œdème aigu pulmonaire et une pneumonie infectieuse.\n\nComme examens complémentaires, je demanderais un ECG (tachycardie, signes de cœur pulmonaire aigu), des gaz du sang (hypoxémie, hypocapnie), un dosage des D-dimères, une angio-CT pulmonaire (examen clé), et un Doppler veineux des membres inférieurs pour rechercher une TVP. La radiographie thoracique permet d’éliminer une pneumonie ou un pneumothorax.\n\nEn termes de prise en charge, la patiente doit être hospitalisée en urgence, mise sous oxygène, voie veineuse posée, surveillance continue, et une anticoagulation curative doit être débutée sans attendre si la probabilité clinique est forte. Si elle était instable, une thrombolyse serait discutée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Rochat, 74 ans, dyspnée aiguë NYHA IV depuis ce matin, douleur thoracique pleuritique.\n\nB (Background) : Ostéoporose, pneumonie passée, appendicectomie, tabagisme 29 UPA, TVP probable jambe droite il y a 2 semaines.\n\nA (Assessment) : Suspicion forte d’embolie pulmonaire. DD : infarctus du myocarde, pneumothorax, OAP, pneumonie.\n\nR (Recommendation) : ECG, gaz du sang, D-dimères, angio-CT pulmonaire, Doppler MI. PEC : oxygène, VVP, hospitalisation urgente, anticoagulation curative immédiate si probabilité forte."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Score de Genève (EP)",
+              "points": [
+                "Âge > 65 ans = +1",
+                "TVP/EP antérieure = +3",
+                "Douleur MI unilatérale = +3",
+                "Hémoptysie = +2",
+                "FC > 95/min = +2",
+                "Douleur thoracique unilatérale = +1",
+                "Probabilité faible < 4, intermédiaire 4-10, forte > 10"
+              ]
+            },
+            {
+              "titre": "👉 Triade EP typique",
+              "points": [
+                "Dyspnée brutale",
+                "Douleur thoracique pleuritique",
+                "ATCD TVP/Facteurs de risque thromboemboliques"
+              ]
+            },
+            {
+              "titre": "👉 Triade de Virchow",
+              "points": [
+                "Stase veineuse (immobilisation, TVP)",
+                "Hypercoagulabilité",
+                "Lésion endothéliale"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas chercher l’antécédent de TVP récente",
+                "Oublier score clinique (Wells/Genève)",
+                "Omettre l’hospitalisation immédiate",
+                "Sous-estimer la gravité potentielle",
+                "Ne pas citer les DD (SCA, pneumothorax, OAP, pneumonie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Embolie pulmonaire",
+                  "reponse": {
+                    "pour": [
+                      "Dyspnée brutale NYHA IV",
+                      "Douleur pleuritique",
+                      "FC 110/min, FR 23/min",
+                      "Antécédent de TVP jambe droite récente",
+                      "Facteurs de risque : âge, tabac, sédentarité"
+                    ],
+                    "contre": [
+                      "Pas d’hémoptysie",
+                      "Pas de syncope"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infarctus du myocarde",
+                  "reponse": {
+                    "pour": [
+                      "Douleur thoracique possible",
+                      "Facteurs de risque CV"
+                    ],
+                    "contre": [
+                      "Douleur non constrictive mais pleuritique",
+                      "Pas d’irradiation typique",
+                      "Dyspnée prédominante"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumothorax",
+                  "reponse": {
+                    "pour": [
+                      "Dyspnée brutale",
+                      "Douleur unilatérale"
+                    ],
+                    "contre": [
+                      "Pas de thorax hypersonore",
+                      "Pas d’asymétrie auscultatoire"
+                    ]
+                  }
+                },
+                {
+                  "question": "OAP",
+                  "reponse": {
+                    "contre": [
+                      "Pas d’antécédent d’IC connue",
+                      "Pas de crépitants",
+                      "Pas d’orthopnée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie",
+                  "reponse": {
+                    "pour": [
+                      "Toux, fébricule"
+                    ],
+                    "contre": [
+                      "Pas de fièvre élevée",
+                      "Pas de crépitants",
+                      "Installation brutale"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "ECG",
+                    "Gaz du sang (hypoxémie, hypocapnie)",
+                    "D-dimères",
+                    "Angio-CT pulmonaire",
+                    "Écho-Doppler MI",
+                    "Radiographie thorax"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Embolie pulmonaire proximale probable sur TVP récente"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation urgente",
+                      "Oxygénothérapie",
+                      "Anticoagulation curative (HBPM, AOD ou HNF)",
+                      "VVP, monitoring"
+                    ],
+                    "specifique": [
+                      "Thrombolyse si instabilité hémodynamique",
+                      "Embolectomie chirurgicale si contre-indication à thrombolyse"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Anticoagulation minimum 3 mois",
+                    "Recherche facteurs de risque persistants (cancer, thrombophilie)",
+                    "Surveillance clinique et biologique (NFS, créatinine, plaquettes)",
+                    "Prévention secondaire : arrêt tabac, activité physique adaptée"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

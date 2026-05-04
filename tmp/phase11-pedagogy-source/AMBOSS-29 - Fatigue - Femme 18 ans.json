@@ -1,0 +1,590 @@
+{
+  "title": "AMBOSS-29 - Fatigue - Femme 18 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Lisa Perez, femme de 18 ans, consultant pour fatigue",
+    "vitals": {
+      "temperature": "36.5°C",
+      "ta": "110/80 mmHg",
+      "fc": "64 bpm",
+      "fr": "15/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je me sens vraiment épuisée. Je n'ai juste pas l'énergie que j'avais avant"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fatigue",
+          "binaryOnly": false,
+          "details": [
+            "Début [Ça a commencé il y a environ 2 semaines]",
+            "Évolution temporelle [Tout le temps]",
+            "Événements précipitants [J'ai eu de la fièvre et un mal de gorge il y a 2 semaines. J'ai pris de l'ibuprofène pour ça, et c'est parti après quelques jours, donc je n'ai pas pris la peine d'aller chez le médecin. Depuis, je suis juste totalement épuisée]",
+            "Progression [J'ai été épuisée tout le temps]",
+            "Épisodes antérieurs [Jamais]",
+            "Facteurs améliorants [Aucun, malheureusement]",
+            "Facteurs aggravants [Aucun]",
+            "Symptômes associés [Non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Œdème des chevilles [Non]",
+            "Fièvre/frissons [Pas depuis mon mal de gorge il y a 2 semaines]",
+            "Palpitations [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleur thoracique [Non]",
+            "Dyspnée [Non]",
+            "Problèmes intestinaux [Non]",
+            "Troubles du sommeil [Eh bien, je dors plus qu'avant. Mais même avec plus de sommeil, je me sens fatiguée toute la journée]",
+            "Appétit [Normal]",
+            "Variations pondérales [Non]",
+            "Intolérance au froid [Non]",
+            "Changements capillaires [Non]",
+            "Changements de voix [Non]",
+            "Crampes musculaires [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation de l'humeur et symptômes dépressifs",
+          "binaryOnly": false,
+          "details": [
+            "Humeur [Je me sens fatiguée, mais pas triste]",
+            "Perte d'intérêt [Non]",
+            "Culpabilité/faible estime de soi [Parfois j'ai des doutes sur moi à cause de mon apparence, mais normalement je suis assez bien avec moi-même]",
+            "Faible énergie [Oui. Je me sens vraiment fatiguée et épuisée]",
+            "Difficultés de concentration [Oui, je suis juste trop fatiguée pour réfléchir]",
+            "Agitation ou ralentissement psychomoteur [Non]",
+            "Idées suicidaires [Non, mon Dieu, je ne me tuerais jamais. Je n'ai jamais pensé à ça non plus]",
+            "Soutien social [Mes amis sont formidables et toujours là pour moi]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Jamais]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Une de mes colocataires était malade il y a 2 semaines aussi. Elle avait un mal de gorge et de la fièvre]",
+            "Antécédents familiaux [Ma mère a une sorte de problème de thyroïde]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [J'étudie l'économie à l'université locale]",
+            "Domicile [Je vis dans un appartement avec deux de mes amies]",
+            "Alcool [Peut-être 3-4 cocktails le week-end. Je ne bois pas pendant la semaine]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Non]",
+            "Exercice [Oh oui, j'adore faire de l'exercice. Je joue au basketball dans l'équipe de mon université. Mais j'ai été tellement fatiguée dernièrement que je n'ai pas pu aller à l'entraînement. Ça me manque vraiment]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents gynécologiques",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Avec qui [Avec mon petit ami]",
+            "Hommes ou femmes [Seulement des hommes]",
+            "Nombre de partenaires au cours de la dernière année [J'ai eu 2 partenaires sexuels]",
+            "Protection [Nous avons toujours utilisé des préservatifs]",
+            "Dernières règles [Il y a 2 semaines]",
+            "Ménarche [J'avais 14 ans]",
+            "Durée des règles [Environ 8 jours]",
+            "Règles régulières [Oui]",
+            "Combien de tampons par jour [J'ai l'impression que mes règles sont plus abondantes que celles de mes amies. Je dois utiliser la plus grande taille de tampon et le changer toutes les 2 heures environ]",
+            "Grossesses [Non]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des conjonctives [Recherche de pâleur]",
+            "Inspection de l'oropharynx [Recherche d'amygdalite/pharyngite]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du cou",
+            "Palpation des ganglions lymphatiques de la tête et du cou",
+            "Examen de la glande thyroïde"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Palpation du foie",
+            "Palpation de la rate"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des extrémités et cutané",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des membres inférieurs",
+            "Examen cutané"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique",
+          "binaryOnly": true,
+          "details": [
+            "Examen ciblé des réflexes ostéo-tendineux"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies infectieuses",
+                "items": [
+                  {
+                    "text": "Mononucléose infectieuse",
+                    "cause": "Arguments POUR:\n\t□ Âge typique : adolescente/jeune adulte\n\t□ Prodrome : mal de gorge + fièvre il y a 2 semaines\n\t□ Fatigue extrême post-infectieuse\n\t□ Hypersomnie sans amélioration\n\t□ Contact malade similaire (colocataire)\n\t□ Chronologie évocatrice : syndrome pseudo-grippal → fatigue\n\t□ Sportive active (basketball) : risque splénique\n\t□ Durée fatigue : 2 semaines (phase aiguë)",
+                    "test": "→ Test monospot, sérologie EBV (anti-VCA IgM)"
+                  },
+                  {
+                    "text": "Infection VIH aiguë (primo-infection)",
+                    "cause": "Arguments POUR:\n\t□ Syndrome rétroviral aigu possible\n\t□ Mal de gorge + fièvre initiale\n\t□ Fatigue persistante\n\t□ Sexuellement active (2 partenaires/an)\nArguments CONTRE:\n\t□ Protection systématique (préservatifs)\n\t□ Pas d'éruption cutanée décrite",
+                    "test": "→ Test VIH 4e génération (Ag p24 + Ac)"
+                  },
+                  {
+                    "text": "Infection CMV",
+                    "cause": "Arguments POUR:\n\t□ Syndrome mononucléosique\n\t□ Fatigue post-infectieuse\n\t□ Présentation similaire EBV\nArguments CONTRE:\n\t□ Moins fréquent que EBV cet âge",
+                    "test": "→ Sérologie CMV (IgM, IgG)"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies hématologiques",
+                "items": [
+                  {
+                    "text": "Anémie ferriprive",
+                    "cause": "Arguments POUR:\n\t□ Ménorragies importantes (tampons XL/2h)\n\t□ Durée règles prolongée (8 jours)\n\t□ Fatigue sévère, troubles concentration\n\t□ Jeune femme = groupe à risque\n\t□ Sportive : besoins fer augmentés\nArguments CONTRE:\n\t□ Début aigu (habituellement progressif)\n\t□ Pas de pâleur décrite",
+                    "test": "→ NFS, fer sérique, ferritine, TIBC"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies endocriniennes",
+                "items": [
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "Arguments POUR:\n\t□ Fatigue, troubles concentration\n\t□ Antécédent familial thyroïdien (mère)\n\t□ Femme jeune (thyroïdite auto-immune)\nArguments CONTRE:\n\t□ Début aigu\n\t□ Pas d'intolérance au froid\n\t□ Pas de prise de poids\n\t□ Contexte infectieux récent",
+                    "test": "→ TSH, T3 libre, T4 libre"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Hépatite virale",
+                    "cause": "Fatigue post-hépatite, ictère parfois absent initialement",
+                    "test": "→ Transaminases, sérologies hépatites"
+                  },
+                  {
+                    "text": "Trouble dépressif majeur",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de tristesse\n\t□ Bon soutien social\n\t□ Pas d'anhédonie",
+                    "test": "→ Évaluation clinique psychiatrique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Test monospot [détecte les anticorps hétérophiles produits en réponse à l'infection EBV ; risque élevé de faux positifs et faux négatifs]",
+            "Sérologie EBV [détecte les anticorps contre l'antigène de la capside virale ; l'anti-VCA IgM seul suffit pour diagnostiquer une infection aiguë]",
+            "NFS et frottis sanguin [pour évaluer l'anémie microcytaire hypochrome, signe d'anémie ferriprive. Le frottis montre une lymphocytose avec > 10% de lymphocytes atypiques dans la mononucléose infectieuse]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires biologiques",
+          "binaryOnly": false,
+          "details": [
+            "LDH, ASAT, ALAT [pour évaluer l'atteinte hépatique dans la mononucléose infectieuse]",
+            "Fer sérique, ferritine, transferrine, capacité totale de fixation du fer (TIBC) [montrerait ↓ fer sérique et ferritine, et ↑ transferrine sérique et capacité totale de fixation du fer dans l'anémie ferriprive]",
+            "TSH, T3 libre, T4 libre [pour évaluer l'hypothyroïdie]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'évitement des sports de contact en cas de mononucléose suspectée",
+            "Réaction appropriée au défi sur l'expérience du médecin",
+            "Éducation sur le repos nécessaire",
+            "Information sur la durée possible de la fatigue",
+            "Conseils de prévention transmission"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si mononucléose infectieuse confirmée",
+                "content": "• Repos au lit phase aiguë\n• Hydratation adéquate\n• Paracétamol 500-: 1000 mg × 3-4/j si fièvre/douleur\n• ÉVITER amoxicilline (éruption dans 90% cas)\n• Corticoïdes si obstruction voies aériennes\n• Éviction sports contact 3-4 semaines minimum\n• Reprise progressive activités après 4 semaines\n• Surveillance splénomégalie clinique"
+              },
+              {
+                "title": "Si anémie ferriprive confirmée",
+                "content": "• Fer per os: Sulfate ferreux 200 mg × 3/j\n• Prise à jeun ou avec vitamine C\n• Durée\n• Recherche/traitement cause ménorragies\n• Contrôle NFS à 4-6 semaines"
+              },
+              {
+                "title": "Si hypothyroïdie confirmée",
+                "content": "• Débuter 50-75 μg/j\n• Contrôle TSH à 6-8 semaines\n• Ajustement par paliers 25 μg"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Arrêt activités sportives temporaire\n• Certificat médical pour université\n• Repos selon tolérance\n• Alimentation équilibrée"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Complications à surveiller",
+            "items": [
+              {
+                "text": "Rupture splénique",
+                "description": "Douleur abdominale aiguë, choc → urgence chirurgicale"
+              },
+              {
+                "text": "Obstruction voies aériennes",
+                "description": "Hypertrophie amygdalienne majeure → corticoïdes"
+              },
+              {
+                "text": "Syndrome hémophagocytaire",
+                "description": "Fièvre persistante, cytopénies → urgence"
+              },
+              {
+                "text": "Complications neurologiques",
+                "description": "Méningite, encéphalite, Guillain-Barré (rares)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Doute sur l'expérience du médecin",
+          "content": "[Est-ce quelque chose que vous avez l'expérience de traiter ? Est-ce que beaucoup de patients de mon âge ont des problèmes comme ça ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mlle Perez, je comprends votre préoccupation. La fatigue n'est en fait pas un problème rare. Nous avons beaucoup de patients qui viennent nous voir parce qu'ils sont épuisés comme vous - y compris des patients de votre groupe d'âge. D'après ce que vous m'avez dit aujourd'hui, votre fatigue pourrait être due à une infection, un problème avec votre glande thyroïde, un manque de fer dans votre sang, ou quelques autres diagnostics possibles. Pour savoir exactement ce qui se passe, j'aimerais faire quelques tests. Je peux vous assurer que vous êtes entre de bonnes mains et que vous serez très bien prise en charge ici. Qu'est-ce que vous en pensez ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Amygdalite membraneuse",
+        "description": "Amygdale élargie et enflammée avec dépôts gris-blanc chez un patient atteint de mononucléose infectieuse.",
+        "data": "grilles_generees/html/images/AMBOSS-29-img1-Membranous tonsillitis.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Mononucléose infectieuse",
+        "description": "Amygdales élargies avec dépôts blancs caractéristiques visibles.",
+        "data": "grilles_generees/html/images/AMBOSS-29-img2-Infectious mononucleosis .jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Pharyngite exsudative",
+        "description": "Pharynx et amygdales chez un patient atteint de mononucléose infectieuse. Les amygdales sont massivement hypertrophiées, se touchant sur la ligne médiane (connues sous le nom d''amygdales qui s'embrassent'), et recouvertes d'exsudat gris-blanc. Les parties visibles du pharynx sont érythémateuses.",
+        "data": "grilles_generees/html/images/AMBOSS-29-img3-Exudative tonsillopharyngitis.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Chéilite angulaire",
+        "description": "Multiples fissures linéaires de l'épiderme (encerclées), d'environ 0,5 cm de longueur, situées au coin de la bouche. L'apparition de ces fissures est appelée chéilite angulaire et a de nombreuses causes possibles, par exemple, carence en fer, irritation mécanique ou infection.",
+        "data": "grilles_generees/html/images/AMBOSS-29-img4-Angular cheilitis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Lymphocytose atypique dans la mononucléose infectieuse",
+        "description": "Photomicrographie d'un frottis sanguin périphérique (coloration Wright-Giemsa ; très fort grossissement). Plusieurs lymphocytes atypiques (1) sont visibles. Les lymphocytes atypiques sont des cellules T activées avec un noyau polymorphe et un cytoplasme basophile abondant. Les lymphocytes inactifs (2) sont comparativement plus petits avec un noyau rond et un mince rebord cytoplasmique. Bien qu'étant des cellules T activées, les lymphocytes atypiques ressemblent fortement aux monocytes (3), d'où le nom de mononucléose infectieuse.",
+        "data": "grilles_generees/html/images/AMBOSS-29-img5-Atypical lymphocytosis in infectious mononucleosis.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Lisa Perez",
+      "age": "18 ans",
+      "contexte": "Étudiante universitaire et joueuse de basketball avec fatigue post-infectieuse",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens vraiment épuisée.",
+        "autreChose": "Je n'ai juste pas l'énergie que j'avais avant."
+      },
+      "consignes": [
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: test monospot) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Est-ce quelque chose que vous avez l'expérience de traiter ? Est-ce que beaucoup de patients de mon âge ont des problèmes comme ça ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue extrême depuis 2 semaines",
+          "Début après syndrome pseudo-grippal",
+          "Mal de gorge + fièvre résolu en 2-3 jours",
+          "Épuisement persistant depuis",
+          "Hypersomnie sans amélioration"
+        ],
+        "symptomesAssocies": [
+          "Colocataire avec symptômes similaires",
+          "Troubles de concentration",
+          "Incapacité faire sport (basketball)",
+          "Ménorragies importantes habituelles",
+          "Pas de symptômes dépressifs"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître fatiguée mais coopérative",
+          "Mentionner frustration de ne pas pouvoir jouer",
+          "Insister sur intensité fatigue inhabituelle",
+          "Décrire clairement chronologie symptômes",
+          "Exprimer inquiétude sur durée symptômes"
+        ],
+        "durantStatus": [
+          "Examen général normal",
+          "Possibles adénopathies cervicales",
+          "Pharynx : recherche signes pharyngite résiduelle",
+          "Abdomen : coopérer pour palpation rate/foie",
+          "Pas de signes d'anémie évidents"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme 18 ans avec mononucléose infectieuse probable : syndrome pseudo-grippal il y a 2 semaines → fatigue extrême persistante. Contact malade similaire (transmission salivaire). Sportive active : RISQUE RUPTURE SPLÉNIQUE. Diagnostic différentiel : anémie ferriprive (ménorragies XL/2h × 8j) mais chronologie favorise EBV. Éviction sports contact OBLIGATOIRE 3-4 semaines minimum. Test monospot peut être négatif début (répéter ou sérologie EBV).",
+      "rolesInterventions": [
+        "Pharynx : érythème résiduel, pas d'exsudat actuel",
+        "Adénopathies : cervicales postérieures palpables",
+        "Rate : limite palpable (splénomégalie débutante)",
+        "Test monospot : positif",
+        "NFS : lymphocytose 60%, 15% lymphocytes atypiques",
+        "Transaminases : ASAT 85, ALAT 95 (légèrement élevées)"
+      ],
+      "pointsCles": [
+        "Mononucléose = maladie du baiser (transmission salivaire)",
+        "Triade : fièvre + pharyngite + adénopathies",
+        "Fatigue peut persister 2-3 mois",
+        "Splénomégalie = CONTRE-INDICATION sports contact",
+        "Lymphocytes atypiques > 10% = pathognomonique",
+        "Éviter amoxicilline : éruption dans 90% cas EBV"
+      ],
+      "pieges": [
+        "Oublier interdiction sports contact (rupture rate)",
+        "Prescrire amoxicilline pour 'pharyngite'",
+        "Négliger anémie ferriprive (ménorragies)",
+        "Se fier uniquement au monospot (faux négatifs)",
+        "Minimiser durée potentielle fatigue",
+        "Ne pas rechercher complications (rate, foie)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Mononucléose infectieuse (infection EBV)"
+        },
+        {
+          "titre": "Mononucléose infectieuse",
+          "contenu": "Infection virale systémique par virus Epstein-Barr :",
+          "points": [
+            "Agent : EBV (HHV-4), virus à ADN famille Herpesviridae",
+            "Transmission : salive (kissing disease), incubation 4-6 semaines",
+            "Épidémiologie : 90% adultes séropositifs, pic 15-24 ans",
+            "Tropisme : lymphocytes B → prolifération polyclonale",
+            "Immunité : infection latente à vie après primo-infection",
+            "Réactivations : possibles si immunodépression"
+          ]
+        },
+        {
+          "titre": "Présentation clinique mononucléose",
+          "contenu": "Triade classique + fatigue prolongée :",
+          "points": [
+            "Phase prodromique : malaise, céphalées, myalgies",
+            "Fièvre : 38-40°C, durée 1-2 semaines",
+            "Pharyngite : érythémateuse → exsudative (50%)",
+            "Adénopathies : cervicales postérieures +++ (90%)",
+            "Splénomégalie : 50-60% cas, max J2-3 semaine",
+            "Hépatomégalie : 10-20%, hépatite anictérique fréquente",
+            "Éruption : 5-10% spontané, 90% si amoxicilline",
+            "Fatigue : symptôme majeur, durée 2-3 mois"
+          ]
+        },
+        {
+          "titre": "Diagnostic mononucléose infectieuse",
+          "contenu": "Clinique + biologie + sérologie :",
+          "points": [
+            "NFS : lymphocytose > 50%, > 10% lymphocytes atypiques",
+            "Lymphocytes atypiques = cellules Downey pathognomoniques",
+            "Test monospot : Ac hétérophiles, Se 85%, Sp 94%",
+            "Limites monospot : faux négatifs début et < 4 ans",
+            "Sérologie EBV : anti-VCA IgM = infection aiguë",
+            "Anti-VCA IgG + anti-EBNA = infection ancienne",
+            "Transaminases : élévation modérée 80% cas"
+          ]
+        },
+        {
+          "titre": "Complications mononucléose",
+          "contenu": "Rares mais potentiellement graves :",
+          "points": [
+            "Rupture splénique : 0.1-0.5%, J2-3 semaine, mortelle",
+            "Mécanisme : trauma minime sur rate fragile",
+            "Prévention : éviction sports contact 3-4 semaines",
+            "Obstruction voies aériennes : hypertrophie amygdalienne",
+            "Complications hématologiques : anémie hémolytique, thrombopénie",
+            "Neurologiques : méningite, encéphalite, Guillain-Barré",
+            "Syndrome hémophagocytaire : activation macrophagique"
+          ]
+        },
+        {
+          "titre": "Anémie ferriprive",
+          "contenu": "Première cause d'anémie mondiale :",
+          "points": [
+            "Prévalence : 30% femmes âge procréer",
+            "Physiopathologie : pertes > apports fer",
+            "Causes femme jeune : menstruations +++, régime",
+            "Ménorragies : > 80 mL/cycle, > 7 jours",
+            "Symptômes : fatigue, pâleur, dyspnée effort",
+            "Signes : chéilite angulaire, koïlonychie, pica",
+            "Diagnostic : ferritine < 30 μg/L (gold standard)"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel fatigue adolescent",
+          "contenu": "Approche systématique causes fréquentes :",
+          "points": [
+            "Infectieuses : EBV, CMV, VIH, hépatites virales",
+            "Hématologiques : anémies, leucémies aiguës",
+            "Endocriniennes : hypothyroïdie, diabète, Addison",
+            "Psychiatriques : dépression, anxiété, troubles alimentaires",
+            "Neurologiques : SEP débutante, narcolepsie",
+            "Inflammatoires : lupus, arthrite juvénile",
+            "Environnementales : privation sommeil, surentraînement"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Mononucléose : traitement symptomatique uniquement",
+        "Repos : phase aiguë, reprise progressive activités",
+        "Antipyrétiques : paracétamol 500-1000 mg × 3-4/j",
+        "ÉVITER aspirine : risque syndrome Reye",
+        "ÉVITER amoxicilline : éruption 90% cas",
+        "Corticoïdes : si obstruction voies aériennes sévère",
+        "Éviction sports : 3-4 semaines minimum (rate)",
+        "Anémie ferriprive : sulfate ferreux 200 mg × 3/j",
+        "Durée fer : 3-6 mois après normalisation Hb"
+      ],
+      "examensComplementaires": [
+        "NFS avec frottis : lymphocytose + cellules atypiques",
+        "Test monospot : rapide mais faux négatifs possibles",
+        "Sérologie EBV si monospot négatif : anti-VCA IgM/IgG",
+        "Transaminases : ASAT/ALAT souvent élevées",
+        "Bilan martial : fer, ferritine, transferrine, TIBC",
+        "TSH : si fatigue persistante > 3 mois",
+        "Sérologies si doute : CMV, VIH, toxoplasmose",
+        "Échographie abdominale : si doute splénomégalie"
+      ]
+    }
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "title": "German-27 - Douleur à l'épaule",
+  "context": {
+    "setting": "Cabinet de médecine générale (remplacement)",
+    "patient": "Madame Spielmann, 60 ans, se présente pour des douleurs à l'épaule gauche"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte pour identifier le motif de consultation",
+          "details": [
+            "[Douleurs à l'épaule gauche]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation temporelle de la douleur",
+          "details": [
+            "Début [Depuis environ 1 mois]",
+            "Évolution [Plutôt progressive]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes inflammatoires",
+          "details": [
+            "Raideur matinale [Aucune]",
+            "Paresthésies associées [Rarement des fourmillements dans le bras]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Impact sur le sommeil",
+          "details": [
+            "Réveils nocturnes [Se réveille la nuit à cause des douleurs et engourdissements]",
+            "Position de sommeil [Dort souvent sur le côté gauche]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs modulant la douleur",
+          "details": [
+            "Facteurs aggravants [Douleur lors de certains mouvements, notamment travail au-dessus de la tête]",
+            "Facteurs améliorants [Rien de particulier remarqué jusqu'à présent]",
+            "Repos vs mouvement [Pas exactement explicable]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Recherche d'événements déclenchants",
+          "details": [
+            "Traumatisme [Aucun]",
+            "Infection récente [Aucune]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "details": [
+            "Symptômes B (fièvre, sueurs nocturnes, perte de poids) [Aucun]",
+            "Fatigue [Non]",
+            "État général [Normal]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Automédication et traitements essayés",
+          "details": [
+            "[Un peu de pommade]",
+            "[Rien n'a été efficace]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents chirurgicaux",
+          "details": [
+            "Chirurgies antérieures [Aucune]",
+            "Chirurgie thyroïdienne [Ablation de la thyroïde pour nodule froid il y a 20 ans]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Pathologies rhumatologiques [Aucune]",
+            "Autres maladies chroniques [Aucune]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [Non]",
+            "Alcool [Un peu de vin le week-end]",
+            "Autres toxiques [Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Euthyrox (lévothyroxine)]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux",
+          "details": [
+            "[Père décédé de leucémie à 60 ans]",
+            "[Mère décédée à 78 ans]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Contexte social et professionnel",
+          "details": [
+            "Profession [Enseignante]",
+            "Situation familiale [Divorcée]",
+            "Enfants [Un fils adulte]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Retentissement fonctionnel",
+          "details": [
+            "Impact professionnel [Capable de travailler]",
+            "Gêne quotidienne [Très gênant]",
+            "Qualité de vie [Surtout altération de la qualité du sommeil]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Synthèse et questions de la patiente",
+          "details": [
+            "Résumé des points clés",
+            "Questions de la patiente [Est-ce que ça redeviendra normal ?]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée",
+            "Questions pertinentes posées",
+            "Exploration systématique des red flags"
+          ],
+          "scoringRule": "Excellente = 2 pts, Suffisante = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'épaule",
+          "details": [
+            "Asymétrie",
+            "Amyotrophie",
+            "Déformation",
+            "Signes inflammatoires"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation systématique",
+          "details": [
+            "Processus coracoïde",
+            "Articulation acromio-claviculaire",
+            "Coiffe des rotateurs (tubercule majeur et mineur)",
+            "Tendon du biceps (gouttière bicipitale)"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Évaluation des amplitudes articulaires",
+          "details": [
+            "Abduction (0-180°)",
+            "Élévation antérieure (flexion)",
+            "Rétropulsion (extension)",
+            "Rotation externe",
+            "Rotation interne",
+            "Tests fonctionnels (main-nuque, main-dos)"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Tests spécifiques de la coiffe des rotateurs",
+          "details": [
+            "Test de Jobe (supra-épineux) [Gauche : moins de force, douloureux]",
+            "Test lift-off (subscapulaire) [Un peu limité des deux côtés]",
+            "Test de Patte (infra-épineux/petit rond) - rotation externe contrariée"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Tests de conflit sous-acromial",
+          "details": [
+            "Test de Neer",
+            "Test de Hawkins-Kennedy",
+            "Test de Yocum",
+            "[Test d'impingement pathologique]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Tests d'instabilité",
+          "details": [
+            "Test d'appréhension antérieur",
+            "Test d'appréhension postérieur",
+            "Test du sulcus (instabilité inférieure)"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen de l'articulation acromio-claviculaire",
+          "details": [
+            "Palpation directe",
+            "Test de compression horizontale (cross-arm test)"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen du tendon du long biceps",
+          "details": [
+            "Palm-up test (Speed test)",
+            "Test de Yergason"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen neurologique et vasculaire",
+          "details": [
+            "Sensibilité",
+            "Force musculaire",
+            "Réflexes",
+            "Pouls périphériques"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen systématique et complet",
+            "Techniques correctement exécutées",
+            "Interprétation appropriée des tests"
+          ],
+          "scoringRule": "Méthodique et complet = 2 pts, Suffisant = 1 pt, Insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "L'étudiant énonce le diagnostic principal",
+          "details": [
+            "Syndrome de conflit sous-acromial (syndrome du supra-épineux)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "L'étudiant évoque les diagnostics différentiels pertinents",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Pathologies de la coiffe",
+                "items": [
+                  {
+                    "text": "Tendinopathie de la coiffe des rotateurs → Échographie ou IRM",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Rupture partielle ou complète de la coiffe → IRM ou arthro-IRM",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tendinopathie calcifiante → Radiographie standard",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies articulaires",
+                "items": [
+                  {
+                    "text": "Capsulite rétractile",
+                    "cause": "Arguments POUR:\n\t□ épaule gelée → Diagnostic clinique, IRM si doute",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Arthrose gléno-humérale → Radiographie standard",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, IRM si nécessaire"
+                  },
+                  {
+                    "text": "Arthrite inflammatoire → Bilan biologique, radiographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ VS, CRP, facteur rhumatoïde, anti-CCP"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies neurologiques",
+                "items": [
+                  {
+                    "text": "Syndrome du défilé thoracique → Tests de provocation, EMG",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Névralgie cervico-brachiale → Radiographie cervicale, IRM cervicale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Myalgie/contracture musculaire → Examen clinique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Pathologie de l'articulation acromio-claviculaire → Radiographie ciblée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          },
+          "scoringRule": "Au moins 2-3 diagnostics différentiels pertinents = 2 pts"
+        },
+        {
+          "id": "m3",
+          "text": "L'étudiant propose les examens complémentaires appropriés",
+          "details": [
+            "Radiographie de l'épaule face + profil (première intention)",
+            "IRM en cas de doute diagnostique ou échec du traitement conservateur",
+            "Échographie si suspicion de pathologie de la coiffe",
+            "Bilan biologique si suspicion d'arthrite inflammatoire"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "L'étudiant propose une prise en charge thérapeutique adaptée",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• Anti-inflammatoires non stéroïdiens (AINS) per os\n• Antalgiques (paracétamol, tramadol si nécessaire)\n• Applications locales d'AINS en gel\n• Infiltration sous-acromiale de corticoïdes si échec"
+              },
+              {
+                "title": "Traitement non médicamenteux",
+                "content": "• Repos relatif (éviter les mouvements douloureux)\n• Application de froid en phase aiguë\n• Physiothérapie : mobilisation douce, renforcement progressif\n• Ergothérapie pour adaptation du poste de travail"
+              },
+              {
+                "title": "Mesures préventives",
+                "content": "• Correction des postures\n• Éviter le travail prolongé au-dessus de la tête\n• Exercices de renforcement de la coiffe\n• Étirements réguliers"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "L'étudiant organise le suivi et répond aux inquiétudes",
+          "details": [
+            "Réévaluation à 4-6 semaines",
+            "Orientation en rhumatologie/orthopédie si échec du traitement conservateur",
+            "Rassurer la patiente sur le pronostic généralement favorable",
+            "Expliquer l'évolution naturelle (amélioration en 3-6 mois dans la plupart des cas)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Démarche diagnostique logique",
+            "Examens complémentaires justifiés",
+            "Traitement adapté et progressif"
+          ],
+          "scoringRule": "Prise en charge excellente = 2 pts, Correcte = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦾 Syndrome de conflit sous-acromial – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur d’épaule d’apparition progressive",
+                "Douleur à l’élévation et à l’abduction (signe de l’arc douloureux entre 60–120°)",
+                "Douleur nocturne, aggravée en décubitus latéral",
+                "Gêne fonctionnelle pour les gestes du quotidien (coiffer, s’habiller, porter un objet en hauteur)"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Sports ou métiers sollicitant l’élévation répétée du bras (lancer, peinture, manutention)",
+                "Patient d’âge moyen à avancé, souvent avec tendinopathie chronique de la coiffe"
+              ]
+            },
+            {
+              "titre": "Éléments d’orientation",
+              "points": [
+                "Absence de traumatisme initial",
+                "Aggravation progressive",
+                "Soulagement partiel par le repos"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Épaule souvent normale à l’examen statique",
+                "Parfois amyotrophie de la coiffe si atteinte chronique"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Mobilité passive conservée",
+                "Mobilité active douloureuse surtout à l’élévation/abduction"
+              ]
+            },
+            {
+              "titre": "Tests spécifiques",
+              "points": [
+                "Test de Neer : douleur à l’élévation passive en antépulsion",
+                "Test de Hawkins-Kennedy : douleur en flexion antérieure + rotation interne",
+                "Signe de l’arc douloureux (60–120° abduction)",
+                "Test de Jobe : souvent douloureux mais non déficitaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie standard (face, profil scapulaire) : calcifications, acromion crochu, arthrose acromio-claviculaire",
+                "Échographie : tendinopathie coiffe, bursite sous-acromiale",
+                "IRM si doute diagnostique ou suspicion rupture coiffe associée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, éviter gestes déclenchants",
+                "Antalgiques ± AINS",
+                "Rééducation : étirements, renforcement coiffe et stabilisateurs de l’omoplate",
+                "Infiltration cortisonée sous-acromiale en cas d’échec du traitement de 1ère intention"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Discussion en cas d’échec du traitement médical bien conduit",
+                "Acromioplastie arthroscopique ± traitement de la coiffe",
+                "Rééducation post-opératoire indispensable"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Mobilité passive conservée, mais mobilité active douloureuse",
+            "Douleur typique dans l’arc douloureux (60–120° abduction)",
+            "Tests de Neer et Hawkins-Kennedy positifs",
+            "Échographie est l’examen de référence pour confirmer tendinopathie/bursite",
+            "Traitement conservateur avant toute chirurgie"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur d’épaule ? Évolution progressive ou brutale ?",
+                "Douleur nocturne, sommeil perturbé ?",
+                "Gêne pour gestes au-dessus de la tête ou derrière le dos ?",
+                "Activité professionnelle ou sportive sollicitant l’épaule ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : amyotrophie éventuelle de la coiffe",
+                "Mobilité passive vs active",
+                "Tests spécifiques : Neer, Hawkins-Kennedy, arc douloureux, Jobe",
+                "Échographie ± IRM si doute ou rupture suspectée"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Éliminer rupture de la coiffe (mobilité active vs passive, force)",
+                "Débuter traitement conservateur (antalgiques, kinésithérapie, infiltration si besoin)",
+                "Chirurgie (acromioplastie) en cas d’échec du traitement médical prolongé"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur d’épaule gauche chronique (Syndrome de conflit sous-acromial probable) – Femme de 60 ans",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (douleur épaule gauche depuis 1 mois, gêne fonctionnelle)",
+            "Caractériser la douleur → début progressif, aggravée mouvements bras au-dessus de la tête, réveils nocturnes",
+            "Symptômes associés → engourdissements occasionnels, pas de fièvre ni perte de poids",
+            "ATCD → thyroïdectomie (nodule froid), prend lévothyroxine",
+            "Habitudes de vie → pas tabac, peu d’alcool, enseignante",
+            "Examen clinique → mobilité passive conservée, mobilité active douloureuse, arc douloureux 60–120°, test de Jobe douloureux, Neer/Hawkins positifs",
+            "Hypothèse principale → syndrome de conflit sous-acromial (supra-épineux)",
+            "Diagnostics différentiels → rupture coiffe, capsulite rétractile, tendinopathie calcifiante, arthrose gléno-humérale, névralgie cervico-brachiale",
+            "Examens complémentaires → radio (face + profil scapulaire), échographie coiffe, IRM si doute",
+            "Prise en charge → repos relatif, antalgiques ± AINS, kinésithérapie (renforcement coiffe, omoplate), infiltration si échec, chirurgie en dernier recours"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : ARC",
+            "elements": [
+              "A = Arc douloureux (60–120° abduction)",
+              "R = Rotation/mobilité passive conservée",
+              "C = Conflit sous-acromial suspecté"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Spielmann, une femme de 60 ans, enseignante, qui consulte pour des douleurs de l’épaule gauche évoluant depuis environ un mois. Les douleurs sont apparues progressivement, sans traumatisme déclencheur. Elles sont situées à la face latérale de l’épaule et parfois irradiées dans le bras. Elles sont aggravées lors des mouvements répétitifs au-dessus de la tête, notamment lorsqu’elle écrit longtemps au tableau ou attrape des objets en hauteur. Elle rapporte également des réveils nocturnes lorsqu’elle dort sur le côté gauche. Elle décrit parfois des fourmillements dans le bras gauche mais pas de perte de force nette. Elle n’a pas remarqué de raideur matinale prolongée. \n\nElle a essayé des pommades locales sans amélioration. Pas de fièvre, pas de perte de poids ni de signes systémiques. Ses antécédents incluent une thyroïdectomie il y a 20 ans pour un nodule bénin, elle est substituée par lévothyroxine. Pas d’autres maladies chroniques, elle ne fume pas, consomme un peu de vin le week-end. Sa mère est décédée à 78 ans, son père d’une leucémie à 60 ans. \n\nÀ l’examen, l’épaule gauche n’a pas de déformation ni signes inflammatoires. À la palpation, une douleur est retrouvée sur le trochiter. La mobilité passive est conservée mais la mobilité active est douloureuse, notamment en abduction entre 60 et 120° (signe de l’arc douloureux). Le test de Jobe est douloureux, le test de Neer et de Hawkins sont positifs. Pas de signe d’instabilité. Les tests neurologiques sont normaux. \n\nEn résumé, il s’agit d’une femme de 60 ans présentant une douleur chronique d’épaule gauche, d’installation progressive, avec réveils nocturnes et arc douloureux caractéristique. Mon hypothèse principale est un syndrome de conflit sous-acromial, probablement sur tendinopathie du supra-épineux. Les diagnostics différentiels incluent une rupture de la coiffe, une tendinite calcifiante, une capsulite rétractile, une arthrose gléno-humérale ou une névralgie cervico-brachiale. \n\nLes examens complémentaires que je demanderais sont une radiographie de l’épaule (face, profil scapulaire) pour rechercher calcifications ou arthrose acromio-claviculaire, une échographie de l’épaule pour évaluer la coiffe et la bourse sous-acromiale, et éventuellement une IRM si doute diagnostique. \n\nLa prise en charge initiale repose sur un traitement conservateur : repos relatif, antalgiques et AINS, kinésithérapie avec travail de mobilité, d’étirements et de renforcement de la coiffe. En cas d’échec, une infiltration cortisonée sous-acromiale peut être proposée. La chirurgie (acromioplastie arthroscopique ± geste sur la coiffe) n’est indiquée qu’en cas d’échec prolongé du traitement médical."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Spielmann, 60 ans, douleur chronique épaule gauche évoluant depuis 1 mois.\n\nB (Background) : Enseignante, thyroïdectomie ancienne, lévothyroxine, pas de traumatisme, pommades inefficaces.\n\nA (Assessment) : Conflit sous-acromial probable. DD : rupture coiffe, capsulite rétractile, arthrose, tendinite calcifiante, névralgie cervico-brachiale.\n\nR (Recommendation) : Radio épaule, échographie coiffe, traitement conservateur (antalgiques, AINS, kiné), infiltration si échec, chirurgie en dernier recours."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Tests spécifiques",
+              "points": [
+                "Neer : douleur à l’élévation passive",
+                "Hawkins-Kennedy : douleur en flexion + rotation interne",
+                "Arc douloureux : douleur 60–120° abduction",
+                "Jobe : douleur à la résistance mais pas de déficit net"
+              ]
+            },
+            {
+              "titre": "👉 Conflit sous-acromial typique",
+              "points": [
+                "Mobilité passive conservée",
+                "Mobilité active douloureuse",
+                "Douleur nocturne",
+                "Profession ou sport sollicitant élévation bras"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas confondre avec capsulite (où mobilité passive est réduite)",
+                "Toujours rechercher rupture de coiffe (perte de force)",
+                "Éliminer causes cervicales si irradiation atypique",
+                "Ne pas proposer chirurgie d’emblée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Hypothèses diagnostiques",
+              "questions": [
+                {
+                  "question": "Quels diagnostics principaux et différentiels évoquez-vous ?",
+                  "reponse": [
+                    "Conflit sous-acromial (supra-épineux)",
+                    "Rupture coiffe (IRM/échographie)",
+                    "Capsulite rétractile",
+                    "Tendinopathie calcifiante",
+                    "Arthrose gléno-humérale",
+                    "Névralgie cervico-brachiale"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens prescrire en première intention ?",
+                  "reponse": [
+                    "Radiographie face + profil scapulaire",
+                    "Échographie de l’épaule",
+                    "IRM si doute ou suspicion rupture coiffe"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Quel est le traitement conservateur recommandé ?",
+                  "reponse": [
+                    "Repos relatif (éviter gestes douloureux)",
+                    "Antalgiques ± AINS",
+                    "Kinésithérapie (renforcement coiffe, stabilisateurs scapulaires)",
+                    "Infiltration cortisonée si échec"
+                  ]
+                },
+                {
+                  "question": "Quand envisager la chirurgie ?",
+                  "reponse": [
+                    "Après 3–6 mois d’échec du traitement conservateur",
+                    "Si gêne fonctionnelle majeure",
+                    "Acromioplastie arthroscopique ± geste coiffe"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "4. Pronostic et suivi",
+              "questions": [
+                {
+                  "question": "Quel est le pronostic du conflit sous-acromial ?",
+                  "reponse": [
+                    "Généralement favorable sous traitement conservateur",
+                    "Amélioration en quelques mois avec kiné et AINS",
+                    "Risque de rupture secondaire de la coiffe si négligé",
+                    "Réévaluation à 4–6 semaines"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

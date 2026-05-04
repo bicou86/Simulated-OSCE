@@ -1,0 +1,633 @@
+{
+  "title": "USMLE-4 - AVP - Homme de 25 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "John Matthews, 25 ans, se présente aux urgences après un accident de la route",
+    "vitals": {
+      "ta": "123/88 mmHg",
+      "fc": "85 bpm",
+      "fr": "22/min",
+      "temperature": "38°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée [J'ai du mal à respirer]",
+            "Douleur thoracique [J'ai cette douleur atroce (tient sa poitrine, côté gauche)]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Début [Cela a commencé hier soir]",
+            "Sévérité [C'est l'une des pires douleurs que j'aie jamais eues. Au moins 8/10]",
+            "Localisation [Côté gauche de la poitrine]",
+            "Facteurs d'amélioration [Rien de ce que je fais ne l'améliore]",
+            "Facteurs aggravants [Cela devient encore pire lorsque je prends une grande respiration ou que j'essaie de bouger]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Circonstances de l'accident",
+          "binaryOnly": false,
+          "details": [
+            "Mécanisme [Je conduisais ma voiture et j'essayais de répondre à mon téléphone portable]",
+            "Détails [Quand j'ai levé les yeux, j'ai vu que j'avais dévié de la route. J'ai immédiatement essayé de ralentir mais j'ai percuté un arbre]",
+            "Vitesse [Je n'allais pas très vite et ma voiture était en gros en bon état]",
+            "Actions post-accident [J'étais embarrassé, alors je n'ai pas appelé la police]",
+            "Ceinture de sécurité [Je portais ma ceinture de sécurité]",
+            "État initial [Je me sentais bien au début, donc je ne pensais pas devoir aller à l'hôpital]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes respiratoires",
+          "binaryOnly": false,
+          "details": [
+            "Toux [Je tousse depuis quelques jours, je suppose]",
+            "Expectoration [Je dois utiliser un mouchoir parce que je continue à ramener cette substance jaune]",
+            "Dyspnée [J'ai du mal à respirer]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre/frissons [J'ai eu un peu chaud et j'ai remarqué que mes muscles sont douloureux, mais je ne pense pas avoir eu de frissons ou de tremblements]",
+            "Douleur abdominale [Oui, j'ai une douleur aiguë ici (indique le quadrant supérieur gauche)]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Bilan traumatique - Tête et cou",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme crânien [Non]",
+            "Écoulement des oreilles, de la bouche ou du nez [Non]",
+            "Perte de conscience [Non]",
+            "Convulsions [Non]",
+            "Céphalées [Non]",
+            "Changement de vision [Non]",
+            "Confusion, perte de mémoire ou changement de personnalité [Non]",
+            "Raideur de la nuque [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Bilan traumatique - Neurologique et autres",
+          "binaryOnly": false,
+          "details": [
+            "Faiblesse ou engourdissement dans les extrémités [Non]",
+            "Symptômes cardiaques (palpitations) [Non]",
+            "Nausées/vomissements [Non]",
+            "Douleur à la miction [Non]",
+            "Autres blessures [J'ai quelques égratignures sur mes bras à cause de l'accident de voiture]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Informations complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Dernier repas/boisson [J'ai pris mon petit-déjeuner ce matin, il y a environ 5 heures. Je n'ai eu aucun problème à le garder]",
+            "Alcool ou drogues [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Mononucléose infectieuse [J'ai eu un mal de gorge, une légère fièvre et de la fatigue il y a 2 semaines. Mon médecin m'a dit que j'avais la mononucléose infectieuse, mais c'est parti maintenant]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père et ma mère sont tous les deux en bonne santé"
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis banquier]",
+            "Alcool [Occasionnelle, le week-end]",
+            "Drogues illicites [Non]",
+            "Tabagisme [Non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général",
+          "binaryOnly": true,
+          "patientComment": "Patient en détresse aiguë, dyspnéique"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Pas de TJ, pas de contusions]",
+            "Pupilles [Pupilles iso-iso]",
+            "Mouvements oculaires [Mouvements oculaires normaux]",
+            "Pharynx [Pas d'œdème ou d'exsudats pharyngés]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normales ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Deux grandes ecchymoses sur le thorax gauche]",
+            "Palpation [Sensibilité des côtes gauches]",
+            "Auscultation [Bruits respiratoires diminués sur le champ pulmonaire gauche, champs pulmonaires droits clairs]",
+            "Percussion"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Palpation [Détendu, souple, sensibilité du quadrant supérieur gauche, pas de défense ni de détente]",
+            "Examen spécifique de l'organomégalie [Pas d'organomégalie]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "État mental [Alerté et orienté x3]",
+            "Nerfs crâniens [II–XII intacts dans les grandes lignes]",
+            "Motricité globale [Force 5/5 dans tous les groupes musculaires]",
+            "Sensibilité [Intacte aux piqué-touché]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen de la peau",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des abrasions [Quelques égratignures sur les bras]",
+            "Lacérations [Pas de lacérations]",
+            "Contusions [Pas de contusions autres que sur le thorax]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes traumatiques prioritaires",
+                "items": [
+                  {
+                    "text": "Pneumothorax",
+                    "cause": "Arguments POUR:\n\t□ Douleur thoracique gauche après AVP\n\t□ Dyspnée\n\t□ Douleur exacerbée par le mouvement et l'inspiration profonde\n\t□ Bruits respiratoires diminués à gauche\n\t□ Tachypnée (FR 22/min)\nArguments CONTRE:\n\t□ Pas de TJ\n\t□ Pas de déviation trachéale",
+                    "test": "→ Radiographie thoracique urgente"
+                  },
+                  {
+                    "text": "Hémothorax",
+                    "cause": "Arguments POUR:\n\t□ Traumatisme thoracique direct\n\t□ Bruits respiratoires diminués à gauche\n\t□ Dyspnée\n\t□ Toux\nArguments CONTRE:\n\t□ Pas de signes de choc hypovolémique\n\t□ TA normale",
+                    "test": "→ Radiographie thoracique, écho FAST"
+                  },
+                  {
+                    "text": "Fracture de côte",
+                    "cause": "Arguments POUR:\n\t□ Traumatisme direct sur le thorax\n\t□ Douleur à la palpation des côtes\n\t□ Douleur à l'inspiration\n\t□ Ecchymoses thoraciques\nComplications possibles:\n\t□ Pneumothorax secondaire\n\t□ Contusion pulmonaire",
+                    "test": "→ Radiographie thoracique"
+                  },
+                  {
+                    "text": "Rupture splénique",
+                    "cause": "Arguments POUR:\n\t□ Douleur quadrant supérieur gauche\n\t□ Antécédent récent de mononucléose (rate fragile)\n\t□ Traumatisme abdominal possible\nArguments CONTRE:\n\t□ Hémodynamique stable\n\t□ Pas de signes péritonéaux",
+                    "test": "→ Écho FAST, CT abdominal avec contraste"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Pneumonie",
+                    "cause": "Arguments POUR:\n\t□ Toux productive depuis quelques jours\n\t□ Expectoration jaune\n\t□ Fièvre (38°C)\n\t□ Douleur pleurétique\nArguments CONTRE:\n\t□ Contexte traumatique récent",
+                    "test": "→ Radiographie thoracique, NFS, hémocultures"
+                  },
+                  {
+                    "text": "Pleurite",
+                    "cause": "Arguments POUR:\n\t□ Douleur thoracique à l'inspiration\n\t□ Contexte post-viral (mononucléose)\nArguments CONTRE:\n\t□ Traumatisme récent plus probable",
+                    "test": "→ Radiographie thoracique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Prise en charge immédiate - ABCDE",
+          "binaryOnly": false,
+          "details": [
+            "A - Voies aériennes : Évaluation et protection",
+            "B - Respiration : Oxygénothérapie si saturation < 94%",
+            "C - Circulation : Voie veineuse périphérique, monitoring",
+            "D - Déficit neurologique : Évaluation continue",
+            "E - Exposition : Recherche d'autres lésions"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique (face et profil)",
+            "Écho FAST (recherche d'épanchement)",
+            "Gazométrie artérielle ou saturation en O2",
+            "NFS, groupe sanguin si suspicion d'hémorragie"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires secondaires",
+          "binaryOnly": false,
+          "details": [
+            "CT thoraco-abdominal si lésions complexes",
+            "Coloration de Gram et culture des expectorations",
+            "Hémocultures si fièvre",
+            "Toxicologie urinaire et alcoolémie",
+            "ECG de surveillance"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement symptomatique et surveillance",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Analgésie",
+                "content": "• Morphine IV titration (attention dépression respiratoire)\n• Paracétamol IV 1g\n• AINS si pas de contre-indication"
+              },
+              {
+                "title": "Support respiratoire",
+                "content": "• Oxygénothérapie pour SpO2 > 94%\n• Position semi-assise\n• Spirométrie incitative\n• Surveillance rapprochée FR et SpO2"
+              },
+              {
+                "title": "Surveillance et prévention",
+                "content": "• Monitoring continu (FC, TA, FR, SpO2)\n• Réévaluation clinique horaire\n• Prévention atélectasie (mobilisation, kiné respiratoire)\n• Thromboprophylaxie si alitement"
+              },
+              {
+                "title": "Traitement spécifique selon diagnostic",
+                "content": "• Pneumothorax : drainage thoracique si > 20%\n• Hémothorax : drainage + surveillance débit\n• Fracture côtes : analgésie multimodale\n• Rupture splénique : chirurgie urgente si instable"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Complications nécessitant une action immédiate",
+            "items": [
+              {
+                "text": "Pneumothorax sous tension",
+                "description": "→ Détresse respiratoire aiguë, TJ, déviation trachéale = Décompression à l'aiguille urgente"
+              },
+              {
+                "text": "Choc hémorragique",
+                "description": "→ Hypotension, tachycardie, pâleur = Réanimation volémique, chirurgie"
+              },
+              {
+                "text": "Tamponnade cardiaque",
+                "description": "→ Triade de Beck (hypotension, TJ, assourdissement B du cœur) = Péricardocentèse"
+              },
+              {
+                "text": "Détresse respiratoire",
+                "description": "→ SpO2 < 90%, cyanose, tirage = Intubation si échec O2 haut débit"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Matthews, vous devriez toujours consulter un médecin après un accident comme celui-ci. Nous devons maintenant vous observer de près jusqu'à ce que nous puissions déterminer la cause de votre douleur. Nous allons faire quelques tests et des images de votre thorax. Nous vous donnerons aussi quelque chose pour la douleur et nous observerons votre respiration pour nous assurer que vous recevez suffisamment d'oxygène. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Pensez-vous que je vais mourir ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Votre condition est préoccupante et évidemment urgente. On va commencer par faire des images de votre thorax. Ensuite, une fois que nous aurons une meilleure idée de ce qui ne va pas, nous pourrons vous administrer un médicament pour vous aider avec la douleur. S'il y a de l'air ou du sang autour de vos poumons, il existe une procédure que nous pouvons effectuer pour libérer la pression. Nous vous surveillerons de très près à partir de maintenant, et si des complications arrivent, nous serons là pour vous aider."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "John Matthews",
+      "age": "25 ans",
+      "contexte": "Homme se présentant aux urgences après un accident de voiture",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai du mal à respirer et j'ai cette douleur atroce.",
+        "autreChose": "(Le patient tient sa poitrine, côté gauche)"
+      },
+      "consignes": [
+        "Montrez une douleur dans la poitrine gauche qui s'aggrave à l'inspiration et au mouvement (c'est-à-dire, lorsque vous inspirez, tenez votre côté et arrêtez votre respiration avec un court soupir).",
+        "Montrez de la douleur lorsque votre poitrine gauche est palpée.",
+        "Montrez de la douleur lorsque votre abdomen supérieur gauche est palpé.",
+        "Respirez rapidement et superficiellement.",
+        "Toussez parfois fort dans un mouchoir.",
+        "Gémissez occasionnellement et répondez aux questions en phrases courtes."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur thoracique gauche sévère",
+          "Dyspnée",
+          "Début : Hier soir après l'accident",
+          "Intensité : 8/10",
+          "Aggravation : Inspiration profonde, mouvement",
+          "Aucune amélioration"
+        ],
+        "symptomesAssocies": [
+          "Toux productive avec expectorations jaunes",
+          "Fièvre légère",
+          "Douleur abdominale quadrant supérieur gauche",
+          "Myalgies"
+        ],
+        "circonstancesAccident": [
+          "Utilisation du téléphone en conduisant",
+          "Déviation de la route",
+          "Impact frontal avec un arbre",
+          "Faible vitesse",
+          "Port de la ceinture de sécurité",
+          "Pas d'appel aux secours initialement"
+        ],
+        "reponseAuxSymptomes": [
+          "Je pensais que ça allait passer",
+          "La douleur empire, c'est pour ça que je suis venu"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Sensation fébrile",
+          "Myalgies",
+          "Pas de frissons francs"
+        ],
+        "respiratoire": [
+          "Dyspnée d'effort et de repos",
+          "Toux depuis quelques jours",
+          "Expectorations jaunes"
+        ],
+        "neurologique": [
+          "Pas de perte de conscience",
+          "Pas de céphalées",
+          "Pas de troubles visuels",
+          "Pas de confusion"
+        ],
+        "digestive": [
+          "Douleur QSG",
+          "Pas de nausées/vomissements",
+          "Dernier repas il y a 5h sans problème"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "tabac": "Non-fumeur",
+        "alcool": "Occasionnelle le week-end",
+        "drogues": "Aucune",
+        "profession": "Banquier"
+      },
+      "histoireMedicale": [
+        "Mononucléose infectieuse il y a 2 semaines (résolu)"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Respiration superficielle et rapide",
+          "Tenir la poitrine gauche",
+          "Grimacer à l'inspiration",
+          "Tousser dans un mouchoir",
+          "Réponses courtes (dyspnée)",
+          "Position antalgique penchée vers la droite"
+        ],
+        "durantStatus": [
+          "Douleur à la palpation thoracique gauche",
+          "Douleur à la palpation QSG",
+          "Arrêt inspiratoire lors de la palpation",
+          "Anxiété visible",
+          "Coopération malgré la douleur"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patient de 25 ans consultant 24h après AVP à faible vitesse (distraction au téléphone). Douleur thoracique gauche pleurétique 8/10, dyspnée, toux productive. Antécédent récent de mononucléose. Examen : ecchymoses thoraciques, sensibilité costale, diminution du murmure vésiculaire gauche, sensibilité QSG. Signes vitaux : légère fièvre et tachypnée.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e demande :",
+        "• Radiographie thoracique : pneumothorax gauche de 30% sans déviation médiastinale",
+        "• Écho FAST : pas d'épanchement intra-abdominal",
+        "• Gazométrie : pH 7.42, PaO2 75 mmHg, PaCO2 35 mmHg",
+        "• NFS : GB 12,000, Hb 14 g/dL",
+        "• Si drainage thoracique : amélioration rapide de la dyspnée"
+      ],
+      "pointsCles": [
+        "Toujours évaluer ABCDE dans tout traumatisme",
+        "Le pneumothorax peut se développer de façon retardée",
+        "L'antécédent de mononucléose augmente le risque de rupture splénique",
+        "La radiographie thoracique est l'examen clé initial",
+        "Ne pas sous-estimer un traumatisme même à faible vitesse"
+      ],
+      "pieges": [
+        "Se focaliser sur la pneumonie et oublier le contexte traumatique",
+        "Ne pas rechercher d'autres lésions associées",
+        "Oublier le risque de rupture splénique post-mononucléose",
+        "Sous-estimer la gravité d'un pneumothorax de 30%",
+        "Ne pas surveiller l'évolution (pneumothorax sous tension)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Pneumothorax post-traumatique gauche sur traumatisme thoracique fermé"
+        },
+        {
+          "titre": "Approche du polytraumatisé - ATLS",
+          "contenu": "Évaluation systématique selon l'Advanced Trauma Life Support :",
+          "points": [
+            "A - Airway : maintien avec protection cervicale",
+            "B - Breathing : évaluation de la ventilation",
+            "C - Circulation : contrôle hémorragique",
+            "D - Disability : évaluation neurologique",
+            "E - Exposure : déshabillage complet et prévention hypothermie"
+          ]
+        },
+        {
+          "titre": "Pneumothorax traumatique",
+          "contenu": "Accumulation d'air dans l'espace pleural suite à un traumatisme :",
+          "points": [
+            "Mécanismes : lacération pulmonaire, fracture côte, barotrauma",
+            "Classification : simple, ouvert, sous tension",
+            "Signes cliniques : dyspnée, douleur pleurétique, diminution MV",
+            "Diagnostic : radiographie thoracique (ligne pleurale visible)",
+            "Traitement : observation si < 20%, drainage si > 20% ou symptomatique"
+          ]
+        },
+        {
+          "titre": "Pneumothorax sous tension",
+          "contenu": "Urgence vitale par compression médiastinale :",
+          "points": [
+            "Physiopathologie : valve unidirectionnelle, pression intrapleurale croissante",
+            "Signes : détresse respiratoire, TJ, déviation trachéale, hypotension",
+            "Diagnostic clinique (ne pas attendre la radio)",
+            "Traitement : décompression à l'aiguille 2e EIC ligne médio-claviculaire",
+            "Puis drainage thoracique définitif"
+          ]
+        },
+        {
+          "titre": "Traumatisme thoracique fermé",
+          "contenu": "Lésions possibles par mécanisme de décélération :",
+          "points": [
+            "Paroi : fractures côtes, volet costal",
+            "Plèvre : pneumothorax, hémothorax",
+            "Poumon : contusion pulmonaire",
+            "Médiastin : contusion myocardique, rupture aortique",
+            "Diaphragme : rupture diaphragmatique"
+          ]
+        },
+        {
+          "titre": "Particularités post-mononucléose",
+          "contenu": "Risque accru de complications spléniques :",
+          "points": [
+            "Splénomégalie dans 50-60% des cas",
+            "Fragilité splénique persistante 4-8 semaines",
+            "Rupture possible même avec traumatisme mineur",
+            "Contre-indication sports de contact 1 mois",
+            "Surveillance échographique si traumatisme abdominal"
+          ]
+        },
+        {
+          "titre": "Écho FAST",
+          "contenu": "Focused Assessment with Sonography for Trauma :",
+          "points": [
+            "Recherche liquide libre intra-abdominal",
+            "4 fenêtres : péricarde, Morrison, périsplénique, Douglas",
+            "Sensibilité 85-95% pour hémopéritoine significatif",
+            "Rapide, non invasif, au lit du patient",
+            "Ne remplace pas le CT si patient stable"
+          ]
+        },
+        {
+          "titre": "Indications du drainage thoracique",
+          "contenu": "Critères de mise en place d'un drain :",
+          "points": [
+            "Pneumothorax > 20% ou symptomatique",
+            "Tout pneumothorax sous ventilation mécanique",
+            "Pneumothorax bilatéral",
+            "Hémothorax",
+            "Pneumothorax sous tension après décompression"
+          ]
+        },
+        {
+          "titre": "Surveillance post-drainage",
+          "contenu": "Points clés du suivi :",
+          "points": [
+            "Oscillation du niveau liquide (swing)",
+            "Absence de fuite aérienne (bullage)",
+            "Radiographie de contrôle",
+            "Expansion pulmonaire complète",
+            "Retrait si poumon expansé et pas de fuite > 24h"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "Le pneumothorax peut se développer de façon retardée post-trauma",
+            "L'examen clinique peut être normal initialement",
+            "La radiographie thoracique est l'examen de première ligne",
+            "Un pneumothorax sous tension est un diagnostic clinique",
+            "Toujours rechercher des lésions associées dans un polytraumatisme",
+            "L'antécédent de mononucléose augmente le risque splénique"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Oxygénothérapie : cible SpO2 > 94%",
+        "Analgésie : morphine IV titrée, éviter dépression respiratoire",
+        "Drainage thoracique : 5e EIC ligne axillaire moyenne",
+        "Antibioprophylaxie : non systématique sauf plaie pénétrante",
+        "Thromboprophylaxie : HBPM si alitement prolongé"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique : face + profil, recherche ligne pleurale",
+        "CT thoracique : si lésions complexes ou doute diagnostique",
+        "Gazométrie : évalue retentissement respiratoire",
+        "Écho pleurale : peut détecter pneumothorax antérieur",
+        "ECG : éliminer contusion myocardique si trauma sévère"
+      ]
+    }
+  }
+}

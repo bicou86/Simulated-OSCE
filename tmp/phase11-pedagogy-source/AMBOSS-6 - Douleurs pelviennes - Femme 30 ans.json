@@ -1,0 +1,811 @@
+{
+  "title": "AMBOSS-6 - Douleurs pelviennes - Femme 30 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Autumn Larsen, femme de 30 ans, consultante pour des douleurs pelviennes",
+    "vitals": {
+      "temperature": "37.2°C",
+      "ta": "124/69 mmHg",
+      "fc": "70 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai des douleurs à l'estomac intermittentes depuis des années"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Dans mon bas-ventre, juste ici]",
+            "Intensité (échelle 0-10) [Ça varie. Parfois c'est vraiment intense, comme un 6 ou 8, et d'autres fois il n'y a rien du tout]",
+            "Qualité [Crampes]",
+            "Début [Il y a environ 5 ans]",
+            "Événements précipitants [Rien de spécial à ce moment-là]",
+            "Progression/constant/intermittent [Ça semble s'aggraver lentement. Je ne l'ai pas tout le temps - peut-être 6 jours par mois maintenant. Et je sais que c'était moins avant]",
+            "Épisodes antérieurs [Je l'ai une fois par mois pendant plusieurs jours d'affilée]",
+            "Irradiation [Mon dos me fait mal aussi]",
+            "Facteurs améliorants [L'ibuprofène aide. Et une bouillotte]",
+            "Facteurs aggravants [C'est définitivement pire autour de mes règles]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "patientComment": "Je suis un peu gênée de dire ça, mais ça fait aussi mal parfois quand j'ai des rapports sexuels avec mon mari, ce qui est terrible parce que nous essayons tellement fort de tomber enceinte. Mais je n'ai simplement pas envie d'avoir des rapports si ça fait mal"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre/frissons [Non]",
+            "Fatigue [Je me sens assez fatiguée dernièrement. Je ne sais pas si c'est à cause du stress d'essayer de tomber enceinte, ou s'il y a quelque chose de plus sérieux qui ne va pas chez moi]",
+            "Palpitations [Non]",
+            "Dyspnée [Non]",
+            "Problèmes urinaires [Non]",
+            "Problèmes intestinaux [Quand j'ai mal, ça fait aussi mal parfois d'aller aux toilettes]",
+            "Appétit [Non]",
+            "Variations pondérales [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'ibuprofène quand la douleur est forte"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "patientComment": "Ma mère avait des fibromes dans son utérus. Mais elle était plus âgée que moi quand elle a été diagnostiquée"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis avocate spécialisée dans les droits de l'homme]",
+            "Domicile [Heureusement mariée. Bien que nous ayons eu du stress conjugal depuis que j'ai obtenu mon diplôme de droit et commencé à voyager pour le travail, tout en essayant en même temps de tomber enceinte]",
+            "Alcool [Non]",
+            "Drogues illicites [Non]",
+            "Tabac [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Histoire sexuelle et gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui, avec mon mari]",
+            "Nombre de partenaires dans l'année [Juste mon mari]",
+            "IST antérieures [Non]",
+            "Dernier dépistage IST [Il y a 3 ans, avant mon mariage]",
+            "Dernières règles [Il y a deux semaines]",
+            "Ménarche [J'avais 9 ans quand j'ai eu mes premières règles]",
+            "Durée des règles [C'est long et abondant. Environ 8 jours, je dirais]",
+            "Règles régulières [Oui, toutes les 4 semaines]",
+            "Spotting [Non]",
+            "Nombre de tampons par jour [Oh, je ne suis pas vraiment sûre, mais je dois les changer toutes les 2 heures environ]",
+            "Pertes vaginales [Juste le type normal]",
+            "Démangeaisons vaginales [Non]",
+            "Sécheresse vaginale [Non]",
+            "Grossesses [Pas encore, mais mon mari et moi essayons depuis environ 2 ans maintenant]",
+            "Avortements/fausses couches [Non]",
+            "Dernier frottis [Il y a 5 mois. Ils ont toujours été normaux]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen tête et cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des conjonctives"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Légère sensibilité dans les quadrants inférieurs droit et gauche]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes gynécologiques prioritaires",
+                "items": [
+                  {
+                    "text": "Léiomyome utérin (fibromes)",
+                    "cause": "Arguments POUR:\n\t□ Dysménorrhée chronique depuis 5 ans\n\t□ Ménorragie (règles de 8 jours, changement toutes les 2h)\n\t□ Dyspareunie\n\t□ Dyschésie (douleur à la défécation)\n\t□ Infertilité primaire (essais depuis 2 ans)\n\t□ Sensibilité abdominale basse\n\t□ Antécédents familiaux de fibromes (mère)\n\t□ Ménarche précoce (9 ans)\n\t□ Nulliparité\n\t□ Âge (30 ans = pic 25-45 ans)",
+                    "test": "→ Examen pelvien + US transvaginale"
+                  },
+                  {
+                    "text": "Endométriose",
+                    "cause": "Arguments POUR:\n\t□ Dysménorrhée chronique progressive\n\t□ Dyspareunie profonde\n\t□ Dyschésie cyclique\n\t□ Infertilité primaire\n\t□ Douleurs pelviennes cycliques\n\t□ Irradiation dorsale\n\t□ Sensibilité pelvienne bilatérale\nArguments CONTRE:\n\t□ Pas de masse palpable à l'examen",
+                    "test": "→ US transvaginale + IRM pelvienne + laparoscopie diagnostique"
+                  },
+                  {
+                    "text": "Adénomyose",
+                    "cause": "Arguments POUR:\n\t□ Dysménorrhée sévère\n\t□ Ménorragie importante\n\t□ Sensibilité abdominale basse\n\t□ Ménarche précoce\nArguments CONTRE:\n\t□ Infertilité primaire moins typique\n\t□ Dyspareunie/dyschésie moins fréquentes",
+                    "test": "→ US transvaginale + IRM pelvienne"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Dysménorrhée primaire",
+                    "cause": "Arguments CONTRE:\n\t□ Début tardif (25 ans)\n\t□ Infertilité associée",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Endométrite",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de pertes anormales",
+                    "test": "→ Examen pelvien + prélèvements"
+                  },
+                  {
+                    "text": "Cancer de l'endomètre",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune (30 ans)\n\t□ Pas de saignements intermenstruels",
+                    "test": "→ Biopsie endométriale si suspicion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen pelvien [obligatoire chez toute patiente avec douleurs pelviennes - recherche masses, sensibilité, mobilité utérine]",
+            "FSC [évaluation de l'anémie vu ménorragie et fatigue]",
+            "β-hCG urinaire [exclure grossesse avant examens invasifs car patiente essaie de concevoir]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "US transvaginale [meilleur examen initial pour endométriose, fibromes et adénomyose]",
+            "IRM pelvienne [plus précise que l'US, différencie fibromes et adénomyose]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens spécialisés",
+          "binaryOnly": false,
+          "details": [
+            "Laparoscopie diagnostique [gold standard pour diagnostic définitif d'endométriose avec biopsie]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien émotionnel",
+          "binaryOnly": false,
+          "details": [
+            "Réaction appropriée au défi concernant l'infertilité",
+            "Soutien émotionnel face aux difficultés de conception",
+            "Discussion des options de traitement pour fertilité"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement des léiomyomes utérins (fibromes)",
+                "content": "• AINS: ibuprofène 400-600mg x3/j pour dysménorrhée\n• Contraceptifs hormonaux: CO ou DIU-LNG (Mirena)\n• Agonistes GnRH: leuprolide pour réduction pré-op (max 6 mois)\n• Myomectomie conservatrice si désir fertilité\n• Embolisation des artères utérines (EAU): alternative chirurgie\n• Supplémentation fer si anémie par ménorragie"
+              },
+              {
+                "title": "Traitement de l'endométriose",
+                "content": "• AINS: naproxène ou ibuprofène pour dysménorrhée cyclique\n• Contraceptifs en continu: suppression menstruelle\n• Progestatifs: dienogest 2mg/j ou désogestrel 75μg/j\n• Agonistes GnRH + add-back thérapy (oestrogènes/progestatifs)\n• Excision laparoscopique des lésions + adhésiolyse\n• FIV si infertilité persistante après traitement"
+              },
+              {
+                "title": "Prise en charge de l'infertilité associée",
+                "content": "• Bilan couple complet: spermogramme, réserve ovarienne (AMH)\n• Hystérosalpingographie: perméabilité tubaire\n• Myomectomie si fibromes sous-muqueux ou  4cm\n• Stimulation ovarienne: clomifène ou gonadotrophines\n• FIV si échec traitement conservateur après 6-12 mois\n• Support psychologique: counseling fertilité, groupes soutien"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Question sur la fertilité",
+          "content": "[Est-ce que cela signifie que je ne peux pas tomber enceinte ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Larsen, je comprends que vous êtes très inquiète de ne pas tomber enceinte malgré vos efforts. Malheureusement, il n'est pas possible pour moi de dire maintenant si vous tomberez finalement enceinte. Cependant, le fait que vous essayez depuis 2 ans sans succès me dit qu'il est temps d'examiner la question plus en profondeur. D'abord, j'aimerais prescrire quelques tests et faire un examen pelvien pour mieux comprendre ce qui pourrait se passer. Ensuite, vous et moi pourrons nous asseoir ensemble et discuter de ce que nous trouvons et de ce que nous pourrions encore avoir besoin de faire."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Vue d'ensemble des types et localisations de léiomyomes utérins",
+        "description": "Vue d'ensemble des types et localisations de léiomyomes utérins montrant les différentes positions possibles : sous-séreux, intramural, sous-muqueux, pédiculé. Chaque localisation a des implications cliniques spécifiques.",
+        "data": "grilles_generees/html/images/AMBOSS-6-img1-Overview of uterine leiomyoma types and location.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Endométriome (kyste chocolat)",
+        "description": "Échographie ovarienne (transvaginale). Un kyste ovarien uniloculaire de 6,5 cm de long est rempli d'échos de faible niveau, produisant un aspect homogène en verre dépoli. Un liquide libre en trace est visible à côté du kyste (superposition bleue). Cet aspect est considéré comme typique d'un endométriome, bien que les endométriomes puissent également être multiloculaires et présenter d'autres caractéristiques, telles que des foyers pariétaux échogènes et des niveaux liquide-liquide. Les endométriomes sont avasculaires lorsqu'ils sont visualisés avec l'échographie Doppler. T : transducteur.",
+        "data": "grilles_generees/html/images/AMBOSS-6-img2-Endometrioma (chocolate cyst).jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Léiomyome utérin",
+        "description": "Échographie transvaginale en coupe sagittale de l'utérus. Le transducteur est positionné près du col et les ondes sonores sont envoyées craniâlement, résultant en une section sagittale du corps utérin (D) et du col (C). L'endomètre (A) se trouve au centre de l'utérus et est appelé bande endométriale en échographie. Il y a trois myomes suspectés (B) dans le myomètre, les deux myomes situés craniâlement étant hétérogènes et hypoéchogènes, et le myome au bas de l'image présentant des calcifications.",
+        "data": "grilles_generees/html/images/AMBOSS-6-img3-Uterine leiomyoma.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Adénomyose utérine focale",
+        "description": "Échographie pelvienne (transvaginale ; plan transversal). Un épaississement asymétrique hétérogène du myomètre antérieur (superposition verte) est accompagné d'un kyste myométrial (superposition rouge). Il y a une interface irrégulière entre l'endomètre (E) et l'épaississement myométrial. La petite lésion ronde hypoéchogène supplémentaire (superposition verte hachurée) est un léiomyome. P : sonde échographique. Ligne pointillée : utérus.",
+        "data": "grilles_generees/html/images/AMBOSS-6-img4-Focal uterine adenomyosis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Endométriose",
+        "description": "Vue laparoscopique de la cavité pelvienne. Des adhérences (superposition verte) sont visibles entre l'utérus (U), les trompes de Fallope (F), l'ovaire (O) et la paroi abdominale. Une petite lésion endométriale (superposition bleue) peut être vue sur la surface de l'ovaire gauche. Ces résultats suggèrent une endométriose.",
+        "data": "grilles_generees/html/images/AMBOSS-6-img5-Endometriosis.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Autumn Larsen",
+      "age": "30 ans",
+      "contexte": "Avocate spécialisée en droits de l'homme consultant pour douleurs pelviennes chroniques",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai des douleurs à l'estomac intermittentes depuis des années.",
+        "autreChose": "Ça semble empirer et j'ai du mal à tomber enceinte."
+      },
+      "consignes": [
+        "Paraître fatiguée pendant la consultation.",
+        "Quand l'examinateur demande où est la douleur, pointer la partie inférieure de votre abdomen.",
+        "Quand l'examinateur appuie sur la partie inférieure de votre abdomen, dire que ça fait un peu mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Est-ce que cela signifie que je ne peux pas tomber enceinte ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs pelviennes crampoïdes depuis 5 ans",
+          "Intensité variable (6-8/10 au maximum)",
+          "6 jours par mois environ",
+          "Aggravation progressive",
+          "Synchronisées avec les règles"
+        ],
+        "symptomesAssocies": [
+          "Dyspareunie (gênant les tentatives de conception)",
+          "Dyschésie pendant les épisodes douloureux",
+          "Ménorragie (8 jours, changement toutes les 2h)",
+          "Fatigue croissante",
+          "Infertilité primaire depuis 2 ans"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer de la fatigue visible",
+          "Exprimer de l'embarras en parlant de dyspareunie",
+          "Montrer de l'inquiétude concernant la fertilité",
+          "Demander des clarifications pour les termes médicaux"
+        ],
+        "durantStatus": [
+          "Pointer le bas-ventre quand demandé",
+          "Légère douleur à la palpation des quadrants inférieurs",
+          "Coopération normale pour l'examen"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 30 ans avec dysménorrhée secondaire progressive, ménorragie, dyspareunie, dyschésie et infertilité primaire. Antécédents familiaux de fibromes utérins. Ménarche précoce à 9 ans. Tableau clinique évocateur de pathologie gynécologique organique nécessitant investigation approfondie.",
+      "rolesInterventions": [
+        "Examen pelvien : utérus augmenté de volume, irrégulier et ferme (fibromes) OU sensibilité recto-vaginale avec nodules (endométriose)",
+        "US transvaginale : masses utérines multiples hypoéchogènes (fibromes) OU kystes ovariens chocolat (endométriomes)",
+        "FSC : Hb 9.5 g/dL (anémie ferriprive)"
+      ],
+      "pointsCles": [
+        "Dysménorrhée secondaire = toujours rechercher cause organique",
+        "Triade fibromes : ménorragie + dysménorrhée + masse pelvienne",
+        "Triade endométriose : dysménorrhée + dyspareunie + infertilité",
+        "Infertilité après 2 ans d'essais = indication bilan complet",
+        "Ménarche précoce = facteur de risque pour fibromes et endométriose"
+      ],
+      "pieges": [
+        "Attribuer les symptômes à une dysménorrhée primaire",
+        "Ne pas faire d'examen pelvien complet",
+        "Oublier de rechercher une anémie",
+        "Ne pas aborder la question de l'infertilité",
+        "Manquer le lien entre symptômes et cycle menstruel"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Léiomyomes utérins (fibromes) avec possible endométriose associée"
+        },
+        {
+          "titre": "Léiomyomes utérins",
+          "contenu": "Tumeurs bénignes du muscle lisse utérin les plus fréquentes :",
+          "points": [
+            "Prévalence : 70-80% des femmes à 50 ans",
+            "Pic d'incidence : 30-40 ans",
+            "Facteurs de risque : ménarche précoce, nulliparité, obésité, race noire",
+            "Types : sous-séreux, intramural, sous-muqueux (selon localisation)",
+            "Symptômes dépendent de taille/localisation : ménorragie (sous-muqueux), masse pelvienne (gros fibromes), compression (vessie/rectum)",
+            "Complications : anémie, infertilité, dégénérescence"
+          ]
+        },
+        {
+          "titre": "Endométriose",
+          "contenu": "Présence de tissu endométrial ectopique :",
+          "points": [
+            "Prévalence : 10-15% des femmes en âge de procréer",
+            "Pathogenèse : menstruation rétrograde, métaplasie, dissémination",
+            "Localisations : ovaires, cul-de-sac de Douglas, ligaments utéro-sacrés",
+            "Symptômes classiques : 3D (Dysménorrhée, Dyspareunie, Dyschésie)",
+            "Infertilité dans 30-50% des cas",
+            "Diagnostic définitif : laparoscopie avec biopsie"
+          ]
+        },
+        {
+          "titre": "Adénomyose",
+          "contenu": "Invasion du myomètre par l'endomètre :",
+          "points": [
+            "Prévalence : 20-30% des femmes",
+            "Facteurs de risque : multiparité, césariennes, âge > 40 ans",
+            "Symptômes : dysménorrhée sévère, ménorragie, utérus globuleux",
+            "Diagnostic : US (stries myométriales), IRM (épaississement jonctionnel)",
+            "Souvent associée à endométriose (30% des cas)",
+            "Traitement définitif : hystérectomie"
+          ]
+        },
+        {
+          "titre": "Impact sur la fertilité",
+          "contenu": "Mécanismes d'infertilité dans ces pathologies :",
+          "points": [
+            "Fibromes : distorsion cavité utérine, altération implantation, obstruction tubaire",
+            "Endométriose : adhérences pelviennes, altération fonction tubaire/ovarienne, inflammation",
+            "Adénomyose : altération contractilité utérine, inflammation endométriale",
+            "Évaluation fertilité : spermogramme partenaire, HSG, réserve ovarienne",
+            "Options : chirurgie conservatrice, FIV, traitement médical temporaire"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique",
+          "contenu": "Séquence d'examens recommandée :",
+          "points": [
+            "1. Examen pelvien bimanuel : taille/forme utérus, masses annexielles",
+            "2. US transvaginale : première ligne, sensibilité 95% fibromes",
+            "3. IRM pelvienne : cartographie pré-opératoire, différenciation lésions",
+            "4. Hystéroscopie : évaluation cavité utérine si sous-muqueux",
+            "5. Laparoscopie : gold standard endométriose, permet traitement",
+            "6. Marqueurs : CA-125 peu spécifique, pas recommandé en routine"
+          ]
+        },
+        {
+          "titre": "Prise en charge de la dysménorrhée secondaire",
+          "contenu": "Approche thérapeutique selon étiologie :",
+          "points": [
+            "Fibromes symptomatiques : AINS, contraceptifs, agonistes GnRH, myomectomie, embolisation",
+            "Endométriose : suppression hormonale (CO, progestatifs), excision laparoscopique",
+            "Adénomyose : DIU-LNG, agonistes GnRH, hystérectomie si échec",
+            "Fertilité : myomectomie si distorsion cavité, excision endométriose, FIV",
+            "Suivi : surveillance croissance fibromes, récidive endométriose"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "AINS première ligne pour dysménorrhée (ibuprofène 400-600mg TID)",
+        "Contraceptifs oraux en continu pour suppression menstruelle",
+        "Agonistes GnRH (leuprolide) pour réduction taille fibromes pré-op",
+        "DIU-LNG (Mirena) pour ménorragie et dysménorrhée",
+        "Supplémentation fer si anémie (fer élément 60-120mg/jour)",
+        "Acide tranexamique 1g TID pendant règles si ménorragie isolée"
+      ],
+      "examensComplementaires": [
+        "US transvaginale : Sensibilité 95% fibromes, 80% endométriomes",
+        "IRM pelvienne T2 : Différencie fibromes (hypointense) vs adénomyose (épaississement jonctionnel >12mm)",
+        "Hystérosalpingographie : Perméabilité tubaire si infertilité",
+        "Laparoscopie diagnostique : Visualisation directe + biopsie endométriose",
+        "FSC : Recherche anémie microcytaire hypochrome",
+        "Ferritine : Évaluation réserves en fer si anémie"
+      ]
+    },
+    "resume": {
+      "titre": "🩺 Léiomyome utérin (fibrome) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes fonctionnels",
+              "points": [
+                "Métrorragies, ménorragies (règles abondantes et prolongées)",
+                "Dysménorrhées",
+                "Douleurs pelviennes chroniques ou sensation de pesanteur",
+                "Symptômes de compression : pollakiurie, constipation, dyspareunie",
+                "Infertilité ou fausses couches à répétition"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Âge : 30–50 ans",
+                "Antécédents familiaux de fibromes",
+                "Obésité, nulliparité",
+                "Origine afro-caribéenne (prévalence augmentée)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen gynécologique",
+              "points": [
+                "Utérus augmenté de volume, irrégulier et ferme à la palpation bimanuel",
+                "Mobilité utérine conservée",
+                "Pas de douleur spontanée (sauf nécrobiose ou volumineux fibrome)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie pelvienne (1ʳᵉ intention) : fibrome hypoéchogène ou hétérogène",
+                "IRM pelvienne si doute diagnostique ou cartographie pré-opératoire"
+              ]
+            },
+            {
+              "titre": "Biologie",
+              "points": [
+                "NFS : rechercher anémie par ménorragies",
+                "Bêta-HCG en cas de suspicion de grossesse",
+                "Bilan de coagulation si saignements importants"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Attitude selon symptomatologie",
+              "points": [
+                "Asymptomatique : abstention + surveillance",
+                "Symptomatique : traitement adapté selon âge et désir de grossesse"
+              ]
+            },
+            {
+              "titre": "Traitements médicamenteux",
+              "points": [
+                "LNG-IUS (stérilet hormonal)",
+                "Antagonistes GnRH (ex : élagolix), parfois en association hormonale",
+                "Contraceptifs oraux ou acide tranexamique pour saignements"
+              ]
+            },
+            {
+              "titre": "Traitements non chirurgicaux",
+              "points": [
+                "Embolisation des artères utérines : si désir de conservation utérine",
+                "Ablation par radiofréquence (disponibilité limitée)"
+              ]
+            },
+            {
+              "titre": "Traitements chirurgicaux",
+              "points": [
+                "Myomectomie : si désir de grossesse",
+                "Hystérectomie : traitement définitif si pas de désir de grossesse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Rechercher systématiquement les troubles menstruels et signes compressifs",
+            "Échographie pelvienne = outil diagnostique de 1ʳᵉ intention",
+            "Prise en charge individualisée selon âge, symptômes et désir de fertilité",
+            "Myomectomie = option conservatrice chez femme jeune souhaitant grossesse",
+            "Surveillance possible en l'absence de symptômes"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Troubles menstruels : ménorragies, métrorragies, dysménorrhées ?",
+                "Douleurs pelviennes chroniques ou pesanteur ?",
+                "Symptômes de compression : pollakiurie, constipation, dyspareunie ?",
+                "Projet de grossesse ?",
+                "Antécédents familiaux ou personnels de fibromes ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales, recherche signes d’anémie",
+                "Examen gynécologique : utérus augmenté, irrégulier, ferme",
+                "Échographie pelvienne (1ʳᵉ intention)",
+                "IRM pelvienne si cartographie pré-opératoire nécessaire",
+                "Bilan biologique : NFS, β-HCG, coagulation si saignements importants"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Surveillance si asymptomatique",
+                "Traitement médicamenteux (LNG-IUS, antagonistes GnRH, AINS, acide tranexamique) selon symptômes",
+                "Chirurgie (myomectomie si désir de grossesse, hystérectomie si pas de désir de grossesse)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleurs pelviennes chroniques (fibromes / endométriose)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser la douleur → localisation, intensité, chronologie, cyclicité",
+            "Symptômes associés → dysménorrhée, dyspareunie, dyschésie, ménorragie, infertilité",
+            "ATCD médicaux, chirurgicaux, familiaux",
+            "Vie sexuelle et désir de grossesse",
+            "Examen clinique → palpation pelvienne, sensibilité, masse éventuelle",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → β-hCG, FSC, US transvaginale ± IRM",
+            "Prise en charge → traitement médical (AINS, hormones), chirurgie conservatrice si désir de grossesse, soutien fertilité"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 5D de l’endométriose",
+            "elements": [
+              "Dysménorrhée",
+              "Dyspareunie",
+              "Dyschésie",
+              "Douleur pelvienne chronique",
+              "Difficulté à concevoir"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Autumn Larsen, une femme de 30 ans, avocate en droits de l’homme, qui consulte pour des douleurs pelviennes récurrentes. \n\nElle décrit des douleurs crampoïdes du bas-ventre, présentes depuis environ 5 ans, avec une intensité qui varie entre 6 et 8 sur 10 lors des épisodes les plus marqués. Ces douleurs durent plusieurs jours, reviennent environ 6 jours par mois et sont clairement plus intenses autour de ses règles. Elle note aussi une irradiation dans le dos. Les douleurs sont partiellement soulagées par l’ibuprofène et l’utilisation d’une bouillotte.\n\nElle rapporte également d’autres symptômes : des règles longues et abondantes, durant environ 8 jours avec changement de protection toutes les deux heures, ce qui est très gênant. Elle se plaint de douleurs lors des rapports sexuels avec son mari, ce qui complique leurs tentatives de conception, puisqu’ils essaient d’avoir un enfant depuis environ deux ans sans succès. Elle mentionne aussi que, lors des épisodes douloureux, aller à la selle est difficile et douloureux. Depuis quelques mois, elle se sent de plus en plus fatiguée.\n\nPour ses antécédents, elle n’a pas de maladies chroniques, pas d’antécédents chirurgicaux, pas d’allergies connues. Elle prend uniquement de l’ibuprofène en cas de douleurs. Sa mère avait eu des fibromes diagnostiqués à l’âge adulte. Dans ses habitudes de vie, elle ne fume pas, ne consomme ni alcool ni drogues.\n\nSur le plan gynécologique, elle a eu ses premières règles à 9 ans, cycles réguliers toutes les 4 semaines, mais longs et abondants. Son dernier frottis date de 5 mois et était normal. Elle est sexuellement active avec son mari uniquement, pas d’antécédents d’IST, et le dernier dépistage date de 3 ans.\n\nÀ l’examen, ses constantes sont normales : TA 124/69, pouls 70, T° 37,2 °C, FR 16. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est souple, mais une sensibilité légère est retrouvée à la palpation des quadrants inférieurs droit et gauche.\n\nEn résumé, il s’agit d’une femme de 30 ans avec des douleurs pelviennes chroniques, cycliques et invalidantes, associées à des ménorragies, une dyspareunie, une dyschésie et une infertilité primaire. Mes hypothèses principales sont des fibromes utérins ou une endométriose, avec l’adénomyose comme autre possibilité. Les diagnostics différentiels plus éloignés incluent une dysménorrhée primaire ou une endométrite.\n\nComme examens complémentaires, je demanderais un test β-hCG pour exclure une grossesse, une FSC pour rechercher une anémie en lien avec les ménorragies, et une échographie pelvienne transvaginale en première intention. Si besoin, une IRM pelvienne ou une laparoscopie diagnostique pourraient être nécessaires.\n\nEn termes de prise en charge, je proposerais une approche combinant soulagement symptomatique (AINS, éventuellement contraception hormonale en continu), et, selon les résultats, une prise en charge chirurgicale conservatrice (myomectomie ou exérèse laparoscopique des lésions d’endométriose). Un accompagnement spécialisé en fertilité et un soutien psychologique seraient également importants."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Larsen, 30 ans, consulte pour douleurs pelviennes chroniques cycliques.\n\nB (Background) : Symptômes depuis 5 ans, plus intenses lors des règles, ménorragies, dyspareunie, dyschésie, infertilité primaire. ATCD familiaux de fibromes.\n\nA (Assessment) : Suspicion de fibromes utérins ou d’endométriose. DD : adénomyose, dysménorrhée primaire.\n\nR (Recommendation) : β-hCG, FSC, échographie transvaginale ± IRM pelvienne, laparoscopie si besoin, orientation gynécologique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Endométriose = 3D",
+              "points": [
+                "Dysménorrhée",
+                "Dyspareunie",
+                "Dyschésie"
+              ]
+            },
+            {
+              "titre": "👉 Fibromes = 3M",
+              "points": [
+                "Ménorragies",
+                "Masse pelvienne",
+                "Ménarche précoce"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas demander de β-hCG → toujours exclure une grossesse",
+                "Oublier de relier symptômes au cycle menstruel",
+                "Ne pas explorer la question de l’infertilité",
+                "Oublier de rechercher une anémie liée aux ménorragies"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Fibromes utérins",
+                  "reponse": {
+                    "pour": [
+                      "Ménorragies abondantes",
+                      "Douleurs pelviennes chroniques",
+                      "Dyspareunie",
+                      "Antécédents familiaux",
+                      "Utérus augmenté de volume possible"
+                    ],
+                    "contre": [
+                      "Pas de masse palpable décrite pour l’instant"
+                    ]
+                  }
+                },
+                {
+                  "question": "Endométriose",
+                  "reponse": {
+                    "pour": [
+                      "Douleurs pelviennes chroniques et cycliques",
+                      "Dysménorrhée progressive",
+                      "Dyspareunie profonde",
+                      "Dyschésie cyclique",
+                      "Infertilité primaire"
+                    ],
+                    "contre": [
+                      "Pas de masse palpable"
+                    ]
+                  }
+                },
+                {
+                  "question": "Adénomyose",
+                  "reponse": {
+                    "pour": [
+                      "Dysménorrhée sévère",
+                      "Ménorragies",
+                      "Douleurs pelviennes diffuses"
+                    ],
+                    "contre": [
+                      "Infertilité primaire moins typique",
+                      "Âge jeune (30 ans)"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "β-hCG urinaire ou plasmatique",
+                    "FSC pour rechercher une anémie",
+                    "Échographie pelvienne transvaginale",
+                    "IRM pelvienne si doute ou cartographie pré-opératoire",
+                    "Laparoscopie diagnostique si suspicion forte d’endométriose"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Douleurs pelviennes chroniques liées probablement à des fibromes ou à une endométriose"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "AINS pour douleurs",
+                      "Contraception hormonale si souhait suppression symptômes",
+                      "Prise en charge chirurgicale conservatrice selon désir de grossesse"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Suivi gynécologique régulier",
+                    "Bilan fertilité complet (spermogramme conjoint, HSG, réserve ovarienne)",
+                    "Soutien psychologique face à l’infertilité",
+                    "Réévaluation après traitement médical ou chirurgical"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

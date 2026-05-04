@@ -1,0 +1,481 @@
+{
+  "title": "German-59 - Lombalgie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Döderlein, 56 ans, se présente en consultation pour des douleurs dorsales",
+    "vitals": {
+      "ta": "135/90 mmHg",
+      "fc": "100 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'introduction",
+          "binaryOnly": false,
+          "patientComment": "Douleurs dorsales"
+        },
+        {
+          "id": "a3",
+          "text": "Localisation précise",
+          "binaryOnly": false,
+          "patientComment": "Bas du dos, à gauche"
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [soudain]",
+            "Durée [depuis ce matin]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Pattern et évolution",
+          "binaryOnly": false,
+          "details": [
+            "Type [va et vient]",
+            "Au repos et en mouvement [les deux]",
+            "Épisodes antérieurs [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "binaryOnly": false,
+          "patientComment": "Dans l'aine"
+        },
+        {
+          "id": "a7",
+          "text": "Qualité de la douleur",
+          "binaryOnly": false,
+          "patientComment": "Crampes"
+        },
+        {
+          "id": "a8",
+          "text": "Intensité de la douleur",
+          "binaryOnly": false,
+          "patientComment": "7/10"
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs modulants",
+          "binaryOnly": false,
+          "patientComment": "Rien de particulier, éventuellement mieux en position couchée"
+        },
+        {
+          "id": "a10",
+          "text": "Événement déclenchant ou traumatisme",
+          "binaryOnly": false,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Faiblesse musculaire [non]",
+            "Troubles sensitifs [non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes urinaires associés",
+          "binaryOnly": false,
+          "details": [
+            "Hématurie macroscopique [oui]",
+            "Dysurie [non]",
+            "Incontinence [non]",
+            "Pollakiurie [non]",
+            "Urgences mictionnelles [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes digestifs",
+          "binaryOnly": false,
+          "details": [
+            "Transit intestinal [normal]",
+            "Nausées/vomissements [non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Frissons [non]",
+            "Perte de poids [non]",
+            "Sueurs nocturnes [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents de lithiase",
+          "binaryOnly": false,
+          "details": [
+            "Dépistage pour ostéoporose [non]",
+            "Fractures antérieures [non]",
+            "Calculs rénaux antérieurs [non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Pathologies connues [hypertension artérielle]",
+            "Antécédents de lombalgies [non]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "Aucune intervention chirurgicale"
+        },
+        {
+          "id": "a18",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "patientComment": "Enalapril 20 mg 1-0-0, Vitamine D3"
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "patientComment": "Aucune allergie connue"
+        },
+        {
+          "id": "a20",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [oui]",
+            "Alcool [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Statut hormonal",
+          "binaryOnly": false,
+          "patientComment": "Ménopause depuis 5 ans, pas de symptômes climatériques"
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a23",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [à préciser]",
+            "Situation familiale [à préciser]",
+            "Activité physique [à préciser]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Hydratation et habitudes alimentaires",
+          "binaryOnly": false,
+          "details": [
+            "Apports hydriques quotidiens [à évaluer]",
+            "Alimentation riche en oxalates [à évaluer]",
+            "Consommation de sel [à évaluer]"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a26",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "binaryOnly": false,
+          "details": [
+            "État général",
+            "Faciès douloureux",
+            "Position antalgique"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du rachis",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Palpation des processus épineux",
+            "Recherche de contracture paravertébrale"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Test de Lasègue",
+          "binaryOnly": false,
+          "patientComment": "Négatif"
+        },
+        {
+          "id": "e4",
+          "text": "Recherche du signe de Giordano",
+          "binaryOnly": false,
+          "details": [
+            "Percussion des fosses lombaires",
+            "Résultat [positif à gauche probable]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Auscultation",
+            "Palpation superficielle et profonde",
+            "Recherche d'un globe vésical"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation des points urétéraux",
+          "binaryOnly": false,
+          "details": [
+            "Point urétéral supérieur",
+            "Point urétéral moyen",
+            "Point urétéral inférieur"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des organes génitaux externes",
+          "binaryOnly": false,
+          "details": [
+            "Inspection vulvaire",
+            "Recherche d'écoulement"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Toucher rectal si indiqué",
+          "binaryOnly": true,
+          "patientComment": "Non indiqué dans ce contexte"
+        },
+        {
+          "id": "e9",
+          "text": "Signes vitaux complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Température [à mesurer]",
+            "État d'hydratation"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Colique néphrétique gauche sur lithiase urétérale probable"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Pyélonéphrite aiguë",
+            "Fracture vertébrale ostéoporotique",
+            "Lombalgie musculaire",
+            "Pathologie gynécologique (kyste ovarien tordu)",
+            "Anévrisme de l'aorte abdominale",
+            "Appendicite rétrocæcale (si à droite)",
+            "Diverticulite sigmoïdienne"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Présentation clinique typique",
+                "items": [
+                  {
+                    "text": "Douleur lombaire unilatérale brutale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Douleur de type crampe/colique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Irradiation vers l'aine",
+                    "cause": "□ trajet urétéral",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hématurie macroscopique associée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Facteurs favorisants",
+                "items": [
+                  {
+                    "text": "Tabagisme",
+                    "cause": "□ déshydratation",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Prise de vitamine D",
+                    "cause": "□ hypercalciurie possible",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Bandelette urinaire (confirmer hématurie)",
+            "ECBU avec recherche de cristaux",
+            "Créatinine, urée (fonction rénale)",
+            "Ionogramme sanguin",
+            "FSC, CRP (éliminer infection)",
+            "Échographie rénale et vésicale en urgence",
+            "CT abdomen sans contraste (gold standard) si doute"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Critères d'hospitalisation",
+          "binaryOnly": false,
+          "details": [
+            "Signes infectieux associés (urgence)",
+            "Rein unique fonctionnel",
+            "Insuffisance rénale aiguë",
+            "Douleur réfractaire au traitement",
+            "Calcul > 10 mm",
+            "Obstruction bilatérale"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique ambulatoire",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antalgique",
+                "content": "• AINS en première intention (diclofénac 75 mg IM ou PO)\n• Métamizole (Novalgin) 500 mg jusqu'à 4x/jour\n• Paracétamol 1g 4x/jour en complément\n• Tramadol si douleur réfractaire\n• Éviter la morphine (spasme urétéral)"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Hyperhydratation (2-3 L/jour)\n• Filtration des urines (tamis)\n• Repos relatif\n• Application de chaleur locale\n• Alpha-bloquants si calcul distal (tamsulosine)"
+              },
+              {
+                "title": "Surveillance",
+                "content": "• Contrôle clinique à 48-72h\n• Contrôle fonction rénale si pas d'amélioration\n• Imagerie de contrôle si calcul > 5 mm\n• Consultation urologie si calcul > 6 mm"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge à distance",
+          "binaryOnly": false,
+          "details": [
+            "Analyse du calcul si récupéré",
+            "Bilan métabolique à 6 semaines",
+            "Calcium, phosphate, acide urique sanguins",
+            "Calciurie, phosphaturie, uraturie des 24h",
+            "PH urinaire, densité urinaire"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Prévention des récidives",
+          "binaryOnly": false,
+          "details": [
+            "Hydratation abondante (> 2L/jour)",
+            "Régime adapté selon type de calcul",
+            "Réduction apports sodés",
+            "Normalisation apports calciques",
+            "Traitement spécifique selon lithiase"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Information et éducation",
+          "binaryOnly": false,
+          "details": [
+            "Expliquer l'évolution naturelle",
+            "Calcul < 4 mm : expulsion spontanée > 90%",
+            "Importance de filtrer les urines",
+            "Signes d'alerte nécessitant reconsultation",
+            "Remise de documentation écrite"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

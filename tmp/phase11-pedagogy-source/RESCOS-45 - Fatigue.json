@@ -1,0 +1,402 @@
+{
+  "title": "RESCOS-45 - Fatigue",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "Mme Bathilda Tourdesac, 87 ans, consulte pour fatigue.",
+    "vitals": {
+      "ta": "140/95 mmHg",
+      "fc": "82 bpm",
+      "temperature": "36.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Raison de la visite",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Type d'insomnie : sommeil court, léger [dort 2-3h à la suite, sommeil non réparateur]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Chronologie (durée, fréquence) : [depuis des mois]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Développement : progressif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés : tristesse, anhédonie [perte d'intérêt pour promenades et marché]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Situation familiale / statut marital [veuve depuis 4 ans]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Ana. générale : sudation nocturne",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Ana. générale : ronflement",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Ana. générale : prise/perte de poids [prise de 5kg]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Ana. cardio-vasc : hypertension",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Ana. digestive : mange peu",
+          "binaryOnly": true
+        },
+        {
+          "id": "a12",
+          "text": "Ana. ostéo-articulaire : gonarthrose bilatérale",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Ana. suicide : présence de pensées suicidaires ? [non]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Histoire médicale : antécédent cancer [mastectomie droite]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Histoire médicale : opérations [sigmoïdectomie, mastectomie]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Habitudes : médicaments [Lisinopril, Torem, Belok-zok, Dalfalgan, Irfen, Temesta]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Habitudes : alcool / drogues",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Désinfection des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Posé ≥ 1 question relatif au status psychiatrique",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Palpation thyroïde (médecin derrière le patient)",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Palpation ganglions cervicaux & axillaires",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Un laboratoire (pas besoin de préciser)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoqué à voix haute une dépression / demandé à la patiente si elle se sentait déprimée",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Évoquer l'aide à domicile",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Proposé une prise en charge psycho-gériatrique",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Expliqué qu'il fallait activement rechercher une cause organique à la fatigue",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Refusé de prescrire des somnifères pour le moment",
+          "binaryOnly": true
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Critères diagnostics d'une dépression",
+        "description": "Critères diagnostiques de la CIM-10 et du DSM-5 pour le diagnostic de dépression, incluant symptômes principaux et secondaires",
+        "filename": "grilles_generees/html/images/dépression-1-img1.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Bathilda Tourdesac",
+      "age": "87 ans",
+      "contexte": "Veuve depuis 4 ans, consultante pour fatigue au cabinet du Dr Rogue",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens fatiguée",
+        "autreChose": "Je me sens faible, mais c'est normal je suis vieille"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue depuis des mois",
+          "Sentiment d'être fatiguée toute la journée",
+          "S'endort l'après-midi devant la télé",
+          "Impossible de s'endormir le soir"
+        ],
+        "symptomesAssocies": [
+          "Sommeil court et léger (2-3h à la suite)",
+          "Sommeil non réparateur",
+          "Tristesse",
+          "Anhédonie (perte d'intérêt pour promenades et marché)",
+          "Isolement social progressif",
+          "Sort de moins en moins de chez elle"
+        ],
+        "reponseAuxSymptomes": [
+          "J'essaie de dormir quand je peux",
+          "Ne fait plus ses activités habituelles"
+        ],
+        "representationMaladie": [
+          "C'est à cause de l'âge",
+          "C'est normal d'être fatiguée à mon âge"
+        ],
+        "questions": [
+          "Pourriez-vous me prescrire des pilules pour mieux dormir ? (à évoquer vers le milieu de la consultation)"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Légère prise de poids ces dernières années (+5kg)",
+          "Pas de sudation nocturne",
+          "Pas de ronflement"
+        ],
+        "neurologique": [
+          "Légère surdité droite depuis > 10 ans"
+        ],
+        "cardiovasculaire": [
+          "Hypertension connue",
+          "Essoufflement à l'effort plus prononcé qu'avant",
+          "Reste autonome (peut gravir des escaliers)"
+        ],
+        "digestive": [
+          "Mange peu",
+          "Perte d'appétit progressive"
+        ],
+        "osteoarticulaire": [
+          "Gonarthrose bilatérale limitant les mouvements",
+          "Lombalgies chroniques",
+          "Ne sait pas si elle est ostéoporotique"
+        ],
+        "genitourinaire": [
+          "Incontinence de stress [parfois je me fais pipi dessus quand je porte les commissions]",
+          "Status post ménopause depuis > 30 ans"
+        ],
+        "psychiatrique": [
+          "Tristesse",
+          "Perte d'énergie",
+          "Pas de pensées suicidaires [je n'ai jamais imaginé me suicider]",
+          "Se sent déprimée mais ne le reconnaît pas spontanément"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Mange peu, perte d'appétit",
+        "activitePhysique": "Aucune, a de la peine à faire le ménage",
+        "sommeil": "Mauvais, se réveille très tôt, s'endort l'après-midi",
+        "tabac": "Non",
+        "alcool": "Non",
+        "drogues": "Non",
+        "medicaments": "Lisinopril 10mg/j, Torem 5mg/j, Belok-zok 50mg/j, Dalfalgan 3g/j, Irfen 600mg réserve, Temesta 1mg réserve"
+      },
+      "histoireMedicale": [
+        "Insuffisance rénale chronique",
+        "Hypertension",
+        "Lombalgies chroniques",
+        "Gonarthrose bilatérale",
+        "Hospitalisée pour les poumons une fois",
+        "Status post sigmoïdectomie",
+        "Status post mastectomie droite (cancer du sein)",
+        "Plusieurs hospitalisations (ne se souvient plus combien)",
+        "Vaccins à jour (fait tous les ans avec le Dr. Rogue)"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère décédée (ne se souvient pas de quoi)",
+        "Père décédé d'un cancer",
+        "Frère décédé d'un problème au cœur",
+        "Grands-parents tous décédés (ne se souvient pas de quoi)"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Rentière",
+        "hobbies": "Les feux de l'amour",
+        "poids": "49 kg (BMI normal)",
+        "taille": "1m61",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Veuve depuis 4 ans",
+        "enfants": "Aucun enfant",
+        "situationSocioEconomique": "Riche",
+        "origine": "Britannique",
+        "etatEsprit": "Baisse de la thymie"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Baisse de la thymie (fatiguée, parle lentement, d'une voix monotone)",
+          "Trouble de la marche (gonarthrose bilatérale)",
+          "Bien habillée, bonne hygiène",
+          "Assise sur une chaise"
+        ]
+      },
+      "informationADonner": "Information clé : Je suis veuve depuis 4 ans (information à donner au bout d'un certain temps). Agenda caché : veut des somnifères. L'aspect le plus important est de garder son indépendance ('plutôt mourir que d'aller en EMS')."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Mme Bathilda Tourdesac, 87 ans, veuve depuis 4 ans, consulte pour fatigue chronique. Antécédents : IRC, HTA, lombalgies chroniques, gonarthrose bilatérale, mastectomie droite. Tableau clinique évocateur de dépression gériatrique masquée : fatigue, troubles du sommeil, anhédonie, isolement social. Demande des somnifères. Refuse aide à domicile malgré difficultés. Signes vitaux : TA 140/95 mmHg, FC 82 bpm, T 36.9°C.",
+      "rolesInterventions": [
+        "Remplir la grille d'évaluation",
+        "Il n'y a pas d'examens paracliniques à disposition (on est au cabinet du généraliste, les résultats ne sont pas instantanés)"
+      ],
+      "pointsCles": [
+        "Dépression gériatrique masquée par plainte somatique (fatigue)",
+        "Veuvage récent (4 ans) comme facteur déclenchant",
+        "Anhédonie et isolement social progressif",
+        "Demande de somnifères comme agenda caché",
+        "Risque de dépendance aux benzodiazépines",
+        "Nécessité d'exclure causes organiques avant traitement"
+      ],
+      "pieges": [
+        "Ne pas prescrire de somnifères sans bilan préalable",
+        "Ne pas manquer la dépression derrière la plainte somatique",
+        "Penser à explorer le statut psychiatrique",
+        "Rechercher systématiquement les idées suicidaires",
+        "Ne pas oublier le diagnostic différentiel de la fatigue"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la dépression chez la personne âgée",
+      "sections": [
+        {
+          "titre": "Particularités de la dépression gériatrique",
+          "contenu": "La dépression chez la personne âgée se présente souvent de manière atypique avec prédominance de plaintes somatiques.",
+          "points": [
+            "Plaintes somatiques au premier plan (fatigue, douleurs)",
+            "Minimisation ou déni de la tristesse",
+            "Troubles cognitifs possibles (pseudo-démence)",
+            "Anhédonie souvent marquée",
+            "Risque suicidaire élevé chez les personnes âgées",
+            "Facteurs de risque : veuvage, isolement, maladies chroniques"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques de la dépression",
+          "contenu": "Selon CIM-10 et DSM-5, au moins 2-3 symptômes principaux et 2 symptômes secondaires pendant au moins 2 semaines.",
+          "points": [
+            "Symptômes principaux : humeur dépressive, perte d'intérêt/joie, baisse d'énergie",
+            "Symptômes secondaires : troubles concentration, estime de soi réduite, culpabilité, perspectives négatives",
+            "Idées suicidaires, troubles du sommeil, modification appétit",
+            "Retentissement fonctionnel significatif"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel de la fatigue",
+          "contenu": "La fatigue a un diagnostic différentiel très large nécessitant une approche systématique.",
+          "points": [
+            "Causes endocrino-métaboliques : hypo/hyperthyroïdie, diabète, insuffisance surrénalienne",
+            "Néoplasies (toutes)",
+            "Infections : EBV, CMV, hépatites, tuberculose",
+            "Insuffisance cardiaque/pulmonaire",
+            "Anémie (ferriprive, B12)",
+            "Médicamenteux : sédatifs, bêta-bloquants, antidépresseurs",
+            "Troubles du sommeil (apnées du sommeil)",
+            "Dépression, anxiété"
+          ]
+        },
+        {
+          "titre": "Dangers des benzodiazépines chez la personne âgée",
+          "contenu": "Les benzodiazépines présentent des risques particuliers chez les personnes âgées.",
+          "points": [
+            "Risque de dépendance accru",
+            "Augmentation du risque de chutes",
+            "Troubles cognitifs et confusion",
+            "Interaction avec polymédication",
+            "Demi-vie prolongée chez la personne âgée",
+            "Syndrome de sevrage difficile",
+            "Masquage de la pathologie sous-jacente"
+          ]
+        },
+        {
+          "titre": "Prise en charge optimale",
+          "contenu": "Approche globale intégrant aspects biologiques, psychologiques et sociaux.",
+          "points": [
+            "Bilan biologique complet avant traitement",
+            "Psychothérapie adaptée à la personne âgée",
+            "Antidépresseurs si nécessaire (ISRS en première intention)",
+            "Maintien à domicile avec aides appropriées",
+            "Suivi psycho-gériatrique spécialisé",
+            "Implication de l'entourage",
+            "Prévention du risque suicidaire"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "ISRS en première intention chez la personne âgée (sertraline, citalopram)",
+        "Débuter à faible dose et augmenter progressivement",
+        "Surveillance effets secondaires (hyponatrémie, saignements)",
+        "Éviter tricycliques (effets anticholinergiques)",
+        "Benzodiazépines : usage limité et court terme uniquement",
+        "Psychothérapie cognitivo-comportementale adaptée",
+        "Traiter au moins 6-12 mois après rémission"
+      ],
+      "examensComplementaires": [
+        "FSC : recherche anémie",
+        "Chimie sanguine : Na, K, créatinine (IRC connue!)",
+        "Ferritine : carence martiale",
+        "TSH, T4 : dysthyroïdie",
+        "Vitamine B12, folates",
+        "Glycémie à jeun",
+        "Bilan hépatique si suspicion",
+        "ECG si prescription antidépresseur",
+        "Imagerie cérébrale si troubles cognitifs"
+      ]
+    }
+  }
+}

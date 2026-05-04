@@ -1,0 +1,301 @@
+{
+  "title": "German-40 - Enurésie - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de pédiatrie",
+    "patient": "Mère consulte avec sa fille de 6 ans car celle-ci fait encore pipi dans sa culotte."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Description du problème",
+          "binaryOnly": true,
+          "patientComment": "La fillette fait encore pipi au lit la nuit, parfois aussi le jour"
+        },
+        {
+          "id": "a3",
+          "text": "Durée du problème",
+          "binaryOnly": true,
+          "patientComment": "Depuis toujours - n'a jamais été propre"
+        },
+        {
+          "id": "a4",
+          "text": "Fréquence des accidents",
+          "binaryOnly": false,
+          "details": [
+            "Fréquence nocturne [presque chaque nuit]",
+            "Fréquence diurne [1-2 fois par semaine]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Port de couches",
+          "binaryOnly": true,
+          "patientComment": "Non, la fillette ne veut plus"
+        },
+        {
+          "id": "a6",
+          "text": "Circonstances des accidents diurnes",
+          "binaryOnly": true,
+          "patientComment": "Surtout en jouant"
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes associés - Douleurs",
+          "binaryOnly": true,
+          "patientComment": "Non, rien remarqué"
+        },
+        {
+          "id": "a8",
+          "text": "Impact psychologique",
+          "binaryOnly": false,
+          "details": [
+            "Sur l'enfant [ne semble pas la déranger, dort et ne remarque rien]",
+            "Sur les parents [agacés par le lavage constant, inquiets car entrée au jardin d'enfants]",
+            "Comparaison sociale [ne veut plus de couches car sa cousine n'en a plus]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Caractéristiques des urines",
+          "binaryOnly": false,
+          "details": [
+            "Couleur [normale]",
+            "Odeur [normale]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes mictionnelles",
+          "binaryOnly": false,
+          "details": [
+            "Fréquence mictionnelle [5-6 fois par jour]",
+            "Autonomie aux toilettes [va seule]",
+            "Comportement [sans particularité]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Transit intestinal et encoprésie",
+          "binaryOnly": true,
+          "patientComment": "Très, très rarement"
+        },
+        {
+          "id": "a12",
+          "text": "Mesures déjà entreprises",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux d'énurésie",
+          "binaryOnly": false,
+          "details": [
+            "Mère [propre à 4 ans]",
+            "Père [incertain - plutôt tard]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Fratrie",
+          "binaryOnly": true,
+          "patientComment": "Non, enfant unique"
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Infections urinaires [aucune connue]",
+            "Maladies rénales [aucune]",
+            "Autres pathologies [aucune]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Bien-être psychologique et problèmes éducatifs",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a17",
+          "text": "Situation familiale",
+          "binaryOnly": true,
+          "patientComment": "Parents ensemble, pas de divorce"
+        },
+        {
+          "id": "a18",
+          "text": "Habitudes de boisson",
+          "binaryOnly": true,
+          "patientComment": "Boit plutôt beaucoup, grand biberon de lait le soir"
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur l'énurésie pédiatrique"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Hygiène des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal",
+          "binaryOnly": true,
+          "patientComment": "Souple, pas de résistance"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation rénale",
+          "binaryOnly": false,
+          "details": [
+            "Reins non palpables [pas d'hypertrophie]",
+            "Absence de douleur à la palpation"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen génital si approprié",
+          "binaryOnly": false,
+          "details": [
+            "Recherche de rougeur",
+            "Recherche de signes d'infection",
+            "Anomalies anatomiques"
+          ],
+          "scoringRule": "Examen complet = 2 pts, partiel = 1 pt, non fait = 0 pt"
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen abdominal et uro-génital adapté à l'âge et au problème"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": true,
+          "patientComment": "Énurésie primaire"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Énurésie secondaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Cause psychologique/stress",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, CRP, hémocultures si fièvre"
+                  },
+                  {
+                    "text": "Malformation uro-génitale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Cause neurologique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Immaturité vésicale",
+                    "cause": "Arguments POUR:\n\t□ oublis diurnes typiques de l'âge",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Analyse d'urine (bandelette et culture)",
+            "Échographie rénale si nécessaire dans le suivi"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Options thérapeutiques expliquées",
+          "binaryOnly": false,
+          "details": [
+            "Modification des habitudes de boisson",
+            "Calendrier soleil/nuages avec renforcement positif",
+            "Système d'alarme (culotte avec sonnette)",
+            "Médicaments : analogues de vasopressine (desmopressine)"
+          ],
+          "patientComment": "Cave : récidive possible après arrêt des médicaments"
+        },
+        {
+          "id": "m5",
+          "text": "Conseils de soutien et rassurance",
+          "binaryOnly": false,
+          "details": [
+            "Nécessite de la patience [pas encore inquiétant]",
+            "Statistiques rassurantes [1 enfant sur 10 pas propre au jardin d'enfants]",
+            "Éviter la pression excessive [ça va venir]",
+            "Approche positive et encourageante"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Planification du suivi",
+          "binaryOnly": true,
+          "patientComment": "Contrôle dans 2-3 mois"
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec approche bio-psycho-sociale adaptée"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

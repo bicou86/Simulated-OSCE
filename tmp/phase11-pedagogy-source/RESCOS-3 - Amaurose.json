@@ -1,0 +1,791 @@
+{
+  "title": "RESCOS-3 - Amaurose",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Mme Louise Richard, 63 ans, consulte suite à une perte de vue depuis ce matin.",
+    "vitals": {
+      "ta": "155/92 mmHg",
+      "fc": "78 bpm",
+      "temperature": "37.3°C",
+      "sao2": "99 %"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation cécité",
+          "details": [
+            "Localisation [œil droit]",
+            "Chronologie [depuis 2 heures]",
+            "Développement (subit / progressif) [début brusque]",
+            "Circonstance de survenue [sur le bateau ce matin pour aller au travail]",
+            "Perte de connaissance associée [non]"
+          ],
+          "scoringRule": "Les cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation céphalées",
+          "details": [
+            "Localisation [bitemporale]",
+            "Irradiation [vers l'oreille droite]",
+            "Qualité [en étau]",
+            "Quantité [4/10]",
+            "Chronologie [depuis environ 1 semaine]",
+            "Développement [progressif]"
+          ],
+          "scoringRule": "Les six = oui, cinq = ±, aucun à quatre = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse par système - générale",
+          "details": [
+            "Fièvre [non]",
+            "Sudation nocturne [oui, depuis 1 semaine]",
+            "Perte de poids [non]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a4",
+          "text": "Anamnèse par système - neurologique",
+          "details": [
+            "Diplopie [non]",
+            "Perte de force [non]",
+            "Perte de sensibilité [non]",
+            "Paresthésies [non]",
+            "Vertiges [non]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Habitudes",
+          "details": [
+            "Tabagisme [environ 1/2 paquet par jour depuis l'âge de 20 ans - 22 UPA]",
+            "Drogues [nihil]",
+            "Médicaments [nihil]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents et comorbidités",
+          "details": [
+            "Maladies actuelles [HTA non traitée mais suivie]",
+            "Antécédents médico-chirurgicaux [pneumothorax à 20 ans, tuberculose dans l'enfance traitée]",
+            "Allergies [aucune]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Ophtalmologique - observation",
+          "details": [
+            "Sclère",
+            "Paupière"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "Ophtalmologique - acuité visuelle",
+          "details": [
+            "Œil droit [0.2, devine des formes]",
+            "Œil gauche [normal]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Ophtalmologique - fond d'œil",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Neuro-ophtalmologique",
+          "details": [
+            "Champs visuels [absents à l'œil droit]",
+            "Poursuite oculaire / oculomotricité [impossible à l'œil droit si l'œil gauche est caché, normale à l'œil gauche]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "Neuro-ophtalmologique - réflexes pupillaires",
+          "details": [
+            "Direct",
+            "Croisé"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Neurologique - orientation aux 4 modes",
+          "details": [
+            "Temps",
+            "Localisation",
+            "Personne",
+            "Situation"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e7",
+          "text": "Neurologique - motricité & sensibilité grossière",
+          "details": [
+            "Motricité",
+            "Sensibilité"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "DD AVC - Test de Cincinnati (Stroke Scale)",
+          "details": [
+            "Motricité de la face (NC VII)",
+            "Épreuve des bras tendus",
+            "Répétition d'une phrase"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e9",
+          "text": "DD artérite de Horton",
+          "details": [
+            "Percussion de l'artère temporale [douleur à la percussion de la tempe droite]",
+            "Palpation de la mâchoire [claudication de la mâchoire]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e10",
+          "text": "Cardiaque",
+          "details": [
+            "Auscultation des 4 foyers",
+            "Auscultation des carotides des deux côtés"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e11",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Demande de laboratoire",
+          "details": [
+            "Formule sanguine simple (FSS) [Hb 113 g/L, plaquettes 422 G/L]",
+            "Vitesse de sédimentation (VS) [55 mm/h]",
+            "CRP [32 mg/L]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m2",
+          "text": "Demande de biopsie de l'artère temporale",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Évoque la nécessité d'exclure une dissection aortique en proposant",
+          "details": [
+            "Imagerie",
+            "Prise de tension aux 2 bras"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Évoque le diagnostic d'artérite de Horton / maladie de Horton / artérite temporale",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Propose l'introduction immédiate d'une corticothérapie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Propose en parallèle l'introduction de",
+          "details": [
+            "Calcium / vitamine D",
+            "Protection gastrique"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m7",
+          "text": "Propose une hospitalisation",
+          "binaryOnly": true
+        },
+        {
+          "id": "m8",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Manifestations cliniques de l’artérite de Horton",
+        "description": "Au début de la maladie, les symptômes peuvent être fluctuants (warning symptoms), avant de s’installer définitivement. Symptômes systémiques (fatigue, fièvre, perte pondérale) : présents chez la moitié des patients. Céphalées : le symptôme le plus fréquent ; souvent localisées au niveau temporal ou occipital (souvent de type hyperesthésies du cuir chevelu). Claudication de la mâchoire : probablement le symptôme le plus spécifique ; il consiste en une fatigue et/ou douleur des muscles masticateurs après quelques bouchées. Manifestations visuelles : diminution de l’acuité visuelle d’un ou deux yeux avec ou sans douleur, souvent précédée par une baisse de la vision des couleurs (dyschromatopsie) ; la perte définitive de la vision est précédée de troubles visuels transitoires dans 15-25% des cas ; l’atteinte visuelle résulte de l’atteinte des branches de l’artère ophtalmique, le plus souvent les artères ciliaires ; une vision initialement trouble peut progresser rapidement vers la cécité si un traitement corticoïde n’est pas rapidement administré, de plus, sans traitement, une atteinte controlatérale peut se manifester dans les une à deux semaines ; l’atteinte visuelle constitue donc une véritable urgence car si le déficit visuel s’installe, il sera permanent. Polymyalgia rheumatica : il s’agit d’une maladie inflammatoire d’étiologie indéterminée, fréquente, affectant 1/133 personnes > 50 ans ; là aussi le pic est à 70-80 ans ; la polymyalgia rheumatica (PM) se caractérise par une raideur matinale surtout au niveau des épaules et des régions cervicale et pelvienne ; le pronostic est favorable sous corticothérapie à petite dose ; on parle aussi d’un «spectre AH-PM».",
+        "data": "grilles_generees/html/images/amaurose-img0.jpg"
+      },
+      {
+        "title": "Fond d'œil - Neuropathie optique ischémique",
+        "description": "Image du fond d'œil montrant un papillœdème marqué, une pâleur du disque optique et des flammèches caractéristiques de l'artérite de Horton. L’atteinte visuelle résulte de l’atteinte des branches de l’artère ophtalmique, le plus souvent les artères ciliaires. Au fond d’œil, un œdème de nerf optique ou de la rétine indique une ischémie antérieure du nerf optique (Anterior Ischemic Optic Neuropathy, AION) ou une occlusion de l’artère centrale de la rétine.",
+        "data": "grilles_generees/html/images/amaurose-img1.jpg"
+      },
+      {
+        "title": "Laboratoire",
+        "description": "VS ↑↑ (> 50 mm/h). CRP (traduit l’activité inflammatoire de l’AT, utile pour témoigner de l’efficacité du traitement). Anémie (chez 55-85% des patients). Thrombocytose (chez 30-70% des patients). Les paramètre immunologiques sont normaux (ex : ANA, FR).",
+        "data": "grilles_generees/html/images/amaurose-img2.jpg"
+      },
+      {
+        "title": "Algorithme de prise en charge de l’artérite de Horton",
+        "description": "* Maintien de la corticothérapie tant que l’AH n’est pas formellement écartée. ** Biopsie bilatérale si pas de diagnostic alternatif.",
+        "data": "grilles_generees/html/images/amaurose-img3.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Louise Richard",
+      "age": "63 ans",
+      "contexte": "Infirmière consultant aux urgences pour perte de vue depuis ce matin",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens vous voir car j'ai perdu la vue depuis ce matin.",
+        "autreChose": "J'ai mal à la tête aussi"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Cécité subite",
+          "Localisation : Œil droit",
+          "Quantité/intensité : Devine des formes mais sinon rien",
+          "Chronologie : A débuté il y a 2 heures, pas d'amélioration depuis",
+          "Développement : Début brusque",
+          "Circonstances de survenue : J'étais dans le bateau ce matin pour aller au travail, quand j'ai perdu la vue"
+        ],
+        "symptomesAssocies": [
+          "Céphalée bitemporale en étau, progressive depuis environ 1 semaine, actuellement à 4/10, irradiant vers l'oreille droite",
+          "Asthénie progressive depuis une semaine, en péjoration nette depuis environ 1 jour. Vous vous sentez fatiguée, impression que le sommeil n'est pas réparateur.",
+          "Sudation nocturne depuis également, vous vous réveillez la nuit, mais pas toutes les nuits, en sueur avec votre lit trempé. Vous avez même changé vos draps une fois dans la semaine"
+        ],
+        "reponseAuxSymptomes": [
+          "Est venue consulter aux urgences"
+        ],
+        "representationMaladie": [
+          "A peur d'être en train de faire un AVC"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Sudations nocturnes depuis 1 semaine"
+        ],
+        "neurologique": [
+          "Cf. anamnèse actuelle",
+          "Trouble de l'orientation et de l'équilibre si œil gauche fermé"
+        ],
+        "osteoArticulaire": [
+          "Sentiment de raideur au réveil"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Nihil",
+        "alimentation": "Saine et équilibrée",
+        "activitePhysique": "Ne fait pas vraiment de sport",
+        "sommeil": "Sommeil irrégulier en raison de son métier (infirmière)",
+        "tabac": "Environ 1/2 paquet par jour depuis l'âge de 20 ans (22 UPA)",
+        "alcool": "1-2 verre de vin par semaine",
+        "drogues": "Nihil",
+        "sexualite": "Rapports réguliers non protégés avec son époux"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle, connue pour une hypertension artérielle (HTA) non traitée mais régulièrement suivie chez le médecin traitant",
+        "Vaccins à jour",
+        "Pas d'allergie",
+        "Ne prend pas de médicament",
+        "Hospitalisée deux fois dans sa vie pour la naissance de ses 2 enfants (3G2P)",
+        "Pneumothorax à l'âge de 20 ans",
+        "Tuberculose dans l'enfance qui a été traitée",
+        "Anamnèse familiale sans particularité"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Tic à l'œil droit (haute fréquence de clignements des paupières)",
+          "Se tient la tête de temps en temps"
+        ],
+        "durantStatus": [
+          "Trouble de l'orientation & de l'équilibre à la fermeture de l'œil gauche (par exemple, quand le médecin vous fait le status ophtalmologique et vous demande de fermer l'œil gauche)",
+          "Douleur à la percussion de la tempe droite",
+          "Hyperesthésie du cuir chevelu (ça fait mal quand on touche)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Anamnèse actuelle :\nPatiente de 63 ans, infirmière, connue pour une HTA non traitée, consulte aux Urgences suite à l'apparition d'une cécité subite de l'œil droit (OD) il y a environ 2 heures. La patiente était sur un bateau (Evian-Lausanne) pour se rendre au travail. A l'anamnèse, la patiente dit pouvoir encore vaguement distinguer les formes mais ne peut plus s'orienter si elle ferme l'œil controlatéral. Elle mentionne également perdre l'équilibre si elle ferme l'œil gauche (OG). Elle n'a pas eu de traumatisme direct au niveau de l'œil ou de traumatisme crânien. Pas de perte de conscience. Elle ne présente pas de trouble de la motricité ou de la sensibilité. Elle ne présente pas de vertiges.\n\nA l'anamnèse par système, on note l'apparition d'une céphalée bitemporale en étau depuis environ 1 semaine, progressive et irradiant vers l'oreille droite. La douleur est actuellement à 4/10. Elle mentionne également des épisodes de sudation nocturne depuis 1 semaine, sans état fébrile associé (mesuré à domicile). Le reste de l'anamnèse par système est sans particularité. La patiente n'a pas d'allergie connue.\n\nAnamnèse familiale : sans particularité.\nPoids : 72 kg, taille 1.72m\nFRCV : tabagisme actif à 22 UPA, HTA, pas de diabète connu, sédentarité.\nMédicaments : nihil.\n\nAntécédents et comorbidités :\n• HTA non traitée (surveillée 2x/an chez le médecin traitant)\n• Pneumothorax à l'âge de 20 ans\n• Notion de tuberculose dans l'enfance, non documentée\n\nStatus :\n• Ophtalmo : observation des sclères et des paupières (y compris éversion) sans particularité, acuité visuelle à 0.2 à l'OD, sans particularité à l'OG, poursuite oculaire impossible à l'OD si l'OG est caché, normale à l'OG. Champs visuels absents à l'OD. Oculomotricité bilatérale normale. Fond d'œil OG sans particularité. Fond d'œil OD : papillœdème marqué, pâleur du disc optique, flammèche.\n• Neuro : GCS 15/15, orientée aux 3 modes, NC sans particularité hormis troubles de l'acuité visuelle de l'OD décrits ci-dessus, épreuve des bras tendus tenue, Romberg négatif, doigt-nez impossible dans l'hémichamp droit mais normal à gauche, réflexes ostéo-tendineux normovifs et symétriques, réflexe cutané-plantaire (RCP) indifférent.\n\nProblèmes et attitude :\nSuspicion d'artérite de Horton (artérite temporale droite) avec :\n• Amaurose de l'œil D\n\nInvestigations :\n• Laboratoire : CRP 32 mg/L, VS élevée à 55 mm/h, formule sanguine simple alignée hormis thrombocytose légère à 422 G/L\n• Biopsie de l'artère temporale droite : effectuée, résultats à pister.\n• US des vx i : demandée, résultats à pister.\n\nAttitude :\n• Au vu de la forte suspicion diagnostique, instauration immédiate d'une corticothérapie par méthylprednisolone 1 g (patiente de > 60 kg) IV 1x/j pour trois jours, suivi de prednisone per os 1 mg/kg/jour. Adapter / arrêter traitement selon résultat biopsie.\n• Initiation d'un traitement par Calcimagon-D3-Forte (calcium + vitamine D3) avec pantoprazole 40mg 1x/j (protection gastrique).\n• Initiation d'un traitement par bisphosphonate (alendronate 70 mg par semaine). Densitométrie osseuse (minéralométrie) à effectuer dans les meilleurs délais.\n• Vérification du status vaccinal à effectuer auprès du médecin traitant, envisager sérologie hépatites, TB-spot à faire dans les deux prochaines semaines, vaccin anti-grippal et antipneumococcique à envisager si absents.\n• Hospitalisation avec alitement pour 3 jours afin d'augmenter la pression de perfusion de la papille/rétine (recommandation ophtalmologique).",
+      "rolesInterventions": [
+        "Remplir la grille d'évaluation",
+        "Donner les résultats des examens demandés : FSS, CRP, VS",
+        "Fournir l'image du fond d'œil quand le médecin fait le status ophtalmologique",
+        "Un lien pour un tableau pour mesurer l'acuité visuelle est à disposition dans la bibliographie (3ème référence). N'hésitez pas à l'imprimer !"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Général",
+          "points": [
+            "L'artérite temporale (AT) avec atteinte oculaire est une URGENCE MEDICALE.",
+            "L'AT appartient aux vasculites avec atteinte des gros vaisseaux.",
+            "Il s'agit d'une vasculite (panartérite) des grosses artères extracrâniennes et de l'arc aortique et branches terminales (aa. Sous-clavière, rénales, iliaques)",
+            "L'AT survient généralement à partir de l'âge de 50 ans.",
+            "Femmes/hommes = 2:1"
+          ]
+        },
+        {
+          "titre": "En pratique clinique",
+          "points": [
+            "Une artérite temporale qui n'est pas diagnostiquée et traitée immédiatement risque de développer une cécité brusque !",
+            "Une amaurose fugace DOIT toujours faire évoquer le diagnostic potentiel d'une AT.",
+            "En présence d'une artérite temporale, le risque d'un anévrisme de l'aorte thoracique est augmenté d'un facteur 15 !"
+          ]
+        },
+        {
+          "titre": "Étiologie",
+          "contenu": "Inconnue"
+        },
+        {
+          "titre": "Clinique - Symptômes généraux",
+          "points": [
+            "Asthénie, épuisement, fièvre, diaphorèse nocturne",
+            "Raideur matinale, myalgies",
+            "Céphalée temporale",
+            "Hyperesthésie du cuir chevelu (le fait de passer le peigne fait mal)"
+          ]
+        },
+        {
+          "titre": "Clinique - Troubles visuels",
+          "points": [
+            "Cécité : Il s'agit souvent d'une manifestation inaugurale ! Si l'atteinte oculaire est unilatérale et non traitée, le 2ème œil risque d'être touché 1-2 sem. plus tard.",
+            "Les modifications suivantes du fond d'œil s'observent généralement seulement APRES la perte visuelle : Pâleur du disque optique due à l'ischémie (= neuropathie optique), Cotton-wool patches, Petits foyer hémorragiques rétiniens, papillœdème",
+            "Diplopie (par occlusion de l'a. ophtalmique et les aa. Ciliaires postérieures)",
+            "Amaurose fugace avec cécité"
+          ]
+        },
+        {
+          "titre": "Clinique - Signes locaux de l'a. temporale superficielle (chez 50% des patients)",
+          "points": [
+            "Tuméfaction douloureuse et rougeur de la région temporale",
+            "Le pouls de l'a. temporale peut être affaibli ou absent",
+            "Claudications des extrémités (membres sup > inf.)"
+          ]
+        },
+        {
+          "titre": "A rechercher à l'examen physique",
+          "points": [
+            "Souffles vasculaires",
+            "Asymétrie de pression artérielle, de pouls",
+            "Dilatation anévrismale de l'aorte"
+          ]
+        },
+        {
+          "titre": "Diagnostic",
+          "contenu": "Le diagnostic est retenu en présence de ≥ 3/5 des critères :",
+          "points": [
+            "Début de la symptomatologie ≥ 50 ans",
+            "Céphalée nouvelle ou nouveau type de céphalée",
+            "Artère temporale superficielle sensible à la palpation ou affaiblissement/absence du pouls",
+            "VS ≥ 50 mm/h",
+            "Histologie typique d'AT lors de la biopsie de l'a. temporale superficielle (vasculite avec infiltration mononucléaire prédominante ou inflammation granulomateuse, généralement avec des cellules géantes)"
+          ]
+        },
+        {
+          "titre": "Note importante",
+          "contenu": "Bien qu'étant souvent le symptôme d'appel, la cécité ne fait pas partie des critères diagnostics !"
+        },
+        {
+          "titre": "Laboratoire",
+          "points": [
+            "VS ↑↑ (> 50 mm/h)",
+            "CRP (traduit l'activité inflammatoire de l'AT, utile pour témoigner de l'efficacité du traitement)",
+            "Anémie (chez 55-85% des patients)",
+            "Thrombocytose (chez 30-70% des patients)",
+            "Les paramètre immunologiques sont normaux (ex : ANA, FR)"
+          ]
+        },
+        {
+          "titre": "Attitude en cas de suspicion d'AT",
+          "points": [
+            "Biopsie de l'artère temporale superficielle. Indiqué chez tous les patients avec suspicion d'AT",
+            "US des vaisseaux extracrâniens"
+          ]
+        },
+        {
+          "titre": "Traitement",
+          "points": [
+            "Sans atteinte oculaire : corticoïdes PO durée 6-12 mois selon la clinique",
+            "Avec atteinte oculaire : corticoïde IV à haute dose (urgence !) puis passer en PO",
+            "Toute initiation de corticothérapie chez une personne de > 50 ans nécessite l'introduction en parallèle d'un traitement contre l'ostéoporose, par calcium, vitamine D et biphosphonates"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel",
+          "contenu": "Le diagnostic différentiel est large et dépend de la présentation, mais on peut relever les plus fréquents :",
+          "points": [
+            "AVC/AIT d'origine athéro-thrombotique",
+            "Polymyalgia rheumatica sans AT",
+            "Autres vasculites systémiques (micro-PAN, Wegener, Takayasu)",
+            "Vasculite primaire du système nerveux central (SNC)",
+            "Amyloïdose primaire du SNC",
+            "Glaucome",
+            "Maladie de Lyme",
+            "..."
+          ]
+        },
+        {
+          "titre": "Remarques",
+          "points": [
+            "Une Rx des poumons (1x/an) est recommandée comme bilan minimal (risque dissection aortique +++)",
+            "Des récidives peuvent se manifester sous forme d'AT ou de polymyalgia rheumatica (50% des patients avec une AT développent une polymyalgia rheumatica)"
+          ]
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Maladie de Horton (Giant Cell Arteritis) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes cardinaux",
+              "points": [
+                "Céphalée récente, souvent temporale, pulsatile, unilatérale ou bilatérale",
+                "Claudication mandibulaire (douleur à la mastication)",
+                "Troubles visuels : amaurose fugace, diplopie, scintillements, flou visuel"
+              ]
+            },
+            {
+              "titre": "Contexte général",
+              "points": [
+                "Âge > 50 ans",
+                "Prédominance féminine (ratio 2:1)",
+                "Signes généraux : fatigue, fièvre, perte de poids, sueurs nocturnes"
+              ]
+            },
+            {
+              "titre": "Symptômes associés",
+              "points": [
+                "Polymyalgie rhumatismale : douleurs et raideurs matinales des ceintures (présente chez ~50%)",
+                "Hyperesthésie du cuir chevelu",
+                "Toux sèche persistante (forme à gros vaisseaux)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes localisés",
+              "points": [
+                "Artère temporale épaissie, douloureuse, indurée, parfois non battante",
+                "Diminution ou absence du pouls temporal",
+                "Asymétrie des pouls périphériques",
+                "Signes ophtalmiques : baisse acuité visuelle, papille pâle"
+              ]
+            },
+            {
+              "titre": "Signes systémiques",
+              "points": [
+                "Souffle vasculaire (carotidien, sous-clavier)",
+                "Asymétrie tensionnelle aux deux bras",
+                "Déficit neurologique focal (rare mais grave)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens biologiques et d'imagerie",
+              "tableau": {
+                "colonnes": ["Examen", "Résultat attendu", "Intérêt"],
+                "lignes": [
+                  ["VS/CRP", "Très élevées (VS > 50 mm/h)", "Inflammation systémique"],
+                  ["NFS", "Anémie, thrombocytose", "Syndrome inflammatoire"],
+                  ["Écho Doppler temporal", "Signe du halo", "Non invasif, rapide"],
+                  ["Biopsie temporale", "Infiltrat + cellules géantes", "Gold standard"],
+                  ["TEP-TDM ou angio-IRM", "Inflammation vasculaire", "Formes à gros vaisseaux"]
+                ]
+              },
+              "points": [
+                "⚠️ La corticothérapie ne doit pas être retardée en cas de forte suspicion clinique"
+              ]
+            },
+            {
+              "titre": "Critères diagnostiques ACR",
+              "points": [
+                "Âge ≥ 50 ans au début",
+                "Céphalée nouvelle ou nouveau type",
+                "Anomalie de l'artère temporale",
+                "VS ≥ 50 mm/h",
+                "Biopsie artérielle positive",
+                "Diagnostic retenu si ≥ 3 critères sur 5"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "🔴 Traitement d'urgence",
+              "tableau": {
+                "colonnes": ["Situation", "Traitement", "Posologie"],
+                "lignes": [
+                  ["Atteinte visuelle/neuro", "Méthylprednisolone IV", "500-1000 mg/j x 3j"],
+                  ["Sans atteinte visuelle", "Prednisone PO", "1 mg/kg/j (max 80mg)"],
+                  ["Prévention", "IPP + Ca/VitD", "Dès J1"]
+                ]
+              },
+              "points": [
+                "Initiation AVANT la biopsie si forte suspicion",
+                "Biopsie dans les 2 semaines après corticoïdes"
+              ]
+            },
+            {
+              "titre": "🟡 Suivi à long terme",
+              "points": [
+                "Décroissance progressive des corticoïdes sur 12-24 mois",
+                "Surveillance VS/CRP mensuelle",
+                "Prévention ostéoporose : biphosphonates si T-score < -1.5",
+                "Surveillance : glycémie, TA, poids, cataracte",
+                "Tocilizumab si cortico-dépendance"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Interroger sur : céphalée, troubles visuels, douleurs mandibulaires",
+            "Savoir reconnaître l'urgence thérapeutique : éviter cécité",
+            "Ne pas retarder la corticothérapie pour attendre les résultats",
+            "Connaître les examens clés : VS/CRP, écho Doppler, biopsie",
+            "Savoir expliquer au patient l'évolution possible et les effets secondaires de la corticothérapie"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Amaurose (Artérite de Horton)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale – Format de présentation ECOS",
+          "points": [
+            "Intro → âge, ATCD, motif",
+            "Symptôme principal → début, mode d'installation, circonstances, durée",
+            "Signes associés → céphalée, AEG, fièvre, symptômes neurologiques",
+            "ATCD et FDR → cardiovasculaires, auto-immuns, tabac",
+            "Examen clinique → ophtalmo, neuro, temporal, cardio",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires urgents",
+            "Prise en charge immédiate et suivi"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo pour ne rien oublier : 3C-3E",
+            "elements": [
+              "Contexte (âge, ATCD, FDR)",
+              "Clinique (symptôme + associés)",
+              "Clinical exam (œil, neuro, temporal)",
+              "Examens complémentaires (labo, imagerie, biopsie)",
+              "Emergency management (corticoïdes)",
+              "Evolution/suivi"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s'agit de Mme Richard, 63 ans, connue pour une HTA non traitée et un tabagisme chronique, qui consulte aux urgences pour une perte brutale de la vision de l'œil droit depuis 2 heures, survenue alors qu'elle se rendait au travail.\n\nElle distingue seulement des formes floues, sans perte de connaissance ni déficit moteur ou sensitif.\n\nCette symptomatologie s'accompagne d'une céphalée bitemporale progressive depuis une semaine, de type \"en étau\" irradiant vers l'oreille droite, cotée à 4/10, ainsi que d'une asthénie et de sudations nocturnes. Pas de fièvre, pas de perte de poids.\n\nATCD : pneumothorax à 20 ans, tuberculose traitée dans l'enfance, pas d'allergie connue. Pas de traitement actuel.\nHabitudes : tabac 22 UPA, pas de drogues.\n\nÀ l'examen : TA 155/92, FC 78, T° 37.3, SpO₂ 99 %.\nL'acuité visuelle est très réduite à droite (0.2, perçoit des formes), normale à gauche. Les champs visuels sont abolis à droite. Fond d'œil droit : papillœdème, pâleur du disque optique et hémorragies en flammèches.\nNeuro : patiente orientée, pas de déficit moteur ni sensitif. Pas de signes d'AVC au test de Cincinnati.\nPalpation de l'artère temporale droite : douloureuse, hyperesthésie du cuir chevelu, claudication de la mâchoire.\n\nEn résumé, il s'agit d'une patiente de 63 ans présentant une amaurose brutale unilatérale avec céphalée temporale et signes systémiques, sur terrain hypertendu et fumeuse.\n\nL'hypothèse principale est une artérite temporale de Horton compliquée de neuropathie optique ischémique antérieure.\n\nDiagnostics différentiels : AVC ischémique, occlusion de l'artère centrale de la rétine, glaucome aigu, autres vasculites.\n\nExamens complémentaires : labo avec VS, CRP, NFS (ici VS 55, CRP 32, Hb 113, plaquettes 422), biopsie de l'artère temporale, écho-Doppler temporal et carotidien, TA aux deux bras pour éliminer dissection aortique.\n\nPrise en charge : instauration immédiate d'une corticothérapie IV forte dose (méthylprednisolone), relais PO, associée à une protection gastrique, calcium + vitamine D, et bisphosphonates.\nUne hospitalisation est indiquée pour surveillance et examens complémentaires."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Richard, 63 ans, consulte pour cécité brutale de l'œil droit depuis 2h.\n\nB (Background) : ATCD HTA non traitée, tabac. Céphalées temporales depuis 1 semaine, sudations nocturnes, asthénie.\n\nA (Assessment) : Suspicion d'artérite temporale de Horton compliquée d'amaurose. VS et CRP élevées, fond d'œil évocateur.\n\nR (Recommendation) : Corticothérapie IV urgente, biopsie temporale, calcium + vit D + IPP, hospitalisation.",
+          "mnemo": {
+            "titre": "👉 Mnémo express : SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "AT = AGE (critères diagnostiques)",
+              "points": [
+                "Age > 50 ans",
+                "Giant cells (biopsie granulomateuse)",
+                "ESR élevée (VS > 50 mm/h)"
+              ]
+            },
+            {
+              "titre": "Urgence amaurose → VITE",
+              "points": [
+                "Vision perdue (urgence !)",
+                "Initiation immédiate corticoïdes",
+                "Test = biopsie temporale",
+                "Eviter la cécité du 2ᵉ œil"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Artérite de Horton",
+                  "reponse": {
+                    "pour": [
+                      "Âge > 50 ans",
+                      "Céphalées temporales récentes",
+                      "Hyperesthésie du cuir chevelu",
+                      "Claudication de la mâchoire",
+                      "Altération de l'état général",
+                      "VS/CRP élevées",
+                      "Fond d'œil pathologique"
+                    ],
+                    "contre": [
+                      "Pas de fièvre (mais non indispensable)",
+                      "Pas de perte de poids (mais non indispensable)"
+                    ]
+                  }
+                },
+                {
+                  "question": "AVC ischémique",
+                  "reponse": {
+                    "pour": [
+                      "Âge",
+                      "HTA",
+                      "Tabagisme"
+                    ],
+                    "contre": [
+                      "Pas de déficit moteur/sensitif",
+                      "Atteinte purement oculaire",
+                      "Céphalées temporales associées"
+                    ]
+                  }
+                },
+                {
+                  "question": "Occlusion de l'artère centrale de la rétine",
+                  "reponse": {
+                    "pour": [
+                      "Perte brutale de vision",
+                      "Unilatérale"
+                    ],
+                    "contre": [
+                      "Fond d'œil différent (pas d'œdème papillaire typique)",
+                      "Contexte inflammatoire associé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Glaucome aigu",
+                  "reponse": {
+                    "pour": [
+                      "Perte de vision brutale"
+                    ],
+                    "contre": [
+                      "Pas de douleur oculaire intense",
+                      "Pas de rougeur oculaire",
+                      "PIO non mesurée mais clinique atypique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Examens à demander",
+                  "reponse": [
+                    "VS, CRP (marqueurs inflammatoires)",
+                    "NFS (anémie, thrombocytose)",
+                    "Biopsie de l'artère temporale",
+                    "Écho-Doppler temporal et carotidien",
+                    "TA aux deux bras (dissection aortique ?)"
+                  ],
+                  "analyse": "👉 Analyse orale : « Ces examens confirment l'inflammation systémique, recherchent les complications vasculaires et confirment le diagnostic histologique. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Artérite temporale de Horton compliquée d'amaurose"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Corticothérapie IV haute dose (méthylprednisolone 500-1000mg/j)",
+                      "Relais PO (prednisone 1mg/kg/j)",
+                      "Protection gastrique (IPP)",
+                      "Calcium + Vitamine D",
+                      "Bisphosphonates si ostéoporose"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance risque de cécité controlatérale (1-2 semaines)",
+                    "Décroissance progressive des corticoïdes",
+                    "Surveillance VS/CRP mensuelle",
+                    "Dépistage anévrisme aortique (Rx/angio annuelle)"
+                  ],
+                  "astuce": "👉 Astuce révision : Penser au trio « Voir – Traiter – Surveiller » : Voir → urgence ophtalmologique, Traiter → corticoïdes immédiats, Surveiller → complications et rechutes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

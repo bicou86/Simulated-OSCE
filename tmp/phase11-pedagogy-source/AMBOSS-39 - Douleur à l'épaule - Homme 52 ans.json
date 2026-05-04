@@ -1,0 +1,868 @@
+{
+  "title": "AMBOSS-39 - Douleur à l'épaule - Homme 52 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Ryan Mitchell, homme de 52 ans, consultant pour douleur à l'épaule",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "120/80 mmHg",
+      "fc": "64 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une douleur à l'épaule vraiment gênante. Je ne peux faire aucun sport en ce moment"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur à l'épaule",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Mon épaule gauche]",
+            "Intensité (sur une échelle de 0-10) [Si je n'utilise pas mon bras gauche, je dirais un 3. Si j'essaie de soulever des choses lourdes, alors ça peut monter jusqu'à un 6 ou 7]",
+            "Qualité [Une douleur sourde. Mais si je fais certains mouvements ça peut aussi donner l'impression que quelqu'un me poignarde avec un couteau]",
+            "Début [Il y a 5 jours, c'est devenu vraiment mauvais. Mais avant ça j'avais une douleur plus légère depuis 2 semaines]",
+            "Événements précipitants [J'étais à la salle de sport en train de soulever des poids quand c'est soudainement devenu pire il y a 5 jours]",
+            "Progression/constante/intermittente [Ça empire]",
+            "Épisodes antérieurs [J'ai eu un problème avec mon épaule gauche il y a 2 ans. À l'époque je jouais beaucoup au tennis et je suis aussi tombé sur mon épaule gauche. Le médecin m'a dit que j'avais une blessure de surutilisation. Mais tout ça était guéri, et je n'ai pas vraiment eu de problèmes avec mon épaule jusqu'à il y a 2 semaines]",
+            "Irradiation [Toute mon épaule gauche fait mal, mais rien d'autre]",
+            "Facteurs améliorants [Si je ne porte rien avec mon bras gauche. Si je ne me couche pas sur mon épaule gauche]",
+            "Facteurs aggravants [Si je porte ou tire des choses avec mon bras gauche. Et ça fait particulièrement mal quand je soulève des choses avec mon bras gauche ou si je me couche sur mon épaule gauche]",
+            "Symptômes associés [Mon épaule gauche est un peu raide depuis 2 semaines. Je ne peux pas la bouger comme avant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour douleur à l'épaule",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Fièvre/frissons [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleur thoracique [Non]",
+            "Essoufflement [Non]",
+            "Douleurs articulaires [Non]",
+            "Problèmes de sommeil [Je n'ai pas bien dormi ces derniers jours. C'est plus douloureux pendant la nuit, et je ne peux pas me coucher sur mon épaule parce que ça cause beaucoup de douleur]",
+            "Infections récentes [Non]",
+            "Faiblesse des membres supérieurs [Hmm, j'ai l'impression d'avoir moins de force dans mon bras gauche. Mais c'est difficile à dire parce que c'est douloureux quand je l'utilise]",
+            "Mouvements limités des membres supérieurs [Quand je bouge mon bras gauche, toute mon épaule est raide. Je ne peux pas lever mon bras au-dessus de ma tête et me gratter le dos]",
+            "Gonflement de l'épaule [Non]",
+            "Altération de la sensation dans les membres supérieurs [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Je me suis cassé la main droite il y a 6 ans. Et j'ai eu une blessure de surutilisation de l'épaule il y a 2 ans"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "J'ai essayé du Vicodin de ma copine, qu'il lui restait d'une chirurgie l'année dernière. Ça a vraiment aidé pour la douleur mais ça m'a rendu un peu étourdi"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Seulement pour ma chirurgie de la main]",
+            "Antécédents chirurgicaux [J'ai eu une chirurgie pour ma main cassée]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père a une bronchite chronique, mais il fume aussi"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaille comme peintre. Ça a été presque impossible de faire mon travail ces 2 dernières semaines]",
+            "Domicile [Je vis avec ma copine]",
+            "Alcool [Non]",
+            "Drogues récréatives [Non]",
+            "Tabac [Non, jamais]",
+            "Exercice [Je fais de l'exercice plusieurs fois par semaine. J'adore le tennis et je fais aussi de la musculation. Mais ces derniers jours je n'ai fait aucun sport]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des membres supérieurs",
+            "Palpation du pouls radial",
+            "Inspection de la région de l'épaule",
+            "Palpation de la région de l'épaule [Sensibilité diffuse de l'épaule gauche avec sensibilité prononcée sur la région sous-acromiale]",
+            "Examen ciblé des mouvements passifs et actifs des membres supérieurs [Les mouvements actifs et passifs de l'épaule gauche sont lents à cause de la douleur. Force 4/5 dans l'épaule gauche]",
+            "Examen ciblé de la sensibilité des membres supérieurs",
+            "Examen ciblé des réflexes ostéotendineux des membres supérieurs"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Tests spécifiques de l'épaule",
+          "binaryOnly": false,
+          "details": [
+            "Test de l'arc douloureux [Douleur avec abduction du bras de 0-120°. Particulièrement douloureux avec abduction de 60°-120°]",
+            "Test de Neer [Positif : Le mouvement cause de la douleur]",
+            "Test de Jobe [Positif : Le patient ne peut pas résister à la pression]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Lésions de la coiffe des rotateurs",
+                "items": [
+                  {
+                    "text": "Rupture de la coiffe des rotateurs",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans avec activités au-dessus de la tête\n\t□ Antécédent de blessure de surutilisation de l'épaule\n\t□ Douleur aiguë et faiblesse de l'épaule\n\t□ Douleur nocturne en décubitus sur l'épaule affectée\n\t□ Tests positifs : arc douloureux, Neer, Jobe\n\t□ Test de Jobe positif = atteinte du supra-épineux (plus fréquent)\n\t□ Force diminuée (4/5) à l'épaule gauche",
+                    "test": "→ US ou IRM épaule gauche (évaluation étendue lésion)"
+                  }
+                ]
+              },
+              {
+                "name": "Syndrome de conflit sous-acromial",
+                "items": [
+                  {
+                    "text": "Syndrome de conflit sous-acromial",
+                    "cause": "Arguments POUR:\n\t□ Condition fréquente avec activités au-dessus de la tête\n\t□ Douleur nocturne en décubitus sur l'épaule\n\t□ Arc douloureux et test de Neer positifs\nArguments CONTRE:\n\t□ Début soudain douleur + force diminuée + test Jobe positif suggèrent rupture coiffe",
+                    "test": "→ Test injection lidocaïne sous-acromiale (différenciation)"
+                  }
+                ]
+              },
+              {
+                "name": "Capsulite rétractile",
+                "items": [
+                  {
+                    "text": "Épaule gelée (capsulite adhésive)",
+                    "cause": "Arguments POUR:\n\t□ Douleur sourde épaule, sensibilité diffuse\n\t□ Raideur de l'épaule\n\t□ Âge > 40 ans\nArguments CONTRE:\n\t□ Restriction significative amplitude mouvement dans tous les plans (surtout rotation externe) absente ici",
+                    "test": "→ Radiographie épaule (éliminer pathologies osseuses)"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Tendinite de la coiffe",
+                    "cause": "Inflammation sans rupture complète",
+                    "test": "→ US épaule"
+                  },
+                  {
+                    "text": "Tendinite calcifiante",
+                    "cause": "Dépôts calciques dans tendons",
+                    "test": "→ Radiographie standard"
+                  },
+                  {
+                    "text": "Tendinite bicipitale",
+                    "cause": "Douleur antérieure spécifique",
+                    "test": "→ Test de Speed, Yergason"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "US de l'épaule gauche [pour évaluer l'étendue de la blessure de l'épaule et les structures affectées. L'imagerie (US, IRM, radiographie) ne serait pas réalisée systématiquement sauf si réparation chirurgicale envisagée. Cependant, vu l'âge du patient et sa profession nécessitant travail au-dessus de la tête, réparation chirurgicale peut être indiquée]",
+            "IRM de l'épaule gauche [pour évaluer l'étendue de la blessure de l'épaule et les structures affectées]",
+            "Radiographie de l'épaule gauche [pour évaluer changements dégénératifs, lésions osseuses ou luxations]",
+            "Test d'injection lidocaïne sous-acromiale [peut aider à distinguer syndrome conflit sous-acromial (incluant bursite et tendinite) des autres causes douleur épaule (rupture complète coiffe, épaule gelée, arthrite gléno-humérale)]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'utilisation d'opioïdes sur ordonnance",
+            "Réaction appropriée au défi concernant le retour au sport"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures conservatrices initiales",
+                "content": "• Repos relatif: Éviter mouvements au-dessus tête\n• Glace: 20 min × 3-4/j phase aiguë\n• AINS: Ibuprofène 600 mg × 3/j × 7-10j\n• Modification activités professionnelles\n• Maintien mobilité: Éviter immobilisation complète"
+              },
+              {
+                "title": "Si rupture partielle coiffe des rotateurs",
+                "content": "• Kinésithérapie précoce intensive\n• • Phase 1 (0-6 sem): Mobilisation passive\n• • Phase 2 (6-12 sem): Renforcement progressif\n• • Phase 3 (3-6 mois): Retour activités\n• Infiltration corticoïdes sous-acromiale\n• • Ma: • Maximum 3 injections/an\n• Taux guérison  95% avec antiviraux action directex succès conservateur: 70-80% ruptures partielles"
+              },
+              {
+                "title": "Si rupture complète coiffe des rotateurs",
+                "content": "• Indications chirurgicales\n• Patient 60 ans actif\n• Rupture aiguë traumatique\n• Échec traitement conservateur 3-6 mois\n• Profession nécessitant travail overhead (peintre)\n• Perte fonction significative\n• Techniques chirurgicales\n• Réparation arthroscopique: (gold standard)\n• Réparation ouverte si rupture massive\n• Débridement si réparation impossible\n• Prothèse inversée si arthropathie\n• Rééducation post-opératoire\n• Immobilisation 4-6 semaines\n• Mobilisation passive précoce J1\n• Actif-assisté à 6 semaines\n• Renforcement à 3 mois\n• Retour sport/travail 6-12 mois"
+              },
+              {
+                "title": "Si syndrome conflit sous-acromial isolé",
+                "content": "• Kinésithérapie: Recentrage tête humérale\n• Exercices renforcement coiffe\n• Étirements capsule postérieure\n• Acromioplastie si échec 6 mois"
+              },
+              {
+                "title": "Prévention récidive",
+                "content": "• Échauffement avant activités\n• Renforcement préventif coiffe\n• Ergonomie poste travail\n• Alternance tâches overhead\n• Étirements réguliers"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Rupture massive irréparable",
+                "description": "Rétraction tendineuse > 5 cm → prothèse inversée"
+              },
+              {
+                "text": "Arthropathie de rupture",
+                "description": "Arthrose gléno-humérale secondaire → douleur chronique"
+              },
+              {
+                "text": "Épaule pseudo-paralytique",
+                "description": "Incapacité élévation active → chirurgie urgente"
+              },
+              {
+                "text": "Atrophie musculaire",
+                "description": "Fosses sus/sous-épineuses creusées → pronostic réservé"
+              },
+              {
+                "text": "Capsulite adhésive secondaire",
+                "description": "Immobilisation prolongée → raideur irréversible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Retour au sport",
+          "content": "[Qu'est-ce que vous en pensez - quand est-ce que je peux retourner à la salle de sport pour faire mes entraînements habituels ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Mitchell, je comprends que vous voulez retourner à vos entraînements, mais je crois que mettre une tension sur votre épaule maintenant pourrait potentiellement aggraver vos symptômes. Cependant, vous pouvez essayer des sports qui mettent moins de stress sur votre épaule, comme la course à pied. Et je vous promets que nous ferons de notre mieux pour traiter votre douleur à l'épaule. Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Amplitude normale d'abduction de l'épaule et douleur dans le conflit",
+        "description": "L'amplitude normale de mouvement est représentée par un demi-cercle vert. La plage d'angle dans laquelle le conflit entraîne une douleur (arc douloureux) est indiquée en rouge.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img1-Normal range of shoulder abduction and pain in impingement.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Techniques de palpation de l'épaule",
+        "description": "(A) Palpation et test de laxité articulaire de l'articulation sterno-claviculaire (l'examinateur évalue la douleur ou le mouvement important en tenant la clavicule entre le pouce et l'index d'une main et en palpant le manubrium avec l'autre)\n(B) Palpation de la clavicule et de l'articulation acromio-claviculaire\n(C) Palpation du processus coracoïde dans la fosse infraclaviculaire (confirmer la palpation correcte par flexion/abduction du bras supérieur, ce qui provoque le mouvement du processus coracoïde sous le doigt palpateur)\n(D) Palpation du tubercule majeur de l'humérus (peut être palpé comme une protubérance mobile lors de la rotation interne et externe du bras).",
+        "data": "grilles_generees/html/images/AMBOSS-39-img2-Palpation techniques of the shoulder.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Palpation dorsale de la scapula",
+        "description": "Palpation depuis : l'épine de la scapula (A), le bord médial de la scapula (B), l'angle inférieur de la scapula (C), et le bord latéral de la scapula (D).",
+        "data": "grilles_generees/html/images/AMBOSS-39-img3-Dorsal palpation of the scapula.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Test de Jobe",
+        "description": "Dans le test de Jobe, l'examinateur applique une pression vers le bas (flèche rouge) sur le bras en abduction, flexion horizontale et rotation interne du patient. On demande au patient de résister à la pression vers le bas (flèche verte). Le muscle supra-épineux, en particulier, est nécessaire pour maintenir la position du bras. S'il y a de la douleur ou si le patient est incapable de maintenir cette position contre la résistance exercée par l'examinateur, cela indique un trouble fonctionnel du muscle supra-épineux (par exemple, rupture, tendinopathie ou bursite sous-acromiale). Si une altération est présente, le test de Jobe est considéré comme positif.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img4-Jobe test.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Rupture de la coiffe des rotateurs",
+        "description": "L'image supérieure montre une coupe transversale de l'articulation de l'épaule. Les images inférieures montrent la progression d'une déchirure dégénérative de la coiffe des rotateurs. Les mouvements répétitifs au-dessus de la tête et/ou les variantes anatomiques de l'acromion peuvent entraîner une inflammation de la bourse sous-acromiale et des tendons de la coiffe des rotateurs (à gauche). Cela peut évoluer vers une dégénérescence de la bourse et des tendons (au milieu). En conséquence, les fibres tendineuses sont moins élastiques et sujettes aux déchirures, entraînant une rupture de la coiffe des rotateurs (à droite). Le tendon du supra-épineux est le plus souvent affecté.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img5-Rotator cuff tear.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Muscles de la coiffe des rotateurs et leur fonction",
+        "description": "Schéma illustrant les muscles de la coiffe des rotateurs (supra-épineux, infra-épineux, petit rond et subscapulaire) et leurs fonctions respectives dans la stabilisation et la mobilité de l'articulation gléno-humérale.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img6-Rotator cuff muscles and their function.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Syndrome de conflit sous-acromial",
+        "description": "Les images supérieures montrent le plan de coupe et l'anatomie de la coupe frontale de l'épaule. Les images inférieures montrent les stades du conflit. Le stade 1, qui est très douloureux, est caractérisé par une irritation de la coiffe des rotateurs et de la bourse. Le stade 2 implique une fibrose des structures, entraînant une fonction restreinte. Le stade 3 implique la rupture douloureuse de la coiffe des rotateurs, une bursite intermittente et une pseudo-paralysie du bras.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img7-Subacromial impingement syndrome.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Épaule gelée",
+        "description": "Coupe frontale de l'épaule et les trois stades de l'épaule gelée. Stade 1 (stade de gel) : synovite minimale avec douleur et limitation du mouvement. Stade 2 (stade gelé) : synovite proliférative avec contraction de la capsule et adhésion du récessus axillaire. Stade 3 (stade de dégel) : capsule contractée après la fin de l'inflammation.",
+        "data": "grilles_generees/html/images/AMBOSS-39-img8-Frozen shoulder.jpg",
+        "id": "img8"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Ryan Mitchell",
+      "age": "52 ans",
+      "contexte": "Homme actif avec douleur d'épaule progressive et antécédent de surutilisation",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur à l'épaule vraiment gênante. Je ne peux faire aucun sport en ce moment.",
+        "autreChose": "C'est devenu pire à la salle de sport il y a 5 jours."
+      },
+      "consignes": [
+        "Quand l'examinateur appuie sur votre épaule gauche, dites que ça fait mal, particulièrement à l'avant.",
+        "Quand l'examinateur vous demande de bouger votre épaule gauche, dites à l'examinateur que votre épaule gauche est raide et douloureuse et bougez-la lentement.",
+        "Quand l'examinateur essaie de bouger votre épaule gauche, faites semblant que votre épaule est raide en rendant plus difficile pour l'examinateur de la bouger que votre épaule droite.",
+        "Quand l'examinateur teste la force de votre épaule en poussant contre votre bras pendant que vous levez votre épaule, faites semblant d'avoir moins de force dans votre épaule gauche et ne poussez que faiblement.",
+        "Quand l'examinateur vous demande de lever votre bras gauche sur le côté, dites que ça fait mal.",
+        "La douleur est maximale quand le bras est levé à 60-120°.",
+        "Quand l'examinateur lève votre bras devant vous avec votre pouce pointant vers le sol, dites que ça fait mal. Quand l'examinateur essaie de pousser votre bras vers le bas dans cette position, ne résistez pas.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demandez 'Qu'est-ce que vous en pensez - quand est-ce que je peux retourner à la salle de sport pour faire mes entraînements habituels ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur épaule gauche progressive",
+          "Début il y a 2 semaines, aggravation brutale il y a 5 jours",
+          "Survenue lors de musculation (poids)",
+          "Intensité 3/10 repos, 6-7/10 effort",
+          "Douleur sourde, parfois coup de poignard",
+          "Raideur associée depuis 2 semaines",
+          "Limitation fonctionnelle importante"
+        ],
+        "symptomesAssocies": [
+          "Douleur nocturne majeure",
+          "Impossibilité décubitus sur épaule gauche",
+          "Faiblesse subjective bras gauche",
+          "Limitation élévation bras au-dessus tête",
+          "Impossibilité se gratter le dos",
+          "Impact professionnel (peintre)",
+          "Arrêt activités sportives"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Frustration sur limitation sportive",
+          "Inquiétude sur capacité travail",
+          "Mentionner usage Vicodin copine",
+          "Insister sur antécédent tennis/chute",
+          "Demander clarification termes médicaux",
+          "Question sur reprise sport (défi)"
+        ],
+        "durantStatus": [
+          "Douleur palpation région sous-acromiale",
+          "Raideur active et passive épaule gauche",
+          "Force 4/5 épaule gauche (faiblesse)",
+          "Arc douloureux 60-120° abduction",
+          "Test Neer positif (douleur)",
+          "Test Jobe positif (pas de résistance)",
+          "Comparaison systématique côtés"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 52 ans peintre avec douleur épaule progressive = rupture coiffe jusqu'à preuve contraire. Facteurs favorisants : âge > 50, profession overhead, ATCD tendinopathie, aggravation brutale musculation. Triade diagnostique : arc douloureux + Neer + Jobe positifs = atteinte supra-épineux probable. Force 4/5 = rupture partielle haute ou complète. Imagerie justifiée vu âge + profession (chirurgie potentielle). US première intention, IRM si chirurgie. Arrêt travail probable. Attention usage opioïdes non prescrits.",
+      "rolesInterventions": [
+        "Inspection : pas d'amyotrophie visible (trop récent)",
+        "Tests complémentaires : Hawkins positif, Speed négatif",
+        "Amplitude : élévation active 100°, passive 150°",
+        "Force testing spécifique : supra-épineux 4/5, autres 5/5",
+        "Instabilité : tests négatifs",
+        "Auscultation thorax : normale (éliminer cause cardiaque)"
+      ],
+      "pointsCles": [
+        "Rupture coiffe = pathologie épaule > 50 ans",
+        "Profession overhead = facteur risque majeur",
+        "Jobe positif = supra-épineux (90% ruptures)",
+        "Force diminuée = rupture > tendinite simple",
+        "Imagerie si échec conservateur OU candidat chirurgie",
+        "Opioïdes non prescrits = red flag addiction"
+      ],
+      "pieges": [
+        "Minimiser comme simple tendinite (force diminuée)",
+        "Omettre conseil sur usage opioïdes détournés",
+        "Promettre retour sport rapide sans évaluation",
+        "Négliger impact professionnel (arrêt travail)",
+        "Oublier causes cardiaques épaule gauche",
+        "Immobilisation stricte (capsulite secondaire)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Rupture partielle ou complète du tendon supra-épineux"
+        },
+        {
+          "titre": "Anatomie de la coiffe des rotateurs",
+          "contenu": "Ensemble de 4 muscles stabilisateurs de l'épaule :",
+          "points": [
+            "Supra-épineux : abduction, plus fréquemment lésé",
+            "Infra-épineux : rotation externe",
+            "Petit rond : rotation externe",
+            "Subscapulaire : rotation interne",
+            "Espace sous-acromial : 1-1.5 cm normal",
+            "Bourse sous-acromiale : réduit friction"
+          ]
+        },
+        {
+          "titre": "Physiopathologie des ruptures",
+          "contenu": "Mécanismes multifactoriels de dégénérescence tendineuse :",
+          "points": [
+            "Théorie extrinsèque : conflit mécanique sous-acromial",
+            "Théorie intrinsèque : dégénérescence tissulaire",
+            "Zone critique : 1 cm insertion supra-épineux",
+            "Facteurs : âge, microtraumatismes répétés",
+            "Progression : tendinopathie → rupture partielle → complète",
+            "Classification : bursal-side vs articular-side"
+          ]
+        },
+        {
+          "titre": "Tests cliniques spécifiques",
+          "contenu": "Manœuvres diagnostiques et leur signification :",
+          "points": [
+            "Arc douloureux : 60-120° = conflit sous-acromial",
+            "Neer : élévation passive forcée = conflit",
+            "Hawkins : rotation interne coude fléchi = conflit",
+            "Jobe (empty can) : supra-épineux, Se 86%, Sp 50%",
+            "Patte (lift-off) : infra-épineux/petit rond",
+            "Gerber (lift-off) : subscapulaire",
+            "Drop arm : rupture massive si positif"
+          ]
+        },
+        {
+          "titre": "Classification des ruptures",
+          "contenu": "Systèmes de gradation pour guide thérapeutique :",
+          "points": [
+            "Taille : < 1 cm (petite), 1-3 cm (moyenne), 3-5 cm (large), > 5 cm (massive)",
+            "Épaisseur : partielle < 50%, partielle > 50%, transfixiante",
+            "Localisation : antérieure, supérieure, postérieure",
+            "Rétraction : Patte stades 1-3",
+            "Dégénérescence graisseuse : Goutallier 0-4",
+            "Atrophie : Thomazeau stades 1-3"
+          ]
+        },
+        {
+          "titre": "Imagerie de l'épaule",
+          "contenu": "Modalités et indications spécifiques :",
+          "points": [
+            "Radiographie : calcifications, arthrose, acromion type",
+            "Échographie : sensibilité 95% mains expertes",
+            "IRM : gold standard, cartographie lésionnelle",
+            "Arthro-IRM : ruptures partielles articulaires",
+            "Arthroscopie : diagnostic et thérapeutique",
+            "Score de Constant : évaluation fonctionnelle"
+          ]
+        },
+        {
+          "titre": "Options thérapeutiques conservatrices",
+          "contenu": "Stratégies non chirurgicales evidence-based :",
+          "points": [
+            "Repos relatif : maintien mobilité sous douleur",
+            "AINS : 2-3 semaines phase aiguë",
+            "Infiltrations : max 3/an, éviter si chirurgie < 3 mois",
+            "Kinésithérapie : protocole Neer 3 phases",
+            "Ondes de choc : tendinopathies calcifiantes",
+            "PRP : données controversées, non remboursé"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Phase aiguë : AINS + glace + repos relatif 1-2 sem",
+        "Infiltration : méthylprednisolone 40 mg + lidocaïne",
+        "Kiné phase 1 : pendulaire Codman, mobilisation passive",
+        "Kiné phase 2 : actif-assisté, étirements capsulaires",
+        "Kiné phase 3 : renforcement progressif, proprioception",
+        "Critères chirurgie : échec 3-6 mois, rupture aiguë jeune",
+        "Post-op : attelle 30° abduction 4-6 semaines",
+        "Retour sport : 6-12 mois selon geste chirurgical"
+      ],
+      "examensComplementaires": [
+        "Radiographie standard : face 3 rotations, profil Lamy",
+        "Incidence Rockwood : évalue espace sous-acromial",
+        "US : opérateur-dépendant, dynamique, bilatéral comparatif",
+        "IRM 1.5T minimum : séquences T1, T2 FS, 3 plans",
+        "Classification acromion Bigliani : I-III (crochet)",
+        "Arthroscanner : si CI IRM (pacemaker)",
+        "EMG : si suspicion atteinte nerveuse associée",
+        "Bilan pré-op : NFS, coag, ECG si > 50 ans"
+      ]
+    },
+    "resume": {
+      "titre": "💪 Lésions de la coiffe des rotateurs – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Circonstances de survenue",
+              "points": [
+                "Traumatisme direct (chute sur l’épaule, traction brusque)",
+                "Mouvements répétitifs en élévation/rotation externe (sports de lancer, travail manuel)",
+                "Installation progressive sans traumatisme chez le sujet âgé (dégénérescence)"
+              ]
+            },
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur de l’épaule (face antéro-latérale, irradiant parfois dans le bras)",
+                "Douleur nocturne, empêchant le sommeil sur le côté atteint",
+                "Limitation fonctionnelle (élévation, rotation externe)",
+                "Faiblesse musculaire, difficulté à lever le bras"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Âge > 50 ans",
+                "Travail ou sport sollicitant l’épaule",
+                "Antécédents de tendinopathie ou d’entorse de l’épaule"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Amyotrophie de la fosse sus- ou sous-épineuse en cas d’atteinte chronique",
+                "Attitude antalgique de l’épaule"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Mobilité active limitée (élévation, abduction)",
+                "Mobilité passive souvent conservée sauf douleur"
+              ]
+            },
+            {
+              "titre": "Tests spécifiques",
+              "points": [
+                "Test de Jobe (sus-épineux) : douleur/faiblesse à l’abduction contrariée",
+                "Test du Patte (sous-épineux) : rotation externe contrariée",
+                "Lift-off test (sous-scapulaire) : incapacité à décoller la main du dos",
+                "Palm-up test (long biceps) : douleur/faiblesse à la flexion contrariée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie standard : recherche d’anomalies osseuses ou calcifications",
+                "Échographie : examen de 1ère intention pour tendinopathie ou rupture",
+                "IRM : référence pour visualiser ruptures et extension des lésions"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, éviter gestes déclenchants",
+                "Antalgiques ± AINS",
+                "Kinésithérapie (renforcement, proprioception, amplitude)",
+                "Infiltration cortisonée sous-acromiale en cas de douleur persistante"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Indiqué en cas de rupture transfixiante symptomatique, échec traitement conservateur",
+                "Réparation arthroscopique de la coiffe ± acromioplastie",
+                "Indication plus fréquente chez sujet jeune actif ou sportif"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur nocturne et faiblesse musculaire = orientent vers rupture de coiffe",
+            "Mobilité passive conservée mais mobilité active limitée",
+            "Échographie est l’examen de 1ère intention",
+            "Rééducation fonctionnelle essentielle, chirurgie réservée aux cas sévères ou persistants"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Circonstances du début : traumatisme ou survenue progressive ?",
+                "Douleur nocturne empêchant le sommeil ?",
+                "Gêne fonctionnelle : lever le bras, porter un objet, gestes du quotidien ?",
+                "Antécédents de tendinopathie ou gestes répétitifs de l’épaule ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : amyotrophie, attitude antalgique",
+                "Mobilité active vs passive",
+                "Tests spécifiques (Jobe, Patte, Lift-off, Palm-up)",
+                "Échographie ± IRM selon suspicion"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Éliminer fracture ou luxation si traumatisme violent",
+                "Initier traitement conservateur (antalgiques, kinésithérapie, repos relatif)",
+                "Référer pour imagerie et discussion chirurgicale si rupture sévère ou résistance au traitement"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur à l’épaule gauche (suspicion rupture coiffe des rotateurs) – Homme de 52 ans",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession (peintre), motif de consultation (douleur épaule gauche)",
+            "Caractériser la douleur → début (2 sem, aggravation brutale 5 j), intensité (repos 3/10, effort 6-7/10), type (sourde + coups de poignard), irradiation, rythme (nocturne, gênant sommeil)",
+            "Facteurs déclenchants/aggravants → musculation, mouvements overhead, décubitus latéral gauche",
+            "Facteurs améliorants → repos, éviter appui/mouvements",
+            "Symptômes associés → raideur, faiblesse, limitation mobilité active, douleur nocturne",
+            "ATCD → fracture main droite (opérée), tendinopathie épaule 2 ans avant",
+            "Traitements → essai Vicodin (non prescrit, effet indésirable)",
+            "Habitudes → peintre, tennis/musculation, non-fumeur, pas d’alcool/drogues",
+            "Examen clinique → mobilité active limitée, passive douloureuse mais conservée, force 4/5, arc douloureux 60–120°, Neer +, Jobe +",
+            "Résumé + hypothèse principale → rupture partielle/complète coiffe (supra-épineux probable)",
+            "Diagnostics différentiels → conflit sous-acromial, tendinite coiffe, tendinite bicipitale, capsulite rétractile",
+            "Examens complémentaires → radio (lésions osseuses, calcifications), US (lésions tendineuses), IRM (cartographie si chirurgie envisagée)",
+            "PEC → repos relatif, glaçage, AINS, kinésithérapie (mobilité, renforcement coiffe), infiltration corticoïdes si persistance, chirurgie si rupture complète/échec conservateur"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : COIFFE",
+            "elements": [
+              "C = Conflit sous-acromial (syndrome d’accrochage)",
+              "O = Ostéo (calcifications tendineuses, arthrose)",
+              "I = Inflammation tendineuse (tendinite)",
+              "F = Frozen shoulder (capsulite rétractile)",
+              "F = Force diminuée (rupture coiffe)",
+              "E = Épreuve clinique (Jobe, Neer, arc douloureux)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Ryan Mitchell, 52 ans, peintre, qui consulte pour une douleur à l’épaule gauche. Cette douleur évolue depuis environ 2 semaines, avec une aggravation brutale il y a 5 jours, lors d’un exercice de musculation à la salle de sport. Il décrit une douleur sourde permanente, notée à 3/10 au repos, mais qui monte à 6–7/10 lors d’efforts ou lorsqu’il soulève le bras. Parfois, il décrit une sensation de coup de poignard. La douleur est localisée à l’épaule gauche, sans irradiation, et s’accompagne d’une raideur et d’une limitation des mouvements. Il rapporte une gêne nocturne majeure, l’empêchant de dormir sur le côté gauche.\n\nConcernant ses antécédents, il avait présenté il y a 2 ans une tendinopathie de l’épaule gauche dans un contexte de tennis, et il a eu une fracture de la main droite opérée. Pas d’allergie connue. Il a utilisé du Vicodin appartenant à sa compagne, ce qui a soulagé la douleur mais provoqué des étourdissements. Sur le plan familial, son père souffre de bronchite chronique. Côté habitudes, il ne fume pas, ne boit pas, ne consomme pas de drogues. Il est sportif avec tennis et musculation réguliers, mais il a cessé toute activité depuis le début des douleurs. Professionnellement, il est peintre et dit que son travail est devenu quasi impossible ces deux dernières semaines.\n\nÀ l’examen, les constantes vitales sont normales. L’épaule gauche présente une sensibilité diffuse, notamment sous-acromiale. Les mouvements actifs sont limités par la douleur, la mobilité passive reste possible mais douloureuse. La force est diminuée à 4/5. On retrouve un arc douloureux entre 60 et 120° d’abduction, un test de Neer positif et un test de Jobe positif. Pas de déficit sensitif ni de signes neurologiques associés.\n\nEn résumé, il s’agit d’un patient de 52 ans, actif professionnellement avec activité overhead, présentant une douleur aiguë sur épaule gauche avec limitation fonctionnelle, douleur nocturne, arc douloureux et tests cliniques positifs. L’hypothèse principale est une rupture de la coiffe des rotateurs, probablement du supra-épineux. Les diagnostics différentiels incluent un conflit sous-acromial, une tendinite simple, une tendinite bicipitale, ou plus rarement une capsulite.\n\nComme examens complémentaires, je demanderais une radiographie de l’épaule gauche, une échographie comme examen de première intention, et une IRM si une réparation chirurgicale est envisagée. \n\nLa prise en charge initiale comprend repos relatif, glace, antalgiques et AINS. Une rééducation précoce est essentielle pour éviter la capsulite. En cas de persistance des symptômes ou si l’imagerie montre une rupture transfixiante, une réparation chirurgicale sera discutée, notamment compte tenu de l’âge du patient, de son métier et de l’impact fonctionnel."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Ryan Mitchell, 52 ans, peintre, consulte pour une douleur invalidante de l’épaule gauche, aggravée depuis 5 jours après musculation.\n\nB (Background) : ATCD fracture main droite opérée, tendinopathie épaule gauche. Pas de tabac, pas d’alcool. Profession : peintre, sports overhead (tennis, musculation).\n\nA (Assessment) : Suspicion rupture coiffe des rotateurs (supra-épineux). DD : conflit sous-acromial, tendinite simple, tendinite bicipitale, capsulite rétractile.\n\nR (Recommendation) : Radiographie, échographie, IRM si chirurgie envisagée. PEC conservatrice (repos, AINS, kinésithérapie). Orientation chirurgicale si rupture complète ou échec traitement."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Tests spécifiques épaule",
+              "points": [
+                "Arc douloureux : 60–120° → conflit sous-acromial",
+                "Neer test : élévation passive forcée → conflit",
+                "Jobe (empty can) : supra-épineux (rupture si faiblesse)",
+                "Patte : infra-épineux/petit rond",
+                "Gerber (lift-off) : subscapulaire"
+              ]
+            },
+            {
+              "titre": "👉 Facteurs de risque rupture coiffe",
+              "points": [
+                "Âge > 50 ans",
+                "Travail overhead (peintre, carreleur, etc.)",
+                "Sports overhead (tennis, musculation)",
+                "ATCD tendinopathie épaule",
+                "Douleur nocturne + faiblesse"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas confondre avec simple tendinite si force diminuée",
+                "Toujours comparer mobilité active vs passive",
+                "Ne pas négliger impact professionnel (arrêt travail)",
+                "Conseiller contre usage opioïdes non prescrits",
+                "Ne pas promettre reprise sport rapide sans bilan"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Rupture de coiffe des rotateurs",
+                  "reponse": {
+                    "pour": [
+                      "Âge > 50 ans",
+                      "Activité professionnelle overhead",
+                      "Douleur nocturne empêchant le sommeil",
+                      "Arc douloureux, Neer +, Jobe +",
+                      "Force diminuée (4/5)"
+                    ],
+                    "contre": [
+                      "Pas de traumatisme violent",
+                      "Pas encore d’amyotrophie visible (évolution récente)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Conflit sous-acromial",
+                  "reponse": {
+                    "pour": [
+                      "Douleur arc douloureux et test Neer positifs",
+                      "Douleur nocturne"
+                    ],
+                    "contre": [
+                      "Force diminuée et Jobe + orientent plutôt vers rupture"
+                    ]
+                  }
+                },
+                {
+                  "question": "Capsulite rétractile",
+                  "reponse": {
+                    "pour": [
+                      "Douleur sourde, raideur",
+                      "Âge > 40 ans"
+                    ],
+                    "contre": [
+                      "Restriction amplitude tous plans absente",
+                      "Mobilité passive conservée"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens prescrire ?",
+                  "reponse": [
+                    "Radiographie standard épaule",
+                    "Échographie (première intention)",
+                    "IRM si suspicion rupture complète et indication chirurgicale",
+                    "± injection lidocaïne sous-acromiale (test différentiel)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge",
+              "questions": [
+                {
+                  "question": "Quel est le traitement initial ?",
+                  "reponse": [
+                    "Repos relatif, éviter mouvements overhead",
+                    "Glaçage, antalgiques, AINS",
+                    "Kinésithérapie précoce (mobilité passive puis active)",
+                    "Infiltration corticoïdes si persistance"
+                  ]
+                },
+                {
+                  "question": "Quand indiquer une chirurgie ?",
+                  "reponse": [
+                    "Rupture transfixiante complète",
+                    "Sujet < 60 ans actif avec demande fonctionnelle",
+                    "Échec traitement conservateur ≥ 3–6 mois",
+                    "Douleur/impotence majeures"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "4. Prévention et suivi",
+              "questions": [
+                {
+                  "question": "Comment prévenir récidive ou aggravation ?",
+                  "reponse": [
+                    "Rééducation proprioceptive et renforcement coiffe",
+                    "Adapter poste de travail (ergonomie, pauses)",
+                    "Échauffement et étirements réguliers",
+                    "Limiter activités overhead répétitives"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,892 @@
+{
+  "title": "AMBOSS-11 - Selles noires - Homme 65 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "William Johnson, homme de 65 ans, consultant pour des selles noires",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "125/80 mmHg",
+      "fc": "72 bpm",
+      "fr": "14/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Eh bien, c'est assez dégoûtant, mais quand je vais aux toilettes, j'ai remarqué que ce qui sort est plus foncé que d'habitude"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des selles noires",
+          "binaryOnly": false,
+          "details": [
+            "Apparence [C'est presque noir, et c'est collant]",
+            "Quantité de noir dans les selles (mélangé, en surface) [Les selles entières apparaissent plus foncées, et ce n'est pas seulement en surface !]",
+            "Présence de sang rouge vif [Non]",
+            "Diarrhée/constipation [Diarrhée ou constipation ? Pas de problème là]",
+            "Début [Il y a 2 semaines]",
+            "Constant/intermittent [C'est la même couleur chaque fois que je suis allé aux toilettes]",
+            "Événements précipitants [Aucun]",
+            "Progression [Non]",
+            "Épisodes antérieurs [Jamais]",
+            "Fréquence [J'ai environ 2 selles par jour]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés - Douleur abdominale",
+          "binaryOnly": false,
+          "details": [
+            "Présence [J'ai aussi eu mal à l'estomac]",
+            "Localisation [Ici (montre le milieu de l'abdomen, juste sous les côtes)]",
+            "Intensité (échelle 0-10) [3-4]",
+            "Qualité [C'est une douleur sourde]",
+            "Début [Ça a aussi commencé il y a 2 semaines]",
+            "Événements précipitants [Aucun]",
+            "Progression/constant/intermittent [La douleur va et vient ; parfois elle n'est pas là du tout. Mais quand elle est là, elle reste assez stable à 3-4]",
+            "Épisodes antérieurs [Aucun]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Ça empire quand je mange quelque chose]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non]",
+            "Nausées/vomissements [Je me suis senti un peu nauséeux aujourd'hui. Mais je n'ai pas vomi du tout]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Non]",
+            "Éruption/changements cutanés [Non]",
+            "Douleur thoracique/dyspnée [Non]",
+            "Problèmes urinaires [Non]",
+            "Changements d'appétit [Oui. J'ai eu moins d'appétit depuis 2 semaines, parce que quand je mange la douleur empire]",
+            "Variations pondérales [Oui, j'ai perdu 1 kg ces 2 dernières semaines]",
+            "Vertiges [Non]",
+            "Nouvelles masses [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai de l'arthrite dans mes deux genoux, et j'ai de l'hypertension"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "details": [
+            "Allergies [Pénicilline]",
+            "Réaction allergique spécifique [Quand j'ai été traité avec de la pénicilline étant enfant, j'ai développé une éruption qui s'est étendue sur tout mon corps]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments actuels [Ibuprofène, à cause de mes douleurs aux genoux. Et ramipril pour l'hypertension]",
+            "Dosage d'ibuprofène [Environ six comprimés de 600 mg par jour depuis au moins quelques mois]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations et contacts malades",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Jamais]",
+            "Contacts malades [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "patientComment": "Mon père a une diverticulose. Mon frère aîné a du diabète"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Ouvrier du bâtiment]",
+            "Domicile [Je vis avec ma femme et 2 enfants]",
+            "Alcool [1-2 bières par jour]",
+            "Drogues illicites [Jamais]",
+            "Tabac [Je fume un paquet de cigarettes chaque jour depuis 40 ans]",
+            "Alimentation [J'aime manger de la viande, surtout de la viande séchée. Et j'essaie d'avoir beaucoup de calories à cause de la dureté de mon travail]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen tête et cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des conjonctives"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Sensibilité épigastrique]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes de saignement digestif haut",
+                "items": [
+                  {
+                    "text": "Ulcère gastrique",
+                    "cause": "Arguments POUR:\n\t□ Facteurs de risque multiples : AINS chroniques (ibuprofène haute dose), tabac, alcool\n\t□ Douleur épigastrique augmentée après repas (typique ulcère gastrique)\n\t□ Sensibilité épigastrique à l'examen\n\t□ Méléna (selles noires goudronneuses)\n\t□ Nausées associées\n\t□ Début aigu des symptômes (2 semaines)\n\t□ L'ibuprofène masque souvent la douleur jusqu'à complication hémorragique",
+                    "test": "→ Endoscopie digestive haute urgente"
+                  },
+                  {
+                    "text": "Gastrite chimique",
+                    "cause": "Arguments POUR:\n\t□ Facteurs de risque : AINS chroniques, tabac, alcool\n\t□ Sensibilité épigastrique\n\t□ Nausées\nArguments CONTRE:\n\t□ Saignement habituellement lent (sang occulte)\n\t□ Début plus progressif\n\t□ Méléna moins typique",
+                    "test": "→ Endoscopie digestive haute"
+                  },
+                  {
+                    "text": "Cancer gastrique",
+                    "cause": "Arguments POUR:\n\t□ Âge (65 ans, pic 70 ans)\n\t□ Tabac + alcool\n\t□ Alimentation riche en nitrites (viande séchée)\n\t□ Douleur épigastrique\n\t□ Perte de poids\n\t□ Méléna\nArguments CONTRE:\n\t□ Début aigu\n\t□ Perte poids probablement liée à douleur/diminution appétit",
+                    "test": "→ Endoscopie avec biopsies multiples"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Ulcère duodénal",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur aggravée par repas (soulagée dans ulcère duodénal)",
+                    "test": "→ Endoscopie digestive haute"
+                  },
+                  {
+                    "text": "Cancer œsophagien",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de dysphagie\n\t□ Pas de reflux",
+                    "test": "→ Endoscopie"
+                  },
+                  {
+                    "text": "Cancer colique",
+                    "cause": "Arguments CONTRE:\n\t□ Méléna suggère saignement digestif haut",
+                    "test": "→ Coloscopie si endoscopie haute négative"
+                  },
+                  {
+                    "text": "Angiodysplasie",
+                    "cause": "Possible mais moins probable vu présentation",
+                    "test": "→ Angiographie si endoscopie négative"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen rectal [Un toucher rectal fait partie de tout examen abdominal complet et est particulièrement important en cas de suspicion de saignement gastro-intestinal]",
+            "Recherche de sang occulte dans les selles [pour confirmer le méléna]",
+            "FSC [pour évaluer l'étendue de toute anémie avec une valeur exacte d'hémoglobine]",
+            "Groupe sanguin et compatibilité croisée [au cas où une transfusion sanguine d'urgence deviendrait nécessaire]",
+            "TP, TCA [pour évaluer une coagulopathie comme cause sous-jacente/facteur aggravant du saignement]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "binaryOnly": false,
+          "details": [
+            "Endoscopie digestive haute [meilleur test initial pour diagnostiquer un saignement gastro-intestinal supérieur et identifier la pathologie sous-jacente (ex: ulcère gastrique, gastrite érosive, carcinome gastrique)]",
+            "Test d'anticorps H. pylori [La gastrite chronique causée par H. pylori est un facteur de risque important pour la maladie ulcéreuse peptique]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Conseil sur l'importance d'arrêter les antalgiques et proposition d'alternative (ex: paracétamol)",
+            "Réaction appropriée au défi concernant le manque de temps"
+          ],
+          "redflagsSection": {
+            "title": "Drapeaux rouges du saignement digestif",
+            "items": [
+              {
+                "text": "Instabilité hémodynamique",
+                "description": "Hypotension, tachycardie, signes de choc"
+              },
+              {
+                "text": "Anémie sévère",
+                "description": "Hb < 7 g/dL, signes d'hypoxie tissulaire"
+              },
+              {
+                "text": "Saignement actif",
+                "description": "Hématémèse, méléna abondant, rectorragies"
+              },
+              {
+                "text": "Comorbidités graves",
+                "description": "Cardiopathie, insuffisance hépatique, coagulopathie"
+              }
+            ]
+          },
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Stabilisation hémodynamique",
+                "content": "• Voie veineuse périphérique gros calibre: (18G)\n• Remplissage vasculaire: Cristalloïdes 500 mL\n• Groupe sanguin, RAI, commande CGR\n• Transfusion si Hb: 7 g/dL ou instabilité\n• Monitorage: FC, TA, diurèse horaire\n• Objectif: TA  90/60 mmHg, FC  100/min"
+              },
+              {
+                "title": "Traitement de l'hémorragie digestive haute",
+                "content": "• Arrêt immédiat des AINS: (ibuprofène)\n• IPP IV: Ésoméprazole 80 mg bolus puis 8 mg/h\n• Endoscopie digestive haute dans les 24h\n• Acide tranexamique: 1g IV si saignement actif\n• Érythromycine: 250 mg IV 30 min avant endoscopie"
+              },
+              {
+                "title": "Si ulcère",
+                "content": "• Test et éradication H. pylori si positif\n• Arrêt définitif AINS si possible\n• Alternative antalgique: Paracétamol"
+              },
+              {
+                "title": "Si cancer",
+                "content": "• Contrôle endoscopique à 6-8 semaines"
+              },
+              {
+                "title": "Prévention des récidives",
+                "content": "• Éducation sur signes d'alarme\n• Alternative COX-2 sélectif si AINS nécessaires"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Manque de temps pour les examens",
+          "content": "[Je n'ai pas le temps pour tous ces tests ! J'ai beaucoup de travail à faire dans les prochaines semaines !]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Johnson, je peux comprendre qu'il est difficile pour vous de trouver le temps pour des tests diagnostiques et que vous avez des obligations au travail. Cependant, je pense qu'il est très important que nous découvrions ce qui cause vos selles noires et vos douleurs à l'estomac. Les selles noires peuvent être un symptôme de saignement gastro-intestinal, qui peut avoir des conséquences dangereuses s'il n'est pas correctement traité. Avec votre permission, nous effectuerons les tests nécessaires et les ferons aussi rapidement que possible ; nous voulons être minutieux pour ne rien manquer. Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Acanthosis nigricans",
+        "description": "Hyperpigmentation, hyperkératose et de nombreux acrochordons (papillomatose) sont visibles sur l'aisselle droite. Ces résultats sont compatibles avec l'acanthosis nigricans.",
+        "data": "grilles_generees/html/images/AMBOSS-11-img1-Acanthosis nigricans.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Prise en charge du saignement digestif haut aigu",
+        "description": "Prise en charge du saignement digestif haut aigu. EGD : œsophagogastroduodénoscopie ; IV : intraveineux ; NPO : nil per os (rien par la bouche) ; UGIB : saignement digestif haut.",
+        "data": "grilles_generees/html/images/AMBOSS-11-img2-Management of acute upper gastrointestinal bleeding.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Ulcère gastrique : Stade Forrest III",
+        "description": "Vue endoscopique de l'estomac. Un ulcère gastrique avec une base lisse recouverte de fibrine est visible. Il y a une petite zone de saignement actif près de l'ulcère où un échantillon de biopsie a été prélevé. Un ulcère sans signes de saignement actif correspond au stade Forrest III.",
+        "data": "grilles_generees/html/images/AMBOSS-11-img3-Gastric ulcer- Forrest stage III.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Cancer gastrique",
+        "description": "Vue endoscopique de l'antre gastrique. Une masse gastrique avec une marge irrégulière et une ulcération centrale peut être vue au niveau de la petite courbure. Ces résultats sont compatibles avec un cancer gastrique.",
+        "data": "grilles_generees/html/images/AMBOSS-11-img4-Gastric cancer.jpg",
+        "id": "img4"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "William Johnson",
+      "age": "65 ans",
+      "contexte": "Ouvrier du bâtiment consultant pour méléna depuis 2 semaines",
+      "motifConsultation": {
+        "plaintePrincipale": "Eh bien, c'est assez dégoûtant, mais quand je vais aux toilettes, j'ai remarqué que ce qui sort est plus foncé que d'habitude.",
+        "autreChose": "J'ai aussi mal à l'estomac depuis 2 semaines."
+      },
+      "consignes": [
+        "Pointer le milieu de votre abdomen, juste sous les côtes, quand l'examinateur vous demande la localisation de votre douleur.",
+        "Dire à l'examinateur que ça fait mal quand il/elle appuie sur cette zone.",
+        "Vous êtes un patient pressé, avec beaucoup de travail à faire et pas beaucoup de temps pour ce rendez-vous.",
+        "Vous ne connaissez pas la signification des termes médicaux (ex: endoscopie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Quand l'examinateur mentionne quels tests diagnostiques sont nécessaires, dire : 'Je n'ai pas le temps pour tous ces tests ! J'ai beaucoup de travail à faire dans les prochaines semaines !'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Selles noires goudronneuses depuis 2 semaines",
+          "Consistance collante",
+          "Couleur uniforme (pas seulement en surface)",
+          "Fréquence normale (2 selles/jour)",
+          "Pas de sang rouge vif"
+        ],
+        "symptomesAssocies": [
+          "Douleur épigastrique sourde (3-4/10)",
+          "Aggravation post-prandiale",
+          "Nausées légères aujourd'hui",
+          "Perte d'appétit",
+          "Perte de poids 1 kg en 2 semaines"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer de l'impatience",
+          "Regarder fréquemment sa montre",
+          "Mentionner le travail qui attend",
+          "Demander des clarifications pour termes médicaux",
+          "Exprimer le dégoût en parlant des selles"
+        ],
+        "durantStatus": [
+          "Pointer l'épigastre quand demandé",
+          "Grimace à la palpation épigastrique",
+          "Abdomen souple par ailleurs",
+          "Coopération malgré l'impatience"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 65 ans avec méléna depuis 2 semaines sur probable ulcère gastrique hémorragique. Facteurs de risque multiples : AINS haute dose chronique (ibuprofène 3600mg/j), tabac 40 PA, alcool quotidien. Douleur épigastrique post-prandiale typique d'ulcère gastrique. Patient pressé minimisant potentiellement la gravité.",
+      "rolesInterventions": [
+        "Toucher rectal : Méléna confirmé, selles noires goudronneuses",
+        "Test gaïac : Fortement positif",
+        "FSC : Hb 9.2 g/dL, VGM 72 fL (anémie microcytaire)",
+        "Endoscopie : Ulcère gastrique de 2cm petite courbure avec base propre (Forrest III)",
+        "Test H. pylori : Positif (test respiratoire à l'urée)"
+      ],
+      "pointsCles": [
+        "Méléna = saignement digestif haut jusqu'à preuve du contraire",
+        "AINS + facteurs de risque = haute probabilité ulcère peptique",
+        "Douleur post-prandiale = ulcère gastrique (vs soulagée par repas = duodénal)",
+        "Endoscopie urgente si saignement actif ou instabilité",
+        "Arrêt AINS impératif + IPP haute dose"
+      ],
+      "pieges": [
+        "Minimiser la gravité du méléna",
+        "Ne pas faire de toucher rectal",
+        "Oublier de vérifier l'hémodynamique",
+        "Ne pas proposer d'alternative aux AINS",
+        "Retarder l'endoscopie chez patient 'occupé'"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Ulcère gastrique hémorragique induit par les AINS"
+        },
+        {
+          "titre": "Ulcère peptique",
+          "contenu": "Perte de substance de la paroi gastro-duodénale :",
+          "points": [
+            "Étiologies : H. pylori (60-90%), AINS (10-30%), stress, Zollinger-Ellison",
+            "Localisation : duodénal > gastrique (4:1)",
+            "Facteurs de risque : âge, tabac, alcool, corticoïdes associés",
+            "Complications : hémorragie (15%), perforation (5%), sténose (2%)",
+            "Mortalité hémorragie : 5-10% (augmente avec âge et comorbidités)",
+            "Récidive sans traitement : 60% à 1 an"
+          ]
+        },
+        {
+          "titre": "Gastropathie aux AINS",
+          "contenu": "Mécanisme de toxicité gastrique :",
+          "points": [
+            "Inhibition COX-1 : diminution prostaglandines protectrices",
+            "Effet topique direct : lésion muqueuse",
+            "Diminution mucus et bicarbonate",
+            "Réduction flux sanguin muqueux",
+            "Risque dose-dépendant (ibuprofène > 1800mg/j)",
+            "Facteurs aggravants : âge > 60, antécédent ulcère, anticoagulants"
+          ]
+        },
+        {
+          "titre": "Hémorragie digestive haute",
+          "contenu": "Urgence médico-chirurgicale fréquente :",
+          "points": [
+            "Incidence : 100-150/100'000/an",
+            "Causes : ulcère (50%), varices (10-20%), Mallory-Weiss (5-15%)",
+            "Présentation : hématémèse, méléna, instabilité hémodynamique",
+            "Méléna : > 50-100 mL sang dans TD supérieur",
+            "Scores pronostiques : Rockall, Glasgow-Blatchford",
+            "Réanimation prioritaire avant diagnostic"
+          ]
+        },
+        {
+          "titre": "Classification endoscopique de Forrest",
+          "contenu": "Stratification du risque de resaignement :",
+          "points": [
+            "Ia : Saignement artériel actif (90% resaignement)",
+            "Ib : Suintement actif (50%)",
+            "IIa : Vaisseau visible non hémorragique (43%)",
+            "IIb : Caillot adhérent (22%)",
+            "IIc : Taches pigmentées (10%)",
+            "III : Base propre (5% - cas du patient)"
+          ]
+        },
+        {
+          "titre": "Prise en charge de l'hémorragie digestive haute",
+          "contenu": "Approche systématique urgente :",
+          "points": [
+            "1. Réanimation : 2 VVP, remplissage, O2",
+            "2. Bilan : FSC, groupe, coag, iono, urée",
+            "3. IPP IV bolus 80mg puis 8mg/h",
+            "4. Endoscopie < 24h (< 12h si instable)",
+            "5. Hémostase endoscopique si saignement actif",
+            "6. Transfusion si Hb < 7 g/dL (< 9 si coronarien)"
+          ]
+        },
+        {
+          "titre": "Prévention secondaire post-ulcère",
+          "contenu": "Mesures essentielles pour éviter récidive :",
+          "points": [
+            "Éradication H. pylori si positif (trithérapie 14j)",
+            "Arrêt définitif AINS si possible",
+            "Si AINS indispensables : IPP au long cours + COX-2 sélectif",
+            "Arrêt tabac et alcool",
+            "Contrôle endoscopique ulcère gastrique à 6-8 semaines",
+            "Surveillance Hb si anémie"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "IPP IV urgence : Oméprazole 80mg bolus puis 8mg/h × 72h",
+        "Relais PO : Oméprazole 40mg BID × 8 semaines",
+        "Éradication H. pylori : Oméprazole 20mg + amoxicilline 1g + clarithromycine 500mg BID × 14j",
+        "Alternative pénicilline : Métronidazole 500mg BID",
+        "Antalgie sans AINS : Paracétamol 1g QID, tramadol si insuffisant",
+        "Supplémentation fer : Fer élément 200mg/j si anémie",
+        "Anti-H2 si intolérance IPP : Ranitidine 150mg BID"
+      ],
+      "examensComplementaires": [
+        "Endoscopie haute : Dans les 24h, permet diagnostic + thérapeutique + biopsies",
+        "Test H. pylori : Biopsie (test uréase rapide) ou test respiratoire C13",
+        "FSC : Hb, VGM, recherche anémie microcytaire (carence fer)",
+        "Ferritine : Évalue réserves fer si anémie",
+        "Groupe ABO + RAI : Préparation transfusion si nécessaire",
+        "Ionogramme/urée : Urée/créat ratio > 100 suggère saignement digestif haut"
+      ]
+    },
+    "resume": {
+      "titre": "🩺 Ulcère gastrique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Douleur épigastrique post-prandiale (souvent 30 min à 1h après les repas)",
+                "Sensation de brûlure ou de crampe « en étau »",
+                "Satiété précoce, ballonnements",
+                "Nausées, vomissements",
+                "RGO, éructations",
+                "Perte d'appétit, amaigrissement"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Prise chronique d'AINS ou aspirine",
+                "Tabagisme, alcool",
+                "Infection à Helicobacter pylori",
+                "Stress physiologique (hospitalisation, brûlures, sepsis)",
+                "Antécédents de PUD (ulcère peptique)",
+                "Âge > 60 ans ou ATCD familial de cancer gastrique"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte (red flags)",
+              "points": [
+                "Amaigrissement inexpliqué",
+                "Vomissements persistants",
+                "Méléna, hématémèse",
+                "Dysphagie, odynophagie",
+                "Anémie ou fatigue"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à l’inspection et palpation abdominale",
+              "points": [
+                "Douleur à la palpation épigastrique",
+                "Signe de défense (en cas de perforation)",
+                "Signes de déshydratation ou d'anémie (pâleur, tachycardie)"
+              ]
+            },
+            {
+              "titre": "Complications à rechercher",
+              "points": [
+                "Hémorragie digestive (méléna, hypotension)",
+                "Perforation (abdomen aigu, défense)",
+                "Sténose pylorique (vomissements tardifs, dilatation gastrique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "NFS : recherche anémie",
+                "CRP, VS : inflammation",
+                "H. pylori : test respiratoire à l’urée, antigène fécal ou biopsie",
+                "FOBT (sang occulte dans les selles)",
+                "Bilan hépatique et rénal selon contexte"
+              ]
+            },
+            {
+              "titre": "Imagerie et endoscopie",
+              "points": [
+                "Endoscopie œsogastroduodénale (EGD) = examen clé",
+                "Biopsies systématiques pour éliminer cancer",
+                "Recherche de signes de complications : saignement, perforation",
+                "Échographie ou scanner abdo si suspicion de complication (perforation, masse)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Arrêt des AINS, tabac, alcool",
+                "Alimentation fractionnée, sans irritants gastriques",
+                "Éducation du patient"
+              ]
+            },
+            {
+              "titre": "Traitement médical",
+              "points": [
+                "IPP (oméprazole, ésoméprazole) pendant 4–8 semaines",
+                "Éradication d’H. pylori si test positif : trithérapie (IPP + amoxicilline + clarithromycine)",
+                "Antiacides ou sucralfate selon les cas"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Contrôle endoscopique à 8–12 semaines si ulcère gastrique (pour vérifier cicatrisation)",
+                "Contrôle de l’éradication H. pylori 4 semaines après traitement",
+                "Surveillance clinique : récidives, complications"
+              ]
+            },
+            {
+              "titre": "Indications chirurgicales",
+              "points": [
+                "Complications (perforation, hémorragie sévère, sténose)",
+                "Résistance au traitement médical",
+                "Ulcère malin ou doute sur tumeur"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Ulcère gastrique : douleur après les repas + amaigrissement",
+            "Rechercher systématiquement prise AINS / H. pylori",
+            "Endoscopie avec biopsies systématique pour exclure cancer",
+            "IPP + éradication H. pylori si positif",
+            "Surveillance endoscopique obligatoire pour ulcère gastrique"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur épigastrique post-prandiale ? Depuis combien de temps ?",
+                "Facteurs aggravants : AINS, tabac, alcool ?",
+                "Signes d’alarme : amaigrissement, vomissements persistants, méléna, hématémèse ?",
+                "Antécédents familiaux de cancer gastrique ?",
+                "ATCD d’ulcère ou infection à H. pylori ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, FR)",
+                "Recherche pâleur, signes d’anémie ou déshydratation",
+                "Palpation épigastrique (douleur, défense)",
+                "Endoscopie œsogastroduodénale avec biopsies",
+                "Biologie : NFS, CRP, test H. pylori"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Arrêt AINS, tabac, alcool + mesures hygiéno-diététiques",
+                "IPP 4–8 semaines ± éradication H. pylori si positif",
+                "Contrôle endoscopique obligatoire pour confirmer cicatrisation et exclure cancer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Selles noires (ulcère gastrique sous AINS)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser les selles → couleur, consistance, durée, sang rouge ?",
+            "Douleur abdominale → localisation, intensité, facteurs aggravants/soulageants",
+            "Symptômes associés → anorexie, amaigrissement, nausées, anémie",
+            "ATCD médicaux et chirurgicaux",
+            "Traitements en cours (AINS ? anticoagulants ?)",
+            "Habitudes de vie : tabac, alcool, alimentation",
+            "Examen clinique → constantes, palpation abdominale, TR",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → NFS, groupage, endoscopie haute ± biopsies",
+            "Prise en charge → arrêt AINS, IPP IV, prise en charge saignement digestif haut"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : MELENA",
+            "elements": [
+              "M = Méléna = saignement digestif haut jusqu’à preuve du contraire",
+              "E = Endoscopie < 24h",
+              "L = Liquides IV + bilan initial (NFS, groupage, coag)",
+              "E = Éliminer cancer gastrique (biopsies)",
+              "N = Ne jamais oublier toucher rectal",
+              "A = Arrêt immédiat des AINS + IPP"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. William Johnson, un ouvrier du bâtiment de 65 ans, qui consulte parce qu’il a remarqué des selles noires depuis environ deux semaines. \n\nIl décrit des selles uniformément noires, goudronneuses et collantes, sans présence de sang rouge vif. Elles surviennent deux fois par jour, sans changement de fréquence. En parallèle, il rapporte une douleur sourde à l’épigastre, notée à 3 ou 4 sur 10, qui est présente depuis la même période et qui s’aggrave après les repas. La douleur est assez stable quand elle survient, sans irradiation. Elle est parfois accompagnée de nausées, mais il n’a pas vomi. Il dit avoir moins d’appétit, et il a perdu environ 1 kilo en deux semaines.\n\nPour ses antécédents, il est connu pour une hypertension et une arthrose des deux genoux. Il n’a pas eu de chirurgie. Il est allergique à la pénicilline, qui lui avait donné une éruption dans l’enfance. Ses traitements habituels sont le ramipril et surtout de l’ibuprofène qu’il prend en grande quantité, environ 6 comprimés de 600 mg par jour depuis plusieurs mois, pour ses douleurs articulaires.\n\nSur le plan familial, son père avait une diverticulose, et son frère est diabétique. Dans ses habitudes de vie, il fume un paquet par jour depuis 40 ans, boit une à deux bières quotidiennes, et mange beaucoup de viande séchée. Il vit avec sa femme et ses deux enfants.\n\nÀ l’examen, ses constantes sont stables : TA 125/80, pouls 72, température 37 °C, FR 14. L’abdomen est souple, avec une sensibilité à la palpation de l’épigastre. Pas de masse abdominale palpable. \n\nEn résumé, il s’agit d’un homme de 65 ans avec méléna, douleurs épigastriques post-prandiales, perte d’appétit et facteurs de risque multiples. Mon hypothèse principale est un ulcère gastrique hémorragique induit par la prise chronique d’AINS. Les diagnostics différentiels incluent une gastrite érosive chimique, un cancer gastrique, et plus rarement un ulcère duodénal.\n\nComme examens complémentaires, je demanderais un toucher rectal pour confirmer le méléna, une NFS pour rechercher une anémie, un groupage et RAI, un bilan de coagulation, et une endoscopie digestive haute avec biopsies pour confirmer l’ulcère et exclure une tumeur. Un test H. pylori sera également indiqué.\n\nEn termes de prise en charge, je commencerais par arrêter immédiatement les AINS, instaurer une perfusion d’IPP IV, assurer une hydratation par voie veineuse et préparer une transfusion si nécessaire. Une endoscopie haute sera réalisée en urgence différée (<24h). Par la suite, le traitement consistera en l’éradication d’H. pylori si positif, la poursuite des IPP et la surveillance endoscopique de l’ulcère gastrique. Je proposerais aussi un relais antalgique par paracétamol et une éducation pour arrêter tabac et alcool."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Johnson, 65 ans, consulte pour selles noires depuis 2 semaines.\n\nB (Background) : Douleurs épigastriques post-prandiales, perte d’appétit, perte de poids légère. ATCD HTA, arthrose. Prise chronique d’ibuprofène à forte dose, tabac et alcool quotidien.\n\nA (Assessment) : Suspicion d’ulcère gastrique hémorragique sous AINS. DD : gastrite érosive, cancer gastrique.\n\nR (Recommendation) : NFS, groupage, bilan coag, endoscopie digestive haute avec biopsies, IPP IV, arrêt AINS, relais paracétamol."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Ulcère gastrique vs duodénal",
+              "points": [
+                "Gastrique → douleur post-prandiale, risque cancer ↑",
+                "Duodénal → douleur calmée par repas, réveil nocturne"
+              ]
+            },
+            {
+              "titre": "👉 Classification de Forrest (risque resaignement)",
+              "points": [
+                "Ia = jet artériel actif (90%)",
+                "Ib = suintement (50%)",
+                "IIa = vaisseau visible (43%)",
+                "IIb = caillot adhérent (22%)",
+                "IIc = taches noires (10%)",
+                "III = base propre (5%)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas faire de TR → toujours vérifier le méléna",
+                "Oublier d’arrêter les AINS",
+                "Ne pas proposer d’alternative antalgique",
+                "Retarder l’endoscopie en cas de patient « pressé »"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Ulcère gastrique",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique post-prandiale",
+                      "Facteurs de risque : AINS haute dose, tabac, alcool",
+                      "Méléna depuis 2 semaines",
+                      "Sensibilité épigastrique"
+                    ],
+                    "contre": [
+                      "Pas d’hématémèse, symptômes relativement modérés"
+                    ]
+                  }
+                },
+                {
+                  "question": "Gastrite érosive",
+                  "reponse": {
+                    "pour": [
+                      "Prise chronique AINS",
+                      "Douleur épigastrique"
+                    ],
+                    "contre": [
+                      "Méléna typique → plus évocateur d’ulcère"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer gastrique",
+                  "reponse": {
+                    "pour": [
+                      "Âge 65 ans",
+                      "Tabac, alcool, alimentation riche en nitrites",
+                      "Douleur épigastrique",
+                      "Amaigrissement"
+                    ],
+                    "contre": [
+                      "Début aigu (2 semaines)",
+                      "Perte de poids minime"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Toucher rectal",
+                    "NFS (anémie)",
+                    "Groupage et RAI",
+                    "Bilan coagulation (TP, TCA)",
+                    "Endoscopie digestive haute avec biopsies",
+                    "Test H. pylori"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Ulcère gastrique hémorragique induit par AINS"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Arrêt immédiat AINS",
+                      "IPP IV forte dose (ex. : ésoméprazole 80mg puis perfusion continue)",
+                      "Hydratation IV, monitorage",
+                      "Transfusion si Hb <7 g/dL ou instabilité"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Endoscopie avec biopsies systématiques",
+                    "Éradication H. pylori si positif",
+                    "Relais IPP per os sur 8 semaines",
+                    "Contrôle endoscopique à 8-12 semaines",
+                    "Alternative antalgique par paracétamol",
+                    "Sevrage tabac et alcool"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

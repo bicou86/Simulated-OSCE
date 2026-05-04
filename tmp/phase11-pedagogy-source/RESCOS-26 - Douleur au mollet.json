@@ -1,0 +1,618 @@
+{
+  "title": "RESCOS-26 - Douleur au mollet",
+  "category": "RESCOS",
+  "subcategory": "Angiologie - Pathologie vasculaire",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 55 ans, facteur depuis 17 ans, consultant pour douleur du mollet gauche à la marche",
+    "vitals": {
+      "ta": "152/88 mmHg (droite), 150/86 mmHg (gauche)"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleur du mollet gauche à la marche"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la claudication intermittente",
+          "details": [
+            "Début [il y a 5 ans]",
+            "Caractère répétitif des symptômes",
+            "Accentuation à la marche rapide ou montée",
+            "Disparition rapide à l'arrêt",
+            "Apparition après environ 50 mètres de marche",
+            "Crampe qui s'estompe en moins d'une minute à l'arrêt"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes associés",
+          "details": [
+            "Douleurs de repos [plus limité à la montée]",
+            "Douleurs nocturnes en position couchée [non]",
+            "Troubles trophiques des extrémités [pied gauche plus froid]",
+            "Paresthésies [non]",
+            "Impuissance [marcher vite impossible]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Tabagisme [20 cigarettes/jour, service militaire à 19 ans]",
+            "Diabète [non]",
+            "HTA [tension normale selon patient]",
+            "Dyslipidémie [cholestérol augmenté, non traité]",
+            "Antécédents familiaux [père mort d'infarctus à 55 ans]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Arthrose genou gauche [refus d'opération]",
+            "Affection PTT [17 ans]",
+            "Traumatisme [non mentionné]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Contexte professionnel et social",
+          "patientComment": "[Facteur PTT depuis 17 ans, marche beaucoup]"
+        },
+        {
+          "id": "a7",
+          "text": "Recherche d'ischémie aiguë (5 P)",
+          "details": [
+            "Pain (douleur)",
+            "Pulselessness (absence de pouls)",
+            "Pallor (pâleur)",
+            "Paresthesia (paresthésies)",
+            "Paresia (parésie)"
+          ],
+          "scoringRule": "Évaluer systématiquement les 5 P de l'insuffisance artérielle aiguë"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": true,
+          "details": [
+            "TA droite 152/88 mmHg",
+            "TA gauche 150/86 mmHg"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection des membres inférieurs",
+          "details": [
+            "Téguments, ongles et pilosité [normale]",
+            "Symétrie [pas de lésion trophique]",
+            "Coloration cutanée [normale]",
+            "Température [pied gauche plus froid]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation des pouls périphériques",
+          "details": [
+            "Artères fémorales [poplitée, tibiale postérieure et pédieuse palpables à droite]",
+            "Artères poplitées [non palpables à gauche]",
+            "Artères tibiales postérieures [non palpables à gauche]",
+            "Artères pédieuses [non palpables à gauche]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation vasculaire",
+          "details": [
+            "Souffle inguinal gauche [3/6]",
+            "Râpeux et irradiant jusqu'à mi-cuisse",
+            "Artères carotides [sans souffle]",
+            "Aorte abdominale [sans souffle]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Test d'Allen (perméabilité artères radiale, cubitale, arcade palmaire)",
+          "patientComment": "[Test de perméabilité des artères des membres supérieurs]"
+        },
+        {
+          "id": "e6",
+          "text": "Mesure de l'index de pression systolique (IPS/ABI)",
+          "details": [
+            "Rapport pression cheville/bras",
+            "Normal: 0.9-1.3",
+            "< 0.9: artériopathie",
+            "< 0.4: ischémie critique"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques à considérer",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Artériopathie oblitérante des membres inférieurs (AOMI) stade IIb",
+                    "cause": "Arguments POUR:\n\t□ Claudication intermittente du mollet < 200m\n\t□ Abolition des pouls distaux à gauche\n\t□ Souffle fémoral gauche\n\t□ Facteurs de risque CV (tabac, dyslipidémie, ATCD familiaux)\n\t□ Pied gauche plus froid",
+                    "test": "→ Echo-Doppler artériel des membres inférieurs"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "Canal lombaire étroit",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de troubles neurologiques\n\t□ Disparition rapide des symptômes à l'arrêt\n\t□ Pouls absents",
+                    "test": "→ IRM lombaire si doute"
+                  },
+                  {
+                    "text": "Arthrose du genou",
+                    "cause": "Arguments POUR:\n\t□ Arthrose connue du genou gauche\nArguments CONTRE:\n\t□ Symptômes typiques de claudication vasculaire\n\t□ Anomalies vasculaires objectives",
+                    "test": "→ Radiographie genou"
+                  },
+                  {
+                    "text": "Neuropathie périphérique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de diabète\n\t□ Pas de paresthésies\n\t□ Symptômes d'effort uniquement",
+                    "test": "→ EMG si suspicion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "details": [
+            "Echo-Doppler artériel membres inférieurs",
+            "Mesure index pression systolique (IPS)",
+            "Bilan lipidique complet",
+            "Glycémie à jeun, HbA1c",
+            "Créatinine, DFG",
+            "ECG de repos",
+            "Test de marche sur tapis"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Classification de l'artériopathie (Leriche-Fontaine)",
+          "details": [
+            "Stade I: Asymptomatique",
+            "Stade II: Claudication intermittente",
+            "Stade IIa: > 200m",
+            "Stade IIb: < 200m [patient actuel]",
+            "Stade III: Douleur de repos",
+            "Stade IV: Troubles trophiques"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Arrêt impératif du tabac\n• Activité physique régulière (marche quotidienne)\n• Régime méditerranéen\n• Perte de poids si surcharge"
+              },
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• Antiagrégant plaquettaire (aspirine 100mg ou clopidogrel 75mg)\n• Statine (objectif LDL < 0.7 g/L)\n• IEC ou ARA2 (protection vasculaire)\n• Traitement symptomatique: cilostazol si échec marche"
+              },
+              {
+                "title": "Revascularisation",
+                "content": "• Indiquée si:\n- Échec traitement médical optimal\n- Claudication invalidante < 100m\n- Ischémie critique\n• Options: angioplastie, stent, pontage"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Contrôle facteurs de risque CV",
+            "IPS annuel",
+            "Echo-Doppler si aggravation",
+            "Dépistage autres localisations (coronaire, carotidienne)",
+            "Éducation thérapeutique"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos artères de la jambe gauche sont rétrécies, ce qui explique vos douleurs à la marche. C'est lié au tabac et au cholestérol. Il est crucial d'arrêter de fumer et de traiter vos facteurs de risque pour éviter l'aggravation."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce au genou que je suis malade?]\n[Dois-je être opéré?]\n[Puis-je continuer à travailler?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Non, c'est au mollet que vous avez mal, le problème vient des artères\nOn va d'abord essayer un traitement médical avec de la marche régulière\nVous pouvez continuer à travailler en adaptant votre rythme de marche"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Cas 1",
+      "nom": "Patient masculin",
+      "age": "55 ans",
+      "profession": "Facteur PTT depuis 17 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal au mollet quand je marche",
+        "description": "Depuis 5 ans, crampe au mollet gauche après 50 mètres de marche"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur type crampe au mollet gauche",
+          "Apparaît après environ 50 mètres de marche",
+          "S'estompe rapidement (moins d'une minute) à l'arrêt",
+          "Plus limité à la montée",
+          "Impossible de marcher vite"
+        ],
+        "facteursDeclenchants": "Marche rapide, montée d'escaliers, port de charges",
+        "evolution": "Régulièrement depuis 5 ans, pas d'aggravation franche"
+      },
+      "antecedents": {
+        "medicaux": [
+          "Arthrose du genou gauche (refuse opération)",
+          "Cholestérol augmenté non traité"
+        ],
+        "familiaux": "Père décédé d'infarctus à 55 ans, mère vivante à 78 ans avec insuffisance cardiaque"
+      },
+      "habitudes": {
+        "tabac": "1 paquet/jour depuis le service militaire (19 ans)",
+        "alcool": "Occasionnel",
+        "activite": "Marche beaucoup pour le travail (facteur)"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet mais minimise",
+          "Pense que c'est son arthrose du genou",
+          "Réticent à l'idée d'arrêter de fumer"
+        ],
+        "signesPhysiques": [
+          "Aucune douleur au repos",
+          "Pied gauche légèrement plus froid"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Insuffisance artérielle",
+      "pointsCles": [
+        "Claudication intermittente typique stade IIb de Leriche-Fontaine",
+        "Facteurs de risque cardiovasculaire multiples",
+        "Abolition des pouls distaux à gauche",
+        "Souffle fémoral caractéristique",
+        "IPS < 0.9 probable"
+      ],
+      "pieges": [
+        "Ne pas confondre avec l'arthrose du genou",
+        "Rechercher systématiquement les 5 P de l'ischémie aiguë",
+        "Dépister les autres localisations athéromateuses",
+        "Ne pas oublier le bilan des facteurs de risque CV"
+      ],
+      "criteresDiagnostiques": [
+        "Claudication < 200m = stade IIb",
+        "IPS < 0.9 confirme AOMI",
+        "Echo-Doppler localise les sténoses"
+      ]
+    },
+    "resume": {
+      "titre": "🦵 Artériopathie oblitérante des membres inférieurs (AOMI) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Claudication intermittente : douleur à l'effort, disparaît à l'arrêt (souvent mollet, cuisse, fesse)",
+                "Douleur de décubitus (stade III), parfois réveils nocturnes",
+                "Plaies chroniques, ulcères, gangrène (stade IV)",
+                "Absence de pouls périphériques ressentie par le patient"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Tabac (principal facteur modifiable)",
+                "HTA, diabète, dyslipidémie",
+                "ATCD de maladie cardiovasculaire (AVC, IDM)",
+                "Insuffisance rénale chronique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Inspection : peau pâle, froide, atrophique, chute des poils, ongles dystrophiques, ulcères",
+                "Palpation : abolition des pouls distaux (pédieux, tibial postérieur)",
+                "Auscultation : souffle artériel fémoral ou poplité",
+                "Test de lever de jambe : pâleur à l’élévation, rougeur à la pendaison",
+                "Index de pression systolique (IPS) ≤ 0,9 : diagnostic clé"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de première intention",
+              "points": [
+                "Index de pression systolique (IPS) au Doppler : < 0,9 = AOMI",
+                "Épreuve de marche + IPS post-exercice si normal au repos",
+                "Bilan biologique : glycémie, HbA1c, profil lipidique, créatinine"
+              ]
+            },
+            {
+              "titre": "Imagerie (si revascularisation envisagée)",
+              "points": [
+                "Écho-Doppler artériel des membres inférieurs",
+                "Angio-IRM ou angio-TDM avec produit de contraste",
+                "Artériographie diagnostique si endovasculaire envisagé"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Sevrage tabagique (primordial)",
+                "Rééducation à la marche (programme supervisé recommandé)",
+                "Contrôle des facteurs de risque cardiovasculaire",
+                "Vaccination antigrippale et COVID-19 recommandée"
+              ]
+            },
+            {
+              "titre": "Traitement médical",
+              "points": [
+                "Antiplaquettaire : aspirine ou clopidogrel",
+                "Statine forte dose (objectifs LDL < 0,55 mmol/L si haut risque)",
+                "Traitement antihypertenseur : cible < 130/80 mmHg",
+                "Traitement du diabète : préférer SGLT2i ou GLP-1 agoniste si indication",
+                "Cilostazol si claudication persistante (CI : insuffisance cardiaque)"
+              ]
+            },
+            {
+              "titre": "Indications de revascularisation",
+              "points": [
+                "Claudication invalidante malgré traitement médical + rééducation",
+                "Ischémie critique : douleurs de repos, ulcères, gangrène",
+                "Techniques : endovasculaire (angioplastie, stent) ou chirurgie (pontage)"
+              ]
+            },
+            {
+              "titre": "Prise en charge des plaies",
+              "points": [
+                "Soins locaux spécialisés (ulcères, nécroses)",
+                "Antibiothérapie si infection",
+                "Amputation si gangrène extensive ou non revascularisable"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Claudication à l’effort = penser AOMI",
+            "Mesurer IPS systématiquement",
+            "Facteurs de risque cardiovasculaire = à corriger activement",
+            "Revascularisation si ischémie critique ou claudication invalidante",
+            "Rééducation à la marche = traitement de première intention"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur au mollet (AOMI)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, ATCD, motif de consultation",
+            "Symptôme principal → début, localisation, déclencheurs, soulagement",
+            "Signes associés → douleur de repos, troubles trophiques, paresthésies",
+            "Facteurs de risque CV → tabac, diabète, HTA, dyslipidémie, ATCD familiaux",
+            "Examen clinique ciblé → inspection MI, température, palpation pouls, souffle vasculaire, IPS",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → IPS, écho-Doppler, bilan biologique",
+            "Prise en charge → mesures hygiéno-diététiques, traitement médical, indication revascularisation"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 5P de l’ischémie aiguë",
+            "elements": [
+              "Pain (douleur)",
+              "Pulselessness (pouls abolis)",
+              "Pallor (pâleur)",
+              "Paresthesia",
+              "Paresia"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit d’un homme de 55 ans, facteur depuis 17 ans, avec des antécédents d’arthrose du genou gauche et une hypercholestérolémie non traitée, tabagique à 20 cigarettes/jour, qui consulte pour une douleur du mollet gauche.\n\nLa douleur est de type crampe, apparaissant systématiquement après environ 50 mètres de marche, rapidement réversible à l’arrêt (moins d’une minute). Elle est aggravée par la montée ou la marche rapide, rendant la marche rapide impossible. Les symptômes sont présents depuis 5 ans, sans aggravation brutale récente.\n\nIl n’y a pas de douleurs de repos ni de troubles sensitifs. Le patient note que son pied gauche est plus froid. Pas de plaies, pas de troubles trophiques.\n\nÀ l’examen, la TA est 152/88 à droite et 150/86 à gauche. On retrouve un pied gauche plus froid, l’absence des pouls poplité, tibial postérieur et pédieux à gauche, alors qu’ils sont perçus à droite. Présence d’un souffle fémoral gauche. Pas de signe d’ischémie aiguë.\n\nEn résumé, il s’agit d’une claudication intermittente typique du mollet gauche avec abolition des pouls et souffle fémoral, sur un terrain à haut risque cardiovasculaire.\n\nHypothèse principale : artériopathie oblitérante des membres inférieurs (AOMI) stade IIb de Leriche-Fontaine.\n\nDiagnostics différentiels : arthrose du genou (mais symptômes typiques vasculaires), canal lombaire étroit, neuropathie périphérique.\n\nExamens complémentaires : mesure de l’index de pression systolique (IPS), écho-Doppler artériel des membres inférieurs, bilan lipidique, glycémie, créatinine, ECG de repos.\n\nPrise en charge immédiate : arrêt impératif du tabac, marche régulière, mise sous antiagrégant plaquettaire, statine, IEC/ARA2. Revascularisation à discuter si claudication invalidante persistante."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Patient de 55 ans, facteur, consulte pour douleur du mollet gauche à la marche depuis 5 ans.\n\nB (Background) : ATCD d’arthrose du genou, cholestérol élevé non traité, tabagisme chronique. Père décédé d’infarctus à 55 ans.\n\nA (Assessment) : Claudication intermittente typique à 50 m, pouls abolis à gauche, souffle fémoral. Hypothèse principale : AOMI stade IIb. DD : arthrose, canal lombaire étroit, neuropathie.\n\nR (Recommendation) : IPS et écho-Doppler, bilan cardio-métabolique, sevrage tabagique, antiagrégant, statine, rééducation à la marche. Revascularisation si échec du traitement médical.",
+          "mnemo": {
+            "titre": "👉 Mnémo express : SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Classification Leriche-Fontaine",
+              "points": [
+                "Stade I : asymptomatique",
+                "Stade IIa : claudication > 200 m",
+                "Stade IIb : claudication < 200 m",
+                "Stade III : douleurs de repos",
+                "Stade IV : troubles trophiques (ulcères, gangrène)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque CV → TABAC",
+              "points": [
+                "T : Tabac 🚬",
+                "A : Antécédent familial",
+                "B : Blood pressure (HTA)",
+                "A : Anomalies lipidiques",
+                "C : Carbohydrate (diabète)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "AOMI",
+                  "reponse": {
+                    "pour": [
+                      "Claudication intermittente typique (< 200 m)",
+                      "Disparition rapide à l’arrêt",
+                      "Pouls abolis à gauche",
+                      "Souffle fémoral gauche",
+                      "Pied plus froid",
+                      "Facteurs de risque CV multiples"
+                    ],
+                    "contre": [
+                      "Pas de troubles trophiques avancés",
+                      "Pas de douleur de repos"
+                    ]
+                  }
+                },
+                {
+                  "question": "Arthrose du genou",
+                  "reponse": {
+                    "pour": [
+                      "Arthrose connue du genou gauche"
+                    ],
+                    "contre": [
+                      "Douleur typique d’effort réversible à l’arrêt",
+                      "Pouls abolis",
+                      "Souffle artériel"
+                    ]
+                  }
+                },
+                {
+                  "question": "Canal lombaire étroit",
+                  "reponse": {
+                    "pour": [
+                      "Douleur à la marche"
+                    ],
+                    "contre": [
+                      "Pas de troubles neurologiques",
+                      "Pas de soulagement en position assise penchée",
+                      "Pouls abolis"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "IPS (< 0,9 si AOMI)",
+                    "Écho-Doppler artériel des MI",
+                    "Bilan lipidique complet",
+                    "Glycémie, HbA1c",
+                    "Créatinine, DFG",
+                    "ECG de repos"
+                  ],
+                  "analyse": "👉 Analyse orale : « Ces examens confirment l’AOMI, évaluent la sévérité et recherchent les facteurs de risque associés. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Artériopathie oblitérante des membres inférieurs (AOMI) stade IIb"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Sevrage tabagique impératif",
+                      "Programme de marche régulière",
+                      "Antiagrégant plaquettaire",
+                      "Statine forte dose",
+                      "IEC/ARA2 pour protection vasculaire",
+                      "Revascularisation si claudication invalidante persistante"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance IPS annuel",
+                    "Contrôle régulier des facteurs de risque",
+                    "Écho-Doppler si aggravation",
+                    "Éducation thérapeutique"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au triptyque « Marcher – Mesurer – Médicament » : Marche régulière, Mesurer IPS, Médicaments CV"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

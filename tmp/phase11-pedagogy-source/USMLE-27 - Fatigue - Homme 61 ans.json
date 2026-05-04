@@ -1,0 +1,920 @@
+{
+  "title": "USMLE-27 - Fatigue - Homme 61 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "William Jordan, 61 ans, vient au cabinet en se plaignant de fatigue",
+    "vitals": {
+      "ta": "135/85 mmHg",
+      "fc": "70 bpm",
+      "fr": "13/min",
+      "temperature": "37°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je me sens fatigué, faible, sans énergie"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fatigue",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a six mois]",
+            "Événements associés [Aucun]",
+            "Progression de la fatigue au cours de la journée [La même tout au long de la journée]",
+            "Impact sur le travail/performance [Oui, je n'ai pas l'énergie de faire ma promenade quotidienne de 30 minutes avec mon chien, et même au travail, je ne suis pas aussi énergique qu'avant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Changements d'appétit [J'ai peu d'appétit]",
+            "Changements de poids [J'ai perdu 3,6 kg au cours des six derniers mois. Je n'avais pas l'intention de perdre du poids]",
+            "Fièvre/frissons, douleur thoracique, toux, essoufflement, intolérance au froid, changements de peau/cheveux [Aucun]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes digestifs",
+          "binaryOnly": false,
+          "details": [
+            "Changement des habitudes intestinales [J'ai des selles 2 à 3 fois par semaine. Cela dure depuis 10 ans. Récemment, j'ai remarqué des selles plus malodorantes et d'apparence graisseuse]",
+            "Sang dans les selles [Non]",
+            "Nausées/vomissements [Parfois, je me sens nauséeux]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Douleur abdominale",
+          "binaryOnly": false,
+          "details": [
+            "Présence de douleur [Oui, je ressens une gêne ici (région épigastrique)]",
+            "Début [Il y a quatre mois ; elle a augmenté progressivement]",
+            "Qualité [Vague, profonde]",
+            "Intensité [4/10]",
+            "Facteurs aggravants/atténuants [Rien ne l'aggrave, mais je me sens mieux quand je me penche en avant]",
+            "Relation avec la nourriture [Aucune]",
+            "Irradiation [La gêne irradie vers mon dos]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes psychiatriques",
+          "binaryOnly": false,
+          "details": [
+            "Sentiment de dépression [Oui, je me sens triste]",
+            "Raison de la tristesse [Je ne sais pas vraiment]",
+            "Pensées/plans/tentatives de suicide [Non]",
+            "Sentiments de culpabilité, de honte, d'inutilité [Non]",
+            "Problèmes de sommeil [Je me réveille inhabituellement tôt le matin. Depuis 2 mois]",
+            "Perte de concentration [Oui, je n'arrive plus à me concentrer en regardant les infos ou en jouant aux cartes avec mes amis]",
+            "Perte d'intérêt [Je ne prends plus de plaisir à jouer aux cartes avec mes amis. Je trouve que la vie est ennuyeuse]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Paracétamol, mais cela n'aide pas"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents psychiatriques",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Appendicectomie à l'âge de 16 ans"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Père [Mon père est mort dans un accident de voiture et avait du diabète]",
+            "Mère [Ma mère est morte d'un cancer du sein]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Policier, retraité depuis un an]",
+            "Consommation d'alcool [Deux bières par jour et 3 à 4 le week-end. C'est comme ça depuis des années. Cela m'aide à me détendre]",
+            "Drogues illicites [Jamais]",
+            "Tabac [J'ai arrêté il y a 6 mois après avoir fumé un paquet par jour pendant 30 ans (parce que cela me dégoûtait et me rendait malade)]",
+            "Exercice [Je marche 30 minutes tous les jours]",
+            "Régime alimentaire [Régulier ; j'aime la malbouffe]",
+            "Activité sexuelle [Sexuellement actif avec ma femme]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune allergie médicamenteuse connue"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Aspect général",
+          "binaryOnly": true,
+          "patientComment": "Le patient ne semble pas en détresse aiguë, mais a l'air triste"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des conjonctives [Pas de pâleur conjonctivale]",
+            "Inspection de la bouche et de la gorge [Bouche et pharynx normaux]",
+            "Palpation des ganglions lymphatiques [Pas d'adénopathie]",
+            "Examen de la glande thyroïde [Thyroïde normale]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [RR et FC normaux ; B1/B2 normaux ; pas de souffles, frottements ou galops]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Murmures vésiculaires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Bruits intestinaux normaux en quantité et qualité]",
+            "Percussion",
+            "Palpation [Détendu, souple, légère sensibilité épigastrique]",
+            "Détente [Pas de détente]",
+            "Signe de Murphy [Négatif]",
+            "Hépato-splénomégalie [Pas d'hépato-splénomégalie]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Pas d'œdème]",
+            "Palpation"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes organiques prioritaires",
+                "items": [
+                  {
+                    "text": "Cancer du pancréas",
+                    "cause": "Arguments POUR:\n\t□ Antécédents de tabagisme (30 paquets-années)\n\t□ Régime riche en graisses\n\t□ Perte de poids non intentionnelle de 3,6 kg\n\t□ Selles malodorantes et d'apparence graisseuse (malabsorption)\n\t□ Douleur épigastrique irradiant vers le dos\n\t□ Amélioration en se penchant en avant\n\t□ Dépression pouvant être manifestation initiale",
+                    "test": "→ CT abdominal, AST/ALT/bilirubine/phosphatases alcalines (PAL)"
+                  },
+                  {
+                    "text": "Pancréatite chronique",
+                    "cause": "Arguments POUR:\n\t□ Antécédents de consommation d'alcool (>14 verres/semaine)\n\t□ Douleur épigastrique irradiant vers le dos\n\t□ Selles malodorantes et d'apparence graisseuse\n\t□ Amélioration en se penchant en avant\nArguments CONTRE:\n\t□ Absence d'épisodes récurrents de douleur similaire",
+                    "test": "→ Amylase, lipase, CT abdominal"
+                  },
+                  {
+                    "text": "Maladie ulcéreuse peptique",
+                    "cause": "Arguments POUR:\n\t□ Douleur épigastrique\n\t□ Nausées\nArguments CONTRE:\n\t□ Perte de poids inhabituelle pour ulcère non compliqué\n\t□ Pas de relation avec les repas",
+                    "test": "→ Gastroscopie"
+                  },
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "Arguments POUR:\n\t□ Fatigue et faiblesse\n\t□ Constipation chronique\n\t□ Symptômes dépressifs\nArguments CONTRE:\n\t□ Douleur abdominale inhabituelle",
+                    "test": "→ TSH"
+                  }
+                ]
+              },
+              {
+                "name": "Causes psychiatriques",
+                "items": [
+                  {
+                    "text": "Dépression majeure",
+                    "cause": "Arguments POUR (critères SIC E CAPS):\n\t□ Sommeil perturbé (réveil matinal précoce depuis 2 mois)\n\t□ Intérêt diminué (anhédonie)\n\t□ Culpabilité: Non\n\t□ Énergie diminuée\n\t□ Concentration diminuée\n\t□ Appétit diminué avec perte de poids\n\t□ Psychomoteur: Ralentissement\n\t□ Suicide: Pas d'idées suicidaires",
+                    "test": "→ TSH pour exclure hypothyroïdie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de base",
+          "binaryOnly": false,
+          "details": [
+            "FSC et recherche de sang occulte dans les selles",
+            "Glycémie",
+            "Études des graisses fécales",
+            "TSH"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires spécialisés",
+          "binaryOnly": false,
+          "details": [
+            "Amylase, lipase",
+            "AST/ALT/bilirubine (directe, indirecte, et totale)/phosphatases alcalines (PAL)",
+            "CT abdominal",
+            "US abdominal",
+            "Gastroscopie si symptômes persistants"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge de la dépression",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Système de soutien",
+                "content": "• Système de soutien à domicile (amis, famille)\n• Systèmes de soutien à l'hôpital et dans la communauté\n• Référence à l'assistante sociale"
+              },
+              {
+                "title": "Compétences de gestion du stress",
+                "content": "• Exercice adapté\n• Techniques de relaxation\n• Passer plus de temps avec la famille et les amis"
+              },
+              {
+                "title": "Suivi psychologique",
+                "content": "• Évaluation psychiatrique si symptômes persistants\n• Considérer antidépresseurs si dépression confirmée\n• Psychothérapie de soutien"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Signes nécessitant une consultation urgente",
+            "items": [
+              {
+                "text": "Ictère ou coloration jaune de la peau/yeux",
+                "description": "→ Suggère obstruction biliaire, consultation immédiate"
+              },
+              {
+                "text": "Aggravation rapide de la douleur abdominale",
+                "description": "→ Possible complication pancréatique"
+              },
+              {
+                "text": "Perte de poids rapide supplémentaire",
+                "description": "→ Suggère progression d'une pathologie sous-jacente"
+              },
+              {
+                "text": "Idées suicidaires",
+                "description": "→ Urgence psychiatrique, consultation immédiate"
+              },
+              {
+                "text": "Vomissements persistants ou selles noires",
+                "description": "→ Possibles complications digestives"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Jordan, vos symptômes sont compatibles avec plusieurs diagnostics différents. Ils peuvent être causés par un ulcère qui pourrait être traité avec un traitement antibiotique et des anti-acides, ou ils peuvent avoir une cause plus sérieuse, comme un cancer du pancréas. Je vais vous programmer un CT abdominal qui pourrait révéler la source de votre douleur, et je vais également effectuer des analyses de sang. Je sais que vous êtes préoccupé par votre prochain voyage, mais les résultats des tests devraient être disponibles dans quelques jours, et ils devraient nous donner une bonne idée de ce qui ne va pas. En attendant, notre assistante sociale peut vous rencontrer pour vous aider à trouver des moyens de gérer le stress que vous avez vécu. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Je veux partir en voyage avec ma femme. Pouvons-nous faire les tests après mon retour ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Vous ne semblez pas être en assez bonne forme pour profiter d'un voyage. Faisons quelques analyses de sang initiales, puis nous verrons comment vous vous sentez et déciderons si nous pouvons vous laisser partir."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "William Jordan",
+      "age": "61 ans",
+      "contexte": "Homme se présentant au cabinet pour fatigue",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens vraiment fatigué, docteur. Je n'ai plus d'énergie.",
+        "autreChose": "J'ai aussi des douleurs au ventre et je me sens triste sans raison."
+      },
+      "consignes": [
+        "Montrez-vous faible et triste, et penchez-vous en avant en position assise.",
+        "Montrez une gêne abdominale qui augmente lorsque vous êtes allongé sur le dos.",
+        "Montrez des signes de douleur à la palpation de la région épigastrique.",
+        "Parler lentement avec peu d'énergie dans la voix."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue",
+          "Début : Il y a six mois",
+          "Progression : Constante tout au long de la journée",
+          "Impact : Ne peut plus faire sa promenade quotidienne de 30 minutes",
+          "Pas d'énergie au travail"
+        ],
+        "symptomesAssocies": [
+          "Perte d'appétit",
+          "Perte de poids de 3,6 kg non intentionnelle",
+          "Selles malodorantes et graisseuses récemment",
+          "Gêne épigastrique vague et profonde",
+          "Nausées occasionnelles",
+          "Tristesse sans raison",
+          "Réveil matinal précoce",
+          "Perte de concentration",
+          "Perte d'intérêt pour les activités"
+        ],
+        "reponseAuxSymptomes": [
+          "J'ai essayé le paracétamol mais ça n'aide pas",
+          "Je me penche en avant quand j'ai mal au ventre"
+        ],
+        "representationMaladie": [
+          "Je ne sais pas ce qui ne va pas",
+          "J'espère que ce n'est rien de grave"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Fatigue persistante",
+          "Perte de poids involontaire"
+        ],
+        "neurologique": [
+          "Trouble de concentration",
+          "Pas de céphalées"
+        ],
+        "digestive": [
+          "Constipation chronique (10 ans)",
+          "Selles graisseuses récentes",
+          "Nausées occasionnelles"
+        ],
+        "psychiatrique": [
+          "Tristesse",
+          "Anhédonie",
+          "Insomnie de réveil précoce"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Paracétamol au besoin",
+        "tabac": "Ex-fumeur - 1 paquet/jour pendant 30 ans, arrêt il y a 6 mois",
+        "alcool": "2 bières/jour, 3-4 le week-end",
+        "sexualite": "Active avec épouse",
+        "drogues": "Jamais"
+      },
+      "histoireMedicale": [
+        "Aucun antécédent médical significatif",
+        "Appendicectomie à 16 ans"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Position penchée en avant",
+          "Voix faible et monotone",
+          "Peu de contact visuel",
+          "Mouvements lents"
+        ],
+        "durantStatus": [
+          "Douleur à la palpation épigastrique",
+          "Inconfort en décubitus dorsal",
+          "Soulagement en position penchée"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patient de 61 ans, policier retraité depuis 1 an, consultant pour fatigue évoluant depuis 6 mois. Perte de poids non intentionnelle de 3,6 kg, perte d'appétit, selles graisseuses récentes. Douleur épigastrique vague irradiant au dos depuis 4 mois, améliorée par antéflexion. Symptômes dépressifs associés (tristesse, anhédonie, insomnie de réveil précoce, trouble de concentration). Consommation d'alcool >14 verres/semaine. Ex-fumeur (30 paquets-années, arrêt il y a 6 mois). ATCD familiaux: père diabétique, mère cancer du sein.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e dit vouloir faire :",
+        "• FSC : donner résultat montrant légère anémie",
+        "• Glycémie : donner résultat montrant hyperglycémie modérée",
+        "• Enzymes pancréatiques : donner résultats avec lipase légèrement élevée",
+        "• CT abdominal : mentionner qu'il sera programmé en externe"
+      ],
+      "pointsCles": [
+        "La présentation suggère une pathologie pancréatique (cancer vs pancréatite chronique)",
+        "Les symptômes dépressifs peuvent être secondaires à une pathologie organique",
+        "La malabsorption (selles graisseuses) oriente vers une insuffisance pancréatique",
+        "L'arrêt récent du tabac après diagnostic pourrait être un signe d'alerte",
+        "La consommation d'alcool est un facteur de risque de pancréatite chronique"
+      ],
+      "pieges": [
+        "Se focaliser uniquement sur la dépression sans explorer les causes organiques",
+        "Oublier de quantifier précisément la consommation d'alcool",
+        "Ne pas faire le lien entre les selles graisseuses et la pathologie pancréatique",
+        "Omettre l'examen abdominal approfondi",
+        "Ne pas explorer les antécédents familiaux de cancer"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Suspicion élevée de cancer du pancréas avec syndrome dépressif secondaire"
+        },
+        {
+          "titre": "Cancer du pancréas - Présentation clinique",
+          "contenu": "Le cancer du pancréas se présente souvent de manière insidieuse :",
+          "points": [
+            "Douleur épigastrique vague irradiant au dos (70% des cas)",
+            "Perte de poids involontaire (90% des cas)",
+            "Ictère si tête du pancréas atteinte (obstruction biliaire)",
+            "Insuffisance pancréatique exocrine → malabsorption → stéatorrhée",
+            "Diabète de novo dans 25% des cas",
+            "Dépression peut précéder le diagnostic de plusieurs mois"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque du cancer du pancréas",
+          "contenu": "Plusieurs facteurs augmentent le risque :",
+          "points": [
+            "Tabagisme (RR 2-3, persiste 10-15 ans après arrêt)",
+            "Pancréatite chronique (souvent liée à l'alcool)",
+            "Diabète (surtout si récent après 50 ans)",
+            "Obésité et régime riche en graisses",
+            "Antécédents familiaux (10% des cas)",
+            "Âge > 60 ans"
+          ]
+        },
+        {
+          "titre": "Pancréatite chronique - Diagnostic différentiel",
+          "contenu": "La pancréatite chronique partage plusieurs caractéristiques :",
+          "points": [
+            "Douleur épigastrique irradiant au dos",
+            "Amélioration par antéflexion (signe du coussin)",
+            "Insuffisance pancréatique → malabsorption",
+            "Alcoolisme responsable de 70-80% des cas",
+            "Évolution par poussées récurrentes typiquement",
+            "Calcifications pancréatiques au CT"
+          ]
+        },
+        {
+          "titre": "Insuffisance pancréatique exocrine",
+          "contenu": "Se manifeste quand >90% du parenchyme est détruit :",
+          "points": [
+            "Stéatorrhée (selles graisseuses, malodorantes)",
+            "Perte de poids malgré apport calorique normal",
+            "Carences en vitamines liposolubles (A, D, E, K)",
+            "Test: élastase fécale diminuée",
+            "Traitement: enzymes pancréatiques de substitution"
+          ]
+        },
+        {
+          "titre": "Dépression et cancer",
+          "contenu": "La dépression peut être un symptôme précoce de cancer :",
+          "points": [
+            "Précède souvent le diagnostic de cancer du pancréas",
+            "Mécanisme: cytokines pro-inflammatoires",
+            "Toujours rechercher cause organique si dépression tardive",
+            "Critères DSM-5: au moins 5 symptômes pendant 2 semaines",
+            "Mnémonique SIC E CAPS pour les critères"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "Bilan étagé selon la suspicion clinique :",
+          "points": [
+            "1ère intention: FSC, glycémie, bilan hépatique, lipase",
+            "CA 19-9: marqueur tumoral peu sensible/spécifique",
+            "CT abdominal avec contraste: examen de choix",
+            "IRM/MRCP si doute diagnostique",
+            "Écho-endoscopie + biopsie si masse suspecte"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Patient de 61 ans présentant un tableau évocateur de pathologie pancréatique maligne: triade classique de douleur épigastrique, perte de poids et apparition récente de selles graisseuses suggérant une insuffisance pancréatique. Les symptômes dépressifs associés renforcent cette suspicion. L'investigation doit être rapide vu le pronostic sombre du cancer du pancréas."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Toute fatigue avec perte de poids après 50 ans nécessite une investigation",
+            "La dépression d'apparition tardive doit faire rechercher une cause organique",
+            "Les selles graisseuses orientent vers une pathologie pancréatique",
+            "Le CT abdominal est l'examen clé pour le diagnostic",
+            "La prise en charge doit être multidisciplinaire (oncologue, psychiatre, assistante sociale)"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Enzymes pancréatiques si insuffisance exocrine confirmée",
+        "Analgésie adaptée (palier OMS selon intensité)",
+        "Support nutritionnel avec diététicien",
+        "Prise en charge de la dépression si persistante"
+      ],
+      "examensComplementaires": [
+        "CT abdominal: masse pancréatique, dilatation canalaire, métastases",
+        "CA 19-9: élevé dans 80% des cancers du pancréas avancés",
+        "Élastase fécale: diminuée si insuffisance pancréatique",
+        "Glycémie à jeun: dépistage diabète secondaire"
+      ]
+    },
+    "resume": {
+      "titre": "🧬 Cancer du pancréas – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur abdominale épigastrique transfixiante irradiant dans le dos",
+                "Amaigrissement rapide, anorexie, asthénie",
+                "Ictère progressif avec prurit (tumeurs céphaliques)",
+                "Nausées, troubles digestifs"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Âge > 60 ans",
+                "Tabac (facteur majeur)",
+                "Alcoolisme chronique",
+                "Pancréatite chronique",
+                "Diabète récent ou aggravé",
+                "Antécédents familiaux de cancer pancréatique (formes héréditaires rares)"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Symptômes souvent tardifs",
+                "Découverte au stade localement avancé ou métastatique dans la majorité des cas"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Amaigrissement, altération état général",
+                "Ictère cutanéo-muqueux avec prurit (si obstruction biliaire)",
+                "Grattage cutané (lésions excoriées)"
+              ]
+            },
+            {
+              "titre": "Palpation",
+              "points": [
+                "Hépatomégalie (métastases hépatiques)",
+                "Vésicule palpable indolore (signe de Courvoisier-Terrier)",
+                "Douleur épigastrique provoquée"
+              ]
+            },
+            {
+              "titre": "Autres signes",
+              "points": [
+                "Ascite (carcinose péritonéale)",
+                "Adénopathie sus-claviculaire gauche (Troisier)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Cholestase biologique si ictère (bilirubine conjuguée, PAL, GGT ↑)",
+                "CA 19-9 souvent élevé (non spécifique, suivi évolutif)",
+                "NFS, fonction hépatique, glycémie"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : première intention si ictère",
+                "Scanner TAP injecté = examen clé pour diagnostic et bilan d’extension",
+                "IRM pancréatique ou bili-IRM si doute",
+                "Échoendoscopie avec biopsie : confirmation histologique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement curatif (si tumeur résécable)",
+              "points": [
+                "Chirurgie : duodénopancréatectomie céphalique (Whipple) pour tumeur céphalique",
+                "Pancréatectomie gauche ± splénectomie pour tumeurs corporeo-caudales",
+                "Curage ganglionnaire systématique"
+              ]
+            },
+            {
+              "titre": "Traitement complémentaire",
+              "points": [
+                "Chimiothérapie adjuvante (gemcitabine, FOLFIRINOX)",
+                "Chimiothérapie néoadjuvante dans certains cas (formes borderline résécables)"
+              ]
+            },
+            {
+              "titre": "Traitement palliatif",
+              "points": [
+                "Drainage biliaire endoscopique (stent) si ictère obstructif",
+                "Chimiothérapie palliative si métastases",
+                "Antalgiques (jusqu’aux morphiniques, bloc cœliaque si douleurs rebelles)",
+                "Soins de support nutritionnels et psychologiques"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Cancer pancréatique = diagnostic souvent tardif, mauvais pronostic",
+            "Symptômes clés : douleur épigastrique transfixiante, ictère progressif, amaigrissement",
+            "Scanner TAP = examen de référence",
+            "Confirmation histologique indispensable avant chimiothérapie",
+            "Chirurgie seule option curative mais souvent inapplicable (découverte tardive)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur abdominale ? Irradiation dorsale ?",
+                "Amaigrissement, anorexie, fatigue ?",
+                "Ictère, prurit, urines foncées, selles décolorées ?",
+                "ATCD pancréatite chronique, tabac, alcool ?",
+                "Diabète récent ou aggravé ? Antécédents familiaux ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen clinique complet (ictère, amaigrissement, Courvoisier, Troisier)",
+                "Biologie : NFS, fonction hépatique, glycémie, CA 19-9",
+                "Échographie abdominale (ictère obstructif)",
+                "Scanner TAP injecté (diagnostic et extension)",
+                "Échoendoscopie avec biopsie pour histologie"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Scanner TAP pour diagnostic et bilan d’extension",
+                "Confirmation histologique avant chimiothérapie",
+                "Chirurgie si tumeur résécable, sinon traitement palliatif (drainage, chimio, soins de support)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Fatigue, perte de poids et douleurs abdominales (suspicion cancer pancréatique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (fatigue, perte de poids, douleurs abdominales)",
+            "Caractériser fatigue → durée (6 mois), constante, impact fonctionnel (arrêt promenades, baisse énergie travail)",
+            "Perte de poids → 3,6 kg en 6 mois, anorexie",
+            "Douleurs → épigastriques, sourdes, irradiant au dos, soulagées par antéflexion",
+            "Transit → constipation chronique, selles graisseuses et malodorantes (stéatorrhée)",
+            "Signes psychiatriques → tristesse, anhédonie, réveil précoce, concentration diminuée",
+            "ATCD → appendicectomie, ex-fumeur 30 PA, alcool quotidien, mère cancer du sein, père diabète",
+            "Examen clinique → état général altéré, douleur épigastrique modérée, pas d’ictère, pas d’HSM",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → FSC, lipase, glycémie, bilan hépatique, TSH, CT abdo injecté",
+            "Prise en charge → multidisciplinaire, enzymes pancréatiques, prise en charge douleur et nutrition, soutien psychiatrique"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : PANCREAS",
+            "elements": [
+              "P = Perte de poids",
+              "A = Amaigrissement + Anorexie",
+              "N = Nausées",
+              "C = Constipation / stéatorrhée",
+              "R = Risque alcool + tabac",
+              "E = Epigastralgie transfixiante",
+              "A = Antéflexion soulage",
+              "S = Suspicion cancer pancréas"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. William Jordan, un homme de 61 ans, policier récemment retraité, qui consulte pour une fatigue persistante évoluant depuis environ six mois.\n\nIl décrit une sensation constante de faiblesse, l’empêchant de réaliser ses promenades quotidiennes avec son chien et réduisant son énergie dans les activités sociales. Depuis la même période, il note une perte de poids involontaire de 3,6 kg, associée à une perte d’appétit. Il a aussi remarqué récemment des selles plus grasses, malodorantes et difficiles à évacuer, suggérant une stéatorrhée.\n\nDepuis quatre mois, il souffre de douleurs abdominales diffuses, surtout en région épigastrique, décrites comme sourdes et profondes, irradiant vers le dos, soulagées lorsqu’il se penche en avant. Il n’a pas de vomissements, ni de rectorragies. Parfois, des nausées.\n\nIl rapporte également des symptômes psychiatriques : tristesse persistante sans raison précise, perte d’intérêt pour ses activités habituelles comme les cartes avec ses amis, réveils précoces, perte de concentration. Il nie toute idée suicidaire.\n\nDans ses antécédents, on note une appendicectomie, un tabagisme ancien (30 paquets-années, sevré il y a 6 mois car cela le dégoûtait), une consommation régulière d’alcool (2 bières par jour, plus le week-end). Son père était diabétique et sa mère est décédée d’un cancer du sein. Pas de traitement en dehors du paracétamol inefficace.\n\nÀ l’examen, M. Jordan est amaigri, triste, penché en avant. Ses constantes sont normales. L’abdomen est souple, avec une sensibilité modérée à la palpation épigastrique, sans défense ni masse palpable. Pas d’ictère ni d’hépatosplénomégalie.\n\nEn résumé, il s’agit d’un homme de 61 ans avec une triade évocatrice : douleur épigastrique irradiant au dos soulagée par antéflexion, perte de poids avec stéatorrhée, et syndrome dépressif récent. Mon hypothèse principale est un cancer du pancréas. Les diagnostics différentiels incluent une pancréatite chronique (alcool), un ulcère gastro-duodénal et une hypothyroïdie.\n\nComme examens complémentaires, je demanderais une FSC (anémie possible), glycémie (diabète de novo), bilan hépatique et pancréatique (lipase, ALAT, PAL, bilirubine), TSH, et surtout un CT abdomino-pelvien injecté. Une échoendoscopie avec biopsie confirmerait le diagnostic.\n\nLa prise en charge doit être multidisciplinaire : traitement de la douleur (paliers OMS, bloc cœliaque si besoin), enzymes pancréatiques de substitution, soutien nutritionnel, accompagnement psychiatrique et orientation oncologique. La chirurgie est le seul traitement curatif, mais la majorité des cas sont diagnostiqués à un stade avancé."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Jordan, 61 ans, présente fatigue, perte de poids et douleurs épigastriques irradiant au dos.\n\nB (Background) : Ex-fumeur 30 PA, consommation d’alcool chronique, constipation ancienne, selles graisseuses récentes, ATCD familiaux de cancer.\n\nA (Assessment) : Suspicion forte de cancer du pancréas. DD : pancréatite chronique, ulcère gastro-duodénal, hypothyroïdie, dépression.\n\nR (Recommendation) : FSC, glycémie, bilan hépatique et pancréatique, TSH, CT abdomino-pelvien injecté. PEC multidisciplinaire avec oncologie, nutrition et psychiatrie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade classique cancer pancréas",
+              "points": [
+                "Douleur épigastrique transfixiante irradiant au dos",
+                "Amaigrissement rapide",
+                "Stéatorrhée (insuffisance pancréatique)"
+              ]
+            },
+            {
+              "titre": "👉 Critères SIC E CAPS (dépression)",
+              "points": [
+                "S = Sommeil perturbé",
+                "I = Intérêt diminué",
+                "C = Concentration diminuée",
+                "E = Énergie diminuée",
+                "C = Culpabilité (ici absente)",
+                "A = Appétit diminué avec perte de poids",
+                "P = Psychomoteur ralenti",
+                "S = Suicide (non ici)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Attribuer fatigue uniquement à dépression",
+                "Oublier de relier stéatorrhée à pancréas",
+                "Négliger bilan pancréatique devant perte poids > 50 ans",
+                "Proposer coloscopie avant CT abdo",
+                "Sous-estimer consommation alcool"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer du pancréas",
+                  "reponse": {
+                    "pour": [
+                      "Âge > 60 ans",
+                      "Douleur épigastrique irradiant au dos",
+                      "Perte de poids involontaire",
+                      "Stéatorrhée récente",
+                      "Antéflexion soulage",
+                      "Tabac/alcool",
+                      "Dépression récente"
+                    ],
+                    "contre": [
+                      "Pas encore d’ictère"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pancréatite chronique",
+                  "reponse": {
+                    "pour": [
+                      "Alcoolisme chronique",
+                      "Douleur épigastrique irradiant au dos",
+                      "Stéatorrhée",
+                      "Soulagement antéflexion"
+                    ],
+                    "contre": [
+                      "Pas d’antécédents de poussées douloureuses récurrentes"
+                    ]
+                  }
+                },
+                {
+                  "question": "Ulcère gastro-duodénal",
+                  "reponse": {
+                    "pour": [
+                      "Douleur épigastrique",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Pas de lien avec repas",
+                      "Perte de poids inhabituelle",
+                      "Douleur irradiant au dos"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hypothyroïdie",
+                  "reponse": {
+                    "pour": [
+                      "Fatigue",
+                      "Constipation",
+                      "Symptômes dépressifs"
+                    ],
+                    "contre": [
+                      "Pas de frilosité",
+                      "Pas de sécheresse cutanée",
+                      "Douleur abdominale atypique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "FSC, ferritine",
+                    "Glycémie",
+                    "Lipase, ALAT, PAL, bilirubine",
+                    "TSH",
+                    "CT abdomino-pelvien injecté",
+                    "Échoendoscopie avec biopsie si masse"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Suspicion de cancer du pancréas confirmé par imagerie et biopsie"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Analgésie adaptée (paliers OMS, bloc cœliaque si douleurs rebelles)",
+                      "Enzymes pancréatiques de substitution",
+                      "Support nutritionnel",
+                      "Soutien psychiatrique"
+                    ],
+                    "specifique": [
+                      "Chirurgie si tumeur résécable",
+                      "Chimiothérapie adjuvante/néoadjuvante selon stade",
+                      "PEC palliative si non résécable (drainage, chimio, soins de support)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation oncologique multidisciplinaire",
+                    "Surveillance clinique et biologique régulière",
+                    "Scanner TAP pour évaluation de la réponse",
+                    "Prise en charge psychologique continue",
+                    "Prévention secondaire : sevrage alcool, alimentation équilibrée"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

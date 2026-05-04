@@ -1,0 +1,567 @@
+{
+  "title": "USMLE-25 - Fièvre enfant - Fille de 18 mois",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "La mère de Maria Sterling, une petite fille de 18 mois, vient au cabinet en se plaignant que son enfant a de la fièvre"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon enfant a de la fièvre"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fièvre",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a deux jours]",
+            "Température mesurée [Je l'ai mesurée, et elle était de 38,3°C sur son front]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes ORL",
+          "binaryOnly": false,
+          "details": [
+            "Écoulement nasal [Pas actuellement, mais elle a eu un écoulement nasal pendant quelques jours il y a environ une semaine]",
+            "Otalgie [Oui, elle se tire l'oreille droite depuis 2 jours]",
+            "Écoulement auriculaire [Non]",
+            "Toux [Pas actuellement, mais elle a toussé pendant quelques jours il y a environ une semaine]",
+            "Essoufflement [Non]",
+            "Difficulté à avaler [Elle semble avoir des difficultés à avaler, mais je ne suis pas sûre]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Éruption cutanée",
+          "binaryOnly": false,
+          "details": [
+            "Présence [Oui, elle a une éruption sur le visage et la poitrine]",
+            "Description [Petits points rouges, certains légèrement surélevés, sur la poitrine, le dos, le ventre et le visage. Il n'y a pas d'éruption sur ses bras ou ses jambes]",
+            "Évolution [Cela a commencé il y a 2 jours sur son visage, puis s'est étendu à sa poitrine, son dos, et son ventre]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "État général [Elle semble fatiguée. Elle ne joue pas avec ses jouets aujourd'hui et ne regarde pas la télévision comme d'habitude]",
+            "Changements d'appétit [Elle ne mange pas beaucoup mais peut boire du lait]",
+            "Habitudes de sommeil [Elle ne dort pas bien depuis 2 jours]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes digestifs et neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Nausées/vomissements [Oui, elle a vomi une fois la nuit dernière]",
+            "Transit intestinal [Non, pas de changement dans les habitudes intestinales ou dans la couleur ou la consistance des selles]",
+            "Habitudes urinaires [Non, pas de changement dans les habitudes urinaires ou dans l'odeur ou la couleur de l'urine]",
+            "Convulsions [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Contacts et expositions",
+          "binaryOnly": false,
+          "details": [
+            "Contacts malades famille [Non]",
+            "Crèche [Oui]",
+            "Contacts malades crèche [Je ne sais pas]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Histoire médicale de l'enfant",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour]",
+            "Dernier bilan de santé [Il y a un mois, et tout était normal]",
+            "Antécédents de naissance [Accouchement vaginal à 40 semaines sans complications]",
+            "Développement [Poids, taille, et développement du langage normaux]",
+            "Problèmes sensoriels [Non, pas de problèmes d'audition ou de vision]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Alimentation",
+          "binaryOnly": true,
+          "patientComment": "Lait entier et aliments solides ; je n'ai pas allaité mon enfant"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Otite moyenne il y a 3 mois, traitée avec succès avec de l'amoxicilline"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Paracétamol"
+        },
+        {
+          "id": "a13",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune allergie médicamenteuse connue"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen clinique non réalisé",
+          "binaryOnly": true,
+          "patientComment": "L'enfant est à la maison, examen sera effectué après l'anamnèse"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections ORL",
+                "items": [
+                  {
+                    "text": "Otite moyenne aiguë",
+                    "cause": "Arguments POUR:\n\t□ Fièvre (38,3°C)\n\t□ Se tire l'oreille droite depuis 2 jours\n\t□ Antécédent d'otite moyenne il y a 3 mois\n\t□ IVRS récente (facteur de risque)\n\t□ Âge (pic 6-24 mois)\n\t□ Crèche (facteur de risque)\n\t□ Fatigue, perte d'appétit\nArguments CONTRE:\n\t□ Pas d'écoulement auriculaire",
+                    "test": "→ Otoscopie pneumatique obligatoire"
+                  }
+                ]
+              },
+              {
+                "name": "Infections graves avec éruption",
+                "items": [
+                  {
+                    "text": "Méningite à méningocoque",
+                    "cause": "Arguments POUR:\n\t□ Fièvre + éruption\n\t□ Léthargie importante\n\t□ Vomissement\n\t□ Troubles du sommeil\n\t□ Pas de vaccin méningocoque à 18 mois\nArguments CONTRE:\n\t□ Éruption maculopapulaire (vs pétéchiale)\n\t□ Pas de convulsions\n\t□ Un seul vomissement",
+                    "test": "→ Ponction lombaire URGENTE si suspicion"
+                  },
+                  {
+                    "text": "Scarlatine",
+                    "cause": "Arguments POUR:\n\t□ Fièvre + éruption\n\t□ Difficulté à avaler (pharyngite ?)\n\t□ Éruption débutant au visage\n\t□ Extension tronc\n\t□ Crèche (transmission)\nArguments CONTRE:\n\t□ Âge < 3 ans (moins fréquent)\n\t□ Description éruption non typique",
+                    "test": "→ Test streptocoque rapide, culture gorge"
+                  }
+                ]
+              },
+              {
+                "name": "Exanthèmes viraux",
+                "items": [
+                  {
+                    "text": "Cinquième maladie (érythème infectieux)",
+                    "cause": "Arguments POUR:\n\t□ Éruption débutant visage\n\t□ Extension au tronc\n\t□ Fièvre modérée\n\t□ Âge compatible\n\t□ Crèche (épidémies)\nArguments CONTRE:\n\t□ Pas de joues giflées typiques décrites\n\t□ Atteinte oreille associée",
+                    "test": "→ Sérologie parvovirus B19 IgM si nécessaire"
+                  },
+                  {
+                    "text": "Varicelle",
+                    "cause": "Arguments POUR:\n\t□ Fièvre + éruption\n\t□ Crèche (très contagieux)\n\t□ Éruption visage et tronc\nArguments CONTRE:\n\t□ Vaccinations à jour\n\t□ Pas de vésicules décrites\n\t□ Pas de prurit mentionné",
+                    "test": "→ PCR varicelle sur lésions si doute"
+                  },
+                  {
+                    "text": "Roséole (exanthème subit)",
+                    "cause": "Arguments POUR:\n\t□ Âge typique (6-24 mois)\n\t□ Fièvre puis éruption\n\t□ Éruption tronc\n\t□ Maculopapulaire\nArguments CONTRE:\n\t□ Habituellement fièvre 3-5j avant éruption\n\t□ Éruption apparaît quand fièvre tombe",
+                    "test": "→ Diagnostic clinique, PCR HHV-6 si besoin"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique complet avec otoscopie pneumatique",
+            "Si suspicion méningite : PL URGENTE",
+            "NFS avec formule leucocytaire",
+            "CRP, VS",
+            "Hémocultures si aspect toxique",
+            "ECBU par poche si fièvre sans foyer"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens selon orientation",
+          "binaryOnly": false,
+          "details": [
+            "Test streptocoque rapide + culture gorge",
+            "PCR multiplex respiratoire si disponible",
+            "Tympanométrie si otoscopie difficile",
+            "Rx thorax si signes respiratoires",
+            "Sérologies virales selon contexte épidémique"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Paracétamol 15mg/kg/dose toutes les 6h\n• Alternance ibuprofène 10mg/kg si > 6 mois\n• Hydratation orale fractionnée ++\n• Pas d'aspirine (risque syndrome de Reye)\n• Surveillance température régulière\n• Confort : vêtements légers"
+              },
+              {
+                "title": "Antibiothérapie selon diagnostic",
+                "content": "• OMA certaine < 2 ans : amoxicilline 80-90mg/kg/j\n• Scarlatine : pénicilline V ou amoxicilline\n• Méningite : ceftriaxone IV urgent\n• Viral : pas d'antibiotiques\n• Attendre résultats si possible"
+              },
+              {
+                "title": "Critères d'hospitalisation",
+                "content": "• Suspicion méningite/sepsis\n• Déshydratation sévère\n• Détresse respiratoire\n• Léthargie importante\n• Échec traitement ambulatoire\n• Contexte social défavorable"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et conseils parentaux",
+          "binaryOnly": false,
+          "details": [
+            "Surveillance température toutes les 4-6h",
+            "Hydratation régulière petits volumes",
+            "Consulter si aggravation ou non amélioration 48h",
+            "Éviction crèche jusqu'à 24h après défervescence",
+            "Lavage mains famille ++",
+            "Aération chambre, température 18-20°C"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information sur évolution",
+          "binaryOnly": false,
+          "details": [
+            "Infections virales : résolution 3-7 jours",
+            "OMA : amélioration 48-72h sous antibiotiques",
+            "Importance observance traitement complet",
+            "Consultation contrôle selon pathologie",
+            "Prévention : vaccinations à jour",
+            "Numéro urgence si aggravation"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Signes d'alarme à communiquer",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Urgences pédiatriques fébriles",
+            "items": [
+              {
+                "text": "Purpura fébrile",
+                "description": "→ Taches violacées ne s'effaçant pas = Méningococcémie, urgence vitale"
+              },
+              {
+                "text": "Altération conscience",
+                "description": "→ Somnolence excessive, difficile à réveiller = Méningite/encéphalite"
+              },
+              {
+                "text": "Convulsions",
+                "description": "→ Même si fébriles = Évaluation urgente, risque méningite"
+              },
+              {
+                "text": "Déshydratation sévère",
+                "description": "→ Pli cutané, yeux cernés, absence larmes = Réhydratation IV"
+              },
+              {
+                "text": "Détresse respiratoire",
+                "description": "→ Tirage, battement ailes nez = Hospitalisation urgente"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Sterling, il semble que votre enfant souffre d'une infection qui peut être virale ou bactérienne. Elle peut avoir une otite ou quelque chose de plus grave. Un examen clinique et des analyses de sang seront nécessaires pour identifier la source de l'infection et le type de virus ou de bactérie en cause. Bien que les infections virales se résolvent généralement d'elles-mêmes, la plupart des infections bactériennes nécessitent des antibiotiques ; cependant, ces infections répondent généralement bien au traitement. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Pensez-vous que j'ai bien fait de venir ici et de vous parler de la fièvre de mon enfant ?] [Est-ce que mon enfant va aller bien ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Vous avez certainement bien fait de venir aujourd'hui. Maria pourrait avoir une infection qui cause sa fièvre, donc nous devons l'examiner ici au cabinet, puis décider si elle a besoin de tests et/ou d'un traitement."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (patient simulé)",
+      "nom": "Mère de Maria Sterling",
+      "age": "Mère d'une enfant de 18 mois",
+      "contexte": "Mère inquiète consultant pour fièvre de son enfant",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon enfant a de la fièvre.",
+        "autreChose": "Elle ne va pas bien du tout."
+      },
+      "consignes": [
+        "Montrez de l'inquiétude concernant la situation de votre enfant.",
+        "L'enfant est resté à la maison avec le père.",
+        "Insistez sur le fait qu'elle se tire l'oreille.",
+        "Décrivez l'éruption en détail si demandé.",
+        "Posez des questions sur la gravité."
+      ],
+      "histoireActuelle": {
+        "fievre": [
+          "Depuis 2 jours",
+          "38,3°C au front",
+          "Paracétamol donné"
+        ],
+        "symptomesORL": [
+          "Se tire oreille droite",
+          "IVRS il y a 1 semaine",
+          "Toux et nez qui coule résolus",
+          "Difficulté à avaler peut-être"
+        ],
+        "eruption": [
+          "Petits points rouges",
+          "Visage d'abord",
+          "Puis tronc",
+          "Pas sur membres",
+          "Certains surélevés"
+        ],
+        "etatGeneral": [
+          "Fatiguée",
+          "Ne joue pas",
+          "Ne regarde pas TV",
+          "Mange peu",
+          "Boit du lait",
+          "Dort mal"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Otite il y a 3 mois",
+          "Traitée amoxicilline",
+          "Guérison complète"
+        ],
+        "naissance": [
+          "Terme normal",
+          "Accouchement vaginal",
+          "Pas de complications"
+        ],
+        "developpement": [
+          "Normal pour âge",
+          "Dernier contrôle il y a 1 mois",
+          "Vaccins à jour"
+        ]
+      },
+      "exposition": {
+        "creche": "Oui, temps plein",
+        "malades": "Ne sait pas",
+        "famille": "Personne malade maison"
+      },
+      "alimentation": {
+        "type": "Lait entier + solides",
+        "allaitement": "Non, jamais allaité"
+      },
+      "inquietudes": {
+        "principales": [
+          "Va-t-elle guérir ?",
+          "C'est grave ?",
+          "Ai-je bien fait de venir ?",
+          "Faut-il aller à l'hôpital ?"
+        ]
+      },
+      "simulation": {
+        "durantConsultation": [
+          "Anxiété visible",
+          "Prise de notes",
+          "Questions fréquentes",
+          "Demande réassurance",
+          "Mentionne otite antérieure"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Enfant de 18 mois fébrile avec signes d'OMA probable (otalgie, ATCD, âge) et éruption virale concomitante. Risque de méningite faible mais à exclure. Nécessite examen clinique urgent pour otoscopie et évaluation éruption.",
+      "rolesInterventions": [
+        "Si l'étudiant-e demande après examen :",
+        "• Otoscopie : tympan droit bombé, rouge, immobile",
+        "• État général : fatiguée mais consolable",
+        "• Éruption : maculopapulaire sans pétéchies",
+        "• Gorge : érythémateuse sans exsudat",
+        "• Nuque : souple"
+      ],
+      "pointsCles": [
+        "OMA très probable vu contexte",
+        "Éruption virale concomitante fréquente",
+        "Toujours exclure méningite si fièvre + éruption",
+        "Antibiothérapie systématique < 2 ans si OMA",
+        "Réassurance parentale importante"
+      ],
+      "pieges": [
+        "Ne pas faire otoscopie",
+        "Minimiser risque méningite",
+        "Ne pas examiner éruption",
+        "Oublier hydratation",
+        "Pas d'explication signes alarme"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Otite moyenne aiguë droite probable avec exanthème viral concomitant (possiblement roséole ou autre virose) chez un nourrisson de 18 mois"
+        },
+        {
+          "titre": "Otite moyenne aiguë du nourrisson",
+          "contenu": "Pathologie ORL pédiatrique la plus fréquente :",
+          "points": [
+            "Incidence : pic 6-24 mois",
+            "80% enfants avant 3 ans",
+            "Facteurs risque : crèche, tabagisme passif, IVRS",
+            "Trompe Eustache courte et horizontale",
+            "Pneumocoque, H. influenzae, Moraxella",
+            "Viral dans 20-30% cas"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques OMA (AAP)",
+          "contenu": "Diagnostic de certitude nécessite :",
+          "points": [
+            "Début aigu des symptômes",
+            "Épanchement rétrotympanique",
+            "ET signes inflammation tympan",
+            "Bombement modéré à sévère = OMA certaine",
+            "Otorrhée non traumatique = OMA certaine",
+            "Bombement léger + otalgie/érythème = OMA probable"
+          ]
+        },
+        {
+          "titre": "Exanthèmes fébriles du nourrisson",
+          "contenu": "Diagnostics fréquents par âge :",
+          "points": [
+            "Roséole (HHV-6) : 6-24 mois typique",
+            "Érythème infectieux : > 2 ans habituellement",
+            "Entérovirus : toute saison, tout âge",
+            "Adénovirus : pharyngite + conjonctivite",
+            "Scarlatine : rare < 3 ans",
+            "Kawasaki : fièvre > 5 jours + critères"
+          ]
+        },
+        {
+          "titre": "Approche fièvre + éruption",
+          "contenu": "Algorithme décisionnel :",
+          "points": [
+            "1. Exclure urgences : méningococcémie, Kawasaki",
+            "2. Rechercher foyer infectieux : ORL, urinaire",
+            "3. Caractériser éruption : type, distribution",
+            "4. Contexte épidémique : crèche, saison",
+            "5. État vaccinal : ROR, varicelle",
+            "6. Traiter selon étiologie probable"
+          ]
+        },
+        {
+          "titre": "Méningite à méningocoque",
+          "contenu": "Urgence vitale à toujours évoquer :",
+          "points": [
+            "Incidence : 0.5-5/100 000/an",
+            "Mortalité : 10-15% si traité",
+            "Purpura fulminans : 40% décès",
+            "Vaccin conjugué C à 12 mois",
+            "Vaccin B : non systématique",
+            "Prophylaxie contacts : rifampicine"
+          ]
+        },
+        {
+          "titre": "Traitement OMA < 2 ans",
+          "contenu": "Antibiothérapie systématique recommandée :",
+          "points": [
+            "Amoxicilline 80-90mg/kg/j en 2 prises",
+            "Durée : 10 jours < 2 ans",
+            "Si allergie : céfuroxime ou azithromycine",
+            "Si échec 48-72h : amoxicilline-clavulanate",
+            "Paracentèse si échec 2e ligne",
+            "Antalgiques systématiques"
+          ]
+        },
+        {
+          "titre": "Complications OMA",
+          "contenu": "Rares mais graves :",
+          "points": [
+            "Mastoïdite : 0.2-2%",
+            "Méningite otogène",
+            "Thrombose sinus latéral",
+            "Abcès cérébral",
+            "Paralysie faciale",
+            "Labyrinthite"
+          ]
+        },
+        {
+          "titre": "Conseils préventifs",
+          "contenu": "Réduction risque récidive :",
+          "points": [
+            "Éviter tabagisme passif ++",
+            "Allaitement maternel protecteur",
+            "Limiter tétine après 6 mois",
+            "Position semi-assise biberons",
+            "Vaccination pneumocoque à jour",
+            "Lavage mains en collectivité"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "OMA = complication fréquente IVRS",
+            "Otoscopie indispensable si otalgie",
+            "< 2 ans = antibiothérapie systématique",
+            "Fièvre + éruption = toujours examiner",
+            "Purpura fébrile = urgence absolue",
+            "Hydratation prioritaire si fièvre",
+            "Information parents sur signes alarme",
+            "Suivi 48-72h si OMA traitée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Amoxicilline 90mg/kg/j en 2 prises x 10j",
+        "Paracétamol 15mg/kg/6h",
+        "Ibuprofène 10mg/kg/8h en alternance",
+        "Gouttes auriculaires contre-indiquées si MT perforé",
+        "Décongestionnants nasaux non recommandés"
+      ],
+      "examensComplementaires": [
+        "Otoscopie pneumatique obligatoire",
+        "Tympanométrie si doute",
+        "NFS, CRP si aspect toxique",
+        "Hémocultures si T° > 39.5°C",
+        "PL si suspicion méningite"
+      ]
+    }
+  }
+}

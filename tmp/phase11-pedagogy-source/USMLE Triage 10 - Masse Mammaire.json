@@ -1,0 +1,594 @@
+{
+  "title": "USMLE Triage 10 - Masse Mammaire",
+  "context": {
+    "setting": "Clinique de médecine générale",
+    "patient": "Janis Clark, une femme caucasienne de 42 ans, se présente avec une plainte concernant la palpation d'une masse dans son sein gauche.",
+    "vitals": {
+      "ta": "128/66 mmHg",
+      "fc": "56 bpm",
+      "fr": "16/min",
+      "temperature": "37.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour, Mme Clark, je suis le Dr Semelis.",
+            "Je comprends que vous avez récemment découvert une masse inquiétante dans votre sein. Pouvez-vous m'en dire plus ?",
+            "Eh bien, c'est une bonne chose que vous soyez venue car je trouve préférable d'évaluer toutes les masses mammaires immédiatement pour la possibilité d'un cancer."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la masse mammaire",
+          "details": [
+            "Localisation précise [quadrant supéro-externe sein gauche]",
+            "Circonstances de découverte [sous la douche, auto-examen]",
+            "Délai depuis découverte [il y a environ une semaine]",
+            "Taille estimée [cacahuète environ]",
+            "Douleur [non douloureuse]",
+            "Première fois [jamais senti avant]"
+          ],
+          "exemplesPhrases": [
+            "La masse est-elle douloureuse ?",
+            "Avez-vous déjà senti cette masse auparavant ?",
+            "Quelle taille diriez-vous qu'elle a ? C'est-à-dire, la compareriez-vous à un petit pois, une cacahuète, une noix ou tout autre type d'objet ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Relation avec le cycle menstruel",
+          "details": [
+            "Position dans cycle [règles terminées il y a 3 semaines]",
+            "Contraception [pilule Ortho Novum depuis longtemps]",
+            "Régularité cycles [assez régulière]",
+            "Type contraception [pilule combinée hormones]",
+            "Variation cyclique [ne sait pas si change avec règles]",
+            "Durée observation [pas attendu assez longtemps]"
+          ],
+          "exemplesPhrases": [
+            "Dites-moi où vous en êtes dans votre cycle menstruel maintenant.",
+            "Est-ce une pilule combinée d'hormones ?",
+            "Puis-je comprendre que vous avez des règles régulières chaque mois ?",
+            "Cette masse change-t-elle en fonction de vos règles ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Signes associés et examen des seins",
+          "details": [
+            "Changements cutanés [non]",
+            "Écoulement mamelonnaire [non]",
+            "Sensibilité locale [un peu car appuie dessus]",
+            "Érythème ou chaleur [non]",
+            "Auto-examen pratique [quelques fois, pas tous les mois]",
+            "Formation reçue [brochure perdue, médecin montré une fois]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Avez-vous eu des changements inhabituels de votre peau au-dessus de la masse elle-même ou un écoulement mamelonnaire inhabituel ?",
+            "Est-ce la première masse mammaire que vous avez jamais sentie dans l'un ou l'autre sein ?",
+            "Vous a-t-on déjà montré comment faire un auto-examen des seins ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents de dépistage",
+          "details": [
+            "Mammographie [jamais faite]",
+            "Recommandation médicale [médecin avait dit de faire]",
+            "Report [partie en vacances l'année dernière]",
+            "Suivi [jamais programmé après retour]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu une mammographie ?",
+            "Une mammographie est un bon test de dépistage pour les femmes de votre âge. Nous en parlerons davantage selon les résultats de cette investigation."
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux et génétiques",
+          "details": [
+            "Belle-sœur [cancer du sein, traitement en cours]",
+            "Lien sanguin [non, femme du frère]",
+            "Timing diagnostic [trouvé il y a 2 mois]",
+            "Pronostic [détecté tôt selon médecins]",
+            "Famille directe [mère AVC, père cancer prostate, sœur et frère sains]",
+            "Cancer maternel/paternel [aucun cancer du sein]"
+          ],
+          "exemplesPhrases": [
+            "Laissez-moi vous demander un peu à propos de votre famille. Vous avez mentionné que votre belle-sœur avait un cancer du sein. Est-elle liée à vous par le sang ?",
+            "Y a-t-il eu quelqu'un dans votre famille directe avec n'importe quel type de cancer, en particulier du sein ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Histoire reproductive et hormonale",
+          "details": [
+            "Grossesses [3 au total]",
+            "Accouchements [2 garçons vivants]",
+            "Fausse couche [1 entre les deux garçons]",
+            "Ménarche [14 ans]",
+            "Régularité menstruelle [toujours assez régulière]",
+            "Symptômes [quelques crampes, mieux que famille]",
+            "Contraception actuelle [pilule combinée longue durée]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des enfants ou avez-vous été enceinte dans votre vie ?",
+            "Vous souvenez-vous de l'âge que vous aviez lorsque vous avez eu vos premières règles ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes de vie et facteurs de risque",
+          "details": [
+            "Tabac [jamais fumé]",
+            "Alcool [ne boit pas]",
+            "Exposition tabac [mari fume cigares poker]",
+            "Exercice [pas régulier, seulement tâches ménagères]",
+            "Activité physique [courses, transport enfants]",
+            "Sédentarité [a l'intention de faire plus]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Fumez-vous ou buvez-vous de l'alcool ?",
+            "Faites-vous de l'exercice régulièrement ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux et médicaments",
+          "details": [
+            "Migraines [traitées par Maxalt PRN]",
+            "Consultation médicale [rare, évite médecins]",
+            "Hospitalisation [seulement accouchements au Texas]",
+            "Suppléments [huile de poisson arrêtée]",
+            "Autres pathologies [aucune]",
+            "Allergies [non mentionnées]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous des médicaments en plus de votre contraception ? Ou êtes-vous allergique à quelque chose ?",
+            "On dirait que vous avez des migraines. Y a-t-il d'autres problèmes pour lesquels vous consultez le médecin ? Avez-vous déjà passé la nuit à l'hôpital ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents mammaires et chirurgicaux",
+          "details": [
+            "Maladie mammaire antérieure [aucune]",
+            "Chirurgie mammaire [aucune]",
+            "Césarienne [1 pour deuxième bébé en siège]",
+            "Autres chirurgies [aucune]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu d'autres problèmes avec une maladie mammaire dans votre vie ?",
+            "Et les interventions chirurgicales ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen mammaire",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux normaux",
+            "Expliquer l'examen et déshabillage nécessaire",
+            "Assurer intimité et confort"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si cela ne vous dérange pas.",
+            "Laissez-moi juste me laver les mains.",
+            "Il semble que vos signes vitaux soient normaux.",
+            "J'aimerais vous demander de retirer votre chemise pour que je puisse écouter votre dos et votre poitrine..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection mammaire",
+          "details": [
+            "Observation symétrie [seins symétriques normaux]",
+            "Recherche changements cutanés [aucun noté]",
+            "Inspection aréole et mamelon [normal]",
+            "Recherche rétraction [absente]",
+            "Inspection en position assise et couchée"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation mammaire systématique",
+          "details": [
+            "Technique spiralée depuis centre [ou méthode quadrants]",
+            "Utilisation pulpe des doigts [pression graduelle]",
+            "Palpation complète sein controlatéral [normal]",
+            "Focalisation quadrant supéro-externe gauche",
+            "Caractérisation masse [1 cm, non fluctuante, non douloureuse]",
+            "Recherche autres masses [absentes]"
+          ],
+          "exemplesPhrases": [
+            "Diriez-vous que c'est aussi gros que ça l'a jamais été ? [si masse palpée]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ganglionnaire",
+          "details": [
+            "Palpation chaîne axillaire [5 groupes]",
+            "Ganglions sous-claviculaires [non palpables]",
+            "Ganglions sus-claviculaires [non palpables]",
+            "Région pectorale médiale [normale]",
+            "Absence adénopathie [confirmée]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Recherche écoulement mamelonnaire",
+          "details": [
+            "Expression douce mamelon [pas d'écoulement]",
+            "Examen des deux seins [normal]",
+            "Caractérisation si présent [non applicable]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu un écoulement mamelonnaire récemment ?"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels d'une masse mammaire chez femme de 42 ans",
+            "categories": [
+              {
+                "name": "Causes bénignes (plus fréquentes)",
+                "items": [
+                  {
+                    "text": "Fibroadénome",
+                    "cause": "Arguments POUR:\n\t□ Femme préménopausée (42 ans)\n\t□ Masse bien délimitée, mobile\n\t□ Non douloureuse\n\t□ Taille stable (cacahuète)\n\t□ Découverte fortuite\n\t□ Pic d'incidence 20-40 ans\nArguments CONTRE:\n\t□ Première découverte à 42 ans (plus rare)\n\t□ Localisation quadrant supéro-externe",
+                    "test": "→ Échographie mammaire, biopsie"
+                  },
+                  {
+                    "text": "Modifications fibrokystiques",
+                    "cause": "Arguments POUR:\n\t□ Femme préménopausée\n\t□ Sous contraception hormonale\n\t□ Quadrant supéro-externe typique\n\t□ Possibles variations cycliques\nArguments CONTRE:\n\t□ Masse bien délimitée vs nodularité diffuse\n\t□ Non douloureuse\n\t□ Pas de variation cyclique observée",
+                    "test": "→ Échographie, suivi clinique"
+                  },
+                  {
+                    "text": "Kyste mammaire",
+                    "cause": "Arguments POUR:\n\t□ Âge typique (40-50 ans)\n\t□ Apparition soudaine possible\n\t□ Bien délimité\nArguments CONTRE:\n\t□ Habituellement fluctuant\n\t□ Souvent multiple\n\t□ Pas de fluctuance décrite",
+                    "test": "→ Échographie (aspect liquidien)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes malignes (à exclure)",
+                "items": [
+                  {
+                    "text": "Carcinome canalaire invasif",
+                    "cause": "Arguments POUR:\n\t□ Âge de risque (> 40 ans)\n\t□ Femme caucasienne\n\t□ Nulliparité relative (2 enfants tard?)\n\t□ Contraception hormonale prolongée\n\t□ Localisation typique (quadrant supéro-externe)\n\t□ Masse bien délimitée possible\nArguments CONTRE:\n\t□ Découverte récente\n\t□ Pas d'antécédents familiaux directs\n\t□ Mobile et bien délimitée",
+                    "test": "→ Biopsie au trocart obligatoire"
+                  },
+                  {
+                    "text": "Carcinome lobulaire invasif",
+                    "cause": "Arguments POUR:\n\t□ Âge et profil hormonal\n\t□ Peut être bien délimité\n\t□ Croissance lente\nArguments CONTRE:\n\t□ Souvent difficile à palper\n\t□ Mammographie négative fréquente",
+                    "test": "→ IRM mammaire si biopsie négative"
+                  },
+                  {
+                    "text": "Carcinome in situ (DCIS)",
+                    "cause": "Arguments POUR:\n\t□ Précurseur cancer invasif\n\t□ Peut se présenter comme masse\n\t□ Âge typique\nArguments CONTRE:\n\t□ Plus souvent microcalcifications\n\t□ Rarement masse palpable",
+                    "test": "→ Mammographie + biopsie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Papillome intracanalaire",
+                    "cause": "Arguments POUR:\n\t□ Masse sous-aréolaire possible\n\t□ Femme préménopausée\nArguments CONTRE:\n\t□ Localisation périphérique\n\t□ Pas d'écoulement mamelonnaire",
+                    "test": "→ Galactographie si écoulement"
+                  },
+                  {
+                    "text": "Lipome",
+                    "cause": "Arguments POUR:\n\t□ Masse bien délimitée\n\t□ Mobile\nArguments CONTRE:\n\t□ Habituellement plus mou\n\t□ Rare dans sein",
+                    "test": "→ Échographie (aspect graisseux)"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Imagerie de première intention",
+          "details": [
+            "Échographie mammaire bilatérale",
+            "Caractérisation masse (solide vs kystique)",
+            "Évaluation vascularisation (Doppler)",
+            "Mesure précise dimensions",
+            "Recherche autres lésions"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Mammographie de dépistage",
+          "details": [
+            "Mammographie bilatérale (première de la patiente)",
+            "Recherche microcalcifications",
+            "Évaluation densité mammaire",
+            "Comparaison avec échographie",
+            "Dépistage controlatéral"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Biopsie diagnostique",
+          "details": [
+            "Biopsie au trocart (core biopsy) échoguidée",
+            "Prélèvement histologique suffisant",
+            "Marquage du site si besoin",
+            "Analyse anatomopathologique complète",
+            "Immunohistochimie si malignité"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge selon résultats",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si biopsie bénigne",
+                "content": "• Surveillance clinique tous les 6 mois\n• Auto-examen mensuel enseigné\n• Mammographie annuelle dès maintenant\n• Retour si modification de la masse\n• Éducation facteurs de risque"
+              },
+              {
+                "title": "Si malignité confirmée",
+                "content": "• Référence urgente en oncologie\n• Bilan d'extension (CT thoraco-abdominal)\n• IRM mammaire bilatérale\n• Consultation chirurgie carcinologique\n• Consultation oncologie médicale\n• Soutien psychologique"
+              },
+              {
+                "title": "Si lésion à haut risque",
+                "content": "• Exérèse chirurgicale complète\n• Surveillance renforcée\n• Conseil génétique si indiqué\n• IRM annuelle en complément\n• Chimioprévention à discuter"
+              },
+              {
+                "title": "Éducation et prévention",
+                "content": "• Technique auto-examen des seins\n• Calendrier mammographies futures\n• Facteurs de risque modifiables\n• Signes d'alarme à surveiller\n• Importance suivi régulier"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Communication et accompagnement",
+          "details": [
+            "Explication probabilités (bénin vs malin)",
+            "Importance diagnostic précoce",
+            "Déroulement investigations",
+            "Délais et planification",
+            "Soutien anxiété et questions famille"
+          ],
+          "exemplesPhrases": [
+            "Mme Clark, il y a plusieurs possibilités pour la nature de cette masse mammaire.",
+            "Les masses mammaires peuvent être causées, encore une fois, par une 'maladie mammaire bénigne' mais peuvent aussi être cancéreuses.",
+            "Évidemment, le cancer, ou ce que nous appelons 'précancer', est parfois trouvé dans une masse mammaire et est la chose la plus importante à diagnostiquer tôt.",
+            "La meilleure façon d'évaluer une masse dans le sein que je peux aussi sentir est une biopsie."
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Red flags et surveillance",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant investigation urgente",
+            "items": [
+              {
+                "text": "Croissance rapide de la masse",
+                "description": "Doublement en < 6 mois"
+              },
+              {
+                "text": "Fixation à la peau ou muscle",
+                "description": "Perte de mobilité, peau d'orange"
+              },
+              {
+                "text": "Écoulement mamelonnaire sanglant",
+                "description": "Unilatéral, unipore"
+              },
+              {
+                "text": "Adénopathies axillaires",
+                "description": "Ganglions durs, fixes"
+              },
+              {
+                "text": "Modifications cutanées",
+                "description": "Rétraction, ulcération, érythème"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan d'investigation",
+          "content": "Mme Clark, il y a plusieurs possibilités pour la nature de cette masse mammaire. Les masses mammaires peuvent être causées, encore une fois, par une 'maladie mammaire bénigne' mais peuvent aussi être cancéreuses. Évidemment, le cancer, ou ce que nous appelons 'précancer', est parfois trouvé dans une masse mammaire et est la chose la plus importante à diagnostiquer tôt. J'aimerais vous programmer pour une investigation plus approfondie de cette masse. J'aimerais faire une échographie de la masse pour mieux déterminer si elle peut être une poche remplie de liquide, appelée kyste, ou une masse solide. Cependant, nous devrons peut-être passer à une biopsie. La meilleure façon d'évaluer une masse dans le sein que je peux aussi sentir est une biopsie. Ce type de biopsie est une chirurgie mineure dans laquelle nous prenons une très petite aiguille et l'insérons dans la masse elle-même. Nous pouvons ensuite regarder sous un microscope pour les cellules cancéreuses. Cela signifie que vous devrez être programmée et venir pour la procédure, mais c'est la meilleure façon d'évaluer cela. Si la biopsie est négative, nous pouvons parler d'autres étapes pour faire un dépistage périodique et des auto-examens des seins. Si elle est positive, nous procéderons à un plan de traitement. Gardez à l'esprit, cependant, que le cancer n'est pas la seule chose qui peut causer une masse dans votre sein. Parfois, d'autres processus bénins causent ce symptôme, ce que nous devrions pouvoir dire par la biopsie. J'aimerais sortir maintenant et prendre des dispositions pour votre biopsie.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile de la patiente",
+          "content": "[Pensez-vous que c'est un cancer ? Quelles sont mes chances ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends votre inquiétude, c'est tout à fait normal. La bonne nouvelle est que la majorité des masses mammaires chez les femmes de votre âge sont bénignes. Cependant, nous ne pouvons pas le déterminer sans faire les examens appropriés. C'est pourquoi nous procédons méthodiquement avec l'échographie et potentiellement la biopsie. Je serai là pour vous accompagner à chaque étape."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Femme de 42 ans avec première masse mammaire palpable",
+        "Découverte récente (1 semaine) lors auto-examen",
+        "Localisation quadrant supéro-externe gauche (zone de prédilection cancer)",
+        "Masse bien délimitée, taille cacahuète, non douloureuse",
+        "Sous contraception hormonale prolongée",
+        "Pas d'antécédents familiaux directs de cancer du sein",
+        "Jamais de mammographie malgré recommandation",
+        "Contexte anxiogène (belle-sœur avec cancer du sein)",
+        "G3P2, ménarche 14 ans, cycles réguliers"
+      ],
+      "pieges": [
+        "Rassurer prématurément avant investigations",
+        "Ne pas faire d'examen mammaire complet bilatéral",
+        "Oublier l'examen ganglionnaire",
+        "Minimiser l'anxiété liée au contexte familial",
+        "Ne pas programmer de mammographie en plus de l'échographie",
+        "Reporter la biopsie si échographie normale",
+        "Ne pas enseigner l'auto-examen correct",
+        "Négliger l'importance du dépistage futur"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée",
+      "nom": "Janis Clark",
+      "age": "42 ans",
+      "contexte": "Mère de 2 enfants, caucasienne, première consultation pour masse mammaire",
+      "motifConsultation": {
+        "plaintePrincipale": "Masse dans sein gauche",
+        "autreChose": "Peur du cancer comme ma belle-sœur"
+      },
+      "histoireActuelle": {
+        "decouverte": [
+          "Il y a 1 semaine sous la douche",
+          "Auto-examen des seins occasionnel",
+          "Quadrant supéro-externe sein gauche",
+          "Première fois qu'elle trouve quelque chose",
+          "Taille d'une cacahuète environ"
+        ],
+        "caracteristiques": [
+          "Non douloureuse",
+          "Bien délimitée selon elle",
+          "Ne sait pas si varie avec cycle",
+          "Touche constamment la zone",
+          "Pas de changements cutanés"
+        ],
+        "contexteFamilial": [
+          "Belle-sœur (femme du frère) avec cancer du sein",
+          "Diagnostic il y a 2 mois",
+          "Chirurgie programmée semaine prochaine",
+          "Détection précoce selon médecins",
+          "Relation proche depuis adolescence"
+        ]
+      },
+      "antecedentsGynecologiques": {
+        "menarche": "14 ans",
+        "cycles": "Réguliers toute sa vie, quelques crampes",
+        "contraception": "Pilule Ortho Novum depuis longtemps",
+        "grossesses": "3 grossesses : 2 garçons + 1 fausse couche entre",
+        "accouchements": "1 normal, 1 césarienne (siège)",
+        "cycleMenstruel": "Règles finies il y a 3 semaines"
+      },
+      "facteurRisque": {
+        "positifs": [
+          "Âge 42 ans",
+          "Race caucasienne",
+          "Contraception hormonale prolongée",
+          "Sédentarité relative",
+          "Nulliparité relative (2 enfants)"
+        ],
+        "negatifs": [
+          "Pas d'ATCD familiaux directs",
+          "Pas de tabac/alcool",
+          "Allaitement (non précisé)",
+          "Ménarche normale (14 ans)"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "pathologies": [
+          "Migraines (Maxalt PRN)",
+          "Sinon en bonne santé générale"
+        ],
+        "hospitalisations": [
+          "Accouchements au Texas seulement",
+          "Évite médecins et hôpitaux"
+        ],
+        "depistage": [
+          "Jamais de mammographie",
+          "Recommandation médicale l'an dernier",
+          "Reporté pour vacances, jamais fait"
+        ]
+      },
+      "habituesVie": {
+        "tabac": "Jamais fumé",
+        "alcool": "Ne boit pas",
+        "exercice": "Pas régulier, seulement tâches ménagères",
+        "exposition": "Mari fume cigares lors soirées poker"
+      },
+      "simulation": {
+        "attitude": [
+          "Anxieuse mais coopérative",
+          "Fait le lien avec belle-sœur",
+          "Culpabilise de ne pas faire auto-examens réguliers",
+          "Reconnaît avoir reporté mammographie",
+          "Veut être rassurée mais comprend sérieux"
+        ],
+        "durantConsultation": [
+          "Montre la zone de la masse",
+          "Exprime inquiétudes clairement",
+          "Pose questions sur probabilité cancer",
+          "Mentionne spontanément contexte familial",
+          "Avoue éviter soins médicaux habituellement"
+        ],
+        "durantExamen": [
+          "Coopérative pour examen mammaire",
+          "Indique précisément la zone",
+          "Confirme que c'est bien la masse sentie",
+          "Demande si c'est normal ce qu'on palpe"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Masses mammaires",
+      "sections": [
+        {
+          "titre": "Épidémiologie des masses mammaires",
+          "contenu": "Femmes 20-39 ans : 90% bénignes. Femmes 40-49 ans : 75% bénignes. Femmes > 50 ans : 50% bénignes. Fibroadénomes : pic 20-30 ans. Cancer : incidence croît avec âge. Localisation : 50% quadrant supéro-externe."
+        },
+        {
+          "titre": "Classification BI-RADS mammographie",
+          "contenu": "BI-RADS 1 : normal. BI-RADS 2 : bénin. BI-RADS 3 : probablement bénin, surveillance 6 mois. BI-RADS 4 : suspect, biopsie recommandée. BI-RADS 5 : hautement suspect, biopsie urgente. BI-RADS 6 : malignité prouvée."
+        },
+        {
+          "titre": "Techniques biopsie mammaire",
+          "contenu": "Core biopsy : référence standard, 14G, échoguidée. Macrobiopsie : aspirative, 8-11G. Biopsie chirurgicale : si discordance radio-histo. Marquage systématique si lésion non palpable. Anatomopathologie + immunohistochimie."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Toute masse palpable > 40 ans : imagerie + biopsie",
+        "Échographie première intention < 40 ans",
+        "Mammographie + échographie > 40 ans",
+        "Core biopsy systématique si BI-RADS 4-5",
+        "Surveillance si lésion bénigne concordante"
+      ],
+      "examensComplementaires": [
+        "Échographie mammaire : différenciation solide/kystique",
+        "Mammographie : microcalcifications, architecture",
+        "IRM mammaire : extension, multifocalité, screening haut risque",
+        "Core biopsy échoguidée : diagnostic histologique",
+        "Immunohistochimie : récepteurs hormonaux, HER2 si cancer"
+      ]
+    }
+  }
+}

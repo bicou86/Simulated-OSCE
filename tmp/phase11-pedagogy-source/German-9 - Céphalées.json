@@ -1,0 +1,225 @@
+{
+  "title": "German-9 - Céphalées",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Monsieur Immrich, 67 ans, se présente au cabinet pour céphalées sévères depuis hier"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte → Symptôme principal",
+          "patientComment": "Céphalées sévères depuis hier",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques des céphalées",
+          "details": [
+            "Temporalité [depuis hier]",
+            "Caractère [piquant]",
+            "Intensité EVA [8/10]",
+            "Facteurs aggravants [plus douloureux en se penchant en avant]",
+            "Facteurs améliorants [aucun]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes d'accompagnement",
+          "details": [
+            "Transpiration [oui]",
+            "Faiblesse générale [oui]",
+            "Photophobie [oui]",
+            "Confusion légère [oui]"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse personnelle",
+          "details": [
+            "Alcool [occasionnellement]",
+            "Tabac",
+            "Drogues"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes B",
+          "patientComment": "aucun",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "patientComment": "cacahuètes",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "patientComment": "Statine pour hypercholestérolémie",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux",
+          "patientComment": "Hypercholestérolémie",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Questions sur infections herpétiques",
+          "details": [
+            "Herpès",
+            "Varicelle-zona (VZV)"
+          ],
+          "patientComment": "pour rechercher encéphalite herpétique/VZV",
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse familiale",
+          "binaryOnly": true
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Vit avec sa femme",
+            "Visite récente chez les petits-enfants il y a 2 semaines [un était malade, grippe ou similaire]"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signe de Brudzinski",
+          "patientComment": "Positif",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Autres signes méningés",
+          "details": [
+            "Signe de Kernig",
+            "Signe de Lasègue"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e3",
+          "text": "Neurostatus par ailleurs",
+          "patientComment": "normal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "patientComment": "Méningite virale",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Autres méningites",
+                    "cause": "□ Bactérienne, Fongique",
+                    "test": "→ Ponction lombaire, CT cérébral préalable"
+                  },
+                  {
+                    "text": "Migraine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen neurologique, IRM si atypique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens de laboratoire",
+          "details": [
+            "NFS",
+            "CRP",
+            "Électrolytes",
+            "Glucose"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Diagnostic du liquide céphalo-rachidien",
+          "details": [
+            "Liquide clair",
+            "Lymphocytose",
+            "Glucose normale",
+            "Protéines",
+            "Lactate"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement",
+          "patientComment": "Méningite virale non compliquée : traitement de support avec analgésiques",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

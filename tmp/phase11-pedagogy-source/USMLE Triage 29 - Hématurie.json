@@ -1,0 +1,494 @@
+{
+  "title": "USMLE Triage 29 - Hématurie",
+  "context": {
+    "setting": "Clinique médicale",
+    "patient": "Jose Montego, homme de 45 ans, consulte pour évaluation de sang dans ses urines depuis le mois dernier",
+    "vitals": {
+      "ta": "128/86 mmHg",
+      "temperature": "37.1°C",
+      "fc": "66 bpm",
+      "fr": "12/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Monsieur Montego, je suis le Dr Mills.",
+            "Je comprends que vous avez du sang dans vos urines.",
+            "Pourriez-vous m'en dire plus à ce sujet ?"
+          ],
+          "patientComment": "Saignements sur les sous-vêtements depuis environ un mois, taches de sang sur sous-vêtements blancs [2-3 fois par semaine], urine foncée ou orange [le matin surtout]"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de l'hématurie",
+          "details": [
+            "Évolution temporelle [depuis 1 mois, maintenant quotidien depuis 10 jours]",
+            "Aspect de l'hématurie [urine foncée/orange le matin, s'améliore avec hydratation]",
+            "Présence de caillots [nie la présence de caillots]",
+            "Moment d'apparition [surtout le matin]"
+          ],
+          "exemplesPhrases": [
+            "Est-ce que cela s'est aggravé au cours du mois, ou est-ce à peu près pareil ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes urinaires associés",
+          "details": [
+            "Dysurie [nie douleur à la miction]",
+            "Pollakiurie [nie changement de fréquence]",
+            "Urgence mictionnelle [nie]",
+            "Incontinence urinaire [nie]",
+            "Difficulté à initier la miction [difficile de commencer parfois, doit attendre]",
+            "Sensation de vidange incomplète [nie résidu post-mictionnel]",
+            "Nycturie [1-2 fois par nuit, inchangé depuis toujours]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous des douleurs lorsque vous urinez ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes génito-urinaires",
+          "details": [
+            "Écoulements péniens [nie écoulements inhabituels]",
+            "Hémospermie [ne vérifie jamais, ne pense pas]",
+            "Douleurs génitales [nie douleurs testicules/vessie]",
+            "Douleurs abdominales [nie douleurs abdominales récentes]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu d'autres écoulements péniens inhabituels ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Histoire sexuelle",
+          "details": [
+            "Activité sexuelle [sexuellement actif avec femmes uniquement]",
+            "Partenaires [monogame depuis 7 ans, vit avec petite amie, ont un fils]",
+            "Antécédents de MST [nie MST antérieures]",
+            "Nombre de partenaires [6 partenaires dans sa vie, 3 mariages]"
+          ],
+          "exemplesPhrases": [
+            "Êtes-vous sexuellement actif ? Avec des hommes, des femmes, ou les deux ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents urologiques",
+          "details": [
+            "Calculs rénaux [nie antécédents de lithiase]",
+            "Problèmes prostatiques [nie problèmes de prostate]",
+            "Chirurgie urologique [vasectomie il y a 4 ans sans complications]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà eu des calculs rénaux ou des problèmes de prostate ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux généraux",
+          "details": [
+            "Hospitalisations [jamais hospitalisé sauf amygdalectomie enfant]",
+            "Chirurgies [amygdalectomie dans l'enfance, vasectomie]",
+            "Problèmes médicaux chroniques [céphalées occasionnelles, douleurs musculaires liées au travail]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous autre chose dans vos antécédents médicaux pour lesquels vous avez consulté le médecin ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Lithiase urinaire familiale [nie calculs rénaux familiaux]",
+            "Cancers familiaux [ne pense pas avoir de cancers familiaux]",
+            "Autres pathologies [père Alzheimer, mère problème thyroïdien]"
+          ],
+          "exemplesPhrases": [
+            "Quelqu'un dans votre famille a-t-il eu des calculs rénaux ? Qu'en est-il de tout type de cancer ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "Tabac [nie usage de tabac]",
+            "Alcool [alcoolique en rétablissement, sobre depuis 15 ans]",
+            "Drogues [nie usage de drogues]",
+            "Profession [couvreur - travail physiquement exigeant]"
+          ],
+          "exemplesPhrases": [
+            "Utilisez-vous ou avez-vous déjà utilisé du tabac ? Qu'en est-il de la consommation d'alcool ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments actuels",
+          "details": [
+            "Médicaments prescrits [nie prise de médicaments prescrits]",
+            "Médicaments en vente libre [Tylénol ou Motrin occasionnel (1x/semaine)]",
+            "Indication [céphalées occasionnelles, douleurs liées au travail]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous des médicaments maintenant ? Qu'en est-il des médicaments en vente libre ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Revue des systèmes",
+          "details": [
+            "Symptômes généraux [nie étourdissements, problèmes d'équilibre]",
+            "Symptômes cardio-respiratoires [nie douleurs thoraciques, dyspnée]",
+            "Symptômes digestifs [nie problèmes digestifs sauf si grippe]",
+            "Douleurs [douleurs liées au travail de couvreur uniquement]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous parfois des étourdissements ou des problèmes d'équilibre ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation et approche",
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux [signes vitaux stables]",
+            "Expliquer l'examen au patient",
+            "Obtenir le consentement pour examen génital et rectal"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le permettez.",
+            "Laissez-moi juste me laver les mains."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation postérieure [6 points]",
+            "Auscultation latérale [1 point chaque côté]",
+            "Recherche de sibilances, ronchi, râles [clairs à l'auscultation]"
+          ],
+          "patientComment": "Poumons clairs à l'auscultation bilatérale. Pas de sibilances, frottements ou ronchi"
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal",
+          "details": [
+            "Auscultation des bruits intestinaux [bruits intestinaux normaux]",
+            "Palpation des 4 quadrants [pas de douleur à la palpation]",
+            "Palpation épigastrique [pas de douleur épigastrique]",
+            "Recherche de masses [pas de masses palpables]",
+            "Auscultation des souffles abdominaux [pas de souffles]"
+          ],
+          "patientComment": "Bruits intestinaux normaux. Pas de douleur à la palpation des 4 quadrants et épigastre. Pas de masses. Pas de souffles abdominaux"
+        },
+        {
+          "id": "e4",
+          "text": "Examen des angles costo-vertébraux",
+          "details": [
+            "Percussion des ACV droits [pas de sensibilité]",
+            "Percussion des ACV gauches [pas de sensibilité]",
+            "Recherche de douleur rénale [pas de sensibilité des ACV]"
+          ],
+          "patientComment": "Pas de sensibilité des angles costo-vertébraux"
+        },
+        {
+          "id": "e5",
+          "text": "Questions durant l'examen",
+          "details": [
+            "Toux récente [questionner pendant l'auscultation]",
+            "Douleur à la pression vésicale [Est-ce que ça fait mal quand j'appuie ici ?]",
+            "Recueillir informations supplémentaires pendant l'examen"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu une toux récemment ? Est-ce que ça fait mal quand j'appuie ici ?"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Impression diagnostique et diagnostic différentiel",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes prostatiques",
+                "items": [
+                  {
+                    "text": "Saignement prostatique / Hyperplasie bénigne de la prostate",
+                    "cause": "Arguments POUR :\n\t□ Homme > 40 ans\n\t□ Difficulté à initier la miction\n\t□ Hématurie sans douleur\n\t□ Symptômes urinaires obstructifs",
+                    "test": "→ Toucher rectal, PSA, échographie prostatique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Infection des voies urinaires",
+                    "cause": "Arguments POUR :\n\t□ Hématurie\n\t□ Homme d'âge moyen\nArguments CONTRE :\n\t□ Absence de dysurie\n\t□ Absence de fièvre",
+                    "test": "→ ECBU avec antibiogramme"
+                  }
+                ]
+              },
+              {
+                "name": "Causes lithiasiques",
+                "items": [
+                  {
+                    "text": "Lithiase urinaire",
+                    "cause": "Arguments POUR :\n\t□ Hématurie\n\t□ Homme d'âge moyen\nArguments CONTRE :\n\t□ Absence de douleurs\n\t□ Pas d'antécédents familiaux",
+                    "test": "→ CT abdomen/pelvis sans contraste"
+                  }
+                ]
+              },
+              {
+                "name": "Causes glomérulaires",
+                "items": [
+                  {
+                    "text": "Glomérulonéphrite",
+                    "cause": "Arguments POUR :\n\t□ Hématurie macroscopique\n\t□ Urine foncée/orange\nArguments CONTRE :\n\t□ Absence de protéinurie clinique\n\t□ Absence d'HTA significative",
+                    "test": "→ Analyse d'urine, protéinurie, créatinine"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Tumeur maligne de la vessie",
+                    "cause": "Arguments POUR :\n\t□ Homme > 40 ans\n\t□ Hématurie indolore\n\t□ Profession exposée (couvreur)\nArguments CONTRE :\n\t□ Absence de tabagisme\n\t□ Jeune âge relatif",
+                    "test": "→ Cystoscopie, CT abdomen/pelvis"
+                  }
+                ]
+              }
+            ]
+          },
+          "exemplesPhrases": [
+            "Monsieur Montego, le sang dans votre urine peut être le résultat de plusieurs causes différentes."
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Plan diagnostique immédiat",
+          "details": [
+            "Examen génital et toucher rectal [évaluation prostatique]",
+            "Analyse d'urine et culture [recherche infection, hématurie, protéinurie]",
+            "Bilan métabolique de base [urée, créatinine, électrolytes]",
+            "CT abdomen/pelvis [recherche lithiase, masses]",
+            "Cystoscopie [visualisation directe vessie et urètre]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais commander plusieurs tests qui nécessiteront de l'urine, du sang, et que vous subissiez une autre procédure pour examiner la vessie."
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Explication des examens complémentaires",
+          "details": [
+            "Cystoscopie [procédure avec petite caméra pour examiner vessie et urètre]",
+            "Imagerie [CT pour rechercher calculs ou masses]",
+            "Analyses biologiques [urine et sang pour infection et fonction rénale]",
+            "Examen clinique [examen génital et prostatique]"
+          ],
+          "exemplesPhrases": [
+            "C'est ce qu'on appelle la 'cystoscopie' et cela implique d'utiliser une très petite caméra pour regarder réellement ces zones."
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Localisation de la source de saignement",
+          "details": [
+            "Déterminer l'origine du saignement [vessie, prostate, reins, voies urinaires]",
+            "Différenciation hématurie initiale/terminale/totale",
+            "Évaluation du système urinaire complet",
+            "Exclusion des causes systémiques"
+          ],
+          "exemplesPhrases": [
+            "La première tâche pour découvrir ce qui pourrait être anormal est de déterminer d'où vient le sang."
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Information et rassurance du patient",
+          "details": [
+            "Explication des possibilités diagnostiques [cancer vessie préoccupant mais rare]",
+            "HBP comme cause fréquente [hyperplasie bénigne prostate]",
+            "Autres causes possibles [reins, calculs, infections]",
+            "Nécessité d'investigations complètes"
+          ],
+          "exemplesPhrases": [
+            "Chez les hommes de plus de 40 ans, le sang peut éventuellement provenir de la vessie et peut être causé par un cancer à cet endroit.",
+            "C'est une possibilité et la plus préoccupante, bien que ce serait encore une cause rare."
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Synthèse et plan de soins",
+          "content": "J'aimerais aussi faire un examen génital et de la prostate sur vous aujourd'hui pour évaluer certaines de ces possibilités. Permettez-moi de sortir et d'organiser ces tests et de vous donner une chance de vous changer en blouse. Y a-t-il un autre aspect de vos soins de santé dont nous n'avons pas encore discuté ? D'accord alors, merci.",
+          "exemplesPhrases": [
+            "Permettez-moi de sortir et d'organiser ces tests et de vous donner une chance de vous changer en blouse."
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Jose Montego",
+      "nom": "Jose Montego",
+      "age": "45 ans",
+      "contexte": "Homme de 45 ans consultant pour hématurie depuis 1 mois",
+      "motifConsultation": {
+        "plaintePrincipale": "Sang dans les urines depuis environ un mois",
+        "inquietude": "Cela me fait flipper"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Saignements sur sous-vêtements depuis 1 mois",
+          "Initialement 2-3 fois par semaine, maintenant quotidien depuis 10 jours",
+          "Urine foncée ou orange, surtout le matin",
+          "S'améliore avec l'hydratation",
+          "Taches de sang sur sous-vêtements blancs",
+          "Pas de caillots de sang"
+        ],
+        "symptomesAssocies": [
+          "Difficulté parfois à initier la miction (doit attendre)",
+          "Nycturie 1-2 fois par nuit (inchangé, présent toute sa vie)",
+          "Pas de dysurie",
+          "Pas de douleurs abdominales ou génitales",
+          "Pas d'écoulements péniens inhabituels"
+        ],
+        "evolution": [
+          "Aggravation progressive",
+          "Passage de 2-3 épisodes par semaine à quotidien",
+          "Taches plus fréquentes sur les sous-vêtements"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Céphalées occasionnelles (travail de couvreur)",
+          "Douleurs musculaires liées au travail",
+          "N'aime pas consulter les médecins"
+        ],
+        "chirurgicaux": [
+          "Amygdalectomie dans l'enfance",
+          "Vasectomie il y a 4 ans (pas de complications)"
+        ],
+        "familiaux": [
+          "Père : maladie d'Alzheimer",
+          "Mère : problème thyroïdien",
+          "Pas de calculs rénaux familiaux",
+          "Pas de cancers familiaux connus"
+        ]
+      },
+      "historieSexuelle": {
+        "activite": "Sexuellement actif avec les femmes uniquement",
+        "partenaires": "Monogame depuis 7 ans avec sa petite amie",
+        "enfants": "Un fils ensemble",
+        "antecedentsMST": "Nie toute MST antérieure",
+        "nombrePartenaires": "6 partenaires dans sa vie, 3 mariages précédents"
+      },
+      "habitudes": {
+        "tabac": "Jamais fumé",
+        "alcool": "Alcoolique en rétablissement, sobre depuis 15 ans",
+        "drogues": "Nie usage de drogues",
+        "profession": "Couvreur (travail physiquement exigeant)",
+        "medicaments": "Tylenol ou Motrin occasionnel (1x/semaine pour céphalées ou douleurs)"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet mais coopératif",
+          "Évite habituellement les médecins",
+          "Un peu gêné de parler de problèmes intimes",
+          "Franc et direct dans ses réponses"
+        ],
+        "reponses": [
+          "Si on demande les caillots : 'Qu'est-ce que vous voulez dire par caillots ?'",
+          "Sur l'aggravation : 'Ça s'est aggravé. Je suis venu parce que ça se produit tous les jours maintenant'",
+          "Sur l'inquiétude : 'Ça me fait flipper'",
+          "Sur les femmes : 'Les femmes sont folles parfois. Vous devez savoir ce que je veux dire ?'",
+          "Sur l'alcool : 'Je suis un alcoolique en rétablissement. Sobre depuis 15 ans maintenant'"
+        ],
+        "examenPhysique": [
+          "Coopératif pour l'examen",
+          "Accepte l'examen génital et rectal après explication",
+          "Pas de douleur particulière à l'examen"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Hématurie chez l'homme de 45 ans",
+      "pointsCles": [
+        "Hématurie macroscopique chez homme de 45 ans nécessite investigation complète",
+        "Symptômes obstructifs (difficulté initiation miction) évoquent pathologie prostatique",
+        "Absence de douleur n'exclut pas de pathologie grave (cancer vésical)",
+        "Profession de couvreur = exposition potentielle à carcinogènes",
+        "Vasectomie antérieure non liée à l'hématurie actuelle"
+      ],
+      "pieges": [
+        "Ne pas minimiser l'hématurie indolore (peut être cancer)",
+        "Ne pas oublier l'examen génital et rectal (évaluation prostatique)",
+        "Importance de la cystoscopie dans le bilan d'hématurie >40 ans",
+        "Ne pas se limiter aux causes infectieuses chez l'homme",
+        "Interroger sur expositions professionnelles (couvreur)"
+      ],
+      "diagnosticDifferentiel": [
+        "Saignement prostatique (HBP) - plus probable",
+        "Infection urinaire - à exclure",
+        "Lithiase urinaire - possible",
+        "Glomérulonéphrite - moins probable",
+        "Cancer vésical - préoccupant à exclure"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie et Pratique - Hématurie de l'adulte",
+      "sections": [
+        {
+          "titre": "Approche diagnostique de l'hématurie",
+          "contenu": "L'hématurie chez l'homme de plus de 40 ans nécessite une investigation urologique complète. La distinction entre hématurie initiale, terminale et totale guide l'orientation diagnostique."
+        },
+        {
+          "titre": "Causes principales selon l'âge",
+          "contenu": "Chez l'homme de 45 ans : HBP (30%), infections (25%), lithiase (20%), cancers urologiques (15%), glomérulonéphrites (10%)."
+        }
+      ],
+      "examensComplementaires": [
+        "ECBU systématique avec antibiogramme",
+        "Bilan métabolique de base (urée, créatinine, électrolytes)",
+        "CT abdomen-pelvis sans injection (recherche lithiase)",
+        "Cystoscopie (indispensable >40 ans avec hématurie)",
+        "Échographie rénale et vésicale",
+        "PSA et toucher rectal"
+      ],
+      "rappelsTherapeutiques": [
+        "Hématurie indolore = cancer jusqu'à preuve du contraire",
+        "Cystoscopie obligatoire chez homme >40 ans avec hématurie",
+        "Bilan complet même si cause bénigne suspectée",
+        "Suivi urologique nécessaire",
+        "Arrêt temporaire anticoagulants si possible"
+      ]
+    }
+  }
+}

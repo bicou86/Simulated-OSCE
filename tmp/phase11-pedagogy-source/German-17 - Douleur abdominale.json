@@ -1,0 +1,293 @@
+{
+  "title": "German-17 - Douleur abdominale",
+  "context": {
+    "setting": "Cabinet de gynécologie",
+    "patient": "Femme de 27 ans se présente avec des douleurs abdominales. Paramètres vitaux normaux."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification des symptômes principaux",
+          "binaryOnly": true,
+          "patientComment": "Douleurs abdominales et douleurs menstruelles"
+        },
+        {
+          "id": "a3",
+          "text": "Début des symptômes",
+          "patientComment": "Depuis longtemps déjà"
+        },
+        {
+          "id": "a4",
+          "text": "Localisation",
+          "patientComment": "Bas-ventre"
+        },
+        {
+          "id": "a5",
+          "text": "Irradiation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a6",
+          "text": "Fréquence et périodicité",
+          "patientComment": "Toujours beaucoup plus intense pendant les règles"
+        },
+        {
+          "id": "a7",
+          "text": "Intensité",
+          "patientComment": "6/10"
+        },
+        {
+          "id": "a8",
+          "text": "Caractère de la douleur",
+          "patientComment": "Sourde, mais aussi piquante"
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs aggravants ou soulageants",
+          "patientComment": "Un peu mieux après les règles"
+        },
+        {
+          "id": "a10",
+          "text": "Douleurs liées à l'alimentation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [Non]",
+            "Perte de poids [Non]",
+            "Sueurs nocturnes [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes digestifs",
+          "details": [
+            "Transit intestinal [Normal]",
+            "Gaz [Présents]",
+            "Nausées/Vomissements [Non]",
+            "Sang dans les vomissements [Non]",
+            "Constipation [Souvent constipée]",
+            "Diarrhée [Non]",
+            "Sang dans les selles [Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédent de chirurgie abdominale",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse gynécologique",
+          "details": [
+            "Dernières règles [Il y a 2 semaines]",
+            "Durée du cycle [28 jours]",
+            "Durée des menstruations [5 jours]",
+            "Intensité des saignements [Plutôt abondants, nécessite beaucoup de tampons]",
+            "Symptômes vaginaux [Non]",
+            "Pertes vaginales [Normales]",
+            "Partenaire stable [Oui]",
+            "Dyspareunie [Oui, parfois]",
+            "Contraception [Non, désir d'enfant]",
+            "Enfants [Non]",
+            "Grossesse actuelle [Non]",
+            "Antécédent de chirurgie gynécologique [Non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Miction",
+          "patientComment": "Normale"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse de voyage",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse de l'entourage",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse personnelle",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a19",
+          "text": "Consommation de substances",
+          "patientComment": "Pas de tabac, alcool rarement le week-end, pas de drogues"
+        },
+        {
+          "id": "a20",
+          "text": "Médication actuelle",
+          "patientComment": "Parfois Panadol quand c'est grave"
+        },
+        {
+          "id": "a21",
+          "text": "Allergies",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse sociale",
+          "patientComment": "Employée de bureau"
+        },
+        {
+          "id": "a23",
+          "text": "Anamnèse familiale",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a24",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie gynécologique avec exploration de la dysménorrhée"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen abdominal",
+          "patientComment": "Sensibilité diffuse dans le bas-ventre"
+        },
+        {
+          "id": "e2",
+          "text": "Inspection de la vulve, du vagin et du col",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e3",
+          "text": "Examen bimanuel recto-vaginal",
+          "details": [
+            "Utérus [Légèrement fixé]",
+            "Cul-de-sac de Douglas [Induration palpable]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation des ganglions lymphatiques",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen gynécologique complet avec recherche spécifique de signes d'endométriose"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic suspecté",
+          "details": [
+            "Endométriose"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 2-3 diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Annexite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Diverticulite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal, CRP"
+                  },
+                  {
+                    "text": "Appendicite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ US abdominal, CT abdominal, CRP"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ β-HCG, US pelvienne"
+                  },
+                  {
+                    "text": "Torsion d'organe",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Analyses sanguines [FSC, CRP]",
+            "Test de grossesse",
+            "Prélèvement vaginal et cervical",
+            "Échographie vaginale",
+            "Laparoscopie diagnostique [Seule méthode pour confirmer le diagnostic]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "details": [
+            "Analgésiques",
+            "Contraceptifs oraux (inhibiteurs de l'ovulation)",
+            "Thérapie endocrinienne [Suppression œstrogénique - compatibilité avec désir de grossesse ?]",
+            "Ablation chirurgicale en cas de complications ou stades très avancés"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Information et éducation de la patiente",
+          "details": [
+            "Explication que les symptômes disparaissent souvent lors de l'aménorrhée ou de la grossesse",
+            "Information sur les complications possibles [Infertilité]",
+            "Information sur les récidives possibles après traitement"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec approche diagnostique et thérapeutique adaptée au désir de grossesse"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

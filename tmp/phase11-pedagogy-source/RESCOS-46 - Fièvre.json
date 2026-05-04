@@ -1,0 +1,751 @@
+{
+  "title": "RESCOS-46 - Fièvre",
+  "context": {
+    "setting": "Urgences",
+    "patient": "M. Pierre Robin, 26 ans, coiffeur, consulte pour fièvre élevée depuis 5 jours",
+    "vitals": {
+      "ta": "105/75 mmHg",
+      "fc": "95 bpm",
+      "fr": "19/min",
+      "temperature": "39.1°C",
+      "sao2": "94%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la fièvre",
+          "details": [
+            "Début/durée [depuis 5 jours]",
+            "Intensité [>39°C mesurée plusieurs fois]",
+            "Évolution [rapidement élevée et invalidante]",
+            "Fluctuation [se calme rarement]",
+            "Facteurs soulageants [Dafalgan temporairement]"
+          ],
+          "scoringRule": "Les cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Présence de douleurs (tous types)",
+          "details": [
+            "Pas de douleur thoracique, pas de céphalée, pas de douleur nucale"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés à la fièvre",
+          "details": [
+            "Frissons [oui, très fréquents]",
+            "Transpiration [oui, plusieurs fois]",
+            "Toux [chronique depuis 2 mois, ne mentionne pas spontanément]",
+            "Dyspnée [non]",
+            "Disparition du goût et/ou odorat COVID-19 [non]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation de la toux",
+          "details": [
+            "Chronologie (durée) [depuis 1-2 mois]",
+            "Fréquence [occasionnelle]",
+            "Qualité (sèche/grasse) [parfois productive]",
+            "Expectorations [quelques glaires]",
+            "Couleur des expectorations [aspect blanc]",
+            "Présence de sang dans les expectorations [non]"
+          ],
+          "scoringRule": "Les six = oui, quatre à cinq = ±, aucun à trois = non"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse par système",
+          "details": [
+            "Éruptions cutanées [pas d'éruption nouvelle]",
+            "Douleurs articulaires [pas de douleur articulaire]",
+            "Symptômes digestifs [transit régulier, pas de nausée]",
+            "Symptômes urinaires [pas de brûlures mictionnelles]"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies [bonne santé habituelle]",
+            "Opérations/hospitalisations [extraction dents de sagesse il y a 1 semaine, appendicectomie à 12 ans]",
+            "Vaccins [à jour]",
+            "Perte de poids récente [poids stable]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes",
+          "details": [
+            "Médicaments [Dafalgan occasionnel, paracétamol 2x/jour depuis début fièvre]",
+            "Tabac [1-2 paquets/jour depuis 16 ans]",
+            "Voyages [dernier voyage il y a 2 ans en Écosse]",
+            "Drogues [cocaïne, cannabis, ecstasy occasionnels en fête]",
+            "Sexualité (type, préservatif) [rapports protégés avec copine]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Foyer aortique",
+            "Foyer pulmonaire",
+            "Foyer mitral",
+            "Foyer tricuspidien"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Status vasculaire",
+          "details": [
+            "Palpation des pouls périphériques",
+            "Temps de recoloration des extrémités",
+            "Présence d'œdème/angiœdème",
+            "Auscultation des carotides"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "e3",
+          "text": "Pulmonaire",
+          "details": [
+            "Auscultation postérieure (min 6 foyers, 3 de chaque côté)",
+            "En auscultant, compare systématiquement gauche et droite",
+            "Auscultation latérale (des deux côtés)",
+            "Auscultation antérieure",
+            "Percussion",
+            "Amplitude"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e4",
+          "text": "Inspection de la cavité buccale",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Rigidité nucale (méningisme)",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Inspection cutanée",
+          "details": [
+            "Recherche d'affection/éruption cutanées (point d'entrée infectieux)",
+            "Recherche systématique sur tout le corps (sauf zones intimes)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Palpations des aires ganglionnaires",
+          "details": [
+            "Cervicales",
+            "Axillaires",
+            "Inguinales"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évoque un diagnostic différentiel cohérent",
+          "details": [
+            "Endocardite (extraction dentaire récente)",
+            "Pneumonie",
+            "Méningite",
+            "Sepsis",
+            "Maladies inflammatoires (Still, Horton)",
+            "Néoplasies",
+            "Fièvre médicamenteuse"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Propose un examen paraclinique pertinent",
+          "details": [
+            "Chimie sanguine et formule sanguine",
+            "Hémocultures",
+            "Stix urinaire/ECBU",
+            "Radiographie thoracique",
+            "ECG"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m3",
+          "text": "Évoque la nécessité d'hospitalisation et de surveillance",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Pierre Robin",
+      "age": "26 ans",
+      "contexte": "Coiffeur, bonne santé habituelle, extraction dents de sagesse il y a une semaine, consulte pour fièvre élevée",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai beaucoup de fièvre depuis 5 jours et j'ai des frissons très fréquemment",
+        "autreChose": "J'ai mesuré plusieurs fois ma température à plus de 39°C !"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fièvre >39°C mesurée plusieurs fois depuis 5 jours",
+          "Rapidement élevée et invalidante",
+          "Ne se calme que rarement",
+          "Empêche de dormir",
+          "État général diminué"
+        ],
+        "symptomesAssocies": [
+          "Frissons très fréquents (1-2 fois pendant l'entretien)",
+          "Transpiration plusieurs fois",
+          "Fatigue et mal-être général",
+          "Anxiété",
+          "N'a pas pu travailler cette semaine"
+        ],
+        "circonstances": [
+          "Début il y a 5 jours sans facteur déclenchant apparent",
+          "Facteurs aggravants: salles surchauffées, duvet trop épais",
+          "Facteurs atténuants: Dafalgan mais temporairement seulement"
+        ],
+        "reponseAuxSymptomes": [
+          "Prise de Dafalgan qui n'ont soulagé que temporairement",
+          "Depuis début fièvre: paracétamol 2x/jour avec effets temporaires"
+        ],
+        "inquietudes": [
+          "Ne sait pas ce qu'il a",
+          "Inquiet de cette fièvre prolongée"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Baisse de l'état général",
+          "Fièvre, asthénie",
+          "Poids stable"
+        ],
+        "cardiovasculaire": [
+          "Pas de palpitations",
+          "Pas de douleur thoracique",
+          "Pas de dyspnée à l'effort",
+          "Pas de vertiges orthostatiques"
+        ],
+        "respiratoire": [
+          "Toux chronique depuis 2 mois à prédominance matinale",
+          "Parfois productive avec quelques glaires blanches",
+          "Toux occasionnelle pendant l'entretien",
+          "ATTENTION: ne pas mentionner spontanément cette toux"
+        ],
+        "neurologique": [
+          "Pas de trouble de conscience",
+          "Pas de céphalée",
+          "Pas de douleur à la nuque",
+          "Pas de faiblesse des membres"
+        ],
+        "digestive": [
+          "Transit régulier",
+          "Pas de nausée ou vomissement",
+          "Pas de diarrhée",
+          "Pas de sang dans les selles"
+        ],
+        "osteoarticulaire": [
+          "Pas de douleur articulaire"
+        ],
+        "genitourinaire": [
+          "Pas de brûlures à la miction",
+          "Pas de modification fréquence urinaire"
+        ],
+        "dermatologique": [
+          "Pas d'éruption cutanée nouvelle"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Dafalgan occasionnel pour maux de tête, paracétamol 2x/jour depuis début fièvre",
+        "alimentation": "Saine et variée",
+        "activitePhysique": "Régulière mais modérée (1x par semaine), tennis et VTT",
+        "sommeil": "7h30 en moyenne, perturbé par la fièvre actuellement",
+        "tabac": "1 paquet/jour voir 2 paquets les soirs de fête depuis l'âge de 16 ans",
+        "alcool": "Plusieurs fois par semaine, surtout les soirs de week-end",
+        "drogues": "Cocaïne, cannabis, ecstasy de façon occasionnelle lors de fêtes",
+        "sexualite": "Rapports réguliers protégés avec copine"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Extraction des dents de sagesse il y a une semaine",
+        "Opération pour appendicite à l'âge de 12 ans",
+        "Pas d'allergie connue",
+        "Vaccins à jour",
+        "Pas de voyage récent (dernier il y a 2 ans en Écosse)"
+      ],
+      "antecedentsFamiliaux": [
+        "Anamnèse familiale sans particularité"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Coiffeur",
+        "hobbies": "Tennis et VTT",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Célibataire",
+        "etatEsprit": "Anxieux, inquiet"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "État général diminué",
+          "Une ou deux fois pendant l'entretien: frissons",
+          "Anxiété",
+          "Toux occasionnelle (ne pas mentionner spontanément la toux chronique)"
+        ],
+        "questionsAPoser": [
+          "Qu'est-ce que j'ai docteur? (si diagnostic pas évoqué)",
+          "Est-ce que c'est grave? (inquiétude)"
+        ]
+      },
+      "informationADonner": [
+        "Mentionner l'extraction dentaire SEULEMENT si l'étudiant demande les antécédents médicaux",
+        "La toux chronique ne doit PAS être mentionnée spontanément - elle fait 'partie du quotidien' du patient fumeur",
+        "Révéler les habitudes de drogues si anamnèse des habitudes/toxiques est demandée"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M. Pierre Robin, 26 ans, coiffeur, BSH. Fièvre >39°C depuis 5 jours avec frissons et transpiration. Extraction dents de sagesse il y a 1 semaine. Toux chronique fumeur depuis 2 mois (non mentionnée spontanément). Polytoxicomanie occasionnelle. Tableau fébrile nécessitant investigation urgente avec suspicion d'endocardite post-extraction dentaire.",
+      "rolesInterventions": [
+        "Aucune intervention directe nécessaire",
+        "Observer l'anamnèse ciblée sur la fièvre",
+        "Évaluer la recherche d'antécédents (extraction dentaire)",
+        "Noter l'exploration des facteurs de risque infectieux",
+        "Vérifier la proposition d'examens paracliniques appropriés"
+      ],
+      "pointsCles": [
+        "Fièvre élevée prolongée chez homme jeune",
+        "DRAPEAU ROUGE: extraction dentaire récente (risque endocardite)",
+        "Facteurs de risque: polytoxicomanie, tabagisme",
+        "Toux chronique du fumeur (piège: ne mentionne pas spontanément)",
+        "Nécessité hospitalisation et bilan infectieux urgent",
+        "Diagnostic différentiel large: infectieux, inflammatoire, néoplasique",
+        "Importance auscultation cardiaque (recherche souffle)",
+        "Recherche signes méningés obligatoire"
+      ],
+      "pieges": [
+        "Ne pas rechercher l'antécédent d'extraction dentaire",
+        "Omettre l'auscultation cardiaque complète",
+        "Ne pas explorer la toux chronique",
+        "Oublier la recherche de signes méningés",
+        "Ne pas évoquer l'endocardite comme diagnostic",
+        "Sous-estimer la gravité (pas d'hospitalisation)",
+        "Ne pas rechercher les habitudes toxiques",
+        "Omettre l'inspection cutanée (portes d'entrée)",
+        "Ne pas palper les aires ganglionnaires"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la fièvre et l'endocardite",
+      "sections": [
+        {
+          "titre": "Approche diagnostique de la fièvre",
+          "contenu": "Toute fièvre doit faire suspecter un processus infectieux en premier lieu.",
+          "points": [
+            "Fièvre: température >38.3°C ou >101°F",
+            "Causes principales: infectieuses (90%), inflammatoires, néoplasiques",
+            "Anamnèse essentielle: début, évolution, facteurs déclenchants",
+            "Recherche systématique portes d'entrée infectieuses",
+            "Anamnèse par système primordiale",
+            "Symptômes B: fièvre, diaphorèse, perte de poids",
+            "Examen clinique complet avec constantes vitales"
+          ]
+        },
+        {
+          "titre": "Endocardite infectieuse",
+          "contenu": "Infection de l'endocarde, rare mais potentiellement mortelle.",
+          "points": [
+            "Incidence: 3-10/100 000 habitants/an",
+            "Mortalité: 15-30% malgré traitement",
+            "Facteurs de risque: valvulopathie, prothèse, toxicomanie IV",
+            "Porte d'entrée: dentaire (30%), cutanée, urinaire",
+            "Germes: Streptocoque, Staphylocoque, HACEK",
+            "Délai d'apparition: quelques jours à semaines",
+            "Diagnostic: critères de Duke (cliniques + échographiques)"
+          ]
+        },
+        {
+          "titre": "Endocardite post-extraction dentaire",
+          "contenu": "Complication rare mais grave des soins dentaires.",
+          "points": [
+            "Incidence: 1/14 000 à 1/100 000 extractions",
+            "Délai: 2 jours à 4 semaines post-intervention",
+            "Germes: Streptocoque viridans, Enterocoque",
+            "Prophylaxie: recommandée si risque élevé",
+            "Symptômes: fièvre, frissons, malaise général",
+            "Souffle cardiaque nouveau dans 50% des cas",
+            "Complications: insuffisance cardiaque, AVC, embolies"
+          ]
+        },
+        {
+          "titre": "Examen clinique dans la fièvre",
+          "contenu": "Recherche systématique de signes focalisateurs.",
+          "points": [
+            "Constantes vitales complètes",
+            "Auscultation cardiaque 4 foyers (recherche souffle)",
+            "Auscultation pulmonaire comparative",
+            "Inspection cutanée (portes d'entrée, pétéchies)",
+            "Palpation aires ganglionnaires (cervicales, axillaires, inguinales)",
+            "Inspection cavité buccale",
+            "Recherche signes méningés (rigidité nucale)",
+            "Examen abdominal"
+          ]
+        },
+        {
+          "titre": "Bilan paraclinique de la fièvre",
+          "contenu": "Investigations ciblées selon orientation clinique.",
+          "points": [
+            "Biologie: NFS, CRP, PCT, chimie complète",
+            "Hémocultures x3 (avant antibiotiques)",
+            "ECBU et bandelette urinaire",
+            "Radiographie thoracique",
+            "ECG (signes de myocardite, troubles conduction)",
+            "Échographie cardiaque si suspicion endocardite",
+            "Ponction lombaire si signes méningés",
+            "Sérologies spécifiques selon contexte"
+          ]
+        },
+        {
+          "titre": "Fièvre d'origine indéterminée",
+          "contenu": "Diagnostic d'exclusion après bilan extensif négatif.",
+          "points": [
+            "Définition: fièvre >38.3°C pendant >3 semaines",
+            "Bilan ambulatoire complet non contributif",
+            "Causes: infectieuses (30%), néoplasiques (20%), inflammatoires (15%)",
+            "30% restent sans diagnostic",
+            "Pronostic généralement bon si pas de cause retrouvée",
+            "Traitement empirique seulement si gravité",
+            "Surveillance clinique rapprochée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Paracétamol: 1g x4/j pour antipyrétique",
+        "Endocardite streptocoque: pénicilline G + gentamicine",
+        "Endocardite staphylocoque: vancomycine + gentamicine",
+        "Durée traitement endocardite: 4-6 semaines IV",
+        "Hydratation IV si déshydratation",
+        "Surveillance étroite: hémocultures de contrôle",
+        "Prophylaxie endocardite: amoxicilline 2g 1h avant soins"
+      ],
+      "examensComplementaires": [
+        "NFS: leucocytose avec neutrophilie si bactérien",
+        "CRP: marqueur inflammatoire (>100 mg/L suspect)",
+        "PCT: >0.5 ng/mL évocateur infection bactérienne",
+        "Hémocultures: 3 prélèvements à 30min d'intervalle",
+        "Échographie cardiaque: végétations, régurgitations",
+        "ECG: troubles conduction, bloc AV (abcès septum)",
+        "Radiographie thorax: œdème pulmonaire, embolies",
+        "ECBU: éliminer infection urinaire"
+      ]
+    },
+    "resume": {
+      "titre": "❤️ Endocardite infectieuse – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes généraux",
+              "points": [
+                "Fièvre persistante (90 % des cas), sueurs, frissons",
+                "Asthénie, perte de poids, anorexie",
+                "Douleurs articulaires ou musculaires",
+                "Essoufflement, douleurs thoraciques",
+                "Signes neurologiques (AVC, confusion, céphalées)",
+                "Douleurs abdominales ou lombaires (emboles, abcès)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Antécédents de cardiopathie valvulaire ou prothèse valvulaire",
+                "Toxicomanie IV",
+                "Cathéter central ou matériel intracardiaque",
+                "Immunodépression",
+                "Infections ORL ou dentaires récentes"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes cardiaques",
+              "points": [
+                "Souffle cardiaque nouveau ou modifié",
+                "Signes d’insuffisance cardiaque (œdèmes, crépitants)",
+                "Troubles du rythme ou de conduction (BAV)"
+              ]
+            },
+            {
+              "titre": "Signes extracardiaques",
+              "points": [
+                "Pétéchies, hémorragies en éclats sous-unguéales",
+                "Lésions de Janeway (macules indolores des paumes/semelles)",
+                "Nodules d’Osler (nodules douloureux des doigts/orteils)",
+                "Taches de Roth (hémorragies rétiniennes avec centre pâle)",
+                "Splénomégalie, douleurs abdominales (emboles)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "3 hémocultures (avant ATB), à différents sites",
+                "CRP, VS, hémogramme (anémie inflammatoire, hyperleucocytose)",
+                "Fonction rénale, bilan hépatique",
+                "Sérologies (Coxiella, Bartonella si hémocultures négatives)",
+                "Recherche de facteurs prédisposants (tox, VIH...)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie cardiaque (ETO préférable à ETT)",
+                "Scanner thoraco-abdominal si suspicion emboles",
+                "IRM cérébrale en cas de signes neuro",
+                "ECG (BAV si abcès périvalvulaire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Urgence",
+              "points": [
+                "Hospitalisation",
+                "Prise de sang pour hémocultures avant ATB",
+                "Début d’antibiothérapie IV probabiliste (ex : vancomycine + ceftriaxone)",
+                "Consultation infectiologue et cardiologue"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Adaptation de l’ATB selon germes (durée : 4–6 semaines)",
+                "Traitement chirurgical si complications : IC sévère, végétation > 10 mm, abcès, résistance au ttt"
+              ]
+            },
+            {
+              "titre": "Prévention secondaire",
+              "points": [
+                "ATB prophylaxie si valvulopathie et soins dentaires à risque",
+                "Suivi cardiologique post-infection"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Fièvre + souffle cardiaque = évoquer endocardite",
+            "Ne pas oublier les signes périphériques : Osler, Janeway, pétéchies",
+            "Hémocultures ×3 avant tout antibiotique",
+            "Échographie transœsophagienne systématique",
+            "Traitement prolongé IV + surveillance des complications emboliques",
+            "Chirurgie si IC, abcès, végétations volumineuses"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Fièvre prolongée (suspicion endocardite)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation",
+            "Caractérisation de la fièvre → début, intensité, fluctuations, réponse aux antipyrétiques",
+            "Signes associés → frissons, sueurs, altération de l’état général",
+            "Contexte → extraction dentaire récente, toxicomanie, tabac",
+            "Examen clinique → constantes, recherche souffle, status cutané et ganglionnaire, signes méningés",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → hémocultures, biologie, Rx thorax, ECG, écho cardiaque",
+            "Prise en charge → hospitalisation, ATB IV probabiliste, avis infectiologie/cardiologie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : FEVER",
+            "elements": [
+              "F = Fièvre persistante",
+              "E = Endocardite à évoquer (souffle, extraction dentaire)",
+              "V = Végétations à rechercher à l’écho",
+              "E = Examens sanguins (hémocultures ×3)",
+              "R = Risque embolique et IC à surveiller"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Pierre Robin, 26 ans, coiffeur, qui consulte pour une fièvre élevée persistante depuis environ 5 jours.\n\nIl décrit des pics fébriles mesurés à plus de 39 degrés, rapidement élevés et invalidants. La fièvre s’accompagne de frissons fréquents et de sueurs abondantes. Le paracétamol a permis une amélioration temporaire mais incomplète. Depuis le début, il se sent très fatigué et n’a pas pu travailler.\n\nIl ne rapporte pas de douleurs thoraciques, pas de céphalées ni de douleurs à la nuque, et pas de dyspnée. Pas de symptômes digestifs ni urinaires. Pas d’éruption cutanée ni de douleurs articulaires.\n\nPour ses antécédents, il est en bonne santé habituelle. Il a subi une extraction des dents de sagesse il y a une semaine et une appendicectomie dans l’enfance. Ses vaccins sont à jour et il n’a pas voyagé récemment. Son poids est stable.\n\nConcernant ses habitudes de vie, il fume 1 à 2 paquets par jour depuis l’adolescence, consomme de l’alcool le week-end et admet des consommations occasionnelles de cocaïne, cannabis et ecstasy en soirée. Il a des rapports sexuels protégés réguliers avec sa compagne.\n\nÀ l’examen, ses constantes sont : tension artérielle 105/75, fréquence cardiaque 95, fréquence respiratoire 19, température 39,1 et saturation à 94 %. Son état général est diminué, il est anxieux et présente des frissons pendant l’entretien. À l’examen clinique complet, il n’y a pas de foyer évident, mais la recherche d’un souffle cardiaque est indispensable, de même que l’inspection cutanée et la palpation des aires ganglionnaires.\n\nEn résumé, il s’agit d’un homme jeune de 26 ans qui présente une fièvre élevée persistante avec frissons, sans foyer évident, dans un contexte d’extraction dentaire récente et de toxicomanie occasionnelle. Mon hypothèse principale est une endocardite infectieuse. Les diagnostics différentiels incluent une pneumonie, une méningite, un sepsis d’origine urinaire ou cutanée, ou plus rarement une pathologie inflammatoire ou néoplasique.\n\nComme examens complémentaires, je demanderais en urgence trois séries d’hémocultures avant tout antibiotique, une NFS, CRP, chimie complète, un ECBU, une radiographie thoracique et un ECG. Une échographie cardiaque, idéalement transœsophagienne, est indispensable si l’endocardite est suspectée.\n\nEn termes de prise en charge immédiate, je proposerais une hospitalisation, une mise sous surveillance rapprochée, la réalisation rapide des hémocultures, et une antibiothérapie IV probabiliste en accord avec l’infectiologue et le cardiologue, adaptée secondairement aux résultats microbiologiques."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Pierre Robin, 26 ans, présente une fièvre élevée persistante depuis 5 jours avec frissons.\n\nB (Background) : Bonne santé habituelle, extraction dentaire il y a une semaine, fumeur et polyconsommateur occasionnel.\n\nA (Assessment) : Fièvre élevée >39°C sans foyer évident, suspicion d’endocardite infectieuse post-extraction. DD : pneumonie, méningite, sepsis.\n\nR (Recommendation) : Hospitalisation, hémocultures ×3, bilan biologique et imagerie, échocardiographie, début d’antibiothérapie IV probabiliste après prélèvements."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Endocardite = DUKE",
+              "points": [
+                "D = Diagnostic clinique (fièvre, souffle, hémocultures)",
+                "U = Urgence hospitalière",
+                "K = Kritères de Duke (majeurs + mineurs)",
+                "E = Écho cardiaque indispensable"
+              ]
+            },
+            {
+              "titre": "Souffle + Fièvre = ⚠️",
+              "points": [
+                "Toujours évoquer une endocardite infectieuse",
+                "Ne pas oublier les portes d’entrée : dentaire, cutanée, urinaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Endocardite infectieuse",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée persistante avec frissons",
+                      "Extraction dentaire récente",
+                      "Facteurs de risque : tabac, drogues",
+                      "Pas de foyer infectieux évident"
+                    ],
+                    "contre": [
+                      "Pas de souffle entendu pour l’instant (mais doit être recherché)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée",
+                      "Toux chronique de fumeur"
+                    ],
+                    "contre": [
+                      "Pas de dyspnée, pas d’expectoration franche purulente",
+                      "Pas de crépitants à l’examen"
+                    ]
+                  }
+                },
+                {
+                  "question": "Méningite",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre et frissons"
+                    ],
+                    "contre": [
+                      "Pas de céphalée, pas de photophobie, pas de raideur de nuque"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Hémocultures ×3 avant ATB",
+                    "NFS, CRP, chimie sanguine",
+                    "ECBU et bandelette urinaire",
+                    "Radiographie thoracique",
+                    "ECG",
+                    "Échographie cardiaque transœsophagienne si suspicion"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Endocardite infectieuse post-extraction dentaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Antibiothérapie IV probabiliste (vancomycine + ceftriaxone)",
+                      "Adaptation selon antibiogramme",
+                      "Surveillance rapprochée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Échographies cardiaques de contrôle",
+                    "Surveillance des hémocultures",
+                    "Suivi cardiologique et infectiologique",
+                    "Prévention secondaire : prophylaxie ATB pour soins dentaires à risque"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

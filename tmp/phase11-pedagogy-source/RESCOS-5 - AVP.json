@@ -1,0 +1,703 @@
+{
+  "title": "RESCOS-5 - AVP",
+  "context": {
+    "setting": "Urgences - Box de déchocage",
+    "patient": "M./Mme Alex Dunant, 28 ans, cycliste, victime d'un accident de vélo avec chute sur l'épaule droite et douleur pelvienne",
+    "vitals": {
+      "ta": "125/75 mmHg (T0) → 95/60 mmHg (T+15min)",
+      "fc": "85 bpm (T0) → 115 bpm (T+15min)",
+      "fr": "18/min",
+      "temperature": "36.8°C",
+      "sao2": "98%",
+      "glasgow": "15/15"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Circonstances de l'accident",
+          "details": [
+            "Mécanisme [chute de vélo à 30 km/h]",
+            "Réception [chute sur épaule droite puis bassin]",
+            "Port du casque [oui, casque présent]",
+            "Perte de connaissance [aucune perte de connaissance]",
+            "Heure de l'accident [il y a 30 minutes]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Plaintes principales du patient",
+          "details": [
+            "Douleur épaule droite [très douloureuse, 8/10]",
+            "Douleur pelvienne [légère gêne initialement]",
+            "Capacité de marche [a pu marcher jusqu'à l'ambulance]",
+            "Évolution des symptômes [aggravation progressive de la douleur pelvienne]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse par systèmes - symptômes associés",
+          "details": [
+            "Nausées [non initialement, puis oui après 15 minutes]",
+            "Vomissements [non]",
+            "Vertiges [légers après 15 minutes]",
+            "Céphalées [non]",
+            "Troubles visuels [non]",
+            "Douleur abdominale [non]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux et allergies",
+          "details": [
+            "Antécédents médicaux [aucun]",
+            "Chirurgies antérieures [aucune]",
+            "Médicaments actuels [aucun]",
+            "Allergies [aucune allergie connue]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Habitudes et contexte social",
+          "details": [
+            "Tabac [non-fumeur]",
+            "Alcool [consommation sociale occasionnelle]",
+            "Activité physique [cyclisme régulier, course à pied]",
+            "Profession [étudiant en ingénierie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse en général - ciblée sur le trauma, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évaluation primaire ABCDE - Airway (voies aériennes)",
+          "details": [
+            "Perméabilité des voies aériennes",
+            "Contrôle cervical (immobilisation)",
+            "Recherche corps étranger",
+            "Évaluation phonation"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e2",
+          "text": "Breathing (ventilation)",
+          "details": [
+            "Fréquence respiratoire",
+            "Ampliation thoracique symétrique",
+            "Auscultation pulmonaire bilatérale",
+            "Recherche pneumothorax",
+            "Saturation en oxygène"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Circulation avec contrôle hémorragie",
+          "details": [
+            "Pouls périphériques [présents mais affaiblis après 15 min]",
+            "Tension artérielle [chute progressive]",
+            "Temps de recoloration capillaire [allongé après 15 min]",
+            "Recherche hémorragie externe [aucune hémorragie visible]",
+            "Évaluation choc hémorragique [signes après 15 minutes]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Disability (état neurologique)",
+          "details": [
+            "Score de Glasgow [15/15]",
+            "Taille et réactivité pupillaire [normales]",
+            "Déficit moteur focal [aucun]",
+            "Réflexes [normaux]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Exposure (exposition et examen secondaire)",
+          "details": [
+            "Déshabillage complet respectant intimité",
+            "Examen épaule droite [déformation, douleur intense]",
+            "Palpation bassin [douleur, instabilité si testée]",
+            "Recherche autres lésions",
+            "Prévention hypothermie"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation spécifique du bassin",
+          "details": [
+            "Inspection [asymétrie possible]",
+            "Palpation douce [douleur]",
+            "Test compression-décompression [à éviter si suspicion fracture]",
+            "Recherche instabilité [présente]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen en général - ABCDE structuré, surveillance évolution",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Reconnaît l'évolution vers le choc hémorragique",
+          "details": [
+            "Identifie la chute tensionnelle progressive",
+            "Reconnaît la tachycardie compensatrice",
+            "Évoque la source hémorragique interne"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Évoque le diagnostic de fracture pelvienne avec saignement",
+          "details": [
+            "Fracture du bassin (open book)",
+            "Hémorragie rétropéritonéale",
+            "Choc hypovolémique secondaire"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Propose les examens complémentaires urgents",
+          "details": [
+            "Radiographie du bassin de face",
+            "CT scan corps entier (pan-scan trauma)",
+            "Bilan sanguin complet (NFS, coagulation, groupe-RAI)",
+            "Gaz du sang artériel",
+            "Radiographie épaule droite"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Initie la réanimation appropriée",
+          "details": [
+            "Deux voies veineuses de gros calibre",
+            "Remplissage vasculaire (cristalloïdes)",
+            "Demande culots globulaires compatibilisés",
+            "Surveillance continue des constantes",
+            "Position anti-choc si nécessaire"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m5",
+          "text": "Évoque la nécessité de stabilisation pelvienne",
+          "details": [
+            "Ceinture pelvienne ou attelle",
+            "Éviter mobilisation excessive du bassin",
+            "Préparation intervention si instabilité hémodynamique"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Demande avis spécialisé approprié",
+          "details": [
+            "Chirurgie orthopédique (fracture pelvienne)",
+            "Chirurgie vasculaire ou radiologie interventionnelle",
+            "Anesthésie-réanimation si instabilité"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m7",
+          "text": "Communication et information du patient/famille",
+          "details": [
+            "Explique la gravité potentielle",
+            "Rassure sur la prise en charge",
+            "Prévient de l'évolution possible"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m8",
+          "text": "Management en général - prise en charge trauma, anticipation",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "fracture-epaule-droite",
+        "title": "Fracture épaule droite",
+        "description": "Radiographie épaule droite",
+        "filename": "urgence-1-img1.jpg"
+      },
+      {
+        "id": "fracture-pelvienne-open-book",
+        "title": "Fracture pelvienne type open book",
+        "description": "Radiographie du bassin montrant une disjonction symphysaire et sacro-iliaque caractéristique d'une fracture instable type B",
+        "filename": "urgence-1-img2.jpg"
+      },
+      {
+        "id": "signes-choc-hemorragique",
+        "title": "Classification du choc hémorragique",
+        "description": "Stades évolutifs du choc hémorragique selon la perte sanguine et les signes cliniques associés",
+        "filename": "urgence-1-img3.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Alex Dunant",
+      "age": "28 ans",
+      "contexte": "Étudiant en ingénierie, cycliste régulier, victime d'accident de vélo, évolution vers choc hémorragique",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis tombé de vélo, j'ai très mal à l'épaule droite",
+        "autreChose": "Au début ça allait, mais maintenant j'ai de plus en plus mal au ventre et je me sens faible"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Chute de vélo à environ 30 km/h il y a 30 minutes",
+          "Réception sur épaule droite puis bassin",
+          "Douleur épaule droite intense (8/10) dès l'impact",
+          "Douleur pelvienne initialement légère, puis progressive",
+          "Aucune perte de connaissance",
+          "Port du casque de protection"
+        ],
+        "symptomesAssocies": [
+          "Initialement : se sentait bien, a pu marcher",
+          "Après 15 minutes : nausées, vertiges légers",
+          "Sensation de faiblesse progressive",
+          "Soif inhabituelle",
+          "Pas de troubles visuels ni céphalées",
+          "Pas de douleur abdominale franche"
+        ],
+        "circonstances": [
+          "Accident sur piste cyclable en descente",
+          "Freinage d'urgence pour éviter piéton",
+          "Chute latérale droite puis roulade",
+          "Secours appelés par témoin",
+          "Transport en ambulance position demi-assise"
+        ],
+        "reponseAuxSymptomes": [
+          "Initialement rassurant car capable de marcher",
+          "Inquiétude croissante avec aggravation symptoms",
+          "Demande antalgiques pour épaule"
+        ],
+        "inquietudes": [
+          "Peur d'avoir cassé l'épaule",
+          "Inquiétude sur l'aggravation des symptômes",
+          "Préoccupation pour études (examens bientôt)"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Habituellement en excellente santé",
+          "Sportif régulier (vélo, course)",
+          "Pas de perte de poids récente",
+          "Sommeil et appétit normaux"
+        ],
+        "cardiovasculaire": [
+          "Pas d'antécédent cardiaque",
+          "Pas de palpitations habituelles",
+          "Tension artérielle normale habituellement"
+        ],
+        "neurologique": [
+          "Aucun antécédent neurologique",
+          "Pas de céphalées chroniques",
+          "Pas de troubles de l'équilibre habituels"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun traitement régulier",
+        "alimentation": "Équilibrée, besoins sportif",
+        "activitePhysique": "Cyclisme 3-4x/semaine, course à pied 2x/semaine",
+        "sommeil": "7-8h par nuit, bon sommeil",
+        "tabac": "Non-fumeur",
+        "alcool": "Consommation sociale occasionnelle (1-2 verres/semaine)",
+        "drogues": "Aucune",
+        "sexualite": "Hétérosexuel, relation stable"
+      },
+      "histoireMedicale": [
+        "Aucun antécédent médical notable",
+        "Jamais hospitalisé",
+        "Aucune chirurgie antérieure",
+        "Vaccins à jour",
+        "Aucune allergie connue",
+        "Dernière consultation médicale : médecine sportive il y a 6 mois"
+      ],
+      "antecedentsFamiliaux": [
+        "Parents en bonne santé",
+        "Pas d'antécédents familiaux significatifs",
+        "Fratrie en bonne santé"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Étudiant en ingénierie mécanique (Master 1)",
+        "hobbies": "Cyclisme, course à pied, escalade occasionnelle",
+        "poids": "Normal, sportif (BMI 22)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Célibataire, en couple",
+        "etatEsprit": "Initialement calme, puis inquiet avec aggravation"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Initial : calme, coopératif, douleur épaule prédominante",
+          "Après 15 min : pâleur progressive, agitation discrète",
+          "Position préférée : demi-assis, évite mouvements bassin",
+          "Réponses cohérentes mais devient moins volubile"
+        ],
+        "durantExamen": [
+          "Coopératif mais douleur à la mobilisation épaule",
+          "Grimace à la palpation pelvienne",
+          "Signes de choc après 15 min : pâleur, sueurs, pouls rapide",
+          "Temps de recoloration capillaire allongé"
+        ],
+        "phasesCritiques": [
+          "T0-10 min : état stable, douleur épaule prédominante",
+          "T10-15 min : début détérioration hémodynamique",
+          "T15+ min : choc hémorragique patent si pas de prise en charge"
+        ],
+        "questionsAPoser": [
+          "Qu'est-ce qui m'arrive ? Je me sens de plus en plus mal (vers T+15 min)",
+          "Est-ce que mon épaule est cassée ? (question initiale)",
+          "Pourquoi j'ai de plus en plus mal au ventre ? (si douleur pelvienne pas explorée)"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur évolution temporelle des symptômes",
+        "Mentionner capacité initiale à marcher",
+        "Souligner aggravation progressive si pas de prise en charge",
+        "Préciser absence perte de connaissance initiale",
+        "À T+15 min : 'Je me sens vraiment mal maintenant, qu'est-ce qui se passe ?'"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Alex Dunant, 28 ans, étudiant, trauma fermé par chute de vélo. Fracture épaule droite + fracture pelvienne instable type open book avec hémorragie rétropéritonéale. Évolution choc hémorragique stade II vers T+15 min. Glasgow 15/15. Mécanisme haute énergie nécessitant évaluation ABCDE complète.",
+      "rolesInterventions": [
+        "Simuler l'évolution hémodynamique : TA 125/75→95/60, FC 85→115 après 15 min",
+        "Indiquer signes de choc si recherchés : pâleur, sueurs, TRC allongé",
+        "Confirmer douleur pelvienne si palpation douce",
+        "Mentionner instabilité pelvienne si test fait (à décourager)",
+        "Répondre aux questions sur constantes vitales"
+      ],
+      "pointsCles": [
+        "Polytraumatisme avec lésion pelvienne masquée",
+        "Évolution temporelle critique : choc hémorragique retardé",
+        "Fracture pelvienne instable type B (open book)",
+        "Hémorragie rétropéritonéale sans signe abdominal franc",
+        "Importance évaluation ABCDE systématique",
+        "Surveillance rapprochée constantes vitales",
+        "Nécessité imagerie urgente (pan-scan)",
+        "Prise en charge multidisciplinaire (orthopédie, radiologie interventionnelle)"
+      ],
+      "pieges": [
+        "Focaliser uniquement sur fracture épaule évidente",
+        "Manquer l'évaluation pelvienne systématique",
+        "Ne pas reconnaître évolution vers choc hémorragique",
+        "Omettre réévaluation constantes vitales",
+        "Sous-estimer gravité car patient marche initialement",
+        "Ne pas demander pan-scan trauma",
+        "Oublier voies veineuses et remplissage précoce",
+        "Ne pas évoquer stabilisation pelvienne",
+        "Retard appel spécialistes",
+        "Tests pelviens agressifs (compression forcée)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur le trauma pelvien et le choc hémorragique",
+      "sections": [
+        {
+          "titre": "Épidémiologie des fractures pelviennes",
+          "contenu": "Lésions graves représentant 3% des fractures mais 20% de mortalité.",
+          "points": [
+            "Incidence : 20-30/100 000 habitants/an",
+            "Mortalité globale : 10-20%",
+            "Mécanismes : trauma haute énergie (85%)",
+            "Âge moyen : bimodal (jeunes + âgés)",
+            "Sex-ratio : légère prédominance masculine",
+            "Polytraumatisme associé : 70% des cas",
+            "Hémorragie majeure : 15-20% des fractures instables"
+          ]
+        },
+        {
+          "titre": "Classification des fractures pelviennes",
+          "contenu": "Classification anatomique et biomécanique selon Tile/AO.",
+          "points": [
+            "Type A : fractures stables (avulsion, sacrum)",
+            "Type B : instabilité rotatoire (open book, compression latérale)",
+            "Type C : instabilité rotatoire ET verticale",
+            "Open book : disjonction symphyse + sacro-iliaque",
+            "Compression latérale : impaction/chevauchement",
+            "Cisaillement vertical : migration céphalique hémi-bassin",
+            "Mécanisme détermine type lésionnel et pronostic"
+          ]
+        },
+        {
+          "titre": "Physiopathologie de l'hémorragie pelvienne",
+          "contenu": "Saignement multifactoriel : osseuse, veineuse, artérielle.",
+          "points": [
+            "Saignement osseux : surface fracturaire importante",
+            "Plexus veineux : réseau dense, fragile",
+            "Artères : iliaque interne et branches",
+            "Volume rétropéritoine : jusqu'à 4-5 litres",
+            "Perte sanguine : 1500-3000 mL (fractures instables)",
+            "Coagulopathie : dilution + hypothermie + acidose",
+            "Cercle vicieux : choc → coagulopathie → saignement"
+          ]
+        },
+        {
+          "titre": "Présentation clinique trauma pelvien",
+          "contenu": "Signes variables selon stabilité et hémorragie associée.",
+          "points": [
+            "Douleur pelvienne : parfois discrète initialement",
+            "Déformation/asymétrie : membres inférieurs",
+            "Hématome scrotal/périnéal : évocateur",
+            "Instabilité : mobilité anormale à la palpation",
+            "Choc hémorragique : retardé possible",
+            "Urétrorragie : lésion urétrale associée",
+            "Déficit neurologique : atteinte plexus lombo-sacré"
+          ]
+        },
+        {
+          "titre": "Évaluation ABCDE du trauma pelvien",
+          "contenu": "Approche systématique selon protocole ATLS.",
+          "points": [
+            "A - Airway : perméabilité + contrôle cervical",
+            "B - Breathing : ventilation + exclusion pneumothorax",
+            "C - Circulation : hémorragie + état de choc",
+            "D - Disability : état neurologique + déficit",
+            "E - Exposure : examen complet + prévention hypothermie",
+            "Réévaluation constante : détérioration possible",
+            "Priorité : ABC avant tout examen secondaire"
+          ]
+        },
+        {
+          "titre": "Prise en charge du choc hémorragique",
+          "contenu": "Réanimation agressive et contrôle précoce hémorragie.",
+          "points": [
+            "Voies veineuses : 2 VVP gros calibre (14-16G)",
+            "Remplissage initial : 1-2L cristalloïdes",
+            "Transfusion : culots globulaires si Hb <7 g/dL",
+            "Ratio plasma/plaquettes : 1:1:1 si hémorragie massive",
+            "Ceinture pelvienne : stabilisation précoce",
+            "Embolisation artérielle : si instabilité persistante",
+            "Chirurgie : fixation externe ou ostéosynthèse"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Stabilisation pelvienne : ceinture ou drap noué",
+        "Remplissage vasculaire : 20 mL/kg cristalloïdes",
+        "Transfusion massive : protocole 1:1:1 (CGR:PFC:plaquettes)",
+        "Embolisation artérielle : si saignement artériel actif",
+        "Fixation externe : si instabilité mécanique",
+        "Antifibrinolytique : acide tranexamique 1g IV",
+        "Facteur VII activé : si coagulopathie réfractaire"
+      ],
+      "examensComplementaires": [
+        "Radiographie bassin face : première intention",
+        "CT scan corps entier : bilan lésionnel complet",
+        "Angio-CT : recherche saignement actif",
+        "NFS, coagulation, groupe-RAI : bilan pré-transfusionnel",
+        "Gaz du sang : acidose, lactates",
+        "Ionogramme, fonction rénale : retentissement",
+        "Radiographie thorax : lésions associées",
+        "Échographie abdominale (FAST) : épanchement"
+      ]
+    },
+    "resume": {
+      "titre": "🚨 Évaluation primaire ABCDE – Polytraumatisé avec choc hémorragique sur fracture du bassin – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse (si possible, recueillie par témoins ou secours)",
+          "subsections": [
+            {
+              "titre": "Circonstances",
+              "points": [
+                "Accident de la voie publique, chute de grande hauteur, écrasement",
+                "Notion de traumatisme à haute cinétique"
+              ]
+            },
+            {
+              "titre": "Symptômes rapportés (si conscience conservée)",
+              "points": [
+                "Douleur pelvienne intense",
+                "Impossibilité de se mobiliser",
+                "Sensation de malaise, vertiges"
+              ]
+            },
+            {
+              "titre": "Facteurs aggravants",
+              "points": [
+                "Antécédents hémorragiques ou anticoagulation",
+                "Perte de connaissance initiale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique (évaluation primaire – approche ABCDE)",
+          "subsections": [
+            {
+              "titre": "A – Airway (voies aériennes)",
+              "points": [
+                "Vérifier perméabilité des voies aériennes",
+                "Immobilisation cervicale systématique",
+                "Intubation si Glasgow ≤ 8 ou détresse respiratoire"
+              ]
+            },
+            {
+              "titre": "B – Breathing (ventilation)",
+              "points": [
+                "Inspection thorax : mouvements, plaies, emphysème",
+                "Auscultation bilatérale : rechercher pneumothorax ou hémothorax",
+                "Oxygénothérapie haut débit"
+              ]
+            },
+            {
+              "titre": "C – Circulation",
+              "points": [
+                "Constantes vitales : TA basse, tachycardie, marbrures (choc hémorragique)",
+                "Recherche hémorragie externe",
+                "Palpation du bassin : instabilité (éviter mobilisations répétées)",
+                "Immobilisation pelvienne immédiate (ceinture pelvienne ou drap serré)",
+                "2 voies IV de gros calibre, remplissage prudent (cristalloïdes ± transfusion massive)"
+              ]
+            },
+            {
+              "titre": "D – Disability (neurologique)",
+              "points": [
+                "Évaluation du score de Glasgow",
+                "Examen pupillaire",
+                "Recherche déficit neurologique périphérique"
+              ]
+            },
+            {
+              "titre": "E – Exposure/Environment",
+              "points": [
+                "Déshabiller complètement le patient pour recherche lésions associées",
+                "Prévenir hypothermie (couverture, réchauffement actif)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques (après stabilisation initiale)",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "NFS, hémoglobine",
+                "Groupage sanguin et RAI",
+                "Bilan de coagulation",
+                "Gaz du sang (lactates, acidose métabolique)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie FAST : recherche hémopéritoine",
+                "Radiographie du bassin en urgence",
+                "Scanner corps entier (traumascanner) après stabilisation hémodynamique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Oxygénation haut débit",
+                "Immobilisation cervicale et pelvienne",
+                "2 voies IV gros calibre, remplissage limité, transfusion précoce (protocole hémorragie massive)"
+              ]
+            },
+            {
+              "titre": "Mesures spécifiques choc hémorragique bassin",
+              "points": [
+                "Ceinture pelvienne serrée pour réduire le saignement",
+                "Transfusion précoce (ratio 1:1:1 si disponible)",
+                "Acide tranexamique IV si hémorragie active",
+                "Appeler immédiatement équipe chirurgicale/traumato + radiologie interventionnelle"
+              ]
+            },
+            {
+              "titre": "Options définitives",
+              "points": [
+                "Embolisation artérielle (radiologie interventionnelle)",
+                "Fixateur externe ou vissage pelvien en urgence",
+                "Chirurgie hémostatique selon disponibilité"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Évaluation primaire ABCDE = prioritaire",
+            "Tout polytraumatisé avec instabilité hémodynamique + fracture du bassin = choc hémorragique jusqu’à preuve du contraire",
+            "Immobilisation pelvienne immédiate",
+            "Transfusion massive précoce (plasma/culots plaquettes équilibrés)",
+            "Recours rapide à embolisation ou chirurgie"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser (si conscience conservée)",
+              "points": [
+                "Circonstances de l’accident ? Haute cinétique ?",
+                "Douleur localisée au bassin ou ailleurs ?",
+                "ATCD médicaux, traitements anticoagulants ?",
+                "Perte de connaissance initiale ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire (urgence)",
+              "points": [
+                "ABCDE complet",
+                "TA, FC, SpO₂, température, Glasgow",
+                "Examen bassin (mobilisation minimale)",
+                "FAST écho abdominal",
+                "Radio bassin",
+                "Bilans sanguins (NFS, groupage, coagulation)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Immobilisation immédiate (cervicale et pelvienne) + oxygénation",
+                "Voies IV, transfusion massive, acide tranexamique",
+                "Embolisation ou chirurgie hémostatique en urgence"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

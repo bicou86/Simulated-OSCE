@@ -1,0 +1,383 @@
+{
+  "title": "RESCOS-29 - Douleur à la jambe",
+  "category": "RESCOS",
+  "subcategory": "Angiologie - Pathologie veineuse",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 68 ans, retraitée, consultant pour œdème et douleur de la cheville et jambe gauche avec dyspnée d'effort",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Œdème et douleur du membre inférieur gauche avec dyspnée"
+        },
+        {
+          "id": "a2",
+          "text": "Histoire de la maladie actuelle",
+          "details": [
+            "Début cheville gauche puis jambe [au milieu du voyage]",
+            "Gonflement progressif et douloureux",
+            "Mise au lit pendant 2 jours [amélioration]",
+            "Jambe gauche nettement plus grosse que la droite",
+            "Peur d'attraper gangrène [médecin parlé de phlébite]",
+            "Varices depuis des années [opérée il y a 4 ans]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Contexte du voyage récent",
+          "details": [
+            "Tour d'Italie en car [16 heures d'une seule traite]",
+            "Voyage avec groupes du 3e âge",
+            "Retour il y a 4 jours [Venise, Rome, Florence, Naples]",
+            "Position assise prolongée dans le car"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Dyspnée d'effort [modérée, en parlant]",
+            "Excès de poids [93 kg pour 1m68]",
+            "Tachypnée [22/min]",
+            "Pas de douleur thoracique",
+            "Pas d'hémoptysie"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque thromboembolique",
+          "details": [
+            "Voyage prolongé en position assise [16h en car]",
+            "Obésité [IMC > 30]",
+            "Âge [68 ans]",
+            "Varices opérées [il y a 4 ans]",
+            "Cancer du sein [il y a 4 ans, chimiothérapie]",
+            "Immobilisation relative [alitement 2 jours]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Cancer du sein droit [mastectomie il y a 4 ans]",
+            "Chimiothérapie [4 cures il y a 1 mois]",
+            "Récidive locale avec envahissement ganglionnaire [il y a 6 mois]",
+            "Embolie pulmonaire mère [décédée à 94 ans]",
+            "Ménopause [50 ans, pas de THS]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Père décédé à 78 ans [hémiplégie]",
+            "Mère décédée à 94 ans [embolie pulmonaire]",
+            "Sœur opérée cancer du sein [va bien]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Score de Wells pour TVP",
+          "details": [
+            "Cancer actif (+1)",
+            "Immobilisation/voyage (+1)",
+            "Gonflement unilatéral (+1)",
+            "Œdème prenant le godet (+1)",
+            "Veines superficielles collatérales (+1)",
+            "Diagnostic alternatif moins probable (+2)"
+          ],
+          "scoringRule": "Score ≥ 2 = Probabilité élevée de TVP"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen physique général",
+          "details": [
+            "État général conservé",
+            "Pas de cyanose",
+            "Dyspnée modérée en parlant",
+            "Tachypnée 22/min"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Mesure des périmètres des membres inférieurs",
+          "details": [
+            "Cheville gauche > droite [différence significative]",
+            "Mollet gauche > droit [circonférence augmentée]",
+            "Cuisse gauche > droite [si TVP proximale]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection et palpation membre inférieur gauche",
+          "details": [
+            "Œdème unilatéral [prenant le godet]",
+            "Rougeur [possible]",
+            "Chaleur locale [augmentée]",
+            "Douleur à la palpation du mollet",
+            "Cyanose déclive [si TVP étendue]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Signes cliniques spécifiques de TVP",
+          "details": [
+            "Signe de Homans [douleur à dorsiflexion passive]",
+            "Ballant du mollet [diminué]",
+            "Turgescence veines superficielles",
+            "Circulation collatérale visible"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation pulmonaire",
+          "details": [
+            "Frottement pleural [si EP associée]",
+            "Épanchement pleural [matité base]",
+            "Fréquence respiratoire [22/min]",
+            "Pas de râles"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Tachycardie [possible]",
+            "Tachyarythmie [si EP]",
+            "Éclat B2 pulmonaire [si HTAP]",
+            "Pas de signes d'insuffisance cardiaque droite"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "TVP proximale avec probable embolie pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Œdème unilatéral post-voyage\n\t□ Facteurs de risque multiples (cancer, voyage, obésité)\n\t□ Dyspnée associée\n\t□ Score de Wells élevé\n\t□ ATCD familial d'EP",
+                    "test": "→ D-dimères, écho-Doppler veineux, angio-CT thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "Insuffisance veineuse chronique décompensée",
+                    "cause": "Arguments POUR:\n\t□ ATCD de varices opérées\nArguments CONTRE:\n\t□ Début brutal post-voyage\n\t□ Unilatéral\n\t□ Dyspnée associée",
+                    "test": "→ Echo-Doppler veineux"
+                  },
+                  {
+                    "text": "Lymphœdème",
+                    "cause": "Arguments POUR:\n\t□ ATCD cancer sein avec curage\nArguments CONTRE:\n\t□ Localisation membre inférieur\n\t□ Début brutal",
+                    "test": "→ Lymphoscintigraphie"
+                  },
+                  {
+                    "text": "Érysipèle",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de placard inflammatoire\n\t□ Pas de porte d'entrée",
+                    "test": "→ NFS, CRP"
+                  },
+                  {
+                    "text": "Rupture kyste poplité (Baker)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de gonarthrose connue\n\t□ Œdème jusqu'à la cuisse",
+                    "test": "→ Échographie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Stratégie diagnostique selon probabilité clinique",
+          "details": [
+            "Probabilité forte (Wells ≥ 2): Echo-Doppler d'emblée",
+            "Si écho négatif mais forte suspicion: répéter à J7",
+            "D-dimères: peu utiles si probabilité forte",
+            "Si dyspnée: angio-CT thoracique ou scintigraphie V/Q"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "details": [
+            "Echo-Doppler veineux membres inférieurs",
+            "D-dimères (si probabilité faible/intermédiaire)",
+            "Angio-CT thoracique (si dyspnée)",
+            "ECG, radiographie thoracique",
+            "Gazométrie artérielle",
+            "Bilan de coagulation (TP, TCA)",
+            "NFS, plaquettes, créatinine"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement anticoagulant",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Phase aiguë",
+                "content": "• HBPM dose curative: enoxaparine 1mg/kg x2/j SC\n• Ou fondaparinux 7.5mg/j SC\n• Ou AOD: rivaroxaban 15mg x2/j pendant 3 semaines\n• Contention élastique classe 2"
+              },
+              {
+                "title": "Phase d'entretien",
+                "content": "• AVK (warfarine) INR cible 2-3\n• Ou AOD: rivaroxaban 20mg/j\n• Durée minimale 3 mois\n• Si cancer actif: 6 mois minimum, préférer HBPM"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Surélévation du membre\n• Mobilisation précoce sous anticoagulation\n• Contention veineuse\n• Antalgie si besoin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "Embolie pulmonaire associée",
+            "TVP massive/phlegmatia",
+            "Risque hémorragique élevé",
+            "Insuffisance rénale sévère",
+            "Contexte social défavorable",
+            "Mauvaise observance prévisible"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Bilan étiologique de la MTEV",
+          "details": [
+            "Recherche cancer occulte (> 50 ans, idiopathique)",
+            "Bilan thrombophilie si < 50 ans ou récidive",
+            "Syndrome des antiphospholipides",
+            "Mutation facteur V Leiden, facteur II",
+            "Déficit en protéines C, S, antithrombine"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vous avez probablement une phlébite (caillot dans la veine) de la jambe, possiblement compliquée d'une embolie pulmonaire. C'est lié à votre long voyage en position assise et vos antécédents. Il faut traiter rapidement avec des anticoagulants."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est grave?]\n[Vais-je avoir la gangrène?]\n[C'est lié à mon cancer?]\n[Combien de temps le traitement?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "C'est sérieux mais bien traité, le pronostic est bon\nNon, pas de risque de gangrène avec le traitement\nLe cancer augmente le risque mais le voyage a été le déclencheur\nAu minimum 3 à 6 mois d'anticoagulants, peut-être plus selon l'évolution"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Cas 2",
+      "nom": "Patiente féminine",
+      "age": "68 ans",
+      "profession": "Retraitée, ancienne enseignante",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma jambe gauche a enflé et me fait mal",
+        "description": "Œdème et douleur progressive depuis retour voyage Italie il y a 4 jours"
+      },
+      "histoireActuelle": {
+        "voyage": [
+          "Tour d'Italie en car avec groupe 3e âge",
+          "16 heures d'une seule traite",
+          "Venise, Rome, Florence, Naples",
+          "Retour il y a 4 jours"
+        ],
+        "symptomes": [
+          "Cheville gauche a commencé à enfler au milieu du voyage",
+          "Puis jambe entière douloureuse",
+          "Mise au lit 2 jours, légère amélioration",
+          "Jambe gauche nettement plus grosse",
+          "Peur d'attraper la gangrène"
+        ],
+        "dyspnee": [
+          "Essoufflée depuis 2-3 jours",
+          "Surtout à l'effort modéré",
+          "Même en parlant parfois"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Cancer sein droit il y a 4 ans (mastectomie)",
+          "Récidive locale il y a 6 mois",
+          "Chimiothérapie (dernière cure il y a 1 mois)",
+          "Varices opérées il y a 4 ans",
+          "Excès de poids (93 kg pour 1m68)"
+        ],
+        "familiaux": [
+          "Mère décédée embolie pulmonaire à 94 ans",
+          "Père décédé hémiplégie à 78 ans",
+          "Sœur cancer du sein (va bien)"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète de la gangrène",
+          "Fatiguée du voyage",
+          "Minimise la dyspnée"
+        ],
+        "signesPhysiques": [
+          "Jambe gauche visiblement plus grosse",
+          "Légère dyspnée en parlant",
+          "Se tient la jambe en position surélevée si possible"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - TVP/EP",
+      "pointsCles": [
+        "Score de Wells élevé (≥ 6 points)",
+        "Multiples facteurs de risque thromboembolique",
+        "Probable EP associée (dyspnée)",
+        "Cancer actif = indication anticoagulation prolongée",
+        "Préférer HBPM si cancer actif"
+      ],
+      "pieges": [
+        "Ne pas minimiser la dyspnée",
+        "Rechercher systématiquement l'EP",
+        "Ne pas oublier le cancer comme facteur de risque",
+        "Adapter la durée d'anticoagulation au contexte",
+        "Surveillance plaquettes sous héparine"
+      ],
+      "scores": [
+        "Wells TVP ≥ 2 = probabilité forte",
+        "Wells EP: calculer si dyspnée",
+        "Genève révisé: alternative au Wells EP",
+        "PESI: pronostic de l'EP"
+      ]
+    }
+  }
+}

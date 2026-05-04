@@ -1,0 +1,817 @@
+{
+  "title": "German-15 - Douleur abdominale",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Hebel, 73 ans, se présente chez le médecin généraliste pour douleurs abdominales"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Mal au ventre"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la douleur (OPQRST)",
+          "details": [
+            "Localisation précise [bas ventre à gauche - fosse iliaque gauche]",
+            "Type/caractère [piquant/en coup de poignard]",
+            "Intensité [6/10 sur l'échelle]",
+            "Irradiation [non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution temporelle",
+          "details": [
+            "Début [depuis 2 jours]",
+            "Mode d'apparition [relativement soudain]",
+            "Évolution [s'aggravant progressivement]",
+            "Périodicité [constante]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "Facteurs aggravants [aucun identifié]",
+            "Facteurs améliorants [aucune amélioration]",
+            "Position antalgique [non mentionnée]",
+            "Relation avec l'alimentation [pas de changement alimentaire]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes digestifs associés",
+          "details": [
+            "Nausées [oui]",
+            "Vomissements [non mentionnés]",
+            "Transit intestinal - diarrhée [oui]",
+            "Flatulences [oui]",
+            "Constipation [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Recherche de signes d'alarme",
+          "details": [
+            "Fièvre [non mentionnée]",
+            "Perte de poids inexpliquée [non]",
+            "Symptômes B (sueurs nocturnes) [non]",
+            "Sang dans les selles [non mentionné]",
+            "Masse palpable [à rechercher]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse urogynécologique",
+          "details": [
+            "Modifications mictionnelles [non]",
+            "Dysurie, pollakiurie [non]",
+            "Hématurie [non]",
+            "Pertes vaginales anormales [non applicables - ménopausée]",
+            "Métrorragies post-ménopausiques [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents obstétricaux et gynécologiques",
+          "details": [
+            "Parité [2 enfants nés normalement]",
+            "Ménopause [oui - âge 73 ans]",
+            "Antécédents gynécologiques [non mentionnés]",
+            "Hystérectomie [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Pathologies chroniques [hypertension artérielle]",
+            "Chirurgies abdominales antérieures [non]",
+            "Coloscopie de dépistage [il y a 5 ans - normale]",
+            "Antécédents de diverticulose [non mentionnés]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Traitement actuel et allergies",
+          "details": [
+            "Médicaments actuels [Valsartan pour hypertension]",
+            "Allergies médicamenteuses [aucune]",
+            "Automédication récente [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes de vie et facteurs de risque",
+          "details": [
+            "Tabagisme [non]",
+            "Consommation d'alcool [1 verre de vin par jour]",
+            "Toxicomanie [non]",
+            "Activité physique [non mentionnée]",
+            "Régime alimentaire (fibres) [non exploré]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse familiale",
+          "patientComment": "Négative pour pathologies digestives",
+          "details": [
+            "Cancer colorectal familial",
+            "Maladies inflammatoires intestinales",
+            "Diverticulose familiale"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Contexte psychosocial",
+          "details": [
+            "Situation familiale [vit avec son époux]",
+            "Autonomie [autonome]",
+            "Stress récent [non mentionné]",
+            "Support social [présent]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse par systèmes",
+          "details": [
+            "Symptômes cardiovasculaires [non]",
+            "Symptômes respiratoires [non]",
+            "Symptômes neurologiques [non]",
+            "Symptômes articulaires [non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie digestive"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale et signes vitaux",
+          "details": [
+            "État général [conservé]",
+            "Position antalgique [non]",
+            "Faciès douloureux [probable]",
+            "Signes vitaux [température à mesurer]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection abdominale",
+          "details": [
+            "Distension abdominale [non]",
+            "Asymétrie [non]",
+            "Cicatrices [absentes]",
+            "Péristaltisme visible [non]",
+            "Circulation collatérale [non]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Bruits hydroaériques [normaux]",
+            "Qualité (gargouillis, cliquetis) [normaux]",
+            "Quantité (5-34/min) [normale]",
+            "Souffles vasculaires [non]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Percussion abdominale",
+          "details": [
+            "Tympanisme généralisé [non]",
+            "Matité déclive [non]",
+            "Douleur à la percussion [fosse iliaque gauche]",
+            "Signe du flot [négatif]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation superficielle et profonde",
+          "details": [
+            "Douleur à la pression [fosse iliaque gauche]",
+            "Résistance/masse palpable [résistance dans le quadrant inférieur gauche]",
+            "Défense musculaire [non]",
+            "Contracture abdominale [non]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes péritonéaux",
+          "details": [
+            "Douleur à la décompression (Blumberg) [non]",
+            "Signe de Murphy [non applicable]",
+            "Signe du psoas [négatif]",
+            "Signe de l'obturateur [négatif]",
+            "Signe de Rovsing [négatif]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation des organes",
+          "details": [
+            "Foie [non palpable]",
+            "Rate [non palpable]",
+            "Reins [non palpables]",
+            "Vessie [non distendue]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen des orifices herniaires",
+          "details": [
+            "Hernies inguinales [absentes]",
+            "Hernie crurale [absente]",
+            "Hernie ombilicale [absente]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Toucher rectal",
+          "details": [
+            "Tonus sphinctérien [normal]",
+            "Masses rectales [absentes]",
+            "Sang au doigtier [absent]",
+            "Douglas douloureux [non]"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Examen gynécologique si indiqué",
+          "details": [
+            "Toucher vaginal",
+            "Mobilité utérine douloureuse",
+            "Masses annexielles"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen abdominal complet et systématique bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Diverticulite sigmoïdienne non compliquée"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 5 diagnostics pertinents = 2 pts, 3-4 = 1 pt, moins de 3 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Pathologie gynécologique",
+                    "cause": "Arguments POUR:\n\t□ annexite, kyste ovarien compliqué",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Cystite/pyélonéphrite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECBU, hémocultures, US rénal"
+                  },
+                  {
+                    "text": "Colite",
+                    "cause": "Arguments POUR:\n\t□ maladie inflammatoire chronique intestinale - MICI",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Cancer colorectal",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Coloscopie, CEA"
+                  },
+                  {
+                    "text": "Colite ischémique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Appendicite",
+                    "cause": "□ localisation atypique",
+                    "test": "→ US abdominal, CT si doute, CRP"
+                  },
+                  {
+                    "text": "Hernie étranglée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen clinique, US si doute"
+                  },
+                  {
+                    "text": "Constipation sévère/fécalome",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie abdominale, coloscopie si alarme"
+                  },
+                  {
+                    "text": "Syndrome de l'intestin irritable",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Pathologie vasculaire",
+                    "cause": "□ anévrisme aortique",
+                    "test": "→ Doppler, angio-IRM ou angio-CT"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques",
+          "details": [
+            "NFS avec formule [leucocytose attendue]",
+            "CRP [élevée dans la diverticulite]",
+            "VS si disponible",
+            "Ionogramme, urée, créatinine",
+            "Analyse d'urine (ECBU) [pour exclure infection urinaire]",
+            "Test de grossesse si approprié"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Échographie abdominale [visualisation des diverticules enflammés, épaississement pariétal]",
+            "CT abdominal avec contraste (gold standard)",
+            "Radiographie abdominale si suspicion de perforation",
+            "IRM si contre-indication au CT"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Classification de la diverticulite",
+          "details": [
+            "Classification de Hinchey",
+            "Diverticulite non compliquée",
+            "Diverticulite compliquée (abcès, perforation, péritonite)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Diverticulite légère (ambulatoire)",
+                "content": "• Antibiothérapie orale 7-10 jours (amoxicilline-clavulanate ou ciprofloxacine + métronidazole)\n• Analgésie (paracétamol, éviter AINS)\n• Régime liquide puis pauvre en résidus\n• Repos digestif relatif\n• Application de froid sur la zone douloureuse"
+              },
+              {
+                "title": "Diverticulite modérée à sévère (hospitalisation)",
+                "content": "• Mise à jeun stricte\n• Hydratation IV\n• Antibiothérapie IV (ceftriaxone + métronidazole)\n• Analgésie IV\n• Surveillance clinique et biologique"
+              },
+              {
+                "title": "Indications chirurgicales",
+                "content": "• Échec du traitement conservateur\n• Complications (perforation, abcès non drainable)\n• Récidives fréquentes\n• Chirurgie élective après résolution (résection sigmoïdienne)"
+              },
+              {
+                "title": "Mesures préventives",
+                "content": "• Régime riche en fibres après phase aiguë\n• Hydratation adéquate\n• Activité physique régulière\n• Éviter constipation\n• Arrêt tabac si applicable"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Suivi et surveillance",
+          "details": [
+            "Contrôle clinique à 48-72h si ambulatoire",
+            "Contrôle biologique si pas d'amélioration",
+            "Coloscopie 6-8 semaines après l'épisode [exclusion de sténoses, tumeurs]",
+            "Éducation sur les signes d'alarme"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Critères d'hospitalisation",
+          "redflagsSection": [
+            {
+              "text": "Signes de péritonite ou sepsis"
+            },
+            {
+              "text": "Échec du traitement ambulatoire à 72h"
+            },
+            {
+              "text": "Impossibilité de s'alimenter ou de s'hydrater"
+            },
+            {
+              "text": "Comorbidités importantes (immunosuppression)"
+            },
+            {
+              "text": "Doute diagnostique"
+            },
+            {
+              "text": "Âge > 85 ans avec facteurs de risque"
+            },
+            {
+              "text": "Complications à l'imagerie"
+            }
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Complications potentielles",
+          "details": [
+            "Abcès péricolique",
+            "Perforation avec péritonite",
+            "Fistules (colovésicale, colovaginale)",
+            "Sténose colique",
+            "Hémorragie diverticulaire"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Éducation du patient",
+          "details": [
+            "Explication de la pathologie diverticulaire",
+            "Importance de l'observance thérapeutique",
+            "Modifications du mode de vie",
+            "Signes nécessitant une reconsultation urgente",
+            "Prévention des récidives"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète et adaptée à la sévérité"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🧩 Diverticulite – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur abdominale localisée, typiquement en fosse iliaque gauche",
+                "Fièvre, frissons",
+                "Troubles du transit (constipation, diarrhée, ténesme)",
+                "Nausées, anorexie"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Âge > 50 ans",
+                "ATCD de diverticulose colique connue",
+                "Antécédents familiaux de diverticulite ou de chirurgie digestive"
+              ]
+            },
+            {
+              "titre": "Signes de gravité à rechercher",
+              "points": [
+                "Douleur diffuse ou péritonéale",
+                "Vomissements incoercibles",
+                "Altération de l’état général",
+                "Immunodépression, terrain fragile (âge, comorbidités)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation abdominale",
+              "points": [
+                "Douleur localisée en FIDG (sigmoïde) à la palpation",
+                "Contracture localisée ou défense abdominale",
+                "Masse palpable (abcès péri-diverticulaire possible)"
+              ]
+            },
+            {
+              "titre": "Constantes",
+              "points": [
+                "Fièvre, tachycardie",
+                "TA basse si choc septique"
+              ]
+            },
+            {
+              "titre": "Recherche complications",
+              "points": [
+                "Signe de péritonite généralisée (perforation)",
+                "Signe occlusif (arrêt gaz/selles, météorisme)",
+                "Signe d’abcès (masse sensible, fièvre persistante)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Syndrome inflammatoire (CRP, hyperleucocytose)",
+                "Bilan rénal et ionogramme (en vue d’imagerie et antibiothérapie)",
+                "Hémocultures si fièvre élevée"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Scanner abdomino-pelvien avec injection = examen de référence (diagnostic + recherche complications)",
+                "Échographie possible mais moins sensible"
+              ]
+            },
+            {
+              "titre": "Coloscopie",
+              "points": [
+                "Contre-indiquée en phase aiguë (risque perforation)",
+                "À réaliser à distance (4–6 semaines) pour exclusion cancer colorectal"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Formes simples (non compliquées)",
+              "points": [
+                "Antibiothérapie probabiliste large spectre (anaérobies + bacilles G-)",
+                "Régime sans résidu ou jeûne si douleur importante",
+                "Hospitalisation selon terrain et douleur"
+              ]
+            },
+            {
+              "titre": "Formes compliquées",
+              "points": [
+                "Abcès : drainage percutané guidé + antibiotiques",
+                "Péritonite : chirurgie en urgence (sigmoïdectomie ± stomie)",
+                "Occlusion : chirurgie selon gravité"
+              ]
+            },
+            {
+              "titre": "Prévention des récidives",
+              "points": [
+                "Alimentation riche en fibres après épisode",
+                "Coloscopie de contrôle à distance",
+                "Discussion chirurgie prophylactique si récidives multiples ou formes compliquées"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur FIDG fébrile = évoquer diverticulite",
+            "Scanner = examen diagnostique de référence",
+            "Pas de coloscopie en phase aiguë",
+            "Antibiothérapie + surveillance si forme simple",
+            "Complications (abcès, perforation, péritonite) = indication chirurgicale ou drainage"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Localisation et durée de la douleur ?",
+                "Fièvre, frissons ?",
+                "Troubles du transit récents ?",
+                "ATCD de diverticulose ou épisodes similaires ?",
+                "Perte de poids, rectorragies (diagnostic différentiel cancer colorectal) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, T°, SpO₂",
+                "Palpation abdominale : douleur FIDG, défense, masse",
+                "Biologie : NFS, CRP, iono, créatinine",
+                "Scanner abdomino-pelvien avec injection",
+                "Coloscopie différée à 4–6 semaines"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par scanner",
+                "Antibiothérapie large spectre + repos digestif si forme simple",
+                "Hospitalisation et chirurgie/drainage si forme compliquée"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur abdominale gauche (suspicion diverticulite sigmoïdienne)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (douleur abdominale en fosse iliaque gauche, 73 ans)",
+            "Caractériser douleur → début soudain, 2 jours, type piquant/coup de poignard, EVA 6/10, constante, non irradiée",
+            "Symptômes associés → nausées, diarrhée, flatulences ; pas de vomissements, pas de constipation",
+            "Signes d’alarme → pas de fièvre rapportée, pas de perte de poids, pas de sang dans selles",
+            "ATCD → HTA sous valsartan, pas de chirurgie abdo, coloscopie normale il y a 5 ans",
+            "Mode de vie → 1 verre de vin/jour, pas de tabac ni drogue",
+            "Examen clinique → douleur FIDG à la palpation, résistance, pas de défense ni contracture, pas de Blumberg, TR normal",
+            "Résumé + hypothèse principale : diverticulite sigmoïdienne non compliquée ; DD : colite infectieuse/inflammatoire, cancer colorectal, colite ischémique, appendicite atypique, pathologie gynéco/urinaire",
+            "Examens complémentaires → NFS, CRP, ionogramme, ECBU, scanner abdo avec injection (gold standard), écho abdo si doute",
+            "Prise en charge → si forme simple : antibiotiques, régime sans résidus, surveillance ; hospitalisation si forme compliquée"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DIVERTI",
+            "elements": [
+              "D = Douleur FIDG",
+              "I = Inflammation (CRP, leucocytose)",
+              "V = Vieil âge (>50 ans)",
+              "E = Exam imagerie = scanner",
+              "R = Repos digestif ± régime sans résidus",
+              "T = Traitement antibio",
+              "I = Imagerie différée (coloscopie après 6–8 sem.)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Hebel, une femme de 73 ans, qui consulte pour des douleurs abdominales évoluant depuis deux jours. La douleur est localisée en fosse iliaque gauche, décrite comme piquante, comme un coup de poignard, d’intensité 6 sur 10. Elle est apparue de façon relativement soudaine, s’est progressivement aggravée et reste constante. Elle n’irradie pas.\n\nLa patiente rapporte des nausées, des diarrhées et des flatulences. Pas de vomissements, pas de constipation. Elle n’a pas noté de fièvre, ni de perte de poids, ni de sang dans les selles. Ses antécédents comprennent une hypertension artérielle traitée par valsartan. Elle n’a jamais été opérée de l’abdomen et avait eu une coloscopie de dépistage normale il y a cinq ans. Pas d’allergies connues. Elle vit avec son mari, est autonome, boit un verre de vin par jour et ne fume pas.\n\nÀ l’examen, la patiente est en bon état général. Pas de fièvre signalée. L’abdomen n’est pas distendu. L’auscultation digestive est normale. À la palpation, une douleur est retrouvée en fosse iliaque gauche, avec une résistance palpable mais sans défense ni contracture. Pas de signe de péritonite. Le toucher rectal est normal.\n\nEn résumé, nous avons une femme de 73 ans présentant une douleur abdominale localisée en FIDG, avec diarrhée et nausées, sans fièvre ni altération majeure de l’état général. Mon hypothèse principale est une diverticulite sigmoïdienne non compliquée. Les diagnostics différentiels incluent une colite infectieuse ou inflammatoire, un cancer colorectal, une colite ischémique, une appendicite gauche, ou une pathologie gynécologique/urinaire.\n\nComme examens complémentaires, je demanderais une NFS, une CRP, un ionogramme, un ECBU, et en imagerie un scanner abdomino-pelvien injecté (gold standard). L’échographie abdominale peut être utile si doute diagnostique. La coloscopie est contre-indiquée en phase aiguë et devra être réalisée 6–8 semaines après pour exclure une pathologie tumorale.\n\nLa prise en charge dépend de la gravité. Dans ce cas, s’il s’agit d’une forme simple : antibiothérapie orale adaptée, régime pauvre en résidus, repos digestif, surveillance rapprochée. Hospitalisation si signes de gravité, complications ou terrain fragile."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Hebel, 73 ans, douleurs abdominales FIDG depuis 2 jours, nausées, diarrhée.\n\nB (Background) : ATCD HTA sous valsartan, coloscopie normale 5 ans plus tôt, pas de chirurgie abdo.\n\nA (Assessment) : Suspicion diverticulite sigmoïdienne non compliquée. DD : colite infectieuse/inflammatoire, cancer colorectal, colite ischémique, appendicite atypique.\n\nR (Recommendation) : NFS, CRP, ECBU, scanner abdo injecté. PEC : antibiothérapie orale, régime sans résidus, surveillance ; hospitalisation si aggravation."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Diverticulite : FIDG + FEVER",
+              "points": [
+                "F = Fosse iliaque gauche douloureuse",
+                "E = Examens biologiques inflammatoires",
+                "V = Vieillesse (patient >50 ans)",
+                "E = Examen de choix : scanner",
+                "R = Repos digestif et régime adapté"
+              ]
+            },
+            {
+              "titre": "👉 Complications : ABCD",
+              "points": [
+                "A = Abcès",
+                "B = Bleeding (hémorragie diverticulaire)",
+                "C = Colovésicale (fistule)",
+                "D = Diffuse peritonitis (perforation)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Proposer une coloscopie en phase aiguë (risque perforation !)",
+                "Sous-estimer douleurs sans recherche systématique de péritonite",
+                "Oublier DD gynéco/urinaire (surtout chez femme âgée)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Diverticulite sigmoïdienne",
+                  "reponse": {
+                    "pour": [
+                      "Douleur localisée en FIDG",
+                      "Âge > 50 ans",
+                      "Résistance palpable",
+                      "Diarrhée + nausées"
+                    ],
+                    "contre": [
+                      "Pas de fièvre franche",
+                      "Pas d’ATCD connu de diverticulose"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colite infectieuse",
+                  "reponse": {
+                    "pour": [
+                      "Douleur abdominale",
+                      "Diarrhée glaireuse"
+                    ],
+                    "contre": [
+                      "Pas de syndrome infectieux franc",
+                      "Pas de contexte épidémique récent"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer colorectal",
+                  "reponse": {
+                    "pour": [
+                      "Douleur abdominale",
+                      "Âge > 50 ans"
+                    ],
+                    "contre": [
+                      "Coloscopie normale il y a 5 ans",
+                      "Pas de rectorragie, pas de perte de poids"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP, ionogramme",
+                    "ECBU",
+                    "Scanner abdo injecté",
+                    "Échographie abdo si doute",
+                    "Coloscopie différée à 6–8 semaines"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Diverticulite sigmoïdienne non compliquée"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Antibiothérapie orale adaptée",
+                      "Régime sans résidus",
+                      "Antalgiques (paracétamol, éviter AINS)",
+                      "Surveillance rapprochée"
+                    ],
+                    "hospitalisation": [
+                      "Si complications ou aggravation",
+                      "Antibiothérapie IV",
+                      "Repos digestif strict",
+                      "PEC chirurgicale si perforation/abcès"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle clinique à 48–72h",
+                    "Scanner ou biologie si aggravation",
+                    "Coloscopie 6–8 semaines après épisode",
+                    "Conseils hygiéno-diététiques (fibres, hydratation, activité physique)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

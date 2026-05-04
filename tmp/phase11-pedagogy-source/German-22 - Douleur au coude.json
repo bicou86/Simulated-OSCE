@@ -1,0 +1,598 @@
+{
+  "title": "German-22 - Douleur au coude",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Madame Wieser, 25 ans, se présente pour des douleurs au coude."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Douleurs au coude"
+        },
+        {
+          "id": "a3",
+          "text": "Localisation de la douleur",
+          "patientComment": "Coude, côté radial"
+        },
+        {
+          "id": "a4",
+          "text": "Intensité sur échelle de 1 à 10",
+          "patientComment": "4-5"
+        },
+        {
+          "id": "a5",
+          "text": "Qualité de la douleur",
+          "patientComment": "Pas claire, pas de sensation électrique, plutôt sourde"
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "patientComment": "En fait non, de temps en temps dans l'avant-bras"
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs d'amélioration ou d'aggravation",
+          "patientComment": "Mieux au repos, pire avec les mouvements"
+        },
+        {
+          "id": "a8",
+          "text": "Apparition temporelle et contexte",
+          "patientComment": "A commencé le week-end dernier, j'ai eu un tournoi de badminton amical et j'ai dû jouer 6 matchs sur 2 jours, j'ai malheureusement perdu la plupart, maintenant limitée au travail"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents de traumatisme",
+          "details": [
+            "Traumatisme actuel [Non]",
+            "Traumatisme antérieur [Non, jamais de traumatisme]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Déficit fonctionnel et gonflement",
+          "patientComment": "Douleurs, pas de gonflement remarqué"
+        },
+        {
+          "id": "a11",
+          "text": "Modalités des symptômes",
+          "details": [
+            "À l'effort [Oui]",
+            "La nuit [Non]",
+            "Au repos [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Activités et habitudes",
+          "patientComment": "Badminton, de temps en temps tennis, jogging"
+        },
+        {
+          "id": "a13",
+          "text": "Maladies systémiques",
+          "patientComment": "En fait rien"
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse médicamenteuse",
+          "details": [
+            "Médicaments actuels [Pilule contraceptive]",
+            "Traitement déjà essayé [Encore rien]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Consommation de substances",
+          "patientComment": "Arrêt du tabac il y a 2 ans, occasionnellement vin/bière, pas de drogues"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "patientComment": "Infirmière, jogging, petit ami"
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie du coude"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Désinfection des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Inspection",
+          "details": [
+            "Rougeur [Normal]",
+            "Gonflement [Normal]",
+            "État de la peau [Normal]",
+            "Position de repos [Normal]",
+            "Muscles [Normal]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Palpation",
+          "details": [
+            "Épicondyle latéral de l'humérus [Douloureux !!!]",
+            "Épicondyle latéral avec extension du poignet contre résistance [Douloureux !!]",
+            "Épicondyle médial de l'humérus [Sans particularité]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Amplitude des mouvements",
+          "details": [
+            "Flexion-Extension (130-30-0) [Sans particularité]",
+            "Pronation-Neutre-Supination [Sans particularité]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Tests de stabilité ligamentaire",
+          "details": [
+            "Stress en valgus [Sans particularité]",
+            "Stress en varus [Sans particularité]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique",
+          "details": [
+            "Sensibilité [Sans particularité]",
+            "Réflexes : biceps (C5) [Normal]",
+            "Réflexes : triceps (C7) [Normal]",
+            "Réflexes : brachioradial (C6) [Normal]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen complet du coude avec tests spécifiques appropriés"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic suspecté",
+          "details": [
+            "Épicondylite latérale (tennis elbow)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Syndrome du rond pronateur [Compression du nerf médian, lors de pronation contre résistance]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Arthrose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, IRM si nécessaire"
+                  },
+                  {
+                    "text": "Arthrite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ VS, CRP, facteur rhumatoïde, anti-CCP"
+                  },
+                  {
+                    "text": "Fracture de la tête radiale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, CT si complexe"
+                  },
+                  {
+                    "text": "Irritation du nerf ulnaire [Signe de Tinel, douleur électrisante lors de la percussion du sillon ulnaire]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Éventuellement radiographie pour exclure d'autres pathologies articulaires [Serait sans particularité]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique conservatrice",
+          "details": [
+            "Application de froid",
+            "Anti-inflammatoires locaux [Par exemple gel de diclofénac]",
+            "Bon pronostic, durée semaines à mois",
+            "Charge sportive uniquement jusqu'à absence de douleur"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge appropriée avec approche conservatrice adaptée"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "💪 Épicondylite latérale (Tennis elbow) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur latérale du coude, précise au niveau de l’épicondyle latéral",
+                "Douleur augmentée lors de la préhension ou de la supination",
+                "Douleur déclenchée par des gestes répétitifs (bricolage, tennis, travail manuel)",
+                "Gêne fonctionnelle : difficulté à serrer la main, porter des charges"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Activités professionnelles ou sportives avec gestes répétitifs du poignet/avant-bras",
+                "Survenue progressive, souvent sans traumatisme déclencheur",
+                "Plus fréquent entre 35 et 55 ans"
+              ]
+            },
+            {
+              "titre": "Éléments distinctifs",
+              "points": [
+                "Pas de blocage ni d’instabilité articulaire (≠ atteinte intra-articulaire)",
+                "Pas de paresthésie (≠ atteinte nerveuse)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation",
+              "points": [
+                "Douleur élective à la palpation de l’épicondyle latéral",
+                "Pas de tuméfaction ni de rougeur"
+              ]
+            },
+            {
+              "titre": "Tests spécifiques",
+              "points": [
+                "Test de la chaise : douleur lors du soulèvement d’une chaise, bras tendu, paume en pronation",
+                "Test de Cozen : douleur à l’extension contrariée du poignet",
+                "Test de Mill : douleur à l’étirement passif des extenseurs",
+                "Poignée de main douloureuse"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Mobilité du coude conservée",
+                "Force de préhension diminuée par la douleur"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie (rarement nécessaire)",
+              "points": [
+                "Diagnostic avant tout clinique",
+                "Échographie : peut montrer une tendinopathie du court extenseur radial du carpe",
+                "IRM : réservée aux formes chroniques résistantes ou doute diagnostique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, adaptation des activités",
+                "Glace locale en phase douloureuse",
+                "Antalgiques ± AINS",
+                "Orthèse (bracelet épicondylien, coudière)",
+                "Kinésithérapie : étirements, renforcement progressif, physiothérapie"
+              ]
+            },
+            {
+              "titre": "Traitement de 2e ligne",
+              "points": [
+                "Infiltration cortisonée locale si douleur persistante",
+                "Ondes de choc ou PRP (en discussion)",
+                "Chirurgie exceptionnelle en cas d’échec prolongé (> 6–12 mois)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur élective à l’épicondyle latéral, reproduite par tests spécifiques",
+            "Mobilité articulaire conservée (≠ arthropathie)",
+            "Diagnostic essentiellement clinique, imagerie non systématique",
+            "Traitement d’abord conservateur et fonctionnel",
+            "Évolution favorable dans la majorité des cas"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur du coude ? Début brutal ou progressif ?",
+                "Activités déclenchantes : bricolage, sport, travail manuel répétitif ?",
+                "Douleur à la préhension, au port de charges ?",
+                "ATCD d’épicondylite ou d’autres tendinopathies ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Palpation de l’épicondyle latéral",
+                "Tests de Cozen, Mill, chaise",
+                "Évaluer la mobilité du coude",
+                "Échographie uniquement si doute diagnostique ou chronicité"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic clinique (douleur localisée + tests positifs)",
+                "Mettre en place traitement conservateur (repos relatif, orthèse, kinésithérapie, antalgiques)",
+                "Envisager infiltration cortisonée si échec, chirurgie exceptionnellement"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur au coude (Épicondylite latérale / Tennis elbow)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation",
+            "Caractériser la douleur → localisation (côté radial coude), type (sourde), intensité (EVA 4-5/10), irradiation (parfois avant-bras)",
+            "Facteurs déclenchants/aggravants → mouvements répétitifs, sport (badminton, tennis)",
+            "Facteurs améliorants → repos",
+            "Signes associés → pas de gonflement, pas de fièvre, pas de paresthésies",
+            "ATCD médicaux, chirurgicaux, familiaux",
+            "Habitudes de vie → sport, travail manuel, tabac, alcool",
+            "Examen clinique → inspection, palpation épicondyle latéral, tests spécifiques (Cozen, Mill, chaise), mobilité coude conservée",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → écho/IRM si doute, radio pour exclure fracture/arthrose",
+            "Prise en charge → repos relatif, glace, AINS topiques, kiné, orthèse ; infiltration si échec ; chirurgie exceptionnellement"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : ELBOW",
+            "elements": [
+              "E = Epicondyle douloureux",
+              "L = Latéral, lié au sport répétitif",
+              "B = Badminton, bricolage, tennis (facteurs déclenchants)",
+              "O = Orthèse et repos",
+              "W = Work adaptation + kiné"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Wieser, une jeune femme de 25 ans, infirmière, qui consulte pour une douleur au coude droit apparue il y a une semaine.\n\nLa douleur est localisée sur la face externe du coude, décrite comme sourde, parfois irradiant dans l’avant-bras. Elle est évaluée à 4 à 5 sur 10. Elle est aggravée lors des mouvements, notamment lorsqu’elle saisit ou soulève des objets, et soulagée au repos. Pas de douleur nocturne, pas de gonflement remarqué, pas de sensation électrique ni de déficit fonctionnel majeur.\n\nL’apparition de la douleur est survenue dans un contexte précis : un tournoi de badminton amical le week-end dernier, où elle a joué six matchs sur deux jours. Depuis, elle est limitée dans son travail quotidien. Elle n’a jamais eu de traumatisme du coude auparavant. Ses antécédents sont sans particularité médicale ou chirurgicale, hormis la prise de contraceptifs oraux. Elle a arrêté de fumer il y a deux ans, consomme occasionnellement de l’alcool, et n’a pas d’usage de drogues.\n\nÀ l’examen, le coude est normal à l’inspection, sans rougeur ni tuméfaction. La palpation retrouve une douleur élective à la pression de l’épicondyle latéral. Cette douleur est reproduite par l’extension contrariée du poignet et par la préhension d’objets. Les amplitudes articulaires du coude sont conservées, de même que la pronation et la supination. Pas de déficit neurologique, les réflexes sont normaux.\n\nEn résumé, il s’agit d’une femme jeune, sportive, avec une douleur latérale du coude déclenchée par des efforts répétitifs, avec douleur localisée à l’épicondyle latéral et tests spécifiques positifs, sans signe articulaire ou neurologique associé. L’hypothèse principale est une épicondylite latérale, aussi appelée tennis elbow. Les diagnostics différentiels incluent une arthrose débutante du coude, une arthrite inflammatoire, une fracture occulte de la tête radiale, une compression nerveuse (syndrome du rond pronateur ou nerf ulnaire).\n\nComme examens complémentaires, une radiographie standard pourrait être faite pour exclure une cause osseuse. Une échographie ou une IRM seraient réservées aux formes chroniques ou résistantes au traitement.\n\nLa prise en charge repose sur un traitement conservateur : repos relatif, application de glace, AINS locaux ou oraux si besoin, port éventuel d’une orthèse épicondylienne, et kinésithérapie avec étirements et renforcement progressif. Si la douleur persiste après plusieurs mois, une infiltration cortisonée peut être proposée. La chirurgie reste exceptionnelle, réservée aux échecs prolongés."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Wieser, 25 ans, infirmière, présente une douleur latérale du coude droit depuis une semaine.\n\nB (Background) : Début après tournoi de badminton, douleur 4-5/10, pas de traumatisme, pas de gonflement, pas de déficit neurologique.\n\nA (Assessment) : Suspicion épicondylite latérale (tennis elbow). DD : arthrose, arthrite, fracture tête radiale, compression nerveuse.\n\nR (Recommendation) : Radio si doute, traitement conservateur (repos relatif, glace, AINS, orthèse, kiné). Infiltration si échec, chirurgie exceptionnelle."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Tests spécifiques Tennis elbow",
+              "points": [
+                "Test de Cozen : extension contrariée du poignet → douleur",
+                "Test de Mill : étirement passif des extenseurs → douleur",
+                "Test de la chaise : soulèvement bras tendu, paume en pronation → douleur"
+              ]
+            },
+            {
+              "titre": "👉 Diagnostic différentiel rapide",
+              "points": [
+                "Arthrose du coude : douleur mécanique, radio anormale",
+                "Arthrite : VS/CRP élevées, douleur inflammatoire",
+                "Fracture tête radiale : contexte traumatique, radio anormale",
+                "Syndrome rond pronateur : douleur à la pronation contrariée",
+                "Atteinte ulnaire : paresthésies, Tinel positif au sillon"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Confondre avec arthrite septique (rare mais grave)",
+                "Oublier d’examiner stabilité ligamentaire",
+                "Prescrire d’emblée infiltration sans essai conservateur",
+                "Négliger kinésithérapie et adaptation activité"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Épicondylite latérale",
+                  "reponse": {
+                    "pour": [
+                      "Douleur élective épicondyle latéral",
+                      "Déclenchée par activité répétitive (badminton, tennis)",
+                      "Reproduite par tests spécifiques",
+                      "Pas de limitation mobilité"
+                    ],
+                    "contre": [
+                      "Pas de signe inflammatoire systémique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Arthrose",
+                  "reponse": {
+                    "pour": [
+                      "Douleur mécanique",
+                      "Patient adulte"
+                    ],
+                    "contre": [
+                      "Âge jeune",
+                      "Pas de signes radiographiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Arthrite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur coude",
+                      "Jeune adulte"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de tuméfaction",
+                      "Pas d’élévation VS/CRP connue"
+                    ]
+                  }
+                },
+                {
+                  "question": "Fracture tête radiale",
+                  "reponse": {
+                    "pour": [
+                      "Douleur coude"
+                    ],
+                    "contre": [
+                      "Pas de traumatisme",
+                      "Mobilité conservée",
+                      "Radio attendue normale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Atteinte nerveuse (rond pronateur/ulnaire)",
+                  "reponse": {
+                    "pour": [
+                      "Douleur avant-bras possible"
+                    ],
+                    "contre": [
+                      "Pas de paresthésies",
+                      "Réflexes normaux",
+                      "Tests neurologiques normaux"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Radiographie du coude si suspicion fracture ou arthrose",
+                    "Échographie tendineuse si doute",
+                    "IRM en cas de chronicité ou suspicion autre diagnostic"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Épicondylite latérale (tennis elbow)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Repos relatif",
+                      "Application de glace",
+                      "AINS topiques ou oraux",
+                      "Orthèse épicondylienne",
+                      "Kinésithérapie (étirements, renforcement progressif)"
+                    ],
+                    "siEchec": [
+                      "Infiltration cortisonée",
+                      "Ondes de choc/PRP (selon contexte)",
+                      "Chirurgie exceptionnelle si échec prolongé"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Évolution favorable en quelques semaines à mois",
+                    "Contrôle clinique à 4-6 semaines",
+                    "Surveillance reprise sport/activité professionnelle",
+                    "Rééducation progressive"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,860 @@
+{
+  "title": "USMLE Triage 26 - Douleur du membre inférieur",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Wendy Nickels, une femme de 43 ans, se présente au service des urgences pour l'évaluation d'une douleur dans la jambe droite depuis 24 heures.",
+    "vitals": {
+      "ta": "142/87 mmHg",
+      "temperature": "37.0°C",
+      "fc": "70 bpm",
+      "fr": "12/min",
+      "sao2": "98% en air ambiant"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Mme Nickels, je suis le Dr Torrado.",
+            "Je comprends que vous avez des douleurs dans la jambe ?",
+            "Pouvez-vous m'en parler ?"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Histoire de la maladie actuelle et chronologie",
+          "details": [
+            "Début hier [24 heures]",
+            "Retour de chez père [5 heures route San Andreas]",
+            "Remarqué en sortant voiture [mollet douloureux et chaud]",
+            "Jardinage week-end [fauché hautes herbes]",
+            "Aggravation ce matin [rouge, chaud, plus douloureux]",
+            "Venue après travail [médecin fermé]",
+            "Cabinet d'avocats [n'a pu s'absenter journée]"
+          ],
+          "exemplesPhrases": [
+            "Aviez-vous des symptômes avant de faucher les herbes ?",
+            "Combien de temps a duré le trajet ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la douleur et symptômes locaux",
+          "details": [
+            "Localisation [mollet postérieur droit]",
+            "Pas autre jambe/autres zones [juste cette jambe]",
+            "Rougeur présente [rouge toute journée]",
+            "Chaleur locale [chaud]",
+            "Œdème suspecté [pense que c'est enflé]",
+            "Pas écoulement/desquamation",
+            "Pas irradiation [reste à cet endroit]",
+            "Intensité [8/10 maximum]"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il eu d'autres zones douloureuses ?",
+            "À part la rougeur, y a-t-il eu un écoulement ?",
+            "La douleur irradie-t-elle quelque part ?",
+            "Sur une échelle de 0 à 10, où placeriez-vous cette douleur ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Facteurs aggravants et soulageants",
+          "details": [
+            "Aggravation étirement [mal de vraiment l'étirer]",
+            "Marche vigoureuse augmente [douloureux]",
+            "Pointe pieds douloureux [peau tendue]",
+            "Ibuprofène ce matin [aidé un peu]",
+            "Aggravation progressive [pire au cours journée]",
+            "Activité sur jambe [très active dessus]"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il quelque chose qui aggrave la douleur ?",
+            "J'imagine que c'est inconfortable. Avez-vous pris quelque chose ?",
+            "Avez-vous l'impression que ça s'est aggravé ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Recherche de symptômes systémiques et pulmonaires",
+          "details": [
+            "Pas fièvre/sensation chaleur [non, pas vraiment]",
+            "Pas problèmes respiratoires",
+            "Pas douleur en respirant",
+            "Pas respiration rapide [venue tout suite si ça]",
+            "Pas engourdissement/picotements [pied pareil]",
+            "Pas vertiges/étourdissements [non, pas du tout]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu de la fièvre ou vous êtes-vous sentie chaude ?",
+            "Qu'en est-il des problèmes respiratoires ?",
+            "Autre chose, comme des engourdissements ou picotements ?",
+            "Vous êtes-vous sentie étourdie ou prise de vertiges ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents similaires et allergies",
+          "details": [
+            "Premier épisode [jamais, première fois]",
+            "Pensait herbe à puce [amie dit non]",
+            "Allergie amoxicilline [éruption université]",
+            "Réaction cutanée [boutons estomac/poitrine]",
+            "Pas autres allergies"
+          ],
+          "exemplesPhrases": [
+            "Un épisode similaire vous est-il déjà arrivé ?",
+            "Avez-vous déjà eu des éruptions cutanées ?",
+            "Êtes-vous allergique à quelque chose ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments actuels et contraception",
+          "details": [
+            "Patch contraceptif [Ortho Evra]",
+            "Application hebdomadaire [sur bras 1×/sem]",
+            "Depuis 2 ans [patch]",
+            "Paxil pour anxiété",
+            "Depuis 6 mois [Paxil]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous des médicaments actuellement ?",
+            "Depuis combien de temps prenez-vous ces médicaments ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes de vie - Tabac",
+          "details": [
+            "Ex-fumeuse [arrêté il y a 2 ans]",
+            "20 ans tabagisme [1 paquet/jour]",
+            "Arrêt avec contraception [médecin aidé]",
+            "Sevrage patchs nicotine [diminué lentement]",
+            "Rien depuis arrêt"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ?",
+            "Combien fumiez-vous chaque jour ?",
+            "C'est une grande chose que vous ayez arrêté."
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes de vie - Alcool et drogues",
+          "details": [
+            "Alcool occasionnel [verre vin/bière week-end]",
+            "2-3 soirs/semaine maximum",
+            "Questions CAGE négatives",
+            "Cocaïne 1× école supérieure [détesté]",
+            "Pas autres drogues"
+          ],
+          "exemplesPhrases": [
+            "Permettez-moi de vous demander pour l'alcool - en consommez-vous ?",
+            "Avez-vous déjà essayé de réduire ?",
+            "Avez-vous déjà pris d'autres drogues pour le plaisir ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux et gynécologiques",
+          "details": [
+            "Anxiété traitée [problème anxiété]",
+            "Examens annuels réguliers",
+            "Jamais hospitalisée",
+            "G0P0 [jamais enceinte]",
+            "Pas désir enfants [jamais voulu]",
+            "Frottis/mammographie normaux",
+            "Pas problèmes saignement/coagulation"
+          ],
+          "exemplesPhrases": [
+            "Êtes-vous déjà allée chez le médecin pour quelque chose de grave ?",
+            "Avez-vous déjà été enceinte ?",
+            "Avez-vous déjà eu un frottis ou mammographie anormal ?",
+            "Avez-vous déjà eu des problèmes de saignement ou coagulation ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Mère cancer poumon [il y a 4 ans]",
+            "Mère fumeuse vie entière [chimio + chirurgie]",
+            "Mère va bien maintenant",
+            "Père décédé incendie [pompier]",
+            "Deux frères cadets sains",
+            "Un frère HTA [médicaments]"
+          ],
+          "exemplesPhrases": [
+            "Permettez-moi de vous demander au sujet de votre famille.",
+            "Quelqu'un dans votre famille a-t-il eu une maladie grave ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le permettez.",
+            "Laissez-moi juste me laver les mains.",
+            "S'il vous plaît, permettez-moi de vous demander de relever votre blouse.",
+            "Je vais d'abord regarder cette jambe."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation postérieure 6 points",
+            "Auscultation latérale bilatérale",
+            "Clairs bilatéralement",
+            "Bruits respiratoires normaux",
+            "Pas sibilances/ronchi/râles"
+          ],
+          "exemplesPhrases": [
+            "Veuillez prendre une profonde respiration pendant que j'écoute votre dos."
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation 4 points minimum",
+            "RCR sans souffles/frottements/galops",
+            "B1/B2 clairs",
+            "Palpation PIM",
+            "Pouls radiaux pendant auscultation",
+            "Pouls périphériques 2+ bilatéralement",
+            "Temps remplissage capillaire <2 sec"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Inspection membres inférieurs - Comparaison",
+          "details": [
+            "Comparaison bilatérale systématique",
+            "Érythème mollet droit [3×5 cm, elliptique]",
+            "Pas rupture cutanée",
+            "Pas desquamation",
+            "Œdème léger visible",
+            "Utilisation lumière pour examen",
+            "Inspection région poplitée"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation membre affecté",
+          "details": [
+            "Chaleur locale présente",
+            "Sensibilité au toucher",
+            "Induration légère généralisée",
+            "Pas fluctuation",
+            "Pas cordons palpables",
+            "Mesure circonférence mollets [1 cm différence]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous beaucoup de douleur quand je touche ici ?"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche thrombose veineuse profonde",
+          "details": [
+            "Signe Homans [légèrement positif]",
+            "Dorsiflexion pied pendant test",
+            "Recherche douleur mollet",
+            "Évaluation sensibilité profonde"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous beaucoup de douleur quand je bouge votre pied comme ça ?"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen vasculaire et lymphatique",
+          "details": [
+            "Pouls poplité normal",
+            "Pouls tibial postérieur normal",
+            "Pouls pédieux normal",
+            "Pas lymphadénopathie poplitée",
+            "Pas lymphadénopathie fémorale",
+            "Pas lymphadénopathie inguinale",
+            "Amplitude mouvement genou/cheville"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de douleur et œdème du mollet",
+            "categories": [
+              {
+                "name": "Urgences vasculaires",
+                "items": [
+                  {
+                    "text": "Thrombose veineuse profonde (TVP)",
+                    "cause": "Arguments POUR:\n\t□ Facteurs risque : contraception œstroprogestative\n\t□ Ex-fumeuse 20 paquets-années\n\t□ Trajet prolongé 5h (stase veineuse)\n\t□ Triade Virchow présente\n\t□ Œdème unilatéral mollet\n\t□ Chaleur et érythème locaux\n\t□ Signe Homans positif\n\t□ Différence circonférence 1cm\nArguments CONTRE:\n\t□ Pas antécédent thrombose\n\t□ Début après jardinage",
+                    "test": "→ D-dimères, échographie Doppler compression urgente"
+                  },
+                  {
+                    "text": "Thrombophlébite superficielle",
+                    "cause": "Arguments POUR:\n\t□ Érythème localisé\n\t□ Chaleur et sensibilité\n\t□ Facteurs risque thrombose\nArguments CONTRE:\n\t□ Pas cordon palpable\n\t□ Localisation profonde\n\t□ Œdème significatif",
+                    "test": "→ Échographie pour éliminer extension profonde"
+                  }
+                ]
+              },
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Cellulite/Érysipèle",
+                    "cause": "Arguments POUR:\n\t□ Érythème chaud douloureux\n\t□ Exposition jardinage (porte entrée)\n\t□ Progression rapide 24h\n\t□ Induration locale\n\t□ Forme elliptique typique\nArguments CONTRE:\n\t□ Pas fièvre\n\t□ Pas lymphangite\n\t□ Pas porte entrée visible",
+                    "test": "→ NFS, CRP, hémocultures si fièvre"
+                  },
+                  {
+                    "text": "Fasciite nécrosante",
+                    "cause": "Arguments POUR:\n\t□ Douleur importante (8/10)\n\t□ Progression rapide\nArguments CONTRE:\n\t□ Pas signes toxicité systémique\n\t□ Pas crépitation\n\t□ État général conservé\n\t□ Pas douleur disproportionnée",
+                    "test": "→ Score LRINEC, CRP, lactates si suspicion"
+                  }
+                ]
+              },
+              {
+                "name": "Causes allergiques/toxiques",
+                "items": [
+                  {
+                    "text": "Dermatite de contact",
+                    "cause": "Arguments POUR:\n\t□ Exposition hautes herbes\n\t□ Jardinage récent\n\t□ Patiente évoque herbe à puce\n\t□ Localisation zone exposée\nArguments CONTRE:\n\t□ Pas prurit mentionné\n\t□ Pas vésicules\n\t□ Œdème profond\n\t□ Signe Homans positif",
+                    "test": "→ Diagnostic clinique, patch tests si récidive"
+                  },
+                  {
+                    "text": "Envenimation (morsure/piqûre)",
+                    "cause": "Arguments POUR:\n\t□ Jardinage hautes herbes\n\t□ Début après exposition\n\t□ Douleur locale importante\nArguments CONTRE:\n\t□ Pas point morsure/piqûre\n\t□ Pas signes systémiques\n\t□ Évolution lente",
+                    "test": "→ Recherche marques morsure, toxicologie si suspicion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques urgents",
+          "details": [
+            "Échographie Doppler compression [gold standard TVP]",
+            "D-dimères [VPN élevée si négatifs]",
+            "NFS avec formule [infection, inflammation]",
+            "CRP/VS [marqueurs inflammation]",
+            "Score Wells TVP [probabilité clinique]",
+            "ECG si suspicion EP [éliminer diagnostic différentiel]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge immédiate TVP suspectée",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Anticoagulation empirique",
+                "content": "• Si forte probabilité clinique (Wells ≥2) :\n- HBPM dose curative immédiate\n- Enoxaparine 1mg/kg × 2/j SC\n- Ou fondaparinux 7.5mg/j SC\n• Ne pas attendre échographie si :\n- Forte suspicion clinique\n- Pas contre-indication\n- Délai examen >4h"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Surélévation membre\n• Mobilisation précoce (pas alitement)\n• Analgésie adaptée :\n- Paracétamol 1g × 4/j\n- AINS avec prudence si anticoagulation\n• Compression élastique :\n- Après confirmation diagnostic\n- Prévention syndrome post-thrombotique"
+              },
+              {
+                "title": "Surveillance et éducation",
+                "content": "• Signes EP à surveiller :\n- Dyspnée brutale\n- Douleur thoracique\n- Hémoptysie\n- Syncope\n• Consignes retour urgence\n• Contre-indication Ortho Evra si TVP confirmée\n• Alternative contraceptive non hormonale"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge alternative si cellulite",
+          "details": [
+            "Antibiothérapie empirique anti-streptocoque/staphylocoque",
+            "Amoxicilline-clavulanate 1g × 3/j PO × 7j",
+            "Si allergie : clindamycine 600mg × 3/j",
+            "Marquage contours érythème",
+            "Réévaluation 48-72h",
+            "Hospitalisation si signes sévérité"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication diagnostics et plan",
+          "details": [
+            "Explication TVP priorité diagnostique",
+            "Risque embolie pulmonaire",
+            "Description échographie (ondes sonores)",
+            "Nécessité analyses sang",
+            "Possibilité infection cutanée",
+            "Lien possible jardinage",
+            "Autres diagnostics envisagés",
+            "Plan examens et attente résultats"
+          ],
+          "exemplesPhrases": [
+            "Mme Nickels, je pense que vos symptômes peuvent résulter de plusieurs problèmes.",
+            "Le plus grave est un caillot sanguin dans une veine profonde de votre jambe.",
+            "Le gros problème est qu'un morceau peut se détacher et voyager jusqu'au poumon.",
+            "C'est ce qu'on appelle une embolie pulmonaire, condition beaucoup plus grave.",
+            "Je peux rechercher un caillot avec une machine utilisant des ondes sonores.",
+            "Une autre possibilité est une infection de la peau.",
+            "Causée par une bactérie qui pénètre sous la peau.",
+            "Cela a pu se produire pendant le jardinage.",
+            "J'aimerais sortir passer les commandes, cela prendra quelques minutes."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Critères d'hospitalisation",
+          "redflagsSection": {
+            "title": "Indications d'hospitalisation ou surveillance rapprochée",
+            "items": [
+              {
+                "text": "TVP proximale confirmée",
+                "description": "Anticoagulation et surveillance initiale"
+              },
+              {
+                "text": "Suspicion embolie pulmonaire",
+                "description": "Dyspnée, douleur thoracique, tachycardie"
+              },
+              {
+                "text": "Cellulite avec signes systémiques",
+                "description": "Fièvre >38.5°C, frissons, hypotension"
+              },
+              {
+                "text": "Fasciite nécrosante suspectée",
+                "description": "Douleur disproportionnée, toxicité, crépitation"
+              },
+              {
+                "text": "Contre-indication anticoagulation ambulatoire",
+                "description": "Risque hémorragique, compliance douteuse"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication complète des diagnostics et examens",
+          "content": "Mme Nickels, je pense que vos symptômes peuvent résulter de plusieurs problèmes différents. Le plus grave est que vous pourriez avoir un caillot sanguin dans l'une des veines profondes de votre jambe. Cela pourrait causer vos symptômes et n'est pas absolument préoccupant en soi. Cependant, le gros problème avec un caillot sanguin là-bas est qu'un petit morceau peut se détacher et voyager dans votre circulation sanguine jusqu'à votre poumon, où il peut se loger. C'est ce qu'on appelle une embolie pulmonaire et c'est une condition beaucoup plus grave. Je peux rechercher un caillot sanguin dans votre jambe avec une machine spéciale qui utilise des ondes sonores pour examiner le flux sanguin dans les veines. Je voudrai aussi faire des analyses de sang pour cette possibilité. Une autre possibilité est que vous ayez une infection de la peau dans cette partie de votre jambe. Ce type d'infection est le plus souvent causé par une bactérie cutanée qui pénètre sous et dans la peau et se développe. Cela a pu se produire pendant le jardinage que vous avez mentionné. J'aimerais également évaluer cela avec des analyses de sang. Il y a plusieurs autres possibilités que je rechercherai également avec ces tests. Pour commencer, cependant, j'aimerais sortir et passer les commandes. Cela ne prendra que quelques minutes.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas encore discuté ? Ok alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Est-ce que c'est à cause de ma pilule contraceptive ? Est-ce que je vais devoir arrêter de la prendre ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "C'est une excellente question, Mme Nickels. Effectivement, les contraceptifs contenant des œstrogènes comme votre patch Ortho Evra augmentent le risque de caillots sanguins, surtout chez les anciennes fumeuses. Si l'échographie confirme une thrombose veineuse, alors oui, vous devrez arrêter le patch car ce serait trop risqué de continuer. Mais ne vous inquiétez pas, il existe de nombreuses alternatives contraceptives sans œstrogènes qui seraient sûres pour vous, comme les dispositifs intra-utérins ou les pilules progestatives seules. Pour l'instant, attendons les résultats des examens. Si c'est une infection de la peau et non un caillot, vous pourrez continuer votre contraception actuelle. Dans tous les cas, nous discuterons des options qui vous conviennent le mieux. L'important maintenant est de faire le bon diagnostic pour vous traiter correctement."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation - Suspicion de TVP",
+      "pointsCles": [
+        "Femme 43 ans avec multiples facteurs risque thrombose",
+        "Contraception œstroprogestative = facteur risque majeur",
+        "Ex-fumeuse 20 paquets-années = risque persistant",
+        "Trajet prolongé 5h = stase veineuse",
+        "Triade de Virchow complète (stase, hypercoagulabilité, lésion endothéliale)",
+        "Signe Homans positif mais peu spécifique (Se 50%, Sp 50%)",
+        "Différence circonférence 1cm = œdème significatif",
+        "Score Wells à calculer pour stratification risque",
+        "D-dimères utiles si probabilité faible/intermédiaire"
+      ],
+      "pieges": [
+        "Ne pas identifier facteurs risque TVP (contraception + tabac)",
+        "Attendre résultats avant anticoagulation si forte suspicion",
+        "Oublier recherche signes EP associée",
+        "Ne pas faire ECG (éliminer autres causes dyspnée)",
+        "Minimiser risque car pas antécédent thrombose",
+        "Ne pas aborder changement contraception",
+        "Confondre avec simple cellulite",
+        "Oublier compression veineuse après diagnostic"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Wendy Nickels",
+      "age": "43 ans",
+      "contexte": "Femme active, cabinet d'avocats, venue aux urgences après travail",
+      "motifConsultation": {
+        "plaintePrincipale": "Douleur jambe droite depuis 24 heures",
+        "autreChose": "Mollet rouge, chaud et douloureux"
+      },
+      "histoireActuelle": {
+        "debut": [
+          "Commencé hier",
+          "Rentrais de chez père en voiture",
+          "Remarqué en sortant voiture",
+          "Mollet douloureux et chaud",
+          "Étrange sensation"
+        ],
+        "contexte": [
+          "Aidé jardinage week-end",
+          "Fauché hautes herbes propriété",
+          "Toutes sortes choses dans herbes",
+          "Peut-être touché quelque chose",
+          "Trajet 5 heures depuis San Andreas"
+        ],
+        "evolution": [
+          "Ce matin levée pire",
+          "Rouge, chaud, plus douloureux",
+          "Pensé tenir coup pour travail",
+          "Cabinet avocats, pas pu m'absenter",
+          "Vraiment mal toute journée",
+          "Peut-être obsessive",
+          "Médecin fermé après travail",
+          "Venue ici plutôt que laisser traîner"
+        ]
+      },
+      "caracteristiquesDouleur": {
+        "localisation": [
+          "Juste cette jambe droite",
+          "Ici à l'arrière (frotter mollet postérieur)",
+          "Pas autre jambe ou autres zones"
+        ],
+        "signesLocaux": [
+          "Rouge toute journée",
+          "Chaud au toucher",
+          "Pense que c'est enflé aussi",
+          "Pas écoulement ou desquamation",
+          "Peau tendue"
+        ],
+        "intensite": [
+          "8/10 au maximum",
+          "Fait plus mal quand marche"
+        ],
+        "facteurs": [
+          "Mal de l'étirer",
+          "Marche vigoureuse aggrave",
+          "Pointe pieds douloureux",
+          "Ibuprofène aidé un peu"
+        ]
+      },
+      "symptomesNegatifs": {
+        "systemiques": [
+          "Pas vraiment fièvre",
+          "Pas sentie chaude"
+        ],
+        "pulmonaires": [
+          "Pas problèmes respiratoires",
+          "Pas douleur en respirant",
+          "Venue tout suite si ça"
+        ],
+        "neurologiques": [
+          "Pas engourdissement",
+          "Pied se sent pareil",
+          "Pas vertiges du tout"
+        ]
+      },
+      "hypothesesPatiente": [
+        "Pensait herbe à puce",
+        "Amie dit que non",
+        "Première fois symptômes comme ça",
+        "Jamais vient à l'hôpital habituellement"
+      ],
+      "antecedentsMedicaux": {
+        "allergies": [
+          "Amoxicilline à université",
+          "Boutons estomac et poitrine",
+          "Rien d'autre"
+        ],
+        "anxiete": [
+          "Problème anxiété",
+          "Vu médecin pour ça",
+          "Examens annuels réguliers"
+        ],
+        "gynecologiques": [
+          "Jamais enceinte",
+          "Jamais voulu enfants",
+          "Frottis normaux",
+          "Mammographie normale",
+          "Pas problèmes saignement"
+        ]
+      },
+      "medicaments": {
+        "contraception": [
+          "Patch Ortho Evra",
+          "Sur bras 1 fois/semaine",
+          "Depuis 2 ans"
+        ],
+        "psychiatriques": [
+          "Paxil pour anxiété",
+          "Depuis 6 mois environ"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "Fumé 20 ans",
+          "1 paquet/jour",
+          "Arrêté il y a 2 ans",
+          "Quand commencé contraception",
+          "Médecin aidé arrêter",
+          "Patchs nicotine pour sevrage",
+          "Rien depuis"
+        ],
+        "felicitations": [
+          "(Si médecin félicite) Merci, c'était difficile"
+        ],
+        "alcool": [
+          "Verre vin/bière week-end",
+          "Ou lors fêtes",
+          "Pas plus 2-3 soirs/semaine",
+          "Jamais senti devoir réduire",
+          "Pas coupable",
+          "Jamais réveil-matin",
+          "Personne n'a critiqué"
+        ],
+        "drogues": [
+          "Cocaïne 1 fois école supérieure",
+          "Détesté, pas fait du bien",
+          "Plus jamais, rien d'autre"
+        ]
+      },
+      "antecedentsFamiliaux": [
+        "Mère cancer poumon il y a 4 ans",
+        "Chimio et chirurgie",
+        "Fumé toute sa vie",
+        "Va bien maintenant",
+        "Père mort incendie maison",
+        "Il était pompier",
+        "Deux frères cadets sains",
+        "Un prend médicaments HTA"
+      ],
+      "simulation": {
+        "attitude": [
+          "Femme professionnelle inquiète",
+          "Minimise un peu au début",
+          "Avoue inquiétude progressive",
+          "Coopérative et précise",
+          "Légèrement anxieuse"
+        ],
+        "durantEntretien": [
+          "Assise jambe légèrement surélevée",
+          "Frotte occasionnellement mollet",
+          "Grimace si touche zone"
+        ],
+        "durantExamen": [
+          "Douleur palpation mollet",
+          "Douleur dorsiflexion pied (Homans)",
+          "Montre bien localisation",
+          "Compare avec autre jambe",
+          "Coopérative tous examens"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Thrombose veineuse profonde",
+      "sections": [
+        {
+          "titre": "Physiopathologie et facteurs de risque",
+          "contenu": "Triade de Virchow : stase veineuse (immobilité, voyage), hypercoagulabilité (contraception, cancer, thrombophilie), lésion endothéliale (trauma, chirurgie). Facteurs risque majeurs : chirurgie récente, immobilisation, cancer actif, contraception œstroprogestative. Facteurs modérés : âge >40 ans, obésité, tabagisme, voyage >4h. Risque relatif contraception : OR 3-4, plus élevé première année."
+        },
+        {
+          "titre": "Diagnostic clinique et paraclinique",
+          "contenu": "Score Wells TVP : cancer actif +1, immobilisation +1, chirurgie récente +1, sensibilité trajets veineux +1, œdème jambe entière +1, différence mollet >3cm +1, œdème prenant godet +1, veines collatérales +1, diagnostic alternatif -2. Probabilité : faible ≤0, intermédiaire 1-2, élevée ≥3. D-dimères : VPN 95-98% si probabilité faible. Échographie compression : Se 95%, Sp 95% pour TVP proximale."
+        },
+        {
+          "titre": "Complications et évolution",
+          "contenu": "Embolie pulmonaire : 50% TVP proximales non traitées, mortalité 30% EP non traitée. Syndrome post-thrombotique : 20-50% à 2 ans, prévention par compression. Récidive : 10% à 1 an, 30% à 5 ans. Mortalité TVP traitée : <3%. Extension proximale TVP distale non traitée : 20-30%."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Anticoagulation immédiate si probabilité clinique élevée, avant confirmation",
+        "HBPM : enoxaparine 1mg/kg × 2/j ou 1.5mg/kg × 1/j SC",
+        "Fondaparinux : 7.5mg/j SC (5mg si <50kg, 10mg si >100kg)",
+        "AOD possibles : rivaroxaban 15mg × 2/j × 3 sem puis 20mg/j",
+        "Durée traitement : 3 mois minimum, 6 mois si facteur réversible",
+        "Contraception œstroprogestative : arrêt définitif, switch DIU ou progestatif seul",
+        "Compression élastique : classe 2, 2 ans minimum, prévention SPT",
+        "Mobilisation précoce encouragée, pas d'alitement strict"
+      ],
+      "examensComplementaires": [
+        "Échographie Doppler compression : première ligne, répéter à J7 si négative et suspicion",
+        "D-dimères : seuil âge-ajusté (âge × 10 après 50 ans), inutiles si probabilité élevée",
+        "Angio-TDM : si suspicion EP associée ou échographie non contributive",
+        "Phlébographie : historique, remplacée par imagerie moderne",
+        "IRM veineuse : femmes enceintes, thrombose veines pelviennes",
+        "Bilan thrombophilie : discuté si <50 ans, récidive, familial"
+      ]
+    },
+    "resume": {
+      "titre": "🩸 Thrombose veineuse profonde (TVP) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur du mollet ou de la cuisse, d’installation progressive",
+                "Sensation de lourdeur ou de tension du membre",
+                "Œdème unilatéral",
+                "Aggravation en position debout ou à la marche"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Immobilisation récente (voyage prolongé, alitement, post-chirurgie)",
+                "Grossesse ou post-partum",
+                "Cancer évolutif",
+                "Thrombophilie connue",
+                "ATCD personnels ou familiaux de MTEV",
+                "Contraception orale estroprogestative ou traitement hormonal"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte",
+              "points": [
+                "Dyspnée brutale, douleur thoracique → suspicion d’embolie pulmonaire",
+                "Douleur abdominale, lombaire (extension thrombose iliaque)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Œdème unilatéral du mollet ou de la cuisse",
+                "Augmentation de la chaleur locale",
+                "Rougeur ou cyanose du membre atteint"
+              ]
+            },
+            {
+              "titre": "Palpation",
+              "points": [
+                "Douleur à la palpation du mollet (signe de Homans peu spécifique)",
+                "Induration veineuse parfois palpable"
+              ]
+            },
+            {
+              "titre": "Mesure",
+              "points": [
+                "Circonférence du mollet augmentée (> 3 cm par rapport au côté sain)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "D-dimères : valeur prédictive négative élevée si probabilité clinique faible/intermédiaire",
+                "NFS, créatinine, bilan de coagulation (avant anticoagulation)"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Écho-doppler veineux des membres inférieurs = examen de référence",
+                "Scanner veineux ou IRM dans formes atypiques ou iliaques"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Anticoagulation",
+              "points": [
+                "Débuter sans attendre si suspicion forte de TVP",
+                "HBPM, fondaparinux ou AOD (rivaroxaban, apixaban, dabigatran)",
+                "Relais par AVK possible (INR cible 2–3)",
+                "Durée : 3 mois minimum (selon facteur déclenchant et risque de récidive)"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Bas de contention élastiques pour prévenir le syndrome post-thrombotique",
+                "Mobilisation précoce avec anticoagulation efficace",
+                "Recherche de facteur déclenchant (cancer, chirurgie, thrombophilie)"
+              ]
+            },
+            {
+              "titre": "Urgence",
+              "points": [
+                "Si signes d’embolie pulmonaire : hospitalisation et prise en charge urgente"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Œdème unilatéral douloureux du mollet = TVP jusqu’à preuve du contraire",
+            "Écho-doppler veineux = examen diagnostique clé",
+            "Anticoagulation précoce indispensable",
+            "Toujours évaluer risque d’embolie pulmonaire associée",
+            "Durée traitement = 3 mois minimum, plus si facteur persistant"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur et œdème du mollet ?",
+                "Immobilisation récente, voyage long, chirurgie ?",
+                "ATCD de TVP ou EP ?",
+                "Facteurs de risque : cancer, contraception hormonale, grossesse ?",
+                "Symptômes respiratoires (dyspnée, douleur thoracique) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection du membre inférieur : œdème, rougeur, chaleur",
+                "Palpation du mollet (douleur, induration)",
+                "Mesure périmètre mollet (comparatif)",
+                "D-dimères si probabilité faible/intermédiaire",
+                "Écho-doppler veineux des MI"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par écho-doppler ± D-dimères",
+                "Anticoagulation immédiate si probabilité clinique forte",
+                "Bas de contention + dépistage facteur déclenchant + suivi anticoagulation"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

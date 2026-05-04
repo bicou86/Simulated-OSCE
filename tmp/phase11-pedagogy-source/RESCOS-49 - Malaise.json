@@ -1,0 +1,451 @@
+{
+  "title": "RESCOS-49 - Malaise",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M. Antonin Dolokov, 62 ans, est amené par ambulance pour troubles de l'état de conscience sur hypoglycémie.",
+    "vitals": {
+      "ta": "135/95 mmHg",
+      "fc": "127 bpm",
+      "temperature": "37.8°C",
+      "sao2": "99%",
+      "glycemie": "2.5 mmol/L",
+      "glasgow": "14/15"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Orientation du patient",
+          "details": [
+            "Personne",
+            "Temporalité",
+            "Espace"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Présence de douleur",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Notion d'intoxication aiguë (\"avez-vous pris ?\")",
+          "details": [
+            "Drogue",
+            "Alcool"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Hétéro-anamnèse avec infirmier/-ère - anamnèse actuelle",
+          "details": [
+            "Circonstances du début du malaise",
+            "Notion de perte de connaissance / syncope",
+            "Notion de traumatisme crânien"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "Hétéroanamnèse avec infirmier/-ère - infos sur le/la patient·e",
+          "details": [
+            "Médicaments habituels",
+            "Antécédents / comorbidités"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse avec patient·e (post resucrage efficace)",
+          "details": [
+            "Circonstance du malaise [double injection d'insuline Tréziba]",
+            "Compliance / modalité du traitement anti-diabétique"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "A - Airways - initie une prise en charge ABCDE",
+          "details": [
+            "Dans les 3 premières minutes après le début station",
+            "Si patient·e en phase agitée - déclare à voix haute que le A est ok",
+            "Si patient·e en phase endormie - inspecte l'intérieur de la cavité buccale"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "B - Breathing",
+          "details": [
+            "Mesure ou demande la fréquence respiratoire",
+            "Demande la mesure de saturation de l'hémoglobine (SpO2)",
+            "Auscultation de min 4 plages pulmonaires",
+            "Thorax visible durant l'examen clinique (pas recouvert)"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "C - Circulation",
+          "details": [
+            "Mesure ou demande la fréquence cardiaque",
+            "Demande la mesure de la tension artérielle",
+            "Palpations des pouls périphériques aux 4 extrémités",
+            "Recherche des signes d'hémorragie",
+            "Mesure du temps de recoloration"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "D - Disability (1) - Glasgow Coma Scale",
+          "details": [
+            "Ouverture des yeux",
+            "Réponse verbale",
+            "Réponse motrice"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "D - Disability (2) - Examen neurologique basique",
+          "details": [
+            "Réflexes pupillaires",
+            "Observation des pupilles (recherche anisocorie)",
+            "Motricité globale des 4 membres",
+            "Signes méningés"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "D - Disability (3) - mesure du glucose capillaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "E - Exposure",
+          "details": [
+            "Demande mesure T°",
+            "Examen sommaire \"tête aux pieds\""
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Équipement - propose de mettre un accès veineux (voie veineuse périphérique)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Demande prélèvement sanguin pour test de laboratoire / gazométrie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Stratégie de resucrage",
+          "details": [
+            "Propose sucre per os",
+            "Propose glucose IV"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Modalité d'injection du glucose - choisit",
+          "details": [
+            "Vitesse : bolus",
+            "Concentration : 40%"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m5",
+          "text": "Propose une injection de glucagon IM",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Propose un suivi rapproché de la glycémie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Antonin/Antonia Dolokov",
+      "age": "62 ans",
+      "contexte": "Diabétique de type II insulino-requérant, status post infarctus du myocarde en janvier 2020 avec pose d'un stent",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai chaud !",
+        "autreChose": "Je ne me sens pas bien..., J'ai mal à la tête"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Double injection d'insuline Tréziba 30 unités ce matin",
+          "Pensait que la première injection était ratée",
+          "Environ 1 heure après : céphalées",
+          "Sentiment de chaleur",
+          "Progressivement de plus en plus faible",
+          "État confus et désorienté"
+        ],
+        "symptomesAssocies": [
+          "Alternance de phases d'agitation et de somnolence",
+          "Transpiration importante",
+          "Incapacité à répondre correctement aux questions",
+          "Refuse les cubes de sucre quand l'infirmier(ère) tente de lui en donner"
+        ],
+        "evolution": [
+          "Dégradation progressive dans l'ambulance",
+          "Glasgow à 14/15 (4/5 pour état confus)",
+          "Si non traité : tombera dans le coma après la sonnerie 2 minutes",
+          "Si traité : retour à la normale 30-60 secondes après traitement IV"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Se sent faible depuis son infarctus"
+        ],
+        "neurologique": [
+          "Mal à la tête, mais ça va mieux maintenant (après traitement)"
+        ],
+        "cardiovasculaire": [
+          "Effort difficile, l'infarctus l'a laissé très faible"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Fait attention (à cause du diabète)",
+        "activitePhysique": "Marche à pied",
+        "sommeil": "Bon",
+        "tabac": "Ex-fumeur(euse), a arrêté avec le diagnostic de diabète (1 paquet/jour pendant 30 ans)",
+        "alcool": "Plus depuis mon diagnostic de diabète",
+        "drogues": "Jamais",
+        "medicaments": "Irbesartan 150mg/j, Esidrex 12.5mg/j, Tréziba 30 U/j, Sortis 40mg/j, Aspirine cardio 100mg/j, Plavix 75mg/j",
+        "sexualite": "Rapports non protégés avec sa femme/son mari"
+      },
+      "histoireMedicale": [
+        "Diabète depuis 10 ans, généralement bien contrôlé",
+        "Infarctus du myocarde il y a 2 mois (juin 2023)",
+        "Status post pose de stent",
+        "Hypertension artérielle",
+        "Appendicite à 14 ans",
+        "Pas d'allergies connues",
+        "Suivi régulier tous les 3 mois (HbA1c et tension)",
+        "Vaccins à jour"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère : décédée d'un cancer",
+        "Père : mort de vieillesse"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Non précisée",
+        "hobbies": "Non précisés",
+        "poids": "Surpoids",
+        "orientationSexuelle": "Non précisée",
+        "etatCivil": "Marié(e)",
+        "enfants": "Non précisé",
+        "situationSocioEconomique": "Non précisée",
+        "origine": "Non précisée",
+        "etatEsprit": "Confus et agité"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Début : agité(e) sur le lit, pas de contact visuel",
+          "Parle trop fort, désorienté(e)",
+          "N'arrive pas à comprendre qu'il/elle est à l'hôpital",
+          "Alterne phases d'agitation et de somnolence (quelques minutes chaque phase)",
+          "Aspergez de l'eau sur le visage avant l'entretien pour simuler les sueurs",
+          "Refuse catégoriquement les cubes de sucre"
+        ],
+        "durantExamen": [
+          "Reste agité(e) ou somnolent(e) selon la phase",
+          "Si phase endormie : reste réveillable si stimulé(e)",
+          "Après traitement IV : retour progressif à la normale en 30-60 secondes"
+        ],
+        "phasesCritiques": [
+          "Si non traité avant sonnerie 2 minutes : tomber dans le coma",
+          "En coma : fermer les yeux, ne pas répondre, non réveillable",
+          "Durée maximale du coma : 2 minutes",
+          "L'infirmier(ère) indiquera l'arrivée du/de la conjoint(e) avec la liste des médicaments"
+        ]
+      },
+      "informationADonner": "Liste des médicaments disponible dans la poche du/de la patient(e), au plus tard après 13 minutes ou à l'arrivée du/de la conjoint(e) si patient(e) dans le coma."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Dolokov, 62 ans, diabétique type II insulino-requérant, status post IDM avec stent (01/2020). Amené(e) pour troubles de conscience après double injection accidentelle d'insuline Tréziba. Glasgow 14/15, agitation et confusion alternant avec somnolence. Glycémie à 2.5 mmol/L.",
+      "rolesInterventions": [
+        "Un(e) infirmier(ère) simulé(e) est présent(e) pour assistance",
+        "L'infirmier(ère) propose des cubes de sucre que le patient refuse",
+        "Si le médecin ne traite pas avant la sonnerie 2 minutes : patient tombe dans le coma",
+        "L'infirmier(ère) annonce l'arrivée du/de la conjoint(e) avec la liste des médicaments"
+      ],
+      "pointsCles": [
+        "Hypoglycémie sévère par surdosage d'insuline lente",
+        "Approche ABCDE systématique en urgence",
+        "Mesure glycémie capillaire essentielle (2.5 mmol/L)",
+        "Échec du resucrage oral (patient refuse/recrache)",
+        "Nécessité d'un accès veineux et glucose IV",
+        "Alternative : glucagon IM si pas d'accès veineux",
+        "Surveillance glycémique rapprochée indispensable"
+      ],
+      "pieges": [
+        "Ne pas faire de glycémie capillaire d'emblée",
+        "Insister sur le resucrage oral alors que patient refuse",
+        "Oublier l'approche ABCDE systématique",
+        "Ne pas penser au glucagon si échec voie veineuse",
+        "Oublier la surveillance glycémique après traitement",
+        "Ne pas anticiper le risque de récidive (insuline lente)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'hypoglycémie sévère",
+      "sections": [
+        {
+          "titre": "Définition et seuils",
+          "contenu": "L'hypoglycémie est définie par une glycémie < 4.0 mmol/L, sévère si < 3.0 mmol/L avec altération de conscience.",
+          "points": [
+            "Hypoglycémie légère : 3.0-3.9 mmol/L",
+            "Hypoglycémie sévère : < 3.0 mmol/L",
+            "Seuil de neuroglycopénie : < 2.8 mmol/L",
+            "Risque vital si < 2.0 mmol/L prolongée",
+            "Symptômes adrénergiques : 3.2-3.8 mmol/L",
+            "Symptômes neuroglycopéniques : < 2.8 mmol/L"
+          ]
+        },
+        {
+          "titre": "Causes principales",
+          "contenu": "Le surdosage en insuline est la cause la plus fréquente chez le diabétique.",
+          "points": [
+            "Erreur de dose d'insuline (confusion entre types)",
+            "Double injection accidentelle",
+            "Repas sauté ou insuffisant",
+            "Exercice physique inhabituel",
+            "Insuffisance rénale (diminution clairance insuline)",
+            "Interaction médicamenteuse",
+            "Consommation d'alcool"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "contenu": "Les symptômes évoluent selon la profondeur de l'hypoglycémie.",
+          "points": [
+            "Phase adrénergique : sueurs, tremblements, palpitations",
+            "Phase neuroglycopénique : confusion, agitation, somnolence",
+            "Troubles du comportement : agressivité, désorientation",
+            "Signes neurologiques : diplopie, paresthésies, aphasie",
+            "Convulsions possibles",
+            "Coma hypoglycémique",
+            "Signes focaux mimant un AVC"
+          ]
+        },
+        {
+          "titre": "Prise en charge immédiate",
+          "contenu": "La correction rapide de la glycémie est vitale.",
+          "points": [
+            "Glycémie capillaire immédiate",
+            "Patient conscient et coopérant : 15-20g glucose PO",
+            "Répéter après 15 minutes si glycémie < 4.0",
+            "Patient confus/non coopérant : glucose IV",
+            "Glucose 40% : 50-100ml en bolus IV",
+            "Alternative : glucagon 1mg IM/SC",
+            "Surveillance glycémique toutes les 15-30 minutes"
+          ]
+        },
+        {
+          "titre": "Particularités de l'insuline lente",
+          "contenu": "Le surdosage en insuline lente nécessite une surveillance prolongée.",
+          "points": [
+            "Durée d'action 24-42 heures selon le type",
+            "Risque de récidive hypoglycémique élevé",
+            "Nécessité d'apports glucidiques répétés",
+            "Surveillance glycémique horaire × 6h minimum",
+            "Hospitalisation souvent nécessaire",
+            "Perfusion glucose 10% si récidives",
+            "Éducation sur prévention des erreurs"
+          ]
+        },
+        {
+          "titre": "Complications",
+          "contenu": "L'hypoglycémie sévère peut avoir des conséquences graves.",
+          "points": [
+            "Lésions cérébrales si hypoglycémie prolongée",
+            "Arythmies cardiaques (allongement QT)",
+            "Syndrome coronarien aigu",
+            "Accidents traumatiques (chutes, AVP)",
+            "Décès possible si non traitée",
+            "Hypoglycémie asymptomatique ultérieure",
+            "Peur de l'hypoglycémie avec mauvais contrôle"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Glucose 40% IV : 50-100ml en bolus (20-40g glucose)",
+        "Glucagon 1mg IM/SC si pas d'accès veineux",
+        "Glucose 10% perfusion : 100ml/h si récidives",
+        "Sucre PO : 3-4 morceaux ou 150ml jus de fruit",
+        "Collation complexe après normalisation",
+        "Adapter doses insuline selon cause",
+        "Octréotide 50-100μg SC si sulfamides"
+      ],
+      "examensComplementaires": [
+        "Glycémie capillaire immédiate (répétée)",
+        "Glycémie veineuse de confirmation",
+        "Ionogramme sanguin",
+        "Fonction rénale (créatinine, urée)",
+        "ECG si troubles du rythme",
+        "Peptide-C et insulinémie si cause incertaine",
+        "Recherche toxiques si suspicion",
+        "Scanner cérébral si déficit focal persistant"
+      ]
+    }
+  },
+  "cloture": {
+    "titre": "Clôture de consultation",
+    "sections": [
+      {
+        "titre": "Communication interprofessionnelle",
+        "contenu": "L'interaction avec l'infirmier(ère) est évaluée dans ce cas.",
+        "points": [
+          "Communication claire et respectueuse",
+          "Écoute des propositions de l'équipe",
+          "Délégation appropriée des tâches",
+          "Leadership sans autoritarisme",
+          "Gestion du stress en situation d'urgence"
+        ]
+      }
+    ]
+  }
+}

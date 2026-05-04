@@ -1,0 +1,891 @@
+{
+  "title": "RESCOS-15 - Diarrhées et constipation",
+  "category": "RESCOS",
+  "subcategory": "Gastro-entérologie - Transit intestinal",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 60 ans consultant pour alternance de diarrhée et constipation depuis 3 mois avec distension abdominale",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "J'ai le ventre gonflé et mes intestins ne fonctionnent plus normalement depuis 3 mois"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la modification du transit",
+          "details": [
+            "Évolution générale [alternance diarrhée/constipation depuis 3 mois]",
+            "Nombre de selles par 24h [variable]",
+            "Modification récente du transit [oui, depuis 3 mois]",
+            "Selles noires déféquées [présentes depuis 15 jours]",
+            "Selles nauséabondes [oui]",
+            "Absence de selles depuis [48 heures actuellement]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques des selles - Aspect anormal",
+          "details": [
+            "Selles de couleur habituelle mélée à du sang rouge [lésion recto-sigmoïdienne]",
+            "Selles rouges avec caillots [hématochézie - hémorragie aiguë haute ou basse]",
+            "Selles noires luisantes [méléna - hémorragie digestive haute]",
+            "Selles couleur mastic [obstruction biliaire, insuffisance hépato-cellulaire]",
+            "Selles jaunes-grisâtres, pâteuses [stéatorrhée]",
+            "Selles en pétoles, dures [colon spastique]",
+            "Selles rubanées de calibre diminué [sténose basse]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes digestifs associés",
+          "details": [
+            "Distension abdominale douloureuse",
+            "Difficultés à s'alimenter [nausées]",
+            "Ténesme [sensation douloureuse de corps étranger intra-rectal]",
+            "Épreintes [coliques violentes précédant l'exonération]",
+            "Douleurs abdominales [type, localisation]",
+            "Ballonnements",
+            "Flatulences"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Éléments anormaux dans les selles",
+          "details": [
+            "Glaires [y compris dans certains cas de côlon irritable]",
+            "Pus",
+            "Sang noir [méléna]",
+            "Sang rouge [rectorragies]",
+            "Graisses [stéatorrhée > 7g/jour]",
+            "Aliments non digérés"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Retentissement général",
+          "details": [
+            "Asthénie",
+            "Perte de poids",
+            "Anorexie",
+            "Fièvre",
+            "Sueurs nocturnes",
+            "Altération de l'état général"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Définitions des troubles du transit",
+          "details": [
+            "Diarrhée aiguë [< 3 semaines]",
+            "Diarrhée chronique [> 3 semaines]",
+            "Diarrhée [poids > 300g/24h ou plus de 3 selles/24h]",
+            "Constipation [émission < 3 selles/semaine]",
+            "Syndrome dysentérique [fièvre + crampes + sang/pus/glaires]",
+            "Syndrome cholérique [diarrhées aqueuses abondantes sans fièvre]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs favorisants et antécédents",
+          "details": [
+            "Alimentation récente [changement de régime]",
+            "Voyage récent",
+            "Prise médicamenteuse [antibiotiques, laxatifs]",
+            "Stress psychosocial",
+            "Antécédents familiaux de cancer colorectal",
+            "Antécédents personnels de polypes",
+            "Maladies inflammatoires intestinales"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "Ambiance générale [agitation ou prostration]",
+            "Faciès [signes de dénutrition, déshydratation]",
+            "Pâleur cutanéo-muqueuse [anémie]",
+            "Ictère [pathologie hépatobiliaire]",
+            "État d'hydratation [pli cutané, sécheresse muqueuses]",
+            "Signes de carences [chéilite, glossite]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux",
+          "details": [
+            "Pulsations, tension artérielle",
+            "Rythme et amplitude respiratoires",
+            "Température",
+            "Poids actuel et évolution"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection abdominale",
+          "details": [
+            "Morphologie [plat vs distendu]",
+            "Symétrie vs asymétrie",
+            "Cicatrices [laparoscopie parfois difficilement visibles]",
+            "Hernies [ombilicales, inguinales, crurales]",
+            "Veines superficielles",
+            "Mouvements respiratoires [observer en même temps le faciès]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Patience [attendre au moins 1 minute avant de conclure]",
+            "Bruits intestinaux normaux [nombreux déplacements du stéthoscope]",
+            "Fréquence des bruits",
+            "Tonalité [bruits métalliques = distension intestinale]",
+            "Silence abdominal [iléus paralytique]",
+            "Hyperactivité [diarrhée, obstruction partielle]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Percussion abdominale",
+          "details": [
+            "Patient allongé [légèrement surélevé si possible]",
+            "Tympanisme [bruits aigus de tambour]",
+            "Normal à l'épigastre [entre gastrique]",
+            "Distension gazeuse [tympanisme diffus]",
+            "Matité [signe liquide - ascite, globe vésical, masse]",
+            "Mesure de la taille du foie, de la rate"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation superficielle",
+          "details": [
+            "Main à plat, doigts serrés",
+            "Tonus pariétal spontané et en réponse",
+            "Douleur localisée",
+            "Défense [peut être vaincue] ou contracture [permanente]",
+            "Extension [contracture généralisée = ventre de bois]",
+            "Douleur à l'ébranlement"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation profonde",
+          "details": [
+            "Recherche masse abdominale [taille, consistance, forme, localisation]",
+            "Mobilité de la masse",
+            "Pulsations [transmises ou de la masse]",
+            "Aorte [normale chez sujet maigre]",
+            "Taille des organes [foie, rate]",
+            "Points douloureux spécifiques"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Palpation spécifique du côlon",
+          "details": [
+            "Cadre colique [cæcum, côlon ascendant, transverse, descendant]",
+            "Sigmoïde [fosse iliaque gauche]",
+            "Cordon induré douloureux [sigmoïdite]",
+            "Masses palpables [tumeur, fécalome]",
+            "Sensibilité à la palpation"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Toucher rectal",
+          "details": [
+            "Position genu-pectorale ou décubitus latéral",
+            "Tonus sphinctérien",
+            "Ampoule rectale [vide, pleine, fécalome]",
+            "Masses rectales palpables",
+            "Sang au doigtier",
+            "Douleur provoquée"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels des troubles du transit",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour troubles du transit avec méléna",
+            "categories": [
+              {
+                "name": "Causes néoplasiques - Prioritaires vu l'âge et méléna",
+                "items": [
+                  {
+                    "text": "Cancer colorectal",
+                    "cause": "Arguments POUR:\n\t□ Âge 60 ans\n\t□ Modification récente du transit (3 mois)\n\t□ Alternance diarrhée/constipation\n\t□ Méléna (selles noires)\n\t□ Distension abdominale\n\t□ Selles nauséabondes",
+                    "test": "→ Coloscopie totale avec biopsies, CT thoraco-abdomino-pelvien, ACE"
+                  },
+                  {
+                    "text": "Polypes coliques compliqués",
+                    "cause": "Arguments POSSIBLES:\n\t□ Saignement digestif bas\n\t□ Troubles du transit\n\t□ Transformation maligne possible",
+                    "test": "→ Coloscopie avec polypectomie"
+                  }
+                ]
+              },
+              {
+                "name": "Occlusion intestinale",
+                "items": [
+                  {
+                    "text": "Occlusion haute (grêle)",
+                    "cause": "Arguments POSSIBLES:\n\t□ Vomissements prédominent\n\t□ Arrêt des gaz et selles\n\t□ Distension abdominale",
+                    "test": "→ ASP debout, CT abdominal"
+                  },
+                  {
+                    "text": "Occlusion basse (côlon)",
+                    "cause": "Arguments POUR:\n\t□ Arrêt gaz et selles (48h)\n\t□ Ballonnement majeur\n\t□ Vomissements tardifs\n\t□ Distension douloureuse",
+                    "test": "→ ASP, lavement aux hydrosolubles, CT"
+                  }
+                ]
+              },
+              {
+                "name": "Maladies inflammatoires intestinales",
+                "items": [
+                  {
+                    "text": "Maladie de Crohn",
+                    "cause": "Arguments CONTRE:\n\t□ Âge de début tardif\n\t□ Pas de diarrhée sanglante typique\n\t□ Pas de douleurs abdominales sévères",
+                    "test": "→ Coloscopie avec iléoscopie, entéro-IRM"
+                  },
+                  {
+                    "text": "Rectocolite hémorragique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de rectorragies franches\n\t□ Pas de syndrome dysentérique",
+                    "test": "→ Rectosigmoïdoscopie, biopsies étagées"
+                  }
+                ]
+              },
+              {
+                "name": "Causes fonctionnelles",
+                "items": [
+                  {
+                    "text": "Syndrome de l'intestin irritable",
+                    "cause": "Arguments CONTRE:\n\t□ Méléna (signe d'alarme)\n\t□ Âge > 50 ans au début\n\t□ Modification récente",
+                    "test": "→ Diagnostic d'exclusion après bilan complet"
+                  }
+                ]
+              },
+              {
+                "name": "Causes vasculaires",
+                "items": [
+                  {
+                    "text": "Ischémie mésentérique chronique",
+                    "cause": "Arguments POSSIBLES:\n\t□ Douleurs post-prandiales\n\t□ Peur de s'alimenter\n\t□ Amaigrissement",
+                    "test": "→ Angio-CT mésentérique, écho-Doppler"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Signes d'alarme (Red Flags)",
+          "redflagsSection": {
+            "title": "Signes nécessitant une exploration urgente",
+            "items": [
+              {
+                "text": "Méléna",
+                "description": "Selles noires = hémorragie digestive haute nécessitant endoscopie"
+              },
+              {
+                "text": "Modification récente du transit après 50 ans",
+                "description": "Haut risque de néoplasie colorectale"
+              },
+              {
+                "text": "Occlusion intestinale",
+                "description": "Arrêt matières et gaz = urgence chirurgicale potentielle"
+              },
+              {
+                "text": "Perte de poids inexpliquée",
+                "description": "Signe de malignité ou malabsorption"
+              },
+              {
+                "text": "Anémie ferriprive",
+                "description": "Saignement occulte chronique"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "NFS: recherche anémie ferriprive (saignement chronique)",
+            "Ferritine, fer sérique, transferrine",
+            "CRP, VS: syndrome inflammatoire",
+            "Ionogramme, urée, créatinine: déshydratation",
+            "Bilan hépatique: pathologie associée",
+            "TSH: dysthyroïdie cause de troubles du transit",
+            "Albumine: dénutrition, malabsorption"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Imagerie et endoscopie",
+          "details": [
+            "ASP debout face et profil: niveaux hydro-aériques si occlusion",
+            "CT abdomino-pelvien avec injection: bilan d'extension si tumeur",
+            "Coloscopie totale: gold standard pour pathologie colique",
+            "- Visualisation directe des lésions",
+            "- Biopsies multiples",
+            "- Polypectomie thérapeutique",
+            "Gastroscopie si méléna: recherche saignement haut",
+            "Entéro-IRM ou vidéocapsule si suspicion grêle"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Marqueurs tumoraux et examens spécialisés",
+          "details": [
+            "ACE (antigène carcino-embryonnaire): cancer colorectal",
+            "CA 19-9: tumeurs digestives",
+            "Calprotectine fécale: inflammation intestinale",
+            "Test FIT (recherche sang occulte dans selles)",
+            "Coproculture si diarrhée fébrile",
+            "Recherche parasites si contexte évocateur",
+            "Test respiratoire lactose/fructose si malabsorption"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement symptomatique des troubles du transit",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de la constipation",
+                "content": "• Mesures hygiéno-diététiques: hydratation, fibres, activité physique\n• Laxatifs osmotiques: macrogol, lactulose\n• Laxatifs de lest: psyllium, ispaghul\n• Laxatifs stimulants: bisacodyl (usage ponctuel)\n• Suppositoires glycérine ou lavements si fécalome"
+              },
+              {
+                "title": "Traitement de la diarrhée",
+                "content": "• Réhydratation orale ou IV selon sévérité\n• Ralentisseurs du transit: lopéramide (si pas de fièvre)\n• Régime pauvre en résidus\n• Probiotiques si post-antibiotiques\n• NE PAS ralentir si suspicion infection"
+              },
+              {
+                "title": "Traitement de la distension abdominale",
+                "content": "• Siméticone (anti-mousse)\n• Charbon activé\n• Antispasmodiques: phloroglucinol\n• Prokinétiques si stase\n• Sonde naso-gastrique si occlusion haute"
+              },
+              {
+                "title": "Prise en charge de l'urgence",
+                "content": "• Hospitalisation si occlusion complète\n• Réanimation hydroélectrolytique\n• Aspiration digestive\n• Antibiothérapie si sepsis\n• Chirurgie si péritonite ou échec médical"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Contrôle biologique après traitement martial",
+            "Coloscopie de contrôle selon findings initiaux",
+            "Surveillance post-polypectomie selon recommandations",
+            "Dépistage famille si cancer colorectal",
+            "Éducation signes d'alarme",
+            "Suivi nutritionnel si dénutrition"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos troubles du transit avec présence de selles noires nécessitent une exploration approfondie. Les selles noires peuvent indiquer un saignement digestif haut qui s'est arrêté. L'alternance diarrhée-constipation à votre âge nécessite d'éliminer une cause organique, notamment tumorale. Nous devons faire rapidement des examens."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est un cancer?]\n[Pourquoi mes selles sont-elles noires?]\n[Vais-je avoir besoin d'une opération?]\n[La coloscopie fait-elle mal?]\n[Combien de temps vont durer ces troubles?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Plusieurs causes sont possibles, la coloscopie permettra de faire le diagnostic précis\nLes selles noires indiquent la présence de sang digéré, provenant du haut tube digestif\nLe traitement dépendra de la cause trouvée, pas forcément chirurgical\nLa coloscopie se fait sous sédation, elle est généralement bien tolérée\nUne fois la cause identifiée et traitée, les troubles devraient s'améliorer rapidement"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée - Troubles du transit",
+      "nom": "Patiente féminine",
+      "age": "60 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon transit intestinal est complètement déréglé depuis 3 mois",
+        "description": "Alternance diarrhée/constipation avec distension abdominale douloureuse"
+      },
+      "histoireActuelle": {
+        "evolution": [
+          "Début il y a 3 mois",
+          "D'abord quelques selles noires",
+          "Puis alternance diarrhée et constipation",
+          "Actuellement pas de selles depuis 48 heures",
+          "Ventre très distendu et douloureux"
+        ],
+        "caracteristiquesSelles": [
+          "Selles noires défequées depuis 15 jours",
+          "Selles nauséabondes",
+          "Parfois selles normales",
+          "Parfois plusieurs selles liquides par jour",
+          "Puis périodes sans aller à la selle"
+        ],
+        "symptomesAssocies": [
+          "Distension abdominale douloureuse",
+          "Difficultés à s'alimenter",
+          "Nausées fréquentes",
+          "Pas de vomissements",
+          "Fatigue importante",
+          "Pas de fièvre"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Aucune maladie digestive connue",
+        "chirurgicaux": "Appendicectomie à 20 ans",
+        "familiaux": "Père décédé d'un cancer du côlon à 70 ans",
+        "medicaments": "Aucun traitement régulier"
+      },
+      "habitudes": {
+        "alimentation": "Normale, pas de changement récent",
+        "alcool": "Occasionnel",
+        "tabac": "Non-fumeuse",
+        "activite": "Sédentaire",
+        "voyage": "Pas de voyage récent"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiète",
+          "Gênée de parler de ses selles",
+          "Se tient le ventre",
+          "Grimace lors des douleurs"
+        ],
+        "signesPhysiques": [
+          "Abdomen visiblement distendu",
+          "Inconfort en position assise",
+          "Se masse le ventre",
+          "Teint légèrement pâle"
+        ],
+        "durantExamen": [
+          "Abdomen distendu, tympanique",
+          "Sensibilité diffuse à la palpation",
+          "Pas de défense",
+          "Bruits intestinaux présents mais diminués",
+          "Gêne lors du toucher rectal"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Troubles du transit",
+      "pointsCles": [
+        "Modification récente du transit après 50 ans = red flag",
+        "Méléna = hémorragie digestive haute digérée",
+        "Alternance diarrhée/constipation évoque néoplasie",
+        "Distension + arrêt matières évoque sub-occlusion",
+        "Antécédent familial cancer colorectal augmente risque"
+      ],
+      "pieges": [
+        "Ne pas banaliser troubles du transit chez > 50 ans",
+        "Rechercher systématiquement signes d'alarme",
+        "Palper tout le cadre colique",
+        "Ne pas oublier le toucher rectal",
+        "Vérifier absence de hernie étranglée"
+      ],
+      "techniquesExamen": [
+        "Inspection: distension, péristaltisme visible",
+        "Auscultation: patience 1 minute minimum",
+        "Percussion: recherche tympanisme/matité",
+        "Palpation cadre colique: cæcum, angles, sigmoïde",
+        "Toucher rectal: tonus, ampoule, sang"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Troubles du transit",
+      "sections": [
+        {
+          "titre": "Sémiologie des selles pathologiques",
+          "contenu": "• Méléna: sang digéré noir, nauséabond (saignement > duodénum)\n• Rectorragies: sang rouge (lésion basse ou saignement massif haut)\n• Selles glairo-sanglantes: colite, cancer rectal\n• Fausses diarrhées du constipé: alternance par fécalome\n• Selles rubanées: sténose rectale ou sigmoïdienne"
+        },
+        {
+          "titre": "Définitions cliniques",
+          "contenu": "DIARRHÉE:\n• Aiguë: < 3 semaines\n• Chronique: > 3 semaines  \n• Poids > 300g/24h ou > 3 selles/jour\n\nCONSTIPATION:\n• < 3 selles/semaine\n• Effort de poussée\n• Selles dures\n• Sensation d'évacuation incomplète"
+        },
+        {
+          "titre": "Syndromes digestifs",
+          "contenu": "DYSENTÉRIQUE:\n• Fièvre + ténesme + épreintes\n• Selles glairo-sanglantes peu abondantes\n• Atteinte rectocolique\n\nCHOLÉRIFORME:\n• Diarrhée aqueuse profuse\n• Déshydratation rapide\n• Absence de fièvre"
+        },
+        {
+          "titre": "Occlusion intestinale",
+          "contenu": "MÉCANIQUE:\n• Obstacle: tumeur, bride, volvulus\n• Hyperactivité puis silence\n• Douleurs coliques\n\nFONCTIONNELLE (iléus):\n• Paralysie intestinale\n• Silence abdominal d'emblée\n• Post-opératoire, péritonite"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Réhydratation selon pertes",
+        "Antispasmodiques si douleurs",
+        "Lopéramide si diarrhée non fébrile",
+        "Laxatifs osmotiques si constipation",
+        "Aspiration digestive si occlusion",
+        "Antibiothérapie si infection documentée",
+        "Chirurgie si occlusion complète ou péritonite"
+      ],
+      "examensComplementaires": [
+        "NFS: anémie microcytaire = saignement chronique",
+        "Ferritine: carence martiale",
+        "CRP, VS: inflammation",
+        "Ionogramme: troubles hydroélectrolytiques",
+        "ASP: niveaux hydro-aériques, pneumopéritoine",
+        "Coloscopie: visualisation directe + biopsies",
+        "CT abdominal: staging tumoral, complications"
+      ]
+    },
+    "resume": {
+      "titre": "🧬 Cancer colorectal – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes d’appel",
+              "points": [
+                "Rectorragies ou hématochézie",
+                "Troubles du transit récents (constipation, diarrhée, alternance)",
+                "Sensation de masse rectale ou ténesme",
+                "Douleurs abdominales ou rectales",
+                "Anémie ferriprive (fatigue, dyspnée d’effort, pâleur)"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Âge > 50 ans",
+                "Antécédents familiaux de cancer colorectal ou polypes adénomateux",
+                "Syndromes héréditaires : HNPCC (Lynch), polypose adénomateuse familiale",
+                "MICI (rectocolite hémorragique, maladie de Crohn colique)",
+                "Facteurs environnementaux : alimentation riche en graisses/viandes rouges, sédentarité, tabac, alcool"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Symptômes souvent insidieux et intermittents",
+                "Découverte parfois au stade métastatique (foie, poumon, péritoine)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen abdominal et rectal",
+              "points": [
+                "Palpation abdominale : recherche masse ou hépatomégalie (métastases)",
+                "TR : masse rectale palpable, saignement",
+                "Recherche d’adénopathies sus-claviculaires (ganglion de Troisier)"
+              ]
+            },
+            {
+              "titre": "Signes de complications",
+              "points": [
+                "Occlusion intestinale (distension abdominale, vomissements, arrêt gaz/selles)",
+                "Perforation (péritonite)",
+                "Hémorragie digestive basse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de confirmation",
+              "points": [
+                "Coloscopie totale avec biopsies = examen de référence",
+                "Anatomopathologie : adénocarcinome dans la majorité des cas"
+              ]
+            },
+            {
+              "titre": "Bilan d’extension",
+              "points": [
+                "Scanner thoraco-abdomino-pelvien (métastases hépatiques, pulmonaires, péritonéales)",
+                "IRM rectale pour cancers du rectum (staging local)",
+                "Marqueur tumoral CEA (suivi, non diagnostic)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement curatif",
+              "points": [
+                "Chirurgie : hémicolectomie droite/gauche, sigmoïdectomie, amputation abdomino-périnéale (rectum bas)",
+                "Curage ganglionnaire systématique",
+                "Résection de métastases si résécables"
+              ]
+            },
+            {
+              "titre": "Traitements complémentaires",
+              "points": [
+                "Chimiothérapie adjuvante selon stade (FOLFOX, CAPOX)",
+                "Radiochimiothérapie néoadjuvante pour cancers du rectum localement avancés",
+                "Thérapies ciblées (anti-EGFR, anti-VEGF) en métastatique"
+              ]
+            },
+            {
+              "titre": "Prise en charge globale",
+              "points": [
+                "Surveillance endoscopique post-thérapeutique",
+                "Dépistage familial si facteur génétique",
+                "Soins de support (douleur, nutrition, psychologique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toute rectorragie après 50 ans = coloscopie obligatoire",
+            "Anémie ferriprive inexpliquée = cancer colorectal jusqu’à preuve du contraire",
+            "Coloscopie avec biopsie = diagnostic de certitude",
+            "Chirurgie = traitement principal",
+            "Radiochimiothérapie néoadjuvante pour cancer du rectum avancé"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Troubles du transit récents ? Rectorragies ?",
+                "Perte de poids, asthénie, anorexie ?",
+                "ATCD familiaux de cancer colorectal ou polypes ?",
+                "Antécédents personnels de MICI, polypes ?",
+                "Facteurs de risque : alimentation, tabac, alcool ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "TR systématique",
+                "Coloscopie totale avec biopsies",
+                "Scanner TAP pour bilan d’extension",
+                "IRM rectale si localisation rectale",
+                "Bilan biologique : NFS, ferritine, CEA"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par coloscopie + biopsie",
+                "Chirurgie avec exérèse tumorale + curage ganglionnaire",
+                "Radiochimiothérapie pour rectum avancé, chimio ± thérapies ciblées si métastatique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Alternance diarrhée/constipation avec méléna (suspicion cancer colorectal)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (troubles du transit avec sang dans les selles, distension abdominale)",
+            "Caractériser troubles du transit → alternance diarrhée/constipation, évolution depuis 3 mois",
+            "Caractériser saignement → méléna, sang rouge, fréquence, intensité",
+            "Signes associés → nausées, distension abdominale, fatigue, perte poids, ténesme",
+            "Facteurs de risque → >50 ans, antécédent familial CCR, appendicectomie, alimentation pauvre en fibres",
+            "Examen clinique → inspection abdomen distendu, palpation (masse, douleur, défense), TR obligatoire",
+            "Résumé + hypothèse principale (cancer colorectal) + DD (occlusion, polypes, MICI, ischémie mésentérique, SII)",
+            "Examens complémentaires → NFS/ferritine, CRP, ionogramme, coloscopie + biopsies, scanner TAP",
+            "Prise en charge → hospitalisation si occlusion/saignement, réhydratation, PEC multidisciplinaire si cancer"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : SANG",
+            "elements": [
+              "S = Sang dans les selles (méléna, rectorragies)",
+              "A = Alternance diarrhée/constipation",
+              "N = Nouvelle modification du transit après 50 ans",
+              "G = Généalogie : antécédent familial de cancer colorectal"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme X., une femme de 60 ans, qui consulte pour des troubles du transit évoluant depuis environ 3 mois.\n\nElle rapporte une alternance de diarrhée et de constipation, parfois plusieurs selles liquides nauséabondes par jour, puis des périodes sans selles pendant plusieurs jours. Depuis 15 jours, elle décrit des selles noires et malodorantes. Actuellement, elle n’a pas eu de selles depuis 48 heures et se plaint d’un ventre très distendu et douloureux. Elle rapporte également des nausées, une fatigue importante et une perte d’appétit. Pas de fièvre.\n\nDans ses antécédents, on note une appendicectomie à 20 ans. Son père est décédé d’un cancer du côlon à 70 ans. Elle n’a pas d’autres antécédents médicaux ni de traitement régulier.\n\nSon mode de vie est sédentaire, sans tabac ni alcool. Son alimentation est normale, sans changement récent.\n\nÀ l’examen, la patiente est inquiète, teint pâle, abdomen très distendu et tympanique, douloureux à la palpation diffuse mais sans défense ni contracture. Les bruits intestinaux sont diminués. Le toucher rectal montre une gêne avec présence possible de sang noir.\n\nEn résumé, il s’agit d’une femme de 60 ans avec modification récente du transit, alternance diarrhée-constipation, méléna, distension abdominale et antécédent familial de CCR. Mon hypothèse principale est un cancer colorectal compliqué d’une sub-occlusion. Les diagnostics différentiels incluent des polypes compliqués, une diverticulite, une colite inflammatoire, une ischémie mésentérique ou un syndrome de l’intestin irritable (moins probable vu les signes d’alarme).\n\nComme examens complémentaires, je demanderais une NFS avec ferritine pour rechercher une anémie ferriprive, une CRP et un ionogramme pour bilan général, une coloscopie totale avec biopsies pour confirmer le diagnostic, et un scanner thoraco-abdomino-pelvien pour le bilan d’extension et rechercher une complication.\n\nLa prise en charge immédiate inclut une réhydratation, un repos digestif, une surveillance clinique étroite et une hospitalisation si signes d’occlusion. À distance, la PEC dépendra du diagnostic, avec chirurgie curative si cancer confirmé, associée éventuellement à une chimiothérapie et un suivi nutritionnel."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme X., 60 ans, présente alternance diarrhée/constipation avec selles noires et distension abdominale.\n\nB (Background) : Début il y a 3 mois, appendicectomie ancienne, père décédé CCR, sédentarité.\n\nA (Assessment) : Suspicion forte cancer colorectal avec sub-occlusion. DD : polypes, MICI, diverticulite, ischémie mésentérique, SII.\n\nR (Recommendation) : NFS/ferritine, CRP, ionogramme, coloscopie + biopsies, scanner TAP. Hospitalisation si occlusion/saignement."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes d’alarme (Red Flags)",
+              "points": [
+                "Méléna",
+                "Modification récente du transit après 50 ans",
+                "Occlusion (arrêt gaz/selles, distension)",
+                "Perte de poids inexpliquée",
+                "Anémie ferriprive"
+              ]
+            },
+            {
+              "titre": "👉 Diagnostics différentiels",
+              "points": [
+                "Cancer colorectal",
+                "Polypes coliques compliqués",
+                "Occlusion basse (tumeur, volvulus)",
+                "MICI (Crohn, RCH)",
+                "Ischémie mésentérique chronique",
+                "SII (diagnostic d’exclusion)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas banaliser troubles du transit >50 ans",
+                "Oublier le TR systématique",
+                "Proposer coloscopie trop tardivement",
+                "Confondre fausse diarrhée du constipé avec diarrhée vraie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer colorectal",
+                  "reponse": {
+                    "pour": [
+                      "Âge > 50 ans",
+                      "Modification récente du transit",
+                      "Méléna",
+                      "Distension abdominale",
+                      "Antécédent familial"
+                    ],
+                    "contre": [
+                      "Pas encore de rectorragies franches"
+                    ]
+                  }
+                },
+                {
+                  "question": "Polypes coliques",
+                  "reponse": {
+                    "pour": [
+                      "Troubles du transit",
+                      "Saignement possible"
+                    ],
+                    "contre": [
+                      "Signes d’occlusion plus marqués"
+                    ]
+                  }
+                },
+                {
+                  "question": "MICI",
+                  "reponse": {
+                    "pour": [
+                      "Alternance diarrhée/constipation possible"
+                    ],
+                    "contre": [
+                      "Âge tardif",
+                      "Pas de rectorragies typiques",
+                      "Pas de syndrome dysentérique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Ischémie mésentérique chronique",
+                  "reponse": {
+                    "pour": [
+                      "Douleurs post-prandiales",
+                      "Amaigrissement"
+                    ],
+                    "contre": [
+                      "Pas de contexte vasculaire franc",
+                      "Douleurs non post-prandiales"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, ferritine",
+                    "CRP, ionogramme, créatinine",
+                    "Coloscopie totale avec biopsies",
+                    "Scanner TAP avec contraste",
+                    "Gastroscopie si doute sur saignement haut"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Suspicion forte cancer colorectal compliqué d’une sub-occlusion, confirmation par coloscopie et biopsies"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation si occlusion/saignement",
+                      "Réhydratation IV",
+                      "Correction anémie",
+                      "Repos digestif"
+                    ],
+                    "specifique": [
+                      "Chirurgie curative avec exérèse tumorale + curage ganglionnaire",
+                      "Chimiothérapie adjuvante selon stade",
+                      "Radiochimiothérapie si localisation rectale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Coloscopie de contrôle selon recommandations",
+                    "Scanner TAP régulier",
+                    "Surveillance CEA",
+                    "Dépistage familial",
+                    "Suivi nutritionnel et psychologique"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

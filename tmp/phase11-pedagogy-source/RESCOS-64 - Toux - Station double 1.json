@@ -1,0 +1,773 @@
+{
+  "title": "RESCOS-64 - Toux - Station double 1",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Denise Dumont, 61 ans, consulte pour l'exacerbation d'une toux chronique et l'apparition depuis 4 jours de crachats de sang rouge",
+    "vitals": {
+      "ta": "155/90 mmHg",
+      "fc": "68 bpm",
+      "temperature": "36.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.4,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de l'hémoptysie",
+          "binaryOnly": false,
+          "details": [
+            "Début et durée [depuis 4 jours]",
+            "Quantité [fond d'un mouchoir, pas abondant]",
+            "Aspect du sang [rouge frais, mélangé aux crachats]",
+            "Évolution [pas d'aggravation récente]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Histoire de la toux chronique",
+          "binaryOnly": false,
+          "details": [
+            "Ancienneté [depuis plusieurs années]",
+            "Horaire habituel [surtout le matin]",
+            "Évolution récente [augmentation depuis 1 mois, toute la journée]",
+            "Caractère des expectorations habituelles [blanches, mousseuses]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes respiratoires associés",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée d'effort [essoufflement dans les escaliers, 3e étage]",
+            "Sibilances [impression de sifflement parfois depuis 2 ans]",
+            "Douleur thoracique [côté droit, apparue il y a 1 mois, 2/10]",
+            "Caractère de la douleur [augmentée par la toux et inspiration profonde]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents respiratoires",
+          "binaryOnly": false,
+          "details": [
+            "BPCO suspectée par médecin traitant [il y a 2 ans, refus d'examens]",
+            "Épisodes de bronchite [1 par an, crachats jaunes-verts, antibiotiques]",
+            "Absence de tuberculose connue [pas de diagnostic antérieur]",
+            "Participation aux campagnes de dépistage [radiophotographie il y a 20 ans]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque et habitudes",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme actif [1 paquet/jour depuis 35 ans]",
+            "Profession [chauffeur de taxi - exposition]",
+            "Consommation d'alcool [1 verre de vin le week-end]",
+            "Absence de toxiques"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes généraux et signes d'alarme",
+          "binaryOnly": false,
+          "details": [
+            "Perte de poids [4 kg ces derniers mois, involontaire]",
+            "Absence de fièvre [pas de syndrome infectieux]",
+            "Absence de sudations nocturnes",
+            "Absence de fatigue anormale"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Signes négatifs importants",
+          "binaryOnly": false,
+          "details": [
+            "Pas d'œdèmes des membres inférieurs",
+            "Pas de troubles du sommeil respiratoires [pas de réveils nocturnes]",
+            "Pas de voyage récent",
+            "Pas d'immobilisation ou antécédent thromboembolique"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents personnels et familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Absence de maladie cardiaque [pas de souffle, pas de rhumatisme articulaire]",
+            "Antécédents familiaux [parents vivants sans pathologie respiratoire]",
+            "Absence d'antécédent familial de tuberculose ou embolie",
+            "Suivi gynécologique régulier [mammographie normale il y a 1 mois]"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments et allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucun médicament, aucune allergie connue"
+        },
+        {
+          "id": "a10",
+          "text": "Contexte social et professionnel",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [mariée, sans enfants]",
+            "Profession [chauffeur de taxi]",
+            "Impact sur la qualité de vie [inquiétude concernant le cancer]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.3,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen général et signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation de l'état général",
+            "Mesure de la fréquence respiratoire [16/min]",
+            "Évaluation des signes de détresse respiratoire",
+            "Recherche de cyanose"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "Inspection thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection statique du thorax",
+            "Évaluation de la symétrie respiratoire",
+            "Recherche de déformation thoracique",
+            "Évaluation du tirage et de l'ampliation"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des vibrations vocales",
+            "Recherche de douleur à la palpation [côté droit]",
+            "Évaluation de l'ampliation thoracique",
+            "Palpation des aires ganglionnaires (sus-claviculaires, axillaires)"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Percussion pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Percussion systématique des deux champs pulmonaires",
+            "Recherche de matité [pas de matité trouvée]",
+            "Évaluation de la sonorité pulmonaire",
+            "Délimitation des bases pulmonaires"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation systématique des deux champs pulmonaires",
+            "Identification des sibilances [quelques sibilances sur les 2 champs]",
+            "Recherche de râles crépitants ou sous-crépitants",
+            "Évaluation du murmure vésiculaire"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque systématique",
+            "Recherche de signes d'insuffisance cardiaque droite",
+            "Évaluation des pouls périphériques",
+            "Recherche d'œdèmes des membres inférieurs"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen ORL et recherche d'adénopathies",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des aires ganglionnaires cervicales",
+            "Examen de la cavité buccale",
+            "Palpation des aires ganglionnaires sus-claviculaires",
+            "Recherche d'adénopathies axillaires"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Recherche de signes extrarespiratoires",
+          "binaryOnly": false,
+          "details": [
+            "Recherche d'hippocratisme digital",
+            "Examen cutané (recherche de métastases)",
+            "Palpation abdominale (hépatomégalie)",
+            "Évaluation neurologique de base"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.2,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal et diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Cancer pulmonaire (forte suspicion)",
+            "BPCO avec exacerbation",
+            "Tuberculose pulmonaire",
+            "Bronchectasies"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non",
+          "ddSection": {
+            "title": "Diagnostics différentiels de l'hémoptysie",
+            "categories": [
+              {
+                "name": "Causes néoplasiques :",
+                "items": [
+                  {
+                    "text": "Cancer bronchopulmonaire primitif",
+                    "test": "→ CT thoracique, fibroscopie bronchique avec biopsie"
+                  },
+                  {
+                    "text": "Métastases pulmonaires",
+                    "test": "→ CT thoraco-abdomino-pelvien, recherche du primitif"
+                  }
+                ]
+              },
+              {
+                "name": "Causes infectieuses :",
+                "items": [
+                  {
+                    "text": "Tuberculose pulmonaire",
+                    "test": "→ Recherche de BK dans les expectorations, test tuberculinique"
+                  },
+                  {
+                    "text": "Pneumonie avec abcédation",
+                    "test": "→ Radiographie thoracique, hémocultures"
+                  },
+                  {
+                    "text": "Bronchectasies infectées",
+                    "test": "→ CT thoracique haute résolution"
+                  }
+                ]
+              },
+              {
+                "name": "Causes cardiovasculaires :",
+                "items": [
+                  {
+                    "text": "Embolie pulmonaire",
+                    "test": "→ D-dimères, angio-CT pulmonaire"
+                  },
+                  {
+                    "text": "Œdème pulmonaire aigu",
+                    "test": "→ Radiographie thoracique, BNP/NT-proBNP"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes :",
+                "items": [
+                  {
+                    "text": "BPCO avec exacerbation",
+                    "test": "→ Spirométrie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Diathèse hémorragique",
+                    "test": "→ Bilan de coagulation, numération plaquettaire"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique (face et profil)",
+            "FSC avec plaquettes",
+            "Bilan de coagulation (TP, TCA)",
+            "Ionogramme, créatinine, urée"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens de seconde intention",
+          "binaryOnly": false,
+          "details": [
+            "CT thoracique avec injection",
+            "Fibroscopie bronchique avec lavage et biopsie",
+            "Recherche de BK dans les expectorations (3 prélèvements)",
+            "Spirométrie complète"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires selon orientation",
+          "binaryOnly": false,
+          "details": [
+            "CT thoraco-abdomino-pelvien (si suspicion néoplasique)",
+            "PET scan (bilan d'extension)",
+            "Échocardiographie (si suspicion cardiaque)",
+            "Angio-CT pulmonaire (si suspicion d'embolie)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Arrêt du tabac immédiat et accompagnement",
+            "Consultation pneumologique urgente",
+            "Surveillance clinique (quantité hémoptysie, état respiratoire)",
+            "Information et rassurance de la patiente"
+          ],
+          "scoringRule": "Au moins trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Surveillance et suivi",
+          "binaryOnly": false,
+          "details": [
+            "Surveillance de l'abondance de l'hémoptysie",
+            "Réévaluation rapide si aggravation",
+            "Coordination avec le pneumologue",
+            "Planification des examens complémentaires"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Denise Dumont",
+      "age": "61 ans",
+      "contexte": "Cabinet d'un médecin généraliste, la Dresse Dupuis",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens vous voir parce que, depuis 4 jours, je crache et il y a du sang, cela m'inquiète",
+        "autreChose": "Non, le reste ça va, ce sont ces crachats qui m'inquiètent"
+      },
+      "histoireActuelle": {
+        "touxExpectorations": [
+          "Je tousse depuis plusieurs années, surtout le matin, avec des crachats en général blancs, mousseux.",
+          "D'habitude je tousse le matin mais depuis 1 mois je trouve que je tousse plus durant la journée (sans avoir plus de crachats, qui sont restés clairs)",
+          "Mon médecin m'avait dit que j'avais peut-être une bronchite chronique (BPCO) mais je n'ai pas voulu faire de tests ni prendre de traitement pour ça.",
+          "Quand j'ai une bronchite, les crachats sont jaunes, parfois verts. J'ai en général une bronchite par année, qui a tendance à durer et le docteur m'a parfois donné des antibiotiques pour la couper.",
+          "Depuis 4 jours, j'ai remarqué du sang dans les crachats. C'est ce qui m'a motivée à venir consulter.",
+          "Ce n'est pas un gros saignement, les crachats sont sanglants, rouge frais, pas plus abondants que d'habitude (fond d'un mouchoir).",
+          "À part le rouge, je n'ai pas remarqué que mes crachats étaient devenus jaunes ou verts ces derniers temps."
+        ],
+        "douleur": [
+          "Je sens une vague douleur au niveau de la poitrine à droite (sur le côté au niveau du sein)",
+          "Elle est apparue il y a environ 1 mois",
+          "Pas très forte (si demandé: 2/10) mais gênante",
+          "La douleur augmente quand je tousse ou quand je respire profondément (pas aggravée au mouvement)"
+        ],
+        "essoufflement": [
+          "Je me sens un peu plus essoufflée par rapport à d'habitude (j'habite un appartement au 3e étage sans ascenseur, j'y arrive essoufflée !)",
+          "Je n'ai pas d'asthme mais l'impression que ça siffle un peu parfois (si demandé: depuis 2 ans)",
+          "Je ne me réveille pas la nuit avec de la peine à respirer, pas besoin d'oreillers supplémentaires"
+        ],
+        "poids": [
+          "J'ai perdu du poids",
+          "J'ai perdu 4 kg",
+          "Ces derniers mois, sans faire de régime"
+        ],
+        "symptomesNegatifs": [
+          "Pas de problème dans les jambes (jambe enflée, douloureuse, rouge...)",
+          "Pas de chevilles enflées",
+          "Pas de fièvre, pas de sudation",
+          "Pas d'épisode de bronchite récemment",
+          "Pas de maladie ou problème cardiaque (p.ex souffle au cœur, rhumatisme articulaire aigu dans la jeunesse)",
+          "Pas de douleurs articulaires, ma voix n'a pas changé",
+          "Pas de fatigue",
+          "Pas de voyage, pas d'immobilité, pas d'antécédent de thrombose ou d'embolie pulmonaire",
+          "Contrôles gynécologiques 1 x/an avec mammographie de contrôle, dernière il y a 1 mois, résultat normal"
+        ]
+      },
+      "antecedents": [
+        "Il y a 2 ans mon médecin traitant m'avait parlé de bronchite chronique (BPCO). Il m'avait proposé des examens pour les poumons mais je n'ai pas voulu les faire parce que je me sentais bien.",
+        "On ne m'a jamais parlé de tuberculose, et pourtant, il y a 20 ans, je passais souvent dans le camion de la radiophotographie."
+      ],
+      "habitudes": {
+        "medicaments": "Aucun",
+        "alcool": "pas régulièrement, 1 verre de vin le week-end",
+        "tabac": "Oui je fume (si demandé : 1 paquet par jour / depuis 35 ans)",
+        "allergie": "Pas d'allergie"
+      },
+      "situationSocioProfessionnelle": [
+        "Mariée, sans enfant",
+        "Chauffeur de taxi"
+      ],
+      "histoireFamiliale": [
+        "Père (88 ans) et mère (85 ans) sans problème de santé.",
+        "Pas d'embolie pulmonaire ni tuberculose dans la famille."
+      ],
+      "examenClinique": [
+        "Habits de ville, haut facile à enlever",
+        "Pas de simulations à l'examen physique, cartes données par l'examinateur-trice"
+      ],
+      "finConsultation": [
+        "Si l'étudiant-e vous demande ce que vous pensez avoir: « Ces crachats de sang m'inquiètent, j'ai peur d'avoir un cancer ».",
+        "L'étudiant-e terminera la consultation en vous demandant de l'attendre pendant qu'il va discuter avec son collègue pneumologue."
+      ]
+    },
+    "interventionsExpert": {
+      "titre": "Interventions de l'expert",
+      "interventions": [
+        {
+          "numero": 1,
+          "moment": "examen clinique",
+          "instruction": "Dire quand l'étudiant-e mesure la fréquence respiratoire:",
+          "message": "Fréquence respiratoire à 16/min"
+        },
+        {
+          "numero": 2,
+          "moment": "examen clinique",
+          "instruction": "Dire quand l'étudiant-e a fini d'examiner les poumons",
+          "message": "Quelques sibilances sur les 2 plages, pas de matité"
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🫁 Toux – Diagnostic final : Cancer pulmonaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes respiratoires",
+              "points": [
+                "Toux chronique ± hémoptysie",
+                "Dyspnée progressive",
+                "Douleur thoracique",
+                "Sifflements respiratoires"
+              ]
+            },
+            {
+              "titre": "Symptômes systémiques ou extra-pulmonaires",
+              "points": [
+                "Perte de poids, fatigue, fièvre",
+                "Dysphagie (compression œsophagienne)",
+                "Enrouement (atteinte du nerf laryngé récurrent)",
+                "Infections respiratoires récidivantes",
+                "Syndrome cave supérieur (œdème tête/cou, cyanose)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Tabagisme (actuel ou passé)",
+                "Exposition professionnelle (amiante, silice, radon)",
+                "Âge > 45 ans",
+                "ATCD familiaux ou personnels de néoplasie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Râles localisés, matité à la percussion",
+                "Syndrome cave supérieur",
+                "Clubbing digital (hippocratisme)",
+                "Signes de métastases : hépatomégalie, douleurs osseuses",
+                "Troubles neurologiques si atteinte cérébrale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie thoracique (1ère intention)",
+                "Scanner thoracique injecté : caractérisation du nodule ou masse",
+                "PET-Scan pour le bilan d'extension",
+                "IRM cérébrale si signes neurologiques"
+              ]
+            },
+            {
+              "titre": "Biopsie et analyse histologique",
+              "points": [
+                "Fibroscopie avec biopsie transbronchique pour les lésions centrales",
+                "Ponction transthoracique guidée pour lésions périphériques",
+                "Analyse immunohistochimique et recherche de mutations (EGFR, ALK, PD-L1, etc.)"
+              ]
+            },
+            {
+              "titre": "Bilans biologiques",
+              "points": [
+                "NFS : anémie ou thrombopénie",
+                "Bilan hépatique et phosphatases alcalines (métastases)",
+                "LDH : parfois augmenté"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Stratégie thérapeutique",
+              "points": [
+                "Référer en pneumo-oncologie",
+                "Chirurgie si tumeur localisée (souvent NSCLC)",
+                "Chimiothérapie ± immunothérapie ± radiothérapie selon le stade et le type histologique",
+                "Traitement des complications (pleurésie maligne, syndrome cave)"
+              ]
+            },
+            {
+              "titre": "Support symptomatique",
+              "points": [
+                "Oxygénothérapie si hypoxie",
+                "Antalgiques (palier selon douleur)",
+                "Antitussifs si toux invalidante",
+                "Kinésithérapie respiratoire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toux chronique chez un patient tabagique = toujours penser au cancer",
+            "Red flags : hémoptysie, amaigrissement, enrouement, infections récidivantes",
+            "Radiographie thoracique normale n’exclut pas un cancer → scanner si suspicion",
+            "Biopsie indispensable pour confirmer le diagnostic",
+            "Référer précocement en oncologie"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux chronique avec hémoptysie (Suspicion cancer pulmonaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte, motif (toux chronique, hémoptysie)",
+            "Caractériser la toux → ancienneté, évolution, productivité, horaire",
+            "Hémoptysie → depuis quand, quantité, sang frais ou digéré, stable ou aggravé",
+            "Symptômes associés → dyspnée, douleur thoracique, sibilances, sueurs nocturnes, perte de poids",
+            "Facteurs de risque → tabac, exposition professionnelle, ATCD pulmonaires",
+            "ATCD médicaux, chirurgicaux, familiaux",
+            "Examen clinique ciblé → auscultation, recherche adénopathies, hippocratisme digital",
+            "Résumé + hypothèse principale (cancer) + DD (BPCO, tuberculose, bronchectasies, EP)",
+            "Examens complémentaires → radio thorax, scanner thoracique, fibroscopie avec biopsie, expectorations pour BK",
+            "Prise en charge immédiate → arrêt tabac, orientation pneumologie, surveillance hémoptysie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : HEMO",
+            "elements": [
+              "H = Hémoptysie (quantité, qualité)",
+              "E = Évolution toux/dyspnée",
+              "M = Malignité (facteurs de risque, perte de poids)",
+              "O = Orientation examens (Rx, CT, bronchoscopie)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Denise Dumont, 61 ans, chauffeur de taxi, qui consulte pour une toux chronique aggravée et l’apparition de crachats sanglants depuis 4 jours.\n\nElle décrit une toux ancienne, présente depuis plusieurs années, surtout le matin, avec des expectorations blanches mousseuses. Depuis environ un mois, la toux est devenue plus fréquente toute la journée, sans augmentation nette des crachats. Elle rapporte une douleur thoracique du côté droit apparue il y a un mois, modérée à 2 sur 10, augmentée par la toux et l’inspiration profonde. Elle dit aussi être plus essoufflée dans les escaliers, alors qu’auparavant elle les montait sans trop de difficulté.\n\nDepuis 4 jours, ses crachats contiennent du sang rouge frais, en petite quantité, de l’ordre du fond d’un mouchoir, sans aggravation récente. Elle n’a pas eu de fièvre, pas de sueurs nocturnes, mais elle rapporte une perte de poids involontaire de 4 kilos ces derniers mois. Pas de fatigue anormale.\n\nPour ses antécédents, son médecin avait suspecté une BPCO il y a 2 ans, mais elle avait refusé les explorations car elle se sentait bien. Elle présente environ un épisode de bronchite par an, traité parfois par antibiotiques. Elle n’a jamais eu de diagnostic de tuberculose. Elle fume un paquet de cigarettes par jour depuis 35 ans. Elle ne prend pas de traitement, n’a pas d’allergies connues. Elle boit un verre de vin le week-end. Elle est mariée, sans enfants, et travaille comme chauffeur de taxi. Dans sa famille, ses parents sont vivants et en bonne santé, sans pathologie respiratoire connue.\n\nÀ l’examen, ses constantes sont : tension artérielle 155/90, fréquence cardiaque 68 par minute, température 36,9°C, fréquence respiratoire 16 par minute, saturation correcte. Elle est en état général conservé. L’inspection est normale. La palpation ne retrouve pas de matité. À l’auscultation, on note quelques sibilances bilatérales, mais pas de crépitants. Pas de cyanose, pas d’œdème des membres inférieurs, pas d’adénopathies cervicales palpables, pas d’hippocratisme digital.\n\nEn résumé, il s’agit d’une femme de 61 ans, tabagique chronique, qui présente une toux chronique aggravée, compliquée par une hémoptysie récente, associée à une perte de poids. Mon hypothèse principale est un cancer bronchopulmonaire. Les diagnostics différentiels incluent une BPCO exacerbée, une tuberculose pulmonaire, des bronchectasies ou une embolie pulmonaire.\n\nComme examens complémentaires, je demanderais en première intention une radiographie thoracique, une NFS et un bilan de coagulation. Ensuite, un scanner thoracique injecté et une fibroscopie bronchique avec biopsies seraient nécessaires. J’ajouterais trois examens d’expectorations pour rechercher une tuberculose. Une spirométrie et, selon le contexte, un PET scan ou un scanner thoraco-abdomino-pelvien compléteraient le bilan.\n\nEn termes de prise en charge immédiate, je recommanderais un arrêt du tabac avec accompagnement, une orientation rapide en pneumologie, une surveillance de l’hémoptysie et une information claire de la patiente. Si un cancer est confirmé, la prise en charge devra être discutée en oncologie."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Dumont, 61 ans, présente toux chronique aggravée et hémoptysie depuis 4 jours.\n\nB (Background) : Tabagisme actif 35 PA, BPCO suspectée non explorée, perte de poids récente 4 kg.\n\nA (Assessment) : Suspicion forte cancer bronchopulmonaire. DD : BPCO exacerbée, tuberculose, bronchectasies.\n\nR (Recommendation) : Radio thorax immédiate, bilan biologique et coagulation, CT thoracique injecté, fibroscopie avec biopsie, orientation pneumo-oncologie, arrêt tabac."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Red flags hémoptysie",
+              "points": [
+                "Sang rouge frais",
+                "Perte de poids involontaire",
+                "Tabagisme chronique",
+                "Douleur thoracique",
+                "Âge > 50 ans"
+              ]
+            },
+            {
+              "titre": "Principaux DD hémoptysie",
+              "points": [
+                "Cancer bronchopulmonaire",
+                "Tuberculose",
+                "BPCO exacerbée",
+                "Bronchectasies",
+                "Embolie pulmonaire"
+              ]
+            },
+            {
+              "titre": "⚠️ Urgence si hémoptysie massive",
+              "points": [
+                "> 200 mL/24h",
+                "Risque asphyxie",
+                "Appel réanimation + intubation possible"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer bronchopulmonaire",
+                  "reponse": {
+                    "pour": [
+                      "Tabagisme chronique 35 PA",
+                      "Âge 61 ans",
+                      "Hémoptysie récente",
+                      "Perte de poids involontaire",
+                      "Toux chronique aggravée"
+                    ],
+                    "contre": [
+                      "Pas de masse palpable, pas de crépitants (mais non spécifiques)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Tuberculose",
+                  "reponse": {
+                    "pour": [
+                      "Hémoptysie",
+                      "Amaigrissement"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de sueurs nocturnes",
+                      "Pas de contage connu"
+                    ]
+                  }
+                },
+                {
+                  "question": "BPCO exacerbée",
+                  "reponse": {
+                    "pour": [
+                      "Toux chronique productive",
+                      "Tabagisme chronique",
+                      "Sibilances à l’auscultation"
+                    ],
+                    "contre": [
+                      "Hémoptysie atypique",
+                      "Pas de surinfection récente"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "Radiographie thorax",
+                    "NFS et plaquettes",
+                    "Bilan de coagulation",
+                    "CT thoracique avec injection",
+                    "Fibroscopie bronchique avec biopsie",
+                    "Expectorations ×3 pour BK"
+                  ],
+                  "analyse": "👉 Analyse orale : « La radio est le premier examen, le scanner et la fibroscopie permettent de confirmer le diagnostic. Les expectorations recherchent une tuberculose. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Suspicion de cancer bronchopulmonaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": [
+                    "Arrêt tabac immédiat",
+                    "Orientation pneumologie/oncologie",
+                    "Confirmation histologique (biopsie)",
+                    "PEC selon stade (chirurgie, chimio, radio, immuno)",
+                    "Traitement symptomatique : antitussifs, antalgiques"
+                  ]
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance hémoptysie",
+                    "Coordination pneumologue-oncologue",
+                    "Stadification (PET scan, CT TAP, IRM cérébrale)",
+                    "Soutien psychologique",
+                    "Soins de support si avancé"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au triptyque « Voir – Prouver – Traiter » : Voir (imagerie), Prouver (biopsie), Traiter (oncologie)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

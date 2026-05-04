@@ -1,0 +1,468 @@
+{
+  "title": "German-3 - Allaitement - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de pédiatrie",
+    "patient": "Mme Martin, accompagnée de son fils de 2 mois, consulte pour difficultés alimentaires",
+    "vitals": {
+      "temperature": "37.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation - plaintes de la mère",
+          "binaryOnly": true,
+          "patientComment": "Il ne veut tout simplement pas boire et je le trouve très maigre !"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation du problème alimentaire",
+          "details": [
+            "Début des symptômes [déjà depuis le début, peu de prise]",
+            "Évolution dans le temps [toujours à peu près pareil]",
+            "Mode d'alimentation [allaitement maternel exclusif]",
+            "Comportement alimentaire global"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Quantification des prises alimentaires",
+          "details": [
+            "Quantité par tétée [100 ml]",
+            "Quantité totale par jour [450 ml]",
+            "Nombre de tétées par jour [j'essaie toujours à nouveau]",
+            "Durée des tétées [environ 10 minutes, il a si vite assez !]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Comportement de l'enfant pendant l'allaitement",
+          "details": [
+            "Demande spontanée de nourriture [oui]",
+            "Comportement lors de la prise [très goulûment !]",
+            "Réaction pendant/après l'allaitement [crie parfois quand il n'en veut plus]",
+            "Signes de satiété précoce"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes digestifs associés",
+          "details": [
+            "Régurgitations/rots [oui, assez fréquemment]",
+            "Vomissements [non]",
+            "Transit intestinal [normal]",
+            "Ballonnements ou distension abdominale [non mentionnés]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Signes de douleur ou d'inconfort",
+          "details": [
+            "Pleurs inexpliqués [pleure rarement]",
+            "Signes de douleur pendant/après les tétées [je ne crois pas]",
+            "Coliques du nourrisson [non mentionnées]",
+            "Irritabilité générale [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Recherche de signes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Signes d'infection [non]",
+            "Fatigue excessive [non mentionnée]",
+            "Autres symptômes associés"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Évaluation de l'allaitement maternel",
+          "details": [
+            "Temps disponible pour allaiter [souvent un peu stressée]",
+            "Technique d'allaitement [on ne peut pas faire grand-chose de mal là-dedans, n'est-ce pas ?!]",
+            "Production lactée [suffisante - oui]",
+            "État des mamelons [pas de pathologie]",
+            "Douleurs lors de l'allaitement [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents périnataux",
+          "details": [
+            "Terme de naissance [38+3 SA - à terme]",
+            "Poids de naissance [2800g = p10]",
+            "Taille de naissance [51cm = p25-p50]",
+            "Périmètre crânien de naissance [35,2cm = p50]",
+            "Adaptation néonatale [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Croissance actuelle",
+          "details": [
+            "Poids actuel [4,5 kg = p10]",
+            "Taille actuelle [je ne sais pas]",
+            "Périmètre crânien actuel [je ne sais pas]",
+            "Évolution des courbes de croissance"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents obstétricaux",
+          "details": [
+            "Déroulement de la grossesse [normal]",
+            "Complications gravidiques [non]",
+            "Exposition à des toxiques [non]",
+            "Médications pendant la grossesse [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents médicaux de l'enfant",
+          "details": [
+            "Hospitalisations antérieures [non]",
+            "Maladies chroniques [non]",
+            "Médications actuelles [non]",
+            "Vaccinations [la première est prévue]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Contexte familial et psychosocial",
+          "details": [
+            "Configuration familiale [père présent à la maison - oui]",
+            "Dynamique familiale [famille heureuse]",
+            "Fratrie [fille de 2 ans, buvait plus et n'était pas si mince]",
+            "Soutien familial disponible"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "patientComment": "Aucune maladie connue dans la famille",
+          "details": [
+            "Troubles digestifs familiaux",
+            "Allergies alimentaires",
+            "Troubles de croissance",
+            "Maladies métaboliques"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Facteurs de risque psychosociaux",
+          "details": [
+            "Stress maternel [souvent stressée lors de l'allaitement]",
+            "Anxiété parentale concernant l'alimentation",
+            "Dépression post-partum [non mentionnée]",
+            "Difficultés d'attachement [non apparentes]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et systématique bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général et signes vitaux",
+          "details": [
+            "Aspect général [bon état général]",
+            "Coloration cutanée [rosée]",
+            "Température [37.0°C]",
+            "Fréquence cardiaque [normale pour l'âge]",
+            "Fréquence respiratoire [normale pour l'âge]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Évaluation de l'hydratation",
+          "details": [
+            "Turgor cutané [normal]",
+            "Temps de recoloration capillaire [normal]",
+            "Muqueuses [humides]",
+            "Production d'urine [normale]",
+            "Larmes présentes [oui]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique du nourrisson",
+          "details": [
+            "État de conscience [éveillé, réactif]",
+            "Tonus musculaire [normal]",
+            "Réflexe de succion [présent et efficace]",
+            "Réflexe de préhension [présent]",
+            "Fontanelles [normales - ni bombées ni déprimées]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen de la cavité buccale",
+          "details": [
+            "Inspection de la bouche [normale]",
+            "Recherche de muguet [absent]",
+            "Frein de langue [normal]",
+            "Palais [normal, pas de fente]",
+            "Pharynx [normal]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen ORL",
+          "details": [
+            "Inspection du nez [normal, perméable]",
+            "Otoscopie bilatérale [tympans normaux]",
+            "Recherche d'obstruction nasale"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cardio-pulmonaire",
+          "details": [
+            "Auscultation cardiaque [normale, pas de souffle]",
+            "Auscultation pulmonaire [normale, murmure vésiculaire symétrique]",
+            "Recherche de signes de détresse respiratoire [absents]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen abdominal",
+          "details": [
+            "Inspection [normal, pas de distension]",
+            "Palpation [souple, indolore]",
+            "Recherche d'organomégalie [absente]",
+            "Bruits hydroaériques [présents, normaux]",
+            "Orifices herniaires [libres]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation anthropométrique",
+          "details": [
+            "Poids actuel et percentile [4,5 kg = p10]",
+            "Rapport poids/taille",
+            "Évolution sur les courbes [poids sur p10-25, reste sur p25-50]",
+            "Signes de malnutrition [absents]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Observation d'une tétée",
+          "details": [
+            "Position du bébé",
+            "Prise du sein",
+            "Efficacité de la succion",
+            "Comportement pendant la tétée",
+            "Signes de fatigue"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique complet et adapté bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Difficultés alimentaires avec prise insuffisante, possiblement liées à une satiété précoce par aérophagie lors de tétées goulues"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 5 diagnostics pertinents = 2 pts, 3-4 = 1 pt, moins de 3 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Problèmes liés à l'allaitement",
+                    "cause": "Arguments POUR:\n\t□ mauvaise technique, stress maternel",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Reflux gastro-œsophagien",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie si sévère, observation clinique"
+                  },
+                  {
+                    "text": "Allergie aux protéines de lait de vache",
+                    "cause": "□ APLV",
+                    "test": "→ Tests allergologiques, régime d'éviction"
+                  },
+                  {
+                    "text": "Pathologie digestive organique",
+                    "cause": "Arguments POUR:\n\t□ sténose du pylore, malrotation",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Cardiopathie congénitale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Troubles métaboliques",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Infections chroniques",
+                    "cause": "□ urinaire, ORL",
+                    "test": "→ NFS, CRP, ECBU, hémocultures selon contexte"
+                  },
+                  {
+                    "text": "Troubles de la déglutition",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Anémie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hypothyroïdie congénitale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "NFS (recherche d'anémie)",
+            "Ionogramme, urée, créatinine",
+            "Bilan hépatique si indiqué",
+            "TSH si suspicion d'hypothyroïdie",
+            "Analyse d'urine (ECBU)",
+            "US abdominale si suspicion de pathologie digestive",
+            "PH-métrie si suspicion de RGO sévère",
+            "Test d'élimination-réintroduction si suspicion d'APLV"
+          ],
+          "scoringRule": "Examens pertinents et justifiés = 2 pts"
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Optimisation de l'allaitement",
+                "content": "• Consultation spécialisée en lactation\n• Évaluation et correction de la technique d'allaitement\n• Positions d'allaitement adaptées (biological nurturing)\n• Gestion du réflexe d'éjection fort si présent\n• Fractionnement des tétées si nécessaire"
+              },
+              {
+                "title": "Gestion de l'aérophagie",
+                "content": "• Pauses fréquentes pendant la tétée pour faire roter\n• Position verticale après les tétées (30 minutes)\n• Massage abdominal doux\n• Éviter la succion trop rapide"
+              },
+              {
+                "title": "Soutien maternel",
+                "content": "• Réduction du stress maternel\n• Organisation du temps pour l'allaitement\n• Soutien psychologique si nécessaire\n• Implication du père dans les soins\n• Groupes de soutien à l'allaitement"
+              },
+              {
+                "title": "Surveillance nutritionnelle",
+                "content": "• Pesées hebdomadaires\n• Tenue d'un journal alimentaire\n• Calcul des apports hydriques quotidiens\n• Surveillance de la diurèse (nombre de couches mouillées)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Plan de suivi",
+          "details": [
+            "Contrôle pondéral dans 1 semaine",
+            "Réévaluation de l'efficacité de l'allaitement",
+            "Suivi des courbes de croissance",
+            "Ajustement du plan selon l'évolution",
+            "Orientation vers consultant en lactation si pas d'amélioration"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Éducation et conseils aux parents",
+          "details": [
+            "Signes de bonne prise alimentaire",
+            "Signes d'alarme nécessitant une consultation",
+            "Importance de la surveillance pondérale",
+            "Normalité des variations individuelles",
+            "Ressources disponibles (consultante en lactation, groupes de soutien)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Critères d'hospitalisation",
+          "redflagsSection": [
+            {
+              "text": "Perte de poids > 10% du poids de naissance"
+            },
+            {
+              "text": "Déshydratation clinique"
+            },
+            {
+              "text": "Léthargie ou altération de l'état général"
+            },
+            {
+              "text": "Vomissements répétés"
+            },
+            {
+              "text": "Absence de prise de poids après 2 semaines"
+            },
+            {
+              "text": "Signes de malnutrition sévère"
+            }
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Alternatives si échec de l'allaitement",
+          "details": [
+            "Compléments au lait maternel tiré",
+            "Utilisation du DAL (dispositif d'aide à la lactation)",
+            "Introduction progressive de préparation pour nourrissons",
+            "Maintien de l'allaitement mixte si souhaité"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète, personnalisée et basée sur les preuves"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

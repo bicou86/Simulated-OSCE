@@ -1,0 +1,734 @@
+{
+  "title": "USMLE Triage 27 - Fatigue et Ecchymoses",
+  "context": {
+    "setting": "Consultation médicale",
+    "patient": "John Clarkson, un homme de 62 ans, se présente avec des plaintes de fatigue et d'ecchymoses.",
+    "vitals": {
+      "ta": "140/85 mmHg",
+      "temperature": "36.9°C",
+      "fc": "66 bpm",
+      "fr": "12/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour M. Clarkson, je suis le Dr Wanik.",
+            "Je comprends que vous avez de la fatigue et des ecchymoses cutanées.",
+            "Pouvez-vous me dire ce qui se passe ?"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fatigue",
+          "details": [
+            "Durée [vraiment épuisé depuis 3 semaines]",
+            "Sévérité [mal à garder yeux ouverts]",
+            "Impact travail [pilote remorqueur, pas endormi au travail]",
+            "Type fatigue [os et corps font mal]",
+            "Constante [fatigue constante]",
+            "Augmentation récente [vraiment augmenté 3 dernières semaines]",
+            "Jamais eu avant [jamais vraiment eu ça]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous changé vos horaires de travail ?",
+            "Est-ce que cela a commencé il y a 3 semaines ?",
+            "Je parie que c'est difficile avec concentration requise."
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Habitudes de sommeil et contexte professionnel",
+          "details": [
+            "Pilote remorqueur fleuve [19 ans]",
+            "Horaires jour [lever au coucher soleil]",
+            "Sommeil régulier [23h à 6h, comme horloge]",
+            "Pas difficultés sommeil [n'a plus besoin réveil]",
+            "Corps habitué horaire [19 ans travail]"
+          ],
+          "exemplesPhrases": [
+            "Quelles sont vos heures de sommeil la nuit ?",
+            "Des difficultés à dormir ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation des ecchymoses",
+          "details": [
+            "Grosses ecchymoses [regarder celles-ci]",
+            "Localisation [bras et hanche]",
+            "Se cogne souvent [mais jamais causé ça]",
+            "Disproportionnées [énormes, pas souvenir impact fort]",
+            "Durée [dernières semaines]",
+            "Hanche droite [depuis au moins 2 semaines]"
+          ],
+          "exemplesPhrases": [
+            "Parlez-moi de ces ecchymoses cutanées.",
+            "Quand ont-elles commencé à apparaître ?",
+            "Je vais vous examiner partout dans quelques minutes."
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Troubles de la coagulation",
+          "details": [
+            "Coupures fréquentes [hameçon, par accident]",
+            "Saignement prolongé [saigné longtemps]",
+            "Nécessité 2ème chiffon [jusqu'à arrêt]",
+            "Inhabituel [bizarre maintenant que mentionné]"
+          ],
+          "exemplesPhrases": [
+            "Vous êtes-vous coupé ou déchiré la peau récemment ?",
+            "A-t-elle saigné longtemps ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes constitutionnels",
+          "details": [
+            "Pas fièvre [n'ai pas eu]",
+            "Pas sueurs nocturnes [ne transpire pas beaucoup]",
+            "Pas céphalées [rarement maux tête]",
+            "Courbatures diffuses [mal partout]",
+            "Douleurs musculaires [dans muscles]",
+            "Sensation os douloureux [os impression faire mal]",
+            "Comme grippe [grande fatigue comme grippe]"
+          ],
+          "exemplesPhrases": [
+            "Autre chose comme de la fièvre ou des sueurs nocturnes ?",
+            "Avez-vous eu des maux de tête ou des douleurs ?",
+            "Ces courbatures se concentrent-elles quelque part ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Appétit et perte de poids",
+          "details": [
+            "Appétit diminué [mange un peu moins]",
+            "Pas faim [pas voulu beaucoup nourriture]",
+            "Perte poids non intentionnelle",
+            "113kg habituellement → 108kg [5kg perdus]",
+            "Surpris perte [pas essayé, juste arrivé]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il de l'alimentation - avez-vous de l'appétit ?",
+            "Avez-vous perdu du poids récemment ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux importants",
+          "details": [
+            "Embolie pulmonaire [il y a 3 mois]",
+            "Crachait sang [sentais horrible]",
+            "TVP origine [caillot venait jambe]",
+            "Médicament important [dit très important]",
+            "Prise quotidienne [tous les jours]",
+            "Fracture bras [il y a 5 ans, accident remorqueur]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous déjà vu le médecin pour quelque chose ?",
+            "Il y a seulement 3 mois, hein ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments actuels",
+          "details": [
+            "Warfarine probable [sonne familier]",
+            "Ajustement selon analyses [médecin ajuste dose]",
+            "Observance correcte [oui, tous jours]",
+            "Aspirine quotidienne [avale tous jours]",
+            "Ibuprofène occasionnel [temps en temps]",
+            "Déteste pilules [haine médicaments]"
+          ],
+          "exemplesPhrases": [
+            "Vous souvenez-vous du médicament que vous prenez ?",
+            "Serait-ce de la Warfarine ?",
+            "Le médecin a-t-il ajusté la dose ?",
+            "Prenez-vous d'autres médicaments ?",
+            "Avez-vous pris de l'ibuprofène récemment ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac actif [1/2 paquet/jour actuellement]",
+            "Ex-gros fumeur [1 paquet/jour × 40 ans]",
+            "Réduction post-EP [depuis caillot]",
+            "Difficile arrêter [40 ans habitude]",
+            "Refuse aide sevrage [j'aime ça, seul vice]",
+            "Pas alcool [pas le temps, pas intéressé]",
+            "Pas drogues [non, pas pour moi]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ou avez-vous déjà fumé ?",
+            "Souhaitez-vous de l'aide pour arrêter ?",
+            "Buvez-vous de l'alcool ?",
+            "Qu'en est-il d'autres drogues ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux et familiaux",
+          "details": [
+            "Appendicectomie [adolescent]",
+            "Divorcé [3 garçons université]",
+            "Travaille dur [pour études enfants]",
+            "Parents décédés [mère 86 ans tabac, père 76 ans cardiaque]",
+            "Frère diabétique [Philadelphie]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il des chirurgies ?",
+            "Êtes-vous marié ?",
+            "Qu'en est-il des maladies majeures dans votre famille ?"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Revue des systèmes négatifs",
+          "details": [
+            "Pas maladie récente [pas rhume/grippe]",
+            "Pas faiblesse/syncope [pas problème]",
+            "Vision normale [remarquerait tout suite]",
+            "Respiration normale [tout disparu après hôpital]",
+            "Pas dyspnée [respiration va bien]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des maladies récentes ?",
+            "Vous sentez-vous faible ou comme si vous alliez vous évanouir ?",
+            "Avez-vous un changement dans votre vision ?",
+            "Avez-vous des difficultés respiratoires ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le permettez.",
+            "Laissez-moi juste me laver les mains.",
+            "On dirait que vos signes vitaux sont normaux.",
+            "J'aimerais d'abord écouter votre cœur..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des ganglions lymphatiques",
+          "details": [
+            "Chaînes cervicales antérieures",
+            "Chaînes cervicales postérieures",
+            "Ganglions axillaires",
+            "Ganglions supraclaviculaires",
+            "Ganglions inguinaux",
+            "Ganglions fémoraux",
+            "Ganglions poplités",
+            "Adénopathie diffuse modérée [trouvée]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous remarqué ces bosses sous votre peau ?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation postérieure 6 zones",
+            "Clairs bilatéralement",
+            "Pas ronchi/râles/sibilances"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation 4 zones antérieures",
+            "Rythme régulier",
+            "Pas souffles/frottements/galops"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal complet",
+          "details": [
+            "Auscultation bruits intestinaux [normaux]",
+            "Recherche souffles [absents]",
+            "Palpation 4 quadrants [souple, non douloureux]",
+            "Signe Murphy [négatif]",
+            "Rebond McBurney [négatif]",
+            "Percussion limites foie [pas hépatomégalie]",
+            "Palpation rate [splénomégalie positive]",
+            "Pointe rate déplacée [notée]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cutané systématique",
+          "details": [
+            "Examen séquentiel toutes zones",
+            "Bras [grandes ecchymoses maculaires]",
+            "Mains [ruptures cutanées minimales]",
+            "Jambes [ecchymoses tibias antérieurs]",
+            "Pieds examinés",
+            "Abdomen/dos vérifiés",
+            "Cou inspecté",
+            "Aine/hanches [ecchymose droite 5×6cm]",
+            "Lésions non blanchissables",
+            "Pas sensibilité ecchymoses"
+          ],
+          "exemplesPhrases": [
+            "Ces ecchymoses sont-elles sensibles quand je les touche ?"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de pancytopénie avec splénomégalie",
+            "categories": [
+              {
+                "name": "Hémopathies malignes",
+                "items": [
+                  {
+                    "text": "Leucémie lymphoïde chronique (LLC)",
+                    "cause": "Arguments POUR:\n\t□ Homme 62 ans (pic 60-70 ans)\n\t□ Fatigue progressive 3 semaines\n\t□ Adénopathies diffuses\n\t□ Splénomégalie\n\t□ Ecchymoses spontanées\n\t□ Perte poids 5kg\n\t□ Symptômes B partiels\nArguments CONTRE:\n\t□ Évolution rapide (3 semaines)\n\t□ Pas infections récurrentes",
+                    "test": "→ NFS + frottis, immunophénotypage, cytogénétique"
+                  },
+                  {
+                    "text": "Leucémie myéloïde chronique (LMC)",
+                    "cause": "Arguments POUR:\n\t□ Âge compatible\n\t□ Splénomégalie importante\n\t□ Fatigue et perte poids\n\t□ Syndrome tumoral\nArguments CONTRE:\n\t□ Évolution rapide\n\t□ Ecchymoses précoces (phase blastique?)",
+                    "test": "→ NFS, recherche BCR-ABL, myélogramme"
+                  },
+                  {
+                    "text": "Leucémie aiguë myéloïde (LAM)",
+                    "cause": "Arguments POUR:\n\t□ Début brutal 3 semaines\n\t□ Pancytopénie probable\n\t□ Ecchymoses/saignements\n\t□ Fatigue intense\n\t□ Courbatures osseuses\nArguments CONTRE:\n\t□ Pas fièvre\n\t□ Splénomégalie inhabituelle",
+                    "test": "→ NFS urgente, frottis, myélogramme urgent"
+                  },
+                  {
+                    "text": "Lymphome (Hodgkin/non-Hodgkin)",
+                    "cause": "Arguments POUR:\n\t□ Adénopathies diffuses\n\t□ Splénomégalie\n\t□ Symptômes B (perte poids)\n\t□ Fatigue progressive\nArguments CONTRE:\n\t□ Ecchymoses précoces\n\t□ Troubles coagulation",
+                    "test": "→ Biopsie ganglionnaire, TDM TAP, LDH"
+                  },
+                  {
+                    "text": "Myélome multiple",
+                    "cause": "Arguments POUR:\n\t□ Âge >60 ans\n\t□ Douleurs osseuses diffuses\n\t□ Fatigue (anémie)\n\t□ Perte poids\nArguments CONTRE:\n\t□ Adénopathies (rares)\n\t□ Splénomégalie (rare)",
+                    "test": "→ Électrophorèse protéines, calcium, créatinine"
+                  }
+                ]
+              },
+              {
+                "name": "Causes médicamenteuses",
+                "items": [
+                  {
+                    "text": "Surdosage warfarine",
+                    "cause": "Arguments POUR:\n\t□ Sous warfarine confirmé\n\t□ Ecchymoses spontanées\n\t□ Saignement prolongé\n\t□ Interaction aspirine possible\n\t□ Ajustements dose mentionnés\nArguments CONTRE:\n\t□ Fatigue intense inhabituelle\n\t□ Perte poids inexpliquée\n\t□ Adénopathies/splénomégalie",
+                    "test": "→ INR urgent, TP/TCA, NFS"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes hématologiques",
+                "items": [
+                  {
+                    "text": "Purpura thrombotique thrombocytopénique (PTT)",
+                    "cause": "Arguments POUR:\n\t□ Ecchymoses spontanées\n\t□ Fatigue (anémie hémolytique)\n\t□ Début subaigu\nArguments CONTRE:\n\t□ Pas fièvre\n\t□ Pas troubles neurologiques\n\t□ Pas insuffisance rénale apparente",
+                    "test": "→ Frottis (schizocytes), LDH, haptoglobine, ADAMTS13"
+                  },
+                  {
+                    "text": "Aplasie médullaire",
+                    "cause": "Arguments POUR:\n\t□ Pancytopénie probable\n\t□ Ecchymoses/saignements\n\t□ Fatigue sévère\nArguments CONTRE:\n\t□ Splénomégalie (rare)\n\t□ Adénopathies (rares)",
+                    "test": "→ NFS, réticulocytes, myélogramme + biopsie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques urgents",
+          "details": [
+            "NFS avec formule manuelle URGENT",
+            "Frottis sanguin (blastes, cellules anormales)",
+            "INR/TP/TCA (surdosage warfarine)",
+            "Ionogramme, urée, créatinine",
+            "Bilan hépatique complet + LDH",
+            "Calcium, phosphore (myélome)",
+            "Recherche sang occulte selles"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires selon résultats",
+          "details": [
+            "Si blastes : myélogramme urgent",
+            "Si lymphocytose : immunophénotypage",
+            "Si pic monoclonal : électrophorèse protéines",
+            "Si cytopenies : biopsie médullaire",
+            "TDM TAP si lymphome suspecté",
+            "Vitamine B12, folates si macrocytose"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures urgentes si INR élevé",
+                "content": "• Arrêt warfarine immédiat\n• Si INR >5 sans saignement :\n- Vitamine K 2.5-5mg PO\n• Si INR >9 ou saignement :\n- Vitamine K 5-10mg IV lent\n- PFC ou complexe prothrombinique\n• Surveillance INR 6-12h"
+              },
+              {
+                "title": "Support symptomatique",
+                "content": "• Repos relatif (fatigue)\n• Éviter traumatismes (ecchymoses)\n• Compression saignements\n• Analgésie douleurs osseuses :\n- Paracétamol 1g × 4/j\n- Éviter AINS (warfarine)\n• Hydratation adéquate"
+              },
+              {
+                "title": "Surveillance et précautions",
+                "content": "• Numération quotidienne si cytopénie\n• Signes infection (neutropénie?)\n• Signes saignement actif\n• Pression artérielle (140/85)\n• Consultation hématologie urgente\n• Hospitalisation si critères sévérité"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication diagnostique au patient",
+          "details": [
+            "Problème possiblement lié warfarine",
+            "Vérification dosage sanguin nécessaire",
+            "Possibilité cancer sang (leucémie) mais rare",
+            "Nécessité analyses sanguines multiples",
+            "Possible biopsie si analyses anormales",
+            "Résultats analyses ne sont pas définitifs",
+            "Autres causes possibles à explorer",
+            "Organisation prélèvements avec infirmière"
+          ],
+          "exemplesPhrases": [
+            "M. Clarkson, je ne peux pas dire exactement ce qui se passe.",
+            "Cela pourrait être ce médicament que vous prenez.",
+            "C'est un médicament qui peut faire avoir des ecchymoses facilement.",
+            "Il ne devrait pas causer la fatigue et perte de poids.",
+            "Une autre maladie pourrait être un cancer rare appelé leucémie.",
+            "C'est un cancer qui se forme dans le sang.",
+            "Cette maladie est très rare dans l'ensemble.",
+            "Seulement une petite possibilité chez vous.",
+            "Les analyses sanguines ne pourront pas dire avec certitude.",
+            "Si résultats suggèrent possibilité, autres tests nécessaires.",
+            "Biopsie os ou ganglions pour être sûr.",
+            "Pour l'instant, simple piqûre dans votre bras."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Critères d'hospitalisation",
+          "redflagsSection": {
+            "title": "Indications d'hospitalisation immédiate",
+            "items": [
+              {
+                "text": "Pancytopénie sévère",
+                "description": "Hb <7g/dL, plaquettes <20000, neutrophiles <500"
+              },
+              {
+                "text": "Saignement actif non contrôlé",
+                "description": "Hémorragie digestive, épistaxis prolongée, hématurie"
+              },
+              {
+                "text": "INR >9 ou hémorragie sous AVK",
+                "description": "Nécessité antagonisation urgente"
+              },
+              {
+                "text": "Syndrome de leucostase",
+                "description": "GB >100000 avec symptômes neurologiques/pulmonaires"
+              },
+              {
+                "text": "Syndrome de lyse tumorale",
+                "description": "Hyperuricémie, hyperkaliémie, hyperphosphatémie"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication complète des diagnostics et plan",
+          "content": "M. Clarkson, je ne peux pas dire exactement ce qui se passe pour produire vos symptômes dont nous avons parlé aujourd'hui. Mais il y a quelques choses pour lesquelles j'aimerais faire des tests, et nous pourrons mieux comprendre. Premièrement, cela pourrait être ce médicament que vous prenez. C'est un médicament qui peut vous faire avoir des ecchymoses facilement, bien qu'il ne devrait pas causer la fatigue et la perte de poids que vous avez eues. Je peux vérifier avec une analyse sanguine si c'est le problème. Une autre maladie que cela pourrait être est un cancer rare appelé leucémie. C'est un type de cancer qui se forme dans le sang et affecte différentes zones de votre corps. Dans votre cas, je penserais à un type spécifique, mais il est vraiment trop tôt pour le dire. Et cette maladie est très rare dans l'ensemble et seulement une petite possibilité chez vous. Je pourrai mieux le dire avec des analyses sanguines. Si les résultats des analyses sanguines suggèrent que cela pourrait être une forte possibilité, nous devrions faire d'autres tests - à savoir, une biopsie de votre os ou de vos ganglions lymphatiques - pour en être sûr. Donc gardez à l'esprit que les analyses sanguines ne pourront pas dire avec certitude d'une manière ou d'une autre. De plus, ce n'est qu'une possibilité peu probable de ce qui se passe ici. En ce qui concerne d'autres possibilités, il y en a quelques-unes, et je ferai également des analyses de laboratoire pour elles. Pour celles-ci, nous aurons besoin de sang d'une simple piqûre d'aiguille dans votre bras. J'aimerais sortir et organiser cela avec mon infirmière si vous le permettez.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Docteur, vous pensez vraiment que j'ai un cancer ? Je ne peux pas arrêter de travailler, j'ai trois garçons à l'université à payer.]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "M. Clarkson, je comprends votre inquiétude, surtout avec vos responsabilités familiales. Pour être honnête, je ne pense pas que le cancer soit l'explication la plus probable. Vos symptômes pourraient très bien être causés par votre médicament anticoagulant, la warfarine, surtout si la dose est trop élevée. C'est beaucoup plus fréquent et expliquerait vos ecchymoses et saignements. La fatigue pourrait avoir d'autres causes simples comme une anémie due aux petits saignements répétés. Je mentionne la leucémie parce qu'il est important d'être complet et de ne rien manquer, mais les chances sont faibles. Les analyses sanguines nous donneront rapidement des réponses - dès aujourd'hui pour certaines. Si c'est juste un problème de dosage de médicament, c'est facilement corrigible. Essayons de ne pas nous inquiéter du pire scénario avant d'avoir les résultats. Je m'engage à vous tenir informé rapidement pour que vous puissiez planifier en conséquence."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation - Pancytopénie et troubles de coagulation",
+      "pointsCles": [
+        "Homme 62 ans avec EP/TVP récente sous anticoagulation",
+        "Triade : fatigue sévère + ecchymoses spontanées + perte poids",
+        "Warfarine + aspirine = risque hémorragique majoré",
+        "Splénomégalie + adénopathies = syndrome lymphoprolifératif probable",
+        "Douleurs osseuses diffuses = infiltration médullaire?",
+        "Symptômes pseudo-grippaux = cytokines tumorales?",
+        "Profession à risque (pilote) = évaluation aptitude travail",
+        "40 paquets-années = facteur risque hémopathies",
+        "Évolution rapide 3 semaines = processus aigu/subaigu"
+      ],
+      "pieges": [
+        "Ne pas vérifier nom exact anticoagulant (patient incertain)",
+        "Oublier interaction warfarine-aspirine",
+        "Ne pas faire INR en urgence si warfarine",
+        "Minimiser adénopathies + splénomégalie",
+        "Ne pas faire frottis sanguin (blastes?)",
+        "Oublier risque professionnel (pilote)",
+        "Ne pas dépister syndrome de lyse",
+        "Retarder consultation hématologie",
+        "Ne pas évaluer critères hospitalisation"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "John Clarkson",
+      "age": "62 ans",
+      "contexte": "Pilote de remorqueur, divorcé, 3 fils à l'université",
+      "motifConsultation": {
+        "plaintePrincipale": "Fatigue et ecchymoses depuis 3 semaines",
+        "autreChose": "Vraiment épuisé tout le temps"
+      },
+      "histoireActuelle": {
+        "fatigue": [
+          "Juste fatigué, vraiment épuisé",
+          "Depuis environ 3 semaines",
+          "Mal à garder yeux ouverts",
+          "Pilote remorqueur sur fleuve",
+          "Travaille heures folles habituellement",
+          "Mais c'est plus que ça",
+          "Pas endormi au travail",
+          "Vraiment vraiment épuisé tout le temps",
+          "Pas dans mes habitudes"
+        ],
+        "caracteristiques": [
+          "Os et corps font mal",
+          "Sommeil aussi mais fatigue constante",
+          "Jamais vraiment eu ça avant",
+          "Vraiment augmenté 3 dernières semaines"
+        ],
+        "travail": [
+          "Travaille le jour",
+          "Lever au coucher soleil",
+          "Fait ça depuis 19 ans",
+          "Toujours dehors tous temps",
+          "Pas été malade récemment"
+        ]
+      },
+      "sommeil": [
+        "23h à environ 6h matin",
+        "Comme une horloge",
+        "Corps habitué horaire",
+        "N'ai plus besoin réveil",
+        "19 ans travail font ça"
+      ],
+      "ecchymoses": {
+        "description": [
+          "Grosses ecchymoses (remonter manches)",
+          "Sur bras et hanche",
+          "Me cogne tout le temps",
+          "Mais jamais causé ça",
+          "Toujours coupure/ecchymose quelque part",
+          "Celles-ci énormes",
+          "Pas souvenir frappé assez fort"
+        ],
+        "chronologie": [
+          "Dernières semaines",
+          "Hanche droite au moins 2 semaines"
+        ],
+        "saignements": [
+          "Me coupe tout temps par accident",
+          "Hameçon ou quelque chose",
+          "L'autre jour saigné longtemps",
+          "Dû prendre 2ème chiffon",
+          "Bizarre maintenant que mentionné"
+        ]
+      },
+      "symptomesAssocies": {
+        "constitutionnels": [
+          "Pas fièvre",
+          "Pas transpire beaucoup nuit",
+          "Rarement maux tête"
+        ],
+        "douleurs": [
+          "Courbatures dans corps",
+          "Mal partout",
+          "Pas isolé quelque part",
+          "Dans muscles partout",
+          "Os impression faire mal",
+          "Comme grippe, grande fatigue"
+        ],
+        "appetit": [
+          "Mange peut-être un peu moins",
+          "Pas voulu beaucoup nourriture",
+          "Juste pas faim",
+          "Poids : 113kg → 108kg",
+          "Vérifié hier soir",
+          "Surpris, pas essayé",
+          "Juste arrivé"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "emboliePulmonaire": [
+          "Caillot sang poumons il y a 3 mois",
+          "Sentais vraiment horrible",
+          "Crachais sang et tout",
+          "Caillot venait jambe",
+          "Coincé dans poumon",
+          "Médicament très important",
+          "Le prends tous jours"
+        ],
+        "medicament": [
+          "Pas souviens nom exact",
+          "(Si suggère Warfarine) Sonne familier, oui",
+          "Médecin ajuste dose avec analyses",
+          "Prends comme prescrit, tous jours"
+        ],
+        "autresMedicaments": [
+          "Déteste pilules",
+          "Aspirine tous jours aussi",
+          "Ibuprofène temps en temps",
+          "Pas pris récemment",
+          "Pensais aspirine pareil"
+        ],
+        "traumatisme": [
+          "Bras cassé il y a 5 ans",
+          "Remorqueur emporté contre pile pont",
+          "Cassé bras dans accident"
+        ],
+        "chirurgie": [
+          "Appendice enlevé adolescent",
+          "Rien d'autre"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "Fumé 1 paquet/jour × 40 ans",
+          "Depuis caillot réduit 1/2 paquet",
+          "Sais mauvais pour moi",
+          "40 ans habitude difficile arrêter",
+          "Médecin hôpital dit arrêter complètement",
+          "(Si aide proposée) Non j'aime ça",
+          "Mon seul vice maintenant"
+        ],
+        "alcool": [
+          "Pas le temps",
+          "Travaille tout temps",
+          "Rentre maison pas intéressé"
+        ],
+        "drogues": [
+          "Non, pas pour moi"
+        ]
+      },
+      "situationFamiliale": [
+        "Divorcé",
+        "Trois garçons",
+        "Tous université",
+        "Pourquoi travaille si dur"
+      ],
+      "antecedentsFamiliaux": [
+        "Parents décédés",
+        "Maman tabagisme 86 ans",
+        "Papa crise cardiaque 76 ans",
+        "Frère Philadelphie diabète",
+        "Rien autre"
+      ],
+      "symptomesNegatifs": [
+        "Pas faible/évanouir",
+        "Vision normale (remarquerait)",
+        "Respiration : tout disparu après hôpital",
+        "Fais très attention maintenant",
+        "Pas difficultés respiratoires"
+      ],
+      "simulation": {
+        "attitude": [
+          "Homme bourru mais coopératif",
+          "Travailleur acharné, préoccupé travail",
+          "Minimise un peu symptômes",
+          "Surpris par certaines constatations",
+          "Inquiet mais pragmatique"
+        ],
+        "durantEntretien": [
+          "Assis fatigué, voûté",
+          "Remonte manches pour montrer",
+          "Gestes lents (fatigue)"
+        ],
+        "durantExamen": [
+          "Montre ecchymoses multiples",
+          "Coopératif pour palpation",
+          "Peut noter ganglions gonflés",
+          "Légère sensibilité rate",
+          "Pas douleur ecchymoses au toucher"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Pancytopénie et syndromes myéloprolifératifs",
+      "sections": [
+        {
+          "titre": "Diagnostic différentiel des pancytopénies",
+          "contenu": "Causes centrales : aplasie médullaire, myélodysplasie, leucémies aiguës, myélofibrose, infiltration médullaire (lymphome, myélome, métastases). Causes périphériques : hypersplénisme, CIVD, PTT/SHU, infections sévères (VIH, leishmaniose). Carences : B12, folates, cuivre. Médicaments : chimiothérapie, antiépileptiques, antibiotiques."
+        },
+        {
+          "titre": "Warfarine et interactions médicamenteuses",
+          "contenu": "Cible INR EP/TVP : 2-3. Demi-vie : 36-42h. Potentialisation : aspirine, AINS, antibiotiques, amiodarone, statines. Antagonisation : vitamine K, rifampicine, millepertuis. Surveillance : INR hebdomadaire si stable, plus fréquent si ajustements. Complications : hémorragie 1-3%/an, majeure 0.5-1%/an."
+        },
+        {
+          "titre": "Syndromes lymphoprolifératifs chroniques",
+          "contenu": "LLC : plus fréquente leucémie adulte >60 ans, lymphocytose >5000, immunophénotype CD5+/CD19+/CD23+. Stades Binet : A (Hb>10, plaq>100, <3 aires), B (3-5 aires), C (Hb<10 ou plaq<100). Pronostic : A-10 ans, B-7 ans, C-2 ans. Complications : infections, transformation Richter, cytopénies auto-immunes."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Surdosage AVK : INR 5-9 sans saignement = vitamine K 1-2.5mg PO",
+        "INR >9 ou saignement : vitamine K 5-10mg IV + PFC/CCP",
+        "Syndrome de lyse : hyperhydratation, allopurinol, rasburicase si sévère",
+        "Support transfusionnel : CGR si Hb<7, plaquettes si <10000 ou saignement",
+        "Neutropénie fébrile : antibiothérapie large spectre urgente",
+        "LLC : observation si stade A, FCR ou ibrutinib si symptomatique",
+        "LAM : chimiothérapie d'induction urgente (7+3)",
+        "Myélome : VRD (bortezomib, lenalidomide, dexamethasone)"
+      ],
+      "examensComplementaires": [
+        "NFS + frottis : indispensable, recherche blastes, cellules anormales",
+        "Myélogramme : >20% blastes = leucémie aiguë, infiltration lymphoïde LLC",
+        "Immunophénotypage : différencie LAM/LAL, caractérise LLC",
+        "Cytogénétique : pronostic leucémies (t(15;17), t(8;21), del(17p))",
+        "Biologie moléculaire : BCR-ABL (LMC), mutations FLT3/NPM1 (LAM)",
+        "Biopsie ganglionnaire : lymphome, transformation Richter",
+        "TEP-scan : bilan extension lymphome, myélome"
+      ]
+    }
+  }
+}

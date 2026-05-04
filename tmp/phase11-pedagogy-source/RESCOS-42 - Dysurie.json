@@ -1,0 +1,725 @@
+{
+  "title": "RESCOS-42 - Dysurie",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "Mme Maria Rodriguez, 29 ans, consulte pour brûlures mictionnelles depuis 3 jours"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur mictionnelle",
+          "details": [
+            "Qualité [brûlure, lame de rasoir]",
+            "Intensité [4/10 en urinant uniquement]",
+            "Irradiation [aucune]",
+            "Facteurs aggravants [miction] ET soulageants [aucun]",
+            "Symptômes associés [douleur bas du dos diffuse 2/10]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Chronologie de la douleur",
+          "details": [
+            "Début [il y a 3 jours]",
+            "Circonstance de survenue [douloureux à chaque miction]",
+            "Évolution [stable, surtout fin de miction]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse urologique",
+          "details": [
+            "Fréquence mictionnelle [20x/jour au lieu d'habituel]",
+            "Quantité d'urine [plus petite quantité]",
+            "Couleur des urines [normale]",
+            "Présence de sang [pas de sang dans les urines]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a4",
+          "text": "Anamnèse génitale",
+          "details": [
+            "Pertes vaginales [pas de pertes]",
+            "Prurit vaginal [pas de prurit]",
+            "Dates des dernières règles [il y a une semaine]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse sexuelle",
+          "details": [
+            "Pratiques [rapports oro-génitaux et vaginaux]",
+            "Partenaires [hommes uniquement, nombreux]",
+            "Type de protection [non protégés - PrEP et pilule seulement]",
+            "Antécédents de MST [non]",
+            "Moyens contraceptifs [pilule contraceptive]"
+          ],
+          "scoringRule": "Au moins quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse générale, présence de",
+          "details": [
+            "Fièvre [pas de fièvre]",
+            "Transpiration [pas de transpiration nocturne]",
+            "Perte de poids involontaire [pas de perte de poids]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies/comorbidités [bonne santé habituelle]",
+            "Interventions ou hospitalisations [IVG il y a 3 ans]",
+            "Allergies [à demander]",
+            "Médicaments [pilule contraceptive et PrEP]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évoque la nécessité d'effectuer un examen abdominal",
+          "details": [
+            "Propose un examen abdominal complet",
+            "Recherche douleur lombaire/flancs (pyélonéphrite)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "Évoque la possibilité d'un examen gynécologique",
+          "details": [
+            "Propose examen gynécologique pour IST"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Simulation - palpation vésicale",
+          "details": [
+            "Réaction appropriée si palpation vessie [envie d'uriner]"
+          ],
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évoque le diagnostic d'infection urinaire basse",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque les diagnostics différentiels",
+          "details": [
+            "Pyélonéphrite",
+            "Infections sexuellement transmissibles (gonorrhée, chlamydia, syphilis, VIH)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Propose des investigations paracliniques",
+          "details": [
+            "Analyse d'urine/ECBU",
+            "Dépistage IST (gonorrhée, chlamydia, syphilis, VIH)"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Propose un traitement",
+          "details": [
+            "Antibiothérapie pour infection urinaire"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Maria Rodriguez",
+      "age": "29 ans",
+      "contexte": "Péripatéticienne (prostituée), bonne santé habituelle, consulte pour brûlures mictionnelles",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal quand j'urine",
+        "autreChose": "Et j'ai un peu mal dans le dos aussi"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs en fin de miction type brûlure (lame de rasoir)",
+          "Intensité 4/10 uniquement en urinant",
+          "Depuis 3 jours",
+          "Pollakiurie 20x/jour (vs habituel)",
+          "Mictions en plus petite quantité"
+        ],
+        "symptomesAssocies": [
+          "Douleurs dans le bas du dos (faibles, musculaires, diffuses 2/10)",
+          "Pas de fièvre ni symptômes B",
+          "Pas de sang dans les urines (couleur normale)",
+          "Pas de pertes ou prurit vaginal"
+        ],
+        "circonstances": [
+          "Douleur survient uniquement en urinant",
+          "Surtout à la fin de la miction",
+          "Aucun facteur atténuant"
+        ],
+        "reponseAuxSymptomes": [
+          "Rien de spécifique",
+          "A attendu que ça passe avant de consulter"
+        ],
+        "inquietudes": [
+          "Ne sait pas ce que ça peut être",
+          "Reconnaît que la douleur est anormale",
+          "Inquiète car ne peut plus recevoir de clients"
+        ]
+      },
+      "anamneseSystemes": {
+        "genitourinaire": [
+          "Dernières règles il y a une semaine",
+          "Pas de pertes vaginales",
+          "Pas de prurit vaginal",
+          "Pas d'hématurie"
+        ],
+        "generale": [
+          "Pas de fièvre",
+          "Pas de transpiration nocturne",
+          "Pas de perte de poids"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Pilule contraceptive et PrEP (prophylaxie HIV)",
+        "alimentation": "Saine et variée",
+        "activitePhysique": "1 journée de randonnée par semaine et escalade",
+        "sommeil": "Bon",
+        "tabac": "Non",
+        "alcool": "2 verres de champagne parfois pour accompagner les clients (occasionnel)",
+        "drogues": "Aucune",
+        "sexualite": "Active, péripatéticienne (prostituée), relations oro-ano-vaginales non protégées"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Interruption volontaire de grossesse il y a 3 ans, sans complications",
+        "Suivi régulier tous les 2 mois pour PrEP"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère en bonne santé",
+        "Père avec diabète, sinon en bonne santé",
+        "3 sœurs en bonne santé",
+        "Pas de frère",
+        "Un grand-père décédé d'infarctus, autres grands-parents en bonne santé"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Péripatéticienne (prostituée)",
+        "hobbies": "Lecture, randonnée",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuelle",
+        "etatCivil": "Célibataire",
+        "etatEsprit": "Coopérative mais inquiète"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude adaptée selon l'aisance du médecin avec la sexualité",
+          "Si médecin naturel : parler librement de sexualité et métier",
+          "Si médecin gêné : faire de la rétention d'information, flou initial"
+        ],
+        "durantExamen": [
+          "Envie d'uriner à la palpation de la vessie"
+        ],
+        "questionsAPoser": [
+          "Est-ce que je dois prendre des médicaments ? (en fin d'entretien si rien proposé)"
+        ]
+      },
+      "informationADonner": [
+        "Révéler progressivement la profession selon l'aisance du médecin avec la sexualité.",
+        "Si demande médicaments : 'Je prends la pilule et la PrEP pour éviter d'attraper des maladies ou tomber enceinte'",
+        "Si demande PrEP : 'Prophylaxie contre le HIV'",
+        "Dès anamnèse sexuelle évoquée : mentionner la prostitution"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Maria Rodriguez, 29 ans, péripatéticienne, BSH. Dysurie depuis 3 jours avec pollakiurie (20x/j) et ténesme vésical. Douleurs lombaires diffuses. Facteurs de risque IST : prostitution, rapports non protégés. Prend PrEP + pilule (protection inadéquate contre autres IST). Tableau évocateur de cystite simple.",
+      "rolesInterventions": [
+        "Aucune intervention directe nécessaire",
+        "Observer l'aisance du médecin avec l'anamnèse sexuelle",
+        "Évaluer l'exploration des facteurs de risque IST",
+        "Noter la proposition de dépistage IST"
+      ],
+      "pointsCles": [
+        "Cystite simple chez femme jeune",
+        "Facteurs de risque majeurs d'IST",
+        "Importance de l'anamnèse sexuelle complète (5 points PPPPP)",
+        "PrEP ne protège que contre VIH",
+        "Nécessité dépistage IST systématique",
+        "Diagnostic différentiel : pyélonéphrite, IST",
+        "Contexte socio-professionnel délicat à explorer"
+      ],
+      "pieges": [
+        "Éviter l'anamnèse sexuelle par gêne",
+        "Ne pas explorer la profession à risque",
+        "Oublier le dépistage IST",
+        "Méconnaître les limites de la PrEP",
+        "Ne pas différencier cystite simple/compliquée",
+        "Omettre l'examen abdominal (pyélonéphrite)",
+        "Attitude moralisatrice face à la prostitution"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la dysurie et les IST",
+      "sections": [
+        {
+          "titre": "Cystite simple chez la femme",
+          "contenu": "Infection bactérienne de la vessie, très fréquente chez la femme jeune.",
+          "points": [
+            "Incidence : 0.5-0.7 épisodes/femme/an",
+            "Agent : E. coli (80-85% des cas)",
+            "Facteurs de risque : activité sexuelle, contraception",
+            "Symptômes : dysurie, pollakiurie, urgences mictionnelles",
+            "Absence de fièvre et signes généraux",
+            "Diagnostic clinique chez femme jeune",
+            "Évolution bénigne sous traitement"
+          ]
+        },
+        {
+          "titre": "Anamnèse sexuelle - Règle des 5 P",
+          "contenu": "Approche structurée pour explorer la sexualité et les risques d'IST.",
+          "points": [
+            "Pratiques : oro-génitales, anales, vaginales",
+            "Partenaires : genre, nombre, régularité",
+            "Protection : préservatifs, méthodes barrières",
+            "Past STDs : antécédents d'IST",
+            "Prévention grossesse : contraception utilisée",
+            "Approche non moralisatrice essentielle",
+            "Confidentialité et bienveillance"
+          ]
+        },
+        {
+          "titre": "PrEP et prophylaxie VIH",
+          "contenu": "Prophylaxie pré-exposition contre l'infection par le VIH.",
+          "points": [
+            "Indication : personnes à risque élevé VIH",
+            "Médicaments : ténofovir/emtricitabine",
+            "Efficacité : >95% si observance correcte",
+            "Suivi : consultation tous les 3 mois",
+            "Limites : ne protège PAS contre autres IST",
+            "Dépistage IST régulier indispensable",
+            "Éducation sur protection globale"
+          ]
+        },
+        {
+          "titre": "IST à dépister chez les personnes à risque",
+          "contenu": "Dépistage systématique des principales IST selon l'exposition.",
+          "points": [
+            "Chlamydia trachomatis : PCR urinaire/génitale",
+            "Neisseria gonorrhoeae : PCR multisite",
+            "Syphilis : sérologies TPPA/VDRL",
+            "VIH : sérologie 4e génération",
+            "Hépatites B et C : sérologies",
+            "HSV 1/2 si lésions",
+            "Dépistage tous les 3-6 mois si risque élevé"
+          ]
+        },
+        {
+          "titre": "Prostitution et santé sexuelle",
+          "contenu": "Approche médicale sans jugement des travailleurs du sexe.",
+          "points": [
+            "Population à risque élevé d'IST",
+            "Facteurs : partenaires multiples, rapports non protégés",
+            "Barrières aux soins : stigmatisation, précarité",
+            "Suivi médical spécialisé recommandé",
+            "Dépistage IST régulier (tous les 3 mois)",
+            "Vaccination hépatite B, HPV",
+            "Soutien psychosocial si besoin"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel de la dysurie",
+          "contenu": "Principales causes de brûlures mictionnelles chez la femme jeune.",
+          "points": [
+            "Cystite simple : dysurie isolée, pas de fièvre",
+            "Pyélonéphrite : fièvre, douleurs lombaires",
+            "Urétrite IST : chlamydia, gonorrhée",
+            "Vaginite : pertes, prurit associés",
+            "Cystite interstitielle : chronique, récidivante",
+            "Lithiase urinaire : douleurs coliques",
+            "Traumatisme urétral : contexte évocateur"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Cystite simple : nitrofurantoïne 100mg x2/j × 5j",
+        "Alternative : fosfomycine 3g dose unique",
+        "Chlamydia : azithromycine 1g dose unique",
+        "Gonorrhée : ceftriaxone 500mg IM + azithromycine",
+        "Syphilis primaire : benzathine pénicilline 2.4MU IM",
+        "Mesures générales : hydratation, mictions régulières",
+        "Réévaluation si échec thérapeutique"
+      ],
+      "examensComplementaires": [
+        "ECBU si cystite compliquée ou récidivante",
+        "PCR chlamydia/gonorrhée : urine, prélèvement génital",
+        "Sérologies syphilis : TPPA, VDRL/RPR",
+        "Sérologie VIH 4e génération",
+        "Sérologies hépatites B et C",
+        "Frottis cervical (HPV) si indiqué",
+        "Échographie rénale si pyélonéphrite",
+        "Hémocultures si sepsis"
+      ]
+    },
+    "resume": {
+      "titre": "💧 Cystite simple chez la femme – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Brûlures mictionnelles",
+                "Pollakiurie",
+                "Impériosités mictionnelles",
+                "Sensation de pesanteur sus-pubienne"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Femme jeune ou d’âge moyen, sans comorbidité",
+                "Pas de fièvre ni frissons",
+                "Pas de douleurs lombaires (≠ pyélonéphrite)",
+                "Pas de facteurs de risque compliquant (grossesse, immunodépression, anomalie urologique connue)"
+              ]
+            },
+            {
+              "titre": "Facteurs favorisants",
+              "points": [
+                "Rapports sexuels récents",
+                "Hygiène intime inadaptée",
+                "Antécédents d’IVU récidivantes",
+                "Utilisation de spermicides ou diaphragme"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen général",
+              "points": [
+                "État général conservé",
+                "Afébrile",
+                "Pas de frissons"
+              ]
+            },
+            {
+              "titre": "Examen abdominal",
+              "points": [
+                "Sensibilité sus-pubienne possible",
+                "Absence de douleur à la percussion lombaire (signe de Giordano négatif)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de première intention",
+              "points": [
+                "Bandelette urinaire (BU) : leucocyturie, nitrites positifs (confirmation si clinique évocatrice)",
+                "Pas d’ECBU systématique dans cystite simple non compliquée"
+              ]
+            },
+            {
+              "titre": "Situations nécessitant ECBU",
+              "points": [
+                "Échec ou récidive rapide après traitement",
+                "Suspicion de pyélonéphrite ou de cystite compliquée",
+                "Grossesse",
+                "Terrain particulier (diabète, immunodépression, uropathie connue)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Antibiothérapie probabiliste (1ère intention)",
+              "points": [
+                "Fosfomycine-trométamol dose unique per os",
+                "Pivmécillinam 3 à 5 jours",
+                "Nitrofurantoïne 5 jours"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Hydratation abondante",
+                "Mictions fréquentes, ne pas retenir les urines",
+                "Mesures d’hygiène intime adaptées",
+                "Éviter les spermicides"
+              ]
+            },
+            {
+              "titre": "Prévention des récidives",
+              "points": [
+                "Uriner après rapports sexuels",
+                "Apports hydriques réguliers",
+                "Traitement prophylactique antibiotique si cystites récidivantes"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Cystite simple = brûlures mictionnelles + pollakiurie sans fièvre ni lombalgie",
+            "Diagnostic clinique + BU, pas d’ECBU systématique",
+            "Antibiotique de première intention : fosfomycine dose unique",
+            "Rechercher systématiquement critères de gravité (fièvre, lombalgie)",
+            "ECBU réservé aux formes compliquées, échecs, grossesses"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Brûlures mictionnelles, pollakiurie, impériosités ?",
+                "Fièvre ou frissons (pyélonéphrite) ?",
+                "Douleurs lombaires ?",
+                "ATCD d’IVU récidivantes ?",
+                "Contexte particulier : grossesse, diabète, immunodépression ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Bandelette urinaire (si disponible)",
+                "ECBU seulement si terrain particulier ou échec thérapeutique",
+                "Examen clinique rapide : Giordano, palpation sus-pubienne"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antibiothérapie probabiliste (fosfomycine dose unique en 1ère intention)",
+                "Hydratation + mesures hygiéno-diététiques",
+                "ECBU uniquement si atypie, complication, grossesse ou récidive"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Dysurie chez femme jeune avec facteurs de risque IST (cystite simple vs IST)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (brûlures mictionnelles depuis 3 jours)",
+            "Caractériser douleur → type brûlure lame de rasoir, EVA 4/10, survenant en fin de miction",
+            "Symptômes urinaires associés → pollakiurie 20x/j, petites quantités, pas d’hématurie",
+            "Signes associés → lombalgies diffuses légères, pas de fièvre, pas de sueurs, pas de perte de poids",
+            "Anamnèse gynécologique → dernières règles il y a 1 semaine, pas de pertes ni prurit",
+            "Contexte sexuel → travailleuse du sexe, rapports multiples, oro-ano-vaginaux, non protégés (PrEP et pilule), pas d’IST connue",
+            "Examen clinique → palpation sus-pubienne (envie d’uriner), Giordano négatif, possible examen gynécologique pour IST",
+            "Résumé + hypothèse principale (cystite simple) + DD (pyélonéphrite, cervicite à Chlamydia/Gonocoque, vaginite, cystite compliquée)",
+            "Examens complémentaires → BU ± ECBU, dépistage IST (PCR Chlamydia/Gonocoque, VIH, syphilis, hépatites)",
+            "Prise en charge → fosfomycine dose unique ou nitrofurantoïne 5j, hydratation, dépistage IST, conseils hygiéno-diététiques, PEC globale santé sexuelle"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DYSURIE",
+            "elements": [
+              "D = Douleur type brûlure",
+              "Y = Yeux sur fréquence (pollakiurie)",
+              "S = Sang ? (hématurie absente ici)",
+              "U = Urgence mictionnelle",
+              "R = Rapport sexuel récent, contexte à risque",
+              "I = IST à dépister",
+              "E = ECBU si atypique ou récidive"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Maria Rodriguez, une jeune femme de 29 ans, qui consulte pour des brûlures à la miction depuis 3 jours.\n\nElle décrit une douleur de type lame de rasoir, notée à 4/10, qui survient uniquement au moment d’uriner, surtout en fin de miction. Elle rapporte une pollakiurie importante, environ 20 mictions par jour, en petites quantités, sans hématurie macroscopique. Elle mentionne aussi une légère douleur lombaire diffuse, à 2/10, mais nie toute fièvre, sueurs nocturnes ou perte de poids. Pas de nausées ni vomissements.\n\nSur le plan gynécologique, ses dernières règles datent d’il y a une semaine. Elle n’a ni pertes vaginales ni prurit. Pas de métrorragies.\n\nConcernant sa vie sexuelle, Mme Rodriguez est travailleuse du sexe. Elle rapporte des rapports oro-ano-vaginaux fréquents et non protégés, utilisant uniquement la pilule contraceptive et la PrEP. Elle n’a pas d’antécédents d’IST connus, mais reconnaît un risque accru par son activité et les partenaires multiples.\n\nÀ l’examen, l’abdomen est souple. La palpation sus-pubienne déclenche une envie d’uriner. Le signe de Giordano est négatif. Un examen gynécologique est indiqué pour recherche d’IST.\n\nEn résumé, il s’agit d’une femme jeune avec brûlures mictionnelles, pollakiurie, douleurs lombaires discrètes, sans fièvre ni hématurie, dans un contexte de rapports sexuels multiples non protégés. Mon hypothèse principale est une cystite simple. Les diagnostics différentiels incluent une pyélonéphrite (mais absence de fièvre et Giordano négatif), une cervicite/urétrite à Chlamydia ou Gonocoque, une vaginite ou plus rarement une cystite compliquée.\n\nComme examens complémentaires, je demanderais une bandelette urinaire, un ECBU si suspicion de complication ou récidive, ainsi qu’un dépistage systématique des IST (PCR Chlamydia/Gonocoque, VIH, syphilis, hépatites). \n\nEn termes de prise en charge, je proposerais une antibiothérapie probabiliste adaptée à une cystite simple (fosfomycine dose unique ou nitrofurantoïne 5 jours), associée à une bonne hydratation, des conseils hygiéno-diététiques et un dépistage complet des IST. Je mettrais l’accent sur la prévention et la protection lors des rapports sexuels."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Rodriguez, 29 ans, brûlures mictionnelles depuis 3 jours, pollakiurie sans fièvre ni hématurie.\n\nB (Background) : Travailleuse du sexe, rapports multiples non protégés, sous pilule et PrEP, pas d’IST connue.\n\nA (Assessment) : Cystite simple probable. DD : pyélonéphrite, cervicite/urétrite IST, vaginite.\n\nR (Recommendation) : BU ± ECBU, dépistage IST complet, traitement empirique (fosfomycine dose unique ou nitrofurantoïne 5j), conseils prévention IST."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Cystite simple : 3C",
+              "points": [
+                "C = Cystalgies (brûlures mictionnelles)",
+                "C = Constante pollakiurie",
+                "C = Contexte jeune femme sans comorbidité"
+              ]
+            },
+            {
+              "titre": "👉 Red flags",
+              "points": [
+                "Fièvre ≥38 °C",
+                "Douleur lombaire (pyélonéphrite)",
+                "Hématurie macroscopique",
+                "Terrain à risque (grossesse, immunodépression)"
+              ]
+            },
+            {
+              "titre": "👉 Santé sexuelle (5P)",
+              "points": [
+                "Pratiques",
+                "Partenaires",
+                "Protection",
+                "Past STDs",
+                "Prévention grossesse"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas explorer vie sexuelle par gêne",
+                "Oublier dépistage IST malgré cystite simple",
+                "Confondre cystite simple et pyélonéphrite",
+                "Sous-estimer impact social et professionnel"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cystite simple",
+                  "reponse": {
+                    "pour": [
+                      "Brûlures mictionnelles isolées",
+                      "Pollakiurie",
+                      "Pas de fièvre",
+                      "Pas d’hématurie"
+                    ],
+                    "contre": [
+                      "Contexte sexuel à risque oriente vers IST à rechercher"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pyélonéphrite",
+                  "reponse": {
+                    "pour": [
+                      "Douleurs lombaires"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de frissons",
+                      "Giordano négatif"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cervicite/urétrite IST",
+                  "reponse": {
+                    "pour": [
+                      "Rapports non protégés",
+                      "Partenaires multiples",
+                      "Contexte prostitution"
+                    ],
+                    "contre": [
+                      "Pas de pertes vaginales",
+                      "Pas de métrorragies",
+                      "Symptômes très ciblés urinaires"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bandelette urinaire",
+                    "ECBU si suspicion compliquée ou récidive",
+                    "PCR Chlamydia/Gonocoque",
+                    "Sérologies VIH, syphilis, hépatites"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cystite simple probable chez femme jeune, avec dépistage IST systématique"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Fosfomycine 3 g dose unique PO",
+                      "ou Nitrofurantoïne 100 mg x2/j × 5j",
+                      "Hydratation abondante",
+                      "Antalgiques simples"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique (amélioration en 48h)",
+                    "Consultation si fièvre ou douleurs lombaires",
+                    "Résultats dépistage IST",
+                    "Suivi gynécologique régulier",
+                    "Conseils de prévention IST (préservatif)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

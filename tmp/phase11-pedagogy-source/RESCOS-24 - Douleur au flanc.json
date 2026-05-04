@@ -1,0 +1,868 @@
+{
+  "title": "RESCOS-24 - Douleur au flanc",
+  "context": {
+    "setting": "Urgences de Delémont",
+    "patient": "Mme Gabrielle Delacour (36 ans), qui se présente avec une douleur abdominale ainsi que des frissons.",
+    "vitals": {
+      "ta": "105/85 mmHg",
+      "fc": "78 bpm",
+      "temperature": "38.1°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Raison de la visite",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Localisation de la douleur [hypochondre droit, flanc droit]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Qualité de la douleur [sourde]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Intensité de la douleur [6/10]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Chronologie (début, durée, fréquence) de la douleur [commencé cette nuit vers 4h, constante]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Circonstances de survenue de la douleur [réveillée par la douleur]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Réponse du patient à la douleur [prise d'Irfen 400mg]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes associés [frissons & nausées]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse sexuelle / comportements à risque",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Ana. uro-génitale : algurie/inconfort [légère algurie]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Ana. uro-génitale : couleur des urines",
+          "binaryOnly": true
+        },
+        {
+          "id": "a12",
+          "text": "Ana. digestive : nausées / vomissements [nausées, pas de vomissements]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Ana. digestive : couleur des selles",
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Ana. digestive : trouble du transit",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Histoire médicale : allergies [noisettes]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Histoire médicale : antécédents (y.c. gynéco) [infections urinaires 4x depuis accouchement, colique néphrétique]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Habitudes : tabac, alcool, drogues, médicaments [non-fumeuse, 1 verre vin/j, pas de drogues, pas de médicaments]",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Désinfection des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Placé à droite du patient",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Observation générale : pas d'ictère",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation abdominale (avant palpation)",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Palpation abdominale (superficielle & profonde)",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Percussion abdominale (tympanisme + taille du foie)",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Défense / détente",
+          "binaryOnly": true
+        },
+        {
+          "id": "e8",
+          "text": "Palpation et percussion des loges rénales",
+          "binaryOnly": true
+        },
+        {
+          "id": "e9",
+          "text": "A évoqué le toucher rectal",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Labo : Formule sanguine simple (FSC)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Labo : chimie sanguine",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Labo : analyse d'urine (dipstick)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Labo : culture urinaire (CAVE : ≠ dipstick)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Labo : test de grossesse",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Hypothèse diagnostique : pyélonéphrite aiguë simple",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Proposé une antibiothérapie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m8",
+          "text": "Évoqué une hospitalisation / un traitement en ambulatoire",
+          "binaryOnly": true
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Valeurs de laboratoire - Pyélonéphrite",
+        "description": "Résultats de laboratoire montrant leucocytose, élévation de la CRP et anomalies urinaires",
+        "filename": "grilles_generees/html/images/douleur-au-flanc-1-img1.jpg"
+      },
+      {
+        "id": "img2",
+        "title": "Algorithme diagnostique - Infection urinaire",
+        "description": "Arbre décisionnel pour la prise en charge des infections urinaires",
+        "filename": "grilles_generees/html/images/douleur-au-flanc-1-img2.jpg"
+      },
+      {
+        "id": "img3",
+        "title": "Antibiothérapie empirique - Pyélonéphrite",
+        "description": "Tableau des antibiotiques recommandés pour le traitement de la pyélonéphrite",
+        "filename": "grilles_generees/html/images/douleur-au-flanc-1-img3.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Gabrielle Delacour",
+      "age": "36 ans",
+      "contexte": "Employée de commerce chez IKEA consultant aux urgences pour douleur au flanc droit et fièvre",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal au ventre depuis cette nuit",
+        "autreChose": "Je me sens fatiguée aussi depuis quelques jours, un sentiment de mal être général"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur au ventre, flanc droit",
+          "Localisation : Hypochondre droit, flanc droit",
+          "Qualité : Douleur sourde",
+          "Intensité : 6/10",
+          "Irradiation : Vers le pubis",
+          "Chronologie : Douleur a commencé cette nuit vers 4h00, progressive",
+          "Développement : La douleur est constante mais je me sens de moins en moins bien",
+          "Circonstances : J'étais au lit et la douleur m'a réveillée",
+          "Facteurs atténuants : Aucun",
+          "Facteurs aggravants : Aucun",
+          "Réponse au symptôme : J'ai pris un Irfen 400mg mais sans effet"
+        ],
+        "symptomesAssocies": [
+          "Frissons",
+          "Nausées (à n'évoquer que si le médecin demande d'autres symptômes après avoir reçu l'info sur les frissons)",
+          "Algurie / Pollakiurie : Urine 10 fois par jour, légère algurie (à n'évoquer que si le médecin fait l'anamnèse du système uro-génital)"
+        ],
+        "reponseAuxSymptomes": [
+          "J'ai pris un Irfen 400mg en espérant que cela soulagerait la douleur",
+          "J'ai appelé mon patron pour dire que je serais absente du travail",
+          "J'ai demandé à ma voisine de s'occuper de ma fille"
+        ],
+        "representationMaladie": [
+          "Je suis inquiète car je n'ai jamais eu une douleur de ce genre",
+          "Je dois retourner m'occuper de ma fille"
+        ],
+        "questions": [
+          "On en a pour combien de temps encore ? Je dois retourner m'occuper de ma fille ! (À poser quand le médecin demande des tests complémentaires)"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Trouble du sommeil cette nuit",
+          "Sudations nocturnes",
+          "Frissons",
+          "Sentiment de fièvre"
+        ],
+        "digestive": [
+          "Nausées",
+          "Pas de vomissements",
+          "Le reste est normal"
+        ],
+        "genitourinaire": [
+          "Pollakiurie (j'ai été 10x aux toilettes depuis cette nuit)",
+          "Légère algurie",
+          "Le reste est normal"
+        ],
+        "psychiatrique": [
+          "Grande anxiété par rapport à la garde de sa fille"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Adéquate",
+        "activitePhysique": "Ski en hiver",
+        "sommeil": "Bon habituellement",
+        "tabac": "Non",
+        "alcool": "1 verre de vin/jour",
+        "drogues": "Non",
+        "medicaments": "Non",
+        "sexualite": "Rapports réguliers non protégés avec son mari"
+      },
+      "histoireMedicale": [
+        "En bonne santé habituelle (BSH)",
+        "Toutes les maladies d'enfance faites à ma connaissance",
+        "Infections urinaires survenues 4x depuis l'accouchement (si le patient a évoqué le système uro-génital)",
+        "A présenté une colique néphrétique avec passage spontané du calcul au décours de la grossesse",
+        "Vaccins à jour",
+        "Hospitalisation : À la naissance de ma fille il y a 2 ans",
+        "Pas d'opérations",
+        "Pas de blessures/traumas",
+        "Pas de transfusions",
+        "Allergie : Noisettes",
+        "Pas d'antécédents psychiatriques",
+        "Antécédents gynécologiques : Status post-partum en 2015",
+        "Anamnèse familiale : Mère en BSH, Père eu un problème au cœur en 2008 maintenant ça va bien, Sœur BSH vit en Angleterre, pas de frère, Grands-parents tous décédés sauf 1 grand-mère (côté maternel) qui souffre de diabète"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Employée de commerce chez IKEA",
+        "taille": "1m67",
+        "poids": "68kg",
+        "etatCivil": "Mariée",
+        "etatEsprit": "Anxieuse, inquiète pour sa fille"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Mal-être général, frissons",
+          "Nausées",
+          "Douleur flanc droit (se tenir le flanc droit durant l'anamnèse)",
+          "Anxiété",
+          "Inquiétude pour votre fille qui est seule avec la voisine"
+        ],
+        "durantStatus": [
+          "Douleur +++ à la palpation de l'angle costo-vertébral droit",
+          "Douleur +++ à la percussion de la loge rénale droite",
+          "Légère douleur à la palpation de l'hypochondre droit",
+          "Signe de Murphy négatif"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Patiente de 36 ans, mère d'une fille de 2 ans, en BSH habituelle, consulte pour douleur au flanc droit depuis cette nuit vers 4h00, associée à fièvre (38.1°C), frissons et nausées. Antécédents d'infections urinaires répétées (4x) depuis l'accouchement et colique néphrétique post-grossesse.",
+      "rolesInterventions": [
+        "Remplir la grille d'évaluation",
+        "Donner les résultats des examens demandés (FSC, chimie sanguine, dipstick urinaire, test de grossesse)",
+        "Pour ce poste, seuls les status cardio-pulmonaire (rapide) et digestif (complet) doivent être effectués",
+        "Toute autre tentative de status de la part du médecin doit déclencher la phrase 'le status est normal, passez' de la part de l'expert"
+      ],
+      "resultatsLaboratoire": {
+        "fsc": {
+          "leucocytes": "16.2 G/L (N : 3.2-9.8)",
+          "erythrocytes": "3.9 T/L (N : 3.5-5.0)",
+          "hb": "141 g/L (N : 120-150)",
+          "hematocrite": "38% (N : 33-43)",
+          "mcv": "92 fl (N : 76-100)",
+          "mch": "29.5 pg (N : 27-33)",
+          "mchc": "343 g/L (N : 330-370)",
+          "plaquettes": "248 G/L (N : 130-400)"
+        },
+        "chimieSanguine": {
+          "na": "138 mmol/L (N : 135-147)",
+          "k": "4 mmol/L (N : 3.5-5)",
+          "creatinine": "109 µmol/L (N : 50-110)",
+          "crp": "91 mg/L (N : < 6)",
+          "asat": "23 U/L (N : 0-35)",
+          "alat": "19 U/L (N : 0-35)",
+          "gammaGt": "28 U/L (N : 0-30)",
+          "phosphataseAlcaline": "69 U/L (N : 30-120)",
+          "bilirubineTotale": "19 µM/L (N : 10-100)"
+        },
+        "analyseUrines": {
+          "aspect": "trouble",
+          "leucos": "positif",
+          "erythro": "positif",
+          "nitrites": "positif",
+          "glucose": "négatif"
+        },
+        "testGrossesse": "négatif"
+      },
+      "pointsCles": [
+        "Pyélonéphrite aiguë simple chez une femme jeune",
+        "Facteurs de risque : infections urinaires récidivantes post-partum",
+        "Pas de critères d'hospitalisation (pas de grossesse, pas de comorbidités, pas de sepsis)",
+        "Importance de l'antibiothérapie empirique adaptée",
+        "Rassurer la patiente sur la prise en charge ambulatoire"
+      ],
+      "pieges": [
+        "Ne pas oublier le test de grossesse systématique chez toute femme en âge de procréer",
+        "Vérifier l'absence de critères de pyélonéphrite compliquée",
+        "Ne pas oublier de palper et percuter les loges rénales",
+        "Penser à la culture urinaire en plus du dipstick"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la pyélonéphrite aiguë",
+      "sections": [
+        {
+          "titre": "Définition pyélonéphrite simple",
+          "contenu": "Infection du parenchyme rénal et du bassinet, généralement d'origine ascendante.",
+          "points": [
+            "Des symptômes d'une cystite peuvent être présents, mais ne sont pas nécessaires",
+            "Fièvre > 38°C, frissons",
+            "Douleur du flanc",
+            "Douleur au niveau de l'angle costo-vertébral, notamment à la palpation bimanuelle / percussion",
+            "Nausée / vomissement"
+          ]
+        },
+        {
+          "titre": "Définition pyélonéphrite compliquée",
+          "contenu": "Pyélonéphrite simple avec :",
+          "points": [
+            "Hypotension, choc septique",
+            "Insuffisance rénale",
+            "Obstruction urinaire",
+            "Facteurs aggravants : risque augmentés d'infections (p.ex. : DM), grossesse"
+          ]
+        },
+        {
+          "titre": "Épidémiologie et pathogénèse",
+          "points": [
+            "75-95% des pyélonéphrites non compliquées chez la jeune femme sont dues aux E. coli",
+            "Pathogénèse : Infection ascendante (++)",
+            "Facteurs de risque : sexe féminin, activité sexuelle, grossesse, anomalies urologiques"
+          ]
+        },
+        {
+          "titre": "Clinique",
+          "contenu": "Symptômes :",
+          "points": [
+            "Généralement, le début est brusque, mais il peut aussi être très subtile (fatigue, nausée, discrète douleur abdominale) chez les sujets très jeunes ou âgés",
+            "Fièvre",
+            "Douleur sus-pubienne, douleur du flanc (du côté du rein atteint)",
+            "Dysurie, pollakiurie, urgence mictionnelle",
+            "Signes : pyurie (+++), hématurie (parfois)"
+          ]
+        },
+        {
+          "titre": "Complications",
+          "points": [
+            "Abcès rénal",
+            "Nécrose papillaire (si : obstruction des voies uro-génitales, DM, abus d'analgésique)",
+            "Sepsis (y compris choc septique), défaillance multi-organique",
+            "Insuffisance rénale aigue"
+          ]
+        },
+        {
+          "titre": "Critères d'hospitalisation",
+          "points": [
+            "Pyélonéphrite compliquée",
+            "Patients co-morbides : insuffisance cardiaque/rénale/hépatique/respiratoire, immunosuppression",
+            "Patients âgés",
+            "Femmes enceintes",
+            "Compliance médicamenteuse compromise",
+            "Nausée/vomissement empêchant la prise orale d'antibiotiques"
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "contenu": "Diagnostic et traitement :",
+          "points": [
+            "Bandelette urinaire : leucocytes et nitrites positifs",
+            "ECBU avec antibiogramme",
+            "Hémocultures si signes de sepsis",
+            "Imagerie (échographie, CT) si suspicion de complication ou échec thérapeutique",
+            "Antibiothérapie empirique : fluoroquinolones ou céphalosporines de 3e génération",
+            "Durée du traitement : 10-14 jours"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antibiothérapie empirique : Ciprofloxacine 500mg 2x/j PO ou Ceftriaxone 1g/j IV/IM",
+        "Analgésie : Paracétamol, AINS si fonction rénale normale",
+        "Hydratation adéquate",
+        "Contrôle ECBU après 48-72h si évolution défavorable",
+        "Suivi en consultation après traitement"
+      ],
+      "examensComplementaires": [
+        "FSC : recherche hyperleucocytose",
+        "CRP : marqueur inflammatoire",
+        "Créatinine : fonction rénale",
+        "Bandelette urinaire : leucocytes, nitrites, sang",
+        "ECBU avec antibiogramme : identification du germe",
+        "Hémocultures si T°>38.5°C ou signes de sepsis",
+        "Test de grossesse systématique",
+        "Échographie rénale si suspicion d'obstruction"
+      ]
+    },
+    "ddSection": {
+      "title": "Diagnostics différentiels à considérer",
+      "categories": [
+        {
+          "name": "Causes urologiques",
+          "items": [
+            {
+              "text": "Pyélonéphrite aiguë simple",
+              "cause": "Arguments POUR:\n\t□ Fièvre avec frissons\n\t□ Douleur flanc avec irradiation pubienne\n\t□ Douleur angle costo-vertébral\n\t□ Pollakiurie et algurie\n\t□ ATCD infections urinaires répétées\n\t□ Leucocyturie, nitrites positifs",
+              "test": "→ ECBU, hémocultures si fièvre élevée"
+            },
+            {
+              "text": "Colique néphrétique",
+              "cause": "Arguments POUR:\n\t□ ATCD de lithiase\n\t□ Douleur flanc\nArguments CONTRE:\n\t□ Présence de fièvre\n\t□ Signes infectieux urinaires",
+              "test": "→ Échographie rénale, CT abdomen sans injection"
+            },
+            {
+              "text": "Cystite aiguë",
+              "cause": "Arguments CONTRE:\n\t□ Fièvre élevée\n\t□ Douleur lombaire\n\t□ Signes systémiques",
+              "test": "→ Bandelette urinaire, ECBU"
+            }
+          ]
+        },
+        {
+          "name": "Causes digestives",
+          "items": [
+            {
+              "text": "Cholécystite aiguë",
+              "cause": "Arguments POUR:\n\t□ Douleur hypochondre droit\nArguments CONTRE:\n\t□ Murphy négatif\n\t□ Irradiation pubienne\n\t□ Signes urinaires",
+              "test": "→ Échographie abdominale, bilan hépatique"
+            },
+            {
+              "text": "Appendicite",
+              "cause": "Arguments CONTRE:\n\t□ Localisation flanc et non FID\n\t□ Pas de défense\n\t□ Signes urinaires présents",
+              "test": "→ Échographie ou CT abdominal"
+            }
+          ]
+        },
+        {
+          "name": "Causes gynécologiques",
+          "items": [
+            {
+              "text": "Salpingite / PID",
+              "cause": "Arguments CONTRE:\n\t□ Pas de pertes vaginales\n\t□ Rapports protégés avec mari\n\t□ Localisation flanc et non pelvienne",
+              "test": "→ Examen gynécologique, échographie pelvienne"
+            }
+          ]
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🔥 Pyélonéphrite aiguë – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Fièvre élevée avec frissons",
+                "Douleurs lombaires unilatérales",
+                "Dysurie, pollakiurie, brûlures mictionnelles",
+                "Altération de l’état général (fatigue, anorexie, nausées, vomissements)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Sexe féminin, rapports sexuels fréquents",
+                "Grossesse",
+                "Antécédents d’infections urinaires récidivantes",
+                "Obstacles urinaires : calculs, adénome prostatique",
+                "Diabète, immunodépression"
+              ]
+            },
+            {
+              "titre": "Signes de gravité",
+              "points": [
+                "Sepsis sévère ou choc septique",
+                "Anurie ou oligurie",
+                "Douleurs intenses résistantes",
+                "Terrain fragile (grossesse, sujet âgé, immunodéprimé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes généraux",
+              "points": [
+                "Fièvre > 38,5 °C",
+                "Tachycardie, parfois hypotension",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "Signes spécifiques",
+              "points": [
+                "Douleur provoquée à la percussion de la fosse lombaire (signe de Giordano positif)",
+                "Douleur abdominale ou pelvienne associée",
+                "Pas de défense abdominale diffuse (≠ péritonite)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "ECBU avec antibiogramme : bactériurie significative + leucocyturie",
+                "Hémocultures si fièvre > 38,5 °C",
+                "NFS : hyperleucocytose",
+                "CRP et PCT élevées"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie réno-vésicale si suspicion obstacle (lithiase, dilatation)",
+                "Scanner abdomino-pelvien injecté si forme compliquée (abcès, pyélonéphrite emphysémateuse, absence d’amélioration sous traitement)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement antibiotique",
+              "points": [
+                "Forme simple : fluoroquinolone (ciprofloxacine) ou C3G orale (céfixime) si antibiogramme favorable",
+                "Forme compliquée ou grave : C3G IV (céfotaxime, ceftriaxone) ± aminoside en début",
+                "Adapter secondairement selon antibiogramme",
+                "Durée : 10–14 jours (7 jours possible si FQ efficace)"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Hydratation adaptée",
+                "Antipyrétiques et antalgiques",
+                "Hospitalisation si forme grave, sepsis, terrain à risque"
+              ]
+            },
+            {
+              "titre": "Prise en charge des complications",
+              "points": [
+                "Drainage urologique si obstacle (sonde JJ, néphrostomie)",
+                "Prise en charge chirurgicale si abcès rénal"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Fièvre + douleur lombaire unilatérale = pyélonéphrite jusqu’à preuve du contraire",
+            "ECBU systématique avec antibiogramme",
+            "Échographie/Scanner si suspicion d’obstacle ou forme compliquée",
+            "ATB IV si forme grave ou compliquée",
+            "Toujours rechercher une cause obstructive (calcul, obstacle tumoral)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand fièvre et douleur lombaire ?",
+                "Signes urinaires associés (pollakiurie, brûlures mictionnelles) ?",
+                "ATCD d’IVU ou de calculs ?",
+                "Grossesse, diabète, immunosuppression ?",
+                "Frissons, malaise ou hypotension (signe de sepsis) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, SpO₂)",
+                "Signe de Giordano (percussion lombaire)",
+                "ECBU + hémocultures",
+                "NFS, CRP, créatinine",
+                "Échographie ± scanner si suspicion de complication"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "ECBU systématique avant ATB",
+                "Antibiothérapie adaptée (FQ ou C3G ± aminoside selon gravité)",
+                "Imagerie si doute diagnostique ou forme compliquée"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur au flanc droit fébrile (suspicion pyélonéphrite aiguë simple)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (douleur flanc droit fébrile)",
+            "Caractériser douleur → localisation hypochondre/flanc droit irradiant au pubis, qualité sourde, EVA 6/10, début nocturne, constante",
+            "Signes associés → fièvre 38,1 °C, frissons, nausées, malaise général",
+            "Signes urinaires → pollakiurie, algurie, urines troubles",
+            "Facteurs de risque → infections urinaires récidivantes, colique néphrétique ancienne, rapports sexuels, sexe féminin",
+            "ATCD médicaux → infections urinaires, colique néphrétique, allergie noisettes",
+            "Habitudes → non-fumeuse, alcool modéré, pas de drogues, pas de traitement chronique",
+            "Examen clinique → palpation abdomen, douleur angle costo-vertébral droit, pas d’ictère, constantes",
+            "Résumé + hypothèse principale (pyélonéphrite) + diagnostics différentiels (colique néphrétique, cystite, cholécystite, appendicite, PID)",
+            "Examens complémentaires → FSC, CRP, créatinine, dipstick, ECBU avec antibiogramme, hémocultures si fièvre >38,5, test grossesse",
+            "Prise en charge → antibiothérapie empirique, antalgie/antipyrétique, hydratation, surveillance, hospitalisation si compliquée"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : FIÈVRE",
+            "elements": [
+              "F = Fièvre avec frissons",
+              "I = Infection urinaire ascendante",
+              "È = Évolution rapide",
+              "V = Vessie (cystite associée possible)",
+              "R = Rein douloureux (Giordano +)",
+              "E = ECBU obligatoire"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Gabrielle Delacour, une femme de 36 ans, employée de commerce, qui consulte aux urgences pour une douleur abdominale apparue cette nuit vers 4 heures.\n\nLa douleur est localisée au flanc droit et à l’hypochondre droit, décrite comme sourde, d’intensité 6/10, constante, avec une irradiation vers le pubis. Elle l’a réveillée et n’a pas été soulagée par la prise d’Ibuprofène 400 mg. Depuis, elle se sent de plus en plus mal, avec des frissons et une sensation de fièvre. Elle rapporte également des nausées, une pollakiurie marquée (10 mictions depuis cette nuit) et une légère brûlure mictionnelle. Pas de vomissements, pas de troubles du transit.\n\nDans ses antécédents, on retrouve plusieurs infections urinaires depuis son accouchement il y a 2 ans, ainsi qu’un épisode de colique néphrétique spontanément résolutif durant sa grossesse. Pas d’opérations ni maladies chroniques. Allergie aux noisettes. Elle ne fume pas, consomme un verre de vin par jour et ne prend aucun traitement chronique.\n\nÀ l’examen, Mme Delacour est fébrile à 38,1 °C, TA 105/85 mmHg, FC 78 bpm. Elle est anxieuse, inquiète pour sa fille restée avec une voisine. L’abdomen est souple, douloureux à la palpation de l’hypochondre droit et surtout à la percussion de la loge rénale droite. Le signe de Murphy est négatif. Pas d’ictère.\n\nEn résumé, il s’agit d’une femme jeune, avec douleur lombaire fébrile, frissons, signes urinaires et ATCD d’infections urinaires. Mon hypothèse principale est une pyélonéphrite aiguë simple. Les diagnostics différentiels incluent une colique néphrétique (mais présence de fièvre oriente vers infection), une cystite simple (pas de douleur lombaire), une cholécystite (Murphy négatif), une appendicite (localisation atypique) et une PID (pas de leucorrhées ni douleurs pelviennes).\n\nComme examens complémentaires, je demanderais une NFS (hyperleucocytose attendue), CRP, créatinine, bandelette urinaire, ECBU avec antibiogramme et un test de grossesse. En cas de fièvre >38,5 ou sepsis, des hémocultures sont indiquées. Une imagerie (échographie rénale ou scanner) serait discutée seulement si évolution défavorable ou suspicion d’obstacle.\n\nEn termes de prise en charge immédiate, je propose une antibiothérapie empirique par fluoroquinolone orale (ciprofloxacine) ou céphalosporine de 3e génération adaptée au contexte, associée à une hydratation, un traitement antipyrétique et une surveillance rapprochée. Une hospitalisation n’est pas nécessaire ici car il s’agit d’une forme simple, sans sepsis ni comorbidité."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Delacour, 36 ans, présente douleur flanc droit fébrile avec frissons et dysurie.\n\nB (Background) : ATCD infections urinaires récidivantes, colique néphrétique, pas de comorbidités. Allergie noisettes.\n\nA (Assessment) : Pyélonéphrite aiguë simple. DD : colique néphrétique, cystite, cholécystite, appendicite, PID.\n\nR (Recommendation) : FSC, CRP, créatinine, dipstick urinaire, ECBU + ATB empirique. Hydratation, antipyrétiques, surveillance ambulatoire. Hospitalisation si forme compliquée."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes typiques pyélonéphrite",
+              "points": [
+                "Fièvre >38 °C avec frissons",
+                "Douleur lombaire unilatérale (Giordano +)",
+                "Syndrome infectieux urinaire : pollakiurie, algurie",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "👉 Complications",
+              "points": [
+                "Sepsis",
+                "Abcès rénal",
+                "Nécrose papillaire",
+                "Insuffisance rénale aiguë"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier le test de grossesse systématique",
+                "Confondre cystite fébrile et pyélonéphrite",
+                "Oublier de proposer ECBU avec antibiogramme",
+                "Prescrire AINS sans vérifier fonction rénale",
+                "Négliger critères de gravité → hospitalisation"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Pyélonéphrite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre avec frissons",
+                      "Douleur flanc droit irradiant pubis",
+                      "Pollakiurie et algurie",
+                      "ATCD infections urinaires récidivantes",
+                      "ECBU positif attendu"
+                    ],
+                    "contre": [
+                      "Pas de sepsis",
+                      "Pas de vomissements incoercibles"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colique néphrétique",
+                  "reponse": {
+                    "pour": [
+                      "ATCD lithiase",
+                      "Douleur flanc"
+                    ],
+                    "contre": [
+                      "Présence de fièvre",
+                      "Signes urinaires infectieux"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cystite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Pollakiurie, algurie"
+                    ],
+                    "contre": [
+                      "Fièvre élevée",
+                      "Douleur lombaire"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cholécystite",
+                  "reponse": {
+                    "pour": [
+                      "Douleur hypochondre droit"
+                    ],
+                    "contre": [
+                      "Murphy négatif",
+                      "Signes urinaires présents"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP",
+                    "Créatinine",
+                    "Dipstick urinaire",
+                    "ECBU avec antibiogramme",
+                    "Hémocultures si T°>38,5 °C",
+                    "Test de grossesse"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Pyélonéphrite aiguë simple confirmée par clinique + ECBU"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Antibiothérapie empirique (ciprofloxacine PO ou ceftriaxone IV selon contexte)",
+                      "Hydratation",
+                      "Paracétamol",
+                      "Surveillance clinique"
+                    ],
+                    "siCompliquee": [
+                      "Hospitalisation",
+                      "ATB IV",
+                      "Imagerie rénale (échographie/scanner)",
+                      "Drainage si obstacle"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation de contrôle après traitement",
+                    "ECBU de contrôle si évolution défavorable",
+                    "Surveillance récidives (mesures hygiéno-diététiques)",
+                    "Orientation urologique si récidives fréquentes"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

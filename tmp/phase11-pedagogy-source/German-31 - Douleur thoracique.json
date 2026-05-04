@@ -1,0 +1,396 @@
+{
+  "title": "German-31 - Douleur thoracique",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Femme de 54 ans (163 cm, 75 kg) se présentant avec douleurs thoraciques et dyspnée",
+    "vitals": {
+      "ta": "110/78 mmHg",
+      "fc": "86 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification des symptômes",
+          "details": [
+            "[Douleur dans la poitrine, arrive mal à respirer]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution des symptômes",
+          "details": [
+            "[Depuis environ 2 heures]",
+            "[Première fois que cela arrive]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Localisation de la douleur",
+          "details": [
+            "[Montre avec toute la main le centre de la poitrine]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Intensité de la douleur",
+          "details": [
+            "[6/10]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Piquant]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Douleur liée à la respiration",
+          "details": [
+            "[Oui !]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Irradiation de la douleur",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "[Mieux avec une respiration superficielle]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes associés",
+          "details": [
+            "Dyspnée [oui]",
+            "Nausées [non]",
+            "Transpiration [non]",
+            "Palpitations [non, juste quelques battements de cœur]",
+            "Vertiges, syncope [non]",
+            "Toux/expectoration [parfois le matin]",
+            "Fièvre [non]",
+            "Douleurs abdominales [non]",
+            "Pyrosis [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Hémoptysie",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Traumatisme thoracique",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension [oui]",
+            "Diabète [non]",
+            "Dyslipidémie [non]",
+            "Antécédents familiaux d'infarctus [non]",
+            "Tabagisme [oui]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Facteurs de risque d'embolie pulmonaire (Score de Wells)",
+          "details": [
+            "Œdème/douleur du mollet [Les jambes font mal après le long trajet en car de toute façon]",
+            "Voyage récent [Revenue de Prague ce matin en car]",
+            "Chirurgie récente [non]",
+            "Cancer actif [non]",
+            "Antécédents familiaux de thrombophilie [non]",
+            "Contraceptifs oraux [Allons donc, j'ai 54 ans !]",
+            "Grossesse [Allôôô ?!]"
+          ],
+          "scoringRule": "Wells ≥ 2 points = probabilité élevée d'EP"
+        },
+        {
+          "id": "a15",
+          "text": "Signes généraux",
+          "details": [
+            "[Pas de perte de poids, pas de fièvre, pas de sueurs nocturnes]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents personnels",
+          "details": [
+            "[Hypertension artérielle]",
+            "[Le poids ! Je n'arrive pas à le perdre...]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Habitudes de vie",
+          "details": [
+            "[Demi-paquet par jour depuis environ 30 ans]",
+            "[Pas d'alcool, pas de drogues]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Bêtabloquant]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Père : infarctus à 78 ans]",
+            "[Mère : en bonne santé]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Travaillait comme électricienne, mariée, 2 enfants]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète ciblée sur l'évaluation du risque cardiovasculaire et thromboembolique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "Couleur de la peau (cyanose ?)",
+            "Excursions thoraciques symétriques et régulières",
+            "Fréquence respiratoire"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "État cardiopulmonaire",
+          "details": [
+            "[Murmure vésiculaire bilatéral présent]",
+            "[Pas de râles, ronchus ou sibilances]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection des membres inférieurs",
+          "details": [
+            "Recherche de signes de TVP",
+            "Œdème, chaleur, rougeur",
+            "Signe de Homans"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Recherche de souffle",
+            "Rythme régulier",
+            "B3/B4"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation abdominale",
+          "details": [
+            "Recherche d'organomégalie",
+            "Douleur épigastrique"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique orienté sur l'évaluation cardiopulmonaire et thromboembolique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic de suspicion principal",
+          "details": [
+            "[Embolie pulmonaire]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Embolie pulmonaire",
+            "Syndrome coronarien aigu",
+            "Pneumothorax",
+            "Pneumonie",
+            "Douleur musculosquelettique",
+            "Reflux gastro-œsophagien"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes vasculaires",
+                "items": [
+                  {
+                    "text": "Embolie pulmonaire → D-dimères, angio-CT thoracique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ D-dimères, angio-CT thoracique"
+                  },
+                  {
+                    "text": "Syndrome coronarien aigu → ECG, troponine, échocardiographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, troponines, test d'effort"
+                  }
+                ]
+              },
+              {
+                "name": "Causes pulmonaires",
+                "items": [
+                  {
+                    "text": "Pneumothorax → Radiographie thoracique, US thoracique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CT thoracique"
+                  },
+                  {
+                    "text": "Pneumonie → Radiographie thoracique, CRP, FSC",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CRP, hémocultures"
+                  },
+                  {
+                    "text": "Pleurésie → Radiographie thoracique, US pleural",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, ponction pleurale"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Douleur musculosquelettique → Examen clinique, test thérapeutique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Reflux gastro-œsophagien → Test IPP, endoscopie si persistance",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie, gastroscopie"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques urgents",
+          "details": [
+            "ECG (éliminer SCA)",
+            "Radiographie thoracique",
+            "D-dimères (si probabilité faible/intermédiaire)",
+            "Gazométrie artérielle",
+            "FSC, CRP, troponine",
+            "Angio-CT thoracique si D-dimères positifs ou haute probabilité"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique initiale",
+          "details": [
+            "Oxygénothérapie si SpO2 < 94%",
+            "Analgésie adaptée",
+            "Anticoagulation si forte suspicion d'EP",
+            "Surveillance monitoring"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de l'embolie pulmonaire confirmée",
+                "content": "• Anticoagulation immédiate : HBPM (enoxaparine 1mg/kg 2x/j SC)\n• Relais par AOD (rivaroxaban, apixaban) ou AVK\n• Durée : minimum 3 mois, à adapter selon étiologie\n• Thrombolyse si EP massive avec instabilité hémodynamique"
+              },
+              {
+                "title": "Mesures de support",
+                "content": "• Repos au lit initial\n• Bas de contention\n• Mobilisation précoce dès stabilisation\n• Recherche étiologique (cancer, thrombophilie)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Information et suivi",
+          "details": [
+            "Expliquer la gravité potentielle",
+            "Nécessité d'hospitalisation pour surveillance",
+            "Importance de l'observance thérapeutique",
+            "Contrôle INR si AVK, surveillance hémorragique"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prévention secondaire",
+          "details": [
+            "Arrêt du tabac impératif",
+            "Contrôle des facteurs de risque cardiovasculaire",
+            "Éviter immobilisation prolongée",
+            "Prophylaxie lors de voyages prolongés"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge urgente appropriée avec stratification du risque et traitement adapté"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

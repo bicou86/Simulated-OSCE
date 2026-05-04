@@ -1,0 +1,414 @@
+{
+  "title": "German-73 - Saignement vaginal",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Une patiente consulte pour des saignements vaginaux (cas possible : jeune femme, femme enceinte ou femme ménopausée selon le scénario)."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Caractéristiques des saignements",
+          "binaryOnly": false,
+          "details": [
+            "Début des saignements [Il y a 3 jours]",
+            "Durée des saignements [Persistants depuis le début]",
+            "Quantité de sang [Importante, 3-4 serviettes par jour]",
+            "Présence de caillots [Oui, quelques caillots]",
+            "Couleur du sang [Rouge vif]",
+            "Évolution [Stable]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Cycle menstruel",
+          "binaryOnly": false,
+          "details": [
+            "Ménarche [13 ans]",
+            "Date des dernières règles [Il y a 6 semaines]",
+            "Régularité du cycle [Habituellement régulier, 28 jours]",
+            "Durée habituelle des règles [5 jours]",
+            "Ménopause [Non applicable / Il y a 2 ans selon le cas]",
+            "Aménorrhée antérieure [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Activité sexuelle et contraception",
+          "binaryOnly": false,
+          "details": [
+            "Rapports sexuels récents [Oui, il y a 1 semaine]",
+            "Protection utilisée [Pas toujours]",
+            "Contraception actuelle [Pilule / DIU / Aucune selon le cas]",
+            "Oubli de pilule [Non applicable]",
+            "Position du DIU [À vérifier si applicable]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Possibilité de grossesse",
+          "binaryOnly": false,
+          "details": [
+            "Test de grossesse fait [Non]",
+            "Symptômes de grossesse [Nausées matinales légères]",
+            "Désir de grossesse [Oui/Non selon le cas]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes associés - Douleur",
+          "binaryOnly": false,
+          "details": [
+            "Présence de douleurs [Oui]",
+            "Localisation [Bas-ventre, bilatérale]",
+            "Intensité (1-10) [6/10]",
+            "Type de douleur [Crampes]",
+            "Durée [Intermittente]",
+            "Irradiation [Non]",
+            "Signes de péritonisme [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes associés - Sécrétions",
+          "binaryOnly": false,
+          "details": [
+            "Leucorrhées anormales [Non]",
+            "Odeur désagréable [Non]",
+            "Brûlures vaginales [Non]",
+            "Démangeaisons [Non]",
+            "Dyspareunie [Légère]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [Non]",
+            "Fatigue [Oui, modérée]",
+            "Vertiges [Légers en se levant]",
+            "Palpitations [Non]",
+            "Signes d'abdomen aigu [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents gynécologiques",
+          "binaryOnly": false,
+          "details": [
+            "Nombre de grossesses [G2P1 ou autre selon le cas]",
+            "Accouchements [1 par voie basse sans complication]",
+            "Fausses couches [1 il y a 2 ans]",
+            "IVG [Non]",
+            "Grossesse extra-utérine [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux pertinents",
+          "binaryOnly": false,
+          "details": [
+            "Troubles de la coagulation [Non]",
+            "Thromboses antérieures [Non]",
+            "Syndrome des antiphospholipides [Non]",
+            "Endométriose [Non diagnostiquée]",
+            "Fibromes connus [Non]",
+            "SOPK [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Interventions gynécologiques antérieures",
+          "binaryOnly": false,
+          "details": [
+            "Chirurgies abdominales [Aucune]",
+            "Curetages [Un après la fausse couche]",
+            "Conisation [Non]",
+            "Stérilisation tubaire [Non]",
+            "Infections pelviennes [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Traumatisme récent",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme abdominal [Non]",
+            "Traumatisme vaginal [Non]",
+            "Violence sexuelle [Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments et substances",
+          "binaryOnly": false,
+          "details": [
+            "Anticoagulants [Non]",
+            "Aspirine [Non]",
+            "Préparations hormonales [Pilule contraceptive]",
+            "Autres médicaments [Aucun]",
+            "Cocaïne [Non]",
+            "Tabac [Non]",
+            "Allergies médicamenteuses [Aucune]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Dernier frottis cervical",
+          "binaryOnly": false,
+          "details": [
+            "[Il y a 1 an, normal]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Fausses couches répétées [Non]",
+            "Cancers gynécologiques [Mère : cancer du sein à 55 ans]",
+            "Troubles de la coagulation [Non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Employée de bureau]",
+            "Stress récent [Modéré au travail]",
+            "Support social [Bon, mariée]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Tension artérielle [120/70 mmHg]",
+            "Pouls [88/min]",
+            "Température [36,8°C]",
+            "État général [Bon, légèrement pâle]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection [Normale]",
+            "Palpation superficielle [Souple]",
+            "Palpation profonde [Sensibilité sus-pubienne]",
+            "Défense [Non]",
+            "Rebond [Non]",
+            "Masses palpables [Non]",
+            "Bruits intestinaux [Normaux]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen gynécologique - Inspection",
+          "binaryOnly": false,
+          "details": [
+            "Vulve [Normale]",
+            "Saignement actif visible [Oui, modéré]",
+            "Lésions externes [Non]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen au spéculum (théorique)",
+          "binaryOnly": false,
+          "details": [
+            "Col de l'utérus [Fermé, saignement provenant de l'orifice cervical]",
+            "Lésions cervicales [Non]",
+            "Polypes [Non]",
+            "Ectropion [Non]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Toucher vaginal bimanuel (théorique)",
+          "binaryOnly": false,
+          "details": [
+            "Taille utérine [Normale / Augmentée selon le cas]",
+            "Position utérine [Antéversée]",
+            "Mobilité utérine [Mobile, non douloureuse]",
+            "Douleur à la mobilisation du col [Non]",
+            "Masses annexielles [Non palpables]",
+            "Culs-de-sac [Libres]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Attention : Placenta praevia",
+          "binaryOnly": false,
+          "details": [
+            "CAVE : Pas d'examen vaginal si suspicion de placenta praevia"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics évoqués - Femme jeune",
+          "binaryOnly": false,
+          "details": [
+            "[Grossesse extra-utérine - à exclure en urgence]",
+            "[Fausse couche]",
+            "[Saignement de nidation]",
+            "[Métrorragie fonctionnelle]",
+            "[Cervicite/infection]",
+            "[Polype cervical]",
+            "[Traumatisme]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics évoqués - Femme enceinte",
+          "binaryOnly": false,
+          "details": [
+            "[Placenta praevia]",
+            "[Décollement placentaire]",
+            "[Hématome rétroplacentaire]",
+            "[Rupture utérine]",
+            "[Menace d'accouchement prématuré]",
+            "[Fausse couche tardive]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Diagnostics évoqués - Femme ménopausée",
+          "binaryOnly": false,
+          "details": [
+            "[Carcinome de l'endomètre]",
+            "[Atrophie vaginale]",
+            "[Polype endométrial]",
+            "[Hyperplasie endométriale]",
+            "[Cancer du col]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Β-HCG quantitatif (urgent !)",
+            "Hémogramme complet",
+            "Groupe sanguin et Rhésus",
+            "Tests de coagulation (TP, TCA)",
+            "CRP"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Imagerie",
+          "binaryOnly": false,
+          "details": [
+            "Échographie pelvienne transabdominale",
+            "Échographie transvaginale (si pas de suspicion de placenta praevia)",
+            "CTG si grossesse avancée"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Voie veineuse si saignement important",
+            "Surveillance des signes vitaux",
+            "Évaluation de la quantité de sang perdu",
+            "Repos"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Traitement médicamenteux possible",
+          "binaryOnly": false,
+          "details": [
+            "Acide tranexamique si saignement important",
+            "Progestérone si menace de fausse couche",
+            "Méthotrexate si GEU non rompue",
+            "Antibiotiques si infection"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Interventions possibles",
+          "binaryOnly": false,
+          "details": [
+            "Curetage si fausse couche incomplète",
+            "Laparoscopie si GEU (préserve fertilité)",
+            "Césarienne d'urgence si indication obstétricale",
+            "Hystéroscopie diagnostique et thérapeutique"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Orientation",
+          "binaryOnly": false,
+          "details": [
+            "Hospitalisation si saignement important",
+            "Consultation gynécologique urgente",
+            "Surveillance ambulatoire si stable"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Information et conseil à la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explication de la démarche diagnostique",
+            "Signes d'alarme à surveiller",
+            "Consignes de repos",
+            "Contraception future si indiquée"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

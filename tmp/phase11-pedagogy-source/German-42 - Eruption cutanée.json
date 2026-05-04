@@ -1,0 +1,585 @@
+{
+  "title": "German-42 - Eruption cutanée",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Meier, 32 ans, se présente en consultation pour une éruption cutanée"
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Se présente avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Exploration du symptôme principal : éruption cutanée",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Évolution temporelle",
+          "patientComment": "Depuis 2 semaines"
+        },
+        {
+          "id": "a4",
+          "text": "Évolution et extension des lésions",
+          "patientComment": "Les lésions ont grandi, plusieurs foyers ont fusionné"
+        },
+        {
+          "id": "a5",
+          "text": "Localisation précise",
+          "patientComment": "Au poignet"
+        },
+        {
+          "id": "a6",
+          "text": "Évolution clinique (amélioration/aggravation)",
+          "patientComment": "Pas d'amélioration ni d'aggravation"
+        },
+        {
+          "id": "a7",
+          "text": "Caractéristiques des lésions",
+          "details": [
+            "Aspect (squameux, vésiculeux, etc.) [Desquamation]",
+            "Symptômes associés (prurit, douleur) [Démangeaisons intenses]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs d'exposition ou déclenchants",
+          "patientComment": "Piscine il y a 3 semaines"
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes B (fièvre, sueurs nocturnes, perte de poids)",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Allergies connues",
+          "patientComment": "Arachide, latex"
+        },
+        {
+          "id": "a11",
+          "text": "Médicaments actuels",
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Maladies antérieures [Aucune]",
+            "Interventions chirurgicales [Aucune]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes de vie",
+          "details": [
+            "Alcool [Occasionnel]",
+            "Tabac [1 paquet/jour depuis 10 ans]",
+            "Drogues [Non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux",
+          "patientComment": "Négatifs"
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse sociale et professionnelle",
+          "patientComment": "Non explorée"
+        },
+        {
+          "id": "a16",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection cutanée détaillée",
+          "details": [
+            "Description des lésions",
+            "Distribution et morphologie",
+            "Caractéristiques spécifiques"
+          ],
+          "patientComment": "Voir image en annexe"
+        },
+        {
+          "id": "e2",
+          "text": "Dermographisme",
+          "patientComment": "Testé"
+        },
+        {
+          "id": "e3",
+          "text": "Évaluation du statut cutané général",
+          "details": [
+            "Recherche d'autres lésions",
+            "État de la peau saine",
+            "Signes de grattage"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation des ganglions lymphatiques régionaux",
+          "patientComment": "Non augmentés"
+        },
+        {
+          "id": "e5",
+          "text": "Signes d'infection secondaire",
+          "patientComment": "Absents"
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Tinea corporis (mycose cutanée)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Dermatoses inflammatoires",
+                "items": [
+                  {
+                    "text": "Psoriasis : Plaques érythémato-squameuses bien délimitées, localisations typiques",
+                    "cause": "Arguments POUR:\n\t□ coudes, genoux, antécédents familiaux possibles",
+                    "test": "→ Diagnostic clinique, biopsie si doute"
+                  },
+                  {
+                    "text": "Dermatite atopique : Prurit intense, lichénification, terrain atopique, localisations flexurales",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Eczéma nummulaire : Lésions en pièces de monnaie, prurit, évolution chronique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Tests allergologiques, patch tests"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "Prélèvement mycologique [Grattage des squames pour examen direct]",
+            "Culture mycologique [Pour identification de l'agent pathogène]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Interprétation des examens",
+          "patientComment": "Visualisation de filaments mycéliens au microscope"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement systémique",
+                "content": "• Antimycotique oral : Terbinafine ou itraconazole selon l'agent pathogène × 2-4 semaines selon l'étendue"
+              },
+              {
+                "title": "Traitement local",
+                "content": "• Antimycotique topique : Application locale pour réduire la contagiosité × En complément du traitement systémique"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Mesures préventives et conseils",
+          "details": [
+            "Éviter les environnements humides",
+            "Sécher soigneusement la peau",
+            "Éviter le partage de serviettes",
+            "Traiter les contacts si nécessaire"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Planification du suivi",
+          "details": [
+            "Contrôle après 2 semaines de traitement",
+            "Vérification de la guérison mycologique",
+            "Adaptation du traitement si nécessaire"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Image clinique - Lésion cutanée",
+        "description": "Photographie montrant l'éruption cutanée squameuse au niveau du poignet, avec aspect annulaire caractéristique d'une tinea corporis",
+        "data": "grilles_generees/images/eruption-cutanee-i-img.jpg"
+      }
+    ],
+    "resume": {
+      "titre": "🌐 Tinea corporis (Dermatophytie cutanée) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Plaques cutanées arrondies, prurigineuses",
+                "Érythémateuses au début puis extension centrifuge",
+                "Aspect typique : centre clair avec bordure surélevée squameuse (aspect en anneau, « ringworm »)",
+                "Chronique ou récidivant"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Contact avec animaux domestiques (chat, chien)",
+                "Contexte sportif (vestiaires, tatamis, contact peau-à-peau)",
+                "Usage partagé de linge, serviettes, vêtements",
+                "Antécédents d’immunodépression (diabète, VIH, corticothérapie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Plaques arrondies ou polycycliques",
+                "Centre clair avec bordure inflammatoire active",
+                "Squames périphériques",
+                "Lésions multiples sur tronc, membres ou visage"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Diagnostic clinique",
+              "points": [
+                "Aspect évocateur souvent suffisant"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires si doute",
+              "points": [
+                "Examen direct au KOH : hyphes segmentés",
+                "Culture fongique (2–6 semaines) pour confirmation",
+                "Lampe de Wood : fluorescence bleu-vert (Microsporum)",
+                "Biopsie cutanée exceptionnelle"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement de première intention",
+              "points": [
+                "Antifongiques topiques (terbinafine, clotrimazole, miconazole, ciclopirox)",
+                "Durée : 2–4 semaines après disparition clinique",
+                "Éviter les crèmes associant corticoïdes (risque Majocchi)"
+              ]
+            },
+            {
+              "titre": "Formes sévères ou réfractaires",
+              "points": [
+                "Antifongiques systémiques (terbinafine, itraconazole, fluconazole, griséofulvine)",
+                "Durée 1–3 mois selon réponse",
+                "Surveillance hépatique si traitement systémique"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Éviter partage serviettes, vêtements, literie",
+                "Traiter les animaux de compagnie si suspectés",
+                "Examiner et traiter les contacts familiaux",
+                "Retour au sport possible après ≥72 h de traitement et lésions couvertes"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Plaque arrondie, prurigineuse, centre clair, bordure squameuse = évocateur",
+            "Diagnostic clinique, KOH utile si doute",
+            "Traitement antifongique topique en 1ère intention",
+            "Formes étendues → antifongiques systémiques",
+            "Toujours prévenir la transmission (contacts, linge, animaux)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand la lésion est-elle apparue ?",
+                "Prurit associé ? Extension progressive ?",
+                "Contacts avec animaux ? Sport de contact ?",
+                "Partage de linge, serviettes, vêtements ?",
+                "Antécédents d’immunodépression ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection cutanée complète",
+                "Examen KOH si diagnostic incertain",
+                "Culture fongique si forme atypique ou réfractaire",
+                "Recherche autres foyers (pieds, ongles, cuir chevelu)",
+                "Bilan immunité si infections récidivantes"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antifongique topique systématique",
+                "Antifongique systémique si atteinte sévère/étendue",
+                "Mesures d’hygiène et contrôle des contacts"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Éruption cutanée prurigineuse au poignet (suspicion de tinea corporis)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (homme 32 ans, éruption cutanée prurigineuse)",
+            "Caractériser la lésion → localisation (poignet), durée (2 semaines), évolution (lésions fusionnantes, extension centrifuge)",
+            "Aspect → annulaire, centre clair, bordure squameuse, prurit intense",
+            "Facteurs déclenchants/exposition → piscine il y a 3 semaines",
+            "ATCD médicaux et chirurgicaux → néant",
+            "ATCD familiaux → négatifs",
+            "Allergies → arachide, latex",
+            "Habitudes de vie → tabac 1PA/j depuis 10 ans, alcool occasionnel, pas de drogues",
+            "Examen clinique → inspection cutanée complète (lésion annulaire squameuse, pas de surinfection), pas d’adénopathie régionale",
+            "Résumé + hypothèse principale : Tinea corporis (dermatophytie cutanée) ; DD : psoriasis, dermatite atopique, eczéma nummulaire",
+            "Examens complémentaires → grattage cutané (examen direct KOH), culture mycologique si doute",
+            "Prise en charge → antifongique topique (terbinafine, clotrimazole), mesures d’hygiène, antifongique systémique si atteinte étendue"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : RING",
+            "elements": [
+              "R = Ring-shaped (lésion annulaire)",
+              "I = Itchy (prurit intense)",
+              "N = Net border (bordure nette squameuse)",
+              "G = Growing (extension centrifuge, foyers fusionnants)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Meier, un homme de 32 ans, qui consulte pour une éruption cutanée au niveau du poignet. L’éruption est apparue il y a environ 2 semaines et n’a pas régressé depuis. Elle a progressivement augmenté de taille, et plusieurs foyers ont même fusionné. Le patient décrit des démangeaisons intenses, sans douleur associée.\n\nÀ l’examen, la lésion est localisée au poignet, de forme arrondie, avec une bordure surélevée squameuse, un centre plus clair et une extension centrifuge. La peau environnante est normale, il n’y a pas d’autres lésions à distance ni d’adénopathie locale. Pas de signes d’infection secondaire. Le reste de l’examen est sans particularité.\n\nLe patient n’a pas d’antécédents médicaux notables, ni chirurgicaux. Il n’a pas de maladies chroniques, mais il est allergique à l’arachide et au latex. Il ne prend pas de traitement. Ses habitudes de vie incluent la consommation de tabac (1 paquet/jour depuis 10 ans) et de l’alcool occasionnel, sans drogue. Dans son entourage, il n’y a pas d’antécédents familiaux de maladies dermatologiques. Il rapporte avoir fréquenté une piscine il y a environ 3 semaines, ce qui constitue un facteur d’exposition classique.\n\nEn résumé, il s’agit d’un homme jeune avec une lésion annulaire prurigineuse, squameuse, au poignet, évocatrice d’un tinea corporis. Les diagnostics différentiels incluent un psoriasis (plaques érythémato-squameuses typiques, localisations classiques), une dermatite atopique (terrain atopique, flexures) ou un eczéma nummulaire (plaques en pièces de monnaie, chroniques).\n\nComme examens complémentaires, je proposerais un grattage cutané pour examen direct (visualisation de filaments mycéliens) et une culture mycologique si besoin. \n\nEn termes de prise en charge, le traitement de première intention repose sur un antifongique topique (terbinafine, clotrimazole, miconazole) pendant 2 à 4 semaines, à poursuivre même après disparition clinique. En cas de forme étendue, un traitement systémique par terbinafine ou itraconazole peut être indiqué. J’associerais des conseils d’hygiène : bien sécher la peau, éviter les environnements humides, ne pas partager les serviettes ou vêtements, et examiner/traiter les contacts proches si nécessaire. Un contrôle clinique et mycologique est à prévoir après 2 semaines."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Meier, 32 ans, présente depuis 2 semaines une éruption prurigineuse au poignet.\n\nB (Background) : Aucun antécédent médical significatif, allergies à l’arachide et au latex. Tabac 1PA/j, piscine il y a 3 semaines.\n\nA (Assessment) : Lésion annulaire squameuse évocatrice d’un tinea corporis. DD : psoriasis, dermatite atopique, eczéma nummulaire.\n\nR (Recommendation) : Grattage cutané et culture mycologique. PEC : antifongique topique 2-4 semaines, hygiène stricte, traitement systémique si formes étendues, contrôle après 2 semaines."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Diagnostic différentiel rapide (mnémotechnique : PED)",
+              "points": [
+                "P = Psoriasis",
+                "E = Eczéma nummulaire / Dermatite atopique",
+                "D = Dermatophytie (tinea)"
+              ]
+            },
+            {
+              "titre": "👉 Examens utiles",
+              "points": [
+                "Examen direct KOH → hyphes segmentés",
+                "Culture mycologique → identification de l’espèce",
+                "Lampe de Wood → fluorescence bleu-vert (Microsporum)",
+                "Biopsie cutanée rare, si doute diagnostique"
+              ]
+            },
+            {
+              "titre": "👉 PEC antifongique",
+              "points": [
+                "Topique systématique (terbinafine/clotrimazole)",
+                "Systémique si lésions multiples/étendues",
+                "Surveillance hépatique si traitement oral",
+                "Durée : 2-4 semaines"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Confondre avec eczéma/psoriasis",
+                "Prescrire corticoïdes topiques seuls → aggravation",
+                "Oublier de conseiller hygiène (linge, serviettes, piscine)",
+                "Négliger dépistage/traitement des contacts"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Tinea corporis",
+                  "reponse": {
+                    "pour": [
+                      "Lésion annulaire avec bordure squameuse active",
+                      "Centre clair",
+                      "Prurit intense",
+                      "Contexte piscine",
+                      "Confirmation mycologique (hyphes visibles)"
+                    ],
+                    "contre": [
+                      "Absence d’autres localisations typiques (pieds, ongles, cuir chevelu)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Psoriasis",
+                  "reponse": {
+                    "pour": [
+                      "Plaques érythémato-squameuses"
+                    ],
+                    "contre": [
+                      "Localisation atypique (poignet)",
+                      "Pas d’ATCD familiaux",
+                      "Pas de lésions sur coudes/genoux"
+                    ]
+                  }
+                },
+                {
+                  "question": "Dermatite atopique",
+                  "reponse": {
+                    "pour": [
+                      "Prurit chronique"
+                    ],
+                    "contre": [
+                      "Pas de terrain atopique",
+                      "Pas de localisation flexurale typique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Eczéma nummulaire",
+                  "reponse": {
+                    "pour": [
+                      "Plaques arrondies, prurigineuses"
+                    ],
+                    "contre": [
+                      "Pas d’évolution chronique",
+                      "Aspect clinique différent (bordure active absente)"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Examen direct au KOH",
+                    "Culture mycologique",
+                    "Lampe de Wood si suspicion Microsporum",
+                    "Biopsie cutanée si doute persistant"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Tinea corporis (dermatophytie cutanée)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Antifongique topique (terbinafine, clotrimazole, miconazole)",
+                      "Durée 2-4 semaines après disparition clinique"
+                    ],
+                    "specifique": [
+                      "Antifongique systémique (terbinafine, itraconazole) si formes étendues",
+                      "Surveillance hépatique si traitement systémique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle clinique et mycologique après 2 semaines",
+                    "Poursuivre traitement jusqu’à guérison complète",
+                    "Vérifier contacts et traiter si nécessaire",
+                    "Conseils hygiène pour éviter récidive"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

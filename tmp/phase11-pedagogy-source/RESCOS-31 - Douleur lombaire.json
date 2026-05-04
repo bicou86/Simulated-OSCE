@@ -1,0 +1,548 @@
+{
+  "title": "RESCOS-31 - Douleur lombaire",
+  "category": "RESCOS",
+  "subcategory": "Urologie - Lithiase urinaire",
+  "context": {
+    "setting": "Service des urgences",
+    "patient": "Homme de 30 ans, sportif, consultant pour douleur lombaire gauche brutale et intense après tennis et consommation de bière",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleur insupportable au niveau du flanc gauche qui descend vers les testicules"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "details": [
+            "Début [brutal après tennis et bière]",
+            "Localisation [fosse lombaire gauche]",
+            "Irradiation [organes génitaux externes, testicule gauche]",
+            "Type [spasmodique, paroxystique]",
+            "Intensité [rapidement intolérable, EVA 9-10/10]",
+            "Évolution [par crises avec accalmies relatives]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Facteurs déclenchants et contexte",
+          "details": [
+            "Activité sportive récente [tennis]",
+            "Déshydratation relative [effort physique]",
+            "Consommation de bière [diurèse augmentée]",
+            "Pas de traumatisme direct",
+            "Pas de position antalgique efficace"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes urinaires associés",
+          "details": [
+            "Besoin impérieux d'uriner [pollakiurie]",
+            "Difficultés mictionnelles [dysurie]",
+            "Urines troubles ou hématuriques [hématurie microscopique fréquente]",
+            "Sensation de vidange incomplète",
+            "Brûlures mictionnelles possibles"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "details": [
+            "Agitation motrice [ne tient pas en place]",
+            "Nausées [fréquentes]",
+            "Vomissements [possibles]",
+            "Sueurs froides",
+            "Pas de fièvre initialement"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents urologiques",
+          "details": [
+            "Épisodes similaires antérieurs",
+            "Antécédents de lithiase urinaire",
+            "Infections urinaires récurrentes",
+            "Malformations urologiques connues",
+            "Antécédents familiaux de lithiase"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs de risque lithiasique",
+          "details": [
+            "Hydratation habituelle insuffisante",
+            "Alimentation riche en protéines [sportif]",
+            "Consommation de sel importante",
+            "Supplémentation vitaminique [vitamine C, D]",
+            "Climat chaud, transpiration importante",
+            "Sédentarité alternant avec sport intense"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments et habitudes",
+          "details": [
+            "Prise d'antalgiques [efficacité?]",
+            "Suppléments protéinés [musculation]",
+            "Consommation d'alcool [bière]",
+            "Tabagisme",
+            "Allergies médicamenteuses"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général et comportement",
+          "details": [
+            "Patient agité, ne trouve pas de position antalgique",
+            "Faciès douloureux",
+            "Pâleur, sueurs",
+            "Déambulation incessante",
+            "Anxiété manifeste"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux",
+          "details": [
+            "Tension artérielle [souvent élevée par la douleur]",
+            "Fréquence cardiaque [tachycardie réflexe]",
+            "Température [apyrexie ou subfébrilité]",
+            "Fréquence respiratoire [polypnée superficielle]",
+            "Saturation O2 normale"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal",
+          "details": [
+            "Inspection: pas de distension",
+            "Palpation: sensibilité flanc gauche",
+            "Défense absente [diagnostic différentiel]",
+            "Pas de masse palpable",
+            "Bruits hydroaériques présents",
+            "Pas de globe vésical"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des fosses lombaires",
+          "details": [
+            "Inspection: pas d'ecchymose, pas de tuméfaction",
+            "Palpation douce: sensibilité",
+            "Percussion: douleur à l'ébranlement lombaire gauche [signe de Giordano positif]",
+            "Comparaison avec côté controlatéral",
+            "Recherche d'un contact lombaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation des points urétéraux",
+          "details": [
+            "Point urétéral supérieur [jonction 1/3 externe-2/3 internes ligne ombilico-épineuse]",
+            "Point urétéral moyen [croissement vaisseaux iliaques]",
+            "Point urétéral inférieur [paroi latérale vessie]",
+            "Douleur provoquée le long du trajet urétéral",
+            "Comparaison bilatérale"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des organes génitaux externes",
+          "details": [
+            "Inspection: testicules symétriques",
+            "Palpation testiculaire: indolore, pas de masse",
+            "Épididymes normaux",
+            "Cordons spermatiques sans anomalie",
+            "Réflexe crémastérien présent [éliminer torsion]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Recherche de complications",
+          "details": [
+            "Signes de pyélonéphrite [fièvre, frissons]",
+            "Signes de sepsis [hypotension, confusion]",
+            "Anurie [urgence sur rein unique]",
+            "Rétention aiguë d'urine",
+            "État de choc [exceptionnel]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examens différentiels",
+          "details": [
+            "Recherche appendicite [Murphy, Rovsing]",
+            "Éliminer anévrisme aorte [masse pulsatile]",
+            "Examen vasculaire périphérique",
+            "Examen neurologique sommaire",
+            "Auscultation cardio-pulmonaire"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels de la colique néphrétique",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour une douleur lombaire aiguë",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Colique néphrétique sur lithiase",
+                    "cause": "Arguments POUR:\n\t□ Douleur lombaire brutale irradiant vers OGE\n\t□ Caractère spasmodique\n\t□ Agitation, pas de position antalgique\n\t□ Contexte: déshydratation relative\n\t□ Homme jeune, sportif",
+                    "test": "→ BU (hématurie), créatinine, ionogramme, échographie rénale, TDM abdomino-pelvien sans injection"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes urologiques",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de syndrome infectieux\n\t□ Début brutal (vs progressif)",
+                    "test": "→ ECBU, hémocultures si fièvre, échographie"
+                  },
+                  {
+                    "text": "Infarctus rénal",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de facteur de risque embolique\n\t□ Âge jeune\n\t□ Irradiation typique vers OGE",
+                    "test": "→ LDH, angio-TDM"
+                  },
+                  {
+                    "text": "Torsion testiculaire",
+                    "cause": "Arguments CONTRE:\n\t□ Testicule non douloureux\n\t□ Réflexe crémastérien présent\n\t□ Douleur lombaire prédominante",
+                    "test": "→ Écho-Doppler testiculaire"
+                  }
+                ]
+              },
+              {
+                "name": "Causes digestives",
+                "items": [
+                  {
+                    "text": "Appendicite aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur lombaire (vs FID)\n\t□ Pas de défense\n\t□ Irradiation vers OGE",
+                    "test": "→ NFS, CRP, échographie abdominale"
+                  },
+                  {
+                    "text": "Diverticulite sigmoidienne",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Douleur à gauche mais lombaire\n\t□ Pas de troubles du transit",
+                    "test": "→ TDM abdomino-pelvien avec injection"
+                  }
+                ]
+              },
+              {
+                "name": "Causes vasculaires",
+                "items": [
+                  {
+                    "text": "Dissection/anévrisme aortique",
+                    "cause": "Arguments CONTRE:\n\t□ Âge jeune\n\t□ Pas de facteur de risque vasculaire\n\t□ Pouls périphériques présents",
+                    "test": "→ Angio-TDM en urgence"
+                  }
+                ]
+              },
+              {
+                "name": "Causes musculo-squelettiques",
+                "items": [
+                  {
+                    "text": "Lombosciatique hyperalgique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de trajet sciatique\n\t□ Irradiation vers OGE (vs membre inférieur)\n\t□ Agitation (vs immobilité antalgique)",
+                    "test": "→ Radiographie rachis, IRM si doute"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires en urgence",
+          "details": [
+            "Bandelette urinaire: hématurie dans 90% des cas",
+            "ECBU: hématurie microscopique, cristallurie, pH urinaire",
+            "Créatinine, urée: fonction rénale",
+            "Ionogramme sanguin, calcémie",
+            "NFS, CRP: syndrome inflammatoire si complication",
+            "Échographie rénale et vésicale: dilatation des cavités pyélocalicielles"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Imagerie pour confirmation diagnostique",
+          "details": [
+            "TDM abdomino-pelvien sans injection (gold standard)",
+            "- Visualise 95% des calculs radio-opaques et radio-transparents",
+            "- Localise précisément le calcul",
+            "- Évalue le retentissement (dilatation)",
+            "- Mesure la taille du calcul",
+            "ASP (Abdomen Sans Préparation): calculs radio-opaques seulement (80%)",
+            "Échographie: alternative si contre-indication TDM (grossesse)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement symptomatique de la crise",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Antalgie en urgence",
+                "content": "• AINS en première intention: kétoprofène 100mg IV ou diclofénac 75mg IM\n• Efficacité supérieure aux morphiniques\n• Effet anti-inflammatoire et antispasmodique\n• Contre-indications: insuffisance rénale, allergie\n• Alternative: morphiniques si contre-indication AINS\n• Antispasmodiques: phloroglucinol (Spasfon®) en complément"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Restriction hydrique pendant la crise (500ml/24h)\n• Position libre (laisser le patient s'agiter)\n• Application de chaleur locale\n• Antiémétiques si nausées/vomissements\n• Anxiolytiques si besoin\n• Surveillance diurèse et température"
+              },
+              {
+                "title": "Traitement expulsif médical",
+                "content": "• Alpha-bloquants (tamsulosine 0.4mg/j)\n• Facilite l'expulsion des calculs < 10mm\n• Calcium-bloqueurs possibles\n• Corticoïdes en cas d'œdème urétéral\n• Durée: jusqu'à expulsion (max 4 semaines)"
+              },
+              {
+                "title": "Hyperhydratation après la crise",
+                "content": "• 2-3 litres/jour après résolution de la crise\n• Eau peu minéralisée\n• Répartie sur 24h\n• Favorise l'expulsion du calcul\n• Prévient la récidive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Indications d'hospitalisation",
+          "details": [
+            "Colique néphrétique fébrile (urgence urologique)",
+            "Anurie (obstruction bilatérale ou rein unique)",
+            "Colique néphrétique hyperalgique résistante",
+            "Insuffisance rénale aiguë obstructive",
+            "Terrain particulier: grossesse, rein unique, transplanté",
+            "Impossibilité de prise en charge ambulatoire"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement urologique spécifique",
+          "details": [
+            "Calculs < 5mm: expulsion spontanée dans 70% des cas",
+            "Calculs 5-10mm: expulsion dans 50% des cas",
+            "Lithotripsie extracorporelle (LEC) si calcul < 20mm",
+            "Urétéroscopie avec extraction ou fragmentation laser",
+            "Néphrostomie percutanée si infection + obstruction",
+            "Chirurgie ouverte exceptionnelle"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Complications à rechercher",
+          "redflagsSection": {
+            "title": "Signes de gravité nécessitant une prise en charge urgente",
+            "items": [
+              {
+                "text": "Pyélonéphrite obstructive",
+                "description": "Fièvre + frissons + colique néphrétique = urgence de drainage"
+              },
+              {
+                "text": "Rupture de la voie excrétrice",
+                "description": "Douleur brutalement soulagée, urinome"
+              },
+              {
+                "text": "Anurie obstructive",
+                "description": "Arrêt complet des urines, urgence absolue"
+              },
+              {
+                "text": "Insuffisance rénale aiguë",
+                "description": "Créatinine élevée, hyperkaliémie"
+              },
+              {
+                "text": "Sepsis/choc septique",
+                "description": "Hypotension, confusion, défaillance multi-organes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m8",
+          "text": "Prévention des récidives",
+          "details": [
+            "Analyse spectrophotométrique du calcul expulsé",
+            "Bilan métabolique à distance (calcémie, uricémie, oxalurie)",
+            "Hyperhydratation: 2-3L/jour à vie",
+            "Régime adapté selon composition du calcul",
+            "- Oxalate de calcium: limiter oxalates (chocolat, thé)",
+            "- Acide urique: alcalinisation urines, allopurinol",
+            "- Phosphate de calcium: acidification urines",
+            "Surveillance régulière: échographie annuelle"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vous présentez très probablement une colique néphrétique, c'est-à-dire qu'un petit calcul s'est formé dans votre rein et bloque l'écoulement de l'urine en descendant vers la vessie. C'est très douloureux mais généralement sans gravité. Nous allons vous soulager rapidement et faire des examens pour confirmer le diagnostic."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Pourquoi ça fait si mal?]\n[Est-ce que c'est dangereux?]\n[Comment le calcul va sortir?]\n[Combien de temps ça va durer?]\n[Est-ce que ça va revenir?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "La douleur est due au blocage de l'urine qui dilate le rein et l'uretère\nCe n'est dangereux que s'il y a de la fièvre ou si les deux reins sont bloqués\nLa plupart des petits calculs s'éliminent spontanément dans les urines en quelques jours\nLa douleur va être soulagée rapidement, l'expulsion prend quelques jours à quelques semaines\nIl y a un risque de récidive de 50% à 10 ans, d'où l'importance de la prévention par l'hydratation"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Colique néphrétique",
+      "nom": "Patient masculin",
+      "age": "30 ans",
+      "profession": "Sportif amateur",
+      "contexte": "Service des urgences",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur atroce dans le dos qui descend vers les testicules",
+        "description": "Douleur lombaire gauche brutale après effort sportif et consommation de bière"
+      },
+      "histoireActuelle": {
+        "circonstances": [
+          "Joué au tennis cet après-midi",
+          "Bu quelques bières après le match",
+          "Douleur apparue brutalement il y a 2 heures",
+          "Rapidement devenue insupportable"
+        ],
+        "caracteristiquesDouleur": [
+          "Part du flanc gauche",
+          "Descend vers le testicule gauche",
+          "Douleur par vagues, spasmodique",
+          "Intensité 9-10/10",
+          "Aucune position ne soulage",
+          "Obligé de marcher sans arrêt"
+        ],
+        "symptomesAssocies": [
+          "Envie d'uriner fréquemment",
+          "Difficultés pour uriner",
+          "Sensation de ne pas vider complètement",
+          "Nausées importantes",
+          "Vomissements une fois",
+          "Sueurs froides"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Aucun antécédent particulier, bonne santé habituelle",
+        "urologiques": "Jamais eu de problème similaire",
+        "familiaux": "Père a fait des calculs rénaux",
+        "chirurgicaux": "Aucune intervention"
+      },
+      "habitudes": {
+        "hydratation": "Boit peu en dehors du sport",
+        "alimentation": "Riche en protéines (musculation)",
+        "sport": "Tennis 2x/semaine, musculation 3x/semaine",
+        "supplements": "Protéines en poudre, vitamines",
+        "alcool": "Bière occasionnellement après le sport",
+        "tabac": "Non-fumeur"
+      },
+      "simulation": {
+        "attitude": [
+          "Très agité, ne tient pas en place",
+          "Se tient le flanc gauche",
+          "Marche sans arrêt dans la pièce",
+          "Grimace de douleur permanente",
+          "Anxieux et demande un soulagement rapide"
+        ],
+        "signesPhysiques": [
+          "Pâleur",
+          "Sueurs visibles",
+          "Main sur la région lombaire gauche",
+          "Change constamment de position",
+          "Respiration superficielle"
+        ],
+        "durantExamen": [
+          "Douleur vive à la percussion lombaire gauche",
+          "Sensibilité le long du trajet urétéral",
+          "Abdomen souple, pas de défense",
+          "Examen testiculaire normal mais appréhension"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Colique néphrétique",
+      "pointsCles": [
+        "Douleur lombaire brutale irradiant vers OGE pathognomonique",
+        "Agitation caractéristique (vs immobilité des péritonites)",
+        "Hématurie présente dans 90% des cas",
+        "TDM sans injection = gold standard diagnostique",
+        "AINS plus efficaces que morphiniques"
+      ],
+      "pieges": [
+        "Ne pas méconnaître une pyélonéphrite obstructive (fièvre)",
+        "Éliminer anévrisme aortique chez le sujet âgé",
+        "Penser à la torsion testiculaire chez l'homme jeune",
+        "Vérifier l'absence d'anurie (rein unique)",
+        "Ne pas hyperhydrater pendant la crise"
+      ],
+      "techniquesExamen": [
+        "Signe de Giordano: percussion douce fosse lombaire",
+        "Points urétéraux: 3 points sur trajet anatomique",
+        "Palpation bimanuelle pour masse rénale",
+        "Toucher rectal si doute sur pathologie digestive",
+        "Examen testiculaire systématique chez l'homme"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Colique néphrétique",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Obstruction aiguë de la voie excrétrice urinaire\n• Hyperpression en amont → distension capsule rénale\n• Stimulation nocicepteurs → douleur viscérale intense\n• Réflexe urétéral → spasmes\n• 75% calculs < 5mm passent spontanément"
+        },
+        {
+          "titre": "Types de calculs",
+          "contenu": "• Oxalate de calcium (75%): radio-opaques\n• Phosphate de calcium (15%): radio-opaques\n• Acide urique (10%): radio-transparents\n• Struvite (infection): radio-opaques\n• Cystine (1%): faiblement radio-opaques"
+        },
+        {
+          "titre": "Facteurs de risque",
+          "contenu": "• Déshydratation chronique\n• Hypercalciurie (40% des cas)\n• Hyperoxalurie\n• Hyperuricémie\n• Infections urinaires récidivantes\n• Anomalies anatomiques\n• Facteurs génétiques\n• Médicaments lithogènes"
+        },
+        {
+          "titre": "Évolution naturelle",
+          "contenu": "• Calculs < 5mm: 70% expulsion spontanée\n• Calculs 5-10mm: 50% expulsion\n• Calculs > 10mm: 10% expulsion\n• Délai moyen expulsion: 8-22 jours\n• Localisation: uretère distal > proximal"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "AINS première ligne: kétoprofène 100mg IV",
+        "Restriction hydrique pendant la crise",
+        "Alpha-bloquants pour faciliter expulsion",
+        "Filtrer les urines pour récupérer le calcul",
+        "Analyse spectrophotométrique systématique",
+        "Hyperhydratation après la crise: 2-3L/jour",
+        "Adaptation diététique selon type de calcul",
+        "LEC si calcul 5-20mm sans expulsion à 4 semaines"
+      ],
+      "examensComplementaires": [
+        "BU: hématurie dans 90%, pH urinaire",
+        "ECBU: hématurie microscopique, cristallurie, germes",
+        "Créatinine: fonction rénale, à contrôler",
+        "Ionogramme: hypercalcémie? Acidose?",
+        "TDM sans injection: sensibilité 95%, spécificité 98%",
+        "Échographie: dilatation cavités, calcul si volumineux",
+        "ASP: calculs radio-opaques seulement (80%)"
+      ]
+    }
+  }
+}

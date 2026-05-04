@@ -1,0 +1,890 @@
+{
+  "title": "AMBOSS-13 - Douleur thoracique - Homme 35 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Anthony Price, homme de 35 ans, consultant aux urgences pour douleur thoracique",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "135/80 mmHg",
+      "fc": "105 bpm",
+      "fr": "24/min",
+      "imc": "19.4 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une douleur dans la poitrine"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Tout le côté gauche de ma poitrine]",
+            "Intensité (échelle 0-10) [Je dirais que c'est un 7-8 en ce moment]",
+            "Qualité [Comme si quelqu'un me poignardait]",
+            "Début [Il y a 2 heures]",
+            "Événements précipitants [Je suis tombé de mon vélo sur mon côté gauche il y a 2 heures. Je roulais sur des feuilles mouillées et j'ai glissé en freinant pour prendre un virage serré. Je suis tombé sur ma poitrine]",
+            "Progression/constant/intermittent [Ça empire]",
+            "Épisodes antérieurs [Jamais]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [Si je respire superficiellement, c'est moins douloureux]",
+            "Facteurs aggravants [Prendre de grandes respirations]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "J'ai aussi l'impression de ne pas pouvoir reprendre mon souffle"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques post-traumatiques",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [Non]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Non]",
+            "Palpitations [Oui, en ce moment du moins. Mais pas habituellement]",
+            "Éruption/changements cutanés (ecchymoses) [J'ai seulement quelques égratignures sur mes mains]",
+            "Toux [Non]",
+            "Infections récentes [Aucune]",
+            "Vertiges [Non]",
+            "Perte de connaissance [Non]",
+            "Blessure à une autre partie du corps [J'ai quelques égratignures sur mes mains, mais rien d'autre]",
+            "Consommation d'alcool ou de drogues avant le traumatisme [Non]",
+            "Faiblesse ou engourdissement [Non]",
+            "Dernier repas/boisson [Il y a environ 4 heures. J'ai mangé des céréales et bu un café]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Rhume des foins"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Pollen"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Parfois je dois utiliser un spray nasal aux stéroïdes et prendre des antihistaminiques"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père a du diabète"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis sculpteur]",
+            "Domicile [Je vis seul]",
+            "Alcool [Je bois 1-2 bières par semaine]",
+            "Drogues illicites [Jamais]",
+            "Tabac [Oui, je fume. Je fume 2 paquets par jour depuis 17 ans]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen corporel général",
+          "binaryOnly": true,
+          "patientComment": "Égratignures sur les deux mains"
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Examen des pupilles",
+            "Examen des muscles oculomoteurs"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation de la distension jugulaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Palpation du pouls radial",
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax [Sensibilité à la palpation sur le côté gauche du thorax]",
+            "Auscultation pulmonaire [Inspiration douloureuse, bruits respiratoires absents du côté gauche du thorax]",
+            "Percussion des champs pulmonaires",
+            "Recherche de frémitus [Frémitus vocal et tactile diminué du côté gauche]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": true,
+          "details": [
+            "Examen de l'orientation dans le temps, l'espace et envers les personnes"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes traumatiques probables",
+                "items": [
+                  {
+                    "text": "Pneumothorax traumatique",
+                    "cause": "Arguments POUR:\n\t□ Traumatisme thoracique contondant (chute vélo)\n\t□ Douleur en coup de poignard typique\n\t□ Dyspnée aiguë post-traumatique\n\t□ Tachypnée (24/min) + tachycardie légère (105 bpm)\n\t□ Douleur à l'inspiration profonde\n\t□ Bruits respiratoires absents côté gauche\n\t□ Frémitus diminué côté gauche\n\t□ Radiographie : ligne pleurale visible sans déviation trachéale",
+                    "test": "→ Radiographie thoracique (déjà faite) + CT thoracique"
+                  },
+                  {
+                    "text": "Contusion costale",
+                    "cause": "Arguments POUR:\n\t□ Traumatisme thoracique direct\n\t□ Douleur localisée côté gauche\n\t□ Sensibilité à la palpation\n\t□ Douleur aggravée par l'inspiration\n\t□ Absence de crépitation (suggère contusion plutôt que fracture)\n\t□ Pas de ligne de fracture visible sur radiographie",
+                    "test": "→ Radiographie série de côtes ou CT si suspicion forte"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostic moins probable",
+                "items": [
+                  {
+                    "text": "Pneumothorax spontané",
+                    "cause": "Arguments POUR:\n\t□ Facteurs de risque : homme, mince (IMC 19.4), fumeur\n\t□ Présentation clinique compatible\n\t□ Radiographie confirmant pneumothorax\nArguments CONTRE:\n\t□ Histoire traumatique claire rendant le pneumothorax traumatique plus probable",
+                    "test": "→ CT pour rechercher bulles d'emphysème"
+                  },
+                  {
+                    "text": "Fracture costale",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de crépitation\n\t□ Pas de fracture visible sur radiographie",
+                    "test": "→ CT thoracique si forte suspicion"
+                  },
+                  {
+                    "text": "Pneumothorax sous tension",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de distension jugulaire\n\t□ Pas d'instabilité hémodynamique\n\t□ Pas de déviation trachéale",
+                    "test": "→ Examen clinique répété"
+                  },
+                  {
+                    "text": "Hémothorax",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'opacité à la radiographie",
+                    "test": "→ CT avec contraste"
+                  },
+                  {
+                    "text": "Contusion pulmonaire",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'infiltrat sur radiographie",
+                    "test": "→ CT thoracique"
+                  },
+                  {
+                    "text": "Volet costal",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de respiration paradoxale",
+                    "test": "→ Examen clinique + radiographie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Gaz du sang artériel, oxymétrie de pouls [pour évaluer les troubles acido-basiques aigus (ex: acidose respiratoire) et si le sang du patient est suffisamment oxygéné]",
+            "ECG [pour exclure une cause cardiaque de la douleur thoracique ; peut aussi fournir des indices diagnostiques supplémentaires pour le pneumothorax]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "CT thoracique [pour mieux évaluer les fractures costales et le pneumothorax, exclure la présence d'une pathologie sous-jacente (ex: bulles dans l'emphysème), et déterminer la probabilité de maladie récurrente]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi de la radiographie",
+            "Rassurer le patient sur la prise en charge",
+            "Expliquer les prochaines étapes du traitement"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Pneumothorax > 2cm ou > 15% volume pulmonaire",
+                "content": "• Patient symptomatique: (dyspnée importante)"
+              },
+              {
+                "title": "Pneumothorax bilatéral ou sous tension",
+                "content": "• Analgésie adaptée pour la douleur\n• Repos strict, éviter efforts physiques\n• Radiographie de contrôle après traitement"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Présentation de la radiographie",
+          "content": "[Le personnel des urgences m'a déjà envoyé faire cette image. Pouvez-vous me l'expliquer ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Laissez-moi regarder... Ici, ce sont vos poumons, sur la gauche vous pouvez voir une fine ligne qui n'est pas présente de l'autre côté de l'image. Cela me dit que votre poumon s'est dégonflé et s'est affaissé, très probablement parce qu'un peu d'air s'est infiltré entre un de vos poumons et l'espace qui l'entoure, qui normalement ne contient pas d'air. Nous appelons cette condition un 'pneumothorax', et c'est très probablement la raison pour laquelle vous avez des douleurs thoraciques et êtes essoufflé. La condition pourrait être liée à votre chute ou elle pourrait s'être produite spontanément. J'aimerais faire des tests supplémentaires pour déterminer le meilleur traitement pour vous en ce moment. Une infirmière vous donnera de l'oxygène entre-temps pour que vous puissiez respirer plus facilement. Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Pneumothorax sans tension",
+        "description": "Radiographie thoracique (vue PA). Une fine ligne blanche représente la plèvre viscérale du poumon gauche (ligne pointillée). Aucune marque pulmonaire n'est visible en périphérie de la plèvre viscérale (superposition verte). L'aspect est compatible avec un pneumothorax gauche. Il n'y a aucun signe de déplacement médiastinal controlatéral, de dépression diaphragmatique ou d'élargissement des espaces intercostaux ipsilatéraux suggérant un pneumothorax sous tension.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img1-Pneumothorax without tension.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Anatomie de surface des poumons",
+        "description": "Repères anatomiques thoraciques pour l'examen clinique : lignes médio-claviculaire, axillaire antérieure, médiane et postérieure. ICS : espace intercostal.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img2-Surface anatomy of the lungs.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Pneumothorax sous tension",
+        "description": "Un pneumothorax sous tension se développe secondairement à un mécanisme de valve unidirectionnelle, causé par une lésion du parenchyme pulmonaire ou de la paroi thoracique qui permet à l'air d'entrer dans l'espace pleural pendant l'inspiration (valve ouverte) mais pas de s'échapper pendant l'expiration (valve fermée). L'accumulation progressive d'air dans l'espace pleural provoque une augmentation ipsilatérale de la pression intrapleurale, entraînant un collapsus pulmonaire ipsilatéral et un déplacement médiastinal vers le côté controlatéral. Le déplacement médiastinal comprime les veines caves, la trachée et le poumon controlatéral, conduisant à une instabilité hémodynamique et une hypoxie.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img3-Tension pneumothorax.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Pneumothorax antérieur droit",
+        "description": "CT thoracique (vue axiale ; fenêtre pulmonaire). Il y a une perte des marques broncho-vasculaires sur l'aspect antérieur du poumon droit. Ces résultats sont pathognomoniques d'un pneumothorax antérieur droit.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img4-Right anterior pneumothorax.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Pneumothorax traumatique et emphysème sous-cutané",
+        "description": "CT thoracique (avec contraste ; plan axial ; fenêtre pulmonaire). Une fracture costale droite déplacée (contour en pointillés) est accompagnée d'un pneumothorax (superposition verte) et d'un emphysème sous-cutané (superposition bleue). Une atélectasie périphérique postérieure (superposition rouge) est visible dans les deux lobes inférieurs, plus importante à droite qu'à gauche.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img5-Traumatic pneumothorax and subcutaneous emphysema.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Fracture costale",
+        "description": "Radiographie thoracique (vue PA). Il y a une fracture de la 1ère côte droite. Une ligne faible dans l'hémithorax droit et l'absence de marques pulmonaires latéralement indiquent la présence d'un pneumothorax (superposition rouge). Des translucidités striées dans le thorax supérieur et le long des bords cardiaques représentent respectivement un emphysème sous-cutané (superposition verte) et médiastinal (pointes de flèches). Ces résultats sont compatibles avec un pneumothorax et un emphysème sous-cutané ainsi que médiastinal résultant d'une fracture costale.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img6-Rib fracture.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Plaie pénétrante thoracique",
+        "description": "Radiographie thoracique antéro-postérieure, position couchée (radiographie au lit) montrant une plaie pénétrante thoracique avec hémopneumothorax et l'objet pénétrant in situ.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img7-Stab wound to the chest.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Volet costal",
+        "description": "Radiographie thoracique (vue AP ; position couchée) d'un patient avec antécédent de traumatisme. De multiples fractures costales droites (lignes rouges) sont présentes, dont certaines montrent un déplacement marqué. Il y a un emphysème sous-cutané étendu (exemples indiqués par les pointes de flèches). Le poumon droit est diffusément opaque (superposition verte), probablement indicatif d'une contusion pulmonaire compte tenu de l'histoire de traumatisme. Superposition blanche : côtes.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img8-Flail chest.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Silhouette cardiaque élargie",
+        "description": "Radiographie thoracique (vue PA) d'un patient avec antécédent de péricardite et signes cliniques de tamponnade. La silhouette cardiaque est élargie (forme globulaire en bouteille d'eau ; élargissement souligné par la superposition hachurée verte) due à un épanchement péricardique.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img9-Enlarged cardiac silhouette.jpg",
+        "id": "img9"
+      },
+      {
+        "title": "Pneumothorax sans tension (répété)",
+        "description": "Radiographie thoracique (vue PA). Une fine ligne blanche représente la plèvre viscérale du poumon gauche (ligne pointillée). Aucune marque pulmonaire n'est visible en périphérie de la plèvre viscérale (superposition verte). L'aspect est compatible avec un pneumothorax gauche. Il n'y a aucun signe de déplacement médiastinal controlatéral, de dépression diaphragmatique ou d'élargissement des espaces intercostaux ipsilatéraux suggérant un pneumothorax sous tension.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img10-Pneumothorax without tension.jpg",
+        "id": "img10"
+      },
+      {
+        "title": "Pneumothorax sous tension (radiographie)",
+        "description": "Radiographie thoracique (vue PA). Un large pneumothorax (superposition verte) a entraîné un collapsus du poumon droit le long du médiastin (bord marqué par une ligne pointillée blanche). Aucune marque broncho-vasculaire n'est visible dans l'hémithorax droit. De plus, le médiastin s'est déplacé vers le côté gauche controlatéral (ligne bleue et flèches), l'hémidiaphragme droit est déprimé (ligne rouge et flèche), et les espaces intercostaux droits sont élargis (exemple indiqué par les flèches blanches). Ces résultats sont caractéristiques d'un pneumothorax sous tension.",
+        "data": "grilles_generees/html/images/AMBOSS-13-img11-Tension pneumothorax.jpg",
+        "id": "img11"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Anthony Price",
+      "age": "35 ans",
+      "contexte": "Sculpteur consultant aux urgences pour douleur thoracique post-traumatique",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une douleur dans la poitrine.",
+        "autreChose": "J'ai aussi l'impression de ne pas pouvoir reprendre mon souffle."
+      },
+      "consignes": [
+        "Utiliser du maquillage ou un marqueur pour simuler de petites égratignures sur vos paumes. Alternativement, dire à l'examinateur qu'il y a de petites égratignures sur vos paumes.",
+        "Quand l'examinateur vous demande de prendre de grandes respirations pour qu'il/elle puisse écouter votre poitrine, lui dire que cela cause de la douleur sur le côté gauche de votre poitrine.",
+        "Quand l'examinateur touche et/ou appuie sur le côté gauche de votre poitrine, lui dire que c'est très douloureux.",
+        "Quand l'examinateur écoute le côté gauche de votre poitrine, retenir votre souffle et lever vos épaules comme si vous respiriez. Quand l'examinateur écoute l'autre côté de votre poitrine, respirer normalement.",
+        "Quand l'examinateur vous demande de dire une phrase comme 'toy boat', dire la phrase doucement pendant qu'il écoute votre poumon gauche ou palpe votre poumon gauche. Quand l'examinateur écoute l'autre côté de votre poitrine ou palpe l'autre côté, dire la phrase à volume normal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: radiographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Une fois que l'examinateur a fini de prendre l'anamnèse, lui montrer la radiographie et dire 'Le personnel des urgences m'a déjà envoyé faire cette image. Pouvez-vous me l'expliquer ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur thoracique gauche début brutal il y a 2 heures",
+          "Type coup de poignard",
+          "Intensité 7-8/10",
+          "Aggravée par inspiration profonde",
+          "Soulagée par respiration superficielle"
+        ],
+        "symptomesAssocies": [
+          "Dyspnée importante",
+          "Sensation de ne pas pouvoir reprendre son souffle",
+          "Palpitations actuelles (non habituelles)",
+          "Égratignures sur les mains",
+          "Pas de toux ni fièvre"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Respiration superficielle visible",
+          "Position antalgique",
+          "Éviter mouvements brusques",
+          "Montrer égratignures sur paumes",
+          "Demander clarifications termes médicaux",
+          "Présenter radiographie après anamnèse"
+        ],
+        "durantStatus": [
+          "Douleur vive à palpation thorax gauche",
+          "Douleur à l'inspiration profonde",
+          "Retenir respiration lors auscultation gauche",
+          "Lever épaules simulant respiration côté gauche",
+          "Respiration normale côté droit",
+          "Voix faible côté gauche pour frémitus",
+          "Voix normale côté droit"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 35 ans avec pneumothorax traumatique gauche post-chute vélo. Facteurs de risque de pneumothorax spontané (homme, mince IMC 19.4, fumeur 34 PA) mais contexte traumatique clair. Présentation classique : douleur pleurétique, dyspnée, diminution murmure vésiculaire et frémitus côté gauche. Radiographie confirmant pneumothorax simple sans signes de tension.",
+      "rolesInterventions": [
+        "Radiographie thoracique : Ligne pleurale gauche visible, absence de trame vasculaire périphérique",
+        "Gaz du sang : pH 7.46, PaO2 85 mmHg, PaCO2 32 mmHg (alcalose respiratoire)",
+        "ECG : Tachycardie sinusale 105 bpm, pas d'anomalie ST",
+        "CT thoracique : Pneumothorax 30% volume, pas de bulles d'emphysème",
+        "SpO2 : 94% en air ambiant"
+      ],
+      "pointsCles": [
+        "Pneumothorax traumatique = indication drainage si > 2cm ou symptomatique",
+        "Toujours exclure pneumothorax sous tension (urgence vitale)",
+        "O2 100% accélère résorption (gradient azote)",
+        "Facteurs risque récidive : tabac, morphotype longiligne, bulles",
+        "Conseil arrêt vol/plongée jusqu'à résolution complète"
+      ],
+      "pieges": [
+        "Ne pas reconnaître la radiographie",
+        "Confondre avec pneumothorax sous tension",
+        "Oublier d'examiner patient pour autres traumatismes",
+        "Ne pas expliquer clairement la radiographie",
+        "Retarder l'oxygénothérapie"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Pneumothorax traumatique simple gauche"
+        },
+        {
+          "titre": "Pneumothorax",
+          "contenu": "Présence d'air dans l'espace pleural :",
+          "points": [
+            "Types : spontané (primaire/secondaire) vs traumatique",
+            "Incidence spontané : 18-28/100'000 hommes, 1.2-6/100'000 femmes",
+            "Facteurs risque : sexe masculin, morphotype longiligne, tabac (RR × 20)",
+            "Physiopathologie : rupture blebs sous-pleurales ou trauma direct",
+            "Taille : < 2cm = petit, > 2cm = grand (ou > 15% volume)",
+            "Récidive : 30% à 2 ans si non traité chirurgicalement"
+          ]
+        },
+        {
+          "titre": "Présentation clinique du pneumothorax",
+          "contenu": "Triade classique variable selon taille :",
+          "points": [
+            "Douleur thoracique pleurétique (90%) : début brutal, coup de poignard",
+            "Dyspnée (80%) : proportionnelle à la taille",
+            "Toux sèche irritative (10%)",
+            "Examen : diminution murmure vésiculaire, hypersonorité percussion",
+            "Frémitus vocal et tactile diminués côté atteint",
+            "Si tension : distension jugulaire, déviation trachéale, instabilité"
+          ]
+        },
+        {
+          "titre": "Diagnostic du pneumothorax",
+          "contenu": "Imagerie essentielle pour confirmation :",
+          "points": [
+            "Radiographie thoracique debout : ligne pleurale visible",
+            "Sensibilité 50-80% (meilleure en expiration)",
+            "CT thoracique : gold standard, quantifie taille exacte",
+            "US thoracique : absence glissement pleural, sensibilité 90%",
+            "Signes radiologiques : signe du sillon profond en décubitus",
+            "Piège : pneumothorax antérieur peut être masqué en décubitus"
+          ]
+        },
+        {
+          "titre": "Prise en charge du pneumothorax",
+          "contenu": "Selon taille et symptômes :",
+          "points": [
+            "Petit (< 2cm) asymptomatique : observation + O2",
+            "Grand ou symptomatique : drainage",
+            "Aspiration simple : option si premier épisode < 50 ans",
+            "Drain thoracique : 14-16F, 2e EIC ligne médio-claviculaire",
+            "Indications chirurgie : récidive, bilatéral, métier à risque",
+            "Pleurodèse : talc ou mécanique pour prévenir récidive"
+          ]
+        },
+        {
+          "titre": "Pneumothorax traumatique",
+          "contenu": "Particularités par rapport au spontané :",
+          "points": [
+            "Mécanisme : lacération pleurale, fracture costale, barotrauma",
+            "Association fréquente : hémothorax (25%), contusion pulmonaire",
+            "Toujours drainer si traumatique (risque évolution sous tension)",
+            "Rechercher lésions associées : volet costal, rupture diaphragme",
+            "Pneumothorax ouvert : urgence, pansement 3 côtés",
+            "Évolution sous tension plus fréquente qu'en spontané"
+          ]
+        },
+        {
+          "titre": "Complications et pronostic",
+          "contenu": "Surveillance et prévention essentielles :",
+          "points": [
+            "Pneumothorax sous tension : urgence vitale, décompression immédiate",
+            "Récidive : 30% sans traitement, 5% après pleurodèse",
+            "Restrictions : pas de vol 2-4 semaines, plongée contre-indiquée",
+            "Hémopneumothorax : drainage urgent calibre large",
+            "Emphysème sous-cutané : bénin si isolé",
+            "Pneumomédiastin associé : rechercher rupture œsophage/trachée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Oxygène 100% : 10-15 L/min masque haute concentration",
+        "Drainage urgence : 2e EIC médio-claviculaire si tension",
+        "Drain thoracique : 14-16F si stable, 5e EIC ligne axillaire moyenne",
+        "Analgésie : paracétamol 1g QID + tramadol 50-100mg si besoin",
+        "Prophylaxie tétanos si plaie associée",
+        "Antibioprophylaxie non systématique sauf drain > 3 jours",
+        "Kinésithérapie respiratoire post-drainage"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique face debout : Ligne pleurale, quantification taille",
+        "CT thoracique : Si doute diagnostique, recherche bulles, lésions associées",
+        "Gaz du sang : Hypoxémie variable, alcalose respiratoire compensatrice",
+        "ECG : Éliminer cause cardiaque, parfois microvoltage si grand pneumothorax",
+        "US thoracique (FAST étendu) : Absence glissement pleural, ligne A sans ligne B"
+      ]
+    },
+    "resume": {
+      "titre": "🩸 Pneumothorax traumatique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Contexte",
+              "points": [
+                "Traumatisme thoracique contondant (ex. accident de la route, chute)",
+                "Traumatisme pénétrant (ex. plaie par arme blanche, balle)",
+                "Barotraumatisme (explosion, plongée)"
+              ]
+            },
+            {
+              "titre": "Symptômes rapportés",
+              "points": [
+                "Dyspnée brutale",
+                "Douleur thoracique unilatérale",
+                "Sensation d’oppression ou d’air manquant",
+                "Toux sèche"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes respiratoires",
+              "points": [
+                "Diminution/abolition du murmure vésiculaire",
+                "Hypersonorité à la percussion",
+                "Asymétrie des mouvements thoraciques",
+                "Diminution du frémitus vocal"
+              ]
+            },
+            {
+              "titre": "Signes de gravité (Spannungspneumothorax)",
+              "points": [
+                "Hypotension, tachycardie",
+                "Cyanose, détresse respiratoire",
+                "Turgescence jugulaire",
+                "Déviation trachéale controlatérale",
+                "Élargissement des espaces intercostaux du côté atteint"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie de 1ère intention",
+              "points": [
+                "Radiographie thoracique : absence de trame vasculaire périphérique, hyperclarté, ligne pleurale visible",
+                "Scanner thoracique : pour polytraumatisés ou diagnostic douteux"
+              ]
+            },
+            {
+              "titre": "Échographie thoracique (FAST)",
+              "points": [
+                "Absence de glissement pleural",
+                "Absence de pouls pulmonaire",
+                "Signe du point poumon (lung point)"
+              ]
+            },
+            {
+              "titre": "Gaz du sang",
+              "points": [
+                "Hypoxémie fréquente",
+                "Hypercapnie si détresse sévère"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Oxygénothérapie haut débit",
+                "Surveillance constante (SpO₂, TA, FC, FR)"
+              ]
+            },
+            {
+              "titre": "Traitement spécifique",
+              "points": [
+                "Spannungspneumothorax : ponction-évacuation immédiate (2e EIC, ligne médio-claviculaire) puis drain thoracique",
+                "Pneumothorax traumatique simple : drainage thoracique en urgence (Bülau, 4e-5e EIC, ligne axillaire antérieure)",
+                "Thoracotomie/chirurgie si hémothorax massif ou plaie ouverte"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Tout traumatisme thoracique + dyspnée = exclure pneumothorax",
+            "Diagnostic clinique + imagerie de confirmation (sauf tension : diagnostic clinique et geste immédiat)",
+            "Ponction décompressive urgente si signes de tension",
+            "Drain thoracique obligatoire pour la majorité des pneumothorax traumatiques",
+            "Toujours rechercher un hémothorax associé"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Mécanisme du traumatisme (coup, chute, arme blanche, accident de voiture) ?",
+                "Douleur thoracique brutale, irradiations ?",
+                "Dyspnée, oppression, toux ?",
+                "ATCD pulmonaires (asthme, BPCO, chirurgie thoracique) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (FR, FC, TA, SpO₂, T°)",
+                "Inspection : mouvements thoraciques, plaies",
+                "Auscultation/percussion thoracique",
+                "Radiographie thoracique (si patient stable)",
+                "Échographie thoracique en urgence (FAST trauma)",
+                "Gaz du sang"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Si tension : ponction immédiate → drainage thoracique",
+                "Sinon : drainage thoracique systématique",
+                "Surveillance rapprochée et prise en charge en contexte de trauma (ATLS)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur thoracique post-traumatique (pneumothorax traumatique simple gauche)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation (traumatisme vélo, douleur thoracique brutale, dyspnée)",
+            "Caractériser la douleur → thorax gauche, type coup de poignard, EVA 7-8/10, aggravée par inspiration, soulagée par respiration superficielle",
+            "Symptômes associés → dyspnée, palpitations, douleur thoracique aggravée par palpation, pas de perte de connaissance, pas de fièvre",
+            "Contexte → chute vélo, traumatisme direct thorax gauche",
+            "ATCD → rhume des foins, pas de chirurgie, pas d’hospitalisation, allergie pollen",
+            "Habitudes → sculpteur, vit seul, tabac 34 PA, 1-2 bières/semaine, pas de drogues",
+            "Examen clinique → FR 24, FC 105, TA 135/80, SpO₂ 94%, IMC 19.4 ; diminution murmure vésiculaire gauche, hypersonorité, frémitus diminué, douleur à palpation",
+            "Résumé + hypothèse principale : pneumothorax traumatique simple gauche ; DD : contusion costale, fracture costale, pneumothorax spontané, contusion pulmonaire, hémothorax, pneumothorax sous tension",
+            "Examens complémentaires → radiographie thorax, gaz du sang, ECG, CT thoracique si doute ou polytrauma",
+            "Prise en charge → oxygène haut débit, analgésie, drainage thoracique si >2 cm ou symptomatique, surveillance rapprochée"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : PNEUMO",
+            "elements": [
+              "P = Poignard (douleur brutale en coup de poignard)",
+              "N = Non symétrique (asymétrie thoracique, murmure aboli)",
+              "E = Étiologie traumatique (chute, coup, accident)",
+              "U = Unilatéral (souffle diminué d’un côté)",
+              "M = Murmure vésiculaire diminué",
+              "O = Oxygène nécessaire"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Anthony Price, un homme de 35 ans, sculpteur, qui consulte aux urgences pour douleur thoracique brutale. Le patient explique qu’il est tombé de vélo il y a environ 2 heures, en glissant sur des feuilles mouillées, et a percuté le sol directement sur son côté gauche. Depuis, il ressent une douleur thoracique gauche brutale, de type coup de poignard, notée à 7-8/10, qui empire progressivement. Elle est aggravée par l’inspiration profonde et légèrement soulagée par une respiration superficielle. \n\nLa douleur s’accompagne d’une dyspnée importante et de palpitations inhabituelles. Pas de perte de connaissance, pas de vomissements, pas de céphalée. Le seul traumatisme associé est quelques égratignures aux mains. Ses antécédents sont limités à un rhume des foins ; il n’a jamais été hospitalisé ni opéré. Il est allergique au pollen. Ses traitements sont ponctuels : spray nasal aux stéroïdes et antihistaminiques. Il vit seul, est sculpteur, fume deux paquets par jour depuis 17 ans et boit 1 à 2 bières par semaine. Son père est diabétique.\n\nÀ l’examen clinique, il est conscient, orienté, avec une FR à 24, une FC à 105, une TA à 135/80, une T° à 37 °C, et un IMC de 19.4. L’auscultation retrouve une diminution du murmure vésiculaire gauche, l’inspiration est douloureuse, les bruits respiratoires sont absents du côté gauche, et le frémitus est diminué. À la percussion, l’hémithorax gauche est hypersonore. Pas de crépitation osseuse, pas de distension jugulaire, pas de déviation trachéale. \n\nEn résumé, il s’agit d’un homme de 35 ans, grand fumeur, mince, consultant pour une douleur thoracique brutale gauche et une dyspnée aiguë après un traumatisme direct thoracique, avec abolition du murmure vésiculaire et hypersonorité gauche. Mon hypothèse principale est un pneumothorax traumatique simple gauche. Les diagnostics différentiels incluent une contusion costale ou pulmonaire, une fracture costale, un hémothorax, un pneumothorax spontané ou sous tension. \n\nComme examens complémentaires, je demande une radiographie thoracique qui montre une ligne pleurale gauche et absence de trame vasculaire périphérique, un gaz du sang (hypoxémie, alcalose respiratoire), et un ECG pour éliminer une cause cardiaque. En cas de doute ou polytrauma, un CT thoracique peut préciser les lésions.\n\nLa prise en charge repose sur une oxygénothérapie haut débit, une analgésie adaptée, un drainage thoracique en cas de pneumothorax >2 cm ou symptomatique, et une surveillance rapprochée avec monitoring."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Price, 35 ans, chute vélo sur le thorax gauche, douleur coup de poignard et dyspnée brutale.\n\nB (Background) : Tabagisme lourd (34 PA), pas de maladies chroniques, pas de chirurgie, allergie pollen. \n\nA (Assessment) : Pneumothorax traumatique gauche probable. DD : fracture costale, contusion pulmonaire, hémothorax, pneumothorax sous tension.\n\nR (Recommendation) : Radiographie thoracique, gaz du sang, oxygène haut débit, analgésie, drainage thoracique si symptomatique, surveillance rapprochée."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade clinique pneumothorax",
+              "points": [
+                "Douleur thoracique brutale",
+                "Dyspnée",
+                "Diminution/abolition du murmure vésiculaire"
+              ]
+            },
+            {
+              "titre": "👉 Signes de pneumothorax sous tension",
+              "points": [
+                "Hypotension",
+                "Tachycardie",
+                "Turgescence jugulaire",
+                "Déviation trachéale",
+                "Cyanose"
+              ]
+            },
+            {
+              "titre": "👉 PEC rapide pneumothorax traumatique",
+              "points": [
+                "Oxygène haut débit",
+                "Radiographie de confirmation si patient stable",
+                "Drainage thoracique (4e-5e EIC, ligne axillaire antérieure)",
+                "Surveillance continue"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Confondre pneumothorax simple et sous tension",
+                "Oublier examen complet pour autres traumatismes",
+                "Négliger l’analgésie",
+                "Ne pas expliquer clairement la radiographie au patient",
+                "Oublier la prophylaxie tétanique si plaie associée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Pneumothorax traumatique",
+                  "reponse": {
+                    "pour": [
+                      "Traumatisme direct thorax gauche",
+                      "Douleur brutale pleurétique",
+                      "Dyspnée aiguë",
+                      "Murmure vésiculaire absent à gauche",
+                      "Hypersonorité à la percussion",
+                      "Radiographie avec ligne pleurale"
+                    ],
+                    "contre": [
+                      "Pas de signes de tension"
+                    ]
+                  }
+                },
+                {
+                  "question": "Contusion costale",
+                  "reponse": {
+                    "pour": [
+                      "Douleur localisée",
+                      "Sensibilité à la palpation"
+                    ],
+                    "contre": [
+                      "Murmure vésiculaire absent",
+                      "Frémitus diminué",
+                      "Hypersonorité thoracique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hémothorax",
+                  "reponse": {
+                    "contre": [
+                      "Pas d’opacité basale à la radio",
+                      "Pas de matité"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumothorax spontané",
+                  "reponse": {
+                    "pour": [
+                      "Homme jeune, mince, fumeur"
+                    ],
+                    "contre": [
+                      "Contexte traumatique clair"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Radiographie thoracique debout (diagnostic clé)",
+                    "Gaz du sang (PaO₂, PaCO₂, pH)",
+                    "ECG (exclure cause cardiaque, tachycardie sinusale)",
+                    "Scanner thoracique si doute ou polytrauma",
+                    "Échographie thoracique (FAST, absence glissement pleural)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Pneumothorax traumatique simple gauche"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Oxygénothérapie haut débit",
+                      "Analgésie adaptée",
+                      "Drainage thoracique si >2 cm ou symptomatique",
+                      "Surveillance continue"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle radiographique post-drainage",
+                    "Sevrage tabagique (fort risque récidive)",
+                    "Éviter vols/plongée jusqu’à résolution complète",
+                    "Kinésithérapie respiratoire post-drainage",
+                    "Prévention récidive (pleurodèse si récidives multiples)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

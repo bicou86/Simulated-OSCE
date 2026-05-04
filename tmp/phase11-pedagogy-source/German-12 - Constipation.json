@@ -1,0 +1,362 @@
+{
+  "title": "German-12 - Constipation",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Madame Meier, 56 ans, se présente au cabinet pour constipation depuis 3 semaines"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte → Symptôme principal",
+          "patientComment": "Constipation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Question de clarification : \"Qu'entendez-vous par constipation ?\"",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Évolution temporelle",
+          "details": [
+            "Durée [depuis 3 semaines, pas avant]",
+            "Évolution : intermittente – continue – progressive [progressive]",
+            "Fréquence des selles < 3/semaine = pathologique [environ 2x/semaine]"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques des selles",
+          "details": [
+            "Consistance : liquide – pâteuse – moulée – fragments durs [fragments durs]",
+            "Effort de poussée important [oui]",
+            "Sensation d'évacuation incomplète [souvent]",
+            "Sensation de blocage [non]",
+            "Évacuation digitale [non]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a6",
+          "text": "Douleurs lors de la défécation",
+          "patientComment": "Oui, fortes",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Aspect des selles",
+          "details": [
+            "Couleur : grise (acholique) – noire (méléna) – rouge (hématochézie) [normale - brun foncé]",
+            "Odeur : normale – très malodorante [normale]",
+            "Sang dans/sur les selles [parfois sang rouge clair sur papier toilette]",
+            "Mucus/pus dans les selles [non]"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a8",
+          "text": "Épisodes antérieurs",
+          "patientComment": "Non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Volume des selles par rapport à l'habitude",
+          "patientComment": "Identique",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Facteurs d'influence",
+          "details": [
+            "Régime alimentaire [beaucoup boire et bouger améliore]",
+            "Gluten [non]",
+            "Coloscopie antérieure [non]"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes d'accompagnement",
+          "details": [
+            "Fièvre [non]",
+            "Céphalées [non]",
+            "Douleurs musculaires/articulaires [non]",
+            "Éruption cutanée [non]",
+            "Production/couleur urinaire [normale]",
+            "Vertiges/hypotension orthostatique [non]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes B",
+          "patientComment": "Sueurs nocturnes, perte de poids de 5 kg en 6 mois",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes thyroïdiens",
+          "details": [
+            "Intolérance au froid",
+            "Prise de poids",
+            "Chute de cheveux",
+            "Modifications cutanées"
+          ],
+          "patientComment": "Non",
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes gastro-intestinaux",
+          "details": [
+            "Nausées/vomissements [nausées après gros repas, pas de vomissements]",
+            "Ballonnements/flatulences [ballonnements augmentés]",
+            "Diarrhée paradoxale [épisodes de diarrhée brefs par moments]",
+            "Douleurs abdominales [non]",
+            "Douleurs rectales [non]",
+            "Incontinence fécale [non]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies antérieures",
+            "Opérations/accouchements [appendicectomie, 3 enfants, 2 césariennes]",
+            "Cancer actif [non, oh mon Dieu ai-je un cancer ?]",
+            "Diabète [non]",
+            "Thyroïde [radiothérapie à l'iode]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a16",
+          "text": "Allergies",
+          "patientComment": "Guêpes",
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Médicaments",
+          "details": [
+            "Vitamine D + Ca2+",
+            "Euthyrox 50 μg/j",
+            "Antiacides [non]",
+            "Anticholinergiques [non]",
+            "Diurétiques [non]",
+            "Opiacés [non]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a18",
+          "text": "Toxiques",
+          "patientComment": "Aucun",
+          "binaryOnly": true
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse familiale",
+          "details": [
+            "Cancer du côlon",
+            "Autres cancers [mère cancer du sein, père cancer du foie]",
+            "Maladies thyroïdiennes"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Alimentation [cuisine consistante, beaucoup de viande, peu de légumes]",
+            "Modification de l'alimentation [non]",
+            "Quantité de boisson [environ 1L/jour]",
+            "Profession [femme au foyer]",
+            "Loisirs/activité physique [peu d'exercice, 1x promenade/semaine + tâches ménagères]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a21",
+          "text": "Anamnèse systémique",
+          "binaryOnly": false,
+          "scoringRule": "Complète = 2 pts, partielle = 1 pt, absente = 0 pt"
+        },
+        {
+          "id": "a22",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen abdominal",
+          "details": [
+            "Inspection",
+            "Auscultation",
+            "Percussion",
+            "Palpation",
+            "Évaluation du turgor cutané et recherche d'efflorescences"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "e2",
+          "text": "Toucher rectal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Examen thyroïdien",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardio-pulmonaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Auscultation pulmonaire"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins deux = 2 pts, un = 1 pt, aucun = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Constipation fonctionnelle",
+                    "cause": "□ alimentation, mouvement",
+                    "test": "→ Radiographie abdominale, coloscopie si alarme"
+                  },
+                  {
+                    "text": "Syndrome de l'intestin irritable avec constipation",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie abdominale, coloscopie si alarme"
+                  },
+                  {
+                    "text": "Cancer du côlon",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Red flags - Signaux d'alarme",
+          "redflagsSection": [
+            {
+              "text": "Âge > 50 ans"
+            },
+            {
+              "text": "Début aigu/récent"
+            },
+            {
+              "text": "Perte de poids / Fièvre / Sueurs nocturnes"
+            },
+            {
+              "text": "Douleurs abdominales/crampes"
+            },
+            {
+              "text": "Saignement rectal"
+            },
+            {
+              "text": "Nausées/vomissements"
+            },
+            {
+              "text": "Douleurs rectales"
+            },
+            {
+              "text": "Modification du calibre des selles"
+            }
+          ],
+          "scoringRule": "Au moins cinq = 2 pts, trois à quatre = 1 pt, moins de trois = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Laboratoire : NFS, CRP, leucocytes, créatinine, électrolytes (Na, K, Ca), TSH, glucose",
+            "Transaminases, Gamma-GT, phosphatases alcalines (PAL), albumine, Quick/aPTT",
+            "Test FIT (recherche de sang occulte dans les selles)",
+            "US abdominale ou CT abdomen",
+            "Coloscopie"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m5",
+          "text": "Reconnaissance de pathologie sur imagerie/coloscopie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Traitement proposé (médicaments/chirurgie)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Organisation si nécessaire d'un transfert hospitalier",
+          "binaryOnly": true
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

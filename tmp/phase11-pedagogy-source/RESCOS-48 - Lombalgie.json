@@ -1,0 +1,618 @@
+{
+  "title": "RESCOS-48 - Lombalgie",
+  "context": {
+    "setting": "Cabinet du généraliste",
+    "patient": "M. Rochat, 75 ans, consulte pour la première fois en 15 ans pour douleurs dans le dos."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur",
+          "details": [
+            "Localisation [lombo-sacré]",
+            "Qualité [sourde]",
+            "Intensité [5/10]",
+            "Irradiation [aucune]",
+            "Chronologie [6 mois, progression de 1/10 à 5/10]",
+            "Facteurs atténuants/aggravants [aucun, ne dépend ni du repos ni du mouvement]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Recherche des drapeaux rouges",
+          "details": [
+            "Âge [75 ans]",
+            "Traumatisme [non]",
+            "Perte de poids [5 kg en 1 an]",
+            "Sudations nocturnes [oui, se réveille trempé]",
+            "Fièvre [non]",
+            "Antécédents néoplasiques"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes neurologiques",
+          "details": [
+            "Déficit moteur [non]",
+            "Déficit sensitif [non]",
+            "Troubles du transit [non]",
+            "Incontinence fécale [non]",
+            "Anesthésie en selle"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Anamnèse uro-génitale",
+          "details": [
+            "Troubles de la vidange [oui, sévères]",
+            "Temps de latence [15 secondes]",
+            "Jet faible [oui, s'arrose les pieds]",
+            "Gouttes terminales [doit pousser pour finir]",
+            "Nycturie [4x/nuit]",
+            "Brûlures mictionnelles [non]",
+            "Hématurie [non]",
+            "Urgences/incontinence [non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Impact fonctionnel",
+          "details": [
+            "Mobilité réduite [oui, depuis 1 mois]",
+            "Autonomie affectée [ne peut plus faire tout ce qu'il faisait]",
+            "Qualité du sommeil [douleur insomniante]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Habitudes et antécédents",
+          "details": [
+            "Médicaments [aucun]",
+            "Tabac [jamais fumé]",
+            "Alcool [1-2 verres/semaine]",
+            "Activité physique [travaille à la ferme]",
+            "Antécédents médicaux"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen ostéo-articulaire",
+          "details": [
+            "Inspection du rachis [pas de déformation]",
+            "Palpation/percussion du rachis [indolore]",
+            "Palpation muscles paravertébraux",
+            "Mobilité rachidienne (flexion/extension/rotation)",
+            "Test de Lasègue [négatif]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen neurologique des membres inférieurs",
+          "details": [
+            "Force motrice [M5 bilatéral]",
+            "Sensibilité",
+            "Réflexes ostéo-tendineux [normovifs, symétriques]",
+            "Signe de Babinski [indifférent/flexion]",
+            "Marche"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Toucher rectal",
+          "details": [
+            "Tonus sphinctérien [normal]",
+            "Palpation de la prostate [masse palpable]",
+            "Recherche de sang [absent]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Examens de laboratoire",
+          "details": [
+            "Formule sanguine complète",
+            "Fonction rénale",
+            "PSA",
+            "Phosphatases alcalines",
+            "Calcium"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Échographie résidu post-mictionnel",
+            "Échographie rénale",
+            "Imagerie selon PSA (CT TAP, scintigraphie osseuse, PET-PSMA)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Hypothèse diagnostique principale",
+          "details": [
+            "Cancer prostatique métastatique",
+            "Justification basée sur l'anamnèse et l'examen"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Diagnostics différentiels évoqués",
+          "details": [
+            "Syndrome de la queue de cheval",
+            "Métastases osseuses d'autre origine",
+            "Myélome multiple",
+            "Sténose spinale",
+            "Infection (ostéomyélite, abcès épidural)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge proposée",
+          "details": [
+            "Référer à l'urologue",
+            "Antalgie adaptée",
+            "Évaluation urgence relative"
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Test de Lasègue",
+        "description": "Illustration de la technique du test de Lasègue pour évaluer une lombosciatalgie",
+        "filename": "grilles_generees/html/images/douleur-dorsale-1-img1.jpg"
+      },
+      {
+        "id": "img2",
+        "title": "Drapeaux rouges de la lombalgie",
+        "description": "Tableau récapitulatif des drapeaux rouges à rechercher en cas de lombalgie",
+        "filename": "grilles_generees/html/images/douleur-dorsale-1-img2.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Rudi Rochat",
+      "age": "75 ans",
+      "contexte": "Paysan à la retraite consultant pour la première fois en 15 ans pour douleurs lombaires",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal au dos",
+        "autreChose": "Comme tous les vieux mais de plus en plus depuis 6 mois"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur axiale fixe",
+          "Localisation : Lombo-sacré",
+          "Qualité : Sourde",
+          "Intensité : 5/10",
+          "Irradiation : Aucune",
+          "Chronologie : de 1/10 à 5/10 en 6 mois, ne fluctue pas",
+          "Développement : Graduel, mais franchement handicapante depuis 1 mois",
+          "Circonstances : Ne se souvient pas, mais est sûr qu'il n'y a pas eu de traumatisme",
+          "Facteurs atténuants : Aucun, notamment pas le repos ou l'effort",
+          "Facteurs aggravants : Aucun, notamment pas le repos ou le mouvement"
+        ],
+        "symptomesAssocies": [
+          "Trouble de la vidange vésicale sévère"
+        ],
+        "reponseAuxSymptomes": [
+          "Perte de mobilité et d'autonomie ('Je ne peux plus faire tout ce que je faisais avant')",
+          "Effet sur la qualité de sommeil (douleur insomniante)"
+        ],
+        "representationMaladie": [
+          "Associe les symptômes à son âge, pense que c'est normal"
+        ],
+        "questions": [
+          "Vous pensez que j'ai quoi docteur ? (en fin d'entretien, si l'étudiant n'évoque pas un diagnostic de lui-même)"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Perte involontaire de 5kg en 1 an",
+          "Sudations nocturnes ('Je me réveille parfois la nuit complètement trempé')",
+          "Pas de fièvre"
+        ],
+        "neurologique": [
+          "Pas de trouble sensitif ou fonctionnel en général",
+          "La douleur fixe limite tout le quotidien"
+        ],
+        "genitourinaire": [
+          "Je dois attendre au moins 15 secondes avant de commencer à uriner",
+          "Le jet est très faible, parfois je m'arrose les pieds",
+          "Je dois beaucoup pousser à la fin pour finir, c'est interminable",
+          "Je me lève 4x/nuit",
+          "Pas de brûlure",
+          "Pas d'antécédent d'infection ou d'hématurie",
+          "Pas d'urgence urinaire ni d'incontinence",
+          "Sexuellement ça ne marche plus, il ne souhaite pas en parler"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Omnivore, légumes viande",
+        "activitePhysique": "Travaille à la ferme pour aider sa fille",
+        "sommeil": "Bon habituellement, mais affecté par les douleurs",
+        "tabac": "N'a jamais fumé",
+        "alcool": "Au carnozet le jeudi, on boit 1-2 verres avec les potes",
+        "medicaments": "Aucun"
+      },
+      "histoireMedicale": [
+        "Homme de 75 ans en bonne santé habituelle mais n'a pas souvent été chez le médecin",
+        "Paysan de métier, malgré son âge continue à exercer une activité physique modérée",
+        "Diète omnivore équilibrée",
+        "Ne fume pas, boit de l'alcool occasionnellement",
+        "Ne prend aucun médicament",
+        "Vaccins à priori à jour hormis celui de la grippe qu'il ne fait jamais",
+        "A cependant choisi de se faire vacciner contre le COVID-19 (3 doses)"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Retraité (ancien paysan)",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Marié",
+        "etatEsprit": "Calme, collaborant, adéquat. Vieux paysan bien sympa qui veut pas déranger mais de bleu ça commence à faire soucis"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Patient calme, collaborant et adéquat",
+          "Vieux paysan bien sympa qui ne veut pas déranger",
+          "Se tient le flanc droit durant l'anamnèse (douleur)"
+        ],
+        "durantStatus": [
+          "Pas de déformation du rachis visible",
+          "Palpation/percussion du rachis indolore",
+          "Pas de trouble de la motricité en flexion/extension/rotation",
+          "Test de Lasègue négatif",
+          "Force M5 aux deux membres inférieurs",
+          "Réflexes ostéotendineux normovifs et symétriques",
+          "Babinski indifférent/en flexion",
+          "Au toucher rectal : masse palpable sur la prostate"
+        ]
+      },
+      "informationADonner": "J'ai de la peine à faire pipi parfois aussi (si étudiant perdu après 5 minutes environ)"
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M. Rochat, 75 ans, paysan retraité, consulte pour douleurs lombaires évoluant depuis 6 mois (1/10 à 5/10), sourdes, fixes, sans facteurs modulateurs. Présence de drapeaux rouges : âge, symptômes B (sudations nocturnes, perte de poids 5kg/an). Troubles mictionnels sévères associés. Status : toucher rectal avec masse prostatique palpable.",
+      "rolesInterventions": [
+        "Si l'étudiant évoque le toucher rectal, lui indiquer le mannequin pour qu'il performe le geste",
+        "Si l'étudiant évoque le tonus sphinctérien durant le toucher rectal, indiquer qu'il est bon, sans aucun déficit",
+        "Si l'étudiant évoque la présence de sang après le toucher rectal, dire qu'il n'y en a pas",
+        "Si l'étudiant évoque un laboratoire, lui demander de préciser quels éléments du laboratoire il souhaiterait avoir",
+        "Si l'étudiant demande les résultats du laboratoire, indiquer que les résultats seront disponibles dans 24 heures",
+        "Si l'étudiant demande une imagerie, ne pas intervenir. S'il demande à l'effectuer de suite ou demande les résultats, rappeler le contexte de la visite (chez le médecin traitant) et qu'il n'y a pas de moyen de faire une imagerie au cabinet"
+      ],
+      "pointsCles": [
+        "Présence de plusieurs drapeaux rouges (age, symptômes B)",
+        "Troubles mictionnels sévères orientant vers pathologie prostatique",
+        "Masse prostatique au toucher rectal",
+        "Suspicion forte de cancer prostatique métastatique",
+        "Nécessité d'investigations complémentaires (PSA, imagerie)"
+      ],
+      "pieges": [
+        "Ne pas oublier l'anamnèse uro-génitale chez un homme âgé avec douleurs lombaires",
+        "Toujours effectuer un toucher rectal dans ce contexte",
+        "Ne pas se limiter à une lombalgie mécanique chez un patient de 75 ans",
+        "Rechercher systématiquement les drapeaux rouges"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur les lombalgies et drapeaux rouges",
+      "sections": [
+        {
+          "titre": "Généralités sur les lombalgies",
+          "contenu": "Les lombalgies sont un motif de consultation très fréquent en médecine ambulatoire avec un impact important sur la santé publique. La cause est le plus souvent aspécifique et évolue favorablement en quelques jours ou semaines.",
+          "points": [
+            "Prévalence : 80% de la population aura au moins un épisode de lombalgie dans sa vie",
+            "La majorité des lombalgies sont bénignes et auto-résolutives",
+            "Importance de l'approche bio-psycho-sociale dans les lombalgies chroniques",
+            "Recherche systématique des drapeaux rouges pour identifier les pathologies graves"
+          ]
+        },
+        {
+          "titre": "Drapeaux rouges de la lombalgie",
+          "contenu": "Les drapeaux rouges sont des signes d'alerte qui doivent faire suspecter une pathologie organique grave sous-jacente :",
+          "points": [
+            "Fracture : trauma grave, trauma léger chez patient âgé ou ostéoporotique, prise de corticoïdes",
+            "Âge : plus de 50 ans, moins de 20 ans",
+            "Néoplasie : antécédents néoplasiques, perte pondérale inexpliquée, douleurs nocturnes, sudations nocturnes",
+            "Facteurs de risque infectieux : fièvre, infection cutanée ou urinaire, geste invasif local récent, déficit immunologique, toxicomanie IV, douleur osseuse vertébrale, douleur inflammatoire nocturne et/ou au repos",
+            "Atteintes neurologiques : anesthésie en selle, troubles sphinctériens, déficit de force inférieur à M3, déficit moteur inférieur à 24 heures et progressif"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque de complication/chronicisation",
+          "points": [
+            "Tabagisme actif",
+            "Obésité",
+            "Âge",
+            "Genre féminin",
+            "Travail (physique intense, sédentaire, psychologiquement lourd, insatisfaisant, chômage/rente AI)",
+            "Bas niveau socio-économique",
+            "Troubles psy (anxiété, dépression, somatisation)"
+          ]
+        },
+        {
+          "titre": "Examen clinique ciblé",
+          "contenu": "L'examen clinique doit être adapté à la problématique aiguë :",
+          "points": [
+            "Observation du rachis à la recherche de déformation",
+            "Palpation du rachis et des muscles paravertébraux",
+            "Évaluation de la motricité, notamment la distance doigt-sol",
+            "Évaluation de la marche",
+            "Test de Lasègue (DD : lombosciatalgie)",
+            "Recherche systématique d'un déficit neurologique aux membres inférieurs",
+            "Toucher rectal si troubles mictionnels ou suspicion de syndrome de la queue de cheval"
+          ]
+        },
+        {
+          "titre": "Cancer de la prostate et métastases osseuses",
+          "contenu": "Le cancer de la prostate est le cancer le plus fréquent chez l'homme et a une forte tendance à métastaser au niveau osseux :",
+          "points": [
+            "Les métastases osseuses sont présentes dans 70-80% des cancers de prostate avancés",
+            "Localisation préférentielle : rachis lombaire, bassin, fémur proximal",
+            "Métastases ostéoblastiques (condensantes) typiques",
+            "Douleurs osseuses souvent le premier symptôme",
+            "Risque de compression médullaire",
+            "Dosage du PSA clé pour le diagnostic"
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "contenu": "La prise en charge dépend de la suspicion clinique et de la présence de drapeaux rouges :",
+          "points": [
+            "Lombalgie simple : antalgie simple et AINS, pas d'investigations",
+            "Présence de drapeaux rouges : investigations ciblées selon la suspicion",
+            "Urgence neurochirurgicale : déficit neurologique, syndrome de la queue de cheval",
+            "Urgence relative : suspicion néoplasique, infectieuse",
+            "Référer au spécialiste selon les résultats des investigations"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antalgie adaptée : paracétamol, AINS, opioïdes si douleur sévère",
+        "Maintien de l'activité physique adaptée",
+        "Physiothérapie si nécessaire",
+        "Traitement spécifique selon l'étiologie (hormonothérapie si cancer prostate)",
+        "Radiothérapie antalgique si métastases osseuses douloureuses"
+      ],
+      "examensComplementaires": [
+        "FSC : recherche anémie, syndrome inflammatoire",
+        "Fonction rénale : créatinine",
+        "PSA : marqueur tumoral prostatique",
+        "Phosphatases alcalines : marqueur de remodelage osseux",
+        "Calcium : recherche hypercalcémie",
+        "Échographie résidu post-mictionnel et rénale",
+        "Radiographie du rachis lombaire si suspicion fracture",
+        "IRM rachis si suspicion compression médullaire",
+        "CT TAP + scintigraphie osseuse si suspicion métastases",
+        "PET-PSMA si disponible pour bilan d'extension"
+      ]
+    },
+    "ddSection": {
+      "title": "Diagnostics différentiels d'une lombalgie chez le sujet âgé",
+      "categories": [
+        {
+          "name": "Causes néoplasiques",
+          "items": [
+            {
+              "text": "Cancer prostatique métastatique",
+              "cause": "Arguments POUR:\n\t□ Homme de 75 ans\n\t□ Douleur progressive sur 6 mois\n\t□ Douleur fixe, non mécanique\n\t□ Symptômes B (perte de poids, sudations)\n\t□ Troubles mictionnels sévères\n\t□ Masse prostatique au TR",
+              "test": "→ PSA, phosphatases alcalines, scintigraphie osseuse"
+            },
+            {
+              "text": "Métastases osseuses d'autre origine",
+              "cause": "Arguments POUR:\n\t□ Âge\n\t□ Douleur non mécanique\n\t□ Symptômes B\nArguments CONTRE:\n\t□ Troubles prostatiques spécifiques\n\t□ Masse prostatique",
+              "test": "→ Bilan complet à la recherche d'un primitif"
+            },
+            {
+              "text": "Myélome multiple",
+              "cause": "Arguments POUR:\n\t□ Âge > 70 ans\n\t□ Douleurs osseuses\nArguments CONTRE:\n\t□ Pas d'anémie apparente\n\t□ Pas d'insuffisance rénale",
+              "test": "→ Électrophorèse des protéines, calcium"
+            }
+          ]
+        },
+        {
+          "name": "Causes mécaniques",
+          "items": [
+            {
+              "text": "Sténose spinale",
+              "cause": "Arguments POUR:\n\t□ Âge\n\t□ Troubles de la marche\nArguments CONTRE:\n\t□ Pas de claudication neurogène\n\t□ Douleur non soulagée par la flexion\n\t□ Présence de drapeaux rouges",
+              "test": "→ IRM rachis lombaire"
+            },
+            {
+              "text": "Fracture de compression vertébrale",
+              "cause": "Arguments CONTRE:\n\t□ Pas de traumatisme\n\t□ Douleur progressive sur 6 mois\n\t□ Pas de douleur aiguë",
+              "test": "→ Radiographie rachis"
+            }
+          ]
+        },
+        {
+          "name": "Causes neurologiques",
+          "items": [
+            {
+              "text": "Syndrome de la queue de cheval",
+              "cause": "Arguments POUR:\n\t□ Troubles urinaires\nArguments CONTRE:\n\t□ Pas d'anesthésie en selle\n\t□ Tonus sphinctérien normal\n\t□ Pas de déficit neurologique\n\t□ Évolution lente",
+              "test": "→ IRM rachis en urgence si suspicion"
+            }
+          ]
+        },
+        {
+          "name": "Causes infectieuses",
+          "items": [
+            {
+              "text": "Ostéomyélite/Abcès épidural",
+              "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de syndrome inflammatoire clinique\n\t□ Évolution lente sur 6 mois\n\t□ Pas de facteur de risque infectieux",
+              "test": "→ NFS, CRP, hémocultures si fièvre"
+            }
+          ]
+        }
+      ]
+    },
+    "resume": {
+      "titre": "🦴 Métastases osseuses du cancer de la prostate – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleurs osseuses chroniques, souvent lombaires, pelviennes ou fémorales",
+                "Douleur nocturne et rebelle aux antalgiques simples",
+                "Fractures pathologiques (faible traumatisme)",
+                "Raideur ou limitation fonctionnelle"
+              ]
+            },
+            {
+              "titre": "Contexte oncologique",
+              "points": [
+                "ATCD de cancer de la prostate connu",
+                "Découverte parfois inaugurale d’un cancer prostatique avancé",
+                "Symptômes urinaires associés (dysurie, pollakiurie, rétention)"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte",
+              "points": [
+                "Douleurs rachidiennes avec déficit moteur ou sensitif (compression médullaire)",
+                "Altération de l’état général (fatigue, perte de poids, anorexie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen osseux et articulaire",
+              "points": [
+                "Douleur provoquée à la palpation des zones osseuses",
+                "Mobilité réduite, boiterie",
+                "Déformation osseuse ou tuméfaction"
+              ]
+            },
+            {
+              "titre": "Examen neurologique",
+              "points": [
+                "Recherche de signes de compression médullaire : déficit moteur, troubles sensitifs",
+                "Troubles sphinctériens (rétention, incontinence)"
+              ]
+            },
+            {
+              "titre": "Examen général",
+              "points": [
+                "État général (amaigrissement, asthénie)",
+                "Recherche d’adénopathies, hépatomégalie ou autres localisations métastatiques"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "PSA élevé (cancer prostatique évolutif)",
+                "Phosphatases alcalines augmentées (activité ostéoblastique)",
+                "Bilan standard : NFS, fonction rénale, calcium"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Scintigraphie osseuse corps entier = examen de référence",
+                "IRM si suspicion de compression médullaire",
+                "Scanner osseux ou PET-scan pour bilan d’extension"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement oncologique",
+              "points": [
+                "Hormonothérapie (castration médicale ou chirurgicale, anti-androgènes)",
+                "Chimiothérapie (docétaxel) dans les formes métastatiques",
+                "Nouvelles hormonothérapies (abiratérone, enzalutamide)"
+              ]
+            },
+            {
+              "titre": "Traitement local et symptomatique",
+              "points": [
+                "Radiothérapie antalgique ciblée sur lésions douloureuses",
+                "Biphosphonates ou dénosumab pour prévenir fractures",
+                "Antalgiques adaptés (jusqu’aux morphiniques si besoin)",
+                "Chirurgie orthopédique préventive ou curative (fracture pathologique, fixation prophylactique)"
+              ]
+            },
+            {
+              "titre": "Urgence",
+              "points": [
+                "Si compression médullaire suspectée : IRM en urgence, corticothérapie IV (dexaméthasone), avis neurochirurgical/radiothérapeutique immédiat"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur osseuse chronique chez un patient avec cancer de la prostate = métastase jusqu’à preuve du contraire",
+            "Scintigraphie osseuse = examen de référence",
+            "Toujours rechercher compression médullaire (urgence thérapeutique)",
+            "Prise en charge multidisciplinaire (oncologie, radiothérapie, orthopédie, soins de support)",
+            "Hormonothérapie = traitement de première intention"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "ATCD de cancer de la prostate ? Stade initial ? Traitements déjà reçus ?",
+                "Localisation, intensité, ancienneté des douleurs osseuses ?",
+                "Douleurs nocturnes ou fractures récentes ?",
+                "Troubles neurologiques (faiblesse, fourmillements) ou sphinctériens ?",
+                "Altération de l’état général (amaigrissement, fatigue) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen osseux : douleur à la palpation, mobilité, boiterie",
+                "Examen neurologique complet si douleurs rachidiennes",
+                "PSA, phosphatases alcalines",
+                "Scintigraphie osseuse ± IRM si compression suspectée"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par PSA + imagerie (scintigraphie osseuse, IRM si doute)",
+                "Initier traitement systémique (hormonothérapie ± chimio) et soins de support",
+                "Anticiper et traiter les complications : fractures, douleurs, compression médullaire"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "title": "AMBOSS-4 - Saignements vaginaux - Femme 50 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Elaine Hill, femme de 50 ans, consultante pour des saignements vaginaux",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "118/79 mmHg",
+      "fc": "85 bpm",
+      "fr": "17/min",
+      "imc": "32 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai eu mes règles à nouveau la semaine dernière, mais je pensais avoir déjà passé la ménopause"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des saignements",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a 5 jours]",
+            "Évolution [Ça a commencé avec quelques taches dans mes sous-vêtements. C'est devenu aussi abondant que des règles normales ces 2 derniers jours]",
+            "Quantité exacte [J'ai dû utiliser 3 serviettes par jour]",
+            "Constant/intermittent [D'abord des taches, maintenant comme des règles]",
+            "Épisodes antérieurs [Aucun]",
+            "Fréquence [C'est la première fois que j'ai ça en 2 ans]",
+            "Facteurs améliorants [Non]",
+            "Facteurs aggravants [Non]",
+            "Événements précipitants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "patientComment": "Je me sens bien sinon"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme pelvien [Non, rien de tel]",
+            "Œdème des chevilles [Non]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Pas vraiment]",
+            "Troubles urinaires [Non]",
+            "Troubles du transit [Non]",
+            "Douleurs abdominales [Non]",
+            "Appétit [Normal]",
+            "Variations pondérales [Non. Je suis toujours du côté lourd de la balance]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai été diagnostiquée diabétique il y a 5 ans et hypertendue il y a 2 ans"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Metformine, métoprolol"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Juste pour avoir mes enfants"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père a une maladie cardiaque"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je vends des cosmétiques depuis chez moi]",
+            "Domicile [Mes enfants sont partis et je vis seule, sauf quand j'ai de la visite]",
+            "Tabac [Je fume un paquet par jour depuis l'âge de 15 ans]",
+            "Alcool [Quand je sors le week-end, je prends un verre ou deux]",
+            "Drogues illicites [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Histoire sexuelle et gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Partenaires [Des hommes que je rencontre dans les bars ou en ligne]",
+            "Nombre de partenaires dans l'année [J'ai eu environ 10 partenaires différents cette année]",
+            "Protection [Parfois je ne m'embête pas. J'ai passé la ménopause de toute façon]",
+            "IST antérieures [J'ai eu une chlamydia il y a environ 7 ans et on m'a donné des antibiotiques]",
+            "Infection HPV [Non, je n'ai pas d'infection, mais je n'ai jamais été testée non plus]",
+            "Dernières règles [Il y a 2 ans]",
+            "Âge de la ménopause [45 ans]",
+            "Symptômes de ménopause actuels [Non, tout ça est fini, heureusement]",
+            "Ménarche [J'avais 9 ans]",
+            "Pertes vaginales [Non, c'est à peu près comme d'habitude, sauf pour le sang]",
+            "Démangeaisons vaginales [Non]",
+            "Sécheresse vaginale [Non]",
+            "Grossesses [J'ai 4 enfants]",
+            "Avortements/fausses couches [Non]",
+            "Dernier frottis [Peut-être il y a 7 ans quand j'ai eu la chlamydia ? Je n'en ai pas fait ces dernières années et j'ai oublié les résultats de la dernière fois]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des conjonctives"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Recherche d'œdème déclive [Pas d'œdème]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies malignes (priorité élevée)",
+                "items": [
+                  {
+                    "text": "Cancer du col de l'utérus",
+                    "cause": "Arguments POUR:\n\t□ Saignements vaginaux post-ménopausiques\n\t□ Âge typique (50 ans)\n\t□ Multiples partenaires sexuels (10/an)\n\t□ Antécédent d'IST (chlamydia)\n\t□ Multiparité (4 enfants)\n\t□ Tabagisme important (35 paquets-années)\n\t□ Dernier frottis il y a 7 ans\n\t□ Jamais de test HPV\n\t□ Protection inconstante",
+                    "test": "→ Examen pelvien + frottis + test HPV"
+                  },
+                  {
+                    "text": "Cancer de l'endomètre",
+                    "cause": "Arguments POUR:\n\t□ Saignements post-ménopausiques (signe cardinal)\n\t□ Ménarche précoce (9 ans)\n\t□ Syndrome métabolique (diabète, HTA, obésité)\n\t□ IMC 32 (obésité)\n\t\nArguments CONTRE:\n\t□ Multiparité est un facteur protecteur",
+                    "test": "→ US transvaginale + biopsie endométriale"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies bénignes",
+                "items": [
+                  {
+                    "text": "Polype endométrial",
+                    "cause": "Arguments POUR:\n\t□ Saignements post-ménopausiques\n\t□ HTA\n\t□ Obésité\n\tMais : Les cancers doivent être exclus d'abord",
+                    "test": "→ US transvaginale + hystéroscopie"
+                  },
+                  {
+                    "text": "Atrophie vaginale/endométriale",
+                    "cause": "Arguments POUR:\n\t□ Post-ménopausique\n\t\nArguments CONTRE:\n\t□ Pas de sécheresse vaginale",
+                    "test": "→ Examen pelvien"
+                  },
+                  {
+                    "text": "Hyperplasie endométriale",
+                    "test": "→ Biopsie endométriale"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen pelvien [obligatoire dans tous les cas de saignements vaginaux post-ménopausiques]",
+            "Examen rectal [pour exclure une cause rectale de saignement confondue avec saignement vaginal]",
+            "Frottis cervical et test HPV [Femmes 30-65 ans : frottis tous les 3 ans OU frottis + HPV tous les 5 ans]",
+            "FSC [pour évaluer une possible anémie due à une perte sanguine chronique]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie et biopsies",
+          "binaryOnly": false,
+          "details": [
+            "US transvaginale [pour évaluer polypes endométriaux et épaississement endométrial, signe de cancer de l'endomètre]",
+            "Biopsie endométriale [pour évaluer cancer de l'endomètre]",
+            "Colposcopie [si frottis anormal]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient",
+            "Gestion de la méfiance envers la médecine"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les pratiques sexuelles sûres",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant la ménopause"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge du cancer du col de l'utérus",
+                "content": "• Conisation: Excision zone transformation si lésions précancéreuses ; Hystérectomie radicale + lymphadénectomie si cancer invasif ; Trachélectomie radicale si désir fertilité (stade IA2-IB1) ; Radiothérapie externe + curiethérapie si stades avancés\n• Surveillance post-thérapeutique: Examen clinique + cytologie"
+              },
+              {
+                "title": "Prise en charge du cancer de l'endomètre",
+                "content": "• Hormonothérapie si récepteurs positifs: Hormonothérapie (progestatifs) si récepteurs positifs\n• Surveillance: CA-125, imagerie selon protocole"
+              },
+              {
+                "title": "Prévention et conseils",
+                "content": "• Sevrage tabagique impératif: (réduit risque progression)\n• Pratiques sexuelles sûres: Préservatifs systématiques\n• Vaccination HPV jusqu'à 45 ans: (rattrapage possible)\n• Dépistage régulier: Frottis + HPV tous les 3-5 ans\n• Counseling psychologique si besoin: (impact fertilité)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Questions difficiles à poser",
+          "content": "[Mon médecin m'a dit que j'avais finalement passé la ménopause. Est-ce que cela signifie que ce n'est pas le cas ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Hill, je comprends votre inquiétude concernant vos symptômes. Par définition, si vous n'avez pas eu de règles pendant 12 mois, vous êtes en ménopause, donc nous devons chercher une autre cause à vos saignements vaginaux. J'aimerais faire quelques tests aujourd'hui, un examen pelvien, et une imagerie de votre bas-ventre. Une fois les résultats disponibles, vous et moi pourrons discuter de la suite. Qu'en pensez-vous ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Œdème déclive de la jambe",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait précédemment été remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-4-img1-Pitting edema of lower leg.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Test de Papanicolaou montrant HSIL",
+        "description": "Photomicrographie d'un échantillon de test de Papanicolaou de cellules squameuses du col utérin (coloration de Papanicolaou ; très fort grossissement). De multiples cellules squameuses intermédiaires normales (cytoplasme bleu clair, exemples indiqués par superposition jaune) et un neutrophile (pointe de flèche) sont visibles. Une nappe de cellules épithéliales anormales plus petites (contour en pointillés) est également présente au bas de l'image. Ces cellules ont des contours nucléaires irréguliers avec un rapport nucléo-cytoplasmique élevé et une chromatine grumelée irrégulière. Il y a une cellule dyskératosique (cytoplasme rouge, flèche) dans l'amas de cellules anormales. Ces résultats sont caractéristiques d'une dysplasie sévère, c'est-à-dire une lésion intraépithéliale squameuse de haut grade (HSIL).",
+        "data": "grilles_generees/html/images/AMBOSS-4-img2-Papanicolaou test showing HSIL.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Grades histopathologiques du cancer du col",
+        "description": "Grades histopathologiques du cancer du col utérin. LSIL : néoplasie intraépithéliale squameuse de bas grade. HSIL : néoplasie intraépithéliale squameuse de haut grade. CIN : néoplasie intraépithéliale cervicale.",
+        "data": "grilles_generees/html/images/AMBOSS-4-img3-Histopathological grades of cervical cancer.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Elaine Hill",
+      "age": "50 ans",
+      "contexte": "Femme consultant au cabinet médical pour saignements vaginaux post-ménopausiques",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai eu mes règles à nouveau la semaine dernière, mais je pensais avoir déjà passé la ménopause.",
+        "autreChose": "C'est bizarre et ça m'inquiète un peu."
+      },
+      "consignes": [
+        "Vous êtes méfiante envers la médecine et les médecins, et vous traitez l'examinateur avec une certaine suspicion.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Montrer une attitude légèrement défensive mais coopérative.",
+        "Défi : Demander 'Mon médecin m'a dit que j'avais finalement passé la ménopause. Est-ce que cela signifie que ce n'est pas le cas ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Saignements vaginaux post-ménopausiques",
+          "Début : Il y a 5 jours",
+          "Évolution : Taches puis saignements comme des règles",
+          "Quantité : 3 serviettes par jour depuis 2 jours",
+          "Premier épisode en 2 ans",
+          "Pas de facteurs déclenchants",
+          "Pas de symptômes associés"
+        ],
+        "symptomesAssocies": [
+          "Se sent bien sinon",
+          "Pas de douleurs",
+          "Pas de fièvre",
+          "Pas de fatigue particulière"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude méfiante mais polie",
+          "Poser des questions sur les examens proposés",
+          "Montrer de la réticence pour l'examen pelvien"
+        ],
+        "durantStatus": [
+          "Coopération normale à l'examen",
+          "Pas de signes de douleur",
+          "Examen abdominal normal"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patiente de 50 ans consultant pour saignements vaginaux 2 ans après la ménopause. Facteurs de risque multiples pour cancer du col : 10 partenaires sexuels/an, protection inconstante, antécédent chlamydia, tabagisme 35 paquets-années, dernier frottis il y a 7 ans, jamais de test HPV. Aussi facteurs de risque pour cancer endomètre : obésité, diabète, HTA, ménarche précoce. Multiparité (facteur protecteur pour endomètre).",
+      "rolesInterventions": [
+        "Examen pelvien : donner le résultat montrant un col anormal",
+        "Frottis : donner un résultat HSIL si demandé",
+        "US transvaginale : donner un épaississement endométrial de 8mm"
+      ],
+      "pointsCles": [
+        "Tout saignement post-ménopausique = cancer jusqu'à preuve du contraire",
+        "Cette patiente cumule les facteurs de risque de cancer du col",
+        "Le dépistage négligé depuis 7 ans est préoccupant",
+        "La méfiance envers la médecine complique la prise en charge",
+        "Importance du counseling sur les pratiques sexuelles sûres"
+      ],
+      "pieges": [
+        "Minimiser l'importance des saignements post-ménopausiques",
+        "Ne pas explorer complètement l'histoire sexuelle",
+        "Oublier l'examen rectal pour exclure saignement rectal",
+        "Ne pas proposer le sevrage tabagique",
+        "Mauvaise gestion de la méfiance de la patiente"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Saignements post-ménopausiques avec forte suspicion de pathologie cervicale maligne"
+        },
+        {
+          "titre": "Saignements post-ménopausiques",
+          "contenu": "Tout saignement vaginal survenant plus de 12 mois après les dernières règles est anormal :",
+          "points": [
+            "Causes malignes dans 5-10% des cas (toujours exclure en premier)",
+            "Cancer de l'endomètre : cause maligne la plus fréquente",
+            "Cancer du col : deuxième cause maligne",
+            "Causes bénignes : atrophie (50%), polypes (10-30%), hyperplasie",
+            "Bilan systématique obligatoire même si saignement minime"
+          ]
+        },
+        {
+          "titre": "Cancer du col de l'utérus",
+          "contenu": "Cette patiente présente un profil de risque très élevé :",
+          "points": [
+            "Infection HPV : cause dans > 99% des cancers du col",
+            "Facteurs de risque : partenaires multiples, IST, tabac, immunosuppression",
+            "Évolution lente : 10-20 ans de l'infection HPV au cancer invasif",
+            "Dépistage efficace : frottis + test HPV détecte les lésions précancéreuses",
+            "Symptômes tardifs : saignements post-coïtaux, puis spontanés"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque spécifiques de cette patiente",
+          "contenu": "Accumulation exceptionnelle de facteurs de risque :",
+          "points": [
+            "Comportement sexuel à haut risque : 10 partenaires/an, pas de protection",
+            "Antécédent d'IST : chlamydia (cofacteur pour cancer du col)",
+            "Tabagisme important : 35 paquets-années (immunosuppression locale)",
+            "Dépistage négligé : dernier frottis il y a 7 ans",
+            "Méconnaissance du statut HPV : jamais testée",
+            "Multiparité : 4 grossesses (traumatisme cervical répété)"
+          ]
+        },
+        {
+          "titre": "Cancer de l'endomètre",
+          "contenu": "Diagnostic différentiel important malgré facteurs protecteurs :",
+          "points": [
+            "Cancer gynécologique le plus fréquent dans les pays développés",
+            "Œstrogènes non opposés : facteur de risque majeur",
+            "Syndrome métabolique : obésité, diabète, HTA (triade classique)",
+            "Ménarche précoce : exposition œstrogénique prolongée",
+            "Multiparité : facteur protecteur important (progestérone)",
+            "Saignement post-ménopausique : symptôme cardinal"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique systématique",
+          "contenu": "Bilan complet obligatoire devant tout saignement post-ménopausique :",
+          "points": [
+            "Examen pelvien : inspection du col, toucher vaginal bimanuel",
+            "Frottis cervical + test HPV : dépistage cancer du col",
+            "US transvaginale : épaisseur endométriale (< 4mm rassurante)",
+            "Biopsie endométriale : gold standard si épaississement",
+            "Hystéroscopie : visualisation directe si doute"
+          ]
+        },
+        {
+          "titre": "Gestion de la patiente méfiante",
+          "contenu": "La méfiance envers la médecine nécessite une approche adaptée :",
+          "points": [
+            "Établir une relation de confiance : écoute, empathie",
+            "Expliquer clairement la nécessité des examens",
+            "Utiliser un langage simple, éviter le jargon médical",
+            "Respecter l'autonomie tout en soulignant l'importance",
+            "Proposer un accompagnement étape par étape"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Cancer du col : Conisation ou hystérectomie selon le stade + radio-chimiothérapie si avancé",
+        "Cancer de l'endomètre : Hystérectomie totale + annexectomie bilatérale",
+        "Prévention primaire : Vaccination HPV (jusqu'à 45 ans), préservatifs",
+        "Prévention secondaire : Dépistage régulier (frottis + HPV)",
+        "Sevrage tabagique : Essentiel pour réduire risque de progression"
+      ],
+      "examensComplementaires": [
+        "Frottis cervical : Sensibilité 55-80% pour CIN2+, spécificité 90%",
+        "Test HPV : Sensibilité > 90% pour CIN2+, VPN excellent",
+        "Co-testing (frottis + HPV) : Stratégie optimale 30-65 ans",
+        "US transvaginale : Endomètre < 4mm exclut cancer dans 99% des cas",
+        "Biopsie endométriale : Sensibilité 90% pour cancer endomètre"
+      ]
+    },
+    "resume": {
+      "titre": "🎗️ Cancer du col de l’utérus / de l'endomètre – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes fréquents 🎗️ Cancer du col",
+              "points": [
+                "Métrorragies (spontanées ou post-coïtales)",
+                "Pertes vaginales anormales (fétides ou abondantes)",
+                "Douleurs pelviennes ou lombaires tardives",
+                "Symptômes urinaires ou digestifs (stades avancés)"
+              ]
+            },
+            {
+              "titre": "Symptômes fréquents 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Métrorragies post-ménopausiques (symptôme principal)",
+                "Saignements intermenstruels chez la femme non ménopausée",
+                "Leucorrhées sérosanglantes",
+                "Douleurs pelviennes ou abdominales tardives",
+                "Altération de l’état général (amaigrissement, asthénie)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque 🎗️ Cancer du col",
+              "points": [
+                "Infection persistante à HPV à haut risque (types 16, 18)",
+                "Début de vie sexuelle précoce, partenaires multiples",
+                "Absence de dépistage (frottis)",
+                "Immunodépression (VIH, traitement immunosuppresseur)",
+                "Tabac",
+                "Multiparité"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Âge > 60 ans",
+                "Obésité, syndrome métabolique",
+                "Nulliparité, infertilité, ménopause tardive",
+                "Traitement par estrogènes seuls (sans progestatif)",
+                "Tamoxifène au long cours",
+                "Antécédents familiaux : syndrome de Lynch (HNPCC)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation 🎗️ Cancer du col",
+              "points": [
+                "Spéculum : visualisation d'une lésion cervicale (exophytique, ulcérée, friable)",
+                "Toucher vaginal et rectal : évaluation extension locale",
+                "Recherche d’adénopathies pelviennes ou sus-claviculaires"
+              ]
+            },
+            {
+              "titre": "Signes cliniques 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Examen gynécologique souvent normal en début de maladie",
+                "Ulcération ou masse intra-utérine au spéculum dans formes avancées",
+                "Palpation abdominale et pelvienne : masse si extension",
+                "Recherche d’adénopathies pelviennes ou sus-claviculaires"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Dépistage 🎗️ Cancer du col",
+              "points": [
+                "Test HPV seul, test HPV + cytologie (cotest), ou cytologie seule selon l’âge et les recommandations nationales",
+                "Dès 25 ans en France (tous les 3 à 5 ans selon le test utilisé)"
+              ]
+            },
+            {
+              "titre": "Diagnostic positif 🎗️ Cancer du col",
+              "points": [
+                "Colposcopie avec biopsies dirigées",
+                "Examen anatomopathologique = confirmation du diagnostic",
+                "IRM pelvienne et TEP scan pour bilan d’extension",
+                "Dosage CA-125 ou SCC non systématique"
+              ]
+            },
+            {
+              "titre": "Examens clés 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Échographie pelvienne transvaginale : mesure de l’épaisseur de l’endomètre",
+                "Hystéroscopie avec biopsie endométriale = diagnostic de certitude",
+                "IRM pelvienne : extension locale (myomètre, col, paramètre)",
+                "Scanner TAP : bilan d’extension métastatique"
+              ]
+            },
+            {
+              "titre": "Marqueurs tumoraux 🎗️ Cancer de l'endomètre",
+              "points": [
+                "CA-125 parfois élevé mais non spécifique",
+                "Utilisé pour suivi dans certains cas avancés"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement selon le stade 🎗️ Cancer du col",
+              "points": [
+                "Lésions précancéreuses : conisation, LEEP ou laser",
+                "Cancer localisé : chirurgie radicale (hystérectomie + curage)",
+                "Cancer localement avancé : radiochimiothérapie concomitante",
+                "Cancer métastatique : chimiothérapie ± immunothérapie (pembrolizumab)"
+              ]
+            },
+            {
+              "titre": "Suivi et prévention secondaire 🎗️ Cancer du col",
+              "points": [
+                "Suivi gynécologique régulier après traitement",
+                "Vaccination anti-HPV dès 11 ans chez filles et garçons",
+                "Éducation sur prévention IST"
+              ]
+            },
+            {
+              "titre": "Chirurgie 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Hystérectomie totale avec annexectomie bilatérale",
+                "Curage ganglionnaire pelvien et lombo-aortique selon le stade",
+                "Cytologie péritonéale"
+              ]
+            },
+            {
+              "titre": "Traitement complémentaire 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Radiothérapie adjuvante selon stade et facteurs de risque",
+                "Chimiothérapie (platine + taxane) dans les stades avancés ou métastatiques",
+                "Hormonothérapie (progestatifs) dans formes hormonosensibles"
+              ]
+            },
+            {
+              "titre": "Prévention secondaire 🎗️ Cancer de l'endomètre",
+              "points": [
+                "Surveillance clinique et échographique régulière",
+                "Dépistage génétique si suspicion de syndrome de Lynch",
+                "Prise en charge des comorbidités métaboliques (obésité, diabète)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS 🎗️ Cancer du col",
+          "points": [
+            "Ne pas banaliser une métrorragie post-coïtale",
+            "Pensez à l'HPV dans l’anamnèse (vie sexuelle, vaccination)",
+            "Colposcopie indispensable si frottis anormal",
+            "Conisation = à la fois diagnostic et thérapeutique pour lésions précancéreuses",
+            "Importance du dépistage organisé et de la vaccination HPV"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS 🎗️ Cancer du col",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Métrorragies (spontanées, post-coïtales) ?",
+                "Pertes vaginales anormales (fétides, abondantes) ?",
+                "Douleurs pelviennes, lombaires, troubles urinaires ou digestifs ?",
+                "Antécédents de frottis anormaux ou absence de dépistage ?",
+                "Vie sexuelle (âge au 1er rapport, nombre de partenaires), statut vaccinal HPV ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales, état général (amaigrissement, asthénie)",
+                "Inspection au spéculum : lésion cervicale suspecte",
+                "Toucher vaginal et rectal : extension locale",
+                "Recherche adénopathies pelviennes et sus-claviculaires",
+                "Évaluation d’un éventuel épanchement (ascite, pleural)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Colposcopie avec biopsies dirigées pour confirmation histologique",
+                "Bilan d’extension (IRM pelvienne, TEP scan)",
+                "Prise en charge oncogynécologique : chirurgie, radiochimiothérapie ou immunothérapie selon le stade"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS 🎗️ Cancer de l'endomètre",
+          "points": [
+            "Toute métrorragie post-ménopausique = cancer de l’endomètre jusqu’à preuve du contraire",
+            "Diagnostic = biopsie endométriale sous hystéroscopie",
+            "Traitement de référence = hystérectomie + annexectomie bilatérale",
+            "IRM = bilan d’extension locale",
+            "Facteurs de risque majeurs = obésité, hyperestrogénie, syndrome de Lynch"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS 🎗️ Cancer de l'endomètre",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Métrorragies post-ménopausiques ou intermenstruelles ?",
+                "Leucorrhées sérosanglantes ?",
+                "Facteurs de risque : obésité, nulliparité, traitements hormonaux (THS, tamoxifène) ?",
+                "ATCD familiaux de cancers (syndrome de Lynch) ?",
+                "Altération de l’état général (amaigrissement, fatigue) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales, état général",
+                "Examen gynécologique complet (spéculum + TV)",
+                "Échographie pelvienne transvaginale",
+                "Hystéroscopie avec biopsie endométriale",
+                "Bilan d’extension par IRM pelvienne ± scanner TAP"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Biopsie endométriale pour diagnostic",
+                "Hystérectomie totale + annexectomie bilatérale ± curage selon stade",
+                "Traitement complémentaire (radio/chimio/hormonothérapie) adapté au stade"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Saignements vaginaux post-ménopausiques",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser le saignement → début, abondance, durée, facteurs aggravants",
+            "Symptômes associés → douleurs, pertes, fièvre, fatigue",
+            "ATCD médicaux (diabète, HTA, obésité), chirurgicaux, gynécologiques",
+            "Contexte sexuel et IST, dépistage (frottis, HPV)",
+            "Examen clinique → inspection spéculum, toucher vaginal, toucher rectal",
+            "Résumé + hypothèse principale + DD (cancer col/endomètre, polype, atrophie)",
+            "Examens complémentaires → US transvaginale, biopsie endomètre, frottis HPV",
+            "Prise en charge → hospitalisation si abondant, orientation gynécologique, counseling"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : POST",
+            "elements": [
+              "P = Post-ménopause = saignement anormal",
+              "O = Oncologie en premier (cancer col/endomètre)",
+              "S = Speculum exam obligatoire",
+              "T = Transvaginal US + biopsie"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Elaine Hill, une femme de 50 ans, vendeuse de cosmétiques, qui consulte pour des saignements vaginaux apparus il y a 5 jours. \n\nElle explique que tout a commencé par quelques taches dans ses sous-vêtements, puis depuis 2 jours les saignements sont devenus aussi abondants que des règles normales, nécessitant environ trois serviettes par jour. Elle précise que c’est la première fois que cela se produit depuis deux ans, date de sa ménopause. Elle n’a pas identifié de facteur déclenchant particulier. Elle dit qu’elle se sent bien sinon, sans douleurs, sans fièvre, sans troubles urinaires ni digestifs, et sans perte de poids inhabituelle.\n\nPour ses antécédents, elle est diabétique depuis 5 ans et hypertendue depuis 2 ans, sous metformine et métoprolol. Son IMC est de 32. Elle n’a jamais été opérée, n’a pas d’allergies connues, et ses seules hospitalisations ont été pour ses accouchements. Dans sa famille, son père a une maladie cardiaque. Elle a eu ses règles pour la première fois à 9 ans, et sa ménopause est survenue à 45 ans. Elle a eu quatre grossesses menées à terme. Elle n’a jamais eu de fausses couches ni d’avortements.\n\nAu plan gynécologique, elle rapporte environ 10 partenaires sexuels différents cette année, avec une protection inconstante. Elle a eu une infection à Chlamydia il y a 7 ans, traitée par antibiotiques. Elle n’a jamais été testée pour le HPV. Son dernier frottis remonte à environ 7 ans et elle ne se souvient pas du résultat. Elle n’a pas eu de pertes vaginales anormales ni de démangeaisons. Pas de sécheresse vaginale rapportée.\n\nDans ses habitudes de vie, elle fume un paquet par jour depuis l’âge de 15 ans, soit plus de 35 paquets-années. Elle boit de l’alcool le week-end, un à deux verres, et ne consomme pas de drogues.\n\nÀ l’examen, ses constantes sont stables : TA 118/79, pouls 85, température 37 °C. Elle est en surpoids. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est souple, non sensible, sans masse palpable, et il n’y a pas d’œdème des membres inférieurs. L’examen pelvien avec spéculum retrouve un col anormal, friable, légèrement ulcéré.\n\nEn résumé, il s’agit d’une femme de 50 ans, post-ménopausée depuis 2 ans, qui présente un épisode inaugural de saignements vaginaux abondants, sur terrain à risque (obésité, diabète, HTA, ménarche précoce, tabagisme, multipartenariat, absence de dépistage HPV). Mon hypothèse principale est un cancer du col utérin. Le diagnostic différentiel inclut un cancer de l’endomètre, une hyperplasie endométriale, un polype ou plus rarement une atrophie vaginale.\n\nComme examens complémentaires, je demanderais en première intention un examen pelvien complet avec frottis cervico-vaginal et test HPV, une colposcopie avec biopsies dirigées, une échographie transvaginale pour évaluer l’endomètre et éventuellement une biopsie endométriale. Une FSC permettrait d’évaluer l’impact hématologique du saignement.\n\nEn termes de prise en charge, j’expliquerais à la patiente que tout saignement post-ménopausique nécessite une exploration approfondie, que nous devons rechercher en priorité une cause cancéreuse, et que cela implique une orientation vers un gynécologue pour bilan et traitement adaptés."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Hill, 50 ans, consulte pour des saignements vaginaux apparus il y a 5 jours, équivalents à des règles.\n\nB (Background) : Post-ménopausée depuis 2 ans, diabète, HTA, obésité, tabagisme, antécédent IST, multipartenariat, dépistage gynécologique négligé.\n\nA (Assessment) : Suspicion de cancer du col utérin ou endométrial. DD : polype, hyperplasie, atrophie.\n\nR (Recommendation) : Examen pelvien avec frottis et test HPV, colposcopie avec biopsies, échographie transvaginale et biopsie endométriale, FSC."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Tout saignement post-ménopausique = CANCER jusqu’à preuve du contraire",
+              "points": [
+                "Cancer de l’endomètre (cause la plus fréquente)",
+                "Cancer du col (2e cause maligne)",
+                "Polype ou atrophie plus rares mais jamais à évoquer en premier"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque cancer endomètre → OBESE",
+              "points": [
+                "Obésité",
+                "BRCA / hérédité",
+                "Early menarche",
+                "Syndrome métabolique (diabète, HTA)",
+                "Estrogènes non opposés"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque cancer col → HPV + SMOKE",
+              "points": [
+                "HPV HR persistant (16, 18)",
+                "Sexualité à risque (partenaires multiples, IST)",
+                "Manque de dépistage",
+                "Obstétrique : multiparité",
+                "Killer : tabac",
+                "Épidémiologie : âge 45-55 ans"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer du col",
+                  "reponse": {
+                    "pour": [
+                      "Saignements post-ménopausiques",
+                      "Multipartenariat sexuel",
+                      "Antécédent d’IST",
+                      "Tabac",
+                      "Absence de dépistage",
+                      "Col anormal au spéculum"
+                    ],
+                    "contre": [
+                      "Multiparité est légèrement protectrice"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer de l’endomètre",
+                  "reponse": {
+                    "pour": [
+                      "Saignements post-ménopausiques",
+                      "Obésité, diabète, HTA",
+                      "Ménarche précoce"
+                    ],
+                    "contre": [
+                      "Multiparité protectrice"
+                    ]
+                  }
+                },
+                {
+                  "question": "Causes bénignes",
+                  "reponse": {
+                    "pour": [
+                      "Polype endométrial",
+                      "Atrophie vaginale"
+                    ],
+                    "contre": [
+                      "Contexte à haut risque oncologique",
+                      "Exploration indispensable"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Examen pelvien avec spéculum et toucher vaginal",
+                    "Examen rectal",
+                    "Frottis cervico-vaginal + test HPV",
+                    "Colposcopie + biopsies dirigées",
+                    "US transvaginale",
+                    "Biopsie endométriale si endomètre > 4 mm",
+                    "FSC"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cancer du col ou cancer de l’endomètre à confirmer par biopsie"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Orientation gynécologique rapide",
+                      "Colposcopie et biopsie",
+                      "Bilan extension (IRM pelvienne, TEP scan)",
+                      "Discussion RCP oncologique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultations gynécologiques régulières",
+                    "Sevrage tabagique",
+                    "Dépistage HPV pour partenaires",
+                    "Soutien psychologique"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

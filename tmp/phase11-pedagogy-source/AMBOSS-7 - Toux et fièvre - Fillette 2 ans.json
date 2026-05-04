@@ -1,0 +1,797 @@
+{
+  "title": "AMBOSS-7 - Toux et fièvre - Fillette 2 ans",
+  "context": {
+    "setting": "Consultation téléphonique",
+    "patient": "Virginia Jameson, fillette de 2 ans, présentée par sa mère pour toux et fièvre",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Elle a de la toux et de la fièvre"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la toux et de la fièvre",
+          "binaryOnly": false,
+          "details": [
+            "Début [Ça a commencé il y a 4 jours avec un nez qui coule. La fièvre et la toux ont commencé il y a 3 jours]",
+            "Constant/intermittent [Elle a eu de la fièvre et de la toux tout le temps]",
+            "Événements précipitants [Aucun]",
+            "Progression [La fièvre a empiré et elle tousse plus depuis que ça a commencé]",
+            "Épisodes antérieurs [Elle est malade assez souvent - elle attrape tout ce que son frère ramène de la garderie, la pauvre. La dernière fois qu'elle a eu de la toux c'était il y a environ 3 mois. Mais elle n'avait pas une fièvre aussi élevée à ce moment-là]",
+            "Facteurs améliorants [Je lui ai donné du Tylenol, ce qui a fait baisser la fièvre]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés - Diarrhée",
+          "binaryOnly": false,
+          "details": [
+            "Symptôme principal [Elle a aussi de la diarrhée]",
+            "Début et fréquence [Elle en a depuis 2 jours. Elle a eu 4-5 couches souillées chaque jour]",
+            "Couleur [Couleur normale]",
+            "Consistance [Ça semble liquide]",
+            "Sang dans les selles [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques respiratoires et ORL",
+          "binaryOnly": false,
+          "details": [
+            "Température [Je viens de mesurer 39.8°C avec le thermomètre auriculaire]",
+            "Tirage d'oreille [Non]",
+            "Nausées/vomissements [Non]",
+            "Écoulement oculaire [Non]",
+            "Écoulement auriculaire [Non]",
+            "Éruption cutanée [Non]",
+            "Pleurs/irritabilité [Elle semble vraiment misérable]",
+            "Expectorations (couleur, quantité, sang) [Elle crache de la glaire verte. Pas beaucoup cependant, et il n'y a pas de sang dedans]",
+            "Dyspnée [Elle respire plus vite que d'habitude]",
+            "Bave/difficulté à avaler ou parler [Non. Elle ne bave pas et sa voix me semble normale]",
+            "Décoloration bleuâtre autour des lèvres ou de la bouche [Non]",
+            "Respiration bruyante [Non]",
+            "Rétractions sous ou entre les côtes en respirant [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Recherche de symptômes généraux et de déshydratation",
+          "binaryOnly": false,
+          "details": [
+            "Problèmes urinaires [Non]",
+            "Problèmes de sommeil [Elle ne dort pas bien parce qu'elle est vraiment inconfortable]",
+            "Convulsions [Non]",
+            "Activité (joueuse) [Elle n'est vraiment pas elle-même, pas joueuse du tout]",
+            "Léthargique/somnolente [Non, rien de tel. Elle semble juste vraiment malheureuse]",
+            "Bouche sèche, yeux enfoncés, apports liquidiens (déshydratation) [Elle semble avoir la bouche sèche et elle boit moins que la normale]",
+            "Nombre de couches mouillées/24h [Je ne peux pas vraiment dire à cause de la diarrhée]",
+            "Voyage récent [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "Elle a eu un ictère pendant la première semaine après sa naissance. Elle a été traitée avec une lumière bleue"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents chirurgicaux et hospitalisations",
+          "binaryOnly": true,
+          "details": [
+            "Chirurgie [Aucune]",
+            "Hospitalisations [Aucune]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents périnataux et de naissance",
+          "binaryOnly": false,
+          "details": [
+            "Histoire prénatale [Normale]",
+            "Histoire de naissance [Elle est née par voie vaginale à 37 semaines, mais il n'y a eu aucun problème]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Allergies et médicaments",
+          "binaryOnly": true,
+          "details": [
+            "Allergies [Aucune]",
+            "Médicaments [Aucun]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Contacts malades [Son grand frère va à la garderie et est malade depuis 4 jours. Il a aussi le nez qui coule et de la toux, mais pas de fièvre]",
+            "Antécédents familiaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Vaccination et développement",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [Toutes ses vaccinations sont à jour]",
+            "Croissance et développement [Tout a été normal lors des visites de contrôle jusqu'à présent]",
+            "Dernier contrôle [Nous avons eu un contrôle il y a 1 mois et tout allait bien]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Mode de vie et alimentation",
+          "binaryOnly": false,
+          "details": [
+            "Garderie [Je reste à la maison avec Virginia, et son frère va à la garderie]",
+            "Habitudes alimentaires et appétit [Elle mange habituellement tout ce que je lui donne, y compris de la viande, des légumes, des fruits et du pain. Mais elle ne veut pas vraiment manger maintenant]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen physique",
+          "binaryOnly": true,
+          "patientComment": "Non disponible dans les cas téléphoniques - Prévoir examen physique complet lors de la visite"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes respiratoires prioritaires",
+                "items": [
+                  {
+                    "text": "Bronchite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Toux productive avec expectorations vertes\n\t□ Fièvre modérée à élevée\n\t□ Précédée d'infection des voies respiratoires supérieures (rhinite)\n\t□ Contact malade (frère avec symptômes similaires)\n\t□ Évolution progressive sur plusieurs jours\n\t□ Âge compatible (2 ans)\n\t□ Virale dans >90% des cas (adénovirus peut causer symptômes respiratoires + GI)",
+                    "test": "→ Examen clinique + auscultation pulmonaire"
+                  },
+                  {
+                    "text": "Pneumonie",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée prolongée (39.8°C depuis 3 jours)\n\t□ Tachypnée (respire plus vite que d'habitude)\n\t□ Expectorations vertes\n\t□ Diminution des apports hydriques\n\t□ Altération de l'état général (pas joueuse)\n\t□ Diarrhée (peut accompagner pneumonie chez l'enfant)\nArguments CONTRE:\n\t□ Pas de tirage intercostal\n\t□ Pas de cyanose",
+                    "test": "→ Radiographie thoracique + FSC + SpO2"
+                  },
+                  {
+                    "text": "Gastroentérite virale avec atteinte respiratoire",
+                    "cause": "Arguments POUR:\n\t□ Diarrhée liquide depuis 2 jours\n\t□ Fièvre\n\t□ Signes de déshydratation\n\t□ Contact malade à la garderie\nArguments CONTRE:\n\t□ Pas de vomissements\n\t□ Symptômes respiratoires prédominants",
+                    "test": "→ Examen des selles si persistance"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Laryngotrachéobronchite (faux croup)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de stridor\n\t□ Pas de voix rauque\n\t□ Pas de toux aboyante",
+                    "test": "→ Examen clinique"
+                  },
+                  {
+                    "text": "Gastroentérite bactérienne",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de sang dans les selles\n\t□ Pas de vomissements",
+                    "test": "→ Coproculture si suspicion"
+                  },
+                  {
+                    "text": "Grippe (influenza)",
+                    "cause": "Arguments POUR : Fièvre élevée, symptômes respiratoires\nArguments CONTRE:\n\t□ Pas en période épidémique mentionnée",
+                    "test": "→ Test rapide influenza"
+                  },
+                  {
+                    "text": "Sepsis",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de léthargie\n\t□ Reste éveillée et réactive",
+                    "test": "→ Hémocultures si détérioration"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen physique [toujours noter comme partie du bilan dans un cas téléphonique]",
+            "Saturation en oxygène [pour déterminer le degré de détresse respiratoire]",
+            "Gaz du sang artériel [pour déterminer s'il y a des troubles acido-basiques, soit à cause de la diarrhée, des symptômes respiratoires, ou les deux]",
+            "FSC avec formule [La numération des GB peut aider à déterminer si l'infection est bactérienne ou virale. L'hématocrite est typiquement élevé en cas de déshydratation]",
+            "Électrolytes, glucose [L'enfant a une diarrhée liquide. Elle a perdu des électrolytes et peut être déshydratée ou hypoglycémique]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens de diagnostic étiologique",
+          "binaryOnly": false,
+          "details": [
+            "Panel viral respiratoire [détecte les virus courants pouvant causer des infections des voies respiratoires]",
+            "Radiographie thoracique [pour exclure une pneumonie]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la mère",
+          "binaryOnly": false,
+          "details": [
+            "Explications des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la mère avec les prochaines étapes diagnostiques",
+            "Recherche des préoccupations et questions"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et orientation",
+          "binaryOnly": false,
+          "details": [
+            "Réaction appropriée au défi concernant la visite à l'hôpital",
+            "Conseil sur l'urgence de la consultation",
+            "Proposition de solutions pour la garde du frère"
+          ],
+          "redflagsSection": {
+            "title": "Drapeaux rouges nécessitant consultation immédiate",
+            "items": [
+              {
+                "text": "Détresse respiratoire",
+                "description": "Tirage intercostal, battement des ailes du nez, cyanose"
+              },
+              {
+                "text": "Déshydratation sévère",
+                "description": "Yeux enfoncés, pli cutané persistant, léthargie"
+              },
+              {
+                "text": "Altération de l'état de conscience",
+                "description": "Somnolence excessive, difficultés à réveiller"
+              },
+              {
+                "text": "Convulsions fébriles",
+                "description": "Risque accru avec fièvre > 39°C"
+              }
+            ]
+          },
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Hydratation abondante × 100-150 mL/kg/jour\n• Humidification de l'air ambiant\n• Fractionnement repas si vomissements\n• Aspiration douce des sécrétions nasales\n• Position demi-assise pour faciliter respiration"
+              },
+              {
+                "title": "Prise en charge de la pneumonie pédiatrique",
+                "content": "• Oxygénothérapie: si SpO2 92%\n• Antibiothérapie: Amoxicilline 80-90 mg/kg/j x2-3/j\n• Alternative: Azithromycine 10mg/kg J1 puis 5mg/kg J2-5\n• Hospitalisation si SpO2 92%, déshydratation, âge 6 mois\n• Réhydratation: IV si vomissements ou refus alimentaire\n• Surveillance: FR, SpO2, état général"
+              },
+              {
+                "title": "Prise en charge de la déshydratation infantile",
+                "content": "• Réhydratation orale: SRO 50-100 mL/kg sur 4h si déshydratation légère\n• Réhydratation IV: Ringer lactate si modérée-sévère\n• Surveillance: Poids, diurèse, état conscience\n• Antiémétiques: Ondansétron 0.1-0.2 mg/kg IV si vomissements\n• Reprise alimentation progressive dès amélioration\n• Éducation parentale: Signes d'alarme, hydratation à domicile"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Refus de venir à l'hôpital",
+          "content": "[Je n'ai pas le temps de venir à l'hôpital ! Je dois aller chercher mon fils à la garderie]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Jameson, je comprends votre sentiment de responsabilité envers votre fils. En même temps, d'après ce que vous m'avez dit jusqu'à présent, je suis inquiet que votre fille puisse avoir une infection grave nécessitant un traitement. Sa respiration rapide, sa fièvre élevée depuis plusieurs jours et votre impression qu'elle ne boit pas assez m'indiquent tous qu'elle doit être examinée par un médecin. Y a-t-il quelqu'un d'autre qui pourrait aller chercher votre fils, ou aimeriez-vous que je vous mette en contact avec notre travailleur social, qui pourrait organiser une garde temporaire pour lui ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Opacités pulmonaires bilatérales",
+        "description": "Radiographie thoracique (vue AP) d'un enfant avec pneumonie COVID-19. De multiples opacités mal définies (exemples indiqués par superposition verte) sont présentes dans les zones moyennes et inférieures des deux poumons, dont certaines ont un aspect arrondi. La silhouette cardiaque est de taille normale et il n'y a pas d'épanchements pleuraux.",
+        "data": "grilles_generees/html/images/AMBOSS-7-img1-Bilateral pulmonary opacities.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Yeux enfoncés dans la déshydratation",
+        "description": "Garçon de 10 ans. La présentation aiguë d'yeux enfoncés, spécialement en association avec un état mental altéré ou une perte de conscience, devrait faire suspecter une déshydratation potentiellement mortelle. La cause de la déshydratation chez cet enfant était une diarrhée due à la fièvre typhoïde.",
+        "data": "grilles_generees/html/images/AMBOSS-7-img2-Sunken eyes in dehydration.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Déshydratation sévère chez un nourrisson",
+        "description": "Abdomen d'un nourrisson : Après pincement, la peau abdominale se rétracte lentement, montrant un pli cutané significatif. Ceci peut être un signe de déshydratation sévère, par exemple au cours d'une infection gastro-intestinale.",
+        "data": "grilles_generees/html/images/AMBOSS-7-img3-Severe dehydration in an infant.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (consultation téléphonique)",
+      "nom": "Mère de Virginia Jameson",
+      "age": "Virginia a 2 ans",
+      "contexte": "Mère inquiète appelant pour sa fille de 2 ans qui a de la toux et de la fièvre",
+      "motifConsultation": {
+        "plaintePrincipale": "Elle a de la toux et de la fièvre.",
+        "autreChose": "Je suis vraiment inquiète, elle n'est pas elle-même."
+      },
+      "consignes": [
+        "Vous êtes très anxieuse et préoccupée par votre fille.",
+        "Vous devenez encore plus anxieuse quand l'examinateur utilise une terminologie médicale.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: radiographie thoracique) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Quand l'examinateur suggère de venir à l'hôpital, dire 'Je n'ai pas le temps de venir à l'hôpital ! Je dois aller chercher mon fils à la garderie.'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux productive avec glaires vertes",
+          "Fièvre élevée (39.8°C) depuis 3 jours",
+          "A commencé par un rhume il y a 4 jours",
+          "Respiration plus rapide que d'habitude",
+          "Diarrhée liquide depuis 2 jours (4-5 couches/jour)",
+          "Diminution des apports hydriques"
+        ],
+        "symptomesAssocies": [
+          "Irritabilité et inconfort",
+          "Troubles du sommeil",
+          "Perte d'appétit",
+          "Bouche sèche",
+          "Pas joueuse comme d'habitude",
+          "Le frère à la garderie a des symptômes similaires mais sans fièvre"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer de l'anxiété croissante",
+          "Demander des clarifications pour les termes médicaux",
+          "Exprimer l'inquiétude pour la santé de votre fille",
+          "Mentionner le stress de devoir gérer deux enfants",
+          "Insister sur le fait que Virginia n'est \"pas elle-même\""
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Fillette de 2 ans avec infection respiratoire haute évoluant vers possible bronchite ou pneumonie. Fièvre élevée prolongée, tachypnée et signes de déshydratation suggèrent complication nécessitant évaluation urgente. Contexte de contagion familiale (frère malade). Consultation téléphonique limitant l'évaluation clinique.",
+      "rolesInterventions": [
+        "Si l'étudiant-e insiste pour une visite urgente :",
+        "Examen physique : Tachypnée, tirage sous-costal léger, ronchi bilatéraux",
+        "SpO2 : 92% à l'air ambiant",
+        "Radiographie thoracique : Infiltrats péribronchiques bilatéraux"
+      ],
+      "pointsCles": [
+        "Fièvre > 39°C depuis 3 jours chez enfant < 3 ans = évaluation médicale",
+        "Tachypnée + fièvre = pneumonie jusqu'à preuve du contraire",
+        "Déshydratation chez jeune enfant = risque de décompensation rapide",
+        "Consultation téléphonique = toujours proposer examen physique",
+        "Importance de gérer l'anxiété parentale tout en assurant sécurité de l'enfant"
+      ],
+      "pieges": [
+        "Minimiser la gravité en consultation téléphonique",
+        "Ne pas insister sur l'importance de l'examen physique",
+        "Oublier d'évaluer les signes de déshydratation",
+        "Ne pas proposer de solutions pour la garde du frère",
+        "Utiliser trop de jargon médical avec parent anxieux"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Bronchite aiguë avec risque de pneumonie et déshydratation secondaire"
+        },
+        {
+          "titre": "Bronchite aiguë chez l'enfant",
+          "contenu": "Inflammation des bronches fréquente en pédiatrie :",
+          "points": [
+            "Étiologie virale dans > 90% des cas",
+            "Virus courants : RSV, rhinovirus, coronavirus, adénovirus",
+            "Symptômes : toux productive, fièvre, rhinite précédente",
+            "Évolution habituelle : 7-10 jours",
+            "Complications : pneumonie, bronchiolite, déshydratation",
+            "Traitement : supportif (hydratation, antipyrétiques)"
+          ]
+        },
+        {
+          "titre": "Pneumonie communautaire chez l'enfant",
+          "contenu": "Complication redoutée nécessitant vigilance :",
+          "points": [
+            "Incidence : 15-20% des bronchites peuvent évoluer",
+            "Signes d'alerte : tachypnée, tirage, SpO2 < 95%, fièvre persistante",
+            "Étiologie < 5 ans : virale (60%), S. pneumoniae, H. influenzae",
+            "Diagnostic : clinique + radiographie thoracique",
+            "Critères d'hospitalisation : SpO2 < 92%, déshydratation, âge < 6 mois",
+            "Traitement : amoxicilline 80-90 mg/kg/j si bactérienne suspectée"
+          ]
+        },
+        {
+          "titre": "Déshydratation chez le jeune enfant",
+          "contenu": "Complication fréquente des infections avec fièvre et diarrhée :",
+          "points": [
+            "Signes cliniques : yeux enfoncés, bouche sèche, pli cutané, oligurie",
+            "Classification : légère (3-5%), modérée (6-9%), sévère (>10%)",
+            "Risques : déséquilibre électrolytique, insuffisance rénale, choc",
+            "Évaluation : poids, diurèse, signes vitaux, état de conscience",
+            "Traitement : réhydratation orale si possible, IV si sévère",
+            "Prévention : encourager hydratation fréquente pendant maladie"
+          ]
+        },
+        {
+          "titre": "Particularités de la consultation téléphonique pédiatrique",
+          "contenu": "Défis et stratégies :",
+          "points": [
+            "Limites : pas d'examen physique, évaluation indirecte",
+            "Importance de l'anamnèse détaillée et systématique",
+            "Drapeaux rouges absolus : cyanose, léthargie, convulsions",
+            "Communication : langage simple, validation des inquiétudes",
+            "Seuil bas pour recommander évaluation en personne",
+            "Documentation : noter clairement limites de l'évaluation téléphonique"
+          ]
+        },
+        {
+          "titre": "Signes de détresse respiratoire chez l'enfant",
+          "contenu": "Reconnaissance précoce essentielle :",
+          "points": [
+            "Tachypnée : > 40/min (2-5 ans), > 30/min (> 5 ans)",
+            "Tirage : sous-costal, intercostal, sus-claviculaire",
+            "Battement des ailes du nez",
+            "Geignement expiratoire (grunting)",
+            "Cyanose péribuccale ou des extrémités",
+            "Agitation ou somnolence (hypoxie/hypercapnie)"
+          ]
+        },
+        {
+          "titre": "Gestion de l'anxiété parentale",
+          "contenu": "Approche empathique et efficace :",
+          "points": [
+            "Validation des inquiétudes : \"Je comprends votre inquiétude\"",
+            "Explication claire des risques sans alarmer",
+            "Proposition de solutions pratiques (garde, transport)",
+            "Implication dans le plan de soins",
+            "Instructions claires pour surveillance à domicile",
+            "Numéros d'urgence et critères de reconsultation"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antipyrétiques : Paracétamol 15 mg/kg/dose Q4-6H ou Ibuprofène 10 mg/kg/dose Q6-8H",
+        "Hydratation : Solution de réhydratation orale 50-100 mL/kg sur 4h si déshydratation légère",
+        "Bronchodilatateurs : Généralement non indiqués dans bronchite simple",
+        "Antibiotiques : Non indiqués sauf pneumonie bactérienne suspectée",
+        "Amoxicilline 80-90 mg/kg/j en 2 prises si pneumonie",
+        "Oxygénothérapie si SpO2 < 92%"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique : Infiltrats, consolidations, hyperinflation",
+        "FSC : Leucocytose avec polynucléose si bactérien",
+        "CRP/PCT : Élévation suggère étiologie bactérienne",
+        "Panel viral respiratoire : Identification virus (RSV, influenza, etc.)",
+        "Ionogramme : Si déshydratation clinique",
+        "Gazométrie : Si détresse respiratoire sévère"
+      ]
+    },
+    "resume": {
+      "titre": "🧒 Bronchite aiguë (pédiatrique) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Toux (parfois quinteuse), souvent productive",
+                "Début progressif après une IVRS (rhinite, pharyngite)",
+                "Fièvre modérée ou absente",
+                "Maux de tête, myalgies, asthénie",
+                "Douleurs thoraciques liées à la toux",
+                "Dyspnée légère"
+              ]
+            },
+            {
+              "titre": "Terrain",
+              "points": [
+                "Enfant scolarisé ou en collectivité",
+                "Antécédents d’asthme ou d’allergie",
+                "Exposition tabagique passive",
+                "Survient souvent en automne/hiver"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes respiratoires",
+              "points": [
+                "Auscultation : râles bronchiques, sibilants, ronchi",
+                "Parfois auscultation normale",
+                "Pas de signes de gravité (tirage, cyanose, polypnée sévère)"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte à exclure",
+              "points": [
+                "Fièvre persistante ou élevée",
+                "Détresse respiratoire",
+                "Diminution des murmures vésiculaires unilatérale",
+                "Altération de l’état général",
+                "Hypoxémie (SpO₂ < 95 %)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens non systématiques",
+              "points": [
+                "Diagnostic clinique dans la majorité des cas",
+                "Radio thorax si doute diagnostic ou suspicion de pneumonie",
+                "CRP et NFS rarement nécessaires (sauf doute avec infection bactérienne)",
+                "Recherche de VRS/Influenza si contexte épidémique ou < 2 ans"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "Hydratation orale",
+                "Antipyrétiques/antalgiques si fièvre ou douleur (paracétamol)",
+                "Lavage nasal si rhinorrhée importante",
+                "Aérosols ou bronchodilatateurs uniquement si sibilants (suspicion asthme)"
+              ]
+            },
+            {
+              "titre": "Antibiothérapie : non indiquée",
+              "points": [
+                "Étiologie virale dans > 90 % des cas",
+                "Antibiotiques uniquement si surinfection bactérienne suspectée"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Amélioration attendue en 7 à 10 jours",
+                "Contrôle si persistance des symptômes au-delà de 3 semaines",
+                "Informer les parents sur la durée typique de la toux post-virale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Pas d’antibiotique sauf signe de pneumonie",
+            "Diagnostic clinique : toux post-IVRS + auscultation normale ou ronchi",
+            "Recherche de signes de gravité (dyspnée, hypoxie, fièvre élevée)",
+            "Éducation des parents sur l’évolution et le suivi",
+            "Éviter traitements inutiles (antitussifs, mucolytiques, corticoïdes)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis combien de temps la toux est-elle présente ?",
+                "Fièvre ? Si oui, quelle intensité et durée ?",
+                "Dyspnée, tirage, sibilants ?",
+                "Antécédents d’asthme ou épisodes similaires ?",
+                "Environnement : tabagisme passif, collectivité, épidémie en cours ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : T°, FR, SpO₂",
+                "Inspection : tirage, cyanose, état général",
+                "Auscultation : ronchi, sibilants, murmures vésiculaires",
+                "Radio thorax si suspicion pneumonie ou atypie",
+                "Pas d’examens complémentaires si tableau simple"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Traitement symptomatique : hydratation, paracétamol, lavage nasal",
+                "Pas d’antibiotique sauf suspicion de pneumonie ou surinfection",
+                "Informer les parents sur l’évolution et les signes d’alerte nécessitant reconsultation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux et fièvre (enfant 2 ans, suspicion bronchite/pneumonie)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractériser → début, durée, intensité fièvre, type de toux",
+            "Symptômes associés → dyspnée, expectoration, diarrhée, hydratation",
+            "Contexte infectieux → contacts, garderie, fratrie",
+            "ATCD et vaccins",
+            "Examen clinique → état général, signes de déshydratation, signes respi (tirage, SpO₂)",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → SpO₂, Rx thorax, FSC, iono, GDS",
+            "Prise en charge → hospitalisation si signes de gravité, réhydratation, oxygène, ATB si pneumonie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo pédiatrique : FEVER",
+            "elements": [
+              "F = Fièvre > 39°C persistante",
+              "E = Expectorations colorées",
+              "V = Ventilation rapide (tachypnée)",
+              "E = État général altéré (pas joueuse)",
+              "R = Risque de déshydratation (diarrhée, apports ↓)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Virginia Jameson, une petite fille de 2 ans, présentée par sa mère pour toux et fièvre depuis trois jours.\n\nLa maladie a commencé il y a quatre jours par un simple nez qui coule. Depuis trois jours, elle présente une fièvre élevée, mesurée jusqu’à 39,8 °C, ainsi qu’une toux persistante, décrite comme constante et productive de petites quantités de glaire verdâtre. La fièvre s’est aggravée, et la toux est devenue plus fréquente et plus gênante. Sa mère note aussi que Virginia respire plus vite que d’habitude, mais il n’y a pas eu de tirage, pas de cyanose ni de respiration bruyante.\n\nEn parallèle, elle a développé une diarrhée liquide depuis deux jours, avec quatre à cinq couches souillées par jour. Les selles sont liquides, non sanglantes. Elle mange beaucoup moins que d’habitude, boit moins, et sa mère note une bouche sèche. Elle ne dort pas bien, est très irritable et, selon sa mère, « elle n’est pas elle-même » : elle ne joue pas, paraît inconfortable mais elle reste éveillée.\n\nSes antécédents sont simples : elle est née à 37 semaines par voie basse, sans complications. Elle a seulement eu un ictère néonatal traité par photothérapie. Aucun antécédent chirurgical ou hospitalisation depuis. Elle n’a pas d’allergies connues et ne prend aucun médicament. Ses vaccinations sont complètes et à jour. Son développement a toujours été normal. À la maison, elle vit avec ses parents et son frère de 4 ans, qui fréquente la garderie et présente actuellement des symptômes similaires (toux et nez qui coule), mais sans fièvre.\n\nEn résumé, il s’agit d’une enfant de 2 ans, fébrile à 39,8 °C depuis trois jours, avec toux productive, tachypnée, diarrhée et signes débutants de déshydratation. Mon hypothèse principale est une bronchite virale compliquée, mais une pneumonie communautaire doit être évoquée au vu de la tachypnée et de la fièvre élevée. Les diagnostics différentiels incluent une gastroentérite virale avec atteinte respiratoire, une grippe, ou plus rarement un sepsis.\n\nComme examens complémentaires, je demanderais en urgence une saturation en oxygène, un examen clinique complet, une radiographie thoracique, une FSC avec formule, un ionogramme et une glycémie, ainsi qu’un panel viral si disponible.\n\nEn termes de prise en charge immédiate, je recommanderais une hospitalisation pour surveillance clinique rapprochée, réhydratation adaptée, oxygénothérapie si la SpO₂ est < 92 %, et une antibiothérapie probabiliste si une pneumonie bactérienne est confirmée. Enfin, je rassurerais et accompagnerais la mère en expliquant clairement la situation et en insistant sur l’urgence de l’évaluation en présentiel."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Virginia, 2 ans, fièvre élevée à 39,8 °C et toux productive depuis 3 jours.\n\nB (Background) : ATCD simples, vaccins à jour. Début par rhume, maintenant diarrhée et baisse hydratation.\n\nA (Assessment) : Suspicion bronchite aiguë compliquée avec risque de pneumonie et déshydratation. DD : gastroentérite virale, grippe, sepsis.\n\nR (Recommendation) : Évaluation urgente à l’hôpital, SpO₂, Rx thorax, FSC/iono, réhydratation et oxygénothérapie si besoin, ATB si pneumonie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Drapeaux rouges pédiatriques",
+              "points": [
+                "Tachypnée persistante",
+                "Tirage intercostal",
+                "SpO₂ < 92 %",
+                "Déshydratation sévère",
+                "Altération de conscience",
+                "Convulsions fébriles"
+              ]
+            },
+            {
+              "titre": "👉 Pneumonie enfant = 4F",
+              "points": [
+                "Fièvre élevée",
+                "Fréquence respi ↑",
+                "Fatigue (pas joueuse)",
+                "Foyer pulmonaire (à l’auscultation ou Rx)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Bronchite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Toux productive",
+                      "Fièvre modérée-élevée",
+                      "Rhinite initiale",
+                      "Contact viral fraternel"
+                    ],
+                    "contre": [
+                      "Fièvre élevée persistante",
+                      "Tachypnée (plutôt en faveur pneumonie)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre 39,8 °C depuis 3 jours",
+                      "Tachypnée",
+                      "Expectorations colorées",
+                      "Altération état général",
+                      "Déshydratation"
+                    ],
+                    "contre": [
+                      "Pas de tirage",
+                      "Pas de cyanose"
+                    ]
+                  }
+                },
+                {
+                  "question": "Gastroentérite virale",
+                  "reponse": {
+                    "pour": [
+                      "Diarrhée liquide",
+                      "Fièvre",
+                      "Contact contagieux"
+                    ],
+                    "contre": [
+                      "Symptômes respiratoires prédominants"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Examen clinique complet",
+                    "SpO₂",
+                    "Radiographie thoracique",
+                    "FSC avec formule",
+                    "Ionogramme et glycémie",
+                    "Panel viral respiratoire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Bronchite aiguë avec suspicion de pneumonie et déshydratation secondaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Réhydratation orale ou IV",
+                      "Oxygénothérapie si SpO₂ < 92 %",
+                      "Amoxicilline forte dose si pneumonie bactérienne suspectée",
+                      "Antipyrétiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance rapprochée en pédiatrie",
+                    "Contrôle hydratation, diurèse et SpO₂",
+                    "Éducation des parents : signes d’alerte",
+                    "Reconsultation immédiate si aggravation"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

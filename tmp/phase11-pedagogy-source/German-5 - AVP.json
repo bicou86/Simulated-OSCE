@@ -1,0 +1,559 @@
+{
+  "title": "German-5 - AVP",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Madame Bachmann, 56 ans, se présente au cabinet suite à un accident de la voie publique"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom et fonction",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'entrée",
+          "details": [
+            "[Docteur, j'ai eu un coup du lapin]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Clarification du terme « coup du lapin »",
+          "details": [
+            "[Une voiture m'est rentrée dedans par derrière et je me suis cogné la tête. Depuis j'ai des maux de tête]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Date de l'accident",
+          "details": [
+            "[Il y a 1 semaine]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Circonstances détaillées de l'accident",
+          "details": [
+            "Mécanisme précis [J'étais arrêtée au feu rouge]",
+            "Vitesse estimée de l'impact [Il m'a percutée à environ 30 km/h par derrière]",
+            "Port de la ceinture [Oui, j'étais attachée]",
+            "Impact sur la tête [Tête contre l'appui-tête]",
+            "Prise en charge immédiate [Pas d'hospitalisation, peu après tout allait bien]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractérisation des céphalées",
+          "details": [
+            "Localisation [Occiput]",
+            "Évolution dans la journée [Plus faibles le matin, plus fortes le soir]",
+            "Irradiation [Oui, vers la nuque]",
+            "Intensité sur échelle 1-10 [Matin 2/10, soir 7/10]",
+            "Type de douleur [Sourde]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs modulateurs",
+          "details": [
+            "Facteurs d'amélioration [Je préfère ne pas prendre de médicaments. La position allongée fait du bien, la chaleur sur la nuque aide]",
+            "Facteurs d'aggravation [Station debout prolongée et stress]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Recherche de symptômes neurologiques associés",
+          "details": [
+            "Vertiges [non]",
+            "Nausées/vomissements [non]",
+            "Troubles sensitifs des membres supérieurs [non]",
+            "Déficit de force des membres supérieurs [non]",
+            "Troubles olfactifs [non]",
+            "Acouphènes [non]",
+            "Diplopie [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents de céphalées",
+          "details": [
+            "[Oui, parfois des céphalées de tension]",
+            "[Investigations pour migraine déjà faites mais négatives]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Syndrome grippal [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux rachis cervical ou crâne",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "details": [
+            "[Aucun]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Parfois des graines de lin pour la régulation du transit]",
+            "[Je suis contre les médicaments]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Allergies",
+          "details": [
+            "[Aucune connue]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [non]",
+            "Alcool [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Mère : migraines]",
+            "[Père : en bonne santé]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Travaille comme vendeuse de chaussures]",
+            "[Mère célibataire]",
+            "[Enfants en pleine puberté]",
+            "[Favorable à la médecine complémentaire]",
+            "[Sportive]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Résumé et questions du patient",
+          "details": [
+            "Résumé de la situation",
+            "Réponse aux inquiétudes [Pensez-vous que je doive me faire opérer de la colonne vertébrale ?]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et systématique du syndrome post-coup du lapin"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen sommaire des nerfs crâniens",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Évaluation de la marche",
+          "details": [
+            "[Marche assurée]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection du rachis cervical",
+          "details": [
+            "Recherche d'hématomes [aucun]",
+            "Recherche de rougeur [aucune]",
+            "Points de pression [aucun]",
+            "Symétrie musculaire [symétrique]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Test de mobilité cervicale active",
+          "details": [
+            "Rotation gauche-droite",
+            "Flexion",
+            "Extension",
+            "Flexion latérale",
+            "Rotation en flexion (teste rachis cervical supérieur)",
+            "Rotation en extension (teste rachis cervical inférieur)"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Test de mobilité cervicale passive",
+          "details": [
+            "Recherche des limitations [Rotation droite limitée]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Mesure distance menton-sternum",
+          "details": [
+            "En flexion",
+            "En extension"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation musculaire cervicale",
+          "details": [
+            "Muscle sterno-cléido-mastoïdien",
+            "Muscles occipitaux",
+            "Muscle élévateur de la scapula"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Test de compression axiale",
+          "details": [
+            "En position neutre",
+            "En flexion latérale si nécessaire"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen neurologique des membres supérieurs",
+          "details": [
+            "Force musculaire",
+            "Sensibilité",
+            "Réflexes ostéo-tendineux"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé sur le rachis cervical et recherche de complications"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic principal",
+          "details": [
+            "[Entorse cervicale post-coup du lapin]",
+            "[Contracture musculaire]",
+            "[Possible blocage des articulations postérieures]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Propose des diagnostics différentiels",
+          "details": [
+            "Hernie discale cervicale",
+            "Fracture vertébrale"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Lésions graves à exclure",
+                "items": [
+                  {
+                    "text": "Fracture vertébrale → Radiographie si critères présents",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, CT si complexe"
+                  },
+                  {
+                    "text": "Hernie discale avec compression → IRM si déficit neurologique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen clinique, US si doute"
+                  },
+                  {
+                    "text": "Dissection artérielle vertébrale → Angio-IRM si suspicion",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Lésions bénignes fréquentes",
+                "items": [
+                  {
+                    "text": "Entorse cervicale",
+                    "cause": "Arguments POUR:\n\t□ WAD grade I-II → Diagnostic clinique",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Contracture musculaire → Examen clinique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome des facettes articulaires → Test thérapeutique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Justifie l'absence d'imagerie immédiate",
+          "details": [
+            "Pas de traumatisme crânien direct",
+            "Pas de céphalée inhabituelle (« pire de ma vie »)",
+            "Pas de nouveau type de céphalée",
+            "Absence de déficit neurologique",
+            "Critères d'Ottawa négatifs"
+          ],
+          "scoringRule": "Radiographie et IRM non indiquées en première intention"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement médicamenteux",
+          "details": [
+            "AINS (après exclusion de contre-indications gastriques)",
+            "Prescription pour 3-5 jours en traitement fixe",
+            "Myorelaxants si pas d'amélioration",
+            "Respect des préférences de la patiente (réticence aux médicaments)"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement pharmacologique",
+                "content": "• AINS : ibuprofène 400mg 3x/jour avec repas\n• Alternative : paracétamol 1g 4x/jour\n• Myorelaxant si besoin : tizanidine 2-4mg le soir\n• Éviter les opioïdes en première intention"
+              },
+              {
+                "title": "Durée et surveillance",
+                "content": "• Traitement initial : 3-5 jours\n• Si amélioration : poursuivre à la demande\n• Si pas d'amélioration à 5 jours : réévaluation\n• IRM si persistance > 2 semaines"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Mesures non médicamenteuses",
+          "details": [
+            "Mobilisation précoce (éviter l'immobilisation)",
+            "Application de chaleur locale",
+            "Kinésithérapie (mouvements passifs puis actifs)",
+            "Chiropractie possible selon préférence",
+            "Respecter l'approche complémentaire souhaitée"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Planification du suivi",
+          "details": [
+            "Contrôle dans 5 jours",
+            "Évaluation après kinésithérapie/chiropractie",
+            "IRM si absence d'amélioration",
+            "Certificat d'arrêt de travail si nécessaire"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Réassurance du patient",
+          "details": [
+            "Expliquer l'évolution favorable habituelle",
+            "Rassurer : pas d'indication chirurgicale",
+            "Importance de la mobilisation précoce",
+            "Pronostic généralement excellent"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge adaptée avec approche conservatrice et respect des préférences"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦴 Entorse cervicale post-coup du lapin – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Circonstances",
+              "points": [
+                "Accident de la voie publique avec mécanisme en flexion-extension brutale du rachis cervical (« whiplash injury »)",
+                "Survenue immédiate ou différée des symptômes"
+              ]
+            },
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Cervicalgies aiguës, raideur cervicale",
+                "Céphalées occipitales",
+                "Douleur irradiant parfois vers les épaules ou le haut du dos",
+                "Sensation de vertige ou troubles de concentration (rares)"
+              ]
+            },
+            {
+              "titre": "Signes de gravité à rechercher",
+              "points": [
+                "Déficit neurologique (moteur ou sensitif)",
+                "Troubles sphinctériens",
+                "Douleur cervicale intense, inhabituelle",
+                "Altération de l’état de conscience (traumatisme crânien associé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Attitude antalgique avec limitation des mouvements du cou",
+                "Absence de déformation visible (≠ fracture ou luxation)"
+              ]
+            },
+            {
+              "titre": "Palpation",
+              "points": [
+                "Douleur à la palpation des muscles paravertébraux cervicaux",
+                "Contracture musculaire",
+                "Douleur sans point osseux franc (≠ fracture)"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Limitation douloureuse des mouvements cervicaux",
+                "Examen neurologique normal (force, sensibilité, ROT) sauf complication"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie cervicale si suspicion de lésion osseuse (critères NEXUS ou Canadian C-Spine Rule)",
+                "IRM si déficit neurologique ou suspicion de lésion discale/ligamentaire grave",
+                "Scanner en cas de doute sur fracture"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Reassurance du patient (lésion bénigne dans la majorité des cas)",
+                "Repos relatif mais éviter immobilisation prolongée",
+                "Application de chaleur locale"
+              ]
+            },
+            {
+              "titre": "Traitement médicamenteux",
+              "points": [
+                "Antalgiques palier I (paracétamol ± AINS)",
+                "Myorelaxants en cure courte si contracture douloureuse",
+                "Pas d’opioïdes sauf douleurs exceptionnelles"
+              ]
+            },
+            {
+              "titre": "Rééducation",
+              "points": [
+                "Mobilisation douce et précoce du rachis cervical",
+                "Kinésithérapie si douleurs persistantes > quelques jours/semaines",
+                "Correction des postures et exercices d’assouplissement"
+              ]
+            },
+            {
+              "titre": "Collier cervical",
+              "points": [
+                "Pas recommandé systématiquement",
+                "Si utilisé : uniquement en phase aiguë pour quelques jours (but antalgique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Diagnostic clinique basé sur douleur cervicale post-traumatique sans déficit neurologique",
+            "Imagerie uniquement si critères de gravité (NEXUS, Canadian C-Spine Rule)",
+            "Évolution favorable dans la majorité des cas",
+            "PEC = antalgiques, chaleur, mobilisation douce (éviter repos strict et collier prolongé)",
+            "Toujours éliminer une fracture ou une atteinte neurologique associée"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Circonstances du traumatisme ? (AVP, vitesse, mécanisme en flexion-extension)",
+                "Douleur cervicale immédiate ou différée ?",
+                "Présence de céphalées, vertiges, irradiation scapulaire ou dorsale ?",
+                "Déficit neurologique : faiblesse, engourdissements ?",
+                "ATCD de pathologie cervicale (hernie discale, arthrose) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : attitude antalgique, mobilité réduite",
+                "Palpation musculaire et osseuse",
+                "Mobilité active et passive du cou",
+                "Examen neurologique complet (moteur, sensitif, ROT)",
+                "Imagerie si suspicion de fracture (selon critères NEXUS / Canadian C-Spine)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Reassurance + repos relatif, chaleur locale",
+                "Antalgiques ± myorelaxants",
+                "Mobilisation douce précoce, éviter collier prolongé"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

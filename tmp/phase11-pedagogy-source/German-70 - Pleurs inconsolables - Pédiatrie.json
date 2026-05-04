@@ -1,0 +1,280 @@
+{
+  "title": "German-70 - Pleurs inconsolables - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de médecine de famille - Garde de weekend",
+    "patient": "Mme Hollenstein, 24 ans, mère d'un nourrisson, consulte car son enfant est très pleurnichard",
+    "vitals": {
+      "temperature": "38,1°C rectal"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation du médecin et identification du patient",
+          "binaryOnly": false,
+          "details": [
+            "Se présenter avec nom, fonction et tâche",
+            "Âge de l'enfant [7 mois]",
+            "Sexe [fille]",
+            "Prénom [Maria]",
+            "Fratrie [aucune, premier enfant]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Début et caractéristiques des pleurs",
+          "binaryOnly": false,
+          "details": [
+            "Début des symptômes [depuis quelques jours]",
+            "Caractère des pleurs [pleurnichard, mécontent]",
+            "Moment de survenue [plutôt le soir]",
+            "Pleurs inconsolables [non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Sommeil et alimentation",
+          "binaryOnly": false,
+          "details": [
+            "Qualité du sommeil [plutôt plus court que d'habitude, agité]",
+            "Alimentation [lait maternel, se passe bien, pas de problème]",
+            "Diversification alimentaire [pas encore introduite]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Troubles digestifs et salivation",
+          "binaryOnly": false,
+          "details": [
+            "Selles [un peu de diarrhée]",
+            "Vomissements [aucun]",
+            "Salivation [bave beaucoup]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Signes cutanés et comportement oral",
+          "binaryOnly": false,
+          "details": [
+            "État de la peau [joues très rouges]",
+            "Comportement [se frotte beaucoup autour de la bouche]",
+            "Mâchouillements [mâchouille beaucoup d'objets actuellement]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Dentition et larmes",
+          "binaryOnly": false,
+          "details": [
+            "Dents visibles [pas encore]",
+            "Présence de larmes [oui]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Signes respiratoires et traumatisme",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée/toux/tirage [non]",
+            "Traumatisme récent [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Fièvre",
+          "binaryOnly": false,
+          "details": [
+            "Température [un peu, 38,1°C rectal]",
+            "Fréquence de mesure [mesurée une fois]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents périnataux et développement",
+          "binaryOnly": false,
+          "details": [
+            "Grossesse [normale, un peu d'œdèmes des jambes]",
+            "Enfant désiré [oui]",
+            "Développement psychomoteur [normal, toujours dans les percentiles]",
+            "Suivi pédiatrique [régulier chez le pédiatre]",
+            "Santé générale [enfant éveillé, content, jusqu'à présent en bonne santé]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Vaccinations et antécédents",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [selon le plan vaccinal]",
+            "Substances nocives mère/père [aucune]",
+            "Médicaments actuels [aucun]",
+            "Antécédents familiaux [aucune maladie connue]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Contexte social et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [vit avec le père]",
+            "Soutien [mère souvent seule à la maison]",
+            "Aide des grands-parents [aucune, vivent loin]",
+            "Réseau social [pas d'amies avec enfants]",
+            "Profession de la mère [coiffeuse diplômée]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Observation générale de l'enfant",
+          "binaryOnly": false,
+          "details": [
+            "État général",
+            "Vigilance et réactivité",
+            "Coloration cutanée"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la cavité buccale",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des gencives",
+            "Recherche de signes de poussée dentaire",
+            "État de la muqueuse buccale"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cutané ciblé",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des joues",
+            "Zone péribuccale",
+            "Recherche d'éruption ou d'irritation"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Conseils prodigués à la mère pendant l'examen",
+          "binaryOnly": false,
+          "details": [
+            "Explication des gestes d'examen",
+            "Réassurance de la mère",
+            "Communication adaptée"
+          ],
+          "patientComment": "L'examen n'est pas obligatoire selon le scénario, mais des conseils peuvent être donnés"
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal et différentiel",
+          "binaryOnly": false,
+          "details": [
+            "Diagnostic principal : poussée dentaire",
+            "Diagnostic différentiel : coliques du nourrisson"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Conseils d'hydratation",
+          "binaryOnly": false,
+          "details": [
+            "Veiller à une hydratation suffisante",
+            "Proposer des tisanes de camomille et de sauge"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Mesures locales pour soulager la poussée dentaire",
+          "binaryOnly": false,
+          "details": [
+            "Acheter un anneau de dentition rempli d'eau en pharmacie (effet rafraîchissant)",
+            "Éventuellement gel de dentition de la pharmacie",
+            "Masser doucement les gencives",
+            "Éventuellement collier d'ambre (peut aider lors de la poussée dentaire)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseils importants et contre-indications",
+          "binaryOnly": false,
+          "details": [
+            "Pas de gels sucrés",
+            "Pas de miel",
+            "Éviter tout produit sucré sur les gencives"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alerte nécessitant une consultation",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre croissante >39°C",
+            "Détérioration de l'état général",
+            "Consulter impérativement le pédiatre dans ces cas"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Soutien psychosocial",
+          "binaryOnly": false,
+          "details": [
+            "Reconnaissance de la situation difficile de la mère",
+            "Encouragements et validation de ses efforts",
+            "Suggestion de chercher du soutien (groupes de parents, etc.)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Résumé et questions",
+          "binaryOnly": false,
+          "details": [
+            "Résumé des points importants",
+            "Vérification de la compréhension",
+            "Réponse aux questions de la mère"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

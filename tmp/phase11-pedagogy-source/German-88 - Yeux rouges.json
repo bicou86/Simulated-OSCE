@@ -1,0 +1,721 @@
+{
+  "title": "German-88 - Yeux rouges",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Jeune homme de 20 ans consulte pour des yeux rouges bilatéraux avec démangeaisons"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du symptôme principal",
+          "binaryOnly": false,
+          "details": [
+            "Yeux rouges bilatéraux [oui, les deux yeux]",
+            "Démangeaisons importantes [oui, ça gratte beaucoup]",
+            "Latéralité et symétrie"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes oculaires associés",
+          "binaryOnly": false,
+          "details": [
+            "Sensation de corps étranger [oui]",
+            "Douleurs oculaires [non]",
+            "Baisse d'acuité visuelle [non]",
+            "Photophobie [non]",
+            "Vision floue",
+            "Halos lumineux"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Sécrétions et larmoiement",
+          "binaryOnly": false,
+          "details": [
+            "Larmoiement [oui, les yeux coulent]",
+            "Type de sécrétions (claires, purulentes)",
+            "Paupières collées le matin [pas spécialement]",
+            "Croûtes sur les cils"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Chronologie et évolution",
+          "binaryOnly": false,
+          "details": [
+            "Début des symptômes [depuis quelques semaines]",
+            "Mode d'installation (brutal/progressif)",
+            "Évolution [progressivement aggravé]",
+            "Variations journalières [pas forcément pire le matin]",
+            "Facteurs déclenchants ou améliorants"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes ORL et respiratoires associés",
+          "binaryOnly": false,
+          "details": [
+            "Rhinorrhée [oui, le nez coule]",
+            "Éternuements fréquents [oui]",
+            "Obstruction nasale",
+            "Prurit nasal",
+            "Symptômes de sinusite"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Contexte environnemental et saisonnier",
+          "binaryOnly": false,
+          "details": [
+            "Période de l'année (printemps/été)",
+            "Exposition à des allergènes",
+            "Animaux domestiques",
+            "Changements récents d'environnement",
+            "Exposition professionnelle/scolaire"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Port et entretien des lentilles de contact",
+          "binaryOnly": false,
+          "details": [
+            "Port de lentilles [oui habituellement]",
+            "Type de lentilles (souples/rigides)",
+            "Port aujourd'hui [non, pas aujourd'hui]",
+            "Durée de port quotidien",
+            "Hygiène et entretien",
+            "Changements récents de produits"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse familiale d'allergie",
+          "binaryOnly": false,
+          "details": [
+            "Allergies dans la famille [père a toujours ça aussi]",
+            "Asthme familial [père asthmatique]",
+            "Eczéma/dermatite atopique [sœur a une peau bizarre]",
+            "Rhinite allergique familiale"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents personnels d'atopie",
+          "binaryOnly": false,
+          "details": [
+            "Asthme personnel [oui]",
+            "Eczéma/dermatite atopique",
+            "Rhinite allergique",
+            "Allergies alimentaires [pommes]",
+            "Allergies aux animaux [chats]",
+            "Autres allergies [latex des gants du professeur]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Correction optique et réfraction",
+          "binaryOnly": false,
+          "details": [
+            "Port de lunettes/lentilles",
+            "Degré de myopie [légèrement myope, -2 dioptries]",
+            "Dernière consultation ophtalmologique"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Médicaments et traitements",
+          "binaryOnly": false,
+          "details": [
+            "Bronchodilatateurs [Ventolin au besoin]",
+            "Corticoïdes inhalés",
+            "Antihistaminiques",
+            "Collyres utilisés",
+            "Automédication"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme [4-5 cigarettes par jour]",
+            "Consommation d'alcool [non]",
+            "Cannabis [haschisch occasionnellement]",
+            "Autres substances"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Contexte social et activités",
+          "binaryOnly": false,
+          "details": [
+            "Scolarité [lycée/gymnase]",
+            "Intégration sociale [bien intégré]",
+            "Sports et loisirs",
+            "Stress/examens"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse sexuelle et IST",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle récente [nouvelle petite amie depuis 4 semaines]",
+            "Protection utilisée [rapports non protégés]",
+            "Symptômes urogénitaux",
+            "Antécédents d'IST"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "État général [sinon en bonne santé]",
+            "Fièvre",
+            "Asthénie",
+            "Arthralgies"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale des yeux et annexes",
+          "binaryOnly": false,
+          "details": [
+            "Hyperhémie conjonctivale bilatérale",
+            "Type d'injection (diffuse, localisée, péricornéenne)",
+            "Chémosis",
+            "Aspect des paupières",
+            "Position des cils",
+            "Sourcil latéral manquant [particularité notée]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des paupières",
+          "binaryOnly": false,
+          "details": [
+            "Œdème palpébral",
+            "Érythème",
+            "Croûtes, squames",
+            "Éversion des paupières (recherche corps étranger)",
+            "Papilles tarsales",
+            "Follicules"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen des sécrétions",
+          "binaryOnly": false,
+          "details": [
+            "Nature des sécrétions (muqueuses, purulentes, aqueuses)",
+            "Quantité",
+            "Localisation (angle interne/externe)"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pupillaire",
+          "binaryOnly": false,
+          "details": [
+            "Taille et symétrie des pupilles",
+            "Réflexe photomoteur direct [normal]",
+            "Réflexe consensuel [normal]",
+            "Déficit pupillaire afférent relatif"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Mesure de l'acuité visuelle",
+          "binaryOnly": false,
+          "details": [
+            "Sans correction",
+            "Avec correction [1.0 bilatéral]",
+            "Vision de près",
+            "Champ visuel par confrontation"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen à la lampe à fente",
+          "binaryOnly": false,
+          "details": [
+            "Examen des paupières et cils",
+            "Film lacrymal",
+            "Conjonctive bulbaire et tarsale",
+            "Cornée (transparence, épithélium)",
+            "Chambre antérieure (profondeur, Tyndall)",
+            "Iris et cristallin"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Test à la fluorescéine",
+          "binaryOnly": false,
+          "details": [
+            "Recherche d'érosion cornéenne [négative]",
+            "Recherche d'ulcère [négatif]",
+            "Temps de rupture du film lacrymal [normal]",
+            "Pattern de coloration"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Pression intraoculaire",
+          "binaryOnly": false,
+          "details": [
+            "Palpation comparative",
+            "Mesure si disponible",
+            "Signes de glaucome aigu"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen ORL complémentaire",
+          "binaryOnly": false,
+          "details": [
+            "Rhinoscopie antérieure",
+            "Muqueuse nasale (pâle, œdématiée)",
+            "Cornets",
+            "Sécrétions"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Auscultation pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation systématique antérieure",
+            "Auscultation systématique postérieure",
+            "Recherche de sibilants",
+            "Recherche de signes d'exacerbation asthmatique"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Examen cutané",
+          "binaryOnly": false,
+          "details": [
+            "Recherche de lésions eczémateuses",
+            "Dermographisme",
+            "Signes de dermatite atopique"
+          ]
+        },
+        {
+          "id": "e12",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": false,
+          "details": [
+            "Conjonctivite allergique saisonnière",
+            "Arguments en faveur du diagnostic",
+            "Corrélation avec le terrain atopique"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels pertinents",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Conjonctivite infectieuse",
+                    "cause": "□ virale, bactérienne",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Conjonctivite à Chlamydia",
+                    "cause": "□ contexte IST",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Kératite/érosion cornéenne liée aux lentilles",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Corps étranger sous-tarsal",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Conjonctivite irritative",
+                    "cause": "□ tabac, cannabis",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome sec oculaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Blépharite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Conjonctivite giganto-papillaire",
+                    "cause": "□ lentilles",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Prélèvement conjonctival pour bactériologie [résultat négatif]",
+            "Recherche de Chlamydia si indiqué",
+            "Tests allergologiques cutanés (prick tests) [positifs aux pollens de graminées]",
+            "IgE spécifiques si nécessaire",
+            "Frottis conjonctival (éosinophiles)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement antiallergique local",
+          "binaryOnly": false,
+          "details": [
+            "Antihistaminiques topiques (lévocabastine, azélastine)",
+            "Stabilisateurs de mastocytes (cromoglycate, nédocromil)",
+            "Associations antihistaminique/stabilisateur",
+            "Collyres corticoïdes en cure courte si sévère",
+            "Larmes artificielles",
+            "Compresses froides"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement systémique",
+          "binaryOnly": false,
+          "details": [
+            "Antihistaminiques oraux (cétirizine, loratadine)",
+            "Optimisation du traitement de l'asthme",
+            "Corticoïdes nasaux si rhinite associée"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Mesures préventives et conseils",
+          "binaryOnly": false,
+          "details": [
+            "Éviction des allergènes identifiés",
+            "Port de lunettes de soleil",
+            "Lavage des cheveux le soir",
+            "Fenêtres fermées en période pollinique",
+            "Arrêt temporaire des lentilles",
+            "Hygiène palpébrale",
+            "Sevrage tabagique conseillé"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Éducation sur les IST",
+          "binaryOnly": false,
+          "details": [
+            "Information sur les risques",
+            "Importance de la protection",
+            "Proposition de dépistage IST",
+            "Conseils de prévention"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Planification du suivi",
+          "binaryOnly": false,
+          "details": [
+            "Réévaluation si persistance des symptômes",
+            "Consultation ophtalmologique si aggravation",
+            "Suivi allergologique",
+            "Contrôle de l'observance"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Critères de référence spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "Baisse d'acuité visuelle",
+            "Douleur oculaire importante",
+            "Photophobie marquée",
+            "Échec du traitement",
+            "Suspicion de complication"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "👁️ Conjonctivite allergique saisonnière – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Prurit oculaire (symptôme le plus caractéristique)",
+                "Larmoiement excessif",
+                "Rougeur oculaire bilatérale",
+                "Sensation de brûlure ou de sable dans les yeux",
+                "Photophobie et vision floue transitoire"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Terrain atopique : rhinite allergique, asthme, eczéma",
+                "Apparition saisonnière (printemps/été)",
+                "Facteurs déclenchants : pollen, poils d’animaux, acariens"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à l’examen",
+              "points": [
+                "Rougeur conjonctivale bilatérale",
+                "Papilles hypertrophiées (conjonctive tarsale supérieure)",
+                "Pas de sécrétion purulente",
+                "Pas de baisse de l’acuité visuelle",
+                "Cernes allergiques, ptosis léger possible"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Diagnostics complémentaires",
+              "points": [
+                "Le diagnostic est clinique",
+                "Tests allergologiques si formes récidivantes (prick tests, IgE spécifiques)",
+                "Test conjonctival allergénique (rare, en milieu spécialisé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Éviction allergénique (pollen, poussières, animaux…)",
+                "Lavage oculaire avec larmes artificielles",
+                "Traitement des comorbidités atopiques (rhinite, asthme)"
+              ]
+            },
+            {
+              "titre": "Traitement pharmacologique",
+              "points": [
+                "Forme légère : antihistaminique topique ± vasoconstricteur (ex : azélastine)",
+                "Forme modérée : stabilisateur des mastocytes (ex : kétotifène), ± antihistaminique oral",
+                "Forme sévère ou réfractaire : corticoïdes topiques (loteprednol) sous contrôle ophtalmo",
+                "Immunomodulateurs topiques (cyclosporine, tacrolimus) si formes chroniques",
+                "Immunothérapie spécifique si allergie documentée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Prurit bilatéral + terrain atopique = évocateur",
+            "Pas d’antibiotique : pas de sécrétion purulente",
+            "Pas de baisse d’acuité visuelle",
+            "Traitement local en 1ʳᵉ intention : antihistaminique ou stabilisateur",
+            "Avis ophtalmologique si doute diagnostique, photophobie, douleur ou forme résistante"
+          ]
+        }
+      ]
+    },    
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Conjonctivite allergique",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Symptôme principal : yeux rouges + prurit + larmoiement",
+            "Chronologie : début, saisonnalité, facteurs déclenchants",
+            "Signes associés : rhinorrhée, éternuements, atopie",
+            "Examen : rougeur bilatérale, papilles, pas de pus",
+            "Résumé + hypothèse principale + DD",
+            "Examens : surtout clinique, prick tests si récidives",
+            "Prise en charge : éviction, antihistaminiques topiques, suivi"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo : PRURIT",
+            "elements": [
+              "Prurit",
+              "Rougeur bilatérale",
+              "Un (terrain atopique)",
+              "Rhinite associée",
+              "Itch = signe cardinal",
+              "Tears (larmes claires)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2 min)",
+          "contenu": "Il s’agit d’un jeune homme de 20 ans, asthmatique connu, qui consulte pour des yeux rouges bilatéraux prurigineux apparus depuis quelques semaines, progressivement aggravés. Il décrit un larmoiement clair, une sensation de brûlure et de corps étranger, mais nie toute douleur, photophobie ou baisse visuelle. Contexte saisonnier : début au printemps. Il a également une rhinorrhée aqueuse et des éternuements fréquents. \nÀ l’examen, on retrouve une hyperhémie conjonctivale bilatérale diffuse, des papilles conjonctivales, sans sécrétions purulentes ni atteinte cornéenne. L’acuité visuelle est normale. \nEn résumé, il s’agit d’une conjonctivite allergique saisonnière probable chez un patient atopique. Diagnostics différentiels : conjonctivite infectieuse, kératite liée aux lentilles, corps étranger. Je propose un traitement symptomatique par antihistaminique topique et larmes artificielles, associé à des mesures d’éviction."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S : Jeune homme de 20 ans, yeux rouges bilatéraux prurigineux. \nB : Terrain atopique, asthme, symptômes saisonniers. \nA : Probable conjonctivite allergique saisonnière. DD : infectieuse, kératite, corps étranger. \nR : Lavage oculaire, antihistaminique topique, suivi, tests allergologiques si récidive.",
+          "mnemo": {
+            "titre": "👉 Mnémo express : SBAR",
+            "elements": ["Situation", "Background", "Assessment", "Recommendation"]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques",
+          "subsections": [
+            {
+              "titre": "Signe discriminant",
+              "points": ["Prurit bilatéral = pense allergique 🪻"]
+            },
+            {
+              "titre": "Erreur à éviter",
+              "points": ["⚠️ Ne pas prescrire d’antibiotiques inutilement !"]
+            },
+            {
+              "titre": "Lien asthme",
+              "points": ["Asthme + rhinite + conjonctivite = triade atopique 🌸"]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables examinateur",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour/contre",
+              "questions": [
+                {
+                  "question": "Conjonctivite allergique",
+                  "reponse": {
+                    "pour": ["Prurit bilatéral", "Larmoiement clair", "Terrain atopique", "Saisonnalité"],
+                    "contre": ["Pas de pus, pas de douleur, pas unilatérale"]
+                  }
+                },
+                {
+                  "question": "Conjonctivite infectieuse",
+                  "reponse": {
+                    "pour": ["Yeux rouges"],
+                    "contre": ["Absence de sécrétions purulentes", "Pas de fièvre", "Bilatéral d’emblée"]
+                  }
+                },
+                {
+                  "question": "Kératite liée aux lentilles",
+                  "reponse": {
+                    "pour": ["Port de lentilles"],
+                    "contre": ["Pas d’ulcération cornéenne", "Pas de photophobie"]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "À proposer",
+                  "reponse": [
+                    "Principalement diagnostic clinique",
+                    "Prick tests ou IgE spécifiques si récidives",
+                    "Frottis conjonctival (éosinophiles) si doute"
+                  ],
+                  "analyse": "👉 En pratique, pas besoin d’imagerie ni systématiquement de prélèvement."
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic et traitement",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Conjonctivite allergique saisonnière"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": [
+                    "Éviction allergènes",
+                    "Larmes artificielles",
+                    "Antihistaminiques topiques ± oraux",
+                    "Stabilisateurs mastocytaires si sévère"
+                  ]
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation si symptômes persistants",
+                    "Orientation ophtalmologique si photophobie, baisse visuelle, douleur",
+                    "Suivi allergologique si récidives"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

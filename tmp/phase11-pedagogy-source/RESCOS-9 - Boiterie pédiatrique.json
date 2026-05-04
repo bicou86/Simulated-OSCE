@@ -1,0 +1,435 @@
+{
+  "title": "RESCOS-9 - Boiterie pédiatrique",
+  "context": {
+    "setting": "Urgences, médecin assistant",
+    "patient": "Charlotte, 2 ans, amenée par sa mère Mme Borloz pour boiterie.",
+    "vitals": {
+      "ta": "100/46 mmHg",
+      "fc": "98 bpm",
+      "fr": "22/min",
+      "temperature": "39.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.7,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la boiterie",
+          "details": [
+            "Début [depuis quand ?]",
+            "Durée [combien de temps ?]",
+            "Évolution [s'aggrave, stable, s'améliore ?]",
+            "Localisation [quelle jambe, quelle articulation ?]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la hanche",
+          "details": [
+            "Rougeur [présente ?]",
+            "Chaleur [présente ?]",
+            "Œdèmes [présents ?]",
+            "Perte de fonction [limitation des mouvements ?]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Atteinte d'une autre articulation",
+          "details": [
+            "Actuellement [autres articulations touchées ?]",
+            "Dans le passé [antécédents articulaires ?]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents de traumatismes des membres inférieurs",
+          "details": [
+            "Récents [trauma récent ?]",
+            "Anciens [trauma anciens ?]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "Caractérisation des douleurs",
+          "details": [
+            "Durée [depuis quand ?]",
+            "Intensité [faible, modérée, forte ?]",
+            "Réponse aux antalgiques [efficacité des médicaments ?]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Caractérisation de la fièvre",
+          "details": [
+            "Durée [depuis quand ?]",
+            "Intensité [température maximale ?]",
+            "Réponse au fébrifuges [efficacité paracétamol/ibuprofène ?]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Caractérisation de la rhinorrhée",
+          "details": [
+            "Début [depuis quand ?]",
+            "Couleur/aspect des sécrétions [claires, jaunes, vertes ?]",
+            "Toux associée [présente ?]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a8",
+          "text": "Présence d'éruptions cutanées",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "État général",
+          "details": [
+            "Activités [diminution des activités ?]",
+            "Apathie [enfant plus calme que d'habitude ?]",
+            "Comportement [changement de comportement ?]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents similaires",
+          "details": [
+            "Chez la patiente [déjà eu des épisodes similaires ?]",
+            "Dans la famille [cas similaires en famille ?]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Maladies [maladies connues ?]",
+            "Chirurgies [interventions chirurgicales ?]",
+            "Hospitalisations [hospitalisations antérieures ?]",
+            "Médicaments [traitements actuels ?]",
+            "Vaccins [vaccinations à jour ?]"
+          ],
+          "scoringRule": "Les cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Développement de l'enfant",
+          "details": [
+            "Grossesse [déroulement de la grossesse ?]",
+            "Événements néonataux [problèmes à la naissance ?]",
+            "Croissance [courbe de croissance normale ?]",
+            "Développement psycho-moteur [acquisitions normales ?]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.3,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal - arthrite septique de la hanche",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel",
+          "details": [
+            "Ostéomyélite",
+            "Synovite aiguë transitoire (rhume de hanche)",
+            "Maladie de Legg-Calvé-Perthes"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Investigations complémentaires - bilan sanguin",
+          "details": [
+            "FSC [formule sanguine complète]",
+            "CRP [protéine C-réactive]",
+            "VS [vitesse de sédimentation]",
+            "Hémoculture [recherche bactérienne dans le sang]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Investigations complémentaires - imagerie",
+          "details": [
+            "Radiographie [radiographie de la hanche]",
+            "Échographie [échographie de la hanche]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge - propose une hospitalisation ou de référer la patiente en orthopédie",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Mme Borloz (mère de Charlotte)",
+      "age": "Mère d'une enfant de 2 ans",
+      "contexte": "Mère inquiète amenant sa fille Charlotte aux urgences pour boiterie et fièvre",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma fille Charlotte boite depuis hier et elle a de la fièvre",
+        "autreChose": "Elle ne veut plus marcher normalement et elle pleure quand on la bouge"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Boiterie apparue brutalement hier",
+          "Refus de poser le pied droit par terre",
+          "Pleurs quand on manipule la jambe droite",
+          "Préfère rester assise ou couchée",
+          "Marche avec protection du membre inférieur droit"
+        ],
+        "symptomesAssocies": [
+          "Fièvre depuis 24h (jusqu'à 39.9°C)",
+          "Rhinorrhée claire depuis 3 jours",
+          "Diminution de l'appétit",
+          "Apathie et fatigue",
+          "Irritabilité inhabituelle",
+          "Dort mal depuis 2 nuits"
+        ],
+        "evolution": [
+          "Début brutal hier matin",
+          "Aggravation progressive",
+          "Fièvre qui monte malgré le paracétamol",
+          "Boiterie de plus en plus marquée"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Fièvre élevée",
+          "Diminution de l'appétit",
+          "Fatigue inhabuelle",
+          "Perte d'intérêt pour les jeux"
+        ],
+        "locomoteur": [
+          "Boiterie membre inférieur droit",
+          "Douleur à la mobilisation de la hanche droite",
+          "Refus de porter le poids sur la jambe droite",
+          "Aucune autre articulation touchée"
+        ],
+        "respiratoire": [
+          "Rhinorrhée claire",
+          "Pas de toux",
+          "Pas de difficultés respiratoires"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Allaitement + diversification alimentaire normale",
+        "activitePhysique": "Marche depuis 15 mois, très active habituellement",
+        "sommeil": "Dort mal depuis 2 nuits à cause de la douleur",
+        "medicaments": "Paracétamol donné pour la fièvre"
+      },
+      "histoireMedicale": [
+        "Grossesse et accouchement sans particularité",
+        "Développement psychomoteur normal",
+        "Marche acquise à 15 mois",
+        "Vaccins non à jour (parents réticents)",
+        "Pas d'hospitalisation antérieure",
+        "Pas de chirurgie",
+        "Aucune allergie connue"
+      ],
+      "antecedentsFamiliaux": [
+        "Pas d'antécédents particuliers",
+        "Pas de maladie rhumatismale en famille",
+        "Parents en bonne santé"
+      ],
+      "informationsPersonnelles": {
+        "contexteFamilial": "Famille avec un seul enfant",
+        "vaccination": "Vaccins non à jour (parents réticents)",
+        "inquietudes": "Très inquiète de voir sa fille ne plus vouloir marcher",
+        "etatEsprit": "Anxieuse mais collaborative"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Tenir l'enfant dans les bras ou sur les genoux",
+          "Montrer de l'inquiétude maternelle",
+          "Décrire précisément le début brutal des symptômes",
+          "Insister sur le changement de comportement de l'enfant",
+          "Mentionner que l'enfant ne veut plus jouer"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est grave docteur ?",
+          "Pourquoi elle ne veut plus marcher ?",
+          "Est-ce que ça va passer tout seul ?",
+          "Faut-il l'hospitaliser ?"
+        ]
+      },
+      "informationADonner": "Si demandé spécifiquement : Charlotte a été en contact avec d'autres enfants à la crèche où il y a eu quelques cas de rhume la semaine dernière."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Charlotte, 2 ans, amenée pour boiterie brutale membre inférieur droit avec fièvre élevée (39.9°C). Refus d'appui, douleur à la mobilisation hanche droite. Rhinorrhée récente. Vaccins non à jour. Tableau évocateur d'arthrite septique de hanche.",
+      "rolesInterventions": [
+        "Évaluer la reconnaissance du tableau d'arthrite septique",
+        "Vérifier l'identification des signes de gravité",
+        "Observer la prise en compte de l'urgence orthopédique",
+        "Noter la qualité de l'anamnèse pédiatrique"
+      ],
+      "pointsCles": [
+        "Urgence orthopédique (arthrite septique de hanche)",
+        "Début brutal avec fièvre élevée",
+        "Refus d'appui et douleur à la mobilisation",
+        "Âge à risque (< 5 ans)",
+        "Vaccins non à jour = facteur de risque",
+        "Nécessité d'hospitalisation immédiate",
+        "Drainage chirurgical urgent indiqué"
+      ],
+      "pieges": [
+        "Banaliser en pensant à une simple synovite",
+        "Ne pas reconnaître l'urgence",
+        "Omettre le statut vaccinal",
+        "Ne pas proposer d'hospitalisation",
+        "Oublier les hémocultures",
+        "Ne pas évoquer le drainage chirurgical"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'arthrite septique pédiatrique",
+      "sections": [
+        {
+          "titre": "Épidémiologie et agents pathogènes",
+          "contenu": "L'arthrite septique est une urgence orthopédique pédiatrique.",
+          "points": [
+            "Incidence : 5-12/100 000 enfants/an",
+            "Pic d'incidence : nourrissons et enfants < 5 ans",
+            "Staphylococcus aureus : agent le plus fréquent",
+            "Streptococcus pyogenes : 2e cause",
+            "Haemophilus influenzae si non vacciné",
+            "Hanche et genou : localisations préférentielles",
+            "Septicémie associée dans 30-40% des cas"
+          ]
+        },
+        {
+          "titre": "Physiopathologie",
+          "contenu": "Dissémination hématogène vers l'articulation avec destruction rapide.",
+          "points": [
+            "Bactériémie avec localisation articulaire",
+            "Vascularisation riche de la synoviale",
+            "Inflammation intense avec épanchement",
+            "Enzymes bactériennes détruisant le cartilage",
+            "Augmentation pression intra-articulaire",
+            "Ischémie et nécrose cartilagineuse",
+            "Séquelles irréversibles si retard > 48h"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "contenu": "Tableau aigu avec fièvre et impotence fonctionnelle.",
+          "points": [
+            "Fièvre élevée (> 38.5°C) dans 80% des cas",
+            "Douleur intense à la mobilisation",
+            "Refus d'appui complet",
+            "Position antalgique (hanche fléchie)",
+            "Signes inflammatoires locaux variables",
+            "Altération de l'état général",
+            "Irritabilité chez le nourrisson"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque",
+          "contenu": "Conditions prédisposant à l'arthrite septique.",
+          "points": [
+            "Âge < 5 ans (immaturité immunitaire)",
+            "Vaccinations incomplètes",
+            "Infection récente (ORL, cutanée)",
+            "Traumatisme articulaire récent",
+            "Immunosuppression",
+            "Maladie chronique",
+            "Malnutrition"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel",
+          "contenu": "Autres causes de boiterie fébrile chez l'enfant.",
+          "points": [
+            "Ostéomyélite adjacente",
+            "Synovite aiguë transitoire",
+            "Maladie de Legg-Calvé-Perthes",
+            "Fracture (fatigue, pathologique)",
+            "Arthrite juvénile idiopathique",
+            "Tumeur osseuse primitive",
+            "Cellulite des tissus mous"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "Bilan biologique et radiologique orienté.",
+          "points": [
+            "NFS : hyperleucocytose avec polynucléose",
+            "CRP élevée (> 20 mg/L)",
+            "VS accélérée",
+            "Hémocultures (positives 30-60%)",
+            "Radiographie : normale initialement",
+            "Échographie : épanchement intra-articulaire",
+            "Ponction articulaire diagnostique"
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "contenu": "Urgence chirurgicale avec drainage et antibiothérapie.",
+          "points": [
+            "Hospitalisation immédiate",
+            "Drainage chirurgical urgent (< 6h)",
+            "Antibiothérapie IV empirique immédiate",
+            "Immobilisation temporaire",
+            "Kinésithérapie précoce",
+            "Surveillance clinique et biologique",
+            "Adaptation ATB selon antibiogramme"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Flucloxacilline IV : 200mg/kg/j en 4 prises",
+        "Céfuroxime IV : 150mg/kg/j en 3 prises",
+        "Clindamycine IV : 40mg/kg/j en 4 prises",
+        "Paracétamol : 15mg/kg/prise, max 60mg/kg/j",
+        "Immobilisation 48-72h post-drainage",
+        "Kinésithérapie dès J3-J5",
+        "ATB PO relais après 48h d'apyrexie"
+      ],
+      "examensComplementaires": [
+        "NFS avec formule leucocytaire",
+        "CRP, VS",
+        "Hémocultures × 2",
+        "Radiographie bassin face + hanche profil",
+        "Échographie de hanche",
+        "Ponction articulaire écho-guidée",
+        "Culture et antibiogramme liquide synovial",
+        "Scanner ou IRM si doute diagnostique"
+      ]
+    }
+  }
+}

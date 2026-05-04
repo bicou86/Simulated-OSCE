@@ -1,0 +1,595 @@
+{
+  "title": "AMBOSS-10 - Douleurs dorsales et raideur - Homme 26 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Justin Cooper, homme de 26 ans, consultant aux urgences pour douleurs dorsales",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "120/80 mmHg",
+      "fc": "74 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon dos me fait mal. Et je me sens raide le matin"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur dorsale",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Hmm... c'est presque tout le dos qui fait mal]",
+            "Intensité (échelle 0-10) [Je dirais un 4]",
+            "Qualité [C'est une douleur sourde]",
+            "Début [Je pense il y a 3 mois]",
+            "Événements précipitants [Aucun]",
+            "Progression/constant/intermittent [Ça a commencé par une douleur très subtile mais c'est devenu pire]",
+            "Épisodes antérieurs [Aucun]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [La raideur du matin s'améliore avec le temps. Vingt minutes après le réveil, après avoir pris une douche et fait du café, j'ai l'impression d'être plus flexible]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "patientComment": "Parfois j'ai des douleurs dans mon genou droit et dans mes deux mains. Contrairement au mal de dos, cette douleur va et vient. Elle n'est pas là tout le temps, seulement quelques jours par mois. Mais c'est aussi pire le matin et ça s'améliore au cours de la journée"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Aucun]",
+            "Fièvre/frissons [Aucun]",
+            "Sueurs nocturnes [Aucun]",
+            "Fatigue [Oui, je me sens un peu plus fatigué que d'habitude]",
+            "Éruption/changements cutanés et unguéaux [Non]",
+            "Dyspnée [Non]",
+            "Problèmes urinaires [Aucun]",
+            "Problèmes intestinaux [Aucun]",
+            "Appétit [J'ai un appétit normal]",
+            "Variations pondérales [Non]",
+            "Infections récentes [Il y a quatre mois j'ai eu une diarrhée qui a été traitée avec des antibiotiques]",
+            "Problèmes oculaires [Aucun]",
+            "Sensation de picotements [Non]",
+            "Faiblesse musculaire [Non]",
+            "Engourdissement (particulièrement membres inférieurs) [Non]",
+            "Dysfonction érectile [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "Comme je vous l'ai dit, j'ai eu une diarrhée il y a 4 mois après avoir mangé du poulet. C'était assez horrible et on m'a prescrit des antibiotiques. Et j'ai de l'asthme"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai eu mon appendice enlevé quand j'avais 18 ans"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Je suis allergique au pollen"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "J'utilise un inhalateur de salbutamol"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "patientComment": "Ma mère a une maladie thyroïdienne. Elle doit prendre des médicaments parce que sa thyroïde est hyperactive. Mon père a du psoriasis"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je travaille comme ingénieur logiciel]",
+            "Domicile [Je vis avec ma petite amie]",
+            "Alcool [Je bois 1 ou 2 bières le week-end]",
+            "Drogues illicites [Je fume de la marijuana]",
+            "Consommation de marijuana (durée, fréquence, dernière utilisation) [Je fume deux fois par semaine depuis 5 ans ; la dernière fois c'était il y a 2 jours]",
+            "Tabac [Jamais]",
+            "Exercice [Non, je n'ai pas le temps de faire de l'exercice]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Histoire sexuelle",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Avec qui [Avec ma petite amie]",
+            "Nombre de partenaires dans l'année [3 partenaires]",
+            "Protection [Toutes mes anciennes partenaires, y compris ma petite amie, prennent la contraception, donc je n'ai pas besoin de porter de préservatif]",
+            "IST antérieures [Non]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen tête et cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des conjonctives",
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du dos",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du dos",
+            "Examen de la colonne vertébrale",
+            "Test d'élévation jambe tendue (signe de Lasègue) [Négatif]",
+            "Signe de Mennell [Positif]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Percussion des champs pulmonaires",
+            "Auscultation des poumons"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des membres supérieurs",
+            "Inspection des mains",
+            "Inspection des membres inférieurs",
+            "Examen du genou",
+            "Examen de la cheville"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": true,
+          "details": [
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la marche"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Spondylarthropathies inflammatoires",
+                "items": [
+                  {
+                    "text": "Spondylarthrite ankylosante",
+                    "cause": "Arguments POUR:\n\t□ Homme jeune (26 ans), pic 15-40 ans\n\t□ Lombalgie inflammatoire progressive depuis 3 mois\n\t□ Raideur matinale s'améliorant avec activité (>20 min)\n\t□ Douleur sourde diffuse du dos\n\t□ Signe de Mennell positif (sacro-iliite)\n\t□ Douleur à la palpation des crêtes iliaques\n\t□ Arthrite périphérique (genou, mains)\n\t□ Fatigue associée",
+                    "test": "→ HLA-B27 + radiographie bassin/rachis + IRM sacro-iliaques"
+                  },
+                  {
+                    "text": "Arthrite réactionnelle",
+                    "cause": "Arguments POUR:\n\t□ Homme 20-40 ans\n\t□ Antécédent entérite bactérienne il y a 4 mois\n\t□ Délai compatible (1-4 semaines post-infection)\n\t□ Sacro-iliite (Mennell positif)\n\t□ Oligoarthrite (genou, mains)\n\t□ Rapports non protégés (infection urogénitale possible)\nArguments CONTRE:\n\t□ Raideur matinale\n\t□ Pas de symptômes cutanés/oculaires/constitutionnels",
+                    "test": "→ Sérologies Chlamydia/gonocoque + coproculture + HLA-B27"
+                  },
+                  {
+                    "text": "Arthrite psoriasique",
+                    "cause": "Arguments POUR:\n\t□ Âge 20-40 ans\n\t□ Antécédents familiaux psoriasis (père)\n\t□ Dactylite possible\n\t□ Oligoarthrite\n\t□ Atteinte rachidienne avec sacro-iliite\n\t□ Arthrite peut précéder psoriasis cutané\nArguments CONTRE:\n\t□ Raideur matinale marquée\n\t□ Pas de lésions cutanées/unguéales",
+                    "test": "→ Recherche lésions psoriasiques + radiographie mains/rachis"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Polyarthrite rhumatoïde",
+                    "cause": "Arguments CONTRE:\n\t□ Homme jeune\n\t□ Atteinte rachidienne prédominante\n\t□ Pas d'atteinte symétrique",
+                    "test": "→ FR + anti-CCP"
+                  },
+                  {
+                    "text": "Hernie discale",
+                    "cause": "Arguments CONTRE:\n\t□ Lasègue négatif\n\t□ Pas d'irradiation\n\t□ Évolution progressive",
+                    "test": "→ IRM rachis si suspicion"
+                  },
+                  {
+                    "text": "Ostéomyélite vertébrale",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de fièvre\n\t□ Pas de syndrome inflammatoire",
+                    "test": "→ Hémocultures + IRM rachis"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen génital [peut montrer des lésions cutanées du gland dans l'arthrite réactionnelle]",
+            "FSC, VS [Les patients avec arthrite réactionnelle peuvent avoir une leucocytose et une anémie normochrome normocytaire. La VS serait probablement élevée dans la spondylarthrite ankylosante, l'arthrite réactionnelle et l'arthrite psoriasique]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens immunologiques",
+          "binaryOnly": false,
+          "details": [
+            "Facteur rhumatoïde, anticorps anti-nucléaires, HLA-B27 [Les auto-anticorps sont négatifs dans la spondylarthrite ankylosante, l'arthrite réactionnelle et l'arthrite psoriasique. HLA-B27 est positif dans 90-95% des patients avec spondylarthrite ankylosante et est aussi souvent positif dans l'arthrite réactionnelle]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens microbiologiques",
+          "binaryOnly": false,
+          "details": [
+            "Tests d'amplification des acides nucléiques pour chlamydia et gonocoque [pour évaluer une infection à chlamydia comme cause d'arthrite réactionnelle ; le patient devrait aussi être dépisté pour la gonorrhée vu ses antécédents de rapports sexuels non protégés]",
+            "Cultures de selles et d'urine [peuvent détecter les organismes causaux de l'arthrite réactionnelle]",
+            "Test VIH [antécédents de rapports sexuels non protégés. L'arthrite réactionnelle pourrait être la manifestation initiale du VIH]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie du rachis et des articulations sacro-iliaques [pour évaluer une colonne en bambou, signe de spondylarthrite ankylosante, ainsi que les syndesmophytes, l'ankylose des articulations sacro-iliaques et la sacro-iliite, qui peuvent survenir dans la spondylarthrite ankylosante et l'arthrite psoriasique]",
+            "Radiographie des mains et du genou droit [pour exclure des changements dégénératifs ; pour évaluer la déformation en crayon dans tasse des doigts comme signe d'arthrite psoriasique]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les drogues récréatives",
+            "Conseil sur les pratiques sexuelles sûres",
+            "Réaction appropriée au défi concernant le manque d'exercice"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de la spondylarthrite ankylosante",
+                "content": "• AINS en première ligne: Indométacine 75-150 mg/j ou diclofénac 100-150 mg/j\n• Utilisation continue plutôt qu'à la demande pour effet anti-inflammatoire optimal: ; Exercices physiques quotidiens et physiothérapie spécialisée\n• Natation et exercices en piscine particulièrement bénéfiques\n• Maintien de la posture et exercices respiratoires\n• Éviter le tabac (aggrave l'évolution)"
+              },
+              {
+                "title": "Traitement de deuxième ligne et biologiques",
+                "content": "• Alternative: Anti-IL17 (sécukinumab) si contre-indication anti-TNF\n• Sulfasalazine 2-3 g/j si arthrite périphérique associée\n• Méthotrexate inefficace sur l'atteinte axiale\n• Corticoïdes systémiques à éviter (peu efficaces)\n• Infiltrations locales possibles si sacro-iliite sévère"
+              },
+              {
+                "title": "Si infection à Chlamydia",
+                "content": "• Traitement du partenaire sexuel si IST confirmée: Corticoïdes intra-articulaires si mono-arthrite sévère"
+              },
+              {
+                "title": "Sulfasalazine si arthrite persistante > 3 mois",
+                "content": "• Physiothérapie pour maintien amplitude articulaire"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Question sur la responsabilité personnelle",
+          "content": "[Est-ce ma faute parce que je ne fais pas assez d'exercice ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Cooper, je peux voir que vous êtes vraiment préoccupé par le fait qu'un manque d'exercice pourrait avoir causé votre mal de dos. J'aimerais prescrire quelques tests pour aller au fond de ce qui cause exactement vos symptômes, mais, d'après ce que j'ai entendu de vous jusqu'à présent, je ne pense pas qu'un manque d'exercice régulier ait causé vos symptômes directement. Cependant, en tant que votre médecin, j'aimerais vous conseiller que l'exercice régulier aide à la forme physique générale, peut prévenir la progression de vos symptômes et pourrait même améliorer votre mal de dos. Si vous êtes intéressé, j'aimerais vous mettre en contact avec notre physiothérapeute, qui peut vous enseigner quelques exercices et parler du type d'activités qui pourraient être les meilleures pour vous. Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Tests d'élévation de la jambe tendue",
+        "description": "Tests d'élévation de la jambe tendue : Illustrations des différentes techniques pour évaluer l'irritation des racines nerveuses lombaires.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img1-Straight leg raise tests.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Tests de provocation de la douleur sacro-iliaque (test de Mennell)",
+        "description": "Le test de Mennell peut être réalisé dans trois positions différentes : 1. Position ventrale : Soulever la jambe passivement (extension de la hanche) avec une main tout en appliquant une pression sur l'articulation sacro-iliaque avec l'autre main. 2. Position latérale : Demander au patient de fléchir la hanche et le genou inférieurs à environ 90°. Soulever la jambe supérieure et étendre la hanche supérieure avec une main tout en fixant le bassin avec l'autre main. 3. Position dorsale : Appliquer une pression dirigée vers l'arrière sur les épines iliaques antéro-supérieures. Ces manœuvres ne devraient pas causer de douleur chez un individu sain. La douleur dans la région de l'articulation sacro-iliaque est appelée signe de Mennell.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img2-Sacroiliac joint pain provocation tests (Mennell test).jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Psoriasis du cuir chevelu",
+        "description": "Des squames et plaques blanc argenté sont visibles sur le cuir chevelu et le front parallèlement à la ligne des cheveux. C'est l'apparence caractéristique du psoriasis du cuir chevelu.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img3-Psoriasis capitis.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Psoriasis en plaques",
+        "description": "Multiples plaques confluentes nettement délimitées recouvertes de squames dures, grossières, blanc argenté sont visibles sur la surface d'extension du genou. C'est l'apparence caractéristique du psoriasis en plaques.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img4-Plaque psoriasis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Ongles en dé à coudre dans le psoriasis",
+        "description": "De multiples petites dépressions rondes sont visibles dans les ongles. Cette apparence est causée par la présence de cellules parakératosiques (cellules avec kératinisation altérée) dans la matrice unguale. Au fil du temps, ces cellules poussent dans la tablette unguale à partir de la matrice unguale, où elles font éruption de la couche cornée, laissant de petites dépressions visibles.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img5-Nail pitting in psoriasis.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Dactylite",
+        "description": "L'index gauche entier de ce patient avec arthrite psoriasique est gonflé. Cette apparence est typique de la dactylite, qui peut être causée par une variété de conditions, incluant les spondylarthropathies, les infections et la drépanocytose.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img6-Dactylitis.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Colonne en bambou et signe du poignard dans la spondylarthrite ankylosante",
+        "description": "Radiographie du rachis lombaire (vue AP). Les syndésmophytes marginaux formés par l'ossification des fibres externes de l'annulus fibrosus ont fait ressembler la colonne vertébrale à une tige de bambou (appelée 'colonne en bambou' ; contours rouges). L'ossification supplémentaire des ligaments supra-épineux et inter-épineux a produit une ligne dense (signe du poignard ; superposition verte) se projetant à travers les vertèbres. La fusion (ankylose) à travers les articulations sacro-iliaques (indiquée par des pointes de flèche) est également visible.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img7-Bamboo spine and dagger sign in ankylosing spondylitis.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Arthrite psoriasique",
+        "description": "Radiographie antéropostérieure du rachis lombaire : 1. Syndésmophytes : par exemple, entre L3 et L4 (exemple montré à gauche). 2. Parasyndésmophytes : par exemple, latéral droit de L2-L3.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img8-Psoriatic arthritis.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Sacro-iliite",
+        "description": "Radiographie du rachis lombaire (vue AP ; position dorsale) d'un patient avec spondylarthrite ankylosante. Des signes caractéristiques de sacro-iliite sont visibles sur les articulations sacro-iliaques, incluant une sclérose périarticulaire étendue (superposition verte) et des érosions (exemple indiqué par superposition rouge).",
+        "data": "grilles_generees/html/images/AMBOSS-10-img9-Sacroiliitis.jpg",
+        "id": "img9"
+      },
+      {
+        "title": "Arthrite psoriasique (manifestations cliniques)",
+        "description": "Radiographie des mains (vue PA). Une arthrite avancée asymétrique atteint la main gauche, avec ankylose de plusieurs articulations interphalangiennes proximales et distales (IPP et IPD) (exemples indiqués par superposition verte) ainsi que de multiples déformations en flexion. Des érosions marginales sont présentes aux bases de la phalange proximale du petit doigt et de la phalange distale du pouce (superposition rouge). Des érosions sous-chondrales centrales et des changements prolifératifs avec une déformation en aile de mouette sont visibles à l'articulation IPD de l'annulaire droit. Une illustration d'une déformation en crayon dans tasse (non présente ici) est également montrée, qui peut survenir dans l'arthrite psoriasique et plusieurs autres arthrites inflammatoires. Des changements dégénératifs avancés impliquent également de multiples articulations carpiennes et métacarpiennes gauches.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img10-Psoriatic arthritis.jpg",
+        "id": "img10"
+      },
+      {
+        "title": "Lésions dégénératives et inflammatoires du rachis",
+        "description": "Les lésions dégénératives résultent de l'usure et sont associées à l'âge avancé. Les lésions inflammatoires surviennent dans des maladies comme la spondylarthrite ankylosante et le psoriasis. S'il y a une érosion sous-chondrale ou une destruction du corps vertébral, considérer une infection bactérienne ou une tumeur comme étiologies possibles.",
+        "data": "grilles_generees/html/images/AMBOSS-10-img11-Degenerative and inflammatory lesions of the spine.jpg",
+        "id": "img11"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Justin Cooper",
+      "age": "26 ans",
+      "contexte": "Ingénieur logiciel consultant aux urgences pour douleurs dorsales chroniques avec raideur matinale",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon dos me fait mal. Et je me sens raide le matin.",
+        "autreChose": "C'est pire le matin et ça s'améliore après que je bouge."
+      },
+      "consignes": [
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: radiographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Quand l'examinateur appuie sur les deux côtés de vos hanches (crête iliaque) alors que vous êtes couché sur le dos, dites à l'examinateur que ça fait mal.",
+        "Si l'examinateur soulève votre jambe dans le cadre d'un test clinique (test de la jambe tendue), cela ne vous cause aucune douleur.",
+        "Défi : Demander 'Est-ce ma faute parce que je ne fais pas assez d'exercice ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur dorsale diffuse depuis 3 mois",
+          "Intensité 4/10, sourde",
+          "Raideur matinale importante",
+          "Amélioration après 20 minutes d'activité",
+          "Début progressif sans facteur déclenchant"
+        ],
+        "symptomesAssocies": [
+          "Douleurs genou droit et mains (intermittentes)",
+          "Fatigue accrue",
+          "Diarrhée traitée par antibiotiques il y a 4 mois",
+          "Pas de symptômes neurologiques",
+          "Pas de drapeaux rouges"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer une posture légèrement voûtée",
+          "Gestuelle limitée due à la raideur",
+          "Mentionner spontanément la raideur matinale",
+          "Demander des clarifications pour termes médicaux",
+          "Exprimer l'inquiétude sur le manque d'exercice"
+        ],
+        "durantStatus": [
+          "Douleur à la pression bilatérale des crêtes iliaques",
+          "Pas de douleur au test de Lasègue",
+          "Mobilité rachidienne légèrement limitée",
+          "Démarche normale mais prudente"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 26 ans avec lombalgie inflammatoire évoluant depuis 3 mois. Raideur matinale > 20 minutes s'améliorant avec activité. Antécédents familiaux de psoriasis (père). Entérite bactérienne il y a 4 mois. Rapports non protégés multiples. Tableau évocateur de spondylarthropathie débutante.",
+      "rolesInterventions": [
+        "Test de Mennell : Douleur bilatérale à la compression des crêtes iliaques",
+        "Test de Lasègue : Négatif bilatéralement",
+        "Examen cutané : Pas de lésions psoriasiques visibles",
+        "Examen des mains : Pas de dactylite actuellement",
+        "HLA-B27 : Positif",
+        "VS : 35 mm/h, CRP 18 mg/L"
+      ],
+      "pointsCles": [
+        "Lombalgie inflammatoire = jeune < 45 ans + raideur matinale + amélioration activité",
+        "Toujours rechercher antécédents infectieux (arthrite réactionnelle)",
+        "Antécédents familiaux psoriasis = risque arthrite psoriasique",
+        "HLA-B27 positif dans 90% spondylarthrite ankylosante",
+        "Sacro-iliite précoce peut être uniquement clinique (IRM plus sensible que radio)"
+      ],
+      "pieges": [
+        "Attribuer la douleur au manque d'exercice",
+        "Ne pas reconnaître le caractère inflammatoire",
+        "Oublier de rechercher les IST (arthrite réactionnelle)",
+        "Manquer les antécédents familiaux de psoriasis",
+        "Ne pas faire d'examen génital (lésions balanite circinée)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Spondylarthrite ankylosante débutante ou arthrite réactionnelle post-entéritique"
+        },
+        {
+          "titre": "Spondylarthrite ankylosante",
+          "contenu": "Spondylarthropathie inflammatoire la plus fréquente :",
+          "points": [
+            "Prévalence : 0.5-1% population, ratio H:F = 3:1",
+            "Début typique : 15-40 ans (pic 20-30 ans)",
+            "Association HLA-B27 : 90-95% des cas",
+            "Critères ASAS : lombalgie > 3 mois + âge < 45 ans + critères inflammatoires",
+            "Évolution : sacro-iliite → syndesmophytes → ankylose (10-20 ans)",
+            "Manifestations extra-articulaires : uvéite (25%), MICI (5-10%)"
+          ]
+        },
+        {
+          "titre": "Arthrite réactionnelle",
+          "contenu": "Arthrite aseptique post-infectieuse :",
+          "points": [
+            "Délai : 1-4 semaines après infection (GI ou GU)",
+            "Agents : Chlamydia (plus fréquent), Shigella, Salmonella, Yersinia, Campylobacter",
+            "Triade classique de Reiter : arthrite + urétrite + conjonctivite (rare forme complète)",
+            "Atteinte articulaire : oligoarthrite asymétrique MI > MS",
+            "Enthésites fréquentes : talon (fasciite plantaire)",
+            "Évolution : 80% résolution < 1 an, 20% chronique"
+          ]
+        },
+        {
+          "titre": "Arthrite psoriasique",
+          "contenu": "Spondylarthropathie associée au psoriasis :",
+          "points": [
+            "Prévalence : 30% des patients psoriasiques",
+            "Arthrite peut précéder psoriasis dans 15% cas",
+            "5 formes : oligoarticulaire (70%), polyarticulaire, axiale, IPD, mutilante",
+            "Dactylite : pathognomonique des spondylarthropathies",
+            "Enthésites : talon, coude, genou",
+            "Atteinte unguéale dans 80% (pitting, onycholyse)"
+          ]
+        },
+        {
+          "titre": "Caractéristiques de la lombalgie inflammatoire",
+          "contenu": "Critères ASAS pour distinguer mécanique vs inflammatoire :",
+          "points": [
+            "Âge début < 40 ans",
+            "Début insidieux",
+            "Amélioration avec exercice",
+            "Pas d'amélioration au repos",
+            "Douleur nocturne (2e partie nuit)",
+            "≥ 4/5 critères = sensibilité 80%, spécificité 72%"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires dans les spondylarthropathies",
+          "contenu": "Bilan diagnostique et suivi :",
+          "points": [
+            "HLA-B27 : Pas diagnostique seul (8% population générale positive)",
+            "Marqueurs inflammation : VS/CRP élevés dans 50-70%",
+            "Radiographie bassin : Sacro-iliite bilatérale (tardive)",
+            "IRM sacro-iliaques : Gold standard précoce (œdème osseux)",
+            "Recherche infection : TAAN Chlamydia/gonocoque, sérologies, coproculture",
+            "Auto-anticorps : FR et anti-CCP négatifs (spondylarthropathies séronégatives)"
+          ]
+        },
+        {
+          "titre": "Prise en charge des spondylarthropathies",
+          "contenu": "Approche multimodale précoce :",
+          "points": [
+            "1re ligne : AINS continus (indométacine 75-150mg/j)",
+            "Exercice physique : Programme structuré quotidien",
+            "Physiothérapie : Maintien mobilité rachidienne",
+            "Infiltrations : Corticoïdes sacro-iliaques si échec AINS",
+            "Biologiques : Anti-TNF si échec AINS (adalimumab, étanercept)",
+            "Suivi : BASDAI, mobilité rachidienne, VS/CRP"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "AINS première ligne : Indométacine 75mg BID ou naproxène 500mg BID",
+        "Exercices quotidiens : Extension rachidienne, natation recommandée",
+        "Anti-TNF si BASDAI > 4 malgré 2 AINS : Adalimumab 40mg SC/2 sem",
+        "Sulfasalazine 2-3g/j si arthrite périphérique prédominante",
+        "Méthotrexate inefficace sur l'atteinte axiale",
+        "Uvéite aiguë : Corticoïdes topiques urgents",
+        "Arrêt tabac impératif (facteur aggravant)"
+      ],
+      "examensComplementaires": [
+        "HLA-B27 : Typisation par PCR ou cytométrie flux",
+        "IRM sacro-iliaques STIR/T2 : Œdème sous-chondral = sacro-iliite active",
+        "Radiographie bassin face : Érosions, sclérose, fusion (classification New York)",
+        "TAAN urinaire premier jet : Chlamydia trachomatis, Neisseria gonorrhoeae",
+        "Coproculture + PCR entéropathogènes : Si diarrhée < 6 mois",
+        "Bilan pré-biologique : NFS, transaminases, sérologies hépatites/VIH/tuberculose"
+      ]
+    }
+  }
+}

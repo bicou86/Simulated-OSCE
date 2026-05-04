@@ -1,0 +1,832 @@
+{
+  "title": "AMBOSS-37 - Changements cutanés - Nouveau-née 4 jours",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Emma Miller, nouveau-née de 4 jours, mère consultant pour changements cutanés",
+    "vitals": {
+      "temperature": "36.9°C",
+      "ta": "80/50 mmHg",
+      "fc": "140 bpm",
+      "fr": "40/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je ne suis pas tout à fait sûre, mais la peau d'Emma me semble jaune. Je suis vraiment inquiète"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des changements cutanés",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [C'est surtout son visage, mais les autres parties de son corps ont l'air un peu jaunes aussi]",
+            "Début [Je viens juste de le remarquer ce matin. Elle avait l'air bien quand nous avons quitté l'hôpital il y a presque 2 jours]",
+            "Événements précipitants [Rien n'a vraiment changé. Elle était agitée la nuit dernière mais je pense que c'était juste parce qu'elle avait faim]",
+            "Progression [Je ne sais pas. Je vous ai appelé tout de suite quand je l'ai vu]",
+            "Épisodes antérieurs [Non]",
+            "Symptômes associés [C'est mon premier enfant donc c'est vraiment difficile de dire ce qui est normal, mais je pense qu'à part sa peau elle va bien]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour ictère néonatal",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [Non]",
+            "Vomissements [Non]",
+            "Écoulement oculaire [Non]",
+            "Écoulement auriculaire [Non]",
+            "Écoulement nasal [Non]",
+            "Éruption cutanée [Non, juste la couleur jaune]",
+            "Pleurs/irritabilité [Juste la nuit dernière. Maintenant elle dort. Elle semblait vraiment fatiguée ce matin - probablement parce qu'elle était debout toute la nuit]",
+            "Toux [Non]",
+            "Essoufflement/difficulté à avaler [Je ne suis pas sûre de pouvoir le dire mais je ne pense pas]",
+            "Problèmes intestinaux [Elle est peut-être un peu constipée. La dernière fois qu'elle a fait caca c'était hier]",
+            "Couleur des selles [Brunes]",
+            "Problèmes de sommeil [Elle a à peine dormi la nuit dernière alors je l'ai mise au lit avec moi. Mais à l'hôpital nous n'avions aucun problème]",
+            "Convulsions [Non]",
+            "Activité (enjouée) [Elle semblait vraiment fatiguée ce matin]",
+            "Bouche sèche, yeux enfoncés, apport liquidien (déshydratation) [Non, sa bouche et ses yeux sont normaux. Mais j'ai encore du mal à allaiter donc elle n'a pas eu beaucoup de lait la nuit dernière. Je pense que c'est pour ça qu'elle était si agitée toute la nuit]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Allaitement et nutrition",
+          "binaryOnly": false,
+          "details": [
+            "Allaitement (fréquence/24 heures) [J'ai beaucoup essayé mais ça n'a marché que 6 fois]",
+            "Allaitement (durée/tétée) [Peut-être 10 minutes à chaque fois]",
+            "Lait artificiel [Non. Je veux vraiment allaiter]",
+            "Nombre de couches mouillées/24 heures [Elle a eu 5 couches mouillées et, comme je l'ai dit, pas de couches sales]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Groupes sanguins",
+          "binaryOnly": false,
+          "details": [
+            "Groupe sanguin maternel [Je suis O positif]",
+            "Groupe sanguin paternel [Désolée, je ne sais pas, et mon mari est actuellement sorti donc je ne peux pas lui demander]",
+            "Groupe sanguin de l'enfant [Je suis désolée. Je devrais le savoir, mais je ne m'en souviens vraiment pas maintenant]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux et de naissance",
+          "binaryOnly": false,
+          "details": [
+            "Antécédents médicaux [Quand nous avons quitté l'hôpital, les médecins ont dit qu'Emma était en bonne santé]",
+            "Antécédents chirurgicaux [Non]",
+            "Hospitalisations antérieures [Juste pour sa naissance]",
+            "Histoire prénatale [La grossesse était complètement normale]",
+            "Autres enfants, grossesses [Non, c'était ma première grossesse]",
+            "Histoire de la naissance [Elle est née à 39 semaines et 5 jours. C'était un accouchement vaginal normal. Je ne pense pas qu'il y ait eu de complications]",
+            "Poids de naissance [Elle pesait exactement 7 livres, ou 3 175 g - c'est le nombre que les médecins utilisaient toujours à l'hôpital]",
+            "Poids au dernier contrôle [Quand nous avons quitté l'hôpital elle pesait 6 livres et 10 onces, ou 3 016 g]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Allergies et médicaments",
+          "binaryOnly": true,
+          "details": [
+            "Allergies [Non]",
+            "Médicaments [Ils nous ont donné des gouttes de vitamine D à l'hôpital, mais j'ai des problèmes pour les lui donner. À l'hôpital ils m'ont dit de les mettre sur mon mamelon avant de la nourrir, mais je pense qu'elle ne les aime pas et ne s'accroche pas si j'utilise les gouttes]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Non. Son père est en bonne santé et personne d'autre n'a encore rendu visite. J'avais peur qu'elle tombe malade]",
+            "Antécédents familiaux [Mon mari a du diabète et ma mère et moi avons des migraines]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Vaccinations et dépistage",
+          "binaryOnly": true,
+          "details": [
+            "Vaccinations [Elle a reçu ce vaccin à la naissance mais rien d'autre jusqu'à présent]",
+            "Dépistage néonatal [Ils ont fait le premier à l'hôpital et ont dit que c'était normal]",
+            "Croissance et développement [Je ne sais pas. C'est juste si difficile à dire. J'espérais entendre que tout est normal lors de notre prochaine visite de contrôle. Elle est prévue pour demain]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Non disponible dans les cas téléphoniques",
+            "Demander à la mère son évaluation de l'enfant"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes nutritionnelles prioritaires",
+                "items": [
+                  {
+                    "text": "Ictère d'allaitement (breastfeeding jaundice)",
+                    "cause": "Arguments POUR:\n\t□ Âge de 4 jours (apparition typique première semaine de vie)\n\t□ Allaitement insuffisant : seulement 6 tétées/24h (normal : 8-12 fois/24h)\n\t□ Difficultés d'allaitement admises par la mère\n\t□ Diminution fréquence des selles (constipation relative)\n\t□ Perte de poids physiologique (3 175g → 3 016g = 5%)\n\t□ Fatigue et agitation nocturne (signes de faim)",
+                    "test": "→ Examen physique urgent + bilirubine"
+                  }
+                ]
+              },
+              {
+                "name": "Causes physiologiques",
+                "items": [
+                  {
+                    "text": "Ictère physiologique néonatal",
+                    "cause": "Arguments POUR:\n\t□ Fréquent chez nouveau-nés à terme et prématurés\n\t□ Apparition entre J3-J8 chez nouveau-nés à terme\n\t□ Nouveau-née par ailleurs asymptomatique\n\t□ Accouchement non compliqué\nArguments CONTRE:\n\t□ Histoire d'allaitement insuffisant et diminution transit favorise plutôt ictère d'allaitement",
+                    "test": "→ Bilirubine sérique selon nomogramme"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hémolytiques",
+                "items": [
+                  {
+                    "text": "Incompatibilité ABO",
+                    "cause": "Arguments POUR:\n\t□ Mère groupe O (risque si enfant A ou B)\n\t□ Groupes père et enfant inconnus\n\t□ Cause de maladie hémolytique du nouveau-né\nArguments CONTRE:\n\t□ Présentation typique < 24h de vie ; cette enfant a 4 jours",
+                    "test": "→ Groupage sanguin + test de Coombs"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Ictère au lait maternel",
+                    "cause": "Apparition plus tardive (J4-J7), pic J10-15",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Sepsis néonatal",
+                    "cause": "Mais pas de fièvre ni signes infectieux",
+                    "test": "→ NFS, CRP si suspicion"
+                  },
+                  {
+                    "text": "Hyperbilirubinémies héréditaires",
+                    "cause": "Gilbert, Crigler-Najjar - plus rares",
+                    "test": "→ Bilirubine fractionnée"
+                  },
+                  {
+                    "text": "Hypothyroïdie congénitale",
+                    "cause": "Dépistage néonatal normal",
+                    "test": "→ TSH si suspicion"
+                  },
+                  {
+                    "text": "Atrésie biliaire",
+                    "cause": "Selles décolorées attendues (ici brunes)",
+                    "test": "→ US abdominal si selles pâles"
+                  },
+                  {
+                    "text": "Galactosémie",
+                    "cause": "Présentation plus sévère avec vomissements",
+                    "test": "→ Test métabolique si suspicion"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen physique [Devrait toujours être la première étape diagnostique dans les cas téléphoniques]",
+            "Mesure transcutanée de bilirubine [La bilirubine sérique est mesurée si la mesure transcutanée donne une valeur élevée selon le nomogramme. Test réalisé avec appareil mesurant le degré de décoloration jaune de la peau]",
+            "Bilirubine sérique [Le degré d'ictère est évalué selon un nomogramme. Si l'enfant dépasse le 95e percentile, il doit être évalué pour ictère pathologique]",
+            "NFS avec réticulocytes, CRP [Leucocytes et CRP comme marqueurs d'inflammation ; taux d'hémoglobine et réticulocytes pour évaluer l'hémolyse]",
+            "Groupage sanguin [Le groupage sanguin et test de Coombs aident à diagnostiquer l'incompatibilité ABO]",
+            "Test de Coombs direct et indirect"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Communication avec la mère",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la mère des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la mère avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la mère"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur la mort subite du nourrisson",
+            "Conseil supplémentaire sur la gestion de l'allaitement",
+            "Réaction appropriée au défi concernant la culpabilité"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Convocation urgente pour examen physique ; Évaluation clinique de l'extension de l'ictère (Kramer)"
+              },
+              {
+                "title": "Mesure transcutanée ou sérique de bilirubine",
+                "content": "• Interprétation selon nomogramme de Bhutani\n• Recherche signes de gravité: (léthargie, hypotonie, cri aigu)"
+              },
+              {
+                "title": "Si ictère d'allaitement confirmé",
+                "content": "• Optimisation allaitement: 8-12 tétées/24h\n• Consultation lactation urgente\n• Réveil actif du bébé pour tétées\n• Position correcte et prise du sein\n• Supplémentation temporaire si perte 10% poids\n• Surveillance bilirubine quotidienne\n• Éviter exposition solaire directe (inefficace, dangereuse)"
+              },
+              {
+                "title": "Si bilirubine > seuil photothérapie",
+                "content": "• Photothérapie intensive: (lumière bleue 430-490 nm)\n• Protection oculaire obligatoire\n• Maximiser l'exposition cutanée: Maximiser surface exposée\n• Maintien allaitement pendant photothérapie\n• Contrôle bilirubine 4-6h après début\n• Arrêt si 2 valeurs seuil"
+              },
+              {
+                "title": "Si bilirubine proche seuil exsanguino-transfusion",
+                "content": "• Photothérapie intensive double\n• Préparation exsanguino-transfusion\n• Albumine: 1g/kg si hypoalbuminémie\n• Surveillance neurologique stricte\n• IRM si signes encéphalopathie\n• Conseils allaitement\n• Mise au sein précoce et fréquente\n• Alternance des seins\n• Compression mammaire pendant tétée\n• Expression manuelle après tétées\n• Vitamine D: Continuer malgré difficultés\n• Pesée avant/après tétée si doute"
+              },
+              {
+                "title": "Prévention complications",
+                "content": "• Dépistage déficit G6PD si origine à risque\n• Éviter médicaments inducteurs hémolyse\n• Surveillance auditive si hyperbilirubinémie sévère"
+              },
+              {
+                "title": "Suivi développement neurologique",
+                "content": "• Information sur ictère nucléaire (kernictère)"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Ictère précoce < 24h",
+                "description": "Toujours pathologique → bilan hémolyse urgent"
+              },
+              {
+                "text": "Hyperbilirubinémie sévère",
+                "description": "Bili > 340 μmol/L → risque encéphalopathie"
+              },
+              {
+                "text": "Signes neurologiques",
+                "description": "Léthargie, hypotonie, opisthotonus → kernictère"
+              },
+              {
+                "text": "Déshydratation > 10%",
+                "description": "Perte poids excessive → réhydratation urgente"
+              },
+              {
+                "text": "Selles décolorées",
+                "description": "Suspicion atrésie biliaire → US urgent"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Culpabilité maternelle",
+          "content": "[Est-ce que c'est ma faute ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Miller, je comprends qu'Emma est votre premier enfant, et vous devez être très inquiète pour elle. D'après ce que vous me dites, je peux vous assurer que ce n'est pas votre faute. Vous avez tout fait correctement en m'appelant quand vous avez remarqué les changements afin que nous puissions maintenant prendre le meilleur soin possible de votre fille. Bien qu'il soit courant que la peau devienne jaune chez les nouveau-nés, j'aimerais que vous ameniez Emma aujourd'hui pour que je puisse l'examiner et tester ses niveaux de bilirubine, le produit chimique qui rend sa peau jaune. Si ce niveau devient trop élevé, les enfants ont parfois besoin d'un traitement avec une lumière spéciale. J'aimerais aussi vous mettre en contact avec une consultante en lactation, qui peut vous aider avec les problèmes d'allaitement que vous rencontrez. Est-ce que cela vous convient ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Ictère néonatal",
+        "description": "Ictère néonatal visible au niveau du visage et du tronc. La coloration jaune de la peau est caractéristique de l'hyperbilirubinémie chez le nouveau-né.",
+        "data": "grilles_generees/html/images/AMBOSS-37-img1-Neonatal jaundice.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Nomogramme de Bhutani",
+        "description": "Le nomogramme de Bhutani définit des courbes percentiles spécifiques à l'âge pour évaluer le risque de développer un ictère néonatal pathologique. Selon la valeur de bilirubine sérique mesurée, plusieurs zones de risque sont définies. Les nouveau-nés dans la zone à haut risque doivent être évalués pour un ictère pathologique !",
+        "data": "grilles_generees/html/images/AMBOSS-37-img2-Bhutani nomogram.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Métabolisme de la bilirubine",
+        "description": "(1) L'hémoglobine est décomposée en hème et globine dans la rate et, dans une moindre mesure, dans la moelle osseuse.\n(2) Les macrophages décomposent l'hème en bilirubine non conjuguée. Liée à l'albumine, la bilirubine non conjuguée est transportée dans le sang et captée par le foie.\n(3) La bilirubine est conjuguée dans le foie et sécrétée dans la bile.\n(4) Pour être sécrétée, la bilirubine conjuguée entre dans le sang pour atteindre les hépatocytes ayant une connexion directe avec les canalicules biliaires. À ce stade, la bilirubine conjuguée est détectable dans le sang.\n(5) La bilirubine atteint l'intestin via la bile. Les bactéries intestinales convertissent la bilirubine en urobilinogène.\n(6) La majeure partie de l'urobilinogène est convertie en stercobilinogène puis en stercobiline. La stercobiline est excrétée dans les selles, leur donnant leur couleur brune caractéristique.\n(7) Une plus petite portion d'urobilinogène est réabsorbée et suit deux voies différentes :\n→ (8) La majeure partie subit une recirculation entéro-hépatique, tandis que le reste est filtré par les reins.\n→ Ou : (9) Le reste est filtré par les reins. Dans l'urine, l'urobilinogène est oxydé en urobiline, responsable de la couleur jaune caractéristique.",
+        "data": "grilles_generees/html/images/AMBOSS-37-img3-Bilirubin metabolism.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (cas téléphonique)",
+      "nom": "Mère d'Emma Miller",
+      "age": "Mère d'un nouveau-né de 4 jours",
+      "contexte": "Consultation téléphonique pour jaunisse néonatale",
+      "motifConsultation": {
+        "plaintePrincipale": "Je ne suis pas tout à fait sûre, mais la peau d'Emma me semble jaune. Je suis vraiment inquiète.",
+        "autreChose": "C'est mon premier enfant et j'ai des difficultés avec l'allaitement."
+      },
+      "consignes": [
+        "Soyez très inquiète de la santé de votre fille.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., photothérapie) et demandez des clarifications si l'examinateur les utilise.",
+        "C'est un cas téléphonique - vous n'êtes pas physiquement présente.",
+        "Défi : Demandez 'Est-ce que c'est ma faute ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Peau jaune remarquée ce matin",
+          "Surtout visible au visage",
+          "Extension au reste du corps",
+          "Pas présent à la sortie hôpital (2 jours)",
+          "Enfant agitée la nuit dernière",
+          "Fatigue importante ce matin"
+        ],
+        "symptomesAssocies": [
+          "Difficultés allaitement majeures",
+          "Seulement 6 tétées/24h",
+          "Durée 10 minutes par tétée",
+          "Pas de selle depuis hier",
+          "5 couches mouillées/24h",
+          "Sommeil perturbé",
+          "Problème avec vitamine D"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Anxiété maternelle palpable",
+          "Culpabilité sur allaitement",
+          "Premier enfant - manque expérience",
+          "Questions sur normalité",
+          "Inquiétude sur responsabilité (défi)",
+          "Demander clarifications termes médicaux"
+        ],
+        "informationsDisponibles": [
+          "Groupe sanguin mère : O+",
+          "Groupes père/enfant inconnus",
+          "Poids naissance : 3175g",
+          "Poids sortie : 3016g (perte 5%)",
+          "Naissance à 39SA+5j",
+          "Accouchement vaginal normal",
+          "Dépistage néonatal normal"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Nouveau-née J4 avec ictère + difficultés allaitement = ictère d'allaitement jusqu'à preuve contraire. Red flags absents : pas d'ictère < 24h, selles brunes (pas décolorées), nouveau-née globalement bien. Facteurs favorisants : allaitement insuffisant (6/24h vs 8-12), perte poids 5%, constipation relative. Risque incompatibilité ABO (mère O+) mais timing rend moins probable. Convocation URGENTE pour examen + bilirubine. Nomogramme Bhutani détermine photothérapie. Support lactation CRUCIAL.",
+      "rolesInterventions": [
+        "Ne peut pas fournir de findings d'examen physique",
+        "Confirme l'importance de l'examen urgent",
+        "Si demandé sur bilirubine : varie selon nomogramme",
+        "Insiste sur consultation lactation même jour",
+        "Rappelle que co-sleeping augmente risque MSN",
+        "Souligne normalité perte poids < 10%"
+      ],
+      "pointsCles": [
+        "Ictère J4 = pic physiologique MAIS évaluer",
+        "Allaitement suboptimal = facteur principal ici",
+        "Nomogramme Bhutani = outil décisionnel clé",
+        "Photothérapie efficace si indiquée",
+        "Support allaitement = prévention récidive",
+        "Jamais banaliser inquiétude parentale"
+      ],
+      "pieges": [
+        "Rassurer sans voir l'enfant (toujours examiner)",
+        "Oublier incompatibilité ABO (mère O+)",
+        "Négliger difficultés allaitement",
+        "Retarder consultation (risque kernictère)",
+        "Conseiller exposition solaire (dangereux)",
+        "Omettre conseil MSN (co-sleeping mentionné)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Ictère d'allaitement (breastfeeding jaundice)"
+        },
+        {
+          "titre": "Ictère néonatal - Épidémiologie",
+          "contenu": "Problème fréquent en période néonatale :",
+          "points": [
+            "Incidence : 60% nouveau-nés à terme, 80% prématurés",
+            "Visible si bilirubine > 85 μmol/L (5 mg/dL)",
+            "Progression céphalo-caudale (Kramer)",
+            "Pic physiologique : J3-5 à terme, J5-7 prématuré",
+            "Facteurs risque : prématurité, allaitement, origine asiatique",
+            "Kernictère : rare mais dévastateur (1/100 000)"
+          ]
+        },
+        {
+          "titre": "Types d'ictère selon timing",
+          "contenu": "Classification temporelle pour orientation étiologique :",
+          "points": [
+            "< 24h : TOUJOURS pathologique (hémolyse ++)",
+            "J2-J3 : Physiologique possible mais surveiller",
+            "J4-J7 : Pic physiologique, ictère allaitement",
+            "> J14 : Prolongé, rechercher cause (lait maternel, hypothyroïdie)",
+            "Réapparition : Sepsis, déficit G6PD, médicaments",
+            "Cholestase : Selles décolorées = urgence (atrésie biliaire)"
+          ]
+        },
+        {
+          "titre": "Ictère d'allaitement vs au lait maternel",
+          "contenu": "Deux entités distinctes à différencier :",
+          "points": [
+            "Ictère d'allaitement (breastfeeding) :",
+            "- Début J2-J4, pic J5-J6",
+            "- Apport insuffisant → ↓ élimination méconium",
+            "- Cycle entéro-hépatique augmenté",
+            "- Traitement : optimiser allaitement",
+            "",
+            "Ictère au lait maternel (breast milk) :",
+            "- Début J4-J7, pic J10-J15",
+            "- Facteurs lait inhibant conjugaison",
+            "- Persiste 3-12 semaines",
+            "- Diagnostic d'exclusion",
+            "- Pas d'arrêt allaitement"
+          ]
+        },
+        {
+          "titre": "Nomogramme de Bhutani",
+          "contenu": "Outil décisionnel pour photothérapie :",
+          "points": [
+            "Courbes percentiles selon âge postnatal (heures)",
+            "Zone à faible risque : < 40e percentile",
+            "Zone intermédiaire : 40e-75e percentile",
+            "Zone intermédiaire haute : 75e-95e percentile",
+            "Zone à haut risque : > 95e percentile",
+            "Ajustement selon facteurs risque (prématurité, hémolyse)"
+          ]
+        },
+        {
+          "titre": "Indications photothérapie",
+          "contenu": "Seuils variables selon facteurs de risque :",
+          "points": [
+            "Nouveau-né à terme sans facteur risque :",
+            "- J1 : > 170 μmol/L",
+            "- J2 : > 260 μmol/L",
+            "- J3 : > 310 μmol/L",
+            "- J4+ : > 340 μmol/L",
+            "",
+            "Facteurs risque nécessitant seuils plus bas :",
+            "- Prématurité (< 37 SA)",
+            "- Hémolyse documentée",
+            "- Déficit G6PD",
+            "- Asphyxie périnatale",
+            "- Sepsis",
+            "- Acidose"
+          ]
+        },
+        {
+          "titre": "Optimisation de l'allaitement",
+          "contenu": "Clé de la prévention et du traitement :",
+          "points": [
+            "Fréquence : 8-12 tétées/24h minimum",
+            "Durée : 10-20 min par sein efficace",
+            "Signes transfert lait : déglutition audible",
+            "Position : ventre contre ventre, menton au sein",
+            "Prise sein : bouche grande, lèvres éversées",
+            "Alternance seins : stimulation production",
+            "Expression manuelle : après tétées si besoin",
+            "Supplémentation : uniquement si perte > 10%"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Photothérapie conventionnelle : 30 μW/cm²/nm",
+        "Photothérapie intensive : 45-60 μW/cm²/nm",
+        "Distance lampe-bébé : 30-50 cm optimal",
+        "Protection oculaire : masque opaque obligatoire",
+        "Rotation bébé : toutes les 2-3h",
+        "Hydratation : maintenir allaitement, pas d'eau",
+        "Arrêt : 2 valeurs < seuil à 12-24h intervalle",
+        "Rebond : recontrôle 12-24h après arrêt"
+      ],
+      "examensComplementaires": [
+        "Bilirubine totale et conjuguée : différencier types",
+        "Transcutanée : screening non invasif, corrélation bonne",
+        "Groupe sanguin mère et enfant + Coombs : si suspicion hémolyse",
+        "NFS + réticulocytes : anémie, hémolyse",
+        "CRP : si suspicion infection",
+        "G6PD : si origine méditerranéenne/africaine/asiatique",
+        "TSH : si ictère prolongé > 2 semaines",
+        "Échographie abdominale : si selles décolorées",
+        "Test de Coombs : positif dans incompatibilités"
+      ]
+    },
+    "resume": {
+      "titre": "🍼 Ictère néonatal (ictère d’allaitement) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Coloration jaune de la peau et des conjonctives, survenue en général entre J2 et J5",
+                "Nouveau-né en bon état général, tonique, sans fièvre ni signe de sepsis",
+                "Allaitement exclusif avec prise alimentaire parfois insuffisante",
+                "Nombre de selles faible (< 4 par jour)",
+                "Pas de troubles digestifs majeurs"
+              ]
+            },
+            {
+              "titre": "Contexte",
+              "points": [
+                "Nourrisson né à terme, sans complications à la naissance",
+                "Pas de signes cliniques évocateurs d’incompatibilité fœto-maternelle",
+                "Pas de fièvre ni de léthargie",
+                "Pas d’antécédent de maladie hépatique familiale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Points à évaluer",
+              "points": [
+                "Évaluation de la coloration cutanée (zones céphalocaudales)",
+                "Recherche d’un ictère dès la 1ère journée de vie (signe de gravité)",
+                "État général : tonus, réflexe de succion, éveil",
+                "Poids, perte pondérale (>10 % = inquiétant)",
+                "Nombre et aspect des selles et urines"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens initiaux",
+              "points": [
+                "Dosage de la bilirubinémie totale ± fractionnée (libre vs conjuguée)",
+                "Courbe percentile selon âge postnatal",
+                "Transcutané ou sanguin selon niveau et évolution",
+                "Bilan à étendre si ictère < 24h, persistant > 10 jours, ou signes de gravité"
+              ]
+            },
+            {
+              "titre": "En cas de doute",
+              "points": [
+                "Groupe sanguin mère/enfant + test de Coombs",
+                "Hémogramme, réticulocytes",
+                "TSH et T4 si ictère prolongé",
+                "G6PD selon terrain ethnique",
+                "Évaluation hépatique si ictère à bilirubine conjuguée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures de base",
+              "points": [
+                "Augmenter la fréquence des tétées (≥ 8 fois/24h)",
+                "Vérifier efficacité de la succion et position",
+                "Soutien à l’allaitement (consultation lactation)",
+                "Réhydratation orale si nécessaire"
+              ]
+            },
+            {
+              "titre": "Traitements spécifiques",
+              "points": [
+                "Photothérapie si seuil dépassé selon courbes de l’AAP",
+                "Interruption transitoire de l’allaitement rarement nécessaire",
+                "Surveillance rapprochée du taux de bilirubine et de l’état général"
+              ]
+            },
+            {
+              "titre": "Suivi",
+              "points": [
+                "Contrôle clinique régulier jusqu’à normalisation",
+                "Surveillance du poids, de la croissance et de l’alimentation",
+                "Informer les parents sur la nature bénigne de l’ictère d’allaitement"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Ictère débutant entre J2–J5, bébé allaité exclusif en bon état général",
+            "Insuffisance d’apports = principale cause (↑ cycle entéro-hépatique)",
+            "Surveillance clinique + dosage de bilirubine selon âge",
+            "Favoriser allaitement (pas l’interrompre), corriger les apports",
+            "Photothérapie uniquement si seuil dépassé selon âge et facteurs de risque"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Ictère néonatal (Emma, 4 jours)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte, motif",
+            "Description coloration cutanée (début, progression, localisation)",
+            "Recherche red flags : ictère < 24h, fièvre, léthargie, selles décolorées, perte poids >10%",
+            "Allaitement : nombre et efficacité des tétées, couches mouillées/sales",
+            "Antécédents : naissance, groupe sanguin mère/père/enfant",
+            "Examen clinique : extension céphalocaudale (Kramer), tonus, éveil, hydratation",
+            "Résumé + hypothèse principale + DD (ictère d’allaitement vs physiologique vs hémolytique vs pathologique)",
+            "Examens complémentaires → bilirubine sérique/transcutanée, NFS, CRP, Coombs",
+            "Prise en charge → optimisation allaitement, photothérapie si seuil, hospitalisation si sévère"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : JAUNE",
+            "elements": [
+              "J = Jours d’apparition (<24h = grave)",
+              "A = Allaitement efficace ?",
+              "U = Urines / selles (décolorées ?)",
+              "N = Nomogramme Bhutani",
+              "E = État général (tonus, éveil, hydratation)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit d’Emma Miller, une petite fille de 4 jours, amenée par sa mère car elle a remarqué ce matin que la peau de son bébé semblait jaune, surtout au niveau du visage, et qu’une coloration jaunâtre apparaissait aussi sur le reste du corps.\n\nSa mère explique que la grossesse et l’accouchement se sont déroulés normalement, à 39 semaines et 5 jours, par voie basse. Emma pesait 3 175 g à la naissance, et 3 016 g à la sortie de la maternité deux jours plus tard, soit une perte de poids de 5 %. Le dépistage néonatal était normal.\n\nDepuis la sortie, elle est nourrie exclusivement au sein, avec environ 6 tétées par jour, d’une durée moyenne de 10 minutes chacune. Sa mère rapporte des difficultés d’allaitement : l’enfant ne s’accroche pas toujours bien et semble parfois insatisfaite. Emma a eu 5 couches mouillées dans les dernières 24 heures, mais pas de selles depuis hier. Les selles précédentes étaient brunes. Elle a été agitée la nuit dernière, probablement par faim, et semblait fatiguée ce matin. Pas de fièvre, pas de vomissements, pas de convulsions. Pas d’éruption cutanée, ni de difficultés respiratoires.\n\nConcernant les antécédents familiaux, la mère est O positif, le groupe sanguin du père et de l’enfant n’est pas connu. Pas d’antécédent de maladie hépatique. Aucun contact infectieux. Vaccinations et vitamine D ont été débutées comme recommandé.\n\nÀ l’examen téléphonique, la mère décrit un enfant qui dort actuellement, mais qui reste tonique et réactif lors des tétées. Elle n’a pas remarqué de déshydratation ni d’anomalie majeure.\n\nEn résumé, il s’agit d’une petite fille de 4 jours, allaitée exclusivement, qui présente un ictère cutanéo-muqueux apparu après la sortie, associé à une prise alimentaire insuffisante et à une diminution du transit intestinal. Mon hypothèse principale est un ictère d’allaitement, favorisé par un apport lacté insuffisant. Les diagnostics différentiels incluent un ictère physiologique, une incompatibilité ABO, plus rarement une infection néonatale, une hypothyroïdie congénitale ou une atrésie biliaire.\n\nComme examens complémentaires, je demanderais un dosage de bilirubine transcutanée ou sérique et son positionnement sur le nomogramme de Bhutani, une FSC avec réticulocytes, une CRP, un groupage sanguin et un test de Coombs. \n\nEn termes de prise en charge, je proposerais une convocation en urgence pour examen clinique et dosage de bilirubine. L’optimisation de l’allaitement est cruciale avec au moins 8 à 12 tétées par jour, un accompagnement par une consultante en lactation, et une pesée régulière. Si la bilirubine est au-dessus du seuil recommandé, une photothérapie serait indiquée. Enfin, j’insisterais sur la surveillance clinique rapprochée et sur le suivi du poids et des selles."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Emma Miller, nouveau-née de 4 jours, présente un ictère cutané apparu ce matin.\n\nB (Background) : Née à terme, accouchement normal, allaitement exclusif mais insuffisant (6 tétées/24h), perte de poids 5 %, pas de selles depuis 24h. Pas de fièvre, pas de signes infectieux.\n\nA (Assessment) : Suspicion d’ictère d’allaitement. DD : ictère physiologique, incompatibilité ABO, sepsis néonatal, atrésie biliaire.\n\nR (Recommendation) : Convocation immédiate pour examen, dosage bilirubine, FSC, Coombs. Optimisation allaitement. Photothérapie si seuil dépassé."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Types d’ictère néonatal à connaître",
+              "points": [
+                "Ictère physiologique → J3-J5, bénin",
+                "Ictère d’allaitement → J2-J4, apport lacté insuffisant",
+                "Ictère au lait maternel → J7-J15, persistant mais bénin",
+                "Ictère pathologique → <24h, persistant >10j, bilirubine conjuguée, ou signes associés"
+              ]
+            },
+            {
+              "titre": "👉 Mnémo RED FLAG : 'FEVER-YELLOW'",
+              "points": [
+                "F = Fièvre",
+                "E = Early onset < 24h",
+                "V = Vomissements",
+                "E = État général altéré (léthargie, hypotonie)",
+                "R = Recoloration selles (décolorées = atrésie biliaire)",
+                "YELLOW = ictère prolongé > 10 jours"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Ictère d’allaitement",
+                  "reponse": {
+                    "pour": [
+                      "Âge 4 jours (début typique)",
+                      "Allaitement insuffisant (6 tétées/24h, faible durée)",
+                      "Perte poids 5 %",
+                      "Transit ralenti (pas de selles depuis 24h)",
+                      "Nourrisson par ailleurs en bon état général"
+                    ],
+                    "contre": [
+                      "Pas de preuve directe sans dosage bilirubine"
+                    ]
+                  }
+                },
+                {
+                  "question": "Ictère physiologique",
+                  "reponse": {
+                    "pour": [
+                      "Apparition J3-J5",
+                      "Nouveau-né à terme en bonne santé"
+                    ],
+                    "contre": [
+                      "Facteurs d’allaitement insuffisant orientent plus vers ictère d’allaitement"
+                    ]
+                  }
+                },
+                {
+                  "question": "Incompatibilité ABO",
+                  "reponse": {
+                    "pour": [
+                      "Mère O+",
+                      "Groupes père et enfant inconnus"
+                    ],
+                    "contre": [
+                      "Ictère apparaissant habituellement <24h",
+                      "Pas d’anémie ou hémolyse cliniquement apparente"
+                    ]
+                  }
+                },
+                {
+                  "question": "Sepsis néonatal",
+                  "reponse": {
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de léthargie",
+                      "Pas de vomissements",
+                      "Bon état général"
+                    ]
+                  }
+                },
+                {
+                  "question": "Atrésie biliaire",
+                  "reponse": {
+                    "contre": [
+                      "Selles brunes présentes",
+                      "Ictère apparu tôt"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Dosage bilirubine totale et conjuguée",
+                    "Positionnement sur nomogramme Bhutani",
+                    "NFS avec réticulocytes",
+                    "CRP",
+                    "Groupage sanguin mère/enfant et test de Coombs"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Ictère néonatal probablement lié à un ictère d’allaitement"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Optimisation allaitement (≥8-12 tétées/24h, consultation lactation)",
+                      "Surveillance poids et diurèse",
+                      "Photothérapie si bilirubine au-dessus du seuil",
+                      "Exsanguino-transfusion si formes sévères"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle clinique et bilirubine quotidien jusqu’à amélioration",
+                    "Surveillance du poids et de la croissance",
+                    "Éducation parentale : ictère fréquent mais à surveiller",
+                    "Informer sur signes de gravité (léthargie, cris aigus, convulsions)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

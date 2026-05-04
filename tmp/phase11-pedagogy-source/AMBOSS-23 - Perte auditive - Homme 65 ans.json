@@ -1,0 +1,477 @@
+{
+  "title": "AMBOSS-23 - Perte auditive - Homme 65 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Marvin Baker, homme de 65 ans, consultant pour perte auditive",
+    "vitals": {
+      "temperature": "36.5°C",
+      "ta": "120/80 mmHg",
+      "fc": "62 bpm",
+      "fr": "15/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je n'entends plus bien"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la perte auditive",
+          "binaryOnly": false,
+          "details": [
+            "Oreilles affectées [Je pense que c'est pareil dans les deux oreilles]",
+            "Tous les sons/sons spécifiques [Hmm, je pense que j'entends un peu moins les tons aigus. J'ai vraiment du mal à comprendre ma petite-fille parfois]",
+            "Début [Il y a environ 5 ans]",
+            "Constant/intermittent [C'est là tout le temps]",
+            "Événements précipitants [Aucun]",
+            "Progression [C'est resté presque pareil pendant un moment mais ça s'est aggravé, surtout cette dernière année]",
+            "Épisodes antérieurs [Jamais]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Quand j'assiste à des réunions de famille et que beaucoup de gens parlent, c'est difficile pour moi de suivre les conversations]",
+            "Symptômes associés [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Céphalées [Non]",
+            "Nausées/vomissements [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Infections récentes [Aucune]",
+            "Vertiges [Non]",
+            "Exposition récente à un bruit fort soudain [Pas que je me souvienne]",
+            "Acouphènes [Non]",
+            "Douleur auriculaire [Non]",
+            "Écoulement auriculaire [Non]",
+            "Faiblesse [Non]",
+            "Engourdissement [Non]",
+            "Picotements [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "details": [
+            "Antécédents médicaux [J'ai été traité pour un cancer de la vessie il y a 3 ans et j'ai eu de la chimiothérapie. Et j'ai des douleurs chroniques à l'épaule]",
+            "Type de chimiothérapie [C'était quelque chose avec 'platine' dans son nom, peut-être 'cisplatine' ?]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "details": [
+            "Allergies [Pénicilline]",
+            "Description de la réaction allergique [Quand j'en ai pris une fois, je me suis senti très nauséeux et essoufflé]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'aspirine à cause de mes douleurs chroniques à l'épaule depuis 6 mois. J'en prends tous les jours, souvent plus d'un comprimé de 500 mg"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [À cause de mon cancer de la vessie, j'ai dû aller à l'hôpital plusieurs fois]",
+            "Antécédents chirurgicaux [On m'a enlevé la vessie, la prostate et certains ganglions lymphatiques à cause du cancer]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est mort d'une crise cardiaque quand il avait 72 ans"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je suis presque à la retraite. Je travaille dans une aciérie. Quand j'étais plus jeune je travaillais à l'usine, mais de nos jours je fais juste de la paperasse dans un bureau. Je suis trop vieux pour un travail plus lourd]",
+            "Niveau sonore au travail, protection auditive [Pas au bureau. Mais dans l'usine c'était bruyant parfois. La plupart du temps j'utilisais mes écouteurs, mais parfois j'oubliais de les mettre]",
+            "Domicile [Je vis avec ma femme. Notre fils a déménagé il y a des années]",
+            "Alcool [Je bois souvent une bière après le travail, mais pas plus d'une]",
+            "Drogues récréatives [Jamais !]",
+            "Tabac [Oui, je fume. Je fume un paquet par jour depuis 42 ans]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Palpation de la tête",
+            "Inspection des oreilles",
+            "Palpation des oreilles",
+            "Otoscopie",
+            "Tests de Rinne et Weber"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique",
+          "binaryOnly": true,
+          "details": [
+            "Examen ciblé des nerfs crâniens",
+            "Examen ciblé de l'audition [Diminution de l'audition bilatérale]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes de surdité neurosensorielle bilatérale",
+                "items": [
+                  {
+                    "text": "Presbyacousie",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans (65 ans)\n\t□ Perte auditive bilatérale progressive\n\t□ Atteinte prédominante des hautes fréquences\n\t□ Difficulté en environnement bruyant (réunions familiales)\n\t□ Difficulté à comprendre voix aiguës (petite-fille)\n\t□ Examen physique normal\n\t□ Tabagisme (facteur de risque)\n\t□ Évolution graduelle sur 5 ans",
+                    "test": "→ Audiométrie tonale et vocale"
+                  },
+                  {
+                    "text": "Surdité induite par le bruit",
+                    "cause": "Arguments POUR:\n\t□ Exposition professionnelle chronique (aciérie)\n\t□ Protection auditive inconstante\n\t□ Bilatérale, neurosensorielle\n\t□ Atteinte hautes fréquences\n\t□ Difficulté en milieu bruyant\nArguments CONTRE:\n\t□ Pas d'acouphènes (fréquents dans ce type)\n\t□ Début après arrêt exposition usine",
+                    "test": "→ Audiométrie : encoche à 4000 Hz typique"
+                  },
+                  {
+                    "text": "Surdité ototoxique médicamenteuse",
+                    "cause": "Arguments POUR:\n\t□ Cisplatine il y a 3 ans (très ototoxique)\n\t□ Aspirine forte dose quotidienne × 6 mois\n\t□ Bilatérale, neurosensorielle\n\t□ Atteinte hautes fréquences\nArguments CONTRE:\n\t□ Début il y a 5 ans (avant médicaments)\n\t□ Pas d'acouphènes ni vertiges",
+                    "test": "→ Audiométrie, arrêt aspirine (réversible)"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Maladie de Ménière",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de vertiges\n\t□ Pas d'acouphènes\n\t□ Bilatérale",
+                    "test": "→ Audiométrie : fluctuante, basses fréquences"
+                  },
+                  {
+                    "text": "Neurinome acoustique",
+                    "cause": "Arguments CONTRE:\n\t□ Bilatéral (neurinome unilatéral sauf NF2)",
+                    "test": "→ IRM avec gadolinium si asymétrie"
+                  },
+                  {
+                    "text": "Otospongiose",
+                    "cause": "Arguments CONTRE:\n\t□ Surdité de transmission\n\t□ Âge début plus jeune",
+                    "test": "→ Tympanométrie, scanner temporal"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Audiométrie [détermine l'étendue de la perte auditive ; aide aussi à différencier la presbyacousie de la perte auditive induite par le bruit]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Conseil pour réduire la prise d'aspirine",
+            "Réaction appropriée au défi : articuler clairement, parler fort",
+            "Éducation sur les aides auditives",
+            "Stratégies de communication"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge de la presbyacousie et prévention",
+                "content": "• Évaluation audiologique complète\n• Audiométrie tonale liminaire\n• Audiométrie vocale dans le silence et le bruit\n• Impédancemétrie\n• Potentiels évoqués auditifs si doute\n• Appareillage auditif\n• Indication si perte 30 dB ou gêne sociale\n• Appareillage bilatéral recommandé\n• Essai 30 jours obligatoire\n• Arrêt aspirine ou réduction dose\n• Protection auditive systématique si bruit\n• Arrêt tabac (ralentit progression)\n• Éviter nouveaux médicaments ototoxiques\n• Stratégies de communication\n• Face à face, bonne lumière\n• Réduire bruit de fond\n• Parler clairement sans crier\n• Lecture labiale\n• Aides techniques (téléphone amplifié)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Difficulté de compréhension",
+          "content": "Faire semblant d'avoir du mal à comprendre l'examinateur sauf s'il parle fort et articule clairement"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "L'examinateur doit s'adapter en parlant plus fort et en articulant clairement, face au patient, avec une bonne lumière sur le visage pour faciliter la lecture labiale. Il doit vérifier régulièrement la compréhension du patient."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Examen et anatomie de surface de la membrane tympanique",
+        "description": "Repères anatomiques du tympan normal pour l'examen otoscopique.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img1-Examination and surface anatomy of the tympanic membrane.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Tests au diapason de Rinne et Weber",
+        "description": "(1) Test de Weber : Un diapason vibrant est placé au centre du crâne. On demande ensuite au patient de quelle oreille le son est entendu le plus fort. Si le son est plus fort dans une oreille, le test de Rinne doit être effectué sur les oreilles droite et gauche. (2) Le diapason vibrant est placé sur le processus mastoïde de l'oreille, qui peut être localisé en palpant derrière le conduit auditif. (3) Si le son s'atténue au point que le patient ne peut plus l'entendre, le diapason est positionné devant la même oreille sans le faire vibrer à nouveau. Dans une audition normale, le patient est capable d'entendre le diapason, car la conduction aérienne est supérieure à la conduction osseuse (le test de Rinne est positif). Les tests de Rinne et Weber peuvent être utilisés pour différencier entre perte auditive de transmission et neurosensorielle.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img2-Rinne and Weber tuning fork tests.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Oreille interne : organes de l'audition et de l'équilibre",
+        "description": "Anatomie de la cochlée et du système vestibulaire.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img3-Inner ear- organs of hearing and balance.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Audiogramme normal",
+        "description": "Seuil auditif dépendant de la fréquence, mesuré par conduction aérienne et osseuse.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img4-Normal audiogram.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Audiogramme dans la presbyacousie",
+        "description": "Seuil auditif dépendant de la fréquence, mesuré par conduction aérienne et osseuse : Dans la presbyacousie, les patients ont du mal à entendre les fréquences plus élevées tant en conduction aérienne qu'osseuse.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img5-Audiogram in presbycusis.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Audiogramme dans la surdité induite par le bruit",
+        "description": "Seuil auditif dépendant de la fréquence, mesuré par conduction aérienne et osseuse. Dans la perte auditive induite par le bruit, l'audition est la plus altérée aux fréquences de 4000 Hz tant en conduction osseuse qu'aérienne.",
+        "data": "grilles_generees/html/images/AMBOSS-23-img6-Audiogram in noise-induced hearing loss.jpg",
+        "id": "img6"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Marvin Baker",
+      "age": "65 ans",
+      "contexte": "Ouvrier métallurgiste proche de la retraite avec perte auditive progressive",
+      "motifConsultation": {
+        "plaintePrincipale": "Je n'entends plus bien.",
+        "autreChose": "C'est difficile de suivre les conversations."
+      },
+      "consignes": [
+        "Quand l'examinateur teste votre audition en chuchotant ou en frottant ses doigts près de votre oreille, faire semblant de ne pas entendre des deux côtés.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: audiométrie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Faire semblant d'avoir du mal à comprendre l'examinateur sauf s'il parle fort et articule clairement."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Perte auditive bilatérale depuis 5 ans",
+          "Aggravation progressive, surtout dernière année",
+          "Difficulté avec tons aigus (voix petite-fille)",
+          "Problème en environnement bruyant",
+          "Constant, pas d'amélioration"
+        ],
+        "symptomesAssocies": [
+          "Pas d'acouphènes",
+          "Pas de vertiges",
+          "Pas de douleur auriculaire",
+          "Pas d'écoulement",
+          "Pas de symptômes neurologiques"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Demander de répéter fréquemment",
+          "Se pencher vers l'examinateur",
+          "Regarder les lèvres (lecture labiale)",
+          "Répondre à côté si question mal comprise",
+          "S'améliorer si examinateur parle fort/articule"
+        ],
+        "durantStatus": [
+          "Ne pas réagir au chuchotement bilatéral",
+          "Ne pas réagir au frottement doigts",
+          "Otoscopie normale",
+          "Weber non latéralisé",
+          "Rinne positif bilatéral (CA > CO)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 65 ans avec presbyacousie typique : perte auditive neurosensorielle bilatérale progressive prédominant sur aigus. Facteurs contributifs : exposition bruit professionnelle, tabagisme. Ototoxicité (cisplatine, aspirine) aggrave probablement. Indication formelle appareillage auditif. Arrêt aspirine peut améliorer partiellement. Pronostic : progression lente inévitable mais appareillage efficace.",
+      "rolesInterventions": [
+        "Audiométrie : Perte neurosensorielle bilatérale 40-60 dB sur 2-8 kHz",
+        "Courbe descendante typique presbyacousie",
+        "Audiométrie vocale : 60% discrimination à 65 dB",
+        "Tympanométrie : Type A normal bilatéral",
+        "Réflexes stapédiens présents mais seuils élevés",
+        "Pas d'indication IRM (symétrique, progressif)"
+      ],
+      "pointsCles": [
+        "Presbyacousie = 1ère cause surdité > 65 ans",
+        "Toujours tester chaque oreille séparément",
+        "Weber non latéralisé + Rinne positif = neurosensoriel bilatéral",
+        "Adaptation communication essentielle (défi)",
+        "Aspirine ototoxique réversible, cisplatine irréversible",
+        "Appareillage bilatéral meilleur que monaural"
+      ],
+      "pieges": [
+        "Ne pas s'adapter au déficit auditif du patient",
+        "Oublier médicaments ototoxiques",
+        "Ne pas conseiller arrêt aspirine",
+        "Confondre transmission et neurosensoriel",
+        "Négliger impact social de la surdité"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Presbyacousie avec contribution de surdité professionnelle et ototoxicité médicamenteuse"
+        },
+        {
+          "titre": "Presbyacousie",
+          "contenu": "Dégénérescence progressive de l'oreille interne liée à l'âge :",
+          "points": [
+            "Prévalence : 30% > 65 ans, 60% > 75 ans",
+            "Pathophysiologie : perte cellules ciliées, strie vasculaire, neurones",
+            "Atteinte symétrique bilatérale progressive",
+            "Débute hautes fréquences (4-8 kHz) → extension",
+            "Discrimination vocale altérée en milieu bruyant",
+            "Facteurs risque : âge, génétique, bruit, tabac, diabète, HTA"
+          ]
+        },
+        {
+          "titre": "Surdité professionnelle",
+          "contenu": "Lésion cochléaire par exposition chronique au bruit :",
+          "points": [
+            "Seuil dangereux : > 85 dB pendant 8h/jour",
+            "Mécanisme : destruction mécanique cellules ciliées",
+            "Encoche caractéristique 4000 Hz à l'audiométrie",
+            "Acouphènes fréquents (50-90% cas)",
+            "Prévention : protection auditive obligatoire",
+            "Maladie professionnelle indemnisable"
+          ]
+        },
+        {
+          "titre": "Ototoxicité médicamenteuse",
+          "contenu": "Atteinte cochléaire et/ou vestibulaire par médicaments :",
+          "points": [
+            "Cisplatine : ototoxicité irréversible dose-dépendante (30-80%)",
+            "Aspirine : ototoxicité réversible à forte dose (> 3g/j)",
+            "Aminosides : irréversible, surveillance nécessaire",
+            "Diurétiques de l'anse : réversible si arrêt précoce",
+            "Mécanisme : stress oxydatif, apoptose cellulaire",
+            "Prévention : monitoring, alternatives si possible"
+          ]
+        },
+        {
+          "titre": "Évaluation audiométrique",
+          "contenu": "Gold standard pour diagnostic et suivi :",
+          "points": [
+            "Audiométrie tonale : seuils par fréquence (125-8000 Hz)",
+            "Audiométrie vocale : discrimination mots dans silence/bruit",
+            "Tympanométrie : intégrité oreille moyenne",
+            "Réflexes stapédiens : voie auditive centrale",
+            "Potentiels évoqués : si doute central/rétrocochléaire",
+            "Otoacoustic emissions : fonction cellules ciliées externes"
+          ]
+        },
+        {
+          "titre": "Tests de Rinne et Weber",
+          "contenu": "Tests au diapason pour orientation diagnostique :",
+          "points": [
+            "Weber : diapason vertex → latéralisation",
+            "- Transmission : latéralise côté atteint",
+            "- Neurosensoriel : latéralise côté sain",
+            "Rinne : compare conduction aérienne (CA) vs osseuse (CO)",
+            "- Normal/neurosensoriel : CA > CO (Rinne +)",
+            "- Transmission : CO > CA (Rinne -)",
+            "Limite : peu sensible pour pertes < 20 dB"
+          ]
+        },
+        {
+          "titre": "Appareillage auditif",
+          "contenu": "Réhabilitation auditive personnalisée :",
+          "points": [
+            "Indication : perte > 30 dB ou gêne sociale significative",
+            "Types : contour oreille, intra-auriculaire, implant",
+            "Technologies : réduction bruit, directionnalité, connectivité",
+            "Appareillage bilatéral : meilleure localisation spatiale",
+            "Période adaptation : 3-6 mois, réglages progressifs",
+            "Remboursement : variable selon pays/assurance"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Arrêt aspirine ou réduction dose minimale efficace",
+        "Protection auditive si exposition bruit > 85 dB",
+        "Appareillage auditif bilatéral si perte > 30 dB",
+        "Réglages progressifs sur 3-6 mois",
+        "Aides techniques : amplificateurs téléphone, alertes visuelles",
+        "Lecture labiale, placement optimal conversation",
+        "Suivi audiométrique annuel",
+        "Éviter nouveaux médicaments ototoxiques"
+      ],
+      "examensComplementaires": [
+        "Audiométrie tonale : courbe type presbyacousie",
+        "Audiométrie vocale : % discrimination selon intensité",
+        "Tympanométrie : éliminer composante transmissionnelle",
+        "Réflexes stapédiens : voies centrales",
+        "Otoscopie : éliminer bouchon cérumen, perforation",
+        "Si asymétrie > 15 dB : IRM IAC avec gadolinium",
+        "Si vertiges associés : VNG, VEMP",
+        "Bilan si ototoxicité : fonction rénale, magnésium"
+      ]
+    }
+  }
+}

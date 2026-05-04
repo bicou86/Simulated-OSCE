@@ -1,0 +1,381 @@
+{
+  "title": "German-47 - Fatigue",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 22 ans consultant son médecin généraliste pour fatigue"
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Se présente avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Évolution temporelle des symptômes",
+          "patientComment": "Depuis 4 semaines"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes principaux",
+          "details": [
+            "Fatigue [Oui]",
+            "Faiblesse [Oui]",
+            "Troubles de concentration [Oui]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Variation diurne des symptômes",
+          "details": [
+            "Moment d'amélioration/aggravation",
+            "Présence d'une baisse matinale"
+          ],
+          "patientComment": "Le matin c'est le pire"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs déclenchants identifiés",
+          "patientComment": "Était souvent malade en hiver, sa copine l'a quitté, pas de travail"
+        },
+        {
+          "id": "a6",
+          "text": "Impact fonctionnel sur la vie quotidienne",
+          "patientComment": "Pas de travail donc ça va... Pas de force pour chercher"
+        },
+        {
+          "id": "a7",
+          "text": "Qualité du sommeil",
+          "patientComment": "Mauvais"
+        },
+        {
+          "id": "a8",
+          "text": "Appétit et alimentation",
+          "patientComment": "Peu - végétarien"
+        },
+        {
+          "id": "a9",
+          "text": "Autres symptômes ou maladie récente",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Dépistage de dépression",
+          "details": [
+            "Humeur dépressive [À explorer]",
+            "Anhédonie [À explorer]",
+            "Épisodes dépressifs antérieurs [À explorer]",
+            "Troubles du sommeil [Déjà évoqués]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Dépistage d'hypothyroïdie",
+          "details": [
+            "État de la peau [À vérifier]",
+            "État des cheveux [À vérifier]",
+            "Troubles gastro-intestinaux [À explorer]",
+            "Transpiration/intolérance au froid [À explorer]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Dépistage d'anémie",
+          "details": [
+            "Dyspnée [À vérifier]",
+            "Palpitations [À vérifier]",
+            "Impact du végétarisme [Déjà noté]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Dépistage de pathologie maligne",
+          "details": [
+            "Sueurs nocturnes [À vérifier]",
+            "Fièvre [À vérifier]",
+            "Perte de poids [À quantifier]",
+            "Adénopathies [À examiner]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Dépistage de diabète",
+          "details": [
+            "Polydipsie [À vérifier]",
+            "Polyurie [À vérifier]",
+            "Infections récurrentes [À explorer]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Médicaments actuels",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux",
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a17",
+          "text": "Allergies",
+          "patientComment": "Abeilles"
+        },
+        {
+          "id": "a18",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [Fume 1 paquet/jour]",
+            "Alcool [Rarement]",
+            "Drogues [À explorer]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation structurée du risque suicidaire",
+          "details": [
+            "Pensées de ne plus vouloir vivre ainsi [Oui]",
+            "Désir de changement [Oui]",
+            "Pensées de mort [Oui]",
+            "Idées suicidaires actives [Oui]",
+            "Plans concrets [Non, pas concrètement]",
+            "Méthode envisagée [Train ou arme]",
+            "Tentatives antérieures [Une fois bu 2 bouteilles de tequila]",
+            "Antécédents familiaux de suicide [Père s'est suicidé il y a 4 ans]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Symptômes psychiatriques associés",
+          "details": [
+            "Anxiété [Oui, peu claire]",
+            "Troubles obsessionnels-compulsifs [Non]",
+            "Troubles de la pensée [Non]",
+            "Idées délirantes [Non]",
+            "Hallucinations [Non]",
+            "Troubles du moi [Non]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Antécédents familiaux psychiatriques",
+          "patientComment": "Père décédé par suicide, mère actuellement en clinique pour burnout"
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse sociale et réseau de soutien",
+          "details": [
+            "Soutien social [Pas d'amis]",
+            "Situation de logement [Seul, 2 chats, mère absente actuellement]",
+            "Situation professionnelle [Sans emploi]"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse psychiatrique ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État mental et présentation",
+          "details": [
+            "Contact visuel",
+            "Hygiène et tenue vestimentaire",
+            "Attitude générale",
+            "Collaboration"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Humeur et affect",
+          "details": [
+            "Humeur subjective",
+            "Affect observé",
+            "Congruence humeur-affect"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Discours et pensée",
+          "details": [
+            "Débit et quantité",
+            "Organisation de la pensée",
+            "Contenu (idées suicidaires, délirantes)"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Perceptions",
+          "details": [
+            "Hallucinations",
+            "Illusions",
+            "Déréalisation/dépersonnalisation"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Fonctions cognitives",
+          "details": [
+            "Orientation temporo-spatiale",
+            "Attention et concentration",
+            "Mémoire"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Jugement et insight",
+          "details": [
+            "Conscience du trouble",
+            "Capacité de jugement"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen physique de base",
+          "details": [
+            "Signes vitaux",
+            "Examen neurologique sommaire",
+            "Recherche de signes d'automutilation"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen psychiatrique et physique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Épisode dépressif majeur"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes organiques",
+                "items": [
+                  {
+                    "text": "Hypothyroïdie : Fatigue, ralentissement psychomoteur, prise de poids, constipation",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  },
+                  {
+                    "text": "Anémie : Fatigue, pâleur, dyspnée d'effort, régime végétarien",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, ferritine, B12, folates"
+                  }
+                ]
+              },
+              {
+                "name": "Causes psychiatriques",
+                "items": [
+                  {
+                    "text": "Trouble de l'adaptation : Facteurs de stress identifiés",
+                    "cause": "Arguments POUR:\n\t□ rupture, chômage, durée < 6 mois",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Trouble du sommeil primaire : Insomnie isolée sans autres symptômes dépressifs",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "NFS [Recherche anémie]",
+            "TSH [Dépistage hypothyroïdie]",
+            "Bilan métabolique de base"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Évaluation de la sévérité et du risque",
+          "details": [
+            "Risque suicidaire élevé (idées actives, antécédents familiaux)",
+            "Isolement social important",
+            "Facteurs de protection limités"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Psychothérapie",
+                "content": "• Thérapie cognitivo-comportementale : Traitement de première ligne, hebdomadaire\n• Thérapie de soutien : En attendant la mise en place d'une TCC"
+              },
+              {
+                "title": "Pharmacothérapie",
+                "content": "• Antidépresseurs (ISRS) : Sertraline ou escitalopram en première intention × Minimum 6-9 mois après rémission\n• Anxiolytiques si nécessaire : Benzodiazépines (ex: alprazolam) à court terme uniquement × Maximum 2-4 semaines"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Plan de sécurité et suivi",
+          "details": [
+            "Contrat de non-passage à l'acte",
+            "Numéros d'urgence fournis",
+            "Prochain rendez-vous fixé dans 3-7 jours",
+            "Implication d'un proche si possible"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "Risque suicidaire imminent",
+            "Absence de soutien social",
+            "Incapacité à garantir sa sécurité"
+          ],
+          "patientComment": "Hospitalisation d'office (FU) si danger aigu"
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge psychiatrique cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

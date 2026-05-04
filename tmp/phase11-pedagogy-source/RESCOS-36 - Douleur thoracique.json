@@ -1,0 +1,801 @@
+{
+  "title": "RESCOS-36 - Douleur thoracique",
+  "category": "RESCOS",
+  "subcategory": "Cardiologie - Pathologie coronarienne",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 45 ans, cadre dirigeant, consultant pour douleur thoracique à l'effort",
+    "vitals": {
+      "ta": "138/85 mmHg",
+      "fc": "78 bpm",
+      "fr": "16/min",
+      "temperature": "36.5°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Douleur dans la poitrine quand je fais des efforts"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur thoracique",
+          "details": [
+            "Localisation rétrosternale [au milieu de la poitrine]",
+            "Type constrictif [serrement, étau]",
+            "Irradiation [mâchoire et bras gauche]",
+            "Début à l'effort [marche rapide, montée d'escaliers]",
+            "Durée [5-10 minutes]",
+            "Cède au repos [en 2-3 minutes]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Circonstances déclenchantes",
+          "details": [
+            "Effort physique [marche rapide, 2 étages]",
+            "Stress émotionnel [réunions importantes]",
+            "Froid [aggravation en hiver]",
+            "Repas copieux [parfois]",
+            "Jamais au repos",
+            "Pas la nuit"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution dans le temps",
+          "details": [
+            "Début [il y a 6 mois]",
+            "Fréquence croissante [2-3 fois par semaine]",
+            "Seuil d'effort diminué [avant 4 étages, maintenant 2]",
+            "Caractéristiques stables",
+            "Pas de douleur de repos"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Classification CCS de l'angor",
+          "details": [
+            "Classe I: Activités quotidiennes normales",
+            "Classe II: Limitation légère [patient actuel]",
+            "Classe III: Limitation marquée",
+            "Classe IV: Angor au moindre effort ou repos"
+          ],
+          "scoringRule": "Patient en classe II CCS"
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Tabagisme [20 cigarettes/jour depuis 25 ans]",
+            "Stress professionnel [cadre dirigeant]",
+            "Sédentarité [pas de sport]",
+            "Surpoids [IMC 27]",
+            "Antécédents familiaux [père IDM à 52 ans]",
+            "Dyslipidémie [non traitée]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes associés",
+          "details": [
+            "Dyspnée d'effort [légère]",
+            "Palpitations [occasionnelles à l'effort]",
+            "Fatigue [depuis quelques mois]",
+            "Pas de syncope",
+            "Pas d'œdèmes",
+            "Pas de claudication"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents et traitements",
+          "details": [
+            "Pas d'antécédents cardiovasculaires",
+            "Pas de diabète connu",
+            "Cholestérol élevé [dernière mesure il y a 2 ans]",
+            "Pas de traitement régulier",
+            "Automédication aspirine [parfois]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "details": [
+            "TA 138/85 mmHg",
+            "FC 78 bpm, régulier",
+            "FR 16/min",
+            "SpO2 98% en air ambiant",
+            "Température 36.5°C",
+            "IMC 27 kg/m²"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection générale",
+          "details": [
+            "Patient en bon état général",
+            "Pas de détresse respiratoire",
+            "Pas de cyanose",
+            "Pas de xanthélasmas",
+            "Arc cornéen [présent]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Bruits du cœur réguliers",
+            "Pas de souffle audible",
+            "Pas de galop",
+            "Pas de frottement péricardique",
+            "B2 normal"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation pulmonaire",
+          "details": [
+            "Murmure vésiculaire normal",
+            "Pas de râles",
+            "Pas de sibilants",
+            "Symétrique bilatéralement"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation des pouls périphériques",
+          "details": [
+            "Pouls carotidiens symétriques [sans souffle]",
+            "Pouls fémoraux présents",
+            "Pouls pédieux présents",
+            "Pouls tibiaux postérieurs présents",
+            "Pas de souffle abdominal"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes d'insuffisance cardiaque",
+          "details": [
+            "Pas de turgescence jugulaire",
+            "Pas de reflux hépato-jugulaire",
+            "Pas d'hépatomégalie",
+            "Pas d'œdèmes des membres inférieurs",
+            "Pas d'ascite"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques à considérer",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Angor stable d'effort (maladie coronarienne)",
+                    "cause": "Arguments POUR:\n\t□ Douleur thoracique typique d'effort\n\t□ Caractère constrictif rétrosternal\n\t□ Irradiation mâchoire et bras gauche\n\t□ Cède rapidement au repos\n\t□ Multiples facteurs de risque CV\n\t□ Âge et sexe masculin",
+                    "test": "→ ECG de repos, test d'effort, coronarographie si positif"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "Reflux gastro-œsophagien",
+                    "cause": "Arguments POUR:\n\t□ Après repas copieux parfois\nArguments CONTRE:\n\t□ Lien net avec l'effort\n\t□ Irradiation typique\n\t□ Durée courte",
+                    "test": "→ IPP test thérapeutique, fibroscopie"
+                  },
+                  {
+                    "text": "Douleur pariétale (syndrome de Tietze)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de reproduction à la palpation\n\t□ Caractère d'effort\n\t□ Irradiation",
+                    "test": "→ Examen clinique, radiographie thoracique"
+                  },
+                  {
+                    "text": "Spasme coronarien (angor de Prinzmetal)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de douleur de repos\n\t□ Pas de douleur nocturne\n\t□ Lien constant avec l'effort",
+                    "test": "→ Holter ECG, test de provocation"
+                  },
+                  {
+                    "text": "Anxiété/trouble panique",
+                    "cause": "Arguments CONTRE:\n\t□ Caractéristiques très typiques\n\t□ Durée et résolution prévisibles\n\t□ Facteurs de risque CV",
+                    "test": "→ Évaluation psychologique après exclusion organique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Stratification du risque cardiovasculaire",
+          "details": [
+            "Score de risque SCORE2 ou Framingham",
+            "Évaluation du risque à 10 ans",
+            "Patient à haut risque (> 20%)",
+            "Nécessité d'une prise en charge agressive",
+            "Recherche de lésions d'organes cibles"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "ECG de repos 12 dérivations",
+            "Test d'effort sur tapis ou vélo",
+            "Échocardiographie de repos",
+            "Score calcique coronaire si doute",
+            "Coroscanner si test d'effort non concluant",
+            "Coronarographie si test positif",
+            "Bilan lipidique complet",
+            "Glycémie à jeun, HbA1c",
+            "Créatinine, microalbuminurie"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement médical de l'angor stable",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement anti-angineux",
+                "content": "• Dérivés nitrés sublinguaux à la demande\n• Bêtabloquants en première intention (bisoprolol 5-10mg/j)\n• Inhibiteurs calciques si contre-indication aux BB\n• Association BB + IC si monothérapie insuffisante\n• Ivabradine, ranolazine en 3e ligne"
+              },
+              {
+                "title": "Prévention cardiovasculaire",
+                "content": "• Antiagrégant: aspirine 75-100mg/j\n• Statine de haute intensité (atorvastatine 40-80mg)\n• IEC si HTA, diabète ou dysfonction VG\n• Objectif LDL < 0.55 g/L\n• Objectif TA < 130/80 mmHg"
+              },
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Arrêt impératif du tabac\n• Activité physique régulière (30min/j)\n• Régime méditerranéen\n• Réduction pondérale (objectif IMC < 25)\n• Gestion du stress\n• Réadaptation cardiaque"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Indications de revascularisation",
+          "details": [
+            "Angor réfractaire au traitement médical optimal",
+            "Test d'ischémie fortement positif",
+            "Sténose du tronc commun > 50%",
+            "Sténose tritronculaire avec dysfonction VG",
+            "Sténose IVA proximale > 70%",
+            "Score SYNTAX pour choix PCI vs CABG"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme nécessitant une prise en charge urgente",
+          "redflagsSection": {
+            "title": "Red flags de syndrome coronarien aigu",
+            "items": [
+              {
+                "text": "Angor de novo < 2 mois",
+                "description": "Apparition récente avec caractère d'emblée sévère"
+              },
+              {
+                "text": "Angor crescendo",
+                "description": "Augmentation fréquence, durée ou intensité"
+              },
+              {
+                "text": "Angor de repos",
+                "description": "Survenue spontanée sans facteur déclenchant"
+              },
+              {
+                "text": "Angor prolongé > 20 minutes",
+                "description": "Ne cède pas aux dérivés nitrés"
+              },
+              {
+                "text": "Signes d'insuffisance cardiaque",
+                "description": "Dyspnée, œdèmes, galop"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos symptômes suggèrent fortement une angine de poitrine, c'est-à-dire un manque d'oxygène au cœur lors des efforts, probablement dû à un rétrécissement des artères coronaires. Avec vos facteurs de risque, notamment le tabagisme, il est crucial d'agir rapidement."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que je risque un infarctus?]\n[Dois-je arrêter de travailler?]\n[Faut-il que j'arrête le sport?]\n[Vais-je avoir besoin d'une opération?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Il y a effectivement un risque, c'est pourquoi nous devons faire des examens rapidement et débuter un traitement\nVous pouvez continuer à travailler mais il faut gérer votre stress et éviter les efforts intenses\nL'activité physique adaptée est bénéfique, nous définirons ensemble un programme après les examens\nSelon les résultats des examens, on décidera si un traitement médicamenteux suffit ou s'il faut dilater les artères"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Maladie coronarienne",
+      "nom": "Patient masculin",
+      "age": "45 ans",
+      "profession": "Cadre dirigeant d'entreprise",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal dans la poitrine quand je fais des efforts",
+        "description": "Douleur thoracique d'effort évoluant depuis 6 mois"
+      },
+      "histoireActuelle": {
+        "douleur": [
+          "Commence quand je marche vite ou monte les escaliers",
+          "Serrement au milieu de la poitrine",
+          "Ça monte dans la mâchoire et le bras gauche",
+          "Dure 5-10 minutes",
+          "S'arrête quand je me repose 2-3 minutes",
+          "Jamais au repos ou la nuit"
+        ],
+        "evolution": [
+          "Début il y a 6 mois",
+          "De plus en plus fréquent (2-3 fois par semaine)",
+          "Avant je montais 4 étages, maintenant 2 suffisent",
+          "Pire quand il fait froid",
+          "Parfois après un gros repas d'affaires"
+        ],
+        "facteursDeclenchants": [
+          "Effort physique surtout",
+          "Stress au travail (grosses réunions)",
+          "Temps froid",
+          "Repas copieux parfois"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Cholestérol élevé (non traité)",
+          "Pas de diabète",
+          "Pas d'hospitalisation"
+        ],
+        "familiaux": [
+          "Père: infarctus à 52 ans (vivant)",
+          "Mère: hypertension",
+          "Frère: diabète"
+        ]
+      },
+      "habitudes": {
+        "tabac": "1 paquet par jour depuis 25 ans",
+        "alcool": "2-3 verres de vin par jour (repas d'affaires)",
+        "activite": "Aucun sport, travail de bureau",
+        "stress": "Beaucoup de pression au travail"
+      },
+      "medicaments": {
+        "actuels": "Aspirine parfois quand j'ai mal"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet mais minimise",
+          "Stressé par son travail",
+          "Réticent à l'idée d'arrêter de fumer",
+          "Veut une solution rapide"
+        ],
+        "signesPhysiques": [
+          "Aucune douleur au repos",
+          "Légèrement en surpoids",
+          "Nerveux, regarde souvent son téléphone"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Maladie coronarienne",
+      "pointsCles": [
+        "Angor d'effort typique classe II CCS",
+        "Multiples facteurs de risque CV majeurs",
+        "Risque cardiovasculaire élevé",
+        "Nécessité d'une stratification urgente",
+        "Indication probable de coronarographie"
+      ],
+      "pieges": [
+        "Ne pas banaliser une douleur thoracique typique",
+        "Évaluer systématiquement tous les facteurs de risque",
+        "Rechercher des signes d'instabilité",
+        "Ne pas retarder les investigations",
+        "Débuter le traitement médical sans attendre"
+      ],
+      "criteresDiagnostiques": [
+        "Douleur thoracique typique: 3 critères sur 3",
+        "1. Gêne rétrosternale caractéristique",
+        "2. Déclenchée par l'effort ou le stress",
+        "3. Soulagée par le repos ou les dérivés nitrés"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Maladie coronarienne",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Athérosclérose coronaire progressive\n• Déséquilibre apport/demande en O2\n• Sténose significative si > 70% (50% pour TC)\n• Ischémie myocardique réversible\n• Circulation collatérale compensatrice"
+        },
+        {
+          "titre": "Classification de l'angor",
+          "contenu": "• Angor stable: prévisible, effort constant\n• Angor instable: repos, crescendo, de novo\n• Syndrome coronarien aigu: STEMI, NSTEMI\n• Angor spastique (Prinzmetal): repos, ST+\n• Syndrome X: angor, coronaires normales"
+        },
+        {
+          "titre": "Stratification du risque",
+          "contenu": "• Clinique: classe CCS, symptômes\n• ECG d'effort: Duke treadmill score\n• Imagerie: étendue de l'ischémie\n• Anatomique: nombre de vaisseaux, TC, IVA proximale\n• Biomarqueurs: troponine ultrasensible"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Objectif 1: Soulager les symptômes (BB, dérivés nitrés, IC)",
+        "Objectif 2: Prévenir les événements (aspirine, statines, IEC)",
+        "Revascularisation: PCI si 1-2 vaisseaux, CABG si 3 vaisseaux ou TC",
+        "Réadaptation cardiaque: améliore pronostic et qualité de vie",
+        "Contrôle strict des facteurs de risque",
+        "Suivi régulier avec ajustement thérapeutique"
+      ],
+      "examensComplementaires": [
+        "ECG repos: ondes Q, troubles de repolarisation, HVG",
+        "Test d'effort: sous-décalage ST, capacité fonctionnelle, récupération",
+        "Échographie d'effort: troubles cinétiques induits",
+        "Scintigraphie myocardique: défects de perfusion réversibles",
+        "Coroscanner: score calcique, sténoses coronaires",
+        "Coronarographie: gold standard, thérapeutique possible"
+      ]
+    },
+    "resume": {
+      "titre": "💙 Angor stable – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur ou oppression rétrosternale, souvent décrite comme constrictive",
+                "Durée courte (< 10 min)",
+                "Déclenchée par effort, stress, froid ou repas copieux",
+                "Irradiations : bras gauche, cou, mâchoire, épigastre",
+                "Soulagement au repos ou par trinitrine sublinguale (effet rapide < 2 min)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "HTA, diabète, dyslipidémie",
+                "Tabac actif ou passé",
+                "Âge avancé",
+                "ATCD familiaux de coronaropathie",
+                "Sédentarité, obésité"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Souvent examen normal en dehors de la crise",
+                "Durant l’accès : anxiété, pâleur, sueurs",
+                "TA et pouls généralement normaux",
+                "Rechercher souffles artériels (carotidiens, fémoraux) pour maladie athéroscléreuse diffuse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "De base",
+              "points": [
+                "ECG de repos (souvent normal si stable)",
+                "Bilan biologique : NFS, glycémie, HbA1c, profil lipidique, créatinine"
+              ]
+            },
+            {
+              "titre": "Tests fonctionnels",
+              "points": [
+                "Épreuve d’effort ECG (dépression ST à l’effort)",
+                "Échocardiographie de stress ou scintigraphie myocardique",
+                "IRM cardiaque de stress"
+              ]
+            },
+            {
+              "titre": "Imagerie morphologique",
+              "points": [
+                "Angio-CT coronaire pour dépister sténoses",
+                "Coronarographie si forte probabilité clinique ou symptômes persistants malgré traitement"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures générales",
+              "points": [
+                "Arrêt du tabac",
+                "Régime méditerranéen, perte de poids si surpoids",
+                "Activité physique régulière adaptée"
+              ]
+            },
+            {
+              "titre": "Traitement médical",
+              "points": [
+                "Symptomatique : trinitrine sublinguale en cas de crise",
+                "Prévention : bêtabloquants (1ère intention), alternatives : inhibiteurs calciques, ivabradine, ranolazine",
+                "Aspirine faible dose (ou clopidogrel si intolérance)",
+                "Statine forte dose (objectif LDL < 70 mg/dL, voire < 55 mg/dL si haut risque)",
+                "Contrôle tensionnel et glycémique (IEC/ARA2 si indication)"
+              ]
+            },
+            {
+              "titre": "Revascularisation",
+              "points": [
+                "Indiquée si symptômes persistants malgré traitement optimal",
+                "PCI (angioplastie avec stent) ou pontage coronarien selon atteinte"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Angor stable = douleur thoracique à l’effort, reproductible, cédant au repos/nitrés",
+            "ECG de repos souvent normal → test d’effort utile",
+            "Toujours évaluer et traiter les FDR cardiovasculaires",
+            "Ttmt médical = antiangineux + antiagrégant + statine ± IEC/ARA2",
+            "Revascularisation si symptômes réfractaires ou ischémie sévère"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur thoracique : durée, déclencheurs, irradiations, soulagement par repos/trinitrine ?",
+                "ATCD cardiovasculaires ou facteurs de risque ?",
+                "Tolérance à l’effort ? Limitation quotidienne ?",
+                "Traitements en cours (nitrés, bêtabloquants, AAS, statine) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, SpO₂)",
+                "ECG de repos",
+                "Bilan biologique (lipides, glycémie, créat)",
+                "Test d’effort ECG ou imagerie fonctionnelle",
+                "Coronarographie si indication"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Contrôle des facteurs de risque + éducation du patient",
+                "Traitement médical optimal (AAS, statine, bêtabloquant, nitrés à la demande)",
+                "Revascularisation si échec médical ou haut risque"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur thoracique d’effort (suspicion d’angor stable classe II CCS)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif (douleur thoracique à l’effort, évoluant depuis 6 mois)",
+            "Caractériser la douleur → rétrosternale constrictive, irradiation mâchoire/bras gauche, durée 5–10 min, cède au repos",
+            "Circonstances déclenchantes → effort (escaliers, marche rapide), stress, froid, repas copieux ; jamais au repos ni la nuit",
+            "Évolution → seuil d’effort diminué, fréquence croissante (2-3x/semaine)",
+            "Classification CCS → classe II (limitation légère)",
+            "Facteurs de risque CV → tabac (1 paquet/j, 25 ans), stress professionnel, sédentarité, surpoids (IMC 27), dyslipidémie non traitée, ATCD familial IDM précoce",
+            "Symptômes associés → dyspnée d’effort, palpitations occasionnelles, fatigue chronique ; pas de syncope ni OMI",
+            "Antécédents → cholestérol élevé, pas de diabète ni de cardiopathie connue, pas de traitement régulier sauf AAS auto-médication",
+            "Examen clinique → constantes normales, auscultation cardiaque/pulmonaire normale, pas de signes d’IC",
+            "Résumé + hypothèse principale : angor stable classe II ; DD : RGO, douleur pariétale, spasme coronarien, anxiété",
+            "Examens complémentaires → ECG de repos, test d’effort, écho cardiaque, bilan lipidique et glycémique, ± coroscanner/coronarographie",
+            "Prise en charge → AAS, statine forte dose, bêtabloquant, trinitrine à la demande, correction des FDR, éducation thérapeutique, possible revascularisation si haut risque"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : TRI (Angor typique = 3/3)",
+            "elements": [
+              "T = Thoracique rétrosternal constrictif",
+              "R = Reproductible à l’effort/stress",
+              "I = Interrompu au repos ou par trinitrine"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. X, 45 ans, cadre dirigeant, qui consulte pour douleurs thoraciques récidivantes à l’effort depuis environ 6 mois. Ces douleurs surviennent typiquement lors d’un effort comme monter deux étages ou marcher rapidement. Elles sont localisées en rétro-sternal, décrites comme un serrement, un étau, avec irradiation vers la mâchoire et le bras gauche. Chaque épisode dure environ 5 à 10 minutes et disparaît en 2 à 3 minutes avec l’arrêt de l’effort. Les douleurs ne surviennent jamais au repos ni la nuit.\n\nLe patient décrit une aggravation progressive : au début il montait 4 étages avant d’avoir mal, aujourd’hui 2 étages suffisent. Il rapporte aussi un essoufflement modéré à l’effort, des palpitations occasionnelles et une fatigue depuis plusieurs mois. Pas de syncope ni d’œdèmes.\n\nSes facteurs de risque cardiovasculaires sont importants : tabagisme chronique à un paquet par jour depuis 25 ans, stress professionnel intense, sédentarité, surpoids avec un IMC à 27, dyslipidémie connue mais non traitée, et un père ayant fait un infarctus à 52 ans. Sa mère est hypertendue et son frère diabétique.\n\nDans ses antécédents, il n’a pas de diabète ni de pathologie cardiaque connue, mais un cholestérol élevé mesuré il y a 2 ans. Il ne prend pas de traitement régulier, hormis de l’aspirine en automédication lors des douleurs. À l’examen, ses constantes sont correctes : TA 138/85, FC 78, FR 16, SpO₂ 98%, T° 36.5°C. L’auscultation cardiaque est normale, sans souffle ni frottement, et l’auscultation pulmonaire est normale. Pas de signes d’insuffisance cardiaque ni de souffle vasculaire périphérique.\n\nEn résumé, il s’agit d’un homme de 45 ans, présentant des douleurs thoraciques typiques d’angor stable classe II selon la classification CCS. Les diagnostics différentiels incluent un reflux gastro-œsophagien, une douleur pariétale type Tietze, un angor de Prinzmetal, ou une anxiété. \n\nComme examens complémentaires, je propose un ECG de repos, un test d’effort, une échocardiographie, un bilan lipidique et glycémique, une créatinine, et éventuellement un coroscanner ou une coronarographie selon les résultats. \n\nLa prise en charge associe un traitement symptomatique et préventif : aspirine faible dose, statine forte intensité, bêtabloquant en première intention, trinitrine sublinguale à la demande, éventuellement un IEC si hypertension ou dysfonction VG. À cela s’ajoutent les mesures hygiéno-diététiques : arrêt du tabac impératif, perte de poids, activité physique adaptée, régime méditerranéen, gestion du stress. Enfin, si les symptômes persistent malgré un traitement médical optimal ou si le test est fortement positif, une revascularisation coronarienne sera discutée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. X, 45 ans, douleurs thoraciques constrictives rétro-sternales, irradiant mâchoire/bras gauche, déclenchées à l’effort, évoluant depuis 6 mois.\n\nB (Background) : Facteurs de risque CV multiples (tabac, dyslipidémie non traitée, surpoids, stress, ATCD familial IDM précoce).\n\nA (Assessment) : Angor stable classe II CCS. DD : RGO, douleurs pariétales, angor spastique, anxiété.\n\nR (Recommendation) : ECG, test d’effort, échographie cardiaque, bilan lipidique/glycémique, AAS, statine, bêtabloquant, trinitrine, correction FDR, revascularisation si besoin."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade douleur angineuse typique",
+              "points": [
+                "Douleur rétrosternale constrictive",
+                "Déclenchée par effort ou stress",
+                "Cédant au repos ou à la trinitrine"
+              ]
+            },
+            {
+              "titre": "👉 Classification CCS",
+              "points": [
+                "Classe I : angor à l’effort intense",
+                "Classe II : limitation légère (ex. 2 étages d’escaliers)",
+                "Classe III : limitation marquée aux activités quotidiennes",
+                "Classe IV : angor au repos"
+              ]
+            },
+            {
+              "titre": "👉 Facteurs de risque majeurs (mnémotechnique : SATOS)",
+              "points": [
+                "S = Stress/sédentarité",
+                "A = Antécédents familiaux",
+                "T = Tabac",
+                "O = Obésité/surpoids",
+                "S = Statines (dyslipidémie non traitée)"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas banaliser une douleur thoracique typique",
+                "Toujours préciser l’évolution (angor stable vs instable)",
+                "Ne pas oublier de classer selon CCS",
+                "Évaluer systématiquement les FDR CV",
+                "Proposer revascularisation si symptômes persistants"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Angor stable d’effort",
+                  "reponse": {
+                    "pour": [
+                      "Douleur rétrosternale constrictive",
+                      "Déclenchée par effort/stress",
+                      "Durée 5-10 min",
+                      "Irradiation typique (mâchoire, bras gauche)",
+                      "Cède au repos",
+                      "Facteurs de risque CV nombreux"
+                    ],
+                    "contre": [
+                      "Pas de douleur au repos",
+                      "Pas de modification ECG connue"
+                    ]
+                  }
+                },
+                {
+                  "question": "RGO",
+                  "reponse": {
+                    "pour": [
+                      "Douleur après repas copieux"
+                    ],
+                    "contre": [
+                      "Lien net avec effort",
+                      "Irradiation typique",
+                      "Durée courte"
+                    ]
+                  }
+                },
+                {
+                  "question": "Douleur pariétale",
+                  "reponse": {
+                    "contre": [
+                      "Pas de douleur reproduite à la palpation",
+                      "Caractère d’effort",
+                      "Irradiation typique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Angor de Prinzmetal",
+                  "reponse": {
+                    "contre": [
+                      "Pas de douleur au repos",
+                      "Pas de douleur nocturne"
+                    ]
+                  }
+                },
+                {
+                  "question": "Anxiété",
+                  "reponse": {
+                    "contre": [
+                      "Caractéristiques très typiques d’angor",
+                      "Durée et résolution prévisibles",
+                      "Multiples FDR CV"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "ECG de repos 12 dérivations",
+                    "Test d’effort ECG",
+                    "Échocardiographie de repos",
+                    "Coroscanner si doute",
+                    "Coronarographie si test positif",
+                    "Bilan biologique : glycémie, HbA1c, lipides, créatinine"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Angor stable classe II CCS sur coronaropathie probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "AAS 75-100 mg/j",
+                      "Statine haute intensité",
+                      "Bêtabloquant (1re intention)",
+                      "Trinitrine sublinguale à la demande",
+                      "Mesures hygiéno-diététiques (arrêt tabac, régime méditerranéen, perte de poids, activité physique adaptée)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation cardiologique régulière",
+                    "Évaluation des symptômes et de la tolérance à l’effort",
+                    "Contrôle biologique (HbA1c, lipides, créatinine)",
+                    "Ajustement thérapeutique",
+                    "Indication éventuelle de revascularisation si symptômes réfractaires ou ischémie sévère"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,571 @@
+{
+  "title": "German-57 - Lombalgie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Huber, 61 ans, se présente en consultation pour des douleurs dorsales"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "binaryOnly": false,
+          "patientComment": "Douleurs dorsales"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [soudain il y a 3 jours]",
+            "Facteur déclenchant [aucun]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Localisation précise",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [région lombaire]",
+            "Irradiation [aucune]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Type et intensité de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Type [douleur de type pression]",
+            "Intensité [EVA 6/10]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs modulants",
+          "binaryOnly": false,
+          "details": [
+            "Amélioration [position assise tranquille ou couchée]",
+            "Aggravation [en se levant]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Recherche des drapeaux rouges (red flags)",
+          "binaryOnly": false,
+          "details": [
+            "Signes infectieux [non]",
+            "Syndrome de la queue de cheval [non]",
+            "Déficits neurologiques [non]",
+            "Incontinence urinaire ou fécale [non]",
+            "Anesthésie en selle [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux (symptômes B)",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Perte de poids non intentionnelle [non]",
+            "Sueurs nocturnes [non]",
+            "Asthénie [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Autres symptômes associés",
+          "binaryOnly": false,
+          "patientComment": "Aucun autre symptôme"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents personnels médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Néoplasie [cancer du sein il y a 5 ans, traité de manière curative]",
+            "Autres pathologies [aucune]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "Mastectomie lors du cancer du sein"
+        },
+        {
+          "id": "a12",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "patientComment": "Aucun médicament régulier"
+        },
+        {
+          "id": "a13",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "patientComment": "Allergie aux guêpes"
+        },
+        {
+          "id": "a14",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [2 paquets par jour depuis 40 ans]",
+            "Alcool [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Statut hormonal",
+          "binaryOnly": false,
+          "patientComment": "Ménopause à 45 ans"
+        },
+        {
+          "id": "a16",
+          "text": "Facteurs de risque d'ostéoporose",
+          "binaryOnly": false,
+          "details": [
+            "Ménopause précoce [oui, à 45 ans]",
+            "Tabagisme important [oui]",
+            "Antécédent de fracture [non]",
+            "Corticothérapie prolongée [non]",
+            "Faible poids corporel [à évaluer]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Ostéoporose familiale [non mentionnée]",
+            "Fractures familiales [non mentionnées]",
+            "Néoplasies familiales [non mentionnées]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [à préciser]",
+            "Activité physique [à préciser]",
+            "Autonomie [à préciser]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection du rachis",
+          "binaryOnly": false,
+          "patientComment": "Normal, pas de déformation visible"
+        },
+        {
+          "id": "e2",
+          "text": "Palpation du rachis",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des processus épineux",
+            "Douleur à la percussion [présente au niveau de L3]",
+            "Recherche de contracture paravertébrale"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Mobilité rachidienne",
+          "binaryOnly": false,
+          "details": [
+            "Flexion antérieure",
+            "Extension",
+            "Inclinaisons latérales",
+            "Rotations",
+            "Résultat [mobilité conservée mais douloureuse]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Test de compression axiale",
+          "binaryOnly": false,
+          "patientComment": "Positif (douleur à la compression)"
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique complet",
+          "binaryOnly": false,
+          "details": [
+            "Sensibilité (tact, douleur, vibration) [normale]",
+            "Force musculaire segmentaire [normale]",
+            "Réflexes ostéo-tendineux [normaux et symétriques]",
+            "Réflexe cutané plantaire [en flexion bilatéralement]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Tests spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Test de Lasègue [négatif]",
+            "Test de Lasègue controlatéral [négatif]",
+            "Test de Bragard [négatif]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des hanches",
+          "binaryOnly": false,
+          "details": [
+            "Mobilité passive [normale]",
+            "Douleur à la mobilisation [absente]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Pouls périphériques",
+          "binaryOnly": false,
+          "details": [
+            "Pouls fémoraux [présents]",
+            "Pouls poplités [présents]",
+            "Pouls pédieux [présents]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Fracture vertébrale pathologique dans le cadre d'une ostéoporose probable"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Fracture vertébrale traumatique",
+            "Métastase vertébrale (antécédent de cancer du sein)",
+            "Fracture pathologique sur autre cause (myélome, hyperparathyroïdie)",
+            "Spondylodiscite infectieuse",
+            "Lombalgie mécanique commune"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Facteurs de risque présents",
+                "items": [
+                  {
+                    "text": "Âge > 60 ans",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Ménopause précoce",
+                    "cause": "□ 45 ans",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tabagisme important",
+                    "cause": "□ 80 paquets-années",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Présentation clinique",
+                "items": [
+                  {
+                    "text": "Douleur d'apparition brutale sans traumatisme",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Douleur à la percussion vertébrale localisée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Test de compression axiale positif",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires biologiques",
+          "binaryOnly": false,
+          "details": [
+            "FSC, CRP, VS (exclusion processus inflammatoire)",
+            "Phosphatases alcalines (PAL), Gamma-GT (si PAL élevées)",
+            "Calcémie, phosphatémie",
+            "25-OH vitamine D",
+            "TSH",
+            "Créatinine (fonction rénale, ostéopathie rénale)",
+            "Électrophorèse des protéines sériques (si suspicion myélome)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie du rachis lombaire (face et profil)",
+            "Densitométrie osseuse (DMO) [résultat : pathologique]",
+            "IRM rachidienne si doute diagnostique",
+            "Scintigraphie osseuse si suspicion métastases multiples"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antalgique",
+                "content": "• Paracétamol 1g 4x/jour\n• AINS si nécessaire (attention fonction rénale)\n• Opioïdes faibles si douleur réfractaire\n• Éviter les myorelaxants (risque de chute)"
+              },
+              {
+                "title": "Traitement de l'ostéoporose",
+                "content": "• Calcium 1000-1200 mg/jour\n• Vitamine D3 800-1000 UI/jour\n• Bisphosphonates (alendronate 70 mg/semaine)\n• Alternative : dénosumab si contre-indication"
+              },
+              {
+                "title": "Mesures non médicamenteuses",
+                "content": "• Repos relatif initial (éviter alitement prolongé)\n• Kinésithérapie après phase aiguë\n• Port d'un corset si besoin (temporaire)\n• Arrêt du tabac impératif"
+              },
+              {
+                "title": "Prévention des chutes",
+                "content": "• Évaluation du domicile\n• Correction troubles visuels\n• Révision médicaments (psychotropes)\n• Activité physique adaptée\n• Supplémentation en vitamine D"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Suivi et surveillance",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle clinique à 4-6 semaines",
+            "Contrôle radiologique si aggravation",
+            "DMO de contrôle à 2 ans",
+            "Surveillance observance traitement",
+            "Dépistage nouvelles fractures"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "data": "grilles_generees/images/lombalgie-i-img.jpg",
+        "title": "Radiographie lombaire",
+        "description": "Radiographie de la colonne lombaire en incidence latérale"
+      }
+    ],
+    "resume": {
+      "titre": "🦴 Fractures vertébrales pathologiques – Ostéoporose probable – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur rachidienne aiguë après effort minime (toux, port de charge, faux mouvement)",
+                "Douleur mécanique, localisée, majorée à la mobilisation",
+                "Raideur rachidienne",
+                "Perte progressive de taille ou cyphose dorsale"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Femme ménopausée > 65 ans ou homme > 70 ans",
+                "ATCD personnels ou familiaux de fracture ostéoporotique",
+                "Corticothérapie prolongée",
+                "IMC bas, carence en vitamine D ou calcium",
+                "Tabac, alcool, sédentarité"
+              ]
+            },
+            {
+              "titre": "Évolution",
+              "points": [
+                "Douleur pouvant s’améliorer en quelques semaines",
+                "Risque élevé de nouvelles fractures vertébrales ou périphériques",
+                "Retentissement fonctionnel : diminution mobilité, perte autonomie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Cyphose dorsale (dos « en bosse »)",
+                "Perte de taille",
+                "Attitude antalgique"
+              ]
+            },
+            {
+              "titre": "Palpation et mobilité",
+              "points": [
+                "Douleur localisée à la pression de l’épineuse vertébrale fracturée",
+                "Raideur rachidienne",
+                "Mobilité réduite, aggravation de la douleur aux mouvements"
+              ]
+            },
+            {
+              "titre": "Recherche de complications",
+              "points": [
+                "Déficit neurologique (rare mais à éliminer : compression médullaire ou radiculaire)",
+                "Altération de l’état général (évoquer une cause tumorale si atypique)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographie rachidienne (profil) : tassement vertébral cunéiforme ou biconcave",
+                "IRM : confirme fracture récente (œdème osseux), élimine cause tumorale",
+                "Scanner : utile pour bilan de stabilité ou doute diagnostique"
+              ]
+            },
+            {
+              "titre": "Explorations complémentaires",
+              "points": [
+                "Ostéodensitométrie (DXA) : confirme ostéoporose (T-score ≤ –2,5)",
+                "Bilan biologique : calcium, phosphate, phosphatases alcalines, 25-OH-vitamine D, TSH, créatinine",
+                "Recherche cause secondaire si suspicion (myélome, hyperparathyroïdie, etc.)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement de la fracture",
+              "points": [
+                "Antalgiques selon intensité (palier I à III)",
+                "Corset orthopédique en phase aiguë pour stabiliser",
+                "Kinésithérapie précoce pour mobilisation douce et prévention déconditionnement",
+                "Vertébroplastie ou cyphoplastie dans cas douloureux rebelles"
+              ]
+            },
+            {
+              "titre": "Traitement de fond de l’ostéoporose",
+              "points": [
+                "Supplémentation en calcium et vitamine D",
+                "Bisphosphonates (alendronate, risédronate, zolédronate) en première intention",
+                "Dénosumab ou tériparatide en cas d’échec/CI",
+                "Mesures hygiéno-diététiques : activité physique adaptée, sevrage tabac et alcool"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toute douleur rachidienne brutale chez sujet à risque = fracture ostéoporotique jusqu’à preuve du contraire",
+            "IRM utile pour dater la fracture et exclure cause tumorale",
+            "Bilan ostéodensitométrique indispensable",
+            "Prise en charge = antalgie, corset, rééducation + traitement de fond anti-ostéoporotique",
+            "Surveillance car haut risque de récidive fracturaire"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Circonstances du début : traumatisme minime, effort, toux ?",
+                "Localisation et intensité de la douleur ?",
+                "ATCD de fracture, corticothérapie, ostéoporose connue ?",
+                "Perte de taille ou déformation progressive du dos ?",
+                "Facteurs de risque : ménopause, tabac, alcool, sédentarité ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Palpation des apophyses épineuses (douleur localisée)",
+                "Radiographie rachis (tassement vertébral)",
+                "IRM si doute diagnostic ou suspicion fracture récente",
+                "Ostéodensitométrie (DXA)",
+                "Bilan biologique : calcium, vitamine D, phosphatases, créatinine"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antalgiques, corset, kinésithérapie douce",
+                "IRM pour confirmer et éliminer cause tumorale",
+                "Traitement anti-ostéoporotique + mesures de prévention des récidives"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

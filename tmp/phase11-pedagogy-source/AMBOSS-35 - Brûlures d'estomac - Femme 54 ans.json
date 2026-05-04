@@ -1,0 +1,865 @@
+{
+  "title": "AMBOSS-35 - Brûlures d'estomac - Femme 54 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Janice Gardner, femme de 54 ans, consultant pour brûlures d'estomac",
+    "vitals": {
+      "temperature": "36.7°C",
+      "ta": "145/85 mmHg",
+      "fc": "90 bpm",
+      "fr": "20/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai des brûlures d'estomac et je veux faire renouveler mon ordonnance"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des brûlures d'estomac",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Quand j'en ai, ça fait mal dans ma poitrine juste derrière l'os ici au milieu]",
+            "Intensité (sur une échelle de 0-10) [Ça dépend quand. Quand c'est vraiment mauvais, c'est presque un 8 ou 9. D'autres fois c'est autour d'un 1-2, mais ça peut aussi disparaître complètement parfois]",
+            "Qualité [C'est un peu une douleur brûlante et une sorte de pression, comme si quelqu'un se tenait debout sur ma poitrine]",
+            "Début [J'ai des brûlures d'estomac depuis environ 10 ans maintenant, mais c'est pire depuis 3 semaines]",
+            "Événements précipitants [J'ai épuisé mes médicaments pour les brûlures d'estomac il y a 3 semaines]",
+            "Progression/constante/intermittente [J'en ai quelques fois par jour. C'est devenu pire quand mes médicaments se sont épuisés. Et j'ai l'impression que les 2 derniers jours ont été vraiment mauvais. Avant c'était seulement la nuit, mais maintenant j'en ai aussi pendant la journée]",
+            "Épisodes antérieurs [Non. Je n'ai jamais manqué de médicaments avant]",
+            "Irradiation [Oui, vers mon estomac]",
+            "Facteurs améliorants [Ça va mieux quand je me repose]",
+            "Facteurs aggravants [Ça empire quand je suis stressée ou quand je dois beaucoup bouger. Plus tôt aujourd'hui j'ai oublié mon portefeuille à l'épicerie et j'ai dû courir pour retourner le chercher. C'est là que c'est devenu vraiment mauvais ! J'ai même dû m'arrêter une minute pour me reposer]",
+            "Symptômes associés [Aucun. Juste les brûlures d'estomac]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour douleur thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Gonflement des chevilles [Non]",
+            "Nausées/vomissements [Oui, quand les brûlures d'estomac deviennent vraiment mauvaises, j'ai aussi un peu de nausées]",
+            "Fatigue [Je suis toujours fatiguée. Mais depuis quelques semaines j'ai l'impression que je ne pouvais plus bouger autant qu'avant. Ça empire juste les brûlures d'estomac. Et j'ai l'impression d'avoir toujours des brûlures d'estomac maintenant]",
+            "Palpitations [Oui, mon cœur bat assez souvent rapidement, surtout quand je suis stressée ou que les brûlures d'estomac sont vraiment mauvaises]",
+            "Toux [Non]",
+            "Essoufflement [Plus tôt aujourd'hui quand j'ai couru dans l'épicerie, je me sentais vraiment essoufflée. Mais c'était la première fois]",
+            "Problèmes de sommeil [Je ne dors jamais bien. Je suis toujours inquiète pour ma mère]",
+            "Infections récentes [Aucune]",
+            "Vertiges [Parfois quand mon cœur bat vraiment vite je me sens aussi étourdie]",
+            "Anxiété [Parfois quand je réalise que je suis la seule personne qui peut prendre soin de ma mère, je deviens vraiment anxieuse et mon cœur commence à battre vraiment vite]",
+            "Dépression [Non. Je suis stressée, et j'aurais vraiment besoin d'une pause, mais je ne suis pas déprimée]",
+            "Transpiration [Oui, quand mon cœur bat vite je commence aussi à beaucoup transpirer]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'hypertension et des brûlures d'estomac"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'hydrochlorothiazide et de l'oméprazole"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Jamais]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est mort d'une crise cardiaque quand il avait 60 ans. Ma mère a la démence, donc je prends soin d'elle"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaille comme secrétaire]",
+            "Domicile [Mes enfants sont à l'université et je suis divorcée, donc il y a 2 ans j'ai emménagé avec ma mère pour prendre soin d'elle. Pendant la journée j'essaie de faire autant de travail que possible de la maison pour qu'elle ne soit pas seule]",
+            "Alcool [Parfois je prends un verre de whisky le week-end, mais c'est tout]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Je fume 2 paquets de cigarettes par jour depuis 40 ans]",
+            "Exercice [J'aimerais bien ! Je n'ai pas vraiment le temps de faire de l'exercice]",
+            "Alimentation [Je sais que je devrais mieux manger, mais avec le travail plus ma mère je n'ai simplement pas le temps de cuisiner. Nous mangeons beaucoup de repas surgelés]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation de la turgescence jugulaire",
+            "Auscultation des artères carotides"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Palpation du choc apical",
+            "Palpation du pouls radial",
+            "Auscultation du cœur"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation des poumons"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation de l'abdomen",
+            "Palpation de l'abdomen"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des mains",
+            "Recherche d'œdème prenant le godet",
+            "Palpation des pouls pédieux"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes cardiaques prioritaires",
+                "items": [
+                  {
+                    "text": "Angor (angine de poitrine)",
+                    "cause": "Arguments POUR:\n\t□ Multiples facteurs de risque cardiovasculaire (tabagisme 80 paquets-années, HTA, stress quotidien élevé, ATCD familial IDM)\n\t□ Douleur rétrosternale en pression déclenchée par l'effort physique ou le stress\n\t□ Symptômes associés : dyspnée d'effort, diaphorèse, palpitations, vertiges, nausées\n\t□ Nouveaux symptômes d'effort malgré traitement IPP\n\t□ Femme ménopausée (perte protection œstrogénique)",
+                    "test": "→ ECG (meilleur test initial pour ischémie cardiaque suspectée)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes gastro-intestinales",
+                "items": [
+                  {
+                    "text": "Reflux gastro-œsophagien (RGO)",
+                    "cause": "Arguments POUR:\n\t□ Histoire de 10 ans de RGO mal contrôlé\n\t□ Aggravation depuis arrêt oméprazole il y a 3 semaines\n\t□ Facteurs de risque : tabagisme, stress\n\t□ Brûlure/pression rétrosternale, nausées typiques\nArguments CONTRE:\n\t□ Symptômes déclenchés par effort et stress plutôt que repas/position ; nouveaux symptômes inquiétants",
+                    "test": "→ Test thérapeutique IPP double dose (si pas de signes cardiaques)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes psychiatriques",
+                "items": [
+                  {
+                    "text": "Trouble anxieux généralisé",
+                    "cause": "Arguments POUR:\n\t□ Anxiété prolongée excessive (soins à la mère démente)\n\t□ Troubles du sommeil chroniques\n\t□ Attaques de panique possibles (douleur thoracique, dyspnée, diaphorèse, palpitations, vertiges, nausées)\n\t□ Stress situationnel majeur\nArguments CONTRE:\n\t□ Symptômes d'effort nouveaux suggèrent cause organique",
+                    "test": "→ Questionnaires anxiété après exclusion causes cardiaques"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Costochondrite",
+                    "cause": "Douleur thoracique reproductible à la palpation",
+                    "test": "→ Examen clinique (douleur à la palpation costochondrale)"
+                  },
+                  {
+                    "text": "Trouble panique",
+                    "cause": "Épisodes paroxystiques avec symptômes végétatifs",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Arythmie cardiaque",
+                    "cause": "Palpitations fréquentes, vertiges associés",
+                    "test": "→ ECG, Holter 24h"
+                  },
+                  {
+                    "text": "Insuffisance cardiaque",
+                    "cause": "Dyspnée d'effort, fatigue progressive",
+                    "test": "→ BNP, échocardiographie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "ECG [meilleur test initial pour ischémie cardiaque suspectée]",
+            "Troponine, CK, CK-MB [marqueurs importants d'infarctus du myocarde ; négatifs dans l'angor]",
+            "NFS [recherche anémie pouvant aggraver angor]",
+            "Glycémie [diabète = facteur de risque cardiovasculaire]",
+            "Bilan lipidique [évaluation risque cardiovasculaire global]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires différés",
+          "binaryOnly": false,
+          "details": [
+            "Test d'effort cardiaque [utile chez patients avec probabilité intermédiaire de coronaropathie]",
+            "Échocardiographie transthoracique [peut détecter anomalies de la cinétique pariétale en cas d'ischémie]",
+            "Coronarographie [gold standard pour diagnostic de coronaropathie ; si tests non invasifs pathologiques ou ambigus]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant le retour à la maison"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Repos strict au lit\n• Oxygénothérapie: Oxygène si SpO2 94%\n• Monitoring cardiaque continu\n• Voie veineuse périphérique\n• ECG dans les 10 minutes"
+              },
+              {
+                "title": "Si angor stable confirmé",
+                "content": "• Aspirine 160-: 325 mg à croquer immédiatement\n• Nitroglycérine sublinguale 0.: 4 mg (répétable × 3)\n• Bêta-bloquant (métoprolol 25-: 50 mg × 2/j)\n• Statine haute intensité (atorvastatine: 80 mg)"
+              },
+              {
+                "title": "IEC si HTA/diabète (ramipril 2.5-",
+                "content": "• Sevrage tabagique impératif"
+              },
+              {
+                "title": "Si syndrome coronarien aigu",
+                "content": "• Double antiagrégation (aspirine + clopidogrel)\n• Anticoagulation (héparine/HBPM)\n• Coronarographie urgente/semi-urgente\n• Revascularisation selon lésions"
+              },
+              {
+                "title": "Si RGO confirmé après exclusion cardiaque",
+                "content": "• IPP double dose (oméprazole: 40 mg × 2/j)\n• Modification style de vie: Surélévation tête de lit 15-20 cm ; Éviter repas 3h avant coucher × Éviter repas 3h avant coucher\n• • Perte de poids si surpoids: • Perte de poids si surpoids ; Arrêt tabac (aggrave RGO)\n• • Éviter aliments déclencheurs\n• Anti-H2 si IPP insuffisant\n• Prokinétiques si stase gastrique"
+              },
+              {
+                "title": "Prise en charge globale",
+                "content": "• Évaluation charge aidant naturel\n• Support psychosocial: (aide pour mère)\n• Gestion du stress (thérapie, relaxation)"
+              },
+              {
+                "title": "Suivi cardiovasculaire rapproché",
+                "content": "• Optimisation facteurs de risque"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Syndrome coronarien aigu",
+                "description": "Douleur > 20 min, sueurs, nausées → urgence absolue"
+              },
+              {
+                "text": "Angor instable",
+                "description": "Angor de novo, crescendo ou de repos → hospitalisation"
+              },
+              {
+                "text": "Insuffisance cardiaque aiguë",
+                "description": "Dyspnée repos, orthopnée, OMI → échocardiographie urgente"
+              },
+              {
+                "text": "Arythmie ventriculaire",
+                "description": "Palpitations + syncope → monitoring cardiaque continu"
+              },
+              {
+                "text": "Épuisement de l'aidant",
+                "description": "Risque dépression, négligence → intervention sociale urgente"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Urgence de rentrer à la maison",
+          "content": "[Est-ce que tout cela est vraiment nécessaire ? Je dois rentrer à la maison pour ma mère. Elle est toute seule, et quelqu'un doit s'occuper d'elle. Pouvez-vous pas juste me donner mon renouvellement ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Gardner, je comprends que vous voulez retourner auprès de votre mère. En même temps, je suis préoccupé que les symptômes que vous décrivez pourraient ne pas être le résultat de vos brûlures d'estomac mais plutôt d'un rétrécissement des artères de votre cœur. Je recommande fortement que vous restiez ici, pour que nous puissions faire des tests pour vous diagnostiquer correctement, et vous traiter si nécessaire. Je peux m'assurer qu'un de nos travailleurs sociaux vienne voir comment nous pouvons prendre soin de votre mère pendant que vous passez des tests. À un moment donné, j'aimerais aussi que nous trouvions ensemble si vous pourriez avoir besoin de plus d'aide pour prendre soin de votre mère à long terme. Il semble que le stress de travailler et de prendre soin d'elle pourrait affecter négativement votre santé, et en tant que votre médecin, je veux que vous soyez en aussi bonne santé que possible."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Œdème prenant le godet du membre inférieur",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait été précédemment remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-35-img1-Pitting edema of lower leg .jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Prise en charge du RGO",
+        "description": "Schéma de prise en charge du reflux gastro-œsophagien (RGO). L'algorithme débute par les modifications du mode de vie et peut progresser vers un traitement pharmacologique et chirurgical selon la sévérité et la réponse au traitement.",
+        "data": "grilles_generees/html/images/AMBOSS-35-img2-Management of GERD.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Enzymes cardiaques et biomarqueurs dans l'infarctus du myocarde",
+        "description": "Évolution temporelle des enzymes cardiaques et biomarqueurs dans l'infarctus du myocarde. Le graphique montre les courbes de concentration sérique de la troponine, de la CK-MB et de la myoglobine en fonction du temps après le début de l'infarctus, permettant le diagnostic et le suivi de la nécrose myocardique.",
+        "data": "grilles_generees/html/images/AMBOSS-35-img3-Cardiac enzymes and biomarkers in myocardial infarction.jpg",
+        "id": "img3"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Janice Gardner",
+      "age": "54 ans",
+      "contexte": "Femme stressée consultant pour brûlures d'estomac avec symptômes cardiaques inquiétants",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai des brûlures d'estomac et je veux faire renouveler mon ordonnance.",
+        "autreChose": "Je dois rentrer rapidement m'occuper de ma mère."
+      },
+      "consignes": [
+        "Vous êtes inquiète et stressée, et vous voulez obtenir votre renouvellement et partir le plus vite possible.",
+        "Quand l'examinateur vous demande la localisation de votre douleur thoracique, montrez le milieu de votre poitrine, entre les mamelons.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., ECG) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Quand l'examinateur recommande que vous restiez plus longtemps pour des tests, dites : 'Est-ce que tout cela est vraiment nécessaire ? Je dois rentrer à la maison pour ma mère. Elle est toute seule, et quelqu'un doit s'occuper d'elle. Pouvez-vous pas juste me donner mon renouvellement ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Brûlures d'estomac depuis 10 ans",
+          "Aggravation depuis 3 semaines (arrêt oméprazole)",
+          "Douleur rétrosternale brûlante avec pression",
+          "Intensité variable (1-2 à 8-9/10)",
+          "Plusieurs fois par jour maintenant",
+          "Aggravée par stress et effort physique",
+          "Episode sévère aujourd'hui en courant à l'épicerie"
+        ],
+        "symptomesAssocies": [
+          "Dyspnée d'effort (première fois aujourd'hui)",
+          "Nausées lors des épisodes sévères",
+          "Fatigue croissante, limitation activités",
+          "Palpitations fréquentes (stress/douleur)",
+          "Vertiges avec palpitations",
+          "Diaphorèse avec tachycardie",
+          "Anxiété liée aux soins de la mère",
+          "Troubles du sommeil chroniques"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer stress et urgence de partir",
+          "Pointer sternum pour localiser douleur",
+          "Insister sur besoin de renouvellement",
+          "Mentionner inquiétude pour mère seule",
+          "Minimiser nouveaux symptômes",
+          "Demander clarification termes médicaux"
+        ],
+        "durantStatus": [
+          "Anxiété visible",
+          "Pas de douleur à la palpation thoracique",
+          "Signes vitaux : TA élevée, tachycardie",
+          "Examen cardiaque normal",
+          "Pas d'œdème des MI",
+          "Résistance à rester pour tests (défi)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme 54 ans avec multiples facteurs de risque cardiovasculaire + nouveaux symptômes d'effort = angor jusqu'à preuve du contraire. Ne PAS banaliser comme simple RGO malgré histoire 10 ans. Red flags : douleur effort + dyspnée nouvelle + arrêt pour repos + ATCD familial IDM + tabagisme majeur + HTA. Stress chronique (aidante mère démente) = facteur aggravant cardiovasculaire ET RGO. ECG urgent obligatoire. Troponines si doute. Ne jamais renvoyer sans exclusion cardiaque formelle.",
+      "rolesInterventions": [
+        "ECG : normal ou légères anomalies ST non spécifiques",
+        "Troponines : négatives (pas d'IDM actuel)",
+        "Auscultation carotides : pas de souffle",
+        "Palpation thorax : pas de douleur costochondrale",
+        "Œdème : absent",
+        "Test nitroglycérine : soulagement partiel suggère angor"
+      ],
+      "pointsCles": [
+        "Toujours exclure cause cardiaque avant d'attribuer au RGO",
+        "Femme + symptômes atypiques = sous-diagnostic fréquent",
+        "Nouveaux symptômes d'effort = investigation cardiaque",
+        "80 paquets-années = risque cardiovasculaire majeur",
+        "Stress aidant = facteur de risque indépendant",
+        "Support social urgent pour éviter événement cardiaque"
+      ],
+      "pieges": [
+        "Banaliser comme 'simple RGO' vu histoire 10 ans",
+        "Ignorer les nouveaux symptômes d'effort",
+        "Oublier risque cardiaque chez femme ménopausée",
+        "Négliger l'épuisement de l'aidant",
+        "Céder à la pression de partir rapidement",
+        "Omettre conseil sevrage tabagique"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Angor d'effort sur coronaropathie avec RGO concomitant"
+        },
+        {
+          "titre": "Angor stable",
+          "contenu": "Ischémie myocardique d'effort par sténose coronaire fixe :",
+          "points": [
+            "Définition : déséquilibre apport/demande O2 myocardique",
+            "Sténose > 70% pour symptômes d'effort",
+            "Présentation typique : homme > 40 ans, femme > 50 ans",
+            "Triade : douleur rétrosternale + effort + soulagement repos",
+            "Durée : 2-10 minutes typiquement",
+            "Classification CCS : I (effort intense) à IV (repos)"
+          ]
+        },
+        {
+          "titre": "Particularités chez la femme",
+          "contenu": "Présentation souvent atypique retardant le diagnostic :",
+          "points": [
+            "Symptômes : fatigue, dyspnée > douleur typique",
+            "Localisation : dos, mâchoire, épigastre fréquents",
+            "Déclencheurs : stress émotionnel > effort physique",
+            "Sous-diagnostic : attribué à anxiété, RGO, ménopause",
+            "Pronostic : mortalité plus élevée si retard diagnostic",
+            "Test effort : moins sensible, considérer imagerie stress"
+          ]
+        },
+        {
+          "titre": "RGO vs Angor",
+          "contenu": "Distinction clinique parfois difficile :",
+          "points": [
+            "RGO : post-prandial, position, aliments acides",
+            "Angor : effort, stress, froid, soulagement repos",
+            "Chevauchement : 30% coronariens ont RGO",
+            "Test nitroglycérine : soulage angor ET spasme œsophagien",
+            "IPP test : amélioration RGO en 1-2 semaines",
+            "ECG effort : discriminant si doute persistant"
+          ]
+        },
+        {
+          "titre": "Syndrome de l'aidant",
+          "contenu": "Impact majeur sur santé cardiovasculaire :",
+          "points": [
+            "Stress chronique : activation sympathique, HTA",
+            "Risque CV : augmenté 60% chez aidants",
+            "Négligence santé : retard consultation, observance",
+            "Isolement social : facteur risque indépendant",
+            "Dépression : 40% aidants, aggrave pronostic CV",
+            "Interventions : répit, support, groupes entraide"
+          ]
+        },
+        {
+          "titre": "Stratification du risque",
+          "contenu": "Évaluation probabilité pré-test coronaropathie :",
+          "points": [
+            "Score de Diamond-Forrester modifié",
+            "Facteurs : âge, sexe, type douleur, facteurs risque",
+            "Bas risque < 15% : test non invasif ou essai médical",
+            "Risque intermédiaire 15-85% : test fonctionnel",
+            "Haut risque > 85% : coronarographie directe",
+            "Score calcique si doute sur risque intermédiaire"
+          ]
+        },
+        {
+          "titre": "Sevrage tabagique dans la coronaropathie",
+          "contenu": "Intervention la plus coût-efficace :",
+          "points": [
+            "Réduction risque : 50% à 1 an, 90% à 15 ans",
+            "Bénéfice immédiat : fonction endothéliale 24h",
+            "Approche 5A : Ask, Advise, Assess, Assist, Arrange",
+            "Pharmacothérapie : patch + gomme, varénicline",
+            "Taux succès : 5% seul, 30% avec aide complète",
+            "Rechute : normale, moyenne 7 tentatives pour succès"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Angor aigu : nitroglycérine 0.4 mg SL q5min × 3",
+        "Aspirine : 75-100 mg/j (prévention primaire si risque)",
+        "Bêta-bloquant : métoprolol 25-100 mg × 2/j (cible FC 55-60)",
+        "Statine : atorvastatine 40-80 mg (cible LDL < 1.8 mmol/L)",
+        "IEC : ramipril 2.5-10 mg/j si HTA/diabète/dysfonction VG",
+        "Dérivé nitré LA : isosorbide mononitrate 30-120 mg/j",
+        "Inhibiteur calcique : amlodipine 5-10 mg si CI bêta-bloquant",
+        "Ranolazine : 500-1000 mg × 2/j si réfractaire"
+      ],
+      "examensComplementaires": [
+        "ECG repos : 50% normal dans angor stable",
+        "ECG effort : Se 68%, Sp 77%, critères ST standardisés",
+        "Échocardiographie stress : dobutamine ou effort",
+        "Scintigraphie myocardique : technétium-99m sestamibi",
+        "IRM stress : adénosine, gold standard non invasif",
+        "Score calcique coronaire : dépistage si risque intermédiaire",
+        "Coronaro-CT : anatomie coronaire non invasive",
+        "Coronarographie : gold standard, permet revascularisation",
+        "FFR : évaluation fonctionnelle des sténoses intermédiaires"
+      ]
+    },
+    "resume": {
+      "titre": "🔥 Brûlures d’estomac – Cause cardiaque (SCA atypique) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes atypiques cardiaques",
+              "points": [
+                "Sensation de brûlure rétrosternale (parfois confondue avec RGO)",
+                "Douleur thoracique non typique : oppression, inconfort, pression",
+                "Irradiation possible vers le dos, le bras gauche ou la mâchoire",
+                "Dyspnée d’effort, nausées, sueurs, fatigue inexpliquée",
+                "Survenue à l'effort, après les repas ou au stress émotionnel"
+              ]
+            },
+            {
+              "titre": "Contexte à risque",
+              "points": [
+                "Homme > 50 ans, femme > 60 ans (présentation atypique plus fréquente chez la femme)",
+                "Facteurs de risque cardiovasculaires : tabac, HTA, diabète, dyslipidémie, ATCD familiaux",
+                "Absence de réponse aux IPP ou traitement antiacide"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Éléments à rechercher",
+              "points": [
+                "Signes de souffrance cardiaque : pâleur, sueurs, anxiété",
+                "Trouble de la fréquence cardiaque ou TA",
+                "Auscultation : B3, galop, râles crépitants si OAP",
+                "Pas de douleur à la palpation pariétale (≠ cause musculosquelettique)",
+                "Examen abdominal normal"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens urgents",
+              "points": [
+                "ECG 12 dérivations dans les 10 minutes : rechercher ST+, ST–, ondes T inversées",
+                "Troponine ultrasensible : à l’admission puis à 1-3 h",
+                "Radiographie thoracique (si dyspnée, OAP suspecté)",
+                "Score HEART ou GRACE si SCA non ST+"
+              ]
+            },
+            {
+              "titre": "Autres bilans",
+              "points": [
+                "Échocardiographie transthoracique : dyskinésie, FE",
+                "Coronarographie si SCA confirmé",
+                "Bilan biologique complet : iono, créatinine, bilan lipidique, glycémie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Prise en charge initiale",
+              "points": [
+                "Appel SAMU / urgences si suspicion de SCA",
+                "Repos strict, oxygénothérapie si SaO2 < 90 %",
+                "Antiplaquettaire : aspirine 250 mg per os ou IV",
+                "Antalgie : morphine si douleur persistante",
+                "Nitroglycérine sublinguale si douleur persistante et PAS > 100 mmHg"
+              ]
+            },
+            {
+              "titre": "Si SCA confirmé",
+              "points": [
+                "Anticoagulation : enoxaparine ou fondaparinux",
+                "Admission en USIC",
+                "Stratégie invasive (coronarographie ± angioplastie)",
+                "Traitement de fond : Bêtabloquants, statine forte dose, IEC/ARA2"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toute douleur thoracique, même atypique, doit faire évoquer un SCA",
+            "Une brûlure rétrosternale persistante non soulagée par les IPP = alerte",
+            "Réaliser systématiquement ECG + troponines",
+            "SCA = urgence vitale → antécédents, FDR, contexte = essentiels",
+            "Référer immédiatement si doute diagnostique"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur : brûlure rétrosternale ou oppression ? Début, durée, facteurs déclenchants ?",
+                "Irradiations : bras gauche, dos, mâchoire ?",
+                "Signes associés : dyspnée, sueurs, nausées, fatigue inhabituelle ?",
+                "ATCD et facteurs de risque cardiovasculaires ?",
+                "Réponse aux IPP ou antiacides ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, SaO2, T°)",
+                "ECG 12 dérivations en urgence",
+                "Dosage troponines à l’admission et à 1-3 h",
+                "Bilan sanguin (iono, créat, glycémie, bilan lipidique)",
+                "Échocardiographie transthoracique si dispo"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Hospitaliser en urgence si suspicion SCA",
+                "Initier traitement : O₂ si hypoxémie, aspirine, morphine, nitrés",
+                "Coronarographie en urgence si SCA confirmé (ST+ ou NSTEMI à haut risque)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Brûlures d’estomac vs Douleur thoracique (Suspicion angor/SCA)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser la douleur → localisation, intensité, qualité, durée, déclencheurs, soulagement",
+            "Symptômes associés → dyspnée, palpitations, sueurs, nausées, vertiges",
+            "Facteurs de risque → tabac, HTA, dyslipidémie, ATCD familiaux, stress",
+            "ATCD médicaux (RGO, HTA), traitements en cours (IPP, diurétiques)",
+            "Examen ciblé → constantes, auscultation cardiaque/pulmonaire, palpation thorax, œdèmes MI",
+            "Résumé + hypothèse principale (angor vs RGO) + DD",
+            "Examens complémentaires immédiats → ECG, troponines, NFS, glycémie, bilan lipidique",
+            "PEC initiale → repos, monitoring, ASA, dérivés nitrés, hospitalisation si SCA suspecté"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DOULOURED",
+            "elements": [
+              "Douleur rétrosternale",
+              "Oppression/brûlure",
+              "Utile → facteurs déclenchants (effort, stress)",
+              "Liaison avec facteurs de risque CV",
+              "Oxygène si SpO2 < 90%",
+              "Repos immédiat",
+              "ECG + Troponine",
+              "Double antiagrégation si SCA confirmé"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Janice Gardner, 54 ans, secrétaire, connue pour une HTA et un reflux gastro-œsophagien, qui consulte pour des brûlures d’estomac aggravées depuis 3 semaines. \n\nElle décrit une douleur rétrosternale brûlante, parfois en pression, irradiant vers l’estomac, d’intensité variable (1-2/10 jusqu’à 8-9/10), apparue il y a 10 ans mais nettement aggravée depuis l’arrêt de son traitement par oméprazole. Initialement nocturne, la douleur survient désormais plusieurs fois par jour, y compris à l’effort et en situation de stress. \n\nSymptômes associés : nausées lors des crises, palpitations fréquentes, dyspnée d’effort nouvellement apparue, vertiges et sueurs lors des épisodes sévères, fatigue chronique. Elle fume 40 cigarettes/jour depuis 40 ans, boit occasionnellement de l’alcool, alimentation déséquilibrée. Antécédents familiaux : père décédé d’un infarctus à 60 ans. \n\nÀ l’examen : TA 145/85, FC 90, FR 20, T° 36,7°C. Patiente anxieuse, pas de douleur pariétale à la palpation, examen cardio-pulmonaire sans particularité, pas d’œdème. \n\nEn résumé : femme de 54 ans avec multiples facteurs de risque cardiovasculaires, douleur thoracique atypique déclenchée par l’effort, symptômes associés inquiétants. Hypothèse principale : angor d’effort/suspicion SCA. DD : reflux gastro-œsophagien, anxiété, costochondrite, arythmie. \n\nExamens complémentaires : ECG 12 dérivations, troponines, NFS, glycémie, profil lipidique. Si doute → test d’effort ou imagerie de stress, coronarographie si anomalie. \n\nPEC immédiate : repos strict, ECG urgent, voie veineuse, ASA, dérivés nitrés, statine haute dose, β-bloquant si non contre-indiqué, hospitalisation pour exploration et traitement."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Gardner, 54 ans, consulte pour brûlures rétrosternales aggravées, maintenant déclenchées par l’effort.\n\nB (Background) : ATCD HTA, RGO. Tabagisme lourd, père décédé d’IDM. Médicaments : hydrochlorothiazide, oméprazole arrêté.\n\nA (Assessment) : Douleur thoracique atypique avec symptômes associés (dyspnée, palpitations, sueurs). Hypothèse principale : angor d’effort / SCA.\n\nR (Recommendation) : ECG + troponines immédiats, hospitalisation pour exclusion SCA, mise en place traitement initial (ASA, nitrés, statine, β-bloquant)."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Angor typique = 3 critères",
+              "points": [
+                "Douleur constrictive rétrosternale",
+                "Déclenchée par l’effort ou le stress",
+                "Cédant en quelques minutes au repos/nitrés"
+              ]
+            },
+            {
+              "titre": "RGO vs Angor",
+              "points": [
+                "RGO : post-prandial, couché, aliments acides",
+                "Angor : effort, stress, froid, soulagé repos"
+              ]
+            },
+            {
+              "titre": "⚠️ Red flags",
+              "points": [
+                "Douleur nouvelle ou aggravée",
+                "Survenue à l’effort",
+                "Dyspnée ou syncope associée",
+                "ATCD familiaux précoces",
+                "Tabagisme majeur"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Angor/SCA",
+                  "reponse": {
+                    "pour": [
+                      "Femme > 50 ans avec FDR multiples",
+                      "Douleur rétrosternale déclenchée par l’effort",
+                      "Dyspnée, palpitations, sueurs, vertiges",
+                      "ATCD familial IDM"
+                    ],
+                    "contre": [
+                      "Douleur décrite comme brûlure typique RGO (mais piège !)"
+                    ]
+                  }
+                },
+                {
+                  "question": "RGO",
+                  "reponse": {
+                    "pour": [
+                      "Histoire chronique de brûlures d’estomac",
+                      "Amélioration sous IPP"
+                    ],
+                    "contre": [
+                      "Douleur déclenchée par l’effort",
+                      "Symptômes cardiaques associés",
+                      "Non améliorée par traitement actuel"
+                    ]
+                  }
+                },
+                {
+                  "question": "Trouble anxieux",
+                  "reponse": {
+                    "pour": [
+                      "Stress intense, aidante d’une mère démente",
+                      "Troubles du sommeil, palpitations"
+                    ],
+                    "contre": [
+                      "Symptômes nouveaux à l’effort",
+                      "Présence de FDR CV majeurs"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "ECG 12 dérivations en urgence",
+                    "Troponines ultrasensibles (0h, 1-3h)",
+                    "NFS, glycémie, bilan lipidique",
+                    "± Échocardiographie transthoracique"
+                  ],
+                  "analyse": "👉 Analyse orale : « L’ECG et les troponines permettent d’exclure un SCA. Les bilans biologiques évaluent les facteurs de risque. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Angor d’effort probable sur coronaropathie"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Repos strict, monitoring",
+                      "ASA 250 mg",
+                      "Nitrés sublinguaux si douleur",
+                      "Statine forte dose",
+                      "β-bloquant si non contre-indiqué",
+                      "Hospitalisation cardiologique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Coronarographie ± revascularisation",
+                    "Contrôle des FDR (tabac, HTA, lipides)",
+                    "IPP si RGO associé",
+                    "Soutien psychosocial pour syndrome de l’aidant"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au mnémo MONA (Morphine, Oxygène, Nitrés, Aspirine) mais ⚠️ adapter selon contexte."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "title": "USMLE-6 - Diabète pédiatrique - Fille de 10 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "La mère de Louise Johnson, 10 ans, consulte car sa fille a récemment été diagnostiquée avec le diabète"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon enfant a récemment été diagnostiqué avec le diabète"
+        },
+        {
+          "id": "a2",
+          "text": "Histoire du diagnostic",
+          "binaryOnly": false,
+          "details": [
+            "Type de diabète [Je ne suis pas sûre]",
+            "Début [Il y a un mois]",
+            "Symptômes au diagnostic [Soif excessive et urination fréquente]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Impact psychosocial",
+          "binaryOnly": false,
+          "details": [
+            "Effet sur l'enfant [Elle est préoccupée par l'impact que cela aura sur ses activités normales, comme jouer au tennis et aller à l'école]",
+            "Dépression [Je ne suis pas sûre, mais elle semble plus préoccupée que déprimée]",
+            "Irritabilité [Non]",
+            "Effet sur les parents [Nous avons été choqués]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Traitement actuel",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments [Injections d'insuline]",
+            "Site d'injection [Dans le ventre]",
+            "Qui fait les injections [Je le fais quand elle est à la maison, mais quand elle est loin de moi, elle fait les injections elle-même]",
+            "Observance de l'insuline [Oui]",
+            "Schéma d'insuline [Deux types : un avec les repas et un au coucher]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Surveillance glycémique",
+          "binaryOnly": false,
+          "details": [
+            "Mesure à domicile [Oui, avant chaque repas et au coucher]",
+            "Glycémie récente [Ce matin, sa glycémie à jeun était de 96]",
+            "Hypoglycémie [Pas vraiment ; le plus bas taux de glycémie était de 80 le matin]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes actuels du diabète",
+          "binaryOnly": false,
+          "details": [
+            "Urination [Normal pour l'instant, mais elle devait aller aux toilettes très souvent, c'est ainsi qu'elle a été diagnostiquée]",
+            "Soif anormale ou faim excessive [Non, mais elle avait soif de façon excessive auparavant]",
+            "Faiblesse ou fatigue [Non]",
+            "Problèmes de vision (vision floue) [Non]",
+            "Picotements ou engourdissements des membres [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Changements de poids et morphologie",
+          "binaryOnly": false,
+          "details": [
+            "Changements de poids [Elle a perdu environ 4 kg au cours des 3 derniers mois, mais maintenant son poids est stable]",
+            "Poids et taille [Elle pèse 81,5 kg et a toujours été en surpoids. Elle mesure 1m55]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Complications et symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Infections de la peau ou des gencives [Non]",
+            "Démangeaisons cutanées [Non]",
+            "Problèmes de sommeil [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Régime alimentaire [Nous essayons de lui donner une alimentation équilibrée avec l'aide du diététicien]",
+            "Exercice et activités [Oui, elle est active et joue au tennis]",
+            "Quand joue-t-elle [Le soir]",
+            "Perte de conscience en jouant [Non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Développement et croissance",
+          "binaryOnly": false,
+          "details": [
+            "Dernières règles [Elle n'a pas encore commencé à avoir ses règles]",
+            "Historique de naissance [Normal]",
+            "Développement [Elle a toujours été à jour dans son développement : marché tôt, parlé à temps, et réussit bien à l'école]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Pas d'antécédents familiaux de diabète"
+        },
+        {
+          "id": "a14",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Note sur l'examen clinique",
+          "binaryOnly": true,
+          "patientComment": "Pas d'examen clinique réalisé - Consultation avec la mère uniquement"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Types de diabète",
+                "items": [
+                  {
+                    "text": "Diabète de type 1",
+                    "cause": "Arguments POUR:\n\t□ Âge pédiatrique (10 ans)\n\t□ Début aigu avec polyurie-polydipsie\n\t□ Perte de poids récente (4 kg en 3 mois)\n\t□ Nécessité d'insuline dès le diagnostic\n\t□ Hyperglycémie au diagnostic\nArguments CONTRE:\n\t□ Surpoids (IMC élevé : 81,5 kg pour 1m55)",
+                    "test": "→ Auto-anticorps (anti-GAD, anti-IA2, anti-ICA, anti-ZnT8), peptide-C, insulinémie"
+                  },
+                  {
+                    "text": "Diabète de type 2",
+                    "cause": "Arguments POUR:\n\t□ Obésité (81,5 kg, toujours en surpoids)\n\t□ Poids maintenant stable\n\t□ Pas d'acidocétose au diagnostic (présumé)\nArguments CONTRE:\n\t□ Âge jeune (10 ans)\n\t□ Pas d'antécédents familiaux de diabète\n\t□ Présentation aiguë",
+                    "test": "→ Peptide-C, insulinémie, recherche d'acanthosis nigricans"
+                  },
+                  {
+                    "text": "Diabète MODY",
+                    "cause": "Arguments POUR:\n\t□ Âge pédiatrique\n\t□ Pas d'acidocétose\nArguments CONTRE:\n\t□ Pas d'antécédents familiaux de diabète\n\t□ Obésité présente\n\t□ Nécessité d'insuline",
+                    "test": "→ Tests génétiques si forte suspicion"
+                  }
+                ]
+              },
+              {
+                "name": "Causes secondaires à éliminer",
+                "items": [
+                  {
+                    "text": "Syndrome de Cushing",
+                    "cause": "Arguments POUR:\n\t□ Obésité\nArguments CONTRE:\n\t□ Pas de vergetures, pas d'HTA\n\t□ Croissance normale",
+                    "test": "→ Cortisol libre urinaire 24h, test de freinage"
+                  },
+                  {
+                    "text": "Diabète médicamenteux",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de prise de corticoïdes ou autres médicaments diabétogènes",
+                    "test": "→ Anamnèse médicamenteuse détaillée"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires pour typage",
+          "binaryOnly": false,
+          "details": [
+            "Peptide-C et insulinémie à jeun",
+            "Auto-anticorps pancréatiques (anti-GAD, anti-IA2, anti-ICA, anti-ZnT8)",
+            "HbA1c actuelle",
+            "Glycémie veineuse"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Bilan des complications",
+          "binaryOnly": false,
+          "details": [
+            "Bilan lipidique complet",
+            "Fonction rénale (créatinine, urée)",
+            "Microalbuminurie",
+            "TSH (association diabète type 1 et thyroïdite)",
+            "Examen ophtalmologique de référence"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Optimisation du traitement",
+                "content": "• Vérifier la technique d'injection\n• Rotation des sites d'injection\n• Adaptation des doses selon les glycémies\n• Objectif HbA1c < 7.5% en pédiatrie"
+              },
+              {
+                "title": "Éducation thérapeutique",
+                "content": "• Formation de l'enfant et des parents\n• Reconnaissance des signes d'hypoglycémie\n• Gestion des hypoglycémies (règle du 15-15)\n• Adaptation des doses lors de l'exercice\n• Comptage des glucides"
+              },
+              {
+                "title": "Prévention des complications aiguës",
+                "content": "• Kit d'urgence glucagon\n• Sucres rapides toujours disponibles\n• Carte de diabétique\n• Information de l'école\n• Plan d'accueil individualisé (PAI)"
+              },
+              {
+                "title": "Suivi multidisciplinaire",
+                "content": "• Endocrinologue pédiatre tous les 3 mois\n• Diététicien pour plan alimentaire\n• Psychologue si besoin\n• Ophtalmologue annuel\n• Podologue si nécessaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Conseils pour l'activité physique",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle glycémique avant, pendant et après le sport",
+            "Réduction de la dose d'insuline rapide si sport prévu",
+            "Collation glucidique si glycémie < 150 mg/dL avant sport",
+            "Hydratation adéquate",
+            "Éviter l'exercice si glycémie > 250 mg/dL avec cétonurie"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Complications aiguës du diabète",
+            "items": [
+              {
+                "text": "Hypoglycémie sévère",
+                "description": "→ Confusion, convulsions, perte de conscience = Glucagon IM/SC, appel 144"
+              },
+              {
+                "text": "Acidocétose diabétique",
+                "description": "→ Vomissements, douleur abdominale, haleine cétonique = Urgences"
+              },
+              {
+                "text": "Syndrome hyperglycémique hyperosmolaire",
+                "description": "→ Déshydratation sévère, altération conscience = Réanimation"
+              },
+              {
+                "text": "Infection sévère",
+                "description": "→ Fièvre avec déséquilibre glycémique = Consultation urgente"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Johnson, je comprends ce que vous ressentez depuis que votre fille a été diagnostiquée avec le diabète. Le diabète peut changer la dynamique de toute la famille et affecter tout le monde, donc votre vie va être un peu différente maintenant. Nous pouvons bien gérer cette maladie grâce à une combinaison d'insuline, d'un régime équilibré et d'exercice régulier. Tout d'abord, vous devez comprendre la maladie et savoir comment la gérer. Vous devrez assister à des cours sur le diabète avec votre fille. Ensuite, tout le monde dans votre famille, y compris votre fille, doit apprendre à reconnaître les signes de faible taux de glucose, comme la confusion, la désorientation ou l'évanouissement, et savoir comment apporter les soins appropriés. Votre fille devrait toujours avoir une collation ou des jus en tant que 'kit d'urgence'. Ses enseignants et ses amis devraient également être informés de sa maladie. J'espère que vous avez bien compris ce que nous avons discuté aujourd'hui. Avez-vous d'autres questions ou préoccupations ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Docteur, je n'ai aucun antécédent de diabète dans ma famille. Pourquoi cela arrive-t-il à ma fille ?] [Ma fille pourra-t-elle un jour manger des sucreries à nouveau ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Votre fille avait probablement une prédisposition génétique à développer le diabète. Ensuite, certains facteurs environnementaux inconnus ont conduit au développement du diabète. Votre fille peut avoir soit un diabète de type 1, soit un diabète de type 2. Dans le diabète de type 1, le système immunitaire attaque le pancréas et détruit les cellules responsables de la production d'insuline. Comme l'insuline régule et maintient la glycémie, une carence en insuline entraînera des niveaux élevés de sucre dans le sang. D'autre part, si votre enfant est en surpoids et n'est pas physiquement active, elle peut avoir un diabète de type 2, qui est une combinaison de carence en insuline et de résistance à l'insuline en raison du surpoids. Dans les deux cas, il n'est pas nécessaire d'avoir des antécédents familiaux de diabète. En ce qui concerne les sucreries, ce n'est pas la cause du diabète de votre fille, c'est un mythe. En fait, votre fille peut encore manger des sucreries, mais avec modération. Elle devra voir un diététicien pour élaborer des plans de repas sains et apprendre à reconnaître les aliments contenant des glucides et leur quantité."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère de la patiente",
+      "nom": "Mère de Louise Johnson",
+      "contexte": "Mère inquiète d'une fille de 10 ans récemment diagnostiquée diabétique",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon enfant a récemment été diagnostiqué avec le diabète.",
+        "autreChose": "Je suis inquiète de comment cela va affecter sa vie."
+      },
+      "consignes": [
+        "Montrer de l'inquiétude mais rester calme et coopérative.",
+        "Poser des questions sur l'avenir de votre fille.",
+        "Montrer que vous êtes impliquée dans les soins mais dépassée.",
+        "Mentionner votre surprise car pas d'antécédents familiaux."
+      ],
+      "histoireActuelle": {
+        "diagnostic": [
+          "Diagnostiquée il y a un mois",
+          "Symptômes initiaux : soif excessive, urination fréquente",
+          "Perte de poids de 4 kg en 3 mois",
+          "Actuellement sous insuline"
+        ],
+        "gestionActuelle": [
+          "Injections d'insuline 2 types (repas + coucher)",
+          "Contrôles glycémiques 4x/jour",
+          "Suivi diététique",
+          "Maintient ses activités (tennis)"
+        ],
+        "inquietudes": [
+          "Impact sur la vie normale de l'enfant",
+          "Capacité à gérer seule à l'école",
+          "Avenir avec cette maladie",
+          "Pourquoi elle si pas d'antécédents familiaux"
+        ]
+      },
+      "informationsSurEnfant": {
+        "physique": [
+          "10 ans, 81,5 kg, 1m55",
+          "Toujours été en surpoids",
+          "Poids stable maintenant",
+          "Pas encore réglée"
+        ],
+        "developpement": [
+          "Développement normal",
+          "Marché tôt, parlé à temps",
+          "Réussit bien à l'école",
+          "Active, joue au tennis"
+        ],
+        "psychologique": [
+          "Préoccupée mais pas déprimée",
+          "Inquiète pour ses activités",
+          "Bonne observance du traitement",
+          "S'injecte seule quand nécessaire"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Prendre des notes",
+          "Poser des questions pratiques",
+          "Montrer de l'émotion en parlant du diagnostic",
+          "Être attentive aux explications"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Fille de 10 ans, obèse (IMC > 95e percentile), diagnostiquée diabétique il y a 1 mois sur syndrome polyuro-polydipsique. Perte de poids de 4 kg. Sous insulinothérapie avec bonne observance. Glycémies relativement stables. Pas d'épisodes d'hypoglycémie sévère. Pas d'antécédents familiaux de diabète. Développement normal, active physiquement.",
+      "rolesInterventions": [
+        "L'expert-e n'intervient pas car pas d'examen clinique",
+        "Si demande d'examens :",
+        "• HbA1c : 8.2% (objectif < 7.5% en pédiatrie)",
+        "• Peptide-C : détectable mais bas",
+        "• Anti-GAD : positifs (suggère diabète type 1)",
+        "• Microalbuminurie : négative"
+      ],
+      "pointsCles": [
+        "Distinguer diabète type 1 vs type 2 en pédiatrie",
+        "L'obésité n'exclut pas le diabète type 1",
+        "L'éducation thérapeutique est fondamentale",
+        "Impliquer toute la famille dans la prise en charge",
+        "Prévenir les complications aiguës et chroniques"
+      ],
+      "pieges": [
+        "Assumer type 2 à cause de l'obésité",
+        "Ne pas rechercher les auto-anticorps",
+        "Oublier le soutien psychologique",
+        "Ne pas impliquer l'école",
+        "Sous-estimer l'impact familial"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Diabète de type 1 probable malgré l'obésité, à confirmer par auto-anticorps"
+        },
+        {
+          "titre": "Épidémiologie du diabète pédiatrique",
+          "contenu": "Évolution des tendances :",
+          "points": [
+            "Type 1 : 90% des diabètes pédiatriques, incidence en augmentation",
+            "Type 2 : augmentation avec l'épidémie d'obésité infantile",
+            "Pic d'incidence type 1 : 5-7 ans et puberté",
+            "Facteurs de risque type 2 : obésité, ethnicité, ATCD familiaux",
+            "Prévalence : 1-2/1000 enfants"
+          ]
+        },
+        {
+          "titre": "Présentation clinique",
+          "contenu": "Différences entre type 1 et type 2 :",
+          "points": [
+            "Type 1 : début aigu, perte de poids, acidocétose fréquente (30%)",
+            "Type 2 : début insidieux, acanthosis nigricans, obésité",
+            "Symptômes communs : polyurie, polydipsie, polyphagie",
+            "Enfants type 1 peuvent être obèses (20-25%)",
+            "Importance du typage pour le traitement"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques",
+          "contenu": "Mêmes que chez l'adulte :",
+          "points": [
+            "Glycémie à jeun ≥ 126 mg/dL (7 mmol/L)",
+            "Glycémie aléatoire ≥ 200 mg/dL avec symptômes",
+            "HGPO 2h ≥ 200 mg/dL",
+            "HbA1c ≥ 6.5%",
+            "Confirmation nécessaire sauf si symptomatique"
+          ]
+        },
+        {
+          "titre": "Auto-anticorps du diabète type 1",
+          "contenu": "Marqueurs de l'auto-immunité :",
+          "points": [
+            "Anti-GAD65 : les plus fréquents",
+            "Anti-IA2 : spécificité élevée",
+            "Anti-insuline : surtout chez les jeunes enfants",
+            "Anti-ZnT8 : découverts récemment",
+            "≥ 2 anticorps positifs = risque très élevé"
+          ]
+        },
+        {
+          "titre": "Insulinothérapie pédiatrique",
+          "contenu": "Schémas adaptés à l'enfant :",
+          "points": [
+            "Basal-bolus : gold standard (4-5 injections/jour)",
+            "Pompe à insuline : flexibilité pour l'enfant actif",
+            "Dose totale : 0.5-1 UI/kg/jour selon stade",
+            "Ratio basal/bolus : 40-50% / 50-60%",
+            "Adaptation selon croissance et puberté"
+          ]
+        },
+        {
+          "titre": "Objectifs glycémiques pédiatriques",
+          "contenu": "Balance entre contrôle et risque d'hypoglycémie :",
+          "points": [
+            "HbA1c < 7.5% (ADA) ou < 7% (ISPAD) si possible",
+            "Glycémie pré-prandiale : 90-130 mg/dL",
+            "Glycémie post-prandiale : < 180 mg/dL",
+            "Éviter hypoglycémies sévères (impact neurologique)",
+            "Individualiser selon âge et capacités"
+          ]
+        },
+        {
+          "titre": "Complications aiguës",
+          "contenu": "Urgences du diabète pédiatrique :",
+          "points": [
+            "Hypoglycémie : seuil < 70 mg/dL, symptômes neuroglycopéniques",
+            "Acidocétose : pH < 7.3, bicarbonates < 15, cétones+++",
+            "Œdème cérébral : complication redoutée de l'acidocétose",
+            "Dawn phenomenon : hyperglycémie matinale (hormones de croissance)",
+            "Effet Somogyi : rebond après hypoglycémie nocturne"
+          ]
+        },
+        {
+          "titre": "Éducation thérapeutique",
+          "contenu": "Programme structuré essentiel :",
+          "points": [
+            "Technique d'injection et rotation des sites",
+            "Autosurveillance glycémique",
+            "Comptage des glucides",
+            "Gestion de l'exercice physique",
+            "Reconnaissance et traitement des hypoglycémies",
+            "Jours de maladie (sick days)"
+          ]
+        },
+        {
+          "titre": "Aspects psychosociaux",
+          "contenu": "Impact sur l'enfant et la famille :",
+          "points": [
+            "Acceptation du diagnostic : processus de deuil",
+            "Autonomisation progressive de l'enfant",
+            "Impact sur la fratrie",
+            "Intégration scolaire (PAI)",
+            "Adolescence : période à risque",
+            "Transition vers soins adultes"
+          ]
+        },
+        {
+          "titre": "Technologies du diabète",
+          "contenu": "Outils modernes de gestion :",
+          "points": [
+            "Capteurs de glucose continu (CGM)",
+            "Pompes à insuline avec arrêt prédictif",
+            "Applications mobiles de suivi",
+            "Télémédecine pour le suivi",
+            "Systèmes en boucle fermée (pancréas artificiel)"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "Le diabète type 1 reste le plus fréquent en pédiatrie",
+            "L'obésité n'exclut pas le type 1",
+            "L'éducation thérapeutique est la clé du succès",
+            "Objectifs glycémiques adaptés à l'âge",
+            "Prévention des hypoglycémies prioritaire",
+            "Soutien psychosocial indispensable",
+            "Technologies améliorent la qualité de vie"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Insuline basale : glargine ou detemir 1x/jour",
+        "Insuline rapide : aspart ou lispro avant repas",
+        "Glucagon : kit d'urgence, formation entourage",
+        "Règle du 15-15 : 15g sucre, recontrôle à 15 min",
+        "Pas de restriction alimentaire stricte"
+      ],
+      "examensComplementaires": [
+        "HbA1c trimestrielle : reflet du contrôle",
+        "Auto-anticorps : typage du diabète",
+        "TSH annuelle : association auto-immune",
+        "Microalbuminurie : dépistage néphropathie après 5 ans",
+        "Fond d'œil : après puberté ou 5 ans d'évolution"
+      ]
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "title": "German-30 - Douleur thoracique",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Jeune homme de 16 ans, s'est blessé en faisant du vélo, vient aux urgences pour contrôle suite à des douleurs thoraciques"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Localisation de la douleur",
+          "details": [
+            "[Thorax latéral gauche, au niveau de la mamelle]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Qualité de la douleur",
+          "details": [
+            "[Piquant]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Début de la douleur",
+          "details": [
+            "[Directement après la chute]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Irradiation",
+          "details": [
+            "[Partout, très douloureux]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Intensité sur une échelle de 1 à 10",
+          "details": [
+            "[7/10]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs aggravants",
+          "details": [
+            "[En respirant et en bougeant]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs d'amélioration",
+          "details": [
+            "[Au repos, en retenant sa respiration]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Autres douleurs (jambes, bras, tête...)",
+          "details": [
+            "[Non, sauf genou écorché]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Circonstances de la chute",
+          "details": [
+            "[A dérapé dans un virage]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Perte de connaissance, vertiges, céphalées",
+          "details": [
+            "[Non, portait un casque]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Dyspnée",
+          "details": [
+            "[Non, mais douleur lors de la respiration]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Médicaments actuels",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Allergies",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Toxiques",
+          "details": [
+            "[Fume parfois du cannabis, boit le week-end, fume rarement]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Activités sportives, loisirs",
+          "details": [
+            "[Vélo, football, amis, « traîner »]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Mère diabétique]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Apprentissage de jardinier, petite amie depuis 6 mois]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée sur la douleur thoracique post-traumatique et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection du thorax",
+          "details": [
+            "[Hématome thorax gauche, écorchures, position antalgique]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation",
+          "details": [
+            "[Très douloureux au niveau de la côte]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Poumons",
+          "details": [
+            "[Ne respire pas profondément - indique des douleurs]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Cœur",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Examen sommaire du rachis et des extrémités",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Bref examen neurologique",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et adapté au contexte traumatique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic de suspicion",
+          "details": [
+            "[Fracture de côte]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Contusion costale",
+            "Fracture de côte",
+            "Pneumothorax"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Lésions pariétales",
+                "items": [
+                  {
+                    "text": "Fracture de côte → Radiographie thoracique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie, CT si complexe"
+                  },
+                  {
+                    "text": "Contusion costale → Examen clinique, radiographie normale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Complications pulmonaires",
+                "items": [
+                  {
+                    "text": "Pneumothorax → Radiographie thoracique, US thoracique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CT thoracique"
+                  },
+                  {
+                    "text": "Hémothorax → Radiographie thoracique, CT thoracique si doute",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Nomme les examens diagnostiques",
+          "details": [
+            "[Radiographie thoracique]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Thérapie",
+          "details": [
+            "Analgésie adaptée (paracétamol, AINS, opioïdes si nécessaire)",
+            "Immobilisation relative",
+            "Physiothérapie respiratoire pour prévenir les complications"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antalgique",
+                "content": "• Palier I : Paracétamol 1g 4x/jour\n• Palier II : AINS (ibuprofène 400mg 3x/jour) si pas de contre-indication\n• Palier III : Tramadol 50-100mg si douleur sévère\n• Éviter la codéine chez l'adolescent"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Repos relatif (pas d'immobilisation stricte)\n• Exercices respiratoires réguliers\n• Éviter les activités sportives pendant 3-4 semaines\n• Surveillance des complications"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Explique l'évolution naturelle et le pronostic",
+          "details": [
+            "Pas d'autre thérapie spécifique nécessaire",
+            "Guérison spontanée en 3-6 semaines",
+            "Pronostic excellent"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Rédige un certificat d'incapacité de travail",
+          "details": [
+            "1 semaine d'arrêt initial",
+            "Contrôle prévu pour réévaluation",
+            "Adaptation selon l'évolution clinique"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente avec diagnostic approprié et suivi planifié"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

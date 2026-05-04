@@ -1,0 +1,575 @@
+{
+  "title": "AMBOSS-17 - Troubles de mémoire - Femme 70 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Grace Ramirez, femme de 70 ans, consultant pour troubles de mémoire",
+    "vitals": {
+      "temperature": "36.5°C",
+      "ta": "125/70 mmHg",
+      "fc": "70 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Ma fille voulait que je vienne. Elle dit que j'ai été très oublieuse dernièrement"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des troubles de mémoire",
+          "binaryOnly": false,
+          "details": [
+            "Début [Depuis environ 2 ans]",
+            "Constant/intermittent [Elle dit que je suis toujours aussi oublieuse. Je crois qu'elle est un peu dramatique]",
+            "Événements précipitants [Aucun]",
+            "Progression [Ma fille dit que ça s'est aggravé]",
+            "Épisodes antérieurs [Aucun]",
+            "Facteurs améliorants [Je pense que c'est un peu mieux si je dors suffisamment]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "Je ne peux penser à rien en ce moment"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Aucun]",
+            "Céphalées [Aucune]",
+            "Fatigue [Oui, je me sens vraiment fatiguée dernièrement]",
+            "Problèmes urinaires [Parfois je n'arrive pas aux toilettes à temps]",
+            "Fréquence [Peut-être une fois par jour. Surtout quand je me réveille le matin et que j'ai vraiment besoin d'y aller]",
+            "Problèmes intestinaux [Non]",
+            "Problèmes de sommeil [Je ne dors pas beaucoup. Je n'arrive pas à m'endormir, et puis je me réveille généralement vers 4h00-5h00]",
+            "Appétit [Je n'ai pas beaucoup d'appétit]",
+            "Variations pondérales [Je ne saurais pas, je ne me pèse pas]",
+            "Infections récentes [Aucune]",
+            "Vertiges [Parfois, si je me lève trop vite]",
+            "Problèmes de marche [Non]",
+            "Chutes [Non]",
+            "Intolérance au froid [Non]",
+            "Cheveux secs [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Troubles cognitifs et fonctionnels",
+          "binaryOnly": false,
+          "details": [
+            "Se perdre [Oui, peut-être une ou deux fois. Mon quartier change tellement. J'ai toujours fini par tomber sur ma fille, donc ce n'était pas un problème]",
+            "Hallucinations [Non]",
+            "Faiblesse [Non]",
+            "Engourdissement [Non]",
+            "Picotements [Non]",
+            "Aide requise pour s'habiller, manger, marcher, aller aux toilettes ou hygiène personnelle [Je fais tout ça sans problème. Enfin, à part mes accidents en allant aux toilettes]",
+            "Aide requise pour faire les courses, le ménage, la comptabilité personnelle, cuisiner, le transport ou les médicaments [Ma fille fait toutes ces choses pour moi]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "État psychologique",
+          "binaryOnly": false,
+          "details": [
+            "Humeur [Mon humeur n'a pas été bonne depuis que mon caniche est mort il y a environ un an]",
+            "Perte d'intérêt [Je jouais au backgammon avec mes amies, mais je n'y vais plus]",
+            "Culpabilité/faible estime de soi [Non]",
+            "Énergie faible [Comme je l'ai dit, je me sens toujours fatiguée. Je pense que ça vient avec l'âge]",
+            "Concentration faible [Je n'arrive pas à me concentrer sur quoi que ce soit. J'oublie constamment de finir ce que je commence, comme mes mots croisés le matin]",
+            "Agitation ou ralentissement psychomoteur [Non]",
+            "Idées suicidaires [Non]",
+            "Soutien social [Ma fille prend très bien soin de moi]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'hypertension"
+        },
+        {
+          "id": "a8",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'hydrochlorothiazide"
+        },
+        {
+          "id": "a10",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai dû aller à l'hôpital pour l'accouchement de mes deux enfants et quand on m'a enlevé la vésicule biliaire il y a environ 20 ans]",
+            "Antécédents chirurgicaux [Juste les fois où j'ai dû aller à l'hôpital]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est mort pendant la Seconde Guerre mondiale mais était en bonne santé, à ma connaissance. Ma mère était en bonne santé aussi, mais elle a attrapé une pneumonie quand elle était très âgée et est morte il y a environ 3 ans"
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Eh bien, je suis retraitée maintenant. Mais j'ai possédé et géré mon propre café au centre-ville pendant de nombreuses années]",
+            "Domicile [Je vis seule, mais ma fille vit dans la maison juste à côté]",
+            "Alcool [Non]",
+            "Drogues illicites [Jamais]",
+            "Tabac [Jamais]",
+            "Exercice [Non]",
+            "Alimentation [Ma fille cuisine pour moi, mais elle n'a pas beaucoup de temps. Nous mangeons surtout des plats surgelés]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Examen de la glande thyroïde"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des mains",
+            "Inspection des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé des nerfs crâniens",
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la sensibilité",
+            "Examen ciblé des réflexes ostéo-tendineux",
+            "Examen ciblé de la marche",
+            "Test des mouvements alternés rapides",
+            "Test doigt-nez",
+            "Signe de Babinski",
+            "Test de Romberg"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Mini-Mental State Examination (MMSE)",
+          "binaryOnly": false,
+          "details": [
+            "Orientation temporelle [(Répondre avec jour, date et mois incorrects, mais saison et année correctes ; ou répondre avec président des États-Unis incorrect)]",
+            "Orientation spatiale [(Répondre avec l'État correct, mais dire seulement 'Je suis à l'hôpital près de chez moi' à toutes les autres questions)]",
+            "Orientation personnelle [Mon nom est Grace Ramirez. J'ai 70 ans. Mon anniversaire est le 14 mai]",
+            "Répéter ces trois mots : maison, balle, arbre [Maison, balle, arbre]",
+            "Épeler monde (M-O-N-D-E) à l'envers [E-D-N-O-M incorrect]",
+            "Répéter les trois mots que je vous ai dit plus tôt [Je me souviens seulement de 'maison']",
+            "Montrer stylo et papier et demander de nommer les objets [Stylo et papier]",
+            "Répéter la phrase : 'Pas de si, ni de mais' [(Faire comme l'examinateur dit)]",
+            "Lire ce que j'ai écrit sur ce papier et faire ce qu'il dit [(Lire à voix haute correctement)]",
+            "Écrire une phrase sur le papier [(Écrire : 'Je suis Grace Ramirez')]",
+            "Maintenant plier le papier et le mettre par terre [(Faire comme l'examinateur dit et plier le papier et le mettre par terre)]",
+            "Copier l'image de deux pentagones entrecroisés [(Copier l'image incorrectement)]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes neurodégénératives probables",
+                "items": [
+                  {
+                    "text": "Maladie d'Alzheimer",
+                    "cause": "Arguments POUR:\n\t□ Troubles mnésiques insidieux depuis 2 ans\n\t□ Atteinte mémoire récente (rappel 3 mots : 1/3)\n\t□ Désorientation temporelle (jour, date, mois incorrects)\n\t□ Désorientation spatiale (se perd dans quartier)\n\t□ Troubles attentionnels (épeler à l'envers incorrect)\n\t□ Apraxie constructive (copie pentagones incorrecte)\n\t□ Perte autonomie instrumentale (fille fait courses, cuisine)\n\t□ Facteurs risque : âge 70, sexe F, HTA, sédentarité",
+                    "test": "→ IRM cérébrale (atrophie hippocampique)"
+                  },
+                  {
+                    "text": "Hydrocéphalie à pression normale",
+                    "cause": "Arguments POUR:\n\t□ Incontinence urinaire (1×/jour)\n\t□ Troubles cognitifs progressifs\n\t□ Âge compatible\nArguments CONTRE:\n\t□ Pas de troubles de la marche (triade d'Hakim incomplète)",
+                    "test": "→ IRM cérébrale + ponction lombaire soustractive"
+                  },
+                  {
+                    "text": "Pseudodémence dépressive",
+                    "cause": "Arguments POUR:\n\t□ Symptômes dépressifs : humeur basse (mort caniche), anhédonie (arrêt backgammon)\n\t□ Fatigue, troubles sommeil, appétit diminué\n\t□ Troubles concentration\nArguments CONTRE:\n\t□ Troubles mnésiques précèdent dépression\n\t□ Début insidieux (pseudodémence = début brutal)",
+                    "test": "→ Échelle dépression gériatrique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à exclure",
+                "items": [
+                  {
+                    "text": "Démence vasculaire",
+                    "cause": "Arguments POUR : HTA (facteur risque)\nArguments CONTRE:\n\t□ Évolution progressive (pas par paliers)",
+                    "test": "→ IRM cérébrale (lacunes, leucoaraïose)"
+                  },
+                  {
+                    "text": "Démence à corps de Lewy",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'hallucinations visuelles\n\t□ Pas de fluctuations",
+                    "test": "→ DaTSCAN si doute"
+                  },
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "Arguments POUR : Fatigue, troubles mnésiques\nArguments CONTRE:\n\t□ Pas intolérance froid\n\t□ Pas cheveux secs",
+                    "test": "→ TSH"
+                  },
+                  {
+                    "text": "Carence en vitamine B12",
+                    "cause": "Peut causer troubles cognitifs réversibles",
+                    "test": "→ Vitamine B12 sérique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "IRM cérébrale [Dans le cas de la maladie d'Alzheimer, une atrophie cérébrale généralisée ou focale peut être visible. L'hydrocéphalie à pression normale montrerait une dilatation des ventricules avec hyperintensités périventriculaires. La démence vasculaire montrerait de multiples lésions lacunaires et de la substance blanche. Une cause néoplasique de démence serait mieux visualisée par IRM]",
+            "CT cérébral [Dans le cas de la maladie d'Alzheimer, une atrophie cérébrale généralisée ou focale peut être visible. L'hydrocéphalie à pression normale montrerait une dilatation des ventricules avec hyperintensités périventriculaires. La démence vasculaire pourrait entraîner des lésions microangiopathiques dans la substance blanche ainsi que de multiples lésions lacunaires]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques",
+          "binaryOnly": false,
+          "details": [
+            "FSC [La carence en vitamine B12 se manifesterait par une anémie mégaloblastique sur la FSC ainsi qu'une thrombocytopénie et/ou leucopénie dans certains cas. L'anémie peut causer de la fatigue]",
+            "TSH [pour exclure l'hypothyroïdie comme cause des symptômes cognitifs de cette patiente]",
+            "Vitamine B12 sérique [pour exclure la carence en B12 comme cause des troubles de mémoire]",
+            "Glycémie, électrolytes [pour exclure les déséquilibres glycémiques et électrolytiques comme causes des symptômes cognitifs de la patiente (ex: hypoglycémie, hypernatrémie)]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens spécialisés",
+          "binaryOnly": false,
+          "details": [
+            "Ponction lombaire [soulagerait les symptômes dans l'HPN (à la fois diagnostique et thérapeutique) ; montrerait ↓ bêta-amyloïde et ↑ tau phosphorylée dans la maladie d'Alzheimer]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil pour patients avec perte de mémoire et/ou troubles cognitifs",
+            "Réaction appropriée au défi (être aimable, paraître intéressé par l'histoire de la patiente, ne pas interrompre)",
+            "Discussion du rôle de l'aidante (fille)",
+            "Planification du suivi",
+            "Ressources de soutien disponibles"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si Alzheimer confirmé",
+                "content": "• Inhibiteurs cholinestérase (donépézil)\n• Soutien aidants naturels\n• Planification médico-légale précoce"
+              },
+              {
+                "title": "Traitement dépression si présente",
+                "content": "• Éviter anticholinergiques"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Bavardage et histoire personnelle",
+          "content": "[Être très bavarde et essayer de raconter une histoire sur sa vie une ou deux fois quand l'examinateur pose des questions sur la famille]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Ramirez, c'est très intéressant ce que vous me racontez sur votre café. J'aimerais beaucoup en entendre plus, mais d'abord, permettez-moi de finir quelques questions importantes sur votre santé pour m'assurer de bien comprendre ce qui se passe. Nous aurons plus de temps pour discuter après. Maintenant, pouvez-vous me dire..."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Figure de pentagones entrecroisés (MMSE)",
+        "description": "Test de praxie constructive du MMSE : deux pentagones se chevauchant. La copie incorrecte suggère des troubles visuospatiaux.",
+        "data": "grilles_generees/html/images/AMBOSS-17-img1-Figure of intersecting pentagons (MMSE).jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Atrophie cérébrale dans la maladie d'Alzheimer",
+        "description": "IRM cérébrale chez deux patients (A et B) d'âge similaire (pondération T1 axiale, coronale et sagittale). A1-A3 : Atrophie cérébrale diffuse et symétrique affectant le lobe frontal et le lobe temporo-pariétal ainsi que la région hippocampique. Le système ventriculaire est dilaté secondairement à l'atrophie parenchymateuse (hydrocéphalie ex vacuo). B1-B3 : Cerveau normal. L'aspect IRM en A1-A3 est caractéristique de la maladie d'Alzheimer avancée.",
+        "data": "grilles_generees/html/images/AMBOSS-17-img2-Cerebral atrophy in Alzheimer disease.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Atrophie cérébrale dans la maladie d'Alzheimer 3/3",
+        "description": "IRM cérébrale (pondération T2 ; plan axial) d'un patient avec troubles mnésiques croissants. L'atrophie du lobe temporal médian est accompagnée d'un élargissement de l'espace sous-arachnoïdien (superposition verte) et d'une dilatation des cornes temporales des ventricules latéraux (superposition rouge). Ces changements morphologiques ont été observés dans le contexte de la maladie d'Alzheimer.",
+        "data": "grilles_generees/html/images/AMBOSS-17-img3-Cerebral atrophy in Alzheimer disease 3:3.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Hydrocéphalie à pression normale",
+        "description": "CT cérébral (plan axial) d'un patient avec symptômes d'hydrocéphalie à pression normale. Il y a une dilatation du troisième ventricule, ainsi que des ventricules latéraux (superposition verte) avec œdème périventriculaire associé (superposition rouge). On observe également des espaces sous-arachnoïdiens disproportionnément élargis (DESH).",
+        "data": "grilles_generees/html/images/AMBOSS-17-img4-Normal pressure hydrocephalus.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Encéphalopathie athérosclérotique sous-corticale 1/2",
+        "description": "CT cérébral (sans contraste ; plan axial). Des zones anormales de faible atténuation sont visibles dans la substance blanche périventriculaire adjacente aux cornes frontales et temporales des ventricules latéraux (superposition verte). Les sillons cérébraux (exemples indiqués par la superposition rouge) et les ventricules sont également proéminents. Ces résultats peuvent être observés dans la démence vasculaire.",
+        "data": "grilles_generees/html/images/AMBOSS-17-img5-Subcortical atherosclerotic encephalopathy 1:2.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Grace Ramirez",
+      "age": "70 ans",
+      "contexte": "Femme retraitée consultant pour troubles de mémoire sur insistance de sa fille",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma fille voulait que je vienne. Elle dit que j'ai été très oublieuse dernièrement.",
+        "autreChose": "Je crois qu'elle est un peu dramatique."
+      },
+      "consignes": [
+        "Agir oublieuse mais ne pas sembler trop préoccupée par cela.",
+        "Quand l'examinateur teste votre orientation et votre mémoire, répondre avec les réponses fournies dans la section examen.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: CT, IRM) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Être très bavarde et essayer de raconter une histoire sur votre vie une ou deux fois quand l'examinateur vous pose des questions sur votre famille. Si l'examinateur est aimable, paraît intéressé et ne vous interrompt pas, finir rapidement l'histoire et le laisser poser la question suivante."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Oublis depuis 2 ans selon fille",
+          "Minimisation des symptômes",
+          "Progression notée par entourage",
+          "Pas de conscience claire du déficit"
+        ],
+        "symptomesAssocies": [
+          "Incontinence urinaire occasionnelle",
+          "Fatigue constante",
+          "Troubles du sommeil",
+          "Perte d'appétit",
+          "Episodes de désorientation spatiale",
+          "Perte d'autonomie instrumentale",
+          "Symptômes dépressifs depuis mort caniche"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître détendue et peu concernée",
+          "Minimiser les symptômes",
+          "Tendance à digresser",
+          "Raconter histoires sur sa vie",
+          "Demander clarifications termes médicaux"
+        ],
+        "durantStatus": [
+          "Coopération normale aux examens physiques",
+          "Erreurs spécifiques au MMSE selon script",
+          "Orientation : erreurs jour/date/mois",
+          "Rappel : 1/3 mots seulement",
+          "Épellation inversée incorrecte",
+          "Copie pentagones incorrecte"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 70 ans avec démence débutante probable type Alzheimer. Présentation classique : troubles mnésiques insidieux, désorientation temporo-spatiale, perte autonomie instrumentale. Score MMSE estimé 20-22/30 (démence légère). Facteurs risque : âge, sexe F, HTA. Composante dépressive réactionnelle. Diagnostic différentiel inclut HPN (mais triade incomplète) et pseudodémence (mais chronologie défavorable).",
+      "rolesInterventions": [
+        "MMSE complet : Score 21/30",
+        "IRM cérébrale : Atrophie hippocampique bilatérale, atrophie corticale modérée",
+        "TSH : 2.8 mUI/L (normale)",
+        "Vitamine B12 : 320 pg/mL (normale)",
+        "FSC : Hb 13.2 g/dL (normale)",
+        "Si PL faite : Protéine tau élevée, β-amyloïde diminuée"
+      ],
+      "pointsCles": [
+        "MMSE < 24/30 = démence (ajuster selon éducation)",
+        "Alzheimer = démence la plus fréquente (60-70%)",
+        "Diagnostic clinique + exclusion causes réversibles",
+        "Toujours rechercher causes traitables (B12, thyroïde)",
+        "Impliquer aidants dès diagnostic",
+        "Planification précoce (directives anticipées)"
+      ],
+      "pieges": [
+        "Accepter minimisation de la patiente",
+        "Ne pas faire MMSE complet",
+        "Oublier causes réversibles",
+        "Ne pas évaluer sécurité domicile",
+        "Interrompre histoires (perd alliance thérapeutique)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Maladie d'Alzheimer au stade léger"
+        },
+        {
+          "titre": "Maladie d'Alzheimer",
+          "contenu": "Démence neurodégénérative la plus fréquente :",
+          "points": [
+            "Prévalence : 5% à 65 ans, double tous les 5 ans",
+            "Pathologie : plaques amyloïdes + dégénérescence neurofibrillaire",
+            "Début insidieux, progression lente (8-10 ans)",
+            "Atteinte hippocampique précoce → troubles mnésiques",
+            "Stades : léger (MMSE 20-24), modéré (10-19), sévère (<10)",
+            "Facteurs risque : âge, APOE ε4, sexe F, bas niveau éducation"
+          ]
+        },
+        {
+          "titre": "Présentation clinique Alzheimer",
+          "contenu": "Critères diagnostiques majeurs :",
+          "points": [
+            "Troubles mémoire épisodique : oublis répétés, questions itératives",
+            "Début insidieux, progression > 6 mois",
+            "Syndrome amnésique hippocampique : encodage déficitaire",
+            "Troubles associés : langage, praxies, gnosies, fonctions exécutives",
+            "Anosognosie fréquente (minimisation déficits)",
+            "Troubles comportement : apathie, anxiété, dépression"
+          ]
+        },
+        {
+          "titre": "Mini-Mental State Examination",
+          "contenu": "Outil de dépistage cognitif :",
+          "points": [
+            "Score total /30 points",
+            "Orientation : 10 points (temps 5, lieu 5)",
+            "Enregistrement : 3 points",
+            "Attention/calcul : 5 points",
+            "Rappel : 3 points",
+            "Langage : 8 points",
+            "Praxie constructive : 1 point",
+            "Seuils : Normal ≥ 27, démence < 24 (ajuster éducation)"
+          ]
+        },
+        {
+          "titre": "Hydrocéphalie à pression normale",
+          "contenu": "Diagnostic différentiel important :",
+          "points": [
+            "Triade d'Hakim : troubles marche + incontinence + démence",
+            "Marche : magnétique, petit pas, élargissement polygone",
+            "Incontinence : urgence puis incontinence vraie",
+            "Démence : sous-corticale, ralentissement psychomoteur",
+            "IRM : dilatation ventriculaire, angle calleux < 40°",
+            "Test : PL soustractive 30-50 mL améliore symptômes"
+          ]
+        },
+        {
+          "titre": "Bilan démence",
+          "contenu": "Évaluation systématique obligatoire :",
+          "points": [
+            "Anamnèse détaillée + hétéroanamnèse +++",
+            "Examen neurologique complet + MMSE",
+            "Bilan causes réversibles : TSH, B12, folates, calcémie",
+            "Imagerie : IRM > CT (atrophie, lacunes, tumeur)",
+            "Si doute : neuropsychologie, PL (biomarqueurs)",
+            "Évaluation fonctionnelle : ADL, IADL"
+          ]
+        },
+        {
+          "titre": "Prise en charge Alzheimer",
+          "contenu": "Approche globale multidisciplinaire :",
+          "points": [
+            "Annonce diagnostique avec tact, présence aidant",
+            "Traitement spécifique : anticholinestérasiques si MMSE 10-26",
+            "Interventions non pharmacologiques : stimulation cognitive",
+            "Prise en charge troubles comportement",
+            "Soutien aidants : formation, répit, groupes",
+            "Anticipation : tutelle, directives anticipées, conduite"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Inhibiteurs cholinestérase : Donépézil 5mg → 10mg/j (stade léger-modéré)",
+        "Alternative : Rivastigmine patch 4.6 → 9.5mg/24h",
+        "Mémantine : 5mg → 20mg/j (stade modéré-sévère, MMSE < 15)",
+        "Antidépresseurs si dépression : Sertraline 50-100mg/j",
+        "Éviter benzodiazépines (confusion) et anticholinergiques",
+        "Mélatonine 2-6mg si troubles sommeil",
+        "Vitamine D 800-1000 UI/j (prévention chutes)"
+      ],
+      "examensComplementaires": [
+        "MMSE : Dépistage initial, suivi évolution (sensibilité 80%)",
+        "MoCA : Plus sensible troubles exécutifs précoces",
+        "IRM cérébrale : Atrophie hippocampique, exclusion autres causes",
+        "TSH, vitamine B12 : Causes réversibles démence",
+        "Biomarqueurs LCR : Aβ42↓, tau↑, p-tau↑ (si doute diagnostique)",
+        "TEP amyloïde/tau : Recherche si présentation atypique"
+      ]
+    }
+  }
+}

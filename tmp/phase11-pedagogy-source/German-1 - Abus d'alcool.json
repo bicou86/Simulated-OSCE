@@ -1,0 +1,362 @@
+{
+  "title": "German-1 - Abus d'alcool",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Monsieur Jägermeister, 53 ans, se présente au cabinet pour un problème d'alcool évoluant depuis plusieurs années"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte pour identifier le motif de consultation",
+          "details": [
+            "[Problème avec l'alcool]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation temporelle de la consommation",
+          "details": [
+            "Durée du problème [Depuis 8 ans]",
+            "Évolution : intermittente ou continue [Tout le temps]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Quantification de la consommation",
+          "details": [
+            "Quantité quotidienne [Chaque jour, 4 litres de bière, 1 bouteille de vin]",
+            "Type de boissons consommées",
+            "Horaires de consommation"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Contexte de consommation",
+          "details": [
+            "Circonstances : en société ou seul [Avant en société, maintenant surtout à la maison]",
+            "Effet recherché [Pour décompresser et se détendre]",
+            "Association avec d'autres substances [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Critères de dépendance (≥3/6 pour le diagnostic)",
+          "details": [
+            "Désir puissant de consommer (craving) [Oui, de plus en plus fort]",
+            "Perte de contrôle [Lors de fêtes, ne se souvient généralement pas de la soirée]",
+            "Tolérance [Supporte déjà plus que les autres]",
+            "Syndrome de sevrage [Légers tremblements quand ne boit pas]",
+            "Abandon d'autres activités [Plus de loisirs, femme l'a quitté, enfants ne viennent plus]",
+            "Poursuite malgré conséquences négatives [Perdu son travail il y a 2 mois, boit encore plus]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Questionnaire CAGE (≥2/4 = positif)",
+          "details": [
+            "Cut down - Avez-vous déjà essayé de réduire ? [Oui, sans succès]",
+            "Annoyed - Agacé par les critiques ? [Ma femme me critiquait constamment, je l'ai parfois frappée]",
+            "Guilty - Sentiment de culpabilité ? [Oui beaucoup, j'ai honte de ma situation actuelle]",
+            "Eye opener - Boire le matin pour se sentir bien ? [Le matin, il faut déjà une ou deux bières pour démarrer]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Tentatives de sevrage antérieures",
+          "details": [
+            "Sevrages ambulatoires ou hospitaliers [Aucun]",
+            "Pharmacothérapies anti-craving [Non]",
+            "Groupes d'entraide (AA, Croix-Bleue) [Essayé une fois, abandonné rapidement]",
+            "Accompagnement psychiatrique [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes alimentaires et symptômes B",
+          "details": [
+            "Alimentation [Ne mange que peu, parfois un peu de pain]",
+            "Fièvre [Non]",
+            "Sueurs nocturnes [Non mentionné]",
+            "Perte de poids [Non mentionné]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes somatiques associés",
+          "details": [
+            "Tendance hémorragique [Non]",
+            "Ictère [Non]",
+            "Encéphalopathie hépatique [Non mentionné]",
+            "Œdèmes/ascite [Non]",
+            "Douleurs abdominales [Oui, souvent des crampes abdominales]",
+            "RGO/œsophagite [Non]",
+            "Dysphagie/odynophagie [Non]",
+            "Gastrite/ulcère [Sensation de lourdeur dans l'estomac]",
+            "Saignements digestifs (méléna, hématochézie) [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes neurologiques",
+          "details": [
+            "Douleurs/faiblesse musculaire [Non]",
+            "Chutes [Souvent tombé quand ivre, sinon non]",
+            "Polyneuropathie (douleurs pieds, hypoesthésie) [Non]",
+            "Troubles mnésiques/diplopie [Oublie beaucoup de choses, pas de diplopie]",
+            "Troubles de coordination/ataxie [Renverse le café, moins adroit qu'avant]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes urinaires et généraux",
+          "details": [
+            "Production/couleur urinaire [Toujours pareil, plutôt claire]",
+            "Vertiges [Non mentionné]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies préexistantes [Aucune]",
+            "Troubles psychiatriques/autres addictions [Non exploré]",
+            "Pathologies hépatiques/pancréatiques [Ne sait pas]",
+            "Chirurgies [Non mentionné]",
+            "Allergies [Aucune]",
+            "Médicaments actuels [Aucun]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Autres toxiques",
+          "details": [
+            "Tabac [50 paquets-années]",
+            "Drogues [Non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Troubles psychiatriques [Ne connaît pas sa famille]",
+            "Alcoolisme familial [Ne connaît pas sa famille]",
+            "Pathologies hépatiques/pancréatiques [Ne connaît pas sa famille]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Contexte socio-professionnel",
+          "details": [
+            "Formation/parcours professionnel [Scolarité obligatoire, apprentissage d'électricien]",
+            "Situation professionnelle actuelle [Au chômage depuis 2 mois]",
+            "Réseau social [Plus personne, femme et enfants ne veulent plus de contact, seul]",
+            "Logement [Petit appartement à Glattfelden]",
+            "Situation financière [Grosses dettes auprès de nombreux amis]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse par systèmes",
+          "binaryOnly": false
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et systématique",
+            "Exploration des critères de dépendance",
+            "Évaluation du retentissement bio-psycho-social"
+          ],
+          "scoringRule": "Excellente = 2 pts, Suffisante = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen abdominal complet",
+          "details": [
+            "Inspection (distension, circulation collatérale)",
+            "Palpation (hépatomégalie, splénomégalie, douleur)",
+            "Percussion (matité, ascite)",
+            "Signes cutanés hépatiques (angiomes stellaires, érythème palmaire)"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection de la cavité buccale",
+          "details": [
+            "Recherche de leucoplasie",
+            "Recherche d'érythroplasie",
+            "État dentaire",
+            "Hypertrophie parotidienne"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Mini-examen neurologique",
+          "details": [
+            "Orientation temporo-spatiale",
+            "Motricité oculaire",
+            "Force musculaire",
+            "Coordination (épreuve doigt-nez)",
+            "Sensibilité vibratoire"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiopulmonaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Auscultation pulmonaire",
+            "Recherche de signes d'insuffisance cardiaque"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Toucher rectal si indiqué",
+          "binaryOnly": false
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes d'intoxication chronique",
+          "details": [
+            "Tremblements",
+            "Érythrose faciale",
+            "Télangiectasies",
+            "Haleine alcoolisée"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation de l'état général",
+          "details": [
+            "État nutritionnel",
+            "Hydratation",
+            "Hygiène corporelle"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et complet",
+            "Recherche des complications",
+            "Techniques adaptées"
+          ],
+          "scoringRule": "Méthodique et complet = 2 pts, Suffisant = 1 pt, Insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "L'étudiant énonce le diagnostic principal",
+          "details": [
+            "Trouble de l'usage de l'alcool / Dépendance à l'alcool"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "L'étudiant évoque les diagnostics différentiels",
+          "details": [
+            "Usage nocif d'alcool (sans dépendance)",
+            "Polytoxicomanie",
+            "Trouble psychiatrique sous-jacent avec alcoolisation secondaire"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "L'étudiant propose les examens complémentaires appropriés",
+          "details": [
+            "Biologie de base : NFS, CRP, ionogramme (Na, K, Ca), créatinine",
+            "Bilan hépatique : transaminases (ASAT, ALAT), GGT, phosphatases alcalines (PAL), albumine",
+            "Bilan de coagulation : TP/INR, TCA",
+            "Fonction pancréatique : lipase, amylase",
+            "TSH (diagnostic différentiel)",
+            "Vitamines B1, B12, folates (carences fréquentes)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "L'étudiant propose des examens morphologiques si indiqués",
+          "details": [
+            "Échographie abdominale",
+            "CT abdominal si suspicion de complication",
+            "Gastroscopie si symptômes digestifs hauts",
+            "Examen ORL si facteurs de risque"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "L'étudiant propose une prise en charge thérapeutique adaptée",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Sevrage et prévention du syndrome de sevrage",
+                "content": "• Évaluation du risque de sevrage (score de Cushman)\n• Sevrage ambulatoire ou hospitalier selon sévérité\n• Benzodiazépines si nécessaire (diazépam, oxazépam)\n• Vitamine B1 (thiamine) systématique - prévention Wernicke-Korsakoff\n• Hydratation et correction des troubles électrolytiques"
+              },
+              {
+                "title": "Traitement médicamenteux de maintien",
+                "content": "• Acamprosate (Aotal®) - anti-craving\n• Naltrexone (Revia®) - antagoniste opioïde\n• Disulfirame (Antabuse®) - effet antabuse\n• Baclofène - hors AMM mais efficace\n• Nalméfène (Selincro®) - réduction de consommation"
+              },
+              {
+                "title": "Prise en charge psychosociale",
+                "content": "• Psychothérapie (TCC, entretien motivationnel)\n• Groupes d'entraide (AA, Croix-Bleue)\n• Accompagnement social (aide aux dettes)\n• Réinsertion professionnelle\n• Thérapie familiale si possible"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "L'étudiant organise le suivi et la prévention",
+          "details": [
+            "Consultations régulières en addictologie",
+            "Surveillance biologique (fonction hépatique)",
+            "Dépistage des complications (cirrhose, neuropathie)",
+            "Vaccination hépatite B",
+            "Prévention des rechutes"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "L'étudiant propose une hospitalisation si nécessaire",
+          "details": [
+            "Risque de sevrage sévère",
+            "Comorbidités somatiques graves",
+            "Échec du sevrage ambulatoire",
+            "Absence de soutien social"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Approche bio-psycho-sociale",
+            "Prise en charge adaptée et personnalisée",
+            "Plan de suivi structuré"
+          ],
+          "scoringRule": "Excellente prise en charge = 2 pts, Correcte = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

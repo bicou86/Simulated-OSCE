@@ -1,0 +1,465 @@
+{
+  "title": "RESCOS-39 - Dyspnée",
+  "category": "RESCOS",
+  "subcategory": "Cardiologie - Pathologie cardiaque",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 62 ans, employé de bureau, consultant pour dyspnée et œdèmes des membres inférieurs",
+    "vitals": {
+      "ta": "145/90 mmHg",
+      "fc": "92 bpm",
+      "fr": "24/min",
+      "temperature": "36.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Essoufflement et gonflement des jambes"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la dyspnée",
+          "details": [
+            "Début progressif [depuis 3 mois]",
+            "Dyspnée d'effort initialement [2 étages]",
+            "Aggravation progressive [maintenant 1 étage]",
+            "Orthopnée [2-3 oreillers la nuit]",
+            "Dyspnée paroxystique nocturne [se réveille essoufflé]",
+            "Amélioration en position assise"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Œdèmes des membres inférieurs",
+          "details": [
+            "Apparition progressive [depuis 6 semaines]",
+            "Bilatéraux et symétriques",
+            "Prennent le godet",
+            "Plus importants le soir",
+            "Diminution le matin",
+            "Prise de poids [+5 kg en 2 mois]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Fatigue importante [depuis 3 mois]",
+            "Toux sèche nocturne [parfois]",
+            "Palpitations [occasionnelles]",
+            "Pas de douleur thoracique",
+            "Pas d'hémoptysie",
+            "Nycturie [2-3 fois par nuit]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Classification NYHA",
+          "details": [
+            "Classe I: Pas de limitation",
+            "Classe II: Limitation légère [patient actuel]",
+            "Classe III: Limitation marquée",
+            "Classe IV: Symptômes au repos"
+          ],
+          "scoringRule": "Patient en classe II-III NYHA"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents cardiovasculaires",
+          "details": [
+            "Hypertension artérielle [depuis 10 ans]",
+            "Infarctus du myocarde [il y a 5 ans]",
+            "Angioplastie coronaire [2 stents]",
+            "Dyslipidémie [traitée]",
+            "Diabète type 2 [depuis 8 ans]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Tabagisme [arrêté après l'infarctus]",
+            "Sédentarité [travail de bureau]",
+            "Surpoids [IMC 28]",
+            "Stress professionnel",
+            "Antécédents familiaux [père décédé d'insuffisance cardiaque]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Traitement actuel",
+          "details": [
+            "IEC (ramipril 5mg/j)",
+            "Bêtabloquant (bisoprolol 5mg/j)",
+            "Aspirine 100mg/j",
+            "Statine (atorvastatine 40mg/j)",
+            "Metformine 1000mg x2/j"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "details": [
+            "TA 145/90 mmHg",
+            "FC 92 bpm, régulier",
+            "FR 24/min",
+            "SpO2 94% en air ambiant",
+            "Température 36.8°C"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection générale",
+          "details": [
+            "Patient en position semi-assise",
+            "Dyspnée de repos modérée",
+            "Cyanose légère des extrémités",
+            "Turgescence jugulaire [visible à 45°]",
+            "Reflux hépato-jugulaire [positif]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Bruits du cœur assourdis",
+            "Galop (B3) [présent]",
+            "Souffle systolique d'insuffisance mitrale [2/6]",
+            "Pas de frottement péricardique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation pulmonaire",
+          "details": [
+            "Râles crépitants bilatéraux [bases]",
+            "Diminution du murmure vésiculaire [bases]",
+            "Matité des bases [épanchement pleural bilatéral]",
+            "Pas de sibilants"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "details": [
+            "Hépatomégalie [bord inférieur à 3 cm du rebord costal]",
+            "Sensibilité hépatique",
+            "Ascite modérée [matité déclive]",
+            "Pas de splénomégalie"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des membres inférieurs",
+          "details": [
+            "Œdèmes bilatéraux prenant le godet [jusqu'aux genoux]",
+            "Symétriques et blancs",
+            "Mous et indolores",
+            "Pouls périphériques présents",
+            "Pas de signes de phlébite"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques à considérer",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque congestive à fraction d'éjection réduite",
+                    "cause": "Arguments POUR:\n\t□ Dyspnée d'effort progressive\n\t□ Orthopnée et DPN\n\t□ Œdèmes des MI bilatéraux\n\t□ Turgescence jugulaire\n\t□ Râles crépitants\n\t□ Galop B3\n\t□ ATCD d'infarctus",
+                    "test": "→ ECG, radiographie thoracique, échocardiographie, BNP/NT-proBNP"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque à fraction d'éjection préservée",
+                    "cause": "Arguments POUR:\n\t□ HTA\n\t□ Diabète\nArguments CONTRE:\n\t□ ATCD d'infarctus\n\t□ Galop B3 (plutôt B4 si FEVG préservée)",
+                    "test": "→ Échocardiographie avec mesure FEVG"
+                  },
+                  {
+                    "text": "BPCO décompensée",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme ancien\n\t□ Dyspnée\nArguments CONTRE:\n\t□ Orthopnée\n\t□ Œdèmes\n\t□ Signes cardiaques",
+                    "test": "→ Spirométrie, gazométrie"
+                  },
+                  {
+                    "text": "Insuffisance rénale chronique",
+                    "cause": "Arguments POUR:\n\t□ Diabète\n\t□ HTA\n\t□ Œdèmes\nArguments CONTRE:\n\t□ Signes cardiaques prédominants",
+                    "test": "→ Créatinine, DFG, ionogramme"
+                  },
+                  {
+                    "text": "Syndrome néphrotique",
+                    "cause": "Arguments CONTRE:\n\t□ Signes cardiaques\n\t□ Dyspnée prédominante\n\t□ Pas d'œdème facial",
+                    "test": "→ Protéinurie, albuminémie"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "details": [
+            "ECG 12 dérivations",
+            "Radiographie thoracique",
+            "BNP ou NT-proBNP",
+            "Échocardiographie transthoracique",
+            "Bilan biologique: NFS, ionogramme, créatinine, BNP",
+            "Troponines si suspicion de SCA",
+            "Gazométrie artérielle si dyspnée sévère"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Critères diagnostiques d'insuffisance cardiaque",
+          "details": [
+            "Critères de Framingham majeurs",
+            "- Dyspnée paroxystique nocturne",
+            "- Turgescence jugulaire",
+            "- Râles crépitants",
+            "- Cardiomégalie radiologique",
+            "- Œdème aigu du poumon",
+            "- Galop B3",
+            "- Reflux hépato-jugulaire"
+          ],
+          "scoringRule": "2 critères majeurs ou 1 majeur + 2 mineurs"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement de l'insuffisance cardiaque",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Restriction sodée < 2g/j\n• Restriction hydrique si hyponatrémie\n• Pesée quotidienne\n• Activité physique adaptée\n• Vaccination grippe et pneumocoque"
+              },
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• Diurétiques de l'anse (furosémide 40-80mg/j)\n• IEC ou ARA2 (augmenter ramipril à 10mg/j)\n• Bêtabloquants (augmenter bisoprolol progressivement)\n• Antagonistes de l'aldostérone (spironolactone 25mg/j)\n• ARNI si FEVG < 35% malgré traitement optimal"
+              },
+              {
+                "title": "Surveillance",
+                "content": "• Poids quotidien\n• Ionogramme, fonction rénale\n• Signes de congestion\n• Tolérance du traitement\n• Éducation thérapeutique"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme (red flags)",
+          "redflagsSection": {
+            "title": "Critères d'hospitalisation",
+            "items": [
+              {
+                "text": "Œdème aigu du poumon",
+                "description": "Dyspnée aiguë sévère avec râles crépitants diffus"
+              },
+              {
+                "text": "Choc cardiogénique",
+                "description": "Hypotension, oligurie, confusion"
+              },
+              {
+                "text": "Syndrome coronarien aigu",
+                "description": "Douleur thoracique avec modifications ECG"
+              },
+              {
+                "text": "Arythmie ventriculaire",
+                "description": "TV, FV, syncope"
+              },
+              {
+                "text": "Insuffisance rénale aiguë",
+                "description": "Créatinine en augmentation rapide"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Éducation thérapeutique",
+          "details": [
+            "Reconnaissance des signes d'alarme",
+            "Importance de l'observance thérapeutique",
+            "Auto-surveillance du poids",
+            "Régime pauvre en sel",
+            "Limitation des apports hydriques",
+            "Activité physique régulière adaptée"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Votre cœur a des difficultés à pomper efficacement le sang, ce qui explique votre essoufflement et le gonflement de vos jambes. C'est probablement lié à votre ancien infarctus. Nous devons ajuster votre traitement et faire des examens complémentaires."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est grave?]\n[Vais-je devoir être hospitalisé?]\n[Est-ce que je peux continuer à travailler?]\n[C'est définitif?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "C'est une maladie sérieuse mais qui se traite bien avec les médicaments appropriés\nSi les examens confirment le diagnostic, on peut d'abord essayer un traitement ambulatoire\nIl faudra adapter votre activité professionnelle, éviter les efforts importants\nAvec un bon traitement et un suivi régulier, on peut stabiliser et améliorer votre état"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Insuffisance cardiaque",
+      "nom": "Patient masculin",
+      "age": "62 ans",
+      "profession": "Employé de bureau",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis essoufflé et mes jambes sont enflées",
+        "description": "Dyspnée progressive et œdèmes des membres inférieurs depuis 3 mois"
+      },
+      "histoireActuelle": {
+        "dyspnee": [
+          "Début il y a 3 mois",
+          "D'abord seulement après 2 étages",
+          "Maintenant après 1 étage",
+          "Obligé de dormir avec 2-3 oreillers",
+          "Parfois réveillé la nuit en manque d'air",
+          "Doit s'asseoir au bord du lit pour respirer"
+        ],
+        "oedemes": [
+          "Jambes qui gonflent depuis 6 semaines",
+          "Les deux jambes pareil",
+          "Plus gonflées le soir",
+          "Chaussures devenues trop serrées",
+          "Pris 5 kg en 2 mois"
+        ],
+        "symptomesAssocies": [
+          "Très fatigué depuis 3 mois",
+          "Tousse parfois la nuit, toux sèche",
+          "Lève 2-3 fois la nuit pour uriner",
+          "Pas de douleur dans la poitrine"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Infarctus il y a 5 ans",
+          "2 stents posés",
+          "Hypertension depuis 10 ans",
+          "Diabète depuis 8 ans",
+          "Cholestérol élevé"
+        ],
+        "familiaux": [
+          "Père décédé d'insuffisance cardiaque à 70 ans",
+          "Mère diabétique"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Fumait 1 paquet/jour, arrêté après l'infarctus",
+        "alcool": "Occasionnel",
+        "activite": "Sédentaire, travail de bureau"
+      },
+      "medicaments": {
+        "actuels": [
+          "Ramipril 5mg le matin",
+          "Bisoprolol 5mg le matin",
+          "Aspirine 100mg",
+          "Atorvastatine 40mg le soir",
+          "Metformine 1000mg matin et soir"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet de son état",
+          "Essoufflé en parlant longuement",
+          "Position semi-assise préférée"
+        ],
+        "signesPhysiques": [
+          "Respiration légèrement rapide",
+          "Se tient légèrement penché en avant",
+          "Montre ses chevilles gonflées si demandé"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Insuffisance cardiaque",
+      "pointsCles": [
+        "Tableau typique d'IC congestive",
+        "Probable IC à FEVG réduite post-IDM",
+        "Classe NYHA II-III",
+        "Multiples facteurs de risque CV",
+        "Traitement sous-optimal à optimiser"
+      ],
+      "pieges": [
+        "Ne pas oublier de classer selon NYHA",
+        "Rechercher systématiquement les signes droits et gauches",
+        "Évaluer la volémie (sèche, euvolémique, congestive)",
+        "Vérifier l'observance thérapeutique",
+        "Dépister une cause de décompensation"
+      ],
+      "criteresDiagnostiques": [
+        "Critères de Framingham",
+        "BNP > 100 pg/ml ou NT-proBNP > 300 pg/ml",
+        "Échocardiographie: FEVG, troubles de cinétique",
+        "Radiographie: cardiomégalie, redistribution vasculaire"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Insuffisance cardiaque",
+      "sections": [
+        {
+          "titre": "Classification",
+          "contenu": "• IC à FEVG réduite (< 40%)\n• IC à FEVG modérément réduite (40-49%)\n• IC à FEVG préservée (≥ 50%)\n• Classification NYHA (I-IV)\n• Stades ACC/AHA (A-D)"
+        },
+        {
+          "titre": "Étiologies principales",
+          "contenu": "• Cardiopathie ischémique (la plus fréquente)\n• HTA\n• Valvulopathies\n• Cardiomyopathies\n• Troubles du rythme\n• Causes toxiques (alcool, chimiothérapie)"
+        },
+        {
+          "titre": "Mécanismes compensateurs",
+          "contenu": "• Activation du système sympathique\n• Système rénine-angiotensine-aldostérone\n• Peptides natriurétiques\n• Remodelage ventriculaire\n• Mécanisme de Frank-Starling"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Quadrithérapie de base: IEC/ARA2 + BB + ARM + diurétiques",
+        "ARNI (sacubitril/valsartan) si FEVG < 35% sous traitement optimal",
+        "Gliflozines (SGLT2i) même sans diabète",
+        "Ivabradine si FC > 70 bpm sous BB maximal",
+        "Dispositifs: DAI si FEVG < 35%, CRT si QRS large",
+        "Transplantation cardiaque en dernier recours"
+      ],
+      "examensComplementaires": [
+        "ECG: recherche séquelles IDM, troubles du rythme, QRS large",
+        "Radiographie thoracique: cardiomégalie, œdème interstitiel, épanchement",
+        "Échocardiographie: FEVG, cinétique, valvulopathies, pressions de remplissage",
+        "BNP/NT-proBNP: aide diagnostique et pronostique",
+        "Coronarographie si cardiopathie ischémique suspectée",
+        "IRM cardiaque: étiologie, viabilité myocardique"
+      ]
+    }
+  }
+}

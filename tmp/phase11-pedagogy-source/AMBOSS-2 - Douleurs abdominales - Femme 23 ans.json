@@ -1,0 +1,871 @@
+{
+  "title": "AMBOSS-2 - Douleurs abdominales - Femme 23 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Anna Bush, femme de 23 ans, consultante pour des douleurs abdominales",
+    "vitals": {
+      "temperature": "38.5°C",
+      "ta": "115/65 mmHg",
+      "fc": "85 bpm",
+      "fr": "22/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon ventre me fait mal depuis ce matin"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Du côté droit, juste au-dessus de l'os de la hanche]",
+            "Intensité [Au moins 9/10]",
+            "Qualité [C'est une douleur vraiment aiguë]",
+            "Début [J'avais une douleur sourde au ventre hier soir, mais pas aussi forte et pas localisée à un endroit précis comme maintenant. La douleur actuelle a commencé ce matin]",
+            "Évolution temporelle [La douleur est là tout le temps et j'ai l'impression qu'elle empire]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [La douleur diminue un peu si je ne bouge pas ou si je me couche]",
+            "Facteurs aggravants [La douleur empire beaucoup si je me lève et marche]",
+            "Épisodes antérieurs similaires [Aucun]",
+            "Événements précipitants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Nausées [Je me sens vraiment nauséeuse mais je n'ai pas vomi]",
+            "Vomissements [Non]",
+            "Fièvre/frissons [J'ai l'impression d'avoir de la fièvre depuis ce matin. L'infirmière n'a-t-elle pas pris ma température plus tôt ?]",
+            "Appétit [Je n'ai rien mangé depuis hier. Je n'ai vraiment pas d'appétit]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non]",
+            "Éruption cutanée [Non]",
+            "Douleurs articulaires [Non]",
+            "Troubles urinaires [Il y a 2 semaines, j'ai eu quelques jours où ça brûlait un peu quand j'urinais, mais c'est parti tout seul]",
+            "Troubles du transit [Je n'ai pas de diarrhée ou de constipation, juste mal au ventre]",
+            "Variations pondérales [Aucune]",
+            "Infections récentes [Hmm, pas que je me souvienne]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "patientComment": "J'avais vraiment une mauvaise acné quand j'étais plus jeune mais ça s'est amélioré l'année dernière. Et puis j'ai eu une chlamydia il y a 2 ans, mais ils m'ont donné des antibiotiques et c'est parti aussi"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Pilule contraceptive orale"
+        },
+        {
+          "id": "a9",
+          "text": "Hospitalisations",
+          "binaryOnly": true,
+          "patientComment": "Jamais"
+        },
+        {
+          "id": "a10",
+          "text": "Contacts malades",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ils sont tous en bonne santé. Enfin, ma mère dit qu'elle a le syndrome du côlon irritable mais je pense que c'est juste le stress"
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis étudiante à l'université]",
+            "Domicile [Je vis dans une résidence universitaire]",
+            "Tabac [Non]",
+            "Alcool [Non]",
+            "Drogues illicites [Jamais]",
+            "Régime alimentaire [Je pense que je mange habituellement équilibré, beaucoup de légumes et du poulet ou de la viande tous les deux ou trois jours]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Histoire sexuelle et gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Partenaire [Mon petit ami]",
+            "Douleur pendant les rapports [Oui, ça fait mal depuis une semaine en fait]",
+            "Nombre de partenaires dans l'année [Deux. Mon petit ami actuel et mon ex]",
+            "Protection [J'utilise des contraceptifs oraux, si c'est ce que vous voulez dire ?]",
+            "Dernières règles [Il y a une semaine]",
+            "Ménarche [À 13 ans]",
+            "Durée des règles [4-5 jours]",
+            "Régularité [Tous les 28 jours, parce que je prends la pilule]",
+            "Nombre de tampons par jour [Deux]",
+            "Pertes vaginales [Aucune maintenant, mais j'en ai eu un peu il y a 2 semaines qui sont parties toutes seules]",
+            "Démangeaisons vaginales [Non]",
+            "Sécheresse vaginale [Non]",
+            "Grossesses [Non, je n'ai jamais été enceinte, et je ne veux vraiment pas d'enfants pour l'instant]",
+            "Dernier frottis [Le printemps dernier, et tout allait bien]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Douleur et défense au quadrant inférieur droit]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Signe de McBurney",
+          "binaryOnly": false,
+          "patientComment": "Positif - douleur au point de McBurney"
+        },
+        {
+          "id": "e6",
+          "text": "Signe de Blumberg",
+          "binaryOnly": false,
+          "patientComment": "Positif - douleur à la décompression brutale"
+        },
+        {
+          "id": "e7",
+          "text": "Signe du psoas",
+          "binaryOnly": false,
+          "patientComment": "Négatif"
+        },
+        {
+          "id": "e8",
+          "text": "Signe de Rovsing",
+          "binaryOnly": false,
+          "patientComment": "Positif - douleur au quadrant inférieur droit lors de la palpation du quadrant inférieur gauche"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologie abdominale urgente (priorité élevée)",
+                "items": [
+                  {
+                    "text": "Appendicite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Séquence typique : douleur diffuse → localisation au quadrant inférieur droit\n\t□ Douleur localisée au point de McBurney\n\t□ Signes d'appendicite positifs (McBurney, Blumberg, Rovsing)\n\t□ Défense abdominale localisée\n\t□ Fièvre, nausées, anorexie\n\t□ Âge typique (jeune adulte)\n\t□ Évolution sur 12-24 heures",
+                    "test": "→ US abdominale ou CT abdominal"
+                  },
+                  {
+                    "text": "Maladie inflammatoire pelvienne (MIP)",
+                    "cause": "Arguments POUR:\n\t□ Âge et facteurs de risque (23 ans, 2 partenaires)\n\t□ Pas de protection barrière\n\t□ Antécédent de chlamydia\n\t□ Dysurie récente\n\t□ Dyspareunie\n\t□ Pertes vaginales il y a 2 semaines\n\t□ Fièvre et nausées\n\tCependant : Douleur habituellement bilatérale, pas de signes d'appendicite",
+                    "test": "→ Examen pelvien + prélèvements cervicaux"
+                  },
+                  {
+                    "text": "Torsion ovarienne",
+                    "cause": "Arguments POUR:\n\t□ Début brutal de douleur sévère\n\t□ Localisation au quadrant inférieur\n\t□ Femme en âge de procréer\n\t□ Nausées\n\t□ Fièvre possible\n\tCependant : Pas de facteurs de risque évidents (kyste, tumeur, grossesse)",
+                    "test": "→ US pelvienne avec Doppler"
+                  }
+                ]
+              },
+              {
+                "name": "Autres diagnostics à éliminer",
+                "items": [
+                  {
+                    "text": "Rupture de kyste ovarien",
+                    "cause": "Arguments POUR:\n\t□ Douleur aiguë unilatérale\n\t□ Femme jeune",
+                    "test": "→ US pelvienne"
+                  },
+                  {
+                    "text": "Grossesse extra-utérine",
+                    "cause": "Arguments POUR:\n\t□ Femme en âge de procréer\n\t□ Activité sexuelle\n\tCependant : Règles récentes (il y a 1 semaine)",
+                    "test": "→ Test de grossesse (β-hCG)"
+                  },
+                  {
+                    "text": "Infection urinaire/pyélonéphrite",
+                    "cause": "Arguments POUR:\n\t□ Antécédent de dysurie récent\n\t□ Fièvre",
+                    "test": "→ ECBU + analyse d'urine"
+                  },
+                  {
+                    "text": "Pseudo-appendicite (Yersinia)",
+                    "test": "→ Coproculture si diarrhée"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Test de grossesse urinaire [obligatoire chez toute femme en âge de procréer avec douleur abdominale]",
+            "FSC avec différentielle [recherche de leucocytose avec déviation gauche]",
+            "VS, CRP [marqueurs inflammatoires]",
+            "Analyse d'urine et ECBU [éliminer infection urinaire]",
+            "US abdominale et pelvienne [évaluer appendicite, torsion ovarienne, kyste rompu]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires secondaires",
+          "binaryOnly": false,
+          "details": [
+            "Examen pelvien [partie essentielle pour évaluer MIP et torsion ovarienne]",
+            "Prélèvements cervicaux et urétraux [recherche Chlamydia trachomatis et Neisseria gonorrhoeae]",
+            "CT abdominal [si US non concluante]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les pratiques sexuelles sûres",
+            "Réaction appropriée au défi concernant la grossesse"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge immédiate de l'appendicite aiguë",
+                "content": "• Réhydratation IV: NaCl 0.9% ou Ringer Lactate\n• Analgésie: Paracétamol 1g IV × 4/j ± morphine si douleur intense\n• Position semi-assise pour le confort"
+              },
+              {
+                "title": "Antibiothérapie péri-opératoire",
+                "content": "• Initiation préopératoire (dans l'heure précédant l'incision)\n• Amo: 2g IV\n• Céfo: 2g IV + métronidazole 500 mg IV\n• Ciproflo: 400 mg IV + métronidazole 500 mg IV\n• Durée: Dose unique si appendicite simple, 3-5j si compliquée"
+              },
+              {
+                "title": "Traitement chirurgical",
+                "content": "• Appendicectomie laparoscopique en urgence: (gold standard) × Traitement immédiat\n• Alternative: Appendicectomie par laparotomie si contre-indication\n• Timing: Idéalement dans les 12-24h après le diagnostic ; Exploration abdominale si découverte peropératoire d'appendice normal\n• Drainage si abcès ou péritonite localisée"
+              },
+              {
+                "title": "Suivi post-opératoire",
+                "content": "• Reprise alimentaire progressive selon tolérance: ; Mobilisation précoce (prévention thromboembolique)\n• Analgésie multimodale adaptée"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Questions difficiles à poser",
+          "content": "[Suis-je enceinte ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Bush, je comprends que vous soyez préoccupée par une possible grossesse. D'après ce que vous m'avez dit aujourd'hui et parce que vous prenez la pilule contraceptive, il est peu probable que vous soyez enceinte. Néanmoins, il ne m'est pas possible de dire avec certitude si vous êtes enceinte ou non sans faire un test de grossesse. Pour en être sûr, j'aimerais vous prescrire un test de grossesse, si vous êtes d'accord. Quels que soient les résultats de ce test, je peux vous assurer que je serai là avec vous à chaque étape."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Pertes cervicales dans la gonorrhée (vue au spéculum)",
+        "description": "La surface du col utérin est recouverte de pertes purulentes blanc-jaunâtre. L'orifice externe de l'utérus est inflammé et rouge. Ces résultats sont compatibles avec la gonorrhée.",
+        "data": "grilles_generees/html/images/AMBOSS-2-img1-Cervical discharge in gonorrhea (speculum view).jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Chlamydia trachomatis en culture cellulaire McCoy",
+        "description": "Photomicrographie de cellules en culture cellulaire McCoy (grossissement inconnu). Les cellules infectées par Chlamydia trachomatis (flèches noires) montrent des corps d'inclusion (corps réticulés, ici en brun) au microscope. Les chlamydiae sont des bactéries intracellulaires obligatoires qui nécessitent une culture cellulaire, plutôt qu'un milieu de croissance, pour se développer. Cette caractéristique est particulièrement importante pour déterminer le meilleur antibiotique pour le traitement.",
+        "data": "grilles_generees/html/images/AMBOSS-2-img2-Chlamydia trachomatis in McCoy cell culture.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Appendicite avec signe de la cible",
+        "description": "Échographie de l'appendice (vue axiale). Le diamètre de l'appendice est augmenté à 12,1 mm (normal ≤ 6 mm). La paroi présente des couches hyperéchogènes et hypoéchogènes dues à l'inflammation et à l'œdème résultant ; en raison de cet aspect, ce signe est appelé signe de la cible. Ce sont des caractéristiques typiques de l'appendicite aiguë.",
+        "data": "grilles_generees/html/images/AMBOSS-2-img3-Appendicitis with target sign.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Endométriome (kyste chocolat)",
+        "description": "Échographie ovarienne (transvaginale). Un kyste ovarien uniloculaire de 6,5 cm de long est rempli d'échos de faible niveau, produisant un aspect homogène en verre dépoli. Un liquide libre en trace est visible à côté du kyste (superposition bleue). Cet aspect est considéré comme typique d'un endométriome, bien que les endométriomes puissent également être multiloculaires et présenter d'autres caractéristiques, telles que des foyers pariétaux échogènes et des niveaux liquide-liquide. Les endométriomes sont avasculaires lorsqu'ils sont visualisés avec l'échographie Doppler. T : transducteur.",
+        "data": "grilles_generees/html/images/AMBOSS-2-img4-Endometrioma (chocolate cyst).jpg",
+        "id": "img4"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Anna Bush",
+      "age": "23 ans",
+      "contexte": "Femme se présentant aux urgences pour douleurs abdominales",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon ventre me fait mal depuis ce matin.",
+        "autreChose": "C'est vraiment douloureux et ça m'inquiète."
+      },
+      "consignes": [
+        "Tenir la partie de votre abdomen juste au-dessus de votre aine droite et agir comme si vous aviez des douleurs sévères quand l'examinateur vous demande de bouger.",
+        "Pointer votre abdomen juste au-dessus de votre aine droite quand on vous demande la localisation de votre douleur.",
+        "Si l'examinateur appuie sur la partie inférieure droite de votre abdomen, faire semblant que ça fait mal et contracter vos muscles abdominaux.",
+        "Si l'examinateur appuie sur la partie inférieure droite de votre abdomen, faire semblant que ça fait mal quand il relâche la pression.",
+        "Si l'examinateur appuie sur la partie inférieure gauche de votre abdomen, dire que la partie inférieure droite fait mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Suis-je enceinte ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs abdominales",
+          "Localisation : Côté droit, juste au-dessus de l'os de la hanche",
+          "Qualité : Douleur vraiment aiguë",
+          "Quantité/intensité : Au moins 9/10",
+          "Chronologie : Douleur sourde hier soir, douleur actuelle depuis ce matin",
+          "Développement : Douleur constante qui empire",
+          "Circonstances de survenue : Aucun événement précipitant",
+          "Facteurs atténuants : Un peu mieux si je ne bouge pas ou me couche",
+          "Facteurs déclenchants/aggravants : Beaucoup pire si je me lève et marche",
+          "Épisodes antérieurs : Aucun"
+        ],
+        "symptomesAssocies": [
+          "Nausées sans vomissements",
+          "Sensation de fièvre depuis ce matin",
+          "Perte d'appétit"
+        ],
+        "reponseAuxSymptomes": [
+          "Je suis venue directement aux urgences car j'étais très inquiète"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Se tenir l'abdomen au niveau de la fosse iliaque droite",
+          "Visage algique",
+          "Éviter les mouvements brusques"
+        ],
+        "durantStatus": [
+          "Douleur marquée à la palpation de la fosse iliaque droite",
+          "Défense abdominale localisée",
+          "Signe de Blumberg positif (douleur à la décompression)",
+          "Signe de Rovsing positif (douleur à droite lors de la palpation à gauche)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Patiente de 23 ans consultant aux urgences pour douleurs abdominales aiguës. Douleur initialement diffuse hier soir, localisée en fosse iliaque droite ce matin, d'intensité 9/10, avec nausées et fièvre. Signes d'appendicite positifs (McBurney, Blumberg, Rovsing). Antécédents de chlamydia, dysurie récente, dyspareunie, sous contraception orale.",
+      "rolesInterventions": [
+        "US abdominale : donner le résultat montrant une appendicite avec signe de la cible",
+        "Analyses sanguines : donner les résultats avec leucocytose à 14000/mm³",
+        "Test de grossesse : donner un résultat négatif"
+      ],
+      "pointsCles": [
+        "La présentation suggère fortement une appendicite aiguë",
+        "L'histoire sexuelle est importante à explorer (MIP dans le différentiel)",
+        "Le test de grossesse est obligatoire chez toute femme en âge de procréer",
+        "Les signes d'appendicite sont caractéristiques",
+        "Ne pas oublier l'examen pelvien dans le bilan"
+      ],
+      "pieges": [
+        "Se focaliser uniquement sur l'appendicite sans explorer l'histoire gynécologique",
+        "Oublier le test de grossesse obligatoire",
+        "Ne pas rechercher les antécédents d'IST",
+        "Mauvaise gestion du défi concernant la grossesse"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Appendicite aiguë probable chez une jeune femme avec facteurs de risque de MIP"
+        },
+        {
+          "titre": "Présentation clinique de l'appendicite aiguë",
+          "contenu": "L'appendicite suit une séquence caractéristique d'événements :",
+          "points": [
+            "Phase initiale : Douleur viscérale diffuse péri-ombilicale/épigastrique (irritation du péritoine viscéral)",
+            "Après 4-24 heures : Migration vers la fosse iliaque droite (irritation du péritoine pariétal)",
+            "Cette séquence est très typique de l'appendicite aiguë",
+            "Signes associés : fièvre, nausées, anorexie",
+            "Plus fréquente chez les enfants et jeunes adultes"
+          ]
+        },
+        {
+          "titre": "Signes cliniques de l'appendicite",
+          "contenu": "Les signes physiques sont hautement suggestifs :",
+          "points": [
+            "Signe de McBurney : Douleur au point situé au 1/3 externe de la ligne ombilico-iliaque droite",
+            "Signe de Blumberg : Douleur à la décompression brutale (irritation péritonéale)",
+            "Signe de Rovsing : Douleur en FID lors de la palpation de la FIG",
+            "Signe du psoas : Douleur lors de l'extension de la hanche droite (appendice rétrocæcal)",
+            "Défense abdominale localisée : Contraction réflexe des muscles abdominaux"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel chez la femme jeune",
+          "contenu": "Toute femme en âge de procréer avec douleur abdominale basse nécessite une approche spécifique :",
+          "points": [
+            "MIP : Douleur bilatérale, pertes vaginales, dyspareunie, antécédents d'IST",
+            "Torsion ovarienne : Douleur brutale unilatérale, nausées, facteurs de risque (kyste)",
+            "Grossesse extra-utérine : Test β-hCG obligatoire",
+            "Rupture de kyste ovarien : Douleur aiguë, résolution spontanée possible",
+            "Infection urinaire : Dysurie, pollakiurie, douleur sus-pubienne"
+          ]
+        },
+        {
+          "titre": "Importance de l'histoire sexuelle",
+          "contenu": "Une histoire sexuelle et gynécologique complète est essentielle :",
+          "points": [
+            "Rechercher les facteurs de risque d'IST (partenaires multiples, pas de protection barrière)",
+            "Antécédents d'IST (augmente le risque de MIP)",
+            "Symptômes gynécologiques récents (pertes, dysurie, dyspareunie)",
+            "Contraception utilisée (n'exclut pas la grossesse)",
+            "Date des dernières règles (évaluer risque de grossesse)"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "L'approche diagnostique doit être systématique :",
+          "points": [
+            "Test β-hCG : Obligatoire chez toute femme en âge de procréer",
+            "FSC : Leucocytose avec déviation gauche dans l'appendicite",
+            "US abdominale : Signe de la cible, épaississement pariétal",
+            "Examen pelvien : Essentiel pour évaluer MIP et pathologie annexielle",
+            "Prélèvements cervicaux : Si suspicion de MIP"
+          ]
+        },
+        {
+          "titre": "Particularités de cette patiente",
+          "contenu": "Plusieurs éléments orientent le diagnostic :",
+          "points": [
+            "Séquence typique d'appendicite (douleur diffuse → localisée)",
+            "Signes d'appendicite tous positifs",
+            "Mais aussi facteurs de risque de MIP (antécédent chlamydia, 2 partenaires, pas de protection barrière)",
+            "Symptômes gynécologiques récents (dysurie, dyspareunie, pertes)",
+            "Importance d'une approche exhaustive incluant l'examen pelvien"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Appendicite : Antibioprophylaxie puis appendicectomie en urgence",
+        "MIP : Antibiothérapie empirique couvrant Chlamydia et gonocoque",
+        "Importance du traitement des partenaires si IST confirmée",
+        "Surveillance post-opératoire si chirurgie réalisée"
+      ],
+      "examensComplementaires": [
+        "US abdominale : Sensibilité 86% pour l'appendicite, opérateur-dépendant",
+        "CT abdominal : Sensibilité 94%, mais irradiation à éviter chez la femme jeune",
+        "Test β-hCG : Sensible dès 10 jours post-conception",
+        "Prélèvements cervicaux : PCR pour Chlamydia et gonocoque, plus sensible que la culture"
+      ]
+    },
+    "resume": {
+      "titre": "🩺 Appendicite aiguë – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur abdominale débutant péri-ombilicale, migrant vers la FID (90 % des cas)",
+                "Nausées, vomissements",
+                "Anorexie",
+                "Fièvre modérée",
+                "Constipation ou diarrhée parfois associée"
+              ]
+            },
+            {
+              "titre": "Éléments à rechercher",
+              "points": [
+                "Âge (adulte jeune ou enfant/adolescent)",
+                "Grossesse chez la femme en âge de procréer (ddx grossesse extra-utérine)",
+                "Antécédents de douleurs similaires",
+                "Prise de médicaments (AINS, immunosuppresseurs)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes abdominaux",
+              "points": [
+                "Douleur à la palpation FID",
+                "Signe de Blumberg (défense, douleur à la décompression)",
+                "Signe de Rovsing : douleur en FID à la palpation FIG",
+                "Signe du psoas (si appendice rétro-cæcal)",
+                "Fièvre modérée"
+              ]
+            },
+            {
+              "titre": "Autres éléments",
+              "points": [
+                "TR : douleur latéralisée si appendice pelvien",
+                "Absence d'autres signes évocateurs d’étiologie gynéco ou digestive"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Hyperleucocytose à polynucléaires neutrophiles",
+                "CRP élevée",
+                "Bêta-hCG chez la femme en âge de procréer",
+                "Bilan pré-opératoire : NFS, plaquettes, ionogramme, urée, créatinine, coagulation"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdomino-pelvienne : première intention, surtout chez enfant/femme enceinte",
+                "Scanner abdomino-pelvien (TDM) avec injection : examen de référence chez l'adulte",
+                "Échographie montrant appendice > 6 mm, non compressible, avec inflammation péri-appendiculaire"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "En urgence",
+              "points": [
+                "Hospitalisation",
+                "Jeûne, perfusion IV, antalgiques, antiémétiques",
+                "Antibiothérapie IV probabiliste (ex. : amox-clav + gentamicine)",
+                "Chirurgie rapide (appendicectomie sous cœlioscopie ou voie ouverte)",
+                "En cas de péritonite : traitement chirurgical urgent + drainage + ATB renforcée"
+              ]
+            },
+            {
+              "titre": "Formes particulières",
+              "points": [
+                "Appendicite abcédée ou plastronnée : ATB seule + drainage si nécessaire, chirurgie différée",
+                "Chez la femme : éliminer une cause gynécologique (GEU, kyste rompu, salpingite)",
+                "Chez la personne âgée : diagnostic souvent plus tardif, plus de complications"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur FID + fièvre modérée + nausées = penser appendicite",
+            "Signes de défense ou Blumberg = urgence chirurgicale",
+            "TDM = examen de référence pour le diagnostic",
+            "Appendicectomie rapide = traitement curatif",
+            "Évoquer formes compliquées (abcès, plastron) si tableau atypique ou subaigu"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur abdominale initiale péri-ombilicale puis migration FID ?",
+                "Nausées, vomissements, anorexie ?",
+                "Fièvre, frissons ?",
+                "ATCD gynécologiques ou grossesse (chez la femme) ?",
+                "Signes de gravité : malaise, douleur diffuse, signes péritonéaux ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : TA, FC, FR, SpO₂, T°",
+                "Palpation FID : défense, Blumberg, Rovsing",
+                "Recherche signe du psoas",
+                "TR ou TV si doute diagnostic pelvien",
+                "Évaluer signes de péritonite généralisée"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Hospitalisation + jeûne + perfusion IV + antibiothérapie IV",
+                "Imagerie (échographie chez enfant/femme enceinte, TDM chez adulte)",
+                "Appendicectomie rapide (cœlioscopie ou laparotomie)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleurs abdominales (appendicite aiguë probable, femme jeune)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif de consultation",
+            "Caractériser douleur → localisation, début, intensité, évolution",
+            "Symptômes associés → fièvre, nausées, troubles urinaires ou gynécologiques",
+            "ATCD médicaux, chirurgicaux, IST, contraception",
+            "Examen clinique → FID sensible, signes de McBurney, Blumberg, Rovsing",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires urgents → β-hCG, FSC/CRP, ECBU, US abdo/pelvienne",
+            "Prise en charge → hospitalisation, perfusion, antalgiques, ATB péri-op, appendicectomie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : APPENDIX",
+            "elements": [
+              "A = Anorexie",
+              "P = Pain migration (péri-ombilical → FID)",
+              "P = Pyrexia (fièvre)",
+              "E = Exam : McBurney/Blumberg/Rovsing",
+              "N = Nausea",
+              "D = Défense abdominale",
+              "I = Infection (leucocytose, CRP ↑)",
+              "X = eXclude grossesse / gynéco"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Anna Bush, une jeune femme de 23 ans, étudiante, qui se présente aux urgences pour des douleurs abdominales apparues ce matin.\n\nElle explique qu’hier soir, elle ressentait une douleur diffuse au ventre, sourde, mal localisée. Ce matin, la douleur est devenue beaucoup plus intense, évaluée à 9 sur 10, localisée dans la fosse iliaque droite. Elle la décrit comme une douleur aiguë, constante, qui s’aggrave si elle se lève ou marche, et qui est un peu soulagée lorsqu’elle reste allongée immobile. Elle n’a jamais eu ce type de douleur auparavant.\n\nElle rapporte des nausées importantes sans vomissements, une perte d’appétit et une impression de fièvre depuis ce matin, confirmée aux urgences avec 38,5 °C. Pas de diarrhée, pas de constipation. Elle ne note pas d’ictère ni de sang dans les selles.\n\nÀ l’interrogatoire, elle mentionne un épisode de brûlures mictionnelles il y a deux semaines, spontanément résolues. Sur le plan gynécologique, ses dernières règles datent d’il y a une semaine, cycles réguliers sous pilule contraceptive. Elle est sexuellement active avec son partenaire actuel et a eu deux partenaires cette année. Elle décrit des douleurs pendant les rapports depuis une semaine, et rapporte avoir eu des pertes vaginales deux semaines auparavant, disparues depuis. Elle a eu une infection à Chlamydia il y a deux ans, traitée par antibiotiques. Jamais de grossesse. Son dernier frottis au printemps était normal.\n\nElle n’a pas d’antécédent chirurgical, pas d’allergies connues. Elle vit en résidence universitaire, ne fume pas, ne boit pas et ne consomme pas de drogues. Ses parents sont en bonne santé, sa mère a un syndrome du côlon irritable.\n\nÀ l’examen, ses constantes montrent : température 38,5 °C, TA 115/65, pouls 85/min, FR 22. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est sensible en fosse iliaque droite avec défense localisée. Le signe de McBurney est positif, le signe de Blumberg est positif et le signe de Rovsing est positif. Le signe du psoas est négatif. Pas de masse palpable ni de signes d’ictère.\n\nEn résumé, il s’agit d’une femme de 23 ans, présentant une douleur abdominale aiguë typique de l’appendicite, avec fièvre, nausées, anorexie et signes cliniques positifs. Mon hypothèse principale est une appendicite aiguë. Les diagnostics différentiels incluent une maladie inflammatoire pelvienne, une torsion ovarienne, une grossesse extra-utérine, une rupture de kyste ovarien et une infection urinaire.\n\nComme examens complémentaires, je demanderais en urgence un test de grossesse β-hCG, une FSC avec CRP, une analyse d’urine et un ECBU, ainsi qu’une échographie abdomino-pelvienne. En cas de doute, un scanner abdominopelvien pourrait être indiqué.\n\nEn termes de prise en charge, je proposerais une hospitalisation, un jeûne strict, une réhydratation IV, des antalgiques adaptés et une antibioprophylaxie. Le traitement définitif est une appendicectomie en urgence par cœlioscopie."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Bush, 23 ans, consulte pour douleur aiguë de la fosse iliaque droite depuis ce matin.\n\nB (Background) : Pas d’ATCD chirurgicaux, contraception orale, antécédent de chlamydia, sexuellement active. Dernières règles il y a 1 semaine.\n\nA (Assessment) : Suspicion d’appendicite aiguë. DD : MIP, torsion ovarienne, rupture kyste, GEU, infection urinaire.\n\nR (Recommendation) : β-hCG urinaire, FSC/CRP, ECBU, échographie abdo-pelvienne, hospitalisation et préparation à une appendicectomie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Appendicite = les 3A",
+              "points": [
+                "Anorexie",
+                "Abdominal pain migrant",
+                "Augmentation fièvre"
+              ]
+            },
+            {
+              "titre": "Diagnostics différentiels gynéco à ne pas manquer",
+              "points": [
+                "MIP (IST, dyspareunie, pertes, fièvre)",
+                "Torsion ovarienne (douleur brutale, intense, unilatérale)",
+                "Grossesse extra-utérine (β-hCG +, aménorrhée ou retard de règles)",
+                "Rupture de kyste ovarien"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier le test β-hCG",
+                "Ne pas explorer l’histoire gynéco/sexuelle",
+                "Se précipiter sur appendicite sans DD",
+                "Ne pas annoncer clairement besoin d’hospitalisation et chirurgie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Appendicite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Séquence typique douleur diffuse → FID",
+                      "Douleur localisée McBurney",
+                      "Signe de Blumberg positif",
+                      "Fièvre 38,5 °C",
+                      "Nausées et anorexie",
+                      "Âge typique"
+                    ],
+                    "contre": [
+                      "Pas de vomissements"
+                    ]
+                  }
+                },
+                {
+                  "question": "Maladie inflammatoire pelvienne",
+                  "reponse": {
+                    "pour": [
+                      "IST antérieure (chlamydia)",
+                      "Partenaires multiples",
+                      "Dyspareunie récente",
+                      "Pertes vaginales antérieures",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Douleur typiquement bilatérale",
+                      "Signes cliniques d’appendicite très typiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Torsion ovarienne",
+                  "reponse": {
+                    "pour": [
+                      "Douleur FID aiguë",
+                      "Nausées"
+                    ],
+                    "contre": [
+                      "Début progressif hier",
+                      "Pas de masse connue",
+                      "Douleur non brutale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Grossesse extra-utérine",
+                  "reponse": {
+                    "pour": [
+                      "Femme jeune sexuellement active"
+                    ],
+                    "contre": [
+                      "Règles il y a 1 semaine",
+                      "Sous pilule contraceptive",
+                      "Pas de retard de règles"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infection urinaire",
+                  "reponse": {
+                    "pour": [
+                      "Dysurie il y a 2 semaines",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Douleur localisée FID avec signes d’appendicite",
+                      "Pas de brûlures mictionnelles actuelles"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Test β-hCG obligatoire",
+                    "FSC avec CRP",
+                    "Analyse d’urine et ECBU",
+                    "Échographie abdomino-pelvienne",
+                    "± Scanner si US non concluante"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Appendicite aiguë"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation en urgence",
+                      "Jeûne, perfusion IV",
+                      "Analgésie IV",
+                      "Antibioprophylaxie préopératoire",
+                      "Appendicectomie laparoscopique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance clinique post-opératoire",
+                    "Mobilisation précoce",
+                    "Analgesie multimodale",
+                    "Prévention complications infectieuses/thromboemboliques"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

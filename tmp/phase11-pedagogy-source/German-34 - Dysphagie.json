@@ -1,0 +1,627 @@
+{
+  "title": "German-34 - Dysphagie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 68 ans consultant son médecin de famille car il a de plus en plus de difficultés à avaler les aliments"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptôme principal",
+          "details": [
+            "[Les aliments passent difficilement, je dois rincer avec de l'eau]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Type d'aliments concernés",
+          "details": [
+            "[Seulement les aliments solides]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Chronologie des symptômes",
+          "details": [
+            "Début [Depuis plusieurs semaines]",
+            "Mode d'installation [Progressif]",
+            "Évolution [Constant, s'aggrave]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Odynophagie (douleur à la déglutition)",
+          "details": [
+            "[Juste une sensation désagréable]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Habitudes alimentaires et masticatoires",
+          "details": [
+            "[Je mange tranquillement, pas de douleur en mâchant]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes associés ORL",
+          "details": [
+            "Fièvre [non]",
+            "Dysphonie [oui, ma femme m'a fait la remarque]",
+            "Hémoptysie [non]",
+            "Sensation de pression au cou, globe pharyngé [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes respiratoires et digestifs",
+          "details": [
+            "Fausses routes, toux lors des repas [non]",
+            "Régurgitations [non]",
+            "Pyrosis, reflux [oui]",
+            "Perte de poids [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux",
+          "details": [
+            "[Hypertension]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Allergies",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [40 paquets-années]",
+            "Alcool [2-3 bières par jour, parfois plus]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Bêtabloquant]",
+            "[IPP (inhibiteur de la pompe à protons)]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Père : infarctus à 78 ans]",
+            "[Mère : en bonne santé]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Ancien électricien]",
+            "[Marié, 2 enfants]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète ciblée sur la dysphagie avec recherche systématique des signes d'alarme"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "État général",
+            "Signes de dénutrition",
+            "Pâleur conjonctivale"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la déglutition",
+          "details": [
+            "Observation de l'acte de déglutition",
+            "Test de déglutition avec de l'eau"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la cavité buccale et du pharynx",
+          "details": [
+            "Inspection de la cavité buccale",
+            "Examen du pharynx",
+            "État des amygdales"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation cervicale",
+          "details": [
+            "Chaînes ganglionnaires cervicales",
+            "Thyroïde",
+            "Masses cervicales"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Laryngoscopie indirecte",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ORL et cervical complet adapté à la dysphagie"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic de suspicion principal",
+          "details": [
+            "[Cancer de l'œsophage]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Nomme les diagnostics différentiels",
+          "details": [
+            "Cancer du larynx",
+            "Tumeur oropharyngée",
+            "Corps étranger",
+            "Achalasie"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Cancer de l'œsophage → Endoscopie digestive haute avec biopsies",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Cancer ORL",
+                    "cause": "□ larynx, pharynx → Laryngoscopie, CT ORL",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Compression extrinsèque",
+                    "cause": "Arguments POUR:\n\t□ médiastin → CT thoracique",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes bénignes",
+                "items": [
+                  {
+                    "text": "Sténose peptique → Endoscopie, pH-métrie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Achalasie → Manométrie œsophagienne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Corps étranger → Radiographie, endoscopie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Anneau de Schatzki → Transit baryte, endoscopie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes neurologiques",
+                "items": [
+                  {
+                    "text": "AVC, pathologie du tronc cérébral → IRM cérébrale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT cérébral, IRM cérébrale"
+                  },
+                  {
+                    "text": "Myasthénie → Test à la néostigmine, anticorps",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Sclérose latérale amyotrophique → EMG, consultation neurologique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ IRM cérébrale et médullaire, ponction lombaire"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques à réaliser",
+          "details": [
+            "Endoscopie digestive haute avec biopsies (urgent)",
+            "Radiographie thoracique (corps étranger)",
+            "Transit œsophagien au produit de contraste",
+            "Manométrie œsophagienne (si endoscopie normale)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge selon le diagnostic",
+          "details": [
+            "Si cancer : chirurgie, radiothérapie, chimiothérapie",
+            "Mesures palliatives si stade avancé",
+            "Référence en oncologie"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge immédiate",
+                "content": "• Endoscopie digestive haute EN URGENCE\n• Biopsies multiples si lésion suspecte\n• Bilan nutritionnel (albumine, préalbumine)\n• Arrêt tabac et alcool immédiat\n• Adaptation de l'alimentation (mixée, liquide)"
+              },
+              {
+                "title": "Si cancer confirmé",
+                "content": "• Bilan d'extension : CT TAP, écho-endoscopie, PET-CT\n• Discussion en RCP oncologique\n• Options thérapeutiques selon le stade :\n- Chirurgie si résécable\n- Radio-chimiothérapie\n- Soins palliatifs si avancé\n• Pose de prothèse œsophagienne si obstruction"
+              },
+              {
+                "title": "Support nutritionnel",
+                "content": "• Consultation diététique\n• Compléments nutritionnels oraux\n• Sonde naso-gastrique si dénutrition sévère\n• Gastrostomie si traitement prolongé\n• Surveillance du poids hebdomadaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Orientation vers un spécialiste",
+          "details": [
+            "Gastro-entérologue en urgence",
+            "Oncologue si cancer confirmé",
+            "ORL si suspicion de cancer ORL",
+            "Radiologue pour imagerie complémentaire"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information et soutien du patient",
+          "details": [
+            "Expliquer la nécessité d'examens urgents",
+            "Préparer à l'éventualité d'un diagnostic grave",
+            "Proposer un soutien psychologique",
+            "Impliquer la famille avec accord du patient"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge urgente adaptée avec orientation rapide vers la gastro-entérologie"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🧵 Dysphagie – Cancer de l'œsophage – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes d’appel",
+              "points": [
+                "Dysphagie progressive : d'abord pour les solides, puis pour les liquides",
+                "Perte de poids involontaire",
+                "Douleur rétro-sternale ou dorsale",
+                "Odynophagie (douleur à la déglutition)",
+                "Dyspepsie chronique",
+                "Signes d’hémorragie digestive haute : hématémèse, méléna, anémie"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Tabagisme, alcool (carcinome épidermoïde)",
+                "RGO chronique, œsophage de Barrett (adénocarcinome)",
+                "Régime pauvre en fruits/légumes, riche en nitrosamines",
+                "Obésité",
+                "Homme > 50 ans"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à l’examen",
+              "points": [
+                "Amaigrissement évident",
+                "Anémie clinique (pâleur conjonctivale, asthénie)",
+                "Adénopathies cervicales palpables (métastases)",
+                "Voix rauque, toux persistante (atteinte nerf laryngé récurrent)",
+                "Signes de métastases : hépatomégalie, douleurs osseuses"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Explorations endoscopiques",
+              "points": [
+                "Endoscopie œso-gastro-duodénale (EGD) avec biopsie : examen clé",
+                "Visualisation directe + prélèvement histologique"
+              ]
+            },
+            {
+              "titre": "Imagerie de stadification",
+              "points": [
+                "Scanner thoraco-abdominal avec injection (évaluation loco-régionale et métastatique)",
+                "TEP scan (FDG-PET) : recherche de métastases à distance",
+                "Échoendoscopie avec ponction : pour stadification locale fine",
+                "± Fibroscopie bronchique si tumeur proximale"
+              ]
+            },
+            {
+              "titre": "Biologie",
+              "points": [
+                "NFS : anémie ferriprive (saignement occulte)",
+                "Bilan hépatique : métastases hépatiques ?",
+                "Créatinine : évaluation pré-thérapeutique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Prise en charge initiale",
+              "points": [
+                "Multidisciplinaire (RCP oncologique, gastro, chirurgie, radiothérapie)",
+                "Évaluation de la résécabilité"
+              ]
+            },
+            {
+              "titre": "Traitement curatif (si tumeur résécable)",
+              "points": [
+                "Œsophagectomie avec curage ganglionnaire",
+                "Chimiothérapie ± radiothérapie néoadjuvante",
+                "Traitement guidé par type histologique et stade"
+              ]
+            },
+            {
+              "titre": "Traitement palliatif (tumeur localement avancée ou métastatique)",
+              "points": [
+                "Chimiothérapie ± radiothérapie",
+                "Mise en place de prothèse œsophagienne (stent)",
+                "Soins de support : nutrition, douleur, dysphagie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Dysphagie progressive + amaigrissement = alerte cancer",
+            "Endoscopie avec biopsie = indispensable",
+            "Stadification complète avant toute décision thérapeutique",
+            "Antécédents de RGO = penser adénocarcinome",
+            "Prise en charge en milieu spécialisé"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Dysphagie progressive (Suspicion cancer de l'œsophage)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractériser la dysphagie → solides vs liquides, progression, douleur associée",
+            "Symptômes associés → dysphonie, régurgitations, pyrosis, perte de poids",
+            "Facteurs de risque → tabac, alcool, RGO, ATCD familiaux",
+            "ATCD médicaux et traitements",
+            "Examen clinique → état général, poids, recherche adénopathies cervicales, examen pharynx et cavité buccale",
+            "Résumé + hypothèse principale (cancer œsophage) + DD (cancer ORL, sténose peptique, achalasie, corps étranger)",
+            "Examens complémentaires → endoscopie haute avec biopsie, imagerie (CT TAP, PET-scan), NFS, bilan nutritionnel",
+            "Prise en charge immédiate → orientation gastro-entérologie, soutien nutritionnel, arrêt tabac/alcool"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : ALARME",
+            "elements": [
+              "A = Amaigrissement",
+              "L = Liquides (dysphagie pour solides puis liquides)",
+              "A = Alcool, tabac",
+              "R = Régurgitations, reflux",
+              "M = Masse (suspecter tumeur)",
+              "E = Endoscopie indispensable"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit d’un patient de 68 ans, ancien électricien, qui consulte pour une dysphagie progressive depuis plusieurs semaines.\n\nIl décrit des difficultés à avaler les aliments solides, qu’il doit souvent faire passer avec de l’eau. La gêne est apparue de manière insidieuse mais elle s’aggrave progressivement. Il n’y a pas de douleur franche mais une sensation désagréable, pas de régurgitations ni de fausses routes. Il rapporte un reflux ancien avec pyrosis, et sa femme note une voix plus rauque récemment. Il ne rapporte pas de perte de poids importante pour l’instant.\n\nPour ses antécédents, il est suivi pour une hypertension artérielle. Il est tabagique chronique à 40 paquets-années, consomme deux à trois bières par jour, parfois davantage. Il est traité par bêtabloquant et IPP. Il n’a pas d’allergies connues.\n\nÀ l’examen ses constantes sont stables et son état général est correct. Il n’y a pas d’amaigrissement évident. À la palpation, pas de masse cervicale. La cavité buccale est normale. Sa voix est légèrement rauque.\n\nEn résumé, il s’agit d’un patient de 68 ans, gros fumeur et consommateur d’alcool, qui présente une dysphagie progressive aux solides, associée à une dysphonie et à un reflux connu. Mon hypothèse principale est un cancer de l’œsophage. Les diagnostics différentiels incluent un cancer ORL, une sténose peptique ou une achalasie.\n\nComme examens complémentaires, je demanderais une endoscopie digestive haute avec biopsies, un scanner thoraco-abdominal, une échoendoscopie et éventuellement un PET-scan. J’ajouterais une NFS et un bilan nutritionnel.\n\nEn termes de prise en charge, je propose une orientation en gastro-entérologie pour confirmation histologique, un soutien nutritionnel, un arrêt du tabac et de l’alcool, et une discussion en RCP oncologique pour décider d’une chirurgie, d’une radiothérapie, d’une chimiothérapie ou de soins palliatifs selon le stade."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Homme de 68 ans avec dysphagie progressive aux solides depuis plusieurs semaines.\n\nB (Background) : Tabagisme 40 PA, alcool quotidien, reflux chronique, HTA sous traitement.\n\nA (Assessment) : Suspicion forte de cancer de l’œsophage. DD : cancer ORL, sténose peptique, achalasie.\n\nR (Recommendation) : Endoscopie haute avec biopsies en urgence, bilan nutritionnel, orientation gastro-entérologie, arrêt tabac/alcool."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Signes d’alarme dysphagie",
+              "points": [
+                "Dysphagie progressive",
+                "Amaigrissement",
+                "Odynophagie",
+                "Hématémèse / méléna",
+                "Adénopathies cervicales",
+                "Voix rauque persistante"
+              ]
+            },
+            {
+              "titre": "Principaux diagnostics différentiels",
+              "points": [
+                "Cancer œsophage",
+                "Cancer ORL",
+                "Sténose peptique (RGO)",
+                "Achalasie",
+                "Anneau de Schatzki",
+                "Troubles neuro (AVC, SLA, myasthénie)"
+              ]
+            },
+            {
+              "titre": "Examens clés",
+              "points": [
+                "Endoscopie haute avec biopsies",
+                "CT thoraco-abdominal",
+                "Échoendoscopie",
+                "PET-scan si extension",
+                "NFS, bilan nutritionnel"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Cancer de l’œsophage",
+                  "reponse": {
+                    "pour": [
+                      "Dysphagie progressive",
+                      "Facteurs de risque (tabac, alcool, RGO)",
+                      "Âge > 60 ans",
+                      "Dysphonie"
+                    ],
+                    "contre": [
+                      "Pas encore de perte de poids"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer ORL",
+                  "reponse": {
+                    "pour": [
+                      "Dysphonie",
+                      "Tabac, alcool"
+                    ],
+                    "contre": [
+                      "Pas de masse palpable",
+                      "Pas d’odynophagie franche"
+                    ]
+                  }
+                },
+                {
+                  "question": "Achalasie",
+                  "reponse": {
+                    "pour": [
+                      "Dysphagie progressive",
+                      "Pas de régurgitations"
+                    ],
+                    "contre": [
+                      "Âge tardif",
+                      "Pas de fausses routes ni dilatation connue"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "Endoscopie digestive haute avec biopsies",
+                    "CT thoraco-abdominal injecté",
+                    "Échoendoscopie",
+                    "PET-scan selon contexte",
+                    "NFS, albumine, bilan hépatique"
+                  ],
+                  "analyse": "👉 Analyse orale : « L’endoscopie confirme le diagnostic par biopsie, le scanner et l’échoendoscopie servent à la stadification, et la biologie évalue l’état général. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Cancer de l’œsophage probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": [
+                    "Endoscopie + biopsie pour confirmation",
+                    "Chirurgie si tumeur localisée résécable",
+                    "Radiochimiothérapie selon stade",
+                    "Soins palliatifs si avancé",
+                    "Soutien nutritionnel dès le début"
+                  ]
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "RCP oncologique pour plan personnalisé",
+                    "Surveillance nutrition et poids",
+                    "Suivi clinique rapproché",
+                    "Soins de support (diététique, psycho, douleur)"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au triptyque « Avaler – Voir – Traiter » : Avaler (symptôme), Voir (endoscopie/imagerie), Traiter (chirurgie/chimio-radio)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

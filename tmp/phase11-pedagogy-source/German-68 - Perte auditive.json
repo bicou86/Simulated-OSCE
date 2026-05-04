@@ -1,0 +1,373 @@
+{
+  "title": "German-68 - Perte auditive",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Martin, 75 ans, se présente pour une consultation de routine. Vous remarquez qu'elle dit constamment \"Pardon ?\" et \"Qu'avez-vous dit ?\""
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "details": [
+            "Qu'est-ce qui vous amène aujourd'hui ? [Contrôle de routine]",
+            "Avez-vous des problèmes particuliers ? [Elle remarque qu'elle n'entend pas si bien]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la perte auditive",
+          "details": [
+            "Apparition temporelle [Pardon ? Progressive et insidieuse]",
+            "Évolution [Progressive sur plusieurs années]",
+            "Latéralisation [Bilatérale]",
+            "Sévérité [Difficultés de compréhension, surtout en groupe]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés ORL",
+          "details": [
+            "Sécrétions auriculaires (cérumen, sang, pus) [non]",
+            "Douleurs auriculaires [non]",
+            "Acouphènes [Pardon ? Non]",
+            "Vertiges [non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Toux [non]",
+            "Rhinorrhée [non]",
+            "Vomissements [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux et ORL",
+          "details": [
+            "Otite moyenne dans l'enfance [oui, plusieurs fois]",
+            "Méningite [oui, à 20 ans]",
+            "Cardiopathie ischémique [oui]",
+            "Autres antécédents ORL [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse médicamenteuse",
+          "details": [
+            "Médicaments actuels [gouttes de valériane seulement]",
+            "Médicaments ototoxiques [non]",
+            "Traitement cardiovasculaire [oui, pour la cardiopathie]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Impact fonctionnel sur la communication",
+          "details": [
+            "Capacité à téléphoner [Pardon ? Difficile, doit souvent faire répéter]",
+            "Volume de la télévision/radio [Les voisins se plaignent qu'ils entendent aussi le Musikantenstadl]",
+            "Compréhension en groupe [Très difficile, évite les réunions]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse systémique",
+          "details": [
+            "Hypertension artérielle [oui, traitée]",
+            "Diabète [non]",
+            "Troubles neurologiques [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse sociale et impact psychosocial",
+          "patientComment": "Vit seule, a un chien, physiquement en forme",
+          "details": [
+            "Situation de vie [vit seule]",
+            "Animaux de compagnie [un chien]",
+            "Condition physique [bonne forme physique]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Activités sociales et loisirs",
+          "details": [
+            "Participation sociale actuelle [Plus si souvent qu'avant]",
+            "Activités abandonnées [Était dans une chorale - on lui dit qu'elle chante faux]",
+            "Isolement social [Ne fait plus grand-chose, évite les sorties]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Exposition au bruit",
+          "details": [
+            "Exposition professionnelle antérieure [non]",
+            "Loisirs bruyants [non]",
+            "Traumatismes acoustiques [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'oreille",
+          "details": [
+            "Pavillon auriculaire droit [normal]",
+            "Pavillon auriculaire gauche [normal]",
+            "Conduit auditif externe visible [normal bilatéralement]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation auriculaire",
+          "details": [
+            "Pression du tragus [indolore bilatéralement]",
+            "Traction du pavillon [indolore bilatéralement]",
+            "Palpation mastoïdienne [normale]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Otoscopie bilatérale",
+          "details": [
+            "Conduit auditif externe droit [normal]",
+            "Tympan droit [normal, nacré]",
+            "Conduit auditif externe gauche [normal]",
+            "Tympan gauche [normal, nacré]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Tests auditifs au diapason",
+          "details": [
+            "Test de Weber [latéralisation à droite]",
+            "Test de Rinne droit [positif]",
+            "Test de Rinne gauche [positif]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Test de la voix chuchotée",
+          "details": [
+            "Compréhension à droite [1 mot sur 4 correct]",
+            "Compréhension à gauche [1 mot sur 4 correct]",
+            "Nécessité de répéter fort [oui]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique de base",
+          "details": [
+            "Nerfs crâniens [normaux]",
+            "Équilibre [normal]",
+            "Coordination [normale]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "Presbyacousie bilatérale"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Caractéristiques diagnostiques de la presbyacousie",
+          "details": [
+            "Surdité de perception symétrique bilatérale",
+            "Atteinte prédominante des fréquences aiguës",
+            "Limitation de la compréhension de la parole",
+            "Difficultés accrues en environnement bruyant",
+            "Évolution progressive avec l'âge",
+            "Possible association avec des acouphènes"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de la surdité chez la personne âgée",
+            "categories": [
+              {
+                "name": "Surdités de perception",
+                "items": [
+                  {
+                    "text": "Presbyacousie",
+                    "cause": "Arguments POUR:\n\t□ Âge avancé (77 ans)\n\t□ Surdité bilatérale symétrique\n\t□ Installation progressive\n\t□ Difficultés en milieu bruyant\n\t□ Antécédents familiaux",
+                    "test": "→ Audiométrie : chute dans les aigus"
+                  },
+                  {
+                    "text": "Surdité induite par le bruit",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'exposition professionnelle au bruit\n\t□ Évolution progressive avec l'âge",
+                    "test": "→ Anamnèse professionnelle, audiométrie"
+                  },
+                  {
+                    "text": "Surdité post-méningitique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédent de méningite\n\t□ Installation progressive",
+                    "test": "→ Anamnèse"
+                  },
+                  {
+                    "text": "Surdité médicamenteuse ototoxique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de prise médicamenteuse ototoxique\n\t□ Évolution lente",
+                    "test": "→ Anamnèse médicamenteuse"
+                  },
+                  {
+                    "text": "Maladie de Ménière",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de vertiges rotatoires\n\t□ Pas de plénitude auriculaire\n\t□ Surdité bilatérale symétrique",
+                    "test": "→ Audiométrie, tests vestibulaires"
+                  },
+                  {
+                    "text": "Neurinome de l'acoustique",
+                    "cause": "Arguments CONTRE:\n\t□ Surdité bilatérale symétrique\n\t□ Pas de signes neurologiques\n\t□ Évolution lente",
+                    "test": "→ IRM cérébrale si doute"
+                  }
+                ]
+              },
+              {
+                "name": "Surdités de transmission",
+                "items": [
+                  {
+                    "text": "Bouchon de cérumen",
+                    "cause": "Arguments CONTRE:\n\t□ Surdité de perception\n\t□ Évolution progressive sur des années",
+                    "test": "→ Otoscopie"
+                  },
+                  {
+                    "text": "Otite moyenne chronique",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédent otologique\n\t□ Tympans normaux\n\t□ Surdité de perception",
+                    "test": "→ Otoscopie, tympanométrie"
+                  },
+                  {
+                    "text": "Otosclérose",
+                    "cause": "Arguments CONTRE:\n\t□ Surdité de perception\n\t□ Pas d'antécédent familial d'otosclérose\n\t□ Âge de début tardif",
+                    "test": "→ Audiométrie, tympanométrie, scanner temporal"
+                  },
+                  {
+                    "text": "Perforation tympanique",
+                    "cause": "Arguments CONTRE:\n\t□ Tympans intacts à l'examen\n\t□ Surdité de perception",
+                    "test": "→ Otoscopie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Troubles de l'attention/concentration",
+                    "cause": "Arguments CONTRE:\n\t□ Déficit objectif à l'audiométrie\n\t□ Difficultés constantes",
+                    "test": "→ Évaluation cognitive"
+                  },
+                  {
+                    "text": "Troubles cognitifs débutants",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'autres signes cognitifs\n\t□ Déficit audiométrique objectif",
+                    "test": "→ Bilan cognitif si doute"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires",
+          "details": [
+            "Audiométrie tonale (courbe typique avec chute dans les aigus)",
+            "Audiométrie vocale (mauvaise discrimination)",
+            "Tympanométrie",
+            "Potentiels évoqués auditifs si doute diagnostique"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement et prise en charge",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Appareillage auditif",
+                "content": "• Indication d'appareillage auditif bilatéral\n• Orientation vers un audioprothésiste\n• Essai et adaptation progressive\n• Suivi régulier de l'adaptation"
+              },
+              {
+                "title": "Accompagnement et conseils",
+                "content": "• Encourager fortement le port de l'appareil auditif\n• Expliquer l'importance de l'appareillage précoce\n• Conseils de communication (face à face, environnement calme)\n• Soutien psychologique si isolement social"
+              },
+              {
+                "title": "Aides techniques complémentaires",
+                "content": "• Téléphone amplifié\n• Système d'alerte visuelle\n• Boucle magnétique pour TV"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Information et pronostic",
+          "details": [
+            "Évolution progressive mais appareillage efficace",
+            "Importance de l'observance pour éviter l'isolement social",
+            "Réévaluation audiométrique annuelle",
+            "Adaptation possible des réglages de l'appareil"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "annexe1",
+        "data": "grilles_generees/images/perte-auditive-ii-img1.png",
+        "title": "Audiogramme - Représentation schématique",
+        "description": "Échelle audiométrique avec zones de conversation et niveaux de perte auditive"
+      },
+      {
+        "id": "annexe2",
+        "data": "grilles_generees/images/perte-auditive-ii-img2.png",
+        "title": "Audiogramme - Représentation schématique",
+        "description": "Échelle audiométrique avec zones de conversation"
+      }
+    ]
+  }
+}

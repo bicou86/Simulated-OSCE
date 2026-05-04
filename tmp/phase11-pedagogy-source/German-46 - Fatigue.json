@@ -1,0 +1,363 @@
+{
+  "title": "German-46 - Fatigue",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Femme de 20 ans, jusqu'ici en bonne santé, consulte pour fatigue"
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Se présente avec nom, fonction et but de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Problème actuel et plaintes subjectives",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes cardiovasculaires",
+          "details": [
+            "Dyspnée [Présente/absente]",
+            "Palpitations [Présentes/absentes]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "État général et performance",
+          "details": [
+            "Capacité de performance [Diminuée/normale]",
+            "Fatigue [Intensité et caractéristiques]",
+            "État psychique [Normal/altéré]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes fonctionnels",
+          "details": [
+            "Troubles orthostatiques [Vertiges au lever]",
+            "Qualité du sommeil [Bonne/perturbée]",
+            "Pâleur remarquée [Par elle-même ou l'entourage]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Épisodes antérieurs similaires et problèmes médicaux passés",
+          "patientComment": "Première fois ou récidive"
+        },
+        {
+          "id": "a7",
+          "text": "Recherche de pathologies sous-jacentes",
+          "details": [
+            "Infection récente [Non/oui]",
+            "Maladie rénale connue [Non/oui]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse de pertes sanguines",
+          "details": [
+            "Menstruations abondantes [Quantité, durée, nombre de protections]",
+            "Méléna [Selles noires goudronneuses]",
+            "Hématémèse [Vomissements sanglants]",
+            "Autres saignements [Épistaxis, gingivorragies]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes alimentaires et nutritionnelles",
+          "details": [
+            "Alimentation équilibrée [Oui/non]",
+            "Régime végétarien/végétalien [Non/oui]",
+            "Consommation de viande rouge [Fréquence]",
+            "Consommation d'alcool [Quantité]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Troubles gastro-intestinaux",
+          "details": [
+            "Digestion [Normale/perturbée]",
+            "Dysphagie [Absente/présente]",
+            "Maladie ulcéreuse [Antécédents]",
+            "Chirurgie gastrique [Gastrectomie]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Troubles neurologiques",
+          "details": [
+            "Troubles de la marche [Non/oui]",
+            "Paresthésies [Fourmillements, engourdissements]",
+            "Troubles de la sensibilité profonde"
+          ],
+          "patientComment": "Évocateurs d'anémie pernicieuse"
+        },
+        {
+          "id": "a12",
+          "text": "Douleurs osseuses",
+          "details": [
+            "Localisation",
+            "Intensité"
+          ],
+          "patientComment": "Évocatrices de drépanocytose ou hémopathie maligne"
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments et exposition à des toxiques",
+          "details": [
+            "Médicaments actuels [Liste]",
+            "Exposition professionnelle [Produits chimiques]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Anémies héréditaires [Thalassémie, drépanocytose]",
+            "Maladies hématologiques"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [Non/oui, quantité]",
+            "Alcool [Non/oui, quantité]",
+            "Drogues [Non/oui]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Situation professionnelle/études",
+            "Conditions de vie",
+            "Stress psychosocial"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée sur l'anémie et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de la pâleur",
+          "details": [
+            "Pâleur cutanée [Présente/absente]",
+            "Pâleur des muqueuses [Conjonctives, muqueuse buccale]",
+            "Pâleur des plis palmaires [Signe de gravité]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Recherche d'ictère",
+          "patientComment": "Évocateur d'hémolyse"
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la cavité buccale",
+          "details": [
+            "Chéilite angulaire [Fissures aux commissures]",
+            "Aspect de la langue [Dépapillée, lisse]",
+            "Glossite [Langue rouge, douloureuse]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiovasculaire",
+          "details": [
+            "Fréquence cardiaque [Tachycardie]",
+            "Tension artérielle [Hypotension]",
+            "Souffle cardiaque [Souffle systolique fonctionnel]",
+            "Bruits vasculaires [Souffle carotidien]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation abdominale",
+          "details": [
+            "Hépatomégalie [Présente/absente]",
+            "Splénomégalie [Présente/absente]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation des aires ganglionnaires",
+          "patientComment": "Recherche d'adénopathies"
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "details": [
+            "Sensibilité profonde",
+            "Réflexes ostéo-tendineux",
+            "Signe de Romberg"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé sur l'anémie et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels évoqués",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Anémies par carence",
+                "items": [
+                  {
+                    "text": "Anémie ferriprive : Microcytaire hypochrome, ferritine basse, causes : pertes menstruelles, carences d'apport",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, ferritine, B12, folates"
+                  },
+                  {
+                    "text": "Anémie par carence en vitamine B12 : Macrocytaire, troubles neurologiques, malabsorption, végétalisme strict",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, ferritine, B12, folates"
+                  },
+                  {
+                    "text": "Anémie par carence en folates : Macrocytaire, grossesse, malnutrition, alcoolisme",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, ferritine, B12, folates"
+                  }
+                ]
+              },
+              {
+                "name": "Anémies par saignement",
+                "items": [
+                  {
+                    "text": "Hyperménorrhée : Règles abondantes et/ou prolongées, cause fréquente chez la jeune femme",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Saignement gastro-intestinal occulte : Ulcère, gastrite, maladie inflammatoire intestinale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Gastroscopie, test Helicobacter pylori"
+                  }
+                ]
+              },
+              {
+                "name": "Anémies hémolytiques",
+                "items": [
+                  {
+                    "text": "Anémie hémolytique auto-immune : Test de Coombs positif, splénomégalie, ictère",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, ferritine, B12, folates"
+                  },
+                  {
+                    "text": "Hémoglobinopathies : Drépanocytose, thalassémie, antécédents familiaux",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires proposés",
+          "details": [
+            "NFS complète [Hb, VGM, CCMH, réticulocytes]",
+            "Bilan martial [Fer sérique, ferritine, transferrine, coefficient de saturation]",
+            "Bilan inflammatoire [CRP, VS]",
+            "Bilan d'hémolyse [Bilirubine, LDH, haptoglobine]",
+            "Frottis sanguin [Morphologie des globules rouges]",
+            "Test de recherche de sang occulte dans les selles"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Reconnaissance d'une anémie ferriprive",
+          "details": [
+            "Caractéristiques biologiques [Microcytaire hypochrome]",
+            "Ferritine basse [< 15 μg/L]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement de l'anémie ferriprive",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement oral",
+                "content": "• Fer ferreux (Fe2+) per os : 100-200 mg de fer élément par jour × 3-6 mois minimum"
+              },
+              {
+                "title": "Effets secondaires et alternatives",
+                "content": "• Gestion des effets secondaires : Douleurs abdominales, constipation, selles noires (bénin)\n• Alternative si intolérance : Fer ferrique (Fe3+) IV si intolérance digestive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Reconnaissance d'une carence en vitamine B12/folates",
+          "details": [
+            "Caractéristiques biologiques [Macrocytaire normochrome]",
+            "Dosages spécifiques [Vitamine B12, folates sériques]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Examens étiologiques selon l'orientation",
+          "details": [
+            "Si suspicion saignement GI [Gastroscopie, coloscopie]",
+            "Si suspicion maladie médullaire [Myélogramme]",
+            "Si hyperménorrhée [Consultation gynécologique, échographie pelvienne]"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Contrôle de l'efficacité [NFS après 1 mois]",
+            "Contrôle de la ferritine [Après 3 mois]",
+            "Recherche et traitement de la cause"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

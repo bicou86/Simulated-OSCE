@@ -1,0 +1,915 @@
+{
+  "title": "AMBOSS-8 - Troubles du transit - Homme 32 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "John Smith, homme de 32 ans, consultant pour des troubles du transit intestinal",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "130/70 mmHg",
+      "fc": "82 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Certains jours je suis constipé, puis d'autres j'ai de la diarrhée. Parfois mes selles sont normales"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des troubles du transit",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a 6 semaines]",
+            "Constant/intermittent [J'ai aussi des selles normales entre les deux, comme je l'ai dit. C'est différent chaque jour, et il n'y a pas vraiment de schéma]",
+            "Événements précipitants [Rien de spécial ne se passait]",
+            "Progression [Non, c'est resté à peu près pareil depuis que ça a commencé]",
+            "Épisodes antérieurs [Aucun]",
+            "Fréquence [Quand j'ai la diarrhée, je dois aller aux toilettes au moins 3 fois par jour. Ça dure quelques jours, puis j'ai 3-5 jours normaux, et ensuite j'ai une période de constipation où je n'y vais que tous les 3 ou 4 jours environ]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques des selles",
+          "binaryOnly": false,
+          "details": [
+            "Diarrhée (couleur/consistance) [Couleur normale et liquide avec un peu de glaire mélangée]",
+            "Sang dans les selles [Eh bien, maintenant que vous demandez, parfois je remarque du sang sur le papier toilette]",
+            "Couleur du sang [Rouge vif]",
+            "Quantité (mélangé, en surface) [Pas beaucoup, juste un peu sur le papier toilette]",
+            "Constant/intermittent [Pas à chaque selle. Je le remarque surtout quand j'ai de la constipation]",
+            "Début du saignement [Il y a 1 mois]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés - Douleurs abdominales",
+          "binaryOnly": false,
+          "details": [
+            "Présence [Mon estomac me fait mal]",
+            "Localisation [Dans la partie inférieure]",
+            "Intensité (échelle 0-10) [3-4]",
+            "Qualité [Sourde]",
+            "Début [Ça a commencé avec la diarrhée il y a 6 semaines]",
+            "Événements précipitants [Aucun]",
+            "Progression/constant/intermittent [Ça va et ça vient]",
+            "Épisodes antérieurs [Aucun]",
+            "Irradiation [Non]",
+            "Facteurs améliorants [Je me sens beaucoup mieux après être allé aux toilettes parfois]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Je suis parti en voyage dans l'État de Washington avec ma petite amie il y a 3 mois]",
+            "Eau non purifiée, randonnée [Non, nous n'avons pas fait de randonnée et nous n'avons pas bu dans des lacs ou des ruisseaux. Nous sommes restés à Seattle, principalement à notre hôtel, et nous nous sommes promenés dans le centre-ville]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes/fatigue [Non]",
+            "Éruption/changements cutanés [Non, pas sur ma peau. J'ai eu des plaies douloureuses dans la bouche ces dernières semaines, mais elles sont parties maintenant]",
+            "Douleurs articulaires [Non]",
+            "Problèmes urinaires [Non]",
+            "Changements d'appétit [Oui. Je pense que je mange un peu moins. Je suis très stressé au travail]",
+            "Variations pondérales [J'ai perdu 3 kg ces 3 derniers mois]",
+            "Infection récente [Aucune]",
+            "Vision floue [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "J'ai eu mon appendice enlevé quand j'avais 14 ans. À part mon appendice, non"
+        },
+        {
+          "id": "a8",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Hospitalisations et contacts malades",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai eu mon appendice enlevé quand j'avais 14 ans]",
+            "Contacts malades [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "patientComment": "Mon père a été diagnostiqué avec un cancer du côlon à 46 ans. Ma grand-mère, la mère de mon père, est décédée parce qu'elle avait un cancer de l'utérus"
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Policier]",
+            "Domicile [Je vis avec ma petite amie]",
+            "Alcool [Non]",
+            "Drogues illicites [Jamais]",
+            "Tabac [Je fume un paquet de cigarettes par jour depuis 16 ans]",
+            "Exercice [Je fais des marches régulièrement]",
+            "Alimentation [Fast-food comme des hamburgers et des burritos. Je n'ai pas le temps de cuisiner]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen tête et cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des conjonctives",
+            "Examen des pupilles",
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation cardiaque normale"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen [Sensibilité dans le quadrant inférieur droit]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Maladies inflammatoires intestinales",
+                "items": [
+                  {
+                    "text": "Maladie de Crohn",
+                    "cause": "Arguments POUR:\n\t□ Diarrhée liquide alternant avec constipation\n\t□ Douleur quadrant inférieur droit\n\t□ Antécédents d'ulcères aphtoïdes buccaux\n\t□ Perte de poids (3 kg en 3 mois)\n\t□ Âge typique (15-35 ans)\n\t□ Glaires dans les selles\n\t□ Symptômes depuis 6 semaines\nArguments CONTRE:\n\t□ Sang rouge vif plutôt lié aux hémorroïdes",
+                    "test": "→ Coloscopie avec biopsies + IRM entéro"
+                  },
+                  {
+                    "text": "Rectocolite hémorragique",
+                    "cause": "Arguments POUR:\n\t□ Diarrhée avec glaires et sang\n\t□ Perte de poids\n\t□ Âge typique (15-35 ans)\nArguments CONTRE:\n\t□ Fréquence diarrhée faible (3x/jour vs ≥10/jour typique)\n\t□ Douleur QID (plutôt QIG attendu)\n\t□ Pas de ténesme mentionné",
+                    "test": "→ Coloscopie avec biopsies"
+                  }
+                ]
+              },
+              {
+                "name": "Néoplasie",
+                "items": [
+                  {
+                    "text": "Cancer colorectal",
+                    "cause": "Arguments POUR:\n\t□ Troubles du transit alternants\n\t□ Sang dans les selles\n\t□ Perte de poids\n\t□ Antécédents familiaux importants (père cancer côlon à 46 ans)\n\t□ Facteurs de risque : tabac, alimentation riche en graisses/pauvre en fibres\n\t□ Possible syndrome de Lynch\nArguments CONTRE:\n\t□ Âge jeune (32 ans)\n\t□ Début récent des symptômes",
+                    "test": "→ Coloscopie avec biopsies + recherche instabilité microsatellites"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Syndrome de l'intestin irritable",
+                    "cause": "Arguments CONTRE:\n\t□ Présence de signes d'alarme (sang, perte de poids, douleur nocturne)",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Hémorroïdes",
+                    "cause": "Arguments POUR : Sang rouge vif sur papier toilette surtout lors de constipation\nProbablement associé à la pathologie principale",
+                    "test": "→ Examen proctologique"
+                  },
+                  {
+                    "text": "Gastroentérite infectieuse",
+                    "cause": "Arguments CONTRE:\n\t□ Durée prolongée (6 semaines)\n\t□ Pas de fièvre",
+                    "test": "→ Coproculture + parasitologie des selles"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Examen rectal [fait partie de l'examen abdominal complet et particulièrement important en cas de saignement abdominal]",
+            "Recherche de sang occulte dans les selles [pour évaluer un saignement occulte possible]",
+            "FSC, électrolytes [L'anémie est un résultat classique dans les MICI et le cancer colorectal. Leucocytose possible dans MICI. La diarrhée peut causer des anomalies électrolytiques]",
+            "VS, CRP [élevées dans les MICI]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens microbiologiques",
+          "binaryOnly": false,
+          "details": [
+            "Coproculture; microscopie des selles pour œufs et parasites [Pour exclure les causes infectieuses de diarrhée, comme C. difficile, giardiase et amibiase]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie et endoscopie",
+          "binaryOnly": false,
+          "details": [
+            "US abdominale [l'inflammation et l'œdème du côlon et de l'intestin grêle se manifestent par un épaississement de la paroi]",
+            "Radiographie abdominale simple [peut détecter des complications des MICI comme une distension intestinale ou un pneumopéritoine]",
+            "Coloscopie [L'endoscopie avec biopsie est le test de choix et est utilisée pour confirmer les diagnostics de MICI et de cancer du côlon]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant le travail",
+            "Discussion sur l'importance du dépistage familial (cancer colorectal)"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de la maladie de Crohn légère-modérée",
+                "content": "• 5-ASA (mésalazine): 3-4g/j PO + suppositoires/lavements\n• AINS à éviter (risque d'aggravation)\n• Arrêt tabac impératif: (facteur aggravant majeur)\n• Supplémentation: Fer, vitamine D, B12 selon carences\n• Probiotiques: Souches spécifiques (VSL#3, E. coli Nissle)\n• Régime"
+              },
+              {
+                "title": "Traitement des MICI modérées-sévères",
+                "content": "• Corticoïdes: Prednisone 40-60mg/j puis décroissance\n• Immunosuppresseurs: Azathioprine 2-2.5mg/kg/j (maintien)\n• Anti-TNF si réfractaire: Infliximab, adalimumab\n• Méthotrexate: Alternative si intolérance azathioprine\n• Surveillance: NFS, transaminases, créatinine mensuelle\n• Vaccinations à jour avant immunosuppression"
+              },
+              {
+                "title": "Traitement des carences",
+                "content": "• Support nutritionnel: Nutrition entérale si dénutrition"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Question sur l'impact professionnel",
+          "content": "[Pensez-vous que je devrai réduire mes heures de travail maintenant ? J'ai besoin de l'argent, vous savez]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Smith, je comprends votre inquiétude que vos symptômes puissent interférer avec votre travail. Cependant, à ce stade, je ne sais pas exactement ce qui cause vos symptômes. D'abord, j'aimerais faire quelques tests pour découvrir ce qui se passe exactement, puis vous et moi pourrons nous mettre d'accord sur un traitement approprié et discuter de la façon de nous assurer que vous pourrez continuer à travailler. Laissez-moi vous assurer que nous avons une équipe très expérimentée dans cet hôpital et nous ferons de notre mieux pour vous traiter. Qu'en pensez-vous ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Uvéite antérieure",
+        "description": "Photographie de l'œil droit. La conjonctive bulbaire et le limbe sont hypérémiques en raison d'une injection mixte conjonctivale et ciliaire. Il y a une synéchie postérieure (adhésion entre l'iris et le cristallin), dans ce cas affectant 360° de la pupille. Ces caractéristiques sont typiques de l'uvéite antérieure.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img1-Anterior uveitis.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Quadrants abdominaux",
+        "description": "Quadrants abdominaux : (1) Quadrant supérieur droit (QSD), (2) Quadrant supérieur gauche (QSG), (3) Quadrant inférieur droit (QID), (4) Quadrant inférieur gauche (QIG), (Cercle) Région périombilicale.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img2-Abdominal quadrants.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Cancer du côlon",
+        "description": "Vue endoscopique du côlon ascendant. Une masse exophytique irrégulière avec des bords surélevés est visible. La surface est amorphe et montre un saignement mineur. Ces caractéristiques sont hautement évocatrices d'un cancer du côlon. Cependant, l'histopathologie est nécessaire pour confirmer le diagnostic.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img3-Colon cancer.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Côlon dans la maladie de Crohn",
+        "description": "Vue endoscopique du côlon. De multiples ulcérations linéaires et serpigineuses recouvertes d'exsudat fibrineux peuvent être vues. La muqueuse entre les ulcérations est érythémateuse et a perdu son patron vasculaire normal. Ces résultats sont caractéristiques de la maladie de Crohn.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img4-Colon in Crohn disease.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Pseudopolypes dans la rectocolite hémorragique avancée",
+        "description": "Vue endoscopique du côlon. Il y a de multiples zones surélevées prominéntes de muqueuse normale résultant de la régénération et de l'hyperplasie muqueuse. Ces résultats sont caractéristiques de pseudopolypes dans la rectocolite hémorragique avancée.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img5-Pseudopolyps in advanced ulcerative colitis.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Anatomie du côlon",
+        "description": "Parties du côlon : Schéma anatomique montrant le cæcum, côlon ascendant, côlon transverse, côlon descendant, côlon sigmoïde et rectum avec leurs rapports anatomiques.",
+        "data": "grilles_generees/html/images/AMBOSS-8-img6-Parts of the colon.jpg",
+        "id": "img6"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "John Smith",
+      "age": "32 ans",
+      "contexte": "Policier consultant pour troubles du transit depuis 6 semaines",
+      "motifConsultation": {
+        "plaintePrincipale": "Certains jours je suis constipé, puis d'autres j'ai de la diarrhée. Parfois mes selles sont normales.",
+        "autreChose": "Mon estomac me fait mal aussi."
+      },
+      "consignes": [
+        "Vous n'êtes pas un patient très bavard. Ne fournissez des informations que si elles sont spécifiquement demandées.",
+        "Vous n'êtes pas au courant de ce que signifient les termes médicaux (ex: coloscopie) et demandez des clarifications si l'examinateur les utilise.",
+        "Si l'examinateur appuie sur la partie inférieure droite de votre abdomen, faites semblant que ça fait mal et contractez vos muscles abdominaux.",
+        "Défi : Demander 'Pensez-vous que je devrai réduire mes heures de travail maintenant ? J'ai besoin de l'argent, vous savez.'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Alternance diarrhée/constipation depuis 6 semaines",
+          "Diarrhée liquide avec glaires 3x/jour pendant quelques jours",
+          "Puis 3-5 jours normaux",
+          "Puis constipation (selles tous les 3-4 jours)",
+          "Sang rouge vif sur papier toilette depuis 1 mois",
+          "Douleurs abdominales basses sourdes (3-4/10)"
+        ],
+        "symptomesAssocies": [
+          "Ulcères buccaux douloureux récents (maintenant résolus)",
+          "Perte de poids 3 kg en 3 mois",
+          "Diminution appétit (stress au travail)",
+          "Soulagement après défécation parfois"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Rester laconique, ne pas élaborer spontanément",
+          "Montrer de l'incompréhension pour les termes médicaux",
+          "Mentionner le stress professionnel si interrogé",
+          "Exprimer l'inquiétude sur l'impact professionnel"
+        ],
+        "durantStatus": [
+          "Douleur et défense à la palpation du QID",
+          "Contracter les abdominaux lors de la palpation",
+          "Pas de douleur ailleurs"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 32 ans avec tableau clinique évocateur de MICI (maladie de Crohn probable) : troubles du transit alternants, douleur QID, ulcères buccaux, perte de poids. Antécédents familiaux importants de cancer colorectal précoce suggérant syndrome de Lynch possible. Facteurs de risque multiples : tabac, alimentation déséquilibrée.",
+      "rolesInterventions": [
+        "Examen rectal : hémorroïdes externes sans fissure",
+        "Coloscopie : ulcérations aphtoïdes éparses, aspect pavimenteux au niveau iléo-cæcal",
+        "Biopsies : inflammation transmurale avec granulomes non caséeux",
+        "FSC : Hb 11.2 g/dL, leucocytes 12'000/mm³",
+        "VS : 45 mm/h, CRP 35 mg/L"
+      ],
+      "pointsCles": [
+        "Drapeaux rouges : sang, perte de poids, douleur nocturne = exclure SII",
+        "Antécédents familiaux cancer côlon jeune = dépistage génétique",
+        "Ulcères buccaux + symptômes GI = penser MICI",
+        "Localisation QID + antécédent appendicectomie = Crohn iléo-cæcal",
+        "Tabagisme = facteur aggravant Crohn, protecteur RCH"
+      ],
+      "pieges": [
+        "Diagnostiquer SII malgré signes d'alarme",
+        "Oublier le toucher rectal",
+        "Ne pas explorer les antécédents familiaux",
+        "Minimiser l'importance des ulcères buccaux",
+        "Ne pas conseiller arrêt tabac"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Maladie de Crohn avec atteinte iléo-colique"
+        },
+        {
+          "titre": "Maladie de Crohn",
+          "contenu": "MICI caractérisée par inflammation transmurale segmentaire :",
+          "points": [
+            "Incidence : 5-10/100'000, pic 15-35 ans",
+            "Localisation : iléon terminal (30%), iléo-colique (40%), côlon seul (20%)",
+            "Symptômes : diarrhée chronique, douleur abdominale, perte de poids",
+            "Manifestations extra-intestinales : arthrites, uvéite, érythème noueux, aphtose",
+            "Complications : sténoses, fistules, abcès, cancer (risque x5)",
+            "Diagnostic : endoscopie + biopsie (granulomes dans 30%)"
+          ]
+        },
+        {
+          "titre": "Rectocolite hémorragique",
+          "contenu": "MICI avec inflammation muqueuse continue du rectum :",
+          "points": [
+            "Toujours débute au rectum et progresse proximalement",
+            "Symptômes : diarrhée sanglante, ténesme, urgence défécatoire",
+            "Fréquence selles corrélée à sévérité : légère <4/j, sévère >10/j",
+            "Manifestations extra-intestinales similaires au Crohn",
+            "Complications : mégacôlon toxique, perforation, cancer (2%/an après 10 ans)",
+            "Traitement curatif possible : colectomie totale"
+          ]
+        },
+        {
+          "titre": "Différences clés Crohn vs RCH",
+          "contenu": "Éléments discriminants pour le diagnostic différentiel :",
+          "points": [
+            "Distribution : segmentaire (Crohn) vs continue (RCH)",
+            "Atteinte : transmurale (Crohn) vs muqueuse (RCH)",
+            "Localisation : tout le tube digestif (Crohn) vs côlon-rectum (RCH)",
+            "Tabac : aggrave Crohn, protège RCH",
+            "Complications : fistules/sténoses (Crohn) vs hémorragie massive (RCH)",
+            "Histologie : granulomes (Crohn) vs cryptes abcédées (RCH)"
+          ]
+        },
+        {
+          "titre": "Cancer colorectal héréditaire",
+          "contenu": "Syndromes à suspecter chez patients jeunes :",
+          "points": [
+            "Syndrome de Lynch (HNPCC) : 3% des CCR, mutations MMR",
+            "Critères Amsterdam II : 3 cas famille, 2 générations, 1 <50 ans",
+            "Cancers associés : endomètre, ovaire, estomac, voies biliaires",
+            "PAF : mutations APC, centaines polypes dès adolescence",
+            "Dépistage : coloscopie dès 20-25 ans si Lynch",
+            "Test : immunohistochimie MMR, instabilité microsatellites"
+          ]
+        },
+        {
+          "titre": "Signes d'alarme dans les troubles fonctionnels",
+          "contenu": "Drapeaux rouges excluant le diagnostic de SII :",
+          "points": [
+            "Début après 50 ans",
+            "Perte de poids involontaire",
+            "Saignement digestif",
+            "Anémie ferriprive",
+            "Symptômes nocturnes",
+            "Antécédents familiaux CCR/MICI",
+            "Masses abdominales/lymphadénopathies"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique des MICI",
+          "contenu": "Bilan initial et examens complémentaires :",
+          "points": [
+            "Biologie : FSC, VS/CRP, fer, B12, folates, albumine",
+            "Selles : calprotectine fécale (>250 μg/g suggère MICI)",
+            "Endoscopie : iléo-coloscopie avec biopsies multiples",
+            "Imagerie : IRM entéro pour Crohn (épaisseur paroi, fistules)",
+            "Histologie : recherche granulomes, architecture cryptes",
+            "Génétique si suspicion Lynch : analyse MMR"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "MICI légère-modérée : 5-ASA (mésalazine 3-4g/j PO ou topique)",
+        "Poussée modérée-sévère : Corticoïdes (prednisone 40-60mg/j)",
+        "Maintien rémission Crohn : Azathioprine 2-2.5mg/kg/j",
+        "Crohn réfractaire : Anti-TNF (infliximab, adalimumab)",
+        "RCH sévère : Corticoïdes IV + ciclosporine si échec",
+        "Supplémentation : Fer, vitamine D, B12 selon carences",
+        "Arrêt tabac impératif dans Crohn"
+      ],
+      "examensComplementaires": [
+        "Calprotectine fécale : Biomarqueur inflammation intestinale (N <50 μg/g)",
+        "Coloscopie : Visualisation directe + biopsies étagées (minimum 2/segment)",
+        "IRM entéro-pelvienne : Épaississement pariétal, rehaussement, complications",
+        "Entéro-scanner : Alternative si IRM non disponible",
+        "Vidéocapsule : Si suspicion Crohn grêle et endoscopie normale",
+        "Test génétiques Lynch : Si critères cliniques ou CCR <50 ans"
+      ]
+    },
+    "resume": {
+      "titre": "🧠 Maladie de Crohn – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Diarrhée chronique (souvent sans sang)",
+                "Douleurs abdominales (souvent en FID)",
+                "Perte de poids, anorexie",
+                "Nausées, vomissements (si atteinte gastroduodénale ou sténose)",
+                "Ballonnements, alternance diarrhée/constipation"
+              ]
+            },
+            {
+              "titre": "Symptômes généraux",
+              "points": [
+                "Asthénie, fièvre modérée",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "Manifestations extra-digestives",
+              "points": [
+                "Arthrites, arthralgies (spondylarthropathies)",
+                "Erythème noueux, pyoderma gangrenosum",
+                "Uvéite, episclérite",
+                "Aphtes buccaux",
+                "Cholélithiase, calculs urinaires (oxalate de calcium)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque / antécédents",
+              "points": [
+                "Âge jeune (< 30 ans)",
+                "Tabac (facteur aggravant)",
+                "Antécédents familiaux de MICI",
+                "Episodes similaires dans le passé",
+                "Chirurgie digestive antérieure"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection et palpation abdominale",
+              "points": [
+                "Douleur localisée en FID",
+                "Masse palpable (épaississement intestinal ou abcès)",
+                "Signes de dénutrition (IMC bas, fonte musculaire)"
+              ]
+            },
+            {
+              "titre": "Examen périnéal",
+              "points": [
+                "Fistules, abcès, fissures",
+                "Ulcérations périnéales"
+              ]
+            },
+            {
+              "titre": "Signes extra-intestinaux",
+              "points": [
+                "Erythème noueux (nodules douloureux sur les jambes)",
+                "Aphtes buccaux",
+                "Uvéite (yeux rouges et douloureux)",
+                "Arthrite (chevilles, genoux, sacro-iliaque)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "CRP, VS élevées",
+                "Anémie inflammatoire, carence en fer ou B12",
+                "Hypoalbuminémie",
+                "Calprotectine fécale augmentée",
+                "Sérologies : VIH, VHB, VHC, EBV (avant immunosuppresseurs)"
+              ]
+            },
+            {
+              "titre": "Endoscopie",
+              "points": [
+                "Coloscopie avec biopsies : ulcérations aphtoïdes, lésions discontinues (skip lesions), aspect en pavage (cobblestone)",
+                "Gastroscopie si suspicion d’atteinte haute"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Entéro-IRM ou scanner abdomino-pelvien pour sténoses, fistules, abcès",
+                "IRM pelvis en cas de signes périnéaux"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement des poussées",
+              "points": [
+                "Corticothérapie orale (budesonide ou prednisone)",
+                "Hospitalisation si forme sévère (IV, chirurgie, nutrition)",
+                "Éviter les AINS",
+                "Antibiotiques si abcès (ex : métronidazole)"
+              ]
+            },
+            {
+              "titre": "Traitement de fond",
+              "points": [
+                "Immunosuppresseurs : azathioprine, méthotrexate",
+                "Biothérapies : anti-TNF (infliximab, adalimumab), ustekinumab",
+                "Surveillance régulière par endoscopie ou calprotectine",
+                "Arrêt du tabac impératif"
+              ]
+            },
+            {
+              "titre": "Soutien nutritionnel",
+              "points": [
+                "Apports énergétiques adaptés, supplémentation en vitamines (B12, D, fer)",
+                "Nutrition entérale si malabsorption",
+                "Éviter dénutrition et carences"
+              ]
+            },
+            {
+              "titre": "Chirurgie",
+              "points": [
+                "Indiquée en cas de sténose, fistule, abcès, échec médical",
+                "Résection segmentaire ou strictureplastie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Patient jeune + diarrhée chronique + douleurs FID = penser à Crohn",
+            "Ne pas oublier l’examen périnéal (fistules, abcès)",
+            "Dosage calprotectine fécale utile pour différencier cause organique/fonctionnelle",
+            "Coloscopie avec biopsies indispensable au diagnostic",
+            "Biothérapies (anti-TNF) pour formes modérées à sévères",
+            "Surveillance nutritionnelle et vaccinale à long terme"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Diarrhée chronique ? Présence de sang ou non ?",
+                "Douleurs abdominales : localisation, caractère, facteurs aggravants ?",
+                "Perte de poids, anorexie, asthénie ?",
+                "ATCD familiaux de MICI ? Tabac ?",
+                "Manifestations extra-digestives : articulaires, cutanées, ophtalmologiques ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales, état nutritionnel (IMC, perte de poids)",
+                "Palpation abdominale (douleur FID, masse)",
+                "Examen périnéal (fistules, abcès, ulcérations)",
+                "Recherche signes extra-intestinaux (aphtes, érythème noueux, arthrite, uvéite)",
+                "Bilan biologique (CRP, NFS, iono, carences)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer diagnostic par coloscopie avec biopsies",
+                "Traitement des poussées : corticoïdes ± antibiotiques si abcès",
+                "Traitement de fond : immunosuppresseurs/biothérapies + sevrage tabac + soutien nutritionnel"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Troubles du transit (MICI vs cancer colorectal)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation",
+            "Troubles du transit → début, alternance diarrhée/constipation, sang, glaires",
+            "Douleur abdominale → localisation, intensité, cyclicité, facteurs",
+            "Symptômes associés → aphtes, perte de poids, fatigue, manifestations extra-digestives",
+            "ATCD médicaux, chirurgicaux, familiaux (cancer colorectal ?)",
+            "Habitudes de vie : tabac, alimentation, stress",
+            "Examen clinique → abdomen, toucher rectal, recherche anémie",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → NFS, CRP, calprotectine, coloscopie + biopsies, imagerie (IRM entéro)",
+            "Prise en charge → anti-inflammatoires spécifiques, nutrition, arrêt tabac, suivi long terme"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : ALARME",
+            "elements": [
+              "A = Anémie",
+              "L = Loss (perte de poids)",
+              "A = Age <50 avec symptômes évocateurs",
+              "R = Rectorragies",
+              "M = Masse abdominale",
+              "E = Extra-intestinal (aphtes, arthrites, uvéite)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de John Smith, un homme de 32 ans, policier, qui consulte pour des troubles du transit depuis environ 6 semaines. \n\nIl explique qu’il alterne entre des épisodes de diarrhée liquide avec glaires, environ trois selles par jour pendant quelques jours, puis une phase de transit normal, et ensuite des épisodes de constipation où il ne va à la selle que tous les 3 ou 4 jours. Cela se répète sans véritable schéma. Il ajoute qu’il a remarqué depuis un mois un peu de sang rouge vif sur le papier toilette, surtout quand il est constipé.\n\nIl décrit aussi des douleurs abdominales sourdes dans la partie inférieure, évaluées à 3-4/10, qui apparaissent surtout lors des épisodes de diarrhée. Ces douleurs sont parfois soulagées après être allé à la selle. Elles ne s’accompagnent pas de fièvre, de nausées ou de vomissements.\n\nDepuis quelques semaines, il a eu des aphtes douloureux dans la bouche, maintenant disparus. Il note aussi une perte de poids d’environ 3 kg sur 3 mois et dit avoir un appétit un peu diminué, dans un contexte de stress professionnel important.\n\nPour ses antécédents, il n’a pas de maladies chroniques connues, mais a eu une appendicectomie à 14 ans. Pas d’allergies et aucun traitement au long cours. Dans sa famille, son père a eu un cancer du côlon à 46 ans, et sa grand-mère paternelle est décédée d’un cancer de l’utérus. \n\nDans ses habitudes de vie, il fume environ un paquet par jour depuis 16 ans, il ne boit pas d’alcool, ne consomme pas de drogues, et son alimentation est dominée par le fast-food, avec peu de fibres.\n\nÀ l’examen, ses constantes sont normales : TA 130/70, FC 82, T° 37 °C, FR 16. L’auscultation cardiaque et pulmonaire est normale. L’abdomen est souple mais sensible dans le quadrant inférieur droit. Pas de masse palpable.\n\nEn résumé, il s’agit d’un homme jeune, avec troubles du transit alternants, rectorragies, douleurs en fosse iliaque droite, perte de poids et aphtose buccale. Mon hypothèse principale est une maladie de Crohn iléo-colique. Les diagnostics différentiels incluent une rectocolite hémorragique, un cancer colorectal sur terrain familial à haut risque, un syndrome de Lynch, des hémorroïdes associées et plus rarement un SII.\n\nComme examens complémentaires, je demanderais une NFS, CRP, calprotectine fécale, une coloscopie avec biopsies multiples, éventuellement une IRM entéro pour explorer l’intestin grêle. Je compléterais par un examen proctologique. \n\nEn termes de prise en charge, je proposerais un traitement de la poussée par corticoïdes si confirmé, un traitement de fond par immunosuppresseurs ou biothérapies selon la sévérité, un soutien nutritionnel et une supplémentation adaptée. J’insisterais également sur l’arrêt impératif du tabac. Enfin, au vu des antécédents familiaux, une orientation vers un dépistage génétique pour syndrome de Lynch serait indiquée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : John Smith, 32 ans, présente depuis 6 semaines des troubles du transit alternant diarrhée/constipation.\n\nB (Background) : Rectorragies, perte de poids de 3 kg, aphtes buccaux récents, père atteint d’un cancer du côlon à 46 ans. Tabagisme important.\n\nA (Assessment) : Suspicion de maladie de Crohn iléo-colique. DD : RCH, cancer colorectal jeune (syndrome de Lynch possible), hémorroïdes.\n\nR (Recommendation) : NFS, CRP, calprotectine fécale, coloscopie avec biopsies, IRM entéro, orientation gastro-entérologie."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Crohn vs RCH",
+              "points": [
+                "Crohn = discontinuité (skip lesions), transmurale, tout tube digestif",
+                "RCH = continue, limitée au rectum/côlon, muqueuse uniquement",
+                "Tabac : aggrave Crohn, protège RCH"
+              ]
+            },
+            {
+              "titre": "👉 Syndrome de Lynch (HNPCC) – 3-2-1",
+              "points": [
+                "3 cas familiaux",
+                "2 générations successives",
+                "1 diagnostic < 50 ans"
+              ]
+            },
+            {
+              "titre": "⚠️ Drapeaux rouges SII",
+              "points": [
+                "Sang dans les selles",
+                "Perte de poids",
+                "Anémie",
+                "Symptômes nocturnes",
+                "ATCD familiaux de cancer colorectal"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Maladie de Crohn",
+                  "reponse": {
+                    "pour": [
+                      "Âge jeune (15-35 ans)",
+                      "Douleurs FID",
+                      "Aphtes buccaux",
+                      "Perte de poids",
+                      "Diarrhée avec glaires",
+                      "Facteur aggravant tabac"
+                    ],
+                    "contre": [
+                      "Présence de sang rouge vif → peut aussi orienter vers hémorroïdes"
+                    ]
+                  }
+                },
+                {
+                  "question": "Rectocolite hémorragique",
+                  "reponse": {
+                    "pour": [
+                      "Diarrhée sanglante",
+                      "Âge typique"
+                    ],
+                    "contre": [
+                      "Douleur en FID (RCH = douleur QIG)",
+                      "Pas de ténesme rapporté",
+                      "Alternance constipation/diarrhée atypique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer colorectal",
+                  "reponse": {
+                    "pour": [
+                      "ATCD familial cancer du côlon jeune",
+                      "Perte de poids",
+                      "Troubles du transit",
+                      "Sang dans les selles",
+                      "Tabac, alimentation déséquilibrée"
+                    ],
+                    "contre": [
+                      "Âge jeune (32 ans)",
+                      "Début récent"
+                    ]
+                  }
+                },
+                {
+                  "question": "SII",
+                  "reponse": {
+                    "contre": [
+                      "Sang, perte de poids, aphtes = drapeaux rouges"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS, CRP, ionogramme",
+                    "Calprotectine fécale",
+                    "Coloscopie avec biopsies",
+                    "IRM entéro ou entéro-scanner",
+                    "Examen proctologique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Maladie de Crohn iléo-colique probable"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Corticothérapie si poussée modérée à sévère",
+                      "5-ASA ± immunosuppresseurs (azathioprine)",
+                      "Biothérapies si formes sévères",
+                      "Soutien nutritionnel et supplémentation",
+                      "Arrêt tabac impératif"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultations gastro-entérologie régulières",
+                    "Surveillance nutritionnelle (fer, B12, vit D)",
+                    "Vaccinations avant immunosuppression",
+                    "Dépistage familial si suspicion syndrome de Lynch",
+                    "Surveillance endoscopique pour risque de cancer colorectal"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

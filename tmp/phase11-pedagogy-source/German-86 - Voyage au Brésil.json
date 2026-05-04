@@ -1,0 +1,348 @@
+{
+  "title": "German-86 - Voyage au Brésil",
+  "context": {
+    "setting": "Cabinet de médecine générale - Consultation de médecine des voyages",
+    "patient": "Mme Fischer, 22 ans, se présente pour préparer son voyage au Brésil"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du projet de voyage",
+          "binaryOnly": false,
+          "details": [
+            "Destination et durée [voyage au Brésil prévu pour 3 mois]",
+            "Délai avant le départ [dans 6 mois]",
+            "Nombre de voyageurs"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Questions et préoccupations de la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations nécessaires [Quelles vaccinations faut-il ?]",
+            "Pharmacie de voyage [Que mettre dans ma trousse ?]",
+            "Autres précautions [Et quoi d'autre ?]",
+            "Risques spécifiques au Brésil"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation détaillée du statut vaccinal",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations de base [vaccins recommandés faits, mais il y a longtemps]",
+            "Hépatite A [jamais vaccinée]",
+            "Hépatite B [jamais vaccinée]",
+            "Tétanos [vaccination expirée]",
+            "Fièvre jaune [non faite]",
+            "Vérification du carnet de vaccination"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux et état de santé",
+          "binaryOnly": false,
+          "details": [
+            "Maladies chroniques [aucune]",
+            "Allergies médicamenteuses [aucune]",
+            "Médicaments actuels [aucun]",
+            "Contraception",
+            "Antécédents chirurgicaux"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Expérience de voyages internationaux",
+          "binaryOnly": false,
+          "details": [
+            "Voyages précédents [jamais été à l'étranger]",
+            "Premier grand voyage [oui]",
+            "Appréhensions particulières",
+            "Expérience avec antipaludiques"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Type de voyage et activités prévues",
+          "binaryOnly": false,
+          "details": [
+            "École de langue à Rio de Janeiro",
+            "Déplacements prévus [avion ou bus vers le nord]",
+            "Excursion en jungle [navigation fluviale prévue]",
+            "Activités sociales [sorties, fêtes]",
+            "Type d'hébergement",
+            "Contact avec animaux",
+            "Baignades prévues"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Évaluation des comportements à risque potentiels",
+          "binaryOnly": false,
+          "details": [
+            "Alimentation de rue",
+            "Consommation d'alcool",
+            "Activité sexuelle possible",
+            "Sports à risque",
+            "Tatouages/piercings envisagés"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Situation personnelle et accompagnement",
+          "binaryOnly": false,
+          "details": [
+            "Voyage seule ou accompagnée",
+            "Contacts sur place",
+            "Niveau de portugais",
+            "Budget santé/assurance"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Vaccinations essentielles pour le Brésil",
+          "binaryOnly": false,
+          "details": [
+            "Mise à jour vaccinations de base [nécessaire vu l'ancienneté]",
+            "Hépatite A (fortement recommandée) [à faire]",
+            "Hépatite B (recommandée, risque IST) [à faire]",
+            "Fièvre jaune (obligatoire pour certaines régions) [à faire]",
+            "Rappel DTPa [tétanos expiré, à faire]",
+            "Fièvre typhoïde (recommandée)",
+            "Rage (selon activités en jungle)",
+            "Grippe saisonnière [éventuellement]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Prévention du paludisme",
+          "binaryOnly": false,
+          "details": [
+            "Zones de transmission [nord du Brésil, Amazonie]",
+            "Traitement de réserve partout [antipaludique d'urgence]",
+            "Prophylaxie recommandée pour le nord",
+            "Options: Méfloquine, Malarone ou Doxycycline",
+            "Choix selon tolérance et coût",
+            "Schéma de prise et durée",
+            "Effets secondaires possibles"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Protection anti-vectorielle complète",
+          "binaryOnly": false,
+          "details": [
+            "Importance cruciale de la protection",
+            "Moustiquaire imprégnée indispensable",
+            "Répulsifs efficaces (DEET 30-50%)",
+            "Vêtements couvrants clairs",
+            "Insecticides pour la chambre",
+            "Protection renforcée au crépuscule",
+            "Prévention dengue, Zika, chikungunya"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Prévention des risques alimentaires",
+          "binaryOnly": false,
+          "details": [
+            "Règle: \"Cook it, boil it, peel it or forget it\"",
+            "Eau embouteillée uniquement",
+            "Éviter glaçons et glaces de rue",
+            "Attention fruits de mer",
+            "Hygiène des mains systématique",
+            "Restaurants recommandés vs street food"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Risques spécifiques et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Accidents de circulation [première cause de rapatriement !]",
+            "Protection solaire intensive [indice 50+]",
+            "Risques liés aux baignades (courants, méduses)",
+            "Criminalité dans certaines zones urbaines",
+            "Précautions sorties nocturnes",
+            "Éviter signes extérieurs de richesse"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Prévention IST et comportement sexuel",
+          "binaryOnly": false,
+          "details": [
+            "Information sur prévalence VIH/IST au Brésil",
+            "Importance des préservatifs",
+            "Où se procurer des préservatifs de qualité",
+            "Éviter partenaires à risque",
+            "Prophylaxie post-exposition si nécessaire",
+            "Contraception d'urgence"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Trousse de pharmacie complète",
+          "binaryOnly": false,
+          "details": [
+            "Protection solaire haute protection",
+            "Antalgiques/antipyrétiques (paracétamol, ibuprofène)",
+            "Antidiarrhéiques (lopéramide)",
+            "Antibiotique large spectre (ciprofloxacine ou azithromycine)",
+            "Antiémétiques",
+            "Solutions de réhydratation orale",
+            "Antiseptique et matériel de pansement",
+            "Spray nasal décongestionnant",
+            "Antihistaminiques (cétirizine)",
+            "Comprimés purification d'eau",
+            "Thermomètre",
+            "Préservatifs"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "État de santé actuel et aptitude au voyage",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique général",
+            "Vérification absence de contre-indications",
+            "État dentaire (conseiller bilan)",
+            "Test VIH proposé (baseline)"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Plan de vaccination personnalisé",
+          "binaryOnly": false,
+          "details": [
+            "Calendrier vaccinal avec délais",
+            "Ordonnances pour tous les vaccins",
+            "Coûts et prise en charge",
+            "Carnet de vaccination international",
+            "Certificat fièvre jaune officiel"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Prescription antipaludiques et médicaments",
+          "binaryOnly": false,
+          "details": [
+            "Choix de l'antipaludique adapté",
+            "Ordonnance avec posologie claire",
+            "Test de tolérance avant départ",
+            "Ordonnance trousse de pharmacie",
+            "Instructions d'utilisation écrites"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Conseils pratiques jeune voyageuse",
+          "binaryOnly": false,
+          "details": [
+            "Précautions spécifiques femme seule",
+            "Applications mobiles sécurité",
+            "Contacts d'urgence locaux",
+            "Comportement en soirée",
+            "Transport sécurisé (Uber vs taxi)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Documentation et assurances",
+          "binaryOnly": false,
+          "details": [
+            "Assurance voyage complète obligatoire",
+            "Assistance rapatriement incluse",
+            "Couverture activités à risque",
+            "Copie documents importants",
+            "Contacts ambassade/consulat"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conduite à tenir en cas de problème",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre au retour = consultation urgente",
+            "Diarrhée persistante",
+            "Accident d'exposition au sang",
+            "Agression sexuelle",
+            "Perte/vol documents",
+            "Numéros d'urgence 24/7"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Ressources et formation",
+          "binaryOnly": false,
+          "details": [
+            "Sites web fiables (SafeTravel, CDC)",
+            "Applications santé voyage",
+            "Cours de portugais médical basique",
+            "Forums voyageurs expérimentés",
+            "Groupes Facebook Brésil"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Planification du suivi médical",
+          "binaryOnly": false,
+          "details": [
+            "Prochains RDV vaccinations",
+            "Check-up avant départ",
+            "Bilan au retour si symptômes",
+            "Test VIH 3 mois après retour",
+            "Disponibilité questions par email"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

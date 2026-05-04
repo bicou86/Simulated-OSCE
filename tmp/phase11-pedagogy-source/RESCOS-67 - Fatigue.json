@@ -1,0 +1,721 @@
+{
+  "title": "RESCOS-67 - Fatigue",
+  "context": {
+    "setting": "Cabinet de médecine générale de la Dre Kovac (médecin assistant·e)",
+    "patient": "Madame Gomez, 38 ans, consulte pour une baisse d'énergie",
+    "vitals": {
+      "ta": "122/84 mmHg",
+      "fc": "60 bpm",
+      "temperature": "36.6°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la fatigue",
+          "details": [
+            "Durée [Depuis 6 mois environ]",
+            "Évolution [Au début intermittent surtout les jours avec beaucoup de travail. Depuis 2 mois péjoration, quasiment constante à présent]",
+            "Chronologie sur la journée [Présente dès le matin, péjoration l'après-midi et le soir]",
+            "Circonstances de survenue [Sans facteur déclenchant particulier selon moi]"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Conséquences de la fatigue sur le quotidien",
+          "patientComment": "Diminution de ma motivation et de ma concentration, ce qui a un impact sur mes performances au travail"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes B associés",
+          "details": [
+            "Fièvre [Non]",
+            "Variation de poids [Prise de poids environ 3-4kg sur la dernière année, selon moi parce que je mange assez mal depuis 1 an à cause du stress au boulot]",
+            "Sueurs nocturnes [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes d'hypothyroïdie",
+          "details": [
+            "Intolérance au froid [Non]",
+            "Transit ralenti [Tendance à la constipation, en aggravation depuis environ 2-3 mois, transit environ 1x/2j, selles plutôt dures]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Sommeil",
+          "details": [
+            "Durée [En moyenne 7h]",
+            "Qualité [Ok]",
+            "Impact sur la fatigue [Faible impact sur la fatigue]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Autres symptômes associés",
+          "details": [
+            "Toux [Non]",
+            "Douleurs abdominales [Non]",
+            "Modifications de l'appétit [Pas de changement d'appétit majeur]",
+            "Douleurs musculaires ou articulaires [Non]",
+            "Polyurie ou polydipsie [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Situation menstruelle",
+          "details": [
+            "Durée des règles [3-5 jours]",
+            "Abondance [Quantité normale d'après moi]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse psychiatrique",
+          "details": [
+            "Humeur [Souvent débordée par les responsabilités, sautes d'humeur]",
+            "Stress [Niveau de stress élevé, nouvelles responsabilités au travail depuis 1 an]",
+            "Perte d'intérêt [Plus de mal à trouver du plaisir dans les activités que j'aimais auparavant]",
+            "Troubles de la concentration [Oui, difficultés de concentration]",
+            "Anxiété [Émotionnellement vulnérable, mal à gérer les situations stressantes]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Alimentation",
+          "details": [
+            "Activité physique [Pas d'exercice physique régulier, passe beaucoup de temps devant un écran]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents",
+          "details": [
+            "Antécédents médicaux [Antécédent de carence martiale lors de l'adolescence et âge jeune adulte en raison de règles abondantes. 3x substitution orale. Substitution pendant la grossesse puis en ordre]",
+            "Traitement [Aucun médicament actuellement]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse familiale",
+          "patientComment": "Rien de particulier"
+        },
+        {
+          "id": "a12",
+          "text": "Consommations",
+          "details": [
+            "Tabac [10 cigarettes par jour depuis l'âge de 18 ans. Avais arrêté pendant mes grossesses]",
+            "OH [Occasionnel]",
+            "Drogues [Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse en général : ciblée, fil conducteur",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Général : examen rapide de la peau - examen des sclères",
+          "details": [
+            "Si réalisé, dire : [Les sclères sont légèrement pâles]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Recherche d'adénopathies cervicales - sus-claviculaires",
+          "patientComment": "Pas d'adénopathies"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation de la glande thyroïde",
+          "patientComment": "Thyroïde normale, pas d'augmentation de volume"
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiaque correctement réalisé",
+          "details": [
+            "4 foyers [Oui]",
+            "NON = incomplet ou non réalisé",
+            "ET postérieur [Non nécessaire pour ce cas]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation pulmonaire (antérieure et postérieure)",
+          "patientComment": "Auscultation pulmonaire normale"
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal : palpation 4 quadrants - recherche d'hépatosplénomégalie",
+          "patientComment": "Abdomen souple, pas d'hépatosplénomégalie"
+        },
+        {
+          "id": "e7",
+          "text": "Examen des ROT au niveau du genou ou de la cheville ou au moins sur 1 site",
+          "details": [
+            "Ralentissement de la phase de relaxation des ROT [Oui, phase de relaxation ralentie alors que la phase de contraction est normale]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen physique en général : effectué de manière structurée, correcte et professionnelle",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Demande un laboratoire",
+          "details": [
+            "Formule sanguine complète [Hb 125 g/L, Hct 41%, MCV 88 fl, MCH 30 pg, MCHC 340 g/L, leucocytes 6.0 G/L, thrombocytes 180 G/L]",
+            "Ferritine [44 ug/L (N: 4-114)]",
+            "Paramètres inflammatoires (VS ou CRP) [VS 4 mm/h, CRP < 0.1 mg/L]",
+            "Fonction rénale [Créatinine 75 umol/L (N: 44-80)]",
+            "Fonction hépatique [ASAT 11 U/L, ALAT 10 U/L, Gamma-GT 41 U/L, bilirubine totale 8 umol/L]",
+            "Électrolytes [Sodium 140 mmol/L, Potassium 3.9 mmol/L]",
+            "Glycémie [Glucose 4.7 mmol/L (N: 3.7-5.6)]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Demande des tests thyroïdiens (TSH seule ou avec T4 libre)",
+          "patientComment": "TSH 20.6 mU/L (N: 0.2-3.5), T4 libre 2.06 pmol/L (N: 12-22)"
+        },
+        {
+          "id": "m3",
+          "text": "Interprète correctement les résultats de laboratoire (TSH augmentée et T4 libre abaissée = hypothyroïdie)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Diagnostic : hypothyroïdie - primaire OU d'origine autoimmune probable",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Cite le diagnostic mentionné au point 4 comme diagnostic plus probable",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Cause endocrinienne",
+                "items": [
+                  {
+                    "text": "Hypothyroïdie primaire",
+                    "cause": "Arguments POUR:\n\t□ Fatigue progressive depuis 6 mois\n\t□ Prise de poids (3-4 kg)\n\t□ Constipation aggravée\n\t□ Ralentissement phase de relaxation des ROT\n\t□ TSH très élevée (20.6 mU/L)\n\t□ T4 libre abaissée (2.06 pmol/L)",
+                    "test": "→ TSH et T4 libre (déjà fait - confirmé)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes hématologiques",
+                "items": [
+                  {
+                    "text": "Anémie ferriprive",
+                    "cause": "Arguments POUR:\n\t□ Antécédent de carence martiale\n\t□ Femme en âge de procréer\n\t□ Sclères légèrement pâles\nArguments CONTRE:\n\t□ Hb normale (125 g/L)\n\t□ Ferritine normale (44 ug/L)",
+                    "test": "→ NFS, ferritine (déjà fait - exclu)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes psychiatriques",
+                "items": [
+                  {
+                    "text": "Trouble anxio-dépressif",
+                    "cause": "Arguments POUR:\n\t□ Stress professionnel important\n\t□ Sautes d'humeur\n\t□ Perte d'intérêt et de motivation\n\t□ Troubles du sommeil (endormissement difficile)\nArguments CONTRE:\n\t□ Pas d'idées suicidaires\n\t□ Symptômes somatiques prédominants",
+                    "test": "→ Questionnaires de dépistage (PHQ-9, GAD-7)"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Propose un dosage des anticorps anti-TPO",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Traitement : substitution par hormones thyroïdiennes (lévothyroxine)",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement substitutif",
+                "content": "- Lévothyroxine (L-thyroxine)\n- Débuter à faible dose : 25-50 μg/jour\n- Augmentation progressive par paliers de 25 μg toutes les 4-6 semaines\n- Dose cible : environ 1.6 μg/kg/jour\n- Prise le matin à jeun, 30 min avant le petit-déjeuner"
+              },
+              {
+                "title": "Surveillance",
+                "content": "- Contrôle TSH dans 6-8 semaines\n- Ajustement de la dose selon TSH\n- Objectif : TSH dans les normes (0.5-2.5 mU/L)\n- Une fois stable : contrôle annuel de la TSH\n- Surveillance des symptômes de surdosage (palpitations, nervosité, insomnie)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m8",
+          "text": "Suivi : prévoir un contrôle biologique dans un délai de 6-8 semaines - informations sur symptômes de surdosage",
+          "binaryOnly": true
+        },
+        {
+          "id": "m9",
+          "text": "Management en général",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Information sur le diagnostic",
+          "content": "« Madame Gomez, vos analyses montrent que vous souffrez d'hypothyroïdie, c'est-à-dire que votre glande thyroïde ne produit pas assez d'hormones. Cela explique votre fatigue, votre prise de poids et votre constipation. »"
+        },
+        {
+          "id": "c2",
+          "text": "Information sur le traitement",
+          "content": "« Je vais vous prescrire de la lévothyroxine, une hormone thyroïdienne de substitution. On commencera par une petite dose qu'on augmentera progressivement. Vous devrez la prendre tous les matins à jeun, 30 minutes avant le petit-déjeuner. »"
+        },
+        {
+          "id": "c3",
+          "text": "Information sur le suivi",
+          "content": "« Nous ferons un contrôle sanguin dans 6 à 8 semaines pour ajuster la dose. Une fois la bonne dose trouvée, vous vous sentirez beaucoup mieux - votre énergie reviendra progressivement. Si vous ressentez des palpitations, de la nervosité ou des troubles du sommeil, contactez-moi car cela pourrait signifier que la dose est trop élevée. »"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente simulée - Mme Gomez",
+      "nom": "Madame Iris Gomez",
+      "age": "38 ans",
+      "contexte": "Cabinet de médecine générale",
+      "profession": "Analyste financière dans une grande entreprise",
+      "etatEsprit": "Fatiguée, collaborante, un peu ralentie, affect un peu triste mais pas franchement déprimée",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai l'impression de ne plus avoir d'énergie. Je suis tout le temps épuisée et ça commence vraiment à me déranger",
+        "autreChose": "Normalement, je suis plutôt active et en forme et là y a vraiment quelque chose qui n'est pas comme d'habitude"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": "Fatigue et baisse d'énergie importante avec impact sur mon quotidien",
+        "chronologie": "Depuis 6 mois environ, au début intermittent surtout les jours avec beaucoup de travail. Depuis 2 mois péjoration, quasiment constante à présent. Présente dès le matin, péjoration l'après-midi et le soir.",
+        "developpement": "Progressif",
+        "circonstances": "Sans facteur déclenchant particulier selon moi",
+        "facteursAggravants": "Activité physique ou tâches lors desquelles je dois beaucoup me concentrer, par exemple au travail",
+        "symptomesAssocies": [
+          "Aucun autre symptôme remarqué"
+        ],
+        "consequences": "Diminution de ma motivation et de ma concentration, ce qui a un impact sur mes performances au travail",
+        "reponseAuSymptome": "Prise de vitamines du commerce pendant 1 mois il y a 3 mois mais sans effet",
+        "episodesAnterieurs": "Oui, lors de l'adolescence et âge jeune adulte lorsque je manquais de fer"
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Prise de poids environ 3-4kg sur la dernière année, selon moi parce que je mange assez mal depuis 1 an à cause du stress au boulot",
+          "Pas de sudations nocturnes",
+          "Pas de changement d'appétit majeur",
+          "Pas de fièvre"
+        ],
+        "digestive": [
+          "Tendance à la constipation, en aggravation depuis environ 2-3 mois",
+          "Mange assez peu de fruits et de légumes surtout depuis 1 année",
+          "Transit environ 1x/2j, selles plutôt dures",
+          "Jamais de sang dans les selles"
+        ],
+        "psychiatrique": [
+          "Souvent débordée par les responsabilités familiales et professionnelles",
+          "Niveau de stress élevé",
+          "Depuis 1 an, nouvelles responsabilités au travail",
+          "Sautes d'humeur, passant de moments de tristesse et de découragement à des moments de frustration ou d'irritabilité",
+          "Émotionnellement vulnérable, mal à gérer les situations stressantes de manière efficace",
+          "Plus de mal à trouver du plaisir dans les activités que j'aimais auparavant",
+          "Diminution générale de l'intérêt et de la motivation",
+          "Parfois difficultés à m'endormir le soir (parfois 1h30 pour m'endormir)",
+          "Réfléchit beaucoup au travail",
+          "A pris de la Valériane pour l'aider",
+          "Durée du sommeil en moyenne 7h, qualité ok, faible impact sur la fatigue",
+          "Pas d'idées suicidaires"
+        ],
+        "gynecologique": [
+          "Règles régulières, cycles de 28 jours",
+          "Durée 3-5 jours",
+          "Quantité normale d'après moi",
+          "Activité sexuelle irrégulière, toujours protégée par préservatif",
+          "Contraception par pilule oestro-progestative"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "alimentation": "Je reconnais ne pas avoir une alimentation très équilibrée surtout depuis 1 année, avec une préférence pour les aliments riches en glucides et en graisses. Pas d'exercice physique régulier, passe beaucoup de temps devant un écran au travail et à la maison.",
+        "tabac": "10 cigarettes par jour depuis l'âge de 18 ans. Avais arrêté pendant mes grossesses.",
+        "alcool": "Occasionnel",
+        "drogues": "Non"
+      },
+      "antecedents": {
+        "medicaux": "Antécédent de carence martiale lorsque j'étais adolescente/jeune adulte en raison de règles abondantes. 3x substitution orale. Substitution pendant la grossesse puis en ordre.",
+        "chirurgicaux": "Aucun",
+        "familiaux": "Rien de particulier",
+        "allergies": "Aucune"
+      },
+      "contexteSocial": {
+        "etatCivil": "Divorcée depuis 3 ans",
+        "enfants": "2 enfants âgés de 8 (fille = Emma) et 6 ans (garçon = Jules)",
+        "garde": "Garde alternée 50/50. Entente ok avec mon ex-mari.",
+        "hobbies": "Regarde beaucoup des séries. Lecture, joue un peu de guitare et aime bien chanter."
+      },
+      "caracteristiques": {
+        "poids": "Normal (BMI 18-25 kg/m²)"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Fatigue",
+          "Un peu ralentie",
+          "Affect un peu triste mais pas franchement déprimée"
+        ],
+        "durantStatus": [
+          "Ralentissement de la phase de relaxation des ROT : quel que soit le site, il faut essayer de simuler que la phase de relaxation du ROT est ralentie alors que la phase de contraction est normale"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert évaluateur",
+      "resumeCas": "Mme Gomez, une femme âgée de 38 ans, se présente au cabinet de la médecin généraliste avec une plainte de fatigue persistante et une baisse générale de son énergie.",
+      "pointsCles": [
+        "Symptômes présents depuis environ six mois et progressivement affecté sa qualité de vie",
+        "Sensation d'épuisement constant, même après une bonne nuit de sommeil",
+        "Diminution de sa motivation et de sa concentration",
+        "Légère prise pondérale attribuée à ses mauvaises habitudes alimentaires",
+        "Tendance à la constipation « depuis qu'elle est adolescente », aggravée depuis quelques mois",
+        "Situation particulièrement stressante au travail depuis environ 1 année",
+        "Sautes d'humeur, démotivation et perte d'intérêt",
+        "Antécédent de carence martiale sur ménorragie lors de l'adolescence et âge jeune adulte"
+      ],
+      "examenClinique": [
+        "Discrète pâleur",
+        "Palpation de la thyroïde normale",
+        "Ralentissement de la phase de relaxation des ROT (réflexes ostéotendineux)",
+        "Reste de l'examen clinique normal"
+      ],
+      "diagnosticDifferentiel": "Assez large et inclut une hypothyroïdie, un état dépressif réactionnel, une anémie ferriprive",
+      "resultatsLaboratoire": "Le laboratoire montre une TSH augmentée et une T4 libre abaissée ce qui permet de poser le diagnostic d'hypothyroïdie primaire",
+      "rolesInterventions": [
+        "Si l'étudiant·e observe les sclères, dire « les sclères sont légèrement pâles »",
+        "Si l'étudiant·e demande des examens de laboratoire sans préciser les tests thyroïdiens : donner UNIQUEMENT la feuille SANS les résultats TSH/T4",
+        "Si demande spécifiquement les tests thyroïdiens (TSH seule ou avec T4 libre), donner la feuille avec les résultats thyroïdiens"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques sur l'hypothyroïdie",
+      "sections": [
+        {
+          "titre": "Diagnostic différentiel de la fatigue",
+          "contenu": "Fatigue = plainte avec un DD initial très large. Dans la démarche commencer par cibler des causes fréquentes de fatigue au vu des informations initiales par exemple carence martiale (rechercher des FR comme hyperménorrhée, alimentation), troubles du sommeil, troubles psychiatriques (à chercher dans l'anamnèse), hypothyroïdie (chercher constipation, frilosité, prise de poids). Sans oublier des causes potentiellement graves par exemple oncologiques (d'où l'investigation ciblée par système et des symptômes B, recherche d'ADP)."
+        },
+        {
+          "titre": "Hypothyroïdie - Diagnostic",
+          "points": [
+            "À rechercher sur la base de la fatigue, prise de poids et constipation + allongement de la phase de relaxation des ROT",
+            "TSH abaissée et T4 libre augmentée = hypothyroïdie primaire",
+            "Dans la suite des investigations, dosage des anticorps anti-TPO conseillé afin d'exclure hypothyroïdie primaire d'une autre origine (De Quervain, thyroïdite silencieuse)"
+          ]
+        },
+        {
+          "titre": "Prise en charge",
+          "points": [
+            "Substitution par lévothyroxine",
+            "Contrôle à 6-8 semaines pour nouveau dosage des hormones thyroïdiennes",
+            "Mise en garde symptômes d'hyperthyroïdie (surdosage)"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Débuter lévothyroxine à faible dose (25-50 μg/jour)",
+        "Augmentation progressive par paliers de 25 μg toutes les 4-6 semaines",
+        "Dose cible environ 1.6 μg/kg/jour",
+        "Prise matinale à jeun, 30 min avant le petit-déjeuner",
+        "Objectif TSH : 0.5-2.5 mU/L",
+        "Surveillance annuelle une fois équilibrée"
+      ],
+      "examensComplementaires": [
+        "TSH : test de première intention (sensibilité > 99%)",
+        "T4 libre : si TSH anormale",
+        "Anticorps anti-TPO : pour confirmer origine auto-immune (thyroïdite de Hashimoto)",
+        "Échographie thyroïdienne : non systématique, si goitre ou nodule palpable",
+        "NFS, ferritine : pour exclure anémie ferriprive associée",
+        "VS/CRP : pour exclure processus inflammatoire"
+      ]
+    },
+    "resume": {
+      "titre": "🦋 Hypothyroïdie primaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes fréquents",
+              "points": [
+                "Fatigue chronique, somnolence",
+                "Prise de poids malgré une baisse de l'appétit",
+                "Intolérance au froid",
+                "Peau sèche, constipation, voix rauque",
+                "Troubles mnésiques, ralentissement psychomoteur",
+                "Chute de cheveux, ongles cassants",
+                "Règles abondantes ou irrégulières"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque / antécédents",
+              "points": [
+                "Sexe féminin (prévalence plus élevée)",
+                "Maladie auto-immune personnelle ou familiale (ex : Hashimoto, diabète type 1, vitiligo)",
+                "Traitement antérieur du cancer thyroïdien ou chirurgie thyroïdienne",
+                "Traitements iatrogènes (amiodarone, lithium, radiothérapie cervicale)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes généraux",
+              "points": [
+                "Bradycardie",
+                "Peau sèche et froide",
+                "Œdèmes péri-orbitaires, visage bouffi (myxœdème)",
+                "Réflexes ostéotendineux ralentis (phase de relâchement prolongée)",
+                "Goitre éventuel (dur, irrégulier, indolore si Hashimoto)",
+                "Hypothermie (dans les formes sévères)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Bilan biologique",
+              "points": [
+                "TSH élevée + T4L basse = hypothyroïdie primaire",
+                "Présence d’anticorps anti-TPO (thyroïdite d’Hashimoto)",
+                "Hypercholestérolémie fréquente",
+                "Anémie normocytaire ou macrocytaire"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires",
+              "points": [
+                "Échographie thyroïdienne si goitre palpable ou nodules",
+                "ECG si bradycardie importante",
+                "Autres bilans selon contexte (glycémie, ferritine, cortisol, etc.)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement hormonal substitutif",
+              "points": [
+                "Lévothyroxine (T4) en prise orale à jeun 30 min avant le petit déjeuner",
+                "Adaptation de la dose selon TSH (objectif : TSH normale)",
+                "Surveillance biologique après 6 semaines d’initiation ou d’ajustement",
+                "Traitement à vie dans la majorité des cas"
+              ]
+            },
+            {
+              "titre": "Précautions",
+              "points": [
+                "Commencer à faible dose chez les sujets âgés ou coronariens",
+                "Éviter les prises simultanées de fer, calcium ou IPP qui diminuent l’absorption",
+                "Surveillance accrue pendant la grossesse (adaptation de dose nécessaire)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Évoquer en cas de fatigue, frilosité, prise de poids",
+            "TSH + T4L indispensables pour le diagnostic",
+            "Ne pas oublier les anticorps anti-TPO dans l'étiologie auto-immune",
+            "Lévothyroxine : traitement simple mais nécessitant un bon suivi biologique",
+            "Adapter la dose progressivement, surtout chez les patients à risque CV",
+            "Toujours évoquer une hypothyroïdie centrale si TSH normale ou basse avec T4L basse"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Fatigue chronique (Hypothyroïdie primaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (fatigue, baisse énergie)",
+            "Caractériser fatigue → durée, évolution, rythme, impact quotidien",
+            "Symptômes associés → constipation, prise poids, frilosité, humeur",
+            "ATCD médicaux (carences, endocrino), traitements",
+            "Habitudes de vie (tabac, alimentation, stress, sommeil)",
+            "Examen → constantes, thyroïde, peau, cheveux, ROT, sclères",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → TSH, T4 libre, anticorps anti-TPO",
+            "Prise en charge → lévothyroxine, éducation, suivi biologique"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo FATIGUE",
+            "elements": [
+              "F = Fatigue persistante",
+              "A = Anxiété/stress associés",
+              "T = Transit ralenti (constipation)",
+              "I = Intolérance au froid (souvent)",
+              "G = Gain de poids",
+              "U = Un peu ralentie (ROT, affect)",
+              "E = Examens → TSH/T4L"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Iris Gomez, 38 ans, analyste financière, qui consulte pour une fatigue persistante et une baisse d’énergie importante depuis environ six mois.\n\nAu début, la fatigue était surtout intermittente, présente les jours de gros travail, mais depuis deux mois elle est quasiment constante, dès le matin, et s’aggrave en fin de journée. Elle dit que cette fatigue impacte sa concentration et sa motivation, ce qui affecte son travail.\n\nElle rapporte aussi une prise de poids de 3 à 4 kilos sur l’année écoulée, malgré un appétit globalement inchangé, et une constipation qui s’est aggravée depuis quelques mois, avec un transit environ une fois tous les deux jours, selles dures. Elle n’a pas eu de fièvre ni de sueurs nocturnes. Pas de perte d’appétit majeure. Son sommeil est correct, environ 7 heures par nuit, sans réel effet sur la fatigue.\n\nAu niveau psychologique, elle se dit souvent débordée par ses responsabilités, avec des sautes d’humeur, un niveau de stress élevé depuis un an avec de nouvelles responsabilités, et une perte d’intérêt pour ses activités habituelles. Elle reconnaît une baisse de plaisir et une vulnérabilité émotionnelle. Pas d’idées suicidaires.\n\nDans ses antécédents, elle a présenté une carence martiale lors de l’adolescence et jeune adulte, corrigée par substitution. Elle n’a pas de traitement actuel. Pas de chirurgie. Sa famille est en bonne santé. \n\nCôté habitudes de vie, elle fume 10 cigarettes par jour depuis l’âge de 18 ans, a arrêté pendant ses grossesses, consomme de l’alcool occasionnellement, et ne fait pas d’activité physique régulière. Son alimentation est déséquilibrée, riche en glucides et graisses.\n\nÀ l’examen clinique, ses constantes sont normales : TA 122/84, FC 60, température 36,6. Elle paraît légèrement pâle. La thyroïde est de volume normal, non douloureuse. Les réflexes ostéotendineux sont particuliers : la phase de relaxation est ralentie. Le reste de l’examen est normal, pas d’adénopathies, abdomen souple, pas d’hépatosplénomégalie.\n\nEn résumé, il s’agit d’une femme jeune avec une fatigue chronique progressive, associée à une constipation, une prise de poids, un ralentissement psychomoteur discret, et un signe clinique typique : la phase de relaxation des ROT ralentie. Mon hypothèse principale est une hypothyroïdie primaire. Les diagnostics différentiels incluent une anémie ferriprive, ou un trouble anxio-dépressif réactionnel.\n\nComme examens complémentaires, je demanderais une NFS et ferritine, une TSH et une T4 libre. Ici, les résultats montrent une TSH à 20,6 (très élevée) et une T4 libre basse à 2,06, ce qui confirme l’hypothyroïdie primaire. Je compléterais par un dosage des anticorps anti-TPO pour rechercher une thyroïdite auto-immune.\n\nEn termes de prise en charge, je propose un traitement substitutif par lévothyroxine, débuté à faible dose (25–50 µg/j), à adapter progressivement selon la TSH. Je l’informerais de la prise matinale à jeun et du suivi biologique à 6–8 semaines pour ajuster la dose, puis annuel une fois l’équilibre atteint."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Iris Gomez, 38 ans, consulte pour une fatigue persistante depuis 6 mois.\n\nB (Background) : Antécédent de carence martiale, tabac 10 cigarettes/j, alimentation déséquilibrée. Depuis 2 mois fatigue quasi constante, constipation aggravée, prise de poids. \n\nA (Assessment) : Suspicion forte d’hypothyroïdie primaire confirmée par TSH élevée et T4 libre basse. DD : anémie ferriprive, trouble anxio-dépressif.\n\nR (Recommendation) : Prescrire lévothyroxine à faible dose, informer sur la prise matinale, contrôle TSH dans 6–8 semaines, dosage anti-TPO, suivi régulier."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Hypothyroïdie = TRISTE",
+              "points": [
+                "T = Transit ralenti",
+                "R = Ralentissement psychomoteur / ROT",
+                "I = Intolérance au froid",
+                "S = Somnolence / fatigue",
+                "T = TSH ↑, T4 ↓",
+                "E = Énergie basse"
+              ]
+            },
+            {
+              "titre": "👉 Suivi traitement",
+              "points": [
+                "Commencer petit (25–50 µg)",
+                "Ajuster toutes les 6–8 semaines",
+                "Cible TSH normale",
+                "Prise matinale à jeun",
+                "Surveillance surdosage : palpitations, nervosité, insomnie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Hypothyroïdie primaire",
+                  "reponse": {
+                    "pour": [
+                      "Fatigue chronique et progressive",
+                      "Prise de poids, constipation",
+                      "Phase de relaxation des ROT ralentie",
+                      "TSH très élevée et T4 libre basse"
+                    ],
+                    "contre": [
+                      "Pas de frilosité marquée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Anémie ferriprive",
+                  "reponse": {
+                    "pour": [
+                      "Antécédent de carence martiale",
+                      "Femme jeune"
+                    ],
+                    "contre": [
+                      "Hb normale",
+                      "Ferritine normale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Trouble anxio-dépressif",
+                  "reponse": {
+                    "pour": [
+                      "Stress professionnel élevé",
+                      "Perte d’intérêt",
+                      "Humeur variable"
+                    ],
+                    "contre": [
+                      "Symptômes physiques marqués (constipation, ROT, prise de poids)",
+                      "Pas d’idées suicidaires"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "NFS + ferritine",
+                    "TSH et T4 libre",
+                    "Anticorps anti-TPO"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Hypothyroïdie primaire, probablement auto-immune (Hashimoto)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Lévothyroxine faible dose (25–50 µg/j)",
+                      "Prise matinale à jeun",
+                      "Ajustement progressif selon TSH"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle TSH après 6–8 semaines",
+                    "Puis annuel une fois équilibrée",
+                    "Informer des signes de surdosage",
+                    "Surveillance grossesse et maladies auto-immunes associées"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

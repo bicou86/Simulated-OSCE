@@ -1,0 +1,741 @@
+{
+  "title": "USMLE Triage 28 - Fièvre pendant la grossesse",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Carrie Westermark, une femme enceinte de 22 ans, se présente au cabinet avec une sensation de brûlure à la miction depuis 4 jours.",
+    "vitals": {
+      "ta": "120/78 mmHg",
+      "temperature": "38.4°C",
+      "fc": "78 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Mme Westermark, ravie de vous rencontrer, je suis le Dr Banebridge.",
+            "Je comprends que vous avez eu des difficultés à uriner récemment.",
+            "Veuillez m'en parler."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des symptômes urinaires",
+          "details": [
+            "Brûlure mictionnelle [sensation brûlure quand urine]",
+            "Durée [environ 4 jours]",
+            "Timing douleur [mal début, mieux fin]",
+            "Fréquence [10-15 fois/jour, constant]",
+            "Urgence mictionnelle [depuis début brûlure]",
+            "Pas hématurie [urine foncée mais pas sang]",
+            "Lien grossesse [25 semaines]",
+            "Conseil médecin [dit venir si cela]"
+          ],
+          "exemplesPhrases": [
+            "Depuis combien de temps cela dure-t-il ?",
+            "Compte tenu de votre grossesse, c'est important à déterminer.",
+            "À quelle fréquence allez-vous aux toilettes ?",
+            "Qu'en est-il du sang dans votre urine ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes fébriles et constitutionnels",
+          "details": [
+            "Fièvre subjective [depuis hier]",
+            "Sensation chaleur [eu vraiment chaud]",
+            "Sueurs nocturnes [transpiré draps nuit dernière]",
+            "Courbatures fébriles [beaucoup courbatures]",
+            "Asthénie [pas vouloir sortir lit]",
+            "Appétit diminué [moins faim derniers jours]",
+            "Prise Tylenol [2 comprimés 3h matin]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous d'autres symptômes comme sensation de chaleur ?",
+            "Il semble que vous ayez de la fièvre d'après vos signes vitaux.",
+            "Qu'en est-il d'une diminution de l'appétit ?",
+            "Quand avez-vous pris la dernière dose de Tylenol ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Douleurs dorsales et autres symptômes",
+          "details": [
+            "Lombalgie présente [dos fait mal aussi]",
+            "Aggravation flexion [mal quand penche]",
+            "ATCD spasme [il y a 6 mois]",
+            "Attribution grossesse [pensé bébé]",
+            "Pas nausées/vomissements actuels",
+            "Toux résiduelle [rhume il y a 2 sem]",
+            "Toux sèche actuelle [irritante]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu d'autres symptômes, comme des douleurs dorsales ?",
+            "Je vais vous examiner et essayer de déterminer si c'est ça.",
+            "Avez-vous eu des nausées ou vomissements ?",
+            "Toussez-vous quelque chose ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Histoire obstétricale actuelle",
+          "details": [
+            "G1P0 [première grossesse]",
+            "25 semaines gestation",
+            "Essais conception [4 mois]",
+            "DPA 9 avril",
+            "DDR 4 juillet",
+            "Mouvements fœtaux [depuis 2 semaines]",
+            "Mouvements récents [tout le temps]",
+            "Pas contractions [oh non]",
+            "Sexe inconnu [ne connaissons pas]"
+          ],
+          "exemplesPhrases": [
+            "Combien de fois avez-vous été enceinte ?",
+            "Quelle est votre date prévue d'accouchement ?",
+            "Avez-vous déjà senti le bébé bouger ?",
+            "Avez-vous eu quelque chose comme une contraction ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes gynécologiques",
+          "details": [
+            "Pertes augmentées [plus que habitude]",
+            "Pertes décolorées [plus foncées]",
+            "Odeur désagréable [sent plutôt mauvais]",
+            "Pas aspect fromage cottage",
+            "Pas saignements vaginaux",
+            "Dyspareunie récente [mal début rapports]",
+            "Depuis quelques semaines"
+          ],
+          "exemplesPhrases": [
+            "Des épisodes de saignements vaginaux ou pertes inhabituelles ?",
+            "Les pertes sont-elles du mucus normal ?",
+            "Est-ce une consistance blanche, comme fromage cottage ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Histoire sexuelle",
+          "details": [
+            "Sexuellement active [oui]",
+            "Relation monogame [mariés]",
+            "Dernier rapport [il y a 1 semaine]",
+            "Pas IST antérieures [non]",
+            "Mari sans IST [pas eu non plus]",
+            "Jamais infection levures [ne pense pas]"
+          ],
+          "exemplesPhrases": [
+            "J'aimerais poser quelques questions personnelles sur votre activité sexuelle.",
+            "Êtes-vous sexuellement active maintenant ?",
+            "Avez-vous une relation monogame ?",
+            "Avez-vous eu des maladies sexuellement transmissibles ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Grossesse actuelle - Évolution",
+          "details": [
+            "Nausées/vomissements T1 [difficile]",
+            "Prométhazine prescrite [pas pris depuis mois]",
+            "Grossesse formidable sinon",
+            "Famille dit rayonne",
+            "Aucun problème majeur",
+            "Prise poids régulière [15 livres]",
+            "Vérifie quotidiennement"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il eu d'autres problèmes avec cette grossesse ?",
+            "Avez-vous pris des médicaments à cause de cette sensation ?",
+            "Avez-vous perdu du poids ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux et chirurgicaux",
+          "details": [
+            "Contraception 16 ans [contrôler règles]",
+            "Fracture jambe 9 ans [ski]",
+            "Pas chirurgies [non]",
+            "Rhume récent [il y a 2 semaines]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'autres problèmes de santé dans votre vie ?",
+            "Qu'en est-il des chirurgies ?",
+            "Avez-vous eu une maladie récente ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes de vie et allergies",
+          "details": [
+            "Non-fumeuse [personne]",
+            "Pas alcool grossesse [arrêté longtemps]",
+            "Raison arrêt [pas faire mal bébé]",
+            "Pas allergies [rien]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous, ou êtes-vous près de quelqu'un qui fume ?",
+            "Buvez-vous de l'alcool pendant cette grossesse ?",
+            "Êtes-vous allergique à quelque chose ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Médicaments actuels",
+          "details": [
+            "Vitamines prénatales",
+            "Tylenol occasionnel [petites douleurs]",
+            "Tylenol récent [2 comprimés nuit dernière]",
+            "Dernier Tylenol [3h matin]",
+            "Pour sensation chaleur [pensé aiderait]"
+          ],
+          "exemplesPhrases": [
+            "Quels médicaments prenez-vous ?",
+            "Quand avez-vous pris la dernière dose ?"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Revue des systèmes additionnels",
+          "details": [
+            "Pas congestion thoracique actuelle",
+            "Pas céphalées",
+            "Pas changements vision",
+            "Pas soif inhabituelle",
+            "Belle-mère inquiète alimentation"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il de la congestion thoracique ?",
+            "Avez-vous eu d'autres symptômes, comme maux de tête ?",
+            "Une soif inhabituelle dernièrement ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le voulez bien.",
+            "Laissez-moi juste me laver les mains.",
+            "Il semble que vos signes vitaux soient normaux.",
+            "Permettez-moi d'abord d'écouter votre cœur et vos poumons."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation postérieure 6 points",
+            "Pas sifflements/râles",
+            "Ronchus légers dispersés base gauche",
+            "Reste clair bilatéralement"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal obstétrical",
+          "details": [
+            "Inspection apparence normale",
+            "Bruits intestinaux normaux",
+            "Palpation 4 quadrants",
+            "Sensibilité sus-pubienne légère [région vésicale]",
+            "Pas masses anormales",
+            "Mesure hauteur utérine [25 cm]",
+            "Pas contractions palpables",
+            "Pas défense abdominale",
+            "Pas sensibilité utérine"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous de la douleur dans chaque quadrant ?",
+            "Où avez-vous normalement vos crampes menstruelles ?",
+            "Est-ce que ça fait mal dans cette zone ?"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen du dos",
+          "details": [
+            "Observation spasme [absent]",
+            "Palpation colonne médiane",
+            "Palpation musculature périspinale",
+            "Percussion angle costovertébral",
+            "Sensibilité ACV droite modérée [positive]",
+            "Pas spasme musculaire visible"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation fœtale",
+          "details": [
+            "Doppler fœtal utilisé",
+            "Recherche au-dessus pubis",
+            "Scanner pour tons rapides",
+            "Distinction tons maternels/fœtaux",
+            "Bruits cœur fœtal trouvés",
+            "Fréquence cardiaque fœtale [160 bpm]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen génital/pelvien",
+          "details": [
+            "Reporté [selon consignes examen]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de fièvre et symptômes urinaires pendant la grossesse",
+            "categories": [
+              {
+                "name": "Infections urinaires",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Dysurie + fièvre 38.4°C\n\t□ Sensibilité angle costovertébral droit\n\t□ Pollakiurie et urgence mictionnelle\n\t□ Lombalgie associée\n\t□ Symptômes systémiques (courbatures, sueurs)\n\t□ Grossesse = facteur risque\n\t□ Progression cystite non traitée\nArguments CONTRE:\n\t□ Pas frissons francs\n\t□ Pas nausées/vomissements",
+                    "test": "→ ECBU + culture urgente, NFS, hémocultures si sévère"
+                  },
+                  {
+                    "text": "Cystite simple",
+                    "cause": "Arguments POUR:\n\t□ Dysurie prédominante\n\t□ Pollakiurie marquée (10-15×/j)\n\t□ Urgence mictionnelle\n\t□ Sensibilité sus-pubienne\nArguments CONTRE:\n\t□ Fièvre élevée inhabituelle\n\t□ Douleur ACV positive\n\t□ Symptômes systémiques",
+                    "test": "→ Bandelette urinaire, ECBU, culture"
+                  }
+                ]
+              },
+              {
+                "name": "Infections génitales",
+                "items": [
+                  {
+                    "text": "Vaginose bactérienne",
+                    "cause": "Arguments POUR:\n\t□ Pertes malodorantes\n\t□ Pertes décolorées foncées\n\t□ Dyspareunie récente\n\t□ Grossesse = facteur risque\nArguments CONTRE:\n\t□ Fièvre inhabituelle\n\t□ Symptômes urinaires marqués",
+                    "test": "→ pH vaginal, test Whiff, frottis état frais"
+                  },
+                  {
+                    "text": "Trichomonase",
+                    "cause": "Arguments POUR:\n\t□ Pertes anormales\n\t□ Dysurie possible\n\t□ Dyspareunie\nArguments CONTRE:\n\t□ Pas pertes mousseuses décrites\n\t□ Fièvre élevée rare",
+                    "test": "→ Frottis état frais, PCR Trichomonas"
+                  },
+                  {
+                    "text": "Candidose vaginale",
+                    "cause": "Arguments POUR:\n\t□ Grossesse = facteur risque\n\t□ Dysurie externe possible\nArguments CONTRE:\n\t□ Pas pertes fromage cottage\n\t□ Pas prurit mentionné\n\t□ Fièvre absente habituellement",
+                    "test": "→ Frottis KOH, culture levures"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes infectieuses",
+                "items": [
+                  {
+                    "text": "Pneumonie",
+                    "cause": "Arguments POUR:\n\t□ Rhume récent il y a 2 semaines\n\t□ Toux persistante sèche\n\t□ Fièvre et courbatures\n\t□ Ronchus base gauche\nArguments CONTRE:\n\t□ Pas dyspnée\n\t□ Pas douleur thoracique\n\t□ Symptômes urinaires prédominants",
+                    "test": "→ Radio thorax, NFS, CRP"
+                  },
+                  {
+                    "text": "Chorioamniotite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre pendant grossesse\n\t□ Pertes anormales\nArguments CONTRE:\n\t□ Pas sensibilité utérine\n\t□ Pas contractions\n\t□ FCF normale (160)",
+                    "test": "→ NFS, CRP, monitoring fœtal continu"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques urgents",
+          "details": [
+            "Bandelette urinaire immédiate",
+            "ECBU avec antibiogramme URGENT",
+            "NFS avec formule différentielle",
+            "CRP, procalcitonine si disponible",
+            "Ionogramme, urée, créatinine",
+            "Hémocultures si T° >38.5°C ou frissons",
+            "Monitoring fœtal si symptômes sévères"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examen pelvien et prélèvements",
+          "details": [
+            "Examen au spéculum",
+            "PH vaginal (VB si >4.5)",
+            "Test Whiff (amine)",
+            "Frottis état frais (Trichomonas, clue cells)",
+            "Frottis KOH (levures)",
+            "PCR Chlamydia/gonocoque",
+            "Culture col si pertes purulentes"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique immédiate",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement probabiliste pyélonéphrite",
+                "content": "• Hospitalisation recommandée grossesse + fièvre\n• Hydratation IV généreuse\n• Antibiothérapie IV initiale :\n- Ceftriaxone 1g/24h IV\n- Ou céfotaxime 1g × 3/j IV\n- Si allergie : aztréonam 1g × 3/j\n• Relais PO après 48h apyrexie :\n- Amoxicilline 1g × 3/j × 10-14j total\n- Selon antibiogramme\n• Paracétamol 1g × 4/j si fièvre"
+              },
+              {
+                "title": "Surveillance materno-fœtale",
+                "content": "• Monitoring cardiotocographique\n• Surveillance contractions utérines\n• Évaluation bien-être fœtal/6h\n• Échographie si anomalie FCF\n• Tocolyse si contractions régulières\n• Corticoïdes si menace APP <34 SA"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Repos au lit initial\n• Bas de contention (prévention TVP)\n• Supplémentation folates/fer maintenue\n• ECBU contrôle à 48h\n• ECBU mensuel jusqu'à accouchement\n• Échographie rénale si récidive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication du plan à la patiente",
+          "details": [
+            "Explication risque infection rénale",
+            "Importance traitement conservateur grossesse",
+            "Nécessité probable hospitalisation",
+            "Risques pour mère et fœtus",
+            "Examens nécessaires (sang, urine, pelvien)",
+            "Comparaison examen pelvien au frottis",
+            "Recherche bactéries pas cancer",
+            "Organisation tests avec infirmière"
+          ],
+          "exemplesPhrases": [
+            "Mme Westermark, il y a quelques choses préoccupantes aujourd'hui.",
+            "Parce que vous êtes enceinte, j'aimerais vous traiter de manière conservatrice.",
+            "Il est assez probable que vous ayez une infection rénale.",
+            "L'infection remonte du tractus urinaire vers les reins.",
+            "C'est particulièrement préoccupant chez une personne enceinte.",
+            "Je veux m'assurer que cela ne devienne pas plus grave.",
+            "Cela pourrait aussi provenir d'une infection vaginale.",
+            "J'aimerais faire un examen pelvien et quelques tests.",
+            "L'examen ressemble beaucoup à un frottis.",
+            "Les échantillons rechercheront des bactéries plutôt que cancer.",
+            "J'aimerais obtenir sang et urine pour déterminer l'infection.",
+            "Permettez-moi d'organiser ces tests avec mon infirmière."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Critères d'hospitalisation grossesse",
+          "redflagsSection": {
+            "title": "Indications d'hospitalisation pendant la grossesse",
+            "items": [
+              {
+                "text": "Pyélonéphrite gravidique",
+                "description": "Toute pyélonéphrite pendant grossesse = hospitalisation"
+              },
+              {
+                "text": "Sepsis maternel",
+                "description": "Fièvre >38.5°C + signes systémiques"
+              },
+              {
+                "text": "Menace d'accouchement prématuré",
+                "description": "Contractions régulières + modifications cervicales"
+              },
+              {
+                "text": "Détresse fœtale",
+                "description": "Anomalies RCF, diminution mouvements actifs"
+              },
+              {
+                "text": "Déshydratation sévère",
+                "description": "Intolérance orale, signes cliniques déshydratation"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication complète du plan diagnostique et thérapeutique",
+          "content": "Mme Westermark, il y a quelques choses qui sont préoccupantes concernant ce qui vous arrive aujourd'hui. Premièrement, parce que vous êtes enceinte, j'aimerais vous traiter de manière plus conservatrice que d'autres personnes. Mais deuxièmement, il est assez probable que vous ayez une infection rénale. C'est quand une infection remonte de votre tractus urinaire inférieur vers vos reins. C'est une situation particulièrement préoccupante chez une personne enceinte, car je veux m'assurer que cela ne devienne pas plus grave. Cela pourrait, cependant, aussi provenir d'une infection de votre vagin ou de votre col de l'utérus. Pour cette possibilité, j'aimerais faire un examen pelvien et effectuer quelques tests aujourd'hui. L'examen ressemble beaucoup à un frottis, mais les échantillons seront analysés pour rechercher des signes de bactéries plutôt que de cancer. Sinon, l'examen est très similaire. En plus de ces tests, j'aimerais obtenir du sang et de l'urine de votre part pour déterminer si une infection peut être présente. Permettez-moi de sortir maintenant et d'organiser ces tests avec mon infirmière.\n\nAvant de partir, y a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile de la patiente",
+          "content": "[Est-ce que l'infection peut faire du mal à mon bébé ? Je suis vraiment inquiète, c'est notre premier enfant et on a essayé si longtemps.]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends parfaitement votre inquiétude, Mme Westermark, c'est tout à fait normal de s'inquiéter pour votre bébé. La bonne nouvelle est que nous avons détecté cette infection tôt et que nous allons la traiter rapidement. Les infections urinaires non traitées peuvent effectivement augmenter le risque de complications comme un accouchement prématuré, c'est pourquoi il est si important que vous soyez venue aujourd'hui. Avec un traitement antibiotique approprié et sûr pour la grossesse, nous pouvons éliminer l'infection et protéger vous et votre bébé. Le fait que vous sentiez encore bien les mouvements du bébé et que son rythme cardiaque soit normal à 160 battements par minute est très rassurant. Nous allons vous surveiller de près, probablement vous hospitaliser quelques jours pour s'assurer que l'infection répond bien au traitement. L'important est que vous êtes entre de bonnes mains et que nous faisons tout pour assurer la santé de votre bébé et la vôtre."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation - Pyélonéphrite gravidique",
+      "pointsCles": [
+        "Femme 22 ans, G1P0 à 25 semaines, primigeste",
+        "Triade classique : fièvre + dysurie + douleur ACV",
+        "Sensibilité angle costovertébral droit = signe pathognomonique",
+        "Fièvre 38.4°C = critère hospitalisation grossesse",
+        "Symptômes urinaires 4 jours = progression cystite",
+        "FCF 160 bpm normale pour 25 SA",
+        "Pertes malodorantes = co-infection vaginale possible",
+        "Toux résiduelle + ronchus = DD pneumonie",
+        "Grossesse = immunosuppression relative"
+      ],
+      "pieges": [
+        "Ne pas hospitaliser pyélonéphrite gravidique",
+        "Oublier monitoring fœtal continu",
+        "Retarder antibiothérapie pour attendre cultures",
+        "Utiliser fluoroquinolones (contre-indiquées grossesse)",
+        "Ne pas rechercher co-infections génitales",
+        "Minimiser risque accouchement prématuré",
+        "Oublier prévention récidive post-traitement",
+        "Ne pas faire échographie rénale si récidive",
+        "Négliger hydratation IV importante"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée",
+      "nom": "Carrie Westermark",
+      "age": "22 ans",
+      "contexte": "Femme enceinte 25 semaines, première grossesse, mariée",
+      "motifConsultation": {
+        "plaintePrincipale": "Brûlure à la miction depuis 4 jours",
+        "autreChose": "Enceinte de 25 semaines, médecin dit venir si problème"
+      },
+      "histoireActuelle": {
+        "symptomesUrinaires": [
+          "Sensation brûlure quand urine",
+          "Depuis environ 4 jours",
+          "Mal début miction, mieux fin",
+          "Sais semble bizarre parler de ça",
+          "Est-ce inquiétant?"
+        ],
+        "frequence": [
+          "Presque constant aux toilettes",
+          "Environ 10-15 fois par jour",
+          "Vraiment augmenté avec bébé",
+          "Médecin dit normal avec grossesse",
+          "Pénible car brûle d'y aller"
+        ],
+        "urgence": [
+          "Oui depuis début brûlure",
+          "Dois y aller immédiatement",
+          "Sentiment pas pouvoir retenir"
+        ],
+        "aspectUrine": [
+          "Un peu foncée dernièrement",
+          "Mais pas de sang visible"
+        ]
+      },
+      "symptomesFebriles": {
+        "fievre": [
+          "Impression fièvre depuis hier",
+          "Eu vraiment chaud",
+          "Transpiré draps nuit dernière",
+          "Jamais fait avant",
+          "Pense hormones bizarres grossesse"
+        ],
+        "courbatures": [
+          "Beaucoup courbatures avec fièvre",
+          "Pas vouloir sortir lit",
+          "Sensation chaleur intense"
+        ]
+      },
+      "douleursDorsales": [
+        "Oui dos fait mal aussi",
+        "Mal quand penche ou fait quoi que ce soit",
+        "Déjà eu problèmes dos",
+        "Médecin dit spasme il y a 6 mois",
+        "Pensé à cause bébé",
+        "Brochure dit peut arriver"
+      ],
+      "histoireGrossesse": {
+        "actuelle": [
+          "Première fois enceinte",
+          "Mari et moi essayé 4 mois",
+          "25 semaines maintenant",
+          "DPA 9 avril",
+          "DDR 4 juillet"
+        ],
+        "evolution": [
+          "Nausées/vomissements T1 difficile",
+          "Prométhazine prescrite",
+          "Plus pris depuis plusieurs mois",
+          "Sinon grossesse formidable",
+          "Famille dit je rayonne"
+        ],
+        "mouvementsFoetaux": [
+          "Sens depuis 2 semaines",
+          "Vraiment génial",
+          "Le sens tout le temps",
+          "Pas connaissons sexe encore"
+        ],
+        "poidsPriseAppetit": [
+          "Pris 15 livres depuis début",
+          "Vérifie tous les jours",
+          "Inquiète pouvoir perdre après",
+          "Moins faim derniers jours",
+          "Belle-mère dit manger plus",
+          "Juste pas envie dernièrement"
+        ]
+      },
+      "symptomesGynecologiques": {
+        "pertes": [
+          "Plus pertes que habitude",
+          "Médecin dit attendu",
+          "Essaie rester propre",
+          "Un peu décolorées, plus foncées",
+          "Pas jaunes mais foncées",
+          "Honnêtement sent mauvais",
+          "(Si demande fromage) Non pas vraiment"
+        ],
+        "saignements": [
+          "Non aucun saignement"
+        ],
+        "contractions": [
+          "Oh non, rien comme ça"
+        ]
+      },
+      "histoireSexuelle": {
+        "activite": [
+          "Oui sexuellement active",
+          "Relation monogame mariés",
+          "Dernier rapport il y a 1 semaine"
+        ],
+        "dyspareunie": [
+          "Parfois mal au début",
+          "Depuis quelques semaines",
+          "Peut-être rien important"
+        ],
+        "istAntecedents": [
+          "Non jamais IST",
+          "Mari non plus"
+        ],
+        "infectionLevures": [
+          "Non ne pense pas"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "medicaux": [
+          "Contraception à 16 ans pour règles",
+          "Fracture jambe 9 ans en skiant",
+          "Rhume il y a 2 semaines",
+          "Pénible car voulais rien prendre"
+        ],
+        "touxResiduelle": [
+          "Toujours toux maintenant",
+          "Médecin dit peut persister",
+          "Au début expectorations",
+          "Maintenant toux sèche irritante"
+        ],
+        "chirurgicaux": [
+          "Non aucune chirurgie"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Vitamines prénatales",
+          "Tylenol occasionnel petites douleurs",
+          "Pris 2 Tylenol nuit dernière",
+          "Dernière dose 3h matin",
+          "Pensé aiderait sensation chaleur"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "Non personne fume"
+        ],
+        "alcool": [
+          "Pas du tout grossesse",
+          "Arrêté il y a longtemps",
+          "Essayions concevoir",
+          "Pas vouloir faire mal bébé"
+        ]
+      },
+      "allergies": [
+        "Non rien du tout"
+      ],
+      "symptomesNegatifs": [
+        "Plus nausées depuis T1",
+        "Pas congestion thoracique actuelle",
+        "Pas maux tête",
+        "Pas changements vision",
+        "Pas soif inhabituelle"
+      ],
+      "simulation": {
+        "attitude": [
+          "Jeune femme inquiète mais polie",
+          "Primigeste anxieuse santé bébé",
+          "Un peu gênée parler symptômes urinaires",
+          "Heureuse grossesse malgré problèmes",
+          "Coopérative et précise"
+        ],
+        "durantEntretien": [
+          "Assise inconfortablement",
+          "Main sur ventre occasionnellement",
+          "Grimace si parle douleur"
+        ],
+        "durantExamen": [
+          "Sensibilité sus-pubienne légère",
+          "Douleur nette percussion ACV droite",
+          "Souriante quand entend cœur bébé",
+          "Coopérative tous examens"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Infections urinaires et grossesse",
+      "sections": [
+        {
+          "titre": "Épidémiologie et physiopathologie",
+          "contenu": "Bactériurie asymptomatique : 2-10% grossesses, dépistage systématique. Cystite : 1-2%, risque progression 40% si non traitée. Pyélonéphrite : 1-2%, pic T2-T3, complications 20-30%. Modifications gravidiques : dilatation uretères, stase urinaire, alcalinisation urines, immunosuppression relative. Germes : E. coli 80%, Klebsiella, Proteus, GBS."
+        },
+        {
+          "titre": "Complications materno-fœtales",
+          "contenu": "Maternelles : sepsis 10-20%, IRA 2%, SDRA <1%, anémie. Fœtales : MAP 30%, RCIU 5-10%, chorioamniotite, mort fœtale <1%. Mécanismes : endotoxines bactériennes, prostaglandines, cytokines pro-inflammatoires. Facteurs risque récidive : uropathie, diabète, drépanocytose, immunosuppression."
+        },
+        {
+          "titre": "Diagnostic et surveillance",
+          "contenu": "Clinique : triade fièvre + dysurie + douleur lombaire. ECBU : >10⁵ UFC/mL, leucocyturie. Hémocultures si T°>38.5°C (positives 15-20%). Échographie rénale : si récidive, recherche dilatation/lithiase. Monitoring fœtal : RCF continu si >24 SA. Biologie : NFS (anémie), ionogramme (déshydratation), CRP/PCT."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Hospitalisation systématique pyélonéphrite gravidique",
+        "Hydratation IV 2-3L/24h, surveillance diurèse",
+        "Antibiothérapie probabiliste IV 48h : C3G ou aztréonam",
+        "Relais PO après apyrexie : amoxicilline 14j total selon antibiogramme",
+        "Tocolyse si contractions : atosiban ou nifédipine",
+        "Corticothérapie anténatale si MAP <34 SA : bétaméthasone",
+        "ECBU contrôle J3, fin traitement, puis mensuel",
+        "Antibioprophylaxie post-traitement discutée si récidive"
+      ],
+      "examensComplementaires": [
+        "Bandelette urinaire : nitrites + leucocytes = Se 90%",
+        "ECBU + antibiogramme : gold standard, résultats 48h",
+        "Hémocultures × 2 : si fièvre >38.5°C ou frissons",
+        "NFS : hyperleucocytose, anémie fréquente",
+        "CRP/PCT : marqueurs sévérité, suivi efficacité",
+        "Échographie rénale : dilatation pyélocalicielle, lithiase",
+        "Doppler rénal : si suspicion abcès ou pyonéphrose"
+      ]
+    }
+  }
+}

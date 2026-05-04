@@ -1,0 +1,932 @@
+{
+  "title": "USMLE Triage 12 - Toux Chronique",
+  "context": {
+    "setting": "Clinique de médecine générale",
+    "patient": "Thom Nordstrom, un homme de 65 ans, se présente à la clinique avec des plaintes de toux depuis 4 mois.",
+    "vitals": {
+      "ta": "136/78 mmHg",
+      "fc": "75 bpm",
+      "fr": "16/min",
+      "temperature": "37.0°C",
+      "sao2": "98% en air ambiant"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour, M. Nordstrom, je suis le Dr Ashton.",
+            "Je comprends que vous avez une toux. Pouvez-vous m'en dire plus à ce sujet ?",
+            "Eh bien, permettez-moi de vous poser quelques questions et j'espère pouvoir aller au fond des choses.",
+            "Cela doit être difficile à supporter."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Chronologie et évolution de la toux",
+          "details": [
+            "Début [il y a environ 4 mois]",
+            "Évolution [raclement gorge puis irritation]",
+            "Progression [augmentation graduelle]",
+            "Persistance [continue encore et encore]",
+            "Attente initiale [pensait que ça allait partir]",
+            "Caractère chronique [depuis ce moment-là]"
+          ],
+          "exemplesPhrases": [
+            "Quand la toux a-t-elle commencé ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques de la toux",
+          "details": [
+            "Type [toux sèche habituellement]",
+            "Expectorations [aucune en général]",
+            "Épisode récent [rhume il y a 1 mois avec mucus]",
+            "Retour état antérieur [toux sèche persistante]",
+            "Constance [à peu près pareil toute la journée]",
+            "Impact sommeil [difficile endormissement, pas de réveil]"
+          ],
+          "exemplesPhrases": [
+            "Diriez-vous que c'est une toux sèche ou expectorez-vous quelque chose ?",
+            "Quand diriez-vous que la toux est pire ? La nuit ou pendant la journée ?",
+            "Est-ce que cela vous empêche de dormir la nuit ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Traitements tentés et efficacité",
+          "details": [
+            "Sudafed [essayé]",
+            "Pastilles menthol [beaucoup utilisées]",
+            "Gargarismes [quand mal à la gorge]",
+            "Efficacité limitée [pastilles aidé un peu]",
+            "Limitation dosage [tellement qu'on peut prendre]",
+            "Antihistaminiques [jamais essayé Benadryl]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous essayé quelque chose pour cela ? C'est-à-dire, avez-vous pris des médicaments ?",
+            "Je peux imaginer. Ces pastilles peuvent être fortes.",
+            "Avez-vous pris des antihistaminiques, comme le Benadryl ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Suivi médical antérieur",
+          "details": [
+            "Médecin traitant [vu mensuellement]",
+            "Mention du problème [parlé de la toux]",
+            "Priorités consultations [toujours autre chose]",
+            "Temps insuffisant [jamais parlé uniquement de toux]",
+            "Autres problèmes [cholestérol, HTA, douleurs thoraciques]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Avez-vous consulté un autre médecin pour cela ? Ou avez-vous été traité dans le passé pour ce type de problème ?",
+            "Parfois, il peut être difficile de tout aborder, n'est-ce pas ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux et comorbidités",
+          "details": [
+            "Hypercholestérolémie [récemment diminué]",
+            "Hypertension artérielle [traitement médicamenteux]",
+            "Douleurs thoraciques [bilan récent normal]",
+            "BPCO [due au tabagisme selon médecin]",
+            "Hypertrophie prostate [traitement récent]",
+            "Bilan cardiaque [négatif après hospitalisation]"
+          ],
+          "exemplesPhrases": [
+            "Eh bien, veuillez me dire brièvement certains des autres problèmes que vous avez.",
+            "Juste d'après les médicaments que vous me dites, il semble que vous ayez plusieurs types de maladies différentes. Pouvez-vous me dire quels problèmes de santé vous avez ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments actuels et chronologie",
+          "details": [
+            "Lovastatine [cholestérol]",
+            "Bénazépril [tension artérielle]",
+            "Hydrochlorothiazide [tension artérielle]",
+            "Advair [inhalateur pour poumons]",
+            "Aspirine [quotidienne]",
+            "Prazosine [prostate, 3 derniers mois]",
+            "Ancienneté [plupart depuis > 1 an]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Quels sont ces médicaments ?",
+            "D'accord. Y en a-t-il de nouveaux ou en avez-vous commencé dans les 4 derniers mois, depuis que cette toux a commencé ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes digestifs et reflux",
+          "details": [
+            "Brûlures d'estomac [depuis 40 ans]",
+            "Fréquence [1-2 fois/semaine]",
+            "Déclencheurs [aliments épicés, tomates, café]",
+            "Évitement alimentaire [épouse adapte cuisine]",
+            "Traitement [comprimés calcium mâchables]",
+            "Prévention [après dîner pour éviter nocturne]",
+            "Lien possible [toux/reflux non exploré]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Qu'en est-il des problèmes pour manger ou des brûlures d'estomac après avoir mangé ?",
+            "D'accord. Combien de nuits par semaine diriez-vous que vous avez des brûlures d'estomac ?",
+            "La toux s'aggrave-t-elle quand vous avez des brûlures d'estomac ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Historique tabagique et sevrage",
+          "details": [
+            "Tabagisme actuel [½ paquet/jour]",
+            "Historique [1-2 paquets/jour × 30 ans]",
+            "Réduction [amélioration récente]",
+            "Lien BPCO [médecin expliqué relation]",
+            "Motivation sevrage [pression familiale]",
+            "Résistance [dernier vice, pas vraiment envie]"
+          ],
+          "exemplesPhrases": [
+            "Vous avez mentionné que vous avez une BPCO due au tabagisme ; fumez-vous toujours ?",
+            "Eh bien, cela a probablement quelque chose à voir avec ça. Voulez-vous arrêter complètement ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Histoire familiale et contexte social",
+          "details": [
+            "Pas de toux familiale [personne connue]",
+            "Père [décédé crise cardiaque à 72 ans]",
+            "Mère [décédée accident voiture à 88 ans]",
+            "Deuil récent [il y a 2 ans]",
+            "Soutien familial [épouse, fille infirmière]",
+            "Humeur [plutôt heureux de nature]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Quelqu'un dans votre famille a-t-il eu quelque chose comme cette toux ?",
+            "Cela a dû être difficile pour tout le monde.",
+            "Êtes-vous parfois déprimé à cause du décès de votre mère ou de quoi que ce soit d'autre ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes de vie et autres antécédents",
+          "details": [
+            "Alcool [une bière avec/après dîner]",
+            "Chirurgies [appendicectomie, hernie]",
+            "Déglutition [pas de problèmes]",
+            "Épisode cardiaque [fausse alerte, douleur pariétale]",
+            "Tentative IPP [pilule rouge inefficace, arrêtée]"
+          ],
+          "exemplesPhrases": [
+            "D'accord. Buvez-vous de l'alcool ?",
+            "D'accord. Avez-vous eu des chirurgies dans votre vie ?",
+            "D'accord. Avez-vous eu des problèmes de déglutition récemment ? C'est-à-dire, avez-vous l'impression que la nourriture reste coincée dans votre gorge ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Commenter les signes vitaux normaux",
+            "Expliquer l'examen au patient",
+            "Débuter par examen ORL"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si cela ne vous dérange pas.",
+            "Laissez-moi juste me laver les mains.",
+            "Il semble que vos signes vitaux soient normaux.",
+            "D'abord, laissez-moi regarder votre bouche et votre gorge..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen ORL complet",
+          "details": [
+            "Otoscopie [tympans gris nacré bilatéraux]",
+            "Examen nasal [muqueuse et cornets roses normaux]",
+            "Examen pharyngé [pas d'érythème]",
+            "Absence hypertrophie amygdalienne [confirmée]",
+            "Absence exsudats [confirmée]",
+            "Évaluation muqueuse buccale [normale]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu le nez qui coule récemment ?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire détaillé",
+          "details": [
+            "Auscultation 6 zones postérieures [claire bilatéralement]",
+            "Absence râles [confirmée]",
+            "Absence ronchi [confirmée]",
+            "Absence sibilances [confirmée]",
+            "Commentaire vocal anomalies [recherchées]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation 4 foyers [rythme régulier]",
+            "Absence souffles [confirmée]",
+            "Absence frottements [confirmée]",
+            "Absence clics [confirmée]",
+            "Fréquence cardiaque normale [75 bpm]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal focalisé",
+          "details": [
+            "Auscultation bruits intestinaux [normaux]",
+            "Recherche souffles abdominaux [absents]",
+            "Palpation 4 quadrants [non douloureuse]",
+            "Palpation épigastrique [léger inconfort]",
+            "Absence hépatomégalie [confirmée]",
+            "Signe de Murphy [négatif]"
+          ],
+          "exemplesPhrases": [
+            "Est-ce que ça fait mal quand j'appuie ici ? [en appliquant une pression directe sur l'épigastre]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de toux chronique chez l'homme de 65 ans",
+            "categories": [
+              {
+                "name": "Causes digestives (très probable)",
+                "items": [
+                  {
+                    "text": "Reflux gastro-œsophagien (RGO)",
+                    "cause": "Arguments POUR:\n\t□ Brûlures d'estomac chroniques (depuis 40 ans)\n\t□ Fréquence 1-2×/semaine\n\t□ Évitement aliments déclencheurs\n\t□ Sensibilité épigastrique à l'examen\n\t□ Amélioration position assise pour dormir\n\t□ Toux sèche chronique\n\t□ Relation temporelle possible\nArguments CONTRE:\n\t□ Patient n'a pas noté de lien\n\t□ Traitement antiacide habituel",
+                    "test": "→ pH-métrie œsophagienne 24h, essai IPP"
+                  }
+                ]
+              },
+              {
+                "name": "Causes médicamenteuses",
+                "items": [
+                  {
+                    "text": "Toux induite par IEC (bénazépril)",
+                    "cause": "Arguments POUR:\n\t□ Bénazépril pris depuis > 1 an\n\t□ Effet secondaire connu des IEC (5-15%)\n\t□ Toux sèche caractéristique\n\t□ Chronologie compatible\n\t□ Âge et sexe à risque\nArguments CONTRE:\n\t□ Début retardé vs traitement\n\t□ Autres causes probables",
+                    "test": "→ Arrêt d'épreuve IEC 2-4 semaines"
+                  }
+                ]
+              },
+              {
+                "name": "Causes respiratoires",
+                "items": [
+                  {
+                    "text": "BPCO avec exacerbation chronique",
+                    "cause": "Arguments POUR:\n\t□ BPCO diagnostiquée\n\t□ Tabagisme actif (½ paquet/jour)\n\t□ Historique lourd (40 paquets-années)\n\t□ Inhalateur Advair prescrit\nArguments CONTRE:\n\t□ Auscultation pulmonaire normale\n\t□ Pas de dyspnée mentionnée\n\t□ Saturation normale (98%)",
+                    "test": "→ Spirométrie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Toux post-infectieuse persistante",
+                    "cause": "Arguments POUR:\n\t□ Rhume il y a 1 mois\n\t□ Évolution vers toux productive puis sèche\n\t□ Possible hypersensibilité résiduelle\nArguments CONTRE:\n\t□ Durée totale 4 mois (bien avant IVRS)\n\t□ Pas d'amélioration progressive",
+                    "test": "→ Suivi clinique, anti-tussifs"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques (à exclure)",
+                "items": [
+                  {
+                    "text": "Cancer laryngé/pharyngé",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme chronique (facteur risque majeur)\n\t□ Âge > 60 ans\n\t□ Sexe masculin\n\t□ Toux chronique inexpliquée\nArguments CONTRE:\n\t□ Examen ORL normal\n\t□ Pas de dysphonie\n\t□ Pas de dysphagie\n\t□ Pas d'adénopathies",
+                    "test": "→ Laryngoscopie indirecte/fibroscopie"
+                  },
+                  {
+                    "text": "Cancer broncho-pulmonaire",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme lourd et prolongé\n\t□ BPCO sous-jacente\n\t□ Âge de risque\n\t□ Toux sèche persistante\nArguments CONTRE:\n\t□ Auscultation normale\n\t□ Pas d'hémoptysie\n\t□ Pas d'amaigrissement\n\t□ État général conservé",
+                    "test": "→ Radiographie thoracique, CT si anormal"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Rhinite chronique/écoulement post-nasal",
+                    "cause": "Arguments POUR:\n\t□ Raclement gorge initial\n\t□ Toux sèche\nArguments CONTRE:\n\t□ Examen nasal normal\n\t□ Pas de congestion rapportée\n\t□ Antihistaminiques non essayés",
+                    "test": "→ Essai antihistaminiques, examen ORL spécialisé"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques de première intention",
+          "details": [
+            "Radiographie thoracique PA/latérale",
+            "PH-métrie œsophagienne 24 heures",
+            "Spirométrie avec épreuve bronchodilatation",
+            "NFS et CRP (inflammation)",
+            "Laryngoscopie indirecte"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Essais thérapeutiques diagnostiques",
+          "details": [
+            "Arrêt d'épreuve bénazépril (2-4 semaines)",
+            "Essai IPP forte dose (oméprazole 40mg×2/j)",
+            "Antihistaminiques (loratadine 10mg/j)",
+            "Bronchodilatateurs si spirométrie anormale",
+            "Anti-tussifs symptomatiques"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement du reflux gastro-œsophagien",
+                "content": "• IPP forte dose : oméprazole 40mg 2×/j × 8-12 semaines\n• Mesures hygiéno-diététiques renforcées\n• Élévation tête de lit 15-20 cm\n• Évitement déclencheurs (café, tomates, épices)\n• Repas 3h avant coucher\n• pH-métrie de contrôle si échec"
+              },
+              {
+                "title": "Modification traitement antihypertenseur",
+                "content": "• Arrêt d'épreuve bénazépril 4 semaines\n• Substitution par ARA2 (losartan 50mg/j)\n• Ou inhibiteur calcique (amlodipine 5mg/j)\n• Surveillance tensionnelle rapprochée\n• Maintien HCTZ si besoin\n• Réévaluation après substitution"
+              },
+              {
+                "title": "Optimisation traitement BPCO",
+                "content": "• Réévaluation prescription Advair\n• Spirométrie de contrôle\n• Vaccination anti-grippale annuelle\n• Pneumocoque si pas fait\n• Education thérapeutique\n• Réhabilitation respiratoire si indiquée"
+              },
+              {
+                "title": "Sevrage tabagique (priorité absolue)",
+                "content": "• Consultation spécialisée tabacologie\n• Substituts nicotiniques adaptés\n• Bupropion ou varénicline si besoin\n• Soutien psychologique\n• Suivi rapproché motivation\n• Information bénéfices respiratoires"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication et éducation",
+          "details": [
+            "Explication multifactorielle de la toux",
+            "Importance du sevrage tabagique",
+            "Optimisation traitement reflux",
+            "Surveillance évolution sous traitement",
+            "Retour si aggravation/nouveaux symptômes"
+          ],
+          "exemplesPhrases": [
+            "M. Nordstrom, après avoir écouté vos symptômes et effectué cet examen physique, je pense qu'il y a plusieurs facteurs qui pourraient causer votre toux.",
+            "Premièrement, vous pourriez avoir un reflux gastrique plus sévère, ou des brûlures d'estomac, que nous ne le pensions.",
+            "Une autre possibilité est que le médicament que vous prenez, le bénazépril, provoque un effet secondaire.",
+            "Parce que vous fumez toujours, cela peut être aggravé par ceci et conduire à vos symptômes."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Surveillance et suivi",
+          "details": [
+            "Réévaluation dans 4-6 semaines",
+            "Carnet de toux quotidien",
+            "Surveillance effets modifications thérapeutiques",
+            "Contrôle spirométrie si BPCO",
+            "Imagerie de contrôle si pas d'amélioration"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Red flags et examens complémentaires",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant investigations poussées",
+            "items": [
+              {
+                "text": "Hémoptysie",
+                "description": "CT thoracique urgente, bronchoscopie"
+              },
+              {
+                "text": "Amaigrissement involontaire",
+                "description": "Bilan néoplasique complet"
+              },
+              {
+                "text": "Dysphagie progressive",
+                "description": "Endoscopie digestive haute"
+              },
+              {
+                "text": "Dysphonie persistante",
+                "description": "Laryngoscopie spécialisée"
+              },
+              {
+                "text": "Adénopathies cervicales",
+                "description": "Cytoponction, bilan ORL"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan d'investigation",
+          "content": "M. Nordstrom, après avoir écouté vos symptômes et effectué cet examen physique, je pense qu'il y a plusieurs facteurs qui pourraient causer votre toux. Premièrement, vous pourriez avoir un reflux gastrique plus sévère, ou des brûlures d'estomac, que nous ne le pensions. Avec la fréquence de vos symptômes, je ne serais pas surpris si vous aviez un reflux du contenu gastrique dans votre œsophage, ou le tube reliant votre bouche à votre estomac. Ce reflux peut parfois irriter votre gorge et vous faire tousser. Pour cette possibilité, je pense qu'il serait utile de mesurer la quantité d'acide que vous avez dans votre œsophage avec ce qu'on appelle une sonde pH. La sonde serait placée dans votre œsophage pendant 24 heures et mesurerait combien d'acide il y a ; cela nous dira à quel point votre reflux est sévère. La sonde est très petite et ne devrait même pas être remarquée du tout. Une autre possibilité est que le médicament que vous prenez, le bénazépril, provoque un effet secondaire. Ce médicament est bien connu pour être associé à une toux et pourrait donc être le coupable de ce problème. Une autre possibilité est que votre BPCO, ou le processus pathologique qui se déroule dans vos poumons à cause du tabagisme, provoque votre toux. Parce que vous fumez toujours, cela peut être aggravé par ceci et conduire à vos symptômes. Très rarement, ce type de chose pourrait être causé par un type spécial de cancer qui se produit dans la zone de votre gorge inférieure. Ce n'est pas très probable, mais j'aimerais faire un test pour évaluer cette rareté. C'est appelé une laryngoscopie et cela implique de vous anesthésier puis d'utiliser essentiellement une caméra au bout d'une longue sonde pour regarder réellement votre nez et votre gorge. C'est une procédure en cabinet et rien pour lequel vous devez être sédaté. J'aimerais sortir maintenant et organiser certains de ces tests avec mon infirmière si vous n'avez pas de questions pour moi à ce stade.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Docteur, est-ce que ça pourrait être un cancer ? J'ai peur à cause de ma cigarette.]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends votre inquiétude, et c'est une question légitime. Le cancer est l'une des causes que nous devons exclure, surtout avec votre historique de tabagisme. Cependant, les autres causes comme le reflux ou l'effet du médicament sont statistiquement beaucoup plus probables. Les examens que nous allons faire nous permettront d'être certains et de vous rassurer."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Homme de 65 ans avec toux chronique sèche depuis 4 mois",
+        "Multiples comorbidités : HTA, BPCO, RGO, HBP",
+        "Tabagisme actif lourd (40 paquets-années)",
+        "Traitement bénazépril (IEC) depuis > 1 an",
+        "RGO chronique sous-traité (antiacides seulement)",
+        "Examen physique normal (poumons, ORL)",
+        "Contexte familial supportif (épouse, fille infirmière)",
+        "Résistance au sevrage tabagique complet"
+      ],
+      "pieges": [
+        "Ne pas explorer le lien temporel médicaments/symptômes",
+        "Oublier d'évaluer la sévérité du reflux gastro-œsophagien",
+        "Ne pas proposer d'arrêt d'épreuve de l'IEC",
+        "Minimiser le rôle du tabagisme actif",
+        "Omettre le dépistage néoplasique (laryngoscopie)",
+        "Ne pas optimiser le traitement de la BPCO",
+        "Négliger l'impact psychologique de la toux chronique",
+        "Sous-estimer l'importance du soutien familial"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Thom Nordstrom",
+      "age": "65 ans",
+      "contexte": "Retraité, multiples comorbidités, résistant au sevrage tabagique",
+      "motifConsultation": {
+        "plaintePrincipale": "Toux chronique gênante",
+        "autreChose": "Ma femme insiste pour que je consulte"
+      },
+      "histoireActuelle": {
+        "toux": [
+          "Depuis 4 mois environ",
+          "Début comme raclement de gorge",
+          "Évolution vers toux irritative",
+          "Principalement sèche",
+          "Constante dans la journée",
+          "Gêne l'endormissement"
+        ],
+        "tentativesTraitement": [
+          "Sudafed sans effet",
+          "Pastilles menthol (aide légère)",
+          "Gargarismes quand mal gorge",
+          "Jamais essayé antihistaminiques",
+          "Limitation par tolérance (trop de pastilles)"
+        ],
+        "episodeRecent": [
+          "Rhume il y a 1 mois",
+          "Toux productive temporaire",
+          "Retour toux sèche habituelle",
+          "Pas d'amélioration globale"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "hta": [
+          "Traitement bénazépril + HCTZ",
+          "Bon contrôle habituel",
+          "Suivi régulier mensuel"
+        ],
+        "bpco": [
+          "Diagnostiquée par médecin traitant",
+          "Liée au tabagisme selon explication",
+          "Traitement Advair inhalé",
+          "Pas de dyspnée rapportée"
+        ],
+        "rgo": [
+          "Brûlures estomac depuis 40 ans",
+          "Évitement alimentaire (épices, tomates, café)",
+          "Antiacides calcium 1-2×/semaine",
+          "Pas de traitement IPP actuel"
+        ],
+        "hbp": [
+          "Prazosine depuis 3 mois",
+          "Amélioration symptômes urinaires"
+        ],
+        "cardiaque": [
+          "Douleurs thoraciques récentes",
+          "Bilan complet négatif",
+          "Diagnostic final : pariétal",
+          "ECG et épreuve effort normaux"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Bénazépril (> 1 an)",
+          "HCTZ (> 1 an)",
+          "Lovastatine (> 1 an)",
+          "Advair inhalateur (> 1 an)",
+          "Aspirine quotidienne (> 1 an)",
+          "Prazosine (3 mois)"
+        ],
+        "arretes": [
+          "IPP rouge il y a 1 an (inefficace, interactions)"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "½ paquet/jour actuellement",
+          "1-2 paquets/jour × 30 ans",
+          "Réduction récente",
+          "Résistance sevrage complet",
+          "Dernier vice restant"
+        ],
+        "alcool": [
+          "1 bière avec/après dîner",
+          "Consommation stable et modérée"
+        ],
+        "famille": [
+          "Épouse supportive mais inquiète",
+          "Fille infirmière (pousse consultation)",
+          "Pression familiale pour santé"
+        ]
+      },
+      "contextePsychologique": {
+        "deuil": [
+          "Mère décédée il y a 2 ans (accident)",
+          "Période difficile mais résolu",
+          "Préférence mort naturelle (comme père)"
+        ],
+        "humeur": [
+          "Plutôt heureux de nature",
+          "Philosophe sur la mort",
+          "Pas de dépression actuelle"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Minimise un peu le problème",
+          "Reconnaît caractère gênant",
+          "Coopératif mais résigné",
+          "Évoque pression familiale",
+          "Réticent changements majeurs"
+        ],
+        "durantConsultation": [
+          "Toux occasionnelle pendant entretien",
+          "Raclement de gorge fréquent",
+          "Mentionne tentatives auto-médication",
+          "Évoque difficulté gestion multiple problèmes",
+          "Exprime frustration persistance symptômes"
+        ],
+        "durantExamen": [
+          "Coopératif pour tous examens",
+          "Signale léger inconfort épigastrique",
+          "Toux provoquée par examen gorge",
+          "Respiration normale malgré BPCO"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Toux chronique",
+      "sections": [
+        {
+          "titre": "Principales causes de toux chronique",
+          "contenu": "Triade classique : RGO (25-40%), syndrome rhinosinusien (20-30%), asthme/équivalent asthmatique (15-25%). Causes médicamenteuses : IEC (5-15% patients), notamment bradykinine. Tabagisme : facteur aggravant universel, cause directe (BPCO, cancer). Toux post-infectieuse : jusqu'à 8 semaines."
+        },
+        {
+          "titre": "Toux induite par IEC",
+          "contenu": "Mécanisme : accumulation bradykinine, substance P. Incidence 5-15%, prédominance féminine. Délai d'apparition : heures à mois. Caractéristiques : toux sèche, nocturne++. Régression : 1-4 semaines après arrêt. Substitution : ARA2 (pas de toux), inhibiteurs calciques."
+        },
+        {
+          "titre": "RGO et toux chronique",
+          "contenu": "Mécanisme double : micro-aspiration + réflexe vagal œsophago-bronchique. Souvent silencieux (50% sans pyrosis). pH-métrie 24h : référence diagnostique. Traitement : IPP forte dose 8-12 semaines + mesures hygiéno-diététiques. Réponse thérapeutique variable."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Toux chronique : toujours éliminer les 3 causes principales",
+        "IEC : arrêt d'épreuve systématique si toux inexpliquée",
+        "RGO : IPP forte dose prolongée + mesures hygiéno-diététiques",
+        "BPCO : optimisation bronchodilatateurs + sevrage tabagique",
+        "Dépistage néoplasique si facteurs de risque (tabac, âge)"
+      ],
+      "examensComplementaires": [
+        "Radiographie thoracique : élimination pathologie pulmonaire",
+        "pH-métrie œsophagienne 24h : diagnostic RGO",
+        "Spirométrie : évaluation BPCO, recherche asthme",
+        "Laryngoscopie : dépistage néoplasique chez fumeur",
+        "Essais thérapeutiques : IPP, arrêt IEC, antihistaminiques"
+      ]
+    },
+    "resume": {
+      "titre": "🌬️ Toux chronique – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Toux > 8 semaines (critère de chronicité)",
+                "Toux sèche ou productive",
+                "Aggravation nocturne ou post-exercice",
+                "Symptômes associés : pyrosis, rhinorrhée, dyspnée, wheezing, post-nasal drip"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque et comorbidités",
+              "points": [
+                "Tabac (actuel ou passé)",
+                "Exposition à des irritants (travail, pollution, allergènes)",
+                "Médicaments : IEC (toux sèche retardée), bêta-bloquants",
+                "Antécédents d’asthme, RGO, rhinite allergique, infections ORL",
+                "Voyage en zones endémiques (tuberculose)",
+                "Immunodépression, antécédents d'infections respiratoires à répétition"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examens ciblés",
+              "points": [
+                "Auscultation pulmonaire : wheezing, râles, silence auscultatoire",
+                "Signes ORL : écoulement nasal, pharyngite chronique",
+                "Recherche de signes de RGO (epigastralgie, douleur post-prandiale)",
+                "Examen cardiaque : souffle, signes d’insuffisance cardiaque"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de première intention",
+              "points": [
+                "Radiographie thoracique (systématique en 1ère ligne)",
+                "Explorations fonctionnelles respiratoires (EFR) si suspicion d’asthme",
+                "Épreuves thérapeutiques selon suspicion clinique (antihistaminiques, IPP, corticoïdes inhalés)"
+              ]
+            },
+            {
+              "titre": "Si absence de réponse ou doute diagnostic",
+              "points": [
+                "Scanner thoracique (si anomalies à la radio ou suspicion néoplasique)",
+                "pH-métrie œsophagienne si suspicion de RGO",
+                "Test aux métacholines ou NO expiré si asthme",
+                "Consultation spécialisée (ORL, pneumo, gastro)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Approche séquentielle empirique",
+              "points": [
+                "Traitement de l’UACS (rhinite) : antihistaminiques 1ère génération, décongestionnants, corticoïdes nasaux",
+                "Traitement de l’asthme : corticoïdes inhalés ± β2-mimétiques",
+                "RGO : IPP 4-8 semaines, hygiène alimentaire",
+                "Bronchite éosinophilique : corticoïdes inhalés ± test des éosinophiles dans les expectorations"
+              ]
+            },
+            {
+              "titre": "Si cause identifiée ou suspectée",
+              "points": [
+                "Adaptation spécifique (ex : arrêt IEC, sevrage tabagique, traitement tuberculose, etc.)",
+                "Surveillance clinique et réévaluation à 4–6 semaines"
+              ]
+            },
+            {
+              "titre": "Cas complexes ou résistants",
+              "points": [
+                "Référer en pneumologie ou ORL",
+                "Examen endoscopique si suspicion lésionnelle (bronchoscopie, nasofibroscopie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toux chronique = > 8 semaines",
+            "Toujours débuter par une radio de thorax",
+            "Approche empirique par essais thérapeutiques séquentiels",
+            "Principales causes : UACS, asthme, RGO, bronchite éosinophilique",
+            "Rechercher médicaments en cause (IEC)",
+            "Référer si échec ou signes d’alerte"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux chronique multifactorielle (RGO / IEC / BPCO / tabac)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractérisation de la toux → durée > 8 sem, type sèche ou productive",
+            "Symptômes associés → reflux, dyspnée, raclement de gorge, sommeil perturbé",
+            "Facteurs de risque → tabac, IEC, comorbidités",
+            "Examen clinique → constantes, auscultation, ORL, abdomen",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → Rx thorax, spirométrie, pH-métrie, arrêt IEC",
+            "Prise en charge → sevrage tabac, essai IPP, substitution IEC, optimisation BPCO"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : 3R + 2I",
+            "elements": [
+              "RGO",
+              "Rhinosinusite chronique",
+              "Respiratoire (BPCO/asthme)",
+              "IEC",
+              "Irritants (tabac, polluants)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Thom Nordstrom, un homme de 65 ans, retraité, qui consulte pour une toux persistante depuis environ 4 mois.\n\nLa toux a commencé par un simple raclement de gorge puis est devenue progressivement une toux sèche irritative. Elle est constante tout au long de la journée, avec un léger impact à l’endormissement mais elle ne le réveille pas la nuit. Elle est décrite comme sèche, sauf lors d’un rhume il y a un mois où il a eu des crachats muqueux. Depuis, la toux est revenue à son caractère sec habituel.\n\nIl a essayé différents traitements en automédication : du Sudafed, des pastilles menthol qu’il consomme beaucoup, et des gargarismes lors de maux de gorge. Cela l’aide un peu mais sans réel effet durable. Il n’a jamais essayé d’antihistaminiques. Lors de ses consultations mensuelles chez son médecin traitant, il a évoqué ce problème mais d’autres priorités (HTA, cholestérol, douleurs thoraciques) ont souvent pris le dessus.\n\nPour ses antécédents, il est suivi pour une hypertension artérielle, une hypercholestérolémie, une BPCO liée au tabac et une hypertrophie bénigne de la prostate. Il a déjà présenté des douleurs thoraciques, explorées et jugées pariétales après bilan cardiaque complet normal. Sur le plan digestif, il décrit des brûlures d’estomac depuis plus de 40 ans, une à deux fois par semaine, surtout après café, épices ou tomates. Il prend des comprimés de calcium en automédication et adapte son alimentation. À l’examen abdominal, il signale un inconfort épigastrique léger. Pas de dysphagie.\n\nSes traitements comprennent une lovastatine, un IEC (bénazépril), un diurétique thiazidique, de l’aspirine, de l’Advair pour ses poumons, et de la prazosine depuis trois mois pour sa prostate. La plupart sont pris depuis plus d’un an, sauf la prazosine plus récente.\n\nSur le plan des habitudes de vie, il fume encore un demi-paquet par jour, après avoir longtemps fumé un à deux paquets par jour pendant trente ans. Sa famille, notamment sa fille infirmière, le pousse à arrêter, mais il considère cela comme son « dernier vice ». Il boit une bière le soir avec le repas. Son moral est plutôt bon, malgré le décès de sa mère il y a deux ans. Il vit avec sa femme et bénéficie d’un bon soutien familial.\n\nÀ l’examen, ses constantes sont normales : TA 136/78, pouls 75, FR 16, T° 37, saturation 98%. L’examen ORL est normal, pas de congestion nasale ni d’érythème pharyngé. L’auscultation pulmonaire est claire, sans râles ni sibilances. Le cœur est normal. À l’examen abdominal, il existe un léger inconfort épigastrique à la palpation, sans hépatosplénomégalie.\n\nEn résumé, il s’agit d’un homme de 65 ans avec une toux sèche chronique depuis 4 mois, dans un contexte de tabagisme actif, d’hypertension traitée par IEC, de reflux gastro-œsophagien ancien, et de BPCO connue. Mon hypothèse principale est un reflux gastro-œsophagien mal contrôlé, possiblement aggravé par le tabac et l’IEC. Les diagnostics différentiels incluent une toux induite par IEC, une BPCO chronique, une rhinite chronique, ou plus rarement une cause néoplasique comme un cancer ORL ou pulmonaire.\n\nComme examens complémentaires, je demanderais une radiographie thoracique, une spirométrie, une pH-métrie œsophagienne et un arrêt d’épreuve de l’IEC pendant quelques semaines. Je proposerais aussi un essai d’IPP à forte dose.\n\nEn termes de prise en charge immédiate, je renforcerais les mesures hygiéno-diététiques pour le reflux, proposerais un IPP en traitement d’essai, substituerais le bénazépril par un ARA2, optimiserais le traitement de la BPCO et surtout travaillerais sur le sevrage tabagique."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Nordstrom, 65 ans, présente une toux sèche persistante depuis 4 mois.\n\nB (Background) : Tabagisme chronique, HTA sous IEC, RGO ancien, BPCO connue.\n\nA (Assessment) : Suspicion multifactorielle : RGO mal contrôlé, toux induite par IEC, tabagisme actif. DD : BPCO, rhinite chronique, cancer ORL/poumon.\n\nR (Recommendation) : Radio thorax, spirométrie, pH-métrie, arrêt IEC, essai IPP, sevrage tabac."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Toux chronique → 3 grands R",
+              "points": [
+                "RGO",
+                "Rhinosinusite chronique",
+                "Respiratoire (BPCO/asthme/bronchite éosinophilique)"
+              ]
+            },
+            {
+              "titre": "IEC = Irascible Etouffante Cough",
+              "points": [
+                "Toux sèche, persistante",
+                "Apparaît après introduction IEC",
+                "Disparaît 1-4 sem après arrêt"
+              ]
+            },
+            {
+              "titre": "Tabac = FACTEUR aggravant universel",
+              "points": [
+                "BPCO",
+                "Cancer poumon/ORL",
+                "Aggravation reflux"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "RGO",
+                  "reponse": {
+                    "pour": [
+                      "Brûlures d’estomac chroniques",
+                      "Aggravation post-repas",
+                      "Sensibilité épigastrique",
+                      "Toux sèche chronique"
+                    ],
+                    "contre": [
+                      "Lien temporel non clairement établi"
+                    ]
+                  }
+                },
+                {
+                  "question": "Toux induite par IEC",
+                  "reponse": {
+                    "pour": [
+                      "IEC prescrit depuis >1 an",
+                      "Toux sèche typique"
+                    ],
+                    "contre": [
+                      "Apparition assez tardive",
+                      "Autres causes coexistantes"
+                    ]
+                  }
+                },
+                {
+                  "question": "BPCO",
+                  "reponse": {
+                    "pour": [
+                      "Tabagisme lourd",
+                      "Diagnostic antérieur",
+                      "Inhalateur prescrit"
+                    ],
+                    "contre": [
+                      "Pas de dyspnée",
+                      "Auscultation normale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer broncho-pulmonaire",
+                  "reponse": {
+                    "pour": [
+                      "Tabagisme ancien",
+                      "Âge > 60 ans",
+                      "Toux chronique inexpliquée"
+                    ],
+                    "contre": [
+                      "Pas d’hémoptysie",
+                      "Pas de perte de poids",
+                      "Examen clinique normal"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Radiographie thoracique",
+                    "Spirométrie avec test bronchodilatateur",
+                    "pH-métrie œsophagienne 24h",
+                    "Arrêt d’épreuve IEC",
+                    "Essai IPP 8 semaines"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Toux chronique multifactorielle (RGO, IEC, tabac, BPCO)"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "IPP forte dose",
+                      "Arrêt IEC → substitution par ARA2",
+                      "Optimisation BPCO",
+                      "Sevrage tabagique",
+                      "Education hygiéno-diététique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation à 4-6 semaines",
+                    "Carnet de toux",
+                    "Surveillance tensionnelle après changement IEC",
+                    "Spirométrie de contrôle",
+                    "Dépistage néoplasique si persistance"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

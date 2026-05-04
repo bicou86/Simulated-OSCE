@@ -1,0 +1,568 @@
+{
+  "title": "USMLE-42 - Convulsions enfant - Fille 11 mois",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "La mère de Michaela Weber, une fillette de 11 mois, se présente aux urgences après que sa fille a fait une convulsion"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon enfant a eu une convulsion"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la convulsion",
+          "binaryOnly": false,
+          "details": [
+            "Début [Ce matin à 11 heures]",
+            "Circonstances [Nous la couchions pour sa sieste, et son corps a simplement commencé à trembler]",
+            "Durée [Cela a duré environ une minute au total]",
+            "Type [Tremblement de tout le corps]",
+            "État postcritique [Elle semblait somnolente après]",
+            "Traumatisme langue/tête [Non]",
+            "Premier épisode [Oui]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Contexte fébrile",
+          "binaryOnly": false,
+          "details": [
+            "Maladie récente [Oui, elle a eu de la fièvre et un nez qui coule au cours des 2 derniers jours]",
+            "Fièvre maximale [Sa température était de 39,4°C la nuit dernière]",
+            "Frissons [Non]",
+            "Traitement antipyrétique [Je lui ai donné du Paracétamol pour enfants hier soir - cela a aidé un peu. Je n'ai pas repris sa température, mais son front était toujours chaud]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Éruption cutanée [Non]",
+            "Tirage auriculaire [Non]",
+            "Nausées/vomissements [Non]",
+            "Changements digestifs [Non]",
+            "Changements urinaires [Moins de couches mouillées que d'habitude]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "État général et comportement",
+          "binaryOnly": false,
+          "details": [
+            "Appétit [Elle a pris du Pedialyte et un peu de lait maternel, mais pas grand-chose d'autre]",
+            "Comportement [Elle a été plus irritable ces derniers jours, mais consolable]",
+            "Sommeil [Elle ne dort pas bien depuis 3 nuits]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Exposition et environnement",
+          "binaryOnly": false,
+          "details": [
+            "Contacts malades [Non]",
+            "Garderie [Non]",
+            "Environnement familial [Elle vit avec moi, mon mari, et son frère de 3 ans]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents de développement",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour]",
+            "Dernier bilan [Il y a deux mois pour un bilan de santé à 9 mois]",
+            "Naissance [Accouchement par voie basse à 38 semaines sans complications]",
+            "Développement [Poids, taille, et développement du langage normaux]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes alimentaires",
+          "binaryOnly": true,
+          "patientComment": "Elle est allaitée et mange un peu de nourriture solide, mais elle n'a pas mangé de nourriture solide ces derniers jours. Elle prend des suppléments de fer que notre pédiatre nous a donnés"
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Seulement du Paracétamol"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen physique à réaliser",
+          "binaryOnly": true,
+          "patientComment": "Examen neurologique et général complet nécessaire"
+        },
+        {
+          "id": "e2",
+          "text": "Points importants de l'examen",
+          "binaryOnly": false,
+          "details": [
+            "État de conscience et réactivité",
+            "Signes méningés (raideur de nuque, Kernig, Brudzinski)",
+            "Fontanelle (tension, bombement)",
+            "Examen neurologique focal",
+            "Signes de déshydratation",
+            "Examen ORL et pulmonaire"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes fébriles bénignes",
+                "items": [
+                  {
+                    "text": "Convulsion fébrile simple",
+                    "cause": "Arguments POUR:\n\t□ Âge typique (6 mois - 5 ans)\n\t□ Contexte fébrile (39,4°C)\n\t□ Durée < 15 minutes (1 minute)\n\t□ Convulsion tonico-clonique généralisée\n\t□ Pas d'antécédents de convulsions\n\t□ État postcritique bref\n\t□ Infection respiratoire haute probable\nCritères : Généralisée, < 15 min, unique en 24h, 6 mois-5 ans",
+                    "test": "→ Souvent aucun si critères remplis"
+                  }
+                ]
+              },
+              {
+                "name": "Infections du SNC",
+                "items": [
+                  {
+                    "text": "Méningite bactérienne ou virale",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée (39,4°C)\n\t□ Convulsion inaugural possible\n\t□ Irritabilité\n\t□ Diminution de l'appétit\n\t□ Diminution de la diurèse\n\t□ Âge < 1 an (risque ++)\nArguments CONTRE:\n\t□ Enfant consolable\n\t□ Pas de léthargie extrême",
+                    "test": "→ Ponction lombaire urgente"
+                  }
+                ]
+              },
+              {
+                "name": "Causes métaboliques",
+                "items": [
+                  {
+                    "text": "Hyponatrémie",
+                    "cause": "Arguments POUR:\n\t□ Convulsion possible\n\t□ Diminution apports (appétit ↓)\n\t□ Pertes augmentées (fièvre)\n\t□ Hydratation par Pedialyte\nArguments CONTRE:\n\t□ Contexte fébrile prédominant\n\t□ Pas de dilution du lait décrite",
+                    "test": "→ Ionogramme sanguin"
+                  },
+                  {
+                    "text": "Hypoglycémie",
+                    "cause": "Arguments POUR:\n\t□ Apports diminués récents\n\t□ Convulsion possible\n\t□ Âge à risque\nArguments CONTRE:\n\t□ Allaitement maintenu\n\t□ Contexte fébrile évident",
+                    "test": "→ Glycémie capillaire immédiate"
+                  }
+                ]
+              },
+              {
+                "name": "Autres infections",
+                "items": [
+                  {
+                    "text": "Infection urinaire/Pyélonéphrite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée\n\t□ Diminution diurèse\n\t□ Sexe féminin\n\t□ Âge < 1 an\nArguments CONTRE:\n\t□ Symptômes respiratoires présents\n\t□ Pas de signes urinaires spécifiques",
+                    "test": "→ ECBU par cathétérisme"
+                  },
+                  {
+                    "text": "Bactériémie occulte",
+                    "cause": "Arguments POUR:\n\t□ Fièvre > 39°C sans foyer\n\t□ Âge < 1 an (risque maximal)\n\t□ État général altéré\nArguments CONTRE:\n\t□ Vaccinations à jour (pneumocoque)",
+                    "test": "→ Hémocultures, FSC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Glycémie capillaire immédiate",
+            "Ponction lombaire si signes méningés ou < 12 mois fébrile",
+            "FSC avec formule",
+            "Ionogramme, urée, créatinine",
+            "CRP, procalcitonine si disponible"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens selon contexte",
+          "binaryOnly": false,
+          "details": [
+            "Hémocultures si aspect toxique",
+            "ECBU par cathétérisme",
+            "Radiographie thoracique si signes pulmonaires",
+            "EEG non urgent (pas si convulsion fébrile simple)",
+            "Scanner cérébral si déficit focal"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Stabilisation",
+                "content": "• Voie veineuse périphérique\n• Monitoring continu (FC, FR, SaO2)\n• Antipyrétiques : paracétamol 15 mg/kg\n• Refroidissement physique modéré\n• Position latérale de sécurité"
+              },
+              {
+                "title": "Si nouvelle convulsion",
+                "content": "• Diazépam rectal 0,5 mg/kg\n• Ou midazolam intranasal 0,2 mg/kg\n• Si échec : lorazépam IV 0,1 mg/kg\n• Surveillance voies aériennes\n• Oxygène si besoin"
+              },
+              {
+                "title": "Antibiothérapie empirique",
+                "content": "• Si méningite suspectée :\n- Ceftriaxone 100 mg/kg/j IV\n- + Vancomycine si résistance locale\n• Débuter AVANT la PL si retard\n• Hémocultures avant si possible"
+              },
+              {
+                "title": "Éducation parentale",
+                "content": "• Rassurer sur convulsion fébrile simple\n• Expliquer bénignité si confirmée\n• Gestion fièvre à domicile\n• Signes d'alarme à surveiller\n• Risque récidive 30% avant 5 ans"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Critères d'hospitalisation",
+          "binaryOnly": false,
+          "details": [
+            "Âge < 12 mois avec fièvre",
+            "Convulsion fébrile complexe",
+            "Signes méningés positifs",
+            "État général altéré persistant",
+            "Anomalies biologiques",
+            "Inquiétude parentale majeure"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Urgences neurologiques pédiatriques",
+            "items": [
+              {
+                "text": "Convulsion prolongée > 5 minutes",
+                "description": "→ État de mal épileptique, benzodiazépines IV"
+              },
+              {
+                "text": "Convulsions répétées sans reprise conscience",
+                "description": "→ État de mal, réanimation"
+              },
+              {
+                "text": "Signes méningés francs",
+                "description": "→ Méningite, antibiotiques urgents"
+              },
+              {
+                "text": "Déficit neurologique focal",
+                "description": "→ AVC, encéphalite, imagerie urgente"
+              },
+              {
+                "text": "Altération conscience persistante",
+                "description": "→ Encéphalopathie, soins intensifs"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Weber, il semble que votre enfant ait effectivement eu une convulsion. La cause la plus probable est sa fièvre élevée ; les convulsions causées par la fièvre se produisent chez de nombreux jeunes enfants. Cependant, étant donné qu'il existe de nombreux types de convulsions, je voudrais examiner votre enfant et effectuer des tests pour m'assurer que les convulsions ne sont pas causées par quelque chose de plus grave, comme une méningite. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Ma fille va-t-elle avoir des lésions cérébrales permanentes à cause de cela ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "L'explication la plus probable pour la convulsion de votre fille est sa fièvre, auquel cas il ne devrait pas y avoir de dommages permanents. Il existe cependant certaines causes de convulsions plus graves. Nous allons effectuer tous les tests nécessaires pour nous assurer qu'aucune de ces causes ne soit responsable."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (patient standardisé)",
+      "nom": "Mère de Michaela Weber",
+      "age": "Mère d'un nourrisson de 11 mois",
+      "contexte": "Aux urgences après convulsion de son enfant",
+      "motifConsultation": {
+        "plaintePrincipale": "Ma fille a eu une convulsion ce matin !",
+        "autreChose": "Elle n'a jamais fait ça avant, j'ai eu très peur."
+      },
+      "consignes": [
+        "Exprimez de l'anxiété à propos de l'état de votre fille.",
+        "Soyez précise sur les détails de la convulsion.",
+        "Montrez que vous êtes une mère attentive.",
+        "Posez des questions sur les séquelles possibles.",
+        "Restez inquiète mais coopérative."
+      ],
+      "histoireActuelle": {
+        "convulsion": [
+          "Ce matin à 11h à la sieste",
+          "Corps qui tremble entièrement",
+          "Durée environ 1 minute",
+          "Somnolente après",
+          "Première fois"
+        ],
+        "contexteMaladie": [
+          "Fièvre depuis 2 jours",
+          "39,4°C hier soir",
+          "Nez qui coule",
+          "Paracétamol avec peu d'effet",
+          "Front toujours chaud"
+        ],
+        "etatGeneral": [
+          "Moins de couches mouillées",
+          "Boit peu (Pedialyte, sein)",
+          "Plus irritable mais consolable",
+          "Dort mal depuis 3 nuits",
+          "Pas d'aliments solides"
+        ],
+        "environnement": [
+          "Pas de garderie",
+          "Vit avec parents et frère 3 ans",
+          "Pas de contacts malades",
+          "Maison sans problème"
+        ]
+      },
+      "antecedentsEnfant": {
+        "naissance": [
+          "38 semaines voie basse",
+          "Sans complications",
+          "Développement normal"
+        ],
+        "medical": [
+          "Aucun problème",
+          "Vaccins à jour",
+          "Dernier contrôle 9 mois",
+          "Suppléments fer"
+        ],
+        "familiaux": [
+          "Pas de convulsions",
+          "Pas d'épilepsie",
+          "Famille en bonne santé"
+        ]
+      },
+      "inquietudes": [
+        "Lésions cérébrales?",
+        "Va-t-elle récidiver?",
+        "Est-ce l'épilepsie?",
+        "Méningite possible?",
+        "Que faire si ça recommence?"
+      ],
+      "simulation": {
+        "attitude": [
+          "Anxieuse mais contrôlée",
+          "Cherche réassurance",
+          "Veut comprendre",
+          "Coopérative pour examens",
+          "Protectrice avec bébé"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Nourrisson de 11 mois présentant première convulsion dans contexte fébrile (39,4°C). Durée courte (1 min), généralisée, postcritique bref. Infection respiratoire haute probable. Critères convulsion fébrile simple présents MAIS âge < 12 mois impose prudence. Ponction lombaire à discuter fortement. Surveillance hospitalière recommandée.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e :",
+        "• Ne mentionne pas la méningite dans le DD",
+        "• Banalise trop la convulsion fébrile",
+        "• Oublie la ponction lombaire < 12 mois",
+        "• Ne propose pas d'hospitalisation",
+        "• Omet l'éducation sur convulsion fébrile"
+      ],
+      "pointsCles": [
+        "Convulsion fébrile simple probable MAIS",
+        "Âge < 12 mois = PL fortement recommandée",
+        "Méningite peut débuter par convulsion",
+        "Hospitalisation prudente à cet âge",
+        "Éducation parentale essentielle"
+      ],
+      "pieges": [
+        "Conclure trop vite convulsion fébrile simple",
+        "Oublier critères âge pour PL",
+        "Ne pas rechercher foyer infectieux",
+        "Minimiser anxiété parentale",
+        "Omettre conseils récidive"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Convulsion fébrile probable chez nourrisson de 11 mois nécessitant exclusion méningite"
+        },
+        {
+          "titre": "Convulsions fébriles",
+          "contenu": "Phénomène fréquent en pédiatrie :",
+          "points": [
+            "Incidence : 2-5% des enfants",
+            "Âge : 6 mois - 5 ans (pic 18 mois)",
+            "Prédisposition génétique (10-20% si ATCD familiaux)",
+            "Seuil convulsif abaissé par fièvre",
+            "Pronostic excellent si simple",
+            "Pas de sur-risque épilepsie si simple"
+          ]
+        },
+        {
+          "titre": "Classification convulsions fébriles",
+          "contenu": "Distinction cruciale pour pronostic :",
+          "points": [
+            "Simple : Généralisée, < 15 min, unique/24h",
+            "Complexe : Focale OU > 15 min OU répétée/24h",
+            "Simple = 70-75% des cas",
+            "Complexe = bilan plus poussé",
+            "Récidive : 30% avant 5 ans",
+            "Plus jeune = plus de risque récidive"
+          ]
+        },
+        {
+          "titre": "Indications ponction lombaire",
+          "contenu": "Recommandations âge-dépendantes :",
+          "points": [
+            "< 12 mois : Fortement recommandée",
+            "12-18 mois : Selon clinique",
+            "> 18 mois : Si signes méningés",
+            "Antibiotiques préalables : PL obligatoire",
+            "État post-critique prolongé : PL",
+            "Doute clinique : PL"
+          ]
+        },
+        {
+          "titre": "Méningite du nourrisson",
+          "contenu": "Présentation souvent atypique :",
+          "points": [
+            "Signes classiques souvent absents < 1 an",
+            "Fièvre + irritabilité peuvent suffire",
+            "Convulsion révélatrice possible",
+            "Fontanelle bombée tardive",
+            "Mortalité 5-10% si bactérienne",
+            "Séquelles 20-30% survivants"
+          ]
+        },
+        {
+          "titre": "Prise en charge aiguë",
+          "contenu": "Approche systématique :",
+          "points": [
+            "ABCD et stabilisation",
+            "Antipyrétiques systématiques",
+            "Voie veineuse et bilan",
+            "PL selon indications",
+            "Antibiothérapie si doute",
+            "Surveillance rapprochée"
+          ]
+        },
+        {
+          "titre": "Traitement convulsion active",
+          "contenu": "Escalade thérapeutique :",
+          "points": [
+            "0-5 min : O2, position latérale",
+            "5 min : Diazépam rectal 0.5 mg/kg",
+            "10 min : Lorazépam IV 0.1 mg/kg",
+            "15 min : Répéter benzodiazépine",
+            "20 min : Phénytoïne ou lévétiracétam",
+            "30 min : Intubation, phénobarbital"
+          ]
+        },
+        {
+          "titre": "Éducation parentale post-convulsion",
+          "contenu": "Messages clés à transmettre :",
+          "points": [
+            "Bénignité habituelle si fébrile simple",
+            "Pas de séquelles neurologiques",
+            "Risque récidive 30%",
+            "Gestion fièvre précoce",
+            "CAT si nouvelle convulsion",
+            "Diazépam rectal si récidives"
+          ]
+        },
+        {
+          "titre": "Prévention récidives",
+          "contenu": "Stratégies evidence-based :",
+          "points": [
+            "Antipyrétiques : efficacité non prouvée",
+            "Pas de prophylaxie antiépileptique",
+            "Diazépam rectal si convulsion > 5 min",
+            "Éducation ++ sur gestion fièvre",
+            "Consultation précoce si fièvre",
+            "Rassurance parentale essentielle"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Nourrisson 11 mois avec première convulsion dans contexte fébrile répondant aux critères de convulsion fébrile simple. Cependant, l'âge < 12 mois impose une ponction lombaire pour exclure formellement une méningite. Hospitalisation pour surveillance et réalisation bilan. Pronostic excellent si convulsion fébrile confirmée. Éducation parentale cruciale."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Les convulsions fébriles sont fréquentes et bénignes",
+            "L'âge < 12 mois impose prudence maximale",
+            "La méningite doit être exclue formellement",
+            "L'hospitalisation rassure et permet surveillance",
+            "L'éducation parentale prévient les récidives mal gérées",
+            "Le pronostic à long terme est excellent"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Paracétamol : 15 mg/kg/6h PO/IV",
+        "Ibuprofène : 10 mg/kg/8h PO si > 6 mois",
+        "Diazépam rectal : 0.5 mg/kg (max 10mg)",
+        "Midazolam nasal : 0.2 mg/kg",
+        "Ceftriaxone : 100 mg/kg/j IV si méningite"
+      ],
+      "examensComplementaires": [
+        "PL : Cellules < 5/mm³, protéines < 0.4 g/L",
+        "GB > 15000 : suggère infection bactérienne",
+        "CRP > 20 : orientation bactérienne",
+        "PCT > 0.5 : forte suspicion bactérienne",
+        "Glycorachie : 2/3 glycémie normale"
+      ]
+    }
+  }
+}

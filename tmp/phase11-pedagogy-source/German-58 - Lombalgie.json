@@ -1,0 +1,619 @@
+{
+  "title": "German-58 - Lombalgie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Hugo Betschart, 53 ans, se présente en consultation pour des douleurs dorsales",
+    "vitals": {
+      "ta": "135/90 mmHg",
+      "fc": "80 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'introduction",
+          "binaryOnly": false,
+          "patientComment": "Douleurs dorsales"
+        },
+        {
+          "id": "a3",
+          "text": "Localisation précise de la douleur",
+          "binaryOnly": false,
+          "patientComment": "Bas du dos"
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [progressif]",
+            "Durée [depuis environ 2 semaines]",
+            "Évolution [de plus en plus intense]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Pattern de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Type [constant]",
+            "Épisodes antérieurs [oui, mais jamais aussi sévère]",
+            "Douleurs nocturnes [moins intenses]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "binaryOnly": false,
+          "patientComment": "Dans la jambe"
+        },
+        {
+          "id": "a7",
+          "text": "Qualité de la douleur",
+          "binaryOnly": false,
+          "patientComment": "Douleur lancinante"
+        },
+        {
+          "id": "a8",
+          "text": "Intensité de la douleur",
+          "binaryOnly": false,
+          "patientComment": "7/10 sur l'échelle EVA"
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs modulants",
+          "binaryOnly": false,
+          "details": [
+            "Aggravation [en position debout et assise, à la toux]",
+            "Amélioration [couché avec jambes fléchies]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Événement déclenchant",
+          "binaryOnly": false,
+          "details": [
+            "Circonstances [mouvement de rotation en déchargeant la voiture]",
+            "Port de charge lourde [non]",
+            "Traumatisme [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes neurologiques - Force",
+          "binaryOnly": false,
+          "details": [
+            "Faiblesse musculaire [sensation bizarre à gauche]",
+            "Localisation [peut-être une faiblesse]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes neurologiques - Sensibilité",
+          "binaryOnly": false,
+          "patientComment": "Fourmillements dans le pied gauche et le mollet"
+        },
+        {
+          "id": "a13",
+          "text": "Recherche syndrome de la queue de cheval",
+          "binaryOnly": false,
+          "details": [
+            "Incontinence urinaire [non]",
+            "Rétention urinaire [non]",
+            "Incontinence fécale [non]",
+            "Anesthésie en selle [non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes généraux (symptômes B)",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Perte de poids [non]",
+            "Sueurs nocturnes [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents de fractures",
+          "binaryOnly": false,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Pathologies connues [migraines dans le passé]",
+            "Immunosuppression [non]",
+            "Cancer [non]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Antécédents de lombalgies",
+          "binaryOnly": false,
+          "patientComment": "Lombalgies récidivantes tous les quelques années"
+        },
+        {
+          "id": "a18",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "Plastie du ligament croisé"
+        },
+        {
+          "id": "a19",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments réguliers [aucun]",
+            "Antalgiques à la demande [Celebrex en cas de douleur]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "patientComment": "Allergie à l'iode"
+        },
+        {
+          "id": "a21",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Alcool [non]",
+            "Tabac [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Ostéoporose [mère : artérite temporale]",
+            "Pathologies cardiovasculaires [père : 2 AIT, sténose aortique]",
+            "Autres pathologies pertinentes [aucune]"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Anamnèse sociale et professionnelle",
+          "binaryOnly": false,
+          "details": [
+            "Profession [à préciser]",
+            "Stress, situation de charge [à évaluer]",
+            "Capacité de travail actuelle [à évaluer]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Observation de la marche",
+          "binaryOnly": false,
+          "details": [
+            "Schéma de marche",
+            "Marche sur la pointe des pieds",
+            "Marche sur les talons"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen en position debout",
+          "binaryOnly": false,
+          "details": [
+            "Statique (alignement, symétrie)",
+            "Dynamique (mouvements actifs)",
+            "Recherche de scoliose",
+            "Recherche de déformation étagée"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Tests de mobilité rachidienne",
+          "binaryOnly": false,
+          "details": [
+            "Test de Schober",
+            "Test d'Ott",
+            "Distance doigts-sol"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen en position assise",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des processus épineux",
+            "Percussion vertébrale",
+            "Recherche de points douloureux"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Testing des réflexes",
+          "binaryOnly": false,
+          "details": [
+            "Réflexe rotulien (L3-L4)",
+            "Réflexe achilléen (S1)"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Testing musculaire segmentaire",
+          "binaryOnly": false,
+          "details": [
+            "L3/L4 : Quadriceps fémoral",
+            "L5 : Extenseur propre du gros orteil",
+            "S1 : Triceps sural"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Testing sensitif par dermatomes",
+          "binaryOnly": false,
+          "details": [
+            "L3 : Face interne de la cuisse",
+            "L4 : Face interne du mollet",
+            "L5 : Face dorsale du pied",
+            "S1 : Face latérale du pied"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen en décubitus",
+          "binaryOnly": false,
+          "details": [
+            "Recherche de contracture musculaire",
+            "Test de Lasègue",
+            "Test de Lasègue controlatéral",
+            "Test de Bragard"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen des hanches",
+          "binaryOnly": false,
+          "details": [
+            "Mobilité passive",
+            "Recherche de douleur"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Examen vasculaire périphérique",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des pouls périphériques (si irradiation dans les jambes)"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Toucher rectal si indiqué",
+          "binaryOnly": false,
+          "details": [
+            "Tonus sphinctérien",
+            "Sensibilité péri-anale"
+          ]
+        },
+        {
+          "id": "e12",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Hernie discale lombaire avec radiculopathie L5 gauche probable"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Protrusion discale sans hernie franche",
+            "Canal lombaire étroit",
+            "Spondylolisthésis",
+            "Fracture vertébrale",
+            "Contracture musculaire paravertébrale",
+            "Processus inflammatoire/infectieux (spondylodiscite)",
+            "Processus tumoral (métastase, tumeur primitive)"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Anamnèse typique",
+                "items": [
+                  {
+                    "text": "Mouvement de rotation déclenchant",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Irradiation dans le territoire L5",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Paresthésies dans le territoire L5",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Aggravation par la toux",
+                    "cause": "□ signe de Déjérine",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Signes cliniques",
+                "items": [
+                  {
+                    "text": "Test de Lasègue probablement positif",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Déficit sensitif territoire L5",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Déficit moteur possible L5",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Examens biologiques pour exclure processus inflammatoire (FSC, CRP, VS)",
+            "IRM lombaire selon évolution clinique et déficit neurologique",
+            "Radiographie lombaire si suspicion de spondylolisthésis",
+            "EMG si doute diagnostique après 6 semaines"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• AINS (poursuivre Celebrex)\n• Paracétamol 1g 4x/jour\n• Tramadol si douleur réfractaire\n• Prégabaline ou gabapentine si douleurs neuropathiques\n• Corticothérapie orale courte si hyperalgie"
+              },
+              {
+                "title": "Traitement non médicamenteux",
+                "content": "• Repos relatif initial (2-3 jours maximum)\n• Maintien des activités adaptées\n• Kinésithérapie après phase hyperalgique\n• Application de chaleur locale\n• Techniques de relaxation"
+              },
+              {
+                "title": "Infiltrations si échec",
+                "content": "• Infiltration épidurale de corticoïdes\n• Infiltration foraminale sous contrôle radiologique\n• Maximum 3 infiltrations par an"
+              },
+              {
+                "title": "Indications chirurgicales",
+                "content": "• Syndrome de la queue de cheval (urgence)\n• Déficit moteur progressif ou sévère\n• Échec du traitement conservateur > 6-8 semaines\n• Douleur invalidante réfractaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Orientation et suivi",
+          "binaryOnly": false,
+          "details": [
+            "Orientation orthopédie/neurochirurgie selon évolution",
+            "Contrôle à 2 semaines",
+            "IRM si pas d'amélioration à 4-6 semaines",
+            "Arrêt de travail selon profession",
+            "Éducation sur l'évolution naturelle favorable (90% à 6 semaines)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prévention des récidives",
+          "binaryOnly": false,
+          "details": [
+            "École du dos",
+            "Renforcement musculaire après phase aiguë",
+            "Ergonomie au travail",
+            "Perte de poids si surcharge pondérale",
+            "Activité physique régulière"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🦴 Hernie discale lombaire – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptomatologie typique",
+              "points": [
+                "Lombalgie aiguë ou chronique avec irradiation radiculaire (sciatalgie)",
+                "Douleur augmentée à la flexion, à l’effort, en position assise",
+                "Soulagement en décubitus",
+                "Parfois paresthésies, engourdissements ou faiblesse motrice"
+              ]
+            },
+            {
+              "titre": "Signes d’alerte (red flags)",
+              "points": [
+                "Troubles sphinctériens (rétention urinaire, incontinence)",
+                "Anesthésie en selle",
+                "Déficit moteur progressif",
+                "Douleur nocturne ou fébricule (suspicion de tumeur/infection)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Tests cliniques",
+              "points": [
+                "Lasègue (straight leg raise) positif : douleur irradiant dans le territoire radiculaire",
+                "Bragard : reproduction douleur à dorsiflexion pied après Lasègue",
+                "Crossed Lasègue : douleur controlatérale (spécifique)"
+              ]
+            },
+            {
+              "titre": "Atteintes radiculaires typiques",
+              "points": [
+                "L4 : déficit extension genou, hypoesthésie face antéro-médiale jambe, ROT rotulien ↓",
+                "L5 : déficit dorsiflexion pied (steppage), hypoesthésie dos pied/gros orteil",
+                "S1 : déficit flexion plantaire, hypoesthésie bord externe pied, ROT achilléen ↓"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "IRM lombaire : examen de référence, visualise hernie, compression radiculaire",
+                "Scanner lombaire si IRM contre-indiquée"
+              ]
+            },
+            {
+              "titre": "Autres",
+              "points": [
+                "EMG utile pour différencier neuropathie périphérique vs radiculopathie",
+                "Pas d’imagerie systématique si absence de red flags"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Conservateur (1ère intention)",
+              "points": [
+                "Repos relatif (éviter immobilisation prolongée)",
+                "Antalgiques, AINS ± myorelaxants",
+                "Kinésithérapie (renforcement, posture)",
+                "Infiltrations épidurales corticoïdes si douleur persistante"
+              ]
+            },
+            {
+              "titre": "Chirurgical",
+              "points": [
+                "Indications : déficit moteur progressif, syndrome de la queue de cheval, douleur invalidante > 6–8 semaines malgré traitement",
+                "Technique : discectomie ± microchirurgie"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur radiculaire typique déclenchée par flexion = hernie discale probable",
+            "Tests de Lasègue/Bragard = outils simples de confirmation",
+            "Red flags = urgence neurochirurgicale (queue de cheval, déficit moteur)",
+            "IRM lombaire = examen clé si indication chirurgicale ou red flags",
+            "PEC initiale = conservatrice (antalgiques, kiné), chirurgie si échec ou urgence"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Début et évolution de la douleur lombaire ?",
+                "Douleur irradiant jambe ? Territoire précis ?",
+                "Facteurs aggravants : flexion, assise prolongée ?",
+                "Déficit moteur ou sensitif associé ?",
+                "Troubles urinaires, sexuels, ou anesthésie en selle ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Examen neurologique complet (force, sensibilité, ROT)",
+                "Tests de Lasègue, Bragard, Lasègue croisé",
+                "IRM lombaire si red flags ou avant chirurgie",
+                "EMG si doute diagnostique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antalgiques + kinésithérapie en 1ère intention",
+                "Surveillance des signes neurologiques",
+                "Référer en neurochirurgie si red flags ou échec du traitement conservateur"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

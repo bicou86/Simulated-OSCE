@@ -1,0 +1,284 @@
+{
+  "title": "German-38 - EM Tabac",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 42 ans se présente chez son médecin généraliste pour un contrôle de routine et souhaite discuter de l'arrêt du tabac"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Je suis venu pour un contrôle de routine, mais j'aimerais peut-être discuter de l'arrêt du tabac"
+        },
+        {
+          "id": "a3",
+          "text": "Évaluation détaillée de la consommation tabagique",
+          "details": [
+            "Début du tabagisme [à 16 ans]",
+            "Nombre de cigarettes par jour [1 paquet (20 cigarettes)]",
+            "Durée du tabagisme [depuis 26 ans]",
+            "Calcul des paquets-années (26 PA)",
+            "Type de tabac (cigarettes industrielles)"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Exploration des tentatives d'arrêt antérieures",
+          "details": [
+            "Nombre de tentatives [3 fois]",
+            "Méthode utilisée [arrêt simple sans aide]",
+            "Durée des arrêts [environ 1 semaine]",
+            "Symptômes lors de l'arrêt [nervosité, irritabilité, pensées obsédantes, ennui]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Exploration de la motivation et des méthodes envisagées",
+          "details": [
+            "Idées sur la méthode d'arrêt [hypnose peut-être]",
+            "Niveau de motivation sur échelle 1-10 [7 - incertain]",
+            "Ambivalence explorée",
+            "Attentes et représentations"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Identification des aspects positifs du tabagisme",
+          "details": [
+            "Aspect social [convivialité avec les amis]",
+            "Aspect plaisir [moment de détente]",
+            "Association avec d'autres habitudes [café, alcool, après les repas]",
+            "Gestion du stress"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Exploration des craintes liées à l'arrêt",
+          "details": [
+            "Peur de l'isolement social [manquer des moments conviviaux]",
+            "Peur de perdre du plaisir",
+            "Crainte de la prise de poids",
+            "Gestion des situations stressantes"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Évaluation de l'environnement tabagique",
+          "details": [
+            "Entourage fumeur [nombreux amis et épouse fument]",
+            "Tabagisme au domicile [sur le balcon, pas toujours]",
+            "Exposition tabagique passive des enfants",
+            "Support social potentiel"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Conséquences actuelles du tabagisme",
+          "details": [
+            "Symptômes respiratoires [toux matinale]",
+            "Impact sur l'activité physique [manque d'endurance pour le jogging]",
+            "Activité physique actuelle [musculation 2x/semaine]",
+            "Autres impacts (financiers, sociaux)"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux personnels et familiaux",
+          "details": [
+            "Antécédents personnels [aucun]",
+            "Hypertension, diabète, dyslipidémie [non]",
+            "Antécédents familiaux [père: cancer bronchique, mère: en bonne santé]",
+            "Médicaments actuels [aucun]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Évaluation des autres substances et situation sociale",
+          "details": [
+            "Consommation d'alcool [le soir et week-ends]",
+            "Autres drogues [non]",
+            "Allergies [aucune]",
+            "Situation sociale [marié, 2 enfants, employé de bureau]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse motivationnelle complète et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Mesure de la pression artérielle",
+            "Fréquence cardiaque",
+            "Recherche de souffles"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Auscultation pulmonaire bilatérale",
+            "Recherche de râles ou sibilants",
+            "Évaluation de la symétrie respiratoire",
+            "Percussion thoracique si indiquée"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen vasculaire périphérique",
+          "details": [
+            "Palpation des pouls périphériques",
+            "Recherche de signes d'artériopathie",
+            "Temps de recoloration capillaire",
+            "Recherche de varices"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ORL et cavité buccale",
+          "details": [
+            "Inspection de la cavité buccale",
+            "État des dents et gencives",
+            "Examen du pharynx",
+            "Recherche de lésions précancéreuses"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Mesure du monoxyde de carbone expiré (si disponible)",
+          "details": [
+            "Utilisation du CO-testeur",
+            "Interprétation des valeurs",
+            "Explication pédagogique au patient",
+            "Utilisation comme outil motivationnel"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation de l'état général",
+          "details": [
+            "Calcul de l'IMC (poids/taille)",
+            "Évaluation du teint et de la coloration cutanée",
+            "Recherche de signes de vieillissement cutané prématuré",
+            "État nutritionnel général"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et adapté au contexte tabagique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évaluation du stade de changement (Assess)",
+          "details": [
+            "Exploration de la motivation actuelle [7/10 - ambivalent]",
+            "Identification du stade (contemplation)",
+            "Validation de l'ambivalence",
+            "Exploration des raisons du changement"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Conseil adapté au stade (Advise)",
+          "details": [
+            "Focus sur l'ambivalence du patient",
+            "Rappel des motivations personnelles identifiées",
+            "Renforcement des bénéfices potentiels",
+            "Proposition d'aide adaptée"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Questions ouvertes pour explorer l'ambivalence",
+          "details": [
+            "\"Qu'est-ce qui vous plaît dans le fait de fumer?\"",
+            "\"Qu'est-ce qui vous dérange dans le tabagisme?\"",
+            "\"Que faudrait-il pour augmenter votre motivation?\"",
+            "\"Comment puis-je vous aider à renforcer votre décision?\""
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Assistance et stratégies (Assist)",
+          "details": [
+            "Exploration des barrières à l'arrêt",
+            "Proposition de soutien personnalisé",
+            "Information sur les centres d'aide au sevrage",
+            "Remise de documentation et contacts utiles"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Stratégies comportementales proposées",
+          "details": [
+            "Gestion des situations à risque identifiées",
+            "Proposition d'impliquer l'épouse [arrêt conjoint?]",
+            "Alternatives aux rituels tabagiques",
+            "Activité physique comme substitut"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Discussion des options thérapeutiques",
+          "details": [
+            "Présentation des substituts nicotiniques",
+            "Information sur les médicaments (varénicline, bupropion)",
+            "Discussion de l'hypnose si intérêt maintenu",
+            "Thérapies comportementales"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Planification du suivi (Arrange)",
+          "details": [
+            "Proposition de rendez-vous de suivi dans 6 mois maximum",
+            "Possibilité de contact plus précoce si décision",
+            "Encouragement à la réflexion",
+            "Maintien de la porte ouverte"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Approche motivationnelle respectueuse et adaptée au stade"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,482 @@
+{
+  "title": "RESCOS-52 - Paralysie",
+  "context": {
+    "setting": "Urgences",
+    "patient": "M./Mme Jean/Jeanne Debussy, 52 ans, serveur/serveuse dans un bar, hospitalisé suite à une paralysie brutale transitoire ayant duré 30 minutes",
+    "vitals": {
+      "ta": "120/82 mmHg",
+      "fc": "70 bpm",
+      "fr": "17/min",
+      "temperature": "37.6°C",
+      "sao2": "98%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Paralysie",
+          "details": [
+            "Localisation [bras et jambe gauches]",
+            "Circonstance de survenue [survenue subitement il y a 1 heure à domicile]",
+            "Développement [apparition brutale, résolution spontanée]",
+            "Chronologie/résolution [durée 30 minutes, résolu en arrivant aux urgences]"
+          ],
+          "scoringRule": "Les quatre = oui, deux à trois = ±, aucun à un = non"
+        },
+        {
+          "id": "a2",
+          "text": "Anamnèse actuelle par système - neurologique",
+          "details": [
+            "Perte de force [incapacité complète à mobiliser bras et jambe gauches]",
+            "Perte de sensibilité [engourdissement bras et jambes gauches]",
+            "Céphalées [non]",
+            "Vertiges [non]",
+            "Troubles visuels [non]",
+            "Troubles auditifs [non]"
+          ],
+          "scoringRule": "Les six = oui, quatre à cinq = ±, aucun à trois = non"
+        },
+        {
+          "id": "a3",
+          "text": "Présence de douleurs",
+          "details": [
+            "Pas de douleur associée aux symptômes neurologiques"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes similaires par le passé",
+          "details": [
+            "Premier épisode, jamais eu de symptômes similaires"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux et comorbidités",
+          "details": [
+            "Maladies [hypertension artérielle traitée]",
+            "Hospitalisations [accouchement si femme, jamais hospitalisé si homme]",
+            "Opérations [aucune]"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "details": [
+            "Amlodipine 5mg 1x/jour pour hypertension",
+            "Pas d'autre médicament, pas d'allergie"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes",
+          "details": [
+            "Tabac [1-3 cigarettes par jour]",
+            "Alcool [1 shot de vodka fin de service avec collègues]",
+            "Drogues [aucune]"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Père décédé d'une tumeur cérébrale il y a 2 ans",
+            "Très inquiet d'avoir la même chose que son père"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État de vigilance - orientation",
+          "details": [
+            "Spatiale",
+            "Temporelle",
+            "Sur sa personne"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e2",
+          "text": "Motricité des membres supérieurs",
+          "details": [
+            "Flexion",
+            "Extension",
+            "Abduction"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e3",
+          "text": "Sensibilité des membres supérieurs - évalue globalement la sensibilité sur tous les dermatomes",
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Réflexes ostéo-tendineux des membres supérieurs",
+          "details": [
+            "Réflexe bicipital des deux côtés",
+            "Réflexe stylo-radial des deux côtés",
+            "Réflexe tricipital des deux côtés"
+          ],
+          "scoringRule": "Les trois = oui, un à deux = ±, aucun = non"
+        },
+        {
+          "id": "e5",
+          "text": "Motricité des membres inférieurs",
+          "details": [
+            "Abduction",
+            "Adduction",
+            "Flexion",
+            "Extension"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Sensibilité des membres inférieurs - évalue globalement la sensibilité sur tous les dermatomes",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Réflexes ostéo-tendineux des membres inférieurs (des deux côtés)",
+          "details": [
+            "Rotulien",
+            "Achilléen"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "e8",
+          "text": "Réflexe cutané plantaire (Babinski) des deux côtés",
+          "binaryOnly": true
+        },
+        {
+          "id": "e9",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évoque le diagnostic principal d'accident ischémique transitoire (AIT)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque un diagnostic différentiel cohérent",
+          "details": [
+            "AVC ischémique",
+            "Saignement intracrânien",
+            "Abus d'alcool/drogues/médicaments",
+            "Vasoconstriction cérébrale",
+            "Syndrome psychiatrique (trouble de conversion)"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m3",
+          "text": "Propose des examens complémentaires appropriés",
+          "details": [
+            "IRM cérébrale (gold standard)",
+            "CT scan cérébral",
+            "Bilan sanguin complet",
+            "ECG",
+            "Échographie carotidienne"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Évoque la nécessité d'une prise en charge urgente",
+          "details": [
+            "AIT doit être traité avec autant d'importance qu'un AVC",
+            "Hospitalisation pour bilan et surveillance"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m5",
+          "text": "Rassure le patient concernant l'inquiétude liée au père",
+          "details": [
+            "Explique que tumeur cérébrale très peu probable avec apparition aussi brusque",
+            "Différencie AIT des tumeurs cérébrales"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Jean/Jeanne Debussy",
+      "age": "52 ans",
+      "contexte": "Serveur/serveuse dans un bar, parent d'une fille de 10 ans, très inquiet car père décédé d'une tumeur cérébrale",
+      "motifConsultation": {
+        "plaintePrincipale": "Il m'est arrivé quelque chose d'horrible ce matin, je ne pouvais plus bouger",
+        "autreChose": "C'est parti après, en sortant de l'ambulance"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Incapacité brutale à mobiliser bras et jambe gauches il y a 1 heure",
+          "Début brutal avec tous les symptômes simultanément",
+          "Résolution spontanée après 30 minutes",
+          "Symptômes disparus à l'arrivée aux urgences",
+          "Aucun signe clinique résiduel à simuler"
+        ],
+        "symptomesAssocies": [
+          "Engourdissement bras et jambe gauches",
+          "Même cinétique que la paralysie (début et fin simultanés)",
+          "Pas de douleur associée",
+          "Pas de céphalée, vertiges, troubles visuels ou auditifs"
+        ],
+        "circonstances": [
+          "Survenue subite à domicile",
+          "Femme de ménage présente qui a appelé le 144",
+          "Transport en ambulance",
+          "Symptômes présents durant tout le trajet",
+          "Résolution à l'installation dans le box des urgences"
+        ],
+        "reponseAuxSymptomes": [
+          "Femme de ménage a appelé immédiatement le 144",
+          "Transport urgent au CHUV en ambulance",
+          "N'a pas pu aller au travail aujourd'hui"
+        ],
+        "inquietudes": [
+          "Peur d'avoir une tumeur au cerveau comme son père",
+          "Père décédé d'une tumeur cérébrale il y a 2 ans",
+          "Anxiété majeure liée à cet antécédent familial"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Pas de fièvre, frissons, transpiration nocturne",
+          "Pas de perte de poids récente",
+          "État général conservé"
+        ],
+        "neurologique": [
+          "Maintenant tous les symptômes sont résolus",
+          "Pas d'antécédent de symptômes similaires",
+          "Orientation et vigilance normales"
+        ],
+        "psychiatrique": [
+          "Pas d'antécédent psychiatrique",
+          "Anxiété actuelle liée à la peur de tumeur cérébrale"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Amlodipine 5mg 1x/jour pour hypertension",
+        "alimentation": "Saine et équilibrée",
+        "activitePhysique": "Badminton 1x/semaine avec des amis",
+        "sommeil": "7h30 en moyenne",
+        "tabac": "1-3 cigarettes par jour",
+        "alcool": "1 shot de vodka à la fin du service avec les collègues, sinon presque jamais",
+        "drogues": "Aucune",
+        "sexualite": "Rapports non protégés réguliers avec époux/épouse"
+      },
+      "histoireMedicale": [
+        "Hypertension artérielle traitée par Amlodipine 5mg 1x/jour",
+        "Pas d'autre maladie, pas d'autre médicament",
+        "Pas d'allergie, vaccins à jour",
+        "Une hospitalisation pour accouchement (si femme), jamais hospitalisé (si homme)",
+        "Aucune opération"
+      ],
+      "antecedentsFamiliaux": [
+        "Père décédé d'une tumeur cérébrale il y a 2 ans",
+        "Très marqué par cet antécédent",
+        "Reste de l'anamnèse familiale sans particularité",
+        "Mère/père d'une fille de 10 ans"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Serveur/serveuse dans un bar",
+        "hobbies": "Badminton avec des amis",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel(le)",
+        "etatCivil": "Marié(e)",
+        "etatEsprit": "Très anxieux, inquiet d'avoir une tumeur comme son père"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Les symptômes ont disparu, il n'y a donc pas de signe clinique à simuler",
+          "Anxiété ++++, surtout liée à la tumeur cérébrale du père",
+          "Croit qu'il/elle a la même chose que son père",
+          "Attitude inquiète et recherche de réassurance"
+        ],
+        "durantExamen": [
+          "Coopératif/coopérative",
+          "Examen neurologique normal",
+          "Pas de déficit moteur ou sensitif résiduel"
+        ],
+        "questionsAPoser": [
+          "Est-ce que j'ai une tumeur comme mon père ? (si diagnostic pas évoqué)",
+          "Qu'est-ce qui m'est arrivé exactement ?"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur l'anxiété liée à l'antécédent paternel",
+        "Mentionner la résolution complète des symptômes",
+        "Préciser que la femme de ménage était témoin de l'épisode"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Debussy, 52 ans, serveur/serveuse, ATCD HTA. Épisode de paralysie et engourdissement hémicorporel gauche durant 30 minutes, résolution spontanée. Tableau typique d'AIT. Anxiété majeure car père décédé tumeur cérébrale. Examen neurologique normal à l'arrivée.",
+      "rolesInterventions": [
+        "Aucune intervention directe nécessaire",
+        "Observer l'anamnèse ciblée sur les symptômes neurologiques",
+        "Évaluer la recherche des facteurs de risque vasculaires",
+        "Noter l'exploration de l'anxiété liée aux antécédents familiaux",
+        "Vérifier la proposition d'examens complémentaires urgents"
+      ],
+      "pointsCles": [
+        "Accident ischémique transitoire (AIT) typique",
+        "Déficit neurologique focal transitoire < 24h",
+        "Facteurs de risque : HTA, tabagisme",
+        "Résolution spontanée complète des symptômes",
+        "AIT = urgence médicale (même importance qu'AVC)",
+        "Imagerie cérébrale urgente indispensable",
+        "Anxiété liée à antécédent familial de tumeur",
+        "Examen neurologique normal post-épisode"
+      ],
+      "pieges": [
+        "Ne pas prendre au sérieux car symptômes résolus",
+        "Omettre la recherche de facteurs de risque vasculaires",
+        "Ne pas proposer d'imagerie cérébrale urgente",
+        "Oublier de rassurer sur l'antécédent familial",
+        "Ne pas évoquer le diagnostic d'AIT",
+        "Sous-estimer l'urgence de la prise en charge",
+        "Ne pas différencier AIT des tumeurs cérébrales",
+        "Omettre l'examen neurologique complet comparatif"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'accident ischémique transitoire (AIT)",
+      "sections": [
+        {
+          "titre": "Définition et épidémiologie de l'AIT",
+          "contenu": "Déficit neurologique focal transitoire d'origine vasculaire.",
+          "points": [
+            "Définition moderne : symptômes < 1 heure (anciennement < 24h)",
+            "Pas de lésion visible à l'imagerie",
+            "Incidence : 200-500/100 000 habitants/an",
+            "Âge moyen : 65-70 ans",
+            "Facteur prédictif majeur d'AVC (risque x10)",
+            "30% font un AVC dans les 5 ans",
+            "10% dans les 3 mois suivant l'AIT"
+          ]
+        },
+        {
+          "titre": "Physiopathologie de l'AIT",
+          "contenu": "Ischémie cérébrale transitoire sans nécrose tissulaire.",
+          "points": [
+            "Hypoperfusion cérébrale transitoire",
+            "Pas de nécrose tissulaire (différence avec AVC)",
+            "Mécanismes : thrombose, embolie, hypoperfusion",
+            "Territoire carotidien (80%) ou vertébro-basilaire (20%)",
+            "Restauration rapide du débit sanguin",
+            "Récupération fonctionnelle complète",
+            "Possible œdème cytotoxique réversible"
+          ]
+        },
+        {
+          "titre": "Étiologies des AIT",
+          "contenu": "Causes multiples nécessitant une investigation systématique.",
+          "points": [
+            "Athérosclérose (cause principale) : carotide, vertébrales",
+            "Embolie cardiaque : FA, valvulopathie, endocardite",
+            "Embolie artère-à-artère : plaque carotidienne",
+            "Dissection artérielle : carotide, vertébrale",
+            "Artérite : Horton, lupus, Behçet",
+            "Troubles hématologiques : thrombophilie",
+            "Vasoconstriction cérébrale réversible"
+          ]
+        },
+        {
+          "titre": "Présentation clinique des AIT",
+          "contenu": "Symptomatologie dépendant du territoire vasculaire atteint.",
+          "points": [
+            "Territoire carotidien : hémiparésie, aphasie, hémianopsie",
+            "Territoire vertébro-basilaire : vertiges, diplopie, dysarthrie",
+            "Début brutal, pic immédiat",
+            "Durée : minutes à quelques heures",
+            "Résolution spontanée complète",
+            "Pas de céphalée (différence avec migraine)",
+            "Conscience conservée"
+          ]
+        },
+        {
+          "titre": "Diagnostic des AIT",
+          "contenu": "Approche clinique et paraclinique urgente.",
+          "points": [
+            "Diagnostic clinique avant tout",
+            "IRM cérébrale avec DWI (gold standard)",
+            "CT scan si IRM non disponible",
+            "Angio-IRM ou angio-CT des TSA",
+            "ECG : recherche FA, troubles rythme",
+            "Échographie cardiaque si embolie suspectée",
+            "Bilan biologique : glycémie, coagulation"
+          ]
+        },
+        {
+          "titre": "Prise en charge de l'AIT",
+          "contenu": "Urgence médicale nécessitant hospitalisation.",
+          "points": [
+            "Hospitalisation systématique",
+            "Antiagrégant plaquettaire : aspirine 300mg",
+            "Statine haute dose si athérosclérose",
+            "Contrôle tensionnel progressif",
+            "Endarterectomie carotidienne si sténose > 70%",
+            "Anticoagulation si FA",
+            "Prévention secondaire à vie"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Phase aiguë : aspirine 300mg en urgence",
+        "Prévention secondaire : aspirine 100mg/j ou clopidogrel 75mg/j",
+        "Statine : atorvastatine 80mg/j",
+        "Contrôle HTA : cible < 140/90 mmHg",
+        "Anticoagulation si FA : warfarine ou AOD",
+        "Endarterectomie carotidienne si sténose > 70%",
+        "Modification facteurs de risque : tabac, diabète"
+      ],
+      "examensComplementaires": [
+        "IRM cérébrale avec séquences DWI : détection ischémie",
+        "Angio-IRM des TSA : sténoses carotidiennes/vertébrales",
+        "CT cérébral : éliminer hémorragie",
+        "ECG 12 dérivations : FA, troubles rythme",
+        "Holter ECG 24h : FA paroxystique",
+        "Échographie cardiaque : source embolique",
+        "Écho-Doppler des TSA : sténoses carotidiennes",
+        "Bilan biologique : NFS, coagulation, lipides, HbA1c"
+      ]
+    }
+  }
+}

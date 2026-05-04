@@ -1,0 +1,559 @@
+{
+  "title": "German-76 - Toux",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Keller, 83 ans, peintre retraité, se présente chez son médecin généraliste pour une toux"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Plainte principale",
+          "binaryOnly": true,
+          "patientComment": "J'ai une toux qui me gêne beaucoup"
+        },
+        {
+          "id": "a3",
+          "text": "Épisodes antérieurs similaires",
+          "details": [
+            "Première fois avec ces caractéristiques [non, pas de cette nature]",
+            "Problèmes respiratoires antérieurs",
+            "Hospitalisations pour dyspnée"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation temporelle de la toux",
+          "details": [
+            "Début [depuis environ 3 semaines]",
+            "Évolution [s'aggrave progressivement]",
+            "Installation [très progressive]",
+            "Prédominance horaire"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de la toux et des expectorations",
+          "details": [
+            "Type de toux [productive]",
+            "Couleur des expectorations [brunâtres]",
+            "Aspect (mousseux, rosé)",
+            "Quantité"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Hémoptysie",
+          "details": [
+            "Présence de sang franc [non]",
+            "Expectorations rosées",
+            "Quantification"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Dyspnée - Caractérisation détaillée",
+          "details": [
+            "Présence [oui, croissante]",
+            "Type [surtout à l'effort]",
+            "Classe NYHA [III - déjà en se levant de la chaise]",
+            "Progression récente"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs positionnels",
+          "details": [
+            "Aggravation en décubitus [oui]",
+            "Aggravation nocturne [oui]",
+            "Aggravation à l'effort [oui]",
+            "Nombre d'oreillers utilisés"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs d'amélioration",
+          "details": [
+            "Position assise [oui, tranquille et droite]",
+            "Repos",
+            "Fenêtre ouverte",
+            "Autres positions"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Orthopnée et dyspnée paroxystique nocturne",
+          "details": [
+            "Orthopnée (nombre d'oreillers)",
+            "Réveils nocturnes avec dyspnée",
+            "Besoin de se lever la nuit",
+            "Amélioration en position assise"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes ORL et infectieux",
+          "details": [
+            "Infection ORL récente [non]",
+            "Rhinite [non]",
+            "Pharyngite [non]",
+            "Fièvre"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Performance physique et fatigue",
+          "details": [
+            "Baisse de performance [oui]",
+            "Fatigue inhabituelle",
+            "Limitation des activités quotidiennes",
+            "Autonomie actuelle"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Autres symptômes respiratoires",
+          "details": [
+            "Écoulement post-nasal [non]",
+            "Sifflements respiratoires [non]",
+            "Sensation d'oppression",
+            "Toux nocturne"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes cardiovasculaires",
+          "details": [
+            "Douleurs thoraciques [non]",
+            "Palpitations [non]",
+            "Syncopes ou malaises",
+            "Claudication intermittente"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Symptômes gastro-œsophagiens",
+          "details": [
+            "Reflux gastro-œsophagien [oui, souvent après les repas]",
+            "Pyrosis",
+            "Régurgitations",
+            "Dysphagie"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Œdèmes et prise de poids",
+          "details": [
+            "Œdèmes des membres inférieurs [oui]",
+            "Prise de poids récente",
+            "Abdomen gonflé",
+            "Dyspnée après les repas"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Symptômes généraux",
+          "details": [
+            "Perte de poids [5 kg en 2 mois]",
+            "Fièvre [non]",
+            "Sueurs nocturnes [oui, remarquées]",
+            "Anorexie"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Exposition environnementale",
+          "details": [
+            "Professionnelle (peintre) [retraité]",
+            "Amiante, solvants",
+            "Tabagisme passif",
+            "Animaux [aucune exposition actuelle]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Antécédents cardiovasculaires",
+          "details": [
+            "Pathologie cardiaque connue [quelque chose au cœur]",
+            "Valvulopathie [une valve trop étroite ou quelque chose comme ça]",
+            "Infarctus du myocarde",
+            "Chirurgie cardiaque"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Traitements cardiovasculaires actuels",
+          "details": [
+            "IEC [Lisinopril]",
+            "Bêtabloquant [Métoprolol]",
+            "Antiagrégant [Aspirine]",
+            "Statine [Crestor]",
+            "Observance thérapeutique"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Habitudes et facteurs de risque",
+          "details": [
+            "Tabagisme [20 paquets-années]",
+            "Alcool [non]",
+            "Drogues [non]",
+            "Activité physique actuelle"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Allergies et intolérances",
+          "details": [
+            "Allergies médicamenteuses [aucune]",
+            "Allergies environnementales",
+            "Intolérances alimentaires"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies cardiovasculaires",
+            "Diabète [mère diabétique]",
+            "Hypertension",
+            "Mort subite"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Contexte social et autonomie",
+          "details": [
+            "Situation familiale [marié]",
+            "Vit avec [sa femme]",
+            "Aide à domicile [Spitex 1x/semaine]",
+            "Autonomie pour les AVQ"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée insuffisance cardiaque"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "details": [
+            "Pression artérielle [145/85 mmHg]",
+            "Fréquence cardiaque [95/min]",
+            "Température [normale]",
+            "Fréquence respiratoire [à compter!]",
+            "Saturation en oxygène"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection générale",
+          "details": [
+            "État général",
+            "Coloration (cyanose, pâleur)",
+            "Position de confort",
+            "Utilisation des muscles accessoires"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiaque - Palpation",
+          "details": [
+            "Palpation du précordium",
+            "Choc de pointe (déplacé?)",
+            "Frémissements",
+            "Soulèvement parasternal"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiaque - Auscultation",
+          "details": [
+            "B1 et B2",
+            "Bruits surajoutés (B3, B4)",
+            "Souffles (sténose aortique?)",
+            "Frottement péricardique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire - Inspection",
+          "details": [
+            "Symétrie thoracique",
+            "Tirage",
+            "Type de respiration",
+            "Déformations"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen pulmonaire - Palpation",
+          "details": [
+            "Vibrations vocales",
+            "Points douloureux",
+            "Ampliation thoracique"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen pulmonaire - Percussion",
+          "details": [
+            "Matité des bases",
+            "Épanchement pleural",
+            "Comparaison bilatérale"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen pulmonaire - Auscultation",
+          "details": [
+            "Auscultation antérieure systématique",
+            "Auscultation postérieure systématique",
+            "Râles crépitants des bases",
+            "Diminution du murmure vésiculaire"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen des extrémités",
+          "details": [
+            "Hippocratisme digital",
+            "Cyanose périphérique",
+            "Température",
+            "Temps de recoloration capillaire"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Signes d'insuffisance cardiaque droite",
+          "details": [
+            "Turgescence des veines jugulaires",
+            "Reflux hépato-jugulaire",
+            "Hépatomégalie",
+            "Ascite"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Recherche d'œdèmes",
+          "details": [
+            "Œdèmes des membres inférieurs [présents]",
+            "Signe du godet",
+            "Bilatéralité et symétrie",
+            "Œdème sacré"
+          ]
+        },
+        {
+          "id": "e12",
+          "text": "Examen ORL rapide",
+          "details": [
+            "Gorge",
+            "Oreilles",
+            "Nez",
+            "Absence de foyer infectieux"
+          ]
+        },
+        {
+          "id": "e13",
+          "text": "Palpation ganglionnaire",
+          "details": [
+            "Aires cervicales",
+            "Aires axillaires",
+            "Autres territoires"
+          ]
+        },
+        {
+          "id": "e14",
+          "text": "Examen abdominal",
+          "details": [
+            "Hépatomégalie de stase",
+            "Ascite",
+            "Circulation collatérale",
+            "Masses"
+          ]
+        },
+        {
+          "id": "e15",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen complet orienté insuffisance cardiaque"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "details": [
+            "Insuffisance cardiaque congestive",
+            "Type (gauche, droite, globale)",
+            "Étiologie probable (valvulaire)",
+            "Classification NYHA"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Pneumonie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CRP, hémocultures"
+                  },
+                  {
+                    "text": "Fibrose pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Reflux gastro-œsophagien",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie, gastroscopie"
+                  },
+                  {
+                    "text": "Bronchite chronique",
+                    "cause": "□ ex-fumeur",
+                    "test": "→ Radiographie thoracique, spirométrie"
+                  },
+                  {
+                    "text": "Épanchement pleural d'autre origine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques",
+          "details": [
+            "BNP ou NT-proBNP",
+            "Troponine",
+            "Marqueurs inflammatoires (CRP)",
+            "Fonction rénale et ionogramme",
+            "NFS"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Radiographie thoracique",
+            "Signes de surcharge (cardiomégalie, redistribution vasculaire)",
+            "Lignes de Kerley",
+            "Épanchement pleural"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens cardiologiques",
+          "details": [
+            "ECG (troubles du rythme, HVG)",
+            "Échocardiographie",
+            "Évaluation de la FEVG",
+            "Évaluation valvulaire (sténose aortique?)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement médicamenteux de l'IC",
+          "details": [
+            "Optimisation IEC (déjà sous Lisinopril)",
+            "Diurétiques de l'anse (furosémide)",
+            "Bêtabloquant (déjà sous métoprolol)",
+            "Antagoniste de l'aldostérone si indiqué"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Traitement symptomatique",
+          "details": [
+            "Restriction hydrosodée",
+            "Oxygénothérapie si hypoxémie",
+            "Position semi-assise",
+            "Surveillance du poids quotidien"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation de la sévérité",
+          "details": [
+            "Critères d'hospitalisation",
+            "Signes de décompensation aiguë",
+            "Stabilité hémodynamique",
+            "Compliance thérapeutique"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Prise en charge étiologique",
+          "details": [
+            "Évaluation chirurgicale si sténose aortique sévère",
+            "Remplacement valvulaire aortique",
+            "TAVI si risque chirurgical élevé",
+            "Optimisation du traitement médical"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Organisation du transfert si nécessaire",
+          "details": [
+            "Indication d'hospitalisation",
+            "Service de cardiologie",
+            "Transport médicalisé",
+            "Information du patient et de la famille"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Suivi et éducation thérapeutique",
+          "details": [
+            "Surveillance des symptômes",
+            "Pesée quotidienne",
+            "Signes d'alarme",
+            "Observance médicamenteuse"
+          ]
+        },
+        {
+          "id": "m12",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète de l'insuffisance cardiaque"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

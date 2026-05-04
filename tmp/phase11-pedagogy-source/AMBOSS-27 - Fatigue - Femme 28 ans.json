@@ -1,0 +1,538 @@
+{
+  "title": "AMBOSS-27 - Fatigue - Femme 28 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Lakeesha Willis, femme de 28 ans, consultant pour fatigue",
+    "vitals": {
+      "temperature": "36.4°C",
+      "ta": "110/65 mmHg",
+      "fc": "60 bpm",
+      "fr": "15/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai été vraiment fatiguée dernièrement"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fatigue",
+          "binaryOnly": false,
+          "details": [
+            "Début [Peut-être depuis 5 mois maintenant]",
+            "Évolution temporelle [Tout le temps]",
+            "Événements précipitants [Eh bien, j'ai donné naissance à mes jumeaux il y a 6 mois]",
+            "Progression [Ça s'aggrave]",
+            "Épisodes antérieurs [Non]",
+            "Facteurs améliorants [Rien. Même dormir n'aide pas]",
+            "Facteurs aggravants [Quand les garçons pleurent beaucoup et se réveillent l'un l'autre tout le temps. Parfois je n'ai pas de sommeil pendant des nuits d'affilée]",
+            "Symptômes associés [J'ai vraiment froid dernièrement. Je dois mettre un pull quand personne d'autre ne le fait]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques post-partum",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Céphalées [Non]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Non]",
+            "Palpitations [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Dyspnée [Non]",
+            "Problèmes urinaires [Non]",
+            "Problèmes intestinaux [Non]",
+            "Troubles du sommeil [Je ne dors pas beaucoup. Je suis debout avec l'un ou l'autre des jumeaux la nuit beaucoup]",
+            "Appétit [Je n'ai pas beaucoup d'appétit]",
+            "Variations pondérales [Je n'ai pas pu perdre mon poids de grossesse encore]",
+            "Infections récentes [Non]",
+            "Vertiges [Parfois je me sens étourdie quand je reste debout longtemps. Pas souvent, cependant]",
+            "Cheveux secs [Peut-être, je n'arrive pas vraiment à utiliser des produits capillaires. Je n'ai pas le temps pour ce genre de choses, avec les jumeaux et tout]",
+            "Allaitement [Je n'ai pas pu allaiter. Je nourris les jumeaux au biberon]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation de l'humeur et symptômes dépressifs",
+          "binaryOnly": false,
+          "details": [
+            "Humeur [Je n'ai pas vraiment été heureuse ces derniers mois. Je suis juste tellement épuisée]",
+            "Perte d'intérêt [Je suis trop fatiguée pour faire les choses amusantes que j'avais l'habitude de faire]",
+            "Culpabilité/faible estime de soi [Je sais que ça devrait être le meilleur moment de ma vie avec les enfants qui viennent de naître, mais je ne suis juste pas heureuse]",
+            "Difficultés de concentration [J'essaie de mon mieux, mais j'oublie de faire des choses simples tout le temps, comme fermer les portes d'armoires ou sortir les poubelles]",
+            "Agitation ou ralentissement psychomoteur [Non]",
+            "Idées suicidaires [Non]",
+            "Soutien social [Je vis avec mon mari et les enfants. Il a été vraiment solidaire mais il est parti toute la journée car il travaille à une heure de chez nous]",
+            "Intention de nuire aux enfants [Non, je ne ferais jamais de mal à mes enfants !]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Chats"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Pour la naissance des jumeaux et quand j'ai eu mon appendice enlevé quand j'étais enfant]",
+            "Antécédents chirurgicaux [J'ai eu mon appendice enlevé quand j'avais environ 10 ans]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ma mère a un trouble bipolaire"
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je suis en congé maternité pour rester à la maison avec les enfants. J'avais prévu de retourner à mon travail d'ingénieure aérospatiale déjà, mais je n'ai juste pas eu l'énergie]",
+            "Alcool [Non, pas depuis que j'ai découvert que j'étais enceinte]",
+            "Drogues récréatives [Non, jamais]",
+            "Tabac [Non]",
+            "Exercice [Non]",
+            "Alimentation [Je n'ai pas le temps de cuisiner ou beaucoup d'appétit, et mon mari est parti la plupart de la journée, donc je grignote juste des petites choses comme des chips et du chocolat]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents gynéco-obstétricaux",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Je n'ai pas vraiment eu de rapports avec mon mari depuis la naissance de nos enfants. Je suis juste trop fatiguée]",
+            "Douleur lors des rapports [Je ne sais pas. Pas avant d'avoir eu les jumeaux]",
+            "Libido [Je n'ai pas vraiment envie d'avoir des rapports]",
+            "Dernières règles [Je n'ai pas eu mes règles depuis avant d'être enceinte]",
+            "Ménarche [Quand j'avais 12 ans]",
+            "Durée des règles [Environ 3-4 jours, avant d'être enceinte]",
+            "Règles régulières [Avant d'être enceinte, oui]",
+            "Grossesses [Seulement avec les jumeaux]",
+            "Antécédents prénataux [Tout était normal. Ils sont juste nés un peu tôt, à 37 semaines et 4 jours]",
+            "Antécédents d'accouchement [C'était un accouchement normal. Les jumeaux étaient encore vraiment petits car ils étaient précoces. Et puis j'ai dû rester un peu plus longtemps car il y a eu beaucoup de saignements après l'accouchement et ils ont dû me donner des transfusions]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Inspection des conjonctives [Recherche de pâleur]",
+            "Examen de la glande thyroïde"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Palpation du pouls radial",
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités et cutané",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des membres inférieurs",
+            "Examen cutané"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation de l'orientation dans le temps, l'espace et les personnes",
+            "Examen ciblé de l'état mental [Affect plat constaté]",
+            "Examen ciblé des mouvements passifs et actifs [Force diminuée des bras et jambes bilatéralement lors de la poussée contre l'examinateur]",
+            "Examen ciblé des réflexes ostéo-tendineux"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Pathologies endocriniennes post-partum",
+                "items": [
+                  {
+                    "text": "Syndrome de Sheehan (hypopituitarisme post-partum)",
+                    "cause": "Arguments POUR:\n\t□ Hémorragie post-partum avec transfusions\n\t□ Symptômes d'hypothyroïdie : fatigue, intolérance au froid, perte d'appétit, absence de perte de poids post-partum\n\t□ Déficit en gonadotrophines : perte de libido, aménorrhée depuis grossesse malgré absence allaitement\n\t□ Déficit en prolactine : échec allaitement\n\t□ Déficit ACTH : faiblesse, TA basse (110/65), FC basse (60)\n\t□ Constellation symptômes suggérant déficits hormonaux multiples\n\t□ Chronologie : 6 mois post-partum",
+                    "test": "→ Dosages hormonaux : cortisol, ACTH, œstradiol, FSH, LH, IGF-1, TSH"
+                  },
+                  {
+                    "text": "Thyroïdite post-partum",
+                    "cause": "Arguments POUR:\n\t□ Fatigue persistante post-partum\n\t□ Intolérance au froid\n\t□ Perte d'appétit\n\t□ Troubles de l'humeur\n\t□ Phase hypothyroïdienne (4-8 mois post-partum)\nArguments CONTRE:\n\t□ Absence perte poids initial\n\t□ Pas de phase hyperthyroïdienne décrite",
+                    "test": "→ TSH, T3, T4 libres, anticorps anti-TPO"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies psychiatriques",
+                "items": [
+                  {
+                    "text": "Dépression post-partum",
+                    "cause": "Arguments POUR:\n\t□ Humeur dépressive depuis accouchement\n\t□ Perte d'intérêt/plaisir (anhédonie)\n\t□ Fatigue/perte d'énergie\n\t□ Sentiments de culpabilité\n\t□ Difficultés concentration\n\t□ Troubles appétit et sommeil\n\t□ Perte libido\n\t□ Antécédents familiaux troubles bipolaires\nArguments CONTRE:\n\t□ Symptômes physiques (aménorrhée, échec allaitement, faiblesse musculaire) suggèrent cause organique",
+                    "test": "→ Échelles EPDS, évaluation psychiatrique"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies hématologiques",
+                "items": [
+                  {
+                    "text": "Anémie ferriprive",
+                    "cause": "Arguments POUR:\n\t□ Hémorragie post-partum avec transfusions\n\t□ Fatigue persistante\n\t□ Difficultés concentration\n\t□ Vertiges orthostatiques\n\t□ Alimentation inadéquate (grignotage)\n\t□ Absence supplémentation fer\n\t□ Pâleur conjonctivale potentielle\nMais : N'explique pas ensemble des symptômes endocriniens",
+                    "test": "→ NFS, fer sérique, ferritine, TIBC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Dosages hormonaux hypophysaires : cortisol sérique, ACTH [tests pour déficit ACTH]",
+            "Dosages hormonaux gonadiques : œstradiol, FSH, LH [tests pour déficit en gonadotrophines]",
+            "IGF-1 [test pour déficit en hormone de croissance]",
+            "TSH [pour tester l'hypothyroïdie]",
+            "Électrolytes sériques, glucose [hypoglycémie et hyponatrémie sont des symptômes du déficit ACTH]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires hématologiques",
+          "binaryOnly": false,
+          "details": [
+            "NFS, VGM, TCMH [hémoglobine basse est un critère d'anémie. Une anémie hypochrome microcytaire suggérerait une anémie ferriprive]",
+            "Fer sérique, ferritine, TIBC [évaluation des réserves en fer]",
+            "Frottis sanguin [morphologie érythrocytaire]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Imagerie spécialisée",
+          "binaryOnly": false,
+          "details": [
+            "IRM cérébrale [modalité d'imagerie de choix dans le syndrome de Sheehan, bien que l'imagerie ne suivrait probablement que les études hormonales si elles sont anormales]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les modifications du mode de vie pour améliorer l'humeur",
+            "Réaction appropriée au défi sur la maternité",
+            "Orientation vers assistance sociale",
+            "Éducation sur l'importance du soutien familial",
+            "Information sur les ressources de soutien post-partum"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement œstro-progestatif si désir fertilité",
+                "content": "• Surveillance étroite pendant traitement\n• Éducation: Port carte urgence médicale × Traitement immédiat\n• Augmentation hydrocortisone si stress/maladie"
+              },
+              {
+                "title": "Si dépression post-partum",
+                "content": "• Psychothérapie cognitive-comportementale: ; ISRS si sévère (sertraline, paroxétine compatibles allaitement)"
+              },
+              {
+                "title": "Thérapie familiale/couples",
+                "content": "• Groupes de soutien mères\n• Surveillance risque suicidaire"
+              },
+              {
+                "title": "Si anémie ferriprive",
+                "content": "• Fer per os: Fumarate ferreux 200 mg × 3/j\n• Supplémentation vitamine C (absorption)\n• Contrôle NFS à 4-6 semaines\n• Fer: IV si intolérance digestive\n• Correction facteurs causaux"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Amélioration nutrition: (alimentation équilibrée)\n• Aide domestique/familiale\n• Repos adapté malgré contraintes jumeaux\n• Soutien psychologique conjoint\n• Surveillance développement enfants"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Culpabilité maternelle",
+          "content": "[Pensez-vous que je suis une mauvaise mère ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Willis, je comprends que vous avez été sous beaucoup de stress et que vous vous sentez épuisée. Je pense que le fait que vous soyez venue me voir aujourd'hui parce que vous êtes préoccupée de bien vous occuper de vos enfants me montre que vous êtes une bonne mère et que vous essayez de vous assurer que vos enfants reçoivent les meilleurs soins possibles. J'aimerais faire quelques tests supplémentaires pour découvrir ce qui cause vos symptômes. Une fois que nous aurons fait cela, nous pourrons nous assurer que vous recevez le meilleur traitement possible. Si vous le souhaitez, je peux aussi vous mettre en contact avec l'une de nos assistantes sociales et vous pourrez lui parler des moyens de vous soutenir, vous et votre famille. Qu'est-ce que vous en pensez ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Axe hypothalamo-hypophysaire hormonal",
+        "description": "L'hypothalamus libère l'hormone de libération des gonadotrophines (GnRH), l'hormone de libération de la corticotrophine (CRH) et l'hormone de libération de la thyrotropine (TRH) dans les vaisseaux portaux de la tige hypophysaire, par lesquels elles atteignent l'hypophyse antérieure. Ces hormones hypothalamiques influencent alors directement la libération d'hormones tropiques de l'hypophyse antérieure dans la circulation périphérique. La GnRH stimule la libération de l'hormone lutéinisante (LH) et de l'hormone folliculo-stimulante (FSH), la CRH stimule l'hormone corticotrope (ACTH), et la TRH stimule l'hormone thyroïdienne stimulante (TSH). La LH et la FSH agissent sur les ovaires/testicules pour produire des hormones sexuelles (œstrogène, progestérone et testostérone) ; l'ACTH stimule la glande surrénale pour produire des glucocorticoïdes (principalement le cortisol) ; et la TSH stimule la glande thyroïde pour produire des hormones thyroïdiennes (T3 et T4). L'hypothalamus influence également la libération d'hormones non-tropiques comme la prolactine et l'hormone de croissance (GH) de l'hypophyse antérieure. La prolactine régule la lactation dans les glandes mammaires ; la GH est stimulée par l'hormone de libération de l'hormone de croissance (GHRH) et stimule à son tour la production du facteur de croissance insulino-mimique 1 (IGF-1) dans le foie. La sécrétion d'hormones est régulée par des boucles de rétroaction, où les hormones produites par les organes cibles peuvent inhiber la libération de leurs hormones de contrôle de l'hypothalamus et de l'hypophyse.",
+        "data": "grilles_generees/html/images/AMBOSS-27-img1-Hypothalamic-pituitary hormone axis.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Diagnostic de l'anémie",
+        "description": "Algorithme diagnostique pour l'évaluation de l'anémie basé sur le VGM et les indices érythrocytaires.",
+        "data": "grilles_generees/html/images/AMBOSS-27-img2-Diagnosis of anemia.jpg",
+        "id": "img2"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Lakeesha Willis",
+      "age": "28 ans",
+      "contexte": "Ingénieure aérospatiale en congé maternité avec fatigue sévère post-hémorragie du post-partum",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai été vraiment fatiguée dernièrement.",
+        "autreChose": "Ça fait 5 mois maintenant."
+      },
+      "consignes": [
+        "Parler lentement et sans beaucoup d'émotion.",
+        "Garder votre visage inexpressif, comme il le serait pendant le sommeil.",
+        "Si l'examinateur teste la force de vos bras ou jambes en vous demandant de pousser contre eux, ne poussez que faiblement.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: IRM, CT) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Pensez-vous que je suis une mauvaise mère ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue persistante depuis 5 mois",
+          "Début après naissance des jumeaux (6 mois)",
+          "Aggravation progressive",
+          "Aucune amélioration malgré le repos",
+          "Intolérance au froid marquée"
+        ],
+        "symptomesAssocies": [
+          "Échec de l'allaitement",
+          "Aménorrhée post-partum persistante",
+          "Perte de libido complète",
+          "Faiblesse musculaire généralisée",
+          "Troubles de concentration et mémoire",
+          "Perte d'appétit et troubles alimentaires",
+          "Symptômes dépressifs secondaires"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Affect plat et expression faciale inexpressive",
+          "Réponses lentes et monotones",
+          "Mentionner la culpabilité de ne pas être heureuse",
+          "Insister sur l'épuisement constant",
+          "Minimiser les symptômes physiques",
+          "Préoccupation principal : bien-être des jumeaux"
+        ],
+        "durantStatus": [
+          "Faiblesse musculaire évidente (test de force)",
+          "Réflexes diminués possibles",
+          "Affect plat persistant",
+          "Réponses lentes aux commandes",
+          "Signes possibles d'hypothyroïdie clinique",
+          "Bradycardie relative (FC 60)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme 28 ans avec syndrome de Sheehan probable : fatigue post-hémorragie du post-partum + déficits hormonaux multiples (ACTH, TSH, gonadotrophines, prolactine). Triade classique : échec allaitement + aménorrhée + symptômes hypothyroïdiens. Facteur déclenchant clair : hémorragie massive nécessitant transfusions → nécrose hypophysaire. Diagnostic différentiel : dépression post-partum (symptômes psychiques) + anémie ferriprive (hémorragie). Urgence relative : risque insuffisance surrénale aiguë.",
+      "rolesInterventions": [
+        "Dosages hormonaux : Cortisol 8h bas (< 100 nmol/L)",
+        "ACTH bas, FSH/LH indétectables, œstradiol bas",
+        "TSH normal-bas, T4 libre basse",
+        "IGF-1 très bas, prolactine indétectable",
+        "NFS : anémie microcytaire (Hb 8.5 g/dL)",
+        "IRM hypophyse : hypophyse atrophique, tige fine"
+      ],
+      "pointsCles": [
+        "Syndrome Sheehan = nécrose hypophysaire post-hémorragie",
+        "Triade classique : agalactie + aménorrhée + hypothyroïdie",
+        "Déficits multiples : ACTH, TSH, FSH/LH, GH, prolactine",
+        "Chronologie : symptômes graduels 6 mois post-partum",
+        "IRM : hypophyse 'vide' ou atrophique",
+        "Traitement : substitution hormonale à vie (hydrocortisone prioritaire)"
+      ],
+      "pieges": [
+        "Attribuer fatigue uniquement à dépression post-partum",
+        "Négliger l'histoire d'hémorragie post-partum",
+        "Oublier l'urgence du déficit en cortisol",
+        "Ne pas rechercher déficits hormonaux multiples",
+        "Confondre avec hypothyroïdie primaire isolée",
+        "Minimiser l'impact psychologique sur la famille"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Syndrome de Sheehan (hypopituitarisme post-partum)"
+        },
+        {
+          "titre": "Syndrome de Sheehan",
+          "contenu": "Nécrose ischémique de l'hypophyse antérieure après hémorragie post-partum :",
+          "points": [
+            "Incidence : 1-2/100 000 accouchements (pays développés)",
+            "Physiopathologie : hypophyse augmentée grossesse + hypovolémie → nécrose",
+            "Déficits hormonaux : ACTH > TSH > FSH/LH > GH > prolactine",
+            "Présentation : aiguë (choc) ou chronique (fatigue progressive)",
+            "Facteurs de risque : hémorragie massive, choc, CID",
+            "Pronostic : bon si diagnostic précoce et traitement adapté"
+          ]
+        },
+        {
+          "titre": "Physiopathologie hypopituitarisme",
+          "contenu": "Cascade de déficits hormonaux par destruction hypophysaire :",
+          "points": [
+            "Hypophyse antérieure : ACTH, TSH, FSH/LH, GH, prolactine",
+            "Hypophyse postérieure : habituellement épargnée (ADH)",
+            "Hiérarchie déficits : GH et prolactine premiers touchés",
+            "ACTH et TSH : déficits plus tardifs mais plus graves",
+            "Gonadotrophines : impact fertilité et libido",
+            "Compensation partielle : rétrocontrôle négatif aboli"
+          ]
+        },
+        {
+          "titre": "Manifestations cliniques Sheehan",
+          "contenu": "Syndrome clinique progressif multi-systémique :",
+          "points": [
+            "Phase aiguë (rare) : choc, collapsus, coma",
+            "Phase chronique : fatigue, faiblesse, intolérance froid",
+            "Déficit ACTH : asthénie, hypotension, hypoglycémies",
+            "Déficit TSH : hypothyroïdie secondaire",
+            "Déficit gonadotrophines : aménorrhée, perte libido, infertilité",
+            "Déficit prolactine : agalactie (signe précoce pathognomonique)",
+            "Déficit GH : moins symptomatique chez adulte"
+          ]
+        },
+        {
+          "titre": "Diagnostic syndrome de Sheehan",
+          "contenu": "Approche combinée clinique, biologique et morphologique :",
+          "points": [
+            "Clinique : triade agalactie + aménorrhée + hypothyroïdie",
+            "Biologie : déficits hormonaux multiples, cortisol 8h bas",
+            "Tests dynamiques : test à l'insuline (gold standard)",
+            "IRM hypophysaire : hypophyse 'vide', atrophie, tige fine",
+            "Critères diagnostiques : contexte + clinique + biologie",
+            "Diagnostic différentiel : adénomes, craniopharyngiome"
+          ]
+        },
+        {
+          "titre": "Dépression post-partum",
+          "contenu": "Trouble mental fréquent période périnatale :",
+          "points": [
+            "Prévalence : 10-15% femmes post-partum",
+            "Facteurs risque : ATCD psychiatriques, stress, isolement",
+            "Symptômes : humeur dépressive, anhédonie, culpabilité",
+            "Diagnostic : critères DSM-5, échelles EPDS",
+            "Complications : négligence enfant, suicide maternel",
+            "Traitement : psychothérapie, ISRS compatibles allaitement"
+          ]
+        },
+        {
+          "titre": "Anémie ferriprive post-partum",
+          "contenu": "Complication fréquente hémorragie obstétricale :",
+          "points": [
+            "Physiopathologie : pertes sanguines + dépletion réserves",
+            "Symptômes : fatigue, dyspnée effort, pâleur, pica",
+            "Biologie : microcytose, hypoferritinémie, ↑ TIBC",
+            "Diagnostic : NFS + bilan martial complet",
+            "Traitement : fer per os 100-200 mg/j élémentaire",
+            "Surveillance : NFS à 4-6 semaines, normalisation 3-6 mois"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Urgence : hydrocortisone 15-20 mg/j (déficit ACTH mortel)",
+        "Lévothyroxine : débuter après cortisol (crise surrénale)",
+        "Dose initiale T4 : 25-50 μg/j, augmentation progressive",
+        "Œstrogènes : si désir grossesse, sinon symptomatique",
+        "GH : rarement indiquée chez adulte",
+        "Éducation : carte urgence, adaptation stress/maladie",
+        "Surveillance : dosages réguliers, adaptation doses",
+        "Grossesse future : surveillance étroite, ajustements hormonaux"
+      ],
+      "examensComplementaires": [
+        "Cortisol 8h : normal > 550 nmol/L, déficit < 100 nmol/L",
+        "ACTH : bas/normal inapproprié si déficit central",
+        "Test stimulation ACTH : réponse diminuée déficit chronique",
+        "TSH, T4 libre : TSH normal-bas + T4 basse = déficit central",
+        "FSH, LH, œstradiol : gonadotrophines basses + œstradiol bas",
+        "IGF-1 : reflet sécrétion GH, bas si déficit",
+        "Prolactine : indétectable = signe pathognomonique",
+        "IRM hypophysaire T1 avec gadolinium : morphologie, nécrose"
+      ]
+    }
+  }
+}

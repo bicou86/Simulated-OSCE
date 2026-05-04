@@ -1,0 +1,417 @@
+{
+  "title": "German-36 - Dyspnée",
+  "context": {
+    "setting": "Cabinet de médecine générale en zone rurale (remplacement)",
+    "patient": "Homme de 56 ans se présente pour dyspnée progressive"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Je suis essoufflé, ça devient de plus en plus difficile"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la dyspnée",
+          "details": [
+            "Effort déclenchant [après 1 étage]",
+            "Orthopnée [dort avec 3 oreillers]",
+            "Dyspnée paroxystique nocturne [doit ouvrir la fenêtre pour dormir]",
+            "Évolution dans le temps"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes respiratoires associés - Toux",
+          "details": [
+            "Type de toux [par crises]",
+            "Caractère [productive]",
+            "Moment privilégié [expectoration matinale]",
+            "Évolution récente"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de l'expectoration",
+          "details": [
+            "Aspect [crachats jaunâtres]",
+            "Quantité",
+            "Odeur",
+            "Hémoptysie [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Évolution temporelle des symptômes",
+          "details": [
+            "Durée totale [depuis 2 ans]",
+            "Saisonnalité [surtout janvier/février/mars]",
+            "Progression",
+            "Périodes d'amélioration"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs déclenchants et aggravants",
+          "details": [
+            "Temps froid [oui]",
+            "Tabagisme passif [oui]",
+            "Après refroidissements [oui]",
+            "Effort physique",
+            "Position couchée"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs d'amélioration",
+          "details": [
+            "Position assise/debout",
+            "Air frais [doit ouvrir la fenêtre]",
+            "Repos",
+            "Médicaments éventuels"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Impact fonctionnel",
+          "details": [
+            "Performance physique [diminution des performances]",
+            "Activités quotidiennes limitées",
+            "Qualité de vie",
+            "Activités abandonnées"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Exacerbations et hospitalisations",
+          "details": [
+            "Épisodes de bronchite",
+            "Prise d'antibiotiques [jamais]",
+            "Hospitalisations [aucune]",
+            "Recours aux urgences"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Activités physiques et loisirs",
+          "details": [
+            "Sport actuel [aucun]",
+            "Activités antérieures [championnats d'échecs]",
+            "Limitations progressives",
+            "Sédentarité"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux personnels",
+          "details": [
+            "Maladies chroniques connues",
+            "Pathologies cardiovasculaires",
+            "Autres problèmes de santé",
+            "Chirurgies antérieures"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "Tabagisme actif [1 paquet/jour depuis 30 ans = 30 paquets-années]",
+            "Tentatives d'arrêt",
+            "Consommation d'alcool",
+            "Toxicomanie [héroïne IV dans le passé, actuellement programme méthadone]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Allergies et traitements actuels",
+          "details": [
+            "Allergies médicamenteuses",
+            "Intolérances",
+            "Médicaments actuels [méthadone]",
+            "Observance thérapeutique"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Cancer bronchique [père décédé à 60 ans]",
+            "Maladies respiratoires familiales",
+            "Pathologies cardiovasculaires",
+            "Allergies familiales"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Contexte social et professionnel",
+          "details": [
+            "Situation familiale [célibataire]",
+            "Activité professionnelle actuelle",
+            "Conditions de vie",
+            "Antécédents judiciaires [5 mois de prison l'année dernière pour infraction à la loi sur les stupéfiants]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension artérielle",
+            "Diabète",
+            "Dyslipidémie",
+            "Antécédents familiaux cardiovasculaires"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Symptômes d'insuffisance cardiaque",
+          "details": [
+            "Œdèmes des membres inférieurs",
+            "Prise de poids récente",
+            "Nycturie",
+            "Fatigue inhabituelle"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée BPCO bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale et pulmonaire",
+          "details": [
+            "État général du patient",
+            "Coloration cutanée",
+            "Morphologie thoracique",
+            "Type de respiration",
+            "Fréquence respiratoire"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation thoracique",
+          "details": [
+            "Vibrations vocales",
+            "Ampliation thoracique",
+            "Points douloureux",
+            "Déformations"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation pulmonaire systématique",
+          "details": [
+            "Auscultation antérieure complète",
+            "Auscultation postérieure complète",
+            "Bruits surajoutés [sibilants/ronchus présents]",
+            "Murmure vésiculaire"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation des muscles respiratoires accessoires",
+          "details": [
+            "Utilisation des scalènes",
+            "Utilisation des sterno-cléido-mastoïdiens",
+            "Respiration abdominale paradoxale",
+            "Tirage"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Recherche de signes d'insuffisance cardiaque droite",
+          "details": [
+            "Œdèmes des membres inférieurs [à vérifier]",
+            "Turgescence jugulaire",
+            "Reflux hépato-jugulaire",
+            "Hépatomégalie"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de cyanose et modifications des extrémités",
+          "details": [
+            "Cyanose péribuccale",
+            "Cyanose des extrémités",
+            "Hippocratisme digital",
+            "Température des extrémités"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Recherche de signes d'HTAP",
+            "Pouls périphériques",
+            "Pression artérielle"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen pneumologique complet et systématique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "BPCO légère (GOLD stade I)",
+            "Justification clinique",
+            "Facteurs de risque identifiés",
+            "Présentation typique"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Bronchite chronique simple",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, spirométrie"
+                  },
+                  {
+                    "text": "Asthme bronchique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Spirométrie avec test de réversibilité, peak flow"
+                  },
+                  {
+                    "text": "Insuffisance cardiaque",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NT-proBNP, échocardiographie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Bronchectasies",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires - Microbiologie et imagerie",
+          "details": [
+            "Culture des crachats (ECBC)",
+            "Radiographie thoracique",
+            "Scanner thoracique si indiqué",
+            "ECG"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires - Fonction respiratoire",
+          "details": [
+            "Spirométrie complète",
+            "Test de réversibilité aux bronchodilatateurs",
+            "Gazométrie artérielle",
+            "Test de marche de 6 minutes"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Interprétation correcte de la spirométrie",
+          "details": [
+            "Classification GOLD stade I",
+            "VEMS < 80% de la valeur prédite",
+            "VEMS/CVF < 70%",
+            "Absence de réversibilité significative"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement médicamenteux proposé",
+          "details": [
+            "Bêta-2 agoniste de courte durée d'action (SABA)",
+            "Anticholinergique de courte durée d'action (SAMA)",
+            "Association éventuelle",
+            "Technique d'inhalation"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Mesures non médicamenteuses",
+          "details": [
+            "Sevrage tabagique (priorité absolue)",
+            "Vaccination antigrippale et antipneumococcique",
+            "Réhabilitation respiratoire",
+            "Activité physique adaptée"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Prise en charge des comorbidités",
+          "details": [
+            "Suivi du programme méthadone",
+            "Dépistage des complications",
+            "Support psychosocial",
+            "Prévention des exacerbations"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Plan de suivi",
+          "details": [
+            "Consultation de contrôle",
+            "Surveillance spirométrique",
+            "Éducation thérapeutique",
+            "Plan d'action en cas d'exacerbation"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge BPCO complète et adaptée au contexte"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Spirométrie",
+        "description": "Résultats spirométriques avec courbes débit-volume et valeurs numériques",
+        "data": "grilles_generees/images/dyspnee-ii-img.jpg"
+      }
+    ]
+  }
+}

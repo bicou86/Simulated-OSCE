@@ -1,0 +1,391 @@
+{
+  "title": "German-77 - Toux",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Maurer, 48 ans, plombier, vous consulte en cabinet pour une toux et de la fièvre.",
+    "vitals": {
+      "ta": "120/80 mmHg",
+      "fc": "72 bpm",
+      "temperature": "39.1°C",
+      "fr": "24/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes principaux",
+          "binaryOnly": true,
+          "patientComment": "Toux et fièvre"
+        },
+        {
+          "id": "a3",
+          "text": "Épisodes antérieurs de symptômes similaires",
+          "binaryOnly": true,
+          "patientComment": "Non, pas de cette nature"
+        },
+        {
+          "id": "a4",
+          "text": "Début et mode d'apparition",
+          "binaryOnly": false,
+          "details": [
+            "Quand [il y a 2 jours]",
+            "Comment [début brutal au travail avec forte fièvre et toux]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Productive ou sèche [productive]",
+            "Couleur des expectorations [jaunâtres et visqueuses]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Hémoptysie",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Dyspnée",
+          "binaryOnly": false,
+          "details": [
+            "Présence [oui]",
+            "Circonstances [en montant les escaliers]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Facteurs aggravants",
+          "binaryOnly": true,
+          "patientComment": "Toute activité"
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs améliorants",
+          "binaryOnly": true,
+          "patientComment": "Dormir"
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse de l'entourage (contagion)",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes associés - Infection ORL",
+          "binaryOnly": false,
+          "details": [
+            "Rhinorrhée [nez a un peu coulé il y a une semaine]",
+            "Mal de gorge [parfois]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes associés - Baisse de performance",
+          "binaryOnly": true,
+          "patientComment": "Oui"
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes associés - Écoulement postnasal",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes associés - Douleurs thoraciques",
+          "binaryOnly": false,
+          "details": [
+            "Présence [oui]",
+            "Caractéristiques [surtout lors de la respiration et de la toux]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Symptômes associés - Symptômes cardiaques",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a16",
+          "text": "Symptômes associés - Sibilances",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a17",
+          "text": "Symptômes associés - Reflux gastro-œsophagien",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a18",
+          "text": "Symptômes associés - Œdèmes des membres inférieurs",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a19",
+          "text": "Symptômes B",
+          "binaryOnly": false,
+          "details": [
+            "Perte de poids [non]",
+            "Fièvre [oui, jusqu'à 39°C avec frissons]",
+            "Sueurs nocturnes [oui, depuis 2 jours]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Exposition (professionnelle, environnementale)",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a21",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Hypertension artérielle [oui]",
+            "Toux chronique [toux matinale depuis environ 4 ans]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Quelque chose pour la tension artérielle"
+        },
+        {
+          "id": "a23",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [25 paquets-années]",
+            "Alcool [2-3 verres de vin par jour]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a25",
+          "text": "Anamnèse familiale",
+          "binaryOnly": true,
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a26",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "État civil [marié]",
+            "Enfants [3]",
+            "Situation professionnelle [stress au travail actuellement]"
+          ]
+        },
+        {
+          "id": "a27",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie respiratoire"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux mesurés",
+          "binaryOnly": true,
+          "patientComment": "TA 120/80 mmHg, FC 72/min, T° 39.1°C, FR 24/min"
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiaque",
+          "binaryOnly": false,
+          "details": [
+            "Palpation du précordium",
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Palpation (frémissement vocal)",
+            "Percussion thoracique",
+            "Auscultation systématique antérieure et postérieure"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Recherche d'hippocratisme digital",
+            "Recherche de cyanose"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Inspection des veines jugulaires",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Recherche d'œdèmes des membres inférieurs",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Examen ORL",
+          "binaryOnly": false,
+          "details": [
+            "Gorge",
+            "Oreilles",
+            "Nez"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Palpation des ganglions lymphatiques",
+          "binaryOnly": true
+        },
+        {
+          "id": "e9",
+          "text": "Examen abdominal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen cardio-pulmonaire complet et systématique bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": true,
+          "patientComment": "Pneumonie communautaire typique"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "binaryOnly": false,
+          "scoringRule": "Au moins 2 DD pertinents = 2 pts",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Exacerbation d'une bronchite chronique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, spirométrie"
+                  },
+                  {
+                    "text": "Abcès pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ US ou CT selon localisation, ponction"
+                  },
+                  {
+                    "text": "Carcinome pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tuberculose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, test IGRA, culture d'expectoration"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique",
+            "Bilan biologique (FSC, marqueurs inflammatoires)",
+            "Hémocultures"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement proposé",
+          "binaryOnly": false,
+          "details": [
+            "Antibiothérapie (amoxicilline, Augmentin ou macrolide)",
+            "Traitement symptomatique (antipyrétique, hydratation)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Évaluation du score CURB-65",
+          "binaryOnly": false,
+          "details": [
+            "C - Confusion [non confus = 0]",
+            "U - Urée > 7 mmol/L [à vérifier]",
+            "R - Fréquence respiratoire ≥ 30/min [24/min = 0]",
+            "B - TA < 90/60 mmHg [120/80 = 0]",
+            "65 - Âge ≥ 65 ans [48 ans = 0]"
+          ],
+          "patientComment": "Score CURB-65 = 0-1 → traitement ambulatoire possible"
+        },
+        {
+          "id": "m6",
+          "text": "Organisation de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Traitement ambulatoire vs hospitalisation",
+            "Arrêt de travail",
+            "Contrôle à prévoir (48-72h)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète et adaptée à la sévérité"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

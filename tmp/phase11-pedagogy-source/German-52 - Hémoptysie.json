@@ -1,0 +1,329 @@
+{
+  "title": "German-52 - Hémoptysie",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "M. Schmid, 62 ans, ancien fumeur, se présente aux urgences pour toux avec crachats sanglants",
+    "vitals": {
+      "ta": "145/90 mmHg",
+      "fc": "92 bpm",
+      "fr": "22/min",
+      "temperature": "37,8°C",
+      "saturation": "93% en air ambiant"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "patientComment": "Toux avec crachats sanglants depuis 3 jours"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques de l'hémoptysie",
+          "details": [
+            "Début et évolution [depuis 3 jours, progressif]",
+            "Quantité de sang [environ 2-3 cuillères à soupe par jour]",
+            "Aspect [sang rouge vif mélangé aux crachats, parfois mousseux]",
+            "Fréquence des épisodes [plusieurs fois par jour, surtout le matin]",
+            "Facteurs déclenchants [toux, effort]"
+          ],
+          "patientComment": "Détails sur l'hémoptysie"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes respiratoires associés",
+          "details": [
+            "Toux [productive depuis 2 mois, aggravation récente]",
+            "Dyspnée [oui, à l'effort modéré, aggravée récemment]",
+            "Douleurs thoraciques [légère oppression thoracique]",
+            "Sifflements respiratoires [parfois]",
+            "Expectorations [purulentes jaunâtres avant l'hémoptysie]"
+          ],
+          "patientComment": "Symptômes respiratoires"
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre/frissons [fébricule depuis 1 semaine]",
+            "Sueurs nocturnes [oui, doit changer de pyjama]",
+            "Perte de poids [5 kg en 2 mois]",
+            "Asthénie [fatigue importante]",
+            "Anorexie [perte d'appétit marquée]"
+          ],
+          "patientComment": "Altération de l'état général"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "details": [
+            "BPCO connue [oui, diagnostiquée il y a 5 ans]",
+            "Hypertension artérielle [oui, traitée]",
+            "Tuberculose antérieure [non]",
+            "Cancers antérieurs [non]",
+            "Maladies cardiaques [non]"
+          ],
+          "patientComment": "Antécédents pathologiques"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes toxiques",
+          "details": [
+            "Tabagisme [40 paquets-années (2 paquets/jour pendant 20 ans)]",
+            "Sevrage tabagique [arrêt il y a 1 an]",
+            "Alcool [1-2 verres de vin par semaine]",
+            "Autres substances [non]"
+          ],
+          "patientComment": "Facteurs de risque"
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments actuels",
+          "details": [
+            "Bronchodilatateurs [Spiriva quotidien]",
+            "Antihypertenseurs [Lisinopril 10mg/jour]",
+            "Anticoagulants/antiagrégants [non]",
+            "Autres traitements [aucun]"
+          ],
+          "patientComment": "Traitements en cours"
+        },
+        {
+          "id": "a9",
+          "text": "Exposition et voyages",
+          "details": [
+            "Exposition professionnelle [menuisier pendant 30 ans, poussière de bois]",
+            "Voyages récents [non]",
+            "Contact tuberculeux [non]",
+            "Animaux domestiques [un chat]"
+          ],
+          "patientComment": "Facteurs environnementaux"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Cancer pulmonaire familial [père décédé d'un cancer du poumon à 65 ans]",
+            "Tuberculose familiale [non]",
+            "Autres cancers [mère cancer du sein]"
+          ],
+          "patientComment": "Histoire familiale"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse sociale",
+          "patientComment": "Menuisier retraité, marié, 3 enfants adultes, vit avec sa femme"
+        },
+        {
+          "id": "a12",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "État général et signes vitaux",
+          "details": [
+            "État général altéré",
+            "Coloration cutanéo-muqueuse (pâleur, cyanose)",
+            "Signes de détresse respiratoire",
+            "Hippocratisme digital"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen pulmonaire complet",
+          "details": [
+            "Inspection du thorax (symétrie, ampliation)",
+            "Palpation (vibrations vocales)",
+            "Percussion (matité)",
+            "Auscultation (murmure vésiculaire, bruits surajoutés)"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque",
+            "Recherche de signes d'insuffisance cardiaque droite",
+            "Œdèmes des membres inférieurs",
+            "Pouls périphériques"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ORL",
+          "details": [
+            "Inspection de la cavité buccale",
+            "Examen du pharynx",
+            "Recherche d'épistaxis",
+            "Examen des sinus"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation ganglionnaire systématique",
+          "details": [
+            "Ganglions cervicaux",
+            "Ganglions sus-claviculaires (Troisier)",
+            "Ganglions axillaires",
+            "Ganglions inguinaux"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes de gravité",
+          "details": [
+            "Instabilité hémodynamique",
+            "Détresse respiratoire aiguë",
+            "Signes de choc"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics à évoquer en priorité",
+          "details": [
+            "Cancer broncho-pulmonaire (forte suspicion)",
+            "Exacerbation de BPCO avec surinfection",
+            "Tuberculose pulmonaire",
+            "Embolie pulmonaire"
+          ],
+          "scoringRule": "Au moins 3 diagnostics = 2 pts"
+        },
+        {
+          "id": "m2",
+          "text": "Autres diagnostics différentiels",
+          "details": [
+            "Bronchiectasies",
+            "Pneumonie bactérienne",
+            "Aspergillose",
+            "Syndrome de Goodpasture",
+            "Vascularite (Wegener)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques urgents",
+          "details": [
+            "NFS, plaquettes",
+            "Coagulation (TP, TCA)",
+            "Gazométrie artérielle",
+            "CRP, VS",
+            "Ionogramme, créatinine"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Radiographie thoracique face + profil",
+            "CT thoracique avec contraste",
+            "Angio-CT si suspicion d'EP"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens microbiologiques",
+          "details": [
+            "Examen direct et culture des expectorations",
+            "Recherche de BK (3 échantillons)",
+            "Recherche de cellules malignes",
+            "Hémocultures si fièvre"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Explorations spécialisées",
+          "details": [
+            "Bronchoscopie avec LBA",
+            "Biopsies bronchiques",
+            "Consultation pneumologique urgente"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Prise en charge thérapeutique immédiate",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Repos au lit, position demi-assise\n• Oxygénothérapie si saturation < 94%\n• Voie veineuse périphérique\n• Surveillance continue (scope, saturation)"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Antitussifs si toux irritative importante\n• Anxiolytique si anxiété majeure\n• Éviter les anticoagulants"
+              },
+              {
+                "title": "Traitement étiologique selon résultats",
+                "content": "• Antibiothérapie si surinfection\n• Antituberculeux si BK+\n• Orientation oncologique si cancer confirmé"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m8",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "Hémoptysie abondante (> 100ml/24h)",
+            "Détresse respiratoire",
+            "Instabilité hémodynamique",
+            "Forte suspicion de cancer",
+            "Contexte social défavorable"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Information et soutien au patient",
+          "details": [
+            "Expliquer la démarche diagnostique",
+            "Rassurer sans minimiser",
+            "Proposer un soutien psychologique",
+            "Impliquer la famille"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

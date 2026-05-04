@@ -1,0 +1,337 @@
+{
+  "title": "German-21 - Douleur abdominale",
+  "context": {
+    "setting": "Service d'urgence d'un hôpital régional",
+    "patient": "Femme de 57 ans se présente avec des douleurs épigastriques."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Localisation de la douleur",
+          "patientComment": "Directement sous l'appendice xiphoïde"
+        },
+        {
+          "id": "a3",
+          "text": "Caractère de la douleur",
+          "patientComment": "Brûlures"
+        },
+        {
+          "id": "a4",
+          "text": "Fréquence",
+          "patientComment": "Presque quotidiennement, aussi la nuit, aussi à jeun"
+        },
+        {
+          "id": "a5",
+          "text": "Durée et évolution",
+          "details": [
+            "Durée totale [Depuis 2 ans]",
+            "Durée des épisodes [Minutes à heures]",
+            "Évolution [Directement en lien avec stress psychique et professionnel]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Événements récents",
+          "patientComment": "La semaine dernière en courant pour attraper le train, éructations acides"
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs d'influence et dépendance alimentaire",
+          "details": [
+            "Facteurs soulageants [Consommation de lait et prise d'antiacides]",
+            "Facteurs déclenchants [Oignons frits, chocolat, vin rouge]",
+            "Relation temporelle avec les repas [Pas directement après la prise alimentaire]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Réveil matinal avec goût acide",
+          "patientComment": "Oui"
+        },
+        {
+          "id": "a9",
+          "text": "Dysphagie ou odynophagie",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Appétit",
+          "patientComment": "Pas de changement"
+        },
+        {
+          "id": "a11",
+          "text": "Changements de poids et symptômes B",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes digestifs associés",
+          "details": [
+            "Nausées [Non]",
+            "Vomissements [Non]",
+            "Habitudes intestinales [Rarement diarrhées, variant selon habitudes alimentaires]",
+            "Ictère [Jamais remarqué]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes alimentaires",
+          "patientComment": "5 tasses de café par jour, déjeuner sauté, grand repas du soir"
+        },
+        {
+          "id": "a14",
+          "text": "Médication actuelle",
+          "patientComment": "Antiacides, agissent à peine récemment"
+        },
+        {
+          "id": "a15",
+          "text": "Consommation de substances",
+          "details": [
+            "Alcool [Connaisseur de whisky]",
+            "Tabac [Fume rarement la pipe]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Allergies",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a17",
+          "text": "Activités sportives et loisirs",
+          "patientComment": "Jogging 2 fois par semaine"
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse systémique",
+          "details": [
+            "De la tête aux pieds incluant fièvre et symptômes B [Aucun résultat]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse familiale",
+          "details": [
+            "Cancers [Négatif]",
+            "Maladies cardiovasculaires [Négatif]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse sociale",
+          "patientComment": "A un chien, sacristain divorcé"
+        },
+        {
+          "id": "a21",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie œsophagienne"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection",
+          "details": [
+            "État général",
+            "Recherche de signes d'alarme"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation",
+          "details": [
+            "Auscultation abdominale",
+            "Auscultation cardio-pulmonaire"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Percussion",
+          "details": [
+            "Percussion abdominale"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation abdominale",
+          "details": [
+            "Palpation superficielle et profonde",
+            "Recherche de masse",
+            "Recherche de douleur épigastrique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation du foie",
+          "details": [
+            "Taille et consistance du foie"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation de la rate",
+          "details": [
+            "Recherche de splénomégalie"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation des reins",
+          "details": [
+            "Recherche de douleur rénale"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Inspection buccale",
+          "details": [
+            "Recherche de signes d'œsophagite",
+            "État dentaire"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen abdominal complet avec recherche appropriée de signes de RGO"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "Reflux gastro-œsophagien (RGO)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 2 diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Dyspepsie fonctionnelle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hernie hiatale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen clinique, US si doute"
+                  },
+                  {
+                    "text": "Œsophagite de reflux",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie, gastroscopie"
+                  },
+                  {
+                    "text": "Cancer de l'œsophage",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Œsophage de Barrett",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Gastrite chronique [Maladie de Crohn gastrique, maladie de Ménétrier]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Ulcère gastrique ou duodénal",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Gastroscopie, test Helicobacter pylori"
+                  },
+                  {
+                    "text": "Cancer gastrique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Sténose du pylore",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Spasme du pylore",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Gastroscopie",
+            "PH-métrie œsophagienne",
+            "Test à l'uréase avec biopsie [Si suspicion d'Helicobacter pylori]",
+            "Analyses sanguines [Gastrine, vitamine B12, auto-anticorps]",
+            "Radiographie ou CT [En cas de suspicion de hernie para-œsophagienne]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "details": [
+            "Mesures hygiéno-diététiques :",
+            "- Lit : surélévation de la tête de lit",
+            "- Restriction de la consommation de café et d'alcool",
+            "- Éviter les aliments acides",
+            "- Éviter les repas tardifs",
+            "- Perte de poids",
+            "- Éviter les médicaments diminuant la pression du sphincter [Anticholinergiques, spasmolytiques, dérivés nitrés, antagonistes calciques]",
+            "Traitement médicamenteux :",
+            "- Inhibiteurs de la pompe à protons (IPP)",
+            "- Éventuellement antagonistes des récepteurs H2",
+            "En cas de résistance thérapeutique :",
+            "- Fundoplicature",
+            "En cas d'œsophage de Barrett :",
+            "- Contrôles endoscopiques réguliers"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec approche thérapeutique progressive et adaptée"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

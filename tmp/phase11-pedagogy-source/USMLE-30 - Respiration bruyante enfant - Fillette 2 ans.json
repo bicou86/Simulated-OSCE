@@ -1,0 +1,481 @@
+{
+  "title": "USMLE-30 - Respiration bruyante enfant - Fillette 2 ans",
+  "context": {
+    "setting": "Consultation téléphonique au cabinet",
+    "patient": "La mère d'Angelina Harvey, une fillette de 2 ans, appelle le cabinet en se plaignant que son enfant a une respiration bruyante et étrange",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon bébé a une respiration bruyante et étrange"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du problème respiratoire",
+          "binaryOnly": false,
+          "details": [
+            "Début [Cela a commencé soudainement il y a environ une heure]",
+            "Progression [Cela s'aggrave]",
+            "Activité précédant l'événement [Elle jouait avec des jouets]",
+            "Description du bruit [C'est un bruit bruyant, comme si elle avait avalé une machine à laver]",
+            "Consistance [Le bruit est toujours le même]",
+            "Phase respiratoire [À l'inhalation]",
+            "Cause identifiable [Rien]",
+            "Facteurs aggravants/atténuants [Aucun] (alimentation, pleurs, position allongée, sommeil)"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Toux [Oui, il y a un peu de toux, mais elle était déjà présente auparavant]",
+            "Caractère de la toux [Non aboyante, non productive, sans sang]",
+            "Fièvre [Elle a eu une légère fièvre la semaine dernière (38.4°C max), mais aujourd'hui sa température est normale]",
+            "Pleurs [Oui]",
+            "Qualité des pleurs [Faibles avec des moments d'étouffement occasionnels]",
+            "Respiration rapide [Je ne peux pas dire, mais on dirait qu'elle essaie de respirer fort]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Autres symptômes",
+          "binaryOnly": false,
+          "details": [
+            "Nausées/vomissements [Non]",
+            "Bavage [Non]",
+            "Cyanose (bleuissement) [Non]",
+            "Difficulté à avaler [Non]",
+            "Enrouement de la voix [Parfois]",
+            "Ronflements nocturnes [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents similaires",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs environnementaux",
+          "binaryOnly": false,
+          "details": [
+            "Antécédents d'allergies familiales [Non]",
+            "Stress psychologique ou social récent [Non]",
+            "Fréquentation d'une crèche [Oui]",
+            "Contacts malades à la crèche [Pas à ma connaissance]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents de santé",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour]",
+            "Dernier bilan de santé [Il y a deux semaines, et tout était normal]",
+            "Croissance et développement [Tout était normal. Elle a atteint tous les jalons en temps voulu]",
+            "Antécédents de naissance [Accouchement vaginal spontané sans complications]",
+            "Habitudes alimentaires [Normales]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Préoccupation de transport",
+          "binaryOnly": true,
+          "patientComment": "Je ne veux pas venir au cabinet à moins que ce ne soit absolument nécessaire, car je n'ai pas de moyen de transport"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen physique non réalisable",
+          "binaryOnly": true,
+          "patientComment": "Consultation téléphonique - examen physique impossible"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Urgences respiratoires pédiatriques",
+                "items": [
+                  {
+                    "text": "Aspiration d'un corps étranger",
+                    "cause": "Arguments POUR:\n\t□ Début soudain pendant qu'elle jouait avec des jouets\n\t□ Respiration bruyante inspiratoire (stridor)\n\t□ Aggravation progressive\n\t□ Âge à risque (2 ans)\n\t□ Bruit constant comme une \"machine à laver\"",
+                    "test": "→ Rx thoracique face/profil, bronchoscopie urgente"
+                  },
+                  {
+                    "text": "Faux-croup (laryngite striduleuse)",
+                    "cause": "Arguments POUR:\n\t□ Respiration bruyante inspiratoire\n\t□ Difficulté respiratoire\n\t□ Fièvre la semaine passée (infection virale)\n\t□ Âge compatible (6 mois - 3 ans)\nArguments CONTRE:\n\t□ Pas de toux aboyante caractéristique\n\t□ Début brutal (habituellement progressif)",
+                    "test": "→ Rx cervicale (signe du clocher)"
+                  },
+                  {
+                    "text": "Épiglottite",
+                    "cause": "Arguments POUR:\n\t□ Enrouement occasionnel\n\t□ Étouffement occasionnel\n\t□ Stridor inspiratoire\nArguments CONTRE:\n\t□ Vaccinations à jour (Hib)\n\t□ Pas de bavage\n\t□ Pas de position antalgique",
+                    "test": "→ Rx cervicale (signe du pouce), laryngoscopie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Angioœdème",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédents allergiques\n\t□ Pas d'œdème facial décrit\n\t□ Début pendant le jeu (pas après ingestion)",
+                    "test": "→ Examen clinique urgent"
+                  },
+                  {
+                    "text": "Abcès rétro-pharyngé",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de bavage\n\t□ Présence de stridor (inhabituel)\n\t□ Pas de voix étouffée",
+                    "test": "→ Rx cervicale latérale"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Évaluation de l'urgence",
+          "binaryOnly": false,
+          "details": [
+            "Situation nécessitant une attention médicale urgente",
+            "Risque d'obstruction complète des voies aériennes",
+            "Transport par ambulance recommandé (144)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Instructions immédiates à la mère",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Consignes de sécurité",
+                "content": "• NE PAS mettre le doigt dans la bouche\n• NE PAS tenter d'extraire un corps étranger\n• Risque d'enfoncer davantage l'objet"
+              },
+              {
+                "title": "Surveillance",
+                "content": "• Observer la respiration de l'enfant\n• Noter tout changement de couleur (cyanose)\n• Surveiller le niveau de conscience"
+              },
+              {
+                "title": "Actions d'urgence",
+                "content": "• Appeler le 144 immédiatement\n• Si détresse respiratoire sévère ou étouffement:\n- Manœuvre de Heimlich adaptée (5 tapes dans le dos + 5 compressions abdominales)\n• Garder l'enfant calme et en position assise"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Plan d'examens à l'arrivée à l'hôpital",
+          "binaryOnly": false,
+          "details": [
+            "Gazométrie artérielle",
+            "Rx thoracique face/profil",
+            "Rx cervicale face/profil",
+            "FSC avec formule leucocytaire",
+            "Préparation pour bronchoscopie si corps étranger"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme absolus",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Appeler immédiatement le 144 si",
+            "items": [
+              {
+                "text": "Cyanose (lèvres ou doigts bleus)",
+                "description": "→ Hypoxie sévère, urgence vitale"
+              },
+              {
+                "text": "Tirage intercostal sévère",
+                "description": "→ Détresse respiratoire majeure"
+              },
+              {
+                "text": "Altération de la conscience",
+                "description": "→ Hypoxie cérébrale"
+              },
+              {
+                "text": "Impossibilité de pleurer ou parler",
+                "description": "→ Obstruction sévère des voies aériennes"
+              },
+              {
+                "text": "Bavage soudain avec position assise penchée",
+                "description": "→ Possible épiglottite"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Harvey, d'après les informations que vous m'avez fournies, j'envisage la possibilité que votre fille ait avalé un corps étranger. Cependant, la possibilité qu'une infection soit à l'origine de son problème doit également être écartée. Pour le moment, je pense que votre fille a besoin d'une attention médicale d'urgence. Puisque vous n'avez pas accès à un moyen de transport, je vous suggère fortement d'appeler le 144 immédiatement et de l'amener au centre médical. En attendant, je vous recommande d'éviter de mettre un doigt dans sa bouche ou de tenter d'extraire un éventuel corps étranger, car cela pourrait le faire s'enfoncer plus profondément. Si vous constatez une détresse respiratoire importante ou un étouffement, effectuez la manœuvre de Heimlich en exerçant une pression soudaine sur son ventre. J'espère que vous avez compris ce que nous avons discuté. Avez-vous des questions ou des préoccupations ? Très bien, je vous verrai dès que vous arriverez à l'hôpital."
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Pouvez-vous m'expliquer exactement ce qui se passe avec mon enfant et ce qui peut être fait pour y remédier ?] [Comment vais-je pouvoir trouver un moyen de transport pour venir au cabinet ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Il m'est difficile de vous donner une réponse précise par téléphone. J'aimerais que vous ameniez votre enfant ici pour que je puisse l'examiner et peut-être effectuer des tests. Après cela, je pourrai vous donner une évaluation plus précise de son état. Nous organiserons un entretien avec l'assistante sociale pour discuter de la manière d'organiser le transport jusqu'au cabinet."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (patient simulé)",
+      "nom": "Mère d'Angelina Harvey",
+      "age": "Mère d'une fillette de 2 ans",
+      "contexte": "Mère inquiète appelant pour sa fille avec respiration bruyante",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon bébé a une respiration très bizarre et bruyante, docteur.",
+        "autreChose": "Ça m'inquiète beaucoup mais je n'ai pas de voiture pour venir."
+      },
+      "consignes": [
+        "Montrez de l'inquiétude pour la santé de votre enfant.",
+        "Ajoutez que vous ne voulez pas venir au cabinet à moins que ce ne soit absolument nécessaire, car vous n'avez pas de moyen de transport.",
+        "Parlez avec anxiété mais restez cohérente.",
+        "Insistez sur le bruit étrange \"comme une machine à laver\".",
+        "Mentionnez qu'elle jouait avec ses jouets quand c'est arrivé."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Respiration bruyante et étrange",
+          "Début soudain il y a 1 heure",
+          "S'aggrave progressivement",
+          "Jouait avec des jouets",
+          "Bruit constant à l'inspiration",
+          "Comme une machine à laver"
+        ],
+        "symptomesAssocies": [
+          "Toux légère préexistante",
+          "Fièvre la semaine dernière (38.4°C)",
+          "Pleurs faibles avec étouffements",
+          "Respiration difficile",
+          "Enrouement occasionnel"
+        ],
+        "reponseAuxSymptomes": [
+          "Très inquiète",
+          "Ne sait pas quoi faire",
+          "Hésite à appeler l'ambulance"
+        ],
+        "representationMaladie": [
+          "Peur qu'elle ait avalé quelque chose",
+          "Ou que ce soit une infection grave"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Enfant habituellement en bonne santé",
+          "Croissance normale"
+        ],
+        "respiratoire": [
+          "Pas d'asthme connu",
+          "Toux légère récente"
+        ],
+        "infectieux": [
+          "Fièvre la semaine dernière",
+          "Va à la crèche"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "vaccinations": "Toutes à jour",
+        "alimentation": "Normale",
+        "developpement": "Normal, tous les jalons atteints"
+      },
+      "histoireMedicale": [
+        "Née à terme sans complications",
+        "Pas d'hospitalisations",
+        "Dernier contrôle il y a 2 semaines normal"
+      ],
+      "simulation": {
+        "durantAppel": [
+          "Voix anxieuse mais claire",
+          "Réponses précises aux questions",
+          "Insister sur le manque de transport",
+          "Demander si c'est vraiment urgent"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Fillette de 2 ans présentant un stridor d'apparition brutale pendant qu'elle jouait avec des jouets. Respiration bruyante inspiratoire progressive décrite comme \"machine à laver\". Pas de signes de détresse sévère pour l'instant mais aggravation progressive. Contexte de toux légère et fièvre récente. Vaccinations à jour. Forte suspicion d'aspiration de corps étranger vu le contexte (jeu avec jouets) et début brutal.",
+      "rolesInterventions": [
+        "Consultation téléphonique uniquement",
+        "Pas d'examen physique possible",
+        "Évaluer l'urgence par l'anamnèse",
+        "Donner des consignes claires à la mère",
+        "Organiser le transport d'urgence"
+      ],
+      "pointsCles": [
+        "Stridor = urgence respiratoire jusqu'à preuve du contraire",
+        "Début brutal pendant jeu = corps étranger probable",
+        "Ne jamais tenter d'extraction aveugle (risque d'enfoncement)",
+        "Transport médicalisé urgent nécessaire",
+        "Préparation pour bronchoscopie probable"
+      ],
+      "pieges": [
+        "Minimiser la gravité car l'enfant respire encore",
+        "Conseiller d'attendre ou de surveiller",
+        "Oublier de donner les consignes de sécurité",
+        "Ne pas organiser le transport d'urgence",
+        "Tenter de rassurer excessivement"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Suspicion forte d'aspiration de corps étranger avec obstruction partielle des voies aériennes supérieures"
+        },
+        {
+          "titre": "Aspiration de corps étranger chez l'enfant",
+          "contenu": "Urgence pédiatrique fréquente et potentiellement mortelle :",
+          "points": [
+            "Pic d'incidence : 1-3 ans (phase orale)",
+            "Objets fréquents : jouets petits, pièces, cacahuètes",
+            "Localisation : 80% bronche droite (plus verticale)",
+            "Présentation variable selon niveau d'obstruction",
+            "Triade classique : toux, wheezing, diminution MV unilatérale"
+          ]
+        },
+        {
+          "titre": "Signes cliniques selon la localisation",
+          "contenu": "La présentation dépend du site d'obstruction :",
+          "points": [
+            "Larynx/trachée : stridor, détresse immédiate",
+            "Bronche principale : wheezing unilatéral, toux",
+            "Bronche segmentaire : peu de signes initiaux",
+            "Obstruction complète : aphonie, cyanose rapide",
+            "Obstruction partielle : stridor, toux, voix conservée"
+          ]
+        },
+        {
+          "titre": "Prise en charge d'urgence",
+          "contenu": "Actions immédiates selon la sévérité :",
+          "points": [
+            "Obstruction partielle + toux efficace : position assise, O2, transport",
+            "Obstruction partielle + toux inefficace : 5 tapes dos + 5 compressions",
+            "Obstruction complète conscient : manœuvre de Heimlich",
+            "Obstruction complète inconscient : RCP",
+            "JAMAIS extraction digitale aveugle"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel du stridor aigu",
+          "contenu": "Éliminer les autres urgences respiratoires :",
+          "points": [
+            "Faux-croup : progressif, toux aboyante, contexte viral",
+            "Épiglottite : bavage, position tripode, toxique",
+            "Angioœdème : œdème facial, contexte allergique",
+            "Abcès rétro-pharyngé : fièvre, torticolis, bavage",
+            "Trachéomalacie : stridor chronique, pas aigu"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires",
+          "contenu": "Approche diagnostique structurée :",
+          "points": [
+            "Rx thorax I/E : piégeage, atélectasie, CE radio-opaque",
+            "Rx cervicale : évaluer trachée, tissus mous",
+            "Bronchoscopie : gold standard diagnostic et thérapeutique",
+            "CT thorax : si doute, CE radiotransparent",
+            "Jamais retarder la prise en charge pour imagerie"
+          ]
+        },
+        {
+          "titre": "Gestion téléphonique des urgences pédiatriques",
+          "contenu": "Principes de triage téléphonique :",
+          "points": [
+            "Évaluer rapidement la gravité par questions ciblées",
+            "Identifier les red flags nécessitant transport immédiat",
+            "Donner consignes claires et simples à répéter",
+            "Organiser transport adapté (ambulance si urgent)",
+            "Prévoir accueil aux urgences (prévenir équipe)"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Fillette de 2 ans avec stridor brutal survenu en jouant, très évocateur d'aspiration de corps étranger. L'absence de détresse sévère immédiate suggère une obstruction partielle mais le risque d'aggravation brutale impose un transport médicalisé urgent. La bronchoscopie sera probablement nécessaire pour diagnostic et extraction."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Stridor aigu = urgence respiratoire toujours",
+            "Contexte de jeu + début brutal = corps étranger probable",
+            "Ne jamais minimiser même si l'enfant \"respire encore\"",
+            "Transport médicalisé urgent systématique",
+            "Préparation mentale des parents aux gestes d'urgence",
+            "Bronchoscopie souvent nécessaire pour diagnostic définitif"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Manœuvre de Heimlich adaptée < 1 an : 5 tapes dos + 5 compressions thoraciques",
+        "Manœuvre de Heimlich > 1 an : 5 tapes dos + 5 compressions abdominales",
+        "O2 haut débit si SpO2 < 94%",
+        "Éviter sédation avant sécurisation voies aériennes"
+      ],
+      "examensComplementaires": [
+        "Rx thorax I/E : recherche piégeage unilatéral",
+        "Bronchoscopie rigide : permet extraction sous contrôle",
+        "Pas de fibroscopie souple (risque de pousser le CE)",
+        "Matériel d'intubation difficile toujours prêt"
+      ]
+    }
+  }
+}

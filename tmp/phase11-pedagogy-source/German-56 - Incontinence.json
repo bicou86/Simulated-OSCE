@@ -1,0 +1,737 @@
+{
+  "title": "German-56 - Incontinence",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Rohner, 60 ans, se présente en consultation pour une incontinence urinaire",
+    "vitals": {
+      "imc": "30 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "binaryOnly": false,
+          "details": [
+            "Incontinence [urinaire]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution temporelle",
+          "binaryOnly": false,
+          "details": [
+            "Début [depuis 7 mois]",
+            "Impact [très gênant pour elle]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Circonstances déclenchantes et progression",
+          "binaryOnly": false,
+          "details": [
+            "Au début [seulement lors de rire, éternuement, toux]",
+            "Actuellement [aussi en montant les escaliers]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Urgence mictionnelle",
+          "binaryOnly": false,
+          "details": [
+            "Besoin impérieux d'uriner [oui]",
+            "Atteint les toilettes à temps [oui]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Fréquence mictionnelle",
+          "binaryOnly": false,
+          "patientComment": "Environ 8 fois par jour"
+        },
+        {
+          "id": "a7",
+          "text": "Sensation de vidange vésicale complète",
+          "binaryOnly": false,
+          "patientComment": "Oui, sensation de vessie vide après miction"
+        },
+        {
+          "id": "a8",
+          "text": "Volume d'urine perdu",
+          "binaryOnly": false,
+          "patientComment": "Seulement un peu"
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes mictionnels associés",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs mictionnelles [non]",
+            "Brûlures mictionnelles [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Apports hydriques quotidiens",
+          "binaryOnly": false,
+          "patientComment": "1,5 à 2 litres par jour"
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes nocturnes",
+          "binaryOnly": false,
+          "details": [
+            "Nycturie [non]",
+            "Incontinence nocturne [non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents infectieux urinaires",
+          "binaryOnly": false,
+          "patientComment": "Oui, souvent en tant que jeune femme"
+        },
+        {
+          "id": "a13",
+          "text": "Sensation de prolapsus",
+          "binaryOnly": false,
+          "details": [
+            "Sensation de descente d'organes [non]",
+            "Sensation de pesanteur pelvienne [non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Statut hormonal",
+          "binaryOnly": false,
+          "details": [
+            "Ménopause [oui]",
+            "Depuis [hystérectomie après le dernier accouchement]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Impact sur la qualité de vie",
+          "binaryOnly": false,
+          "patientComment": "Oui, altération significative"
+        },
+        {
+          "id": "a16",
+          "text": "Symptômes généraux (symptômes B)",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Sueurs nocturnes [non]",
+            "Perte de poids non intentionnelle [non]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "État général et performance",
+          "binaryOnly": false,
+          "details": [
+            "Fatigue [non]",
+            "État général [se sent sinon assez bien]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Symptômes digestifs",
+          "binaryOnly": false,
+          "details": [
+            "Appétit [normal]",
+            "Transit intestinal [normal]",
+            "Constipation [non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Traitements déjà entrepris",
+          "binaryOnly": false,
+          "patientComment": "Rééducation périnéale avec instructions trouvées sur Internet"
+        },
+        {
+          "id": "a20",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Diabète de type 2 [depuis 8 ans]",
+            "Autres pathologies [aucune]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "patientComment": "Hystérectomie à 40 ans après le dernier enfant"
+        },
+        {
+          "id": "a22",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "patientComment": "Metformine"
+        },
+        {
+          "id": "a23",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [1 paquet par jour depuis 30 ans]",
+            "Alcool [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "patientComment": "Aucune allergie connue"
+        },
+        {
+          "id": "a25",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Cancer du sein [mère décédée]",
+            "Autres antécédents familiaux pertinents [aucun]"
+          ]
+        },
+        {
+          "id": "a26",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Situation familiale [mariée, 3 enfants]",
+            "Profession [femme au foyer]",
+            "Activité physique [peu d'activité physique]"
+          ]
+        },
+        {
+          "id": "a27",
+          "text": "Anamnèse obstétricale",
+          "binaryOnly": false,
+          "details": [
+            "Nombre d'accouchements [3]",
+            "Mode d'accouchement [à préciser]",
+            "Poids des enfants à la naissance [à préciser]",
+            "Complications obstétricales [à préciser]"
+          ]
+        },
+        {
+          "id": "a28",
+          "text": "Questions finales et synthèse",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avons-nous oublié quelque chose d'important ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a29",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen abdominal complet",
+          "binaryOnly": false,
+          "details": [
+            "Inspection (cicatrices, distension)",
+            "Auscultation (bruits intestinaux)",
+            "Palpation superficielle et profonde",
+            "Palpation vésicale (globe vésical)",
+            "Recherche d'une masse abdominale"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des fosses lombaires",
+          "binaryOnly": false,
+          "details": [
+            "Palpation bimanuelle des reins",
+            "Recherche de douleur à l'ébranlement"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen des aires ganglionnaires",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des ganglions inguinaux"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen périnéal externe",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la vulve au repos",
+            "Test de toux (fuite d'urine visible)",
+            "Évaluation du tonus périnéal"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen gynécologique ou orientation",
+          "binaryOnly": true,
+          "patientComment": "Nécessite un examen gynécologique complet - orientation vers gynécologue si non réalisable"
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique ciblé",
+          "binaryOnly": false,
+          "details": [
+            "Sensibilité périnéale",
+            "Réflexes des membres inférieurs",
+            "Force musculaire des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Incontinence urinaire d'effort",
+          "details": [
+            "Incontinence urinaire d'effort (probable)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Vessie hyperactive (syndrome d'hyperactivité vésicale)",
+            "Incontinence urinaire mixte",
+            "Incontinence par regorgement (vessie de trop-plein)",
+            "Vessie neurogène",
+            "Fistule vésico-vaginale (post-chirurgicale)"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Incontinence d'effort",
+                "items": [
+                  {
+                    "text": "Hypermobilité urétrale → Test à la toux, pad-test",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Insuffisance sphinctérienne intrinsèque → Bilan urodynamique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Incontinence par urgenturie",
+                "items": [
+                  {
+                    "text": "Vessie hyperactive idiopathique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Vessie hyperactive secondaire",
+                    "cause": "Arguments POUR:\n\t□ infection, calcul, tumeur → ECBU, cystoscopie",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Incontinence mixte",
+                    "cause": "□ effort + urgenturie",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Incontinence par regorgement → Mesure du résidu post-mictionnel",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Calendrier mictionnel (3 jours)",
+            "Bandelette urinaire + ECBU si positif",
+            "Mesure du résidu post-mictionnel (échographie)",
+            "Glycémie à jeun (contrôle diabète)",
+            "Questionnaire de qualité de vie (ICIQ-SF)",
+            "Pad-test (quantification objective des fuites)",
+            "Examen gynécologique complet (atrophie, prolapsus)",
+            "Bilan urodynamique si échec du traitement conservateur",
+            "Cystoscopie si hématurie ou suspicion de pathologie vésicale"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Perte de poids (objectif IMC < 25)\n• Arrêt du tabac\n• Régulation des apports hydriques\n• Éviter café, thé, alcool\n• Traitement de la constipation"
+              },
+              {
+                "title": "Traitement conservateur de première ligne",
+                "content": "• Rééducation périnéale par kinésithérapeute spécialisé\n• Exercices de Kegel (3 séries de 10 contractions/jour)\n• Biofeedback périnéal\n• Électrostimulation fonctionnelle\n• Cônes vaginaux"
+              },
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• Œstrogènes locaux si atrophie vaginale\n• Duloxétine si échec rééducation (non remboursé en Suisse)\n• Anticholinergiques si composante d'urgenturie"
+              },
+              {
+                "title": "Options chirurgicales (si échec conservateur)",
+                "content": "• Bandelette sous-urétrale (TVT, TOT)\n• Colposuspension de Burch\n• Injections péri-urétrales\n• Sphincter artificiel (cas sévères)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Suivi et orientation",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle à 3 mois avec calendrier mictionnel",
+            "Orientation gynécologie/urologie si nécessaire",
+            "Évaluation de l'efficacité du traitement conservateur",
+            "Adaptation thérapeutique selon évolution"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "resume": {
+      "titre": "🚺 Incontinence urinaire d'effort – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse ciblée",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Fuite involontaire d'urine lors d'une augmentation de la pression abdominale : toux, rire, éternuement, effort physique",
+                "Pas de besoin impérieux ni pollakiurie (sinon, penser à incontinence mixte)",
+                "Volume de fuite faible, prévisible",
+                "Contexte fréquent : multiparité, post-ménopause, obésité, chirurgie pelvienne"
+              ]
+            },
+            {
+              "titre": "Rechercher",
+              "points": [
+                "Durée et retentissement fonctionnel (qualité de vie, sexualité)",
+                "Facteurs de risque : accouchements, constipation chronique, toux chronique, sport à impact",
+                "Médicaments : diurétiques, sédatifs",
+                "Comorbidités : diabète, troubles neurologiques"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen pelvien",
+              "points": [
+                "Recherche de prolapsus pelvien",
+                "Test de toux en position gynécologique vessie pleine",
+                "Tonus du plancher pelvien",
+                "Signe de fuite urinaire déclenchée"
+              ]
+            },
+            {
+              "titre": "Autres points",
+              "points": [
+                "Palpation abdominale (globe vésical ?)",
+                "Examen neurologique si suspicion d'atteinte (troubles sensitifs, moteur)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🩺 Examens complémentaires (si besoin)",
+          "points": [
+            "Non nécessaires si tableau typique",
+            "ECBU pour éliminer infection",
+            "Calendrier mictionnel (3 jours)",
+            "Bilan urodynamique : réservé aux échecs thérapeutiques, suspicion de forme mixte ou neurologique"
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "🟢 Première intention – Traitement conservateur",
+              "points": [
+                "Rééducation périnéale supervisée : Kegel, biofeedback",
+                "Modifications du mode de vie : perte de poids, sevrage tabagique, traitement de la toux chronique ou constipation",
+                "Pessaire vaginal (si prolapsus associé ou CI chirurgicale)",
+                "Estrogènes locaux si syndrome génito-urinaire de la ménopause"
+              ]
+            },
+            {
+              "titre": "🟡 Si échec après 6–8 semaines",
+              "tableau": {
+                "colonnes": [
+                  "Traitement",
+                  "Indication",
+                  "Technique"
+                ],
+                "lignes": [
+                  [
+                    "Bandelette sous-urétrale",
+                    "Traitement de référence",
+                    "TVT (rétropubien) ou TOT (transobturateur)"
+                  ],
+                  [
+                    "Colposuspension de Burch",
+                    "Alternative",
+                    "Chirurgie ouverte"
+                  ],
+                  [
+                    "Sling fascial autologue",
+                    "Cas complexes",
+                    "Utilise tissu propre"
+                  ],
+                  [
+                    "Agents de comblement",
+                    "Refus/CI chirurgie",
+                    "Injections péri-urétrales"
+                  ]
+                ]
+              }
+            },
+            {
+              "titre": "🔵 Chez l'homme (post prostatectomie)",
+              "points": [
+                "Si incontinence persistante > 6 mois :",
+                "• Sphincter urinaire artificiel (standard)",
+                "• Sling urétral masculin ou ballons ajustables"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Bien distinguer incontinence d'effort vs impériosité (différent management !)",
+            "Savoir proposer et expliquer la rééducation périnéale en première intention",
+            "Connaître les indications chirurgicales et expliquer les différentes options",
+            "Penser aux diagnostics différentiels (prolapsus, incontinence mixte)",
+            "Être capable d'évaluer l'impact sur la qualité de vie"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Incontinence urinaire (Femme 60 ans)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, ATCD, motif",
+            "Symptôme actuel → début, circonstances, progression, impact",
+            "Autres symptômes urinaires → urgenturie, nycturie, brûlures, vidange complète",
+            "ATCD médicaux/chirurgicaux/gynécologiques/obstétricaux",
+            "Traitements actuels / essais déjà faits",
+            "Habitudes de vie (IMC, tabac, activité)",
+            "Examen clinique → abdo, périnéal, gynéco, neurologique",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires à proposer",
+            "Prise en charge immédiate et suivi"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : MAPS-U",
+            "elements": [
+              "Motif",
+              "Antécédents",
+              "Points cliniques",
+              "Synthèse (diagnostic + DD)",
+              "Urine tests (bandelette, ECBU, calendrier)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s'agit de Mme Rohner, 60 ans, obèse (IMC 30), diabétique de type 2 traité par metformine, tabagique chronique, qui consulte pour une incontinence urinaire évoluant depuis 7 mois.\n\nInitialement les fuites n'apparaissaient qu'à l'effort, lors de la toux, du rire ou des éternuements. Actuellement elles surviennent aussi en montant les escaliers. Elle décrit parfois un besoin impérieux d'uriner mais arrive toujours aux toilettes à temps. Elle urine environ 8 fois par jour, sans brûlures, sans douleurs, sans nycturie ni incontinence nocturne. Les pertes sont de petit volume.\n\nElle a eu une hystérectomie après son dernier accouchement à 40 ans. Trois grossesses, accouchements par voie basse, enfants de poids non précisé. Ménopausée depuis l'hystérectomie. Elle a tenté une rééducation périnéale trouvée sur internet, sans amélioration.\n\nÀ l'examen : abdomen souple, pas de globe vésical, pas de masse ; reins non douloureux, pas d'adénopathie inguinale. Périnée : fuite observée au test de toux, tonus diminué. Pas de prolapsus évident. L'examen neurologique des MI est normal.\n\nEn résumé, il s'agit d'une femme de 60 ans avec obésité, diabète et antécédent gynécologique, présentant une incontinence urinaire typiquement à l'effort, très gênante dans sa vie quotidienne.\n\nL'hypothèse principale est une incontinence urinaire d'effort.\n\nDiagnostics différentiels : incontinence mixte, vessie hyperactive, incontinence de regorgement, cause neurologique, plus rarement fistule post-chirurgicale.\n\nJe propose comme examens complémentaires : un calendrier mictionnel sur 3 jours, une bandelette urinaire avec ECBU si positif, une échographie pour résidu post-mictionnel, un pad-test, un examen gynécologique complet, une évaluation qualité de vie par questionnaire ICIQ-SF.\n\nLa prise en charge : mesures hygiéno-diététiques (perte de poids, arrêt du tabac, régulation hydrique, éviter café/thé/alcool), rééducation périnéale supervisée par un kinésithérapeute spécialisé. En cas d'échec : options médicamenteuses (œstrogènes locaux, duloxétine) ou chirurgicales (bandelette sous-urétrale type TVT/TOT). Suivi prévu à 3 mois avec réévaluation."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Rohner, 60 ans, consulte pour incontinence urinaire depuis 7 mois.\n\nB (Background) : Diabète, hystérectomie, tabac, obésité. Fuites initialement à l'effort, désormais plus fréquentes. Pas de nycturie, pas de brûlures, pas de globe.\n\nA (Assessment) : Incontinence urinaire d'effort probable. DD : incontinence mixte, hyperactivité vésicale, regorgement.\n\nR (Recommendation) : Calendrier mictionnel, BU/ECBU, échographie post-mictionnelle, pad-test. Prise en charge initiale = hygiène de vie + rééducation périnéale supervisée.",
+          "mnemo": {
+            "titre": "👉 Mnémo : SBAR",
+            "elements": [
+              "Situation",
+              "Background",
+              "Assessment",
+              "Recommendation"
+            ]
+          }
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Types d'incontinence → DAME",
+              "points": [
+                "D'effort",
+                "Argenturie (vessie hyperactive)",
+                "Mixte",
+                "En trop-plein (regorgement)"
+              ]
+            },
+            {
+              "titre": "Prise en charge de l'incontinence → 4R",
+              "points": [
+                "Régime (perte de poids, hydratation adaptée, stop café/tabac)",
+                "Rééducation périnéale (kiné, Kegel)",
+                "Remedications (œstrogènes, duloxétine, anticholinergiques si urgenturie)",
+                "Réparation chirurgicale (TVT/TOT, Burch)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre le diagnostic principal et DD",
+              "questions": [
+                {
+                  "question": "Incontinence d'effort",
+                  "reponse": {
+                    "pour": [
+                      "Fuites au rire, toux, effort",
+                      "Observées au test de toux",
+                      "Pas de nycturie",
+                      "Pas de globe"
+                    ],
+                    "contre": [
+                      "Présence légère d'urgenturie → possible mixte"
+                    ]
+                  }
+                },
+                {
+                  "question": "Vessie hyperactive",
+                  "reponse": {
+                    "pour": [
+                      "Besoin impérieux rapporté"
+                    ],
+                    "contre": [
+                      "Contrôle des mictions",
+                      "Pas d'incontinence par urgenturie réelle"
+                    ]
+                  }
+                },
+                {
+                  "question": "Incontinence mixte",
+                  "reponse": {
+                    "pour": [
+                      "Arguments pour effort + urgenturie"
+                    ],
+                    "contre": []
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires et analyse",
+              "questions": [
+                {
+                  "question": "Examens immédiats",
+                  "reponse": [
+                    "Calendrier mictionnel",
+                    "BU ± ECBU",
+                    "Échographie résidu post-mictionnel",
+                    "Pad-test"
+                  ],
+                  "analyse": "👉 Analyse orale : « Ces examens objectivent les fuites, excluent infection ou rétention et aident à choisir le traitement. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Incontinence urinaire d'effort"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Mesures hygiéno-diététiques",
+                      "Rééducation périnéale supervisée",
+                      "Médicaments ou chirurgie si échec"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle à 3 mois avec calendrier mictionnel",
+                    "Orientation gynécologie/urologie si persistance"
+                  ],
+                  "astuce": "👉 Mnémo : \"1-2-3\" → 1 = hygiène de vie, 2 = rééducation, 3 = chirurgie si échec"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

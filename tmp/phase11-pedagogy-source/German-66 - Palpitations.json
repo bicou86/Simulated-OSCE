@@ -1,0 +1,432 @@
+{
+  "title": "German-66 - Palpitations",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Étudiante de 26 ans se présentant pour palpitations, paraît stressée et raconte peu spontanément"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "binaryOnly": false,
+          "patientComment": "J'ai des palpitations"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [depuis 4 semaines]",
+            "Moment d'apparition [plutôt le matin]",
+            "Durée des épisodes [quelques minutes]",
+            "Fréquence [quotidienne]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation du rythme cardiaque",
+          "binaryOnly": false,
+          "details": [
+            "Faire taper le rythme par la patiente",
+            "Fréquence [relativement rapide, environ 150/min]",
+            "Régularité [régulier]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Irradiation",
+          "binaryOnly": false,
+          "patientComment": "Aucune irradiation"
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes cardiovasculaires associés",
+          "binaryOnly": false,
+          "details": [
+            "Vertiges [parfois un peu étourdie mais pas très]",
+            "Syncope/malaise [jamais tombée ni évanouie]",
+            "Dyspnée [non]",
+            "Douleurs thoraciques [un peu serré dans la poitrine]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes neurovégétatifs",
+          "binaryOnly": false,
+          "details": [
+            "Transpiration [parfois un peu]",
+            "Sensation de chaleur [parfois un peu]",
+            "Tremblements [non]",
+            "Nausées [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Pathologies connues [aucune]",
+            "Hospitalisations [non]",
+            "Interventions chirurgicales [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse par systèmes",
+          "binaryOnly": false,
+          "details": [
+            "Neurologique (AIT, troubles sensitifs, langage) [non]",
+            "Psychiatrique [non]",
+            "Cardiaque [non]",
+            "Thyroïdien [aucune idée, mère avait quelque chose]",
+            "Digestif [parfois constipée]",
+            "Uro-génital [règles régulières, faibles]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes alimentaires et hydratation",
+          "binaryOnly": false,
+          "details": [
+            "Hydratation [plutôt peu, environ 1L par jour]",
+            "Café [5 tasses par jour]",
+            "Appétit [normal]",
+            "Alimentation [mange peu - midi salade, soir muesli]",
+            "Poids et taille [51 kg, 1,72 m - pas de changement]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [demi-paquet par jour depuis 2 ans]",
+            "Alcool [rarement le week-end]",
+            "Drogues [cocaïne le week-end - sur demande spécifique]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "patientComment": "Pilule contraceptive"
+        },
+        {
+          "id": "a13",
+          "text": "Activité physique et loisirs",
+          "binaryOnly": false,
+          "patientComment": "Aucune activité sportive, mais très active socialement"
+        },
+        {
+          "id": "a14",
+          "text": "État psychologique et stress",
+          "binaryOnly": false,
+          "details": [
+            "Niveau de stress [se sent très stressée mais gère tout]",
+            "Charge de travail [fait beaucoup en plus de l'université]",
+            "Sentiment de surcharge [se sent parfois dépassée et un peu seule]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Maladies cardiaques familiales [aucune]",
+            "Situation familiale [parents divorcés, pas de contact avec le père]",
+            "Mère [femme d'affaires, n'a jamais le temps]",
+            "Fratrie [enfant unique]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Logement [vit seule]",
+            "Études [droit, beaucoup de stress]",
+            "Support social [limité]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Questions de clôture et résumé",
+          "binaryOnly": false,
+          "details": [
+            "Résumer les points importants",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Fréquence cardiaque [150 bpm]",
+            "Tension artérielle",
+            "Fréquence respiratoire",
+            "Température"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Palpation précordiale [normale]",
+            "Auscultation cardiaque en au moins 3 positions",
+            "Rythme [régulier]",
+            "Souffles [aucun]",
+            "Bruits surajoutés [aucun]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du pouls",
+          "binaryOnly": false,
+          "details": [
+            "Pouls radial",
+            "Régularité",
+            "Amplitude",
+            "Symétrie"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation antérieure systématique [normale]",
+            "Auscultation postérieure systématique [normale]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen thyroïdien",
+          "binaryOnly": false,
+          "details": [
+            "Inspection",
+            "Palpation [normale]",
+            "Recherche de nodules",
+            "Recherche de goitre"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen général",
+          "binaryOnly": false,
+          "details": [
+            "État général",
+            "Peau [pâle]",
+            "Tremblements [absents]",
+            "Exophtalmie [absente]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique sommaire",
+          "binaryOnly": false,
+          "details": [
+            "Réflexes ostéo-tendineux",
+            "Tremblements fins des extrémités"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Palpitations liées au stress et aux stimulants"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Tachycardie supraventriculaire paroxystique",
+            "Hyperthyroïdie",
+            "Trouble anxieux/attaque de panique",
+            "Arythmie induite par la cocaïne",
+            "Anémie",
+            "Phéochromocytome (rare)"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Facteurs favorisants identifiés",
+                "items": [
+                  {
+                    "text": "Consommation excessive de caféine",
+                    "cause": "□ 5 tasses/jour",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Stress psychosocial important",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Consommation de cocaïne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Déshydratation relative",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Signes d'alerte à exclure",
+                "items": [
+                  {
+                    "text": "Syncope vraie → arythmie grave",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, Holter ECG"
+                  },
+                  {
+                    "text": "Antécédents familiaux de mort subite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Anomalies à l'examen clinique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Biologie : FSC (anémie), TSH (hyperthyroïdie), ionogramme",
+            "ECG de repos",
+            "Holter ECG 24h si récidive",
+            "Échocardiographie si anomalie ECG",
+            "Test toxicologique urinaire si besoin"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge non médicamenteuse",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Modifications du mode de vie",
+                "content": "• Réduction drastique du café (max 1-2 tasses/jour)\n• Hydratation adéquate (minimum 1,5-2L/jour)\n• Arrêt impératif de la cocaïne\n• Sevrage tabagique progressif\n• Activité physique régulière (30 min 3x/semaine)"
+              },
+              {
+                "title": "Gestion du stress",
+                "content": "• Techniques de relaxation (training autogène, méditation)\n• Respiration abdominale\n• Yoga ou tai-chi\n• Amélioration de l'hygiène du sommeil\n• Planification du temps de travail"
+              },
+              {
+                "title": "Modifications alimentaires",
+                "content": "• Repas réguliers et équilibrés\n• Petit-déjeuner consistant\n• Éviter les repas trop légers\n• Limiter les excitants (thé, boissons énergisantes)\n• Supplémentation en magnésium possible"
+              },
+              {
+                "title": "Support psychosocial",
+                "content": "• Consultation psychologique si besoin\n• Groupes de soutien étudiants\n• Aménagement possible des études\n• Renforcement du réseau social"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Conseils spécifiques sur les substances",
+          "binaryOnly": false,
+          "details": [
+            "Information sur les risques cardiaques de la cocaïne",
+            "Orientation vers consultation d'addictologie si besoin",
+            "Aide au sevrage tabagique",
+            "Alternatives au café (tisanes, décaféiné)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement médicamenteux",
+          "binaryOnly": false,
+          "details": [
+            "Bêta-bloquants si échec des mesures hygiéno-diététiques",
+            "Anxiolytiques ponctuels si composante anxieuse marquée",
+            "Traitement spécifique selon résultats (fer si anémie, etc.)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Suivi",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle à 2-4 semaines",
+            "Journal des palpitations",
+            "Réévaluation après modifications du mode de vie",
+            "ECG de contrôle si persistance"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Éducation et prévention",
+          "binaryOnly": false,
+          "details": [
+            "Explication du cercle vicieux stress-palpitations",
+            "Techniques d'autogestion",
+            "Signes d'alerte nécessitant une consultation",
+            "Importance de l'observance des changements"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

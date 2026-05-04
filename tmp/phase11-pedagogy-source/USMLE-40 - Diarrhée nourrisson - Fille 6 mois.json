@@ -1,0 +1,546 @@
+{
+  "title": "USMLE-40 - Diarrhée nourrisson - Fille 6 mois",
+  "context": {
+    "setting": "Consultation téléphonique au cabinet",
+    "patient": "La mère de Theresa Wheaton, une enfant de 6 mois, appelle le cabinet en se plaignant que son enfant a de la diarrhée"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon bébé a de la diarrhée"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la diarrhée",
+          "binaryOnly": false,
+          "details": [
+            "Début [Cela a commencé hier à 14h]",
+            "Progression [Cela empire]",
+            "Fréquence des selles [Elle a environ 6 selles par jour]",
+            "Description des selles [Marron clair, liquides, en grande quantité]",
+            "Sang dans les selles [Non]",
+            "Lien avec la prise orale [Aucun]",
+            "Selles régulières auparavant [Oui]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Signes de déshydratation",
+          "binaryOnly": false,
+          "details": [
+            "Nombre de couches mouillées [Aucune depuis hier]",
+            "Bouche sèche [Oui, sa bouche est sèche]",
+            "Fontanelle enfoncée [Question non posée mais importante]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "État général de l'enfant",
+          "binaryOnly": false,
+          "details": [
+            "Changements d'appétit [Elle n'a pas aussi faim qu'avant]",
+            "Activités [Elle n'est pas aussi joueuse qu'avant]",
+            "Éveil et réactivité [Elle est moins réactive et semble somnolente]",
+            "Cri [Non, son cri est faible]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [Oui, j'ai pris sa température, et elle était de 38,1°C]",
+            "Respiration rapide [Non]",
+            "Nausées/vomissements [Non]",
+            "Éruption cutanée [Non]",
+            "Convulsions [Non]",
+            "Toux [Non]",
+            "Tiraillement de l'oreille [Non]",
+            "Pleurs lors de la miction [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes abdominaux",
+          "binaryOnly": false,
+          "details": [
+            "Distension abdominale [Non]",
+            "Infection respiratoire haute récente [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Traitement essayé",
+          "binaryOnly": true,
+          "patientComment": "J'ai essayé du paracétamol, mais cela n'a pas aidé"
+        },
+        {
+          "id": "a8",
+          "text": "Exposition et contacts",
+          "binaryOnly": false,
+          "details": [
+            "Garderie [Oui]",
+            "Contacts malades à la garderie [Pas à ma connaissance]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes alimentaires",
+          "binaryOnly": true,
+          "patientComment": "Lait maternisé enrichi en fer ; céréales de riz le soir ; occasionnellement du jus"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux de l'enfant",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour]",
+            "Dernier bilan de santé [Il y a deux semaines, et tout était normal]",
+            "Antécédents de naissance [Accouchement vaginal spontané sans complications]",
+            "Antécédents médicaux [Aucun antécédent notable]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen clinique non réalisable",
+          "binaryOnly": true,
+          "patientComment": "Consultation téléphonique - examen physique impossible"
+        },
+        {
+          "id": "e2",
+          "text": "Nécessité d'examen urgent",
+          "binaryOnly": true,
+          "patientComment": "Évaluation clinique urgente recommandée vu les signes de déshydratation"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes infectieuses",
+                "items": [
+                  {
+                    "text": "Gastroentérite virale",
+                    "cause": "Arguments POUR:\n\t□ Cause la plus fréquente à cet âge\n\t□ Diarrhée aqueuse aiguë\n\t□ Fièvre légère (38,1°C)\n\t□ Fréquentation d'une garderie\n\t□ Évolution rapide\n\t□ Pas de sang dans les selles\nVirus possibles : Rotavirus (si non vacciné), Norovirus, Adénovirus",
+                    "test": "→ PCR virale dans les selles, immunochromatographie rotavirus"
+                  },
+                  {
+                    "text": "Gastroentérite bactérienne",
+                    "cause": "Arguments POUR:\n\t□ Diarrhée aiguë importante\n\t□ Fréquentation garderie (transmission)\n\t□ Fièvre présente\nArguments CONTRE:\n\t□ Pas de sang dans les selles\n\t□ Pas de douleurs abdominales marquées\n\tBactéries possibles : Salmonella, Shigella, Campylobacter, E. coli",
+                    "test": "→ Coproculture, recherche de leucocytes fécaux"
+                  }
+                ]
+              },
+              {
+                "name": "Causes nutritionnelles",
+                "items": [
+                  {
+                    "text": "Malabsorption/Intolérance alimentaire",
+                    "cause": "Arguments POUR:\n\t□ Consommation de jus (inapproprié à 6 mois)\n\t□ Diarrhée aqueuse\n\t□ Introduction récente possible d'aliments\nArguments CONTRE:\n\t□ Début brutal\n\t□ Fièvre associée\n\t□ Enfant allait bien avant",
+                    "test": "→ pH des selles, substances réductrices"
+                  }
+                ]
+              },
+              {
+                "name": "Complications et autres causes",
+                "items": [
+                  {
+                    "text": "Infection urinaire/Pyélonéphrite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Manifestation atypique chez nourrisson\n\t□ Somnolence\nArguments CONTRE:\n\t□ Pas de pleurs à la miction\n\t□ Diarrhée prédominante",
+                    "test": "→ ECBU, analyse d'urine"
+                  },
+                  {
+                    "text": "Invagination intestinale",
+                    "cause": "Arguments POUR:\n\t□ Âge à risque (3-12 mois)\n\t□ Somnolence marquée\n\t□ Détérioration état général\nArguments CONTRE:\n\t□ Pas de sang dans selles\n\t□ Pas de vomissements\n\t□ Pas de douleurs paroxystiques décrites",
+                    "test": "→ Échographie abdominale urgente"
+                  },
+                  {
+                    "text": "Septicémie/Bactériémie",
+                    "cause": "Arguments POUR:\n\t□ Somnolence importante\n\t□ Absence de miction (hypoperfusion)\n\t□ Cri faible\n\t□ Détérioration rapide\nArguments CONTRE:\n\t□ Fièvre modérée seulement",
+                    "test": "→ Hémocultures, bilan septique complet"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Gravité de la déshydratation",
+          "binaryOnly": false,
+          "details": [
+            "Signes de déshydratation sévère présents",
+            "Anurie depuis > 12h = urgence",
+            "Somnolence = signe neurologique grave",
+            "Bouche sèche confirmée",
+            "Cri faible = hypotonie"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Conduite à tenir immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Consultation urgente obligatoire",
+            "Transport médicalisé si détresse",
+            "Assistance sociale pour transport si besoin",
+            "Ne pas retarder la prise en charge",
+            "Conseils en attendant : position, surveillance"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Ionogramme sanguin, urée, créatinine",
+            "Glycémie (hypoglycémie possible)",
+            "Gaz du sang (acidose métabolique)",
+            "FSC, CRP, hémocultures si sepsis",
+            "Analyse d'urine + ECBU",
+            "Coproculture + virologie selles"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Réhydratation urgente",
+                "content": "• Voie IV probable vu déshydratation sévère\n• Soluté isotonique 20 ml/kg en bolus\n• Réévaluation clinique après chaque bolus\n• Correction déficits électrolytiques\n• Surveillance diurèse horaire"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Paracétamol si fièvre mal tolérée\n• PAS d'anti-diarrhéiques (dangereux)\n• PAS d'antibiotiques sans preuve bactérienne\n• Isolement contact si hospitalisation\n• Mesures d'hygiène strictes"
+              },
+              {
+                "title": "Réalimentation",
+                "content": "• Reprise précoce alimentation normale\n• Maintien allaitement/lait habituel\n• Éviter jus de fruits\n• SRO entre les tétées si possible\n• Pas de régime restrictif"
+              },
+              {
+                "title": "Conseils préventifs",
+                "content": "• Lavage des mains ++\n• Hygiène garderie à vérifier\n• Vaccination rotavirus si non fait\n• Éviter jus avant 12 mois\n• Signes d'alarme à connaître"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Signes d'alarme",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Urgences pédiatriques",
+            "items": [
+              {
+                "text": "Déshydratation sévère",
+                "description": "→ Léthargie, yeux enfoncés, pli cutané persistant, anurie"
+              },
+              {
+                "text": "Choc hypovolémique",
+                "description": "→ Tachycardie, hypotension, marbrures, temps de recoloration > 3s"
+              },
+              {
+                "text": "Troubles neurologiques",
+                "description": "→ Convulsions, coma, fontanelle bombée"
+              },
+              {
+                "text": "Invagination",
+                "description": "→ Pleurs paroxystiques, pâleur, masse abdominale, selles sanglantes"
+              },
+              {
+                "text": "Sepsis",
+                "description": "→ Fièvre > 39°C ou hypothermie, détresse respiratoire, purpura"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame Wheaton, d'après les informations que vous m'avez données, je crains que votre enfant ne soit déshydraté. Elle n'a pas uriné depuis hier, et elle est faible et somnolente. Il m'est très difficile d'évaluer son état par téléphone, et je ne veux en aucun cas mettre sa santé en danger. Pour cette raison, je vais vous demander de l'amener ici pour un examen clinique et une évaluation complète, et nous procéderons ensuite en fonction de ce que nous trouverons lors de l'examen. Je comprends que vous pourriez avoir des problèmes de transport, mais nous avons la chance d'avoir un assistant social ici qui peut vous aider à résoudre ces problèmes. Après notre conversation, je vais transférer votre appel vers lui, et il pourra vous aider. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[À quel point mon bébé est-il malade ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Il m'est difficile de vous donner une réponse précise par téléphone. J'aimerais que vous ameniez votre bébé ici pour que je puisse l'examiner et peut-être faire quelques tests. Après cela, je devrais être en mesure de vous donner une évaluation plus précise."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (patient standardisé)",
+      "nom": "Mère de Theresa Wheaton",
+      "age": "Mère d'un nourrisson de 6 mois",
+      "contexte": "Appel téléphonique pour diarrhée aiguë de son bébé",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon bébé a de la diarrhée depuis hier.",
+        "autreChose": "Elle n'est pas bien du tout, je suis très inquiète."
+      },
+      "consignes": [
+        "Montrez de l'inquiétude pour la santé de votre enfant.",
+        "Ajoutez que vous ne voulez pas venir au cabinet à moins que ce ne soit absolument nécessaire car vous n'avez pas de moyen de transport.",
+        "Soyez précise dans vos réponses sur l'état de l'enfant.",
+        "Insistez sur le fait qu'elle n'a pas fait pipi depuis hier.",
+        "Mentionnez sa somnolence croissante."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Diarrhée depuis hier 14h",
+          "6 selles liquides par jour",
+          "Marron clair, grande quantité",
+          "Aggravation progressive"
+        ],
+        "signesDeshydratation": [
+          "Aucune couche mouillée depuis hier",
+          "Bouche sèche",
+          "Somnolence inhabituelle",
+          "Cri faible",
+          "Moins réactive"
+        ],
+        "symptomesAssocies": [
+          "Fièvre à 38,1°C",
+          "Perte d'appétit",
+          "Moins joueuse",
+          "Pas de vomissements"
+        ],
+        "contexteSocial": [
+          "Va à la garderie",
+          "Pas de malades connus",
+          "Problème de transport",
+          "Inquiétude maternelle++"
+        ],
+        "traitementEssaye": [
+          "Paracétamol sans effet",
+          "Continue lait maternisé",
+          "Ne sait pas quoi faire"
+        ]
+      },
+      "antecedentsEnfant": {
+        "naissance": [
+          "Accouchement normal",
+          "Pas de complications",
+          "Développement normal"
+        ],
+        "medical": [
+          "Vaccins à jour",
+          "Dernier contrôle il y a 2 semaines",
+          "Jamais malade avant",
+          "Pas d'hospitalisation"
+        ],
+        "alimentation": [
+          "Lait maternisé enrichi fer",
+          "Céréales riz le soir",
+          "Jus occasionnel",
+          "Pas d'allaitement maternel"
+        ]
+      },
+      "simulation": {
+        "durantAppel": [
+          "Voix inquiète",
+          "Hésitation sur transport",
+          "Questions sur gravité",
+          "Recherche réassurance",
+          "Accepte finalement de venir"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Nourrisson de 6 mois présentant gastroentérite aiguë avec déshydratation sévère. Signes d'alarme multiples : anurie > 12h, somnolence, cri faible, bouche sèche. Nécessite réhydratation IV urgente. Risque de choc hypovolémique. Diagnostic différentiel doit inclure sepsis et invagination. Hospitalisation probable.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e :",
+        "• Minimise la gravité : rappeler signes déshydratation sévère",
+        "• Propose traitement à domicile : contre-indiquer formellement",
+        "• Oublie aide transport : mentionner service social",
+        "• Prescrit anti-diarrhéiques : rappeler danger chez nourrisson"
+      ],
+      "pointsCles": [
+        "Déshydratation sévère = urgence vitale",
+        "Consultation téléphonique insuffisante",
+        "Transport ne doit pas retarder soins",
+        "Réhydratation IV probablement nécessaire",
+        "Surveillance hospitalière recommandée"
+      ],
+      "pieges": [
+        "Sous-estimer la gravité",
+        "Accepter barrière du transport",
+        "Donner conseils sans voir l'enfant",
+        "Oublier risques invagination/sepsis",
+        "Ne pas insister sur urgence"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Gastroentérite aiguë du nourrisson avec déshydratation sévère"
+        },
+        {
+          "titre": "Déshydratation du nourrisson",
+          "contenu": "Urgence pédiatrique fréquente :",
+          "points": [
+            "Réserves hydriques limitées (70% poids corporel)",
+            "Pertes importantes : 10-20 ml/kg/selle",
+            "Classification : légère <5%, modérée 5-10%, sévère >10%",
+            "Mortalité si non traitée : 10-15%",
+            "Acidose métabolique fréquente",
+            "Hypoglycémie risque chez < 1 an"
+          ]
+        },
+        {
+          "titre": "Évaluation clinique déshydratation",
+          "contenu": "Signes de gravité croissante :",
+          "points": [
+            "Légère : soif, muqueuses sèches",
+            "Modérée : pli cutané, TRC > 2s, oligurie",
+            "Sévère : léthargie, yeux enfoncés, anurie",
+            "Choc : tachycardie, hypotension, coma",
+            "Score de Gorelick validé",
+            "Poids = meilleur indicateur si connu"
+          ]
+        },
+        {
+          "titre": "Gastroentérite virale",
+          "contenu": "Première cause mondiale mortalité infantile :",
+          "points": [
+            "Rotavirus : 40% avant vaccination",
+            "Norovirus : épidémies garderies",
+            "Adénovirus : diarrhée prolongée",
+            "Transmission féco-orale ++",
+            "Immunité partielle seulement",
+            "Vaccination rotavirus efficace 85%"
+          ]
+        },
+        {
+          "titre": "Particularités 6 mois",
+          "contenu": "Âge vulnérable :",
+          "points": [
+            "Immunité maternelle déclinante",
+            "Introduction aliments = risques",
+            "Garderie = exposition multiple",
+            "Réserves fer limitées",
+            "Croissance rapide = besoins ++",
+            "Communication non verbale seulement"
+          ]
+        },
+        {
+          "titre": "Réhydratation",
+          "contenu": "Gold standard thérapeutique :",
+          "points": [
+            "Orale si déshydratation légère-modérée",
+            "IV si sévère ou échec oral",
+            "Soluté isotonique : SSI ou Ringer",
+            "Bolus 20 ml/kg en 20 min",
+            "Réévaluation après chaque bolus",
+            "Maintenance : 100 ml/kg/j (< 10 kg)"
+          ]
+        },
+        {
+          "titre": "Erreurs fréquentes",
+          "contenu": "À éviter absolument :",
+          "points": [
+            "Sous-estimer déshydratation nourrisson",
+            "Retarder réhydratation IV",
+            "Utiliser solutés hypotoniques",
+            "Prescrire anti-diarrhéiques (iléus)",
+            "Antibiotiques systématiques",
+            "Jeûne prolongé (malnutrition)"
+          ]
+        },
+        {
+          "titre": "Prévention",
+          "contenu": "Mesures efficaces :",
+          "points": [
+            "Vaccination rotavirus systématique",
+            "Allaitement maternel exclusif 6 mois",
+            "Hygiène mains ++ (SHA)",
+            "Éviter jus avant 1 an",
+            "Isolement malades en collectivité",
+            "Éducation parentale signes alarme"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Nourrisson de 6 mois avec gastroentérite aiguë évoluant vers déshydratation sévère (anurie, léthargie, sécheresse muqueuses). Consultation téléphonique insuffisante, nécessite évaluation clinique urgente et réhydratation IV probable. Le retard de prise en charge peut être fatal. L'aide au transport est prioritaire pour permettre l'accès aux soins."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "La déshydratation sévère du nourrisson est une urgence vitale",
+            "L'anurie > 12h impose une réhydratation IV",
+            "Les barrières sociales ne doivent pas retarder les soins",
+            "La gastroentérite reste meurtrière si mal prise en charge",
+            "La prévention par vaccination est efficace",
+            "L'éducation parentale peut sauver des vies"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Réhydratation IV : SSI 20 ml/kg en bolus",
+        "Maintenance : 100 ml/kg/j + pertes",
+        "Paracétamol : 15 mg/kg/dose si fièvre",
+        "SRO : 50-100 ml après chaque selle",
+        "Zinc : 10-20 mg/j × 10-14j (OMS)"
+      ],
+      "examensComplementaires": [
+        "Ionogramme : Na, K, Cl, CO2",
+        "Glycémie : risque hypoglycémie ++",
+        "Urée, créatinine : fonction rénale",
+        "Gaz du sang : si déshydratation sévère",
+        "Coproculture : si sang ou sepsis"
+      ]
+    }
+  }
+}

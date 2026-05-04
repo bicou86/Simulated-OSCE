@@ -1,0 +1,614 @@
+{
+  "title": "AMBOSS-36 - Fatigue - Homme 54 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Nick Booker, homme de 54 ans, consultant pour fatigue",
+    "vitals": {
+      "temperature": "36.9°C",
+      "ta": "130/80 mmHg",
+      "fc": "70 bpm",
+      "fr": "17/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je me sens vraiment fatigué ces derniers temps"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fatigue",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a environ 4 semaines]",
+            "Constante/intermittente [Pratiquement tout le temps]",
+            "Événements précipitants [Je pense que j'ai eu la grippe intestinale environ une semaine avant que la fatigue commence. J'avais de la fièvre et j'ai beaucoup vomi ; je ne pouvais rien manger pendant presque toute une semaine]",
+            "Progression [Je pense que la grippe intestinale est pratiquement partie. Mais la fatigue semble juste empirer]",
+            "Épisodes antérieurs [Pas comme ça]",
+            "Facteurs améliorants [Eh bien, je suppose que le sommeil aide un peu]",
+            "Facteurs aggravants [Je pense que boire de l'alcool n'aide probablement pas vraiment]",
+            "Symptômes associés [Mes muscles ont aussi commencé à faire mal à peu près au même moment. Vous savez, un peu comme quand vous avez un rhume ?]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour fatigue après fièvre et vomissements",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non]",
+            "Nausées/vomissements [Je suis encore un peu nauséeux, particulièrement le matin]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleurs articulaires [Non, juste dans mes muscles]",
+            "Problèmes urinaires/changements de couleur de l'urine [Non]",
+            "Problèmes intestinaux/changements de couleur des selles [Oui, mes selles ont l'air assez claires ces derniers temps]",
+            "Douleur abdominale [Oui, du côté droit, juste sous mes côtes]",
+            "Appétit [Je n'ai pas eu beaucoup d'appétit ces deux derniers mois]",
+            "Changements de poids [Oui, j'ai perdu environ 10 livres (4,5 kg) au cours des 2 derniers mois. Mais je pense que ça a commencé avant que j'aie les symptômes que j'ai maintenant]",
+            "Prurit [Oui, depuis quelques jours]",
+            "Gonflement des seins [Non]",
+            "Diminution de la pilosité corporelle [Non]",
+            "Diminution de la libido [Ce n'est pas que je ne veux pas, c'est juste que je n'ai pas eu de relation depuis mon divorce il y a 7 ans]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai eu deux épisodes de pancréatite. Un il y a environ 5 ans et l'autre l'année dernière"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai dû aller à l'hôpital la dernière fois que j'ai eu une pancréatite]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Non]",
+            "Antécédents familiaux [Je ne sais pas - j'ai été adopté]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaillais dans un restaurant, mais j'ai perdu mon emploi l'année dernière]",
+            "Domicile [Je vis seul]",
+            "Alcool [Je bois environ 10 bières par jour]",
+            "Ressenti besoin de réduire votre consommation ? [Oui, c'est pratiquement ce qui a ruiné mon mariage. Mais je pense qu'il est juste trop tard pour arrêter maintenant]",
+            "Agacé par les critiques sur votre consommation ? [Bien sûr, arrêter est plus facile à dire qu'à faire]",
+            "Culpabilité à propos de la consommation ? [Oui]",
+            "Besoin de boire dès le matin ? [Presque tous les jours]",
+            "Drogues récréatives [J'ai utilisé de la cocaïne par intermittence pendant les 10 dernières années, et j'ai essayé l'héroïne pour la première fois il y a environ 3 mois et j'en utilise pratiquement tous les jours depuis]",
+            "Usage de drogues intraveineuses [J'avais l'habitude de sniffer la cocaïne, mais il y a 3 mois j'ai commencé à m'injecter de la cocaïne et de l'héroïne]",
+            "Tabac [Je fume environ un paquet par jour depuis 35 ans]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des sclères [Montrer l'image d'ictère au patient]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Inspection du thorax"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen",
+            "Palpation du foie [Sensibilité légère à la palpation]",
+            "Palpation de la rate",
+            "Matité déclive"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des mains",
+            "Inspection des membres inférieurs"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes infectieuses prioritaires",
+                "items": [
+                  {
+                    "text": "Hépatite B et/ou C aiguë",
+                    "cause": "Arguments POUR:\n\t□ Usage de drogues intraveineuses (risque majeur hépatite B et C)\n\t□ Syndrome pseudo-grippal initial avec symptômes GI (nausées, vomissements)\n\t□ Phase prolongée avec perte d'appétit, douleur HCD, fatigue persistante\n\t□ Cholestase intrahépatique avec hyperbilirubinémie (ictère scléral)\n\t□ Selles décolorées (cholestase)\n\t□ Prurit récent (accumulation sels biliaires)",
+                    "test": "→ Sérologies virales hépatites (HAV, HBV, HCV)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes toxiques",
+                "items": [
+                  {
+                    "text": "Hépatite alcoolique",
+                    "cause": "Arguments POUR:\n\t□ Trouble d'usage d'alcool sévère (10 bières/jour, questionnaire CAGE positif 4/4)\n\t□ Symptômes non spécifiques : nausées légères, perte appétit, perte poids\n\t□ Douleur HCD par sensibilité hépatique\n\t□ Ictère scléral et cholestase intrahépatique (selles pâles)\nArguments CONTRE:\n\t□ N'explique pas syndrome grippal initial ; pas d'hépato-splénomégalie\n\t□ Ascite ou signes cutanés hépatiques",
+                    "test": "→ ASAT, ALAT (ratio ASAT/ALAT > 1 dans hépatite alcoolique)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes néoplasiques",
+                "items": [
+                  {
+                    "text": "Cancer du pancréas",
+                    "cause": "Arguments POUR:\n\t□ Perte appétit et poids débutée il y a 2 mois (avant syndrome grippal)\n\t□ Ictère scléral, prurit, selles pâles (cholestase extrahépatique)\n\t□ Facteurs de risque : pancréatite chronique, alcool, tabagisme\nArguments CONTRE:\n\t□ Douleur HCD (foie) plutôt qu'épigastrique irradiant au dos ; absence signe de Courvoisier suggère processus inflammatoire/infectieux plutôt que néoplasique",
+                    "test": "→ US abdominal (masse pancréatique et cholestase)"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Cirrhose",
+                    "cause": "Alcool chronique + hépatites virales possibles",
+                    "test": "→ Albumine, TP/TCA (fonction hépatique)"
+                  },
+                  {
+                    "text": "Pancréatite chronique",
+                    "cause": "ATCD pancréatites récurrentes, alcool",
+                    "test": "→ Lipase, imagerie pancréatique"
+                  },
+                  {
+                    "text": "Cholédocholithiase",
+                    "cause": "Cholestase, douleur HCD",
+                    "test": "→ US abdominal"
+                  },
+                  {
+                    "text": "Cholangiocarcinome",
+                    "cause": "Cholestase, ictère, prurit",
+                    "test": "→ CT abdominal avec contraste"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "US abdominal [Le tissu hépatique peut apparaître anormal dans hépatites A, B, C et alcoolique. Une masse pancréatique et cholestase résultante peuvent être visualisées dans cancer pancréas]",
+            "NFS [Anémie macrocytaire, thrombocytose ou thrombocytopénie, leucocytose neutrophile absolue peuvent être présentes dans hépatite alcoolique et cirrhose]",
+            "TP, TCA [pour évaluer synthèse hépatique altérée (ex: cirrhose)]",
+            "ASAT, ALAT, bilirubine, phosphatases alcalines, Gamma-GT, lipase [Ratio ASAT/ALAT > 1 indique lésion cellulaire hépatique, comme dans hépatite alcoolique. Dans hépatites A, B et C aiguës, transaminases très élevées mais ALAT > ASAT (ratio < 1). Bilirubine, PAL et GGT élevées indiquent cholestase]",
+            "Albumine [pour évaluer synthèse hépatique altérée (ex: cirrhose)]",
+            "Sérologies virales hépatites (HAV, HBV, HCV) [Anti-HAV IgM élevés confirment hépatite A aiguë. HBsAg et anti-HCV pour dépister hépatites B et C]",
+            "Test VIH [Le patient n'a jamais eu de test VIH et fait partie d'un groupe à haut risque]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires différés",
+          "binaryOnly": false,
+          "details": [
+            "CT abdominal avec contraste [Si cancer pancréas suspecté et masse visualisée à l'US. Signes suggestifs : masse mal définie, hypodense/hypoéchogène, hypovasculaire avec signe du double canal (obstruction et dilatation canal cholédoque et canal pancréatique)]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les drogues illicites",
+            "Conseil sur l'abus d'alcool",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant le test VIH"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Hospitalisation pour bilan étiologique urgent\n• Voie veineuse périphérique\n• Hydratation: IV prudente (risque cirrhose)\n• Surveillance signes vitauxx et conscience\n• Arrêt alcool avec prévention sevrage\n• Précautions universelles: (risque hépatites virales)"
+              },
+              {
+                "title": "Hépatite B aiguë",
+                "content": "• Repos, hydratation, nutrition\n• Pas d'antiviraux sauf forme sévèrex sauf forme sévère\n• Vaccination contacts non immunisés\n• Déclaration obligatoire"
+              },
+              {
+                "title": "Hépatite C aiguë",
+                "content": "• Attendre 12-16 semaines pour traitement"
+              },
+              {
+                "title": "Si pas de clairance spontanée",
+                "content": "• Taux guérison  95% avec antiviraux action directex guérison 95% avec antiviraux action directe"
+              },
+              {
+                "title": "Si hépatite alcoolique",
+                "content": "• Score de Maddrey: Si ≥ 32 = forme sévère"
+              },
+              {
+                "title": "Corticoïdes si Maddrey ≥ 32 sans infection",
+                "content": "• Prednisolone: 40 mg/j × 28j puis décroissance\n• Nutrition entérale si dénutrition\n• Thiamine: 100 mg/j (prévention Wernicke)\n• Abstinence alcool totale et définitive"
+              },
+              {
+                "title": "Si cancer pancréas",
+                "content": "• Stadification par CT thoraco-abdomino-pelvien\n• CA 19-9 (marqueur tumoral)\n• Évaluation résécabilité par chirurgie"
+              },
+              {
+                "title": "Si non résécable",
+                "content": "• Drainage biliaire si ictère obstructif"
+              },
+              {
+                "title": "Prise en charge des addictions",
+                "content": "• Échange seringues, kit injection stérile"
+              },
+              {
+                "title": "Traitement comorbidités psychiatriques",
+                "content": "• Réinsertion sociale et professionnelle"
+              },
+              {
+                "title": "Vaccination hépatite A et B si non immunisé",
+                "content": "• Dépistage régulier VIH, VHC si poursuite UDIV: IV ; Surveillance carcinome hépatocellulaire si cirrhose"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Hépatite fulminante",
+                "description": "Encéphalopathie + INR > 1.5 → transfert USI, greffe hépatique"
+              },
+              {
+                "text": "Syndrome hépatorénal",
+                "description": "Créatinine ascendante + oligurie → albumine IV, terlipressine"
+              },
+              {
+                "text": "Péritonite bactérienne spontanée",
+                "description": "Si ascite : fièvre, douleur, confusion → ponction, ATB urgente"
+              },
+              {
+                "text": "Hémorragie digestive haute",
+                "description": "Varices œsophagiennes si cirrhose → endoscopie urgente"
+              },
+              {
+                "text": "Syndrome de sevrage alcoolique",
+                "description": "Tremblements, hallucinations → benzodiazépines, thiamine"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Test VIH",
+          "content": "[Pensez-vous que je devrais faire un test VIH ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Booker, je comprends votre préoccupation d'avoir peut-être le VIH. Bien que vos symptômes actuels puissent être dus à diverses causes, votre histoire d'usage de drogues intraveineuses est un facteur de risque pour l'infection VIH, et je recommanderais de faire un test VIH maintenant si vous êtes d'accord. Si vous êtes intéressé, j'aimerais aussi vous mettre en contact avec notre travailleur social, qui peut vous aider à trouver des programmes de réhabilitation. J'aimerais aussi vous conseiller fortement de ne pas partager d'aiguilles ou de seringues avec d'autres personnes, car cela vous expose au risque d'infection par le VIH, l'hépatite C et d'autres maladies potentiellement mortelles."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Ictère (jaunisse)",
+        "description": "Ictère (jaunisse)",
+        "data": "grilles_generees/html/images/AMBOSS-36-img1-Jaundice (icterus).jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Ascite",
+        "description": "L'abdomen est considérablement élargi en raison de l'ascite. Des maculo-papules érythémateuses partiellement érosives sont visibles, compatibles avec un prurigo simple.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img2-Ascites.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Diagnostic différentiel de l'ictère",
+        "description": "Diagnostic différentiel de l'ictère",
+        "data": "grilles_generees/html/images/AMBOSS-36-img3-Differential diagnosis of jaundice.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Classification de l'ictère selon la maladie sous-jacente et la localisation",
+        "description": "Classification de l'ictère selon la maladie sous-jacente et la localisation",
+        "data": "grilles_generees/html/images/AMBOSS-36-img4-Classification of jaundice according to underlying disease and localization.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Arbre biliaire extrahépatique",
+        "description": "Les canaux hépatiques droit et gauche se rejoignent pour former le canal hépatique commun. Le canal cystique rejoint le canal hépatique commun pour former le canal cholédoque. Le canal pancréatique principal se draine dans le canal cholédoque. Le canal cholédoque s'ouvre dans la partie descendante du duodénum.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img5-Extrahepatic biliary tree.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Métabolisme de la bilirubine",
+        "description": "(1) L'hémoglobine est décomposée en hème et globine dans la rate et, dans une moindre mesure, dans la moelle osseuse. (2) Les macrophages décomposent l'hème en bilirubine non conjuguée. Liée à l'albumine, la bilirubine non conjuguée est transportée dans la circulation sanguine et captée par le foie. (3) La bilirubine est conjuguée dans le foie et sécrétée dans la bile. (4) Pour être sécrétée, la bilirubine conjuguée entre dans le sang pour atteindre les hépatocytes avec une connexion directe aux canalicules biliaires. À ce stade, la bilirubine conjuguée est détectable dans le sang. (5) La bilirubine atteint l'intestin via la bile. Les bactéries intestinales convertissent la bilirubine en urobilinogene. (6) La majeure partie de l'urobilinogene est convertie en stercobilinogene puis en stercobiline. La stercobiline est excrétée dans les selles, leur donnant leur couleur brune caractéristique. (7) Une plus petite portion d'urobilinogene est réabsorbée et suit deux voies différentes : (8) La majeure partie subit une recirculation hépatobiliaire, tandis que le reste est filtré dans le rein. Ou : (9) Le reste est filtré dans les reins. Dans l'urine, l'urobilinogene est oxydé en urobiline, qui est responsable de la couleur jaune caractéristique.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img6-Bilirubin metabolism.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Dilatation des canaux biliaires",
+        "description": "Échographie du foie (vue intercostale ; plan transversal). Le canal cholédoque dilaté mesure 12,8 mm de diamètre et est de plus gros calibre que la veine porte (PV). Le diamètre normal du canal cholédoque est généralement rapporté comme ≤ 7 mm, ou ≤ 11 mm après cholécystectomie. L : foie.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img7-Biliary ductal dilatation.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Dilatation des canaux biliaires intrahépatiques",
+        "description": "Échographie du foie (lobe gauche ; plan transversal ; Doppler couleur). De multiples canaux biliaires intrahépatiques dilatés sont visibles (exemples indiqués par la superposition verte). Le Doppler couleur (dans la boîte verte) aide à différencier les branches de la veine porte (signal Doppler rouge) des canaux biliaires. Les canaux biliaires intrahépatiques normaux mesurent environ 2 mm de diamètre et ne dépassent pas 40 % du diamètre de la veine porte qui les accompagne.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img8-Intrahepatic bile ductal dilatation.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Dilatation des canaux biliaires intrahépatiques (2)",
+        "description": "Échographie du foie (lobe gauche ; plan transversal ; Doppler couleur). De multiples canaux biliaires intrahépatiques dilatés sont visibles (exemples indiqués par la superposition verte). Le Doppler couleur (dans la boîte verte) aide à différencier les branches de la veine porte (signal Doppler rouge) des canaux biliaires. Les canaux biliaires intrahépatiques normaux mesurent environ 2 mm de diamètre et ne dépassent pas 40 % du diamètre de la veine porte qui les accompagne.",
+        "data": "grilles_generees/html/images/AMBOSS-36-img9-Intrahepatic bile ductal dilatation.jpg",
+        "id": "img9"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Nick Booker",
+      "age": "54 ans",
+      "contexte": "Homme avec fatigue, ictère et multiples facteurs de risque hépatiques",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens vraiment fatigué ces derniers temps.",
+        "autreChose": "J'ai aussi des douleurs musculaires et j'ai perdu du poids."
+      },
+      "consignes": [
+        "Quand l'examinateur inspecte vos yeux, montrez l'image d'ictère fournie.",
+        "Quand l'examinateur palpe la partie supérieure droite de votre abdomen, dites que vous avez une douleur légère là.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demandez 'Pensez-vous que je devrais faire un test VIH ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue depuis 4 semaines, constante",
+          "Précédée d'un syndrome grippal intestinal",
+          "Fièvre et vomissements importants 1 semaine",
+          "Incapacité à s'alimenter pendant cette période",
+          "Fatigue qui s'aggrave progressivement",
+          "Myalgies diffuses concomitantes"
+        ],
+        "symptomesAssocies": [
+          "Nausées persistantes, surtout matinales",
+          "Selles décolorées récentes",
+          "Douleur hypochondre droit",
+          "Perte appétit depuis 2 mois",
+          "Perte poids 10 livres en 2 mois",
+          "Prurit depuis quelques jours",
+          "Ictère scléral visible"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître fatigué et épuisé",
+          "Mentionner consommation alcool importante",
+          "Avouer usage drogues IV récent",
+          "Exprimer ambivalence sur arrêt substances",
+          "Questionnaire CAGE positif 4/4",
+          "Inquiétude sur risque VIH (défi)"
+        ],
+        "durantStatus": [
+          "Montrer image ictère scléral",
+          "Douleur légère hypochondre droit",
+          "Pas d'ascite clinique",
+          "Pas de signes cutanés hépatiques",
+          "Coopération pour examen",
+          "Demander clarification termes médicaux"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 54 ans avec ictère + facteurs risque multiples = hépatite virale jusqu'à preuve contraire. Usage drogues IV récent (3 mois) = fenêtre parfaite pour hépatite C aiguë. Syndrome grippal initial typique hépatite virale aiguë. Alcoolisme sévère + pancréatites = cofacteurs aggravants. Perte poids 2 mois AVANT syndrome actuel = red flag cancer pancréas à ne pas manquer. Cholestase mixte probable : virale + alcoolique + ? néoplasique. Bilan hépatique complet urgent + imagerie + sérologies virales + VIH.",
+      "rolesInterventions": [
+        "Inspection abdomen : pas d'ascite visible, pas de circulation collatérale",
+        "Palpation foie : bord inférieur palpable 2 cm sous rebord costal",
+        "Matité déclive : négative (pas d'ascite)",
+        "Astérixis : absent",
+        "Angiomes stellaires : absents",
+        "Érythème palmaire : absent"
+      ],
+      "pointsCles": [
+        "UDIV = toujours penser hépatites B et C + VIH",
+        "Hépatite C aiguë : 75% asymptomatique, 25% ictère",
+        "Window period : 4-10 semaines pour séroconversion",
+        "Alcool + virus = synergie pour progression cirrhose",
+        "Perte poids antérieure = toujours chercher néoplasie",
+        "Réduction risques : urgent même si patient ambivalent"
+      ],
+      "pieges": [
+        "Attribuer tout à l'alcool (manquer hépatite virale)",
+        "Ignorer perte poids antérieure (cancer pancréas)",
+        "Oublier co-infections VIH/VHB chez UDIV",
+        "Ne pas proposer test VIH immédiat",
+        "Juger patient sur ses addictions",
+        "Omettre conseil réduction des risques"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Hépatite C aiguë sur terrain d'hépatopathie alcoolique"
+        },
+        {
+          "titre": "Hépatite C aiguë",
+          "contenu": "Infection virale du foie par VHC, principalement transmise par voie sanguine :",
+          "points": [
+            "Incidence : 75% asymptomatique, 25% symptomatique",
+            "Incubation : 2-12 semaines (moyenne 6-7 semaines)",
+            "Phase aiguë : syndrome grippal, ictère dans 20-30%",
+            "Clairance spontanée : 15-45% dans les 6 mois",
+            "Chronicité : 55-85% évoluent vers hépatite chronique",
+            "Facteurs favorables : sexe féminin, symptômes, génotype 3"
+          ]
+        },
+        {
+          "titre": "Hépatite alcoolique",
+          "contenu": "Inflammation hépatique aiguë sur hépatopathie alcoolique chronique :",
+          "points": [
+            "Seuil : > 80g/j homme, > 60g/j femme × années",
+            "Spectre : stéatose → hépatite → cirrhose",
+            "Présentation : ictère, hépatomégalie douloureuse, fièvre",
+            "Biologie : ASAT/ALAT > 2, ASAT < 300, hyperbilirubinémie",
+            "Score Maddrey : (4.6 × (TP patient - TP témoin)) + bili totale",
+            "Mortalité : 50% à 30j si Maddrey ≥ 32 sans traitement"
+          ]
+        },
+        {
+          "titre": "Co-infection VHC/alcool",
+          "contenu": "Synergie délétère sur la progression de la fibrose :",
+          "points": [
+            "Progression cirrhose : × 3 si co-facteurs",
+            "Carcinome hépatocellulaire : risque × 100",
+            "Réponse antiviraux : diminuée si alcool actif",
+            "Abstinence : améliore réponse traitement VHC",
+            "Stéatose : 70% VHC génotype 3 + alcool",
+            "Décompensation : plus rapide et sévère"
+          ]
+        },
+        {
+          "titre": "Usage de drogues intraveineuses et hépatites",
+          "contenu": "Population à très haut risque nécessitant approche globale :",
+          "points": [
+            "Prévalence VHC : 50-90% chez UDIV",
+            "Prévalence VHB : 5-10% (vaccination urgente)",
+            "Co-infection VIH : 15-30% selon régions",
+            "Réinfection : possible après traitement (génotypes différents)",
+            "Transmission : partage matériel injection (seringues, cuillères)",
+            "Prévention : programmes échange seringues, substitution"
+          ]
+        },
+        {
+          "titre": "Cancer du pancréas et pancréatite chronique",
+          "contenu": "Risque néoplasique augmenté après pancréatites répétées :",
+          "points": [
+            "Risque relatif : × 13 si pancréatite chronique",
+            "Délai : 10-20 ans après début pancréatite",
+            "Présentation : ictère obstructif progressif indolore",
+            "Signe Courvoisier : vésicule palpable non douloureuse",
+            "CA 19-9 : sensibilité 80%, spécificité 90%",
+            "Pronostic : survie médiane 4-6 mois si métastatique"
+          ]
+        },
+        {
+          "titre": "Approche du patient avec addictions multiples",
+          "contenu": "Prise en charge globale sans jugement :",
+          "points": [
+            "Évaluation motivationnelle : stade précontemplation",
+            "Réduction des risques : priorité sur abstinence",
+            "Substitution opiacés : méthadone ou buprénorphine",
+            "Alcool : sevrage supervisé si dépendance physique",
+            "Support psychosocial : logement, emploi, réseau",
+            "Comorbidités psy : dépression 30%, anxiété 20%"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "VHC aigu : attendre 12-16 sem (clairance spontanée possible)",
+        "Si persistance : sofosbuvir/velpatasvir 12 sem (pangénotypique)",
+        "Taux guérison : > 95% avec AAD même si UDIV actif",
+        "Hépatite alcoolique sévère : prednisolone 40 mg/j × 28j",
+        "Alternative : pentoxifylline 400 mg × 3/j si CI stéroïdes",
+        "Nutrition : 35-40 kcal/kg/j, protéines 1.2-1.5 g/kg/j",
+        "Thiamine : 100-300 mg IV/j avant glucose (Wernicke)",
+        "Prophylaxie sevrage : diazépam selon score CIWA"
+      ],
+      "examensComplementaires": [
+        "Bilan hépatique : ASAT, ALAT, GGT, PAL, bilirubine T/C",
+        "Fonction hépatique : TP, facteur V, albumine",
+        "Sérologies virales : HBsAg, anti-HBc, anti-HCV, ARN-VHC",
+        "VIH : test 4e génération (Ag p24 + Ac)",
+        "US abdominal : taille foie, échostructure, voies biliaires",
+        "Élastométrie : évaluation fibrose (FibroScan)",
+        "Alpha-fœtoprotéine : dépistage CHC si cirrhose",
+        "CA 19-9 + CT si suspicion cancer pancréas",
+        "Ammoniémie : si troubles neurologiques"
+      ]
+    }
+  }
+}

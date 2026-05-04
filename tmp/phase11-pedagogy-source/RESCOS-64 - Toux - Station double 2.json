@@ -1,0 +1,380 @@
+{
+  "title": "RESCOS-64 - Toux - Station double 2",
+  "context": {
+    "setting": "Présentation de Mme Dumont au pneumologue",
+    "patient": "Examinateur-trice : Posez uniquement les questions écrites en rouge."
+  },
+  "sections": {
+    "presentation": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "p1",
+          "text": "Identité, motif de consultation",
+          "subheader": "Examinateur-trice: \"Présente-moi la patiente.\"",
+          "binaryOnly": true,
+          "details": [
+            "Nom, prénom, âge"
+          ]
+        },
+        {
+          "id": "p2",
+          "text": "Identité, motif de consultation",
+          "binaryOnly": true,
+          "details": [
+            "Hémoptysie"
+          ]
+        },
+        {
+          "id": "p3",
+          "text": "Identité, motif de consultation",
+          "binaryOnly": false,
+          "details": [
+            "Aggravation de la toux et de la dyspnée"
+          ],
+          "scoringRule": "Toux = 1 pt, dyspnée = 1 pt"
+        },
+        {
+          "id": "p4",
+          "text": "Résume les éléments pertinents de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme actif à 35 UPA"
+          ],
+          "scoringRule": "2 éléments = 2 pts, 1 élément = 1 pt"
+        },
+        {
+          "id": "p5",
+          "text": "Résume les éléments pertinents de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Douleur thoracique respiro-dépendante et augmentée à la toux"
+          ],
+          "scoringRule": "2 éléments = 2 pts, 1 élément = 1 pt"
+        },
+        {
+          "id": "p6",
+          "text": "Résume les éléments pertinents de l'anamnèse",
+          "binaryOnly": true,
+          "details": [
+            "Possible BPCO non investigué (sur refus de la patiente)"
+          ]
+        },
+        {
+          "id": "p7",
+          "text": "Résume les éléments pertinents de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Perte pondérale 4 kg/quelques mois"
+          ],
+          "scoringRule": "2 éléments = 2 pts, 1 élément = 1 pt"
+        },
+        {
+          "id": "p8",
+          "text": "Résume les éléments pertinents de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Afébrile, pas de sudations"
+          ],
+          "scoringRule": "2 éléments = 2 pts, 1 élément = 1 pt"
+        },
+        {
+          "id": "p9",
+          "text": "Résume les éléments pertinents de l'examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Fréquence respiratoire normale"
+          ]
+        },
+        {
+          "id": "p10",
+          "text": "Résume les éléments pertinents de l'examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation pulmonaire : sibilances diffuses"
+          ]
+        },
+        {
+          "id": "p11",
+          "text": "Résume les éléments pertinents de l'examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Percussion pulmonaire normale"
+          ]
+        },
+        {
+          "id": "p12",
+          "text": "Résume les éléments pertinents de l'examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation cardiaque normale"
+          ]
+        },
+        {
+          "id": "p13",
+          "text": "Résume les éléments pertinents de l'examen physique",
+          "binaryOnly": true,
+          "details": [
+            "Palpation thoracique sous le sein droit normale"
+          ]
+        },
+        {
+          "id": "p14",
+          "text": "Évaluation globale de la présentation de la patiente",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation globale de la présentation de la patiente"
+          ]
+        },
+        {
+          "id": "p15",
+          "text": "Réflexivité",
+          "binaryOnly": true,
+          "details": [
+            "Réalise ne pas avoir cherché certains éléments pertinents dans l'anamnèse et /ou l'examen clinique et les mentionne"
+          ],
+          "scoringRule": "Fait = 1 pt, Pas fait = 0 pt"
+        }
+      ]
+    },
+    "raisonnement": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "r1",
+          "text": "Diagnostic le plus probable: Cancer pulmonaire",
+          "subheader": "Examinateur-trice: \"Quelles sont tes hypothèses diagnostiques ? Donne les arguments pour et contre.\"",
+          "binaryOnly": true
+        },
+        {
+          "id": "r2",
+          "text": "Arguments POUR le cancer pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Tabagisme, toux, dyspnée, douleur thoracique, perte pondérale"
+          ],
+          "scoringRule": "4-6 = 3 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "r3",
+          "text": "Arguments CONTRE le cancer pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Absence de fatigue"
+          ]
+        },
+        {
+          "id": "r4",
+          "text": "Diagnostic différentiel: Tuberculose",
+          "binaryOnly": true
+        },
+        {
+          "id": "r5",
+          "text": "Arguments POUR la tuberculose",
+          "binaryOnly": false,
+          "details": [
+            "Perte pondérale, toux, dyspnée"
+          ]
+        },
+        {
+          "id": "r6",
+          "text": "Arguments CONTRE la tuberculose",
+          "binaryOnly": false,
+          "details": [
+            "Pas de fièvre, pas de facteurs de risque (cortisone), pas d'antécédent, pas de TBC dans la famille"
+          ],
+          "scoringRule": "4-2 = 2 pts, 1 = 0.5 pt, 0 = 0 pt"
+        },
+        {
+          "id": "r7",
+          "text": "Diagnostic différentiel: Embolie pulmonaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "r8",
+          "text": "Arguments POUR l'embolie pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "(Aggravation de) dyspnée, (aggravation de) toux, douleur thoracique respiro-dépendante"
+          ]
+        },
+        {
+          "id": "r9",
+          "text": "Arguments CONTRE l'embolie pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Pas de voyage, pas d'immobilité, pas de TVP, pas d'ATCD d'EP"
+          ],
+          "scoringRule": "4-3 = 2 pts, 2-1 = 1 pt, 1-0 = 0 pt"
+        },
+        {
+          "id": "r10",
+          "text": "Diagnostic différentiel: Pneumonie",
+          "binaryOnly": true
+        },
+        {
+          "id": "r11",
+          "text": "Arguments POUR la pneumonie",
+          "binaryOnly": false,
+          "details": [
+            "Probable BPCO (toux grasse chronique chez fumeur), douleur thoracique respiro-dépendante, (aggravation de) dyspnée, (aggravation de) toux"
+          ]
+        },
+        {
+          "id": "r12",
+          "text": "Arguments CONTRE la pneumonie",
+          "binaryOnly": false,
+          "details": [
+            "Pas de changement de couleur/quantité des expectorations, pas de fièvre"
+          ]
+        },
+        {
+          "id": "r13",
+          "text": "Diagnostic différentiel: Sténose mitrale",
+          "binaryOnly": true
+        },
+        {
+          "id": "r14",
+          "text": "Arguments POUR la sténose mitrale",
+          "binaryOnly": false,
+          "details": [
+            "Aucun"
+          ]
+        },
+        {
+          "id": "r15",
+          "text": "Arguments CONTRE la sténose mitrale",
+          "binaryOnly": false,
+          "details": [
+            "Pas de problème cardiaque connu, pas de souffle cardiaque, pas de rhumatisme articulaire aigu"
+          ]
+        },
+        {
+          "id": "r16",
+          "text": "Évaluation globale du raisonnement clinique",
+          "binaryOnly": false,
+          "details": [
+            "A suivi un cours logique et structuré"
+          ],
+          "scoringRule": "Fait = 2 pts, ± = 1 pt, Pas fait = 0 pt"
+        }
+      ]
+    },
+    "examens": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examens complémentaires",
+          "subheader": "Examinateur-trice: \"De quels examens complémentaires as-tu besoin pour confirmer ou infirmer tes hypothèses diagnostiques ?\"",
+          "binaryOnly": true,
+          "details": [
+            "Formule sanguine"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examens complémentaires",
+          "binaryOnly": true,
+          "details": [
+            "Na+, K+, urée, créatinine, CRP"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Crase, plaquettes, D Dimères"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examens complémentaires",
+          "binaryOnly": true,
+          "details": [
+            "Imagerie : RX thorax ou Ct-scan pulmonaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examens complémentaires",
+          "binaryOnly": true,
+          "details": [
+            "Gazométrie"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examens spécialisés",
+          "binaryOnly": true,
+          "details": [
+            "Cultures d'expectorations et recherche de BK"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examens spécialisés",
+          "binaryOnly": true,
+          "details": [
+            "Test sanguin de QuantiFéron"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examens spécialisés",
+          "binaryOnly": true,
+          "details": [
+            "Échocardiographie transthoracique"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examens spécialisés",
+          "binaryOnly": true,
+          "details": [
+            "Bilan angiologique veineux (TVP)"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Examens spécialisés",
+          "binaryOnly": true,
+          "details": [
+            "Spirométrie=Fonctions pulmonaires à faire à distance pour confirmer le COPD"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Prise en charge",
+          "subheader": "Examinateur-trice: \"Quelles sont tes recommandations à la patiente en attendant les résultats des examens ?\"",
+          "binaryOnly": true,
+          "details": [
+            "Consulter rapidement si aggravation des hémoptysies, ou de la douleur thoracique ou de la dyspnée"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Prise en charge",
+          "binaryOnly": true,
+          "details": [
+            "Stimulation à l'arrêt du tabac (patch, consultation antitabac, hypnose...)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge",
+          "binaryOnly": true,
+          "details": [
+            "Proposer un arrêt de travail"
+          ]
+        }
+      ]
+    }
+  }
+}

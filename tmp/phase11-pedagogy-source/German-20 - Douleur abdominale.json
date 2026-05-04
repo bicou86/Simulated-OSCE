@@ -1,0 +1,310 @@
+{
+  "title": "German-20 - Douleur abdominale",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Homme de 72 ans se présente avec des douleurs abdominales, se tord de douleur.",
+    "vitals": {
+      "ta": "142/89 mmHg",
+      "fc": "84 bpm",
+      "fr": "14/min",
+      "temperature": "36.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Fortes douleurs abdominales"
+        },
+        {
+          "id": "a3",
+          "text": "Début des symptômes",
+          "patientComment": "Depuis quelques heures"
+        },
+        {
+          "id": "a4",
+          "text": "Localisation",
+          "patientComment": "Plutôt à gauche, région moyenne à inférieure de l'abdomen"
+        },
+        {
+          "id": "a5",
+          "text": "Migration de la douleur",
+          "patientComment": "Toujours au même endroit"
+        },
+        {
+          "id": "a6",
+          "text": "Irradiation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a7",
+          "text": "Mode de début",
+          "patientComment": "Soudain"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents de douleurs similaires",
+          "patientComment": "Depuis longtemps déjà des douleurs récurrentes après les repas"
+        },
+        {
+          "id": "a9",
+          "text": "Fréquence et périodicité",
+          "patientComment": "Légèrement ondulant"
+        },
+        {
+          "id": "a10",
+          "text": "Intensité",
+          "patientComment": "8/10"
+        },
+        {
+          "id": "a11",
+          "text": "Caractère de la douleur",
+          "patientComment": "Piquante, coliques"
+        },
+        {
+          "id": "a12",
+          "text": "Facteurs aggravants ou soulageants",
+          "patientComment": "En ce moment rien n'aide du tout !"
+        },
+        {
+          "id": "a13",
+          "text": "Douleurs liées à l'alimentation",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes généraux et digestifs",
+          "details": [
+            "Fièvre [Non]",
+            "Transit intestinal et gaz [Maintenant pas du tout !]",
+            "Nausées/Vomissements [Nausées]",
+            "Sang dans les vomissements [Non]",
+            "Diarrhée/Constipation [Non]",
+            "Sang dans les selles [Non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédent de chirurgie abdominale",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse de voyage",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse de l'entourage",
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "a18",
+          "text": "Symptômes constitutionnels",
+          "details": [
+            "Perte de poids [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fièvre prolongée [Non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension artérielle [Oui]",
+            "Dyslipidémie [Oui]",
+            "Diabète [Oui]",
+            "Tabagisme [Oui]",
+            "Antécédent familial de maladie coronarienne < 55 ans [Non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse personnelle",
+          "patientComment": "Antécédent d'infarctus du myocarde il y a 6 ans, fibrillation auriculaire, hypertension artérielle, diabète"
+        },
+        {
+          "id": "a21",
+          "text": "Consommation de substances",
+          "patientComment": "40 paquets-années, alcool occasionnel, pas de drogues"
+        },
+        {
+          "id": "a22",
+          "text": "Médication actuelle",
+          "patientComment": "IEC, bêta-bloquant, diurétique, digitaline, aspirine, statine, metformine"
+        },
+        {
+          "id": "a23",
+          "text": "Allergies",
+          "patientComment": "Non"
+        },
+        {
+          "id": "a24",
+          "text": "Anamnèse sociale",
+          "patientComment": "Agriculteur"
+        },
+        {
+          "id": "a25",
+          "text": "Anamnèse familiale",
+          "patientComment": "Père infarctus du myocarde à 73 ans"
+        },
+        {
+          "id": "a26",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète avec identification des facteurs de risque cardiovasculaire majeurs"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'abdomen et de la peau",
+          "details": [
+            "État général [Patient se tord de douleur]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Auscultation abdominale",
+          "patientComment": "Bruits intestinaux rares, souffle vasculaire synchrone au pouls"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation abdominale",
+          "patientComment": "Abdomen entier douloureux à la pression avec point maximal dans l'abdomen moyen gauche, défense musculaire"
+        },
+        {
+          "id": "e4",
+          "text": "Signes péritonéaux",
+          "patientComment": "Oui"
+        },
+        {
+          "id": "e5",
+          "text": "Toucher rectal",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e6",
+          "text": "Palpation des ganglions lymphatiques",
+          "patientComment": "Normal"
+        },
+        {
+          "id": "e7",
+          "text": "Status cardio-pulmonaire",
+          "details": [
+            "Examen cardiovasculaire",
+            "Examen pulmonaire"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Status vasculaire",
+          "details": [
+            "Recherche de pouls périphériques",
+            "Recherche d'anévrisme de l'aorte abdominale"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen abdominal complet avec recherche appropriée de signes d'ischémie intestinale"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic suspecté",
+          "details": [
+            "Infarctus mésentérique aigu"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 2-3 diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Thrombose veineuse mésentérique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Colique néphrétique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal sans contraste, ECBU"
+                  },
+                  {
+                    "text": "Diverticulite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal, CRP"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Analyses sanguines [FSC, CRP, lactate, CK, LDH]",
+            "Radiographie thoracique",
+            "ECG",
+            "Radiographie abdominale [Niveaux hydro-aériques, anses dilatées]",
+            "Échographie abdominale [Liquide libre, anses immobiles]",
+            "Doppler couleur, angio-IRM",
+            "Coloscopie [Risque de perforation !]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique urgente",
+          "details": [
+            "Tolérance à l'ischémie intestinale maximale 6 heures !",
+            "Dès la suspicion clinique :",
+            "Angiographie et laparotomie exploratrice",
+            "Selon les constatations : embolectomie, désobstruction, pontage",
+            "Réévaluation du traitement médicamenteux"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge urgente appropriée avec reconnaissance de la gravité et de l'urgence chirurgicale"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,449 @@
+{
+  "title": "RESCOS-12 - Crise de panique",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M./Mme Michel/Michelle Laurent, 27 ans, se présente seul(e) suite à un malaise/une crise survenue sur son lieu de travail."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.65,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Explore les plaintes principales actuelles : Crises de paniques",
+          "details": [
+            "Début [il y a 3-4 mois]",
+            "Intensité [angoisses intenses]",
+            "Durée [quelques minutes]",
+            "Fréquence [presque tous les jours actuellement]",
+            "Contexte [réunion de travail, discussion conflictuelle]",
+            "Facteurs déclencheurs [situations diverses, pas toujours identifiables]",
+            "Facteurs atténuants [essaie de respirer profondément sans grand effet]"
+          ],
+          "scoringRule": "Au moins 4 = oui, 2-3 = ±, aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Répercussion des symptômes dans le quotidien du/de la patient·e",
+          "details": [
+            "Emploi [accumulation d'heures supplémentaires, moins d'efficacité, difficultés de concentration]",
+            "Relations [tensions avec conjoint(e), disputes, moins d'activités communes]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse cardio-respiratoire (afin d'exclure cette origine)",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents psychiatriques personnels (éventuels suivis, hospitalisations, traitements...)",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse socioprofessionnelle ET familiale",
+          "details": [
+            "Profession [comptable, premier emploi depuis mai]",
+            "Couple [en couple, vit avec ami(e) depuis 3 mois]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents psychiatriques familiaux [mère avec troubles anxieux, prend Xanax]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Évaluation de troubles cognitifs",
+          "details": [
+            "Trouble de la mémoire",
+            "Trouble de la concentration"
+          ],
+          "scoringRule": "Au moins 1 = oui, aucun = non",
+          "pointScale": 1
+        },
+        {
+          "id": "a8",
+          "text": "Éléments thymiques",
+          "details": [
+            "Humeur dépressive",
+            "Perte d'intérêt",
+            "Perte de plaisir",
+            "Réduction d'énergie"
+          ],
+          "scoringRule": "Au moins 3 = oui, un à deux = ±, aucun = non",
+          "pointScale": 3
+        },
+        {
+          "id": "a9",
+          "text": "Présence d'idées suicidaires [non actuellement, mais ATCD à l'adolescence]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Syndrome somatique",
+          "details": [
+            "Trouble du sommeil [difficultés d'endormissement, ruminations, réveils fréquents, 5h/nuit]",
+            "Modification de l'appétit [diminution]",
+            "Perte/prise de poids [perte de 2-3 kg]"
+          ],
+          "scoringRule": "Au moins 2 = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a11",
+          "text": "Éléments de trouble de panique",
+          "details": [
+            "Angoisses intenses d'apparition brutale",
+            "Imprévisible",
+            "Montée progressive",
+            "Dans situations variables d'apparition (travail, maison, sorties)"
+          ],
+          "scoringRule": "Au moins 2 = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes neurovégétatifs",
+          "details": [
+            "Palpitations [cœur qui bat vite]",
+            "Douleurs thoraciques [gêne thoracique]",
+            "Sensation d'étouffement [impression d'étouffement]",
+            "Étourdissement [la tête qui tourne]",
+            "Déréalisation/dépersonnalisation [sentiment d'être ailleurs, hors de soi-même]",
+            "Peur de mourir ou perdre le contrôle de soi ou devenir fou"
+          ],
+          "scoringRule": "Au moins 3 = oui, un-2 = ±, aucun = non"
+        },
+        {
+          "id": "a13",
+          "text": "Absence de symptômes entre les crises",
+          "binaryOnly": true,
+          "pointScale": 1
+        },
+        {
+          "id": "a14",
+          "text": "Éléments hypo/maniaques (fluctuation de l'humeur, humeur euphorique, baisse des besoins de sommeil, surplus d'énergie, désinhibition, ...)",
+          "binaryOnly": true,
+          "pointScale": 1
+        },
+        {
+          "id": "a15",
+          "text": "Évaluation de consommation de toxiques (alcool, drogue)",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Symptômes psychotiques (délire, troubles perceptifs)",
+          "binaryOnly": true,
+          "pointScale": 1
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse et évaluation psychiatrique en général : ciblées, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0,
+      "criteria": []
+    },
+    "management": {
+      "weight": 0.1,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "scoringRule": "Crise de panique = oui, autre trouble anxieux évoqué = ±, aucun ou pas pertinent = non"
+        },
+        {
+          "id": "m2",
+          "text": "Proposition de mise en place d'un suivi ambulatoire",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Proposition d'une médication d'urgence (Anxiolyse)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m4",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Michel/Michelle Laurent",
+      "age": "27 ans",
+      "contexte": "Comptable dans une grande entreprise de télécommunications, célibataire, vit en colocation",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai eu une crise sur mon lieu de travail, je pense que c'est une crise cardiaque",
+        "autreChose": "J'ai vraiment cru que j'allais mourir, c'était horrible"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Crises de panique depuis 3-4 mois",
+          "Angoisses intenses qui durent quelques minutes",
+          "Presque tous les jours actuellement",
+          "Surviennent dans différents contextes (réunions, discussions conflictuelles)",
+          "Parfois sans facteur déclencheur identifiable",
+          "Essaie de respirer profondément mais sans grand effet"
+        ],
+        "symptomesAssocies": [
+          "Cœur qui bat très vite pendant les crises",
+          "Gêne thoracique, impression d'oppression",
+          "Sensation d'étouffement, comme si je ne pouvais plus respirer",
+          "La tête qui tourne, vertiges importants",
+          "Sentiment d'être ailleurs, hors de moi-même",
+          "Peur intense de mourir ou de devenir fou/folle"
+        ],
+        "evolution": [
+          "Première crise il y a 3-4 mois",
+          "Au début, crises occasionnelles",
+          "Maintenant presque quotidiennes",
+          "Durée : quelques minutes mais semblent interminables",
+          "Entre les crises : va bien, pas de symptômes",
+          "Aujourd'hui : crise en réunion de travail importante"
+        ],
+        "repercussions": [
+          "Accumulation d'heures supplémentaires au travail",
+          "Moins d'efficacité, difficultés de concentration",
+          "Tensions avec mon/ma conjoint(e)",
+          "Disputes plus fréquentes à la maison",
+          "Moins d'activités communes avec ami(e)",
+          "Évite certaines situations par peur des crises"
+        ],
+        "questions": [
+          "Est-ce que c'est grave ? J'ai vraiment peur que ce soit cardiaque",
+          "Ma mère prend du Xanax pour ses angoisses, est-ce que j'en aurai besoin aussi ?"
+        ]
+      },
+      "anamneseSystemes": {
+        "cardioRespiratoire": [
+          "Pas de douleur thoracique en dehors des crises",
+          "Pas d'essoufflement à l'effort",
+          "Pas de palpitations hors crises",
+          "Jamais eu de problème cardiaque"
+        ],
+        "neurologique": [
+          "Pas de maux de tête inhabituels",
+          "Pas de perte de connaissance",
+          "Pas de convulsions"
+        ],
+        "psychiatrique": [
+          "Pas de suivi psychiatrique actuel",
+          "Antécédent d'idées suicidaires à l'adolescence",
+          "Pas d'idées suicidaires actuellement",
+          "Sommeil perturbé : difficultés d'endormissement, ruminations",
+          "Réveils fréquents, environ 5h de sommeil par nuit",
+          "Appétit diminué, perte de 2-3 kg"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Moins d'appétit, saute parfois des repas",
+        "activitePhysique": "Arrêt du sport depuis quelques mois",
+        "sommeil": "5h/nuit, ruminations, réveils fréquents",
+        "tabac": "Non-fumeur/se",
+        "alcool": "Occasionnel, en soirée",
+        "drogues": "Non",
+        "medicaments": "Aucun actuellement"
+      },
+      "histoireMedicale": [
+        "Pas d'antécédents médicaux significatifs",
+        "Pas d'hospitalisation",
+        "Pas de chirurgie",
+        "Pas d'allergie connue",
+        "Vaccins à jour",
+        "Idées suicidaires à l'adolescence suite à harcèlement scolaire",
+        "Pas de tentative de suicide"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère : troubles anxieux, prend du Xanax",
+        "Père : bonne santé",
+        "Pas de frère et sœur",
+        "Pas d'antécédent cardiaque dans la famille"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Comptable dans grande entreprise de télécommunications",
+        "hobbies": "Cinéma, lecture (avant les crises)",
+        "poids": "Normal",
+        "orientationSexuelle": "Non précisée",
+        "etatCivil": "En couple, vit avec ami(e) depuis 3 mois",
+        "enfants": "Aucun",
+        "situationSocioEconomique": "Premier emploi depuis mai, situation stable",
+        "origine": "Non précisée",
+        "etatEsprit": "Très anxieux/se, peur de mourir"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Nerveux/se, agité(e)",
+          "Parle rapidement",
+          "Cherche constamment la réassurance",
+          "Peut mettre la main sur la poitrine en parlant des crises",
+          "Éviter de simuler une crise pendant l'entretien"
+        ],
+        "durantExamen": [
+          "Tendu(e) mais collaborant(e)",
+          "Pas de signes physiques anormaux",
+          "Constantes vitales normales"
+        ]
+      },
+      "informationADonner": "Si le candidat demande : 'J'ai déjà pensé à me suicider quand j'étais adolescent(e) suite à du harcèlement scolaire, mais plus maintenant.'"
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Laurent, 27 ans, comptable, se présente aux urgences suite à une crise de panique survenue au travail. Crises récurrentes depuis 3-4 mois avec symptômes neurovégétatifs intenses (palpitations, dyspnée, vertiges, déréalisation). Impact fonctionnel majeur sur vie professionnelle et personnelle. ATCD d'idées suicidaires à l'adolescence. Mère sous anxiolytiques.",
+      "rolesInterventions": [
+        "Laisser le candidat mener l'entretien psychiatrique",
+        "Noter la qualité de l'exploration des symptômes anxieux",
+        "Vérifier l'évaluation du risque suicidaire",
+        "Observer la capacité à rassurer le patient"
+      ],
+      "pointsCles": [
+        "Trouble panique typique avec crises récurrentes",
+        "Absence de symptômes entre les crises (critère diagnostique)",
+        "Impact fonctionnel significatif",
+        "Terrain familial anxieux (mère)",
+        "Antécédent d'idées suicidaires à explorer",
+        "Diagnostic différentiel cardiaque à exclure",
+        "Nécessité d'un suivi psychiatrique ambulatoire"
+      ],
+      "pieges": [
+        "Ne pas manquer l'évaluation du risque suicidaire",
+        "Explorer systématiquement les autres troubles anxieux",
+        "Exclure une cause organique (hyperthyroïdie, phéochromocytome)",
+        "Ne pas oublier la consommation de toxiques",
+        "Proposer une anxiolyse d'urgence si nécessaire",
+        "Importance de rassurer sur l'absence de danger vital"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur le trouble panique",
+      "sections": [
+        {
+          "titre": "Définition et critères diagnostiques",
+          "contenu": "Le trouble panique se caractérise par des attaques de panique récurrentes et inattendues.",
+          "points": [
+            "Attaque de panique : montée brusque d'anxiété intense",
+            "Pic en moins de 10 minutes",
+            "Au moins 4 symptômes parmi 13 critères DSM-5",
+            "Caractère imprévisible des crises",
+            "Préoccupation persistante concernant de nouvelles attaques",
+            "Changements comportementaux significatifs",
+            "Absence de cause organique ou toxique"
+          ]
+        },
+        {
+          "titre": "Symptômes de l'attaque de panique",
+          "contenu": "Les 13 symptômes possibles selon le DSM-5.",
+          "points": [
+            "Palpitations ou tachycardie",
+            "Transpiration",
+            "Tremblements ou secousses musculaires",
+            "Sensation de souffle court ou d'étouffement",
+            "Sensation d'étranglement",
+            "Douleur ou gêne thoracique",
+            "Nausée ou gêne abdominale",
+            "Sensation de vertige ou d'évanouissement",
+            "Déréalisation ou dépersonnalisation",
+            "Peur de perdre le contrôle ou de devenir fou",
+            "Peur de mourir",
+            "Paresthésies",
+            "Frissons ou bouffées de chaleur"
+          ]
+        },
+        {
+          "titre": "Épidémiologie et évolution",
+          "contenu": "Le trouble panique est fréquent et touche préférentiellement les jeunes adultes.",
+          "points": [
+            "Prévalence : 2-3% de la population",
+            "Début typique : 20-30 ans",
+            "Prédominance féminine (2:1)",
+            "Évolution chronique avec rémissions et rechutes",
+            "Risque d'agoraphobie secondaire (30-50%)",
+            "Comorbidités fréquentes : dépression, autres troubles anxieux",
+            "Facteurs de risque : stress, antécédents familiaux, traumatismes"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel",
+          "contenu": "Plusieurs pathologies organiques et psychiatriques peuvent mimer un trouble panique.",
+          "points": [
+            "Causes cardiaques : arythmie, angor, prolapsus mitral",
+            "Causes endocriniennes : hyperthyroïdie, phéochromocytome, hypoglycémie",
+            "Causes respiratoires : asthme, embolie pulmonaire",
+            "Causes neurologiques : épilepsie temporale, vertiges",
+            "Intoxications : caféine, cannabis, cocaïne, sevrage alcoolique",
+            "Autres troubles anxieux : phobie sociale, TAG, TSPT",
+            "Trouble bipolaire ou dépression avec anxiété"
+          ]
+        },
+        {
+          "titre": "Prise en charge aiguë",
+          "contenu": "La gestion de la crise aiguë vise à rassurer et soulager rapidement.",
+          "points": [
+            "Rassurance sur l'absence de danger vital",
+            "Environnement calme et sécurisant",
+            "Techniques de respiration contrôlée",
+            "Anxiolyse si nécessaire : lorazépam 1-2mg SL ou alprazolam 0.5-1mg",
+            "Éviter l'hyperventilation (pas de sac plastique)",
+            "Examen somatique pour exclure cause organique",
+            "Éducation sur la nature bénigne des symptômes"
+          ]
+        },
+        {
+          "titre": "Traitement au long cours",
+          "contenu": "La prise en charge combine approches pharmacologique et psychothérapeutique.",
+          "points": [
+            "Psychothérapie cognitivo-comportementale (TCC) en première intention",
+            "ISRS : sertraline, paroxétine, escitalopram",
+            "IRSN : venlafaxine si échec ISRS",
+            "Durée minimale : 12 mois après rémission",
+            "Éviter benzodiazépines au long cours (dépendance)",
+            "Techniques de relaxation et mindfulness",
+            "Psychoéducation sur le trouble",
+            "Traitement des comorbidités"
+          ]
+        },
+        {
+          "titre": "Évaluation du risque suicidaire",
+          "contenu": "Le trouble panique augmente le risque suicidaire, surtout en cas de comorbidités.",
+          "points": [
+            "Risque multiplié par 2-3 vs population générale",
+            "Facteurs de risque : dépression associée, isolement, échecs thérapeutiques",
+            "Évaluation systématique des idées suicidaires",
+            "Exploration des antécédents de tentatives",
+            "Plan de sécurité si risque identifié",
+            "Orientation psychiatrique si risque élevé",
+            "Implication de l'entourage dans la surveillance"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Crise aiguë : lorazépam 1-2mg sublingual ou alprazolam 0.5-1mg",
+        "ISRS première ligne : sertraline 50-200mg/j, escitalopram 10-20mg/j",
+        "Alternative : paroxétine 20-60mg/j (attention au sevrage)",
+        "IRSN si échec : venlafaxine 75-225mg/j",
+        "Éviter benzodiazépines > 4 semaines",
+        "TCC : 12-16 séances recommandées",
+        "Durée traitement : minimum 12 mois après rémission"
+      ],
+      "examensComplementaires": [
+        "ECG systématique (éliminer trouble du rythme)",
+        "TSH pour exclure hyperthyroïdie",
+        "Glycémie capillaire si suspicion hypoglycémie",
+        "Toxicologie urinaire si consommation suspectée",
+        "Ionogramme, calcémie si indiqué",
+        "Métanéphrines urinaires si suspicion phéochromocytome",
+        "Holter ECG si palpitations persistantes hors crises",
+        "EEG seulement si suspicion épilepsie temporale"
+      ]
+    }
+  }
+}

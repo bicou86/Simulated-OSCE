@@ -1,0 +1,377 @@
+{
+  "title": "German-37 - Dysurie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Monsieur Steller, 52 ans, se présente en consultation pour difficultés et douleurs lors de la miction"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'entrée - Symptôme principal",
+          "details": [
+            "[Difficultés à uriner]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la dysurie",
+          "details": [
+            "Douleurs mictionnelles [oui]",
+            "Jet faible/goutte à goutte [non]",
+            "Durée des symptômes [depuis 4 jours]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Fréquence et volume mictionnel",
+          "details": [
+            "Fréquence [environ 15 fois par jour]",
+            "Volume [peu d'urine à chaque fois, seulement avec effort]",
+            "Nycturie [oui, 3 fois par nuit]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Aspect des urines",
+          "details": [
+            "Couleur [normale, parfois peut-être rougeâtre]",
+            "Présence de sang [peut-être]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Écoulement urétral",
+          "details": [
+            "Présence [oui]",
+            "Moment d'apparition [le matin]",
+            "Aspect [blanchâtre]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Douleurs associées",
+          "details": [
+            "Douleurs hypogastriques [non]",
+            "Douleurs lombaires [non]",
+            "Douleurs lors de l'éjaculation [pas de rapports sexuels depuis]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Éruption cutanée [non]",
+            "Symptômes B (sueurs nocturnes, perte de poids) [non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Recherche étiologique - Comportements à risque",
+          "details": [
+            "Hydratation [normale]",
+            "Rapports sexuels non protégés [oui, plusieurs ces derniers mois]",
+            "Partenaires [prostituées et une connaissance occasionnelle]",
+            "Dernier rapport à risque [il y a environ 5 semaines]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents urologiques",
+          "details": [
+            "Dépistage prostatique [jamais fait]",
+            "Sondage vésical [non]",
+            "Épisodes similaires antérieurs [non]",
+            "Anomalies congénitales [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "details": [
+            "[Aucun]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Allergies",
+          "details": [
+            "[Aucune]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Aucun]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Habitudes de vie",
+          "details": [
+            "Alcool [consommation modérée]",
+            "Tabac [non précisé]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Sans particularité]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Marié mais épouse partie avec un autre homme il y a 5 mois]",
+            "[Enfants partis du domicile]",
+            "[Banquier, très stressé]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète ciblée sur l'infection sexuellement transmissible avec exploration des facteurs de risque"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen abdominal",
+          "details": [
+            "Palpation abdominale",
+            "Palpation vésicale",
+            "Percussion vésicale",
+            "Recherche d'un globe vésical"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen des fosses lombaires",
+          "details": [
+            "Palpation bilatérale",
+            "Signe de Giordano (douleur à la percussion)"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen génital externe",
+          "details": [
+            "Inspection du méat urétral",
+            "Recherche d'écoulement",
+            "Examen du gland et du prépuce",
+            "Palpation testiculaire",
+            "Recherche d'adénopathies inguinales"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Toucher rectal",
+          "details": [
+            "Évaluation du volume prostatique",
+            "Consistance de la prostate",
+            "Douleur prostatique",
+            "Recherche de nodules"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen urologique et génital complet adapté à la suspicion d'IST"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic principal",
+          "details": [
+            "[Urétrite gonococcique et/ou à Chlamydia]",
+            "[Blennorragie]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Cystite",
+            "Prostatite",
+            "Urétrite non gonococcique",
+            "Infection urinaire haute"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Infections sexuellement transmissibles",
+                "items": [
+                  {
+                    "text": "Urétrite gonococcique → Prélèvement urétral, PCR",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Urétrite à Chlamydia → PCR sur premier jet urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Urétrite à Mycoplasma/Ureaplasma → PCR multiplex",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Urétrite à Trichomonas → Examen direct, culture",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Infections urinaires",
+                "items": [
+                  {
+                    "text": "Cystite bactérienne → ECBU, bandelette urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECBU, bandelette urinaire"
+                  },
+                  {
+                    "text": "Prostatite aiguë → ECBU, PSA, échographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECBU, PSA, toucher rectal"
+                  },
+                  {
+                    "text": "Pyélonéphrite → ECBU, hémocultures, échographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECBU, hémocultures, US rénal"
+                  }
+                ]
+              },
+              {
+                "name": "Causes non infectieuses",
+                "items": [
+                  {
+                    "text": "Traumatisme urétral → Anamnèse, urétrocystographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Corps étranger/calcul → Radiographie, échographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Sténose urétrale → Débitmétrie, urétrocystographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Bandelette urinaire et ECBU",
+            "Test des 3 ou 4 verres si nécessaire",
+            "Prélèvement de l'écoulement urétral (gonocoques et Chlamydia)",
+            "Biologie : FSC, CRP, créatinine",
+            "Test VIH obligatoire !",
+            "Sérologies IST (syphilis, hépatites B et C)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Traitement antibiotique",
+          "details": [
+            "Ceftriaxone 500mg IM dose unique (gonocoque)",
+            "+ Azithromycine 1g PO dose unique (Chlamydia)",
+            "Alternative : doxycycline 100mg 2x/j pendant 7 jours"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de première ligne",
+                "content": "• Ceftriaxone 500mg IM dose unique\n• + Azithromycine 1g PO dose unique\n• Traitement simultané des deux germes (co-infection fréquente)\n• Abstinence sexuelle jusqu'à guérison"
+              },
+              {
+                "title": "Mesures associées",
+                "content": "• Notification et traitement du/des partenaire(s)\n• Dépistage IST complet (VIH, syphilis, hépatites)\n• Éducation sur les rapports protégés\n• Contrôle clinique à 7 jours\n• Test de guérison à 3 semaines"
+              },
+              {
+                "title": "En cas d'échec",
+                "content": "• Vérifier l'observance\n• Rechercher une réinfection\n• Antibiogramme si résistance\n• Envisager autres germes (Mycoplasma, Trichomonas)"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Notification des partenaires",
+          "details": [
+            "Information obligatoire des partenaires",
+            "Traitement empirique des partenaires",
+            "Période de notification : 60 jours",
+            "Anonymat respecté si souhaité"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prévention et conseils",
+          "details": [
+            "Utilisation systématique du préservatif",
+            "Dépistage régulier si comportements à risque",
+            "Information sur les IST",
+            "Vaccination hépatite B si non fait"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Suivi",
+          "details": [
+            "Contrôle clinique à 1 semaine",
+            "Test de guérison à 3-4 semaines",
+            "Contrôle VIH à 3 mois (fenêtre sérologique)",
+            "Support psychologique si nécessaire (contexte de séparation)"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète d'une IST avec traitement, notification des partenaires et prévention"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

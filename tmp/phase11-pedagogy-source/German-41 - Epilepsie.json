@@ -1,0 +1,361 @@
+{
+  "title": "German-41 - Epilepsie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Eispelipe, 77 ans, consulte pour une première crise convulsive."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte initiale → symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "Crise convulsive"
+        },
+        {
+          "id": "a3",
+          "text": "Évolution temporelle de la crise",
+          "binaryOnly": false,
+          "details": [
+            "Début [soudain, il y a environ 1h, peu après le repas]",
+            "Durée de la crise [2-3 minutes, m'a semblé une éternité !]",
+            "Fréquence [une seule fois]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques de la crise",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [tout le corps, tremblements]",
+            "Type [tonique-clonique]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Phase post-critique",
+          "binaryOnly": false,
+          "details": [
+            "Désorientation [oui]",
+            "Somnolence [oui, confus et somnolent après la crise]",
+            "Agitation [non]",
+            "Myalgies [non mentionné]",
+            "Amnésie [non mentionné]"
+          ],
+          "scoringRule": "Au moins 3 = 2 pts, 2 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs de provocation",
+          "binaryOnly": false,
+          "details": [
+            "Privation de sommeil [peu dormi]",
+            "Consommation d'alcool/drogues [aucune]",
+            "Stress émotionnel [dispute avec le voisin]",
+            "Photostimulation [non]",
+            "Traumatisme crânien [ne sait pas]"
+          ],
+          "scoringRule": "Au moins 3 = 2 pts, 2 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "a7",
+          "text": "Prodromes et aura",
+          "binaryOnly": false,
+          "details": [
+            "Aura épigastrique [sensation bizarre au ventre en mangeant]",
+            "Aura olfactive [non]",
+            "Aura visuelle [non]",
+            "Aura auditive [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Signes accompagnateurs de la crise",
+          "binaryOnly": false,
+          "details": [
+            "Cri initial [non]",
+            "Morsure de langue [oui, salive légèrement sanglante]",
+            "Perte d'urine/selles [oui, a uriné]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Chutes ou traumatismes antérieurs",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes associés - Infectieux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Céphalées [ces derniers temps, souvent céphalées du côté gauche]",
+            "Photophobie/phonophobie [non]",
+            "Nausées/vomissements [légères nausées le matin, pas d'appétit au petit-déjeuner]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes végétatifs",
+          "binaryOnly": true,
+          "patientComment": "Sueurs, tremblements, tachycardie : aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes B",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Sueurs nocturnes [non]",
+            "Perte de poids [5 kg en 6 mois]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes neurologiques et cardiovasculaires",
+          "binaryOnly": false,
+          "details": [
+            "Déficits neurologiques/AIT/AVC [non]",
+            "Changement de personnalité [irritable, dépressif]",
+            "Cardiopathie connue [aucune connue]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "details": [
+            "Diabète [non]",
+            "Addiction [non]",
+            "Cancer actif [antécédent de cancer de prostate, résection il y a 3 ans]",
+            "Épilepsie [non]",
+            "Tumeur cérébrale [non]",
+            "Convulsions fébriles enfant [non]"
+          ],
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "a15",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Chats, chiens"
+        },
+        {
+          "id": "a16",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Antidépresseur citalopram 10mg per os",
+          "details": [
+            "Attention : antidépresseurs, neuroleptiques, tramadol abaissent le seuil épileptogène"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Alcool [1 verre de vin par jour]",
+            "Tabac [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Père [cancer de prostate, décédé]",
+            "Mère [cancer du sein, décédée]",
+            "Fratrie [en bonne santé]",
+            "Épilepsie familiale [non]",
+            "Tumeur cérébrale familiale [non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Formation [gymnase]",
+            "Famille [marié, 3 enfants]",
+            "Profession [architecte]",
+            "Domicile [maison à Uster]",
+            "Loisirs [course de fond]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Revue des systèmes",
+          "binaryOnly": true
+        },
+        {
+          "id": "a21",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la première crise convulsive"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen neurologique (incluant orientation)",
+          "binaryOnly": false,
+          "details": [
+            "État de conscience [somnolent, confus temporellement et spatialement]",
+            "Force motrice [légère faiblesse de l'hémicorps gauche]",
+            "Tonus [normal]",
+            "Réflexes ostéo-tendineux [symétriques]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardio-pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque [sans particularité]",
+            "Auscultation pulmonaire [sans particularité]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation carotidienne",
+          "binaryOnly": true,
+          "patientComment": "Pas de souffle"
+        },
+        {
+          "id": "e4",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen neurologique et cardiovasculaire ciblé et approprié"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": true,
+          "patientComment": "Crise convulsive d'étiologie incertaine, possibles métastases cérébrales"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "binaryOnly": false,
+          "scoringRule": "Au moins 3 = 2 pts, 2 = 1 pt, 0-1 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Delirium tremens",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Méningite/encéphalite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Ponction lombaire, CT cérébral préalable"
+                  },
+                  {
+                    "text": "Tumeur cérébrale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Hypoglycémie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "AIT/AVC",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT cérébral, IRM cérébrale"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Biologie : ionogramme, calcium, TSH, CK",
+            "Bilan hépatique : transaminases, Gamma-GT, phosphatases alcalines, albumine, Quick/aPTT",
+            "Toxicologie : dépistage drogues, alcoolémie, glycémie",
+            "Imagerie : échographie carotides, CT/IRM cérébral"
+          ],
+          "scoringRule": "Au moins 3 catégories = 2 pts, 2 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement d'urgence du status epilepticus",
+          "binaryOnly": false,
+          "details": [
+            "Lorazépam (Temesta®) 0.1 mg/kg IV",
+            "Si persistance : Propofol/Thiopental/Phénytoïne"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement antiépileptique de fond",
+          "binaryOnly": false,
+          "details": [
+            "Épilepsie focale : Lamotrigine (aussi pendant grossesse)",
+            "Épilepsie généralisée : Valproate",
+            "Alternatives : Carbamazépine/Oxcarbazépine",
+            "Autres : Prégabaline, Gabapentine, Tiagabine/Vigabatrine"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitements spécifiques selon étiologie",
+          "binaryOnly": false,
+          "details": [
+            "Chirurgie si tumeur",
+            "Shunt si hydrocéphalie",
+            "Antibiothérapie/antiviraux si méningite"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Orientation et suivi",
+          "binaryOnly": true,
+          "patientComment": "Transfert si nécessaire à l'hôpital/neurologue"
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec diagnostic différentiel, examens et traitement adaptés"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

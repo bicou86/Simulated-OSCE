@@ -1,0 +1,757 @@
+{
+  "title": "RESCOS-68 - Eruption cutanée",
+  "type": "ecos-standard",
+  "context": {
+    "setting": "Cabinet de médecine générale (remplacement de la Dre Jacqueline Dupont)",
+    "patient": "M./Mme Maballe, 31 ans, consulte pour une éruption cutanée",
+    "vitals": {
+      "fr": "15/min",
+      "ta": "125/70 mmHg",
+      "fc": "72 bpm",
+      "temperature": "37.2°C",
+      "sao2": "98% (air ambiant)"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.3,
+      "title": "Anamnèse",
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Lésions",
+          "details": [
+            "Début",
+            "Évolution en nombre",
+            "Évolution en caractère",
+            "Localisation"
+          ],
+          "patientComment": "Apparues il y a 2 jours sur le flanc droit"
+        },
+        {
+          "id": "a2",
+          "text": "Douleurs",
+          "details": [
+            "Début",
+            "Précise moment par rapport aux lésions"
+          ],
+          "patientComment": "48 heures avant"
+        },
+        {
+          "id": "a3",
+          "text": "Douleurs",
+          "details": [
+            "Caractère",
+            "Intensité",
+            "Facteurs atténuants/Facteurs aggravants",
+            "Médicaments pris"
+          ],
+          "patientComment": "Douleurs intenses type brûlures, avec lancées, associées à un prurit, soulagées par paracétamol"
+        },
+        {
+          "id": "a4",
+          "text": "Prurit",
+          "details": [
+            "Début & Évolution"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Premier épisode",
+          "details": [
+            "A demandé si ATCD similaire"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes associés : Fièvre/fatigue/toux/céphalées",
+          "patientComment": "Pas de fièvre ni autre symptôme",
+          "scoringRule": "Au moins 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs de risque",
+          "details": [
+            "Trauma/stress",
+            "Traitement immunosuppresseur/infection récente/maladie (cancer, HIV, Immuno)",
+            "Fatigue importante"
+          ],
+          "patientComment": "Pas connu pour maladie immunologique, pas de médicament"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse personnelle",
+          "details": [
+            "Allergie",
+            "Vaccins"
+          ],
+          "patientComment": "Pas d'allergie connue, fait la varicelle à l'âge de 3 ans"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse de varicelle",
+          "patientComment": "Varicelle à 3 ans",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Contage",
+          "patientComment": "Pas de notion de contage",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse en général : ciblée, fil conducteur",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.2,
+      "title": "Status",
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection des lésions",
+          "patientComment": "« Photo de lésions sur le thorax latéral D »",
+          "exemplesPhrases": "Lésions vésculo-papuleuses sur le flanc droit, dermatome thoracique, ne dépassant pas la ligne médiane",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Inspection des paumes des mains/plantes des pieds",
+          "scoringRule": "Les 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen des aires ganglionnaires : Axillaires/Inguinales/Cervicales",
+          "patientComment": "Pas d'adénopathie",
+          "scoringRule": "Les 3 = oui, 2 = +/-, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Palpation du thorax pour reproduire les douleurs",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Examen des muqueuses : Bouche/Nez/OGE (intention)",
+          "patientComment": "Normal, pas de lésion",
+          "scoringRule": "Les 3 = oui, 2 = +/-, aucun = non"
+        },
+        {
+          "id": "e6",
+          "text": "Intention de faire status ORL, pulmonaire ou cardio",
+          "patientComment": "« L'examen est normal, passez à la suite »",
+          "scoringRule": "Au moins 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen physique en général : effectué de manière structurée, correcte et professionnelle",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "title": "Management",
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Présentation du cas",
+          "details": [
+            "Synthétique",
+            "Éléments pertinent de l'anamnèse et du status"
+          ],
+          "scoringRule": "Les 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "m2",
+          "text": "Hypothèse Diagnostique",
+          "patientComment": "Zona",
+          "binaryOnly": true
+        },
+        {
+          "id": "m3",
+          "text": "Diagnostic principal et diagnostics différentiels",
+          "scoringRule": "Au moins 2 = oui, 1 = +/-, aucun = non",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Zona (Herpes zoster)",
+                    "cause": "Arguments POUR:\n\t□ Antécédent de varicelle à 3 ans\n\t□ Douleurs intenses antérieures aux lésions (48h avant)\n\t□ Lésions vésiculopapuleuses\n\t□ Distribution dermatomique unilatérale (thoracique D)\n\t□ Ne dépasse pas la ligne médiane\n\t□ Âge jeune mais pas de maladie immunologique connue",
+                    "test": "→ Diagnostic clinique, PCR virale si doute"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "Eczéma",
+                    "cause": "Arguments POUR:\n\t□ Prurit présent\n\t□ Lésions croûteuses\nArguments CONTRE:\n\t□ Distribution dermatomique stricte\n\t□ Douleurs intenses type brûlures\n\t□ Unilatéral",
+                    "test": "→ Examen clinique, biopsie si doute"
+                  },
+                  {
+                    "text": "Impétigo",
+                    "cause": "Arguments POUR:\n\t□ Lésions croûteuses\n\t□ Possible prurit\nArguments CONTRE:\n\t□ Distribution dermatomique\n\t□ Douleurs neuropathiques\n\t□ Pas de contexte infectieux",
+                    "test": "→ Prélèvement bactériologique"
+                  },
+                  {
+                    "text": "Varicelle",
+                    "cause": "Arguments POUR:\n\t□ Lésions vésiculaires\nArguments CONTRE:\n\t□ Distribution dermatomique unilatérale\n\t□ Antécédent de varicelle\n\t□ Pas de lésions généralisées",
+                    "test": "→ Sérologie VZV si doute"
+                  },
+                  {
+                    "text": "Dermatite de contact",
+                    "cause": "Arguments POUR:\n\t□ Localisation précise\n\t□ Prurit\nArguments CONTRE:\n\t□ Distribution dermatomique parfaite\n\t□ Douleurs neuropathiques\n\t□ Pas d'exposition identifiée",
+                    "test": "→ Tests épicutanés"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Argumentation pour les DD",
+          "scoringRule": "Complète et pertinente (au moins 3 arguments) = oui, Partiellement pertinente (1-2 arguments) = +/-, Très pauvre ou erronée = non"
+        },
+        {
+          "id": "m5",
+          "text": "Examens complémentaires indiqués",
+          "scoringRule": "Frottis des lésions avec PCR virale = oui, bactério = +/-"
+        },
+        {
+          "id": "m6",
+          "text": "Dépistage Immunologique (HIV ou autre)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m7",
+          "text": "Management en général",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "title": "Clôture",
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Clôture type",
+          "content": "Vous présentez un zona thoracique, c'est une réactivation du virus de la varicelle qui reste dormant dans les ganglions nerveux après l'infection initiale. Le traitement antiviral doit être débuté rapidement pour réduire la durée et l'intensité des symptômes, ainsi que le risque de névralgie post-zostérienne.",
+          "exemplesPhrases": [
+            "\"C'est une maladie douloureuse mais qui se traite bien si on commence rapidement.\"",
+            "\"Les antiviraux vont réduire la durée des symptômes et prévenir les complications.\"",
+            "\"La douleur peut persister quelques semaines après la guérison des lésions.\""
+          ]
+        },
+        {
+          "id": "c2",
+          "text": "Questions difficiles du patient",
+          "content": "[Est-ce contagieux?] [Pourquoi maintenant alors que j'ai eu la varicelle enfant?] [Est-ce que ça peut revenir?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse type du candidat",
+          "content": "Le zona est contagieux pour les personnes n'ayant pas eu la varicelle, par contact direct avec les lésions. Il survient lors d'une baisse d'immunité même transitoire (stress, fatigue). Les récidives sont possibles mais rares chez l'immunocompétent.",
+          "exemplesPhrases": [
+            "\"Évitez le contact des lésions avec les femmes enceintes et les immunodéprimés.\"",
+            "\"Le virus reste dormant et peut se réactiver lors d'un affaiblissement du système immunitaire.\"",
+            "\"Un vaccin existe pour prévenir le zona chez les personnes âgées.\""
+          ]
+        },
+        {
+          "id": "c4",
+          "text": "Exemple de présentation de cas type",
+          "content": "M. Maballe est un patient de 31 ans, en bonne santé qui présente des lésions vésiculopapuleuses depuis 2 jours. Ces lésions sont associées à des douleurs intenses, type brûlures, quotées de 6-8/10 qui sont apparues 48H avant les lésions et qui sont peu soulagées par le paracétamol. A relever qu'il ne présente pas de symptôme associé hormis un prurit, et il n'est pas connu pour une maladie immunologique, et ne prend aucun médicament. Il n'a jamais eu antécédent d'épisode similaire, n'a pas d'allergie connue avec des vaccins à jour. Il n'y ni contage ni anamnèse familiale, mais il a fait la varicelle à l'âge de 3 ans. Au status, les paramètres vitaux sont normaux et nous constatons des lésions latéro-thoraciques D correspondante à un dermatome thoracique ne dépassent pas la ligne médiane. Les lésions sont croûteuses actuellement avec un érythème induré autour. Le reste du status est sans particularité notamment, il n'a pas de lésion des paumes ou plantes, et pas d'adénopathie."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "photo1",
+        "title": "Lésions de zona thoracique",
+        "description": "Lésions vésiculopapuleuses sur érythème, distribution dermatomique thoracique droite, ne dépassant pas la ligne médiane",
+        "filename": "grilles_generees/html/images/rescos-68-zona-thoracique.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient simulé",
+      "nom": "M./Mme Maballe",
+      "age": "31 ans",
+      "contexte": "Patient en bonne santé habituelle",
+      "motifConsultation": {
+        "plaintePrincipale": "Éruption cutanée sur le flanc droit depuis 2 jours",
+        "autreChose": "Douleurs intenses associées"
+      },
+      "histoireActuelle": {
+        "lesions": [
+          "Apparues il y a 2 jours sur le flanc droit",
+          "Lésions vésiculopapuleuses",
+          "Ne dépassent pas la ligne médiane",
+          "Distribution sur un dermatome thoracique",
+          "Évolution vers des croûtes avec érythème induré"
+        ],
+        "douleurs": [
+          "Douleurs apparues 48 heures AVANT les lésions",
+          "Intenses, type brûlures avec lancées",
+          "Intensité 6-8/10",
+          "Associées à un prurit",
+          "Peu soulagées par le paracétamol"
+        ],
+        "symptomesAbsents": [
+          "Pas de fièvre",
+          "Pas de fatigue",
+          "Pas de toux",
+          "Pas de céphalées",
+          "Pas d'autres symptômes"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Varicelle à l'âge de 3 ans",
+          "Pas de maladie immunologique connue",
+          "Infection Covid-19 il y a 2 mois",
+          "BSH (bonne santé habituelle)"
+        ],
+        "chirurgicaux": "Aucun",
+        "medicaments": "Aucun médicament régulier, paracétamol récemment pour les douleurs",
+        "allergies": "Aucune allergie connue",
+        "vaccins": "Vaccins à jour selon schéma Suisse, 2 doses Covid"
+      },
+      "facteurs": {
+        "exposition": "Pas de contage récent",
+        "voyage": "Pas de voyage récent",
+        "stress": "Pas de stress particulier",
+        "immunosuppression": "Pas de traitement immunosuppresseur"
+      },
+      "examenClinique": {
+        "general": "État général bon, paramètres vitaux normaux",
+        "peau": {
+          "lesions": "Lésions vésiculopapuleuses croûteuses sur le thorax latéral droit, dermatome thoracique, érythème induré",
+          "distribution": "Unilatérale, ne dépasse pas la ligne médiane",
+          "autres": "Pas de lésion des paumes ou plantes"
+        },
+        "ganglions": "Pas d'adénopathie (axillaire, inguinale, cervicale)",
+        "muqueuses": "Normales, pas de lésions (bouche, nez, OGE)",
+        "autresSystemes": "Examen ORL, pulmonaire et cardiaque normal"
+      },
+      "simulation": {
+        "attitude": [
+          "Patient inquiet par les douleurs intenses",
+          "Coopératif pour l'examen",
+          "Souhaite comprendre ce qui lui arrive"
+        ],
+        "durantExamen": [
+          "Signale la douleur lors de la palpation",
+          "Montre précisément où les lésions ont commencé",
+          "Décrit bien la chronologie douleur puis lésions"
+        ]
+      },
+      "inquietudes": {
+        "principales": [
+          "Intensité de la douleur",
+          "Contagiosité pour l'entourage",
+          "Durée de la maladie",
+          "Risque de récidive"
+        ],
+        "questions": [
+          "Est-ce contagieux pour ma famille?",
+          "Combien de temps vais-je avoir mal?",
+          "Est-ce que ça peut laisser des séquelles?",
+          "Pourquoi ça m'arrive maintenant?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Instructions pour l'expert évaluateur",
+      "dossierMedical": "Zona thoracique chez un patient de 31 ans immunocompétent",
+      "rolesInterventions": [
+        "Le candidat dispose de 9 minutes pour anamnèse et examen clinique",
+        "Donner la photo des lésions lors de l'examen clinique",
+        "Après 9 minutes, interrompre et demander la présentation",
+        "Le candidat a 1 minute pour préparer sa présentation",
+        "Présentation en 3 minutes avec hypothèse diagnostique et 2 diagnostics différentiels",
+        "Poser les questions dans l'ordre de la grille d'évaluation"
+      ],
+      "pointsCles": [
+        "Reconnaître la distribution dermatomique unilatérale",
+        "Identifier la chronologie douleur avant lésions (prodrome)",
+        "Demander l'antécédent de varicelle",
+        "Examen des muqueuses et aires ganglionnaires",
+        "Diagnostic de zona et diagnostics différentiels pertinents",
+        "Argumentation basée sur l'anamnèse et le status"
+      ],
+      "pieges": [
+        "Ne pas demander l'antécédent de varicelle",
+        "Confondre avec une dermatose bilatérale",
+        "Oublier l'examen des muqueuses",
+        "Ne pas préciser la chronologie douleur-lésions",
+        "Proposer des examens inutiles",
+        "Mauvaise gestion du temps (9 minutes)"
+      ],
+      "objectifsSpecifiques": [
+        "Apprendre à LIRE les consignes",
+        "Apprendre à gérer le temps : faire l'anamnèse et status ciblé en 9 minutes",
+        "S'exercer à s'adresser directement à l'examinateur-trice",
+        "S'exercer à présenter le cas de manière synthétique",
+        "S'exercer à montrer les capacités de raisonnement clinique"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Points théoriques et pratiques",
+      "sections": [
+        {
+          "titre": "Zona (Herpes zoster)",
+          "contenu": "Le zona est une réactivation du virus varicelle-zona (VZV) resté latent dans les ganglions sensitifs après la varicelle.",
+          "points": [
+            "Incidence : augmente avec l'âge et l'immunosuppression",
+            "Prodrome : douleurs 48-72h avant l'éruption",
+            "Distribution : dermatomique, unilatérale, ne dépasse pas la ligne médiane",
+            "Évolution : macules → papules → vésicules → croûtes en 7-10 jours"
+          ]
+        },
+        {
+          "titre": "Complications",
+          "contenu": "Les complications dépendent de l'âge et du statut immunitaire.",
+          "points": [
+            "Névralgie post-zostérienne : douleur > 3 mois après éruption",
+            "Zona ophtalmique : atteinte V1, risque de kératite",
+            "Zona otique (Ramsay-Hunt) : atteinte VII avec paralysie faciale",
+            "Dissémination chez l'immunodéprimé"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel",
+          "contenu": "Le diagnostic est généralement clinique mais peut être confondu avec d'autres dermatoses.",
+          "points": [
+            "Herpès simplex : récurrent, pas de distribution dermatomique",
+            "Dermatite de contact : prurit prédominant, contexte d'exposition",
+            "Eczéma : bilatéral, prurit intense, pas de vésicules groupées",
+            "Impétigo : croûtes mélicériques, contexte infectieux"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Antiviraux dans les 72h : valaciclovir 1000mg 3x/j pendant 7 jours",
+        "Alternative : aciclovir 800mg 5x/j pendant 7 jours",
+        "Analgésie : paracétamol, AINS, gabapentine si douleurs neuropathiques",
+        "Soins locaux : antiseptiques, pansements non adhérents",
+        "Prévention : vaccin zona après 50 ans (Zostavax ou Shingrix)"
+      ],
+      "examensComplementaires": [
+        "Diagnostic clinique dans la majorité des cas",
+        "PCR VZV sur prélèvement vésiculaire : gold standard si doute",
+        "Immunofluorescence directe : rapide mais moins sensible",
+        "Culture virale : peu utilisée car longue",
+        "Sérologie VZV : pas utile en phase aiguë",
+        "HIV si zona chez sujet jeune sans facteur de risque"
+      ]
+    },
+    "resume": {
+      "titre": "🔥 Zona (Herpes zoster) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Douleur neuropathique unilatérale en bande (brûlure, picotement, fourmillements)",
+                "Éruption vésiculeuse sur un territoire dermatomérique",
+                "Phase prodromique possible : fièvre, fatigue, céphalées",
+                "Photophobie si atteinte oculaire",
+                "Historique de varicelle (VZV latent dans le ganglion postérieur)",
+                "Facteurs déclenchants : stress, immunodépression, âge > 50 ans"
+              ]
+            },
+            {
+              "titre": "Formes à risque",
+              "points": [
+                "Patient immunodéprimé (VIH, greffe, chimiothérapie)",
+                "Zona ophtalmique (branche V1 du trijumeau)",
+                "Zona disséminé ou multidermatomérique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection cutanée",
+              "points": [
+                "Éruption vésiculeuse unilatérale sur un dermatome bien délimité",
+                "Croûtes après 7–10 jours",
+                "Pas de passage de la ligne médiane",
+                "Signe de Hutchinson : vésicules sur l’aile du nez → atteinte oculaire possible"
+              ]
+            },
+            {
+              "titre": "Autres éléments à rechercher",
+              "points": [
+                "Fièvre ou signes de dissémination",
+                "Déficit moteur associé (ex : zona du plexus brachial)",
+                "Signe de surinfection bactérienne locale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Diagnostic clinique",
+              "points": [
+                "Souvent suffisant si tableau typique"
+              ]
+            },
+            {
+              "titre": "Examens à visée étiologique ou de confirmation",
+              "points": [
+                "PCR VZV sur écouvillon vésiculaire (forme atypique, disséminée)",
+                "Bilan VIH / immunodépression si forme sévère ou récidivante",
+                "Ponction lombaire si suspicion d'encéphalite ou méningite"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement antiviral (si < 72 h ou critères de gravité)",
+              "points": [
+                "Valaciclovir, famciclovir ou aciclovir PO",
+                "Aciclovir IV si immunodépression, dissémination, ou atteinte neurologique",
+                "Durée : 7 jours"
+              ]
+            },
+            {
+              "titre": "Antalgiques",
+              "points": [
+                "Paracétamol, AINS pour douleurs légères",
+                "Tramadol ou morphine si douleur intense",
+                "Gabapentine, prégabaline ou antidépresseurs tricycliques si douleur neuropathique persistante"
+              ]
+            },
+            {
+              "titre": "Corticothérapie (cas sélectionnés)",
+              "points": [
+                "Discussion en cas de douleur sévère, atteinte oculaire ou neurologique (avec antiviraux)"
+              ]
+            },
+            {
+              "titre": "Mesures complémentaires",
+              "points": [
+                "Isolement si lésion active : éviter contact avec femmes enceintes non immunisées, immunodéprimés et nourrissons",
+                "Vaccin Zostavax ou Shingrix en prévention chez > 50 ans (hors épisode aigu)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur en bande suivie d’une éruption vésiculeuse unilatérale = penser zona",
+            "Antiviraux à initier dans les 72 h ou en cas de formes graves",
+            "Toujours rechercher une immunodépression en cas de formes atypiques",
+            "Vaccination recommandée après 50 ans pour prévenir les récidives",
+            "Surveillance de la douleur : risque de névralgie post-zostérienne"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Douleur en bande unilatérale ? Depuis combien de temps ?",
+                "Apparition d’une éruption vésiculeuse sur le trajet d’un dermatome ?",
+                "ATCD de varicelle ?",
+                "Facteurs de risque : âge > 50 ans, immunodépression, stress ?",
+                "Localisation : visage (V1), œil, atteinte multidermatomérique ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection cutanée détaillée",
+                "Recherche de signe de Hutchinson (atteinte nasale → risque oculaire)",
+                "Examen neurologique : déficit moteur, douleur neuropathique",
+                "PCR VZV si forme atypique ou disséminée",
+                "Bilan VIH ou immunité si forme sévère/récidivante"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Antiviraux PO dans les 72 h ou IV si immunodéprimé/atteinte grave",
+                "Antalgiques adaptés (± traitement neuropathique)",
+                "Isolement et prévention (éviter contacts à risque, proposer vaccination après 50 ans)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Zona (Herpes zoster)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte, motif de consultation",
+            "Caractériser l’éruption → début, localisation, évolution, douleur",
+            "Symptômes associés → fièvre, prurit, céphalées, fatigue",
+            "ATCD médicaux (varicelle, immunosuppression, comorbidités)",
+            "Facteurs de risque → stress, infection récente, traitement immunosuppresseur",
+            "Examen clinique → distribution dermatomique, unilatérale, état général",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → clinique le plus souvent, PCR si doute",
+            "Prise en charge → antiviraux si < 72 h, antalgie adaptée, surveillance complications"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo ZONA",
+            "elements": [
+              "Z = Zoster (douleur en bande avant éruption)",
+              "O = One side (unilatéral, dermatomique)",
+              "N = Ne dépasse pas la ligne médiane",
+              "A = Antécédent de varicelle obligatoire"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Maballe, 31 ans, en bonne santé habituelle, qui consulte pour une éruption cutanée douloureuse apparue il y a deux jours.\n\nLes lésions ont commencé sur le flanc droit, sous forme de petites vésicules regroupées, qui se sont rapidement multipliées. Elles restent strictement limitées à ce côté et ne dépassent pas la ligne médiane. Depuis hier, elles commencent à croûter avec un érythème autour. \n\nIl décrit des douleurs intenses de type brûlures, apparues 48 heures avant l’éruption, avec des lancées et un prurit associé. La douleur est évaluée entre 6 et 8 sur 10 et n’est que partiellement soulagée par le paracétamol. \n\nIl n’a pas de fièvre, pas de céphalée, pas de toux ni de fatigue particulière. C’est le premier épisode de ce type. \n\nPour ses antécédents, il a eu la varicelle à l’âge de 3 ans, il n’a pas de maladie immunologique connue, pas d’allergie, il n’a pas de traitement chronique. Il a eu une infection Covid il y a deux mois mais s’est bien rétabli. Ses vaccins sont à jour. Il n’a pas de contage récent ni de stress particulier.\n\nÀ l’examen, ses constantes sont normales : tension 125/70, pouls 72, température 37,2°C, FR 15, saturation 98 %. On observe une éruption vésiculo-papuleuse croûteuse sur le flanc droit, limitée à un dermatome thoracique, unilatérale et ne dépassant pas la ligne médiane. Il n’y a pas d’adénopathie palpable, les muqueuses sont normales et l’examen général est sans particularité.\n\nEn résumé, il s’agit d’un patient jeune, immunocompétent, présentant une éruption vésiculeuse douloureuse en bande, précédée de douleurs neuropathiques, avec distribution dermatomique typique. Mon hypothèse principale est un zona thoracique. Les diagnostics différentiels incluent un eczéma, un impétigo, une varicelle ou une dermatite de contact, mais la douleur préalable, la distribution unilatérale et l’antécédent de varicelle orientent clairement vers le zona.\n\nComme examens complémentaires, le diagnostic est clinique, une PCR VZV sur frottis vésiculaire peut être demandée en cas de doute ou forme atypique. \n\nEn termes de prise en charge, je propose un traitement antiviral oral à débuter rapidement car nous sommes dans les 72 premières heures, par valaciclovir 1 g trois fois par jour pendant 7 jours, associé à une antalgie adaptée. J’informerais le patient sur la contagiosité par contact direct avec les lésions, à éviter particulièrement avec les femmes enceintes non immunisées et les immunodéprimés. Je surveillerais aussi l’évolution de la douleur en raison du risque de névralgie post-zostérienne."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Maballe, 31 ans, consulte pour une éruption cutanée douloureuse apparue depuis 2 jours.\n\nB (Background) : Antécédent de varicelle à 3 ans, pas d’immunosuppression connue, pas de fièvre ni autres symptômes.\n\nA (Assessment) : Éruption vésiculeuse douloureuse unilatérale, distribution dermatomique. Hypothèse principale : zona. DD : eczéma, impétigo, dermatite de contact, varicelle.\n\nR (Recommendation) : Débuter antiviral oral rapidement (< 72 h), antalgie adaptée, conseils sur contagiosité et surveillance des complications."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Mnémo des signes typiques : PAVE",
+              "points": [
+                "P = Prodrome douloureux avant l’éruption",
+                "A = Antécédent de varicelle",
+                "V = Vésicules groupées",
+                "E = Éruption unilatérale dermatomérique"
+              ]
+            },
+            {
+              "titre": "👉 Complications = « 3N »",
+              "points": [
+                "Névralgie post-zostérienne",
+                "Nerf trijumeau (zona ophtalmique)",
+                "Nerf facial (syndrome de Ramsay Hunt)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Zona",
+                  "reponse": {
+                    "pour": [
+                      "Antécédent de varicelle",
+                      "Douleur prodromique avant éruption",
+                      "Éruption vésiculeuse en dermatome unilatéral",
+                      "Ne dépasse pas la ligne médiane"
+                    ],
+                    "contre": [
+                      "Âge jeune (moins classique, mais possible)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Eczéma",
+                  "reponse": {
+                    "pour": [
+                      "Prurit",
+                      "Lésions croûteuses"
+                    ],
+                    "contre": [
+                      "Douleur neuropathique intense",
+                      "Distribution dermatomérique stricte",
+                      "Unilatéral"
+                    ]
+                  }
+                },
+                {
+                  "question": "Impétigo",
+                  "reponse": {
+                    "pour": [
+                      "Croûtes",
+                      "Prurit"
+                    ],
+                    "contre": [
+                      "Pas de contexte infectieux",
+                      "Douleur neuropathique absente en impétigo",
+                      "Distribution en dermatome"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Aucun nécessaire si tableau typique",
+                    "PCR VZV sur frottis vésiculaire si doute",
+                    "Sérologie VIH si zona récidivant ou atypique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Zona thoracique"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Valaciclovir 1 g x 3/j pendant 7 jours si < 72 h",
+                      "Antalgiques adaptés (paracétamol, ± tramadol)",
+                      "Soins locaux avec antiseptiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance de la douleur (prévention névralgie post-zostérienne)",
+                    "Informer sur contagiosité",
+                    "Vaccination zona possible plus tard en prévention des récidives"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

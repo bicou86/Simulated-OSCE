@@ -1,0 +1,549 @@
+{
+  "title": "AMBOSS-25 - Douleur au genou - Femme 47 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Ashley Stone, femme de 47 ans, consultant pour douleur au genou droit",
+    "vitals": {
+      "temperature": "37.8°C",
+      "ta": "115/80 mmHg",
+      "fc": "68 bpm",
+      "fr": "16/min",
+      "imc": "32 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai mal au genou"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Mon genou droit]",
+            "Intensité (échelle 0-10) [C'est un 6]",
+            "Qualité [C'est une douleur sourde]",
+            "Début [La douleur a commencé il y a 3 jours]",
+            "Événements précipitants [Je suis tombée sur mon genou il y a 3 jours après avoir glissé dans les escaliers au travail. Ça faisait très mal, alors j'ai mis un bandage]",
+            "Autres blessures lors de la chute [J'ai seulement quelques égratignures sur mes mains, mais rien d'autre]",
+            "Perte de connaissance [Non]",
+            "Progression/constant/intermittent [La douleur s'aggrave]",
+            "Épisodes antérieurs [Jamais]",
+            "Irradiation [Tout mon mollet me fait mal aussi]",
+            "Facteurs améliorants [Ça ne fait pas aussi mal si je ne bouge pas ma jambe. Et j'ai pris de l'ibuprofène, ce qui a aidé]",
+            "Facteurs aggravants [Bouger ma jambe et marcher]",
+            "Symptômes associés [Mon mollet est aussi gonflé depuis hier soir]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Eh bien, la veille de ma chute j'étais sur la route toute la journée pour rendre visite à des clients intéressés par l'achat d'œuvres d'art. Mais comme ma jambe me fait tellement mal, je n'ai pas beaucoup bougé ces 2 derniers jours]",
+            "Fièvre/frissons [Non]",
+            "Éruption cutanée/changements cutanés [Je ne suis pas sûre. J'ai ce bandage sur mon genou. Mais mon mollet n'est pas rouge et je n'ai pas remarqué d'éruption]",
+            "Douleur thoracique [Non]",
+            "Toux [Non]",
+            "Dyspnée [Non]",
+            "Douleurs articulaires [À part la douleur dans mon genou, non]",
+            "Problèmes urinaires [Aucun]",
+            "Variations pondérales [Hmm, non. Je sais que je suis en surpoids, j'ai toujours eu du mal avec mon poids]",
+            "Infections récentes [Non]",
+            "Vertiges [Non]",
+            "Chaleur du membre inférieur [Non, je ne pense pas]",
+            "Faiblesse/engourdissement/picotements [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "details": [
+            "Antécédents médicaux [Mon cholestérol est un peu élevé]",
+            "Thrombose dans le passé [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de la rosuvastatine"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Pour la naissance de mon fils]",
+            "Grossesses antérieures/fausses couches [Aucune]",
+            "Antécédents chirurgicaux [Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ma mère a eu un AVC quand elle avait 60 ans. Mon père est en bonne santé"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je suis artiste]",
+            "Domicile [Je vis avec mon mari et notre fils]",
+            "Alcool [Parfois je bois un verre de vin le soir]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Je fume un paquet par jour depuis 20 ans]",
+            "Exercice [Pas vraiment]",
+            "Alimentation [Nous commandons beaucoup de nourriture. J'aime la cuisine chinoise et mexicaine]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Palpation du pouls radial",
+            "Auscultation cardiaque",
+            "Évaluation de la distension veineuse jugulaire"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen thoracique",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation pulmonaire"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Retrait du bandage de la patiente",
+            "Inspection des membres inférieurs",
+            "Recherche d'œdème déclive",
+            "Palpation des membres inférieurs [Mollet droit sensible à la palpation. Sensibilité de la ligne articulaire latérale du genou droit]",
+            "Examen ciblé des mouvements passifs et actifs des membres inférieurs [Amplitude de mouvement diminuée dans le genou droit due à la douleur]",
+            "Test de Lachman",
+            "Test du tiroir postérieur",
+            "Test de stress en valgus",
+            "Test de stress en varus",
+            "Examen ciblé de la sensibilité des membres inférieurs",
+            "Palpation des pouls pédieux",
+            "Signe de Homans [Positif]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Complications vasculaires",
+                "items": [
+                  {
+                    "text": "Thrombose veineuse profonde (TVP)",
+                    "cause": "Arguments POUR:\n\t□ Douleur progressive du mollet\n\t□ Œdème du mollet après trauma membre inférieur\n\t□ Immobilisation 2 jours (alitement)\n\t□ Signe de Homans positif\n\t□ Température subfébrile (37.8°C)\n\t□ Facteurs de risque : tabagisme, obésité (IMC 32)\n\t□ Sensibilité le long du système veineux profond\n\t□ Voyage prolongé la veille (voiture)",
+                    "test": "→ Score de Wells, D-dimères, écho-Doppler veineux"
+                  }
+                ]
+              },
+              {
+                "name": "Traumatismes musculo-ligamentaires",
+                "items": [
+                  {
+                    "text": "Élongation du gastrocnémien",
+                    "cause": "Arguments POUR:\n\t□ Douleur mollet après chute\n\t□ Œdème localisé\n\t□ Signe de Homans positif (douleur mollet)\n\t□ Irradiation possible vers genou\nArguments CONTRE:\n\t□ Habituellement lors saut\n\t□ Pas chute ; ecchymose absente",
+                    "test": "→ Échographie musculaire mollet"
+                  },
+                  {
+                    "text": "Déchirure du ligament collatéral latéral (LCL)",
+                    "cause": "Arguments POUR:\n\t□ Douleur genou après chute\n\t□ Sensibilité ligne articulaire latérale\n\t□ Mécanisme traumatique direct\n\t□ Limitation amplitude mouvement\nArguments CONTRE:\n\t□ N'explique pas œdème mollet\n\t□ Température subfébrile",
+                    "test": "→ IRM genou si doute, radiographie d'abord"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Rupture kyste de Baker",
+                    "cause": "Douleur brutale mollet, œdème, ecchymose possible",
+                    "test": "→ Échographie région poplitée"
+                  },
+                  {
+                    "text": "Hématome post-traumatique",
+                    "cause": "Collection sanguine après trauma direct",
+                    "test": "→ Échographie parties molles"
+                  },
+                  {
+                    "text": "Syndrome de loge aigu",
+                    "cause": "Arguments CONTRE:\n\t□ Douleur extrême\n\t□ Tension compartiment",
+                    "test": "→ Mesure pression compartiments si suspicion"
+                  },
+                  {
+                    "text": "Cellulite",
+                    "cause": "Arguments CONTRE:\n\t□ Pas érythème\n\t□ Pas fièvre élevée",
+                    "test": "→ Clinique, hémocultures si doute"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "D-dimères [réalisés si critères de Wells pour TVP < 2 ; des niveaux normaux excluent une TVP ; seraient probablement positifs chez cette patiente à cause de la blessure récente du membre inférieur]",
+            "Échographie de compression avec Doppler jambe droite [test de choix pour diagnostiquer une TVP ; dans la TVP, montrerait une non-compressibilité de la veine obstruée, une masse hyperéchogène visible et un flux absent/anormal en imagerie Doppler]",
+            "Échographie mollet droit [pour évaluer une déchirure du gastrocnémien et autres blessures musculaires]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie ostéo-articulaire",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie genou droit [pour exclure une fracture et autres blessures associées]",
+            "IRM genou droit [pour évaluer les blessures des tissus mous associées (ex: déchirure méniscale, blessures ligamentaires croisées) ; montrerait une rupture du ligament collatéral, bien que ce ne soit pas typiquement requis pour le diagnostic]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente",
+            "Ne pas répéter les manœuvres douloureuses pendant l'examen physique",
+            "Remettre le bandage de la patiente"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les options de soutien pour les changements de poids et de régime",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi",
+            "Éducation sur l'importance de la mobilisation précoce",
+            "Information sur la prévention des TVP"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si TVP confirmée",
+                "content": "• Anticoagulation immédiate: HBPM ou AOD"
+              },
+              {
+                "title": "Héparine non fractionnée si insuffisance rénale",
+                "content": "• Durée × 3-6 mois minimum post-trauma\n• Bas de contention classe 2\n• Mobilisation précoce encouragée\n• Surveillance INR si AVK"
+              },
+              {
+                "title": "Si élongation gastrocnémien",
+                "content": "• RICE: Repos, glace, compression, élévation\n• AINS si pas contre-indication\n• Physiothérapie progressive\n• Reprise activité graduelle 2-6 semaines"
+              },
+              {
+                "title": "Si lésion LCL",
+                "content": "• Attelle articulée ou genouillère\n• AINS, glace locale\n• Physiothérapie: Renforcement quadriceps\n• Chirurgie rarement nécessaire"
+              },
+              {
+                "title": "Prévention TVP future",
+                "content": "• Arrêt tabac impératif\n• Perte de poids: IMC 32 → 25)\n• Hydratation voyages longs\n• Exercices cheville réguliers\n• Éviter immobilisation prolongée"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Inquiétude sur la gravité",
+          "content": "[Pensez-vous que mon état est dangereux ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Stone, je comprends votre inquiétude. À ce stade, je ne sais pas exactement ce qui cause votre douleur au genou et au mollet. Vous pourriez avoir un caillot sanguin dans une des veines de votre jambe, ou vous pourriez vous être blessé le genou ou les muscles de votre jambe lors de votre chute au travail. J'aimerais faire quelques tests et des examens d'imagerie de votre genou et des vaisseaux sanguins de votre jambe pour déterminer exactement ce qui cause vos symptômes et m'assurer que nous vous donnons le traitement approprié. Je peux vous assurer que nous avons une équipe très expérimentée dans cet hôpital et que nous vous fournirons les meilleurs soins possibles. Qu'est-ce que vous en pensez ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Thrombose veineuse profonde (TVP)",
+        "description": "Il y a un œdème diffus et un érythème de la jambe et du pied droits. Le diamètre du mollet droit est visiblement plus grand que celui du gauche. Ces caractéristiques sont typiques de la TVP. L'histoire clinique et les investigations (par exemple, échographie Doppler, taux de D-dimères) aident à distinguer entre TVP et cellulite, qui se manifeste également par une jambe douloureuse, chaude, érythémateuse et œdémateuse.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img1-Deep vein thrombosis (DVT).jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Œdème déclive de la jambe",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait précédemment été remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img2-Pitting edema of lower leg.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Test de Lachman",
+        "description": "Avec le patient en position de décubitus dorsal, le genou à examiner est fléchi à environ 20°. L'examinateur saisit la cuisse distale avec une main et la jambe proximale avec la seconde main (pouce placé sur la tubérosité tibiale). La jambe inférieure est ensuite tirée ventralement. Une mobilité accrue dans la direction ventrale et/ou un point final lâche ou inexistant suggèrent une lésion du ligament croisé antérieur, particulièrement s'il y a une différence significative avec l'autre genou.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img3-Lachman test.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Tests du tiroir",
+        "description": "Le patient est en position de décubitus dorsal, la jambe à examiner est dressée et le genou est fléchi à environ 90°. L'examinateur place ses deux mains autour de la jambe inférieure (avec les pouces placés sur la tubérosité tibiale). Pour examiner le ligament croisé antérieur, le tibia est tiré ventralement. Pour examiner le ligament croisé postérieur, le tibia est poussé dorsalement. Si la mobilité du tibia est augmentée (particulièrement par rapport à l'autre jambe) ou s'il y a un point final lâche, le test du tiroir est dit positif et peut indiquer une lésion du ligament respectif.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img4-Drawer tests.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Approche diagnostique de la TVP",
+        "description": "Algorithme décisionnel basé sur le score de Wells et les D-dimères.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img5-Diagnostic approach to DVT.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Ligaments du genou",
+        "description": "A : ligament croisé antérieur, B : ménisque latéral, C : ligament collatéral fibulaire, D : ligament croisé postérieur, E : ménisque médial, F : ligament collatéral tibial.",
+        "data": "grilles_generees/html/images/AMBOSS-25-img6-Ligaments of the knee- A- anterior cruciate ligament B- lateral meniscus C- fibular collateral ligament D- posterior cruciate ligament E- medial meniscus F- tibial collateral ligament.jpg",
+        "id": "img6"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Ashley Stone",
+      "age": "47 ans",
+      "contexte": "Artiste obèse avec douleur genou et mollet après chute, suspicion de TVP",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal au genou.",
+        "autreChose": "Mon mollet est aussi gonflé."
+      },
+      "consignes": [
+        "Vous avez un bandage autour de votre genou droit pour que la peau ne soit pas visible. Si l'examinateur vous demande de l'enlever, faites-le.",
+        "Quand l'examinateur vous demande de bouger votre jambe droite inférieure, dire que ça fait mal.",
+        "Quand l'examinateur presse votre mollet droit, dire que ça fait mal.",
+        "Quand l'examinateur presse sur votre genou droit, dire que ça fait mal du côté droit (extérieur) du genou.",
+        "Quand l'examinateur pousse votre pied droit vers votre nez, dire que ça fait mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Pensez-vous que mon état est dangereux ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleur genou droit depuis 3 jours",
+          "Chute dans escaliers au travail",
+          "Douleur sourde intensité 6/10",
+          "Irradiation vers mollet",
+          "Aggravation progressive"
+        ],
+        "symptomesAssocies": [
+          "Œdème mollet depuis hier soir",
+          "Immobilisation 2 jours (douleur)",
+          "Voyage prolongé veille chute",
+          "Température subfébrile",
+          "Pas de signes embolie pulmonaire"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Inquiétude sur gravité condition",
+          "Minimiser problème poids",
+          "Mentionner sédentarité habituelle",
+          "Décrire immobilisation récente",
+          "Demander clarifications termes médicaux"
+        ],
+        "durantStatus": [
+          "Bandage genou droit visible",
+          "Douleur mobilisation jambe droite",
+          "Sensibilité palpation mollet droit",
+          "Sensibilité ligne articulaire latérale genou",
+          "Signe Homans positif (dorsiflexion douloureuse)",
+          "Limitation amplitude mouvement genou"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme 47 ans avec forte suspicion TVP : douleur mollet progressive + œdème + immobilisation post-trauma + facteurs risque (obésité, tabac, voyage). Score Wells = 1 (sensibilité système veineux), mais clinique très évocatrice. Diagnostic différentiel : élongation gastrocnémien, lésion LCL. Urgence : éliminer TVP (risque EP). Écho-Doppler indispensable même si D-dimères négatifs (trauma récent).",
+      "rolesInterventions": [
+        "Score Wells : 1 point (sensibilité trajet veineux)",
+        "D-dimères : 850 ng/mL (élevés, non spécifiques)",
+        "Écho-Doppler : Thrombus veine poplitée droite",
+        "Radiographie genou : Normale, pas fracture",
+        "Échographie mollet : Pas déchirure musculaire",
+        "IRM genou : Œdème osseux, LCL intact"
+      ],
+      "pointsCles": [
+        "TVP = urgence diagnostique (risque EP 30-50%)",
+        "Triade Virchow : stase + lésion endothéliale + hypercoagulabilité",
+        "Signe Homans peu sensible/spécifique mais orienter",
+        "D-dimères élevés après trauma (peu spécifiques)",
+        "Écho-Doppler = gold standard diagnostic TVP",
+        "Anticoagulation immédiate si forte suspicion clinique"
+      ],
+      "pieges": [
+        "Se focaliser sur trauma genou seul",
+        "Négliger risque TVP car Wells bas",
+        "Oublier recherche signes EP",
+        "Ne pas évaluer facteurs risque thrombose",
+        "Retarder anticoagulation si forte suspicion",
+        "Oublier conseils prévention (tabac, poids)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Thrombose veineuse profonde (TVP) du membre inférieur droit"
+        },
+        {
+          "titre": "Thrombose veineuse profonde",
+          "contenu": "Obstruction veineuse par thrombus avec risque embolique majeur :",
+          "points": [
+            "Incidence : 1-2/1000 personnes/an",
+            "Mortalité : 3-15% (principalement par EP)",
+            "Localisation : 90% membres inférieurs",
+            "Proximale (poplitée-iliaque) : risque EP 50%",
+            "Distale (surale) : risque EP 15-20%",
+            "Récidive : 30% à 10 ans sans traitement adéquat"
+          ]
+        },
+        {
+          "titre": "Physiopathologie - Triade de Virchow",
+          "contenu": "Trois facteurs favorisant la thrombose :",
+          "points": [
+            "Stase veineuse : immobilisation, voyage prolongé, obésité",
+            "Lésion endothéliale : trauma, chirurgie, cathéters",
+            "Hypercoagulabilité : cancer, grossesse, thrombophilie",
+            "Interaction complexe : rarement un seul facteur",
+            "Cascade coagulation : activation excessive",
+            "Inflammation : rôle central dans thrombogenèse"
+          ]
+        },
+        {
+          "titre": "Score de Wells pour TVP",
+          "contenu": "Stratification du risque pré-test :",
+          "points": [
+            "Cancer actif : +1 point",
+            "Paralysie/immobilisation MI : +1 point",
+            "Alitement > 3j ou chirurgie < 4 sem : +1 point",
+            "Sensibilité trajet veineux profond : +1 point",
+            "Œdème MI entier : +1 point",
+            "Œdème mollet > 3 cm vs controlatéral : +1 point",
+            "Œdème prenant godet : +1 point",
+            "Veines superficielles collatérales : +1 point",
+            "TVP antérieure documentée : +1 point",
+            "Diagnostic alternatif aussi probable : -2 points",
+            "Score ≥ 2 : probabilité élevée → écho-Doppler",
+            "Score < 2 : D-dimères → si + alors écho-Doppler"
+          ]
+        },
+        {
+          "titre": "Diagnostic TVP",
+          "contenu": "Approche combinée clinique et paraclinique :",
+          "points": [
+            "Clinique : douleur, œdème, chaleur, Homans+",
+            "D-dimères : VPN excellente si < 500 ng/mL",
+            "Mais ↑ si : âge, trauma, infection, cancer",
+            "Écho-Doppler compression : Se 95%, Sp 98%",
+            "Critères : incompressibilité, thrombus visible, absence flux",
+            "Phlébographie : historique gold standard, rarement utilisée",
+            "IRM veineuse : si doute iliaque ou cave"
+          ]
+        },
+        {
+          "titre": "Complications TVP",
+          "contenu": "Évolution potentiellement mortelle ou invalidante :",
+          "points": [
+            "Embolie pulmonaire : 30-50% TVP proximales",
+            "Syndrome post-thrombotique : 20-50% à 2 ans",
+            "Récidive TVP : 30% à 10 ans",
+            "Extension thrombus : si non traité",
+            "Phlegmatia alba/cerulea dolens : urgence",
+            "Gangrène veineuse : rarissime mais grave"
+          ]
+        },
+        {
+          "titre": "Traitement TVP",
+          "contenu": "Anticoagulation précoce pour prévenir extension et EP :",
+          "points": [
+            "HBPM : enoxaparine 1 mg/kg × 2/j SC",
+            "AOD : rivaroxaban 15 mg × 2/j × 21j puis 20 mg/j",
+            "AVK : warfarine INR cible 2-3 (moins utilisé)",
+            "Durée : 3 mois si facteur déclenchant réversible",
+            "6-12 mois si idiopathique ou récidive",
+            "Indéfinie si cancer actif ou récidives multiples",
+            "Bas contention : classe 2, prévention syndrome post-thrombotique",
+            "Thrombolyse : si phlegmatia ou EP massive"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "TVP proximale : anticoagulation immédiate même avant confirmation",
+        "HBPM : énoxaparine 1 mg/kg × 2/j ou 1.5 mg/kg × 1/j",
+        "AOD : rivaroxaban 15 mg × 2/j × 3 sem puis 20 mg/j",
+        "Apixaban : 10 mg × 2/j × 7j puis 5 mg × 2/j",
+        "Surveillance plaquettes si HNF (risque TIH)",
+        "Bas contention classe 2 : 2 ans minimum",
+        "Mobilisation précoce encouragée (pas alitement)",
+        "Éducation : signes EP, observance, INR si AVK"
+      ],
+      "examensComplementaires": [
+        "Score Wells : évaluation probabilité clinique",
+        "D-dimères ELISA : seuil 500 ng/mL (âge-ajusté : âge × 10)",
+        "Écho-Doppler veineux MI : compression + flux couleur",
+        "Radiographie thorax : éliminer EP si dyspnée",
+        "ECG : tachycardie sinusale possible",
+        "Bilan thrombophilie : si < 50 ans, récidive, familial",
+        "Scanner thoracique : si suspicion EP associée",
+        "Bilan pré-thérapeutique : NFS, créat, TP, TCA"
+      ]
+    }
+  }
+}

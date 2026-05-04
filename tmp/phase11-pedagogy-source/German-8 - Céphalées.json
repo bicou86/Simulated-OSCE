@@ -1,0 +1,337 @@
+{
+  "title": "German-8 - Céphalées",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 70 ans se présente pour un contrôle de tension artérielle"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte d'introduction → Symptôme principal",
+          "patientComment": "Céphalées",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Localisation des douleurs",
+          "details": [
+            "Unilatérale/bilatérale",
+            "Tête ou visage"
+          ],
+          "patientComment": "Plus à gauche qu'à droite, pas dans le visage",
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques temporelles",
+          "details": [
+            "Début de la douleur [depuis ce matin]",
+            "Durée",
+            "Constante/intermittente"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a5",
+          "text": "Variation dans la journée",
+          "patientComment": "Pire le matin qu'au soir, mais seulement depuis ce matin",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Intensité de la douleur",
+          "patientComment": "5/10",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Caractère de la douleur",
+          "patientComment": "Sourde",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Irradiation",
+          "patientComment": "Difficile à dire, pas vraiment",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs de soulagement",
+          "patientComment": "Dormir",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Facteurs aggravants",
+          "patientComment": "Aucun",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes d'accompagnement",
+          "details": [
+            "Nausées",
+            "Vomissements",
+            "Photophobie",
+            "Larmoiement",
+            "Douleurs à la mastication",
+            "Troubles visuels"
+          ],
+          "patientComment": "Non",
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a12",
+          "text": "Première fois ou connu",
+          "patientComment": "Habituellement peu de céphalées, mais pas complètement inconnu",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Maladies récentes",
+          "patientComment": "Aucune",
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Fièvre",
+          "patientComment": "Pas de fièvre, mais avant-hier ne se sentait pas bien, peut-être",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Raideur de nuque",
+          "patientComment": "Non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Traumatisme",
+          "patientComment": "Non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a17",
+          "text": "Crises convulsives",
+          "patientComment": "Qu'est-ce que c'est ?",
+          "binaryOnly": true
+        },
+        {
+          "id": "a18",
+          "text": "Douleurs aux épaules et muscles",
+          "patientComment": "Oui depuis environ une semaine, peut-être du bodypump",
+          "binaryOnly": true
+        },
+        {
+          "id": "a19",
+          "text": "Stress, consommation de caféine",
+          "patientComment": "Pas de stress, 4-5 cafés par jour, mais pas encore aujourd'hui",
+          "binaryOnly": true
+        },
+        {
+          "id": "a20",
+          "text": "Alimentation",
+          "patientComment": "Hier au restaurant chinois, fête d'anniversaire copieuse",
+          "binaryOnly": true
+        },
+        {
+          "id": "a21",
+          "text": "Piqûre de tique",
+          "patientComment": "Ne se souvient pas",
+          "binaryOnly": true
+        },
+        {
+          "id": "a22",
+          "text": "Antécédents personnels",
+          "details": [
+            "Néoplasie",
+            "Hypertension"
+          ],
+          "patientComment": "Hypertension, pas de néoplasie",
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a23",
+          "text": "Médicaments",
+          "details": [
+            "Antihypertenseurs [Coversum-Combi]",
+            "Antalgiques [aucun]"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a24",
+          "text": "Contraceptifs oraux (chez la femme)",
+          "patientComment": "Non applicable",
+          "binaryOnly": true
+        },
+        {
+          "id": "a25",
+          "text": "Toxiques",
+          "patientComment": "Aucun, rarement alcool, hier un peu plus évidemment",
+          "binaryOnly": true
+        },
+        {
+          "id": "a26",
+          "text": "Allergies",
+          "patientComment": "Pénicilline",
+          "binaryOnly": true
+        },
+        {
+          "id": "a27",
+          "text": "Antécédents familiaux",
+          "patientComment": "Pas de migraine, père décédé d'AVC",
+          "binaryOnly": true
+        },
+        {
+          "id": "a28",
+          "text": "Anamnèse sociale, profession",
+          "patientComment": "Conducteur CFF retraité, marié",
+          "binaryOnly": true
+        },
+        {
+          "id": "a29",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "patientComment": "TA 160/100, reste normal",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Méningisme",
+          "patientComment": "négatif",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Neurostatus",
+          "details": [
+            "Pupilles",
+            "Fond d'œil"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e4",
+          "text": "Palpation artère temporale",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation cardiaque avec artères carotides",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "patientComment": "Céphalée du restaurant chinois (Chinese-Restaurant-Headache)",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Gueule de bois",
+                    "cause": "□ alcool d'hier",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Sevrage en caféine",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Déshydratation",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Migraine/Horton",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen neurologique, IRM si atypique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "VS (CRP)",
+            "NFS"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "CT cérébral",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Traitement/Prise en charge",
+          "details": [
+            "Si maladie de Horton : corticoïdes et référence",
+            "Sinon : antalgiques et contrôle"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

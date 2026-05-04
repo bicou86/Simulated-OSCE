@@ -1,0 +1,465 @@
+{
+  "title": "German-64 - Obésité",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme X, 34 ans, consulte pour un souhait de perte de poids, craignant une maladie qui la fait grossir",
+    "vitals": {
+      "imc": "28 kg/m²"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation",
+          "binaryOnly": false,
+          "patientComment": "Je voudrais perdre du poids, j'ai peur d'avoir une maladie qui me fait grossir"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation du surpoids",
+          "binaryOnly": false,
+          "details": [
+            "Poids actuel [76 kg]",
+            "Taille [1,65 m]",
+            "IMC calculé [28 kg/m²]",
+            "Début de la prise de poids [depuis la puberté]",
+            "Évolution pondérale [progressive]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Objectif de perte de poids",
+          "binaryOnly": false,
+          "patientComment": "10 kg"
+        },
+        {
+          "id": "a5",
+          "text": "Régimes antérieurs",
+          "binaryOnly": false,
+          "details": [
+            "Types de régimes essayés [plusieurs fois, une semaine avec seulement des légumes]",
+            "Résultats obtenus [perte de poids temporaire]",
+            "Effet yo-yo [toujours tout repris]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Habitudes alimentaires - Petit-déjeuner",
+          "binaryOnly": false,
+          "patientComment": "3 tranches de pain avec Nutella, café"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes alimentaires - Déjeuner",
+          "binaryOnly": false,
+          "patientComment": "La plupart du temps une salade"
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes alimentaires - Dîner",
+          "binaryOnly": false,
+          "details": [
+            "Composition [la plupart du temps viande avec pâtes]",
+            "Quantité [repas copieux]",
+            "Portions [grandes portions, je me ressers]",
+            "Cuisine maison [oui, le soir]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Collations et grignotage",
+          "binaryOnly": false,
+          "details": [
+            "Matinée [banane et croissant, grand café au lait]",
+            "Après-midi [faim rapidement après le déjeuner, yaourt, gâteau, pâtisserie]",
+            "Soirée [quelque chose devant la télévision]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Hydratation et boissons",
+          "binaryOnly": false,
+          "details": [
+            "Eau [l'eau n'est pas assez savoureuse]",
+            "Boissons sucrées [préfère le thé glacé]",
+            "Quantité quotidienne [à préciser]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Comportement alimentaire",
+          "binaryOnly": false,
+          "details": [
+            "Manger sans faim [oui]",
+            "Alimentation émotionnelle [oui, mange sous stress]",
+            "Vitesse des repas [à évaluer]",
+            "Repas devant écran [oui, le soir]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Activité physique",
+          "binaryOnly": false,
+          "patientComment": "Aucune activité physique"
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes évocateurs d'endocrinopathie",
+          "binaryOnly": false,
+          "details": [
+            "Fatigue inhabituelle [non]",
+            "Frilosité [non]",
+            "Constipation [tendance constipée]",
+            "Peau sèche [non]",
+            "Chute de cheveux [non]",
+            "Troubles du cycle menstruel [non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Symptômes évocateurs de diabète",
+          "binaryOnly": false,
+          "details": [
+            "Polyurie [non]",
+            "Polydipsie [non]",
+            "Polyphagie [non]",
+            "Perte de poids paradoxale [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Autres symptômes",
+          "binaryOnly": false,
+          "details": [
+            "Hypertension [non]",
+            "Troubles du sommeil [non]",
+            "Ronflement/apnées [à évaluer]",
+            "Douleurs articulaires [douleurs aux genoux]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux personnels",
+          "binaryOnly": false,
+          "patientComment": "Aucune maladie connue, sauf douleurs aux genoux"
+        },
+        {
+          "id": "a17",
+          "text": "Traitements actuels",
+          "binaryOnly": false,
+          "patientComment": "Aucun médicament"
+        },
+        {
+          "id": "a18",
+          "text": "Habitudes de vie et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [non]",
+            "Alcool [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "patientComment": "Allergie aux chats"
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Diabète familial [mère diabétique]",
+            "Obésité familiale [à préciser]",
+            "Maladies cardiovasculaires [non]",
+            "Père [en bonne santé]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Anamnèse psychosociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [comptable]",
+            "Situation familiale [vit avec son partenaire]",
+            "Enfants [non]",
+            "Stress/conflits [disputes fréquentes avec le partenaire]",
+            "Partenaire [aussi en surpoids]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous quelque chose à ajouter ?",
+            "Avez-vous des questions ?"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures anthropométriques",
+          "binaryOnly": false,
+          "details": [
+            "Poids confirmé",
+            "Taille confirmée",
+            "Tour de taille",
+            "Tour de hanches",
+            "Calcul du rapport taille/hanches"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection générale",
+          "binaryOnly": false,
+          "details": [
+            "Répartition de la graisse (androïde vs gynoïde)",
+            "Recherche de vergetures violacées",
+            "Acanthosis nigricans",
+            "Œdèmes des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Signes de Cushing",
+          "binaryOnly": false,
+          "details": [
+            "Faciès lunaire",
+            "Bosse de bison",
+            "Amyotrophie proximale",
+            "Ecchymoses spontanées"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Mesure de la tension artérielle",
+            "Auscultation cardiaque",
+            "Pouls périphériques"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire",
+            "Recherche de signes d'insuffisance cardiaque"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection (stries, cicatrices)",
+            "Palpation (hépatomégalie)",
+            "Mesure du périmètre abdominal"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation thyroïdienne",
+          "binaryOnly": false,
+          "details": [
+            "Volume thyroïdien",
+            "Nodules",
+            "Consistance"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen ostéo-articulaire",
+          "binaryOnly": false,
+          "details": [
+            "Examen des genoux (gonarthrose)",
+            "Mobilité articulaire",
+            "Recherche de signes inflammatoires"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Surpoids (IMC 28 kg/m²) d'origine multifactorielle"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels à exclure",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  },
+                  {
+                    "text": "Syndrome de Cushing",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Cortisol libre urinaire 24h, test de freinage"
+                  },
+                  {
+                    "text": "Syndrome des ovaires polykystiques",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Insulinome",
+                    "cause": "□ rare",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Glycémie à jeun",
+            "HbA1c",
+            "TSH",
+            "Bilan lipidique complet",
+            "Transaminases hépatiques",
+            "Créatinine",
+            "Acide urique"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Éducation sur les risques",
+          "binaryOnly": false,
+          "details": [
+            "Risque de diabète de type 2 (antécédent familial)",
+            "Hypertension artérielle",
+            "Maladies cardiovasculaires",
+            "Stéatose hépatique",
+            "Syndrome d'apnées du sommeil",
+            "Aggravation des problèmes articulaires"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseils nutritionnels",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Principes de base",
+                "content": "• Alimentation équilibrée selon la pyramide alimentaire\n• 3 repas principaux + 1-2 collations saines\n• Portions contrôlées (assiette modèle)\n• Manger lentement et sans distraction\n• Hydratation avec de l'eau (1,5-2L/jour)"
+              },
+              {
+                "title": "Modifications spécifiques",
+                "content": "• Remplacer le Nutella par confiture allégée ou miel\n• Pain complet au lieu de pain blanc\n• Collations : fruits, yaourt nature, noix (portion contrôlée)\n• Éviter les boissons sucrées (thé glacé → eau aromatisée)\n• Réduire les portions de féculents le soir"
+              },
+              {
+                "title": "Stratégies comportementales",
+                "content": "• Journal alimentaire pendant 1 semaine\n• Identifier les déclencheurs émotionnels\n• Planifier les repas à l'avance\n• Faire les courses avec une liste\n• Ne pas manger devant la télévision"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Activité physique",
+          "binaryOnly": false,
+          "details": [
+            "Commencer progressivement (marche 30 min/jour)",
+            "Objectif : 150 min d'activité modérée/semaine",
+            "Exercices adaptés aux genoux (natation, vélo)",
+            "Intégrer l'activité au quotidien (escaliers, marche)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Objectifs réalistes",
+          "binaryOnly": false,
+          "details": [
+            "Perte de poids réaliste : 5 kg maximum en 1 an",
+            "Objectif : 0,5-1 kg par mois",
+            "Focus sur les changements durables",
+            "Éviter les régimes restrictifs"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Prise en charge multidisciplinaire",
+          "binaryOnly": false,
+          "details": [
+            "Consultation diététicienne",
+            "Soutien psychologique si besoin (alimentation émotionnelle)",
+            "Suivi médical régulier",
+            "Groupe de soutien possible"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Suivi",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle dans 1 mois avec journal alimentaire",
+            "Pesée mensuelle (pas plus fréquente)",
+            "Réévaluation des objectifs à 3 mois",
+            "Contrôle biologique à 6 mois"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

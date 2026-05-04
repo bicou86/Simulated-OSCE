@@ -1,0 +1,322 @@
+{
+  "title": "German-85 - Vomissements et diarrhée - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Petit enfant de 2 ans se présentant avec vomissements et diarrhée, ou femme âgée de 85 ans résidant en EMS se présentant avec confusion"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question ouverte pour identifier le motif de consultation",
+          "details": [
+            "[Vomissements et diarrhée chez l'enfant]",
+            "[Confusion chez la personne âgée]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Signes cliniques de déshydratation",
+          "details": [
+            "Pli cutané persistant",
+            "Muqueuses sèches",
+            "Oligurie"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes digestifs",
+          "details": [
+            "Vomissements (fréquence, aspect)",
+            "Diarrhée (fréquence, consistance)"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Bilan des entrées et sorties",
+          "details": [
+            "Quantité de boissons ingérées",
+            "Fréquence et volume des urines [Couche sèche]",
+            "Présence de larmes lors des pleurs [Absence de larmes]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "État neurologique",
+          "details": [
+            "Confusion",
+            "Somnolence",
+            "Sopor"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Recherche de causes infectieuses",
+          "details": [
+            "Signes d'infection urinaire [Chez l'enfant éventuellement comme cause]",
+            "Fièvre associée",
+            "Environnement épidémique"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Recherche de causes métaboliques - Diabète sucré",
+          "details": [
+            "Polyurie-polydipsie",
+            "Perte de poids récente",
+            "Antécédents familiaux de diabète"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Recherche de causes endocriniennes - Insuffisance surrénalienne",
+          "details": [
+            "Asthénie chronique",
+            "Hypotension",
+            "Hyperpigmentation cutanée"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents personnels",
+          "details": [
+            "Maladies rénales [Néphropathie préexistante]",
+            "Maladies digestives chroniques",
+            "Hospitalisations récentes"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes alimentaires et hydratation habituelle"
+        },
+        {
+          "id": "a12",
+          "text": "Toxiques et médicaments",
+          "details": [
+            "Diurétiques",
+            "Laxatifs",
+            "Autres médicaments"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse de l'entourage",
+          "details": [
+            "Cas similaires dans l'entourage",
+            "Voyage récent",
+            "Consommation d'aliments suspects"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents familiaux pertinents"
+        },
+        {
+          "id": "a15",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Conditions de vie",
+            "Autonomie (personne âgée)",
+            "Garde d'enfant/crèche"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée sur le problème",
+            "Questions pertinentes posées",
+            "Bonne exploration des diagnostics différentiels"
+          ],
+          "scoringRule": "Bien structurée = 2 pts, Suffisante = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Évaluation clinique de l'état d'hydratation",
+          "details": [
+            "Pli cutané (temps de recoloration)",
+            "État des muqueuses (sèches/humides)",
+            "Yeux enfoncés",
+            "Fontanelle déprimée (nourrisson)"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation vésicale",
+          "details": [
+            "Globe vésical",
+            "Douleur sus-pubienne"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen rénal",
+          "details": [
+            "Palpation des fosses lombaires",
+            "Recherche de douleur à l'ébranlement"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Mesure de la tension artérielle",
+          "details": [
+            "[Hypotension ?]",
+            "Recherche d'hypotension orthostatique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation de l'état général",
+          "details": [
+            "Poids actuel (si possible)",
+            "État de conscience",
+            "Température"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé et systématique",
+            "Techniques d'examen appropriées",
+            "Interprétation correcte des signes"
+          ],
+          "scoringRule": "Complet et méthodique = 2 pts, Suffisant = 1 pt, Insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "L'étudiant énonce le diagnostic principal",
+          "details": [
+            "Déshydratation aiguë"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "L'étudiant évoque les diagnostics différentiels pertinents",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Pertes digestives",
+                "items": [
+                  {
+                    "text": "Gastro-entérite aiguë virale → Coproculture si diarrhée glairo-sanglante",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Intoxication alimentaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes métaboliques",
+                "items": [
+                  {
+                    "text": "Diabète sucré décompensé → Glycémie, glycosurie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Glycémie à jeun, HbA1c"
+                  },
+                  {
+                    "text": "Insuffisance surrénalienne",
+                    "cause": "Arguments POUR:\n\t□ maladie d'Addison → Ionogramme, cortisol",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Causes rénales",
+                "items": [
+                  {
+                    "text": "Insuffisance rénale aiguë → Créatinine, urée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          },
+          "scoringRule": "Au moins 3 diagnostics différentiels pertinents = 2 pts"
+        },
+        {
+          "id": "m3",
+          "text": "L'étudiant propose les examens complémentaires appropriés",
+          "details": [
+            "Ionogramme sanguin (Na, K, Cl)",
+            "Fonction rénale (créatinine, urée)",
+            "NFS (hémoconcentration : Hb, Ht)",
+            "Glycémie",
+            "Analyse d'urine si suspicion d'infection"
+          ],
+          "scoringRule": "Examens pertinents et justifiés = 2 pts"
+        },
+        {
+          "id": "m4",
+          "text": "L'étudiant propose une prise en charge thérapeutique adaptée",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Réhydratation",
+                "content": "• Voie orale si déshydratation légère à modérée\n• Solution de réhydratation orale (SRO)\n• Voie intraveineuse si déshydratation sévère ou échec voie orale\n• Soluté isotonique (NaCl 0.9% ou Ringer lactate)"
+              },
+              {
+                "title": "Correction des troubles électrolytiques",
+                "content": "• Surveillance et correction du potassium\n• Ajustement selon ionogramme\n• Monitoring cardiaque si troubles sévères"
+              },
+              {
+                "title": "Traitement étiologique",
+                "content": "• Antiémétiques si vomissements importants\n• Pas d'antidiarrhéiques chez l'enfant\n• Traitement spécifique selon la cause"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "L'étudiant organise le suivi et l'orientation",
+          "details": [
+            "Critères d'hospitalisation définis",
+            "Transfert à l'hôpital si nécessaire",
+            "Surveillance de la réhydratation",
+            "Éducation des parents/soignants"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Démarche diagnostique logique",
+            "Traitement adapté à la sévérité",
+            "Prise en charge globale du patient"
+          ],
+          "scoringRule": "Excellente prise en charge = 2 pts, Correcte = 1 pt, Insuffisante = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

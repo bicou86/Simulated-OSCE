@@ -1,0 +1,543 @@
+{
+  "title": "AMBOSS-40 - Vertiges - Homme 25 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Fred Potter, homme de 25 ans, consultant pour vertiges",
+    "vitals": {
+      "temperature": "37.5°C",
+      "ta": "120/70 mmHg",
+      "fc": "65 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je me sens vraiment étourdi"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des vertiges",
+          "binaryOnly": false,
+          "details": [
+            "Description des vertiges [J'ai l'impression que la pièce tourne autour de moi]",
+            "Début [Ça a commencé vraiment soudainement hier soir]",
+            "Constant/intermittent [C'est là tout le temps]",
+            "Événements précipitants [Je ne me souviens de rien de particulier]",
+            "Progression [Je pense que ça reste à peu près pareil]",
+            "Épisodes antérieurs [Non]",
+            "Facteurs améliorants [Rien. C'est horrible]",
+            "Facteurs aggravants [Non]",
+            "Symptômes associés [J'ai la nausée à cause des vertiges. Je n'ai pas eu à vomir cependant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour vertiges",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Céphalée [Non]",
+            "Fièvre/frissons [Je n'ai pas pris ma température, mais j'ai l'impression d'avoir peut-être un peu de fièvre]",
+            "Éruption cutanée/changements cutanés [Je n'ai rien vu]",
+            "Toux [J'avais un petit rhume la semaine dernière et j'avais une toux alors, mais je pense que c'est parti maintenant]",
+            "Infections récentes [Seulement le rhume la semaine dernière]",
+            "Acouphènes [Oui, dans mon oreille droite]",
+            "Plénitude auriculaire [Oui, aussi dans mon oreille droite]",
+            "Perte auditive [Oui. Je pense que c'est surtout mon oreille droite aussi]",
+            "Changements de vision [Non]",
+            "Engourdissement/faiblesse/picotements [Non]",
+            "Prurit [Oui, mon oreille droite me démange depuis quelques jours. Je pensais que c'était juste de la cire alors je l'ai nettoyée, mais ça n'a pas aidé]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "details": [
+            "Antécédents médicaux [Je me suis blessé au genou en jouant au football l'année dernière. Rupture du LCA]",
+            "Varicelle dans le passé [Oui, je suis presque sûr d'avoir eu la varicelle quand j'étais enfant]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends de l'aspirine pour mon genou parfois, ça fait encore mal quand je cours ou joue au football"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai eu une chirurgie pour mon genou l'année dernière]",
+            "Antécédents chirurgicaux [Seulement le genou]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Aucun]",
+            "Antécédents familiaux [Mon frère aîné a une neurofibromatose]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je gère un lave-auto]",
+            "Domicile [Je vis seul]",
+            "Alcool [Seulement les week-ends]",
+            "Drogues récréatives [Je fume généralement un joint quand je rentre du travail pour me détendre un peu, je le fais seulement le soir, jamais pendant la journée]",
+            "Tabac [Oui. Je fume environ un demi-paquet par jour. Je pense que j'avais 14 ans quand j'ai commencé]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête",
+            "Inspection des oreilles [Montrer l'image de l'herpès zoster oticus]",
+            "Palpation des oreilles [Oreille droite sensible à la palpation]",
+            "Otoscopie"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Tests auditifs",
+          "binaryOnly": false,
+          "details": [
+            "Test de Rinne et test de Weber [Rinne : positif bilatéralement, Weber : latéralisation à l'oreille gauche]",
+            "Test de Dix-Hallpike"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé des nerfs crâniens",
+            "Examen ciblé de l'audition [Audition diminuée à droite]",
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la sensibilité",
+            "Examen ciblé des réflexes ostéotendineux",
+            "Examen ciblé de la marche",
+            "Test d'alternance rapide des mouvements",
+            "Test doigt-nez",
+            "Test de Romberg [Positif]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes otologiques prioritaires",
+                "items": [
+                  {
+                    "text": "Zona auriculaire (syndrome de Ramsay Hunt)",
+                    "cause": "Arguments POUR:\n\t□ IVRS la semaine précédente → immunosuppression → réactivation VZV\n\t□ Vertiges, perte auditive, sensibilité et prurit du pavillon\n\t□ Fébricule présent\n\t□ Lésions herpétiques caractéristiques (vésicules groupées sur base érythémateuse)\n\t□ Atteinte du nerf vestibulo-cochléaire (VIII)\n\t□ Test de Weber latéralisé à gauche = surdité neurosensorielle droite",
+                    "test": "→ Audiométrie tonale (confirme surdité neurosensorielle)"
+                  },
+                  {
+                    "text": "Maladie de Ménière",
+                    "cause": "Arguments POUR:\n\t□ Triade : vertiges, acouphènes, perte auditive\n\t□ Symptômes cochléaires présents\n\t□ Test de Romberg positif\nArguments CONTRE:\n\t□ Âge jeune (typiquement 40-60 ans) ; épisodes paroxystiques attendus ; lésions herpétiques du pavillon rendent zona plus probable",
+                    "test": "→ Audiométrie (perte auditive basses fréquences dans Ménière)"
+                  }
+                ]
+              },
+              {
+                "name": "Causes vestibulaires",
+                "items": [
+                  {
+                    "text": "Névrite vestibulaire",
+                    "cause": "Arguments POUR:\n\t□ Vertiges sévères et nausées\n\t□ Association possible avec IVRS\nArguments CONTRE:\n\t□ Instabilité de la marche attendue ; absence de symptômes cochléaires (perte auditive, acouphènes) qui sont présents ici",
+                    "test": "→ Test calorique vestibulaire"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Vertige positionnel paroxystique bénin",
+                    "cause": "Vertiges brefs déclenchés par mouvements tête",
+                    "test": "→ Dix-Hallpike positif avec nystagmus"
+                  },
+                  {
+                    "text": "Migraine vestibulaire",
+                    "cause": "ATCD migraines, vertiges récurrents",
+                    "test": "→ Diagnostic d'exclusion"
+                  },
+                  {
+                    "text": "Neurinome acoustique",
+                    "cause": "ATCD familial neurofibromatose (risque NF2)",
+                    "test": "→ IRM avec gadolinium"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Audiométrie tonale [pour exclure une surdité neurosensorielle dans le zona auriculaire. Une perte auditive des basses fréquences serait observée dans la maladie de Ménière]",
+            "Potentiels évoqués auditifs du tronc cérébral [pour exclure une lésion du système nerveux central]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les drogues récréatives",
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant le départ"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antiviral urgent (< 72h)",
+                "content": "• Valacyclovir: 1000 mg × 3/j × 7-10j PO\n• Ou acyclovir: 800 mg × 5/j × 7-10j PO\n• IV si sévère: Acyclovir 10 mg/kg × 3/j\n• Corticothérapie associée\n• Prednisone 60-: 80 mg/j × 5j\n• Puis décroissance sur 5-7j\n• Améliore pronostic paralysie faciale"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Antivertigineux: Méclizine 25-50 mg × 3/j\n• Antiémétiques: Ondansétron 4-8 mg si besoin\n• Analgésiques: Paracétamol ± tramadol\n• Protection oculaire si paralysie faciale\n• Soins locaux\n• Pas de manipulation oreille\n• Éviter eau dans oreille"
+              },
+              {
+                "title": "Si maladie de Ménière",
+                "content": "• Crise aiguë\n• Repos au calme, position confortable\n• Diazépam 5-: 10 mg IV/IM\n• Antiémétiques: Prométhazine 25 mg\n• Réhydratation si vomissements"
+              },
+              {
+                "title": "Traitement de fond",
+                "content": "• Régime hyposodé: 2g/j\n• Diurétiques: Hydrochlorothiazide 25 mg/j\n• Bétahistine 16-: 24 mg × 2/j\n• Éviter caféine, alcool, stress"
+              },
+              {
+                "title": "Si échec médical",
+                "content": "• Injection intratympanique corticoïdes\n• Gentamicine intratympanique: (chimique)\n• Chirurgie: Décompression sac endolymphatique"
+              },
+              {
+                "title": "Si névrite vestibulaire",
+                "content": "• Phase aiguë\n• Repos strict 24-48h\n• Antivertigineu\n• Corticoïdes: Méthylprednisolone 100 mg/j × 3j\n• Rééducation vestibulaire précoce\n• Débuter dès amélioration (J3-5)\n• Exercices de stabilisation regard\n• Habituation aux mouvements\n• Compensation centrale\n• Conseils généraux vertiges\n• Éviter mouvements brusques tête\n• Se lever lentement\n• Éclairage suffisant la nuit\n• Rampes et barres d'appui\n• Pas de conduite si vertiges actifs\n• Arrêt travail si métier à risque"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Signes d'alarme et complications",
+            "items": [
+              {
+                "text": "Paralysie faciale",
+                "description": "Zona = risque 60% → corticoïdes urgents"
+              },
+              {
+                "text": "Surdité définitive",
+                "description": "Retard traitement > 72h → séquelles auditives"
+              },
+              {
+                "text": "Névralgie post-zostérienne",
+                "description": "Douleur chronique → gabapentine, amitriptyline"
+              },
+              {
+                "text": "Extension méningée",
+                "description": "Céphalées, raideur nuque → PL urgente"
+              },
+              {
+                "text": "Schwannome vestibulaire",
+                "description": "ATCD familial NF → IRM systématique"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Interruption et volonté de partir",
+          "content": "[Pourquoi avez-vous besoin de savoir tout ça ? Je pense que venir ici était une erreur. Je devrais partir. Je dois rentrer chez moi pour mes chats - quelqu'un doit les nourrir.]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Potter, je comprends que vous êtes inquiet pour vos chats, mais vous avez pris la bonne décision aujourd'hui en venant me voir. Il est important que je pose toutes ces questions afin de mieux comprendre ce qui cause vos symptômes pour que nous puissions vous traiter correctement. J'aimerais vous poser juste quelques questions de plus et vous examiner avant que vous partiez. Je serais heureux d'appeler quelqu'un pour vous qui pourrait s'occuper de vos chats, comme un ami ou un parent. Cependant, en tant que votre médecin, c'est mon travail de vous maintenir dans la meilleure santé possible, et pour cela je dois exclure toute condition qui pourrait affecter votre audition de façon permanente avant de vous renvoyer chez vous. Comment vous sentez-vous par rapport à cela ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Tests de Rinne et Weber au diapason",
+        "description": "(1) Test de Weber : Un diapason vibrant est placé au centre du crâne. On demande ensuite au patient de quelle oreille le son est entendu le plus fort. Si le son est plus fort dans une oreille, le test de Rinne doit être effectué sur les oreilles droite et gauche.\n(2) Le diapason vibrant est placé sur le processus mastoïde de l'oreille, qui peut être localisé en palpant derrière le conduit auditif.\n(3) Si le ton diminue au point que le patient ne peut plus l'entendre, le diapason est positionné devant la même oreille sans le faire vibrer à nouveau. Dans une audition normale, le patient est capable d'entendre le diapason, car la conduction aérienne est supérieure à la conduction osseuse (le test de Rinne est positif). Les tests de Rinne et Weber peuvent être utilisés pour différencier entre la perte auditive de conduction et neurosensorielle.",
+        "data": "grilles_generees/html/images/AMBOSS-40-img1-Rinne and Weber tuning fork tests.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Zona auriculaire (Herpes zoster oticus)",
+        "description": "Plusieurs vésicules groupées remplies de liquide clair sont visibles sur l'oreille. L'aspect antérieur de l'hélix est partiellement croûteux. C'est l'apparence typique du zona auriculaire (herpes zoster oticus). La constatation supplémentaire d'une paralysie unilatérale du nerf facial est diagnostique du syndrome de Ramsay Hunt.",
+        "data": "grilles_generees/html/images/AMBOSS-40-img2-Herpes zoster oticus.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Examen et anatomie de surface de la membrane tympanique",
+        "description": "Schéma illustrant l'examen otoscopique et l'anatomie de surface de la membrane tympanique, montrant les différents quadrants et repères anatomiques visibles à l'examen.",
+        "data": "grilles_generees/html/images/AMBOSS-40-img3-Examination and surface anatomy of the tympanic membrane.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Membrane tympanique saine",
+        "description": "Photographie otoscopique de la membrane tympanique gauche. La membrane tympanique est vue comme un disque ovoïde translucide gris perlé à l'extrémité du conduit auditif externe. Elle peut être grossièrement divisée en deux parties : la petite et flasque pars flaccida (PF) et la plus grande et plus tendue pars tensa (PT) en dessous. Au centre, une protubérance appelée 'strie malléolaire' est visible (superposition verte). Elle est soulevée par le processus du marteau et le manche du marteau. La pointe du marteau forme l'umbo (superposition jaune). Le quadrant antéro-inférieur montre la réflexion physiologique de la lumière otoscopique, appelée 'cône de lumière' (superposition bleue).",
+        "data": "grilles_generees/html/images/AMBOSS-40-img4-Healthy tympanic membrane.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Signes d'examen dans la paralysie du nerf facial",
+        "description": "Les symptômes dans la paralysie faciale centrale sont causés par une lésion du motoneurone supérieur (UMN) contralatéral. Parce que les muscles responsables des mouvements des paupières et du front sont innervés par des fibres du motoneurone supérieur des deux hémisphères, leur fonction est préservée dans la paralysie faciale centrale. Dans la paralysie faciale périphérique, les dommages aux fibres du motoneurone inférieur (LMN) entraînent une paralysie ipsilatérale de tous les muscles faciaux. Parce que les fibres sensorielles et autonomes rejoignent les fibres du motoneurone inférieur du nerf facial dans son trajet périphérique, les paralysies faciales périphériques peuvent également se manifester avec des symptômes non moteurs.",
+        "data": "grilles_generees/html/images/AMBOSS-40-img5-Examination findings in facial nerve palsy.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Fred Potter",
+      "age": "25 ans",
+      "contexte": "Homme jeune avec vertiges aigus et signes otologiques",
+      "motifConsultation": {
+        "plaintePrincipale": "Je me sens vraiment étourdi.",
+        "autreChose": "La pièce tourne autour de moi depuis hier soir."
+      },
+      "consignes": [
+        "Agissez comme si vous ne pouviez pas entendre du côté droit. Si l'examinateur ne parle pas assez fort, demandez des clarifications ou faites semblant de ne pas entendre sa question.",
+        "Quand l'examinateur regarde votre oreille droite, montrez-lui l'image fournie et faites semblant que votre oreille droite fait mal quand l'examinateur la touche.",
+        "Quand l'examinateur place le diapason sur le sommet de votre tête, dites que vous pouvez entendre le son plus fort du côté gauche.",
+        "Quand l'examinateur place le diapason sur l'os derrière votre oreille jusqu'à ce que vous ne puissiez plus l'entendre puis le place à côté de votre oreille, dites que vous pouvez entendre le son à nouveau.",
+        "Quand l'examinateur vous demande de vous tenir debout avec les deux pieds joints, lever les bras et fermer les yeux, agissez comme si vous basculiez sur le côté.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (par ex., audiogramme) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Interrompez l'examinateur pendant qu'il vous interroge sur votre santé et dites : 'Pourquoi avez-vous besoin de savoir tout ça ? Je pense que venir ici était une erreur. Je devrais partir. Je dois rentrer chez moi pour mes chats - quelqu'un doit les nourrir.'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Vertiges rotatoires depuis hier soir",
+          "Début brutal",
+          "Sensation que la pièce tourne",
+          "Constant, sans rémission",
+          "Nausées associées sans vomissements",
+          "Pas de facteur déclenchant identifié"
+        ],
+        "symptomesAssocies": [
+          "Perte auditive oreille droite",
+          "Acouphènes oreille droite",
+          "Sensation plénitude oreille droite",
+          "Prurit auriculaire droit depuis quelques jours",
+          "Fébricule ressenti",
+          "IVRS la semaine précédente",
+          "Douleur oreille droite"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Difficulté audition côté droit",
+          "Demander répétition questions",
+          "Anxiété visible (vertiges)",
+          "Mentionner inquiétude pour chats",
+          "Interruption consultation (défi)",
+          "Demander clarification termes médicaux"
+        ],
+        "durantStatus": [
+          "Montrer image zona auriculaire",
+          "Douleur palpation oreille droite",
+          "Weber latéralisé à gauche",
+          "Rinne positif bilatéralement",
+          "Romberg positif (déséquilibre)",
+          "Audition diminuée à droite"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 25 ans avec vertiges aigus + signes cochléo-vestibulaires + lésions vésiculeuses oreille = zona auriculaire (Ramsay Hunt) jusqu'à preuve contraire. IVRS récente = facteur déclenchant réactivation VZV. Weber latéralisé gauche = surdité neurosensorielle droite. Romberg positif = atteinte vestibulaire. URGENCE thérapeutique : antiviraux < 72h pour éviter séquelles. Risque paralysie faciale 60%. ATCD familial NF = surveiller neurinome VIII bilatéral (NF2). Cannabis quotidien + tabac = counseling obligatoire.",
+      "rolesInterventions": [
+        "Otoscopie : tympan normal, CAE avec vésicules",
+        "Paralysie faciale : absente pour l'instant",
+        "Nystagmus : horizontal, battant côté sain",
+        "Head thrust test : positif côté droit",
+        "Examen neurologique : normal sauf VIII",
+        "Température : 37.5°C confirmé"
+      ],
+      "pointsCles": [
+        "Zona auriculaire = urgence ORL (< 72h)",
+        "VZV réactivation ganglion géniculé",
+        "Risque surdité définitive si retard traitement",
+        "Paralysie faciale dans 60% cas",
+        "Névralgie post-zostérienne possible",
+        "ATCD NF familial = risque schwannome VIII"
+      ],
+      "pieges": [
+        "Confondre avec simple névrite vestibulaire",
+        "Manquer les vésicules (zone de Ramsay Hunt)",
+        "Retarder antiviraux (fenêtre 72h)",
+        "Oublier protection oculaire si PF",
+        "Négliger ATCD familial NF (IRM indiquée)",
+        "Omettre conseils cannabis/tabac"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Zona auriculaire (syndrome de Ramsay Hunt)"
+        },
+        {
+          "titre": "Zona auriculaire - Syndrome de Ramsay Hunt",
+          "contenu": "Réactivation du VZV dans le ganglion géniculé (VII) :",
+          "points": [
+            "Incidence : 5/100 000/an",
+            "Pathogénie : réactivation VZV ganglion géniculé",
+            "Extension possible : VIII (60%), V, IX, X",
+            "Triade : vésicules auriculaires + paralysie faciale + otalgie",
+            "Forme complète : + vertiges + surdité (atteinte VIII)",
+            "Pronostic PF : moins bon que Bell (30% récupération complète)"
+          ]
+        },
+        {
+          "titre": "Zones de Ramsay Hunt",
+          "contenu": "Territoires cutanés innervés par le VII (sensibilité) :",
+          "points": [
+            "Zone I : membrane tympanique",
+            "Zone II : conque et anthélix",
+            "Zone III : paroi postérieure CAE",
+            "Zone IV : lobule auriculaire",
+            "Vésicules : 1-2 jours après douleur",
+            "Distribution : souvent zones II et III"
+          ]
+        },
+        {
+          "titre": "Tests de Weber et Rinne",
+          "contenu": "Différenciation surdité de transmission vs perception :",
+          "points": [
+            "Weber : diapason vertex/front",
+            "- Normal : pas de latéralisation",
+            "- Transmission : latéralise côté sourd",
+            "- Perception : latéralise côté sain",
+            "Rinne : compare CA vs CO",
+            "- Normal/perception : CA > CO (Rinne +)",
+            "- Transmission : CO > CA (Rinne -)"
+          ]
+        },
+        {
+          "titre": "Maladie de Ménière",
+          "contenu": "Hydrops endolymphatique idiopathique :",
+          "points": [
+            "Triade : vertiges + surdité + acouphènes",
+            "Crises : 20 min à 24h (moyenne 2-4h)",
+            "Plénitude auriculaire : signe prémonitoire",
+            "Surdité : fluctuante, basses fréquences",
+            "Évolution : bilatéralisation 30-50%",
+            "Stades : I (fluctuant) → IV (fixé)"
+          ]
+        },
+        {
+          "titre": "Névrite vestibulaire",
+          "contenu": "Inflammation virale du nerf vestibulaire :",
+          "points": [
+            "Étiologie : post-virale (HSV-1, VZV)",
+            "Présentation : vertige aigu intense",
+            "Durée : jours à semaines",
+            "Absence symptômes cochléaires (clé)",
+            "Nystagmus : horizontal, unidirectionnel",
+            "Récupération : compensation centrale 6-12 semaines"
+          ]
+        },
+        {
+          "titre": "Neurofibromatose et schwannome vestibulaire",
+          "contenu": "Association NF2 et tumeurs nerfs crâniens :",
+          "points": [
+            "NF2 : schwannomes VIII bilatéraux pathognomoniques",
+            "Transmission : autosomique dominante",
+            "Dépistage : IRM annuelle si NF familiale",
+            "Présentation : surdité progressive unilatérale",
+            "Vertiges : rares (compensation lente)",
+            "Traitement : surveillance vs chirurgie vs radiothérapie"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Zona auriculaire : valacyclovir 1g × 3/j × 7-10j",
+        "Alternative : acyclovir 800 mg × 5/j PO",
+        "Corticoïdes : prednisone 1 mg/kg × 5j puis décroissance",
+        "Antivertigineux : méclizine 25 mg × 3/j PRN",
+        "Protection oculaire si PF : larmes, pommade, occlusion",
+        "Ménière aigu : diazépam 5-10 mg IV + antiémétique",
+        "Ménière fond : régime hyposodé + bétahistine 24 mg × 2/j",
+        "Névralgie résiduelle : gabapentine 300 mg progressive"
+      ],
+      "examensComplementaires": [
+        "Audiométrie tonale : type et degré surdité",
+        "Audiométrie vocale : discrimination",
+        "Impédancemétrie : réflexe stapédien (VII)",
+        "PEA : potentiels évoqués auditifs (atteinte rétrocochléaire)",
+        "Vidéonystagmographie : caractérisation nystagmus",
+        "Test calorique : fonction vestibulaire par côté",
+        "IRM IAC : si suspicion schwannome ou atypique",
+        "Électroneuronographie : pronostic PF si > 90% dégénérescence"
+      ]
+    }
+  }
+}

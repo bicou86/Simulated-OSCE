@@ -1,0 +1,391 @@
+{
+  "title": "German-33 - Douleur thoracique",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 67 ans consultant son médecin de famille pour douleurs thoraciques",
+    "vitals": {
+      "ta": "134/87 mmHg",
+      "fc": "64 bpm",
+      "fr": "15/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification des symptômes",
+          "details": [
+            "[Douleurs dans la poitrine]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Durée des symptômes",
+          "details": [
+            "[Depuis déjà un certain temps]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Localisation de la douleur",
+          "details": [
+            "[Directement derrière le sternum]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Intensité de la douleur",
+          "details": [
+            "[4/10]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Piquante, brûlante]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Douleur liée à la respiration",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Irradiation de la douleur",
+          "details": [
+            "[Parfois dans le dos]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Facteurs déclenchants et modulateurs",
+          "details": [
+            "[Douleur surtout après les repas]",
+            "[Un peu pire en position couchée]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Lien avec l'effort physique",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes associés",
+          "details": [
+            "Dyspnée [non]",
+            "Nausées [non]",
+            "Douleurs abdominales [oui, parfois épigastriques]",
+            "Pyrosis [oui, souvent]",
+            "Vertiges, syncope [non]",
+            "Palpitations [non]",
+            "Toux, expectoration [non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Traumatisme thoracique",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension [oui]",
+            "Diabète [non]",
+            "Dyslipidémie [non]",
+            "Antécédents familiaux d'infarctus [non]",
+            "Tabagisme [oui]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Facteurs de risque d'embolie pulmonaire",
+          "details": [
+            "Œdème/douleur du mollet [non]",
+            "Voyage récent [non]",
+            "Chirurgie récente [non]",
+            "Cancer actif [non]",
+            "Antécédents familiaux de thrombophilie [non]"
+          ],
+          "scoringRule": "Wells = 0 point"
+        },
+        {
+          "id": "a15",
+          "text": "Signes généraux",
+          "details": [
+            "[Pas de perte de poids, pas de fièvre, pas de sueurs nocturnes]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents personnels",
+          "details": [
+            "[Hypertension artérielle]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Habitudes de vie",
+          "details": [
+            "[Demi-paquet par jour depuis 40 ans]",
+            "[1-2 verres de vin rouge chaque soir]",
+            "[Pas de drogues]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Bêtabloquant]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "details": [
+            "[Non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Père : AVC à 82 ans]",
+            "[Mère : en bonne santé]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Enseignant, marié, 2 enfants]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée sur le reflux gastro-œsophagien avec exclusion des diagnostics différentiels graves"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "[Pas de pâleur, pas de cyanose, pas d'œdèmes, pas de stase jugulaire]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "État cardiopulmonaire",
+          "details": [
+            "[Normal]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen vasculaire",
+          "details": [
+            "[Normal]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "details": [
+            "[Sensibilité à la pression épigastrique]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Recherche de signes d'alarme",
+          "details": [
+            "Dysphagie",
+            "Amaigrissement",
+            "Anémie",
+            "Hémorragie digestive"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé avec recherche systématique des signes d'alarme"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Énonce le diagnostic de suspicion principal",
+          "details": [
+            "[Reflux gastro-œsophagien (RGO)]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Œsophagite peptique",
+            "Hernie hiatale",
+            "Angor stable",
+            "Pathologie œsophagienne (sténose, cancer)"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Causes digestives",
+                "items": [
+                  {
+                    "text": "Reflux gastro-œsophagien → Test IPP, pH-métrie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ pH-métrie, gastroscopie"
+                  },
+                  {
+                    "text": "Œsophagite peptique → Endoscopie digestive haute",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hernie hiatale → Radiographie, endoscopie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examen clinique, US si doute"
+                  },
+                  {
+                    "text": "Cancer de l'œsophage → Endoscopie avec biopsies",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Imagerie (CT/IRM), biopsie, marqueurs tumoraux"
+                  }
+                ]
+              },
+              {
+                "name": "Causes cardiovasculaires",
+                "items": [
+                  {
+                    "text": "Angor stable → ECG d'effort, coronarographie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome coronarien chronique → Épreuve d'effort, coroscanner",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, troponines, test d'effort"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Spasme œsophagien → Manométrie œsophagienne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Troubles moteurs de l'œsophage → Manométrie haute résolution",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "ECG (éliminer cause cardiaque)",
+            "Biologie : FSC, CRP, troponine, CK",
+            "Radiographie thoracique",
+            "PH-métrie des 24 heures",
+            "Endoscopie digestive haute (si signes d'alarme ou échec du traitement)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "details": [
+            "Mesures hygiéno-diététiques",
+            "Inhibiteurs de la pompe à protons (IPP)"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures hygiéno-diététiques",
+                "content": "• Éviter café, alcool, aliments gras\n• Pas de repas copieux le soir\n• Attendre 2-3h après le repas avant de se coucher\n• Surélever la tête du lit (15-20 cm)\n• Perte de poids si surpoids\n• Arrêt du tabac\n• Éviter vêtements serrés à la taille"
+              },
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• IPP : oméprazole 20mg 1x/j pendant 4-8 semaines\n• Si amélioration : poursuivre à la demande\n• Si échec : doubler la dose ou changer d'IPP\n• Antiacides en complément si besoin ponctuel\n• Prokinétiques si troubles moteurs associés"
+              },
+              {
+                "title": "Indications de l'endoscopie",
+                "content": "• Signes d'alarme (dysphagie, amaigrissement, anémie)\n• Âge > 50 ans avec symptômes récents\n• Échec du traitement IPP bien conduit\n• Symptômes récidivants à l'arrêt du traitement\n• Antécédents familiaux de cancer digestif"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Suivi et surveillance",
+          "details": [
+            "Réévaluation à 4-8 semaines",
+            "Si amélioration : traitement à la demande",
+            "Si échec : endoscopie digestive haute",
+            "Surveillance au long cours si œsophagite"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information du patient",
+          "details": [
+            "Expliquer la nature bénigne du RGO",
+            "Importance des mesures hygiéno-diététiques",
+            "Observance du traitement IPP",
+            "Consulter si apparition de signes d'alarme"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge adaptée avec approche progressive et éducation thérapeutique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,310 @@
+{
+  "title": "German-87 - Voyage à Madagascar",
+  "context": {
+    "setting": "Cabinet de médecine générale - Consultation de médecine des voyages",
+    "patient": "Père célibataire consultant pour préparer un voyage à Madagascar avec son fils de 10 ans (voyage de 3 semaines)"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation professionnelle avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification du motif de consultation",
+          "binaryOnly": false,
+          "details": [
+            "Destination et durée [voyage à Madagascar prévu pour 3 semaines]",
+            "Délai avant le départ",
+            "Nombre et âge des voyageurs"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Questions et préoccupations spécifiques du patient",
+          "binaryOnly": false,
+          "details": [
+            "Précautions générales [que faut-il prendre en compte ?]",
+            "Fièvre jaune [nécessaire ?]",
+            "Médicaments à emporter [lesquels ?]",
+            "Vaccinations requises [quelles vaccinations ?]",
+            "Spécificités pédiatriques [particularités avec l'enfant ?]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation du statut vaccinal actuel",
+          "binaryOnly": false,
+          "details": [
+            "Carnet de vaccination à jour [selon le schéma vaccinal standard pour les deux]",
+            "Vaccinations de base complètes",
+            "Vaccinations spécifiques voyages antérieures",
+            "Date du dernier rappel tétanos"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux et allergies",
+          "binaryOnly": false,
+          "details": [
+            "Maladies chroniques père [aucune]",
+            "Maladies chroniques fils [aucune]",
+            "Allergies père [aucune]",
+            "Allergies fils [rhume des foins]",
+            "Médicaments réguliers"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Expériences de voyages internationaux antérieurs",
+          "binaryOnly": false,
+          "details": [
+            "Destinations visitées [Amérique, Australie, Égypte, Europe]",
+            "Problèmes de santé lors de voyages précédents",
+            "Tolérance aux antipaludiques si déjà pris",
+            "Adaptation de l'enfant aux voyages"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Type et conditions du voyage planifié",
+          "binaryOnly": false,
+          "details": [
+            "Activités prévues [tour en jungle, observation d'oiseaux, plongée]",
+            "Type d'hébergement [hôtel à la plage pour 1 semaine, puis ?]",
+            "Zones visitées (urbaines/rurales)",
+            "Altitude des destinations",
+            "Contact avec animaux prévu"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Durée et période du voyage",
+          "binaryOnly": false,
+          "details": [
+            "Saison à Madagascar",
+            "Durée totale [3 semaines]",
+            "Itinéraire prévu"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "État de santé actuel des voyageurs",
+          "binaryOnly": false,
+          "details": [
+            "Symptômes actuels",
+            "Capacité physique pour les activités prévues",
+            "Grossesse (non applicable ici)"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Vaccinations recommandées pour Madagascar",
+          "binaryOnly": false,
+          "details": [
+            "Vérification vaccinations de base à jour [toutes faites]",
+            "Hépatite A (fortement recommandée) [à faire pour les deux]",
+            "Hépatite B (recommandée pour séjour prolongé) [à faire pour les deux]",
+            "Fièvre typhoïde (recommandée)",
+            "Rage (selon activités)",
+            "Fièvre jaune [non requise pour Madagascar]",
+            "Grippe saisonnière [éventuellement pour les deux]",
+            "Rappel DTPa si nécessaire"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Prévention du paludisme",
+          "binaryOnly": false,
+          "details": [
+            "Zone de transmission [tout le pays est impaludé]",
+            "Chimioprophylaxie recommandée [Méfloquine pour les deux]",
+            "Schéma posologique [1 comprimé/semaine]",
+            "Début prophylaxie [1-2 semaines avant le départ]",
+            "Durée post-voyage [4 semaines après le retour]",
+            "Alternatives si contre-indication (Malarone, Doxycycline)",
+            "Effets secondaires possibles"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Protection anti-vectorielle",
+          "binaryOnly": false,
+          "details": [
+            "Importance de la protection contre les moustiques",
+            "Moustiquaire imprégnée pour la nuit",
+            "Répulsifs cutanés (DEET 30-50%, adaptés enfants)",
+            "Vêtements longs imprégnés de perméthrine",
+            "Climatisation/ventilateur",
+            "Heures de protection renforcée (crépuscule)"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Conseils d'hygiène alimentaire et hydrique",
+          "binaryOnly": false,
+          "details": [
+            "Règle d'or: \"Cook it, boil it, peel it or forget it\"",
+            "Eau en bouteille capsulée uniquement",
+            "Éviter glaçons, glaces artisanales",
+            "Éviter crudités, fruits non pelés",
+            "Éviter viandes peu cuites",
+            "Hygiène des mains systématique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Risques spécifiques à Madagascar",
+          "binaryOnly": false,
+          "details": [
+            "Peste endémique [attention aux rats et puces]",
+            "Mesures préventives contre la peste",
+            "Bilharziose (éviter baignades eau douce)",
+            "Accidents de la circulation [première cause de rapatriement]",
+            "Exposition solaire intense",
+            "Risques liés aux activités (plongée, trek)"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Trousse à pharmacie adaptée",
+          "binaryOnly": false,
+          "details": [
+            "Protection solaire indice 50+",
+            "Antalgiques/antipyrétiques (paracétamol)",
+            "Antidiarrhéiques (lopéramide avec prudence chez l'enfant)",
+            "Antibiotique à large spectre (ciprofloxacine ou azithromycine)",
+            "Solutions de réhydratation orale",
+            "Antiseptique cutané et compresses",
+            "Pansements et bandages",
+            "Comprimés de purification d'eau",
+            "Antihistaminiques (cétirizine)",
+            "Thermomètre",
+            "Pince à épiler"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Précautions sexuelles et protection IST",
+          "binaryOnly": false,
+          "details": [
+            "Information sur les risques IST/VIH",
+            "Préservatifs si relations",
+            "Éviter tatouages/piercings",
+            "Prudence transfusions sanguines"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Plan de vaccination personnalisé",
+          "binaryOnly": false,
+          "details": [
+            "Calendrier des vaccinations à faire",
+            "Délais nécessaires avant le départ",
+            "Ordonnances pour les vaccins",
+            "Carnet de vaccination international"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Prescriptions médicamenteuses",
+          "binaryOnly": false,
+          "details": [
+            "Ordonnance chimioprophylaxie antipaludique",
+            "Ordonnance trousse de pharmacie",
+            "Instructions d'utilisation détaillées",
+            "Adaptations pédiatriques des posologies"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Conseils spécifiques voyage avec enfant",
+          "binaryOnly": false,
+          "details": [
+            "Vigilance accrue sur l'hydratation",
+            "Protection solaire renforcée",
+            "Surveillance état général",
+            "Activités adaptées à l'âge",
+            "Gestion du décalage horaire"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Documentation et ressources",
+          "binaryOnly": false,
+          "details": [
+            "Brochures d'information sur Madagascar",
+            "Coordonnées ambassade/consulat",
+            "Assurance voyage et rapatriement",
+            "Centres médicaux sur place",
+            "Application mobile conseils voyageurs"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Plan d'urgence et conduite à tenir",
+          "binaryOnly": false,
+          "details": [
+            "Signes d'alerte nécessitant consultation",
+            "Conduite en cas de fièvre au retour",
+            "Numéros d'urgence locaux",
+            "Procédure rapatriement sanitaire"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Planification du suivi",
+          "binaryOnly": false,
+          "details": [
+            "Rendez-vous pour vaccinations manquantes",
+            "Consultation au retour si symptômes",
+            "Rappel surveillance fièvre jusqu'à 3 mois post-retour",
+            "Disponibilité pour questions"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

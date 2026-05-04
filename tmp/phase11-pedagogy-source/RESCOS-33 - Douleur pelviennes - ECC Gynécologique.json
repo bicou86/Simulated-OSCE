@@ -1,0 +1,542 @@
+{
+  "title": "RESCOS-33 - Douleur pelviennes - ECC Gynécologique",
+  "context": {
+    "setting": "Cabinet de gynécologie",
+    "patient": "Mme Pat Minier, 28 ans, enseignante, consulte pour examen gynécologique de routine et douleurs pelviennes cycliques",
+    "vitals": {
+      "ta": "118/75 mmHg",
+      "fc": "68 bpm",
+      "temperature": "36.9°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation et investigation de la plainte",
+          "details": [
+            "Motif principal [consultation de routine + douleurs pelviennes cycliques]",
+            "Caractérisation de la douleur [localisation, irradiation, qualité]",
+            "Facteurs déclenchants et circonstances [rapport sexuel, menstruations]",
+            "Facteurs aggravants/soulageants [effort, repos, antalgiques]",
+            "Temporalité [durée, caractère cyclique, évolution]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Anamnèse gynécologique complète",
+          "details": [
+            "Cycle menstruel [régulier, durée 28 jours, règles 5 jours]",
+            "Date des dernières règles [il y a 10 jours]",
+            "Dysménorrhée [douleurs modérées les 2 premiers jours]",
+            "Saignements anormaux [aucun saignement intermenstruel]",
+            "Ménarche [à 13 ans]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse sexuelle inclusive et respectueuse",
+          "details": [
+            "Demande permission pour questions intimes",
+            "Partenaire(s) [partenaire régulier·ère depuis 3 ans]",
+            "Pratiques sexuelles [pénétration vaginale]",
+            "Dyspareunie [légère douleur profonde parfois]",
+            "Protection contre IST [couple fidèle, dépistage récent]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents gynéco-obstétricaux",
+          "details": [
+            "Contraception [pilule combinée depuis 5 ans]",
+            "Gestité et parité [nulligeste, nullipare]",
+            "Dernier contrôle gynécologique [il y a 2 ans, frottis normal]",
+            "Antécédents d'IST [aucun]",
+            "Ménopause [non applicable]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents personnels et familiaux",
+          "details": [
+            "Antécédents médicaux [aucun]",
+            "Antécédents chirurgicaux [appendicectomie à 16 ans]",
+            "Allergies [aucune allergie connue]",
+            "Antécédents familiaux oncologiques [grand-mère cancer du sein]",
+            "Dépistage des violences [aucune violence rapportée]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse socioprofessionnelle et habitudes",
+          "details": [
+            "Profession [enseignant·e primaire]",
+            "Tabac/alcool/substances [non-fumeur·se, alcool social]",
+            "Activité physique [yoga 2x/semaine]",
+            "Origine et facteurs culturels [origine européenne]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - inclusive, respectueuse, ciblée",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation et consentement pour l'examen",
+          "details": [
+            "Explication du déroulement de l'examen",
+            "Demande de consentement explicite oral",
+            "Installation correcte de la/du patient·e",
+            "Préparation du matériel avant l'examen",
+            "Respect de l'intimité et de la pudeur"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Status abdominal préalable",
+          "details": [
+            "Inspection abdominale",
+            "Auscultation abdominale",
+            "Palpation superficielle et profonde",
+            "Palpation des aires ganglionnaires inguinales"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e3",
+          "text": "Inspection génitale complète",
+          "details": [
+            "Vulve [lèvres externes et internes, clitoris]",
+            "Périnée et région péri-anale",
+            "Mont du pubis",
+            "Recherche de lésions, prolapsus, anomalies",
+            "Respect de la diversité anatomique normale"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen au spéculum",
+          "details": [
+            "Nouveau consentement avant le geste",
+            "Technique d'introduction correcte [45°, appui fourchette]",
+            "Visualisation du col utérin",
+            "Inspection du col et des parois vaginales",
+            "Retrait progressif avec inspection complète"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Prélèvements appropriés",
+          "details": [
+            "Cytologie cervicale [spatule + brosse]",
+            "Prélèvement pour examen direct si indiqué",
+            "Prélèvements microbiologiques si nécessaire",
+            "Technique de prélèvement correcte"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Palpation vaginale bimanuelle",
+          "details": [
+            "Nouveau consentement avant le geste",
+            "Palpation du col [position, taille, mobilisation]",
+            "Exploration utérine [taille, forme, position]",
+            "Palpation des annexes [recherche de masses]",
+            "Exploration des culs-de-sac et ligaments"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e7",
+          "text": "Technique d'examen en général - professionnelle, respectueuse",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Interprétation des findings et diagnostic",
+          "details": [
+            "Synthèse des éléments d'anamnèse",
+            "Corrélation clinique des findings",
+            "Diagnostic principal [dysménorrhée primaire]",
+            "Diagnostic différentiel [endométriose, dysménorrhée secondaire]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Proposition d'examens complémentaires",
+          "details": [
+            "Bandelette urinaire et test de grossesse",
+            "Échographie pelvienne si indiquée",
+            "Prélèvements microbiologiques si symptômes",
+            "Justification des examens proposés"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m3",
+          "text": "Counselling et information de la/du patient·e",
+          "details": [
+            "Explication des résultats d'examen",
+            "Information sur le diagnostic probable",
+            "Conseils thérapeutiques adaptés",
+            "Réponse aux questions et inquiétudes"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Proposition thérapeutique",
+          "details": [
+            "Antalgiques pour dysménorrhée [AINS]",
+            "Modification contraceptive si nécessaire",
+            "Conseils non-médicamenteux [chaleur, activité physique]",
+            "Suivi programmé"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Planification du suivi",
+          "details": [
+            "Contrôle gynécologique de routine [dans 1 an]",
+            "Suivi spécifique si symptômes persistants",
+            "Information sur signes d'alarme",
+            "Programmation du prochain frottis"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Communication et professionnalisme",
+          "details": [
+            "Attitude inclusive et non-discriminante",
+            "Respect de l'autonomie de la/du patient·e",
+            "Confidentialité et non-jugement",
+            "Communication claire et adaptée"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Management en général - approche holistique et respectueuse",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "anatomie-genitale-externe",
+        "title": "Anatomie génitale externe féminine",
+        "description": "Schéma anatomique détaillé des organes génitaux externes avec variations anatomiques normales",
+        "filename": "ecc_gynéco-img1.jpg"
+      },
+      {
+        "id": "diversite-vulvaire",
+        "title": "Diversité anatomique vulvaire",
+        "description": "Illustrations montrant la variabilité normale de l'anatomie vulvaire dans la population",
+        "filename": "ecc_gynéco-img2.jpg"
+      },
+      {
+        "id": "technique-speculum",
+        "title": "Technique d'examen au spéculum",
+        "description": "Démonstration de la technique correcte d'introduction et de manipulation du spéculum",
+        "filename": "ecc_gynéco-img3.jpg"
+      },
+      {
+        "id": "prolapsus-genitaux",
+        "title": "Types de prolapsus génitaux",
+        "description": "Schémas illustrant les différents types de prolapsus : cystocèle, hystérocèle, rectocèle",
+        "filename": "ecc_gynéco-img4.jpg"
+      },
+      {
+        "id": "modele-plissit",
+        "title": "Modèle PLISSIT pour l'anamnèse sexuelle",
+        "description": "Guide pratique pour aborder la sexualité en consultation : Permission, Information, Suggestions, Thérapie",
+        "filename": "ecc_gynéco-img5.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient·e standardisé·e",
+      "nom": "Pat Minier",
+      "age": "28 ans",
+      "contexte": "Enseignant·e au primaire, en couple stable, consulte pour contrôle de routine et douleurs pelviennes cycliques",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens pour mon contrôle annuel, et j'aimerais aussi parler de douleurs que j'ai pendant mes règles",
+        "autreChose": "Ces douleurs sont plus fortes depuis quelques mois"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs pelviennes cycliques durant les menstruations",
+          "Intensité modérée à forte (6-7/10) les 2 premiers jours",
+          "Localisation : bas-ventre et région lombaire",
+          "Amélioration avec antalgiques et chaleur",
+          "Aggravation progressive depuis 6 mois"
+        ],
+        "symptomesAssocies": [
+          "Légère dyspareunie profonde occasionnelle",
+          "Pas de saignements anormaux",
+          "Pas de pertes vaginales anormales",
+          "Cycle régulier de 28 jours",
+          "Pas de symptômes urinaires"
+        ],
+        "circonstances": [
+          "Douleurs exclusivement pendant les règles",
+          "Début progressive des douleurs il y a environ 1 an",
+          "Aucun événement déclenchant identifié",
+          "Impact sur activités : absences au travail occasionnelles"
+        ],
+        "reponseAuxSymptomes": [
+          "Utilise des AINS (ibuprofène 400mg)",
+          "Applique de la chaleur (bouillotte)",
+          "Adapte son activité physique pendant les règles"
+        ],
+        "inquietudes": [
+          "Peur que ce soit quelque chose de grave",
+          "Inquiétude sur impact sur fertilité future",
+          "Désir d'avoir des enfants dans quelques années"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "État général conservé",
+          "Pas de perte de poids",
+          "Sommeil parfois perturbé par les douleurs",
+          "Appétit normal"
+        ],
+        "gynecologique": [
+          "Ménarche à 13 ans",
+          "Cycle régulier 28 jours, règles 5 jours",
+          "Pilule combinée depuis 5 ans",
+          "Pas de grossesse antérieure"
+        ],
+        "digestive": [
+          "Transit normal",
+          "Pas de dyschésie",
+          "Pas de saignements digestifs"
+        ],
+        "urinaire": [
+          "Pas de dysurie",
+          "Pas d'infections urinaires récurrentes",
+          "Mictions normales"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Pilule combinée (éthinylestradiol/lévonorgestrel), ibuprofène pendant les règles",
+        "alimentation": "Équilibrée, végétarienne",
+        "activitePhysique": "Yoga 2x/semaine, marche régulière",
+        "sommeil": "7-8h par nuit, bon sommeil habituel",
+        "tabac": "Non-fumeur·se",
+        "alcool": "Consommation sociale modérée (1-2 verres/semaine)",
+        "drogues": "Aucune",
+        "sexualite": "Relation stable depuis 3 ans, satisfaction générale"
+      },
+      "histoireMedicale": [
+        "Santé générale excellente",
+        "Appendicectomie à 16 ans sans complications",
+        "Pas d'hospitalisation depuis",
+        "Vaccins à jour y compris HPV",
+        "Dernier contrôle gynéco il y a 2 ans (frottis normal)",
+        "Pas d'antécédent d'IST"
+      ],
+      "antecedentsFamiliaux": [
+        "Grand-mère maternelle : cancer du sein à 65 ans",
+        "Mère : ménopause précoce à 48 ans",
+        "Père : bonne santé",
+        "Pas d'antécédents gynécologiques familiaux particuliers"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Enseignant·e au primaire",
+        "hobbies": "Lecture, yoga, jardinage",
+        "poids": "Normal (BMI 22)",
+        "orientationSexuelle": "Hétérosexuel·le",
+        "etatCivil": "En concubinage",
+        "etatEsprit": "Généralement optimiste, légèrement inquiet·ète"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude coopérative et ouverte",
+          "Répond volontiers aux questions",
+          "Légère gêne pour les questions intimes (normal)",
+          "Exprime clairement ses inquiétudes"
+        ],
+        "durantExamen": [
+          "Accepte l'examen après explication",
+          "Légère tension normale à l'examen",
+          "Sensibilité pelvienne modérée à la palpation",
+          "Aucun finding pathologique à simuler"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est normal d'avoir si mal pendant les règles ?",
+          "Est-ce que ça peut affecter ma fertilité ?",
+          "Y a-t-il quelque chose que je peux faire pour améliorer la situation ?"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur le caractère cyclique des douleurs",
+        "Mentionner l'aggravation progressive",
+        "Exprimer l'inquiétude sur la fertilité",
+        "Préciser la qualité de la relation de couple"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Pat Minier, 28 ans, enseignant·e, nullipare, sous pilule. Dysménorrhée progressive depuis 1 an avec impact fonctionnel. Couple stable avec désir de grossesse future. Examen gynécologique de routine à réaliser. Évaluation des compétences en anamnèse inclusive et examen technique.",
+      "rolesInterventions": [
+        "Évaluer la qualité de l'anamnèse gynécologique",
+        "Observer le respect des principes d'inclusivité",
+        "Noter la technique d'examen et demande de consentement",
+        "Vérifier l'interprétation clinique et le counselling",
+        "Évaluer la communication et le professionnalisme"
+      ],
+      "pointsCles": [
+        "Anamnèse gynécologique complète et inclusive",
+        "Respect du consentement éclairé à chaque étape",
+        "Technique d'examen gynécologique appropriée",
+        "Interprétation clinique : dysménorrhée primaire vs secondaire",
+        "Communication respectueuse et non-discriminante",
+        "Counselling adapté sur contraception et fertilité",
+        "Approche holistique de la santé génitale",
+        "Dépistage approprié des violences et IST"
+      ],
+      "pieges": [
+        "Omettre la demande de consentement explicite",
+        "Faire des suppositions sur l'orientation sexuelle",
+        "Ne pas utiliser un langage inclusif",
+        "Technique d'examen au spéculum incorrecte",
+        "Oublier l'anamnèse sexuelle appropriée",
+        "Ne pas dépister les violences",
+        "Manquer l'évaluation de l'impact fonctionnel",
+        "Communication non-respectueuse ou jugeante",
+        "Ne pas proposer de suivi approprié",
+        "Omettre les antécédents familiaux oncologiques"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en sémiologie gynécologique",
+      "sections": [
+        {
+          "titre": "Principes de l'anamnèse gynécologique inclusive",
+          "contenu": "L'anamnèse gynécologique doit être respectueuse de la diversité des identités de genre et orientations sexuelles.",
+          "points": [
+            "Utilisation d'un langage inclusif et neutre",
+            "Respect des pronoms préférés de la/du patient·e",
+            "Éviter les suppositions sur l'orientation sexuelle",
+            "Demander la permission avant les questions intimes",
+            "Contextualiser la nécessité de l'anamnèse sexuelle",
+            "Rappeler la confidentialité et le non-jugement",
+            "Adapter la terminologie anatomique au confort patient·e"
+          ]
+        },
+        {
+          "titre": "Consentement explicite en gynécologie",
+          "contenu": "Le consentement doit être libre, éclairé et enthousiaste pour chaque étape de l'examen.",
+          "points": [
+            "Consentement oral clair requis à chaque étape",
+            "Explication du déroulement avant l'examen",
+            "Possibilité de refuser certaines parties",
+            "Alternative si refus : autoprélèvements",
+            "Renouvellement du consentement si nécessaire",
+            "Attention au langage corporel patient·e",
+            "Arrêt immédiat si retrait du consentement"
+          ]
+        },
+        {
+          "titre": "Technique d'examen au spéculum",
+          "contenu": "L'examen au spéculum requiert une technique précise pour minimiser l'inconfort.",
+          "points": [
+            "Installation en position gynécologique adaptée",
+            "Introduction à 45° avec appui sur fourchette postérieure",
+            "Ouverture progressive jusqu'à visualisation du col",
+            "Inspection complète du col et parois vaginales",
+            "Prélèvements selon indication clinique",
+            "Retrait progressif avec inspection continue",
+            "Éviter les mouvements brusques ou douloureux"
+          ]
+        },
+        {
+          "titre": "Diversité anatomique normale",
+          "contenu": "Il existe une grande variabilité dans l'anatomie génitale externe normale.",
+          "points": [
+            "Variations de taille et forme des lèvres",
+            "Différences de pigmentation normale",
+            "Asymétrie physiologique fréquente",
+            "Changements liés à l'âge et hormones",
+            "Impact des antécédents obstétricaux",
+            "Modifications post-chirurgicales possibles",
+            "Importance de rassurer sur normalité"
+          ]
+        },
+        {
+          "titre": "Anamnèse sexuelle selon modèle PLISSIT",
+          "contenu": "Approche structurée pour aborder la sexualité en consultation.",
+          "points": [
+            "Permission : demander autorisation d'aborder le sujet",
+            "Limited Information : donner informations de base",
+            "Specific Suggestions : conseils ciblés selon besoin",
+            "Intensive Therapy : référer à spécialiste si nécessaire",
+            "Les '6 P' : Partenaires, Pratiques, Protection, Passé, Pregnancy, Plus",
+            "Évaluation du plaisir et des dysfonctions",
+            "Dépistage des violences sexuelles"
+          ]
+        },
+        {
+          "titre": "Dysménorrhée : approche diagnostique",
+          "contenu": "Distinction entre dysménorrhée primaire et secondaire.",
+          "points": [
+            "Dysménorrhée primaire : sans pathologie pelvienne",
+            "Début précoce après ménarche, douleurs cycliques",
+            "Dysménorrhée secondaire : pathologie sous-jacente",
+            "Endométriose, fibromes, adénomyose possibles",
+            "Évaluation de l'impact fonctionnel important",
+            "Examens complémentaires selon sévérité",
+            "Traitement symptomatique et étiologique"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Dysménorrhée primaire : AINS en première intention",
+        "Contraception hormonale : amélioration dysménorrhée",
+        "Chaleur locale : effet antalgique prouvé",
+        "Exercice physique régulier : bénéfice préventif",
+        "Techniques de relaxation : yoga, méditation",
+        "Supplémentation magnésium : effet modeste",
+        "IRM pelvienne si suspicion endométriose"
+      ],
+      "examensComplementaires": [
+        "Bandelette urinaire : éliminer infection urinaire",
+        "Test de grossesse : systématique si activité sexuelle",
+        "Échographie pelvienne : évaluation anatomique",
+        "Prélèvements cervico-vaginaux : dépistage IST",
+        "Cytologie cervicale : dépistage cancer du col",
+        "Cultures vaginales : infections génitales",
+        "IRM pelvienne : endométriose profonde"
+      ]
+    }
+  }
+}

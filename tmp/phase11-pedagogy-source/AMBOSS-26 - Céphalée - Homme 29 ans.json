@@ -1,0 +1,534 @@
+{
+  "title": "AMBOSS-26 - Céphalée - Homme 29 ans",
+  "context": {
+    "setting": "Clinique de soins urgents",
+    "patient": "Adam Graham, homme de 29 ans, consultant pour céphalée",
+    "vitals": {
+      "temperature": "36.6°C",
+      "ta": "120/70 mmHg",
+      "fc": "70 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai mal à la tête"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la céphalée",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Du côté droit de ma tête, particulièrement mon front et la zone autour de mon œil]",
+            "Intensité (échelle 0-10) [C'est un 7-8]",
+            "Qualité [C'est une douleur pulsatile]",
+            "Début [Ça a commencé ce matin, donc il y a peut-être 2 heures]",
+            "Événements précipitants [Non, je ne me souviens de rien en particulier]",
+            "Progression/constant/intermittent [Ça s'aggrave]",
+            "Épisodes antérieurs [J'ai eu des maux de tête occasionnels dans le passé mais jamais aussi intenses et pas souvent, peut-être une fois tous les deux mois]",
+            "Irradiation [Eh bien, ça fait le plus mal devant, mais vraiment tout le côté droit de ma tête bat. Je n'ai pas de douleur ailleurs cependant, si c'est ce que vous voulez dire]",
+            "Facteurs améliorants [Si je m'allonge et ne bouge pas, ma tête va un peu mieux]",
+            "Facteurs aggravants [Bouger. Et la lumière vive dans cette pièce aggrave aussi]",
+            "Symptômes associés [Je me sens un peu nauséeux mais je n'ai pas vomi]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Traumatisme [Non]",
+            "Fièvre/frissons [Non]",
+            "Problèmes de sommeil [J'ai été vraiment stressé récemment parce que j'essaie de trouver un nouvel emploi, donc je reste souvent debout tard pour écrire des candidatures. J'ai du mal à m'endormir avec tant de choses en tête de toute façon, donc autant faire quelque chose de productif]",
+            "Appétit [Mon appétit est bon. Hier soir j'ai eu vraiment faim et j'ai mangé deux boîtes de raviolis]",
+            "Infections récentes [Non]",
+            "Vertiges [Non]",
+            "Troubles visuels [Non, la lumière aggrave juste mon mal de tête, mais je vois bien]",
+            "Difficultés à parler [Non]",
+            "Faiblesse [Non]",
+            "Picotements/engourdissements [Non]",
+            "Humeur [Je pense que mon humeur est généralement bonne. J'ai juste été vraiment stressé]",
+            "Larmoiement [Non]",
+            "Congestion nasale/nez qui coule [Non]",
+            "Agitation [Non]",
+            "Transpiration [Oui, j'ai l'impression que mon visage est vraiment en sueur]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "details": [
+            "Allergies [Pénicilline]",
+            "Type de réaction [J'ai eu une très mauvaise éruption sur tout mon corps]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "J'ai essayé de prendre de l'ibuprofène pour le mal de tête il y a environ une heure mais ça n'a pas aidé. À part ça je ne prends aucun médicament"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Aucune]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ma mère a eu un AVC l'année dernière juste avant ses 65 ans. Le reste de ma famille est en bonne santé"
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaillais comme chef de projet pour une entreprise de construction, mais ils ont fait faillite il y a six mois. Je cherche un nouvel emploi depuis et j'ai un entretien d'embauche aujourd'hui]",
+            "Domicile [Je vis avec ma femme et ma fille]",
+            "Alcool [Je ne bois pas habituellement, mais hier soir j'ai bu du vin rouge avec ma femme pour célébrer le fait que j'ai enfin été invité à un entretien pour un excellent travail]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Je fume environ 2 paquets par jour depuis mes 15 ans]",
+            "Exercice [Je ne fais pas beaucoup d'exercice ; je passe la plupart de mon temps à la maison à mon bureau]",
+            "Alimentation [Je pense que j'ai généralement une alimentation équilibrée. Dernièrement l'argent est un peu serré, donc nous avons dû cuisiner plus nous-mêmes, ce qui est probablement plus sain que de manger au restaurant tout le temps de toute façon]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête",
+            "Inspection des conjonctives",
+            "Évaluation de l'acuité visuelle (échelle de Snellen)",
+            "Fond d'œil direct"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Inspection du cou",
+            "Palpation du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation de l'orientation dans le temps, l'espace et les personnes",
+            "Examen ciblé des nerfs crâniens",
+            "Recherche de méningisme",
+            "Examen ciblé des mouvements passifs et actifs",
+            "Examen ciblé de la sensibilité",
+            "Examen ciblé des réflexes ostéo-tendineux",
+            "Examen ciblé de la marche",
+            "Test des mouvements alternés rapides",
+            "Test doigt-nez",
+            "Signe de Babinski",
+            "Test de Romberg"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Céphalées primaires",
+                "items": [
+                  {
+                    "text": "Crise migraineuse",
+                    "cause": "Arguments POUR:\n\t□ Prodrome : appétit inhabituel avant céphalée (2 boîtes raviolis)\n\t□ Céphalée unilatérale droite sévère\n\t□ Douleur pulsatile/battante\n\t□ Intensité 7-8/10 (sévère)\n\t□ Nausées associées\n\t□ Photophobie marquée\n\t□ Aggravation par mouvement\n\t□ Amélioration repos/immobilité\n\t□ Facteurs déclenchants multiples :\n\t  • Vin rouge (vasodilatateur)\n\t  • Manque sommeil chronique\n\t  • Stress émotionnel (chômage)\n\t  • Tabagisme\n\t□ Âge et sexe compatibles",
+                    "test": "→ Diagnostic clinique, pas d'examens si typique"
+                  },
+                  {
+                    "text": "Céphalée de tension",
+                    "cause": "Arguments POUR:\n\t□ Stress majeur (chômage 6 mois)\n\t□ Manque sommeil\n\t□ Anxiété (recherche emploi)\n\t□ Type céphalée le plus fréquent\nArguments CONTRE:\n\t□ Unilatérale (habituellement bilatérale)\n\t□ Pulsatile (habituellement pression)\n\t□ Symptômes autonomes présents\n\t□ Photophobie marquée",
+                    "test": "→ Diagnostic clinique"
+                  },
+                  {
+                    "text": "Algie vasculaire de la face",
+                    "cause": "Arguments POUR:\n\t□ Homme jeune (pic 20-40 ans)\n\t□ Unilatérale stricte périorbitaire\n\t□ Transpiration faciale\n\t□ Tabagisme (facteur risque)\n\t□ Alcool déclencheur (vin)\nArguments CONTRE:\n\t□ Durée > 2h (AVF 15min-3h)\n\t□ Pas larmoiement/rhinorrhée\n\t□ Pas agitation\n\t□ Pas nocturne typique",
+                    "test": "→ Diagnostic clinique si critères stricts"
+                  }
+                ]
+              },
+              {
+                "name": "Céphalées secondaires à exclure",
+                "items": [
+                  {
+                    "text": "Hémorragie sous-arachnoïdienne",
+                    "cause": "Arguments CONTRE:\n\t□ Début progressif (pas thunderclap)\n\t□ Pas méningisme",
+                    "test": "→ CT cérébral si suspicion"
+                  },
+                  {
+                    "text": "Méningite",
+                    "cause": "Arguments CONTRE:\n\t□ Apyrexie\n\t□ Pas méningisme\n\t□ Pas syndrome infectieux",
+                    "test": "→ Ponction lombaire si doute"
+                  },
+                  {
+                    "text": "Masse intracrânienne",
+                    "cause": "Arguments CONTRE:\n\t□ Début aigu\n\t□ Pas déficit focal\n\t□ Pas HTIC",
+                    "test": "→ IRM cérébrale si atypique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Drapeaux rouges à rechercher",
+          "binaryOnly": false,
+          "details": [
+            "Céphalée sévère implacable",
+            "Fièvre",
+            "Déficits neurologiques focaux",
+            "Convulsions",
+            "Troubles de conscience",
+            "Signes d'hypertension intracrânienne (ex: perte de connaissance, œdème papillaire)",
+            "Signes de méningisme",
+            "Symptômes psychiatriques",
+            "Douleur oculaire"
+          ],
+          "redflagsSection": {
+            "title": "Signaux d'alarme nécessitant imagerie",
+            "items": [
+              {
+                "text": "Céphalée en coup de tonnerre",
+                "description": "Début brutal maximal < 1 minute → HSA"
+              },
+              {
+                "text": "Céphalée nouvelle > 50 ans",
+                "description": "Risque accru pathologie secondaire"
+              },
+              {
+                "text": "Changement de pattern",
+                "description": "Modification céphalée habituelle"
+              },
+              {
+                "text": "Céphalée positionnelle",
+                "description": "Hypotension/hypertension intracrânienne"
+              },
+              {
+                "text": "Immunodépression",
+                "description": "Risque infectieux/néoplasique accru"
+              },
+              {
+                "text": "Déficit neurologique",
+                "description": "Lésion structurelle possible"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Migraine, céphalée de tension et algie vasculaire = diagnostics cliniques basés sur l'histoire et l'examen physique",
+            "Ne pas faire d'examens diagnostiques sauf si drapeaux rouges présents",
+            "Proposer au patient de s'allonger et tamiser la lumière"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Donner l'option de s'allonger et proposer de tamiser la lumière",
+            "Réaction appropriée au défi concernant l'entretien d'embauche",
+            "Éducation sur les facteurs déclenchants",
+            "Conseils hygiène de vie"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de crise légère-modérée",
+                "content": "• AINS: Ibuprofène 600-800 mg ou naproxène 500-1000 mg\n• Paracétamol: 1000 mg (moins efficace)"
+              },
+              {
+                "title": "Traitement de crise sévère",
+                "content": "• Triptans: Sumatriptan 50-100 mg PO ou 6 mg SC\n• Alternatives: Zolmitriptan, rizatriptan\n• Association possible triptan + AINS"
+              },
+              {
+                "title": "Mesures non pharmacologiques",
+                "content": "• Repos dans pièce sombre et calme\n• Application glace sur front/tempes\n• Hydratation adéquate\n• Techniques relaxation"
+              },
+              {
+                "title": "Prophylaxie si ≥ 4 crises/mois",
+                "content": "• Bêtabloquants: Propranolol 80-240 mg/j\n• Antiépileptiques: Topiramate 50-100 mg/j\n• Antidépresseurs: Amitriptyline 25-75 mg/j\n• Antagonistes CGRP: Érenumab mensuel"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Impatience pour médicament",
+          "content": "Interrompre l'examinateur pendant l'anamnèse et dire [J'ai un entretien d'embauche cet après-midi. Pouvez-vous juste me donner un médicament pour que ce mal de tête disparaisse et que je puisse aller à l'entretien ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Graham, je comprends que l'entretien d'embauche est important pour vous. Je peux vous assurer que nous ferons de notre mieux pour vous faire sortir d'ici le plus rapidement possible. Mais avant de vous donner un médicament, j'aimerais vous poser quelques questions supplémentaires et effectuer un examen physique. Il est important que j'aie une meilleure idée de ce qui cause votre mal de tête pour que je puisse vous traiter de manière appropriée. Est-ce que ça vous convient ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Localisation et symptômes additionnels des céphalées primaires",
+        "description": "Ces trois types de céphalées primaires peuvent être différenciés selon la localisation de la douleur, l'intensité et les symptômes additionnels. - Céphalée de tension : holocrânienne ou bifrontale, céphalée sourde ; pas de symptômes autonomes. - Migraine : céphalée unilatérale avec symptômes autonomes (vomissements, nausées, phonophobie, photophobie). - Algie vasculaire : céphalée unilatérale, périorbitaire avec injection conjonctivale, larmoiement, rhinorrhée et gonflement des muqueuses nasales, syndrome de Horner, transpiration du front ou du visage.",
+        "data": "grilles_generees/html/images/AMBOSS-26-img1-Localization and additional symptoms of primary headaches.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Localisation de la douleur dans les céphalées secondaires",
+        "description": "Certaines caractéristiques de la douleur et symptômes associés peuvent aider au diagnostic d'une céphalée secondaire : - Artérite temporale : céphalée unilatérale, claudication de la mâchoire, sensibilité du cuir chevelu ou de l'artère temporale, symptômes constitutionnels, changements visuels. - Crise hypertensive : céphalée diffuse, souvent bifrontale (La céphalée dans le contexte d'une crise hypertensive peut être un symptôme isolé mais peut aussi être une manifestation d'encéphalopathie hypertensive, qui constitue une urgence hypertensive). - Sinusite : Douleur ou pression faciale dans la région de la cavité sinusale, rhinorrhée purulente, symptômes grippaux. - Céphalée par abus médicamenteux : céphalée diffuse qui peut changer de type et de localisation au cours d'un épisode et s'est développée ou aggravée avec l'abus d'analgésiques.",
+        "data": "grilles_generees/html/images/AMBOSS-26-img2-Pain localization in secondary headache.jpg",
+        "id": "img2"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Adam Graham",
+      "age": "29 ans",
+      "contexte": "Chef de projet au chômage avec céphalée migraineuse typique avant entretien d'embauche",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai mal à la tête.",
+        "autreChose": "C'est vraiment intense."
+      },
+      "consignes": [
+        "Mentionner que la lumière aggrave votre mal de tête. Si l'examinateur ne propose pas de tamiser la lumière après que vous l'ayez mentionné, commencer à donner des réponses très courtes et ne pas donner d'information que l'examinateur ne demande pas spécifiquement.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: CT) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Interrompre l'examinateur pendant l'anamnèse et dire 'J'ai un entretien d'embauche cet après-midi. Pouvez-vous juste me donner un médicament pour que ce mal de tête disparaisse et que je puisse aller à l'entretien ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Céphalée unilatérale droite",
+          "Début ce matin (2 heures)",
+          "Douleur pulsatile intense 7-8/10",
+          "Localisation front et périorbitaire",
+          "Aggravation progressive"
+        ],
+        "symptomesAssocies": [
+          "Nausées sans vomissements",
+          "Photophobie marquée",
+          "Aggravation au mouvement",
+          "Transpiration faciale",
+          "Amélioration au repos allongé",
+          "Prodrome : appétit inhabituel hier soir"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître souffrant mais coopératif",
+          "Protéger yeux de la lumière",
+          "Mentionner stress entretien d'embauche",
+          "Impatience pour traitement (défi)",
+          "Réactions négatives si lumière non tamisée"
+        ],
+        "durantStatus": [
+          "Examen neurologique normal",
+          "Pas de méningisme",
+          "Pas de déficit focal",
+          "Réaction douloureuse à la lumière",
+          "Préférence pour position allongée"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme 29 ans avec crise migraineuse typique : céphalée unilatérale pulsatile sévère + nausées + photophobie + prodrome. Multiples facteurs déclenchants : vin rouge, stress, manque sommeil, tabac. Pas de drapeaux rouges. Diagnostic clinique, pas d'imagerie nécessaire. Échec ibuprofène suggère besoin triptan. Importance gestion stress et prophylaxie si récurrent.",
+      "rolesInterventions": [
+        "Examen neurologique : Normal complet",
+        "Fond d'œil : Normal, pas œdème papillaire",
+        "Signes méningés : Négatifs",
+        "TA/FC : Normaux (pas urgence hypertensive)",
+        "Si traitement : Sumatriptan 100 mg PO efficace",
+        "Si prophylaxie discutée : Propranolol indiqué"
+      ],
+      "pointsCles": [
+        "Migraine = diagnostic clinique si critères IHS",
+        "POUND : Pulsatile, One day, Unilateral, Nausea, Disabling",
+        "Photophobie = adapter environnement (tamiser lumière)",
+        "Pas d'imagerie sauf drapeaux rouges",
+        "Triptans si échec AINS dans migraine sévère",
+        "Identifier et éviter facteurs déclenchants"
+      ],
+      "pieges": [
+        "Prescrire imagerie pour migraine typique",
+        "Ne pas proposer tamiser lumière",
+        "Oublier conseil arrêt tabac",
+        "Minimiser impact stress/sommeil",
+        "Ne pas évaluer fréquence pour prophylaxie",
+        "Confondre avec céphalée tension (bilatérale)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Crise migraineuse sans aura"
+        },
+        {
+          "titre": "Migraine",
+          "contenu": "Céphalée primaire neurovaculaire récurrente :",
+          "points": [
+            "Prévalence : 15% femmes, 6% hommes",
+            "Physiopathologie : activation système trigémino-vasculaire",
+            "Dépression corticale propagée → aura (30% cas)",
+            "Libération CGRP, substance P → inflammation neurogène",
+            "Génétique : 60-70% héritabilité, polygénique",
+            "Pic incidence : 20-40 ans, début souvent adolescence"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques IHS migraine sans aura",
+          "contenu": "Au moins 5 crises répondant aux critères :",
+          "points": [
+            "A. Durée 4-72 heures non traitée",
+            "B. Au moins 2 parmi : unilatérale, pulsatile, modérée-sévère, aggravée par activité",
+            "C. Au moins 1 parmi : nausées/vomissements, photo ET phonophobie",
+            "D. Non attribuable à autre trouble",
+            "Migraine avec aura : ≥ 2 crises avec aura typique",
+            "Aura : symptômes neurologiques réversibles 5-60 min"
+          ]
+        },
+        {
+          "titre": "Facteurs déclenchants migraineux",
+          "contenu": "Triggers identifiables chez 75% patients :",
+          "points": [
+            "Alimentaires : alcool (vin rouge), chocolat, fromages vieillis, MSG",
+            "Hormonaux : menstruations, contraceptifs oraux",
+            "Environnementaux : lumières vives, odeurs fortes, changements météo",
+            "Comportementaux : stress, manque/excès sommeil, repas sautés",
+            "Médicamenteux : vasodilatateurs, contraceptifs",
+            "Effet cumulatif : plusieurs triggers simultanés"
+          ]
+        },
+        {
+          "titre": "Céphalée de tension",
+          "contenu": "Céphalée primaire la plus fréquente :",
+          "points": [
+            "Prévalence : 40-80% population",
+            "Bilatérale, pression/étau (non pulsatile)",
+            "Intensité légère-modérée",
+            "Pas aggravation activité physique",
+            "Pas nausées/vomissements significatifs",
+            "Photo OU phonophobie possible (pas les deux)"
+          ]
+        },
+        {
+          "titre": "Algie vasculaire de la face (Cluster)",
+          "contenu": "Céphalée trigémino-autonomique sévère :",
+          "points": [
+            "Homme > femme (3:1), pic 20-40 ans",
+            "Douleur unilatérale atroce périorbitaire",
+            "Durée 15 min - 3 heures",
+            "Signes autonomes ipsilatéraux : larmoiement, rhinorrhée, ptosis",
+            "Agitation caractéristique (vs immobilité migraine)",
+            "Périodicité : clusters 4-12 semaines, rémissions"
+          ]
+        },
+        {
+          "titre": "Approche thérapeutique stratifiée",
+          "contenu": "Traitement adapté à la sévérité et impact :",
+          "points": [
+            "Stratification : légère → AINS, sévère → triptans d'emblée",
+            "Précoce : meilleure efficacité si pris début crise",
+            "Association : triptan + AINS supérieur monothérapie",
+            "Voie administration : SC > nasal > oral si vomissements",
+            "Limites : max 2 jours/semaine (céphalées rebond)",
+            "Échec triptan : vérifier timing, voie, dose, diagnostic"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Crise légère : ibuprofène 600-800 mg ou naproxène 500 mg",
+        "Crise modérée-sévère : sumatriptan 50-100 mg PO",
+        "Voie SC si vomissements : sumatriptan 6 mg",
+        "Antiémétique : métoclopramide 10 mg si nausées",
+        "Prophylaxie 1ère ligne : propranolol 80-240 mg/j",
+        "Alternative : topiramate 50-100 mg/j (tératogène)",
+        "Amitriptyline 25-75 mg si composante tensionnelle",
+        "Anti-CGRP si échec : érenumab 70-140 mg/mois SC"
+      ],
+      "examensComplementaires": [
+        "Aucun si migraine typique sans drapeaux rouges",
+        "CT cérébral sans contraste si :",
+        "- Céphalée thunderclap (HSA)",
+        "- Déficit neurologique focal",
+        "- Changement pattern céphalée",
+        "IRM cérébrale si :",
+        "- Céphalée nouvelle > 50 ans",
+        "- Anomalie examen neurologique",
+        "- Céphalée progressive/atypique",
+        "Ponction lombaire après imagerie normale si méningite/HSA suspectée"
+      ]
+    }
+  }
+}

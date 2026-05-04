@@ -1,0 +1,608 @@
+{
+  "title": "RESCOS-69 - Traumatisme MS - Basketteur 25 ans",
+  "context": {
+    "setting": "Urgences d'un hôpital universitaire",
+    "patient": "M/Mme Norton, 25 ans, consulte pour des douleurs du bras D après son match de basketball",
+    "vitals": {
+      "ta": "139/80 mmHg",
+      "fc": "90 bpm",
+      "fr": "18/min",
+      "temperature": "37.2°C",
+      "saturation": "98% (air ambiant)"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Moment et le lieu",
+          "patientComment": "Après le match de basketball, dans le vestiaire",
+          "scoringRule": "Les deux = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Déroulement",
+          "details": [
+            "Personnes impliquées",
+            "Mécanisme du traumatisme"
+          ],
+          "patientComment": "Altercation avec un coéquipier qui m'a tordu le bras",
+          "scoringRule": "Les 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a3",
+          "text": "Demande concernant autre lésion traumatique (coup)",
+          "details": [
+            "Cérébrale",
+            "Abdominale",
+            "Thoracique",
+            "Autre"
+          ],
+          "scoringRule": "Au moins 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Douleurs",
+          "details": [
+            "Localisation",
+            "Intensité",
+            "Évolution",
+            "Facteurs aggravant",
+            "Facteurs atténuant",
+            "Médicaments pris ou reçus",
+            "Caractère"
+          ],
+          "scoringRule": "Au moins 4 = oui, 2-3 = +/-, 0-1 = non"
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "details": [
+            "Perte de sensibilité ou paresthésies du MSD"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Douleurs ailleurs",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Propose une antalgie",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Prise d'alcool ou drogue ce soir là",
+          "scoringRule": "Les deux = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents médicaux/chirurgicaux/médicaments/allergie/vaccin",
+          "scoringRule": "Au moins 3 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "a10",
+          "text": "Contexte d'harcèlement de son équipier/-ère",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse en général: ciblée, fil conducteur",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "title": "Status",
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection bras D",
+          "patientComment": "Importante tuméfaction avec déformation du tiers inférieur au niveau de l'humérus droit, peau intacte, pas de lésion cutanée",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Contrôle neurologique et vasculaire distal à la lésion du MSD",
+          "scoringRule": "Les deux = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "e3",
+          "text": "Vérifie motricité de la main et des doigts du MSD",
+          "scoringRule": "Les deux = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen pour d'autre lésions de la peau",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Examen sommaire corps",
+          "details": [
+            "Abdomen",
+            "Thorax",
+            "Bassin",
+            "4 membres",
+            "Crâne",
+            "Visage",
+            "Cavité buccale",
+            "Dents"
+          ],
+          "scoringRule": "Au moins 4 = oui, 2-3 = +/-, 0-1 = non"
+        },
+        {
+          "id": "e6",
+          "text": "Envisage de faire des photos pour la documentation",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Examen physique en général: effectué de manière structurée, correcte et professionnelle.",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Demande des radiographies du MSD ou CT du MSD",
+          "patientComment": "Vous donnez les radiographies du MSD dans le dossier",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Hypothèse Diagnostique",
+          "details": [
+            "Fracture de l'humérus",
+            "Spiroïde",
+            "De diaphyse",
+            "Déplacée",
+            "Distale",
+            "Multifragmentaire"
+          ],
+          "scoringRule": "Au moins 3 = oui, 1-2 = +/-, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge",
+          "details": [
+            "Réduction fermée",
+            "Plâtre",
+            "Consultation et suivi orthopédique"
+          ],
+          "scoringRule": "Au moins 2 = oui, 1 = +/-, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Informe de la possibilité de porter plainte",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Quittance et prend en charge le trauma psychologique",
+          "scoringRule": "Bien = oui, partiellement = +/-, Non = non"
+        },
+        {
+          "id": "m6",
+          "text": "Informe des offres de soutien à disposition (organisations aides aux victimes de violence, soutien psychologique)",
+          "scoringRule": "Les deux types = oui, 1 type = +/-, aucun = non"
+        },
+        {
+          "id": "m7",
+          "text": "Management en général",
+          "scoringRule": "bien = 2 ; suffisant = 1 ; insuffisant = 0"
+        }
+      ]
+    },
+    "cloture": {}
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario Patient·es standardisé·es",
+      "nom": "Larry/Layla Norton",
+      "age": "25 ans",
+      "contexte": "Urgences d'un hôpital universitaire",
+      "motifConsultation": {
+        "plaintePrincipale": "[Je suis venu·e parce que je me suis fait mal au bras au match]",
+        "autreChose": "[Je n'ai jamais eu aussi mal. Je pense que ça peut être cassé]"
+      },
+      "histoireActuelle": {
+        "deroulement": [
+          "Après le match de Basketball: en fait, j'étais dans le vestiaire et...",
+          "L.Norton (L.N) a été dans le vestiaire avec l'équipe, déçu·e de la défaite et sa performance",
+          "Un·e coéquipier·ière est venu·e lui crier dessus (agression verbale)",
+          "Cette personne, (Jean/Jeanne) cherchait la bagarre, a critiqué L.N dans ses compétences sportives, mais aussi pour ses origines américaines",
+          "Quand L.N a dit «Fuck off, you bully!», le conflit s'est transformé en agression physique",
+          "Les deux se sont donné des coups"
+        ],
+        "traumatisme": [
+          "Jean/ne a pris le bras de L.N et l'a tordu brusquement avec tous ces forces",
+          "L.N a ressenti directement un craquement avec de vives douleurs et un petite envie de vomir",
+          "Jean/ne, choqué·e, est parti·e en courant",
+          "Seul·e 1 autre coéquipier/-ère était sous la douche mais pas de témoin direct"
+        ],
+        "douleurs": [
+          "[Évolution-constantes, 9/10, malgré 400mg d'ibuprofen, 1 g de paracétamol]",
+          "[Ça commence à pulser, aggravé par les mouvements, mais persistant sans mouvement]",
+          "[Bras D]",
+          "[N'arrive plus à bouger le bras au niveau de l'épaule et coude]",
+          "[Déformation et œdème du tiers distal de l'humérus qui se sont développé immédiatement]",
+          "[Sensibilité préservée MSD]",
+          "[Perfusion main, bras, et avant-bras sans particularité]"
+        ],
+        "autresLesions": [
+          "[3 x griffures superficielles MSG]",
+          "[Pas d'autre lésion, ni hématome]",
+          "[Pas de traumatisme crânien, ni trauma abdominal notamment]"
+        ],
+        "contexteHarcelement": [
+          "Depuis son arrivée en Suisse L.N n'est pas bien intégré·e, jugé·e trop américain·e, associé· à Trump, bien que il/elle soit démocrate",
+          "1-2 joueur·ses en particulier, (Jean/Jeanne), critique bcp, accuse de trop chercher l'attention du coach, d'être une «lèche-cul», ne mérite pas l'attention, a réussi à faire un groupe contre LN",
+          "Quelques attaques sur les réseaux sociaux aussi",
+          "LN vie mal cet harcèlement, est seul·e en Suisse",
+          "LN est très surpris·e, déçu·e de la violence, mais a également honte, est confus·e concernant l'avenir"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Algique, en détresse",
+          "Triste, algique, démunie"
+        ],
+        "durantConsultation": [
+          "Si le/la candidat·e demande des nouvelles du match: [Nous avons perdu] - cette défaite a créé bcp de tension dans l'équipe",
+          "Si le/la candidat·e demande si vous êtes tombé: [Plus ou moins], et continuez comme ça si le/la candidat·e pose des questions fermées"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "[NON]",
+        "tabac": "[NON]",
+        "alcool": "[NON]",
+        "drogues": "[NON]",
+        "contraception": "[Oui, préservatif hommes]"
+      },
+      "antecedents": {
+        "medicaux": "[RAS]",
+        "chirurgicaux": "[NON]",
+        "allergies": "[NON]",
+        "vaccins": "[Oui selon schéma USA]",
+        "voyage": "[Oui, arrivé du Texas (chez lui/elle) il y a 3 mois, avant début de saison]"
+      },
+      "informationsPersonnelles": {
+        "profession": "Joueur·se de Basketball semi-professionnel",
+        "hobbies": "Basketball, basketball, cours à pied, basketball",
+        "etatCivil": "célibataire, pas d'enfant, hétérosexuel·e, habite à Lausanne, est venu·e en Suisse pour jouer au basketball, originaire de Texas, USA"
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour les examinateur·trices",
+      "resumeCas": "Il s'agit d'un·e américaine (Texas) de 25 ans, venu·e en Suisse pour jouer au basketball qui consulte aux urgences après un match. Il s'avère qu'il·elle a été agressé·e par son équipier·ère avec une torsion brusque et violente de son bras D. Cet incident est arrivé dans un contexte d'harcèlement chronique et de mauvaise intégration dans l'équipe.",
+      "hypotheseDiagnostique": "Fracture spiroïde, (diaphysaire, multifragmentaire, déplacée) humérus droit, agression, harcèlement chronique",
+      "attentesCandidat": "Poser le diagnostic et proposer la prise en charge orthopédique avec prise en charge globale de l'agression et du contexte d'harcèlement",
+      "pointsCles": [
+        "Les radiographies du bras doivent être transmises si et quand le·la candidat·e les demandes (cf grille d'évaluation)",
+        "Objectifs de cette station: en particulier, en plus du sujet clinique aigu!",
+        "Apprendre à LIRE les consignes- les stations ne sont pas toutes les mêmes",
+        "Apprendre à gérer le temps-faire l'anamnèse et status ciblé",
+        "Faire un examen «head to toe» sommaire pour s'assurer qu'il n'y pas d'autre lésion traumatique, envisage des photos, de la documentation médico-légale",
+        "Explorer le contexte d'agression aiguë et de harcèlement chronique",
+        "Évoque les structures para-médicales d'aide socio-psychologique aux victimes de violences, et la possibilité de porter plainte"
+      ]
+    },
+    "resume": {
+      "titre": "💥 Traumatisme du MS – Fracture diaphysaire de l’humérus – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Éléments à rechercher",
+              "points": [
+                "Mécanisme du traumatisme (haute vs basse énergie, chute, accident de la voie publique, sport)",
+                "Douleur immédiate, impotence fonctionnelle du bras",
+                "Perception de craquement ou déformation",
+                "ATCD médicaux : ostéoporose, cancer (métastase osseuse ?)",
+                "Traitements en cours (anticoagulants, corticoïdes)",
+                "Niveau d’activité et exigences fonctionnelles"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Douleur localisée, impotence fonctionnelle",
+                "Déformation du bras, raccourcissement, varus",
+                "Mobilisation douloureuse avec crépitation osseuse",
+                "Inspection cutanée : plaie, menace de fracture ouverte",
+                "Bilan neurovasculaire (pDMS) : n. radial (extension du poignet/doigts), sensibilité, pouls périphériques",
+                "Recherche de polytraumatisme (AVP, chute de grande hauteur)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Radiographies du bras en 2 incidences (AP + profil) incluant épaule et coude",
+                "Scanner si fracture complexe, polytraumatisme ou doute diagnostique"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires",
+              "points": [
+                "Bilan biologique selon contexte (NFS, coagulation, fonction rénale)",
+                "Exploration vasculaire (Doppler/angio-CT) si suspicion de lésion artérielle"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Conservatrice",
+              "points": [
+                "Indiquée dans la majorité des cas si pas de complication",
+                "Immobilisation initiale (attelle, bandage coude au corps ou plâtre brachio-antébrachial)",
+                "Brace fonctionnel du bras (4–6 semaines)",
+                "Rééducation précoce de l’épaule, coude, main"
+              ]
+            },
+            {
+              "titre": "Chirurgicale",
+              "points": [
+                "Indications absolues : fracture ouverte, lésion vasculo-nerveuse, polytraumatisme, pseudarthrose, échec du traitement conservateur",
+                "Indications relatives : obésité, mauvaise observance, fractures transverses instables",
+                "Techniques : plaque vissée (ORIF), enclouage centromédullaire, fixateur externe si polytrauma",
+                "Objectif : fixation stable, mobilisation précoce"
+              ]
+            },
+            {
+              "titre": "Surveillance et complications",
+              "points": [
+                "Contrôles cliniques et radiologiques réguliers",
+                "Complications : lésion du nerf radial, pseudarthrose, cal vicieux, infection (post-op)",
+                "Rééducation fonctionnelle systématique"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toujours rechercher et documenter un déficit neurovasculaire (n. radial !)",
+            "La majorité des fractures diaphysaires humérales se traitent bien par méthode conservatrice",
+            "La chirurgie est réservée aux fractures instables, ouvertes ou compliquées",
+            "Rééducation précoce = clé du bon résultat fonctionnel",
+            "Informer le patient sur la durée de consolidation (8–12 semaines)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Comment est survenu le traumatisme ? Haute/basse énergie ?",
+                "Douleur immédiate, impotence fonctionnelle ?",
+                "Antécédents d’ostéoporose, cancer, fracture ?",
+                "Traitement anticoagulant ou corticoïdes ?",
+                "Engourdissement, déficit moteur (main tombante) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : déformation, plaie",
+                "Palpation douce : douleur, crépitation",
+                "Examen neurovasculaire systématique",
+                "Radiographies AP + profil incluant épaule et coude",
+                "Scanner si fracture complexe ou polytrauma"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Immobiliser immédiatement et calmer la douleur",
+                "Contrôle neurovasculaire systématique + documentation",
+                "Décider traitement conservateur vs chirurgical selon indications"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Traumatisme du membre supérieur (Fracture humérus droit, basketteur 25 ans, agression/harcèlement)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte sportif (25 ans, basketteur semi-pro, urgences après match)",
+            "Mécanisme → agression par un coéquipier, torsion violente du bras, craquement immédiat",
+            "Symptômes → douleur intense 9/10, impotence fonctionnelle, déformation et tuméfaction humérus distal",
+            "Facteurs aggravants/soulageants → aggravée par mouvements, persiste au repos, pas soulagée par AINS/paracétamol",
+            "Symptômes associés → pas de perte de sensibilité, pas de déficit moteur, perfusion distale conservée",
+            "Autres lésions → griffures superficielles avant-bras G, pas de trauma crânien/abdominal/thoracique",
+            "ATCD médicaux/chirurgicaux/allergies → RAS",
+            "Habitudes → pas tabac, pas alcool, pas drogues",
+            "Contexte psychosocial → isolement, harcèlement chronique dans l’équipe, attaque raciste",
+            "Examen clinique ciblé → inspection (déformation, œdème, peau intacte), examen neurovasculaire distal, motricité main/doigts, recherche autres lésions cutanées/corporelles",
+            "Hypothèse principale → fracture diaphysaire déplacée de l’humérus droit (spiroïde, multifragmentaire)",
+            "Examens complémentaires → radiographies AP + profil incluant épaule et coude",
+            "Prise en charge → immobilisation (attelle/plâtre), antalgie, réduction si nécessaire, suivi orthopédie",
+            "Prise en charge médico-légale → documentation, photos, informer possibilité porter plainte, orientation soutien psychologique/aide aux victimes"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : DOULEUR + NVP",
+            "elements": [
+              "D = Déformation",
+              "O = Œdème",
+              "U = Urgence (traumatisme violent)",
+              "L = Localisation précise",
+              "E = Échelle EVA",
+              "U = Urgence médico-légale",
+              "R = Recherche lésions associées",
+              "N = Neuro (motricité/sensibilité)",
+              "V = Vasculaire (pouls distaux, coloration)",
+              "P = Plaie (fracture ouverte ?)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Larry Norton, un basketteur semi-professionnel de 25 ans, arrivé récemment du Texas et qui consulte aux urgences après un match. Dans le vestiaire, à l’issue d’une défaite, il a eu une altercation avec un coéquipier. Celui-ci l’a saisi par le bras droit et l’a tordu violemment. Il a immédiatement ressenti un craquement accompagné d’une douleur aiguë, évaluée à 9/10, avec apparition rapide d’un œdème et d’une déformation au tiers distal de l’humérus droit. Il décrit une impotence fonctionnelle complète, ne peut plus mobiliser son bras, mais il garde la sensibilité et la motricité des doigts, et sa main reste bien perfusée. Il a pris paracétamol et ibuprofène sans réel soulagement.\n\nIl n’a pas de traumatisme associé notable, si ce n’est trois griffures superficielles au bras gauche. Il n’y a pas eu de choc crânien, thoracique ou abdominal. Ses antécédents médicaux sont vierges, il n’a jamais été opéré, pas d’allergie connue, vaccinations à jour. Il ne fume pas, ne consomme ni alcool ni drogues.\n\nÀ l’examen, ses paramètres vitaux sont stables. L’inspection montre une tuméfaction importante et une déformation de l’humérus distal droit, avec peau intacte. Le bilan neurovasculaire distal est normal : sensibilité et motricité préservées, pouls radial présent. Les doigts et la main sont chauds et bien colorés. À l’examen sommaire du reste du corps, pas d’autres lésions traumatiques significatives. \n\nLes radiographies confirment une fracture diaphysaire spiroïde, déplacée et multifragmentaire de l’humérus droit. Mon hypothèse principale est donc une fracture diaphysaire de l’humérus compliquée par le contexte d’agression. \n\nLa prise en charge comporte l’immobilisation immédiate avec antalgie, une réduction si nécessaire, puis la mise en place d’un plâtre ou d’un brace. Une consultation orthopédique est organisée pour discuter la stratégie : traitement conservateur ou chirurgical selon stabilité et contexte. On documente soigneusement les lésions (photos, dossier), on informe le patient de la possibilité de déposer plainte, et on l’oriente vers les structures d’aide aux victimes de violences et soutien psychologique. Enfin, on planifie un suivi rapproché en orthopédie pour surveiller la consolidation et prévenir les complications."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Norton, 25 ans, basketteur, présente une douleur intense et impotence fonctionnelle du bras droit après agression par coéquipier.\n\nB (Background) : RAS médicaux, pas de toxiques, contexte de harcèlement dans l’équipe.\n\nA (Assessment) : Fracture diaphysaire spiroïde déplacée et multifragmentaire de l’humérus droit. Pas de déficit neurovasculaire, peau intacte. Contexte médico-légal d’agression.\n\nR (Recommendation) : Immobilisation et antalgie, radiographies de contrôle, avis orthopédie, documentation médico-légale, informer possibilité de plainte et orienter vers soutien psychologique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Complications à surveiller",
+              "points": [
+                "Lésion du nerf radial (main tombante)",
+                "Syndrome de loge",
+                "Fracture ouverte",
+                "Pseudarthrose",
+                "Cal vicieux"
+              ]
+            },
+            {
+              "titre": "👉 PEC en 3 étapes",
+              "points": [
+                "Antalgie + immobilisation",
+                "Contrôle neurovasculaire systématique et répété",
+                "Documentation médico-légale + orientation orthopédie"
+              ]
+            },
+            {
+              "titre": "👉 Harcèlement/violence",
+              "points": [
+                "Explorer le contexte relationnel",
+                "Informer possibilité de porter plainte",
+                "Proposer structures de soutien (aide aux victimes, psychologue)",
+                "Documenter objectivement les lésions"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier bilan neurovasculaire distal",
+                "Négliger recherche autres lésions",
+                "Ne pas documenter lésion dans un contexte médico-légal",
+                "Ne pas aborder le contexte de harcèlement",
+                "Se limiter au bras sans vision globale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Diagnostic différentiel",
+              "questions": [
+                {
+                  "question": "Fracture diaphysaire de l’humérus",
+                  "reponse": {
+                    "pour": [
+                      "Mécanisme traumatique direct et violent",
+                      "Craquement, douleur immédiate, impotence fonctionnelle",
+                      "Déformation visible",
+                      "Radiographies confirmant fracture spiroïde, déplacée"
+                    ]
+                  }
+                },
+                {
+                  "question": "Luxation gléno-humérale",
+                  "reponse": {
+                    "pour": [
+                      "Douleur et impotence fonctionnelle"
+                    ],
+                    "contre": [
+                      "Déformation typique absente",
+                      "Mobilité de l’épaule limitée mais atteinte humérale distale visible",
+                      "Radio montre fracture et non luxation"
+                    ]
+                  }
+                },
+                {
+                  "question": "Contusion/entorse",
+                  "reponse": {
+                    "contre": [
+                      "Douleur trop intense",
+                      "Déformation et craquement",
+                      "Impotence fonctionnelle complète",
+                      "Radio confirmant fracture"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires",
+              "questions": [
+                {
+                  "question": "Quels examens demandez-vous ?",
+                  "reponse": [
+                    "Radiographies bras droit en AP et profil incluant épaule et coude",
+                    "± scanner si fracture complexe ou doute",
+                    "Bilan biologique de base (NFS, coag, fonction rénale) avant chirurgie si nécessaire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Prise en charge et suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Fracture diaphysaire de l’humérus droit, déplacée et multifragmentaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Immobilisation + antalgie",
+                      "Avis orthopédie",
+                      "Réduction fermée si indiquée",
+                      "Plâtre ou orthèse",
+                      "Documentation médico-légale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle radiographique régulier",
+                    "Surveillance déficit neurovasculaire secondaire",
+                    "Rééducation fonctionnelle",
+                    "Accompagnement psychologique",
+                    "Suivi orthopédique rapproché"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

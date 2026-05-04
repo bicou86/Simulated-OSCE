@@ -1,0 +1,677 @@
+{
+  "title": "RESCOS-63 - Toux - Pédiatrie",
+  "context": {
+    "setting": "Urgences, hôpital régional",
+    "patient": "Liam Lambretta, bébé de 5 mois, est emmené par son parent pour de la toux.",
+    "vitals": {
+      "fc": "145 bpm",
+      "fr": "40/min",
+      "temperature": "38.6°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Toux",
+          "details": [
+            "Début [depuis 5 jours]",
+            "Évolution [de plus en plus fréquente]",
+            "Qualité [toux en quintes]",
+            "Fréquence [à répétition]",
+            "Cyanose [devient bleu lors des quintes]"
+          ],
+          "scoringRule": "Au moins 3 = oui, 1-2 = ±, aucun = non"
+        },
+        {
+          "id": "a2",
+          "text": "Fièvre",
+          "details": [
+            "Début [depuis 4 jours]",
+            "Évolution [plusieurs pics par jour]",
+            "Température précisée [jusqu'à 39°C]",
+            "Réponse aux fébrifuges [répond au paracétamol]",
+            "Frissons/marbrures"
+          ],
+          "scoringRule": "Au moins 3 = oui, 1-2 = ±, aucun = non"
+        },
+        {
+          "id": "a3",
+          "text": "Vomissements",
+          "details": [
+            "Début [depuis 3 jours]",
+            "Évolution [6-8x/jour]",
+            "Association avec toux [oui, après les quintes]",
+            "Contenu [glaires claires, un peu blanchâtres]"
+          ],
+          "scoringRule": "Au moins 2 = oui, 1 = ±, aucun = non"
+        },
+        {
+          "id": "a4",
+          "text": "Alimentation/Hydratation",
+          "details": [
+            "Allaitement [prend la moitié des quantités habituelles]",
+            "Couches mouillées [1 seule/24h au lieu de 4]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a5",
+          "text": "État général",
+          "details": [
+            "Apathie et/ou fatigue [fatigué, apathique après les accès de toux]"
+          ],
+          "binaryOnly": true,
+          "pointScale": 1
+        },
+        {
+          "id": "a6",
+          "text": "Anamnèse personnelle",
+          "details": [
+            "Grossesse [sans particularité]",
+            "Accouchement [voie basse sans particularité]",
+            "Néonatale [sans particularité]",
+            "Croissance [suit les courbes]",
+            "Développement [sans particularité]"
+          ],
+          "scoringRule": "Au moins 4 = oui, 2 à 3 = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Vaccins/Médicaments",
+          "details": [
+            "Vaccins [aucun]",
+            "Médicaments [Vitamine D]"
+          ],
+          "scoringRule": "Les deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "a8",
+          "text": "Contage [2 grandes sœurs jumelles de 4 ans, actuellement enrhumées]",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général : ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèse diagnostique : Coqueluche",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "details": [
+            "Bronchiolite",
+            "Pneumonie",
+            "Faux croup",
+            "Infection virale des voies respiratoires supérieures"
+          ],
+          "scoringRule": "Au moins 2 = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Prise de sang (FSC, CRP, Hémoculture)",
+            "Recherche bactério dans les expectorations"
+          ],
+          "scoringRule": "Les 2 = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires",
+          "details": [
+            "Radiographie/Ultrason thoracique"
+          ],
+          "scoringRule": "Au moins 1 = oui",
+          "pointScale": 1
+        },
+        {
+          "id": "m5",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Hospitalisation",
+            "Hydratation",
+            "Alimentation",
+            "Antibiotiques"
+          ],
+          "scoringRule": "Au moins 2 = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Mère/Père de Liam Lambretta",
+      "age": "Parent d'un bébé de 5 mois",
+      "contexte": "Parent inquiet amenant son bébé de 5 mois aux urgences pour toux persistante",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon bébé tousse énormément depuis plusieurs jours et je suis très inquiet(e)",
+        "autreChose": "Il devient tout bleu quand il tousse et il vomit après"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux depuis 5 jours",
+          "Quintes de toux répétées",
+          "Bébé devient bleu (cyanosé) pendant les quintes",
+          "Toux de plus en plus fréquente",
+          "Difficulté à reprendre son souffle après les quintes",
+          "Fait un bruit inspiratoire après les quintes (chant du coq)"
+        ],
+        "symptomesAssocies": [
+          "Fièvre depuis 4 jours (jusqu'à 39°C)",
+          "Plusieurs pics de fièvre par jour",
+          "Répond au paracétamol mais la fièvre revient",
+          "Vomissements depuis 3 jours (6-8x/jour)",
+          "Vomit après les quintes de toux",
+          "Vomit des glaires claires, un peu blanchâtres",
+          "Très fatigué et apathique après les accès de toux"
+        ],
+        "evolution": [
+          "D'abord un simple rhume",
+          "Toux qui s'aggrave progressivement",
+          "Quintes de plus en plus rapprochées",
+          "État général qui se dégrade"
+        ],
+        "alimentation": [
+          "Prend seulement la moitié des quantités habituelles de lait",
+          "Difficulté à téter à cause de la toux",
+          "Une seule couche mouillée en 24h au lieu de 4 habituellement",
+          "Parent très inquiet de la déshydratation"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Bébé habituellement en bonne santé",
+          "Suit bien les courbes de croissance",
+          "Développement psychomoteur normal"
+        ],
+        "respiratoire": [
+          "Pas d'antécédents respiratoires",
+          "Pas d'asthme dans la famille",
+          "Respiration difficile pendant les quintes"
+        ]
+      },
+      "histoireMedicale": [
+        "Grossesse sans particularité",
+        "Accouchement par voie basse sans complication",
+        "Période néonatale sans particularité",
+        "Pas de vaccinations (parents opposés)",
+        "Seul traitement : Vitamine D",
+        "Pas d'allergies connues",
+        "Pas d'hospitalisations antérieures"
+      ],
+      "antecedentsFamiliaux": [
+        "2 grandes sœurs jumelles de 4 ans",
+        "Les sœurs sont actuellement enrhumées",
+        "Pas de maladies chroniques dans la famille",
+        "Parents en bonne santé"
+      ],
+      "informationsPersonnelles": {
+        "contexteFamilial": "Famille avec 3 enfants",
+        "vaccination": "Parents opposés aux vaccinations",
+        "inquietudes": "Très inquiet(e) de voir son bébé devenir bleu",
+        "etatEsprit": "Anxieux/anxieuse mais collaboratif/collaborative"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Tenir une poupée représentant le bébé",
+          "Montrer de l'inquiétude et de l'anxiété",
+          "Décrire précisément les quintes de toux",
+          "Insister sur la cyanose qui fait très peur",
+          "Mentionner le bruit inspiratoire après les quintes si demandé",
+          "Exprimer la fatigue due aux nuits blanches"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est grave docteur?",
+          "Est-ce qu'il va devoir être hospitalisé?",
+          "Comment peut-on l'aider à mieux respirer?",
+          "C'est de notre faute s'il n'est pas vacciné?"
+        ]
+      },
+      "informationADonner": "Si le médecin demande spécifiquement : mentionner que les sœurs vont à la crèche et qu'il y a eu des cas de coqueluche là-bas il y a quelques semaines."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Liam Lambretta, 5 mois, amené pour toux en quintes depuis 5 jours avec cyanose et vomissements post-tussifs. Fièvre jusqu'à 39°C. Non vacciné. Contage possible via sœurs en crèche. Diminution apports hydriques, déshydratation probable.",
+      "rolesInterventions": [
+        "Évaluer la reconnaissance du tableau clinique typique de coqueluche",
+        "Vérifier que le candidat identifie le statut vaccinal",
+        "Observer si le candidat fait le lien avec le contage possible",
+        "Noter la prise en compte de la gravité (cyanose, déshydratation)"
+      ],
+      "pointsCles": [
+        "Tableau classique de coqueluche du nourrisson",
+        "Triade : quintes + cyanose + vomissements post-tussifs",
+        "Âge à risque (< 6 mois) pour complications",
+        "Non vacciné = facteur de risque majeur",
+        "Déshydratation avec oligurie",
+        "Contage probable via la crèche",
+        "Indication d'hospitalisation formelle"
+      ],
+      "pieges": [
+        "Ne pas reconnaître le tableau de coqueluche",
+        "Minimiser la gravité chez le nourrisson",
+        "Oublier de demander le statut vaccinal",
+        "Ne pas rechercher la source de contage",
+        "Proposer une prise en charge ambulatoire",
+        "Ne pas évoquer l'antibioprophylaxie des contacts"
+      ],
+      "questionsExpert": [
+        "Quelle est votre hypothèse diagnostique principale?",
+        "Quels examens complémentaires proposez-vous?",
+        "Quelle prise en charge thérapeutique recommandez-vous?"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la coqueluche du nourrisson",
+      "sections": [
+        {
+          "titre": "Épidémiologie et agent pathogène",
+          "contenu": "La coqueluche est une infection respiratoire très contagieuse causée par Bordetella pertussis.",
+          "points": [
+            "Transmission par gouttelettes (taux d'attaque 80-90%)",
+            "Incubation : 7-10 jours (5-21 jours)",
+            "Contagiosité maximale en phase catarrhale",
+            "Résurgence dans les pays développés malgré vaccination",
+            "Nourrissons < 6 mois : groupe le plus à risque",
+            "Source souvent intrafamiliale (parents, fratrie)",
+            "Protection maternelle insuffisante si mère non vaccinée récemment"
+          ]
+        },
+        {
+          "titre": "Présentation clinique classique",
+          "contenu": "L'évolution se fait en trois phases caractéristiques.",
+          "points": [
+            "Phase catarrhale (1-2 sem) : rhinorrhée, toux légère, peu fébrile",
+            "Phase paroxystique (2-8 sem) : quintes caractéristiques",
+            "Quintes : accès de toux répétés sans inspiration",
+            "Chant du coq : inspiration sifflante post-quinte",
+            "Cyanose fréquente pendant les quintes",
+            "Vomissements post-tussifs typiques",
+            "Phase de convalescence : diminution progressive"
+          ]
+        },
+        {
+          "titre": "Particularités chez le nourrisson",
+          "contenu": "La présentation peut être atypique et plus grave chez les très jeunes enfants.",
+          "points": [
+            "Absence possible du chant du coq caractéristique",
+            "Apnées et bradycardies fréquentes",
+            "Cyanose sévère, détresse respiratoire",
+            "Difficultés alimentaires, déshydratation rapide",
+            "Risque de pneumonie bactérienne secondaire",
+            "Encéphalopathie hypoxique possible",
+            "Mortalité élevée < 3 mois (1-3%)"
+          ]
+        },
+        {
+          "titre": "Diagnostic",
+          "contenu": "Le diagnostic repose sur la clinique et la confirmation bactériologique.",
+          "points": [
+            "PCR Bordetella : gold standard, résultat rapide",
+            "Culture sur milieu spécial : spécifique mais longue",
+            "Prélèvement nasopharyngé profond indispensable",
+            "Hyperlymphocytose caractéristique (>10 000/mm³)",
+            "Radiographie thoracique : souvent normale",
+            "Possibles infiltrats péribronchiques",
+            "Exclusion des complications (pneumonie, atélectasie)"
+          ]
+        },
+        {
+          "titre": "Complications",
+          "contenu": "Les complications sont fréquentes et potentiellement graves chez le nourrisson.",
+          "points": [
+            "Pneumonie (principale cause de décès)",
+            "Apnées sévères nécessitant ventilation",
+            "Convulsions (2-4% des cas hospitalisés)",
+            "Encéphalopathie coquelucheuse",
+            "Hypertension artérielle pulmonaire",
+            "Hémorragies (conjonctivales, cérébrales)",
+            "Hernies, prolapsus rectal (efforts de toux)"
+          ]
+        },
+        {
+          "titre": "Traitement",
+          "contenu": "La prise en charge associe antibiothérapie et soins de support.",
+          "points": [
+            "Hospitalisation systématique < 6 mois",
+            "Azithromycine : 10mg/kg/j x 5 jours",
+            "Alternative : clarithromycine 15mg/kg/j x 7 jours",
+            "Oxygénothérapie selon besoins",
+            "Hydratation IV si apports oraux insuffisants",
+            "Alimentation fractionnée, position proclive",
+            "Surveillance cardio-respiratoire continue",
+            "Aspiration douce des sécrétions"
+          ]
+        },
+        {
+          "titre": "Prévention",
+          "contenu": "La vaccination reste la meilleure protection.",
+          "points": [
+            "Vaccination dès 2 mois (DTPa-VPI-Hib-HBV)",
+            "Schéma : 2, 4, 11 mois + rappels",
+            "Vaccination cocooning de l'entourage",
+            "Vaccination maternelle au 3e trimestre",
+            "Antibioprophylaxie des contacts proches",
+            "Éviction de collectivité 5 jours après ATB",
+            "Déclaration obligatoire (cas groupés)"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Azithromycine : 10mg/kg/j en 1 prise x 5 jours",
+        "Clarithromycine : 7.5mg/kg x 2/j x 7 jours",
+        "Érythromycine : 50mg/kg/j en 4 prises x 14 jours",
+        "Paracétamol : 15mg/kg/prise, max 60mg/kg/j",
+        "O2 si saturation < 92%",
+        "Salbutamol inhalé : peu efficace dans la coqueluche",
+        "Corticoïdes : non recommandés en routine"
+      ],
+      "examensComplementaires": [
+        "PCR Bordetella pertussis sur aspiration nasopharyngée",
+        "Culture sur milieu de Bordet-Gengou",
+        "NFS : hyperlymphocytose > 10 000/mm³",
+        "CRP : souvent peu élevée sauf surinfection",
+        "Hémocultures si fièvre élevée",
+        "Radiographie thoracique",
+        "Gazométrie si détresse respiratoire",
+        "Ionogramme si déshydratation"
+      ]
+    },
+    "resume": {
+      "titre": "🤧 Toux pédiatrique – Diagnostic final : Coqueluche – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Éléments évocateurs",
+              "points": [
+                "Toux paroxystique persistante > 2 semaines",
+                "Quintes de toux violente avec reprise inspiratoire (chant du coq)",
+                "Vomissements post-toux fréquents",
+                "Apnées, cyanose chez le nourrisson",
+                "Absence ou faible fièvre"
+              ]
+            },
+            {
+              "titre": "Terrain et contexte",
+              "points": [
+                "Nourrissons non vaccinés < 6 mois (forme sévère)",
+                "Adolescents ou adultes avec rappel vaccinal incomplet",
+                "Contage familial récent (toux dans l'entourage)",
+                "Épidémies scolaires ou collectives"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes cliniques",
+              "points": [
+                "Toux spasmodique sans phase catarrhale claire chez le nourrisson",
+                "Apnées, cyanose, fatigue post-toux",
+                "Vomissements induits par la toux",
+                "État général souvent conservé sauf chez le nourrisson"
+              ]
+            },
+            {
+              "titre": "Critères de gravité (hospitalisation)",
+              "points": [
+                "Apnées, détresse respiratoire",
+                "Hypoxie, déshydratation",
+                "Difficulté d’alimentation",
+                "Âge < 4 mois, prématurité, poids bas",
+                "Comorbidités (cardiaques, neurologiques, immunodépression)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Confirmation microbiologique",
+              "points": [
+                "PCR Bordetella pertussis (écouvillon nasopharyngé) : test de référence",
+                "Culture bactérienne : possible mais moins sensible",
+                "Sérodiagnostic utile chez l'adulte ou tardivement"
+              ]
+            },
+            {
+              "titre": "Autres examens",
+              "points": [
+                "NFS : hyperlymphocytose fréquente",
+                "Radiographie thoracique si suspicion de complication (atélectasie, surinfection)",
+                "Évaluation de la saturation en oxygène (SpO2)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Antibiothérapie",
+              "points": [
+                "Macrolide : azithromycine (1er choix), clarithromycine ou érythromycine",
+                "Traitement efficace pour ↓ contagiosité si début précoce",
+                "Alternative : cotrimoxazole si allergie"
+              ]
+            },
+            {
+              "titre": "Support et prévention",
+              "points": [
+                "Hospitalisation en pédiatrie si critères de gravité",
+                "Oxygénothérapie, hydratation, nutrition adaptée",
+                "Vaccination des sujets contacts non à jour",
+                "Prophylaxie post-exposition chez les contacts à risque (macrolide)",
+                "Déclaration obligatoire (maladie à déclaration obligatoire)"
+              ]
+            },
+            {
+              "titre": "Contre-indications",
+              "points": [
+                "Pas de traitement symptomatique par antitussif ou corticoïde",
+                "Pas de sirop antitussif"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toux paroxystique prolongée + vomissements = penser coqueluche",
+            "PCR nasopharyngée = test diagnostique de choix",
+            "Macrolide rapide dès la suspicion clinique",
+            "Nourrisson < 6 mois = à haut risque → hospitalisation",
+            "Vaccination et prophylaxie pour briser la chaîne de transmission"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Nourrisson 5 mois, toux en quintes (Coqueluche)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, contexte, motif (toux, fièvre, cyanose)",
+            "Caractériser la toux → durée, quintes, chant du coq, cyanose, vomissements post-toux",
+            "Symptômes associés → fièvre, apathie, alimentation diminuée, oligurie",
+            "Statut vaccinal et contage épidémiologique (crèche, fratrie, épidémie coqueluche)",
+            "ATCD néonataux, grossesse, croissance, développement",
+            "Examen clinique → constantes vitales, tirage, saturation O2, état d’hydratation, signes de détresse",
+            "Résumé + hypothèse principale (coqueluche) + diagnostics différentiels",
+            "Examens complémentaires → PCR Bordetella nasopharyngée, NFS (hyperlymphocytose), gaz du sang, Rx thorax",
+            "Prise en charge immédiate → hospitalisation, isolement respiratoire, antibiothérapie macrolide, hydratation/nutrition, prophylaxie entourage"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : TOUX",
+            "elements": [
+              "T = Toux en quintes",
+              "O = Oxygène ↓ (cyanose, apnées)",
+              "U = Vomissements post-toux",
+              "X = Xpert PCR Bordetella pour confirmation"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Liam Lambretta, nourrisson de 5 mois, amené par sa mère pour une toux persistante depuis cinq jours.\n\nLa toux survient par quintes, répétitives, avec des épisodes de cyanose et des difficultés à reprendre son souffle. Parfois elle est suivie d’un bruit inspiratoire typique de chant du coq. Depuis trois jours, il vomit après les quintes, en rejetant des glaires claires.\n\nIl a de la fièvre depuis quatre jours, jusqu’à 39 degrés, avec plusieurs pics quotidiens. Son alimentation est diminuée de moitié et il n’a mouillé qu’une seule couche en vingt-quatre heures. Sa mère le décrit fatigué et apathique après les épisodes de toux.\n\nPour ses antécédents, la grossesse et l’accouchement étaient normaux, la croissance est correcte. Il n’est pas encore vacciné car ses parents s’y opposent. Il n’a pas d’allergies connues. Dans le contexte, ses deux sœurs de quatre ans ont présenté un rhume, et la crèche a signalé des cas de coqueluche.\n\nÀ l’examen ses constantes sont les suivantes : fréquence cardiaque 145 par minute, fréquence respiratoire 40, température 38,6. Le nourrisson est fatigué, pâle, avec des quintes de toux provoquant une cyanose, une hydratation insuffisante et un tirage discret.\n\nEn résumé, il s’agit d’un nourrisson de 5 mois, non vacciné, avec une toux en quintes typiques, cyanose et vomissements post-toux, associé à des signes de déshydratation. Mon diagnostic principal est une coqueluche. Les diagnostics différentiels incluent une bronchiolite, une pneumonie, un faux croup ou une infection virale des voies respiratoires hautes.\n\nComme examens complémentaires, je demanderais une PCR Bordetella pertussis, une NFS pour rechercher une lymphocytose, une CRP, éventuellement une hémoculture, et une radiographie thoracique pour rechercher des complications.\n\nEn termes de prise en charge, j’indique une hospitalisation en pédiatrie avec monitoring cardio-respiratoire, un isolement gouttelettes, un traitement par azithromycine, de l’oxygène si la saturation descend en dessous de 92 %, une hydratation intraveineuse, une alimentation fractionnée et une prophylaxie antibiotique par macrolide pour l’entourage."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Nourrisson 5 mois, toux en quintes avec cyanose et vomissements post-toux.\n\nB (Background) : Non vacciné, contage probable via sœurs enrhumées en crèche avec cas coqueluche.\n\nA (Assessment) : Tableau typique de coqueluche sévère, nourrisson à risque de complications (apnées, déshydratation).\n\nR (Recommendation) : Hospitalisation immédiate, isolement respiratoire, azithromycine, hydratation IV, prophylaxie contacts familiaux."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Triade typique du nourrisson",
+              "points": [
+                "Toux en quintes",
+                "Cyanose ou apnée",
+                "Vomissements post-toux"
+              ]
+            },
+            {
+              "titre": "Critères de gravité pédiatriques",
+              "points": [
+                "Âge < 6 mois",
+                "Apnées/cyanose",
+                "Alimentation < 50%",
+                "Oligurie",
+                "Déshydratation"
+              ]
+            },
+            {
+              "titre": "Antibioprophylaxie des contacts",
+              "points": [
+                "Macrolide (azithromycine)",
+                "Vaccination de rattrapage",
+                "Éviction crèche/école pendant 5 jours ATB"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Coqueluche",
+                  "reponse": {
+                    "pour": [
+                      "Toux en quintes",
+                      "Cyanose/apnées",
+                      "Vomissements post-toux",
+                      "Non vacciné",
+                      "Contage familial probable"
+                    ],
+                    "contre": [
+                      "Fièvre modérée (mais compatible, surtout nourrisson)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Bronchiolite",
+                  "reponse": {
+                    "pour": [
+                      "Nourrisson < 2 ans",
+                      "Toux, dyspnée"
+                    ],
+                    "contre": [
+                      "Pas de sibilants ni signes obstructifs",
+                      "Vomissements post-toux atypiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre 39°C",
+                      "Toux productive"
+                    ],
+                    "contre": [
+                      "Quintes typiques + chant du coq",
+                      "Cyanose paroxystique"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "PCR Bordetella pertussis (nasopharyngé)",
+                    "NFS (lymphocytose)",
+                    "CRP, hémocultures si fièvre élevée",
+                    "Rx thorax si complications suspectées",
+                    "Gaz du sang si détresse respiratoire"
+                  ],
+                  "analyse": "👉 Analyse orale : « La PCR est l’examen de référence, la NFS montre typiquement une hyperlymphocytose. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Coqueluche du nourrisson"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": [
+                    "Hospitalisation en unité pédiatrique",
+                    "Isolement gouttelettes",
+                    "Azithromycine 10mg/kg/j × 5j",
+                    "Oxygène si SpO2 <92%",
+                    "Hydratation IV, alimentation fractionnée"
+                  ]
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance cardio-respiratoire continue",
+                    "Prévenir et traiter les apnées",
+                    "Prophylaxie macrolide pour fratrie et entourage",
+                    "Vaccination de rattrapage pour contacts non immunisés",
+                    "Déclaration obligatoire de la maladie"
+                  ],
+                  "astuce": "👉 Astuce révision : penser au mnémo « MACRO » : Macrolide, Alimentation, Cardio-respi monitoring, Rattrapage vaccinal, Organisation prophylaxie contacts."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

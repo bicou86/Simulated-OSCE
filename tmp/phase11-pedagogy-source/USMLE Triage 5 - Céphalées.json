@@ -1,0 +1,557 @@
+{
+  "title": "USMLE Triage 5 - Céphalées",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Mme Ami Carson, femme de 32 ans, se présente au cabinet médical pour des céphalées.",
+    "vitals": {
+      "ta": "140/92 mmHg",
+      "fc": "64 bpm",
+      "fr": "12/min",
+      "temperature": "37.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour Mme Carson, je suis le Dr Branson.",
+            "Je comprends que vous êtes venue aujourd'hui pour des maux de tête dont vous souffrez. Pouvez-vous m'en dire plus ?",
+            "Cela doit être difficile à supporter. Être dans la douleur physique peut rendre beaucoup de choses dans la vie tellement plus difficiles."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des céphalées",
+          "details": [
+            "Durée totale [3 ans, depuis la naissance du dernier enfant]",
+            "Fréquence [environ 1x/semaine, augmentation récente]",
+            "Durée des épisodes [demi-journée à quelques jours]",
+            "Localisation [côté droit, derrière l'œil, irradiation vers l'arrière]",
+            "Type de douleur [pulsatile, aiguë à l'avant, sourde à l'arrière]",
+            "Intensité maximale [8/10 ou plus]",
+            "Temps pour atteindre le maximum [quelques heures]"
+          ],
+          "exemplesPhrases": [
+            "Puis-je vous demander depuis combien de temps vous avez ces maux de tête au total ?",
+            "Combien de temps durent-ils quand ils surviennent ?",
+            "À quelle fréquence diriez-vous que vous les avez ?",
+            "Où avez-vous mal dans votre tête ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Facteurs déclenchants et relations",
+          "details": [
+            "Déclencheurs identifiés [aucun clair, possible lumières autoroute]",
+            "Relation menstruelle [possiblement plus fréquents avant les règles]",
+            "Aura ou prodromes [non]",
+            "Changements de vision précédant [non]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous trouvé quelque chose qui tend à les déclencher, comme des lumières vives ou certaines odeurs ?",
+            "Est-ce que ceux-ci surviennent en relation avec une partie de votre cycle menstruel ?",
+            "Ces maux de tête sont-ils précédés d'un quelconque changement de vision ou avertissement ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Facteurs aggravants et soulageants",
+          "details": [
+            "Facteurs aggravants [lumières vives, bruits forts]",
+            "Photophobie et phonophobie [oui]",
+            "Médicaments essayés [Tylenol et ibuprofène inefficaces]",
+            "Facteurs soulageants [sommeil, position allongée]",
+            "Position de la tête [pas de changement]"
+          ],
+          "exemplesPhrases": [
+            "Est-ce que quelque chose aide ?",
+            "Est-ce que poser votre tête change la douleur du tout ?",
+            "Quand la douleur est là, est-ce que quelque chose l'empire ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "details": [
+            "Nausées/vomissements [oui, si céphalée sévère]",
+            "Larmoiement [non]",
+            "Fièvre [non vérifiée]",
+            "Symptômes ORL [rhinorrhée due aux allergies]",
+            "Douleur faciale [non]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il de la nausée ou des vomissements quand vous avez mal à la tête ?",
+            "Avez-vous déjà de la fièvre avec cette douleur ?",
+            "Quand vous avez ces maux de tête, avez-vous un larmoiement d'un ou des deux yeux ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux et allergiques",
+          "details": [
+            "Allergies saisonnières [oui, rhinorrhée actuelle]",
+            "Chirurgie des sinus [il y a 5 ans]",
+            "Infections sinusiennes passées [oui, résolues après chirurgie]",
+            "Grossesses [3 enfants]",
+            "Acné [traitée à l'université]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous des médicaments pour ces allergies ?",
+            "Avez-vous déjà des infections des sinus ?",
+            "Avez-vous consulté le médecin pour d'autres problèmes de santé dans le passé ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments actuels",
+          "details": [
+            "Loratadine [pour allergies, pas prise actuellement]",
+            "Contraceptifs oraux [Ortho-cyclen, depuis des années]",
+            "Tylenol [occasionnel, inefficace]",
+            "Ibuprofène [occasionnel, inefficace]"
+          ],
+          "exemplesPhrases": [
+            "Je sais pour la loratadine, le Tylenol et l'ibuprofène. Prenez-vous d'autres médicaments ?",
+            "Quel est leur nom ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes de vie et caféine",
+          "details": [
+            "Tabac [ancienne fumeuse, arrêt il y a 1 an]",
+            "Alcool [occasionnel]",
+            "Caféine [demi-cafetière le matin + 3-4 sodas light/jour]",
+            "Durée de consommation élevée [3 ans, depuis dernière grossesse]",
+            "Tentatives de réduction [oui, mais fatigue]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ou utilisez-vous du tabac ?",
+            "Buvez-vous de la caféine ?",
+            "Avez-vous déjà essayé de réduire ?",
+            "Depuis combien de temps buvez-vous autant, diriez-vous ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Histoire familiale",
+          "details": [
+            "Mère [décédée à 14 ans de la patiente, cancer du sein métastatique, migraines]",
+            "Père [bonne santé, travaille dans une salle de sport]",
+            "Enfants [3, tous en bonne santé]"
+          ],
+          "exemplesPhrases": [
+            "Quelqu'un dans votre famille a-t-il eu des problèmes de santé, surtout liés aux maux de tête ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Expliquer l'examen au patient",
+            "Commenter les signes vitaux"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si vous le permettez.",
+            "Laissez-moi juste me laver les mains.",
+            "J'aimerais d'abord commencer par examiner vos yeux..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête et du cou",
+          "details": [
+            "Palpation du crâne [normale, non traumatique]",
+            "Palpation des muscles cervicaux et des épaules",
+            "Recherche de sensibilité des artères temporales [absente]",
+            "Palpation ganglionnaire [pas d'adénopathie]",
+            "Amplitude de mouvement cervical [normale]"
+          ],
+          "exemplesPhrases": [
+            "Votre cou vous fait-il mal quand vous le tournez d'un côté à l'autre ?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen ophtalmologique",
+          "details": [
+            "Réflexes pupillaires [PERRLA]",
+            "Photophobie marquée à l'examen",
+            "Refus d'examen de l'œil controlatéral due à photophobie",
+            "Fond d'œil [normal bilatéralement]",
+            "Recherche d'œdème papillaire [absent]"
+          ],
+          "exemplesPhrases": [
+            "Je suis désolé de devoir utiliser une lumière si brillante pendant cet examen. Est-ce que cela aggrave votre mal de tête ou fait juste mal aux yeux ?"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ORL",
+          "details": [
+            "Otoscopie [tympans gris nacré bilatéralement]",
+            "Examen nasal [rhinorrhée présente]",
+            "Examen pharyngé [normal]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen vasculaire cervical",
+          "details": [
+            "Auscultation carotidienne bilatérale",
+            "Recherche de souffles [absents]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique - Nerfs crâniens",
+          "details": [
+            "Nerfs crâniens II-XII [intacts]",
+            "Pas de déficits focaux"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique - Motricité et sensibilité",
+          "details": [
+            "Force musculaire [5/5 partout]",
+            "Sensibilité tactile [intacte]",
+            "Proprioception [normale]",
+            "Test piqué/mousse [normal]",
+            "Réflexes ostéotendineux [2+ bilatéralement]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen neurologique - Tests spéciaux",
+          "details": [
+            "Signe de Babinski [normal]",
+            "Signe de Romberg [normal]",
+            "Test doigt-nez [normal]",
+            "Marche normale",
+            "Marche sur talons et pointes [normale]",
+            "Recherche de signes méningés [absents]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels des céphalées récurrentes",
+            "categories": [
+              {
+                "name": "Céphalées primaires les plus probables",
+                "items": [
+                  {
+                    "text": "Céphalées liées à la caféine",
+                    "cause": "Arguments POUR:\n\t□ Consommation excessive (½ cafetière + 3-4 sodas/jour)\n\t□ Depuis 3 ans (coïncide avec début des céphalées)\n\t□ Fatigue lors des tentatives de réduction\n\t□ Pattern compatible avec sevrage\nArguments CONTRE:\n\t□ Céphalées surviennent même avec consommation régulière",
+                    "test": "→ Journal de consommation caféine/céphalées"
+                  },
+                  {
+                    "text": "Migraine commune (sans aura)",
+                    "cause": "Arguments POUR:\n\t□ Céphalée unilatérale pulsatile\n\t□ Photophobie et phonophobie\n\t□ Nausées/vomissements si sévère\n\t□ Histoire familiale (mère)\n\t□ Durée 4-72h compatible\n\t□ Intensité 8/10\nArguments CONTRE:\n\t□ Pas d'aura\n\t□ Réponse nulle aux AINS",
+                    "test": "→ Diagnostic clinique, journal des céphalées"
+                  },
+                  {
+                    "text": "Migraine cataméniale",
+                    "cause": "Arguments POUR:\n\t□ Relation possible avec les règles\n\t□ Contraceptifs oraux (facteur favorisant)\n\t□ Âge et sexe compatibles\nArguments CONTRE:\n\t□ Survient aussi à d'autres moments du cycle\n\t□ Pas de pattern menstruel clair",
+                    "test": "→ Journal menstruel/céphalées sur 3 mois"
+                  }
+                ]
+              },
+              {
+                "name": "Autres céphalées primaires",
+                "items": [
+                  {
+                    "text": "Céphalées de tension",
+                    "cause": "Arguments POUR:\n\t□ Mère de 3 enfants (stress)\n\t□ Douleur sourde à l'arrière\nArguments CONTRE:\n\t□ Caractère pulsatile\n\t□ Unilatérale\n\t□ Photophobie/phonophobie\n\t□ Nausées/vomissements",
+                    "test": "→ Évaluation du stress, relaxation"
+                  }
+                ]
+              },
+              {
+                "name": "Céphalées secondaires à exclure",
+                "items": [
+                  {
+                    "text": "Sinusite chronique",
+                    "cause": "Arguments POUR:\n\t□ Antécédent de chirurgie sinusienne\n\t□ Allergies actives avec rhinorrhée\n\t□ Localisation frontale possible\nArguments CONTRE:\n\t□ Pas de douleur faciale\n\t□ Pas de fièvre\n\t□ Pattern non typique",
+                    "test": "→ CT des sinus"
+                  },
+                  {
+                    "text": "Hypertension artérielle",
+                    "cause": "Arguments POUR:\n\t□ TA élevée (140/92)\n\t□ Céphalées matinales possibles\nArguments CONTRE:\n\t□ Pattern non typique de l'HTA\n\t□ Caractère unilatéral",
+                    "test": "→ MAPA, contrôle tensionnel"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "details": [
+            "CT cérébral sans contraste (première évaluation)",
+            "CT des sinus si suspicion sinusite",
+            "Pression artérielle répétée"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques",
+          "details": [
+            "NFS avec formule leucocytaire",
+            "Bilan métabolique de base",
+            "TSH (screening)",
+            "VS, CRP si fièvre ou suspicion infectieuse"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement aigu de la crise",
+                "content": "• Triptans : sumatriptan 50-100 mg PO (si migraine confirmée)\n• Anti-émétiques : métoclopramide 10 mg si nausées\n• Repos dans pièce sombre et calme\n• Hydratation adéquate\n• Éviter Tylenol/AINS (inefficaces chez elle)"
+              },
+              {
+                "title": "Gestion de la caféine",
+                "content": "• Réduction progressive sur 2-4 semaines\n• Objectif : < 200 mg/jour (2 tasses café)\n• Substitution par décaféiné\n• Surveillance des céphalées de sevrage\n• Hydratation accrue pendant sevrage"
+              },
+              {
+                "title": "Prophylaxie si échec",
+                "content": "• Bêta-bloquants : propranolol 40-80 mg 2x/jour\n• Antidépresseurs : amitriptyline 10-25 mg le soir\n• Antiépileptiques : topiramate 25-100 mg/jour\n• Réévaluation contraception (facteur aggravant)\n• Critères : > 4 crises/mois ou handicap important"
+              },
+              {
+                "title": "Mesures non pharmacologiques",
+                "content": "• Journal des céphalées détaillé\n• Identification et éviction des triggers\n• Régularité sommeil/repas\n• Gestion du stress\n• Activité physique régulière\n• Biofeedback si disponible"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "details": [
+            "Explication des diagnostics possibles en termes simples",
+            "Rassurer sur la bénignité probable",
+            "Importance du sevrage progressif de caféine",
+            "Explication du CT scan",
+            "Plan de suivi structuré"
+          ],
+          "exemplesPhrases": [
+            "Mme Carson, à en juger par votre histoire et l'examen physique que je viens de faire, il pourrait y avoir plusieurs raisons pour lesquelles vous avez ces maux de tête.",
+            "Premièrement, ils peuvent être causés par l'excès de caféine que vous semblez prendre chaque jour.",
+            "Une autre cause pourrait être que ce sont des migraines.",
+            "J'aimerais obtenir d'autres tests pour éliminer également des causes rares telles qu'une infection des sinus ou, très rarement, une masse dans votre tête."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Red flags et surveillance",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant une consultation urgente",
+            "items": [
+              {
+                "text": "Céphalée brutale en coup de tonnerre",
+                "description": "Suspicion d'hémorragie sous-arachnoïdienne"
+              },
+              {
+                "text": "Céphalée avec fièvre et raideur de nuque",
+                "description": "Suspicion de méningite"
+              },
+              {
+                "text": "Déficit neurologique focal",
+                "description": "AVC ou processus expansif"
+              },
+              {
+                "text": "Changement de pattern des céphalées",
+                "description": "Nouvelle étiologie possible"
+              },
+              {
+                "text": "Céphalée progressive s'aggravant",
+                "description": "Hypertension intracrânienne"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan",
+          "content": "Mme Carson, à en juger par votre histoire et l'examen physique que je viens de faire, il pourrait y avoir plusieurs raisons pour lesquelles vous avez ces maux de tête. Premièrement, ils peuvent être causés par l'excès de caféine que vous semblez prendre chaque jour. La caféine, juste par son mode d'action, tend à faire dilater ou agrandir les vaisseaux sanguins. Une cause bien connue de maux de tête est parfois quand votre corps n'obtient pas cette aide pour dilater les vaisseaux dans votre cerveau et qu'ils se contractent, ce qui, à son tour, cause la douleur. C'est ce qu'on appelle un sevrage de caféine ou un mal de tête lié à la caféine, et parce que votre consommation de caféine est si élevée, je pense que c'est une vraie possibilité. Une autre cause pourrait être que ce sont des migraines. Il existe plusieurs types de migraines qui s'intègrent vraiment dans une grande classe de maux de tête appelée 'type vasculaire'. Cela signifie simplement que la douleur est causée par les nerfs autour des vaisseaux sanguins dans votre tête, encore une fois à cause d'une constriction incontrôlée. Les types de migraine varient mais peuvent avoir certaines similitudes de sorte qu'ils peuvent être traités de manière quelque peu similaire. Parce que c'est la première fois que vous êtes évaluée pour ces maux de tête sévères, j'aimerais obtenir d'autres tests pour éliminer également des causes rares telles qu'une infection des sinus ou, très rarement, une masse dans votre tête. Ce sera des analyses de sang, et j'organiserai également un scanner de votre tête. Un scanner, ou \"tomodensitométrie\", fait référence à un type spécial de radiographie qui est prise de votre tête et montre votre cerveau et votre crâne en coupe transversale. Le test lui-même consiste à s'allonger sur une table mince, qui vous déplace ensuite dans et hors d'une machine en forme de beignet qui prend les radiographies. J'aimerais sortir et organiser ces tests avec mon infirmière.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile de la patiente",
+          "content": "[Est-ce que j'ai une tumeur au cerveau ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "C'est très peu probable étant donné vos symptômes depuis 3 ans sans aggravation neurologique. Les tumeurs causent généralement des symptômes progressifs avec des déficits. Le scanner nous permettra d'être absolument certains et de vous rassurer complètement."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Femme de 32 ans avec céphalées récurrentes depuis 3 ans",
+        "Pattern migraineux classique : unilatéral, pulsatile, photophobie/phonophobie",
+        "Consommation excessive de caféine coïncidant avec début des symptômes",
+        "Histoire familiale positive pour migraines (mère)",
+        "Hypertension artérielle notée (140/92) à 32 ans",
+        "Photophobie marquée à l'examen confirmant le caractère migraineux",
+        "Contraceptifs oraux comme facteur potentiellement aggravant"
+      ],
+      "pieges": [
+        "Ne pas explorer la consommation de caféine en détail",
+        "Oublier l'histoire familiale de migraines",
+        "Ne pas quantifier précisément la caféine (café + sodas)",
+        "Minimiser l'HTA chez une jeune femme",
+        "Ne pas explorer la relation avec les règles",
+        "Oublier d'examiner le fond d'œil pour exclure HTIC",
+        "Ne pas proposer de prophylaxie si critères remplis"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour la patiente standardisée",
+      "nom": "Ami Carson",
+      "age": "32 ans",
+      "contexte": "Mère de 3 enfants avec céphalées invalidantes récurrentes",
+      "motifConsultation": {
+        "plaintePrincipale": "Horribles maux de tête",
+        "autreChose": "J'ai besoin que quelqu'un fasse quelque chose pour tout ça"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Céphalées depuis 3 ans (depuis naissance du dernier enfant)",
+          "Localisation : côté droit, derrière l'œil, irradiation vers l'arrière",
+          "Douleur pulsatile, aiguë devant, sourde derrière",
+          "Intensité 8/10 au maximum",
+          "Durée : demi-journée à quelques jours",
+          "Fréquence : environ 1/semaine, augmentation récente"
+        ],
+        "symptomesAssocies": [
+          "Photophobie et phonophobie marquées",
+          "Nausées/vomissements si céphalée sévère",
+          "Pas d'aura visuelle",
+          "Rhinorrhée due aux allergies actuelles"
+        ],
+        "facteurs": [
+          "Possiblement plus fréquentes avant les règles",
+          "Pas de déclencheur clair identifié",
+          "Aggravation par lumières et bruits",
+          "Soulagement partiel par le sommeil"
+        ],
+        "attitude": [
+          "Frustrée par l'inefficacité des antalgiques usuels",
+          "Inquiète mais pas anxieuse",
+          "Décrit précisément ses symptômes",
+          "Minimise un peu sa consommation de caféine"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Rhinite allergique",
+          "3 grossesses normales",
+          "Acné (traitée à l'université)",
+          "Chirurgie des sinus il y a 5 ans"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Ortho-cyclen (contraceptif oral) depuis des années",
+          "Loratadine pour allergies (pas prise actuellement)",
+          "Tylenol occasionnel (inefficace)",
+          "Ibuprofène occasionnel (inefficace)"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Ex-fumeuse, arrêt il y a 1 an (fumé 3 ans)",
+        "alcool": "Occasionnel (peu de sorties avec 3 enfants)",
+        "cafeine": "½ cafetière le matin + 3-4 sodas light/jour depuis 3 ans"
+      },
+      "contexteSocial": {
+        "famille": "Mariée, 3 enfants",
+        "stress": "Gestion de 3 enfants",
+        "activites": "Limitées par les responsabilités familiales"
+      },
+      "histoireFamiliale": {
+        "mere": "Décédée à ses 14 ans - cancer du sein métastatique, avait des migraines",
+        "pere": "Bonne santé, travaille dans une salle de sport",
+        "enfants": "3, tous en bonne santé"
+      },
+      "simulation": {
+        "durantConsultation": [
+          "Se frotter occasionnellement la tempe droite",
+          "Plisser les yeux sous lumière normale",
+          "Parler d'une voix un peu tendue mais polie",
+          "Montrer de la frustration quand elle parle de l'inefficacité des médicaments"
+        ],
+        "durantExamen": [
+          "Photophobie marquée lors de l'examen ophtalmoscopique",
+          "Refuser l'examen de l'œil controlatéral après le premier",
+          "Pas de sensibilité à la palpation du crâne",
+          "Examen neurologique normal"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Céphalées",
+      "sections": [
+        {
+          "titre": "Critères diagnostiques de la migraine sans aura",
+          "contenu": "A. Au moins 5 crises répondant aux critères B-D. B. Céphalées durant 4-72h. C. Au moins 2 : unilatérale, pulsatile, modérée/sévère, aggravée par activité. D. Au moins 1 : nausées/vomissements, photo ET phonophobie. E. Non attribuée à autre cause."
+        },
+        {
+          "titre": "Céphalées et caféine",
+          "contenu": "Surconsommation : > 200mg/jour (2 tasses). Mécanisme : vasoconstriction chronique avec tolérance. Sevrage : céphalées 12-24h après dernière prise, pic à 48h. Traitement : réduction progressive sur 2-4 semaines."
+        },
+        {
+          "titre": "Red flags des céphalées",
+          "contenu": "SNOOP : Systémiques (fièvre, perte poids), Neurologiques (déficits focaux), Onset brutal, Older (>50 ans nouveau), Pattern change. Nécessitent imagerie urgente et/ou PL."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Crise migraineuse : triptans (CI si coronaropathie), AINS haute dose précoce",
+        "Prophylaxie : indiquée si >4 crises/mois ou handicap important",
+        "1ère ligne : propranolol, métoprolol, amitriptyline",
+        "2ème ligne : topiramate, valproate (CI si grossesse)",
+        "Éviction triggers : stress, manque sommeil, jeûne, alcool, fromages vieillis",
+        "Sevrage caféine progressif pour éviter céphalées rebond"
+      ],
+      "examensComplementaires": [
+        "CT cérébral : 1ère imagerie si première évaluation céphalées",
+        "IRM cérébrale : si anomalie au CT ou signes atypiques",
+        "PL : si suspicion méningite, HTIC, HSA avec CT normal",
+        "Journal céphalées : fréquence, triggers, réponse traitement",
+        "Dosage caféine : rarement nécessaire, histoire suffisante"
+      ]
+    }
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "title": "German-51 - Hématurie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Müller, 52 ans, banquier, se présente chez son médecin traitant pour du sang dans les urines"
+  },
+  "sections": {
+    "anamnese": {
+      "title": "Anamnèse",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Motif de consultation principal",
+          "patientComment": "Sang dans les urines"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques de l'hématurie",
+          "details": [
+            "Début et évolution [depuis 4 semaines de temps en temps]",
+            "Quantité de sang [jusqu'à présent peu de sang, aujourd'hui plus]",
+            "Aspect (caillots) [non, juste urine colorée]",
+            "Moment dans le jet urinaire [ne sait pas, plutôt à la fin]"
+          ],
+          "patientComment": "Détails sur l'hématurie"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes mictionnels",
+          "details": [
+            "Fréquence mictionnelle [plutôt souvent, environ six fois par jour]",
+            "Dysurie [non]",
+            "Rétention urinaire [jamais]",
+            "Gouttes post-mictionnelles [oui, presque toujours]"
+          ],
+          "patientComment": "Troubles mictionnels associés"
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes associés",
+          "details": [
+            "Douleurs abdominales ou lombaires [aucune]",
+            "Traumatisme génito-urinaire [non]",
+            "Manipulations urétrales [oui, parfois jeux sexuels avec insertion d'objets]"
+          ],
+          "patientComment": "Autres symptômes"
+        },
+        {
+          "id": "a6",
+          "text": "Revue des systèmes",
+          "details": [
+            "Symptômes B [aucun]",
+            "Symptômes neurologiques [aucun]",
+            "Symptômes cardio-pulmonaires [aucun]",
+            "Troubles digestifs [normaux]",
+            "Appétit et évolution pondérale [appétit normal, poids stable 75 kg pour 1,80 m]"
+          ],
+          "patientComment": "Absence de symptômes systémiques"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabagisme [1/2 paquet/jour depuis 20 ans]",
+            "Consommation d'alcool [le weekend demi-bouteille de vin au repas]",
+            "Substances illicites [non]",
+            "Médicaments [aucun, notamment pas d'anticoagulants]"
+          ],
+          "patientComment": "Facteurs de risque"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Maladies urologiques",
+            "Lithiases rénales",
+            "Infections urinaires",
+            "Interventions chirurgicales"
+          ],
+          "patientComment": "Aucun antécédent urologique"
+        },
+        {
+          "id": "a9",
+          "text": "Activités et expositions",
+          "details": [
+            "Activités sportives intenses [course à pied régulière, marathon il y a 4 semaines]",
+            "Voyages récents [rien de particulier]",
+            "Exposition professionnelle [non, travail de bureau]"
+          ],
+          "patientComment": "Activités récentes"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Cancer urologique familial",
+            "Maladies rénales héréditaires"
+          ],
+          "patientComment": "Père infarctus à 68 ans, mère en bonne santé, aucun cancer familial connu"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse sociale",
+          "patientComment": "Banquier, marié, 2 fils adolescents, pas de stress particulier"
+        },
+        {
+          "id": "a12",
+          "text": "Résumé et questions complémentaires",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "title": "Examen clinique",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "details": [
+            "Tension artérielle",
+            "Fréquence cardiaque",
+            "Temperature"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal",
+          "details": [
+            "Palpation abdominale",
+            "Palpation des fosses lombaires",
+            "Recherche de globe vésical"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen génito-urinaire",
+          "details": [
+            "Inspection des organes génitaux externes",
+            "Palpation testiculaire",
+            "Recherche d'écoulement urétral"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e4",
+          "text": "Toucher rectal",
+          "details": [
+            "Taille et consistance de la prostate",
+            "Nodules prostatiques",
+            "Douleur à la palpation"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Recherche d'adénopathies",
+          "details": [
+            "Ganglions inguinaux",
+            "Ganglions sus-claviculaires"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "title": "Prise en charge",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion principal",
+          "patientComment": "Carcinome vésical à exclure"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 4 diagnostics = 2 pts, 2-3 diagnostics = 1 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Lésion urétrale traumatique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hématurie d'effort bénigne",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Lithiase urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal sans contraste, US rénal"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, CRP, hémocultures si fièvre"
+                  },
+                  {
+                    "text": "Néphropathie glomérulaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hypertrophie bénigne de la prostate",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques",
+          "details": [
+            "NFS (hémoglobine)",
+            "Créatinine",
+            "Marqueurs inflammatoires (CRP)",
+            "PSA (si homme > 50 ans)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Analyses urinaires",
+          "details": [
+            "Bandelette urinaire",
+            "Sédiment urinaire",
+            "Cytologie urinaire",
+            "Culture urinaire (ECBU)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens d'imagerie et explorations",
+          "details": [
+            "Échographie vésicale et rénale (US)",
+            "Mesure du résidu post-mictionnel",
+            "Cystoscopie",
+            "Uro-CT si nécessaire"
+          ],
+          "scoringRule": "Au moins 3 examens = 2 pts"
+        },
+        {
+          "id": "m6",
+          "text": "Traitement et conseils",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures immédiates",
+                "content": "• Hydratation abondante (2-3L/jour)\n• Éviter les efforts intenses temporairement\n• Surveillance de l'évolution"
+              },
+              {
+                "title": "Traitement selon étiologie",
+                "content": "• Si tumeur vésicale : référence en urologie pour résection\n• Si infection : antibiothérapie adaptée\n• Si lithiase : traitement médical ou chirurgical selon la taille"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Orientation spécialisée",
+          "patientComment": "Référer à l'urologue pour exploration complémentaire, notamment cystoscopie"
+        },
+        {
+          "id": "m8",
+          "text": "Facteurs de risque à modifier",
+          "details": [
+            "Arrêt du tabac (facteur de risque majeur)",
+            "Éviter les manipulations urétrales",
+            "Suivi régulier"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

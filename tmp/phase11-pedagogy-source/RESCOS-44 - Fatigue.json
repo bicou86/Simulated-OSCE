@@ -1,0 +1,414 @@
+{
+  "title": "RESCOS-44 - Fatigue",
+  "context": {
+    "setting": "Policlinique",
+    "patient": "Mr/Mme Marchand, 42 ans, connu pour une obésité (BMI > 30 kg/m2) consulte pour une fatigue persistante."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la fatigue",
+          "details": [
+            "Apparition [progressive depuis plusieurs semaines]",
+            "Intensité [épuisant, difficulté à se lever]",
+            "Évolution [de pire en pire]",
+            "Fluctuence",
+            "Impact sur l'AVQ [limité dans activités quotidiennes, congé 1 semaine]",
+            "Premier épisode?"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du sommeil",
+          "details": [
+            "Durée du sommeil [9 heures]",
+            "Qualité du sommeil [toujours fatigué malgré 9h]",
+            "Réveils durant la nuit [non]",
+            "Ronflement [ne sait pas]"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a3",
+          "text": "Anamnèse uro-génitale",
+          "details": [
+            "Couleur",
+            "Quantité [2 litres par jour]",
+            "Douleur [non]",
+            "Fréquence [5-6 fois par jour]",
+            "Urgence mictionnelle [1 fois par semaine]"
+          ],
+          "scoringRule": "Au moins quatre = 2 points, trois = 1 point, deux ou moins = 0 point"
+        },
+        {
+          "id": "a4",
+          "text": "Habitudes",
+          "details": [
+            "Médicaments [aucun]",
+            "Alcool [1-2 verres par semaine]",
+            "Drogue [cannabis 2-3x/semaine]",
+            "Alimentation [voir détails]"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a5",
+          "text": "Anamnèse alimentaire",
+          "details": [
+            "Quels aliments? [céréales, tartines, viande, pâtes, légumes]",
+            "Plats types [2 bols céréales + 2 tartines matin, équilibré midi/soir]",
+            "Grignotages [biscuits, gâteaux, pâtisserie en rentrant]"
+          ],
+          "scoringRule": "Les trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a6",
+          "text": "DD - dépression",
+          "details": [
+            "Perte de plaisir",
+            "Tristesse",
+            "Idées noires",
+            "Arrêt d'activités",
+            "Envies suicidaires"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a7",
+          "text": "DD - cancer",
+          "details": [
+            "Perte de poids [non]",
+            "Fièvre [non]",
+            "Sudation nocturne [non]"
+          ],
+          "scoringRule": "Les trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "a8",
+          "text": "DD - maladie infectieuse",
+          "details": [
+            "Douleurs abdominales",
+            "Rapports sexuels à risque [non, pas de rapports depuis 1 an]",
+            "Voyage dans un pays à risque"
+          ],
+          "scoringRule": "Au moins deux = 2 points, un = 1 point, aucun = 0 point"
+        },
+        {
+          "id": "a9",
+          "text": "DD - insuffisance cardiovasculaire",
+          "details": [
+            "Dyspnée à l'effort",
+            "Orthopnée paroxystique nocturne",
+            "Jambes gonflées",
+            "Toux sèche"
+          ],
+          "scoringRule": "Au moins deux = 2 points, un = 1 point, aucun = 0 point"
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = 2 points, suffisant = 1 point, insuffisant = 0 point"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Palpation de la thyroïde",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Palpation et percussion des loges rénales",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Palpation des aires ganglionnaires",
+          "details": [
+            "Cervicales",
+            "Axillaires",
+            "Inguinales"
+          ],
+          "scoringRule": "Au moins deux = 2 points, un = 1 point, aucun = 0 point"
+        },
+        {
+          "id": "e4",
+          "text": "Status cardiaque",
+          "details": [
+            "Auscultation des aires cardiaques (les quatre)",
+            "Auscultation de la carotide",
+            "Signe du godet",
+            "Palpation du choc de pointe",
+            "Vérification de la présence d'une cyanose périphérique ou centrale"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "e5",
+          "text": "Status en général - réalisé de manière structurée, correcte et professionnelle",
+          "scoringRule": "Bien = 2 points, suffisant = 1 point, insuffisant = 0 point"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "L'étudiant/e a-t-elle/il évoqué comme diagnostic principal le diabète?",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoquer un diagnostic différentiel plausible",
+          "details": [
+            "Syndrome d'apnée du sommeil obstructif",
+            "Hypothyroïdie",
+            "Psychiatrique (burnout/dépression)",
+            "Anémie",
+            "Infection (ex: EBV, CMV, HIV)"
+          ],
+          "scoringRule": "Au moins trois = 2 points, deux = 1 point, un ou moins = 0 point"
+        },
+        {
+          "id": "m3",
+          "text": "Management en général",
+          "scoringRule": "Bien = 2 points, suffisant = 1 point, insuffisant = 0 point"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "img1",
+        "title": "Causes potentielles de fatigue",
+        "description": "Tableau récapitulatif des causes de fatigue avec classification par système",
+        "filename": "grilles_generees/html/images/fatigue-1-img1.jpg"
+      },
+      {
+        "id": "img2",
+        "title": "Symptômes et signes d'hypothyroïdie",
+        "description": "Tableau présentant les symptômes et signes évocateurs d'hypothyroïdie",
+        "filename": "grilles_generees/html/images/fatigue-1-img2.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Pascal/e Marchand",
+      "age": "42 ans",
+      "contexte": "Ingénieur(e) dans une start-up à l'EPFL, divorcé(e) depuis 3 ans avec une fille de 5 ans en garde partagée",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens vous voir parce que je suis fatigué/e",
+        "autreChose": "Cette fatigue m'inquiète un peu"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Fatigue progressive depuis plusieurs semaines",
+          "Impossible de dire exactement quand cela a commencé",
+          "De pire en pire",
+          "Difficulté parfois à se lever du lit",
+          "Limitation dans les activités quotidiennes",
+          "Prise d'1 semaine de congé car épuisé/e pour aller au travail"
+        ],
+        "symptomesAssocies": [
+          "Boit plus depuis 1 mois [environ 2 litres par jour]",
+          "Va plus souvent aux toilettes [5-6 fois par jour]",
+          "Urgences mictionnelles occasionnelles [1 fois par semaine environ]",
+          "Handicap au travail car doit s'absenter pendant les réunions"
+        ],
+        "representationMaladie": [
+          "Inquiétude après recherches sur internet",
+          "Si femme : peur d'un cancer du sein",
+          "Si homme : peur d'un cancer de la prostate"
+        ],
+        "questions": [
+          "Cela dure depuis quelques mois et cela m'inquiète un peu (si question ouverte)"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Pas de perte de poids",
+          "Pas de fièvre",
+          "Pas de sudation nocturne"
+        ],
+        "genitourinaire": [
+          "Urine plus (2 litres par jour)",
+          "Urine plus souvent (5-6 fois par jour)",
+          "Quelques urgences mictionnelles (1 fois/semaine environ)"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Après divorce, mange beaucoup. Petit déjeuner : 2 bols céréales + 2 tartines beurre/confiture. Midi/soir : essaie équilibré avec viande 2x/semaine, beaucoup pâtes et légumes. Grignote entre repas (biscuits, gâteaux). Pâtisserie en rentrant du travail.",
+        "activitePhysique": "Randonnée 1 fois tous les week-ends. Course à pied 1 fois par semaine",
+        "sommeil": "Dormait bien avant. Maintenant dort 9 heures et toujours fatigué/e. Ne sait pas si ronfle, pas de réveils nocturnes.",
+        "tabac": "Arrêté il y a 3 ans. Fumait 1 paquet/jour depuis l'âge de 20 ans",
+        "alcool": "1 fois par semaine pendant l'apéro. 1-2 verres de vin par semaine",
+        "drogues": "Cannabis 2-3x par semaine quand fille pas là. Débuté après divorce",
+        "medicaments": "Aucun médicament. Vaccins à jour"
+      },
+      "histoireMedicale": [
+        "Divorcé/e depuis 3 ans (impact fort, prise de poids)",
+        "Poids correct avant divorce (BMI=20)",
+        "Prise de 25 kg en 3 ans",
+        "Tentatives de régime sans succès",
+        "Obésité actuelle (BMI>30)",
+        "Fille de 5 ans en bonne santé (garde partagée)",
+        "Aucun rapport sexuel depuis plus d'1 an",
+        "Jamais contracté d'IST"
+      ],
+      "antecedentsFamiliaux": [
+        "Si femme : Père vivant, mère décédée d'un cancer du sein diagnostiqué trop tard",
+        "Si homme : Mère vivante, père décédé d'un cancer de la prostate diagnostiqué trop tard",
+        "Frère connu pour HTA et diabète de type II"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Ingénieur/e dans une start-up à l'EPFL",
+        "hobbies": "Randonnée, cinéma, jeux-vidéos",
+        "poids": "Obèse (BMI 30-40)",
+        "orientationSexuelle": "Hétérosexuel/le",
+        "etatCivil": "Divorcé/e",
+        "enfants": "Une fille de 5 ans (garde partagée)",
+        "situationSocioEconomique": "Stable professionnellement",
+        "origine": "Non spécifiée",
+        "etatEsprit": "Fatigué/e, un peu inquiet/ète"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Épuisé/e durant tout l'entretien",
+          "Parler avec lenteur",
+          "Montrer des signes de fatigue évidents"
+        ]
+      },
+      "informationADonner": "Constantes dans la norme. Si femme : grossesse bien passée, règles normales, pas de contraceptifs. Si homme : pas connu pour hyperplasie prostatique."
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M./Mme Marchand, 42 ans, obésité (BMI>30), consulte pour fatigue progressive depuis plusieurs semaines limitant AVQ. Polydipsie et polyurie depuis 1 mois (5-6x/j). Inquiétude sur cause tumorale (ATCD familiaux cancer). Divorcé/e depuis 3 ans avec prise de poids importante (+25kg). Consommation cannabis. Constantes normales.",
+      "rolesInterventions": [
+        "Si l'étudiant se perd dans l'anamnèse, interrompez-lui et dites-lui 'relisez la consigne'"
+      ],
+      "pointsCles": [
+        "Diabète inaugural type II très probable (obésité + polydipsie/polyurie)",
+        "Fatigue multifactorielle possible",
+        "Inquiétude du patient sur cause tumorale à adresser",
+        "Impact psychosocial du divorce avec modifications comportementales",
+        "Nécessité d'exclure causes organiques avant diagnostic psychiatrique"
+      ],
+      "pieges": [
+        "Ne pas manquer le diabète devant la polydipsie/polyurie",
+        "Explorer systématiquement les diagnostics différentiels",
+        "Rassurer sur l'absence de signes tumoraux",
+        "Ne pas oublier l'apnée du sommeil (obésité + fatigue)",
+        "Penser aux causes endocriniennes (thyroïde)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'investigation de la fatigue",
+      "sections": [
+        {
+          "titre": "Classification de la fatigue",
+          "contenu": "La fatigue peut être classée selon son origine pour orienter l'investigation.",
+          "points": [
+            "Fatigue centrale (système nerveux central)",
+            "Fatigue périphérique (neuromusculaire)",
+            "Maladie physique (ex: pneumonie, diabète)",
+            "Maladie psychologique (trouble psychiatrique)",
+            "Cause sociale (conflits familiaux)",
+            "Cause physiologique (âge)",
+            "Cause occupationnelle (tension au travail)"
+          ]
+        },
+        {
+          "titre": "Caractérisation de la fatigue",
+          "contenu": "L'anamnèse doit explorer systématiquement trois éléments clés.",
+          "points": [
+            "Apparition (brutale vs progressive)",
+            "Durée (aiguë < 1 mois, subaiguë 1-6 mois, chronique > 6 mois)",
+            "Évolution (stable, fluctuante, progressive)",
+            "Impact fonctionnel sur les activités quotidiennes",
+            "Facteurs aggravants et soulageants",
+            "Symptômes associés orientant vers une cause spécifique"
+          ]
+        },
+        {
+          "titre": "Diabète de type 2",
+          "contenu": "Le diabète inaugural doit être évoqué devant certains signes cardinaux.",
+          "points": [
+            "Polydipsie (soif excessive)",
+            "Polyurie (urines fréquentes et abondantes)",
+            "Polyphagie avec perte de poids paradoxale",
+            "Fatigue importante",
+            "Facteurs de risque : obésité, ATCD familiaux, sédentarité",
+            "Complications possibles si non traité : rétinopathie, néphropathie, neuropathie",
+            "Nécessité d'un bilan métabolique complet"
+          ]
+        },
+        {
+          "titre": "Syndrome d'apnée du sommeil",
+          "contenu": "À évoquer systématiquement chez un patient obèse fatigué.",
+          "points": [
+            "Sommeil non réparateur malgré durée suffisante",
+            "Ronflements (à rechercher avec conjoint)",
+            "Pauses respiratoires nocturnes",
+            "Céphalées matinales",
+            "Somnolence diurne excessive",
+            "Score d'Epworth ou NoSAS pour évaluation",
+            "Polysomnographie pour confirmation diagnostique"
+          ]
+        },
+        {
+          "titre": "Causes endocriniennes",
+          "contenu": "L'hypothyroïdie est un diagnostic différentiel important de la fatigue.",
+          "points": [
+            "Asthénie et ralentissement psychomoteur",
+            "Frilosité et constipation",
+            "Prise de poids",
+            "Peau sèche, cheveux cassants",
+            "Bradycardie",
+            "Diagnostic par dosage TSH",
+            "Voir tableau des symptômes en annexe"
+          ]
+        },
+        {
+          "titre": "Exclusion d'une cause tumorale",
+          "contenu": "L'absence de certains signes permet de rassurer le patient.",
+          "points": [
+            "Pas de perte de poids inexpliquée",
+            "Pas de fièvre au long cours",
+            "Pas de sudations nocturnes",
+            "Status des loges rénales normal",
+            "Absence d'adénopathies",
+            "Importance de rassurer le patient inquiet"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Diabète : metformine en première intention si confirmé",
+        "Régime hypocalorique et activité physique indispensables",
+        "Prise en charge multidisciplinaire de l'obésité",
+        "CPAP si syndrome d'apnée confirmé",
+        "Antidépresseurs si composante psychiatrique",
+        "Substitution hormonale si hypothyroïdie"
+      ],
+      "examensComplementaires": [
+        "Glycémie à jeun et HbA1c",
+        "Bilan rénal avec créatinine",
+        "Bilan hépatique complet",
+        "TSH pour exclure hypothyroïdie",
+        "FSC pour recherche anémie",
+        "Ferritine si suspicion carence martiale",
+        "Polysomnographie si suspicion apnée du sommeil",
+        "ECG de base",
+        "Bandelette urinaire pour glycosurie/protéinurie"
+      ]
+    }
+  }
+}

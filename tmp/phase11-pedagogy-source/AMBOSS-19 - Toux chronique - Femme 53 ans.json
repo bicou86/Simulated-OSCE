@@ -1,0 +1,962 @@
+{
+  "title": "AMBOSS-19 - Toux chronique - Femme 53 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Maria Wright, femme de 53 ans, consultant pour toux persistante",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "135/80 mmHg",
+      "fc": "80 bpm",
+      "fr": "22/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une toux"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Toux productive [Oui, je crache toujours quelque chose]",
+            "Sang dans les expectorations [Non]",
+            "Couleur des expectorations [C'est jaunâtre]",
+            "Volume des expectorations [Peut-être 1-2 cuillères à café par jour]",
+            "Début [Je ne sais pas vraiment. J'ai une toux depuis 5 ans, mais maintenant elle s'aggrave]",
+            "Constant/intermittent [Elle est là tout le temps. Mais c'est pire le matin]",
+            "Événements précipitants [Aucun]",
+            "Progression [Oui, comme je l'ai dit, elle s'aggrave depuis quelques mois]",
+            "Épisodes antérieurs [Comme je l'ai dit, j'ai une toux depuis un certain temps]",
+            "Fréquence [Tous les jours]",
+            "Facteurs améliorants [Rien]",
+            "Facteurs aggravants [Respirer profondément]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non]",
+            "Œdème des chevilles [Je pense qu'elles sont toujours un peu gonflées, mais peut-être qu'elles sont juste grosses]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Oui, je me sens plus fatiguée que d'habitude depuis quelques mois]",
+            "Palpitations [Aucune]",
+            "Douleur thoracique [Aucune]",
+            "Essoufflement [Oui, quand je monte deux étages, je suis essoufflée]",
+            "Problèmes urinaires [Je dois me lever pour aller aux toilettes beaucoup la nuit]",
+            "Problèmes intestinaux [Aucun]",
+            "Problèmes de sommeil, plusieurs oreillers [Non]",
+            "Appétit [Normal]",
+            "Variations pondérales [J'ai perdu 3 kg en 3 mois. Je n'essayais même pas mais je ne peux pas dire que ça me dérange de perdre du poids]",
+            "Infections récentes [Aucune]",
+            "Symptômes d'infection respiratoire haute [Non]",
+            "Exposition à la tuberculose, dernier test cutané [Non, jamais. Mon dernier test cutané pour la tuberculose au travail était normal]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'hypertension artérielle, qui a été diagnostiquée il y a 5 ans"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Oui, je prends du lisinopril"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [J'ai eu une césarienne pour la naissance de ma fille]",
+            "Antécédents chirurgicaux [Seulement la césarienne]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Contacts malades",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père est décédé d'une crise cardiaque quand il avait 70 ans"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaille dans un supermarché]",
+            "Domicile [Je vis avec mon mari et notre fille]",
+            "Alcool [Un verre de vin un jour sur deux]",
+            "Drogues récréatives [Je déteste ces trucs illégaux et je n'en prendrais jamais]",
+            "Tabac [Oui je fume. Je fume environ 2 paquets par jour depuis 35 ans]",
+            "Exercice [Je n'ai pas le temps pour ça]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation de la distension veineuse jugulaire",
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque",
+            "Palpation du pouls radial",
+            "Palpation du choc apexien",
+            "Recherche du reflux hépato-jugulaire"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Percussion des champs pulmonaires",
+            "Auscultation pulmonaire",
+            "Recherche de frémitus vocal"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des mains",
+            "Recherche d'œdème déclive"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes respiratoires probables",
+                "items": [
+                  {
+                    "text": "Bronchopneumopathie chronique obstructive (BPCO)",
+                    "cause": "Arguments POUR:\n\t□ Toux chronique productive avec expectorations jaunâtres\n\t□ Tabagisme sévère : 70 paquets-années (2 paquets/jour × 35 ans)\n\t□ Toux pire le matin (hypersécrétion nocturne)\n\t□ Dyspnée d'effort (montée 2 étages)\n\t□ Fatigue progressive\n\t□ Perte de poids non intentionnelle (3 kg en 3 mois)\n\t□ Œdème périphérique possible (cœur pulmonaire débutant)\n\t□ Âge et durée des symptômes compatibles",
+                    "test": "→ Spirométrie avec test de réversibilité"
+                  },
+                  {
+                    "text": "Insuffisance cardiaque congestive",
+                    "cause": "Arguments POUR:\n\t□ Dyspnée d'effort\n\t□ Nycturie (redistribution nocturne des fluides)\n\t□ Fatigue\n\t□ Œdème périphérique\n\t□ Toux chronique (congestion pulmonaire)\n\t□ HTA (facteur de risque cardiovasculaire)\n\t□ Tabagisme (facteur de risque cardiovasculaire)\n\t□ Antécédent familial de cardiopathie\nArguments CONTRE:\n\t□ Expectorations productives\n\t□ Examen cardiaque normal",
+                    "test": "→ ECG, échocardiographie transthoracique"
+                  },
+                  {
+                    "text": "Cancer du poumon",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme majeur (70 paquets-années = risque très élevé)\n\t□ Perte de poids non intentionnelle\n\t□ Fatigue\n\t□ Toux chronique évolutive\n\t□ Âge (53 ans)\n\t□ 90% des cancers pulmonaires liés au tabac\nArguments CONTRE:\n\t□ Absence d'hémoptysie\n\t□ Symptômes depuis 5 ans",
+                    "test": "→ Radiographie thoracique, CT thoracique si anomalie"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Bronchiectasies",
+                    "cause": "Toux productive chronique, expectorations purulentes",
+                    "test": "→ CT thoracique haute résolution"
+                  },
+                  {
+                    "text": "Bronchiolite oblitérante",
+                    "cause": "Dyspnée progressive, toux",
+                    "test": "→ CT thoracique, biopsie pulmonaire"
+                  },
+                  {
+                    "text": "Emphysème",
+                    "cause": "Composante de la BPCO, destruction alvéolaire",
+                    "test": "→ CT thoracique, α1-antitrypsine"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Gaz du sang artériel et oxymétrie de pouls [pour évaluer la saturation en oxygène et l'équilibre acido-basique]",
+            "ECG [peut montrer des signes d'hypertrophie ventriculaire gauche ou droite dans l'ICC ainsi que des signes de pathologies cardiaques concomitantes (ex: arythmies, ischémie cardiaque)]",
+            "Échocardiographie transthoracique [gold standard pour évaluer les patients avec insuffisance cardiaque]",
+            "BNP, NT-pro BNP [Le niveau de BNP est proportionnel à la surcharge volumique et de pression ventriculaire. Des niveaux élevés de BNP chez les patients avec symptômes classiques d'ICC confirment le diagnostic (index prédictif élevé)]",
+            "Radiographie thoracique [utilisée pour évaluer les signes de BPCO (ex: hyperclarté, côtes horizontales et espaces intercostaux élargis), signes d'ICC (ex: cardiomégalie ou congestion pulmonaire), et signes de cancer du poumon (ex: nodule solitaire, élargissement médiastinal)]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Tests de fonction pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Spirométrie avec test de réversibilité [montrerait une CVF et un VEMS diminués, ainsi qu'un volume résiduel, un volume gazeux intrathoracique et une capacité pulmonaire totale augmentés dans la BPCO]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Offrir mouchoir et eau lors de la crise de toux",
+            "Conseil sur l'arrêt du tabac",
+            "Conseil sur les options de soutien pour l'exercice régulier",
+            "Réaction appropriée au défi concernant l'arrêt du tabac",
+            "Éducation sur les risques du tabagisme"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Prise en charge de la BPCO probable",
+                "content": "• Arrêt tabac = priorité absolue\n• Counseling comportemental\n• Substituts nicotiniques\n• Varénicline ou bupropion\n• Bronchodilatateurs selon sévérité\n• GOLD A: SABA ou SAMA prn\n• GOLD B: LABA ou LAMA régulier\n• GOLD C/D: LABA + LAMA ± CSI\n• Vaccination grippe et pneumocoque\n• Réhabilitation pulmonaire\n• Oxygénothérapie si PaO2 55 mmHg\n• Plan d'action pour exacerbations"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Résistance à l'arrêt du tabac",
+          "content": "[Quel est l'intérêt d'arrêter maintenant, alors que je suis déjà malade avec une toux ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Wright, je comprends pourquoi vous avez l'impression qu'il n'y a aucun intérêt à arrêter de fumer maintenant. Cependant, même après avoir fumé longtemps, arrêter peut souvent vous aider à vous remettre d'une toux chronique et empêcher vos problèmes de s'aggraver. De plus, fumer peut causer des maladies du cœur et des vaisseaux sanguins de votre corps, ce qui peut finalement entraîner une crise cardiaque ou un AVC. En arrêtant maintenant, vous réduirez considérablement le risque de souffrir de l'une de ces maladies à l'avenir. Dans cet hôpital, nous avons des programmes pour vous aider à arrêter de fumer et il existe également des options médicales que nous pouvons essayer, comme la thérapie de remplacement de la nicotine. Si vous êtes intéressée, nous pouvons déterminer ensemble ce qui fonctionnerait le mieux pour vous. Qu'est-ce que vous en pensez ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Œdème prenant le godet du membre inférieur",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait précédemment été remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img1-Pitting edema of lower leg.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "ECG dans l'hypertrophie ventriculaire gauche",
+        "description": "ECG 12 dérivations (vitesse du papier : 25 mm/s). Fréquence cardiaque : ≈55/min. Rythme sinusal régulier. Axe cardiaque normal : polarité du complexe QRS positive (+) dans les dérivations I, II et III. Ondes P larges et bifides (P) : appelées \"P mitrale\" et suggérant une hypertrophie auriculaire gauche. SV2 (S) + RV5 (R) > 3,5 mV : répond aux critères de Sokolow-Lyon pour l'hypertrophie ventriculaire gauche. Aspect de surcharge ventriculaire gauche : sous-décalage ST (ST) avec inversion de l'onde T (T) dans les dérivations latérales gauches I et V4-V6. Les critères de Sokolow-Lyon positifs et l'aspect de surcharge ventriculaire gauche sont caractéristiques de l'hypertrophie ventriculaire gauche.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img2-ECG in left ventricular hypertrophy.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Courbe débit-volume dans les maladies pulmonaires obstructives et restrictives",
+        "description": "(1) Le graphique supérieur est une courbe débit-volume normale et une courbe temps-volume utilisée pour déterminer le VEMS. (2) Les maladies pulmonaires obstructives entraînent une courbe débit-volume concave en raison de l'augmentation de la résistance. Le VEMS absolu, ainsi que le VEMS par rapport à la capacité vitale (VEMS/CVF), sont diminués. (3) Les maladies pulmonaires restrictives entraînent une courbe débit-volume rétrécie en raison de la réduction de la capacité vitale et de la compliance. Le VEMS absolu est diminué, mais pas par rapport à la capacité vitale (VEMS/CVF).",
+        "data": "grilles_generees/html/images/AMBOSS-19-img3-Flow-volume loop in obstructive and restrictive lung diseases.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Mesure du volume expiratoire forcé en 1 seconde (VEMS)",
+        "description": "Spirogramme : 3 respirations au repos suivies de la mesure du volume expiratoire forcé en 1 seconde (VEMS). Procédure de mesure du VEMS : Le patient prend une inspiration profonde, puis expire aussi profondément et rapidement que possible. Le volume de gaz expiré pendant la première seconde est le VEMS. Cette valeur est ensuite corrélée avec la capacité vitale forcée (CVF) et indiquée en pourcentage (rapport VEMS/CVF). La courbe bleue démontre une respiration saine, tandis que la courbe jaune illustre la respiration dans la BPCO (l'atteinte de l'expiration maximale est différée en raison de l'obstruction des voies aériennes et le VEMS est grandement diminué). De plus, diverses mesures sont montrées : VRI = volume de réserve inspiratoire, VC = volume courant, VRE = volume de réserve expiratoire, VR = volume résiduel.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img4-Measurement of forced expiratory volume in 1 second (FEV1).jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Hyperinflation pulmonaire (1/2)",
+        "description": "Radiographie thoracique (vue PA). De grands volumes pulmonaires (contour vert et flèches) sont accompagnés d'un élargissement des espaces intercostaux (exemples indiqués par des flèches rouges) et d'un aplatissement diaphragmatique, indiquant une hyperinflation.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img5-Pulmonary hyperinflation (1:2).jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Hyperinflation pulmonaire (2/2)",
+        "description": "Radiographie thoracique (vue latérale). De grands volumes pulmonaires (ligne verte extérieure et flèches) sont accompagnés d'un aplatissement diaphragmatique, de poumons hyperlucides et d'un espace rétrosternal prominénent, indiquant une hyperinflation.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img6-Pulmonary hyperinflation (2:2).jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Hypertrophie ventriculaire gauche (1/2)",
+        "description": "Radiographie thoracique (vue PA). La silhouette cardiaque est élargie, avec le bord cardiaque gauche déplacé latéralement (superposition verte) de sa position normale (contour vert) en raison de l'hypertrophie ventriculaire gauche.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img7-Left ventricular enlargement (1:2).jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Hypertrophie ventriculaire gauche (2/2)",
+        "description": "Radiographie thoracique (vue latérale). La convexité prominénente du bord postérieur de la silhouette cardiaque (superposition verte ; silhouette cardiaque normale indiquée par le contour vert) représente l'hypertrophie ventriculaire gauche (VG) (indiquée par la flèche). Il n'y a pas d'oblitération de l'espace rétrosternal (superposition rouge) pour indiquer une hypertrophie ventriculaire droite (VD).",
+        "data": "grilles_generees/html/images/AMBOSS-19-img8-Left ventricular enlargement (2:2).jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Masse pulmonaire du lobe supérieur droit",
+        "description": "Radiographie thoracique (vue PA) d'un patient avec cancer du poumon. Une opacité de type masse aux marges irrégulières (superposition verte) est présente dans le lobe supérieur droit.",
+        "data": "grilles_generees/html/images/AMBOSS-19-img9-Right upper lobe lung mass.jpg",
+        "id": "img9"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Maria Wright",
+      "age": "53 ans",
+      "contexte": "Femme travaillant en supermarché avec tabagisme sévère et toux chronique productive",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une toux.",
+        "autreChose": "Elle s'aggrave depuis quelques mois."
+      },
+      "consignes": [
+        "Tousser régulièrement tout au long de la consultation et observer si l'examinateur vous offre un verre d'eau et/ou un mouchoir.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: ECG) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Quand l'examinateur vous conseille d'arrêter de fumer, dire 'Quel est l'intérêt d'arrêter maintenant, alors que je suis déjà malade avec une toux ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux chronique depuis 5 ans",
+          "Aggravation depuis quelques mois",
+          "Productive d'expectorations jaunâtres",
+          "Pire le matin",
+          "Quotidienne et constante"
+        ],
+        "symptomesAssocies": [
+          "Dyspnée d'effort (2 étages)",
+          "Fatigue progressive",
+          "Perte de poids 3 kg en 3 mois",
+          "Nycturie",
+          "Œdème chevilles possible"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Tousser régulièrement (toux grasse)",
+          "Minimiser l'importance des symptômes",
+          "Résistance à l'arrêt du tabac",
+          "Attitude défensive sur le tabagisme",
+          "Demander clarifications termes médicaux"
+        ],
+        "durantStatus": [
+          "Possible sibilants ou ronchi à l'auscultation",
+          "Temps expiratoire prolongé possible",
+          "Œdème déclive minime chevilles",
+          "Hippocratisme digital possible",
+          "Pas de détresse respiratoire au repos"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 53 ans avec BPCO très probable sur tabagisme majeur (70 paquets-années). Présentation classique : toux productive chronique matinale, dyspnée d'effort progressive, signes systémiques (fatigue, amaigrissement). Possibles signes de cœur pulmonaire débutant (œdème, nycturie). Diagnostics différentiels : insuffisance cardiaque, cancer pulmonaire. Arrêt tabac = intervention thérapeutique majeure.",
+      "rolesInterventions": [
+        "Spirométrie : VEMS/CVF 62%, VEMS 48% prédit, non réversible",
+        "Classification GOLD : Stade 3 (sévère)",
+        "Gaz du sang : pH 7.38, PaO2 68 mmHg, PaCO2 45 mmHg",
+        "Radiographie thorax : Hyperinflation, aplatissement diaphragmes",
+        "ECG : Déviation axiale droite, P pulmonaire",
+        "BNP : 85 pg/mL (légèrement élevé)",
+        "Hématocrite : 48% (polyglobulie secondaire)"
+      ],
+      "pointsCles": [
+        "70 paquets-années = risque majeur BPCO et cancer",
+        "Toujours offrir mouchoir/eau lors toux (empathie)",
+        "Arrêt tabac bénéfique à tout stade BPCO",
+        "Spirométrie = gold standard diagnostic BPCO",
+        "Perte poids + tabagisme = penser cancer",
+        "BPCO = maladie systémique (muscle, os, cœur)"
+      ],
+      "pieges": [
+        "Minimiser importance du tabagisme",
+        "Ne pas offrir aide pendant toux",
+        "Oublier dépistage cancer pulmonaire",
+        "Négliger signes cœur pulmonaire",
+        "Message défaitiste sur arrêt tabac",
+        "Confondre avec insuffisance cardiaque isolée"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Bronchopneumopathie chronique obstructive (BPCO) stade GOLD 3 avec début de cœur pulmonaire"
+        },
+        {
+          "titre": "BPCO",
+          "contenu": "Maladie respiratoire chronique progressive caractérisée par une limitation persistante du débit aérien :",
+          "points": [
+            "Prévalence : 10-15% adultes > 40 ans, 4e cause mortalité mondiale",
+            "Étiologie : 90% tabagisme, aussi pollution, α1-antitrypsine",
+            "Physiopathologie : inflammation chronique → remodelage voies aériennes",
+            "Composantes : bronchite chronique + emphysème en proportions variables",
+            "Définition spirométrique : VEMS/CVF < 0.70 post-bronchodilatateur",
+            "Classification GOLD 1-4 selon VEMS : léger > 80%, modéré 50-79%, sévère 30-49%, très sévère < 30%"
+          ]
+        },
+        {
+          "titre": "Manifestations cliniques BPCO",
+          "contenu": "Évolution insidieuse avec symptômes progressifs :",
+          "points": [
+            "Toux chronique : souvent matinale, productive",
+            "Expectorations : muqueuses à purulentes selon exacerbations",
+            "Dyspnée : d'abord effort intense → repos (stades avancés)",
+            "Signes physiques : temps expiratoire ↑, sibilants, ronchi",
+            "Phénotypes : emphysémateux (pink puffer) vs bronchitique (blue bloater)",
+            "Manifestations systémiques : amaigrissement, faiblesse musculaire, ostéoporose"
+          ]
+        },
+        {
+          "titre": "Complications de la BPCO",
+          "contenu": "Évolution vers insuffisance respiratoire et atteintes systémiques :",
+          "points": [
+            "Cœur pulmonaire : HTP → dilatation VD → insuffisance cardiaque droite",
+            "Exacerbations : infections, pollution → déclin accéléré VEMS",
+            "Insuffisance respiratoire : hypoxémie → hypercapnie",
+            "Polyglobulie secondaire : EPO ↑ par hypoxie chronique",
+            "Comorbidités : cardiovasculaires ++, cancer poumon, dépression",
+            "Mortalité : 50% à 10 ans si VEMS < 1L"
+          ]
+        },
+        {
+          "titre": "Diagnostic de la BPCO",
+          "contenu": "Approche clinique et fonctionnelle systématique :",
+          "points": [
+            "Spirométrie post-BD : VEMS/CVF < 0.70 = critère diagnostique",
+            "Radiographie thorax : hyperinflation, aplatissement diaphragmes",
+            "CT thorax : emphysème, bronchiectasies, dépistage cancer",
+            "Gaz du sang : hypoxémie ± hypercapnie selon stade",
+            "Test marche 6 min : évaluation capacité fonctionnelle",
+            "α1-antitrypsine : si < 45 ans ou emphysème basal"
+          ]
+        },
+        {
+          "titre": "Traitement de la BPCO",
+          "contenu": "Approche multimodale selon stade et phénotype :",
+          "points": [
+            "Arrêt tabac : seule intervention modifiant histoire naturelle",
+            "Bronchodilatateurs : LABA, LAMA, associations",
+            "CSI : si exacerbations fréquentes ou asthme associé",
+            "Oxygénothérapie : si PaO2 < 55 mmHg ou < 60 avec complications",
+            "Réhabilitation : améliore qualité vie, capacité exercice",
+            "Vaccinations : grippe annuelle, pneumocoque",
+            "Chirurgie : résection bulles, réduction volume, transplantation"
+          ]
+        },
+        {
+          "titre": "Arrêt du tabac",
+          "contenu": "Intervention thérapeutique majeure dans la BPCO :",
+          "points": [
+            "Bénéfices immédiats : ralentissement déclin VEMS dès 1 an",
+            "Réduction mortalité : 50% si arrêt précoce",
+            "Approche 5A : Ask, Advise, Assess, Assist, Arrange",
+            "Substituts nicotiniques : patch + forme orale = efficacité ↑",
+            "Varénicline : agoniste partiel récepteurs nicotiniques",
+            "Bupropion : antidépresseur, CI si convulsions",
+            "Soutien comportemental : double taux succès"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "GOLD A : SABA (salbutamol) ou SAMA (ipratropium) prn",
+        "GOLD B : LABA (formotérol) ou LAMA (tiotropium) régulier",
+        "GOLD C : LABA + LAMA (ex: indacatérol/glycopyrronium)",
+        "GOLD D : LABA + LAMA ± CSI (si éosinophiles > 300)",
+        "Exacerbation légère : bronchodilatateurs augmentés",
+        "Exacerbation modérée : + prednisone 40mg × 5j",
+        "Exacerbation sévère : hospitalisation, O2, BiPAP si besoin",
+        "Prophylaxie : roflumilast si bronchite chronique + exacerbations"
+      ],
+      "examensComplementaires": [
+        "Spirométrie complète pré/post BD : VEMS, CVF, VEMS/CVF, CPT, VR",
+        "Test réversibilité : 400μg salbutamol, mesure à 15-20 min",
+        "Gaz du sang artériel : si SpO2 < 92% ou signes cœur pulmonaire",
+        "Radiographie thorax PA et latérale : hyperinflation, bulles",
+        "CT thorax sans contraste : quantification emphysème, dépistage cancer",
+        "ECG et échocardiographie : si suspicion cœur pulmonaire",
+        "NFS : polyglobulie secondaire si hypoxie chronique",
+        "α1-antitrypsine : si emphysème précoce ou basal"
+      ]
+    },
+    "resume": {
+      "titre": "🌬️ BPCO – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Toux chronique productive (souvent matinale)",
+                "Dyspnée d’effort progressive",
+                "Sifflements, sensation d’oppression thoracique",
+                "Exacerbations fréquentes (infections respiratoires récidivantes)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Tabagisme actif ou ancien (facteur principal)",
+                "Exposition professionnelle (poussières, gaz, fumées)",
+                "Pollution intérieure (combustibles domestiques)",
+                "Antécédents familiaux (ex. : déficit en alpha-1 antitrypsine)"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Triade classique",
+              "points": [
+                "Dyspnée aggravée par rapport au niveau habituel",
+                "Augmentation de la fréquence et/ou de la sévérité de la toux",
+                "Augmentation du volume et/ou de la purulence des expectorations"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Éléments contextuels à rechercher",
+              "points": [
+                "Fièvre, frissons (infection sous-jacente ?)",
+                "Douleur thoracique (pleurale ? embolique ?)",
+                "Fatigue marquée, confusion (hypoxie, hypercapnie ?)",
+                "Présence de sibilances ou bruits respiratoires nouveaux"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Facteurs déclenchants ou aggravants",
+              "points": [
+                "Infection respiratoire haute récente (rhinopharyngite, bronchite)",
+                "Exposition à des irritants (fumée, pollution, allergènes)",
+                "Arrêt ou mauvaise observance du traitement de fond",
+                "Médicaments décompensants (sédatifs, β-bloquants non cardio-sélectifs)",
+                "Stress ou chirurgie récente",
+                "Insuffisance cardiaque sous-jacente"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Historique BPCO",
+              "points": [
+                "Nombre et gravité des exacerbations précédentes",
+                "Hospitalisations antérieures, intubation ou ventilation non invasive",
+                "Traitement de fond actuel (inhalateurs, corticoïdes, oxygénothérapie)",
+                "Vaccination : grippe, pneumocoque",
+                "Score mMRC de dyspnée au repos"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes au repos ou à l’effort",
+              "points": [
+                "Râles bronchiques, sibilants diffus",
+                "Allongement du temps expiratoire",
+                "Tirage, signes de lutte respiratoire si sévère",
+                "Thorax en tonneau (hyperinflation)",
+                "Cyanose, hippocratisme digital (formes avancées)"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Signes de gravité",
+              "points": [
+                "Tachypnée, utilisation des muscles accessoires",
+                "Cyanose, sueurs, agitation ou somnolence",
+                "Saturation < 90 % sans oxygène",
+                "Altération de l’état de conscience",
+                "Signes de lutte respiratoire"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Autres signes",
+              "points": [
+                "Sibilants ou râles à l’auscultation",
+                "Allongement du temps expiratoire",
+                "Hépatojugulaires, œdèmes (si IC droite associée)",
+                "Température (fièvre évocatrice d’infection)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Explorations fonctionnelles respiratoires (EFR)",
+              "points": [
+                "Spirométrie : VEMS/CVF < 70 % après bronchodilatateur = diagnostic",
+                "VEMS permet de grader la sévérité (stades GOLD)",
+                "Test de réversibilité généralement négatif"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires",
+              "points": [
+                "Radiographie thoracique : hyperclarté, diaphragmes aplatis",
+                "Dosage alpha-1 antitrypsine (chez les < 45 ans ou ATCD familiaux)",
+                "Gaz du sang si SpO2 < 92 % ou signes de gravité",
+                "Scanner thoracique (formes atypiques ou complications)"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Examens de base",
+              "points": [
+                "Gaz du sang : recherche hypoxémie/hypercapnie ± acidose",
+                "Radiographie thoracique : éliminer pneumonie ou pneumothorax",
+                "ECG : rechercher trouble du rythme ou signe de surcharge cardiaque",
+                "Biologie : NFS, CRP, ionogramme, BNP si IC suspectée"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Autres en fonction du contexte",
+              "points": [
+                "PCR SARS-CoV-2 / grippe",
+                "Hémocultures si fièvre",
+                "ECBC si expectorations purulentes"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures non pharmacologiques",
+              "points": [
+                "Sevrage tabagique (mesure la plus efficace)",
+                "Vaccination : grippe, pneumocoque, COVID, coqueluche, zona",
+                "Réhabilitation respiratoire (kiné, exercice)",
+                "Éducation thérapeutique (inhalateurs, signes d’alerte)"
+              ]
+            },
+            {
+              "titre": "Traitement pharmacologique",
+              "points": [
+                "Bronchodilatateurs inhalés : SABA/SAMA en phase aiguë",
+                "Traitement de fond selon groupe GOLD : LABA, LAMA ± CSI",
+                "Corticothérapie systémique si exacerbation sévère",
+                "Antibiotiques en cas d'exacerbation infectieuse (critères d'Anthonisen)"
+              ]
+            },
+            {
+              "titre": "Formes sévères",
+              "points": [
+                "Oxygénothérapie à long terme si PaO2 < 55 mmHg",
+                "Ventilation non invasive (VNI) en cas d’hypercapnie",
+                "Chirurgie : réduction de volume ou greffe (cas sélectionnés)"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Traitement initial",
+              "points": [
+                "Oxygénothérapie : cible SpO₂ 88–92 %",
+                "Bronchodilatateurs : SABA ± SAMA (salbutamol/ipratropium)",
+                "Corticothérapie systémique (ex : prednisolone 40 mg/j pendant 5 j)",
+                "Antibiothérapie si critères : expectoration purulente, dyspnée + fièvre (ex : amox-clav)"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Support respiratoire",
+              "points": [
+                "Si hypercapnie/hypoxémie persistante : VNI en 1ère intention",
+                "Intubation si échec ou signes de détresse respiratoire",
+                "Surveillance rapprochée : gazométrie, conscience, FR, SpO₂"
+              ]
+            },
+            {
+              "titre": "Exacerbation aiguë de BPCO : Autres mesures",
+              "points": [
+                "Hydratation IV si besoin",
+                "Arrêt du tabac, sevrage",
+                "Réévaluation du traitement de fond à la sortie",
+                "Vaccination si statut incomplet"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Tabagisme chronique = principal facteur de risque",
+            "Dyspnée + toux chronique productive = évoquer BPCO",
+            "Spirométrie indispensable au diagnostic",
+            "Prévention des exacerbations = priorité",
+            "Éducation + sevrage + bronchodilatateurs = piliers du traitement"
+          ]
+        },
+        {
+          "titre": "✅ Exacerbation aiguë de BPCO : Points clés ECOS",
+          "points": [
+            "Triade AECOPD : dyspnée, toux, expectorations",
+            "Cause infectieuse = déclencheur principal",
+            "Toujours viser SpO₂ entre 88–92 %, éviter l’hyperoxie",
+            "VNI si acidose ou hypercapnie",
+            "Corticothérapie courte + ATB si purulence des crachats"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Tabagisme actuel ou passé ? Nombre de paquets-années ?",
+                "Toux chronique, expectorations, dyspnée : depuis combien de temps ?",
+                "Fréquence des exacerbations ? Hospitalisations antérieures ?",
+                "Vaccinations (grippe, pneumocoque) à jour ?",
+                "Facteurs déclenchants récents (infection, pollution, arrêt traitement) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : FR, SpO₂, FC, TA, T°",
+                "Auscultation pulmonaire : sibilants, ronchi, murmure vésiculaire",
+                "EFR : spirométrie avec VEMS/CVF < 70 %",
+                "Gaz du sang si SpO₂ < 92 % ou signe de gravité",
+                "Radio thorax pour éliminer pneumonie ou complication"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Sevrage tabagique + optimisation du traitement inhalé",
+                "En cas d’exacerbation : oxygène (SpO₂ 88–92 %), SABA/SAMA, corticoïdes courts, ± antibiotiques",
+                "Surveillance rapprochée et éducation thérapeutique pour prévenir récidives"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux chronique (BPCO probable, tabagisme sévère)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation",
+            "Caractériser la toux → durée (>8 sem), productive ou sèche, expectorations",
+            "Symptômes associés → dyspnée, fatigue, perte de poids, sueurs nocturnes",
+            "Facteurs de risque → tabac (paquets-années), antécédents familiaux cardiaques",
+            "Examen clinique → constantes, auscultation, signes de cœur pulmonaire",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → spirométrie, Rx thorax, GDS, ECG/écho",
+            "Prise en charge → arrêt tabac, bronchodilatateurs, vaccination, réhabilitation"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : OLD COPS",
+            "elements": [
+              "O = Obstruction bronchique (VEMS ↓)",
+              "L = Longue histoire tabagique",
+              "D = Dyspnée progressive",
+              "C = Crachats matinaux",
+              "O = Œdème périphérique (cœur pulmonaire)",
+              "P = Poids qui diminue",
+              "S = Spirométrie indispensable"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Maria Wright, une femme de 53 ans, employée dans un supermarché, qui consulte pour une toux chronique.\n\nElle rapporte une toux présente depuis environ 5 ans, mais qui s’est nettement aggravée depuis quelques mois. La toux est quotidienne, constante, et productive d’expectorations jaunâtres, environ une à deux cuillères à café par jour, surtout le matin. Elle nie toute hémoptysie. Elle dit que la toux est aggravée lorsqu’elle respire profondément et qu’aucun facteur ne l’améliore vraiment.\n\nEn plus de cette toux, elle se sent plus fatiguée depuis quelques mois, a noté une perte de poids involontaire d’environ 3 kilos en trois mois, et rapporte un essoufflement lorsqu’elle monte deux étages. Elle mentionne aussi que ses chevilles gonflent parfois, et qu’elle doit se lever plusieurs fois la nuit pour uriner. Elle n’a pas eu de fièvre, pas de sueurs nocturnes, pas de douleurs thoraciques. Pas de contact tuberculeux connu.\n\nPour ses antécédents, elle est suivie pour une hypertension artérielle diagnostiquée il y a 5 ans, traitée par lisinopril. Elle n’a pas d’allergies connues. Côté chirurgical, elle a eu une césarienne pour la naissance de sa fille. Son père est décédé d’un infarctus à 70 ans.\n\nConcernant son mode de vie, elle fume environ deux paquets de cigarettes par jour depuis 35 ans, soit un tabagisme très important de 70 paquets-années. Elle boit un verre de vin un jour sur deux. Elle ne consomme pas de drogues. Elle vit avec son mari et sa fille.\n\nÀ l’examen, ses constantes sont normales : TA 135/80, pouls 80, FR 22, T° 37. À l’auscultation pulmonaire, on entend quelques ronchi et sibilants diffus avec un temps expiratoire prolongé. Pas de crépitants. On note un discret œdème déclive des chevilles. Pas de cyanose centrale. Pas d’adénopathies palpables. Pas de signes de détresse respiratoire au repos.\n\nEn résumé, il s’agit d’une femme de 53 ans, tabagique lourde, qui présente une toux chronique productive, aggravée récemment, avec dyspnée d’effort, perte de poids et fatigue. Mon hypothèse principale est une BPCO sévère, probablement GOLD 3, possiblement compliquée d’un début de cœur pulmonaire. Les diagnostics différentiels incluent une insuffisance cardiaque congestive et un cancer pulmonaire.\n\nComme examens complémentaires, je demanderais une spirométrie avec test de réversibilité, une radiographie thoracique, des gaz du sang artériel, un ECG et une échocardiographie. Selon le contexte, un dosage BNP et un scanner thoracique pourraient être utiles. Je proposerais aussi un dosage d’alpha-1 antitrypsine chez une patiente plus jeune ou avec ATCD familiaux.\n\nEn termes de prise en charge immédiate, la priorité est l’arrêt complet du tabac, avec un accompagnement adapté. Je recommanderais la vaccination grippe et pneumocoque, une optimisation thérapeutique avec bronchodilatateurs inhalés (selon classification GOLD), et une réhabilitation respiratoire. En cas d’hypoxémie sévère, une oxygénothérapie prolongée pourrait être discutée."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Wright, 53 ans, présente une toux productive chronique aggravée depuis quelques mois.\n\nB (Background) : Tabagisme lourd (70 paquets-années), HTA traitée par IEC, pas d’allergies.\n\nA (Assessment) : Suspicion BPCO sévère, GOLD 3 probable. DD : insuffisance cardiaque, cancer pulmonaire.\n\nR (Recommendation) : Spirométrie, Rx thorax, gaz du sang, ECG/écho, sevrage tabac, bronchodilatateurs."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "BPCO = 3C",
+              "points": [
+                "C = Crachats chroniques",
+                "C = Clope (tabac) facteur principal",
+                "C = Capacité respiratoire ↓ (VEMS)"
+              ]
+            },
+            {
+              "titre": "Arrêt tabac = 5A",
+              "points": [
+                "Ask",
+                "Advise",
+                "Assess",
+                "Assist",
+                "Arrange"
+              ]
+            },
+            {
+              "titre": "GOLD staging",
+              "points": [
+                "GOLD 1 : VEMS > 80%",
+                "GOLD 2 : VEMS 50–79%",
+                "GOLD 3 : VEMS 30–49%",
+                "GOLD 4 : VEMS < 30%"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "BPCO",
+                  "reponse": {
+                    "pour": [
+                      "Toux chronique productive > 5 ans",
+                      "Tabagisme lourd : 70 PA",
+                      "Dyspnée d’effort",
+                      "Examen : ronchi, sibilants, expiration prolongée",
+                      "Perte de poids, fatigue"
+                    ],
+                    "contre": [
+                      "Pas de crépitants",
+                      "Pas de variation circadienne (asthme moins probable)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Insuffisance cardiaque",
+                  "reponse": {
+                    "pour": [
+                      "Dyspnée d’effort",
+                      "Nycturie",
+                      "Œdème chevilles",
+                      "Fatigue"
+                    ],
+                    "contre": [
+                      "Toux productive typique respiratoire",
+                      "Examen cardiaque sans anomalies majeures"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer pulmonaire",
+                  "reponse": {
+                    "pour": [
+                      "Tabagisme très important",
+                      "Perte de poids",
+                      "Fatigue chronique"
+                    ],
+                    "contre": [
+                      "Pas d’hémoptysie",
+                      "Toux ancienne de plusieurs années"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Spirométrie avec test de réversibilité",
+                    "Radiographie thoracique",
+                    "Gaz du sang artériel",
+                    "ECG, échocardiographie",
+                    "BNP si suspicion cardiaque",
+                    "Scanner thoracique si anomalie"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "BPCO sévère (probable GOLD 3) avec début de cœur pulmonaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Sevrage tabagique avec soutien",
+                      "Vaccination grippe + pneumocoque",
+                      "Bronchodilatateurs selon stade GOLD",
+                      "Réhabilitation respiratoire",
+                      "Oxygénothérapie si PaO2 < 55 mmHg"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle régulier en pneumologie",
+                    "Surveillance exacerbations",
+                    "Spirométrie annuelle",
+                    "Dépistage cancer pulmonaire",
+                    "Éducation thérapeutique continue"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "title": "RESCOS-50 - Malaise",
+  "context": {
+    "setting": "Urgences",
+    "patient": "M. Thierry Duchêne, 30 ans, designer, connu pour anémie ferriprive, consulte après perte de connaissance ce matin",
+    "vitals": {
+      "ta": "100/80 mmHg",
+      "fc": "62 bpm",
+      "fr": "15/min",
+      "temperature": "37.2°C",
+      "sao2": "99%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la perte de connaissance",
+          "details": [
+            "Chronologie/durée [durée inconnue mais reprise rapide sans état postcritique]",
+            "Développement [apparition brutale]",
+            "Circonstances de survenue [en se levant des toilettes]",
+            "Fréquence [premier épisode]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes associés",
+          "details": [
+            "Sensations vertigineuses avant la perte de connaissance",
+            "Voile noir et étoiles avant l'épisode",
+            "Tremblements pendant l'épisode selon les parents",
+            "Symptômes disparus au réveil"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "État post-critique",
+          "details": [
+            "Réveil avec famille autour de lui",
+            "Orientation conservée (sait où il est, reconnaît ses parents)",
+            "Pas de confusion post-critique",
+            "Récupération rapide et complète"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de signes d'hypotension orthostatique",
+          "details": [
+            "Épisode en se levant (changement de position)",
+            "Vertiges et voile devant les yeux",
+            "Pas de symptômes en position allongée/assise"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux et facteurs prédisposants",
+          "details": [
+            "Anémie ferriprive en traitement (fer per os et IV)",
+            "Jamais hospitalisé ni opéré",
+            "Allergie au pollen",
+            "Vaccins à jour"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Pas d'antécédents familiaux de syncope, épilepsie ou pathologie cardiaque"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes et facteurs de risque",
+          "details": [
+            "Médicaments [fer per os 1x/jour]",
+            "Alimentation [trop grasse : fast food 5-10x/semaine]",
+            "Activité physique [course à pied et fitness]",
+            "Tabac/alcool/drogues [non]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse en général - ciblée, fil conducteur",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Constantes vitales et état général",
+          "details": [
+            "Mesure de la tension artérielle",
+            "Fréquence cardiaque et pouls",
+            "État d'hydratation",
+            "Évaluation générale"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Test d'hypotension orthostatique",
+          "details": [
+            "Mesure TA en position couchée",
+            "Mesure TA après 3 minutes debout",
+            "Recherche de symptômes au lever",
+            "Interprétation du test (chute ≥20/10 mmHg)"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque 4 foyers",
+            "Recherche de souffle ou trouble du rythme",
+            "Palpation des pouls périphériques",
+            "Recherche de signes d'insuffisance cardiaque"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen neurologique de base",
+          "details": [
+            "État de conscience et orientation",
+            "Recherche de déficit neurologique focal",
+            "Reflexes pupillaires"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Recherche de signes d'anémie",
+          "details": [
+            "Coloration des conjonctives",
+            "Coloration des muqueuses",
+            "Recherche de pâleur cutanée"
+          ],
+          "scoringRule": "Les trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Examen en général - structuré et professionnel",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Évoque le diagnostic principal de syncope orthostatique",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Évoque un diagnostic différentiel cohérent",
+          "details": [
+            "Syncope cardiogène (troubles du rythme)",
+            "Syncope vasovagale",
+            "Épilepsie",
+            "AIT (accident ischémique transitoire)"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m3",
+          "text": "Propose des examens complémentaires appropriés",
+          "details": [
+            "ECG 12 dérivations",
+            "Bilan sanguin (NFS, ionogramme, glycémie)",
+            "Dosage de l'hémoglobine (contrôle anémie)",
+            "Holter ECG si suspicion cardiaque"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Propose une prise en charge adaptée",
+          "details": [
+            "Correction de l'anémie (optimisation traitement martial)",
+            "Conseils préventifs (lever progressif, hydratation)",
+            "Éviction des facteurs favorisants",
+            "Suivi médical rapproché"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Rassurance et explication au patient",
+          "details": [
+            "Explique le lien avec l'anémie",
+            "Rassure sur le caractère bénin probable",
+            "Explique l'importance du suivi"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m6",
+          "text": "Management en général",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "id": "drapeaux-rouges-vertiges",
+        "title": "Drapeaux rouges en cas de symptomatologie vertigineuse",
+        "description": "Signes d'alerte nécessitant un recours à l'avis d'un spécialiste en cas de syndrome vertigineux",
+        "filename": "syncope-1-img1.jpg"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Thierry Duchêne",
+      "age": "30 ans",
+      "contexte": "Designer, célibataire, sportif (course à pied, fitness), connu pour anémie ferriprive en traitement",
+      "motifConsultation": {
+        "plaintePrincipale": "Je ne comprends pas ce qu'il s'est passé, je me suis levé et après j'ai dû tomber dans les pommes. Je me suis retrouvé avec mes parents et j'étais par terre",
+        "autreChose": "Je ne comprends pas ce qu'il s'est passé"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Perte de connaissance brutale ce matin en se levant des toilettes",
+          "Durée inconnue mais reprise de conscience rapide",
+          "Sans état postcritique (orientation conservée)",
+          "Premier épisode de ce type",
+          "Très inquiet car jamais arrivé auparavant"
+        ],
+        "symptomesAssocies": [
+          "Sensations vertigineuses avant la perte de connaissance",
+          "A vu des étoiles puis un voile noir",
+          "Selon les parents: tremblements pendant l'épisode",
+          "Symptômes complètement disparus au réveil",
+          "Se sentait normal avant de se lever"
+        ],
+        "circonstances": [
+          "Survenue en se levant des toilettes",
+          "Parents présents dans la maison",
+          "Retrouvé conscient par sa famille",
+          "Pas de traumatisme lors de la chute",
+          "Était resté assis aux toilettes quelques minutes"
+        ],
+        "reponseAuxSymptomes": [
+          "Parents ont appelé les secours",
+          "Consultation aux urgences par sécurité",
+          "Inquiétude car premier épisode"
+        ],
+        "inquietudes": [
+          "Ne comprend pas ce qui s'est passé",
+          "Peur que cela se reproduise",
+          "Inquiet car premier épisode de ce type"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "État général conservé",
+          "Pas de fièvre",
+          "Sommeil bon",
+          "Appétit normal"
+        ],
+        "cardiovasculaire": [
+          "Pas de palpitations",
+          "Pas de douleur thoracique",
+          "Pas d'essoufflement à l'effort"
+        ],
+        "neurologique": [
+          "Pas de céphalée",
+          "Pas de troubles visuels",
+          "Pas de faiblesse des membres",
+          "Examen neurologique normal"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Fer per os 1x/jour pour anémie ferriprive",
+        "alimentation": "Trop grasse : fast food 5-10x/semaine",
+        "activitePhysique": "Course à pied et fitness réguliers",
+        "sommeil": "Bon, 7-8h par nuit",
+        "tabac": "Non-fumeur",
+        "alcool": "Ne boit pas d'alcool",
+        "drogues": "Jamais consommé",
+        "sexualite": "Hétérosexuel, pas de rapports sexuels actuellement"
+      },
+      "histoireMedicale": [
+        "Anémie ferriprive diagnostiquée et traitée",
+        "Substitution de fer per os 1x/jour",
+        "Injections intraveineuses de fer",
+        "Jamais hospitalisé ni opéré",
+        "Allergie au pollen (rhinite saisonnière)",
+        "Vaccins à jour"
+      ],
+      "antecedentsFamiliaux": [
+        "Pas d'antécédents familiaux particuliers",
+        "Pas d'antécédents de syncope ou épilepsie en famille",
+        "Pas d'antécédents cardiaques familiaux"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Designer (travail sédentaire)",
+        "hobbies": "Course à pied, fitness",
+        "poids": "Normal (BMI 18-25)",
+        "orientationSexuelle": "Hétérosexuel",
+        "etatCivil": "Célibataire",
+        "etatEsprit": "Décontracté mais inquiet de cet épisode"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Attitude décontractée mais légèrement inquiète",
+          "Coopératif",
+          "Répond volontiers aux questions",
+          "État général normal"
+        ],
+        "durantExamen": [
+          "Aucune simulation particulière",
+          "Examen neurologique normal",
+          "Coopératif pour les manœuvres"
+        ],
+        "questionsAPoser": [
+          "Mais qu'est-ce que j'ai ? Je suis très inquiet car c'est la première fois que cela m'arrive (à la sonnerie des 2 minutes restantes)"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur le fait que c'est la première fois",
+        "Mentionner l'anémie ferriprive en traitement",
+        "Préciser que les parents étaient témoins",
+        "Décrire les prodromes : vertiges, étoiles, voile noir"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "M. Duchêne, 30 ans, designer, ATCD anémie ferriprive sous traitement martial. Syncope orthostatique ce matin en se levant des toilettes. Prodromes typiques : vertiges, voile noir, étoiles. Récupération rapide sans état postcritique. Premier épisode. Examen neurologique normal.",
+      "rolesInterventions": [
+        "Seule intervention : si l'étudiant commence un status neurologique, l'informer que ce dernier est normal",
+        "Observer l'anamnèse ciblée sur la syncope",
+        "Évaluer la recherche d'hypotension orthostatique",
+        "Noter la proposition d'examens complémentaires appropriés"
+      ],
+      "pointsCles": [
+        "Syncope orthostatique chez jeune adulte anémique",
+        "Circonstances typiques : lever après position assise prolongée",
+        "Prodromes évocateurs : vertiges, voile devant les yeux",
+        "Récupération rapide sans confusion post-critique",
+        "Facteur prédisposant : anémie ferriprive",
+        "Test d'hypotension orthostatique à réaliser",
+        "Diagnostic différentiel avec épilepsie et syncope cardiaque",
+        "Importance de la correction de l'anémie"
+      ],
+      "pieges": [
+        "Ne pas rechercher l'hypotension orthostatique",
+        "Omettre le lien avec l'anémie ferriprive",
+        "Ne pas différencier syncope et épilepsie",
+        "Oublier de rassurer le patient (épisode probablement bénin)",
+        "Ne pas proposer d'ECG pour éliminer cause cardiaque",
+        "Sous-estimer l'importance des conseils préventifs",
+        "Ne pas optimiser le traitement de l'anémie"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur la syncope et l'hypotension orthostatique",
+      "sections": [
+        {
+          "titre": "Définition et épidémiologie de la syncope",
+          "contenu": "Perte de connaissance soudaine, brève, spontanément résolutive avec perte du tonus postural.",
+          "points": [
+            "Prévalence : 15-25% de la population générale",
+            "Cause : hypoperfusion cérébrale globale transitoire",
+            "Durée : généralement < 1 minute",
+            "Récupération spontanée complète",
+            "Pas de séquelles neurologiques",
+            "Plus fréquente chez les personnes âgées",
+            "Représente 1-3% des consultations aux urgences"
+          ]
+        },
+        {
+          "titre": "Classification des syncopes",
+          "contenu": "Trois grandes catégories selon le mécanisme physiopathologique.",
+          "points": [
+            "Syncope réflexe (vasovagale) : 60-70% des cas",
+            "Syncope orthostatique : 10-15% des cas",
+            "Syncope cardiaque : 10-15% des cas",
+            "Causes neurologiques rares : <5%",
+            "Syncope réflexe : stimulus → bradycardie/vasodilatation",
+            "Syncope orthostatique : défaut d'adaptation tensionnelle",
+            "Syncope cardiaque : trouble du rythme ou obstruction"
+          ]
+        },
+        {
+          "titre": "Hypotension orthostatique",
+          "contenu": "Chute tensionnelle anormale au changement de position.",
+          "points": [
+            "Définition : chute ≥20 mmHg systolique ou ≥10 mmHg diastolique",
+            "Mesure après 3 minutes en position debout",
+            "Mécanisme : défaut du système nerveux autonome",
+            "Causes : déshydratation, médicaments, neuropathie",
+            "Anémie : facteur prédisposant important",
+            "Symptômes : vertiges, voile devant les yeux, faiblesse",
+            "Peut être asymptomatique"
+          ]
+        },
+        {
+          "titre": "Syncope et anémie",
+          "contenu": "L'anémie est un facteur prédisposant majeur à la syncope orthostatique.",
+          "points": [
+            "Mécanisme : diminution du transport d'oxygène",
+            "Compensation : tachycardie, augmentation débit cardiaque",
+            "Seuil critique : Hb < 7-8 g/dL",
+            "Facteurs aggravants : déshydratation, effort",
+            "Anémie ferriprive : cause fréquente chez jeune adulte",
+            "Traitement : correction de l'anémie essentielle",
+            "Prévention : hydratation, lever progressif"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel de la syncope",
+          "contenu": "Distinguer la syncope vraie des autres pertes de connaissance.",
+          "points": [
+            "Épilepsie : mouvements tonico-cloniques d'emblée",
+            "Syncope : mouvements après début perte de connaissance",
+            "Épilepsie : confusion postcritique, morsure de langue",
+            "Syncope : récupération rapide et complète",
+            "AIT : déficits neurologiques focaux",
+            "Hypoglycémie : contexte évocateur, sueurs",
+            "Syncope cardiaque : contexte d'effort, antécédents"
+          ]
+        },
+        {
+          "titre": "Prise en charge de la syncope",
+          "contenu": "Approche diagnostique et thérapeutique structurée.",
+          "points": [
+            "Anamnèse détaillée : circonstances, prodromes",
+            "Examen clinique : test orthostatique, cardiovasculaire",
+            "ECG systématique : troubles du rythme/conduction",
+            "Bilan biologique : NFS, ionogramme, glycémie",
+            "Échocardiographie si suspicion cardiaque",
+            "Holter ECG si syncope récidivante",
+            "Traitement étiologique si cause identifiée"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Syncope orthostatique : correction cause sous-jacente",
+        "Hydratation : 2-3L/jour, supplémentation sodée",
+        "Conseils comportementaux : lever progressif, éviter stations debout prolongées",
+        "Anémie ferriprive : fer per os 100-200mg/j, fer IV si intolérance",
+        "Médicaments : arrêt hypotenseurs si possible",
+        "Bas de contention si hypotension orthostatique sévère",
+        "Fludrocortisone 0.1-0.2mg/j si échec mesures conservatrices"
+      ],
+      "examensComplementaires": [
+        "ECG 12 dérivations : troubles rythme/conduction",
+        "NFS : recherche anémie, polyglobulie",
+        "Ionogramme complet : déshydratation, troubles électrolytiques",
+        "Glycémie : éliminer hypoglycémie",
+        "Fonction rénale : néphropathie",
+        "TSH : dysthyroïdie",
+        "Holter ECG 24-48h : troubles du rythme intermittents",
+        "Échocardiographie : pathologie cardiaque structurelle",
+        "Test d'inclinaison si syncopes récidivantes"
+      ]
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "title": "German-82 - Troubles du sommeil",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Huber, 42 ans, consulte pour des problèmes de sommeil"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation du médecin",
+          "binaryOnly": true,
+          "details": [
+            "Se présenter avec nom, fonction et tâche"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du problème principal",
+          "binaryOnly": false,
+          "details": [
+            "Nature du trouble du sommeil [dort mal, agitée la nuit]",
+            "Durée [6 semaines]",
+            "Évolution [toujours à peu près identique]",
+            "Horaire des troubles (endormissement, réveils nocturnes, réveil précoce)"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes cardiocirculatoires",
+          "binaryOnly": false,
+          "details": [
+            "Palpitations [oui]",
+            "Transpiration excessive [oui]",
+            "Sensation de chaleur [a vite chaud]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes digestifs",
+          "binaryOnly": false,
+          "details": [
+            "Modification du transit intestinal [pas de grand changement, peut-être un peu plus fréquent]",
+            "Diarrhée ou constipation"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes pondéraux et alimentaires",
+          "binaryOnly": false,
+          "details": [
+            "Appétit [faim augmentée]",
+            "Évolution pondérale [perte de poids malgré tout]",
+            "Quantification de la perte de poids"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes oculaires et cutanés",
+          "binaryOnly": false,
+          "details": [
+            "Sensation oculaire [sensation que les sourcils sont gonflés]",
+            "Changements visuels",
+            "Modifications cutanées"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Sueurs nocturnes [oui]",
+            "Fièvre",
+            "Perte de poids"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes neurologiques et psychiques",
+          "binaryOnly": false,
+          "details": [
+            "Nervosité, irritabilité",
+            "Tremblements",
+            "Troubles de concentration",
+            "Anxiété"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments et substances",
+          "binaryOnly": false,
+          "details": [
+            "Médicaments actuels [aucun]",
+            "Alcool [de temps en temps]",
+            "Tabac [non mentionné]",
+            "Drogues [non]",
+            "Caféine"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents personnels",
+          "binaryOnly": false,
+          "details": [
+            "Maladies antérieures [aucune]",
+            "Hospitalisations",
+            "Allergies [pollen]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "details": [
+            "[Appendicectomie]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Maladies thyroïdiennes [mère a eu quelque chose de similaire, mais c'est parti avec les médicaments]",
+            "Autres maladies héréditaires"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Anamnèse sociale et professionnelle",
+          "binaryOnly": false,
+          "details": [
+            "Profession [femme de ménage]",
+            "Situation familiale [2 enfants, vit en famille]",
+            "Stress professionnel ou familial"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Anamnèse gynécologique",
+          "binaryOnly": false,
+          "details": [
+            "Cycles menstruels réguliers",
+            "Contraception",
+            "Possibilité de grossesse"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": false,
+          "details": [
+            "Tension artérielle",
+            "Fréquence cardiaque",
+            "Température",
+            "Poids et taille (BMI)"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Inspection générale",
+          "binaryOnly": false,
+          "details": [
+            "État général",
+            "Morphologie",
+            "Agitation psychomotrice",
+            "Tremblements"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen ophtalmologique",
+          "binaryOnly": false,
+          "details": [
+            "Recherche d'exophtalmie [présente]",
+            "Rétraction palpébrale",
+            "Regard brillant"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen thyroïdien",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du cou",
+            "Palpation thyroïdienne [légère augmentation de volume]",
+            "Recherche de nodules",
+            "Auscultation (souffle thyroïdien)"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation cardiaque",
+            "Recherche d'arythmie",
+            "Pouls périphériques"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cutané",
+          "binaryOnly": false,
+          "details": [
+            "Texture de la peau",
+            "Chaleur cutanée",
+            "Myxœdème prétibial"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Réflexes ostéo-tendineux",
+            "Recherche de tremblements fins",
+            "Force musculaire"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "binaryOnly": false,
+          "details": [
+            "Maladie de Basedow (hyperthyroïdie auto-immune)"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 3 DD mentionnés",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Adénome thyroïdien toxique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Goitre multinodulaire toxique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Thyroïdite subaiguë",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Abus de substances",
+                    "cause": "□ amphétamines, cocaïne",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Trouble anxieux/psychose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Phéochromocytome",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens biologiques thyroïdiens",
+          "binaryOnly": false,
+          "details": [
+            "TSH (thyréostimuline)",
+            "T3 libre (fT3)",
+            "T4 libre (fT4)",
+            "Anticorps anti-récepteurs de la TSH (TRAK)",
+            "Anticorps anti-TPO [négatif]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Autres examens biologiques",
+          "binaryOnly": false,
+          "details": [
+            "Formule sanguine complète",
+            "Ionogramme",
+            "Fonction hépatique",
+            "Glycémie"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "Échographie thyroïdienne [thyroïde augmentée, vascularisation accrue]",
+            "Scintigraphie thyroïdienne [fixation homogène]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement médical",
+          "binaryOnly": false,
+          "details": [
+            "Traitement thyréostatique (antithyroïdiens de synthèse)",
+            "Durée du traitement [12-18 mois]",
+            "Surveillance biologique régulière",
+            "Bêtabloquants si nécessaire (symptômes cardiovasculaires)"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et évolution",
+          "binaryOnly": false,
+          "details": [
+            "Contrôles biologiques réguliers",
+            "Tentative d'arrêt après 12-18 mois",
+            "Options en cas de récidive ou persistance",
+            "Éducation thérapeutique"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Options thérapeutiques alternatives",
+          "binaryOnly": false,
+          "details": [
+            "Iode radioactif",
+            "Chirurgie (thyroïdectomie)",
+            "Indications et contre-indications"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Prise en charge symptomatique",
+          "binaryOnly": false,
+          "details": [
+            "Repos",
+            "Éviter les stimulants",
+            "Soutien psychologique si nécessaire",
+            "Arrêt de travail si indiqué"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

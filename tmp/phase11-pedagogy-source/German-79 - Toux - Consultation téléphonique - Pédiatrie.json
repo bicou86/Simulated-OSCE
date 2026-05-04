@@ -1,0 +1,315 @@
+{
+  "title": "German-79 - Toux - Consultation téléphonique - Pédiatrie",
+  "context": {
+    "setting": "Consultation téléphonique pédiatrique - 21h00",
+    "patient": "Appel d'une mère inquiète concernant sa fille Jasmin, 5 ans, qui présente une toux. La mère habite à la campagne, n'est pas motorisée et a encore 3 autres enfants."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom et fonction",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Identification complète",
+          "binaryOnly": false,
+          "details": [
+            "Nom, âge et sexe de l'enfant [Jasmin, 5 ans, fille]",
+            "Numéro de téléphone de l'appelant pour rappel"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Question ouverte initiale",
+          "binaryOnly": true,
+          "patientComment": "Jasmin 5 ans a une toux. Maman ne peut pas venir à l'hôpital car habite à la campagne et n'est pas motorisée, a encore 3 autres enfants"
+        },
+        {
+          "id": "a4",
+          "text": "Début et circonstances",
+          "binaryOnly": false,
+          "details": [
+            "Début [depuis ce matin]",
+            "Activités précédentes [jouait un peu dehors]",
+            "État actuel [sortie du lit et se plaint de légère dyspnée]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "État général actuel de l'enfant",
+          "binaryOnly": false,
+          "details": [
+            "Léthargie [non]",
+            "Réactivité [allongée sur le canapé et peut encore bien répondre aux questions]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Signes de détresse respiratoire",
+          "binaryOnly": false,
+          "details": [
+            "Tirage intercostal [non]",
+            "Tirage sus-sternal [non]",
+            "Respiration rapide et superficielle [non, pas particulièrement]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Température",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre mesurée [non]",
+            "Sensation thermique [se sent un peu chaude]",
+            "Site de mesure si mesuré"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Signes d'infection ORL",
+          "binaryOnly": false,
+          "details": [
+            "Nez [léger rhume]",
+            "Gorge",
+            "Cou",
+            "Trachée"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Caractéristiques de la respiration",
+          "binaryOnly": true,
+          "patientComment": "Rauque"
+        },
+        {
+          "id": "a10",
+          "text": "Possibilité d'aspiration de corps étranger",
+          "binaryOnly": true,
+          "patientComment": "Ne pense pas"
+        },
+        {
+          "id": "a11",
+          "text": "Caractéristiques de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Son [aboyante]",
+            "Type [sèche]",
+            "Productive ou non [non productive]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Coloration cutanée",
+          "binaryOnly": true,
+          "patientComment": "Non, pas de peau bleutée"
+        },
+        {
+          "id": "a13",
+          "text": "Tentatives thérapeutiques",
+          "binaryOnly": true,
+          "patientComment": "Non, vient juste d'appeler"
+        },
+        {
+          "id": "a14",
+          "text": "Recherche de drapeaux rouges (RED FLAGS)",
+          "binaryOnly": false,
+          "details": [
+            "État général, troubles de conscience [normal]",
+            "Foyers fébriles ORL (troubles déglutition, otalgie) [négatif]",
+            "Méningisme [négatif]",
+            "Signes urinaires [négatif]",
+            "Éruption cutanée [négatif]",
+            "Traumatisme crânien récent [négatif]"
+          ],
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents similaires",
+          "binaryOnly": true,
+          "patientComment": "Non, pas avec dyspnée"
+        },
+        {
+          "id": "a16",
+          "text": "Maladies de base",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a17",
+          "text": "Hospitalisations antérieures",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a18",
+          "text": "Médicaments et allergies",
+          "binaryOnly": true,
+          "patientComment": "Antihistaminiques pour rhume des foins"
+        },
+        {
+          "id": "a19",
+          "text": "Anamnèse de l'entourage",
+          "binaryOnly": true,
+          "patientComment": "Frères et sœurs plus jeunes en bonne santé"
+        },
+        {
+          "id": "a20",
+          "text": "Résumé et confirmation",
+          "binaryOnly": true,
+          "details": [
+            "Fait un bref résumé de la situation",
+            "Demande confirmation de l'exactitude"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse téléphonique complète et systématique adaptée à l'urgence pédiatrique"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Note: Examen clinique non réalisable par téléphone",
+          "binaryOnly": true,
+          "details": [
+            "Évaluation indirecte basée sur les observations parentales"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Évaluation globale de la démarche téléphonique",
+          "binaryOnly": false,
+          "details": [
+            "Adaptation appropriée à la consultation téléphonique"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": true,
+          "patientComment": "Faux-croup (laryngite striduleuse)"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Crise d'asthme",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Spirométrie avec test de réversibilité, peak flow"
+                  },
+                  {
+                    "text": "Aspiration de corps étranger",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Évaluation de l'urgence",
+          "binaryOnly": false,
+          "details": [
+            "Mentionne la possibilité d'une consultation urgente",
+            "Reconnaît l'impossibilité de déplacement immédiat",
+            "Propose surveillance et rappel dans 1 heure"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Conseils thérapeutiques",
+          "binaryOnly": false,
+          "details": [
+            "Mesurer la fièvre, si présente donner paracétamol/Algifor sirop",
+            "Assurer une bonne humidification de l'air",
+            "Remèdes maison : lait au miel, tisanes, compresses de pommes de terre",
+            "Installer l'enfant dans la salle de bain avec eau chaude qui coule",
+            "Calmer l'enfant"
+          ],
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "details": [
+            "Tirage intercostal ou sus-sternal",
+            "Peau bleutée (cyanose)",
+            "Pas d'amélioration malgré les mesures",
+            "Refus de boire",
+            "Dégradation de l'état général",
+            "Expectorations sanglantes"
+          ],
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "m6",
+          "text": "Organisation du suivi",
+          "binaryOnly": false,
+          "details": [
+            "Proposer rappel dans 1 heure",
+            "Si aggravation, envoyer ambulance pour chercher l'enfant",
+            "Disponibilité pour nouveau contact si besoin"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Vérification de la compréhension",
+          "binaryOnly": false,
+          "details": [
+            "Fait répéter les recommandations par l'appelant",
+            "Demande accord avec les recommandations",
+            "Demande s'il y a des questions ou points peu clairs"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Clôture appropriée",
+          "binaryOnly": false,
+          "details": [
+            "Encourage à rappeler en cas d'incertitude",
+            "Encourage à se présenter si nécessaire",
+            "Attitude rassurante et professionnelle"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge téléphonique complète avec conseils pratiques adaptés et organisation du suivi"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

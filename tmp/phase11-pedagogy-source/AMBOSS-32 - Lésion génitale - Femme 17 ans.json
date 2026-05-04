@@ -1,0 +1,579 @@
+{
+  "title": "AMBOSS-32 - Lésion génitale - Femme 17 ans",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Eva Woods, femme de 17 ans, consultant pour lésion génitale",
+    "vitals": {
+      "temperature": "36.5°C",
+      "ta": "115/80 mmHg",
+      "fc": "68 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Il y a quelque chose sur la peau dans ma région génitale"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la lésion génitale",
+          "binaryOnly": false,
+          "details": [
+            "Description du changement cutané [Je ne sais pas vraiment, je n'ai pas regardé de près]",
+            "Lésion douloureuse [Non]",
+            "Début [Ça a commencé il y a 5 jours]",
+            "Évolution temporelle [C'est là tout le temps]",
+            "Événements précipitants [Je ne peux penser à rien]",
+            "Progression [Non]",
+            "Épisodes antérieurs [Aucun]",
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Aucun]",
+            "Symptômes associés [Ça fait aussi bizarre quand j'urine depuis 5 jours]",
+            "Fréquence [Chaque fois que je dois uriner]",
+            "Autres symptômes urinaires (ex: sang dans les urines) [Non]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques pour lésions génitales et dysurie",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non, je n'ai été nulle part récemment]",
+            "Fièvre/frissons [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Problèmes intestinaux [Non]",
+            "Appétit [Normal]",
+            "Variations pondérales [Non]",
+            "Infections récentes [J'ai eu deux infections urinaires l'année dernière, où uriner était assez douloureux. Mais cette fois ça semble différent]",
+            "Gonflement dans l'aine [Non]",
+            "Douleur dans l'aine [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a5",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Je suis allergique au latex. J'ai dû porter des gants en latex dans notre laboratoire de biologie et j'ai eu une éruption horrible"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends une pilule contraceptive"
+        },
+        {
+          "id": "a7",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Seulement pour l'ablation de mon appendice]",
+            "Antécédents chirurgicaux [Mon appendice a été enlevé quand j'avais 10 ans]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Contacts malades et antécédents familiaux",
+          "binaryOnly": true,
+          "details": [
+            "Contacts malades [Non]",
+            "Antécédents familiaux [Mon père a de l'hypertension et du diabète]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je travaille comme serveuse]",
+            "Domicile [Je vis seule dans un appartement]",
+            "Alcool [Peut-être une bière tous les deux jours]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Non, je ne fume pas]",
+            "Tabac dans le passé [J'ai arrêté de fumer il y a 3 mois. Avant ça, j'ai fumé un paquet par jour pendant 2 ans]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents sexuels",
+          "binaryOnly": false,
+          "details": [
+            "Activité sexuelle [Oui]",
+            "Avec qui [J'ai eu plusieurs partenaires]",
+            "Hommes ou femmes [Seulement des hommes]",
+            "Nombre de partenaires au cours de la dernière année [J'ai eu 8 partenaires différents au cours de la dernière année, souvent des aventures d'un soir]",
+            "Protection [Je prends la pilule contraceptive. Je ne peux pas utiliser de préservatifs à cause de mon allergie au latex]",
+            "Antécédents d'infections sexuellement transmissibles [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents gynécologiques",
+          "binaryOnly": false,
+          "details": [
+            "Dernières règles [Il y a 1 semaine]",
+            "Ménarche [J'ai eu mes premières règles quand j'avais 13 ans]",
+            "Durée des règles [Environ 4 jours]",
+            "Règles régulières [Oui]",
+            "Combien de tampons par jour [Environ 3 petits par jour]",
+            "Pertes vaginales [Parfois j'ai un peu de pertes. J'en ai eu plus que d'habitude ces 4 derniers jours]",
+            "Apparence des pertes vaginales [La plupart du temps c'est blanc, mais j'ai aussi eu des pertes verdâtres ces 4 derniers jours]",
+            "Odeur des pertes vaginales [Ça ne sent pas]",
+            "Démangeaisons vaginales [Oui, toute ma région génitale me démange depuis quelques jours]",
+            "Sécheresse vaginale [Non]",
+            "Grossesses [Non, Dieu merci. Je m'assure de prendre mes pilules contraceptives tous les jours]",
+            "Avortements/fausses couches [Non]",
+            "Vaccination contre le VPH [Oui, j'ai reçu une injection contre le virus qui cause le cancer du col de l'utérus]",
+            "Série de vaccination complétée [Non, malheureusement j'ai oublié de retourner chez mon médecin]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen du dos",
+          "binaryOnly": true,
+          "details": [
+            "Examen de la sensibilité de l'angle costo-vertébral"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de l'abdomen",
+            "Auscultation de l'abdomen",
+            "Percussion de l'abdomen",
+            "Palpation de l'abdomen",
+            "Palpation des ganglions lymphatiques inguinaux"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections sexuellement transmissibles",
+                "items": [
+                  {
+                    "text": "Infection au papillomavirus humain (VPH)",
+                    "cause": "Arguments POUR:\n\t□ IST la plus fréquente aux États-Unis\n\t□ VPH types 6 et 11 → condylomes acuminés\n\t□ Lésions génitales indolores (vulve, col, urètre, anus)\n\t□ Prurit et sensibilité possibles\n\t□ Partenaires multiples (8/an) sans protection barrière\n\t□ Vaccination VPH incomplète (1 dose sur 3)\n\t□ Âge sexuellement active (17 ans)\nArguments CONTRE:\n\t□ Dysurie et pertes vaginales atypiques pour VPH seul → co-infection probable",
+                    "test": "→ Examen pelvien, inspection visuelle, biopsie si doute"
+                  },
+                  {
+                    "text": "Infection à Chlamydia trachomatis",
+                    "cause": "Arguments POUR:\n\t□ IST très fréquente chez jeunes femmes\n\t□ Pertes vaginales purulentes verdâtres\n\t□ Dysurie présente (urétrite)\n\t□ Partenaires multiples non protégés\n\t□ Certains sérotypes → lymphogranulome vénérien (lésion génitale)\nArguments CONTRE:\n\t□ Lésion génitale peu typique pour Chlamydia seule",
+                    "test": "→ PCR Chlamydia sur prélèvement cervical/urinaire"
+                  },
+                  {
+                    "text": "Syphilis primaire",
+                    "cause": "Arguments POUR:\n\t□ Chancre : lésion génitale indolore\n\t□ Ulcère unique rouge, rond, surélevé\n\t□ Bord induré caractéristique\n\t□ Localisation vulve/col possible\nArguments CONTRE:\n\t□ Pas d'adénopathies inguinales\n\t□ Pertes vaginales et prurit atypiques",
+                    "test": "→ Test RPR/VDRL, microscopie fond noir si chancre"
+                  }
+                ]
+              },
+              {
+                "name": "Co-infections probables",
+                "items": [
+                  {
+                    "text": "Gonorrhée",
+                    "cause": "Souvent associée à Chlamydia, pertes purulentes",
+                    "test": "→ PCR gonocoque sur prélèvement"
+                  },
+                  {
+                    "text": "Candidose vulvo-vaginale",
+                    "cause": "Prurit intense, pertes blanches, facteur favorisant : antibiotiques récents pour ITU",
+                    "test": "→ Examen direct KOH, culture"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "ATCD 2 ITU/an, dysurie présente",
+                    "test": "→ Bandelette urinaire, ECBU"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Examen pelvien [pour inspecter la lésion génitale et les pertes vaginales et examiner les signes de maladie inflammatoire pelvienne]",
+            "Examen rectal [pour évaluer les lésions dans la zone rectale (ex: souvent le cas dans l'infection VPH)]",
+            "Test VIH [devrait être effectué chez tous les patients à haut risque ; le consentement doit être obtenu avant d'effectuer le test]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Tests diagnostiques IST",
+          "binaryOnly": false,
+          "details": [
+            "Test rapide de la réagine plasmatique [pour tester la syphilis]",
+            "Microscopie à fond noir [tests définitifs pour détecter la syphilis primaire et secondaire lorsqu'un échantillon peut être obtenu (ex: chancre exsudatif, condylome)]",
+            "Tests d'amplification des acides nucléiques pour chlamydia et gonorrhée [pour tester l'infection à Chlamydia trachomatis et Neisseria gonorrhoeae]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Autres examens",
+          "binaryOnly": false,
+          "details": [
+            "Bandelette urinaire, analyse d'urine [pour évaluer une ITU]",
+            "Préparation à l'état frais avec test KOH [pour évaluer différentes formes de vulvovaginite (ex: candidose vulvo-vaginale)]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Demande de consentement pour effectuer le test VIH",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les pratiques sexuelles plus sûres",
+            "Conseil sur l'utilisation de préservatifs sans latex",
+            "Recommandation de compléter la série de vaccination VPH",
+            "Réaction appropriée au défi sur la confidentialité",
+            "Éducation sur la prévention des IST"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si infection VPH (condylomes) confirmée",
+                "content": "• Imiquimod 5% crème × 3/semaine × 16 sem\n• Ou podophyllotoxine 0.5% × 2/j × 3j\n• Cryothérapie azote liquide hebdomadaire\n• Surveillance régulière (récidives fréquentes)\n• Compléter vaccination VPH (doses 2 et 3)"
+              },
+              {
+                "title": "Si infection Chlamydia confirmée",
+                "content": "• Azithromycine 1 g dose unique PO\n• Ou doxycycline 100 mg × 2/j × 7j\n• Traitement partenaires obligatoire\n• Test de guérison à 3-4 semaines"
+              },
+              {
+                "title": "Si gonorrhée associée",
+                "content": "• Ceftriaxone 500 mg IM dose unique\n• PLUS azithromycine 1 g PO\n• Déclaration obligatoire"
+              },
+              {
+                "title": "Si syphilis primaire",
+                "content": "• Benzathine pénicilline G 2.4 MU IM dose unique\n• Si allergie: doxycycline 100 mg × 2/j × 14j\n• Suivi sérologique à 3, 6, 12 mois"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Abstinence sexuelle jusqu'à guérison\n• Dépistage et traitement tous partenaires récents\n• Préservatifs sans latex systématiques\n• Dépistage IST complet (VIH, hépatites)\n• Suivi gynécologique régulier"
+              }
+            ]
+          },
+          "redflagsSection": {
+            "title": "Complications à surveiller",
+            "items": [
+              {
+                "text": "Maladie inflammatoire pelvienne",
+                "description": "Douleur pelvienne, fièvre → hospitalisation, ATB IV"
+              },
+              {
+                "text": "Grossesse ectopique",
+                "description": "Complication tardive Chlamydia/gonorrhée non traitées"
+              },
+              {
+                "text": "Infertilité tubaire",
+                "description": "Séquelle infections pelviennes répétées"
+              },
+              {
+                "text": "Transmission VIH",
+                "description": "Risque augmenté si IST ulcératives"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Confidentialité parentale",
+          "content": "[Allez-vous le dire à mes parents ? Je ne veux pas qu'ils le sachent !]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Eva, je comprends votre préoccupation. Bien que je vous encourage à partager autant d'informations avec vos parents que vous vous sentez à l'aise, je ne suis pas autorisé à partager des informations concernant la contraception, la grossesse et les maladies sexuellement transmissibles avec vos parents sans votre consentement. Donc tout ce que vous me dites sur vos symptômes actuels sera gardé confidentiel, et je promets que je ne parlerai pas avec vos parents à moins que vous ne vouliez que je le fasse. Avez-vous d'autres questions ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Éruption maculo-papulaire dans la syphilis secondaire",
+        "description": "Des papules et macules rouges partiellement confluentes et partiellement squameuses de ≈ 2-5 mm de diamètre sont visibles sur les paumes et les poignets. Cette apparence est typique de la syphilis secondaire.",
+        "data": "grilles_generees/html/images/AMBOSS-32-img1-Maculopapular rash in secondary syphilis.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Éruption maculo-papulaire dans la syphilis secondaire (2)",
+        "description": "Une éruption maculopapulaire érythémateuse avec desquamation est visible sur la paume gauche. Une éruption avec cette apparence est typique de la syphilis secondaire.",
+        "data": "grilles_generees/html/images/AMBOSS-32-img2-Maculopapular rash in secondary syphilis.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Verrues anogénitales (condylomes acuminés)",
+        "description": "De multiples lésions exophytiques, en forme de chou-fleur, confluentes et érythémateuses sont visibles dans la région périanale.",
+        "data": "grilles_generees/html/images/AMBOSS-32-img3-Anogenital warts (condylomata acuminata).jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Chancre du gland dans la syphilis primaire",
+        "description": "Un ulcère superficiel avec des bords indurés est visible sur le gland du pénis. Cette découverte est compatible avec la syphilis primaire.",
+        "data": "grilles_generees/html/images/AMBOSS-32-img4-Chancre of the glans penis in primary syphilis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Pseudohyphes dans la candidose vulvo-vaginale",
+        "description": "Préparation vaginale à l'état frais après préparation à l'hydroxyde de potassium (KOH) (microscopie) qui montre Candida albicans formant de multiples pseudohyphes (structures filamenteuses fines).",
+        "data": "grilles_generees/html/images/AMBOSS-32-img5-Pseudohyphae in vulvovaginal candidiasis.jpg",
+        "id": "img5"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Eva Woods",
+      "age": "17 ans",
+      "contexte": "Adolescente sexuellement active avec lésion génitale et symptômes d'IST",
+      "motifConsultation": {
+        "plaintePrincipale": "Il y a quelque chose sur la peau dans ma région génitale.",
+        "autreChose": "Et ça fait bizarre quand j'urine."
+      },
+      "consignes": [
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: vaccin VPH) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Allez-vous le dire à mes parents ? Je ne veux pas qu'ils le sachent !'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Lésion génitale depuis 5 jours",
+          "Non douloureuse",
+          "N'a pas regardé de près",
+          "Présente en permanence",
+          "Pas de facteur déclenchant identifié"
+        ],
+        "symptomesAssocies": [
+          "Dysurie depuis 5 jours",
+          "Pertes vaginales augmentées",
+          "Pertes verdâtres depuis 4 jours",
+          "Prurit génital depuis quelques jours",
+          "Pas d'odeur des pertes",
+          "ATCD 2 ITU l'année dernière"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montrer de la gêne/pudeur",
+          "Anxiété sur confidentialité parentale",
+          "Minimiser nombre de partenaires initialement",
+          "Insister sur allergie latex (important!)",
+          "Mentionner oubli compléter vaccination VPH"
+        ],
+        "durantStatus": [
+          "Coopérer pour examen abdominal",
+          "Pas de signes inflammatoires pelviens",
+          "Pas d'adénopathies inguinales",
+          "Examen cutané général normal",
+          "Rappeler pudeur (drapage respectueux)"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Adolescente 17 ans avec probable co-infection IST : condylomes VPH + Chlamydia/gonorrhée. Facteurs de risque majeurs : 8 partenaires/an, pas de protection barrière (allergie latex), vaccination VPH incomplète. Dysurie + pertes verdâtres = infection cervico-urétrale probable. CONFIDENTIALITÉ ABSOLUE (mineure + IST). Dépistage complet IST obligatoire incluant VIH. Traitement empirique justifié. Éducation cruciale : préservatifs sans latex disponibles!",
+      "rolesInterventions": [
+        "Examen génital externe : condylomes vulvaires multiples",
+        "Col : pertes mucopurulentes verdâtres abondantes",
+        "Test Chlamydia/gonorrhée : positifs tous deux",
+        "RPR : négatif",
+        "Test VIH : négatif (avec consentement)",
+        "Bandelette urinaire : leucocytes ++, nitrites -"
+      ],
+      "pointsCles": [
+        "IST chez mineure = confidentialité absolue sauf danger",
+        "Co-infections IST fréquentes → dépistage complet",
+        "Allergie latex ≠ contre-indication protection barrière",
+        "Préservatifs sans latex (polyuréthane, polyisoprène) existent",
+        "Vaccination VPH efficace même après début activité sexuelle",
+        "Traitement partenaires obligatoire (notification anonyme possible)"
+      ],
+      "pieges": [
+        "Informer les parents sans consentement (illégal)",
+        "Oublier alternatives préservatifs sans latex",
+        "Ne traiter qu'une seule IST (co-infections ++)",
+        "Omettre dépistage VIH chez patient à risque",
+        "Ne pas compléter vaccination VPH",
+        "Jugement moral sur comportement sexuel"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Co-infection VPH (condylomes) + Chlamydia trachomatis"
+        },
+        {
+          "titre": "Infection VPH",
+          "contenu": "IST la plus fréquente, virus ADN papillomavirus :",
+          "points": [
+            "Prévalence : 40% adultes sexuellement actifs",
+            "Types 6, 11 : condylomes (90% cas), bas risque",
+            "Types 16, 18 : haut risque oncogène (70% cancers col)",
+            "Transmission : contact peau-peau (préservatif protection partielle)",
+            "Incubation : 3 semaines à 8 mois",
+            "Clairance spontanée : 90% à 2 ans si immunocompétent"
+          ]
+        },
+        {
+          "titre": "Condylomes acuminés",
+          "contenu": "Verrues génitales bénignes mais récidivantes :",
+          "points": [
+            "Aspect : papules/plaques rosées, surface verruqueuse",
+            "Localisation F : vulve, périnée, péri-anal, col, vagin",
+            "Symptômes : généralement asymptomatiques, prurit possible",
+            "Diagnostic : clinique, biopsie si doute",
+            "Évolution : croissance variable, régression spontanée possible",
+            "Récidive : 30% après traitement"
+          ]
+        },
+        {
+          "titre": "Infection Chlamydia trachomatis",
+          "contenu": "Bactérie intracellulaire obligatoire, IST bactérienne #1 :",
+          "points": [
+            "Incidence : pic 15-24 ans, F > H",
+            "Sérotypes D-K : infections urogénitales",
+            "Sérotypes L1-L3 : lymphogranulome vénérien (rare)",
+            "Asymptomatique : 70% femmes, 50% hommes",
+            "Symptômes F : cervicite mucopurulente, urétrite, dysurie",
+            "Complications : MIP (10-15%), grossesse ectopique, infertilité"
+          ]
+        },
+        {
+          "titre": "Vaccination VPH",
+          "contenu": "Prévention primaire cancers et condylomes :",
+          "points": [
+            "Vaccins : Gardasil 9 (types 6,11,16,18,31,33,45,52,58)",
+            "Schéma : 2 doses si < 15 ans, 3 doses si ≥ 15 ans",
+            "Efficacité : 90% prévention condylomes si naïf",
+            "Rattrapage : jusqu'à 26 ans (45 ans certains pays)",
+            "Bénéfice post-exposition : oui (autres types, récidives)",
+            "Couverture optimale : avant début activité sexuelle"
+          ]
+        },
+        {
+          "titre": "Confidentialité médicale chez mineurs",
+          "contenu": "Exceptions au consentement parental :",
+          "points": [
+            "Contraception : accès libre sans autorisation parentale",
+            "IST : diagnostic et traitement confidentiels",
+            "Grossesse : suivi prénatal, IVG confidentiels",
+            "Addictions : prise en charge confidentielle",
+            "Santé mentale : selon gravité et âge",
+            "Limites : danger imminent, maltraitance, incapacité"
+          ]
+        },
+        {
+          "titre": "Alternatives préservatifs pour allergie latex",
+          "contenu": "Options protection barrière sans latex :",
+          "points": [
+            "Polyuréthane : fin, conducteur chaleur, plus cher",
+            "Polyisoprène : élastique comme latex, hypoallergénique",
+            "Peau d'agneau : protection grossesse seule (pas IST)",
+            "Préservatif féminin : polyuréthane ou nitrile",
+            "Efficacité : équivalente latex si usage correct",
+            "Disponibilité : pharmacies, planning familial"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Condylomes : imiquimod 3×/sem ou podophyllotoxine 2×/j × 3j",
+        "Cryothérapie : azote liquide hebdomadaire si échec topiques",
+        "Chlamydia : azithromycine 1g dose unique (1ère ligne)",
+        "Alternative : doxycycline 100 mg × 2/j × 7j",
+        "Gonorrhée : ceftriaxone 500 mg IM + azithromycine 1g",
+        "Test de contrôle : 3-4 semaines après traitement",
+        "Notification partenaires : 60 jours précédents",
+        "Abstinence : 7 jours après traitement monodose"
+      ],
+      "examensComplementaires": [
+        "PCR Chlamydia/gonocoque : prélèvement cervical ou 1er jet",
+        "Test VIH 4e génération : dépistage systématique si IST",
+        "Sérologies : syphilis (RPR/VDRL), hépatites B/C",
+        "Examen pelvien : inspection condylomes, prélèvements",
+        "Colposcopie : si condylomes cervicaux",
+        "Bandelette urinaire : éliminer ITU associée",
+        "Test grossesse : si retard règles",
+        "Frottis cervical : différé (pas avant 21 ans)"
+      ]
+    }
+  }
+}

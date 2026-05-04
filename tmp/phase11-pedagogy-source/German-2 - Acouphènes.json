@@ -1,0 +1,416 @@
+{
+  "title": "German-2 - Acouphènes",
+  "context": {
+    "setting": "Cabinet ORL",
+    "patient": "M. Dupont, 50 ans, se présente chez l'ORL pour un nouveau problème auriculaire"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Problème actuel",
+          "binaryOnly": true,
+          "patientComment": "Acouphènes - ça siffle toujours comme ça"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation des acouphènes",
+          "details": [
+            "Apparition temporelle [depuis environ 1 mois]",
+            "Évolution [constant, parfois plus fort, parfois plus faible]",
+            "Facteurs modulateurs [augmente lors d'effort et de stress]",
+            "Type de son [sifflement aigu]",
+            "Latéralisation [bilatérale]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes ORL associés",
+          "details": [
+            "Troubles auditifs [possible, doit souvent faire répéter]",
+            "Sécrétions auriculaires (cérumen, sang, pus) [non]",
+            "Otalgie [non]",
+            "Vertiges [parfois - ce son rend tout bizarre !]",
+            "Sensation de plénitude auriculaire [non mentionnée]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux d'accompagnement",
+          "details": [
+            "Fièvre [non]",
+            "Toux [non]",
+            "Rhinite [non]",
+            "Nausées/vomissements [non]",
+            "Céphalées [non mentionnées]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Recherche de facteurs déclenchants",
+          "patientComment": "Vous croyez que j'invente ça ? Je ne sais pas d'où vient ce sifflement ! Mais ça siffle !",
+          "details": [
+            "Traumatisme acoustique récent",
+            "Exposition au bruit",
+            "Situations particulières"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents ORL",
+          "patientComment": "Aucune maladie auriculaire antérieure",
+          "details": [
+            "Otites à répétition",
+            "Chirurgie ORL",
+            "Surdité familiale"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux généraux",
+          "details": [
+            "Hypertension artérielle [légèrement élevée]",
+            "Diabète [non mentionné]",
+            "Maladies cardiovasculaires [non mentionnées]",
+            "Troubles neurologiques [non]",
+            "Antécédents psychiatriques [burnout traité - va bien maintenant]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Traumatismes",
+          "patientComment": "Quelques chutes à vélo, sinon rien - tête pas gravement blessée",
+          "details": [
+            "Traumatisme crânien",
+            "Barotraumatisme",
+            "Traumatisme cervical"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Anamnèse médicamenteuse",
+          "patientComment": "Ne connaît pas ses médicaments",
+          "details": [
+            "Recherche de médicaments ototoxiques (aminosides, diurétiques de l'anse, aspirine haute dose)",
+            "Chimiothérapie",
+            "Médicaments actuels"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse sociale et professionnelle",
+          "details": [
+            "Situation familiale [marié - malheureux avec sa femme, 3 enfants adultes]",
+            "Profession [facteur]",
+            "Exposition professionnelle au bruit [exposition limitée]",
+            "Consommation de substances (tabac, alcool, café)"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Anamnèse systémique",
+          "details": [
+            "Revue des systèmes cardiovasculaire",
+            "Revue du système neurologique",
+            "Recherche de signes d'alerte"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Impact sur la qualité de vie",
+          "details": [
+            "Troubles du sommeil",
+            "Difficultés de concentration",
+            "Retentissement professionnel",
+            "Anxiété liée aux acouphènes"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et systématique bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection",
+          "details": [
+            "Inspection du pavillon auriculaire [normal]",
+            "Recherche de cicatrices ou malformations [absentes]",
+            "Inspection du conduit auditif externe [normal]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation",
+          "details": [
+            "Pression du tragus [non douloureux]",
+            "Traction du pavillon [non douloureux]",
+            "Palpation mastoïdienne [normale]",
+            "Palpation des ganglions cervicaux [normaux]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Otoscopie bilatérale",
+          "patientComment": "Normale des deux côtés",
+          "details": [
+            "Aspect du tympan",
+            "Présence de cérumen",
+            "Signes inflammatoires",
+            "Perforations"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Tests auditifs au diapason",
+          "details": [
+            "Test de Weber [normal - pas de latéralisation]",
+            "Test de Rinne bilatéral [normal - conduction aérienne > osseuse]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen vestibulaire et de l'équilibre",
+          "details": [
+            "Test de Romberg [légèrement instable]",
+            "Recherche de nystagmus [absent]",
+            "Test de marche aveugle [normal]",
+            "Épreuve des index [normale]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique ciblé",
+          "patientComment": "Normal",
+          "details": [
+            "Nerfs crâniens (notamment V, VII, VIII)",
+            "Réflexes",
+            "Sensibilité faciale",
+            "Force musculaire"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque [normale]",
+            "Auscultation carotidienne (souffle) [absente]",
+            "Mesure de la tension artérielle [légèrement élevée]",
+            "Pouls périphériques [normaux]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen de la cavité buccale et du pharynx",
+          "details": [
+            "Inspection de l'oropharynx",
+            "Palpation de l'articulation temporo-mandibulaire",
+            "Dentition"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et systématique bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Acouphènes"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins 4 diagnostics pertinents = 2 pts, 2-3 = 1 pt, moins de 2 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Surdité brusque",
+                    "cause": "□ diagnostic d'exclusion",
+                    "test": "→ Audiométrie, tympanométrie, IRM si suspicion rétrocochléaire"
+                  },
+                  {
+                    "text": "Hypertension artérielle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Mesure TA répétée, MAPA, bilan HTA"
+                  },
+                  {
+                    "text": "Neurinome de l'acoustique",
+                    "cause": "□ Schwannome vestibulaire",
+                    "test": "→ IRM cérébrale avec gadolinium, PEA"
+                  },
+                  {
+                    "text": "Maladie de Ménière",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Audiométrie, vidéonystagmographie, IRM"
+                  },
+                  {
+                    "text": "Otospongiose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Audiométrie, tympanométrie, CT rochers"
+                  },
+                  {
+                    "text": "Presbyacousie avec acouphènes",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Audiométrie, IRM cérébrale si unilatéral"
+                  },
+                  {
+                    "text": "Infections",
+                    "cause": "Arguments POUR:\n\t□ Otite moyenne chronique, labyrinthite",
+                    "test": "→ Otoscopie, audiométrie, CT si complications"
+                  },
+                  {
+                    "text": "Bouchon de cérumen",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Otoscopie"
+                  },
+                  {
+                    "text": "Causes vasculaires",
+                    "cause": "□ Malformation artério-veineuse",
+                    "test": "→ IRM/ARM cérébrale, angiographie"
+                  },
+                  {
+                    "text": "Causes métaboliques",
+                    "cause": "□ dysthyroïdie",
+                    "test": "→ TSH, T4 libre, T3"
+                  },
+                  {
+                    "text": "Traumatisme acoustique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Audiométrie, CT rochers si fracture suspectée"
+                  },
+                  {
+                    "text": "Médicaments ototoxiques",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Audiométrie de suivi, dosage médicamenteux"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires",
+          "details": [
+            "Audiométrie tonale et vocale",
+            "Tympanométrie",
+            "Potentiels évoqués auditifs",
+            "Acouphénométrie",
+            "IRM cérébrale avec séquences du rocher (si suspicion de neurinome)",
+            "Bilan biologique (NFS, TSH, glycémie)",
+            "Bilan cardiovasculaire si indiqué"
+          ],
+          "scoringRule": "Au moins 3 examens pertinents = 2 pts"
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement aigu (si récent)",
+                "content": "• Corticothérapie (comme pour surdité brusque)\n• Prednisolone 1 mg/kg/j pendant 7-10 jours\n• Hémodilution (hydroxyéthylamidon)"
+              },
+              {
+                "title": "Traitement de la cause sous-jacente",
+                "content": "• Contrôle de l'hypertension artérielle\n• Correction des troubles métaboliques\n• Arrêt des médicaments ototoxiques si possible\n• Extraction du bouchon de cérumen"
+              },
+              {
+                "title": "Traitement symptomatique chronique",
+                "content": "• Thérapie cognitivo-comportementale (TCC)\n• Thérapie sonore (masquage, habituation)\n• Appareillage auditif avec générateur de bruit blanc\n• Techniques de relaxation\n• Prise en charge du stress"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Éviter le silence complet\n• Hygiène de sommeil\n• Réduction de la consommation de caféine\n• Activité physique régulière"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Information et éducation du patient",
+          "details": [
+            "Expliquer la nature bénigne dans la majorité des cas",
+            "Informer sur la complexité du traitement [le traitement des acouphènes n'est pas simple]",
+            "Rassurer sur l'absence de gravité habituelle",
+            "Expliquer l'importance de la prise en charge globale"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Suivi et orientation",
+          "details": [
+            "Contrôle audiométrique régulier",
+            "Suivi ORL spécialisé",
+            "Orientation psychologique si retentissement important",
+            "Groupe de soutien pour patients acouphéniques"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Signes d'alerte nécessitant une prise en charge urgente",
+          "redflagsSection": [
+            {
+              "text": "Acouphènes pulsatiles unilatéraux"
+            },
+            {
+              "text": "Surdité brusque associée"
+            },
+            {
+              "text": "Vertiges invalidants"
+            },
+            {
+              "text": "Signes neurologiques focaux"
+            },
+            {
+              "text": "Céphalées inhabituelles"
+            },
+            {
+              "text": "Acouphènes avec otorrhée ou otalgie"
+            }
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète, structurée et adaptée au patient"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

@@ -1,0 +1,912 @@
+{
+  "title": "RESCOS-25 - Douleur au flanc et troubles mictionnels - ECC Urologie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 65 ans consultant pour état fébrile avec douleurs du flanc gauche et troubles mictionnels aigus",
+    "vitals": {
+      "temperature": "39.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur du flanc",
+          "details": [
+            "Mode d'apparition [veille, brutale]",
+            "Localisation [flanc gauche]",
+            "Type de douleur [constante, 6/10]",
+            "Irradiation [aucune]",
+            "Position antalgique [aucune]",
+            "Facteurs aggravants/soulageant [empêche de dormir]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des troubles mictionnels aigus",
+          "details": [
+            "Algurie [brûlures en urinant depuis 4 jours]",
+            "Pollakiurie [toutes les 2 heures]",
+            "Aspect des urines [pas de changement visible]",
+            "Hématurie [absente]",
+            "Odeur des urines [plus forte que d'habitude]",
+            "Pyurie [présence de pus]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a3",
+          "text": "Recherche des symptômes de prostatisme",
+          "details": [
+            "Dysurie d'attente [difficulté à initier la miction]",
+            "Dysurie de poussée [besoin de forcer]",
+            "Sensation de vidange incomplète [vessie pas complètement vide]",
+            "Faiblesse du jet [diminution progressive]",
+            "Pollakiurie habituelle [toutes les 3 heures]",
+            "Incontinence par regorgement [tâches dans le slip]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés et généraux",
+          "details": [
+            "Fièvre [39°C]",
+            "Frissons [présents]",
+            "Troubles du transit [à rechercher]",
+            "Pneumaturie [air dans les urines - absent]",
+            "Fécalurie [selles dans les urines - absente]",
+            "État général [bonne santé habituelle]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Recherche des types d'hématurie",
+          "details": [
+            "Hématurie initiale [au début de la miction]",
+            "Hématurie terminale [fin de miction]",
+            "Hématurie totale [toute la miction]",
+            "Quantification [macroscopique vs microscopique]",
+            "Chronologie [aiguë vs chronique]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Évaluation de l'incontinence urinaire",
+          "details": [
+            "Incontinence par regorgement [gouttes, vessie pleine]",
+            "Incontinence de stress [effort, toux, rire]",
+            "Incontinence d'urgence [envie soudaine]",
+            "Circonstances déclenchantes",
+            "Retentissement sur la qualité de vie"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux et facteurs de risque",
+          "details": [
+            "Antécédents urologiques [infections, lithiases]",
+            "Pathologies chroniques [diabète, HTA]",
+            "Interventions chirurgicales antérieures",
+            "Allergies médicamenteuses",
+            "Traitements actuels"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Habitudes et mode de vie",
+          "details": [
+            "Tabagisme [facteur de risque cancer vessie]",
+            "Hydratation quotidienne",
+            "Activité sexuelle [dysfonction érectile]",
+            "Expositions professionnelles [colorants, amines]",
+            "Activité physique"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche urologique systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "Position du patient [position antalgique?]",
+            "Agitation [patient agité par douleur?]",
+            "État général [pâleur, transpiration]",
+            "Aspect général [facies douloureux]",
+            "Coloration cutanée"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de l'abdomen - séquence complète",
+          "details": [
+            "Inspection [cicatrices, distension]",
+            "Auscultation [de part et d'autre du nombril]",
+            "Percussion [main à plat, 4 quadrants]",
+            "Palpation superficielle [4 quadrants]",
+            "Palpation profonde [débuter côté non douloureux]",
+            "Recherche douleur et masses"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la vessie",
+          "details": [
+            "Percussion sus-pubienne [recherche matité]",
+            "Palpation sus-pubienne [recherche globe vésical]",
+            "Évaluation du volume vésical",
+            "Recherche de douleur vésicale",
+            "Signes de rétention urinaire"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen des loges rénales",
+          "details": [
+            "Palpation bimanuelle [main postérieure flanc, main antérieure sous rebord costal]",
+            "Recherche rein palpable [descente à l'inspiration]",
+            "Percussion loges rénales [patient assis]",
+            "Recherche douleur à la percussion [signe de Giordano]",
+            "Comparaison bilatérale"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Toucher rectal - technique",
+          "details": [
+            "Positionnement patient et explications",
+            "Inspection péri-anale [inflammations, fissures, nodules, fistules, hémorroïdes]",
+            "Évaluation tonus sphinctérien [fermeture complète]",
+            "Palpation rectum [polypes, masses, irrégularités]",
+            "Palpation cul-de-sac de Douglas [antérieur au rectum]",
+            "Inspection doigtier [selles, sang]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e6",
+          "text": "Examen de la prostate au toucher rectal",
+          "details": [
+            "Taille prostate [normale 3-4 cm, châtaigne]",
+            "Consistance [ferme élastique normale]",
+            "Surface [lisse vs nodulaire]",
+            "Sensibilité [douleur à la palpation]",
+            "Masse suspecte [induration, asymétrie]",
+            "Sillon médian [présent vs effacé]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen complémentaire orienté",
+          "details": [
+            "Palpation ganglionnaire inguinale",
+            "Examen des organes génitaux externes",
+            "Recherche œdèmes membres inférieurs",
+            "Examen neurologique périnéal si indiqué",
+            "Signes de déshydratation"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - examen urologique complet",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Orientation diagnostique principale",
+          "details": [
+            "Pyélonéphrite aiguë sur obstacle prostatique",
+            "Prostatite aiguë bactérienne",
+            "Syndrome obstructif du bas appareil urinaire",
+            "Évaluation de la sévérité [sepsis, rétention]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel urologique",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections urinaires",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite aiguë obstructive",
+                    "cause": "Arguments POUR:\n\t□ Fièvre 39°C avec frissons\n\t□ Douleur flanc gauche constante\n\t□ Algurie et pollakiurie\n\t□ Obstacle prostatique sous-jacent",
+                    "test": "→ ECBU, hémocultures, échographie rénale, scanner si doute"
+                  },
+                  {
+                    "text": "Prostatite aiguë bactérienne",
+                    "cause": "Arguments POUR:\n\t□ Fièvre élevée avec frissons\n\t□ Troubles mictionnels aigus\n\t□ Contexte de prostatisme\nArguments CONTRE:\n\t□ Douleur flanc plutôt que périnéale",
+                    "test": "→ ECBU, toucher rectal douloureux, PSA différé"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies obstructives",
+                "items": [
+                  {
+                    "text": "Hypertrophie bénigne de prostate (HBP)",
+                    "cause": "Arguments POUR:\n\t□ Âge 65 ans\n\t□ Dysurie depuis 1 an\n\t□ Faiblesse du jet\n\t□ Vidange incomplète\n\t□ Incontinence par regorgement",
+                    "test": "→ PSA, échographie vésico-prostatique, débitmétrie"
+                  },
+                  {
+                    "text": "Cancer de prostate",
+                    "cause": "Arguments POUR:\n\t□ Âge > 50 ans\n\t□ Symptômes obstructifs\nArguments CONTRE:\n\t□ Évolution progressive sur 1 an",
+                    "test": "→ PSA, toucher rectal, IRM prostatique si PSA élevé"
+                  }
+                ]
+              },
+              {
+                "name": "Lithiases urinaires",
+                "items": [
+                  {
+                    "text": "Colique néphrétique fébrile",
+                    "cause": "Arguments POUR:\n\t□ Douleur flanc\n\t□ Contexte fébrile\nArguments CONTRE:\n\t□ Douleur constante non colique\n\t□ Pas d'agitation typique",
+                    "test": "→ Bandelette urinaire, échographie, scanner low-dose"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics évoqués = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "Bandelette urinaire [leucocytes, nitrites, sang]",
+            "ECBU avec antibiogramme [avant antibiothérapie]",
+            "NFS, CRP [syndrome inflammatoire]",
+            "Créatinine, urée [fonction rénale]",
+            "Ionogramme [déshydratation, sepsis]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "details": [
+            "Échographie rénale et vésicale [dilatation, lithiase]",
+            "Mesure résidu post-mictionnel [rétention chronique]",
+            "Scanner abdomino-pelvien si doute diagnostique",
+            "Échographie prostatique par voie sus-pubienne",
+            "UIV ou uro-scanner si indication"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement antibiotique empirique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Pyélonéphrite aiguë",
+                "content": "• Ceftriaxone IV : 2g/jour ou ciprofloxacine 500mg x2/j PO si allergie × 10-14 jours total, relais PO selon antibiogramme\n• Hospitalisation : Si signes de gravité, obstacle, immunodépression × Surveillance 48-72h minimum"
+              },
+              {
+                "title": "Drainage urinaire si obstacle",
+                "content": "• Sonde vésicale : Si rétention aiguë ou résidu important × Jusqu'à traitement définitif obstacle"
+              }
+            ]
+          },
+          "scoringRule": "Traitement adapté avec posologie = oui, partiel = ±, inadapté = non"
+        },
+        {
+          "id": "m6",
+          "text": "Traitement symptomatique et mesures générales",
+          "details": [
+            "Antipyrétiques [paracétamol 1g x4/j]",
+            "Antalgiques [palier adapté à la douleur]",
+            "Hydratation [2-3L/jour si pas de rétention]",
+            "Alpha-bloquants [tamsulosine si prostatisme]",
+            "Repos et surveillance température"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Hospitalisation si sepsis sévère",
+            "Rétention urinaire aiguë nécessitant drainage",
+            "Insuffisance rénale aiguë obstructive",
+            "Échec antibiothérapie ambulatoire 48h",
+            "Terrain fragile [diabète, immunodépression]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m8",
+          "text": "Suivi et prise en charge au long cours",
+          "details": [
+            "Consultation urologie pour bilan prostatique",
+            "PSA à distance de l'infection [3 mois]",
+            "Débitmétrie et résidu post-mictionnel",
+            "Discussion traitement HBP [médical vs chirurgical]",
+            "Dépistage cancer prostate selon recommandations"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge urologique globale",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé - Prostatisme et infection urinaire",
+      "nom": "Patient homme",
+      "age": "65 ans",
+      "contexte": "Homme en bonne santé habituelle consultant pour état fébrile avec douleurs du flanc et troubles urinaires",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai de la fièvre depuis hier et des douleurs au flanc gauche",
+        "autreChose": "J'ai aussi des brûlures quand j'urine depuis quelques jours"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "État fébrile à 39° apparu la veille",
+          "Frissons associés à la fièvre",
+          "Douleurs du flanc gauche constantes",
+          "Intensité 6/10, sans facteur déclenchant",
+          "Sans irradiation, sans position antalgique",
+          "Douleur empêchant de dormir"
+        ],
+        "symptomesAssocies": [
+          "Brûlures mictionnelles depuis 4 jours",
+          "Pollakiurie toutes les 2 heures",
+          "Pas de changement d'aspect des urines",
+          "Pas de sang visible dans les urines",
+          "Urines sentant plus fort que d'habitude"
+        ],
+        "troublesChroniquesMictionnels": [
+          "Problèmes urinaires depuis environ 1 an",
+          "Difficulté à initier la miction",
+          "Impression de vessie pas complètement vide",
+          "Besoin d'uriner toutes les 3 heures habituellement",
+          "Force du jet diminuée progressivement",
+          "Pertes d'urine occasionnelles (tâches dans le slip)"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Bonne santé habituelle",
+        "Pas d'antécédents urologiques particuliers",
+        "Pas d'infections urinaires antérieures",
+        "Pas de lithiases connues"
+      ],
+      "habitudes": {
+        "tabac": "À préciser selon objectifs pédagogiques",
+        "hydratation": "Boit environ 1.5L par jour",
+        "activiteSexuelle": "Peut mentionner dysfonction érectile si interrogé",
+        "profession": "À adapter selon le contexte"
+      },
+      "simulation": {
+        "attitude": [
+          "Patient inquiet par la fièvre et les douleurs",
+          "Coopératif mais gêné par les questions intimes",
+          "Peut minimiser les troubles mictionnels chroniques",
+          "Expression de douleur lors de la palpation du flanc"
+        ],
+        "durantExamen": [
+          "Position normale, pas de position antalgique marquée",
+          "Légère transpiration due à la fièvre",
+          "Douleur à la percussion de la loge rénale gauche",
+          "Gêne lors du toucher rectal",
+          "Globe vésical possible si rétention"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est une infection des reins ?",
+          "Est-ce lié à mes problèmes pour uriner ?",
+          "Vais-je devoir être hospitalisé ?",
+          "C'est grave docteur ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Homme 65 ans, état fébrile 39°C avec frissons. Douleur flanc gauche 6/10. Algurie et pollakiurie depuis 4 jours. Prostatisme évoluant depuis 1 an avec dysurie, faiblesse du jet et incontinence par regorgement. Probable pyélonéphrite aiguë sur obstacle prostatique.",
+      "rolesInterventions": [
+        "Observer l'anamnèse complète des troubles mictionnels",
+        "Évaluer la caractérisation de la douleur du flanc",
+        "Vérifier la recherche des différents types de troubles mictionnels",
+        "Contrôler la technique d'examen abdominal et des loges rénales",
+        "Apprécier la réalisation du toucher rectal"
+      ],
+      "pointsCles": [
+        "Caractérisation complète douleur flanc (PQRST)",
+        "Différenciation troubles mictionnels aigus vs chroniques",
+        "Recherche signes de gravité (sepsis, rétention)",
+        "Examen abdominal séquence IAAPP",
+        "Palpation bimanuelle des loges rénales",
+        "Percussion loges rénales patient assis",
+        "Toucher rectal avec évaluation prostate",
+        "Diagnostic pyélonéphrite sur obstacle",
+        "Antibiothérapie adaptée et drainage si nécessaire",
+        "Orientation urologique pour bilan prostatique"
+      ],
+      "pieges": [
+        "Se focaliser uniquement sur l'infection aiguë",
+        "Omettre l'anamnèse du prostatisme chronique",
+        "Ne pas rechercher tous les types de troubles mictionnels",
+        "Mauvaise technique palpation loges rénales",
+        "Oublier le toucher rectal",
+        "Ne pas évaluer le résidu post-mictionnel",
+        "Antibiothérapie inadaptée à la pyélonéphrite",
+        "Ne pas reconnaître l'urgence si obstacle",
+        "Omettre le suivi urologique ultérieur"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en urologie",
+      "sections": [
+        {
+          "titre": "Troubles mictionnels - Classification",
+          "contenu": "Systématisation des symptômes du bas appareil urinaire.",
+          "points": [
+            "Symptômes obstructifs : dysurie, jet faible, gouttes retardataires",
+            "Symptômes irritatifs : pollakiurie, urgenturie, nycturie",
+            "Algurie : brûlures mictionnelles (infection, inflammation)",
+            "Hématurie : initiale (urètre), terminale (vessie), totale (rein)",
+            "Incontinence : effort, urgence, regorgement, mixte",
+            "Score IPSS : évaluation standardisée des symptômes",
+            "Retentissement sur qualité de vie"
+          ]
+        },
+        {
+          "titre": "Hypertrophie bénigne de prostate",
+          "contenu": "Pathologie urologique la plus fréquente chez l'homme âgé.",
+          "points": [
+            "Prévalence : 50% à 60 ans, 90% à 85 ans",
+            "Physiopathologie : hyperplasie zone transitionnelle",
+            "Symptômes obstructifs et irritatifs progressifs",
+            "Complications : rétention, infections, lithiases, IRC",
+            "Diagnostic : TR, PSA, échographie, débitmétrie",
+            "Traitement médical : alpha-bloquants, inhibiteurs 5α-réductase",
+            "Traitement chirurgical : RTUP, adénomectomie, laser"
+          ]
+        },
+        {
+          "titre": "Infections urinaires masculines",
+          "contenu": "Toujours considérées comme compliquées chez l'homme.",
+          "points": [
+            "Facteurs de risque : obstacle, sondage, diabète, immunodépression",
+            "Cystite : rare, rechercher facteur favorisant",
+            "Prostatite aiguë : fièvre, douleurs périnéales, TR douloureux",
+            "Pyélonéphrite : fièvre, douleur lombaire, signes urinaires",
+            "ECBU systématique avant antibiothérapie",
+            "Imagerie si fièvre persistante ou récidive",
+            "Antibiothérapie prolongée 10-21 jours selon site"
+          ]
+        },
+        {
+          "titre": "Examen des loges rénales",
+          "contenu": "Technique de palpation et percussion rénale.",
+          "points": [
+            "Palpation bimanuelle : main postérieure soulève",
+            "Main antérieure palpe sous rebord costal",
+            "Rein descend à l'inspiration profonde",
+            "Pôle inférieur rein droit parfois palpable normalement",
+            "Percussion : patient assis, poing fermé",
+            "Signe de Giordano : douleur à la percussion",
+            "Comparaison bilatérale systématique"
+          ]
+        },
+        {
+          "titre": "Toucher rectal - Technique",
+          "contenu": "Examen fondamental en urologie masculine.",
+          "points": [
+            "Position : décubitus latéral ou debout penché",
+            "Inspection péri-anale : fissures, hémorroïdes, fistules",
+            "Introduction doigt lubrifié doucement",
+            "Tonus sphinctérien : normal = fermeture complète",
+            "Palpation parois rectales : masses, irrégularités",
+            "Prostate : taille, consistance, surface, sillon médian",
+            "Vésicules séminales palpables si pathologiques"
+          ]
+        },
+        {
+          "titre": "Cancer de prostate - Dépistage",
+          "contenu": "Recommandations actuelles de dépistage.",
+          "points": [
+            "Dépistage individuel 50-70 ans après information",
+            "45 ans si antécédent familial ou origine africaine",
+            "PSA total + toucher rectal annuels",
+            "PSA > 4 ng/ml ou TR anormal → biopsies",
+            "Rapport PSA libre/total < 20% suspect",
+            "Vélocité PSA > 0.75 ng/ml/an significative",
+            "IRM multiparamétrique avant biopsies"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Alpha-bloquants : tamsulosine 0.4mg/j, alfuzosine 10mg/j",
+        "Inhibiteurs 5α-réductase : finastéride 5mg/j si prostate >40g",
+        "Pyélonéphrite : ceftriaxone 1-2g/j IV ou fluoroquinolone PO",
+        "Prostatite aiguë : fluoroquinolone 500mg x2/j 3 semaines",
+        "Anticholinergiques : oxybutynine si vessie hyperactive",
+        "Sondage vésical : si rétention aiguë ou résidu >300ml"
+      ],
+      "examensComplementaires": [
+        "ECBU : leucocyturie, bactériurie, antibiogramme",
+        "PSA : dépistage cancer, faussement élevé si infection",
+        "Créatinine : fonction rénale, obstruction chronique",
+        "Échographie : reins, vessie, prostate, résidu post-mictionnel",
+        "Débitmétrie : courbe mictionnelle, débit max <15ml/s anormal",
+        "Scanner : pyélonéphrite compliquée, lithiase, tumeur",
+        "Cystoscopie : hématurie, sténose urétrale, tumeur vessie"
+      ]
+    },
+    "resume": {
+      "titre": "🔥 Pyélonéphrite aiguë – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Fièvre élevée avec frissons",
+                "Douleurs lombaires unilatérales",
+                "Dysurie, pollakiurie, brûlures mictionnelles",
+                "Altération de l’état général (fatigue, anorexie, nausées, vomissements)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Sexe féminin, rapports sexuels fréquents",
+                "Grossesse",
+                "Antécédents d’infections urinaires récidivantes",
+                "Obstacles urinaires : calculs, adénome prostatique",
+                "Diabète, immunodépression"
+              ]
+            },
+            {
+              "titre": "Signes de gravité",
+              "points": [
+                "Sepsis sévère ou choc septique",
+                "Anurie ou oligurie",
+                "Douleurs intenses résistantes",
+                "Terrain fragile (grossesse, sujet âgé, immunodéprimé)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes généraux",
+              "points": [
+                "Fièvre > 38,5 °C",
+                "Tachycardie, parfois hypotension",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "Signes spécifiques",
+              "points": [
+                "Douleur provoquée à la percussion de la fosse lombaire (signe de Giordano positif)",
+                "Douleur abdominale ou pelvienne associée",
+                "Pas de défense abdominale diffuse (≠ péritonite)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "ECBU avec antibiogramme : bactériurie significative + leucocyturie",
+                "Hémocultures si fièvre > 38,5 °C",
+                "NFS : hyperleucocytose",
+                "CRP et PCT élevées"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie réno-vésicale si suspicion obstacle (lithiase, dilatation)",
+                "Scanner abdomino-pelvien injecté si forme compliquée (abcès, pyélonéphrite emphysémateuse, absence d’amélioration sous traitement)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement antibiotique",
+              "points": [
+                "Forme simple : fluoroquinolone (ciprofloxacine) ou C3G orale (céfixime) si antibiogramme favorable",
+                "Forme compliquée ou grave : C3G IV (céfotaxime, ceftriaxone) ± aminoside en début",
+                "Adapter secondairement selon antibiogramme",
+                "Durée : 10–14 jours (7 jours possible si FQ efficace)"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Hydratation adaptée",
+                "Antipyrétiques et antalgiques",
+                "Hospitalisation si forme grave, sepsis, terrain à risque"
+              ]
+            },
+            {
+              "titre": "Prise en charge des complications",
+              "points": [
+                "Drainage urologique si obstacle (sonde JJ, néphrostomie)",
+                "Prise en charge chirurgicale si abcès rénal"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Fièvre + douleur lombaire unilatérale = pyélonéphrite jusqu’à preuve du contraire",
+            "ECBU systématique avec antibiogramme",
+            "Échographie/Scanner si suspicion d’obstacle ou forme compliquée",
+            "ATB IV si forme grave ou compliquée",
+            "Toujours rechercher une cause obstructive (calcul, obstacle tumoral)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand fièvre et douleur lombaire ?",
+                "Signes urinaires associés (pollakiurie, brûlures mictionnelles) ?",
+                "ATCD d’IVU ou de calculs ?",
+                "Grossesse, diabète, immunosuppression ?",
+                "Frissons, malaise ou hypotension (signe de sepsis) ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales (TA, FC, T°, SpO₂)",
+                "Signe de Giordano (percussion lombaire)",
+                "ECBU + hémocultures",
+                "NFS, CRP, créatinine",
+                "Échographie ± scanner si suspicion de complication"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "ECBU systématique avant ATB",
+                "Antibiothérapie adaptée (FQ ou C3G ± aminoside selon gravité)",
+                "Imagerie si doute diagnostique ou forme compliquée"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur au flanc gauche fébrile avec troubles mictionnels (suspicion pyélonéphrite sur obstacle prostatique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (fièvre 39°C, douleur flanc gauche, troubles urinaires aigus)",
+            "Caractériser douleur → flanc gauche, constante, 6/10, sans irradiation, nocturne",
+            "Troubles urinaires aigus → brûlures mictionnelles, pollakiurie toutes les 2h, odeur forte",
+            "Symptômes de prostatisme chronique → dysurie d’attente et de poussée, faiblesse jet, vidange incomplète, incontinence par regorgement",
+            "Signes associés → fièvre, frissons, malaise",
+            "Examen clinique → fièvre, douleur loge rénale gauche (Giordano +), globe vésical possible, TR (prostate augmentée, sensible)",
+            "Résumé + hypothèse principale (pyélonéphrite obstructive vs prostatite) + DD (colique néphrétique fébrile, HBP non compliquée, cancer prostate)",
+            "Examens complémentaires → BU, ECBU avec ATB, NFS/CRP, créat/urée, ionogramme, hémocultures, échographie réno-vésico-prostatique ± scanner",
+            "Prise en charge → antibiothérapie IV, antalgie/antipyrétique, hydratation, drainage vésical si rétention, hospitalisation, orientation urologique"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : FLAIR",
+            "elements": [
+              "F = Fièvre 39°C avec frissons",
+              "L = Lombalgie/flanc gauche douloureux",
+              "A = Algurie et pollakiurie",
+              "I = Infection compliquée (homme, obstacle)",
+              "R = Rétention urinaire possible"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. X., un homme de 65 ans, en bonne santé habituelle, qui consulte pour un état fébrile avec douleurs du flanc gauche et troubles urinaires.\n\nDepuis hier, il présente une fièvre à 39°C, accompagnée de frissons intenses et d’un malaise général. La douleur est localisée au flanc gauche, d’intensité 6/10, constante, sans irradiation, apparue la veille et l’empêche de dormir. Depuis 4 jours, il rapporte également des brûlures mictionnelles, une pollakiurie toutes les deux heures et une odeur plus forte de ses urines, sans hématurie visible.\n\nÀ l’interrogatoire, il mentionne aussi des troubles urinaires chroniques évoluant depuis environ 1 an : difficulté à initier la miction, impression de vidange incomplète, jet urinaire de moins en moins puissant, pollakiurie diurne toutes les 3 heures et quelques pertes d’urines par regorgement.\n\nIl n’a pas d’antécédents médicaux particuliers connus, pas d’infections urinaires ni de lithiases diagnostiquées. Il n’a pas été opéré. Il boit environ 1,5 L d’eau par jour, ne fume pas et consomme peu d’alcool.\n\nÀ l’examen, M. X est fébrile à 39°C, frissonnant, légèrement diaphorétique. À la palpation, l’abdomen est souple, mais douloureux au niveau de la loge rénale gauche, avec un signe de Giordano positif. On palpe un globe vésical sus-pubien. Le toucher rectal retrouve une prostate augmentée de volume, sensible à la palpation, sans nodule franc.\n\nEn résumé, il s’agit d’un homme de 65 ans avec fièvre élevée, douleurs du flanc gauche, signes urinaires aigus et prostatisme ancien. Mon hypothèse principale est une pyélonéphrite aiguë obstructive sur hypertrophie bénigne de prostate compliquée, ou une prostatite aiguë bactérienne. Les diagnostics différentiels incluent une colique néphrétique fébrile, une simple HBP non compliquée ou un cancer de la prostate.\n\nComme examens complémentaires, je demanderais une bandelette urinaire, un ECBU avec antibiogramme avant toute antibiothérapie, une NFS, CRP, créatinine et ionogramme. Des hémocultures sont justifiées vu la fièvre élevée. En imagerie, une échographie réno-vésico-prostatique est indiquée pour rechercher une dilatation des cavités ou une rétention, et un scanner abdomino-pelvien si doute ou suspicion de complication.\n\nEn termes de prise en charge, une hospitalisation est nécessaire pour antibiothérapie IV probabiliste (céphalosporine de 3e génération ± aminoside en début), avec relais oral après antibiogramme. Une hydratation, un traitement antipyrétique/antalgique et une surveillance rapprochée sont indiqués. En cas de globe vésical, une sonde vésicale à demeure doit être mise en place en attendant un traitement définitif de l’obstacle prostatique. Le patient sera orienté ensuite en urologie pour bilan complet et traitement de fond de l’HBP."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Homme de 65 ans, fièvre 39°C avec frissons, douleur flanc gauche, brûlures mictionnelles.\n\nB (Background) : Prostatisme ancien (dysurie, jet faible, vidange incomplète), pas d’ATCD uro connus.\n\nA (Assessment) : Suspicion pyélonéphrite aiguë obstructive sur HBP vs prostatite aiguë bactérienne. DD : colique néphrétique fébrile, cancer prostate.\n\nR (Recommendation) : Hospitalisation, BU, ECBU avec antibiogramme, NFS/CRP, créat/urée, hémocultures, échographie réno-vésico-prostatique. ATB IV (C3G ± aminoside), drainage vésical si rétention, orientation urologique."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Signes typiques pyélonéphrite obstructive",
+              "points": [
+                "Fièvre > 38,5°C avec frissons",
+                "Douleur lombaire/flanc",
+                "Pollakiurie, brûlures mictionnelles",
+                "Globe vésical",
+                "Terrain masculin âgé avec HBP"
+              ]
+            },
+            {
+              "titre": "👉 Prostatite aiguë",
+              "points": [
+                "Fièvre élevée avec frissons",
+                "Pollakiurie, dysurie aiguë",
+                "TR douloureux (prostate sensible)",
+                "Toujours faire ECBU",
+                "ATB 3-6 semaines"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Oublier le TR dans bilan urologique",
+                "Prescrire AINS → aggrave risque rénal",
+                "Oublier de rechercher sepsis",
+                "Confondre cystite masculine (rare) avec prostatite",
+                "Négliger drainage vésical en cas de rétention"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Pyélonéphrite aiguë obstructive sur HBP",
+                  "reponse": {
+                    "pour": [
+                      "Homme > 60 ans",
+                      "Douleur flanc gauche",
+                      "Fièvre 39°C avec frissons",
+                      "Troubles mictionnels chroniques",
+                      "Globe vésical"
+                    ],
+                    "contre": [
+                      "Pas de douleurs coliques typiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Prostatite aiguë bactérienne",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre élevée",
+                      "Pollakiurie, brûlures mictionnelles",
+                      "Prostate sensible au TR"
+                    ],
+                    "contre": [
+                      "Douleur plus lombaire que périnéale"
+                    ]
+                  }
+                },
+                {
+                  "question": "Colique néphrétique fébrile",
+                  "reponse": {
+                    "pour": [
+                      "Douleur flanc",
+                      "Fièvre"
+                    ],
+                    "contre": [
+                      "Douleur constante, non colique",
+                      "Pas d’agitation typique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cancer de prostate",
+                  "reponse": {
+                    "pour": [
+                      "Âge 65 ans",
+                      "Symptômes obstructifs chroniques"
+                    ],
+                    "contre": [
+                      "Évolution aiguë fébrile",
+                      "Pas de nodule franc au TR"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bandelette urinaire",
+                    "ECBU avec antibiogramme",
+                    "NFS, CRP",
+                    "Créatinine, ionogramme",
+                    "Hémocultures",
+                    "Échographie réno-vésico-prostatique",
+                    "Scanner abdomino-pelvien si doute"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Pyélonéphrite aiguë obstructive sur hypertrophie bénigne de la prostate"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Antibiothérapie IV (C3G ± aminoside)",
+                      "Hydratation IV",
+                      "Antipyrétiques/antalgiques",
+                      "Drainage vésical si globe"
+                    ],
+                    "specifique": [
+                      "Relais oral après antibiogramme",
+                      "Durée totale 10–14 jours",
+                      "Orientation urologique pour bilan HBP"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation urologique",
+                    "PSA à distance de l’infection",
+                    "Échographie de contrôle",
+                    "Discussion traitement HBP (médical ou chirurgical)",
+                    "Surveillance récidives infectieuses"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

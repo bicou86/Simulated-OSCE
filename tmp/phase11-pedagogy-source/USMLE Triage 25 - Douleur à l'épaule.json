@@ -1,0 +1,968 @@
+{
+  "title": "USMLE Triage 25 - Douleur à l'épaule",
+  "context": {
+    "setting": "Clinique",
+    "patient": "Michael McKinney, un homme de 34 ans, se présente à la clinique en se plaignant d'une douleur à l'épaule droite.",
+    "vitals": {
+      "ta": "138/88 mmHg",
+      "temperature": "36.9°C",
+      "fc": "60 bpm",
+      "fr": "16/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour, M. McKinney, je suis le Dr Nelson.",
+            "Je comprends que vous avez eu des douleurs à l'épaule dernièrement.",
+            "Pouvez-vous m'en dire plus ?"
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la douleur (OPQRST)",
+          "details": [
+            "Localisation [épaule droite antérieure]",
+            "Durée [environ 2 mois]",
+            "Début progressif [fin saison softball]",
+            "Qualité [aiguë, pas constante]",
+            "Intensité [7/10 au maximum, 0/10 au repos]",
+            "Irradiation [reste localisée, région antérieure]",
+            "Pas de traumatisme spécifique",
+            "Joueur première base, bras lanceur droit"
+          ],
+          "exemplesPhrases": [
+            "Vous souvenez-vous d'une première fois où vous vous êtes blessé ?",
+            "Y a-t-il autre chose qui déclenche la douleur ?",
+            "La douleur irradie-t-elle quelque part ?",
+            "Sur une échelle de 0 à 10, où évalueriez-vous cette douleur ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Facteurs aggravants et soulageants",
+          "details": [
+            "Douleur nocturne [se retourne, doit changer position]",
+            "Musculation aggrave [développé couché]",
+            "Mouvements au-dessus tête [fait le plus mal]",
+            "Gym 1 jour/2 [alterne haut/bas corps]",
+            "AINS peu efficaces [naproxène aide un peu]",
+            "Ibuprofène inefficace [essayé il y a 2 semaines]",
+            "Pas essayé chaud/froid [sauna sans effet]"
+          ],
+          "exemplesPhrases": [
+            "Je peux imaginer à quel point cela peut être inconfortable.",
+            "Avez-vous fait quelque chose pour la douleur ?",
+            "Qu'en est-il d'une compresse chaude ou froide ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de signes inflammatoires et instabilité",
+          "details": [
+            "Pas rougeur/œdème visible",
+            "Pas sensation instabilité [non, pas cette sensation]",
+            "Jamais luxation épaule [non]",
+            "Pas blocage articulaire [non]",
+            "Pas picotements/engourdissement [non]"
+          ],
+          "exemplesPhrases": [
+            "La zone est-elle déjà devenue rouge ou enflée ?",
+            "Votre épaule vous a-t-elle semblé instable ?",
+            "Avez-vous déjà eu une luxation de cette épaule ?",
+            "S'est-elle déjà bloquée ?",
+            "Ressentez-vous des picotements ou engourdissement ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Dépistage douleurs référées",
+          "details": [
+            "Pas douleur thoracique [non, pas du tout]",
+            "Pas dyspnée [non]",
+            "Pas congestion/toux [non]",
+            "Pas douleur abdominale [non, rien]",
+            "Pas autres problèmes articulaires actuels"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des douleurs thoraciques ou difficultés respiratoires ?",
+            "Une congestion thoracique ou de la toux ?",
+            "Qu'en est-il de douleurs abdominales ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents traumatiques et sportifs",
+          "details": [
+            "Policier actif [métier difficile]",
+            "Athlétique [gars assez athlétique]",
+            "Fracture pouce passée",
+            "Entorses chevilles multiples [les deux]",
+            "Blessure par balle jambe droite [il y a 2 ans]",
+            "Balle dans muscle [m'a effleuré]",
+            "Bonne récupération [plutôt bien récupéré]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu d'autres problèmes avec vos articulations ou muscles ?",
+            "On dirait que vous l'avez été - c'est un métier difficile."
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Dysfonction érectile [arrive parfois]",
+            "Eczéma coudes [applique stéroïde si grave]",
+            "Pas hospitalisation [jamais passé nuit]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'autres problèmes dans vos antécédents médicaux ?",
+            "Quelque chose pour lequel vous avez vu le médecin ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents chirurgicaux",
+          "details": [
+            "Amygdalectomie [12 ans]",
+            "Chirurgie blessure balle [jambe droite]",
+            "Pas autres chirurgies"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il des chirurgies, autres que cette blessure par balle ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Médicaments actuels",
+          "details": [
+            "Vardénafil [occasionnellement pour dysfonction érectile]",
+            "Naproxène PRN [occasionnel]",
+            "Ibuprofène PRN [essayé sans succès]",
+            "Stéroïde topique PRN [eczéma, pas utilisé depuis mois]"
+          ],
+          "exemplesPhrases": [
+            "Prenez-vous d'autres médicaments ?",
+            "Est-ce seulement un médicament topique ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes de vie",
+          "details": [
+            "Non-fumeur [non, plutôt en bonne santé]",
+            "Alcool occasionnel [bière avec dîner 1×/sem]",
+            "Pas drogues [non, jamais]",
+            "Suppléments arrêtés [en prenais mais pas continué]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ou utilisez-vous du tabac ?",
+            "Buvez-vous de l'alcool ?",
+            "D'autres drogues ?",
+            "Qu'en est-il des compléments alimentaires ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Parents en bonne santé",
+            "Deux sœurs en bonne santé",
+            "Pas maladies importantes famille"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il eu des maladies importantes dans votre famille ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "J'aimerais faire un examen physique maintenant, si vous le voulez bien.",
+            "Laissez-moi juste me laver les mains.",
+            "Il semble que vos signes vitaux soient normaux.",
+            "Veuillez enlever votre chemise pour que je puisse examiner vos épaules."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen neurologique membre supérieur",
+          "details": [
+            "Sensibilité tactile bilatérale [normale]",
+            "Réflexes ostéotendineux [2+ bilatéraux]",
+            "Force musculaire globale [5/5 partout]",
+            "Pas déficit neurologique focal"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection épaules",
+          "details": [
+            "Apparence symétrique [pas asymétrie]",
+            "Pas érythème visible",
+            "Pas œdème/déformation",
+            "Pas atrophie musculaire",
+            "Comparaison bilatérale"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Palpation structures épaule",
+          "details": [
+            "Sensibilité région gléno-humérale antérieure [légère]",
+            "Processus coracoïde [pas sensible]",
+            "Tendon biceps [pas sensible]",
+            "Articulation acromio-claviculaire",
+            "Coiffe des rotateurs"
+          ],
+          "exemplesPhrases": [
+            "Pouvez-vous me montrer où se trouve votre douleur ?"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Amplitude de mouvement passive et active",
+          "details": [
+            "Flexion complète",
+            "Extension complète",
+            "Abduction/adduction complètes",
+            "Rotation externe complète",
+            "Rotation interne complète",
+            "Amplitude complète mais douloureuse certains mouvements"
+          ],
+          "exemplesPhrases": [
+            "Cette manœuvre provoque-t-elle une augmentation de la douleur ?",
+            "Pouvez-vous me montrer ce qui aggrave cette douleur ?"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Tests spéciaux - Conflit et coiffe",
+          "details": [
+            "Test Neer [positif pour conflit]",
+            "Test Hawkins [évalué]",
+            "Test boîte vide [positif]",
+            "Test isométrique sus-épineux [positif]",
+            "Test arc douloureux passif",
+            "Force rotation interne/externe [normale]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Tests spéciaux - Biceps et stabilité",
+          "details": [
+            "Test Speed [négatif]",
+            "Test Yergason [négatif]",
+            "Test bras croisé [légèrement positif]",
+            "Pas signe du sillon",
+            "Pas appréhension pendant manœuvres",
+            "Stabilité articulaire préservée"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels de douleur d'épaule chez l'adulte jeune sportif",
+            "categories": [
+              {
+                "name": "Pathologies de la coiffe des rotateurs",
+                "items": [
+                  {
+                    "text": "Tendinopathie de la coiffe des rotateurs",
+                    "cause": "Arguments POUR:\n\t□ Sportif avec mouvements répétitifs (softball)\n\t□ Douleur progressive sans traumatisme\n\t□ Douleur nocturne caractéristique\n\t□ Test sus-épineux positif\n\t□ Test boîte vide positif\n\t□ Aggravation mouvements au-dessus tête\n\t□ Âge compatible (34 ans)\nArguments CONTRE:\n\t□ Force préservée (5/5)",
+                    "test": "→ Échographie ou IRM si échec traitement conservateur"
+                  },
+                  {
+                    "text": "Syndrome de conflit sous-acromial",
+                    "cause": "Arguments POUR:\n\t□ Test Neer positif\n\t□ Douleur mouvements répétitifs\n\t□ Localisation antérieure typique\n\t□ Aggravation activités overhead\n\t□ Amélioration partielle AINS\nArguments CONTRE:\n\t□ Pas limitation amplitude mouvement",
+                    "test": "→ Radio épaule (espace sous-acromial), échographie dynamique"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies du labrum",
+                "items": [
+                  {
+                    "text": "Lésion SLAP (déchirure labrum supérieur)",
+                    "cause": "Arguments POUR:\n\t□ Sportif lanceur (softball)\n\t□ Douleur antérieure\n\t□ Test bras croisé légèrement positif\n\t□ Douleur avec activités overhead\nArguments CONTRE:\n\t□ Pas sensation blocage\n\t□ Pas instabilité\n\t□ Tests biceps négatifs",
+                    "test": "→ Arthro-IRM pour visualisation labrum"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies tendineuses",
+                "items": [
+                  {
+                    "text": "Tendinite du biceps",
+                    "cause": "Arguments POUR:\n\t□ Localisation antérieure\n\t□ Sportif avec mouvements répétitifs\nArguments CONTRE:\n\t□ Test Speed négatif\n\t□ Test Yergason négatif\n\t□ Pas sensibilité gouttière bicipitale",
+                    "test": "→ Échographie pour évaluation tendon long biceps"
+                  }
+                ]
+              },
+              {
+                "name": "Pathologies articulaires",
+                "items": [
+                  {
+                    "text": "Arthrose gléno-humérale débutante",
+                    "cause": "Arguments POUR:\n\t□ Douleur progressive\n\t□ Aggravation fin journée\nArguments CONTRE:\n\t□ Âge jeune (34 ans)\n\t□ Amplitude mouvement complète\n\t□ Pas raideur matinale décrite",
+                    "test": "→ Radiographies standard (face, profil, axillaire)"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens paracliniques immédiats",
+          "details": [
+            "Radiographies épaule droite (3 incidences)",
+            "Face vraie (Grashey)",
+            "Profil de coiffe (outlet view)",
+            "Axillaire pour éliminer luxation occulte",
+            "Recherche calcifications, arthrose, acromion type III",
+            "Si radiographies normales : traitement conservateur d'abord"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge thérapeutique initiale",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement médicamenteux",
+                "content": "• AINS réguliers (pas PRN) :\n- Naproxène 500mg × 2/j × 2-3 semaines\n- Avec protecteur gastrique si facteurs risque\n- Importance observance régulière\n• Antalgiques si besoin :\n- Paracétamol 1g × 3-4/j en alternance\n• Éviter opioïdes initialement"
+              },
+              {
+                "title": "Repos relatif et modifications activités",
+                "content": "• Arrêt temporaire musculation épaule\n• Éviter mouvements overhead répétitifs\n• Pas sports lancer 3-4 semaines\n• Maintien activités bas du corps\n• Modifier position sommeil (oreiller support)\n• Éviter immobilisation complète"
+              },
+              {
+                "title": "Rééducation précoce",
+                "content": "• Exercices pendulaires (Codman)\n• Étirements capsule postérieure\n• Renforcement isométrique progressif\n• Glace 15-20 min après activités\n• Kinésithérapie si pas amélioration 2-3 semaines\n• Programme renforcement coiffe après phase aiguë"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Thérapies de deuxième ligne si échec",
+          "details": [
+            "Infiltration corticoïdes sous-acromiale",
+            "IRM si suspicion déchirure coiffe",
+            "Échographie diagnostique et thérapeutique",
+            "Référence orthopédie si lésion structurelle",
+            "Arthroscopie si lésion SLAP confirmée"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Suivi et surveillance",
+          "details": [
+            "Réévaluation dans 2-3 semaines",
+            "Évaluer observance traitement",
+            "Vérifier amélioration douleur/fonction",
+            "Ajuster traitement selon réponse",
+            "Imagerie avancée si pas amélioration",
+            "Prévention récidives (technique lancer)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Communication du plan au patient",
+          "details": [
+            "Explication inflammation coiffe rotateurs",
+            "Description syndrome conflit",
+            "Possibilité déchirure labrum moins probable",
+            "Importance traitement AINS régulier",
+            "Nécessité repos relatif épaule",
+            "Éviter musculation temporairement",
+            "Options si échec (infiltration, IRM)",
+            "Bon pronostic avec traitement conservateur"
+          ],
+          "exemplesPhrases": [
+            "M. McKinney, il y a quelques possibilités qui pourraient causer votre douleur.",
+            "Je pense qu'elle pourrait être causée par une inflammation des tendons de la coiffe des rotateurs.",
+            "Ces tendons peuvent être blessés par une tension ou déchirure partielle.",
+            "L'inflammation cause ce qu'on appelle un 'conflit'.",
+            "Le tendon enflammé est pris entre deux os dans l'épaule.",
+            "Une autre possibilité est une petite déchirure dans la cupule (labrum).",
+            "J'aimerais commencer une thérapie ici et vous revoir dans quelques semaines.",
+            "Le Naprosyn doit être pris constamment, pas seulement quand ça fait mal.",
+            "Je recommande pas de musculation ou sports de lancer pendant cette période.",
+            "Si cet essai n'est pas couronné de succès, nous avons d'autres options.",
+            "Cela comprend éventuellement l'injection de stéroïde ou une IRM.",
+            "J'espère que nous pourrons régler cela sans ces prochaines étapes."
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Conseils de prévention",
+          "redflagsSection": {
+            "title": "Signes d'alarme nécessitant réévaluation urgente",
+            "items": [
+              {
+                "text": "Faiblesse brutale du bras",
+                "description": "Rupture complète coiffe des rotateurs"
+              },
+              {
+                "text": "Luxation récidivante",
+                "description": "Instabilité gléno-humérale"
+              },
+              {
+                "text": "Douleur nocturne croissante",
+                "description": "Possible déchirure évolutive"
+              },
+              {
+                "text": "Fièvre avec douleur épaule",
+                "description": "Arthrite septique à éliminer"
+              },
+              {
+                "text": "Échec traitement conservateur 6 semaines",
+                "description": "Lésion structurelle probable"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication complète du plan diagnostique et thérapeutique",
+          "content": "M. McKinney, il y a quelques possibilités qui pourraient causer votre douleur d'après ce que vous m'avez dit et mon examen physique. Je pense qu'elle pourrait être causée par une inflammation directe des tendons qui composent ce qu'on appelle la coiffe des rotateurs. La coiffe des rotateurs est un ensemble de muscles et de tendons qui maintiennent l'articulation de l'épaule ensemble et fournissent la puissance musculaire pour la bouger. Ces tendons peuvent être blessés par une tension ou une déchirure partielle comme c'est probablement le cas chez vous. Les gaines autour du tendon s'enflamment souvent à cause de cela. Cette inflammation cause ce qu'on appelle un 'conflit', qui est le piégeage des gaines tendineuses enflammées entre deux os opposés dans l'épaule. Cela se produit lorsque le tendon lui-même est déchiré ou enflammé ou que la gaine qui l'entoure s'enflamme, provoquant son léger élargissement. Parce que l'épaule a beaucoup de structures dans un petit espace, ces tendons enflammés et élargis sont parfois pris entre des zones osseuses, ce qui cause de la douleur. Une autre possibilité est qu'il y ait une petite déchirure dans la cupule qui maintient la boule de l'épaule en place. La déchirure peut être une irritation qui se produit avec certains types de mouvements causant votre douleur. Bien que je pense que c'est moins probable, j'aimerais commencer une thérapie ici à la clinique et vous revoir en suivi dans quelques semaines pour évaluer comment ça se passe. La thérapie consistera en une dose constante du médicament que vous avez essayé, le Naprosyn. Cela fonctionne pour réduire l'inflammation dans cette zone et calmer l'irritation. Ce médicament doit être pris constamment au cours des prochaines semaines et je vais également vous conseiller de ne pas forcer cette épaule pendant cette période. Je recommande pas de musculation ou de sports qui pourraient causer une tension de cette zone. Plus elle est tendue, plus l'inflammation peut se produire, ce qui recommence le cycle. Il existe d'autres thérapies qui pourraient être utiles si cet essai thérapeutique n'est pas couronné de succès. Cependant, commencer ce médicament et avoir votre suivi est le meilleur plan d'action pour le moment. Si nous devons, nous devrons peut-être passer à l'étape suivante lors de votre prochain rendez-vous. Cela comprend éventuellement l'injection de cette épaule avec un stéroïde ou l'obtention d'une étude diagnostique comme une IRM. J'espère cependant que nous pourrons régler cela sans ces prochaines étapes. Avez-vous des questions sur votre diagnostic ou votre plan de traitement ?\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile du patient",
+          "content": "[Est-ce que je vais pouvoir reprendre la musculation et le softball bientôt ? C'est important pour mon travail de policier de rester en forme.]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "Je comprends parfaitement votre préoccupation, M. McKinney. Rester en forme est effectivement crucial pour votre travail de policier. La bonne nouvelle est que la plupart des tendinopathies de la coiffe des rotateurs répondent bien au traitement conservateur. Je recommande une pause de 3-4 semaines pour les activités qui sollicitent l'épaule, mais vous pouvez absolument continuer le cardio et l'entraînement du bas du corps. Après 2-3 semaines, si la douleur s'améliore, nous pourrons commencer une reprise progressive avec des exercices de renforcement spécifiques pour l'épaule. Pour le softball, je dirais plutôt 4-6 semaines avant de reprendre les lancers. L'important est de bien traiter maintenant pour éviter que ça devienne chronique. Avec votre forme physique de base et votre motivation, je suis confiant que vous pourrez reprendre toutes vos activités. Nous réévaluerons dans 2-3 semaines et ajusterons le plan selon votre progression."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation - Douleur d'épaule chez le sportif",
+      "pointsCles": [
+        "Homme 34 ans, policier et sportif actif",
+        "Douleur progressive sans traumatisme franc = tendinopathie probable",
+        "Douleur nocturne = signe caractéristique pathologie coiffe",
+        "Tests Neer et boîte vide positifs = conflit sous-acromial",
+        "Force préservée 5/5 = pas rupture complète",
+        "Localisation antérieure + sportif lanceur = penser SLAP",
+        "FC 60 bpm normale chez sportif entraîné",
+        "Échec AINS PRN = nécessité traitement régulier"
+      ],
+      "pieges": [
+        "Ne pas rechercher douleurs référées (thoracique, abdominale)",
+        "Oublier examen neurologique complet",
+        "Ne pas tester les deux épaules pour comparaison",
+        "Prescrire AINS en PRN au lieu de régulier",
+        "Ne pas insister sur repos sportif temporaire",
+        "Faire IRM trop tôt avant essai conservateur",
+        "Oublier position sommeil dans conseils",
+        "Ne pas programmer suivi rapproché"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé",
+      "nom": "Michael McKinney",
+      "age": "34 ans",
+      "contexte": "Policier actif, sportif, consultation pour douleur épaule droite",
+      "motifConsultation": {
+        "plaintePrincipale": "Douleur épaule droite depuis 2 mois",
+        "autreChose": "Gêne pour dormir et s'entraîner"
+      },
+      "histoireActuelle": {
+        "debut": [
+          "Apparu pendant saison softball",
+          "Joueur première base, droitier",
+          "Fin de saison quand commencé",
+          "Pas moment spécifique blessure",
+          "Juste commencé faire mal"
+        ],
+        "localisation": [
+          "Juste ici (montrer épaule droite antérieure)",
+          "Reste principalement là",
+          "Région avant de l'épaule"
+        ],
+        "caracteristiques": [
+          "Terriblement mal pour dormir",
+          "Me retourne et doit changer position",
+          "Mal quand m'entraîne",
+          "Plutôt aigu, pas tout le temps",
+          "Pas mal assis à parler",
+          "Certains mouvements seulement"
+        ]
+      },
+      "facteursDeclenchants": {
+        "musculation": [
+          "Vais gym 1 jour sur 2",
+          "Mal avec développé couché",
+          "N'importe quoi intense avec épaule",
+          "Mouvements au-dessus tête pire",
+          "Travaille haut corps 1 fois/2",
+          "Sinon jambes et abdos"
+        ],
+        "quotidien": [
+          "Plus actif fin de journée",
+          "Probablement pire à ce moment"
+        ]
+      },
+      "traitements": {
+        "medicaments": [
+          "Naproxène autre jour, aide un peu",
+          "Ne veux pas prendre longtemps",
+          "Pas tout le temps",
+          "Ibuprofène il y a 2 semaines",
+          "N'a pas aidé, essayé naproxène"
+        ],
+        "autres": [
+          "Jamais fait chaud/froid",
+          "Parfois sauna mais fait rien"
+        ]
+      },
+      "symptomesNegatifs": {
+        "inflammation": [
+          "Non, fait juste mal",
+          "Pas voir différence en regardant"
+        ],
+        "instabilite": [
+          "Non, pas cette sensation",
+          "Jamais eu luxation",
+          "Jamais bloquée",
+          "Pas picotements/engourdissement"
+        ],
+        "systemiques": [
+          "Pas douleur thoracique",
+          "Pas difficultés respiratoires",
+          "Pas congestion/toux",
+          "Pas douleur abdominale"
+        ]
+      },
+      "antecedentsMedicaux": {
+        "traumatiques": [
+          "Gars assez athlétique",
+          "Cassé pouce une fois",
+          "Entorses chevilles plusieurs fois",
+          "Les deux chevilles",
+          "Rien extraordinaire"
+        ],
+        "professionnels": [
+          "Policier",
+          "Balle dans jambe droite il y a 2 ans",
+          "Juste dans muscle, m'a effleuré",
+          "Plutôt bien récupéré",
+          "Ont dit j'ai eu chance"
+        ],
+        "medicaux": [
+          "Dysfonction érectile parfois",
+          "Vardénafil occasionnellement",
+          "Eczéma coudes",
+          "Stéroïde topique si grave",
+          "Pas utilisé depuis quelques mois"
+        ],
+        "chirurgicaux": [
+          "Amygdales enlevées à 12 ans",
+          "Chirurgie blessure balle",
+          "Sinon rien"
+        ]
+      },
+      "habitudesVie": {
+        "tabac": [
+          "Non, plutôt en bonne santé"
+        ],
+        "alcool": [
+          "Occasionnellement",
+          "Bière avec dîner parfois",
+          "Peut-être 1 fois/semaine"
+        ],
+        "drogues": [
+          "Non, jamais"
+        ],
+        "supplements": [
+          "En prenais mais pas continué"
+        ]
+      },
+      "antecedentsFamiliaux": [
+        "Parents vont bien",
+        "Deux sœurs vont bien",
+        "Pas maladies importantes"
+      ],
+      "simulation": {
+        "attitude": [
+          "Policier professionnel",
+          "Sportif frustré par limitation",
+          "Coopératif et motivé",
+          "Veut solution rapide"
+        ],
+        "durantEntretien": [
+          "Assis confortablement",
+          "Montre région antérieure épaule droite",
+          "Pas douleur au repos"
+        ],
+        "durantExamen": [
+          "Légère sensibilité palpation antérieure",
+          "Douleur avec certains tests (Neer, boîte vide)",
+          "Amplitude mouvement complète",
+          "Force normale mais douloureuse",
+          "Coopératif tous tests"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Pathologies de l'épaule chez le sportif",
+      "sections": [
+        {
+          "titre": "Anatomie fonctionnelle de la coiffe",
+          "contenu": "Coiffe des rotateurs : sus-épineux (abduction), sous-épineux (rotation externe), petit rond (rotation externe), sous-scapulaire (rotation interne). Espace sous-acromial : 7-14mm normal, <7mm = conflit. Arc coracoacromial : ligament protective. Stabilisateurs statiques : labrum, ligaments gléno-huméraux. Stabilisateurs dynamiques : coiffe, deltoïde, biceps."
+        },
+        {
+          "titre": "Syndrome de conflit sous-acromial",
+          "contenu": "Stades Neer : I-œdème/hémorragie (<25 ans), II-fibrose/tendinite (25-40 ans), III-rupture partielle/complète (>40 ans). Types acromion : I-plat (17%), II-courbe (43%), III-crochu (40%, plus conflit). Causes : surmenage, instabilité, anomalies osseuses. Tests cliniques : Neer (Se 75%, Sp 48%), Hawkins (Se 80%, Sp 60%), Jobe (Se 86%, Sp 50%)."
+        },
+        {
+          "titre": "Lésions SLAP et pathologies du labrum",
+          "contenu": "SLAP = Superior Labrum Anterior-Posterior. Types Snyder : I-effilochage, II-décollement biceps, III-anse seau, IV-extension biceps. Sportifs overhead : 35% prévalence. Tests : O'Brien (Se 63%, Sp 73%), Speed (Se 32%, Sp 75%), Yergason (Se 43%, Sp 79%). Arthro-IRM : Se 82-100%, Sp 71-98%."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Phase aiguë (0-3 semaines) : repos relatif, AINS réguliers, glace, mobilisation douce",
+        "Exercices pendulaires Codman : 5 min × 3/jour dès J1",
+        "AINS : efficacité similaire entre molécules, importance régularité > PRN",
+        "Phase subaiguë (3-6 semaines) : étirements capsule, renforcement isométrique",
+        "Infiltration corticoïdes : 70-90% amélioration court terme, max 3/an",
+        "Kinésithérapie : protocole Neer modifié, 85% succès à 3 mois",
+        "Chirurgie : acromioplastie si échec 6 mois, réparation coiffe si rupture",
+        "Retour sport : progressif après 6-12 semaines selon pathologie"
+      ],
+      "examensComplementaires": [
+        "Radiographies standard : face vraie, outlet view, axillaire (luxation occulte)",
+        "Échographie : opérateur-dépendant, Se 87%, Sp 96% pour ruptures complètes",
+        "IRM : gold standard coiffe, Se 89%, Sp 93%, coût élevé",
+        "Arthro-IRM : labrum++, invasive, Se 82-100% lésions SLAP",
+        "Arthroscanner : alternative si CI IRM, moins performant tissus mous",
+        "EMG : si suspicion compression nerveuse (nerf suprascapulaire)"
+      ]
+    },
+    "resume": {
+      "titre": "💪 Tendinopathie de la coiffe des rotateurs – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Douleur d’épaule progressive, souvent antéro-latérale",
+                "Douleur lors des mouvements en élévation ou en abduction",
+                "Douleur nocturne, surtout en décubitus latéral",
+                "Gêne fonctionnelle dans les gestes du quotidien (se coiffer, s’habiller, porter un objet)"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Activités répétitives bras en hauteur (sport de lancer, natation, travail manuel)",
+                "Âge > 40 ans (processus dégénératif progressif)",
+                "Mauvaise posture scapulaire ou déséquilibre musculaire"
+              ]
+            },
+            {
+              "titre": "Éléments d’orientation",
+              "points": [
+                "Absence de traumatisme initial",
+                "Douleur déclenchée à l’effort et soulagée au repos",
+                "Pas de perte brutale de force (≠ rupture de coiffe)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Épaule souvent normale en statique",
+                "Parfois amyotrophie sus- ou sous-épineuse si tendinopathie chronique"
+              ]
+            },
+            {
+              "titre": "Mobilité",
+              "points": [
+                "Mobilité passive conservée",
+                "Mobilité active douloureuse (élévation/abduction)"
+              ]
+            },
+            {
+              "titre": "Tests spécifiques",
+              "points": [
+                "Test de Jobe (sus-épineux) : douleur à l’abduction contrariée",
+                "Test du Patte (sous-épineux) : douleur en rotation externe contrariée",
+                "Lift-off test (sous-scapulaire) : douleur lors du décollement de la main du dos",
+                "Palm-up test (long biceps) : douleur lors de la flexion contrariée"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie : examen de 1ère intention (tendinopathie, bursite associée)",
+                "IRM si doute diagnostique, suspicion rupture partielle ou échec du traitement",
+                "Radiographie standard : éliminer calcification ou cause osseuse"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement conservateur",
+              "points": [
+                "Repos relatif, éviter les gestes déclenchants",
+                "Antalgiques ± AINS",
+                "Kinésithérapie : travail d’amplitude, renforcement des muscles de la coiffe et de la scapula",
+                "Infiltration cortisonée sous-acromiale si douleur rebelle"
+              ]
+            },
+            {
+              "titre": "Traitement chirurgical",
+              "points": [
+                "Rare, discuté en cas d’échec du traitement médical prolongé",
+                "Acromioplastie arthroscopique ± geste sur la coiffe si lésion évolutive"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Douleur progressive de l’épaule, surtout aux mouvements en élévation",
+            "Mobilité passive conservée, mobilité active douloureuse",
+            "Test de Jobe douloureux mais non déficitaire",
+            "Échographie est l’examen de référence",
+            "Traitement conservateur = première intention"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Depuis quand douleur de l’épaule ? Progressive ou brutale ?",
+                "Douleur nocturne ? Sommeil perturbé ?",
+                "Gêne dans les gestes du quotidien (se coiffer, s’habiller, porter un sac) ?",
+                "Activité sportive ou professionnelle sollicitant l’épaule ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Inspection : recherche d’amyotrophie",
+                "Mobilité active vs passive",
+                "Tests spécifiques : Jobe, Patte, Lift-off, Palm-up",
+                "Échographie (± IRM selon contexte)"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Éliminer une rupture (force conservée mais douloureuse en tendinopathie)",
+                "Débuter traitement conservateur (antalgiques, kinésithérapie, repos relatif)",
+                "Envisager infiltration si échec, chirurgie seulement en dernier recours"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Douleur à l’épaule (suspicion tendinopathie coiffe des rotateurs / conflit sous-acromial)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, profession, motif de consultation",
+            "Caractériser douleur (OPQRST) → localisation antérieure épaule droite, début progressif fin saison softball, EVA 7/10 max",
+            "Durée → 2 mois, aggravée par mouvements overhead, développé couché, nocturne",
+            "Facteurs soulageants/aggravants → AINS peu efficaces, repos relatif améliore",
+            "Signes associés → pas instabilité, pas paresthésies, pas fièvre",
+            "Examen clinique → inspection, palpation, mobilité active/passive, tests spéciaux (Neer, Hawkins, Jobe, Speed, Yergason)",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → radiographies standard, échographie/IRM si échec traitement conservateur",
+            "Prise en charge → AINS réguliers, repos relatif, kinésithérapie, glace, infiltration corticoïdes si échec"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : PAIN",
+            "elements": [
+              "P = Pain nocturne (typique tendinopathie)",
+              "A = Activities overhead aggravent",
+              "I = Impingement tests positifs (Neer, Hawkins)",
+              "N = No rupture complète (force conservée)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. Michael McKinney, un homme de 34 ans, policier actif et sportif, qui consulte pour une douleur à l’épaule droite depuis environ deux mois.\n\nLa douleur a débuté progressivement à la fin de sa saison de softball, sans traumatisme spécifique. Elle est localisée en avant de l’épaule droite, décrite comme aiguë, survenant surtout lors de certains mouvements. Son intensité est évaluée à 7 sur 10 au maximum, mais à 0 au repos. La douleur ne s’irradie pas et reste localisée. Elle est particulièrement gênante la nuit, l’obligeant parfois à changer de position.\n\nLa douleur est aggravée par les mouvements au-dessus de la tête, notamment au développé couché et aux exercices de musculation sollicitant les épaules. Elle est légèrement soulagée par le repos. Il a essayé l’ibuprofène sans succès et prend du naproxène de temps en temps, avec un soulagement partiel.\n\nIl n’a pas noté de rougeur, d’œdème, ni de sensation d’instabilité. Pas d’épisodes de luxation, pas de blocage articulaire, pas de picotements ou d’engourdissement. Pas de douleurs thoraciques, respiratoires ou abdominales.\n\nSes antécédents sont marqués par quelques blessures sportives (entorses de cheville, fracture du pouce) et une blessure par balle à la jambe droite il y a deux ans, bien récupérée. Il a un eczéma traité par topiques et une dysfonction érectile traitée occasionnellement par vardénafil. Chirurgie antérieure : amygdalectomie et chirurgie suite à la balle. Pas de tabac, alcool occasionnel, pas de drogues. Ses parents et ses sœurs sont en bonne santé.\n\nÀ l’examen, les constantes vitales sont normales. L’épaule est symétrique, sans déformation ni amyotrophie. La palpation retrouve une légère sensibilité de la région gléno-humérale antérieure. L’amplitude articulaire est complète, mais certains mouvements déclenchent la douleur. Les tests spéciaux montrent un test de Neer positif, un test de Hawkins évalué, un test de la boîte vide positif avec douleur, et un test isométrique du sus-épineux positif. Les tests pour le biceps (Speed et Yergason) sont négatifs. La force globale est conservée (5/5), sans déficit neurologique.\n\nEn résumé, il s’agit d’un homme jeune, sportif, avec une douleur progressive de l’épaule droite, nocturne et aggravée par les mouvements overhead, avec tests de conflit positifs et force conservée. L’hypothèse principale est une tendinopathie de la coiffe des rotateurs, possiblement associée à un syndrome de conflit sous-acromial. Les diagnostics différentiels incluent une lésion SLAP, une tendinite du biceps, ou plus rarement une arthrose gléno-humérale débutante.\n\nEn termes d’examens complémentaires, je demanderais des radiographies de l’épaule (face vraie, profil de coiffe, axillaire) pour éliminer une cause osseuse. Une échographie ou une IRM seraient réservées en cas d’échec du traitement conservateur.\n\nLa prise en charge initiale repose sur un traitement médicamenteux avec AINS réguliers pendant 2 à 3 semaines, du paracétamol en alternance si nécessaire, un repos relatif en évitant les mouvements overhead et la musculation de l’épaule, des exercices pendulaires et de la glace après l’effort. En cas d’échec, une infiltration corticoïde pourra être proposée. Je prévois une réévaluation clinique à 2-3 semaines et une reprise progressive du sport après amélioration."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. McKinney, 34 ans, policier, présente une douleur progressive de l’épaule droite depuis 2 mois.\n\nB (Background) : Sportif, joueur de softball, douleur nocturne, aggravée par musculation et mouvements overhead. Pas traumatisme franc, pas instabilité.\n\nA (Assessment) : Suspicion tendinopathie coiffe des rotateurs avec conflit sous-acromial. DD : lésion SLAP, tendinite du biceps, arthrose débutante.\n\nR (Recommendation) : Radiographies standard, traitement conservateur (AINS réguliers, repos relatif, kinésithérapie, glace). Réévaluation 2-3 semaines, infiltration corticoïde si échec."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Douleur épaule chronique – mnemonic SOFTBALL",
+              "points": [
+                "S = Sportif avec mouvements overhead",
+                "O = Onset progressif",
+                "F = Force conservée",
+                "T = Tests Neer/Jobe positifs",
+                "B = Biceps normal (Speed, Yergason négatifs)",
+                "A = At night pain (douleur nocturne)",
+                "L = Localisation antérieure",
+                "L = Lancer sportif typique"
+              ]
+            },
+            {
+              "titre": "👉 Coiffe des rotateurs",
+              "points": [
+                "S = Sus-épineux → abduction",
+                "SS = Sous-scapulaire → rotation interne",
+                "SE = Sous-épineux → rotation externe",
+                "PR = Petit rond → rotation externe"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Tendinopathie de la coiffe des rotateurs",
+                  "reponse": {
+                    "pour": [
+                      "Douleur progressive sans traumatisme",
+                      "Douleur nocturne caractéristique",
+                      "Tests Jobe/boîte vide positifs",
+                      "Aggravation overhead"
+                    ],
+                    "contre": [
+                      "Force préservée (pas rupture complète)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Syndrome de conflit sous-acromial",
+                  "reponse": {
+                    "pour": [
+                      "Test Neer positif",
+                      "Douleur overhead",
+                      "Localisation antérieure"
+                    ],
+                    "contre": [
+                      "Pas limitation franche de mobilité"
+                    ]
+                  }
+                },
+                {
+                  "question": "Lésion SLAP",
+                  "reponse": {
+                    "pour": [
+                      "Sportif lanceur",
+                      "Douleur antérieure"
+                    ],
+                    "contre": [
+                      "Pas de blocage articulaire",
+                      "Tests biceps négatifs"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Radiographies de l’épaule (face vraie, profil de coiffe, axillaire)",
+                    "Échographie ou IRM si échec traitement conservateur",
+                    "Pas d’imagerie avancée en première intention"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Tendinopathie de la coiffe des rotateurs avec conflit sous-acromial"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "AINS réguliers 2-3 semaines",
+                      "Repos relatif, éviter overhead",
+                      "Paracétamol si besoin",
+                      "Exercices pendulaires, glace",
+                      "Rééducation précoce"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation clinique à 2-3 semaines",
+                    "Si échec : infiltration corticoïde, IRM",
+                    "Reprise progressive sport après amélioration",
+                    "Conseils prévention récidive (technique de lancer, échauffement)"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

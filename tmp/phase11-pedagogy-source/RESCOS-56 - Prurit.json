@@ -1,0 +1,869 @@
+{
+  "title": "RESCOS-56 - Prurit",
+  "category": "RESCOS",
+  "subcategory": "Gastro-entérologie - Pathologie biliaire",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 61 ans consultant pour prurit généralisé et ictère depuis une semaine",
+    "vitals": {}
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "Démangeaisons intenses et jaunisse depuis une semaine"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de l'ictère",
+          "details": [
+            "Début [progressif depuis une semaine]",
+            "Prurit généralisé [précédant l'ictère]",
+            "Urines foncées [depuis trois jours, couleur bière brune]",
+            "Selles décolorées [actuellement franchement brunes et mousseuses]",
+            "Coloration jaune [yeux et peau]",
+            "Évolution progressive"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "details": [
+            "Prurit intense [généralisé, prédominant aux extrémités]",
+            "Perte pondérale [6 kilos en 3 mois]",
+            "Anorexie [perte d'appétit progressive]",
+            "Vagues douleurs épigastriques [fond continu]",
+            "Pas de fièvre",
+            "Pas de frissons"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents personnels",
+          "details": [
+            "Cholécystectomie [il y a 15 ans]",
+            "Calculs biliaires antérieurs",
+            "Pas d'hépatite connue",
+            "Pas de transfusion sanguine",
+            "Pas de voyage récent",
+            "Pas d'exposition à des toxiques"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "Consommation d'alcool [modérée, occasionnelle]",
+            "Tabagisme [rechercher]",
+            "Médicaments hépatotoxiques [aucun]",
+            "Compléments alimentaires [aucun]",
+            "Drogues illicites [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Cancer digestif dans la famille",
+            "Pathologies hépatiques héréditaires",
+            "Maladies auto-immunes"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Revue des systèmes",
+          "details": [
+            "Pas de méléna",
+            "Pas d'hématémèse",
+            "Pas de rectorragies",
+            "Transit intestinal normal",
+            "Pas de troubles urinaires",
+            "Pas de dyspnée"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale",
+          "details": [
+            "Ictère cutanéo-muqueux franc [coloration jaune généralisée]",
+            "Sclérotiques ictériques [jaunes]",
+            "Excoriations cutanées [lésions de grattage sur avant-bras]",
+            "État général [légèrement apathique mais bien orienté]",
+            "Pas d'angiomes stellaires",
+            "Pas d'érythrose palmaire"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Signes vitaux",
+          "details": [
+            "Tension artérielle",
+            "Fréquence cardiaque",
+            "Température [apyrexie]",
+            "Fréquence respiratoire",
+            "Saturation O2",
+            "Poids actuel et évolution"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen abdominal - Inspection",
+          "details": [
+            "Morphologie générale [plat vs distendu]",
+            "Symétrie",
+            "Cicatrices [cave laparoscopie cholécystectomie]",
+            "Hernies visibles",
+            "Veines superficielles",
+            "Mouvements respiratoires"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation abdominale",
+          "details": [
+            "Patience avant de conclure [attendre au moins 1 minute]",
+            "Bruits intestinaux [fréquence normale]",
+            "Tonalité [bruits métalliques = distension intestinale]",
+            "Souffle vasculaire [rechercher]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Percussion abdominale",
+          "details": [
+            "Tympanisme normal [à l'épigastre]",
+            "Matité hépatique [limite supérieure et inférieure]",
+            "Flèche hépatique [normale, non augmentée]",
+            "Recherche d'ascite [matité déclive]",
+            "Rate [normalement non percutable]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation superficielle",
+          "details": [
+            "Main à plat, doigts serrés",
+            "Tonus pariétal spontané et en réponse à la pression",
+            "Douleur localisée [rechercher]",
+            "Défense [absente, ventre souple]",
+            "Contracture [absente]",
+            "Douleur à l'ébranlement [absente]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Palpation profonde - Foie",
+          "details": [
+            "Position décubitus dorsal",
+            "Technique main postérieure loge rénale, main antérieure sous rebord costal",
+            "Inspiration profonde pour faire descendre le foie",
+            "Foie de taille normale [non palpable ou bord inférieur à limite]",
+            "Consistance [si palpable]",
+            "Surface [lisse vs nodulaire]",
+            "Bord inférieur [mousse vs tranchant]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Palpation profonde - Rate et autres",
+          "details": [
+            "Rate non palpable [normale]",
+            "Recherche de masse abdominale",
+            "Aorte [pulsations normales, pas d'anévrisme]",
+            "Vésicule biliaire [signe de Murphy négatif - déjà cholécystectomisé]",
+            "Points douloureux épigastriques"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Recherche de signes d'insuffisance hépatocellulaire",
+          "details": [
+            "Absence d'ascite [pas de matité déclive]",
+            "Pas d'angiomes stellaires",
+            "Pas d'érythrose palmaire",
+            "Pas d'ongles blancs",
+            "Pas de foetor hépatique",
+            "Pas d'encéphalopathie [pas d'astérixis/flapping tremor]"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Recherche de signes d'hypertension portale",
+          "details": [
+            "Pas de splénomégalie",
+            "Pas de circulation collatérale abdominale",
+            "Pas d'ascite",
+            "Pas de gynécomastie",
+            "Pas d'atrophie testiculaire"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels de l'ictère",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques pour un ictère avec prurit",
+            "categories": [
+              {
+                "name": "Ictère obstructif - Causes principales",
+                "items": [
+                  {
+                    "text": "Calcul résiduel ou néoplasie de la tête du pancréas",
+                    "cause": "Arguments POUR:\n\t□ Prurit intense précédant l'ictère\n\t□ Urines foncées, selles claires\n\t□ Perte de poids (6kg en 3 mois)\n\t□ Antécédent de cholécystectomie\n\t□ Absence d'insuffisance hépatocellulaire",
+                    "test": "→ Échographie abdominale, CT abdominal, MRCP, CA 19-9"
+                  },
+                  {
+                    "text": "Cholangiocarcinome",
+                    "cause": "Arguments POSSIBLES:\n\t□ Âge 61 ans\n\t□ Ictère progressif\n\t□ Perte de poids\n\t□ Prurit important",
+                    "test": "→ IRM biliaire, ERCP avec biopsies"
+                  },
+                  {
+                    "text": "Ampullome vatérien",
+                    "cause": "Arguments POSSIBLES:\n\t□ Obstruction biliaire\n\t□ Selles décolorées intermittentes",
+                    "test": "→ Duodénoscopie, écho-endoscopie"
+                  }
+                ]
+              },
+              {
+                "name": "Ictère sur cirrhose - Ascite",
+                "items": [
+                  {
+                    "text": "Cirrhose décompensée",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'ascite clinique\n\t□ Pas d'angiomes stellaires\n\t□ Pas d'érythrose palmaire\n\t□ Pas de signes d'hypertension portale\n\t□ Foie de taille normale",
+                    "test": "→ Bilan hépatique complet, échographie avec Doppler"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes d'ictère",
+                "items": [
+                  {
+                    "text": "Hépatite virale aiguë",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de syndrome grippal\n\t□ Pas de fièvre\n\t□ Évolution progressive (vs brutale)",
+                    "test": "→ Sérologies virales (VHA, VHB, VHC, VHE)"
+                  },
+                  {
+                    "text": "Hépatite médicamenteuse",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de prise médicamenteuse récente\n\t□ Pas d'exposition toxique",
+                    "test": "→ Anamnèse médicamenteuse détaillée"
+                  },
+                  {
+                    "text": "Cholangite sclérosante",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'antécédent de MICI\n\t□ Âge de début tardif",
+                    "test": "→ MRCP, anticorps anti-mitochondries"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "Bilan hépatique complet: bilirubine totale et conjuguée",
+            "Transaminases (ALAT/ASAT)",
+            "Phosphatases alcalines (PAL) et Gamma-GT [élévation importante si obstruction]",
+            "Albumine, TP/INR [fonction hépatique]",
+            "NFS: recherche anémie, hyperleucocytose",
+            "Lipase [pancréatite associée]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Imagerie biliaire",
+          "details": [
+            "Échographie abdominale en première intention",
+            "- Dilatation des voies biliaires intra et extra-hépatiques",
+            "- Recherche de calcul résiduel dans le cholédoque",
+            "- Masse pancréatique ou péri-hilaire",
+            "- État du parenchyme hépatique",
+            "CT abdominal avec injection",
+            "- Meilleure visualisation des masses",
+            "- Staging si néoplasie",
+            "MRCP (cholangio-pancréatographie par résonance magnétique)",
+            "- Visualisation non invasive de l'arbre biliaire",
+            "- Localisation précise de l'obstacle"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Marqueurs tumoraux et examens spécialisés",
+          "details": [
+            "CA 19-9 [cholangiocarcinome, cancer pancréas]",
+            "ACE [métastases hépatiques]",
+            "Alpha-foetoprotéine [carcinome hépatocellulaire]",
+            "IgG4 [pancréatite auto-immune]",
+            "ERCP diagnostique et thérapeutique",
+            "- Sphinctérotomie si calcul",
+            "- Pose de prothèse biliaire si sténose",
+            "- Biopsies/brossage cytologique"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement symptomatique du prurit",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Mesures générales",
+                "content": "• Éviter les bains chauds\n• Utiliser savons doux, pH neutre\n• Porter vêtements amples en coton\n• Maintenir ongles courts\n• Humidifier l'environnement\n• Émollients cutanés réguliers"
+              },
+              {
+                "title": "Traitement médicamenteux du prurit cholestatique",
+                "content": "• Cholestyramine 4g x 2-3/jour (chélateur acides biliaires)\n• Rifampicine 150-300mg/jour\n• Naltrexone 25-50mg/jour (antagoniste opioïde)\n• Sertraline 75-100mg/jour\n• Antihistaminiques peu efficaces mais peuvent aider au sommeil"
+              },
+              {
+                "title": "Traitement de l'obstruction biliaire",
+                "content": "• Drainage biliaire endoscopique (ERCP)\n• Sphinctérotomie si calcul cholédocien\n• Pose de prothèse biliaire si sténose maligne\n• Drainage percutané transhépatique si échec ERCP\n• Chirurgie selon étiologie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Surveillance et complications",
+          "redflagsSection": {
+            "title": "Complications à surveiller",
+            "items": [
+              {
+                "text": "Angiocholite",
+                "description": "Fièvre + frissons + douleur HCD = triade de Charcot, urgence"
+              },
+              {
+                "text": "Insuffisance rénale",
+                "description": "Syndrome hépatorénal, néphropathie aux sels biliaires"
+              },
+              {
+                "text": "Coagulopathie",
+                "description": "Déficit vitamine K par malabsorption biliaire"
+              },
+              {
+                "text": "Sepsis biliaire",
+                "description": "Choc septique sur angiocholite"
+              },
+              {
+                "text": "Pancréatite obstructive",
+                "description": "Si obstacle ampullaire"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m7",
+          "text": "Orientation et prise en charge",
+          "details": [
+            "Hospitalisation si angiocholite ou altération état général",
+            "Référence gastro-entérologie pour ERCP",
+            "Référence chirurgie si tumeur résécable",
+            "Référence oncologie si tumeur non résécable",
+            "Suivi rapproché si traitement ambulatoire",
+            "Supplémentation vitamines liposolubles (A,D,E,K)"
+          ]
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication au patient",
+          "content": "Vos symptômes suggèrent un blocage de l'écoulement de la bile, ce qui explique la jaunisse et les démangeaisons. Cela peut être dû à un calcul résiduel après votre opération de la vésicule ou à une autre cause qu'il faut identifier. Nous devons faire des examens sanguins et une échographie pour comprendre l'origine du problème."
+        },
+        {
+          "id": "c2",
+          "text": "Questions du patient",
+          "content": "[Est-ce que c'est un cancer?]\n[Pourquoi ça me gratte autant?]\n[Est-ce que c'est grave?]\n[Vais-je avoir besoin d'une nouvelle opération?]\n[Combien de temps pour que la jaunisse disparaisse?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponses adaptées",
+          "content": "Plusieurs causes sont possibles, dont certaines bénignes comme un calcul. Les examens vont nous orienter\nLes démangeaisons sont dues aux sels biliaires qui s'accumulent dans la peau quand la bile ne s'écoule pas\nC'est une situation qui nécessite un traitement mais qui se soigne généralement bien une fois la cause identifiée\nSelon la cause, le traitement peut être endoscopique sans chirurgie ouverte\nUne fois l'obstacle levé, la jaunisse disparaît généralement en quelques semaines"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé - Ictère obstructif",
+      "nom": "Patient masculin",
+      "age": "61 ans",
+      "contexte": "Cabinet de médecine générale",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis tout jaune et j'ai des démangeaisons terribles depuis une semaine",
+        "description": "Prurit généralisé suivi d'un ictère progressif avec urines foncées"
+      },
+      "histoireActuelle": {
+        "symptomesPrincipaux": [
+          "Prurit généralisé apparu en premier",
+          "Plus intense au niveau des avant-bras",
+          "Jaunisse apparue 3-4 jours après",
+          "D'abord les yeux puis la peau",
+          "Urines devenues foncées comme de la bière brune",
+          "Selles actuellement franchement brunes et mousseuses"
+        ],
+        "symptomesAssocies": [
+          "Perte de 6 kilos en 3 mois",
+          "Perte d'appétit progressive",
+          "Vagues douleurs épigastriques en fond continu",
+          "Pas de fièvre",
+          "Pas de frissons",
+          "Pas de nausées ou vomissements"
+        ],
+        "facteursDeclenchants": [
+          "Rien de particulier",
+          "Pas de nouveau médicament",
+          "Pas de voyage récent",
+          "Pas d'excès alimentaire"
+        ]
+      },
+      "antecedents": {
+        "medicaux": "Cholécystectomie il y a 15 ans pour calculs biliaires",
+        "chirurgicaux": "Cholécystectomie laparoscopique",
+        "familiaux": "Pas de cancer digestif connu dans la famille",
+        "allergies": "Aucune allergie connue"
+      },
+      "habitudes": {
+        "alcool": "Occasionnel, modéré",
+        "tabac": "Non-fumeur",
+        "medicaments": "Aucun traitement régulier",
+        "alimentation": "Normale, pas de régime particulier"
+      },
+      "simulation": {
+        "attitude": [
+          "Inquiet mais calme",
+          "Se gratte fréquemment les avant-bras",
+          "Légèrement apathique",
+          "Bien orienté dans le temps et l'espace"
+        ],
+        "signesPhysiques": [
+          "Coloration jaune visible de la peau et des sclérotiques",
+          "Excoriations sur les avant-bras",
+          "Pas de confusion",
+          "Pas de tremblements"
+        ],
+        "durantExamen": [
+          "Abdomen souple, pas de défense",
+          "Pas de douleur à la palpation sauf légère sensibilité épigastrique",
+          "Cicatrices de laparoscopie visibles",
+          "Coopératif pour l'examen"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert - Ictère obstructif",
+      "pointsCles": [
+        "Ictère obstructif typique: prurit précède l'ictère",
+        "Urines foncées + selles décolorées = obstruction biliaire complète",
+        "Cholécystectomie ancienne: penser calcul résiduel ou néoplasie",
+        "Perte de poids: red flag pour néoplasie",
+        "Absence de signes d'insuffisance hépatocellulaire"
+      ],
+      "pieges": [
+        "Ne pas oublier l'examen complet malgré diagnostic évident",
+        "Rechercher systématiquement signes d'hypertension portale",
+        "Palper la région épigastrique (masse pancréatique)",
+        "Vérifier l'absence de confusion (encéphalopathie)",
+        "Ne pas négliger l'examen cutané (excoriations, angiomes)"
+      ],
+      "techniquesExamen": [
+        "Percussion: déterminer taille du foie (flèche hépatique)",
+        "Palpation bimanuelle du foie: inspiration profonde",
+        "Recherche ascite: matité déclive en décubitus latéral",
+        "Astérixis: bras tendus, mains en extension dorsale",
+        "Murphy négatif car cholécystectomisé"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Ictère obstructif",
+      "sections": [
+        {
+          "titre": "Physiopathologie",
+          "contenu": "• Obstruction voies biliaires → accumulation bile conjuguée\n• Reflux bilirubine conjuguée dans le sang\n• Sels biliaires dans la peau → prurit\n• Absence de sels biliaires intestinaux → selles décolorées\n• Bilirubine conjuguée filtrée par les reins → urines foncées"
+        },
+        {
+          "titre": "Diagnostic différentiel des ictères",
+          "contenu": "OBSTRUCTIF:\n• Prurit, urines foncées, selles claires\n• Excoriations cutanées\n• Diathèse hémorragique (déficit vitamine K)\n• Absence d'encéphalopathie\n\nCIRRHOSE:\n• Encéphalopathie\n• Foetor\n• Angiomes stellaires, érythrose palmaire\n• Splénomégalie"
+        },
+        {
+          "titre": "Étiologies de l'obstruction biliaire",
+          "contenu": "BÉNIGNES:\n• Lithiase cholédocienne résiduelle\n• Sténose bénigne post-opératoire\n• Pancréatite chronique\n• Cholangite sclérosante\n\nMALIGNES:\n• Cancer tête du pancréas (60%)\n• Cholangiocarcinome\n• Ampullome vatérien\n• Métastases hilaires"
+        },
+        {
+          "titre": "Triade de Charcot",
+          "contenu": "Angiocholite aiguë:\n1. Fièvre avec frissons\n2. Douleur hypochondre droit\n3. Ictère\n\nPentade de Reynolds (si grave):\n+ Confusion\n+ Choc septique"
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Cholestyramine 4g x 2-3/jour pour le prurit",
+        "Vitamine K 10mg IM si TP bas",
+        "Antibioprophylaxie si geste endoscopique",
+        "ERCP en urgence si angiocholite",
+        "Drainage biliaire: endoscopique > percutané",
+        "Prothèse biliaire métallique si tumeur non résécable",
+        "Résection chirurgicale si tumeur opérable"
+      ],
+      "examensComplementaires": [
+        "Bilirubine totale et conjuguée: hyperbilirubinémie conjuguée",
+        "PAL et GGT: très augmentées (syndrome cholestatique)",
+        "Transaminases: modérément élevées",
+        "TP/INR: allongé si obstruction prolongée",
+        "Échographie: dilatation VBIH et VBEH",
+        "CT/IRM: masse pancréatique, staging",
+        "MRCP: cartographie biliaire non invasive",
+        "ERCP: diagnostique et thérapeutique"
+      ]
+    },
+    "resume": {
+      "titre": "💛 Ictère obstructif (ictère cholestatique avec prurit précédant l’ictère) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes principaux",
+              "points": [
+                "Prurit cutané diffus, souvent inaugural, précédant l’ictère",
+                "Ictère cutanéo-muqueux d’installation progressive",
+                "Urines foncées (cholurie)",
+                "Selles décolorées (acholie)",
+                "Douleurs de l’hypochondre droit ou de l’épigastre, parfois coliques hépatiques"
+              ]
+            },
+            {
+              "titre": "Contexte et facteurs de risque",
+              "points": [
+                "Lithiase biliaire (cholédocolithiase)",
+                "Tumeurs pancréatiques (cancer tête du pancréas), cholangiocarcinome",
+                "Antécédents de chirurgie biliaire",
+                "Consommation d’alcool, tabac",
+                "Antécédents familiaux de cancers digestifs"
+              ]
+            },
+            {
+              "titre": "Signes de gravité/complications",
+              "points": [
+                "Angiocholite : triade de Charcot (fièvre, douleurs HCD, ictère)",
+                "Amaigrissement, anorexie (néoplasie)",
+                "Cholestase prolongée → carences vitaminiques liposolubles"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Inspection",
+              "points": [
+                "Ictère conjonctival et cutané",
+                "Grattage cutané lié au prurit",
+                "Amaigrissement éventuel"
+              ]
+            },
+            {
+              "titre": "Palpation abdominale",
+              "points": [
+                "Hépatomégalie possible",
+                "Vésicule de Courvoisier-Terrier : palpable, distendue, indolore (obstruction tumorale)",
+                "Douleur provoquée à l’HCD si cause lithiasique"
+              ]
+            },
+            {
+              "titre": "Autres signes",
+              "points": [
+                "Fièvre et frissons (angiocholite)",
+                "Adénopathie de Troisier (métastases néoplasiques)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Bilirubine conjuguée élevée",
+                "Cholestase : PAL et GGT augmentées",
+                "Cytolyse modérée (ASAT/ALAT)",
+                "Hémocultures si fièvre"
+              ]
+            },
+            {
+              "titre": "Imagerie",
+              "points": [
+                "Échographie abdominale : 1ère intention, dilatation voies biliaires, recherche obstacle",
+                "Scanner TAP injecté : bilan étiologique (calcul, tumeur, compression)",
+                "IRM biliaire (cholangio-IRM) pour préciser l’obstruction",
+                "Echoendoscopie ou CPRE : diagnostic + geste thérapeutique (extraction calcul, drainage)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Mesures initiales",
+              "points": [
+                "Hospitalisation si ictère fébrile ou terrain fragile",
+                "Réhydratation, correction troubles hydro-électrolytiques",
+                "Antibiothérapie IV si angiocholite"
+              ]
+            },
+            {
+              "titre": "Traitement étiologique",
+              "points": [
+                "Cholédocolithiase : CPRE avec sphinctérotomie et extraction du calcul",
+                "Tumeur pancréato-biliaire : drainage biliaire endoscopique ± chirurgie curative si possible",
+                "Stent biliaire palliatif si cancer non résécable"
+              ]
+            },
+            {
+              "titre": "Prise en charge globale",
+              "points": [
+                "Antiprurigineux (choléstyramine, antihistaminiques)",
+                "Supplémentation en vitamines liposolubles si cholestase prolongée",
+                "Discussion multidisciplinaire (chirurgie, oncologie, endoscopie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Prurit inaugural suivi d’un ictère = typique de l’ictère cholestatique obstructif",
+            "Biologie : bilirubine conjuguée ↑, PAL et GGT ↑↑",
+            "Échographie = examen clé initial pour confirmer la dilatation biliaire",
+            "CPRE = diagnostic + thérapeutique (calcul, stent)",
+            "Toujours rechercher et traiter les complications infectieuses (angiocholite)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Prurit ? Depuis quand ?",
+                "Ictère progressif ou brutal ?",
+                "Douleurs HCD ou coliques biliaires ?",
+                "Fièvre, frissons (angiocholite) ?",
+                "Amaigrissement, anorexie ? (suspicion néoplasie)"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Biologie hépatique : bilirubine, PAL, GGT, transaminases",
+                "Échographie abdominale (dilatation VBIH/VBEH, obstacle)",
+                "Scanner TAP injecté ou IRM biliaire",
+                "CPRE si indication thérapeutique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Confirmer cholestase obstructive (clinique + bio + écho)",
+                "Lever l’obstacle (CPRE pour calcul, drainage/stent pour tumeur)",
+                "Traiter complication infectieuse (angiocholite = ATB IV + drainage urgent)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Prurit inaugural suivi d’un ictère progressif (suspicion obstruction biliaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif (prurit généralisé puis jaunisse depuis 1 semaine)",
+            "Caractériser ictère → début progressif, constant, prurit inaugural, urines foncées, selles décolorées",
+            "Symptômes associés → perte pondérale 6 kg/3 mois, anorexie, douleurs épigastriques sourdes, pas de fièvre",
+            "ATCD → cholécystectomie ancienne, calculs biliaires, pas d’hépatite connue",
+            "Habitudes de vie → alcool modéré, pas de drogues, tabac ?",
+            "Examen clinique → ictère cutanéo-muqueux franc, excoriations cutanées, abdomen souple, foie de taille normale, pas de signes d’insuffisance hépatocellulaire ni d’HTP",
+            "Résumé + hypothèse principale (ictère cholestatique obstructif par tumeur pancréato-biliaire ou calcul résiduel) + diagnostics différentiels (cholangiocarcinome, ampullome, hépatite virale, cirrhose)",
+            "Examens complémentaires → bilan hépatique (bilirubine conjuguée, PAL, GGT, transaminases), NFS/TP, échographie abdominale, scanner TAP, cholangio-IRM ± CPRE avec geste thérapeutique",
+            "Prise en charge → hospitalisation, traitement symptomatique du prurit, drainage biliaire si obstacle, orientation gastro/oncologie/chirurgie"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : JAUNE",
+            "elements": [
+              "J = Jaunisse progressive",
+              "A = Amaigrissement",
+              "U = Urines foncées",
+              "N = Néoplasie pancréas/cholangiocarcinome à évoquer",
+              "E = Examens (bio, écho, scanner, IRM, CPRE)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de M. X, un homme de 61 ans, qui consulte pour démangeaisons intenses généralisées apparues il y a une semaine, suivies d’une jaunisse que sa famille a remarquée. L’ictère est progressif et constant, touchant d’abord les yeux puis la peau. Le patient a remarqué que ses urines sont devenues foncées comme de la bière brune depuis 3 jours, et que ses selles sont décolorées et mousseuses. Il rapporte aussi une perte d’appétit et un amaigrissement de 6 kilos en 3 mois, ainsi que de vagues douleurs épigastriques diffuses, sans fièvre ni frissons.\n\nSes antécédents sont marqués par une cholécystectomie il y a 15 ans pour calculs biliaires. Il ne prend pas de médicaments réguliers, n’a pas voyagé récemment, ne consomme pas de drogues et boit seulement de l’alcool de façon occasionnelle. Il n’a pas d’antécédent d’hépatite connue. Il ne fume pas.\n\nÀ l’examen, M. X présente un ictère cutanéo-muqueux franc avec sclérotiques jaunes et de multiples lésions de grattage sur les avant-bras. L’abdomen est souple, non douloureux, avec une cicatrice de laparoscopie visible. On ne retrouve pas d’hépatomégalie palpable, ni de splénomégalie, ni de circulation collatérale. Il n’y a pas d’angiomes stellaires, pas d’érythrose palmaire et pas de signes d’insuffisance hépatocellulaire. L’état général est légèrement altéré mais le patient est orienté.\n\nEn résumé, il s’agit d’un homme de 61 ans avec un prurit inaugural, suivi d’un ictère progressif, associé à des urines foncées, des selles décolorées et une perte pondérale. Mon hypothèse principale est un ictère cholestatique obstructif secondaire à une lithiase résiduelle ou plus probablement une tumeur pancréato-biliaire, comme un cancer de la tête du pancréas ou un cholangiocarcinome. Les diagnostics différentiels incluent une ampullome vatérien, une hépatite virale ou médicamenteuse, et plus rarement une cirrhose.\n\nComme examens complémentaires, je demanderais un bilan biologique hépatique avec bilirubine totale et conjuguée, PAL, GGT, transaminases, ainsi que la coagulation et la NFS. En imagerie, une échographie abdominale est indiquée en première intention pour rechercher une dilatation des voies biliaires et une masse. Un scanner TAP injecté et une cholangio-IRM permettraient de préciser l’obstruction. En cas de confirmation d’un obstacle, une CPRE pourra être envisagée à visée diagnostique et thérapeutique.\n\nEn termes de prise en charge, je proposerais une hospitalisation pour évaluation et traitement. Le prurit peut être soulagé par la cholestyramine ou la rifampicine. Un drainage biliaire endoscopique pourrait être indiqué si l’ictère est sévère ou si le patient présente un prurit invalidant. Le patient devra être orienté en gastro-entérologie, en oncologie ou en chirurgie digestive selon le diagnostic final."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Homme de 61 ans, prurit inaugural suivi d’un ictère progressif depuis une semaine, urines foncées et selles décolorées.\n\nB (Background) : Antécédent de cholécystectomie, perte de 6 kg en 3 mois, pas de fièvre ni frissons.\n\nA (Assessment) : Suspicion ictère cholestatique obstructif par néoplasie pancréato-biliaire ou calcul résiduel. DD : cholangiocarcinome, ampullome, hépatite virale.\n\nR (Recommendation) : Bilan hépatique, échographie abdominale, scanner TAP, cholangio-IRM, CPRE si besoin, hospitalisation, traitement symptomatique du prurit, orientation spécialisée."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Triade classique cholestase",
+              "points": [
+                "Prurit inaugural",
+                "Ictère progressif",
+                "Urines foncées + selles décolorées"
+              ]
+            },
+            {
+              "titre": "👉 Causes principales d’ictère obstructif",
+              "points": [
+                "Calcul biliaire résiduel",
+                "Cancer tête pancréas",
+                "Cholangiocarcinome",
+                "Ampullome vatérien"
+              ]
+            },
+            {
+              "titre": "👉 Complications à rechercher",
+              "points": [
+                "Angiocholite (triade de Charcot : fièvre, douleurs HCD, ictère)",
+                "Sepsis biliaire",
+                "Carences vitaminiques liposolubles",
+                "Pancréatite obstructive"
+              ]
+            },
+            {
+              "titre": "⚠️ Pièges ECOS",
+              "points": [
+                "Ne pas oublier l’examen cutané (lésions de grattage)",
+                "Toujours rechercher signes d’insuffisance hépatique",
+                "Penser à palper la région épigastrique (masse pancréatique)",
+                "Ne pas confondre avec une hépatite virale"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Ictère obstructif (cancer tête pancréas, cholangiocarcinome)",
+                  "reponse": {
+                    "pour": [
+                      "Prurit inaugural",
+                      "Ictère progressif",
+                      "Urines foncées, selles décolorées",
+                      "Perte pondérale",
+                      "Antécédent calculs biliaires"
+                    ],
+                    "contre": [
+                      "Pas de masse palpable au stade actuel"
+                    ]
+                  }
+                },
+                {
+                  "question": "Hépatite virale",
+                  "reponse": {
+                    "pour": [
+                      "Ictère possible"
+                    ],
+                    "contre": [
+                      "Pas de fièvre",
+                      "Pas de syndrome grippal",
+                      "Évolution progressive"
+                    ]
+                  }
+                },
+                {
+                  "question": "Cirrhose décompensée",
+                  "reponse": {
+                    "pour": [
+                      "Ictère possible"
+                    ],
+                    "contre": [
+                      "Pas d’ascite",
+                      "Pas d’angiomes stellaires",
+                      "Foie de taille normale"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Bilan hépatique (bilirubine conjuguée, PAL, GGT, transaminases)",
+                    "NFS, TP/INR",
+                    "Échographie abdominale",
+                    "Scanner TAP injecté",
+                    "IRM biliaire",
+                    "CPRE si indication diagnostique/therapeutique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Ictère cholestatique obstructif probablement secondaire à une tumeur pancréato-biliaire"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Hospitalisation",
+                      "Cholestyramine ou rifampicine pour prurit",
+                      "Drainage biliaire endoscopique si obstacle"
+                    ],
+                    "specifique": [
+                      "Si calcul → CPRE avec extraction",
+                      "Si tumeur résécable → chirurgie",
+                      "Si tumeur non résécable → stent palliatif + oncologie"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle biologique et clinique",
+                    "Surveillance complications (angiocholite, carences vitaminiques)",
+                    "Orientation oncologique si cancer",
+                    "Soutien nutritionnel et psychologique"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,826 @@
+{
+  "title": "AMBOSS-18 - Toux chronique - Femme 21 ans",
+  "context": {
+    "setting": "Clinique de santé étudiante",
+    "patient": "Anna Campbell, femme de 21 ans, consultant pour toux persistante",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "120/70 mmHg",
+      "fc": "80 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai une toux qui me dérange vraiment"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Toux productive d'expectorations [Pas habituellement. Mais ces derniers jours, oui, j'ai craché des trucs]",
+            "Couleur des expectorations [C'est verdâtre]",
+            "Volume des expectorations [Je dirais environ 1 cuillère à café par jour]",
+            "Sang dans les expectorations [Non]",
+            "Début [Il y a 3-4 mois]",
+            "Constant/intermittent [Ça va et ça vient]",
+            "Événements précipitants [La première fois que je l'ai eue, c'était à un de mes cours de gymnastique. Rien de spécial ne se passait vraiment à ce moment-là]",
+            "Progression [C'était pareil jusqu'à il y a environ 4 jours, mais ensuite c'est soudainement devenu beaucoup plus grave]",
+            "Épisodes antérieurs [Non]",
+            "Fréquence [De temps en temps, jusqu'à il y a 4 jours. Maintenant je l'ai plusieurs fois par jour]",
+            "Facteurs améliorants [Rien vraiment]",
+            "Facteurs aggravants [Quand je fais de l'exercice, j'ai soudainement une grosse crise de toux et je dois arrêter. C'est tellement agaçant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes associés",
+          "binaryOnly": true,
+          "patientComment": "Parfois, quand j'ai des crises de toux, j'ai aussi l'impression de ne pas pouvoir reprendre mon souffle, ce qui est effrayant"
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Voyage récent [Non]",
+            "Céphalées [Non]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Hmm, je me suis sentie un peu chaude le soir ces 2 derniers jours]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Non]",
+            "Palpitations [Aucune]",
+            "Douleur thoracique [Ces 4 derniers jours, ma toux a été douloureuse]",
+            "Problèmes urinaires [Aucun]",
+            "Problèmes intestinaux [Aucun]",
+            "Problèmes de sommeil [Depuis un mois, cette toux m'a réveillée plusieurs fois pendant la nuit, donc mon sommeil n'a pas été aussi bon que normalement]",
+            "Appétit [Normal]",
+            "Variations pondérales [Non]",
+            "Infections récentes [Eh bien, j'ai un rhume, si c'est ce que vous voulez dire]",
+            "Symptômes d'infection respiratoire haute [J'ai le nez qui coule depuis 5 jours]",
+            "Exposition à la tuberculose [Non]",
+            "Exposition aux fumées/poussières [Non]",
+            "Exposition aux animaux/animaux domestiques [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "J'ai de l'eczéma"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Je pense que je suis allergique aux chevaux. Mon eczéma s'est toujours aggravé quand je suis allée faire de l'équitation"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "J'utilise deux crèmes hydratantes différentes pour mon eczéma, et quand ça devient vraiment grave, je dois utiliser une crème à l'hydrocortisone"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Jamais, Dieu merci !]",
+            "Antécédents chirurgicaux [Non]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Contacts malades",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ma mère a aussi de l'eczéma"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Occupation [Je suis étudiante à l'université pour devenir graphiste]",
+            "Domicile [Je vis dans un dortoir]",
+            "Alcool [Parfois je bois une bière aux fêtes, mais je ne bois pas régulièrement]",
+            "Drogues illicites [Je fume de la marijuana parfois ou j'essaie une des pilules qu'on me propose aux fêtes où je vais. Mais je ne prends pas quelque chose tous les jours ou quoi que ce soit comme ça]",
+            "Tabac [Je ne fume pas de cigarettes, seulement de la marijuana de temps en temps]",
+            "Exercice [Je fais de la gymnastique depuis que je suis petite, et je suis dans l'équipe de gymnastique de l'université, mais maintenant j'ai du mal à finir l'entraînement à cause de ces horribles crises de toux]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": true,
+          "details": [
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Percussion des champs pulmonaires",
+            "Auscultation pulmonaire",
+            "Recherche de frémitus"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Inspection des mains"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes respiratoires probables",
+                "items": [
+                  {
+                    "text": "Asthme",
+                    "cause": "Arguments POUR:\n\t□ Toux intermittente depuis 3-4 mois\n\t□ Dyspnée lors des crises\n\t□ Déclenchement par exercice (asthme d'effort)\n\t□ Terrain atopique : eczéma personnel et familial\n\t□ Allergie aux chevaux connue\n\t□ Âge jeune, bonne santé générale\n\t□ Réveils nocturnes par toux\n\t□ Hyperréactivité bronchique probable (aggravation avec infection)",
+                    "test": "→ Spirométrie avec test de réversibilité"
+                  },
+                  {
+                    "text": "Bronchite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Toux productive douloureuse depuis 4 jours\n\t□ Expectorations verdâtres\n\t□ Fièvre légère vespérale\n\t□ Suite d'infection respiratoire haute (rhinite 5 jours)\n\t□ > 90% virales, pas d'antibiotiques nécessaires\nArguments CONTRE:\n\t□ Symptômes pré-existants depuis 3-4 mois\n\t□ Aggravation par exercice = asthme plus probable",
+                    "test": "→ Examen clinique suffit habituellement"
+                  },
+                  {
+                    "text": "Pneumonie atypique",
+                    "cause": "Arguments POUR:\n\t□ Toux sèche devenue productive\n\t□ Dyspnée, fièvre légère\n\t□ Jeune adulte (population cible)\n\t□ Évolution subaiguë possible\nArguments CONTRE:\n\t□ Nature intermittente\n\t□ Déclencheurs spécifiques\n\t□ Terrain atopique\n\t□ Symptômes URI actuels",
+                    "test": "→ Radiographie thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Syndrome d'écoulement postérieur",
+                    "cause": "Arguments POUR : Rhinite actuelle\nArguments CONTRE:\n\t□ Toux précède rhinite de plusieurs mois",
+                    "test": "→ Essai thérapeutique antihistaminique"
+                  },
+                  {
+                    "text": "Reflux gastro-œsophagien (RGO)",
+                    "cause": "Peut causer toux chronique, surtout nocturne",
+                    "test": "→ Essai IPP si suspicion"
+                  },
+                  {
+                    "text": "Pneumopathie d'hypersensibilité",
+                    "cause": "Arguments CONTRE:\n\t□ Pas d'exposition identifiée",
+                    "test": "→ Recherche d'antigènes si exposition"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Gaz du sang artériel, oxymétrie de pouls [pour évaluer la gravité de la condition et tester si le sang de la patiente est suffisamment oxygéné]",
+            "FSC avec différentielle [Un décompte de GB peut aider à déterminer si une infection est présente et si elle est bactérienne ou virale. Une éosinophilie peut être observée sur la FSC chez les patients asthmatiques]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens de fonction respiratoire",
+          "binaryOnly": false,
+          "details": [
+            "Mesure du débit de pointe [pour surveiller la réponse à un essai de traitement bronchodilatateur]",
+            "Tests de fonction pulmonaire (EFR) [Les EFR sont le test diagnostique de première ligne pour l'asthme et montreront un VEMS diminué et d'autres signes de maladie pulmonaire obstructive. L'obstruction est réversible lorsque des bronchodilatateurs sont administrés]",
+            "Test de provocation à la méthacholine [utilisé pour provoquer des symptômes chez les patients avec asthme intermittent qui ont des EFR normales]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens d'imagerie",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique [pour exclure une pneumonie]"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les drogues récréatives",
+            "Offrir mouchoir et/ou eau pendant la crise de toux de la patiente",
+            "Réaction appropriée au défi concernant la guérison",
+            "Rassurer sur les options thérapeutiques",
+            "Éducation sur l'asthme si confirmé"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement de fond si asthme confirmé",
+                "content": "• Palier 1\n• Palier 2: + CSI faible dose quotidien\n• Palier 3: + LABA ou augmenter CSI"
+              },
+              {
+                "title": "Mesures non pharmacologiques",
+                "content": "• Éviction allergènes (chevaux++)\n• Plan d'action écrit\n• Technique inhalation\n• Arrêt marijuana (irritant bronchique)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Demande de guérison",
+          "content": "[Pensez-vous pouvoir faire en sorte que cette toux disparaisse ? Ça me dérange vraiment !]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Campbell, je comprends que votre toux vous dérange. À ce stade, malheureusement, je ne peux pas dire exactement ce qui la cause. J'aimerais d'abord faire quelques tests pour trouver le bon diagnostic, puis vous commencer sur un traitement approprié une fois que nous saurons exactement ce qui se passe. Il existe de nombreuses causes traitables de toux, et nous avons une gamme de médicaments qui peuvent aider, selon la cause. Mon équipe et moi nous assurerons de faire de notre mieux pour vous aider. Avez-vous d'autres questions ou préoccupations ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Anatomie de surface des poumons",
+        "description": "Repères anatomiques thoraciques pour l'examen clinique pulmonaire avec lignes de référence et lobes pulmonaires. ICS : espace intercostal.",
+        "data": "grilles_generees/html/images/AMBOSS-18-img1-Surface anatomy of the lungs.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Mécanismes d'obstruction endobronchique dans l'asthme",
+        "description": "L'obstruction endobronchique et la présentation clinique caractéristique de l'asthme (c'est-à-dire dyspnée, sibilants télé-expiratoires et toux persistante) sont causés par le bronchospasme, l'œdème de la muqueuse et l'augmentation de la production de mucus (hypersécrétion bronchique).",
+        "data": "grilles_generees/html/images/AMBOSS-18-img2-Mechanisms of endobronchial obstruction in asthma.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Courbe débit-volume dans l'asthme aigu",
+        "description": "Le débit expiratoire est altéré par les voies aériennes rétrécies. Par conséquent, le débit expiratoire de pointe est plus bas que la normale avec une courbe légèrement concave (creusée) vers le volume résiduel. Le volume résiduel est anormalement élevé (≈ 2 L), car les voies aériennes rétrécies ont empêché une expiration complète.",
+        "data": "grilles_generees/html/images/AMBOSS-18-img3-Flow-volume loop in acute asthma.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Consolidation alvéolaire (1/2)",
+        "description": "Radiographie thoracique (vue PA) d'un patient fébrile avec toux sévère et douleur thoracique droite. Opacification hétérogène due à une consolidation dans le poumon droit moyen et inférieur se projetant à travers l'ombre du sein droit. En l'absence d'études comparatives, la radiographie ne peut pas distinguer si la cause est aiguë ou chronique.",
+        "data": "grilles_generees/html/images/AMBOSS-18-img4-Airspace consolidation (1:2).jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Consolidation alvéolaire (2/2)",
+        "description": "Radiographie thoracique (vue latérale). Opacification (superposition verte) se projetant sur la silhouette cardiaque jouxte la grande scissure (ligne pointillée noire), qui est légèrement déplacée supérieurement compatible avec une petite composante de perte de volume. Une vue PA a montré que l'anomalie était située du côté droit. L'opacification est compatible avec une consolidation de l'espace aérien dans le lobe moyen droit (ML). En l'absence d'études comparatives, la radiographie ne peut pas distinguer si la cause est aiguë ou chronique. LL : lobe inférieur ; UL : lobe supérieur ; ligne pointillée blanche : petite scissure.",
+        "data": "grilles_generees/html/images/AMBOSS-18-img5-Airspace consolidation (2:2).jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Prise en charge du RGO",
+        "description": "Algorithme thérapeutique du reflux gastro-œsophagien incluant mesures hygiéno-diététiques et traitement médicamenteux.",
+        "data": "grilles_generees/html/images/AMBOSS-18-img6-Management of GERD.jpg",
+        "id": "img6"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Anna Campbell",
+      "age": "21 ans",
+      "contexte": "Étudiante universitaire et gymnaste consultant pour toux chronique gênante",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai une toux qui me dérange vraiment.",
+        "autreChose": "Parfois j'ai l'impression de ne pas pouvoir reprendre mon souffle."
+      },
+      "consignes": [
+        "Agir comme si votre toux vous agaçait vraiment.",
+        "À un moment donné pendant la consultation, commencer à tousser de manière incontrôlable et observer si l'examinateur vous offre un verre d'eau et/ou un mouchoir.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: spirométrie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Dire 'Pensez-vous pouvoir faire en sorte que cette toux disparaisse ? Ça me dérange vraiment !'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux intermittente depuis 3-4 mois",
+          "Aggravation brutale depuis 4 jours",
+          "Productive récemment (expectorations verdâtres)",
+          "Crises déclenchées par exercice",
+          "Dyspnée associée lors des crises"
+        ],
+        "symptomesAssocies": [
+          "Rhinorrhée depuis 5 jours",
+          "Fièvre légère vespérale 2 jours",
+          "Douleur thoracique à la toux (4 jours)",
+          "Réveils nocturnes par toux",
+          "Impact sur activités sportives"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître agacée par la toux",
+          "Crise de toux incontrôlable à déclencher",
+          "Frustration visible lors discussion impact sport",
+          "Demander clarifications termes médicaux",
+          "Insister sur désir de guérison rapide"
+        ],
+        "durantStatus": [
+          "Examen pulmonaire normal (sauf si crise)",
+          "Possible sibilants légers si ausculte pendant effort",
+          "Coopération normale",
+          "Pas de signes de détresse respiratoire au repos"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 21 ans avec asthme d'effort probable sur terrain atopique. Présentation classique : toux chronique intermittente déclenchée par exercice, terrain atopique (eczéma + allergie), hyperréactivité bronchique lors infection respiratoire actuelle. Diagnostic différentiel inclut bronchite aiguë surajoutée. Marijuana = facteur aggravant. Nécessite spirométrie pour confirmer diagnostic.",
+      "rolesInterventions": [
+        "Débit de pointe : 380 L/min (80% prédit)",
+        "Spirométrie : VEMS/CVF 68%, réversibilité +15% post-bronchodilatateur",
+        "Test méthacholine : Positif (PC20 = 4 mg/mL)",
+        "Radiographie thoracique : Normale",
+        "FSC : GB 8500, éosinophiles 6%",
+        "SpO2 : 97% air ambiant au repos"
+      ],
+      "pointsCles": [
+        "Asthme = obstruction réversible + inflammation + hyperréactivité",
+        "Triade atopique : asthme, eczéma, rhinite allergique",
+        "Asthme d'effort = forme fréquente chez jeunes athlètes",
+        "Marijuana = irritant bronchique majeur",
+        "Toujours offrir mouchoir/eau lors crise toux (empathie)",
+        "Spirométrie avec réversibilité = gold standard diagnostic"
+      ],
+      "pieges": [
+        "Se focaliser uniquement sur bronchite aiguë",
+        "Oublier terrain atopique",
+        "Ne pas offrir aide pendant crise toux",
+        "Prescrire antibiotiques d'emblée",
+        "Minimiser impact sur qualité de vie"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Asthme d'effort sur terrain atopique avec bronchite aiguë virale surajoutée"
+        },
+        {
+          "titre": "Asthme",
+          "contenu": "Maladie inflammatoire chronique des voies aériennes :",
+          "points": [
+            "Prévalence : 5-10% population, début souvent enfance/adolescence",
+            "Physiopathologie : inflammation, hyperréactivité, remodelage",
+            "Triade : bronchospasme + œdème + hypersécrétion mucus",
+            "Phénotypes : allergique, non-allergique, exercice, professionnel",
+            "Triggers : allergènes, exercice, infections, irritants, émotions",
+            "Histoire naturelle : variable, rémissions possibles"
+          ]
+        },
+        {
+          "titre": "Asthme d'effort (AIE)",
+          "contenu": "Bronchoconstriction induite par exercice :",
+          "points": [
+            "Prévalence : 90% asthmatiques, 10% population générale",
+            "Mécanisme : perte eau/chaleur → osmolarité ↑ → médiateurs",
+            "Timing : début 5-10 min exercice, pic 5-10 min post",
+            "Durée : résolution spontanée 20-90 min",
+            "Sports à risque : course, ski, hockey (air froid/sec)",
+            "Diagnostic : chute VEMS ≥ 10% post-exercice"
+          ]
+        },
+        {
+          "titre": "Terrain atopique",
+          "contenu": "Prédisposition génétique aux allergies :",
+          "points": [
+            "Marche atopique : eczéma → allergie alimentaire → asthme → rhinite",
+            "IgE médiée : sensibilisation précoce",
+            "Génétique : héritabilité 60-80%",
+            "Facteurs environnementaux : hygiène, pollution, tabac",
+            "Comorbidités : 80% asthmatiques ont rhinite allergique",
+            "Pronostic : début précoce = plus sévère"
+          ]
+        },
+        {
+          "titre": "Diagnostic de l'asthme",
+          "contenu": "Approche clinique et fonctionnelle :",
+          "points": [
+            "Clinique : symptômes variables + triggers + atopie",
+            "Spirométrie : VEMS/CVF < 0.7 (ou < LLN)",
+            "Réversibilité : VEMS ↑ ≥ 12% ET ≥ 200 mL post-BD",
+            "Test méthacholine : PC20 < 8 mg/mL (sensible)",
+            "Débit pointe : variabilité > 20% sur 2 semaines",
+            "FeNO : > 50 ppb suggère inflammation éosinophilique"
+          ]
+        },
+        {
+          "titre": "Traitement de l'asthme",
+          "contenu": "Approche par paliers GINA :",
+          "points": [
+            "Objectif : contrôle symptômes + prévention exacerbations",
+            "Palier 1 : SABA prn (si < 2×/semaine)",
+            "Palier 2 : CSI faible dose quotidien",
+            "Palier 3 : CSI faible + LABA ou CSI dose moyenne",
+            "Palier 4 : CSI moyenne/forte + LABA ± LAMA",
+            "Palier 5 : + anti-IgE, anti-IL5, corticoïdes oraux",
+            "Réévaluation 3 mois, ajustement selon contrôle"
+          ]
+        },
+        {
+          "titre": "Cannabis et poumons",
+          "contenu": "Effets respiratoires de la marijuana :",
+          "points": [
+            "Irritation bronchique : toux, expectorations, sifflements",
+            "Inflammation : bronchite chronique similaire tabac",
+            "Hyperréactivité bronchique augmentée",
+            "Risque infections : immunosuppression locale",
+            "Barotrauma : technique inhalation profonde + Valsalva",
+            "Interaction asthme : aggravation symptômes et contrôle"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Crise légère : Salbutamol 100μg 2-4 bouffées q20min × 3",
+        "Crise modérée : + Prednisone 40-60mg PO × 5-7j",
+        "Traitement fond : Budésonide 200μg BID départ",
+        "Si AIE isolé : Salbutamol 2 bouffées 15min avant exercice",
+        "Alternative AIE : Montélukast 10mg/j",
+        "Technique inhalation : avec chambre d'espacement idéalement",
+        "Plan action écrit : zones verte/jaune/rouge"
+      ],
+      "examensComplementaires": [
+        "Spirométrie pré/post BD : VEMS, CVF, VEMS/CVF, réversibilité",
+        "Test exercice : Tapis/vélo 6-8min à 80-90% FCmax",
+        "Débit pointe domicile : Matin/soir × 2 semaines",
+        "Test méthacholine : Si spirométrie normale mais suspicion forte",
+        "Radiographie thorax : Éliminer complications/autres diagnostics",
+        "IgE spécifiques : Si allergie suspectée (chevaux++)"
+      ]
+    },
+    "resume": {
+      "titre": "🌬️ Asthme – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Dyspnée, sifflements (wheezing), toux sèche (souvent nocturne ou à l'effort)",
+                "Oppression thoracique",
+                "Symptômes variables dans le temps et réversibles spontanément ou sous traitement",
+                "Déclenchés par : effort, allergènes, infections respiratoires, froid, émotions"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "ATCD personnel ou familial d’atopie (eczéma, rhinite allergique)",
+                "Exposition tabagique (active ou passive)",
+                "Environnement professionnel (poussières, produits chimiques)",
+                "Obésité, reflux gastro-œsophagien",
+                "Allergènes environnementaux"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Examen physique",
+              "points": [
+                "Souvent normal en dehors des crises",
+                "En cas d’exacerbation : tirage, sibilants expiratoires diffus, polypnée",
+                "Signes de lutte respiratoire si forme sévère"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Explorations fonctionnelles respiratoires",
+              "points": [
+                "Spirométrie : obstruction réversible (VEMS ↑ ≥ 12 % et ≥ 200 mL après bronchodilatateur)",
+                "Débit expiratoire de pointe (DEP) : variabilité diurne > 10 %",
+                "Test de provocation (méthacholine) si diagnostic incertain"
+              ]
+            },
+            {
+              "titre": "Biologie / Compléments",
+              "points": [
+                "Eosinophiles sanguins élevés (type 2 inflammation)",
+                "FeNO augmenté (inflammation éosinophilique)",
+                "Tests allergologiques (IgE spécifiques, prick-tests) si asthme allergique suspecté"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Traitement de fond (selon GINA)",
+              "points": [
+                "Corticostéroïdes inhalés (CSI) : traitement de base",
+                "± β2-mimétiques de longue durée (LABA)",
+                "± traitements biologiques en cas d’asthme sévère (anti-IgE, anti-IL5/IL4)",
+                "Éducation thérapeutique : bon usage des inhalateurs, plan d’action"
+              ]
+            },
+            {
+              "titre": "Crise d’asthme",
+              "points": [
+                "Ventoline (salbutamol) : 4-10 bouffées via chambre d’inhalation",
+                "± corticothérapie orale (prednisone 0,5–1 mg/kg/j)",
+                "Oxygénothérapie si désaturation",
+                "Urgence si signes de gravité : tachypnée, cyanose, trouble conscience"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Symptômes variables et réversibles = penser asthme",
+            "Spirométrie avec test de réversibilité = examen clé",
+            "Éviter diagnostic uniquement clinique si doute → EFR !",
+            "Informer, éduquer et établir un plan personnalisé d’action",
+            "Toujours rechercher un facteur déclenchant ou aggravant (tabac, allergène, infection)"
+          ]
+        },
+        {
+          "titre": "📋 Check-list rapide ECOS",
+          "subsections": [
+            {
+              "titre": "Questions à poser",
+              "points": [
+                "Symptômes : toux, sifflements, oppression thoracique, dyspnée ?",
+                "Variabilité : symptômes nocturnes, à l’effort, lors d’infections ou allergènes ?",
+                "ATCD d’atopie, asthme familial, allergies ?",
+                "Facteurs déclenchants : tabac, pollution, environnement professionnel ?",
+                "Traitements déjà utilisés (Ventoline, CSI) et efficacité ?"
+              ]
+            },
+            {
+              "titre": "Examens à faire",
+              "points": [
+                "Constantes vitales : FR, SpO₂, FC",
+                "Auscultation pulmonaire : sibilants, signes de lutte",
+                "EFR : spirométrie avec test de réversibilité",
+                "DEP (débit expiratoire de pointe) : variabilité diurne",
+                "± tests allergologiques si suspicion asthme allergique"
+              ]
+            },
+            {
+              "titre": "PEC en 3 points",
+              "points": [
+                "Ventoline (salbutamol) en cas de crise, ± corticothérapie orale si sévère",
+                "CSI en traitement de fond ± LABA selon sévérité",
+                "Éducation thérapeutique : éviter déclencheurs + bon usage des inhalateurs + plan d’action"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux chronique (asthme d’effort sur terrain atopique)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractériser la toux → durée, sèche ou productive, déclencheurs",
+            "Symptômes associés → dyspnée, réveils nocturnes, douleurs thoraciques, fièvre",
+            "Terrain atopique → eczéma, allergies connues, antécédents familiaux",
+            "Facteurs aggravants → infections, tabac, marijuana, animaux",
+            "Examen clinique → auscultation, signes de lutte, sibilants",
+            "Résumé + hypothèse principale + diagnostics différentiels",
+            "Examens complémentaires → EFR avec test réversibilité, DEP, Rx thorax",
+            "Prise en charge → bronchodilatateur, éducation, prévention crises, plan d’action écrit"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : ASTHME",
+            "elements": [
+              "A = Atopie (eczéma, allergies)",
+              "S = Sibilants expiratoires",
+              "T = Toux nocturne/effort",
+              "H = Hyperréactivité bronchique",
+              "M = Mesure EFR obligatoire",
+              "E = Exacerbations déclenchées (infection, allergènes, effort)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Mme Anna Campbell, une étudiante de 21 ans, gymnaste universitaire, qui consulte pour une toux chronique.\n\nLa toux a commencé il y a environ trois à quatre mois. Elle était initialement intermittente, survenant surtout à l’effort ou lors de ses entraînements de gymnastique, l’obligeant parfois à s’arrêter à cause de quintes. Depuis environ quatre jours, la toux s’est aggravée brutalement et est devenue plus fréquente, plusieurs fois par jour. Elle est devenue productive de petites quantités d’expectorations verdâtres, environ une cuillère à café par jour. Pas d’hémoptysie.\n\nElle rapporte qu’au cours de certaines crises de toux, elle ressent une dyspnée, avec l’impression de manquer d’air, ce qui est assez effrayant pour elle. Depuis un mois, la toux perturbe son sommeil avec plusieurs réveils nocturnes. Elle se plaint également de douleurs thoraciques depuis quatre jours, liées aux quintes de toux. Depuis cinq jours, elle a un rhume avec nez qui coule, et elle a eu une fièvre légère le soir ces deux derniers jours.\n\nPour ses antécédents, elle est connue pour un eczéma, traité par émollients et hydrocortisone locale lors des poussées. Elle décrit aussi une allergie aux chevaux, qui a toujours aggravé son eczéma. Dans sa famille, sa mère a aussi de l’eczéma. Elle n’a pas d’antécédents chirurgicaux ni hospitalisations.\n\nCôté habitudes de vie, elle ne fume pas de cigarettes mais consomme de la marijuana de temps en temps, et dit parfois essayer des pilules en soirée. Elle boit occasionnellement de l’alcool. Elle vit en dortoir étudiant.\n\nÀ l’examen, ses constantes sont normales : TA 120/70, pouls 80, FR 18, T° 37. Elle n’est pas en détresse respiratoire au repos. L’auscultation pulmonaire est normale en dehors des quintes, où de légers sibilants expiratoires peuvent être entendus. Pas d’adénopathies, pas de cyanose, pas d’œdème.\n\nEn résumé, il s’agit d’une femme jeune, atopique, avec une toux chronique intermittente déclenchée par l’effort, réveillant la nuit, aggravée récemment avec expectorations verdâtres dans un contexte viral. Mon hypothèse principale est un asthme d’effort sur terrain atopique, avec possible bronchite virale surajoutée. Les diagnostics différentiels incluent une bronchite aiguë isolée, une pneumonie atypique, un reflux gastro-œsophagien ou un écoulement postérieur.\n\nComme examens complémentaires, je demanderais en priorité une spirométrie avec test de réversibilité au bronchodilatateur, une mesure du débit de pointe, et éventuellement un test de provocation à la méthacholine si la spirométrie est normale. Une radiographie thoracique permettrait d’exclure une pneumonie. Une FSC pourrait montrer une éosinophilie si asthme atopique.\n\nEn termes de prise en charge immédiate, je proposerais un traitement par bronchodilatateur de courte durée d’action à la demande, une initiation de corticoïdes inhalés si l’asthme est confirmé, et une éducation thérapeutique avec plan d’action écrit. J’insisterais aussi sur l’éviction des allergènes connus, l’arrêt complet du cannabis et la surveillance de la technique d’inhalation."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Mme Campbell, 21 ans, présente une toux chronique intermittente depuis 3-4 mois, aggravée récemment.\n\nB (Background) : Atopie personnelle et familiale (eczéma, allergie chevaux), non fumeuse de tabac mais consommation de marijuana, sportive de haut niveau.\n\nA (Assessment) : Suspicion forte d’asthme d’effort, avec aggravation virale. DD : bronchite aiguë, pneumonie atypique, RGO, syndrome d’écoulement postérieur.\n\nR (Recommendation) : Spirométrie avec test de réversibilité, DEP, Rx thorax, mise à l’essai d’un bronchodilatateur, envisager CSI si diagnostic confirmé."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Asthme = TRIade",
+              "points": [
+                "T = Toux chronique variable",
+                "R = Réversible sous traitement",
+                "I = Intermittente + déclenchée (effort, allergènes, infection)"
+              ]
+            },
+            {
+              "titre": "Asthme d’effort → PENSER à",
+              "points": [
+                "Crises après 5–10 min d’effort",
+                "Régressent spontanément 20–60 min après",
+                "Prévention : salbutamol 15 min avant exercice"
+              ]
+            },
+            {
+              "titre": "👉 Astuce ECOS",
+              "points": [
+                "Toujours offrir un verre d’eau ou mouchoir en cas de crise de toux",
+                "Montre empathie et professionnalisme"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Asthme d’effort",
+                  "reponse": {
+                    "pour": [
+                      "Toux intermittente depuis 3-4 mois",
+                      "Déclenchée par effort",
+                      "Réveils nocturnes",
+                      "Dyspnée lors crises",
+                      "Terrain atopique (eczéma, allergie chevaux)",
+                      "Âge jeune"
+                    ],
+                    "contre": [
+                      "Auscultation normale hors crise"
+                    ]
+                  }
+                },
+                {
+                  "question": "Bronchite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre légère",
+                      "Expectorations verdâtres",
+                      "Rhinorrhée récente"
+                    ],
+                    "contre": [
+                      "Symptômes préexistants depuis 3-4 mois",
+                      "Déclenchée par effort = atypique"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie atypique",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre légère",
+                      "Toux subaiguë",
+                      "Douleur thoracique récente"
+                    ],
+                    "contre": [
+                      "Terrain atopique",
+                      "Toux intermittente déclenchée"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Spirométrie avec test de réversibilité",
+                    "Mesure du débit de pointe",
+                    "Test de provocation à la méthacholine si besoin",
+                    "Radiographie thoracique",
+                    "FSC (éosinophilie possible)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Asthme d’effort sur terrain atopique, aggravé par une infection virale récente"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Salbutamol en spray à la demande",
+                      "CSI faible dose si symptômes fréquents",
+                      "Éducation et plan d’action écrit",
+                      "Éviction allergènes + arrêt cannabis"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Contrôle clinique et spirométrie à 3 mois",
+                    "Surveillance de la technique d’inhalation",
+                    "Adaptation traitement selon GINA (paliers)",
+                    "Informer sur les signes d’exacerbation et critères d’urgence"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "title": "German-74 - Tachycardie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mme Meier, 56 ans, se présente au cabinet pour palpitations aiguës",
+    "vitals": {
+      "ta": "135/90 mmHg",
+      "fc": "127 bpm",
+      "fr": "18/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Symptôme principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai des palpitations, mon cœur bat très fort"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation temporelle de l'épisode actuel",
+          "details": [
+            "Début [soudain]",
+            "Durée actuelle [30 minutes]",
+            "Évolution [paroxystique - va et vient]",
+            "Fin de l'épisode (spontanée ou provoquée)"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Récurrence et historique",
+          "details": [
+            "Épisodes antérieurs [déjà 5 fois]",
+            "Fréquence des épisodes",
+            "Durée habituelle",
+            "Évolution dans le temps"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques du rythme cardiaque",
+          "details": [
+            "Fréquence estimée [155/min]",
+            "Régularité du rythme [irrégulier]",
+            "Sensations de pauses [oui, pendant la crise]",
+            "Battements manqués ou supplémentaires"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs déclenchants et modulateurs",
+          "details": [
+            "Stress [oui]",
+            "Caféine [oui]",
+            "Alcool [oui]",
+            "Effort physique",
+            "Position",
+            "Repas copieux"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes cardiovasculaires associés",
+          "details": [
+            "Douleurs thoraciques [non]",
+            "Oppression thoracique",
+            "Irradiation éventuelle",
+            "Lien avec l'effort"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes neurovégétatifs",
+          "details": [
+            "Vertiges/malaises [oui]",
+            "Syncope ou présyncope",
+            "Sueurs [non]",
+            "Nausées"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes respiratoires",
+          "details": [
+            "Dyspnée [non]",
+            "Orthopnée",
+            "Dyspnée paroxystique nocturne",
+            "Toux"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Signes d'insuffisance cardiaque",
+          "details": [
+            "Œdèmes des membres inférieurs [non]",
+            "Prise de poids récente [non]",
+            "Fatigue inhabituelle",
+            "Diminution de la tolérance à l'effort"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptôme spécifique post-critique",
+          "details": [
+            "Polyurie post-paroxystique [oui, environ 30 min après, 2x aux toilettes]",
+            "Fatigue après l'épisode",
+            "Durée de récupération"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Signes d'hyperthyroïdie",
+          "details": [
+            "Intolérance à la chaleur [non]",
+            "Perte de poids [non]",
+            "Diarrhée [non]",
+            "Tremblements [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Asthénie",
+            "Anorexie",
+            "Modifications récentes"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Statut ménopausique et hormonal",
+          "details": [
+            "Dernières menstruations [il y a 5 ans]",
+            "Symptômes de ménopause [non]",
+            "Traitement hormonal substitutif [non]",
+            "Bouffées de chaleur"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Contexte psychosocial",
+          "details": [
+            "Stress aigu récent [non]",
+            "Charge mentale",
+            "Anxiété associée",
+            "Qualité du sommeil"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension artérielle [oui]",
+            "Diabète [non]",
+            "Dyslipidémie [oui]",
+            "Obésité (IMC)"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Tabagisme détaillé",
+          "details": [
+            "Consommation actuelle [1 paquet/jour]",
+            "Durée [20 ans]",
+            "Paquets-années [20 PA]",
+            "Tentatives d'arrêt"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Score de Wells pour embolie pulmonaire",
+          "details": [
+            "Œdème du mollet [non]",
+            "Immobilisation récente/chirurgie [non]",
+            "Cancer actif [non]",
+            "Antécédent de TVP/EP [oui, TVP gauche en 2006]",
+            "Hémoptysie [non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Antécédents cardiovasculaires personnels",
+          "details": [
+            "Cardiopathie ischémique [non]",
+            "Infarctus du myocarde [non]",
+            "Troubles du rythme connus",
+            "Valvulopathies"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Antécédents neurologiques",
+          "details": [
+            "AVC/AIT [non]",
+            "Déficit neurologique",
+            "Céphalées",
+            "Épilepsie"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Autres antécédents médicaux",
+          "details": [
+            "Pathologie thyroïdienne [non]",
+            "MVTE [TVP gauche 2006]",
+            "Pathologies psychiatriques/anxiété [non]",
+            "Autres maladies chroniques"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Antécédents chirurgicaux",
+          "details": [
+            "Interventions antérieures [non]",
+            "Complications",
+            "Anesthésies"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Traitements actuels",
+          "details": [
+            "Antihypertenseurs",
+            "Hypolipémiants",
+            "Anticoagulants/antiagrégants",
+            "Autres médicaments",
+            "Observance"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Allergies médicamenteuses",
+          "details": [
+            "Allergies connues",
+            "Intolérances",
+            "Réactions antérieures"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "Antécédents familiaux cardiovasculaires",
+          "details": [
+            "Infarctus du myocarde [père décédé à 60 ans]",
+            "Mort subite",
+            "Troubles du rythme",
+            "AVC"
+          ]
+        },
+        {
+          "id": "a26",
+          "text": "Habitudes de vie",
+          "details": [
+            "Consommation de café [5 tasses/jour]",
+            "Activité physique [jogging 2x/semaine]",
+            "Alimentation",
+            "Consommation d'alcool"
+          ]
+        },
+        {
+          "id": "a27",
+          "text": "Questions de clôture et résumé",
+          "details": [
+            "Autres informations importantes",
+            "Questions du patient",
+            "Résumé de l'anamnèse"
+          ]
+        },
+        {
+          "id": "a28",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée troubles du rythme"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection cardiovasculaire",
+          "details": [
+            "Veines jugulaires [légèrement turgescentes]",
+            "Reflux hépato-jugulaire [positif]",
+            "Cyanose",
+            "Œdèmes périphériques"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Palpation cardiovasculaire",
+          "details": [
+            "Pouls périphérique [irrégulier]",
+            "Intensité du pouls [variable]",
+            "Déficit de pouls",
+            "Choc de pointe"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Percussion cardiaque",
+          "details": [
+            "Matité cardiaque [normale]",
+            "Cardiomégalie",
+            "Épanchement péricardique"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation cardiaque",
+          "details": [
+            "Bruits cardiaques [purs]",
+            "Souffles [absents]",
+            "Galop (B3/B4)",
+            "Frottement péricardique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire complet",
+          "details": [
+            "Inspection thoracique [normale]",
+            "Palpation (vibrations vocales)",
+            "Percussion pulmonaire",
+            "Auscultation bilatérale [normale]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation thyroïdienne",
+          "details": [
+            "Volume thyroïdien [normal, pas d'hypertrophie]",
+            "Nodules",
+            "Consistance",
+            "Mobilité"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Auscultation thyroïdienne",
+          "details": [
+            "Souffle thyroïdien",
+            "Thrill"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen cutanéo-muqueux",
+          "details": [
+            "Coloration cutanée [un peu pâle]",
+            "Conjonctives [pas de signes d'anémie]",
+            "Muqueuses",
+            "Temps de recoloration capillaire"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Signes périphériques d'insuffisance cardiaque",
+          "details": [
+            "Œdèmes des membres inférieurs",
+            "Hépatomégalie",
+            "Ascite",
+            "Râles pulmonaires"
+          ]
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen cardiovasculaire complet adapté aux palpitations"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal suspecté",
+          "details": [
+            "Fibrillation auriculaire paroxystique",
+            "Justification clinique",
+            "Éléments en faveur",
+            "Score CHA2DS2-VASc à calculer"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2-3)",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Tachycardie supraventriculaire par réentrée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, Holter ECG"
+                  },
+                  {
+                    "text": "Flutter auriculaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Extrasystolie auriculaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tachycardie sinusale inappropriée",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, Holter ECG"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "ECG - Réalisation et interprétation",
+          "details": [
+            "ECG 12 dérivations immédiat",
+            "Reconnaissance du trouble du rythme",
+            "Analyse des intervalles",
+            "Recherche de signes d'ischémie"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens biologiques - Urgence",
+          "details": [
+            "Troponine I",
+            "CK-MB",
+            "BNP/NT-proBNP",
+            "D-dimères si suspicion EP"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens biologiques - Bilan étiologique",
+          "details": [
+            "NFS (anémie)",
+            "CRP (inflammation)",
+            "Ionogramme (Na, K, Ca)",
+            "Créatinine et DFG",
+            "TSH (hyperthyroïdie)"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Examens biologiques - Bilan pré-thérapeutique",
+          "details": [
+            "Transaminases (ASAT, ALAT)",
+            "Gamma-GT, PAL",
+            "Albumine",
+            "TP/INR, aPTT"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Imagerie et examens complémentaires",
+          "details": [
+            "Radiographie thoracique",
+            "Échocardiographie transthoracique",
+            "Holter ECG 24h si diagnostic incertain",
+            "Angio-TDM thoracique si suspicion EP"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Surveillance scopée si disponible",
+            "Contrôle de la fréquence cardiaque",
+            "Anticoagulation selon score CHA2DS2-VASc",
+            "Cardioversion si instable"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Traitement médicamenteux au long cours",
+          "details": [
+            "Bêtabloquants ou inhibiteurs calciques",
+            "Anticoagulation orale (AOD ou AVK)",
+            "Antiarythmiques si échec",
+            "Gestion des facteurs de risque"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Orientation et suivi",
+          "details": [
+            "Nécessité d'hospitalisation évaluée",
+            "Consultation cardiologie",
+            "Éducation thérapeutique",
+            "Suivi régulier"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète d'une FA paroxystique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

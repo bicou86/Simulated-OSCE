@@ -1,0 +1,286 @@
+{
+  "title": "German-39 - EM Vaccinations - Pédiatrie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Mère venant consulter pour un conseil sur les vaccinations (jumeaux de 3 semaines, fille et garçon)"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et objectif de la consultation",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Explorer les questions de la mère",
+          "binaryOnly": true,
+          "patientComment": "Quelles questions avez-vous concernant les vaccinations ?"
+        },
+        {
+          "id": "a3",
+          "text": "Antécédents vaccinaux et expériences",
+          "binaryOnly": false,
+          "details": [
+            "Statut vaccinal de la mère [elle-même vaccinée]",
+            "Profession des parents [à explorer]",
+            "Niveau de connaissances sur les vaccinations [à évaluer]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Explorer les craintes et l'environnement social",
+          "binaryOnly": false,
+          "details": [
+            "Angoisses spécifiques concernant les vaccinations",
+            "Influence de l'entourage (famille, amis, groupe de parents)"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Gestion des questions sur les effets secondaires",
+          "binaryOnly": false,
+          "details": [
+            "Effets secondaires courants (douleur locale, rougeur, fièvre légère)",
+            "Effets secondaires graves très rares",
+            "Balance bénéfice-risque favorable",
+            "Comparaison avec les risques des maladies évitées"
+          ],
+          "patientComment": "J'ai entendu parler d'effets secondaires graves..."
+        },
+        {
+          "id": "a6",
+          "text": "Réponse aux préoccupations sur l'autisme",
+          "binaryOnly": false,
+          "details": [
+            "Aucun lien scientifique prouvé entre vaccinations et autisme",
+            "Coïncidence temporelle uniquement",
+            "Études nombreuses confirmant la sécurité"
+          ],
+          "patientComment": "J'ai lu sur Internet que les vaccins peuvent causer l'autisme..."
+        },
+        {
+          "id": "a7",
+          "text": "Explication de l'âge de vaccination précoce",
+          "binaryOnly": false,
+          "details": [
+            "Vaccination dès 8 semaines car système immunitaire encore immature",
+            "Protection nécessaire justement parce que les bébés sont vulnérables",
+            "Anticorps maternels diminuent après quelques mois"
+          ],
+          "patientComment": "Pourquoi vacciner si tôt ? Ne vaut-il pas mieux attendre que l'enfant soit plus grand ?"
+        },
+        {
+          "id": "a8",
+          "text": "Gestion de la pression sociale négative",
+          "binaryOnly": false,
+          "details": [
+            "Explication du concept d'immunité collective",
+            "Responsabilité collective pour protéger les plus vulnérables",
+            "Approche empathique face aux critiques"
+          ],
+          "patientComment": "Dans mon groupe de mamans, une mère m'a vivement critiquée quand j'ai mentionné vouloir vacciner mes enfants..."
+        },
+        {
+          "id": "a9",
+          "text": "Sensibilisation aux maladies évitables par vaccination",
+          "binaryOnly": false,
+          "details": [
+            "Nous sommes privilégiés grâce aux vaccinations",
+            "Maladies graves devenues rares donc méconnues",
+            "Conséquences potentiellement dramatiques des maladies"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Information sur le caractère non obligatoire",
+          "binaryOnly": false,
+          "details": [
+            "Pas d'obligation vaccinale en Suisse",
+            "Décision parentale mais avec responsabilité des conséquences",
+            "Certaines structures peuvent exiger des vaccinations"
+          ],
+          "patientComment": "Est-ce que je suis obligée de faire vacciner mes enfants ?"
+        },
+        {
+          "id": "a11",
+          "text": "Explication des échecs vaccinaux possibles",
+          "binaryOnly": false,
+          "details": [
+            "Nécessité de doses multiples pour une protection optimale",
+            "Échecs vaccinaux rares mais possibles",
+            "Importance du respect du calendrier vaccinal"
+          ],
+          "patientComment": "J'ai lu qu'un enfant vacciné contre la rougeole est quand même mort de cette maladie..."
+        },
+        {
+          "id": "a12",
+          "text": "Information sur la prise en charge financière",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations de base remboursées par l'assurance maladie",
+            "Vaccinations recommandées prises en charge"
+          ],
+          "patientComment": "Qui paie pour les vaccinations ?"
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Explication du plan vaccinal DTPa-IPV-Hib-HBV",
+          "binaryOnly": false,
+          "details": [
+            "Schéma: 2, 4, 6, 15-24 mois, 4-7 ans, 11-15 ans, 25-29 ans",
+            "Diphtérie: croup, obstruction des voies respiratoires, myocardite, polyneuropathie",
+            "Tétanos: contractions musculaires graves, potentiellement mortel",
+            "Coqueluche: attention particulière chez les nourrissons (risque d'apnée)",
+            "Poliomyélite: paralysie, encore présente dans certains pays",
+            "Haemophilus influenzae b: méningite, épiglottite, pneumonie",
+            "Hépatite B: protection précoce importante"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Explication vaccination pneumocoques",
+          "binaryOnly": false,
+          "details": [
+            "Schéma: 2, 4 et 12 mois",
+            "Protection contre méningite, pneumonie, septicémie",
+            "Particulièrement dangereux pour les nourrissons"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Explication vaccination ROR",
+          "binaryOnly": false,
+          "details": [
+            "Schéma: 12 mois et 15-24 mois",
+            "Rougeole: >1 million décès/an dans le monde, complications: otite, pneumonie, encéphalite (1/1000, létalité 30%)",
+            "Oreillons: méningite, surdité, orchite avec risque de stérilité",
+            "Rubéole: dangereux pendant la grossesse, encéphalite rubéoleuse"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Explication vaccination méningocoques",
+          "binaryOnly": false,
+          "details": [
+            "Schéma: 12-15 mois et 11-15 ans",
+            "Méningite fulminante avec létalité de 10%",
+            "Septicémie méningococcique"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Information sur les autres vaccinations",
+          "binaryOnly": false,
+          "details": [
+            "HPV: 11-14 ans (2 doses)",
+            "Varicelle: si pas contractée naturellement, vaccination à 11-14 ans",
+            "Hépatite A: selon voyages et exposition",
+            "FSME: selon région et activités",
+            "Grippe: annuelle pour groupes à risque"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Utilisation du carnet de vaccination",
+          "binaryOnly": false,
+          "details": [
+            "Importance du suivi vaccinal",
+            "Conservation des dates et lots",
+            "Document officiel pour voyages et inscriptions"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Remise de documentation officielle",
+          "binaryOnly": false,
+          "details": [
+            "Guide de vaccination de l'OFSP",
+            "Brochures d'information adaptées",
+            "Site web de référence pour informations fiables"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Planification concrète du suivi vaccinal",
+          "binaryOnly": false,
+          "details": [
+            "Proposition de premier rendez-vous à 2 mois",
+            "Explication du calendrier complet",
+            "Convenir que la mère recontacte pour fixer le rendez-vous"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Disponibilité pour questions supplémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Offrir un nouvel entretien si nécessaire",
+            "Possibilité de contact téléphonique",
+            "Porte ouverte pour toute inquiétude"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Mise en garde sur les sources d'information",
+          "binaryOnly": false,
+          "details": [
+            "Prudence vis-à-vis des informations Internet non vérifiées",
+            "Privilégier les sources officielles (OFSP, pédiatre)",
+            "Éviter les forums et réseaux sociaux pour information médicale"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Encouragement bienveillant à la vaccination",
+          "binaryOnly": false,
+          "details": [
+            "Renforcement positif de la démarche de s'informer",
+            "Rappel des bénéfices pour les enfants",
+            "Respect du processus décisionnel parental"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

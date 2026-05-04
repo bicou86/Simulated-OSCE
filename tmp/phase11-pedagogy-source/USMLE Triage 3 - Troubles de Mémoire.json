@@ -1,0 +1,647 @@
+{
+  "title": "USMLE Triage 3 - Troubles de Mémoire",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "Jack Plaster, un homme de 78 ans, se présente avec des plaintes de perte de mémoire. Son épouse l'accompagne.",
+    "vitals": {
+      "ta": "128/88 mmHg",
+      "fc": "72 bpm",
+      "fr": "12/min",
+      "temperature": "37.0°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Introduction et approche empathique (nom, fonction et questions ouvertes)",
+          "binaryOnly": true,
+          "exemplesPhrases": [
+            "Bonjour M. et Mme Plaster, je suis le Dr Jenson.",
+            "Je comprends que vous avez eu des problèmes de mémoire, M. Plaster. Veuillez m'en dire plus à ce sujet."
+          ]
+        },
+        {
+          "id": "a2",
+          "text": "Exploration des troubles mnésiques",
+          "details": [
+            "Problèmes de mémoire [depuis longtemps, aggravation récente]",
+            "Oubli des lieux familiers [se perd, ne connaît plus les endroits]",
+            "Questions répétitives [pose des questions dont il connaissait la réponse]",
+            "Oubli des noms [chat qu'il a nommé, petite-fille Emily]",
+            "Désorientation spatiale [perdu à un pâté de maisons de chez lui]"
+          ],
+          "exemplesPhrases": [
+            "Bill, que pensez-vous de ce que votre femme vient de dire ?",
+            "Vous perdez-vous souvent et avez-vous l'impression de ne pas savoir où vous êtes ?",
+            "Qu'en est-il de poser à votre femme des questions dont vous pensez avoir connu la réponse ?"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Troubles de la marche et équilibre",
+          "details": [
+            "Instabilité à la marche [depuis quelques semaines]",
+            "Besoin de se tenir aux objets [dans la maison]",
+            "Sensation d'instabilité [pourrait tomber]",
+            "Pas de vertiges [non, juste instable]",
+            "Antécédent de chute [il y a 1 an sur la glace]"
+          ],
+          "exemplesPhrases": [
+            "M. Plaster, pouvez-vous me parler du besoin de vous tenir aux choses quand vous marchez ?",
+            "Avez-vous des vertiges ?",
+            "Êtes-vous déjà tombé ?",
+            "Qu'en est-il récemment ?"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évolution temporelle et impact",
+          "details": [
+            "Durée des troubles mnésiques [quelques années, accumulation progressive]",
+            "Aggravation récente [derniers mois pour l'orientation]",
+            "Impact sur la conduite [épouse conduit maintenant]",
+            "Reconnaissance des voisins [parfois non familiers]",
+            "Préservation de l'identité familiale [n'oublie pas le nom de sa femme]"
+          ],
+          "exemplesPhrases": [
+            "Depuis combien de temps a-t-il des problèmes de mémoire ?",
+            "A-t-il déjà oublié votre nom ou le nom de ses enfants ?",
+            "Est-ce le genre de chose qu'il vous est facile d'oublier ?"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Médicaments et changements récents",
+          "details": [
+            "Nouveaux médicaments [non]",
+            "Médicaments actuels [aténolol, lisinopril, lovastatine, tamsulosine, glyburide]",
+            "Gestion par l'épouse [toujours organisé ses médicaments]",
+            "Observance [routine quotidienne respectée]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous commencé de nouveaux médicaments depuis que ces symptômes ont commencé ?",
+            "Quels médicaments prenez-vous ?",
+            "Est-ce un changement que vous organisiez ses médicaments, ou cela a-t-il toujours été le cas ?"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes neurologiques associés",
+          "details": [
+            "Force musculaire [normale, peut bouger très bien]",
+            "Sensibilité [normale, teste avec filament chez médecin]",
+            "Perte de connaissance [non]",
+            "Vision [pas de nouveaux problèmes]",
+            "Parole et langage [non évalué spécifiquement]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu des problèmes pour bouger vos bras ou vos jambes récemment ?",
+            "Qu'en est-il de la sensation ? Avez-vous des engourdissements ou des sensations inhabituelles dans votre corps ?",
+            "Perdez-vous parfois connaissance sans le vouloir ?",
+            "Avez-vous de nouveaux problèmes de vision ?"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes cardiovasculaires",
+          "details": [
+            "Douleur thoracique [non]",
+            "Dyspnée [non, jamais eu]",
+            "Claudication [non, pas de douleur aux jambes]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il de la douleur thoracique ?",
+            "Avez-vous des difficultés respiratoires ?",
+            "Avez-vous parfois des douleurs dans vos pieds ou vos jambes ? Surtout en marchant ?"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes digestifs et nutritionnels",
+          "details": [
+            "Appétit [mange comme un cheval]",
+            "Douleur abdominale [non]",
+            "Transit intestinal [régulier, mange des fruits]",
+            "Perte de poids [non mentionnée]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous parfois des douleurs abdominales ou des difficultés à manger ?",
+            "Des problèmes pour aller aux toilettes ?"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes urinaires",
+          "details": [
+            "Incontinence urinaire [oui, quelques fuites]",
+            "Type d'incontinence [pas de sensation du besoin]",
+            "Circonstances [assis devant TV, humidité sans urgence]",
+            "Dysurie [non]",
+            "Difficulté mictionnelle [contrôlée par tamsulosine]"
+          ],
+          "exemplesPhrases": [
+            "Qu'en est-il d'uriner ? Des problèmes pour arriver aux toilettes à temps ?",
+            "Est-ce parce que vous n'êtes pas arrivé aux toilettes à temps ou parce que vous ne sentiez pas que vous en aviez besoin ?",
+            "Qu'en est-il de commencer un jet d'urine ? Est-ce difficile ?",
+            "Avez-vous l'impression que vous devez vous dépêcher ou vous perdrez le contrôle ?",
+            "Qu'en est-il des brûlures quand vous urinez ?"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes généraux",
+          "details": [
+            "Fièvre [non]",
+            "Autres symptômes récents [non]"
+          ],
+          "exemplesPhrases": [
+            "De la fièvre récemment ?",
+            "Y a-t-il d'autres symptômes récemment dont vous aimeriez discuter ?"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Hypertension artérielle [oui]",
+            "Hypercholestérolémie [oui]",
+            "Diabète [type 2]",
+            "HBP (hypertrophie bénigne de la prostate) [oui]",
+            "Cors aux pieds [opérés]"
+          ],
+          "exemplesPhrases": [
+            "Je connais vos médicaments, pouvez-vous me parler de vos problèmes médicaux ?"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "details": [
+            "Chirurgie des cors aux pieds [oui]",
+            "Blessure par balle à la guerre [fracture de jambe, chirurgie]",
+            "Autres chirurgies [non]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous eu d'autres opérations ?",
+            "Vous en souvenez-vous M. Plaster ?"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes de vie",
+          "details": [
+            "Tabac [jamais fumé]",
+            "Alcool [rare maintenant, abstinent depuis 30 ans]",
+            "Profession antérieure [facteur postal pendant 28 ans]"
+          ],
+          "exemplesPhrases": [
+            "Fumez-vous ou avez-vous déjà fumé ?",
+            "Qu'en est-il de l'alcool ?"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Histoire familiale",
+          "details": [
+            "Enfants [fils à la faculté de droit, fille avec 3 filles]",
+            "Maladies familiales de mémoire [non]",
+            "Santé des enfants [en bonne santé]"
+          ],
+          "exemplesPhrases": [
+            "Y a-t-il d'autres maladies dans votre famille ?",
+            "Y a-t-il eu des maladies causant des problèmes de mémoire chez vos parents ou d'autres membres de la famille ?"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Inquiétudes et questions de l'épouse",
+          "details": [
+            "Préoccupation principale [maladie d'Alzheimer ?]",
+            "Observations de l'épouse [questions sur la banque, nom du chat]",
+            "Rôle d'aidante [gère médicaments, conduit]"
+          ],
+          "exemplesPhrases": [
+            "Pensez-vous que c'est quelque chose comme la maladie d'Alzheimer ?"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Préparation à l'examen",
+          "binaryOnly": true,
+          "details": [
+            "Se laver les mains",
+            "Expliquer l'examen au patient",
+            "Commenter les signes vitaux"
+          ],
+          "exemplesPhrases": [
+            "D'accord. J'aimerais faire un examen physique maintenant, si cela ne vous dérange pas.",
+            "Laissez-moi juste me laver les mains.",
+            "Il semble que vos signes vitaux soient normaux, alors permettez-moi d'abord de regarder dans vos oreilles..."
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen ORL",
+          "details": [
+            "Otoscopie bilatérale [membranes tympaniques nacrées grises]",
+            "Test de mobilité tympanique [normale]",
+            "Sensibilité mastoïdienne [absente]",
+            "Réflexes pupillaires [PERRLA]",
+            "Mouvements oculaires [intacts]"
+          ],
+          "exemplesPhrases": [
+            "Avez-vous des douleurs dans vos oreilles ?"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen neurologique - Nerfs crâniens",
+          "details": [
+            "Nerfs crâniens II-XII [intacts]",
+            "Vision et champs visuels [à évaluer]",
+            "Mouvements oculaires [normaux]",
+            "Fonction faciale [symétrique]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen neurologique - Sensibilité",
+          "details": [
+            "Sensation tactile des extrémités [normale]",
+            "Test au monofilament [négatif]",
+            "Test piqué/mousse [normal]",
+            "Proprioception digitale [intacte]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen neurologique - Motricité",
+          "details": [
+            "Force musculaire [5/5 symétrique]",
+            "Réflexes ostéotendineux [2+ symétriques]",
+            "Signe de Babinski [flexion plantaire]",
+            "Clonus de la cheville [un battement]",
+            "Pas de tremblement"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique - Coordination",
+          "details": [
+            "Diadococinésie [normale]",
+            "Doigt-nez [normal]",
+            "Talon-tibia [normal]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen de la marche et équilibre",
+          "details": [
+            "Démarche spontanée [instable, base large]",
+            "Marche sur les talons [incapable]",
+            "Marche sur la pointe des pieds [incapable]",
+            "Test de Romberg [négatif]",
+            "Sécurité du patient [prêt à rattraper si chute]"
+          ],
+          "exemplesPhrases": [
+            "Quand vous fermez les yeux, avez-vous l'impression que vous pourriez tomber ?"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque 4 foyers [rythme régulier, pas de souffle]",
+            "Souffles carotidiens [absents]",
+            "Pouls périphériques [2+ symétriques]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Diagnostics différentiels des troubles cognitifs avec troubles de la marche",
+            "categories": [
+              {
+                "name": "Causes potentiellement réversibles",
+                "items": [
+                  {
+                    "text": "Hydrocéphalie à pression normale",
+                    "cause": "Arguments POUR:\n\t□ Triade classique : troubles cognitifs + troubles de la marche + incontinence urinaire\n\t□ Démarche instable à base large\n\t□ Incontinence sans urgence mictionnelle\n\t□ Progression sur plusieurs mois\nArguments CONTRE:\n\t□ Pas de description typique de marche magnétique",
+                    "test": "→ IRM cérébrale (dilatation ventriculaire), ponction lombaire soustractive"
+                  },
+                  {
+                    "text": "Syndrome confusionnel (infection occulte)",
+                    "cause": "Arguments POUR:\n\t□ Âge avancé\n\t□ Diabétique (risque infectieux accru)\n\t□ Changement récent du statut mental\nArguments CONTRE:\n\t□ Pas de fièvre\n\t□ Évolution progressive sur des mois\n\t□ Pas de fluctuation de la conscience",
+                    "test": "→ NFS, CRP, ECBU, radiographie thoracique"
+                  }
+                ]
+              },
+              {
+                "name": "Démences neurodégénératives",
+                "items": [
+                  {
+                    "text": "Maladie d'Alzheimer",
+                    "cause": "Arguments POUR:\n\t□ Troubles mnésiques progressifs\n\t□ Désorientation spatiale\n\t□ Oubli des noms propres\n\t□ Âge approprié\n\t□ Évolution insidieuse\nArguments CONTRE:\n\t□ Troubles de la marche précoces inhabituels\n\t□ Incontinence précoce",
+                    "test": "→ IRM cérébrale (atrophie hippocampique), bilan neuropsychologique"
+                  },
+                  {
+                    "text": "Maladie de Parkinson avec démence",
+                    "cause": "Arguments POUR:\n\t□ Troubles de la marche\n\t□ Instabilité posturale\n\t□ Troubles cognitifs\nArguments CONTRE:\n\t□ Pas de tremblement de repos\n\t□ Pas de bradykinésie décrite\n\t□ Pas de rigidité",
+                    "test": "→ Examen neurologique spécialisé, DaTscan si doute"
+                  }
+                ]
+              },
+              {
+                "name": "Causes vasculaires",
+                "items": [
+                  {
+                    "text": "Démence vasculaire (infarctus multiples)",
+                    "cause": "Arguments POUR:\n\t□ Facteurs de risque vasculaires (HTA, diabète, hyperlipidémie)\n\t□ Évolution par paliers possible\n\t□ Troubles de la marche\nArguments CONTRE:\n\t□ Pas d'histoire d'AVC\n\t□ Évolution plutôt progressive",
+                    "test": "→ IRM cérébrale (hypersignaux substance blanche, lacunes)"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires immédiats",
+          "details": [
+            "NFS avec formule leucocytaire",
+            "Ionogramme et fonction rénale",
+            "Glycémie, HbA1c",
+            "TSH, vitamine B12, folates",
+            "Analyse et culture d'urine",
+            "Examen génital et toucher rectal"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Imagerie et examens spécialisés",
+          "details": [
+            "IRM cérébrale avec séquences T1, T2, FLAIR",
+            "Évaluation de l'atrophie et des espaces périventriculaires",
+            "Recherche de signes d'hydrocéphalie",
+            "Bilan neuropsychologique si pas d'amélioration"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge thérapeutique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Si hydrocéphalie à pression normale confirmée",
+                "content": "• Référence en neurochirurgie\n• Ponction lombaire soustractive thérapeutique\n• Évaluation pour dérivation ventriculo-péritonéale\n• Rééducation de la marche"
+              },
+              {
+                "title": "Si démence d'Alzheimer probable",
+                "content": "• Inhibiteurs de la cholinestérase (donépézil, rivastigmine)\n• Mémantine si stade modéré à sévère\n• Soutien psychosocial famille\n• Planification médico-légale précoce\n• Évaluation de la sécurité à domicile"
+              },
+              {
+                "title": "Mesures générales",
+                "content": "• Optimisation du contrôle glycémique\n• Contrôle tensionnel strict\n• Prévention des chutes (kinésithérapie, aides techniques)\n• Éducation de l'aidante\n• Services de soutien à domicile"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Communication avec le patient et sa famille",
+          "details": [
+            "Explication des diagnostics possibles en termes simples",
+            "Rassurer sur les causes réversibles possibles",
+            "Importance des examens pour éliminer les causes traitables",
+            "Soutien à l'épouse aidante"
+          ],
+          "exemplesPhrases": [
+            "Eh bien, je ne peux pas dire ce que cela pourrait être à ce stade.",
+            "Avant de poser ce diagnostic, j'aimerais poser plus de questions et faire quelques tests.",
+            "Il est possible que si nous sommes capables de trouver la raison de ces symptômes, cela pourrait être réversible."
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Red flags et surveillance",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant une réévaluation urgente",
+            "items": [
+              {
+                "text": "Aggravation rapide de l'état mental",
+                "description": "Confusion aiguë, désorientation complète"
+              },
+              {
+                "text": "Chutes répétées",
+                "description": "Risque de traumatisme crânien"
+              },
+              {
+                "text": "Signes neurologiques focaux",
+                "description": "Déficit moteur, aphasie brutale"
+              },
+              {
+                "text": "Fièvre ou signes infectieux",
+                "description": "Risque de décompensation"
+              },
+              {
+                "text": "Rétention urinaire aiguë",
+                "description": "Complication de l'HBP"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Explication diagnostique et plan",
+          "content": "M. et Mme Plaster, je ne peux pas dire exactement ce qui pourrait se passer pour causer ces symptômes. Cependant, il y a des tests que j'aimerais faire pour essayer de le découvrir. Une possibilité est une maladie appelée \"hydrocéphalie à pression normale\", qui est un nom sophistiqué pour quand le liquide qui baigne normalement le cerveau s'y accumule et cause des dommages. Cette maladie est heureusement réversible et peut être la cause de ce qui se passe ici, mais la meilleure façon de le dire est une IRM, ou scanner cérébral, pour regarder le cerveau lui-même. Le test lui-même est assez facile en ce sens que vous devrez vous allonger sur une petite table, qui se déplace ensuite dans et hors d'une machine en forme de tunnel. Il prend des photos de votre cerveau pendant que vous vous déplacez. Une autre possibilité, comme nous en avons parlé auparavant, est le début de la maladie d'Alzheimer. C'est une maladie préoccupante qui peut causer certains des symptômes de type mémoire que vous avez. C'est une maladie courante, mais il n'y a vraiment pas d'excellent moyen de dire si c'est la cause. Pour celle-ci, je veux éliminer d'autres possibilités avant de la pointer parce que la maladie d'Alzheimer n'est pas totalement curable, bien que nous ayons des médicaments pour aider. Dans l'ensemble, je devrai prélever du sang aujourd'hui, de l'urine aujourd'hui, faire un examen génital et de la prostate rapide, et vous faire suivre pour ce scanner cérébral au service de radiologie. Permettez-moi de sortir et d'organiser ces tests pendant que je vous demande de vous mettre en blouse.\n\nY a-t-il un autre aspect de vos soins de santé dont nous n'avons pas déjà discuté ? D'accord alors, merci."
+        },
+        {
+          "id": "c2",
+          "text": "Question difficile de l'épouse",
+          "content": "[Pensez-vous que c'est quelque chose comme la maladie d'Alzheimer ?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse appropriée du candidat",
+          "content": "La maladie d'Alzheimer est une maladie préoccupante qui peut avoir certaines des caractéristiques que vous décrivez, mais il est trop tôt pour le dire maintenant. La maladie d'Alzheimer et d'autres maladies qui causent ce qu'on appelle la \"démence\" sont souvent difficiles à diagnostiquer. Avant de poser ce diagnostic, j'aimerais poser plus de questions et faire quelques tests. Il est possible que si nous sommes capables de trouver la raison de ces symptômes, cela pourrait être réversible, auquel cas nous pourrions certainement le traiter."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "informationsExpert": {
+      "titre": "Points clés pour l'évaluation",
+      "pointsCles": [
+        "Présentation de la triade classique d'hydrocéphalie à pression normale",
+        "Troubles cognitifs + troubles de la marche + incontinence urinaire",
+        "Importance de l'anamnèse collatérale (épouse)",
+        "Patient minimise ses symptômes, épouse plus inquiète",
+        "Multiples facteurs de risque vasculaires",
+        "Démarche à base large sans autres signes parkinsoniens",
+        "Incontinence sans urgence mictionnelle (signe clé)"
+      ],
+      "pieges": [
+        "Ne pas se focaliser uniquement sur Alzheimer",
+        "Oublier l'hydrocéphalie à pression normale (potentiellement réversible)",
+        "Ne pas faire l'examen neurologique complet",
+        "Négliger l'examen de la marche",
+        "Oublier de rechercher une infection occulte chez le diabétique",
+        "Ne pas impliquer l'épouse dans la discussion",
+        "Manquer l'incontinence urinaire dans l'anamnèse"
+      ]
+    },
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour le patient standardisé et son épouse",
+      "nom": "Jack Plaster",
+      "age": "78 ans",
+      "contexte": "Homme âgé avec troubles mnésiques progressifs accompagné de son épouse",
+      "motifConsultation": {
+        "plaintePrincipale": "Perte de mémoire",
+        "autreChose": "Ma femme dit que je me suis aggravé"
+      },
+      "histoireActuelle": {
+        "troublesMnesiques": [
+          "Oubli du chemin pour rentrer du magasin (1 pâté de maisons)",
+          "Questions sur la banque fréquentée depuis 20 ans",
+          "Oubli du nom du chat qu'il a nommé",
+          "Oubli du nom de la petite-fille (Emily)",
+          "Non-reconnaissance occasionnelle des voisins"
+        ],
+        "troublesMarche": [
+          "Instabilité depuis quelques semaines",
+          "Besoin de se tenir aux meubles",
+          "Sensation qu'il pourrait tomber",
+          "Pas de vertiges, juste instable"
+        ],
+        "incontinence": [
+          "Quelques épisodes de fuites",
+          "Pas de sensation du besoin d'uriner",
+          "Découverte d'humidité en regardant la TV"
+        ],
+        "attitude": [
+          "Minimise ses problèmes",
+          "Dit avoir toujours eu mauvaise mémoire",
+          "Embarrassé par ses oublis",
+          "Coopératif mais défensif"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Hypertension artérielle",
+          "Hypercholestérolémie",
+          "Diabète type 2",
+          "Hypertrophie bénigne de la prostate",
+          "Cors aux pieds (opérés)"
+        ],
+        "chirurgicaux": [
+          "Ablation des cors",
+          "Chirurgie pour blessure par balle à la jambe (guerre)"
+        ],
+        "professionnels": [
+          "Facteur postal pendant 28 ans (retraité)",
+          "Vétéran de guerre"
+        ]
+      },
+      "medicaments": {
+        "actuels": [
+          "Aténolol (HTA)",
+          "Lisinopril (HTA)",
+          "Lovastatine (cholestérol)",
+          "Tamsulosine (prostate)",
+          "Glyburide (diabète)"
+        ],
+        "gestion": "Épouse organise tous les médicaments"
+      },
+      "habitudes": {
+        "tabac": "Jamais fumé",
+        "alcool": "Abstinent depuis 30 ans, consommation modérée avant"
+      },
+      "contexteSocial": {
+        "famille": "Marié, 2 enfants (fils en faculté de droit, fille avec 3 filles)",
+        "logement": "Même maison depuis 26 ans",
+        "conduite": "Épouse conduit maintenant partout",
+        "autonomie": "Dépendant de son épouse pour médicaments et transport"
+      },
+      "roleEpouse": {
+        "nom": "Sherry Plaster",
+        "observations": [
+          "Note l'aggravation récente",
+          "Donne des exemples précis",
+          "Gère les médicaments",
+          "Conduit partout",
+          "Inquiète de la maladie d'Alzheimer"
+        ],
+        "attitude": [
+          "Protectrice mais réaliste",
+          "Corrige gentiment son mari",
+          "Fournit les détails manquants"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Patient : Regarder son épouse pour confirmation",
+          "Patient : Minimiser les symptômes",
+          "Patient : Montrer de la frustration quand il oublie",
+          "Épouse : Intervenir pour clarifier ou corriger",
+          "Épouse : Donner des exemples concrets"
+        ],
+        "durantExamen": [
+          "Marche lente et prudente",
+          "Se tenir au mobilier si possible",
+          "Difficulté marquée pour marche talons/pointes",
+          "Coopératif pour l'examen neurologique"
+        ]
+      }
+    },
+    "theoriePratique": {
+      "titre": "Rappels théoriques - Troubles cognitifs chez la personne âgée",
+      "sections": [
+        {
+          "titre": "Hydrocéphalie à pression normale",
+          "contenu": "Triade classique : troubles cognitifs + apraxie de la marche + incontinence urinaire. Cause potentiellement réversible de démence. Diagnostic : IRM (dilatation ventriculaire disproportionnée), ponction lombaire soustractive. Traitement : dérivation ventriculo-péritonéale si amélioration après PL."
+        },
+        {
+          "titre": "Démences et diagnostic différentiel",
+          "contenu": "Alzheimer : troubles mnésiques prédominants, évolution progressive. Vasculaire : facteurs de risque CV, évolution par paliers. Corps de Lewy : hallucinations, fluctuations, parkinsonisme. Fronto-temporale : troubles comportementaux précoces."
+        },
+        {
+          "titre": "Bilan de démence",
+          "contenu": "Biologie : NFS, iono, urée/créat, B12, folates, TSH, syphilis. Imagerie : IRM > TDM. Tests cognitifs : MMSE, MoCA. Éliminer causes réversibles : médicaments, dépression, hypothyroïdie, carence B12."
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "HPN : dérivation VP si réponse positive à PL soustractive",
+        "Alzheimer : inhibiteurs cholinestérase (donépézil, rivastigmine, galantamine)",
+        "Stade modéré-sévère : ajouter mémantine",
+        "Mesures non pharmacologiques : stimulation cognitive, activité physique",
+        "Support aux aidants : formation, répit, groupes de soutien"
+      ],
+      "examensComplementaires": [
+        "IRM cérébrale : gold standard pour HPN et atrophie",
+        "Ponction lombaire : pression d'ouverture, protéines, test soustractif",
+        "MMSE/MoCA : évaluation cognitive standardisée",
+        "Bilan métabolique complet : éliminer causes réversibles",
+        "EEG si suspicion de crises épileptiques"
+      ]
+    }
+  }
+}

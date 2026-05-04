@@ -1,0 +1,746 @@
+{
+  "title": "RESCOS-57b - Ralentissement - Consultation téléphonique",
+  "type": "consultation-telephonique",
+  "context": {
+    "setting": "Urgences d'un hôpital régional (médecin assistant·e). Il est 21h30",
+    "patient": "M. Michel Bertchi, 88 ans, résident en EMS, présente un ralentissement depuis ce soir avec diarrhées depuis 2 jours",
+    "caller": "Sofia/Sofian, infirmier·ère de nuit à l'EMS de la Croix",
+    "vitals": {
+      "fc": "98 bpm",
+      "ta": "120/78 mmHg",
+      "temperature": "37.8°C"
+    },
+    "patientInfo": {
+      "chambre": "Dans sa chambre à l'EMS",
+      "etat": "Patient ralenti mais orienté aux 4 modes"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "title": "Anamnèse",
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Réception adéquate de l'appel : nom et fonction",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Se renseigne sur la fonction de son interlocutrice",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Se renseigne sur le patient : nom, âge",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Se renseigne sur l'état du patient : en général, la veille, au moment de l'appel",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Diarrhées",
+          "details": [
+            "Début [depuis 2 jours]",
+            "Fréquence [5-6 épisodes ce jour]",
+            "Consistance [aqueuses]",
+            "Présence de mucus ou de sang [pas de sang frais ni de méléna]",
+            "Caractère habituel ou nouveau [nouveau]",
+            "Transit habituel [habituellement normal]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Autres symptômes associés",
+          "details": [
+            "Fièvre [il n'a pas eu de fièvre sur la journée, température à 37.8°C ce soir]",
+            "Fatigue [fatigue importante]",
+            "Alimentation [appétit conservé]",
+            "Vomissements [1 seul épisode ce jour, après le repas du midi, alimentaire]",
+            "Mesures entreprises [bouillotte chaude proposée]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse environnement / contage",
+          "patientComment": "Un autre résident de l'EMS a eu des symptômes similaires il y a quelques jours"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents médicaux, médicaments habituels",
+          "details": [
+            "Hypertension",
+            "Hypercholestérolémie",
+            "Hyperplasie bénigne de la prostate",
+            "Troubles du sommeil",
+            "Déclin cognitif léger",
+            "Médicaments [Cosaar Plus 50/12.5mg, Atorvastatine 10mg, Pradif T 40mcg, Distraneurine caps, Ginkgo]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Erreur de délivrance médicaments ou introduction médicament",
+          "patientComment": "Pas d'erreur de délivrance, pas de nouveau médicament"
+        },
+        {
+          "id": "a10",
+          "text": "Consommations : tabac [non connu] - alcool [occasionnel]"
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse en général",
+          "details": [
+            "État général ciblé [Patient habituellement autonome hormis aide à l'habillement]",
+            "Conducteur [non, en EMS]",
+            "Bien-être [Patient aimable et agréable habituellement]"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "title": "Management",
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Questionne sur l'examen clinique réalisé et le fait préciser",
+          "details": [
+            "Constantes [FC 98/min, TA 120/78 mmHg, T° 37.8°C]",
+            "Status neurologique [Patient ralenti, orienté aux 4 modes, pas de signe de latéralisation]",
+            "Status abdominal [Palpation diffusément sensible, pas de défense ni détente, bruits abdominaux augmentés]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Questionne sur l'hydratation du patient",
+          "patientComment": "Langue et muqueuses sèches, temps de recoloration de 4 secondes, pâleur des téguments"
+        },
+        {
+          "id": "m3",
+          "text": "Demande si directives anticipées connues et/ou attitude de réanimation",
+          "patientComment": "Décision de réanimation dans le dossier est OUI, directives anticipées non connues"
+        },
+        {
+          "id": "m4",
+          "text": "Hypothèse diagnostique : indique qu'aucun diagnostic ne peut être posé par téléphone"
+        },
+        {
+          "id": "m5",
+          "text": "Suggère le diagnostic de gastro-entérite"
+        },
+        {
+          "id": "m6",
+          "text": "Demande si le patient peut être davantage surveillé durant la nuit"
+        },
+        {
+          "id": "m7",
+          "text": "Propose un point de situation téléphonique en cas d'incertitude ressentie"
+        },
+        {
+          "id": "m8",
+          "text": "Recommandation sur la suite de la prise en charge et mesures concrètes",
+          "details": [
+            "Stimulation de réhydratation per os [surveillance rapprochée durant la nuit avec prise de constantes et évaluation état de vigilance]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "m9",
+          "text": "Prévoir régime spécifique dès le lendemain"
+        },
+        {
+          "id": "m10",
+          "text": "Prévoir consultation médicale le lendemain et en priorité"
+        },
+        {
+          "id": "m11",
+          "text": "Rappelle les signes d'alerte nécessitant un appel ou un transfert immédiat",
+          "details": [
+            "Trouble de l'état de conscience",
+            "Perturbation des constantes",
+            "Refus de réhydratation"
+          ]
+        },
+        {
+          "id": "m12",
+          "text": "Fait répéter les recommandations sur les mesures à prendre en cas de péjoration de l'état de santé"
+        },
+        {
+          "id": "m13",
+          "text": "Demande à l'infirmier·ère si se sent confortable"
+        },
+        {
+          "id": "m14",
+          "text": "Management en général : Bien - suffisant - insuffisant"
+        },
+        {
+          "id": "m15",
+          "text": "Diagnostics différentiels à considérer",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes prioritaires",
+                "items": [
+                  {
+                    "text": "Gastro-entérite infectieuse (virale ou bactérienne)",
+                    "cause": "Arguments POUR:\n\t□ Diarrhées aqueuses depuis 2 jours\n\t□ Vomissement alimentaire\n\t□ Contexte de contage dans l'EMS\n\t□ Température sub-fébrile",
+                    "test": "→ Hydratation per os, surveillance, consultation médicale le lendemain"
+                  },
+                  {
+                    "text": "Déshydratation sévère",
+                    "cause": "Arguments POUR:\n\t□ Muqueuses sèches\n\t□ Temps de recoloration prolongé (4 secondes)\n\t□ Ralentissement psychomoteur\n\t□ Diarrhées multiples",
+                    "test": "→ Surveillance rapprochée des constantes et de l'état de conscience"
+                  },
+                  {
+                    "text": "État confusionnel d'origine médicamenteuse",
+                    "cause": "Arguments POUR:\n\t□ Polymédication (Distraneurine)\n\t□ Patient âgé de 88 ans\n\t□ Ralentissement psychomoteur",
+                    "test": "→ Vérifier l'absence d'erreur de délivrance médicamenteuse"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "Arguments POUR:\n\t□ Patient âgé avec prostate\n\t□ Changement d'état général",
+                    "test": "→ À explorer lors de la consultation médicale du lendemain"
+                  },
+                  {
+                    "text": "Problème cardiaque (insuffisance cardiaque décompensée)",
+                    "cause": "Arguments CONTRE:\n\t□ Pas de dyspnée\n\t□ TA normale\n\t□ Pas d'œdèmes mentionnés",
+                    "test": "→ Surveillance des constantes durant la nuit"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "title": "Évaluation générale de l'A.M.",
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Exceptionnellement compétent",
+          "scoringRule": "Note A"
+        },
+        {
+          "id": "e2",
+          "text": "Très compétent",
+          "scoringRule": "Note B"
+        },
+        {
+          "id": "e3",
+          "text": "Compétent",
+          "scoringRule": "Note C"
+        },
+        {
+          "id": "e4",
+          "text": "Limité",
+          "scoringRule": "Note D"
+        },
+        {
+          "id": "e5",
+          "text": "Incompétent",
+          "scoringRule": "Note E"
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "title": "Clôture",
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Clôture type",
+          "content": "Je comprends votre inquiétude. D'après ce que vous me décrivez, M. Bertchi semble présenter une gastro-entérite avec déshydratation modérée. Il est important de le surveiller cette nuit, de favoriser l'hydratation et de prévoir une consultation médicale demain matin en priorité. N'hésitez pas à rappeler si son état se détériore.",
+          "exemplesPhrases": [
+            "\"Je vous remercie pour votre appel et votre vigilance. Nous restons disponibles si vous avez besoin.\"",
+            "\"Vous avez bien fait de nous appeler. La surveillance que vous allez mettre en place est appropriée.\""
+          ]
+        },
+        {
+          "id": "c2",
+          "text": "Questions difficiles du patient",
+          "content": "[Faut-il vraiment le transférer ce soir aux urgences?] [Pensez-vous qu'il va s'en sortir?] [C'est de ma faute s'il va mal?]"
+        },
+        {
+          "id": "c3",
+          "text": "Réponse type du candidat",
+          "content": "D'après les éléments que vous me communiquez, M. Bertchi peut rester à l'EMS cette nuit avec une surveillance rapprochée. Les signes vitaux sont stables et il reste conscient. Cependant, si son état se détériore - notamment s'il devient confus, si ses constantes se dégradent ou s'il refuse de s'hydrater - il faudra le transférer immédiatement.",
+          "exemplesPhrases": [
+            "\"Non, ce n'est absolument pas de votre faute. Ces infections digestives sont fréquentes en collectivité.\"",
+            "\"Avec une bonne hydratation et une surveillance adaptée, la situation devrait s'améliorer.\""
+          ]
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour l'infirmier·ère simulé·e",
+      "nom": "Sofia/Sofian (infirmier·ère) - Patient: Michel Bertchi",
+      "age": "88 ans (patient)",
+      "contexte": "Infirmier·ère de nuit dans un EMS depuis 3 ans. Début du travail à 19h, colloque de transmission de 19h à 20h, puis tournée du soir.",
+      "motifConsultation": {
+        "plaintePrincipale": "Bonsoir, Sofia/Sofian, infirmier·ère de nuit à l'EMS de la Croix. Je vous appelle car un de nos résident est un peu ralenti ce soir. Je m'inquiète pour lui et je ne sais pas quoi faire...",
+        "autreChose": "Inquiétude concernant l'état du résident"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "M. Bertchi est ralenti depuis ce soir",
+          "Il gémit souvent et ne se laisse pas faire comme d'habitude",
+          "Il n'arrive pas bien à dire ce qui se passe mais semble inconfortable et fatigué",
+          "Répond avec un temps de latence de quelques secondes aux sollicitations",
+          "Orienté aux 4 modes"
+        ],
+        "diarrhees": [
+          "Début il y a 2 jours",
+          "5-6 épisodes aujourd'hui, moins la veille",
+          "Type aqueux",
+          "Pas de sang frais ni de méléna",
+          "Un autre résident a eu des diarrhées ces derniers jours (contage)",
+          "1 épisode depuis l'arrivée en service ce soir"
+        ],
+        "douleurs": [
+          "Localisation imprécise, mains sur le ventre au niveau du nombril",
+          "Semble aller mieux depuis qu'il est allé à selles",
+          "Intensité non évaluable",
+          "Bouillotte chaude proposée"
+        ],
+        "symptomesAssocies": [
+          "Fièvre : 37.8°C ce soir (thermomètre auriculaire), pas de fièvre dans la journée",
+          "Vomissement : 1 seul épisode ce jour après le repas du midi, alimentaire",
+          "Fatigue importante",
+          "Faiblesse généralisée",
+          "Pas de céphalées, vertiges, paresthésies, parésie ou troubles visuels"
+        ]
+      },
+      "simulation": {
+        "attitude": [
+          "Un peu stressé·e par la situation",
+          "Reste professionnel·le et communique clairement et calmement",
+          "Inquiet·ète pour le résident",
+          "Cherche des conseils et des consignes claires"
+        ],
+        "durantConsultation": [
+          "Position derrière un paravent (invisible pour les candidats)",
+          "Le patient est dans sa chambre et ne participe pas activement",
+          "Peut avoir le scénario avec soi car invisible"
+        ]
+      },
+      "antecedents": {
+        "medicaux": [
+          "Tuberculose dans sa jeunesse (traitement complet)",
+          "Hypertension",
+          "Hypercholestérolémie",
+          "Hyperplasie bénigne de la prostate",
+          "Troubles du sommeil",
+          "Déclin cognitif léger lentement progressif",
+          "Pneumonie en 2016"
+        ],
+        "chirurgicaux": [
+          "Réparation coiffe des rotateurs",
+          "Accident de vélo avec fracture du tibia (1955)"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Cosaar Plus 50/12.5mg, Atorvastatine 10mg, Pradif T 40mcg, Distraneurine caps, Ginkgo 3x/j",
+        "tabac": "Pas connu",
+        "alcool": "Occasionnel lors de fêtes spéciales à l'EMS, max 1 verre de vin rouge",
+        "alimentation": "Alimentation équilibrée faite par cuisine de l'EMS. Appétit conservé.",
+        "allergies": "Aucune allergie ni intolérance",
+        "vaccins": "Vaccins à jour (schéma suisse). Dernier vaccin Grippe l'hiver passé"
+      },
+      "informationsPersonnelles": {
+        "profession": "En EMS depuis 6 ans",
+        "etatCivil": "Veuf, a perdu son épouse il y a 8 ans",
+        "famille": "Une fille de 53 ans vivant en Allemagne, un fils de 56 ans vivant en Suisse alémanique (Grisons). Visite 1x/mois de son fils.",
+        "autonomie": "Relativement autonome habituellement hormis aide à l'habillement. S'alimente de manière autonome au réfectoire de l'EMS."
+      },
+      "contexteSocial": {
+        "activites": "Participe habituellement volontiers aux rencontres et activités organisées par l'EMS",
+        "loisirs": "Regarde souvent la télévision",
+        "visite": "Sa fille est venue lui rendre visite avec un de ses petits-fils venu d'Allemagne récemment"
+      },
+      "inquietudes": {
+        "principales": [
+          "Souhaite savoir s'il faut transférer le patient de nuit ou si la situation peut attendre l'évaluation médicale du lendemain",
+          "Inquiet·ète car le patient n'est pas comme d'habitude",
+          "Ne veut pas que M. Bertchi péjore son état général"
+        ],
+        "questions": [
+          "Faut-il vraiment le transférer ce soir aux urgences?",
+          "Pensez-vous qu'il va s'en sortir?",
+          "C'est de ma faute s'il va mal?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Instructions pour l'expert évaluateur",
+      "rolesInterventions": [
+        "L'infirmier·ère appelle les urgences pour un résident en EMS présentant un ralentissement et des diarrhées",
+        "Le candidat doit mener une anamnèse téléphonique détaillée",
+        "Le candidat doit évaluer la gravité de la situation",
+        "Le candidat doit donner des conseils de prise en charge adaptés",
+        "Le candidat doit identifier les signes d'alerte nécessitant un transfert"
+      ],
+      "pointsCles": [
+        "Évaluer correctement l'état d'hydratation du patient",
+        "Identifier le contexte épidémique (contage dans l'EMS)",
+        "Reconnaître qu'il s'agit probablement d'une gastro-entérite",
+        "Proposer une surveillance adaptée avec critères de transfert clairs",
+        "Rassurer l'infirmier·ère tout en restant vigilant",
+        "Communication claire et structurée dans un contexte téléphonique"
+      ],
+      "pieges": [
+        "Vouloir transférer immédiatement sans évaluation approfondie",
+        "Minimiser la situation chez un patient âgé et fragile",
+        "Oublier de demander l'examen clinique réalisé",
+        "Ne pas s'enquérir des directives anticipées",
+        "Ne pas donner de consignes claires de surveillance",
+        "Ne pas préciser les signes d'alerte nécessitant un rappel"
+      ],
+      "instructionsSpecifiques": [
+        "Si le candidat veut immédiatement hospitaliser : l'infirmier·ère questionne la nécessité",
+        "Si le candidat insiste pour l'hospitalisation : l'infirmier·ère accepte et appelle l'ambulance",
+        "Si demande de réveiller le patient : l'infirmier·ère dit qu'il dort bien maintenant",
+        "Les directives de réanimation sont OUI, directives anticipées non connues"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Points théoriques et pratiques",
+      "sections": [
+        {
+          "titre": "Déshydratation chez la personne âgée",
+          "contenu": "La déshydratation est fréquente et potentiellement grave chez les personnes âgées en institution. Les signes cliniques incluent : sécheresse des muqueuses, pli cutané persistant, temps de recoloration capillaire allongé, confusion ou ralentissement psychomoteur.",
+          "points": [
+            "Risque accru chez les patients avec troubles cognitifs",
+            "La confusion peut être le premier signe",
+            "Nécessité d'une surveillance rapprochée des constantes"
+          ]
+        },
+        {
+          "titre": "Gastro-entérite en collectivité",
+          "contenu": "Les épidémies de gastro-entérite sont fréquentes en EMS. La transmission est favorisée par la vie en collectivité et la fragilité des résidents.",
+          "points": [
+            "Mesures d'hygiène renforcées nécessaires",
+            "Isolement entérique du patient",
+            "Surveillance des autres résidents"
+          ]
+        },
+        {
+          "titre": "Communication téléphonique en médecine",
+          "contenu": "La consultation téléphonique nécessite des compétences spécifiques : écoute active, questions ciblées, synthèse claire des informations.",
+          "points": [
+            "Utiliser le modèle SBAR (Situation, Background, Assessment, Recommendation)",
+            "Toujours vérifier la compréhension des consignes",
+            "Documenter précisément l'appel"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Réhydratation orale précoce avec solutés de réhydratation",
+        "Régime alimentaire adapté (BRAT : Bananes, Riz, Applesauce, Toast)",
+        "Surveillance des signes vitaux toutes les 4 heures",
+        "Antipyrétiques si fièvre > 38.5°C",
+        "Éviter les anti-diarrhéiques chez les personnes âgées"
+      ],
+      "examensComplementaires": [
+        "Bilan biologique si persistance : NFS, ionogramme, fonction rénale",
+        "Coproculture si diarrhées sanglantes ou fièvre élevée",
+        "Recherche de Clostridium difficile si antibiothérapie récente",
+        "ECG si troubles du rythme ou signes cardiaques"
+      ]
+    },
+    "resume": {
+      "titre": "💧 Ralentissement sur déshydratation (diarrhées aiguës) chez le sujet âgé – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes digestifs",
+              "points": [
+                "Diarrhée aiguë (≤ 14 jours), souvent d’allure virale",
+                "Nombre de selles/jour, aspect (liquide, sanglant, glaireux)",
+                "Présence de fièvre, douleurs abdominales, nausées/vomissements"
+              ]
+            },
+            {
+              "titre": "Symptômes de déshydratation",
+              "points": [
+                "Fatigue, confusion, ralentissement psychomoteur",
+                "Diminution de la diurèse",
+                "Soif (parfois absente chez la personne âgée)"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque et contexte",
+              "points": [
+                "Âge > 65 ans",
+                "Polymédication (diurétiques, laxatifs, antidiabétiques...)",
+                "Chaleur ambiante, pertes hydriques non compensées",
+                "Troubles cognitifs limitant l’hydratation spontanée"
+              ]
+            },
+            {
+              "titre": "Contexte épidémiologique",
+              "points": [
+                "Contage digestif (établissements, entourage)",
+                "Voyage récent",
+                "Antibiothérapie récente (penser C. difficile)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes de déshydratation",
+              "points": [
+                "Hypotension orthostatique",
+                "Tachycardie",
+                "Pli cutané, sécheresse muqueuses",
+                "Altération de l’état général"
+              ]
+            },
+            {
+              "titre": "Recherche de complications",
+              "points": [
+                "Fièvre, douleur abdominale → infection invasive",
+                "Bruits hydroaériques diminués ou absents",
+                "Signes de choc (marbrures, confusion, oligurie sévère)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Biologie",
+              "points": [
+                "Ionogramme sanguin : hyponatrémie/hypernatrémie, hyperurémie",
+                "Créatininémie : IRA fonctionnelle",
+                "CRP, NFS si syndrome inflammatoire",
+                "Recherche de toxine C. difficile si ATB récente"
+              ]
+            },
+            {
+              "titre": "Autres examens",
+              "points": [
+                "ECG si troubles hydro-électrolytiques",
+                "Échographie abdominale si douleur localisée ou suspicion de complication"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Réhydratation",
+              "points": [
+                "Forme légère à modérée : réhydratation orale (solution sucrée-salée)",
+                "Forme sévère : réhydratation IV (NaCl 0.9%) avec surveillance hémodynamique"
+              ]
+            },
+            {
+              "titre": "Mesures associées",
+              "points": [
+                "Arrêt des traitements aggravants (diurétiques, AINS, IEC... selon contexte)",
+                "Antalgiques si douleurs abdominales",
+                "Surveillance poids, diurèse, constantes"
+              ]
+            },
+            {
+              "titre": "Traitement étiologique",
+              "points": [
+                "Traitement symptomatique de la diarrhée (éviter lopéramide si suspicion de diarrhée invasive)",
+                "Antibiotiques si cause bactérienne avérée (ex. : C. difficile)",
+                "Prévention des récidives (éducation, hydratation préventive)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Penser à la déshydratation chez la personne âgée ralentie avec diarrhée",
+            "Interrogatoire précis : ATB récente, contage, fièvre, antalgiques",
+            "Évaluer les signes de gravité (IRA, choc, troubles conscience)",
+            "Réhydratation précoce et adaptée",
+            "Adapter les traitements usuels pendant l’épisode"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Consultation téléphonique – Ralentissement et diarrhées (Gastro-entérite, déshydratation)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (consultation téléphonique systématisée)",
+          "points": [
+            "Se présenter et identifier l’interlocuteur (nom, fonction, lieu)",
+            "Identifier le patient : nom, âge, état général habituel",
+            "Caractériser le symptôme principal : début, évolution, intensité",
+            "Rechercher diarrhées : fréquence, aspect, sang/mucus, contage",
+            "Rechercher symptômes associés : fièvre, vomissements, douleurs, état de conscience",
+            "Vérifier les constantes",
+            "Évaluer hydratation : muqueuses, recoloration, diurèse",
+            "ATCD et traitements, médicaments introduits récemment",
+            "Directives anticipées / statut de réanimation",
+            "Résumé + hypothèse principale + DD",
+            "Mesures immédiates → hydratation, surveillance, critères d’alerte, consultation le lendemain"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo TELEPHONE",
+            "elements": [
+              "T = Titre / présentation",
+              "E = État habituel du patient",
+              "L = Localisation (lieu, EMS/chambre)",
+              "E = Évaluation du symptôme principal",
+              "P = Paramètres vitaux",
+              "H = Hydratation",
+              "O = Ordonnances (médicaments/erreurs récentes)",
+              "N = Niveau de conscience",
+              "E = Examens complémentaires / directives"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min, script oral)",
+          "contenu": "Il s’agit d’un appel concernant M. Michel Bertchi, 88 ans, résident en EMS, habituellement autonome avec une aide pour l’habillement, qui présente ce soir un ralentissement psychomoteur associé à des diarrhées depuis deux jours.\n\nSelon l’infirmière, il a eu aujourd’hui 5 à 6 épisodes de diarrhée aqueuse, sans sang ni méléna. Il a également eu un épisode de vomissement après le repas de midi. Depuis ce soir, il est plus fatigué, ralenti, avec une latence à répondre, mais reste orienté aux 4 modes. Son appétit est conservé.\n\nÀ l’examen, ses constantes sont : fréquence cardiaque 98/min, tension 120/78, température 37,8°C. Pas de signe de focalisation neurologique. L’abdomen est diffusément sensible sans défense ni masse. Les bruits intestinaux sont augmentés. Les muqueuses sont sèches, le temps de recoloration est prolongé à 4 secondes, avec une pâleur cutanée.\n\nSes antécédents incluent une hypertension, une hypercholestérolémie, une hyperplasie bénigne de la prostate, des troubles du sommeil et un déclin cognitif léger. Il prend Cosaar Plus, atorvastatine, Pradif T, Distraneurine et Ginkgo. Pas d’erreur de délivrance médicamenteuse. Il est en réanimation complète selon le dossier.\n\nEn résumé, il s’agit d’un homme âgé, fragilisé, avec diarrhées aiguës probablement infectieuses dans un contexte de contage en EMS, compliquées d’une déshydratation modérée responsable d’un ralentissement. L’hypothèse principale est une gastro-entérite virale. Les diagnostics différentiels incluent une déshydratation sévère, une infection urinaire, un effet médicamenteux (notamment Distraneurine), ou plus rarement une pathologie cardiaque.\n\nLa prise en charge immédiate consiste à favoriser une hydratation orale régulière si possible, à assurer une surveillance rapprochée de l’état de conscience et des constantes durant la nuit, et à prévoir une consultation médicale en priorité le lendemain matin. J’ai rappelé les signes d’alerte justifiant un transfert immédiat : aggravation de la conscience, instabilité hémodynamique, refus d’hydratation."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : M. Bertchi, 88 ans, résident en EMS, présente un ralentissement ce soir, avec diarrhées depuis 2 jours.\n\nB (Background) : Antécédents d’HTA, HBP, troubles cognitifs légers. Polymédication. Contage récent en EMS.\n\nA (Assessment) : Probable gastro-entérite virale avec déshydratation modérée. DD : infection urinaire, effet médicamenteux, pathologie cardiaque.\n\nR (Recommendation) : Hydratation orale régulière, surveillance rapprochée cette nuit (constantes, vigilance), consultation médicale demain matin, rappeler si aggravation (confusion, constantes, refus hydratation)."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 Déshydratation = SEC",
+              "points": [
+                "S = Sècheresse des muqueuses",
+                "E = État de conscience ralenti",
+                "C = Capillary refill time prolongé"
+              ]
+            },
+            {
+              "titre": "👉 Diarrhée aiguë en collectivité = « 3C »",
+              "points": [
+                "C = Contage (autres cas en EMS)",
+                "C = Courte durée (< 14 jours)",
+                "C = Contexte collectif (risque épidémie)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Gastro-entérite infectieuse",
+                  "reponse": {
+                    "pour": [
+                      "Diarrhées aiguës aqueuses",
+                      "Contexte de contage en EMS",
+                      "Fièvre subfébrile",
+                      "Vomissement alimentaire"
+                    ],
+                    "contre": [
+                      "Pas de fièvre élevée",
+                      "Pas de sang dans les selles"
+                    ]
+                  }
+                },
+                {
+                  "question": "Déshydratation sévère",
+                  "reponse": {
+                    "pour": [
+                      "Muqueuses sèches",
+                      "TRC 4 sec",
+                      "Ralentissement psychomoteur"
+                    ],
+                    "contre": [
+                      "TA correcte",
+                      "Patient encore orienté"
+                    ]
+                  }
+                },
+                {
+                  "question": "Effet médicamenteux (ex. Distraneurine)",
+                  "reponse": {
+                    "pour": [
+                      "Polymédication",
+                      "Patient âgé"
+                    ],
+                    "contre": [
+                      "Pas de nouvelle introduction",
+                      "Pas d’erreur de délivrance"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Que proposeriez-vous ?",
+                  "reponse": [
+                    "Pas d’examens immédiats téléphoniques",
+                    "Prévoir consultation médicale avec NFS, ionogramme, créatinine",
+                    "Si persistance : recherche Clostridium difficile (si ATB récente)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Gastro-entérite aiguë avec déshydratation modérée"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Réhydratation orale régulière",
+                      "Surveillance rapprochée cette nuit",
+                      "Régime adapté (BRAT : banane, riz, compote, toast)",
+                      "Éviter les anti-diarrhéiques"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Consultation médicale en priorité le lendemain",
+                    "Surveillance de l’évolution (vigilance, constantes, hydratation)",
+                    "Appeler immédiatement en cas de péjoration"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

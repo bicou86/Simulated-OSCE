@@ -1,0 +1,418 @@
+{
+  "title": "German-60 - Malaise",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Homme de 79 ans se présente pour insécurité et malaise survenant au lever du lit ou après sa sieste dans le fauteuil à bascule"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte - Motif de consultation",
+          "binaryOnly": true,
+          "patientComment": "J'ai des malaises et une sensation d'insécurité quand je me lève"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation des symptômes principaux",
+          "details": [
+            "Déclenchement par changements de position [oui, au lever]",
+            "Amélioration en position allongée [oui, en me couchant c'est mieux]",
+            "Prédominance horaire [le matin c'est pire qu'en soirée]",
+            "Durée des symptômes"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes neurovégétatifs associés",
+          "details": [
+            "Vertiges [oui, quand je me lève]",
+            "Tachycardie [parfois oui]",
+            "Sueurs [parfois oui]",
+            "Pâleur [parfois oui]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Épisodes syncopaux et chutes",
+          "details": [
+            "Nombre de chutes [2 fois]",
+            "Perte de connaissance complète",
+            "Gravité des chutes [non, pas graves]",
+            "Traumatismes associés"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes cognitifs et généraux",
+          "details": [
+            "Problèmes de concentration [comme toujours, je suis vieux]",
+            "Fatigue inhabituelle",
+            "Céphalées [rarement]",
+            "Modifications récentes"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes cardiovasculaires",
+          "details": [
+            "Douleurs thoraciques",
+            "Dyspnée",
+            "Palpitations",
+            "Œdèmes des membres inférieurs"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes évocateurs d'autres causes",
+          "details": [
+            "Intolérance au froid [non]",
+            "Acrocyanose [non]",
+            "Signes d'hypothyroïdie",
+            "Signes d'insuffisance surrénalienne"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents cardiovasculaires",
+          "details": [
+            "Maladies cardiaques connues [longtemps sans contrôle mais se sent bien]",
+            "Hypertension artérielle",
+            "Insuffisance cardiaque",
+            "Troubles du rythme"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents médicaux autres",
+          "details": [
+            "Maladies rénales [non]",
+            "Diabète",
+            "Maladies neurologiques",
+            "Autres pathologies chroniques [non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Traitements médicamenteux",
+          "details": [
+            "Médicaments actuels [quelque chose à la maison, ne sait pas exactement]",
+            "Antihypertenseurs",
+            "Diurétiques",
+            "Psychotropes",
+            "Observance thérapeutique"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Habitudes de vie et hydratation",
+          "details": [
+            "Apports alimentaires [mange beaucoup]",
+            "Hydratation quotidienne [1 litre par jour]",
+            "Consommation de sel",
+            "Modifications récentes"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Substances et habitudes",
+          "details": [
+            "Tabagisme [fume des cigares]",
+            "Alcool [occasionnellement un verre de vin]",
+            "Café/thé",
+            "Autres substances"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Activités physiques et mode de vie",
+          "details": [
+            "Activités sportives [non]",
+            "Loisirs [jeu d'échecs, fauteuil à bascule, promenades]",
+            "Niveau d'autonomie",
+            "Mobilité générale"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Maladies cardiovasculaires familiales",
+            "Hypotension familiale",
+            "Autres pathologies héréditaires",
+            "Causes de décès [mère: accident, père: inconnu]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Contexte social",
+          "details": [
+            "Situation familiale [marié avec Heidi]",
+            "Enfants [4 enfants, 8 petits-enfants]",
+            "Profession antérieure [ancien cuisinier]",
+            "Conditions de vie actuelles"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète orientée hypotension orthostatique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Hygiène des mains",
+          "details": [
+            "Désinfection des mains avant l'examen"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Mesure de la pression artérielle orthostatique",
+          "details": [
+            "Mesure en position couchée (après 5 min de repos)",
+            "Mesure en position debout (immédiatement)",
+            "Mesure en position debout (après 3 min)",
+            "Calcul de la différence"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Test de Schellong complet",
+          "details": [
+            "Position couchée 10 minutes",
+            "Mesures répétées en orthostatisme",
+            "Documentation des symptômes",
+            "Interprétation correcte"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "Auscultation cardiaque (4 foyers)",
+            "Palpation du pouls (fréquence et régularité)",
+            "Recherche de souffles",
+            "Signes d'insuffisance cardiaque"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen pulmonaire",
+          "details": [
+            "Inspection thoracique",
+            "Auscultation pulmonaire bilatérale",
+            "Recherche de râles",
+            "Évaluation de la symétrie"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Inspection cutanée et vasculaire",
+          "details": [
+            "Recherche de pâleur",
+            "Présence de varices",
+            "État d'hydratation cutanée",
+            "Temps de recoloration capillaire"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique de dépistage",
+          "details": [
+            "Orientation temporo-spatiale",
+            "Équilibre et coordination",
+            "Réflexes ostéo-tendineux",
+            "Force musculaire globale"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Recherche de signes d'hypovolémie",
+          "details": [
+            "Pli cutané",
+            "Sécheresse des muqueuses",
+            "Yeux enfoncés",
+            "Pression veineuse jugulaire"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen ciblé sur l'hypotension orthostatique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "details": [
+            "Hypotension orthostatique",
+            "Justification clinique",
+            "Critères diagnostiques (chute TA >20/10 mmHg)",
+            "Sévérité évaluée"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Hypotension essentielle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hypotension secondaire à une insuffisance cardiaque",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NT-proBNP, échocardiographie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Causes endocriniennes",
+                    "cause": "Arguments POUR:\n\t□ hypothyroïdie, insuffisance surrénalienne",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Causes neurogènes",
+                    "cause": "□ neuropathie autonome",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Hypovolémie",
+                    "cause": "□ déshydratation, hémorragie",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Iatrogénie médicamenteuse",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires - Monitoring",
+          "details": [
+            "Mesure de la TA sur 3 jours différents",
+            "Holter tensionnel 24h",
+            "Test de Schellong standardisé",
+            "Tilt-test si nécessaire"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires - Biologie",
+          "details": [
+            "NFS (anémie)",
+            "Ionogramme (déshydratation)",
+            "Fonction rénale",
+            "TSH (hypothyroïdie)",
+            "Cortisol (insuffisance surrénalienne)"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Examens complémentaires - Cardiologie",
+          "details": [
+            "ECG de repos",
+            "Échocardiographie",
+            "Holter ECG si suspicion de troubles du rythme",
+            "Test d'effort si indiqué"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Mesures non médicamenteuses",
+          "details": [
+            "Hydratation adéquate (>1,5L/jour)",
+            "Augmentation des apports en sel",
+            "Lever progressif en 3 temps",
+            "Éviter la station debout prolongée",
+            "Bas de contention si varices",
+            "Surélévation de la tête du lit"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Révision médicamenteuse",
+          "details": [
+            "Identification des médicaments hypotenseurs",
+            "Ajustement posologique",
+            "Changement d'horaire de prise",
+            "Substitution si nécessaire"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Traitement médicamenteux spécifique",
+          "details": [
+            "Fludrocortisone (Florinef® 0,1mg/jour)",
+            "Posologie progressive (max 0,5mg/jour)",
+            "Surveillance des effets secondaires",
+            "Alternatives (midodrine si échec)"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Éducation du patient et prévention",
+          "details": [
+            "Explication de la pathologie",
+            "Reconnaissance des symptômes d'alerte",
+            "Prévention des chutes",
+            "Adaptation de l'environnement"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Planification du suivi",
+          "details": [
+            "Rendez-vous de contrôle programmé",
+            "Surveillance de l'efficacité thérapeutique",
+            "Ajustement selon l'évolution",
+            "Coordination avec le médecin traitant"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète de l'hypotension orthostatique"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

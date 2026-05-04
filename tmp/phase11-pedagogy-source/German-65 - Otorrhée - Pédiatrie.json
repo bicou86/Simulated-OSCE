@@ -1,0 +1,374 @@
+{
+  "title": "German-65 - Otorrhée - Pédiatrie",
+  "context": {
+    "setting": "Service d'urgences pédiatriques",
+    "patient": "Fillette de 3 ans amenée par sa mère pour écoulement auriculaire. L'enfant a déjà été vue et une otite moyenne aiguë a été diagnostiquée"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Problème actuel principal",
+          "binaryOnly": false,
+          "patientComment": "Il y a du liquide qui sort de l'oreille de ma fille"
+        },
+        {
+          "id": "a3",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Apparition soudaine [non, progressif]",
+            "Aggravation des symptômes [stable]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractérisation de l'écoulement",
+          "binaryOnly": false,
+          "details": [
+            "Type de sécrétion (cérumen, sang, pus) [liquide]",
+            "Aspect [blanc-jaunâtre]",
+            "Odeur [non fétide]",
+            "Quantité [modérée]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes auriculaires associés",
+          "binaryOnly": false,
+          "details": [
+            "Douleur [pleure moins qu'avant]",
+            "Hypoacousie [pas clair, difficile à évaluer]",
+            "Acouphènes [pas clair à cet âge]",
+            "Vertiges [pas clair]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [oui, persiste]",
+            "Toux [non]",
+            "Rhinorrhée [oui]",
+            "Vomissements [non]",
+            "État général [meilleur qu'avant]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Pathologies antérieures [aucune]",
+            "Épisodes d'otite antérieurs [1 fois]",
+            "Hospitalisations [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Statut vaccinal",
+          "binaryOnly": false,
+          "patientComment": "Vaccinations selon le calendrier vaccinal"
+        },
+        {
+          "id": "a9",
+          "text": "Traitements en cours",
+          "binaryOnly": false,
+          "details": [
+            "Antibiotiques [oui, depuis aujourd'hui]",
+            "Paracétamol [oui]",
+            "Lavage nasal [oui, NaCl]",
+            "Amélioration avec traitement [pas d'amélioration durable]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Contexte environnemental",
+          "binaryOnly": false,
+          "details": [
+            "État de santé familial [famille en bonne santé]",
+            "Fréquentation de collectivité [oui, crèche]",
+            "Fratrie [aucune, enfant unique]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Anamnèse par systèmes",
+          "binaryOnly": false,
+          "details": [
+            "Système respiratoire [RAS]",
+            "Système digestif [RAS]",
+            "Système cardiovasculaire [RAS]",
+            "Hydratation [bonne]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Questions de clôture",
+          "binaryOnly": false,
+          "details": [
+            "Avez-vous des questions ?",
+            "Y a-t-il autre chose d'important ?"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection de l'oreille externe",
+          "binaryOnly": false,
+          "patientComment": "Aspect externe normal, écoulement visible au méat"
+        },
+        {
+          "id": "e2",
+          "text": "Palpation auriculaire",
+          "binaryOnly": false,
+          "details": [
+            "Pression du tragus [l'enfant pleure]",
+            "Traction du pavillon [douloureux]",
+            "Palpation mastoïdienne [non douloureuse]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Otoscopie bilatérale",
+          "binaryOnly": false,
+          "details": [
+            "Oreille droite [tympan rouge]",
+            "Oreille gauche [tympan rouge, perforation visible, écoulement]",
+            "Conduit auditif externe [non inflammatoire]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen ORL complémentaire",
+          "binaryOnly": false,
+          "details": [
+            "Oropharynx [anneau pharyngé érythémateux]",
+            "Rhinoscopie antérieure [sécrétions muqueuses]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation ganglionnaire",
+          "binaryOnly": false,
+          "details": [
+            "Ganglions cervicaux [légèrement augmentés]",
+            "Ganglions rétro-auriculaires [non palpables]",
+            "Ganglions pré-auriculaires [non palpables]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Auscultation cardio-pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation pulmonaire [normale]",
+            "Auscultation cardiaque [normale]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "patientComment": "Abdomen souple, indolore"
+        },
+        {
+          "id": "e8",
+          "text": "Recherche de complications",
+          "binaryOnly": false,
+          "details": [
+            "Signes de mastoïdite [absents]",
+            "Signes méningés [absents]",
+            "Paralysie faciale [absente]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "binaryOnly": false,
+          "patientComment": "Otite moyenne aiguë purulente avec perforation tympanique spontanée"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels de l'otorrhée",
+          "binaryOnly": false,
+          "details": [
+            "Otite moyenne aiguë purulente perforée",
+            "Otite externe (mais douleur à la mobilisation)",
+            "Traumatisme avec fracture du rocher (sang, LCR)",
+            "Otite moyenne chronique avec cholestéatome (écoulement fétide)",
+            "Corps étranger surinfecté"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Otite moyenne aiguë perforée",
+                "items": [
+                  {
+                    "text": "Écoulement purulent après douleur intense",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Soulagement de la douleur après perforation",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Contexte infectieux ORL",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Signes d'alarme à rechercher",
+                "items": [
+                  {
+                    "text": "Écoulement fétide → cholestéatome",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Écoulement clair → fistule LCR",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Sang pur → traumatisme",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge thérapeutique",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement antibiotique",
+                "content": "• Poursuite de l'antibiothérapie débutée (amoxicilline)\n• Durée totale : 7-10 jours\n• Réévaluation si pas d'amélioration à 48-72h\n• Adaptation selon antibiogramme si prélèvement"
+              },
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Antalgiques : paracétamol 15 mg/kg/dose 4x/jour\n• Antipyrétiques si fièvre\n• Lavage nasal au sérum physiologique\n• Éviter l'eau dans l'oreille"
+              },
+              {
+                "title": "Soins locaux",
+                "content": "• NE PAS instiller de gouttes auriculaires\n• Nettoyer délicatement l'écoulement externe\n• Protéger l'oreille lors du bain\n• Éviter les cotons-tiges"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Information sur les complications possibles",
+          "binaryOnly": false,
+          "details": [
+            "Mastoïdite (tuméfaction rétro-auriculaire)",
+            "Paralysie faciale (par œdème du nerf)",
+            "Thrombose du sinus latéral",
+            "Complications intracrâniennes (méningite, abcès cérébral)",
+            "Labyrinthite"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Rassurer la mère",
+          "binaryOnly": false,
+          "details": [
+            "Perforation tympanique souvent bénéfique (drainage)",
+            "Cicatrisation spontanée habituelle en 2-3 semaines",
+            "Amélioration attendue sous antibiotiques",
+            "Surveillance simple nécessaire"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Suivi et surveillance",
+          "binaryOnly": false,
+          "details": [
+            "Contrôle clinique dans 48-72h si pas d'amélioration",
+            "Contrôle ORL à 1 semaine",
+            "Contrôle de la cicatrisation tympanique à 1 mois",
+            "Audiométrie si doute sur l'audition"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Conseils de prévention",
+          "binaryOnly": false,
+          "details": [
+            "Vaccination antipneumococcique à jour",
+            "Éviter le tabagisme passif",
+            "Limiter l'usage de la tétine",
+            "Position semi-assise pour les biberons"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Critères de reconsultation urgente",
+          "binaryOnly": false,
+          "details": [
+            "Tuméfaction rétro-auriculaire",
+            "Paralysie faciale",
+            "Vertiges importants",
+            "Céphalées intenses",
+            "Altération de l'état général"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

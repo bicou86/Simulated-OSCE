@@ -1,0 +1,556 @@
+{
+  "title": "RESCOS-1 - Adénopathie sus-claviculaire - ECC Lymphatique",
+  "context": {
+    "setting": "Cabinet d'hématologie",
+    "patient": "M. Martin Ni, 35 ans, consulte pour l'apparition d'une grosseur de la taille d'un œuf de pigeon au-dessus de la clavicule gauche avec sensation de lourdeur dans l'estomac",
+    "vitals": {
+      "ta": "125/78 mmHg",
+      "fc": "72 bpm",
+      "fr": "16/min",
+      "temperature": "37.2°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la plainte principale",
+          "details": [
+            "Apparition de la grosseur [taille œuf de pigeon, sus-claviculaire gauche]",
+            "Durée des symptômes [date d'apparition précise]",
+            "Cinétique de croissance [rapide, lente, stable]",
+            "Douleurs associées [indolore, sensible, douloureuse]",
+            "Lourdeur dans l'estomac [caractérisation de la gêne]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Recherche d'autres adénopathies",
+          "details": [
+            "Autres ganglions palpés par le patient [cou, aisselles, aines]",
+            "Évolution d'autres grosseurs [apparition simultanée ou successive]",
+            "Localisation des autres adénopathies",
+            "Taille comparative des différents ganglions"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes d'accompagnement généraux",
+          "details": [
+            "Amaigrissement [perte de poids chiffrée]",
+            "Anorexie [perte d'appétit]",
+            "Asthénie [fatigue inhabituelle]",
+            "Sueurs nocturnes [nécessitant changement de vêtements]",
+            "Prurit [démangeaisons généralisées]",
+            "Fièvre [température, horaire, durée]"
+          ],
+          "scoringRule": "Au moins cinq = oui, trois à quatre = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Facteurs de risque infectieux",
+          "details": [
+            "Infections récentes [ORL, dentaires, cutanées]",
+            "Voyage récent [zones tropicales, endémiques]",
+            "Contact avec animaux [chats, rongeurs]",
+            "Piqûres d'insectes [tiques, moustiques]",
+            "Contage infectieux [tuberculose, mononucléose]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a5",
+          "text": "Facteurs de risque HIV et MST",
+          "details": [
+            "Anamnèse sexuelle [partenaires multiples, protection]",
+            "Facteurs de risque HIV [IVDU, transfusions]",
+            "Antécédents de MST",
+            "Test HIV récent [statut sérologique]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Médicaments et expositions",
+          "details": [
+            "Prise de médicaments récente [antibiotiques, anticonvulsivants]",
+            "Exposition professionnelle [produits chimiques]",
+            "Vaccinations récentes",
+            "Suppléments ou médecines alternatives"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a7",
+          "text": "Antécédents personnels et familiaux",
+          "details": [
+            "Antécédents de cancer [personnel et familial]",
+            "Antécédents hématologiques [lymphome, leucémie]",
+            "Maladies auto-immunes [LED, polyarthrite]",
+            "Immunodépression [corticoïdes, chimiothérapie]",
+            "Antécédents familiaux d'hémopathies"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Anamnèse socioprofessionnelle",
+          "details": [
+            "Profession [expositions professionnelles]",
+            "Habitudes [tabac, alcool]",
+            "Animaux domestiques",
+            "Conditions de logement [insalubrité]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche hématologique systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale et signes vitaux",
+          "details": [
+            "État général [altération, amaigrissement visible]",
+            "Signes vitaux complets [température, TA, FC]",
+            "Pâleur [conjonctives, paumes]",
+            "Ictère [sclères, peau]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Palpation des ganglions cervicaux et occipitaux",
+          "details": [
+            "Position patient assis [examinateur devant ou derrière]",
+            "Palpation avec pulpe des doigts [ganglions occipitaux]",
+            "Chaînes cervicales [superficielles et profondes]",
+            "Ganglions sous-maxillaires et sous-mentonniers",
+            "Éviter compression symétrique [risque carotidien]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation des aires sus-claviculaires",
+          "details": [
+            "Patient en position assise [examinateur derrière]",
+            "Palpation symétrique possible",
+            "Palpation profonde derrière clavicules",
+            "Faire inspirer le patient [mobilisation ganglions]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e4",
+          "text": "Examen des aires axillaires",
+          "details": [
+            "Patient en position assise [muscles pectoraux détendus]",
+            "Porter le bras du patient [décontraction musculaire]",
+            "Palpation creux axillaire [main controlatérale]",
+            "Progression de haut en bas jusqu'au creux",
+            "Mouvements circulaires surface côtes [doigts en crochet]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Palpation des ganglions épitrochléens et inguinaux",
+          "details": [
+            "Ganglions épitrochléens [face interne coudes]",
+            "Ganglions inguinaux [plis inguinaux]",
+            "Recherche systématique bilatérale",
+            "Technique de palpation appropriée"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e6",
+          "text": "Caractérisation des adénopathies palpées",
+          "details": [
+            "Nombre d'aires ganglionnaires atteintes",
+            "Taille des adénopathies [mesure en cm]",
+            "Consistance [ferme, molle, dure]",
+            "Mobilité [fixées ou mobiles]",
+            "Sensibilité [douloureuses, indolores]",
+            "Aspect [en paquet ou individualisées]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e7",
+          "text": "Palpation de la rate",
+          "details": [
+            "Inspection et auscultation préalables",
+            "Décubitus dorsal [main postérieure loge rénale]",
+            "Main antérieure sous rebord costal [inspiration patient]",
+            "Décubitus latéral droit [technique alternative]",
+            "Caractérisation si rate palpable [taille, consistance]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e8",
+          "text": "Examen complémentaire selon contexte",
+          "details": [
+            "Recherche hépatomégalie [palpation foie]",
+            "Auscultation cardiaque [souffle, frottement]",
+            "Examen cutané [lésions, éruptions]",
+            "Palpation abdominale [masses]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e9",
+          "text": "Technique d'examen en général - palpation ganglionnaire spécialisée",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Analyse sémiologique et diagnostic différentiel",
+          "details": [
+            "Adénopathie sus-claviculaire gauche [ganglion de Troisier]",
+            "Orientation vers cause néoplasique [localisation suspecte]",
+            "Diagnostic différentiel [lymphome, métastases, infections]",
+            "Signification pronostique [drainage thoraco-abdominal]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Différenciation cause infectieuse vs tumorale",
+          "details": [
+            "Arguments pour cause infectieuse [fièvre, douleur, évolution]",
+            "Arguments pour cause tumorale [indolore, dure, fixée]",
+            "Symptômes B [fièvre, sueurs, amaigrissement]",
+            "Cinétique d'évolution [rapide vs lente]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m3",
+          "text": "Évaluation de l'extension ganglionnaire",
+          "details": [
+            "Cartographie des aires atteintes",
+            "Adénopathies localisées vs généralisées",
+            "Taille et nombre de ganglions",
+            "Recherche organomégalies [rate, foie]"
+          ],
+          "scoringRule": "Les quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Proposition d'examens complémentaires de première intention",
+          "details": [
+            "NFS avec frottis sanguin",
+            "LDH, β2-microglobuline",
+            "Sérologies [EBV, CMV, toxoplasmose]",
+            "Radiographie thoracique",
+            "Échographie abdominale"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m5",
+          "text": "Examens spécialisés selon orientation",
+          "details": [
+            "CT scan thoraco-abdomino-pelvien",
+            "Biopsie ganglionnaire [histologie + immunohistochimie]",
+            "PET-scan si suspicion lymphome",
+            "Ponction-biopsie ostéo-médullaire si indiquée"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Approche diagnostique du ganglion de Troisier",
+          "details": [
+            "Recherche néoplasie thoraco-abdominale",
+            "Endoscopie digestive haute [estomac, œsophage]",
+            "CT thoraco-abdominal avec contraste",
+            "Marqueurs tumoraux si indiqués"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Information du patient et planification",
+          "details": [
+            "Explication de la démarche diagnostique",
+            "Information sur les examens nécessaires",
+            "Délais et urgence relative",
+            "Soutien psychologique approprié"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Orientation spécialisée",
+          "details": [
+            "Hématologie [suspicion hémopathie]",
+            "Oncologie [suspicion métastases]",
+            "Gastro-entérologie [bilan digestif]",
+            "Pneumologie [bilan thoracique]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - approche systématique des adénopathies",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Martin Ni",
+      "age": "35 ans",
+      "contexte": "Homme de 35 ans, consultant pour grosseur sus-claviculaire gauche apparue récemment",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai découvert une grosseur de la taille d'un œuf de pigeon au-dessus de ma clavicule gauche",
+        "autreChose": "J'ai aussi une sensation de lourdeur dans l'estomac"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Grosseur sus-claviculaire gauche découverte il y a 2 semaines",
+          "Taille approximative d'un œuf de pigeon",
+          "Découverte fortuite en se rasant",
+          "Semble avoir légèrement augmenté de taille",
+          "Indolore, ferme à la palpation"
+        ],
+        "symptomesAssocies": [
+          "Sensation de lourdeur dans l'estomac depuis 1 mois",
+          "Légère perte d'appétit",
+          "Pas de fièvre ni de sueurs nocturnes",
+          "Pas d'amaigrissement notable",
+          "Fatigue un peu plus marquée récemment"
+        ],
+        "circonstances": [
+          "Découverte fortuite de la grosseur",
+          "Aucun traumatisme récent",
+          "Pas d'infection récente connue",
+          "Inquiétude croissante devant la persistance"
+        ],
+        "facteursDeclenchants": [
+          "Aucun facteur déclenchant identifié",
+          "Pas de voyage récent",
+          "Pas de contact avec animaux particulier"
+        ],
+        "inquietudes": [
+          "Peur que ce soit quelque chose de grave",
+          "Préoccupation par la taille du ganglion",
+          "Interrogation sur lien avec gêne stomacale"
+        ]
+      },
+      "habitudes": {
+        "tabac": "Fumeur, 10 cigarettes/jour depuis 15 ans",
+        "alcool": "Consommation sociale modérée, quelques verres/semaine",
+        "activitePhysique": "Sédentaire, travail de bureau",
+        "alimentation": "Alimentation déséquilibrée, repas irréguliers"
+      },
+      "antecedentsPersonnels": [
+        "Pas d'antécédents médicaux particuliers",
+        "Pas d'interventions chirurgicales",
+        "Pas de traitement régulier",
+        "Dernière consultation médicale il y a 2 ans"
+      ],
+      "antecedentsFamiliaux": [
+        "Père décédé d'un cancer du poumon à 65 ans",
+        "Mère en bonne santé, 60 ans",
+        "Pas d'antécédents familiaux d'hémopathies connues",
+        "Un oncle paternel avec cancer de l'estomac"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Comptable dans une PME",
+        "etatCivil": "Célibataire",
+        "enfants": "Pas d'enfants",
+        "preoccupations": "Inquiétude sur impact professionnel si maladie grave",
+        "etatEsprit": "Anxieux mais coopératif"
+      },
+      "expositionsRisques": {
+        "voyage": "Pas de voyage récent",
+        "animaux": "Pas d'animaux domestiques",
+        "profession": "Bureau, pas d'exposition particulière",
+        "sexuelle": "Hétérosexuel, partenaires occasionnelles, protection inconstante"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Montre spontanément la localisation de la grosseur",
+          "Exprime son inquiétude de manière modérée",
+          "Mentionne la sensation stomacale si questionné",
+          "Coopératif pour les questions personnelles"
+        ],
+        "durantExamen": [
+          "Permet l'examen sans résistance",
+          "Ganglion sus-claviculaire gauche palpable (simulation)",
+          "Pas d'autres adénopathies évidentes",
+          "Rate non palpable"
+        ],
+        "questionsAPoser": [
+          "Est-ce que c'est grave docteur ?",
+          "Est-ce que cela peut être un cancer ?",
+          "Y a-t-il un lien avec ma gêne à l'estomac ?"
+        ]
+      },
+      "informationADonner": [
+        "Insister sur la localisation sus-claviculaire",
+        "Mentionner la sensation de lourdeur stomacale",
+        "Préciser l'absence de fièvre ou sueurs",
+        "Évoquer les antécédents familiaux de cancer si questionné",
+        "Exprimer l'inquiétude de manière appropriée"
+      ]
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Martin Ni, 35 ans, comptable, célibataire. Adénopathie sus-claviculaire gauche (ganglion de Troisier) depuis 2 semaines avec sensation de lourdeur stomacale. Fumeur 15 UPA. ATCD familiaux: père cancer poumon, oncle cancer estomac. Localisation très suspecte nécessitant bilan extensif.",
+      "rolesInterventions": [
+        "Évaluer la qualité de l'anamnèse hématologique",
+        "Observer la technique de palpation ganglionnaire",
+        "Noter la reconnaissance du ganglion de Troisier",
+        "Vérifier l'approche diagnostique systématique",
+        "Évaluer la proposition d'examens appropriés"
+      ],
+      "pointsCles": [
+        "Ganglion de Troisier (sus-claviculaire gauche)",
+        "Signification pronostique majeure (métastases)",
+        "Lien avec symptômes abdominaux (lourdeur)",
+        "Technique de palpation ganglionnaire systématique",
+        "Différenciation infectieux vs tumoral",
+        "Nécessité bilan d'extension rapide",
+        "Importance des antécédents familiaux oncologiques",
+        "Orientation spécialisée appropriée"
+      ],
+      "pieges": [
+        "Ne pas reconnaître la signification du ganglion de Troisier",
+        "Technique de palpation ganglionnaire incorrecte",
+        "Omettre l'examen de toutes les aires ganglionnaires",
+        "Ne pas rechercher organomégalies (rate, foie)",
+        "Sous-estimer la gravité potentielle",
+        "Ne pas faire le lien avec symptômes abdominaux",
+        "Oublier l'anamnèse des facteurs de risque",
+        "Ne pas proposer bilan d'imagerie thoraco-abdominal",
+        "Retard dans l'orientation spécialisée",
+        "Information patient inappropriée ou insuffisante"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique du système lymphatique",
+      "sections": [
+        {
+          "titre": "Physiopathologie des adénopathies",
+          "contenu": "Les ganglions lymphatiques s'hypertrophient en réponse à une stimulation antigénique ou une prolifération tumorale.",
+          "points": [
+            "Réponse immunitaire locale : infection dans territoire drainé",
+            "Réponse immunitaire généralisée : infections systémiques",
+            "Prolifération tumorale primitive : lymphomes",
+            "Envahissement métastatique : cancers solides",
+            "Causes inflammatoires : maladies auto-immunes",
+            "Causes médicamenteuses : phénytoïne, allopurinol",
+            "Ganglion normal : <1 cm sauf inguinal <1.5 cm"
+          ]
+        },
+        {
+          "titre": "Classification topographique des adénopathies",
+          "contenu": "La localisation des adénopathies oriente le diagnostic étiologique.",
+          "points": [
+            "Adénopathies localisées : infection ou métastase régionale",
+            "Adénopathies généralisées : maladie systémique",
+            "Ganglion de Troisier : sus-claviculaire gauche, métastases digestives",
+            "Adénopathies axillaires : cancer du sein, lymphome",
+            "Adénopathies cervicales : infections ORL, lymphome",
+            "Adénopathies inguinales souvent réactionnelles",
+            "Médiastin : lymphome, sarcoïdose, tuberculose"
+          ]
+        },
+        {
+          "titre": "Caractéristiques sémiologiques des ganglions",
+          "contenu": "L'examen physique permet d'orienter vers l'étiologie.",
+          "points": [
+            "Ganglions infectieux : douloureux, mous, mobiles",
+            "Ganglions tumoraux : indolores, durs, fixés",
+            "Ganglions en paquet : lymphome, métastases",
+            "Ganglions individualisés : infections, réactionnels",
+            "Évolution rapide : infections, lymphomes agressifs",
+            "Évolution lente : lymphomes indolents, métastases",
+            "Suppuration : infections bactériennes, tuberculose"
+          ]
+        },
+        {
+          "titre": "Techniques de palpation ganglionnaire",
+          "contenu": "Méthode systématique d'examen des aires ganglionnaires.",
+          "points": [
+            "Ganglions cervicaux : patient assis, pulpe des doigts",
+            "Sus-claviculaires : palpation profonde derrière clavicules",
+            "Axillaires : muscles détendus, porter le bras",
+            "Épitrochléens : face interne des coudes",
+            "Inguinaux : plis inguinaux, bilatéral",
+            "Séquence : inspection → palpation → caractérisation",
+            "Éviter compression carotidienne"
+          ]
+        },
+        {
+          "titre": "Physiopathologie de la splénomégalie",
+          "contenu": "La rate s'hypertrophie selon plusieurs mécanismes.",
+          "points": [
+            "Fonction lymphoïde : infections, lymphomes",
+            "Fonction phagocytaire : anémies hémolytiques",
+            "Congestion vasculaire : hypertension portale",
+            "Infiltration : leucémies, maladies de surcharge",
+            "Rate normale : non palpable sous rebord costal",
+            "Palpation : décubitus dorsal et latéral droit",
+            "Différencier splénomégalie vraie et ptose"
+          ]
+        },
+        {
+          "titre": "Approche diagnostique des adénopathies",
+          "contenu": "Stratégie d'investigation selon présentation clinique.",
+          "points": [
+            "Anamnèse : durée, localisation, symptômes B",
+            "Examen : toutes aires, caractérisation, organomégalies",
+            "Bilan initial : NFS, LDH, radiographie thorax",
+            "Sérologies : EBV, CMV, toxoplasmose, HIV",
+            "Imagerie : échographie, CT scan selon indication",
+            "Biopsie ganglionnaire : si persistance >4-6 semaines",
+            "Immunohistochimie : typage précis lymphomes"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Adénopathies infectieuses : traitement étiologique spécifique",
+        "Lymphomes : chimiothérapie selon type histologique",
+        "Métastases ganglionnaires : traitement tumeur primitive",
+        "Surveillance simple : ganglions réactionnels <1 cm",
+        "Corticothérapie : contre-indiquée avant biopsie",
+        "Antibiotiques : seulement si infection documentée",
+        "Biopsie ganglionnaire : technique chirurgicale standard"
+      ],
+      "examensComplementaires": [
+        "NFS avec frottis : anomalies hématologiques",
+        "LDH : marqueur d'activité tumorale lymphoïde",
+        "β2-microglobuline : pronostic lymphomes",
+        "Sérologies EBV, CMV : infections virales",
+        "Radiographie thorax : adénopathies médiastinales",
+        "Échographie ganglionnaire : structure, vascularisation",
+        "CT scan thoraco-abdominal : bilan d'extension",
+        "PET-scan : activité métabolique, suivi thérapeutique"
+      ]
+    }
+  }
+}

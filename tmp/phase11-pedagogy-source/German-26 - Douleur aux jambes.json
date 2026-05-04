@@ -1,0 +1,507 @@
+{
+  "title": "German-26 - Douleur aux jambes",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "M. Schneider, 72 ans, se présente aux urgences pour douleurs soudaines à la jambe avec impossibilité de marcher",
+    "vitals": {
+      "ta": "142/89 mmHg",
+      "fc": "84 bpm",
+      "fr": "14/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes principaux",
+          "details": [
+            "[Fortes douleurs dans la jambe droite]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Début des symptômes",
+          "details": [
+            "[Il y a 2 heures]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a4",
+          "text": "Facteur déclenchant",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a5",
+          "text": "Localisation précise",
+          "details": [
+            "[Mollet droit]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a6",
+          "text": "Intensité de la douleur (échelle 0-10)",
+          "details": [
+            "[8/10]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a7",
+          "text": "Irradiation",
+          "details": [
+            "[Jusqu'au pied]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a8",
+          "text": "Début et évolution",
+          "details": [
+            "[Début soudain]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a9",
+          "text": "Caractère de la douleur",
+          "details": [
+            "[Tranchante, lancinante]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a10",
+          "text": "Limitation fonctionnelle",
+          "details": [
+            "[Oui, ne peut plus marcher du tout]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a11",
+          "text": "Premier épisode",
+          "details": [
+            "[Oui]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a12",
+          "text": "Facteurs influençant la douleur",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a13",
+          "text": "Activité physique habituelle",
+          "details": [
+            "[Non, seulement un peu dans la maison et le jardin]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a14",
+          "text": "Claudication intermittente",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a15",
+          "text": "Angor d'effort",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a16",
+          "text": "Traumatisme récent",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a17",
+          "text": "Fièvre ou infection",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a18",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension artérielle [oui]",
+            "Diabète [oui]",
+            "Dyslipidémie [oui]",
+            "Tabagisme [oui, 40 paquets-années]",
+            "Antécédents familiaux positifs [non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a19",
+          "text": "Signes de thrombose veineuse profonde",
+          "details": [
+            "[Non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a20",
+          "text": "Facteurs de risque de TVP",
+          "details": [
+            "Immobilisation prolongée [non]",
+            "Chirurgie récente [non]",
+            "Antécédent de TVP/EP [non]",
+            "Thrombophilie familiale [non]",
+            "Cancer actif [non]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "a21",
+          "text": "Antécédents personnels",
+          "details": [
+            "[Hypertension artérielle]",
+            "[Diabète de type 2]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a22",
+          "text": "Allergies",
+          "details": [
+            "[Aucune]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a23",
+          "text": "Médicaments actuels",
+          "details": [
+            "[Bêtabloquant]",
+            "[IEC (inhibiteur de l'enzyme de conversion)]",
+            "[Statine]",
+            "[Metformine]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a24",
+          "text": "Habitudes et toxiques",
+          "details": [
+            "[40 paquets-années]",
+            "[Alcool occasionnel]",
+            "[Pas de drogues]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a25",
+          "text": "Anamnèse familiale",
+          "details": [
+            "[Père: infarctus du myocarde à 63 ans]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a26",
+          "text": "Anamnèse sociale",
+          "details": [
+            "[Marié]",
+            "[Pas d'enfants]",
+            "[Ancien magasinier]"
+          ],
+          "binaryOnly": true
+        },
+        {
+          "id": "a27",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et complète"
+          ],
+          "scoringRule": "Bien conduite = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection des membres inférieurs",
+          "details": [
+            "[Jambe non gonflée]",
+            "[Coloration blanche du genou jusqu'au pied]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e2",
+          "text": "Évaluation de la sensibilité",
+          "details": [
+            "[Intacte (?)]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e3",
+          "text": "Recherche de signes de TVP",
+          "details": [
+            "[Pas de douleur à la compression du mollet]",
+            "[Pas de douleur à la percussion axiale]",
+            "[Pas de douleur à l'extension du mollet (signe de Homans)]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e4",
+          "text": "Palpation des pouls artériels",
+          "details": [
+            "Pouls fémoral droit [présent]",
+            "Pouls poplité droit [absent]",
+            "Pouls tibial postérieur droit [absent]",
+            "Pouls pédieux droit [absent]",
+            "Comparaison avec le côté controlatéral"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "details": [
+            "[Normal]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e6",
+          "text": "Examen pulmonaire",
+          "details": [
+            "[Normal]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e7",
+          "text": "Température cutanée",
+          "details": [
+            "Membre inférieur droit froid",
+            "Comparaison avec le côté gauche"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e8",
+          "text": "Examen neurologique",
+          "details": [
+            "Force musculaire",
+            "Réflexes ostéo-tendineux",
+            "Sensibilité profonde"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e9",
+          "text": "Signes des 6 P de l'ischémie aiguë",
+          "details": [
+            "Pain (douleur) [présente]",
+            "Pallor (pâleur) [présente]",
+            "Pulselessness (absence de pouls) [présente]",
+            "Paresthésies [à évaluer]",
+            "Paralysis (paralysie) [à évaluer]",
+            "Poikilothermia (membre froid) [présente]"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "e10",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et systématique"
+          ],
+          "scoringRule": "Complet et bien structuré = 2 pts (oui), suffisant = 1 pt (±), insuffisant = 0 pt (non)"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal",
+          "patientComment": "Occlusion artérielle aiguë du membre inférieur droit",
+          "binaryOnly": false
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels (au moins 2)",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Thrombose veineuse profonde",
+                    "cause": "□ TVP",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Pathologie musculo-squelettique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Arthrose, arthrite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ VS, CRP, facteur rhumatoïde, anti-CCP"
+                  },
+                  {
+                    "text": "Ostéomyélite",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Embolie paradoxale",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Dissection artérielle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome compartimental",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires urgents",
+          "details": [
+            "Échographie Doppler artérielle",
+            "ECG (recherche de fibrillation auriculaire)",
+            "Angioscanner des membres inférieurs si disponible",
+            "Bilan biologique: NFS, CRP, créatinine, CPK, lactates",
+            "Bilan de coagulation: TP, TCA, INR",
+            "D-dimères"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "details": [
+            "Héparine non fractionnée IV (bolus puis perfusion continue)",
+            "Analgésie adaptée (morphine si nécessaire)",
+            "Position déclive du membre",
+            "Protection thermique du membre",
+            "Voie veineuse périphérique",
+            "Monitoring cardiaque continu"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m5",
+          "text": "Orientation et traitement définitif",
+          "details": [
+            "Transfert urgent au laboratoire de cathétérisme",
+            "Embolectomie chirurgicale (technique de Fogarty)",
+            "Thrombolyse intra-artérielle dirigée",
+            "Angioplastie percutanée",
+            "Évaluation par chirurgien vasculaire"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m6",
+          "text": "Ajustement thérapeutique à long terme",
+          "details": [
+            "Introduction d'aspirine",
+            "Clopidogrel selon indication",
+            "Anticoagulation orale (AOD ou AVK)",
+            "Optimisation du traitement cardiovasculaire",
+            "Statine à haute dose"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et complications",
+          "details": [
+            "Fenêtre thérapeutique de 6 heures",
+            "Surveillance horaire des pouls et de la sensibilité",
+            "Risque de syndrome de reperfusion",
+            "Risque de rhabdomyolyse",
+            "Surveillance de la fonction rénale",
+            "Risque d'amputation si retard thérapeutique"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m8",
+          "text": "Information du patient et pronostic",
+          "details": [
+            "Explication de l'urgence de la situation",
+            "Information sur les procédures à venir",
+            "Consentement éclairé pour intervention",
+            "Pronostic dépendant du délai de revascularisation"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m9",
+          "text": "Prévention secondaire",
+          "details": [
+            "Recherche étiologique (source embolique)",
+            "Échocardiographie transthoracique/transoesophagienne",
+            "Holter ECG si suspicion de FA paroxystique",
+            "Contrôle strict des facteurs de risque cardiovasculaire",
+            "Sevrage tabagique impératif"
+          ],
+          "binaryOnly": false
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge urgente et adaptée"
+          ],
+          "scoringRule": "Complète et structurée = 2 pts (oui), suffisante = 1 pt (±), insuffisante = 0 pt (non)"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

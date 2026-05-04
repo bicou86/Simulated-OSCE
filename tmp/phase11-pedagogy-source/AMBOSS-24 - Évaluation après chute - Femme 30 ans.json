@@ -1,0 +1,511 @@
+{
+  "title": "AMBOSS-24 - Évaluation après chute - Femme 30 ans",
+  "context": {
+    "setting": "Clinique de soins urgents",
+    "patient": "Marisa Hernandez, femme de 30 ans, consultant après une chute",
+    "vitals": {
+      "temperature": "36.7°C",
+      "ta": "121/69 mmHg",
+      "fc": "95 bpm",
+      "fr": "13/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je suis tombée dans les escaliers à la maison hier, et maintenant mon bras gauche et le côté droit de mon visage ont ces gros bleus qui font vraiment mal"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du traumatisme",
+          "binaryOnly": false,
+          "details": [
+            "Début/moment de l'événement [Je suis tombée hier soir, et les bleus étaient là quand je me suis réveillée ce matin]",
+            "Événements précipitants/mécanisme de la chute [J'ai juste glissé dans les escaliers, et je suis tombée sur mon bras et ma tête. J'aurais dû être plus prudente]",
+            "Perte de connaissance [Non]",
+            "Progression [On dirait que les bleus pourraient encore grossir aujourd'hui]",
+            "Épisodes antérieurs [J'ai beaucoup de bleus en fait. Je pense que je fais des bleus facilement]",
+            "Fréquence [C'est difficile à dire. J'ai presque toujours un bleu quelque part sur moi]",
+            "Facteurs améliorants [J'ai mis une poche de glace sur le bleu de mon visage plus tôt et ça a aidé un peu]",
+            "Facteurs aggravants [Ça fait plus mal quand je le touche]",
+            "Symptômes associés [Non, qu'est-ce que vous voulez dire ? Je suis juste tombée et maintenant j'ai des bleus, qu'est-ce que vous voulez entendre d'autre ?]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [Mon visage fait mal où il y a le bleu, mais c'est tout]",
+            "Nausées/vomissements [Non]",
+            "Fièvre/frissons [Non]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Non]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleurs articulaires [Non, mes bras font juste mal où j'ai les bleus]",
+            "Problèmes urinaires [Non]",
+            "Problèmes intestinaux [Non]",
+            "Problèmes de sommeil [Je ne dors pas toujours autant que j'aimerais, mais c'est comme ça avec les enfants, non ?]",
+            "Appétit [J'ai toujours eu bon appétit]",
+            "Variations pondérales [Non]",
+            "Vertiges [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Antécédents hémorragiques",
+          "binaryOnly": false,
+          "details": [
+            "Saignements accrus après blessures mineures [Je n'ai pas eu de coupure depuis un moment, mais je me souviens m'être coupé le doigt assez profondément il y a des années avec un couteau de cuisine et avoir dû changer le pansement 3 fois parce que ça continuait à saigner]",
+            "Saignements accrus pendant l'accouchement [Je pense que j'ai perdu un peu trop de sang la deuxième fois. J'étais vraiment fatiguée pendant des semaines]",
+            "Saignements accrus pendant les règles [Oui, je devais changer mon tampon presque toutes les heures, alors mon médecin m'a mise sous contraception après la naissance de mon deuxième enfant. C'est mieux depuis]",
+            "Saignements de nez [Non]",
+            "Saignements des gencives après brossage [Je ne pense pas]",
+            "Saignements dans muscles, articulations ou tissus profonds [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Je prends une pilule contraceptive"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Seulement pour la naissance de mes enfants - il y a 2 et 4 ans]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Ma mère a un trouble bipolaire"
+        },
+        {
+          "id": "a10",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je reste à la maison avec les enfants. Je travaillais avant, mais le travail de mon mari est très stressant, alors maintenant je reste à la maison et j'essaie de le soutenir autant que possible]",
+            "Domicile [Je vis avec mon mari et mes enfants]",
+            "Alcool [Non]",
+            "Drogues récréatives [Non]",
+            "Tabac [Non]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Histoire spécifique de violence domestique",
+          "binaryOnly": false,
+          "details": [
+            "Relation avec le conjoint [Il est vraiment stressé en ce moment, alors il se met parfois en colère. Je ne pense pas que ce soit sa faute, je devrais juste essayer d'être plus attentive et trouver des moyens de réduire son stress]",
+            "Peur pour sa sécurité/celle des enfants [Eh bien, parfois il me bouscule un peu trop brusquement ou sa main glisse. Je ne suis pas vraiment tombée dans les escaliers hier. Je n'aime juste pas le dire à personne parce qu'il ne le fait pas exprès et il s'excuse toujours. Je ne pense pas qu'il ferait mal aux enfants]",
+            "Arme à feu à la maison [Non]",
+            "Plan d'urgence [Je pense que je pourrais rester chez ma sœur]",
+            "Système de soutien [Ma sœur est au courant, mais elle est la seule. Je ne veux pas que les gens pensent qu'il y a des problèmes dans notre famille. Je pense que la plupart des mariages traversent des moments stressants]",
+            "Consommation alcool/drogues du conjoint [Il boit parfois un peu trop quand il rentre du travail. C'est généralement à ce moment qu'il se met en colère]",
+            "Dépression [Non]",
+            "Régularité des abus [Peut-être une ou deux fois par semaine quand le travail devient vraiment stressant ou quand je n'ai pas le temps de nettoyer le désordre des enfants avant qu'il rentre]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Vérification corporelle complète",
+          "binaryOnly": true
+        },
+        {
+          "id": "e3",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête [Hématome 4 x 3 cm sur joue droite et zone infraorbitaire]",
+            "Palpation de la tête [Sensibilité à la palpation sur la joue droite dans la zone du bleu]",
+            "Inspection des conjonctives",
+            "Inspection des sclères",
+            "Examen des pupilles",
+            "Examen des muscles oculomoteurs"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen des extrémités",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des membres supérieurs [Hématome 5 x 5 cm sur bras gauche supérieur. Sensibilité à la palpation sur le bras gauche supérieur dans la zone du bleu. Multiples hématomes douloureux à différents stades sur l'avant-bras droit]",
+            "Inspection des mains",
+            "Inspection des membres inférieurs"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Cause principale",
+                "items": [
+                  {
+                    "text": "Violence domestique",
+                    "cause": "Arguments POUR:\n\t□ Ecchymoses multiples à différents stades d'évolution\n\t□ Localisation : visage + bras (zones défensives typiques)\n\t□ Histoire incohérente avec mécanisme allégué\n\t□ Minimisation, excuses pour le partenaire\n\t□ Admission violence physique 1-2×/semaine\n\t□ Alcoolisme du conjoint (facteur de risque)\n\t□ Isolement social (seule sœur au courant)\n\t□ Comportement : nervosité, évitement regard\n\t□ Cycle violence : tension → explosion → excuses",
+                    "test": "→ Documentation photographique, évaluation sécurité"
+                  }
+                ]
+              },
+              {
+                "name": "Troubles de l'hémostase associés",
+                "items": [
+                  {
+                    "text": "Purpura thrombopénique immunologique (PTI)",
+                    "cause": "Arguments POUR:\n\t□ Ecchymoses faciles et fréquentes\n\t□ Ménorragies (changement tampon/heure)\n\t□ Saignement prolongé après coupure\n\t□ Hémorragie post-partum excessive\n\t□ Femme en âge de procréer (pic incidence)\n\t□ Évolution chronique chez l'adulte\nArguments CONTRE:\n\t□ Localisation traumatique des lésions",
+                    "test": "→ FSC avec plaquettes, frottis sanguin"
+                  },
+                  {
+                    "text": "Maladie de von Willebrand",
+                    "cause": "Arguments POUR:\n\t□ Trouble hémostatique congénital le plus fréquent\n\t□ Ménorragies importantes\n\t□ Saignement prolongé après trauma\n\t□ Hémorragie post-partum\n\t□ Présentation variable selon type\nArguments CONTRE:\n\t□ Pas d'antécédents familiaux\n\t□ Début tardif",
+                    "test": "→ Facteur VIII, antigène vWF, cofacteur ristocétine"
+                  },
+                  {
+                    "text": "Autres coagulopathies",
+                    "cause": "Déficits facteurs coagulation, dysfonction plaquettaire",
+                    "test": "→ TP, TCA, temps de saignement"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "FSC [La thrombocytopénie (plaquettes < 150 000/mm³) serait apparente sur la FSC. La leucocytose (leucocytes > 10 000/mm³) pourrait indiquer une leucémie, et le LED pourrait aussi causer divers troubles hématologiques sur FSC et études de coagulation]",
+            "Frottis sanguin périphérique [Des plaquettes anormales (ex: certains troubles plaquettaires congénitaux) et une pseudothrombocytopénie (adhérence des plaquettes aux neutrophiles) pourraient être vues sur frottis ; Le frottis sanguin serait normal dans le PTI et la maladie de vW (autre qu'une rareté possible de plaquettes)]",
+            "Temps de saignement, TP, TCA [Le temps de saignement peut être prolongé dans la maladie de vW et le PTI, selon la gravité. Le TP teste les voies extrinsèque et commune de coagulation et est le plus souvent prolongé dans la déficience en vitamine K. Le TCA teste les voies intrinsèque et commune et peut être prolongé dans la maladie de vW (due à la déficience en facteur VIII) ainsi que dans les troubles de la voie intrinsèque]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Tests spécifiques maladie de von Willebrand",
+          "binaryOnly": false,
+          "details": [
+            "Dosage de l'activité du facteur VIII [Le facteur VIII est normalement protégé de la protéolyse par le vWF et peut donc être diminué dans la maladie de vW]",
+            "Dosage de l'antigène du facteur von Willebrand [test de dépistage pour le vWF qui mesure la quantité de vWF]",
+            "Dosage du cofacteur de la ristocétine [test de dépistage pour le vWF qui mesure l'activité du vWF]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec la patiente",
+          "binaryOnly": false,
+          "details": [
+            "Explications à la patiente des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord de la patiente avec le plan diagnostique",
+            "Recherche des préoccupations et questions de la patiente",
+            "Ne pas répéter les manœuvres douloureuses pendant l'examen physique"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur les options de soutien pour la violence domestique",
+            "Réaction appropriée au défi",
+            "Approche empathique et non-jugeante",
+            "Information sur la confidentialité",
+            "Évaluation du plan de sécurité",
+            "Documentation appropriée"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Conseil juridique gratuit",
+                "content": "• Groupes de soutien\n• Services protection enfance si besoin"
+              },
+              {
+                "title": "Approche thérapeutique",
+                "content": "• Validation sans jugement\n• Respecter autonomie décisionnelle\n• Ne jamais forcer à quitter\n• Planifier suivi rapproché\n• Confidentialité absolue (sauf danger enfants)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Attitude défensive",
+          "content": "Être défensive quand on pose des questions ouvertes sur la situation et le mécanisme exact de la chute. Ne révéler l'information sur la violence domestique que si directement demandé. Ne pas donner d'indices !"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "Mme Hernandez, je comprends que certaines de mes questions peuvent vous sembler inutiles ou intrusives. Il est vraiment important, cependant, que je comprenne exactement ce qui vous est arrivé pour que je puisse vous aider aujourd'hui. Toute information que vous partagez avec moi est strictement confidentielle et ne sera partagée avec personne d'autre. D'après mon expérience avec certains de mes autres patients, je me demande si quelqu'un à la maison vous fait du mal - est-ce le cas ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Ecchymose sur la joue droite et zone infraorbitaire",
+        "description": "Photographie de la joue droite d'une patiente adulte. Une grande décoloration brun-bleu de la peau dans la zone infraorbitaire. C'est l'apparence typique d'un hématome.",
+        "data": "grilles_generees/html/images/AMBOSS-24-img1-Bruise on the right cheek and infraorbital area.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Ecchymose sur le bras supérieur gauche",
+        "description": "Photographie du bras gauche d'un patient adulte. Décoloration vert-violet de la peau du bras supérieur. C'est l'apparence typique d'un hématome.",
+        "data": "grilles_generees/html/images/AMBOSS-24-img2-Bruise on the left upper arm.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Ecchymoses multiples sur l'avant-bras droit",
+        "description": "Photographie de l'avant-bras droit inférieur d'une patiente adulte. Multiples décolorations brun-bleu de la peau. C'est l'apparence typique d'un hématome.",
+        "data": "grilles_generees/html/images/AMBOSS-24-img3-Multiple bruises on the right lower arm.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Hémostase primaire",
+        "description": "(1) La lésion tissulaire entraîne la libération du facteur von Willebrand (vWF) des corps de Weibel-Palade (WPB) dans l'endothélium et des granules α dans les plaquettes. Le vWF se lie ensuite au collagène exposé au site de la lésion. La vasoconstriction (non montrée ici) se produit par un réflexe de stimulation neurale et une libération d'endothéline des cellules endothéliales endommagées. (2) Les plaquettes se lient au vWF exposé au site de la lésion et subissent un changement conformationnel. (3) Les plaquettes activées libèrent une combinaison de facteurs, incluant l'adénosine diphosphate (ADP), les ions calcium (Ca2+), et le facteur activateur plaquettaire (PAF). L'ADP se lie aux récepteurs P2Y12 sur les plaquettes, induisant une translocation des récepteurs GpIIb/IIIa à la surface cellulaire. Ces récepteurs sont favorisés par les ions Ca2+. (4) L'expression des récepteurs GpIIb/IIIa permet aux plaquettes activées de se lier entre elles avec le fibrinogène comme intermédiaire. L'action du PAF avec le thromboxane A2 (TXA2) favorise davantage l'agrégation plaquettaire. Les clous plaquettaires sont renforcés avec de la fibrine pendant l'hémostase secondaire.",
+        "data": "grilles_generees/html/images/AMBOSS-24-img4-Primary hemostasis.jpg",
+        "id": "img4"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la patiente standardisée",
+      "nom": "Marisa Hernandez",
+      "age": "30 ans",
+      "contexte": "Mère au foyer victime de violence conjugale consultant pour ecchymoses multiples",
+      "motifConsultation": {
+        "plaintePrincipale": "Je suis tombée dans les escaliers à la maison hier.",
+        "autreChose": "J'ai ces gros bleus qui font vraiment mal."
+      },
+      "consignes": [
+        "Vous avez été physiquement maltraitée par votre mari, et ce n'est pas la première fois. Agir nerveuse et ne pas établir beaucoup de contact visuel avec l'examinateur.",
+        "Peindre un bleu sur votre bras supérieur gauche et plusieurs bleus sur votre avant-bras droit. Peindre un bleu sur votre joue droite juste sous votre œil. (Alternativement, montrer ces images à l'examinateur pendant l'examen physique).",
+        "Si l'examinateur touche ou presse légèrement sur les bleus en examinant vos bras et votre visage, dire que ça fait mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Être défensive quand on pose des questions ouvertes sur la situation et le mécanisme exact de la chute. Ne révéler l'information sur la violence domestique que si directement demandé. Ne pas donner d'indices !"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Ecchymoses multiples après 'chute'",
+          "Douleur au niveau des hématomes",
+          "Histoire incohérente avec lésions",
+          "Ecchymoses fréquentes habituelles"
+        ],
+        "symptomesAssocies": [
+          "Tendance aux ecchymoses",
+          "Ménorragies importantes",
+          "Saignements prolongés après coupures",
+          "Hémorragie post-partum",
+          "Troubles du sommeil"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Comportement nerveux, évitement regard",
+          "Minimisation des symptômes",
+          "Défensive sur questions ouvertes",
+          "Protection du conjoint violent",
+          "Révélation progressive si questions directes",
+          "Émotions : peur, honte, culpabilité"
+        ],
+        "durantStatus": [
+          "Douleur à la palpation des ecchymoses",
+          "Réaction défensive au contact",
+          "Hématomes d'âges différents visibles",
+          "Localisation typique violence (face, bras)",
+          "Pas de signes neurologiques focaux"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Femme de 30 ans victime de violence conjugale régulière (1-2×/semaine). Présentation typique : ecchymoses multiples d'âges différents, localisation caractéristique (visage, bras), histoire incohérente, comportement défensif. Trouble hémostase possible associé (ménorragies, saignements prolongés). Évaluation sécurité prioritaire. Documentation médico-légale essentielle. Respect autonomie patiente crucial.",
+      "rolesInterventions": [
+        "FSC : Plaquettes 180 000/mm³ (normale)",
+        "TP/TCA : Normaux",
+        "Temps saignement : Limite supérieure normale",
+        "Photos lésions : Documentées avec échelle",
+        "Évaluation sécurité : Risque modéré-élevé",
+        "Plan urgence : Refuge sœur identifié"
+      ],
+      "pointsCles": [
+        "Violence conjugale = urgence médico-sociale",
+        "Questions directes nécessaires (défi)",
+        "Documentation photos + schéma corporel",
+        "Confidentialité sauf danger enfants",
+        "Ne jamais forcer à partir",
+        "Cycle violence : tension → explosion → lune de miel",
+        "Alcool conjoint = facteur risque majeur"
+      ],
+      "pieges": [
+        "Accepter histoire chute sans questionner",
+        "Ne pas explorer violence directement",
+        "Jugement ou critique des choix patiente",
+        "Signalement sans consentement (adulte compétent)",
+        "Minimiser risque pour enfants",
+        "Oublier troubles hémostase associés"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic principal",
+          "contenu": "Violence conjugale avec possible trouble de l'hémostase associé"
+        },
+        {
+          "titre": "Violence conjugale",
+          "contenu": "Problème de santé publique majeur touchant tous les milieux :",
+          "points": [
+            "Prévalence : 25-30% femmes subissent violence physique/sexuelle",
+            "Cycle violence : tension → explosion → réconciliation → tension",
+            "Types : physique, psychologique, sexuelle, économique",
+            "Facteurs risque : alcool, stress, isolement, grossesse",
+            "Escalade progressive : violence psychologique → physique",
+            "Mortalité : homicide 1ère cause décès femmes enceintes"
+          ]
+        },
+        {
+          "titre": "Présentation clinique violence conjugale",
+          "contenu": "Indices devant alerter le clinicien :",
+          "points": [
+            "Lésions multiples à différents stades évolution",
+            "Localisation : visage, cou, seins, abdomen, bras",
+            "Histoire incohérente avec mécanisme allégué",
+            "Délai consultation après traumatisme",
+            "Consultations répétées pour traumas",
+            "Comportement : peur, évitement regard, nervosité",
+            "Partenaire contrôlant, répond à la place"
+          ]
+        },
+        {
+          "titre": "Approche clinique",
+          "contenu": "Évaluation systématique et empathique :",
+          "points": [
+            "Entretien seule sans partenaire (obligatoire)",
+            "Questions directes non-jugeantes",
+            "Validation expérience sans minimisation",
+            "Évaluation sécurité immédiate (elle + enfants)",
+            "Documentation détaillée : photos, schémas, citations",
+            "Information ressources disponibles",
+            "Respect autonomie décisionnelle"
+          ]
+        },
+        {
+          "titre": "Plan de sécurité",
+          "contenu": "Éléments essentiels à établir avec la patiente :",
+          "points": [
+            "Identification lieu sûr urgence (famille, refuge)",
+            "Sac urgence : documents, argent, médicaments",
+            "Code/signal avec proches si danger",
+            "Numéros urgence programmés téléphone",
+            "Protection documents importants",
+            "Plan évacuation enfants",
+            "Éviter escalade : ne pas annoncer départ"
+          ]
+        },
+        {
+          "titre": "Purpura thrombopénique immunologique",
+          "contenu": "Destruction auto-immune des plaquettes :",
+          "points": [
+            "Épidémiologie : femmes jeunes > hommes",
+            "Mécanisme : anticorps anti-plaquettes → destruction rate",
+            "Présentation : pétéchies, ecchymoses, épistaxis, ménorragies",
+            "Diagnostic exclusion : thrombopénie isolée",
+            "PTI secondaire : LED, VIH, VHC, lymphome",
+            "Traitement si plaquettes < 30 000 ou saignements"
+          ]
+        },
+        {
+          "titre": "Maladie de von Willebrand",
+          "contenu": "Trouble héréditaire de l'hémostase le plus fréquent :",
+          "points": [
+            "Prévalence : 1% population (souvent asymptomatique)",
+            "Types : 1 (70%, partiel), 2 (20%, qualitatif), 3 (10%, absent)",
+            "Hérédité : autosomique dominant (types 1,2)",
+            "Clinique : saignements muqueux, ménorragies, post-op",
+            "Diagnostic : ↓ vWF:Ag, ↓ vWF:RCo, ± ↓ FVIII",
+            "Traitement : desmopressine (type 1), concentrés facteurs"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Violence conjugale : sécurité d'abord, jamais forcer départ",
+        "Documentation : photos datées avec échelle, schéma corporel",
+        "Ressources : ligne nationale, refuges, aide juridique",
+        "PTI aigu : corticoïdes si plaquettes < 30 000",
+        "PTI chronique : rituximab, thrombopoïétine agonistes",
+        "vWD type 1 : desmopressine 0.3 μg/kg IV",
+        "vWD sévère : concentrés FVIII/vWF",
+        "Ménorragies : contraception hormonale, acide tranexamique"
+      ],
+      "examensComplementaires": [
+        "FSC complète : plaquettes, VGM, leucocytes",
+        "Frottis sanguin : morphologie plaquettaire",
+        "TP, TCA : voies coagulation",
+        "Temps saignement : fonction plaquettaire globale",
+        "Facteur VIII : peut être ↓ si vWD",
+        "vWF:Ag et vWF:RCo : quantité et fonction vWF",
+        "Agrégation plaquettaire : si suspicion thrombopathie",
+        "Photos lésions : médico-légal avec consentement"
+      ]
+    }
+  }
+}

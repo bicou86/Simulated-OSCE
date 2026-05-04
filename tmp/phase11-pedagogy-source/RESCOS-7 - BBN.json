@@ -1,0 +1,289 @@
+{
+  "title": "RESCOS-7 - BBN",
+  "context": {
+    "setting": "Service de neurochirurgie, CHUV",
+    "patient": "Claude Dubois, 52 ans, enseignant(e) en anglais et philosophie, consulte après un accident de vélo avec traumatisme crânien léger."
+  },
+  "sections": {
+    "communication": {
+      "weight": 1.0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Demandé la raison de la visite ou « Comment allez-vous ? »",
+          "binaryOnly": true
+        },
+        {
+          "id": "c2",
+          "text": "Fait un bref résumé de la situation avant l'annonce",
+          "binaryOnly": true
+        },
+        {
+          "id": "c3",
+          "text": "Respecté un temps de silence après la mauvaise nouvelle",
+          "binaryOnly": true
+        },
+        {
+          "id": "c4",
+          "text": "Demandé si le patient voulait tout savoir ou au contraire n'avoir qu'une idée globale",
+          "binaryOnly": true
+        },
+        {
+          "id": "c5",
+          "text": "Évité le jargon médical en communiquant",
+          "binaryOnly": true
+        },
+        {
+          "id": "c6",
+          "text": "Expliqué pourquoi la chirurgie était indiquée",
+          "binaryOnly": true
+        },
+        {
+          "id": "c7",
+          "text": "Expliqué les risques liés à la pathologie",
+          "binaryOnly": true
+        },
+        {
+          "id": "c8",
+          "text": "Expliqué les risques liés à l'opération",
+          "binaryOnly": true
+        },
+        {
+          "id": "c9",
+          "text": "A nommé au moins une émotion que le patient pourrait être entrain de ressentir",
+          "binaryOnly": true
+        },
+        {
+          "id": "c10",
+          "text": "A validé cette/ces émotion(s)",
+          "binaryOnly": true
+        },
+        {
+          "id": "c11",
+          "text": "A demandé à au moins 2 reprises si le patient avait des questions",
+          "binaryOnly": true
+        },
+        {
+          "id": "c12",
+          "text": "A fait un résumé de la situation vers la fin de l'entretien",
+          "binaryOnly": true
+        },
+        {
+          "id": "c13",
+          "text": "A proposé un rendez-vous dans un délai court pour reparler de la situation",
+          "binaryOnly": true
+        },
+        {
+          "id": "c14",
+          "text": "A proposé au patient de lui fournir des informations écrites (p.ex. : pamphlet)",
+          "binaryOnly": true
+        },
+        {
+          "id": "c15",
+          "text": "A demandé ce que le patient comptait faire de la suite de sa journée",
+          "binaryOnly": true
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le/la patient(e) standardisé(e)",
+      "nom": "Claude Dubois",
+      "age": "52 ans",
+      "contexte": "Enseignant(e) en anglais et en philosophie dans un gymnase lausannois, marié(e), 2 enfants",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai fait un accident de vélo ce matin en allant au travail et me suis cogné la tête. Alors je suis venu pour vérifier que tout allait bien",
+        "autreChose": "J'espère pouvoir bientôt retourner au travail"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Accident de vélo ce matin en se rendant au travail",
+          "Traumatisme crânien léger lors de la chute",
+          "N'a pas perdu connaissance",
+          "Aucun symptôme particulier ressenti",
+          "Se sent bien malgré l'accident"
+        ],
+        "circonstances": [
+          "Accident à vélo à cinétique modérée",
+          "Chute avec impact céphalique",
+          "Consultation préventive par prudence",
+          "CT-scan réalisé révélant un anévrisme de 9mm de l'artère communicante antérieure"
+        ],
+        "questions": [
+          "Qu'est-ce que ça implique d'avoir cet « anévrisme » ?",
+          "De quel type d'opération s'agit-il ?",
+          "Quels sont les risques liés à l'opération ?",
+          "Quels sont les risques liés à ne pas effectuer d'opération ?"
+        ]
+      },
+      "anamneseSystemes": {
+        "generale": [
+          "Bonne santé habituelle",
+          "Aucun symptôme particulier"
+        ],
+        "neurologique": [
+          "Pas de céphalées",
+          "Pas de troubles visuels",
+          "Pas de déficit neurologique"
+        ]
+      },
+      "habitudes": {
+        "alimentation": "Normale",
+        "activitePhysique": "Vélo régulièrement",
+        "sommeil": "Bon",
+        "tabac": "Non",
+        "alcool": "1 verre de vin par jour",
+        "drogues": "Non",
+        "medicaments": "Aucun"
+      },
+      "histoireMedicale": [
+        "Bonne santé habituelle",
+        "Maladies d'enfance classiques",
+        "Appendicectomie à 14 ans",
+        "Vaccins à jour",
+        "Aucune allergie connue",
+        "Suivi médical annuel régulier"
+      ],
+      "antecedentsFamiliaux": [
+        "Mère : décédée d'un accident de montagne",
+        "Père : décédé d'un cancer",
+        "Frère cadet : problèmes cardiaques",
+        "Pas de sœur",
+        "Grands-parents tous décédés"
+      ],
+      "informationsPersonnelles": {
+        "profession": "Enseignant(e) en anglais et philosophie",
+        "hobbies": "Vélo, cinéma",
+        "poids": "Normal",
+        "taille": "Normal",
+        "orientationSexuelle": "Hétérosexuel(le)",
+        "etatCivil": "Marié(e)",
+        "enfants": "2 enfants",
+        "situationSocioEconomique": "Moyenne",
+        "origine": "Suisse",
+        "etatEsprit": "Initialement confiant, puis choqué par l'annonce"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Assis(e) sur une chaise",
+          "Bien habillé(e), bonne hygiène",
+          "Attitude décontractée au début",
+          "Progresser à travers les phases : choc, déni, colère, marchandage, dépression"
+        ],
+        "phasesCritiques": [
+          "État normal pré-annonce : content de se sentir bien",
+          "Choc à l'annonce : observer temps de silence",
+          "Déni : 'Mais je vais bien pourtant !'",
+          "Colère : refus de la chirurgie",
+          "Marchandage : demande d'alternatives",
+          "Dépression : inquiétude sur les risques",
+          "Pas encore d'acceptation à la fin"
+        ],
+        "questionsAPoser": [
+          "Si j'ai vécu avec ça toute ma vie, je peux continuer à vivre avec !",
+          "Une chirurgie ??? Mais je vais bien pourtant !",
+          "Il existe sûrement un autre moyen de me traiter ?",
+          "Êtes-vous sûr qu'une opération est essentielle ?",
+          "Quels sont les risques de ma maladie ?",
+          "Quels sont les risques d'une opération ?"
+        ]
+      },
+      "informationADonner": "À la conclusion : 'Il faut que je réfléchisse à cette opération et que j'en parle à ma famille. Je vais rentrer à la maison et en parler à ma femme.'"
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Claude Dubois, 52 ans, enseignant(e), consulte après accident de vélo avec TCC léger. CT-scan révèle anévrisme de l'artère communicante antérieure de 9mm (incidentalome). Indication chirurgicale posée au vu de la taille, du jeune âge et du risque de rupture non négligeable.",
+      "rolesInterventions": [
+        "Évaluer les capacités communicationnelles et empathiques du médecin",
+        "Observer le respect des étapes de l'annonce de mauvaise nouvelle",
+        "Vérifier l'utilisation appropriée des méthodes SPIKES ou EPICES"
+      ],
+      "pointsCles": [
+        "Station pure de communication (pas d'examen clinique)",
+        "Annonce d'une mauvaise nouvelle (découverte fortuite)",
+        "Anévrisme de 9mm avec indication chirurgicale formelle",
+        "Patient asymptomatique se sentant bien",
+        "Importance de l'empathie et de la validation des émotions",
+        "Nécessité d'expliquer clairement les risques et les options"
+      ],
+      "pieges": [
+        "Utiliser du jargon médical sans explication",
+        "Ne pas respecter le temps de silence après l'annonce",
+        "Manquer de validation des émotions du patient",
+        "Ne pas proposer de suivi rapproché",
+        "Oublier de vérifier la compréhension du patient",
+        "Ne pas explorer ce que le patient sait déjà"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique sur l'annonce de mauvaise nouvelle",
+      "sections": [
+        {
+          "titre": "Méthode SPIKES",
+          "contenu": "Approche structurée pour l'annonce de mauvaise nouvelle.",
+          "points": [
+            "S = Setting up : préparation, environnement, connexion",
+            "P = Assessing perceptions : évaluer ce que sait le patient",
+            "I = Invitation : déterminer ce que veut savoir le patient",
+            "K = Knowledge : donner l'information graduellement",
+            "E = Emotions : reconnaître et valider les émotions",
+            "S = Strategy : planifier la suite et offrir soutien"
+          ]
+        },
+        {
+          "titre": "Méthode EPICES",
+          "contenu": "Approche française équivalente à SPIKES.",
+          "points": [
+            "E = Environnement : relire dossier, planifier, intimité",
+            "P = Perception : explorer compréhension du patient",
+            "I = Invitation : respecter le désir d'information",
+            "C = Connaissances : annoncer graduellement",
+            "E = Empathie : valider les émotions",
+            "S = Stratégie : synthèse et planification"
+          ]
+        },
+        {
+          "titre": "Anévrismes intracrâniens",
+          "contenu": "Pathologie vasculaire cérébrale nécessitant prise en charge spécialisée.",
+          "points": [
+            "Dilatation anormale de la paroi artérielle",
+            "Risque de rupture proportionnel à la taille",
+            "Anévrismes > 7mm : indication chirurgicale",
+            "Localisation communicante antérieure fréquente",
+            "Découverte fortuite lors d'imagerie",
+            "Pronostic excellent si traitement préventif"
+          ]
+        },
+        {
+          "titre": "Phases psychologiques du deuil",
+          "contenu": "Réactions émotionnelles normales face à une mauvaise nouvelle.",
+          "points": [
+            "Choc initial et déni",
+            "Colère et frustration",
+            "Marchandage et négociation",
+            "Dépression et tristesse",
+            "Acceptation progressive",
+            "Variabilité individuelle importante"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Clippage chirurgical : approche microchirurgicale",
+        "Embolisation endovasculaire : coils ou stents",
+        "Surveillance si anévrisme < 7mm",
+        "Contrôle tensionnel strict",
+        "Arrêt tabac impératif",
+        "Suivi angiographique régulier"
+      ],
+      "examensComplementaires": [
+        "Angio-CT cérébral : évaluation morphologique",
+        "IRM cérébrale avec séquences FLAIR",
+        "Angiographie conventionnelle (gold standard)",
+        "Bilan préopératoire si chirurgie",
+        "Consultation anesthésique",
+        "Évaluation neuropsychologique"
+      ]
+    }
+  }
+}

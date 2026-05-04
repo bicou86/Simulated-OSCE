@@ -1,0 +1,393 @@
+{
+  "title": "RESCOS-57 - Ralentissement - Consultation téléphonique EMS",
+  "category": "RESCOS",
+  "subcategory": "Consultation téléphonique",
+  "context": {
+    "setting": "Urgence hôpital régional - Consultation téléphonique avec infirmier·ère d'EMS",
+    "patient": "M. Michel Bertchi, 88 ans, résident en EMS, présente un ralentissement avec déshydratation sur diarrhées aiguës",
+    "vitals": {
+      "fc": "98 bpm",
+      "ta": "120/78 mmHg",
+      "temperature": "37.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Identification de l'interlocuteur et contexte",
+          "binaryOnly": true,
+          "patientComment": "[Infirmier·ère de nuit à l'EMS de la Croix]"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation du symptôme principal - Ralentissement",
+          "details": [
+            "Début [depuis ce soir]",
+            "Évolution [temps de latence aux sollicitations]",
+            "État de conscience [orienté aux 4 modes]",
+            "Comparaison état habituel [hier normal, souriant]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation des diarrhées",
+          "details": [
+            "Début [depuis 2 jours]",
+            "Fréquence [5-6 épisodes aujourd'hui]",
+            "Aspect [aqueux, non sanglant, pas de méléna]",
+            "Contage [un autre résident avec symptômes similaires]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes associés",
+          "details": [
+            "Douleurs abdominales [inconfortable, mains sur le ventre]",
+            "Vomissements [1 épisode après midi, alimentaire]",
+            "Fièvre [37.8°C ce soir, pas de fièvre dans la journée]",
+            "Fatigue [importante]",
+            "Faiblesse [généralisée]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Recherche de symptômes neurologiques",
+          "details": [
+            "Céphalées [non]",
+            "Vertiges [non]",
+            "Troubles visuels [non]",
+            "Paresthésies/parésie [non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents médicaux",
+          "details": [
+            "HTA",
+            "Hypercholestérolémie",
+            "HBP",
+            "Troubles du sommeil",
+            "Déclin cognitif léger",
+            "TB dans jeunesse [traitement complet]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "details": [
+            "Cosaar Plus 50/12.5mg [Losartan + Hydrochlorothiazide]",
+            "Atorvastatine 10mg",
+            "Pradif T 40mcg",
+            "Distraneurine caps",
+            "Ginkgo 3x/j"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Allergies",
+          "patientComment": "[Aucune allergie ni intolérance]"
+        },
+        {
+          "id": "a9",
+          "text": "Contexte social et familial",
+          "details": [
+            "En EMS depuis 6 ans",
+            "Veuf depuis 8 ans",
+            "Fille en Allemagne [visite récente avec petit-fils]",
+            "Fils en Suisse [visite 1x/mois]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Directives anticipées",
+          "patientComment": "[Décision de réanimation: OUI]"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "title": "Examen clinique rapporté par l'infirmier·ère",
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Signes vitaux",
+          "binaryOnly": true,
+          "details": [
+            "FC 98/min",
+            "TA 120/78 mmHg",
+            "T° 37.8°C auriculaire"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "État neurologique",
+          "details": [
+            "Ralenti mais orienté aux 4 modes",
+            "Pas de signe de latéralisation",
+            "Pas de parésie grossière"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Signes de déshydratation",
+          "details": [
+            "Pâleur des téguments",
+            "Muqueuses sèches",
+            "Langue sèche",
+            "Temps de recoloration 4 secondes"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen abdominal",
+          "details": [
+            "Palpation diffusément sensible",
+            "Pas de défense",
+            "Pas de détente",
+            "Bruits intestinaux augmentés"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostics différentiels",
+          "ddSection": {
+            "title": "Hypothèses diagnostiques à considérer",
+            "categories": [
+              {
+                "name": "Diagnostic principal",
+                "items": [
+                  {
+                    "text": "Déshydratation sur gastro-entérite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Diarrhées aqueuses depuis 2 jours\n\t□ Vomissement alimentaire\n\t□ Signes cliniques de déshydratation\n\t□ Temps de recoloration allongé\n\t□ Contage dans l'EMS",
+                    "test": "→ Ionogramme, créatinine, urée"
+                  }
+                ]
+              },
+              {
+                "name": "Diagnostics différentiels",
+                "items": [
+                  {
+                    "text": "État confusionnel d'origine médicamenteuse",
+                    "cause": "Arguments POUR:\n\t□ Diurétique (hydrochlorothiazide)\n\t□ Distraneurine\n\t□ Âge avancé\n\t□ Déshydratation aggravante",
+                    "test": "→ Révision traitement, dosages médicamenteux"
+                  },
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "Arguments POUR:\n\t□ Âge, homme avec HBP\n\t□ Ralentissement\n\t□ Fièvre modérée\nArguments CONTRE:\n\t□ Pas de symptômes urinaires",
+                    "test": "→ Bandelette urinaire, ECBU"
+                  },
+                  {
+                    "text": "Colite à Clostridium difficile",
+                    "cause": "Arguments POUR:\n\t□ Contexte EMS\n\t□ Diarrhées multiples\nArguments CONTRE:\n\t□ Pas d'antibiothérapie récente",
+                    "test": "→ Recherche toxine C. difficile dans selles"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Mesures immédiates à l'EMS",
+          "details": [
+            "Surveillance rapprochée des signes vitaux",
+            "Hydratation orale si tolérée (SRO)",
+            "Position demi-assise",
+            "Surveillance diurèse",
+            "Isolement de contact (précautions entériques)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Critères d'hospitalisation",
+          "details": [
+            "Signes de déshydratation sévère",
+            "Altération état conscience persistante",
+            "Impossibilité hydratation orale",
+            "Instabilité hémodynamique",
+            "Comorbidités importantes"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires si hospitalisation",
+          "details": [
+            "Bilan biologique: NFS, ionogramme, urée, créatinine",
+            "CRP, PCT si suspicion infectieuse",
+            "Coproculture + recherche toxines",
+            "ECG (trouble électrolytique)",
+            "Bandelette urinaire"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Traitement proposé",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Réhydratation",
+                "content": "• Voie orale privilégiée si possible (SRO)\n• Si échec ou déshydratation sévère: NaCl 0.9% IV\n• Surveillance bilan entrées/sorties"
+              },
+              {
+                "title": "Symptomatique",
+                "content": "• Paracétamol si douleurs/fièvre\n• Éviter anti-diarrhéiques (risque rétention bactérienne)\n• Régime adapté: BRAT (banane, riz, compote, toast)"
+              },
+              {
+                "title": "Surveillance",
+                "content": "• Paramètres vitaux /4h\n• Poids quotidien\n• Diurèse\n• État de conscience"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m6",
+          "text": "Red flags à surveiller",
+          "redflagsSection": {
+            "title": "Signes d'alerte nécessitant transfert immédiat",
+            "items": [
+              {
+                "text": "Hypotension < 90/60 mmHg",
+                "description": "Risque de choc hypovolémique"
+              },
+              {
+                "text": "Confusion aiguë ou somnolence",
+                "description": "Signe de déshydratation sévère ou sepsis"
+              },
+              {
+                "text": "Oligurie < 500ml/24h",
+                "description": "Insuffisance rénale aiguë"
+              },
+              {
+                "text": "Fièvre > 38.5°C persistante",
+                "description": "Infection systémique possible"
+              },
+              {
+                "text": "Sang dans les selles",
+                "description": "Colite invasive"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "c1",
+          "text": "Instructions claires à l'infirmier·ère",
+          "content": "Je vous propose de surveiller M. Bertchi cette nuit avec contrôle des signes vitaux toutes les 4 heures. Essayez de l'hydrater oralement avec des SRO si possible. Si son état se détériore (confusion, hypotension, fièvre élevée), n'hésitez pas à rappeler pour un transfert aux urgences."
+        },
+        {
+          "id": "c2",
+          "text": "Plan de suivi",
+          "content": "Le médecin de l'EMS devra réévaluer M. Bertchi demain matin. Un bilan sanguin sera probablement nécessaire. Maintenir les précautions d'hygiène pour éviter la propagation."
+        },
+        {
+          "id": "c3",
+          "text": "Questions de l'infirmier·ère",
+          "content": "[Dois-je le transférer cette nuit?]\n[Que faire s'il refuse de boire?]\n[Faut-il arrêter ses médicaments habituels?]"
+        },
+        {
+          "id": "c4",
+          "text": "Réponses aux préoccupations",
+          "content": "Pour l'instant, pas de transfert immédiat nécessaire si les signes vitaux restent stables\nSi refus de boire, nouvelle évaluation nécessaire pour hydratation IV\nSuspendre temporairement le diurétique, maintenir les autres traitements"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Instructions pour l'infirmier·ère standardisé·e",
+      "nom": "Sofia/Sofian",
+      "role": "Infirmier·ère de nuit à l'EMS de la Croix",
+      "contexte": "Appel téléphonique au médecin de garde à 21h30",
+      "patient": "M. Michel Bertchi, 88 ans (ne participe pas à la consultation)",
+      "motifConsultation": {
+        "plaintePrincipale": "Résident ralenti ce soir avec diarrhées depuis 2 jours",
+        "introduction": "Bonsoir, Sofia/Sofian, infirmier·ère de nuit à l'EMS de la Croix. Je vous appelle car un de nos résidents est un peu ralenti ce soir. Je m'inquiète pour lui et je ne sais pas quoi faire..."
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "M. Bertchi est ralenti depuis ce soir",
+          "Gémit souvent, ne se laisse pas faire comme d'habitude",
+          "Répond avec temps de latence mais orienté aux 4 modes",
+          "Hier soir était normal, souriant après visite de sa fille"
+        ],
+        "diarrhees": [
+          "Depuis 2 jours",
+          "5-6 épisodes aujourd'hui",
+          "Type aqueux, pas de sang",
+          "Un autre résident avec symptômes similaires"
+        ],
+        "signesAssocies": [
+          "Vomissement 1x après midi (alimentaire)",
+          "Température 37.8°C ce soir",
+          "Fatigue importante",
+          "Inconfortable, mains sur le ventre"
+        ]
+      },
+      "examenPhysique": {
+        "signesVitaux": "FC 98/min, TA 120/78 mmHg, T° 37.8°C",
+        "deshydratation": "Pâleur, muqueuses sèches, temps recoloration 4 sec",
+        "abdominal": "Sensible diffusément, pas de défense, bruits augmentés",
+        "neurologique": "Ralenti mais orienté, pas de latéralisation"
+      },
+      "simulation": {
+        "attitude": [
+          "Stressé·e mais professionnel·le",
+          "Inquiet·ète pour le résident",
+          "Cherche conseils clairs"
+        ],
+        "durantAppel": [
+          "Reste derrière paravent (invisible)",
+          "Communication claire et calme",
+          "Peut avoir le scénario avec soi"
+        ],
+        "reponsesSituations": [
+          "Si transfert immédiat demandé: 'Je ne suis pas certaine que ce soit nécessaire...'",
+          "Si demande d'opinion: 'Je suis un peu perdu·e, il allait bien hier...'",
+          "Si insistance transfert: accepte et appelle ambulance",
+          "Si réveil patient demandé: 'Il dort bien maintenant, pas sûr que ce soit une bonne idée'"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert évaluateur",
+      "objectifSSP": "SSP 216 - Changement soudain du statut mental",
+      "diagnosticPrincipal": "Ralentissement sur déshydratation (diarrhées aiguës)",
+      "pointsCles": [
+        "Gestion consultation téléphonique avec professionnel de santé",
+        "Évaluation indirecte d'un patient fragile",
+        "Identification signes de déshydratation",
+        "Décision hospitalisation vs surveillance",
+        "Instructions claires et précises",
+        "Communication adaptée avec infirmier·ère"
+      ],
+      "pieges": [
+        "Vouloir hospitaliser immédiatement sans évaluation",
+        "Sous-estimer la déshydratation chez personne âgée",
+        "Oublier l'aspect contagieux (autre résident atteint)",
+        "Ne pas donner d'instructions de surveillance",
+        "Ne pas suspendre le diurétique",
+        "Communication inadaptée (trop technique ou pas assez précise)"
+      ],
+      "criteresCommunication": [
+        "Identification claire de l'interlocuteur",
+        "Questions structurées et pertinentes",
+        "Écoute active des informations fournies",
+        "Instructions claires et vérifiables",
+        "Rassurer tout en restant vigilant",
+        "Définir critères de rappel/transfert"
+      ]
+    }
+  }
+}

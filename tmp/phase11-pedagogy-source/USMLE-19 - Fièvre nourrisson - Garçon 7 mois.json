@@ -1,0 +1,885 @@
+{
+  "title": "USMLE-19 - Fièvre nourrisson - Garçon de 7 mois",
+  "context": {
+    "setting": "Cabinet médical",
+    "patient": "La mère de Josh White, un garçon de 7 mois, vient au cabinet en se plaignant que son enfant a de la fièvre"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Mon enfant a de la fièvre"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de la fièvre",
+          "binaryOnly": false,
+          "details": [
+            "Début [Hier]",
+            "Température mesurée [Je l'ai mesurée sur son front, et elle était de 38,3°C]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Symptômes respiratoires",
+          "binaryOnly": false,
+          "details": [
+            "Écoulement nasal [Oui]",
+            "Toux [Non]",
+            "Essoufflement [Je pense que oui ; il respire rapidement]",
+            "Signes de détresse [Je n'ai pas remarqué de rétractions abdominales ni de dilatation des narines]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Symptômes ORL",
+          "binaryOnly": false,
+          "details": [
+            "Tirer sur les oreilles [Non]",
+            "Écoulement des oreilles [Non]",
+            "Difficulté à avaler [Je ne sais pas, mais il n'a rien mangé depuis hier et refuse de boire au biberon ou au sein]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "État général [Il a l'air fatigué et irrité depuis hier]",
+            "Changement d'appétit [Il ne mange rien du tout]",
+            "Éruption cutanée [Non]",
+            "Tremblements/convulsions [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes digestifs et urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Nausées/vomissements [Non]",
+            "Transit intestinal [Non, pas de changement dans les habitudes intestinales ou la couleur/la consistance des selles]",
+            "Habitudes urinaires [Non, pas de changement dans les habitudes urinaires, l'odeur ou la couleur de l'urine]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes de sommeil",
+          "binaryOnly": true,
+          "patientComment": "La nuit dernière, il n'a pas bien dormi et a pleuré quand je l'ai couché"
+        },
+        {
+          "id": "a8",
+          "text": "Contacts et exposition",
+          "binaryOnly": false,
+          "details": [
+            "Contacts malades famille [Son frère de 3 ans a eu une infection des voies respiratoires supérieures il y a une semaine, mais il va bien maintenant]",
+            "Crèche [Oui]",
+            "Contacts malades crèche [Je ne sais pas]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Histoire médicale du nourrisson",
+          "binaryOnly": false,
+          "details": [
+            "Vaccinations [À jour]",
+            "Dernier contrôle [Il y a deux semaines, et tout allait bien avec lui]",
+            "Histoire de naissance [C'était un accouchement vaginal à 40 semaines sans complications]",
+            "Développement [Poids, taille, et développement du langage normaux]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Alimentation",
+          "binaryOnly": false,
+          "details": [
+            "Type d'alimentation [Je l'allaite, et je lui donne toutes les vitamines prescrites. Il refuse de téter depuis hier. Il mange aussi de la nourriture pour bébé 3x/j]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Jaunisse dans la première semaine de vie"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Paracétamol"
+        },
+        {
+          "id": "a14",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen clinique non réalisé",
+          "binaryOnly": true,
+          "patientComment": "L'examen sera effectué après l'anamnèse"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections respiratoires",
+                "items": [
+                  {
+                    "text": "Infection virale des voies respiratoires supérieures",
+                    "cause": "Arguments POUR:\n\t□ Fièvre modérée (38,3°C)\n\t□ Rhinorrhée\n\t□ Contact frère avec IVRS récente\n\t□ Collectivité (crèche)\n\t□ Âge compatible\n\t□ Saison probable\nArguments CONTRE:\n\t□ Tachypnée présente",
+                    "test": "→ Examen clinique, panel viral si besoin"
+                  },
+                  {
+                    "text": "Pneumonie",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Tachypnée/dyspnée\n\t□ Refus alimentaire\n\t□ Contact infectieux récent\n\t□ Collectivité\nArguments CONTRE:\n\t□ Pas de toux\n\t□ Pas de signes de lutte décrits",
+                    "test": "→ Radiographie thoracique"
+                  },
+                  {
+                    "text": "Bronchiolite débutante",
+                    "cause": "Arguments POUR:\n\t□ Âge < 2 ans\n\t□ Rhinorrhée\n\t□ Tachypnée\n\t□ Contact infectieux\n\t□ Difficultés alimentaires\nArguments CONTRE:\n\t□ Pas de toux\n\t□ Pas de sibilants décrits",
+                    "test": "→ Examen clinique, saturation O2"
+                  }
+                ]
+              },
+              {
+                "name": "Infections ORL",
+                "items": [
+                  {
+                    "text": "Otite moyenne aiguë",
+                    "cause": "Arguments POUR:\n\t□ Âge (pic 6-24 mois)\n\t□ Fièvre\n\t□ Irritabilité\n\t□ Refus alimentaire\n\t□ Troubles sommeil\n\t□ Post-IVRS fréquent\n\t□ Crèche (facteur risque)\nArguments CONTRE:\n\t□ Pas de tirage d'oreilles",
+                    "test": "→ Otoscopie pneumatique"
+                  }
+                ]
+              },
+              {
+                "name": "Infections graves",
+                "items": [
+                  {
+                    "text": "Méningite",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Irritabilité importante\n\t□ Refus alimentaire total\n\t□ Léthargie\n\t□ Âge à risque\nArguments CONTRE:\n\t□ Pas de convulsions\n\t□ Vaccinations à jour",
+                    "test": "→ Ponction lombaire si suspicion"
+                  },
+                  {
+                    "text": "Bactériémie occulte",
+                    "cause": "Arguments POUR:\n\t□ Fièvre sans foyer\n\t□ Âge 3-36 mois\n\t□ Altération état général\nArguments CONTRE:\n\t□ T° < 39°C\n\t□ Vaccinations à jour\n\t□ Source ORL probable",
+                    "test": "→ Hémoculture, NFS, CRP"
+                  }
+                ]
+              },
+              {
+                "name": "Autres infections",
+                "items": [
+                  {
+                    "text": "Infection urinaire",
+                    "cause": "Arguments POUR:\n\t□ Fièvre sans foyer évident\n\t□ Garçon < 1 an\n\t□ Irritabilité\n\t□ Refus alimentaire\nArguments CONTRE:\n\t□ Pas de signes urinaires\n\t□ Source ORL probable",
+                    "test": "→ ECBU par cathétérisme"
+                  },
+                  {
+                    "text": "Gastroentérite débutante",
+                    "cause": "Arguments POUR:\n\t□ Fièvre\n\t□ Refus alimentaire\n\t□ Collectivité\nArguments CONTRE:\n\t□ Pas de vomissements\n\t□ Pas de diarrhée\n\t□ Transit normal",
+                    "test": "→ Surveillance clinique"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique complet avec otoscopie",
+            "Saturation en oxygène",
+            "Si fièvre > 39°C ou mauvais état général : NFS, CRP",
+            "Bandelette urinaire (si disponible) ou ECBU",
+            "Radiographie thoracique si signes respiratoires"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens selon orientation clinique",
+          "binaryOnly": false,
+          "details": [
+            "Panel viral respiratoire (VRS, grippe) si épidémie",
+            "Hémoculture si suspicion bactériémie",
+            "Ponction lombaire si signes méningés",
+            "Test antigénique streptocoque si > 3 ans",
+            "Procalcitonine si doute infection bactérienne"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Paracétamol 15mg/kg/dose toutes les 6h\n• Alternance ibuprofène 10mg/kg si > 6 mois\n• Hydratation orale fractionnée\n• Désobstruction rhinopharyngée (sérum physiologique)\n• Position semi-assise\n• Surveillance température"
+              },
+              {
+                "title": "Critères d'hospitalisation",
+                "content": "• Âge < 3 mois avec T° > 38°C\n• Signes de gravité (détresse respiratoire)\n• Déshydratation\n• Suspicion méningite\n• Échec traitement ambulatoire\n• Contexte social défavorable"
+              },
+              {
+                "title": "Antibiothérapie selon étiologie",
+                "content": "• OMA : amoxicilline 80-90mg/kg/j si < 2 ans\n• Pneumonie : amoxicilline ou amox-clav\n• IU : céphalosporine orale\n• Pas d'ATB si viral probable\n• Attendre résultats si possible"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Surveillance et conseils",
+          "binaryOnly": false,
+          "details": [
+            "Surveillance température toutes les 4h",
+            "Hydratation régulière (petit volume)",
+            "Consulter si aggravation ou non amélioration 48h",
+            "Signes d'alarme : somnolence, détresse respiratoire",
+            "Éviction crèche jusqu'à apyrexie 24h",
+            "Lavage des mains famille"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Information parentale",
+          "binaryOnly": false,
+          "details": [
+            "Évolution naturelle infections virales (3-5 jours)",
+            "Importance hydratation",
+            "Utilisation correcte antipyrétiques",
+            "Pas d'antibiotiques si viral",
+            "Consultation de contrôle si besoin",
+            "Numéro urgence si aggravation"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Signes d'alarme à communiquer",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Urgences pédiatriques",
+            "items": [
+              {
+                "text": "Détresse respiratoire",
+                "description": "→ Tirage, battement ailes du nez = Hospitalisation urgente"
+              },
+              {
+                "text": "Altération de conscience",
+                "description": "→ Somnolence, difficile à réveiller = Urgence neurologique"
+              },
+              {
+                "text": "Déshydratation",
+                "description": "→ Pli cutané, yeux cernés, oligurie = Réhydratation IV"
+              },
+              {
+                "text": "Purpura fébrile",
+                "description": "→ Méningococcémie = Urgence vitale, ATB immédiat"
+              },
+              {
+                "text": "Convulsions",
+                "description": "→ Même si fébriles = Évaluation urgente"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Madame White, la fièvre de votre enfant pourrait être due à une simple infection des voies respiratoires supérieures, ou elle pourrait être attribuable à une otite causée par un virus ou certains types de bactéries. Je voudrais l'examiner afin de mieux déterminer la cause de sa fièvre et d'exclure des causes plus graves, telles qu'une méningite. En plus d'un examen clinique détaillé, votre bébé pourrait avoir besoin de quelques analyses de sang, d'une analyse d'urine et peut-être d'une radiographie pulmonaire. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Est-ce que mon bébé va bien aller ? Dois-je emmener mon bébé à l'hôpital ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Je comprends que vous êtes inquiète et que vous voulez des réponses, mais je dois d'abord examiner votre enfant. Bien que je soupçonne qu'il s'agisse d'une infection virale, je dois m'assurer qu'il n'a rien de plus grave qui pourrait nécessiter un séjour à l'hôpital."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour la mère (patient simulé)",
+      "nom": "Mère de Josh White",
+      "age": "Mère d'un nourrisson de 7 mois",
+      "contexte": "Mère inquiète venant consulter pour fièvre de son bébé",
+      "motifConsultation": {
+        "plaintePrincipale": "Mon enfant a de la fièvre.",
+        "autreChose": "Il ne veut rien manger et respire vite."
+      },
+      "consignes": [
+        "Montrer de l'inquiétude concernant la situation de votre enfant.",
+        "Tenir un poupon ou faire comme si vous aviez votre bébé.",
+        "Mentionner spontanément que son frère était malade.",
+        "Insister sur le fait qu'il refuse de manger.",
+        "Poser des questions sur la gravité."
+      ],
+      "histoireActuelle": {
+        "fievre": [
+          "Début hier",
+          "38,3°C au front",
+          "Donné paracétamol"
+        ],
+        "symptomes": [
+          "Nez qui coule",
+          "Respire vite",
+          "Fatigué et irrité",
+          "Refuse sein et biberon",
+          "Mauvaise nuit"
+        ],
+        "exposition": [
+          "Frère 3 ans IVRS il y a 1 semaine",
+          "Va à la crèche",
+          "Contacts malades inconnus"
+        ]
+      },
+      "antecedents": {
+        "naissance": [
+          "Accouchement normal à terme",
+          "Pas de complications"
+        ],
+        "medicaux": [
+          "Jaunisse première semaine",
+          "Sinon en bonne santé"
+        ],
+        "croissance": [
+          "Développement normal",
+          "Vaccins à jour",
+          "Dernier contrôle il y a 2 semaines"
+        ]
+      },
+      "alimentation": {
+        "normale": [
+          "Allaitement maternel",
+          "Nourriture bébé 3x/jour",
+          "Vitamines prescrites"
+        ],
+        "actuelle": [
+          "Refuse tout depuis hier",
+          "Pas de vomissements"
+        ]
+      },
+      "simulation": {
+        "durantConsultation": [
+          "Bercer le poupon",
+          "Regard inquiet",
+          "Questions fréquentes",
+          "Prise de notes",
+          "Demander si hôpital nécessaire"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Nourrisson de 7 mois fébrile avec rhinorrhée et tachypnée, dans contexte de contage familial (IVRS). Très probablement infection virale mais nécessite exclusion otite moyenne aiguë (très fréquente à cet âge) et infections plus graves.",
+      "rolesInterventions": [
+        "Si l'étudiant-e demande après examen :",
+        "• Otoscopie : tympan droit bombé et rouge",
+        "• Auscultation : MV normaux, pas de râles",
+        "• Saturation : 96% air ambiant",
+        "• Gorge : pharynx érythémateux",
+        "• État hydratation : correct"
+      ],
+      "pointsCles": [
+        "OMA très fréquente à 7 mois",
+        "Signes OMA peuvent être frustes",
+        "Pneumonie possible sans toux",
+        "Méningite toujours à exclure",
+        "Hydratation prioritaire"
+      ],
+      "pieges": [
+        "Ne pas examiner les tympans",
+        "Minimiser la tachypnée",
+        "Oublier risque déshydratation",
+        "ATB systématiques si viral",
+        "Ne pas expliquer signes alarme"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Otite moyenne aiguë droite sur surinfection post-virale, dans contexte d'infection respiratoire haute avec contage familial"
+        },
+        {
+          "titre": "Épidémiologie fièvre du nourrisson",
+          "contenu": "Problème fréquent en pédiatrie :",
+          "points": [
+            "20-30% consultations pédiatriques",
+            "Pic incidence 6-24 mois",
+            "80% causes virales",
+            "OMA : complication 30% IVRS",
+            "Risque bactériémie : 1-2% si > 39°C",
+            "Méningite : 0,5% fièvres sans foyer"
+          ]
+        },
+        {
+          "titre": "Particularités du nourrisson fébrile",
+          "contenu": "Défis diagnostiques :",
+          "points": [
+            "Signes cliniques frustes",
+            "Examen difficile (pleurs)",
+            "Communication non verbale",
+            "Système immunitaire immature",
+            "Risque infection invasive plus élevé",
+            "Déshydratation rapide"
+          ]
+        },
+        {
+          "titre": "Otite moyenne aiguë",
+          "contenu": "Pathologie ORL la plus fréquente :",
+          "points": [
+            "Incidence : 50% avant 1 an, 80% avant 3 ans",
+            "Facteurs risque : crèche, tabagisme passif",
+            "Post-IVRS dans 70% cas",
+            "Pneumocoque, Haemophilus, Moraxella",
+            "Diagnostic : otoscopie bombement + rougeur",
+            "Épanchement seul ≠ OMA"
+          ]
+        },
+        {
+          "titre": "Critères diagnostiques OMA",
+          "contenu": "AAP 2013 :",
+          "points": [
+            "Début aigu",
+            "Épanchement rétrotympanique",
+            "ET inflammation tympan",
+            "Bombement modéré/sévère",
+            "OU otorrhée non traumatique",
+            "Otalgie ou irritabilité si non verbal"
+          ]
+        },
+        {
+          "titre": "Évaluation gravité nourrisson fébrile",
+          "contenu": "Échelle de Yale (YIOS) :",
+          "points": [
+            "Qualité des pleurs",
+            "Réaction stimulation parentale",
+            "État éveil",
+            "Couleur",
+            "Hydratation",
+            "Réponse sociale",
+            "Score > 10 = risque infection sévère"
+          ]
+        },
+        {
+          "titre": "Bilan paraclinique selon âge",
+          "contenu": "Recommandations actuelles :",
+          "points": [
+            "< 1 mois : bilan septique complet",
+            "1-3 mois + fièvre > 38°C : NFS, hémoculture, ECBU, ± PL",
+            "3-36 mois bien + T < 39°C : selon clinique",
+            "3-36 mois + T > 39°C : NFS, ECBU",
+            "Baisse seuil depuis vaccination Hib/pneumo",
+            "Biomarqueurs : CRP > PCT > GB"
+          ]
+        },
+        {
+          "titre": "Traitement OMA",
+          "contenu": "Approche différenciée :",
+          "points": [
+            "< 6 mois : ATB systématique",
+            "6-24 mois : ATB si certain ou bilatéral",
+            "> 2 ans unilatérale : option observation 48h",
+            "Amoxicilline 80-90 mg/kg/j en 2 prises",
+            "Si échec 48h : amox-clav",
+            "Durée : 5j si > 2 ans, 10j si < 2 ans"
+          ]
+        },
+        {
+          "titre": "Antipyrétiques chez nourrisson",
+          "contenu": "Utilisation rationnelle :",
+          "points": [
+            "Paracétamol : 15mg/kg/6h (max 60mg/kg/j)",
+            "Ibuprofène : 10mg/kg/8h si > 6 mois",
+            "Alternance non recommandée systématiquement",
+            "Objectif : confort, pas normalisation T°",
+            "Méthodes physiques peu efficaces",
+            "Éviter aspirine (Reye)"
+          ]
+        },
+        {
+          "titre": "Prévention infections nourrisson",
+          "contenu": "Mesures efficaces :",
+          "points": [
+            "Allaitement maternel exclusif 6 mois",
+            "Vaccination complète et à jour",
+            "Éviter tabagisme passif",
+            "Limiter collectivité si possible",
+            "Hygiène des mains ++",
+            "Position surélevée si reflux"
+          ]
+        },
+        {
+          "titre": "Messages clés",
+          "points": [
+            "OMA = complication fréquente IVRS",
+            "Otoscopie systématique si fièvre",
+            "Diagnostic OMA = critères stricts",
+            "ATB pas systématiques > 2 ans",
+            "Surveillance hydratation cruciale",
+            "Information parents sur évolution",
+            "Signes alarme bien expliqués",
+            "Suivi 48-72h si pas amélioration"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Paracétamol 15mg/kg toutes les 6h",
+        "Ibuprofène 10mg/kg/8h si > 6 mois",
+        "Amoxicilline 80-90mg/kg/j si OMA",
+        "Sérum physiologique nasal pluriquotidien",
+        "Hydratation orale fractionnée"
+      ],
+      "examensComplementaires": [
+        "Otoscopie pneumatique obligatoire",
+        "Saturation O2",
+        "ECBU si fièvre sans foyer",
+        "NFS/CRP si aspect toxique",
+        "Radio thorax si signes pulmonaires"
+      ]
+    },
+    "resume": {
+      "titre": "👂 Otite moyenne aiguë (OMA) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Contexte clinique",
+              "points": [
+                "Enfant < 2 ans, souvent suite à une IVRS récente",
+                "Symptômes d’apparition brutale : fièvre, pleurs, irritabilité",
+                "Otalgie (généralement unilatérale)",
+                "Tirage ou frottement de l’oreille",
+                "Refus d’alimentation ou troubles du sommeil",
+                "Vomissements, diarrhée parfois associés"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Crèche ou collectivité",
+                "Tabagisme passif",
+                "Absence d’allaitement maternel",
+                "ATCD d’OMA récidivantes",
+                "Malformations ORL (ex. : fente palatine)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Otoscope",
+              "points": [
+                "Tympan bombant, opaque, congestionné",
+                "Abolition du triangle lumineux",
+                "Mobilité réduite au test pneumatique",
+                "Otorrhée si tympan perforé"
+              ]
+            },
+            {
+              "titre": "Autres signes",
+              "points": [
+                "Fièvre modérée à élevée",
+                "Irritabilité, pleurs",
+                "Pas de signe de complication (mastodynie, raideur de nuque)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Pas d’examen systématique",
+              "points": [
+                "Diagnostic clinique",
+                "Pas de biologie sauf doute diagnostique ou complication",
+                "Paracentèse rare, réservée aux échecs thérapeutiques ou formes compliquées"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Stratégie thérapeutique",
+              "points": [
+                "Observation possible (≥ 2 ans, forme légère, unilatérale)",
+                "ATB immédiats si < 6 mois, bilatérale < 2 ans, fièvre > 39°C, otorrhée, mauvais état général"
+              ]
+            },
+            {
+              "titre": "Antibiothérapie",
+              "points": [
+                "Amoxicilline PO 7-10 jours (80–90 mg/kg/j)",
+                "Augmentin si échec ou conjonctivite associée",
+                "Alternative si allergie : macrolide (azithromycine)"
+              ]
+            },
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "Paracétamol ± ibuprofène",
+                "Surveillance à 48–72h",
+                "Hydratation et repos"
+              ]
+            },
+            {
+              "titre": "Complications à surveiller",
+              "points": [
+                "Mastoïdite (douleur rétro-auriculaire, œdème)",
+                "Perforation tympanique persistante",
+                "Otite séreuse chronique",
+                "Méningite (rare)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toujours examiner les tympans avec un otoscope",
+            "Tympan bombant = signe clé",
+            "Antibiothérapie pas systématique : dépend de l’âge et de la sévérité",
+            "Amoxicilline = traitement de 1ère intention",
+            "Surveillance rapprochée à 48–72h si traitement différé"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Fièvre nourrisson (OMA probable)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif, contexte infectieux",
+            "Caractériser la fièvre → début, T°, évolution, antipyrétiques",
+            "Symptômes associés → respiratoires, ORL, digestifs, urinaires, neuro",
+            "État général → éveil, irritabilité, alimentation, hydratation",
+            "Facteurs de risque → collectivité, contage familial, tabagisme passif",
+            "Antécédents → grossesse, naissance, vaccinations",
+            "Examen clinique → constantes, tympans, poumons, hydratation, nuque",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires adaptés → NFS, CRP, ECBU, radio thorax, PL si doute",
+            "Prise en charge → antipyrétiques, hydratation, ATB si OMA confirmée"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : FEVER",
+            "elements": [
+              "F = Focus de l’infection ?",
+              "E = État général (éveil, tonus, hydratation)",
+              "V = Voies respiratoires/ORL",
+              "E = Examen complet (tympans, gorge, poumons, nuque)",
+              "R = Red flags (détresse respi, convulsions, purpura, léthargie)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit de Josh White, un garçon de 7 mois, amené par sa mère car il présente de la fièvre depuis hier.\n\nLa température a été mesurée au front à 38,3°C. Sa mère a donné du paracétamol. Depuis hier, elle a remarqué que Josh a le nez qui coule, qu’il respire plus vite que d’habitude et qu’il semble fatigué et irritable. Il refuse de téter au sein ou au biberon et n’a presque rien mangé. La nuit dernière, il a très mal dormi et pleurait dès qu’elle essayait de le recoucher. Il n’a pas présenté de convulsions, pas de vomissements, pas de diarrhée, et ses urines et selles restent normales. \n\nDans les expositions, son frère de 3 ans a eu une infection respiratoire haute il y a une semaine, et Josh va à la crèche. Les vaccinations sont à jour. Il est né à terme, par voie basse, sans complications. Son développement est normal. Comme antécédent médical, il avait présenté une jaunisse néonatale, mais rien depuis. \n\nÀ l’examen clinique (fourni par l’expert), ses constantes sont correctes avec une saturation à 96% en air ambiant. L’auscultation pulmonaire est normale, sans râles ni sibilants. À l’otoscopie, le tympan droit apparaît rouge et bombé. Le pharynx est un peu rouge, l’état d’hydratation est conservé et il n’y a pas de signe méningé. \n\nEn résumé, il s’agit d’un nourrisson de 7 mois fébrile, avec rhinorrhée, irritabilité, refus alimentaire et tympan droit bombé et congestif. Mon hypothèse principale est une otite moyenne aiguë droite, probablement post-virale. Les diagnostics différentiels incluent une infection virale des voies respiratoires supérieures simple, une bronchiolite débutante, une pneumonie, une infection urinaire ou plus rarement une méningite.\n\nComme examens complémentaires, en première intention je réaliserais une otoscopie bilatérale complète, je vérifierais la saturation en oxygène, et si la fièvre s’élevait au-delà de 39°C ou si l’état général se dégradait, je demanderais une NFS et une CRP. Un ECBU par cathéter serait indiqué si l’examen ne retrouvait pas de foyer évident. Une radiographie thoracique serait utile si signes respiratoires inquiétants.\n\nEn termes de prise en charge, je commencerais par du paracétamol en traitement symptomatique, une bonne hydratation et des lavages de nez réguliers. L’otite moyenne aiguë confirmée à cet âge justifie une antibiothérapie par amoxicilline à forte dose. Je conseillerais aussi une surveillance rapprochée avec réévaluation dans 48 heures si pas d’amélioration ou aggravation."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Josh White, 7 mois, présente une fièvre à 38,3°C depuis hier.\n\nB (Background) : Né à terme, vaccins à jour, contage familial (frère malade récemment), va en crèche. Symptômes actuels : rhinorrhée, tachypnée, irritabilité, refus alimentaire.\n\nA (Assessment) : Suspicion otite moyenne aiguë droite confirmée par tympan rouge et bombé. DD : IVRS virale simple, bronchiolite, pneumonie, infection urinaire.\n\nR (Recommendation) : Traitement symptomatique (paracétamol, lavages de nez, hydratation) et antibiothérapie par amoxicilline. Surveillance clinique rapprochée et réévaluation dans 48h."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "👉 OMA : les 3C",
+              "points": [
+                "C = Crèche (facteur de risque)",
+                "C = Contage viral récent",
+                "C = Congestion et bombement tympan"
+              ]
+            },
+            {
+              "titre": "👉 Signes d’alarme pédiatriques",
+              "points": [
+                "Somnolence ou léthargie",
+                "Convulsions",
+                "Détresse respiratoire",
+                "Déshydratation",
+                "Purpura fébrile"
+              ]
+            },
+            {
+              "titre": "👉 Antibio OMA : règle des âges",
+              "points": [
+                "< 6 mois → ATB systématique",
+                "6–24 mois → ATB si certain ou bilatéral",
+                "> 2 ans unilatérale simple → surveillance possible"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Otite moyenne aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Âge 7 mois (fréquent)",
+                      "Fièvre, irritabilité, troubles du sommeil",
+                      "Refus alimentaire",
+                      "Tympan droit rouge et bombé",
+                      "Crèche et contage viral"
+                    ],
+                    "contre": [
+                      "Pas d’otorrhée spontanée (mais non nécessaire pour diagnostic)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infection virale des voies respiratoires supérieures",
+                  "reponse": {
+                    "pour": [
+                      "Rhinorrhée",
+                      "Fièvre modérée",
+                      "Contage familial"
+                    ],
+                    "contre": [
+                      "Tympan bombé orientant vers OMA"
+                    ]
+                  }
+                },
+                {
+                  "question": "Pneumonie",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre",
+                      "Respiration rapide"
+                    ],
+                    "contre": [
+                      "Pas de toux",
+                      "Auscultation normale",
+                      "Pas de signes de lutte"
+                    ]
+                  }
+                },
+                {
+                  "question": "Infection urinaire",
+                  "reponse": {
+                    "pour": [
+                      "Fièvre isolée possible chez nourrisson"
+                    ],
+                    "contre": [
+                      "Présence d’un foyer ORL évident"
+                    ]
+                  }
+                },
+                {
+                  "question": "Méningite",
+                  "reponse": {
+                    "pour": [
+                      "Âge à risque",
+                      "Fièvre, irritabilité"
+                    ],
+                    "contre": [
+                      "Pas de convulsions",
+                      "Pas de raideur nuque",
+                      "Bon état hydratation"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demanderiez-vous ?",
+                  "reponse": [
+                    "Examen clinique complet avec otoscopie",
+                    "Saturation O2",
+                    "NFS, CRP si fièvre > 39°C ou mauvais état général",
+                    "ECBU par cathéter si pas de foyer",
+                    "Radio thorax si signes pulmonaires"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Otite moyenne aiguë droite sur surinfection post-virale"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": {
+                    "immediat": [
+                      "Paracétamol 15 mg/kg toutes les 6h",
+                      "Hydratation orale fractionnée",
+                      "Lavage de nez régulier",
+                      "Amoxicilline forte dose (80–90 mg/kg/j) en 2 prises"
+                    ]
+                  }
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Surveillance de la température et de l’état général",
+                    "Réévaluation clinique dans 48 heures",
+                    "Informer parents sur signes d’alarme (somnolence, convulsions, purpura, détresse respi)",
+                    "Éviction crèche jusqu’à apyrexie"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

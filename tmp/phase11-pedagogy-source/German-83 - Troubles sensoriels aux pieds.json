@@ -1,0 +1,539 @@
+{
+  "title": "German-83 - Troubles sensoriels aux pieds",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Stirni, 52 ans, plombier, consulte en cabinet de médecine générale pour des troubles de la sensibilité aux pieds.",
+    "vitals": {
+      "ta": "145/95 mmHg",
+      "fc": "72 bpm",
+      "temperature": "37,2°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Plainte principale",
+          "binaryOnly": true,
+          "details": [
+            "[Troubles de la sensibilité aux pieds]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Début et évolution",
+          "binaryOnly": false,
+          "details": [
+            "Début des symptômes [Remarqué vraiment il y a 2 mois]",
+            "Probable durée réelle [Probablement déjà présent depuis plus longtemps]",
+            "Évolution [Progressive]",
+            "Facteur déclencheur [Aucun identifié]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques des troubles sensitifs",
+          "binaryOnly": false,
+          "details": [
+            "Type de sensations [Fourmillements en position assise]",
+            "À la marche [Parfois comme engourdi]",
+            "Picotements [Oui]",
+            "Engourdissement [Oui]",
+            "Distribution [En chaussettes]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Extension et localisation",
+          "binaryOnly": false,
+          "details": [
+            "Limite supérieure [Juste au-dessus des chevilles]",
+            "Bilatéral [Oui]",
+            "Symétrique [Oui]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Facteurs modulants",
+          "binaryOnly": false,
+          "details": [
+            "Facteurs améliorants [Aucun]",
+            "Facteurs aggravants [Aucun]",
+            "Variation selon l'heure [Non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Symptômes moteurs associés",
+          "binaryOnly": false,
+          "details": [
+            "Perte de force [Non]",
+            "Difficultés à la marche [Non]",
+            "Chutes [Non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Douleur",
+          "binaryOnly": false,
+          "details": [
+            "Présence de douleur [Oui et non, c'est très désagréable]",
+            "Type [Sensation désagréable plutôt que vraie douleur]",
+            "Intensité [Modérée]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Plaie au pied",
+          "binaryOnly": false,
+          "details": [
+            "Présence d'une plaie [Oui]",
+            "Circonstances [S'est planté une épine il y a 3 semaines]",
+            "Cicatrisation [Pas encore bien cicatrisée]",
+            "Localisation [Plante du pied]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Suivi médical",
+          "binaryOnly": false,
+          "details": [
+            "Dernière consultation [Il y a des années]",
+            "Raison de l'absence de suivi [Ancien médecin a fermé son cabinet]",
+            "Attitude face aux consultations [N'aime pas aller chez le médecin]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Symptômes visuels",
+          "binaryOnly": false,
+          "details": [
+            "Troubles visuels [Non]",
+            "Port de lunettes [Lunettes de lecture seulement]",
+            "Vision floue [Non]",
+            "Baisse d'acuité [Non]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes urinaires",
+          "binaryOnly": false,
+          "details": [
+            "Jet urinaire [Plus faible qu'avant]",
+            "Urines mousseuses [Non]",
+            "Polyurie [Non mentionnée]",
+            "Pollakiurie [Non mentionnée]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes cardiovasculaires",
+          "binaryOnly": false,
+          "details": [
+            "Palpitations [De temps en temps]",
+            "Douleurs thoraciques [Non]",
+            "Dyspnée [Non]",
+            "État depuis l'infarctus [Sinon OK]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents personnels",
+          "binaryOnly": false,
+          "details": [
+            "[Infarctus du myocarde il y a 3 ans]",
+            "[Fracture de jambe dans l'enfance]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Facteurs de risque cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Diabète [Non diagnostiqué jusqu'à présent]",
+            "Hypertension [Oui, sous traitement]",
+            "Hypercholestérolémie [Oui, sous traitement]",
+            "Tabagisme [Ex-fumeur, 40 paquets-années, arrêt après l'infarctus]",
+            "Antécédents familiaux [Positifs - voir plus bas]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Revue des systèmes - Neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [Non]",
+            "Vision [Normale avec lunettes]",
+            "Audition [Normale]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Revue des systèmes - Digestif",
+          "binaryOnly": false,
+          "details": [
+            "Dysphagie [Non]",
+            "Digestion [Normale]",
+            "Transit intestinal [Parfois diarrhée]",
+            "Poids [Stable]",
+            "Appétit [Normal]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Revue des systèmes - Respiratoire",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée [Non]",
+            "Toux [Non]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Revue des systèmes - Locomoteur",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs articulaires [Oui, en rapport avec l'âge]",
+            "Raideur matinale [Non spécifiée]",
+            "Gonflement articulaire [Non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "État cutané et œdèmes",
+          "binaryOnly": false,
+          "details": [
+            "Peau [Sèche]",
+            "Œdèmes des membres inférieurs [Non]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Fonction sexuelle",
+          "binaryOnly": false,
+          "details": [
+            "[Dysfonction érectile]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Médicaments actuels",
+          "binaryOnly": false,
+          "details": [
+            "[Aténolol (bêta-bloquant)]",
+            "[Simvastatine (statine)]",
+            "[AAS (aspirine)]"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Habitudes et toxiques",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [Ex-fumeur, 2 paquets/jour pendant 20 ans, arrêt il y a 3 ans]",
+            "Alcool [3 bières/jour]",
+            "Digestif [Parfois un schnaps après le repas]",
+            "Drogues [Non]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "details": [
+            "[Aucune allergie connue]"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Frère [Infarctus à 47 ans]",
+            "Mère [Décédée d'infarctus à 68 ans]",
+            "Diabète familial [Non mentionné]"
+          ]
+        },
+        {
+          "id": "a26",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Plombier]",
+            "Situation familiale [Divorcé]",
+            "Enfants [Aucun]",
+            "Activité physique [Peu d'exercice]"
+          ]
+        },
+        {
+          "id": "a27",
+          "text": "Questions supplémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Autres préoccupations [À explorer]",
+            "Questions du patient [À encourager]"
+          ]
+        },
+        {
+          "id": "a28",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Palpation cardiaque [Choc de pointe normal]",
+            "Auscultation cardiaque [B1 B2 réguliers, pas de souffle]",
+            "Auscultation des carotides [Pas de souffle]"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Status vasculaire périphérique",
+          "binaryOnly": false,
+          "details": [
+            "Pouls pédieux [Présents bilatéralement]",
+            "Pouls tibial postérieur [Présents bilatéralement]",
+            "Pouls poplités [Présents]",
+            "Temps de recoloration capillaire [Normal]",
+            "Température des pieds [Normale]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Inspection des pieds",
+          "binaryOnly": false,
+          "details": [
+            "Aspect général [Peau sèche]",
+            "Déformations [Aucune]",
+            "Ongles [Normaux]",
+            "Espaces interdigitaux [Normaux]",
+            "Hyperkératose [Possible]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Inspection de la plaie",
+          "binaryOnly": false,
+          "details": [
+            "Localisation [Plante du pied]",
+            "Aspect [Cicatrisation retardée]",
+            "Signes d'infection [À évaluer]",
+            "Tissus nécrotiques [À évaluer]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen de la sensibilité",
+          "binaryOnly": false,
+          "details": [
+            "Sensibilité vibratoire (diapason) [Diminuée distalement]",
+            "Sensibilité au monofilament [Diminuée]",
+            "Sensibilité thermique [À tester]",
+            "Sensibilité douloureuse [Diminuée]",
+            "Distribution [En chaussettes, symétrique]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen des réflexes",
+          "binaryOnly": false,
+          "details": [
+            "Réflexes achilléens [Diminués ou absents]",
+            "Réflexes rotuliens [À tester]",
+            "Babinski [Négatif bilatéralement]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Fond d'œil",
+          "binaryOnly": false,
+          "details": [
+            "Rétinopathie diabétique [À rechercher]",
+            "Signes d'hypertension [À rechercher]"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": false,
+          "details": [
+            "[Neuropathie diabétique périphérique]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "[Neuropathie alcoolique]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Neuropathie autonome]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Artériopathie oblitérante des membres inférieurs",
+                    "cause": "□ AOMI]",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "[Carence en vitamine B12]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Bilan biologique spécifique"
+                  },
+                  {
+                    "text": "[Hypothyroïdie]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  },
+                  {
+                    "text": "[Neuropathie urémique]",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Autres problèmes identifiés",
+          "binaryOnly": false,
+          "details": [
+            "[Hypertension mal contrôlée post-infarctus]",
+            "[Dysfonction érectile d'origine vasculaire ou médicamenteuse]",
+            "[Probable hypertrophie prostatique]",
+            "[Consommation d'alcool excessive]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires",
+          "binaryOnly": false,
+          "details": [
+            "Glycémie à jeun",
+            "HbA1c",
+            "Bilan lipidique complet",
+            "Tests hépatiques",
+            "Créatinine et DFG",
+            "Microalbuminurie",
+            "TSH",
+            "Vitamine B12",
+            "FSC"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Orientations spécialisées",
+          "binaryOnly": false,
+          "details": [
+            "Ophtalmologue [Pour dépistage rétinopathie]",
+            "Diabétologue/endocrinologue [Pour équilibre diabétique]",
+            "Consultation plaies et cicatrisation",
+            "Urologue [Pour dysfonction érectile et troubles mictionnels]",
+            "Éventuellement angiologue [Si suspicion AOMI]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Ajustement du traitement antihypertenseur",
+            "Discussion sur la consommation d'alcool",
+            "Soins de la plaie du pied",
+            "Conseils sur le chaussage adapté",
+            "Éducation sur l'auto-examen des pieds"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Examens complémentaires additionnels",
+          "binaryOnly": false,
+          "details": [
+            "Échographie Doppler des artères des membres inférieurs",
+            "ECG de contrôle",
+            "Éventuellement EMG si doute diagnostique"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Mesures préventives",
+          "binaryOnly": false,
+          "details": [
+            "Arrêt définitif du tabac (déjà fait)",
+            "Réduction de la consommation d'alcool",
+            "Contrôle glycémique strict",
+            "Contrôle tensionnel optimal",
+            "Activité physique régulière adaptée",
+            "Surveillance podologique régulière"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Éducation du patient",
+          "binaryOnly": false,
+          "details": [
+            "Importance du suivi médical régulier",
+            "Risques liés au diabète non traité",
+            "Prévention des complications du pied diabétique",
+            "Signes d'alarme à surveiller"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

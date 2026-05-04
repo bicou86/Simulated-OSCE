@@ -1,0 +1,649 @@
+{
+  "title": "German-49 - Gonflement abdominal",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "M. Hugentobler, 53 ans, administrateur en surpoids, consulte pour un gonflement abdominal"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom et fonction",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Début par question ouverte",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Localisation précise du gonflement",
+          "binaryOnly": false,
+          "details": [
+            "[Patient montre plutôt la région inguinale]",
+            "[Pas vraiment abdominal mais plutôt au niveau de l'aine]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Caractéristiques temporelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [remarqué pour la première fois il y a 3 mois]",
+            "Évolution [a augmenté de taille]",
+            "Variations journalières [non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes douloureux",
+          "binaryOnly": false,
+          "details": [
+            "[Non douloureux]",
+            "[Pas de douleur même à la palpation]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Description détaillée du gonflement",
+          "binaryOnly": false,
+          "details": [
+            "Couleur [normale, pas de rougeur]",
+            "Forme [arrondie]",
+            "Consistance [molle]",
+            "Mobilité [peu mobile]",
+            "Fluctuation [non]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Latéralité",
+          "binaryOnly": false,
+          "details": [
+            "[Seulement à droite]",
+            "[Côté gauche normal]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Gêne fonctionnelle",
+          "binaryOnly": false,
+          "details": [
+            "[Gêne lors du jardinage]",
+            "[Dérange lors de la flexion]",
+            "[Aspect inesthétique]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Réductibilité du gonflement",
+          "binaryOnly": false,
+          "details": [
+            "[Non réductible]",
+            "[Ne rentre pas quand on appuie dessus]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Facteurs d'amélioration/aggravation",
+          "binaryOnly": false,
+          "details": [
+            "Position debout [augmente]",
+            "Position couchée [pas de changement]",
+            "Efforts de poussée [devient plus gros]",
+            "Toux/éternuement [augmente de volume]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents de hernie",
+          "binaryOnly": false,
+          "details": [
+            "[Jamais eu de hernie auparavant]",
+            "[Première fois]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Symptômes digestifs - Transit",
+          "binaryOnly": false,
+          "details": [
+            "Constipation [parfois constipé]",
+            "Consistance des selles [plutôt molles]",
+            "Couleur/odeur [normales]",
+            "Sang dans les selles [non]"
+          ]
+        },
+        {
+          "id": "a13",
+          "text": "Symptômes digestifs - Autres",
+          "binaryOnly": false,
+          "details": [
+            "Sensation de plénitude [oui]",
+            "Ballonnements [parfois]",
+            "Émission de gaz [normale]",
+            "Nausées/vomissements [non]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Signes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Perte de poids [non, poids constant et élevé]",
+            "Sueurs nocturnes [non]",
+            "Fatigue [non]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Signes inflammatoires locaux",
+          "binaryOnly": false,
+          "details": [
+            "Jambe rouge [non]",
+            "Plaie à la jambe [non]",
+            "Œdème des membres inférieurs [non]"
+          ]
+        },
+        {
+          "id": "a16",
+          "text": "Antécédents médicaux",
+          "binaryOnly": false,
+          "details": [
+            "Cardiovasculaires [hypercholestérolémie]",
+            "Métaboliques [crises de goutte]",
+            "Diabète [non]",
+            "Hypertension [non]"
+          ]
+        },
+        {
+          "id": "a17",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": false,
+          "details": [
+            "[Cholécystectomie]",
+            "Autres chirurgies abdominales [non]",
+            "Complications post-opératoires [non]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Médicaments actuels",
+          "binaryOnly": false,
+          "details": [
+            "[Allopurinol pour la goutte]",
+            "[Simvastatine pour le cholestérol]",
+            "Observance [bonne]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Allergies",
+          "binaryOnly": false,
+          "details": [
+            "[Acariens]",
+            "Médicamenteuses [non]",
+            "Alimentaires [non]"
+          ]
+        },
+        {
+          "id": "a20",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Alcool [2 bières par jour]",
+            "Tabac [non]",
+            "Drogues [non]"
+          ]
+        },
+        {
+          "id": "a21",
+          "text": "Revue des systèmes - Neurologique",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [non]",
+            "Vertiges [non]",
+            "Troubles visuels [non]",
+            "Troubles auditifs [non]"
+          ]
+        },
+        {
+          "id": "a22",
+          "text": "Revue des systèmes - Cardio-respiratoire",
+          "binaryOnly": false,
+          "details": [
+            "Dyspnée [non]",
+            "Toux [non]",
+            "Douleurs thoraciques [non]",
+            "Palpitations [non]"
+          ]
+        },
+        {
+          "id": "a23",
+          "text": "Revue des systèmes - Urogénital",
+          "binaryOnly": false,
+          "details": [
+            "Jet urinaire [moins fort qu'avant mais correct]",
+            "Pollakiurie [non]",
+            "Nycturie [non]",
+            "Brûlures mictionnelles [non]"
+          ]
+        },
+        {
+          "id": "a24",
+          "text": "Revue des systèmes - Locomoteur",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs articulaires [goutte occasionnelle]",
+            "Raideurs [non]",
+            "Gonflements articulaires [lors des crises de goutte]"
+          ]
+        },
+        {
+          "id": "a25",
+          "text": "État général et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "État général [bon]",
+            "Appétit [bon, aime la viande]",
+            "Sommeil [normal]"
+          ]
+        },
+        {
+          "id": "a26",
+          "text": "Activité physique",
+          "binaryOnly": false,
+          "details": [
+            "[Aquajogging occasionnel]",
+            "[Pas très régulier]",
+            "[Jardinage]"
+          ]
+        },
+        {
+          "id": "a27",
+          "text": "Habitudes alimentaires",
+          "binaryOnly": false,
+          "details": [
+            "[Aime la viande]",
+            "[Alimentation copieuse]",
+            "[Régime riche en protéines]"
+          ]
+        },
+        {
+          "id": "a28",
+          "text": "Anamnèse sociale et professionnelle",
+          "binaryOnly": false,
+          "details": [
+            "Profession [administrateur]",
+            "Port de charges lourdes [non, travail de bureau]",
+            "Situation familiale [marié]",
+            "Enfants [sans enfants]"
+          ]
+        },
+        {
+          "id": "a29",
+          "text": "Anamnèse sexuelle",
+          "binaryOnly": false,
+          "details": [
+            "[Rapports sexuels avec son épouse]",
+            "[Pas de contraception]",
+            "[Pas de troubles sexuels]"
+          ]
+        },
+        {
+          "id": "a30",
+          "text": "Antécédents familiaux",
+          "binaryOnly": false,
+          "details": [
+            "Cancers [non]",
+            "Lymphomes/leucémies [non]",
+            "[Mère 94 ans, en bonne santé]",
+            "[Père décédé d'AVC à 74 ans]"
+          ]
+        },
+        {
+          "id": "a31",
+          "text": "Inquiétudes du patient",
+          "binaryOnly": false,
+          "details": [
+            "[Craint que ce soit une tumeur]",
+            "[Demande si c'est grave]"
+          ]
+        },
+        {
+          "id": "a32",
+          "text": "Résumé et questions du patient",
+          "binaryOnly": false,
+          "details": [
+            "Résumé des points principaux",
+            "Vérification de la compréhension",
+            "[Y a-t-il d'autres symptômes non abordés ?]"
+          ]
+        },
+        {
+          "id": "a33",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse générale ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection des mains",
+          "binaryOnly": false,
+          "details": [
+            "Signes hépatiques (érythème palmaire, Dupuytren)",
+            "Hippocratisme digital",
+            "Astérixis"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen abdominal - Patient debout",
+          "binaryOnly": false,
+          "details": [
+            "Inspection générale de l'abdomen",
+            "Asymétrie visible",
+            "Masse évidente",
+            "[Patient montre le gonflement inguinal]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Manœuvres spécifiques debout",
+          "binaryOnly": false,
+          "details": [
+            "Faire tousser le patient",
+            "Observation de l'augmentation du gonflement",
+            "Manœuvre de Valsalva"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Auscultation abdominale",
+          "binaryOnly": false,
+          "details": [
+            "[Bruits intestinaux présents et normaux]",
+            "Auscultation sur le gonflement",
+            "Recherche de souffle vasculaire"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Palpation abdominale générale",
+          "binaryOnly": false,
+          "details": [
+            "Palpation des 9 quadrants",
+            "Recherche d'hépatomégalie [non]",
+            "Recherche de splénomégalie [non]",
+            "Masses abdominales [non]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Palpation inguinale spécifique",
+          "binaryOnly": false,
+          "details": [
+            "Palpation bilatérale des régions inguinales",
+            "[Gonflement mou à droite]",
+            "[Non réductible]",
+            "Recherche d'impulsion à la toux"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen spécifique des orifices herniaires",
+          "binaryOnly": false,
+          "details": [
+            "Orifice inguinal externe",
+            "Orifice inguinal interne",
+            "Canal inguinal",
+            "Distinction hernie directe/indirecte"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen du scrotum",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du scrotum",
+            "Palpation testiculaire bilatérale",
+            "Transillumination si indiquée"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Mesure de la tension artérielle",
+          "binaryOnly": true
+        },
+        {
+          "id": "e10",
+          "text": "Toucher rectal si indiqué",
+          "binaryOnly": false,
+          "details": [
+            "Tonus sphinctérien",
+            "Prostate",
+            "Masses rectales"
+          ]
+        },
+        {
+          "id": "e11",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen clinique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal communiqué au patient",
+          "binaryOnly": false,
+          "details": [
+            "[Hernie inguinale droite]"
+          ]
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "binaryOnly": false,
+          "details": [
+            "Hernie inguinale",
+            "Adénopathie inguinale",
+            "Lipome",
+            "Tumeur des tissus mous",
+            "Hydrocèle",
+            "Varicocèle"
+          ],
+          "ddSection": {
+            "categories": [
+              {
+                "name": "En faveur d'une hernie inguinale",
+                "items": [
+                  {
+                    "text": "Localisation inguinale typique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Augmentation à l'effort et à la toux",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Non douloureuse",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Consistance molle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              },
+              {
+                "name": "Contre les autres diagnostics",
+                "items": [
+                  {
+                    "text": "Adénopathie : pas de signes inflammatoires, pas d'infection",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NFS, CRP, ECBU, hémocultures selon contexte"
+                  },
+                  {
+                    "text": "Tumeur : évolution lente, consistance molle",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT abdominal, marqueurs tumoraux"
+                  },
+                  {
+                    "text": "Hydrocèle : localisation scrotale absente",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Échographie inguinale pour confirmation",
+            "Bilan préopératoire si chirurgie envisagée"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Examens d'imagerie",
+                "content": "• Échographie inguinale : confirmation diagnostique\n• Évaluation du contenu herniaire\n• Recherche de complications"
+              },
+              {
+                "title": "Bilan biologique",
+                "content": "• NFS, coagulation (préopératoire)\n• Glycémie (facteur de risque)\n• Bilan hépatique (consommation d'alcool)\n• Fonction rénale"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Options thérapeutiques expliquées",
+          "binaryOnly": false,
+          "details": [
+            "Traitement chirurgical recommandé",
+            "Techniques : laparoscopique vs ouverte",
+            "Avantages et inconvénients de chaque technique",
+            "Délai recommandé"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Complications possibles",
+          "binaryOnly": false,
+          "details": [
+            "Risque d'incarcération",
+            "Risque d'étranglement",
+            "Complications post-opératoires",
+            "Récidive possible"
+          ],
+          "redflagsSection": [
+            {
+              "text": "Douleur soudaine et intense au niveau de la hernie"
+            },
+            {
+              "text": "Hernie devenant irréductible et douloureuse"
+            },
+            {
+              "text": "Nausées et vomissements associés"
+            },
+            {
+              "text": "Arrêt des matières et des gaz"
+            },
+            {
+              "text": "Rougeur et chaleur locale"
+            }
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Prise en charge des facteurs de risque",
+          "binaryOnly": false,
+          "details": [
+            "Perte de poids recommandée",
+            "Éviter les efforts de soulèvement",
+            "Traitement de la constipation",
+            "Réduction de la consommation d'alcool"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Aborder la problématique alcoolique",
+          "binaryOnly": false,
+          "details": [
+            "Évaluation de la consommation",
+            "Impact sur la santé",
+            "Proposition d'aide si nécessaire"
+          ]
+        },
+        {
+          "id": "m8",
+          "text": "Référence au chirurgien",
+          "binaryOnly": false,
+          "details": [
+            "Organisation de la consultation chirurgicale",
+            "Transmission des informations pertinentes",
+            "Délai de prise en charge"
+          ]
+        },
+        {
+          "id": "m9",
+          "text": "Rassurer le patient",
+          "binaryOnly": false,
+          "details": [
+            "Ce n'est pas une tumeur",
+            "Pathologie bénigne et fréquente",
+            "Excellent pronostic après traitement"
+          ]
+        },
+        {
+          "id": "m10",
+          "text": "Plan de suivi",
+          "binaryOnly": false,
+          "details": [
+            "Consultation de contrôle après échographie",
+            "Suivi post-opératoire",
+            "Surveillance des facteurs de risque"
+          ]
+        },
+        {
+          "id": "m11",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge générale cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

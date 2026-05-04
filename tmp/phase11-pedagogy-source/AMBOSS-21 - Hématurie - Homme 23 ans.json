@@ -1,0 +1,566 @@
+{
+  "title": "AMBOSS-21 - Hématurie - Homme 23 ans",
+  "context": {
+    "setting": "Service d'urgence",
+    "patient": "Matthew Black, homme de 23 ans, consultant pour sang dans les urines",
+    "vitals": {
+      "temperature": "37°C",
+      "ta": "135/85 mmHg",
+      "fc": "80 bpm",
+      "fr": "14/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "J'ai du sang dans mes urines"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation de l'hématurie",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a 2 jours]",
+            "Constant/intermittent [Mon urine est vraiment rouge à chaque fois que j'urine. Ça me fait peur]",
+            "Événements précipitants [Hmm... Je ne suis pas sûr. J'ai eu un rhume il y a 3 semaines. Mais je ne pense pas que ça ait un rapport]",
+            "Progression [C'est pareil depuis 2 jours]",
+            "Épisodes antérieurs [Non, jamais]",
+            "Facteurs améliorants [Rien]",
+            "Facteurs aggravants [Rien]",
+            "Symptômes associés [J'ai l'impression d'avoir encore un peu de toux]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Début [Il y a 3 semaines quand j'ai eu ce rhume]",
+            "Progression [Non]",
+            "Expectoration [Non]",
+            "Hémoptysie [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Recherche de symptômes spécifiques",
+          "binaryOnly": false,
+          "details": [
+            "Céphalées [Non]",
+            "Œdème des chevilles [Maintenant que vous le dites, mes jambes sont un peu gonflées depuis quelques jours, oui. J'ai même eu du mal à enfiler mes chaussures ce matin]",
+            "Fièvre/frissons [Seulement quand j'ai eu le rhume il y a 3 semaines]",
+            "Sueurs nocturnes [Non]",
+            "Fatigue [Je me sens un peu fatigué depuis 2 semaines]",
+            "Éruption cutanée/changements cutanés [Non]",
+            "Douleur thoracique [Non]",
+            "Dyspnée [Non]",
+            "Douleurs articulaires [Non]",
+            "Problèmes urinaires/changements de fréquence [Je pense que j'ai uriné un peu moins cette semaine que d'habitude]",
+            "Variations pondérales [Je n'ai pas remarqué de changement de poids]",
+            "Mal de gorge [En ce moment je n'ai pas mal à la gorge. Il y a 3 semaines quand j'avais mon rhume, ma gorge était vraiment douloureuse par contre]",
+            "Douleur dorsale [Les côtés de mon dos me font mal depuis 3 jours, oui]",
+            "Nez qui coule [Eh bien, mon nez est toujours un peu bouché]",
+            "Mal d'oreille [Non]",
+            "Changements de vision [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a6",
+          "text": "Allergies",
+          "binaryOnly": true,
+          "patientComment": "Aucune"
+        },
+        {
+          "id": "a7",
+          "text": "Médicaments",
+          "binaryOnly": true,
+          "patientComment": "Juste mon spray nasal salin quotidien"
+        },
+        {
+          "id": "a8",
+          "text": "Hospitalisations et antécédents chirurgicaux",
+          "binaryOnly": true,
+          "details": [
+            "Hospitalisations [Jamais]",
+            "Antécédents chirurgicaux [Aucun]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Contacts malades",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a10",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Tout le monde dans ma famille est vraiment en bonne santé"
+        },
+        {
+          "id": "a11",
+          "text": "Habitudes et mode de vie",
+          "binaryOnly": false,
+          "details": [
+            "Travail [Je viens de terminer ma licence, et maintenant je postule pour l'école de droit]",
+            "Domicile [Je viens de retourner vivre chez mes parents, mais c'est juste jusqu'à ce que je sois accepté à l'école de droit]",
+            "Alcool [Je prendrai une bière ou deux le week-end, mais je ne bois généralement pas pendant la semaine]",
+            "Drogues récréatives [Jamais]",
+            "Tabac [Oui. Je fume environ un paquet par jour depuis 5 ans]",
+            "Exercice [Je faisais de la natation à l'université, et je vais encore nager quelques fois par semaine habituellement. Mais ces 3 dernières semaines j'étais trop fatigué]"
+          ]
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Mesures d'hygiène",
+          "binaryOnly": true,
+          "details": [
+            "Lavage des mains",
+            "Respect de la pudeur avec drap"
+          ]
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la tête, yeux, oreilles, nez et gorge",
+          "binaryOnly": false,
+          "details": [
+            "Inspection de la tête",
+            "Palpation de la tête",
+            "Inspection des conjonctives",
+            "Inspection des oreilles",
+            "Palpation des oreilles",
+            "Otoscopie",
+            "Inspection du nez",
+            "Inspection de l'oropharynx"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen du cou",
+          "binaryOnly": true,
+          "details": [
+            "Palpation des ganglions lymphatiques de la tête et du cou"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen du dos",
+          "binaryOnly": true,
+          "details": [
+            "Recherche de douleur à l'angle costo-vertébral [Sensibilité légère bilatérale à l'angle costo-vertébral]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": true,
+          "details": [
+            "Auscultation cardiaque"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen thoracique",
+          "binaryOnly": false,
+          "details": [
+            "Inspection du thorax",
+            "Palpation du thorax",
+            "Percussion des champs pulmonaires",
+            "Auscultation pulmonaire",
+            "Recherche de frémitus"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen des extrémités",
+          "binaryOnly": true,
+          "details": [
+            "Recherche d'œdème déclive"
+          ]
+        },
+        {
+          "id": "e8",
+          "text": "Examen cutané",
+          "binaryOnly": true
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Glomérulonéphrites aiguës",
+                "items": [
+                  {
+                    "text": "Glomérulonéphrite post-streptococcique",
+                    "cause": "Arguments POUR:\n\t□ Syndrome néphritique typique : hématurie + HTA + œdèmes\n\t□ Infection ORL il y a 3 semaines (délai classique)\n\t□ Mal de gorge important lors du rhume (pharyngite streptococcique ?)\n\t□ Âge compatible (pic 5-12 ans mais possible jeune adulte)\n\t□ Fatigue et oligurie (atteinte rénale)\n\t□ Douleur flancs bilatérale (distension capsulaire)\n\t□ Évolution subaiguë typique",
+                    "test": "→ ASLO, complément C3, analyse urinaire"
+                  },
+                  {
+                    "text": "Néphropathie à IgA (maladie de Berger)",
+                    "cause": "Arguments POUR:\n\t□ Présentation néphritique similaire\n\t□ Âge typique (20-30 ans)\n\t□ Rhinite chronique (nez toujours bouché)\n\t□ Plus fréquente chez l'homme\nArguments CONTRE:\n\t□ Délai 3 semaines trop long (habituellement 2-5 jours post-infection)",
+                    "test": "→ Analyse urinaire, IgA sériques, biopsie rénale si doute"
+                  },
+                  {
+                    "text": "Granulomatose avec polyangéite (Wegener)",
+                    "cause": "Arguments POUR:\n\t□ Syndrome pneumo-rénal (toux persistante + néphrite)\n\t□ Rhinite chronique (90% des cas)\n\t□ Fatigue générale\n\t□ Atteinte rénale avec hématurie\nArguments CONTRE:\n\t□ Âge jeune (pic 65-74 ans)\n\t□ Pas de signes systémiques graves\n\t□ Histoire infectieuse récente plus évocatrice",
+                    "test": "→ c-ANCA, radiographie thoracique, biopsie si suspicion"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes d'hématurie",
+                "items": [
+                  {
+                    "text": "Pyélonéphrite",
+                    "cause": "Douleur flancs, mais pas de fièvre actuelle ni symptômes urinaires irritatifs",
+                    "test": "→ ECBU, hémocultures si fièvre"
+                  },
+                  {
+                    "text": "Lithiase urinaire",
+                    "cause": "Douleur flancs présente mais bilatérale, pas de colique typique",
+                    "test": "→ Échographie rénale, scanner abdominal sans contraste"
+                  },
+                  {
+                    "text": "Tuberculose génito-urinaire",
+                    "cause": "Toux persistante, mais pas de signes systémiques",
+                    "test": "→ Recherche BK urinaire × 3, Quantiféron"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires de première intention",
+          "binaryOnly": false,
+          "details": [
+            "Échographie rénale [peut montrer des reins augmentés de taille dans la glomérulonéphrite post-streptococcique]",
+            "Analyse d'urine avec microscopie [Le sédiment néphritique est un signe classique de glomérulonéphrite post-streptococcique, néphropathie à IgA et GPA]",
+            "FSC, VS [La FSC peut montrer une anémie dans la GPA et la glomérulonéphrite post-streptococcique. Une VS significativement élevée est typique de la GPA]",
+            "Urée, créatinine [La fonction rénale doit être évaluée dans tous les cas de suspicion de maladie rénale]",
+            "Titre antistreptolysine, niveaux de complément [La glomérulonéphrite post-streptococcique après une infection de la gorge entraîne typiquement un titre antistreptolysine élevé et un complément C3 diminué, qui est normal dans la néphropathie à IgA]",
+            "c-ANCA [positif chez près de 90% des patients avec GPA]"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Examens d'imagerie et biopsie",
+          "binaryOnly": false,
+          "details": [
+            "Radiographie thoracique [La radiographie/CT peut montrer de multiples lésions nodulaires cavitaires bilatérales dans la GPA]",
+            "Biopsie rénale [Dans la glomérulonéphrite post-streptococcique et la néphropathie à IgA, l'histoire du patient et l'évaluation en laboratoire suffisent généralement pour le diagnostic. Cependant, la biopsie rénale est le seul test diagnostique capable de vraiment confirmer ces diagnostics, et elle est donc utilisée dans les cas ambigus ou les maladies sévères ou progressives. Le diagnostic de GPA doit être confirmé par biopsie du tissu affecté, par exemple des reins]"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Communication avec le patient",
+          "binaryOnly": false,
+          "details": [
+            "Explications au patient des impressions diagnostiques préliminaires",
+            "Explication du plan de prise en charge",
+            "Utilisation d'un langage non médical et clarification des termes médicaux",
+            "Évaluation de l'accord du patient avec le plan diagnostique",
+            "Recherche des préoccupations et questions du patient",
+            "Ne pas répéter les manœuvres douloureuses pendant l'examen physique"
+          ]
+        },
+        {
+          "id": "m5",
+          "text": "Conseil et soutien",
+          "binaryOnly": false,
+          "details": [
+            "Conseil sur l'arrêt du tabac",
+            "Réaction appropriée au défi concernant la dialyse",
+            "Rassurer sur le pronostic généralement favorable",
+            "Soutien émotionnel face à l'inquiétude"
+          ],
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Traitement symptomatique",
+                "content": "• Restriction hydrosodée ( × 2g sel/jour)\n• Diurétiques de l'anse si œdèmes (furosémide)\n• Antihypertenseurs si HTA persistante (IEC/ARA2)\n• Repos au lit phase aiguë\n• Antibiothérapie\n• Érythromycine si allergie pénicilline\n• Évolution habituelle\n• Résolution spontanée 95% cas en 3-4 semaines\n• Normalisation C3 en 6-8 semaines\n• Hématurie microscopique peut persister 1-2 ans\n• Pronostic excellent chez l'adulte jeune"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Défi : Inquiétude sur la dialyse",
+          "content": "[Est-ce que j'aurai besoin de dialyse ?]"
+        },
+        {
+          "id": "cl2",
+          "text": "Réponse type du candidat",
+          "content": "M. Black, étant donné les symptômes que vous décrivez, je suis préoccupé par le fait que vos reins pourraient être affectés d'une certaine manière. Cependant, tous les patients atteints de maladie rénale ne doivent pas subir de dialyse, et selon la nature du problème, les reins peuvent souvent récupérer par eux-mêmes. Je suis content que vous soyez venu aujourd'hui. J'aimerais faire quelques tests pour déterminer exactement ce qui se passe, puis nous pourrons procéder à partir de là. Qu'est-ce que vous en pensez ?"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Œdème prenant le godet du membre inférieur",
+        "description": "Le tissu est nettement œdémateux au-dessus de la ligne jusqu'à laquelle la chaussette du patient avait précédemment été remontée. Après avoir appliqué une pression sur la zone prétibiale, l'indentation résiduelle caractéristique de l'œdème prenant le godet devient visible.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img1-Pitting edema of lower leg.jpg",
+        "id": "img1"
+      },
+      {
+        "title": "Vascularite nécrosante des doigts",
+        "description": "Main droite d'une patiente de 62 ans avec suspicion de granulomatose avec polyangéite.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img2-Necrotizing vasculitis of the fingers.jpg",
+        "id": "img2"
+      },
+      {
+        "title": "Vascularite nécrosante des orteils",
+        "description": "Pied gauche d'un patient de 62 ans avec vascularite nécrosante des orteils (I-IV). Le bilan a confirmé le diagnostic de granulomatose avec polyangéite.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img3-Necrotizing vasculitis of the toes.jpg",
+        "id": "img3"
+      },
+      {
+        "title": "Glomérulonéphrite dans la granulomatose avec polyangéite",
+        "description": "Photomicrographie d'un échantillon de biopsie rénale (coloration H&E, très fort grossissement). Un corpuscule rénal (centre de l'image) est visible avec une nécrose fibrinoïde rouge (éosinophilique) au pôle supérieur du glomérule (superposition bleue) et un infiltrat inflammatoire comprenant un mélange de neutrophiles (exemples indiqués par les pointes de flèches) et de lymphocytes (exemples indiqués par la superposition jaune). Ces résultats indiquent une glomérulonéphrite. Le diagnostic de granulomatose avec polyangéite a été posé sur la base d'autres résultats de biopsie non visibles ici (présence de vascularite nécrosante dans les vaisseaux sanguins rénaux de petite à moyenne taille), d'études de laboratoire supplémentaires (analyse d'urine) et de la présentation clinique (par exemple, arthralgies, atteinte oculaire).",
+        "data": "grilles_generees/html/images/AMBOSS-21-img4-Glomerulonephritis in granulomatosis with polyangiitis.jpg",
+        "id": "img4"
+      },
+      {
+        "title": "Vascularite nécrosante rénale dans la granulomatose avec polyangéite",
+        "description": "Photomicrographie d'un échantillon de biopsie rénale (coloration H&E, grossissement moyen). Un vaisseau sanguin rénal de taille moyenne est visible avec infiltration de neutrophiles (exemples indiqués par les pointes de flèches) et une zone de nécrose fibrinoïde (stries rouges ; superposition jaune), indiquant une vascularite nécrosante. Il y a également une abondance d'histiocytes extravasculaires (cellules épithélioïdes ; exemples indiqués par les flèches) et d'infiltrats lymphoplasmocytaires (exemples indiqués par la superposition bleue) formant des granulomes en palissade.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img5-Renal necrotizing vasculitis in granulomatosis with polyangiitis.jpg",
+        "id": "img5"
+      },
+      {
+        "title": "Glomérulonéphrite post-infectieuse",
+        "description": "Image microscopique d'une biopsie rénale (coloration PAS, fort grossissement). Un corpuscule rénal entouré de nombreux tubules peut être vu au centre de l'image. Parce que le corpuscule rénal est nettement élargi, l'espace entre les capillaires glomérulaires et la couche pariétale de la capsule de Bowman (contour pointillé noir) est rétréci. Au sein du glomérule, il y a une hypercellularité due à la prolifération des cellules endothéliales (pointes de flèches jaunes) et des cellules mésangiales (pointes de flèches noires). Un infiltrat inflammatoire, principalement des neutrophiles (pointes de flèches bleues) et des monocytes (pointes de flèches blanches), est également présent. En conséquence, les lumières des capillaires ne sont pas clairement identifiables. C'est l'apparence histopathologique de la glomérulonéphrite post-infectieuse.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img6-Postinfectious glomerulonephritis.jpg",
+        "id": "img6"
+      },
+      {
+        "title": "Néphropathie à IgA",
+        "description": "Photomicrographie de tissu rénal (coloration PAS). Un glomérule entouré de nombreux tubules est visible au centre de chaque image. Il y a une prolifération de cellules mésangiales (exemples marqués par des cercles jaunes) avec dépôt de matrice extracellulaire au sein des glomérules. Dans la néphropathie à IgA, ces changements peuvent aller de focaux segmentaires (exemples indiqués par des flèches noires) à diffus (exemples indiqués par des pointes de flèches jaunes). C'est l'apparence histopathologique caractéristique de la néphropathie à IgA. Contours bleus : Capillaires glomérulaires.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img7-IgA nephropathy.jpg",
+        "id": "img7"
+      },
+      {
+        "title": "Cylindres hématiques dans le sédiment urinaire",
+        "description": "Photomicrographie du sédiment urinaire (microscopie à contraste de phase). Un cylindre tubulaire (superposition bleue) est visible au centre de l'image. Le cylindre est composé de nombreux globules rouges, identifiables par leur forme biconvexe caractéristique (exemples soulignés en jaune), dans une matrice de fibrine et de protéines plasmatiques. Plusieurs cellules épithéliales entourant le cylindre hématique sont également visibles. Les cylindres hématiques dans le sédiment urinaire sont typiquement observés dans la glomérulonéphrite.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img8-Red blood cell (RBC) casts in urine sediment.jpg",
+        "id": "img8"
+      },
+      {
+        "title": "Nodules pulmonaires cavitaires 1/2",
+        "description": "CT thoracique (avec contraste ; plan axial ; fenêtre pulmonaire) d'un patient avec antécédent de granulomatose avec polyangéite. Un nodule pulmonaire cavitaire à paroi épaisse (superposition) est visible dans l'apex pulmonaire droit. La granulomatose avec polyangéite (GPA) est une vascularite nécrosante c-ANCA positive multisystémique qui implique les vaisseaux sanguins de petite à moyenne taille et montre une prédilection pour le système respiratoire et les reins. Les nodules pulmonaires sont fréquents et peuvent se caviter. La GPA peut également se manifester par une consolidation pulmonaire, une hémorragie et des opacités interstitielles. L'atteinte trachéale peut entraîner une sténose sous-glottique. LBV : veine brachiocéphalique gauche ; RBV : veine brachiocéphalique droite ; T : trachée.",
+        "data": "grilles_generees/html/images/AMBOSS-21-img9-Cavitary lung nodules 1:2.jpg",
+        "id": "img9"
+      }
+    ],
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Matthew Black",
+      "age": "23 ans",
+      "contexte": "Jeune diplômé consultant aux urgences pour hématurie macroscopique",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai du sang dans mes urines.",
+        "autreChose": "Ça me fait vraiment peur."
+      },
+      "consignes": [
+        "Quand l'examinateur tapote doucement sur les côtés de votre dos autour de la partie inférieure de votre cage thoracique, dire que ça fait un peu mal.",
+        "Vous n'êtes pas au courant de la signification des termes médicaux (ex: échographie) et demandez des clarifications si l'examinateur les utilise.",
+        "Défi : Demander 'Est-ce que j'aurai besoin de dialyse ?'"
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Hématurie macroscopique depuis 2 jours",
+          "Urine rouge à chaque miction",
+          "Très inquiet et effrayé",
+          "Pas d'amélioration",
+          "Premier épisode"
+        ],
+        "symptomesAssocies": [
+          "Œdème des chevilles depuis quelques jours",
+          "Difficulté à enfiler chaussures ce matin",
+          "Fatigue depuis 2 semaines",
+          "Toux persistante depuis rhume",
+          "Oligurie subjective cette semaine",
+          "Douleur flancs bilatérale depuis 3 jours"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Paraître inquiet et effrayé",
+          "Insister sur la peur du sang dans urines",
+          "Mentionner rhume avec mal de gorge sévère il y a 3 semaines",
+          "Demander clarifications termes médicaux",
+          "Exprimer inquiétude sur dialyse"
+        ],
+        "durantStatus": [
+          "Douleur légère percussion angles costo-vertébraux",
+          "Œdème visible chevilles",
+          "TA légèrement élevée (135/85)",
+          "Reste de l'examen normal",
+          "Coopération totale"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 23 ans avec syndrome néphritique aigu typique : hématurie macroscopique + HTA + œdèmes. Histoire très évocatrice de glomérulonéphrite post-streptococcique : pharyngite il y a 3 semaines (délai classique), âge compatible, présentation typique. Diagnostics différentiels : néphropathie IgA (délai trop long), GPA (peu probable à cet âge). Pronostic excellent avec récupération complète habituelle.",
+      "rolesInterventions": [
+        "Analyse urine : hématurie +++, protéinurie ++, cylindres hématiques",
+        "ASLO : 800 UI/mL (N < 200)",
+        "C3 : 45 mg/dL (N: 90-180) - abaissé",
+        "C4 : 25 mg/dL (N: 10-40) - normal",
+        "Créatinine : 1.8 mg/dL (légèrement élevée)",
+        "Échographie : reins taille augmentée, échostructure normale"
+      ],
+      "pointsCles": [
+        "Délai 3 semaines post-pharyngite = typique GNPS",
+        "Syndrome néphritique complet : hématurie + HTA + œdèmes",
+        "C3 bas + ASLO élevé = diagnostic GNPS quasi certain",
+        "Toujours rassurer : pronostic excellent jeune adulte",
+        "Pas de corticoïdes dans GNPS (différent autres GN)",
+        "Surveillance simple suffit souvent, hospitalisation si sévère"
+      ],
+      "pieges": [
+        "Confondre avec néphropathie IgA (délai 2-5 jours)",
+        "Prescrire antibiotiques systématiquement",
+        "Oublier de rassurer sur dialyse",
+        "Négliger surveillance TA et fonction rénale",
+        "Faire biopsie d'emblée (réserver cas atypiques)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic le plus probable",
+          "contenu": "Glomérulonéphrite aiguë post-streptococcique (GNAPS)"
+        },
+        {
+          "titre": "Glomérulonéphrite post-streptococcique",
+          "contenu": "Complication immunologique post-infectieuse du streptocoque β-hémolytique groupe A :",
+          "points": [
+            "Épidémiologie : 1-2% après pharyngite, 5-10% après impétigo",
+            "Délai : 1-3 semaines post-pharyngite, 3-6 semaines post-impétigo",
+            "Mécanisme : complexes immuns circulants → dépôts sous-épithéliaux",
+            "Activation complément → inflammation → syndrome néphritique",
+            "Souches néphritogènes : types M 1, 2, 4, 12, 18, 25",
+            "Âge : pic 5-12 ans, mais possible tout âge"
+          ]
+        },
+        {
+          "titre": "Syndrome néphritique aigu",
+          "contenu": "Triade classique avec manifestations inflammatoires glomérulaires :",
+          "points": [
+            "Hématurie : macroscopique (urines coca-cola) ou microscopique",
+            "HTA : rétention sodée → hypervolémie → HTA parfois sévère",
+            "Œdèmes : faciès le matin, chevilles le soir, prise poids",
+            "Protéinurie : habituellement < 3g/24h (non néphrotique)",
+            "Oligurie : diminution DFG par inflammation glomérulaire",
+            "Cylindres hématiques : pathognomoniques de glomérulonéphrite"
+          ]
+        },
+        {
+          "titre": "Diagnostic biologique GNAPS",
+          "contenu": "Marqueurs spécifiques confirmant l'étiologie post-streptococcique :",
+          "points": [
+            "ASLO : pic 3-5 semaines, > 200 UI/mL (pharyngite++)",
+            "Anti-DNase B : plus sensible pour impétigo",
+            "C3 bas : consommation par activation voie alterne (90% cas)",
+            "C4 normal : voie classique non activée",
+            "Normalisation C3 en 6-8 semaines = bon pronostic",
+            "Cylindres hématiques : globules rouges moulés tubules"
+          ]
+        },
+        {
+          "titre": "Néphropathie à IgA vs GNAPS",
+          "contenu": "Diagnostic différentiel principal avec timing différent :",
+          "points": [
+            "IgA : hématurie 1-3 jours post-infection (synpharyngitique)",
+            "GNAPS : délai 1-3 semaines (post-infectieux)",
+            "IgA : C3/C4 normaux, IgA sériques ↑ (50% cas)",
+            "GNAPS : C3 bas transitoire, ASLO élevé",
+            "IgA : récidives fréquentes avec infections",
+            "GNAPS : épisode unique habituel"
+          ]
+        },
+        {
+          "titre": "Granulomatose avec polyangéite",
+          "contenu": "Vascularite systémique avec atteinte ORL-poumons-reins :",
+          "points": [
+            "Triade : sinusite chronique + nodules pulmonaires + glomérulonéphrite",
+            "c-ANCA/PR3 positifs 90% formes généralisées",
+            "Âge : pic 65-74 ans (rare jeune adulte)",
+            "Évolution : subaiguë à chronique",
+            "Signes systémiques : fièvre, amaigrissement, arthralgies",
+            "Urgence thérapeutique si atteinte rénale rapidement progressive"
+          ]
+        },
+        {
+          "titre": "Évolution et pronostic GNAPS",
+          "contenu": "Généralement excellent chez l'enfant et l'adulte jeune :",
+          "points": [
+            "Résolution spontanée 95% cas en 3-4 semaines",
+            "Diurèse normale en 1-2 semaines",
+            "TA normale en 2-3 semaines",
+            "Hématurie microscopique peut persister 1-2 ans",
+            "Protéinurie traces acceptable jusqu'à 6 mois",
+            "Récupération rénale complète > 95% enfants, 90% adultes",
+            "IRC rare : 1% enfants, 10% adultes > 60 ans"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Restriction hydrosodée : < 2g sel/jour, liquides selon diurèse",
+        "Furosémide : 1-2 mg/kg si œdèmes importants",
+        "Antihypertenseurs si TA > 95e percentile :",
+        "- IEC/ARA2 première ligne (néphroprotection)",
+        "- Amlodipine si contre-indication ou insuffisant",
+        "Pénicilline V : 250-500 mg × 2/j × 10j si streptocoque actif",
+        "Prophylaxie familiale si cas récents streptocoque",
+        "Repos relatif phase aiguë (pas alitement strict)",
+        "Surveillance : TA, poids, diurèse, créatinine hebdomadaire"
+      ],
+      "examensComplementaires": [
+        "Analyse urine + sédiment : hématurie, protéinurie, cylindres",
+        "ASLO + anti-DNase B : confirmer infection streptococcique",
+        "C3, C4, CH50 : C3 bas typique, normalisation 6-8 semaines",
+        "Créatinine, urée : évaluer fonction rénale",
+        "FSC : anémie dilution possible",
+        "Échographie rénale : reins augmentés taille, échostructure normale",
+        "Culture gorge : recherche streptocoque actif",
+        "Biopsie rénale si : évolution atypique, C3 bas > 8 sem, IRC progressive"
+      ]
+    }
+  }
+}

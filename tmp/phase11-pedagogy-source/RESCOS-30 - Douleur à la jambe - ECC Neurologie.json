@@ -1,0 +1,514 @@
+{
+  "title": "RESCOS-30 - Douleur à la jambe - ECC Neurologie",
+  "context": {
+    "setting": "Service de neurologie",
+    "patient": "Homme de 64 ans, avocat, présentant des douleurs neuropathiques sévères de la jambe droite",
+    "vitals": {
+      "ta": "140/80 mmHg",
+      "fc": "70 bpm"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la douleur neuropathique",
+          "details": [
+            "Type de douleur [brûlures, décharges électriques, fourmillements]",
+            "Localisation précise [territoire radiculaire, dermatomal]",
+            "Intensité [échelle numérique 0-10, retentissement fonctionnel]",
+            "Évolution temporelle [continue, paroxystique, horaire]",
+            "Facteurs déclenchants [mouvements, positions, contact]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Analyse sémiologique neurologique",
+          "details": [
+            "Troubles sensitifs [hypoesthésie, allodynie, hyperalgésie]",
+            "Déficit moteur associé [faiblesse, amyotrophie]",
+            "Troubles trophiques [peau, phanères, articulations]",
+            "Réflexes ostéotendineux [abolition, asymétrie]",
+            "Signes d'irritation radiculaire [Lasègue, position antalgique]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Recherche d'étiologies rachidiennes",
+          "details": [
+            "Lombalgie associée [chronologie, caractéristiques]",
+            "Traumatisme rachidien [chute, accident, sport]",
+            "Efforts de soulèvement [port de charges lourdes]",
+            "Positions profesionnelles [station prolongée, flexions]",
+            "Antécédents chirurgicaux rachidiens"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a4",
+          "text": "Facteurs de risque et comorbidités",
+          "details": [
+            "Diabète [équilibre glycémique, complications]",
+            "Maladies auto-immunes [connectivites, vascularites]",
+            "Néoplasies [antécédents, métastases potentielles]",
+            "Maladies infectieuses [zona, VIH, hépatites]",
+            "Insuffisance rénale [neuropathie urémique]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a5",
+          "text": "Médicaments et toxiques",
+          "details": [
+            "Chimiothérapie [vincristine, cisplatine, taxanes]",
+            "Antibiotiques [métronidazole, quinolones]",
+            "Anticonvulsivants [phénytoïne]",
+            "Alcoolisme chronique [consommation, sevrage]",
+            "Produits industriels [solvants, métaux lourds]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a6",
+          "text": "Retentissement fonctionnel et qualité de vie",
+          "details": [
+            "Sommeil [réveils nocturnes, qualité du repos]",
+            "Activités professionnelles [arrêt, adaptation]",
+            "Mobilité [marche, position assise, conduite]",
+            "Humeur [dépression, anxiété liées à la douleur]",
+            "Traitements antérieurs [efficacité, effets secondaires]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a7",
+          "text": "Anamnèse en général - approche de la douleur neuropathique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection et observation de la marche",
+          "details": [
+            "Démarche antalgique [évitement appui, boiterie]",
+            "Amyotrophie [mollet, cuisse, asymétrie]",
+            "Troubles trophiques [peau sèche, dépilation, ongles]",
+            "Position spontanée [flexion hanche-genou antalgique]",
+            "Déformation des pieds [griffe d'orteils, cavus]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la sensibilité",
+          "details": [
+            "Cartographie sensitive [territoire L5, S1, dermatomal]",
+            "Sensibilité tactile [coton, pinceau, hypoesthésie]",
+            "Sensibilité douloureuse [piqûre, hyperalgésie, allodynie]",
+            "Sensibilité thermique [chaud/froid, thermoalgésie]",
+            "Sensibilité vibratoire [diapason 128 Hz, niveau lésionnel]",
+            "Sensibilité proprioceptive [position gros orteil]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e3",
+          "text": "Testing moteur analytique",
+          "details": [
+            "Dorsiflexion du pied [L4-L5, tibial antérieur]",
+            "Extension du gros orteil [L5, extenseur propre]",
+            "Flexion plantaire [S1, triceps sural, gastrocnémiens]",
+            "Éversion du pied [L5-S1, fibulaires]",
+            "Flexion des orteils [S1-S2, fléchisseurs]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Réflexes ostéotendineux des membres inférieurs",
+          "details": [
+            "Réflexe rotulien [L3-L4, comparaison bilatérale]",
+            "Réflexe achilléen [S1, abolition unilatérale?]",
+            "Réflexe cutané plantaire [Babinski, indifférent]",
+            "Réflexe médio-plantaire [S1-S2]",
+            "Polycinétisme, diffusion des réflexes"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e5",
+          "text": "Examen rachidien et signes radiculaires",
+          "details": [
+            "Inspection rachis [scoliose, cyphose, attitude antalgique]",
+            "Mobilité rachis lombaire [flexion, extension, latéralité]",
+            "Signe de Lasègue [SLR, angle de déclenchement]",
+            "Signe de Léri [extension genou en flexion hanche]",
+            "Palpation processus épineux [points douloureux]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Recherche de signes de compression médullaire",
+          "details": [
+            "Syndrome de la queue de cheval [anesthésie en selle]",
+            "Troubles sphinctériens [rétention, incontinence]",
+            "Réflexes cutanés abdominaux [étagement médullaire]",
+            "Signe de Babinski bilatéral",
+            "Niveau sensitif abdominal"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen vasculaire des membres inférieurs",
+          "details": [
+            "Pouls périphériques [fémoral, poplité, pédieux, tibial post]",
+            "Signes d'ischémie [pâleur, froideur, retard recoloration]",
+            "Trophicité cutanée [ulcération, cicatrisation]",
+            "Index de pression systolique [Doppler si disponible]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - examen neurologique périphérique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic topographique et syndromique",
+          "details": [
+            "Radiculopathie L5 ou S1 [territoire clinique cohérent]",
+            "Neuropathie distale vs radiculopathie",
+            "Mononeuropathie vs polyneuropathie",
+            "Atteinte sensitive pure vs sensitivomotrice"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic étiologique - causes de neuropathie douloureuse",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Causes rachidiennes",
+                "items": [
+                  {
+                    "text": "Hernie discale L4-L5 ou L5-S1",
+                    "cause": "Arguments POUR:\n\t□ Douleur radiculaire\n\t□ Position antalgique\n\t□ Lasègue positif\n\t□ Déficit moteur territorial",
+                    "test": "→ IRM lombaire, EMG"
+                  },
+                  {
+                    "text": "Canal lombaire étroit",
+                    "cause": "Arguments POUR:\n\t□ Âge >50 ans\n\t□ Claudication neurogène\n\t□ Amélioration en flexion",
+                    "test": "→ IRM lombaire, CT myélographie"
+                  }
+                ]
+              },
+              {
+                "name": "Neuropathies métaboliques",
+                "items": [
+                  {
+                    "text": "Neuropathie diabétique",
+                    "cause": "Arguments POUR:\n\t□ Diabète connu\n\t□ Douleurs distales bilatérales\n\t□ Troubles trophiques",
+                    "test": "→ Glycémie, HbA1c, EMG"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes",
+                "items": [
+                  {
+                    "text": "Neuropathie post-zostérienne",
+                    "cause": "Arguments POUR:\n\t□ Antécédent de zona\n\t□ Douleur territoriale\n\t□ Allodynie",
+                    "test": "→ Anamnèse, examen clinique"
+                  },
+                  {
+                    "text": "Méralgie paresthésique",
+                    "cause": "Arguments POUR:\n\t□ Face antéro-externe cuisse\n\t□ Compression nerf cutané",
+                    "test": "→ Topographie clinique, EMG"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics évoqués = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires spécialisés",
+          "details": [
+            "Électromyogramme [vitesses conduction, dénervation]",
+            "IRM lombaire [hernie discale, canal étroit, tumeur]",
+            "Bilan métabolique [glycémie, fonction rénale, vitamines]",
+            "Sérologies [VIH, hépatites, Lyme selon contexte]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement pharmacologique de la douleur neuropathique",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Première intention",
+                "content": "• Gabapentine : 300-1800mg/j en 3 prises, augmentation progressive × Évaluation à 2-4 semaines\n• Prégabaline : 75-300mg/j en 2 prises, alternative à la gabapentine × Efficacité plus rapide"
+              },
+              {
+                "title": "Deuxième intention",
+                "content": "• Antidépresseurs tricycliques : Amitriptyline 10-75mg/j, contre-indications cardiaques × Effet retardé 2-3 semaines\n• Duloxétine : 60mg/j, double action antidépressive × Surtout si neuropathie diabétique"
+              }
+            ]
+          },
+          "scoringRule": "Au moins deux classes thérapeutiques = oui, une = ±, aucune = non"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement étiologique selon la cause",
+          "details": [
+            "Chirurgie rachidienne [hernie discale, canal étroit]",
+            "Équilibration diabète [objectif HbA1c <7%]",
+            "Infiltrations épidurales [corticoïdes, anesthésiques]",
+            "Kinésithérapie [renforcement, mobilité]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m6",
+          "text": "Approches non médicamenteuses",
+          "details": [
+            "Kinésithérapie [mobilisation, renforcement]",
+            "Stimulation électrique transcutanée (TENS)",
+            "Thérapies cognitivo-comportementales",
+            "École du dos [éducation, ergonomie]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et adaptation thérapeutique",
+          "details": [
+            "Évaluation de l'efficacité [échelle douleur, fonctionnalité]",
+            "Surveillance effets secondaires [sédation, vertiges]",
+            "Adaptation posologique progressive",
+            "Critères d'arrêt ou changement de traitement"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m8",
+          "text": "Orientation et suivi spécialisé",
+          "details": [
+            "Centre de la douleur [si douleur réfractaire]",
+            "Neurochirurgie [si indication chirurgicale]",
+            "Rhumatologie [pathologie rachidienne]",
+            "Suivi neurologique [évolution, complications]"
+          ],
+          "scoringRule": "Au moins deux = oui, un = ±, aucun = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge douleur neuropathique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Homme de 64 ans",
+      "age": "64 ans",
+      "contexte": "Avocat présentant des douleurs neuropathiques sévères de la jambe droite",
+      "motifConsultation": {
+        "plaintePrincipale": "J'ai des douleurs terribles dans la jambe droite qui m'empêchent de dormir",
+        "autreChose": "C'est comme des décharges électriques qui descendent jusqu'au pied"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Douleurs neuropathiques intenses jambe droite depuis 6 mois",
+          "Type brûlures et décharges électriques",
+          "Trajet de la fesse jusqu'au pied",
+          "Intensité 8/10, permanente avec paroxysmes",
+          "Aggravation nocturne, réveils fréquents"
+        ],
+        "symptomesAssocies": [
+          "Fourmillements du pied droit",
+          "Sensation de pied 'mort', hypoesthésie",
+          "Faiblesse pour relever le pied",
+          "Difficultés à la marche prolongée",
+          "Aucun trouble sphinctérien"
+        ],
+        "circonstances": [
+          "Début progressif il y a 6 mois",
+          "Aggravation après port de charges lourdes",
+          "Position assise prolongée (profession d'avocat)",
+          "Amélioration relative en position couchée"
+        ],
+        "facteursDeclenchants": [
+          "Toux, éternuements augmentent la douleur",
+          "Mouvements brusques de flexion du dos",
+          "Station debout prolongée",
+          "Conduite automobile difficile"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Bonne santé générale",
+        "Pas de diabète ni de maladies auto-immunes",
+        "Pas d'antécédent de chirurgie rachidienne",
+        "Pas de notion de traumatisme récent"
+      ],
+      "habitudes": {
+        "profession": "Avocat, nombreuses heures assis au bureau",
+        "activite": "Sédentaire, arrêt du sport à cause des douleurs",
+        "tabac": "Non fumeur",
+        "alcool": "Consommation sociale modérée"
+      },
+      "traitements": {
+        "actuels": [
+          "Paracétamol 1g x 4/j (peu efficace)",
+          "Ibuprofène 400mg si douleurs majeures",
+          "Tramadol 50mg occasionnel"
+        ],
+        "anterieurs": [
+          "Kinésithérapie classique (amélioration temporaire)",
+          "Infiltrations épidurales (2 séances, bénéfice modéré)"
+        ]
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Position antalgique, évite flexion du tronc",
+          "Exprime la sévérité des douleurs nocturnes",
+          "Décrit précisément le trajet des douleurs",
+          "Mentionne l'impact professionnel important"
+        ],
+        "durantExamen": [
+          "Lasègue positif à 45° à droite",
+          "Hypoesthésie territoire L5 droit",
+          "Faiblesse dorsiflexion pied droit (4/5)",
+          "Abolition réflexe achilléen droit"
+        ],
+        "questionsAPoser": [
+          "Est-ce que je vais devoir être opéré ?",
+          "Ces médicaments vont-ils m'endormir pour travailler ?",
+          "Combien de temps cela va-t-il durer ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Homme 64 ans, avocat. Radiculalgie L5-S1 droite évoluant depuis 6 mois. Douleurs neuropathiques sévères (8/10) avec déficit moteur dorsiflexion pied, hypoesthésie, Lasègue positif 45°. Impact fonctionnel majeur. Échec traitements symptomatiques.",
+      "pointsCles": [
+        "Radiculopathie L5-S1 droite avec douleurs neuropathiques",
+        "Sémiologie neurologique cohérente (Lasègue, déficit L5)",
+        "Caractérisation précise de la douleur neuropathique",
+        "Retentissement fonctionnel et professionnel majeur",
+        "Indication IRM lombaire et EMG",
+        "Traitement spécialisé douleur neuropathique",
+        "Évaluation chirurgicale si hernie discale",
+        "Approche multidisciplinaire nécessaire"
+      ],
+      "pieges": [
+        "Ne pas différencier douleur nociceptive vs neuropathique",
+        "Manquer l'examen sensitif détaillé par territoire",
+        "Ne pas rechercher le signe de Lasègue",
+        "Omettre l'évaluation du retentissement fonctionnel",
+        "Prescrire uniquement des antalgiques classiques",
+        "Ne pas proposer d'examens complémentaires spécialisés",
+        "Sous-estimer l'impact psychologique des douleurs chroniques",
+        "Ne pas envisager les traitements non médicamenteux",
+        "Retard dans l'orientation spécialisée"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique des douleurs neuropathiques",
+      "sections": [
+        {
+          "titre": "Physiopathologie des douleurs neuropathiques",
+          "contenu": "Lésion ou dysfonction du système nerveux périphérique ou central générant des douleurs.",
+          "points": [
+            "Sensibilisation périphérique : hyperactivité nocicepteurs",
+            "Sensibilisation centrale : facilitation médullaire",
+            "Désinhibition : perte contrôles inhibiteurs descendants",
+            "Activité ectopique : décharges spontanées neurones lésés",
+            "Couplage éphaptique : transmission aberrante",
+            "Plasticité synaptique : réorganisation circuits douleur",
+            "Inflammation neurogène : médiateurs pro-inflammatoires"
+          ]
+        },
+        {
+          "titre": "Classification des douleurs neuropathiques",
+          "contenu": "Différenciation selon le niveau lésionnel et les mécanismes.",
+          "points": [
+            "Neuropathies périphériques : polyneuropathies, mononeuropathies",
+            "Radiculopathies : compression, inflammation racines nerveuses",
+            "Neuropathies centrales : post-AVC, sclérose en plaques",
+            "Douleurs focales : névralgie trigéminale, post-zostériennes",
+            "Douleurs généralisées : fibromyalgie, neuropathie des petites fibres",
+            "Douleurs mixtes : composante nociceptive + neuropathique",
+            "Allodynie : douleur au contact non douloureux"
+          ]
+        },
+        {
+          "titre": "Sémiologie des radiculopathies lombaires",
+          "contenu": "Corrélation anatomoclinique des compressions radiculaires.",
+          "points": [
+            "L4 : face antérieure cuisse, quadriceps, réflexe rotulien",
+            "L5 : face externe jambe, dorsiflexion pied, pas de réflexe",
+            "S1 : face postérieure cuisse-jambe, triceps, réflexe achilléen",
+            "Lasègue : tension radiculaire, positif si <60°",
+            "Léri : extension genou en flexion hanche",
+            "Territoire sensitif : dermatomal strict vs subjectif",
+            "Déficit moteur : testing analytique muscle par muscle"
+          ]
+        },
+        {
+          "titre": "Outils d'évaluation de la douleur neuropathique",
+          "contenu": "Scores et questionnaires spécialisés pour le diagnostic.",
+          "points": [
+            "DN4 : questionnaire diagnostique douleur neuropathique",
+            "NPSI : intensité symptômes neuropathiques spécifiques",
+            "Échelle numérique : intensité 0-10",
+            "McGill Pain Questionnaire : aspects qualitatifs",
+            "Retentissement fonctionnel : HAD, qualité de vie",
+            "Examen neurologique quantitatif (QST)",
+            "Tests sensoriels : thermoalgésimètre, monofilaments"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Gabapentine : 300mg x3/j → 1800mg/j, augmentation progressive",
+        "Prégabaline : 75mg x2/j → 300mg x2/j, efficacité rapide",
+        "Amitriptyline : 10-75mg/j le soir, surveillance cardiaque",
+        "Duloxétine : 60mg/j, double action neuropathie diabétique",
+        "Patch lidocaïne 5% : douleurs focales, allodynie",
+        "Tramadol : 50-100mg x4/j si échec première intention",
+        "Infiltrations épidurales : corticoïdes + anesthésiques locaux"
+      ],
+      "examensComplementaires": [
+        "EMG : vitesses de conduction nerveuse, potentiels dénervation",
+        "IRM lombaire : hernie discale, canal lombaire étroit, tumeur",
+        "CT-scan : alternative si contre-indication IRM",
+        "Myélographie CT : canal étroit, compression radiculaire",
+        "Tests sensoriels quantitatifs : seuils thermiques, vibratoires",
+        "Potentiels évoqués somesthésiques : voies lemniscales",
+        "Biopsie nerveuse : neuropathies inflammatoires (rare)"
+      ]
+    }
+  }
+}

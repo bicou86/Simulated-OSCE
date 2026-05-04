@@ -1,0 +1,303 @@
+{
+  "title": "German-10 - Chute",
+  "context": {
+    "setting": "Service d'urgences de l'hôpital cantonal de Lucerne",
+    "patient": "Madame Bauer, 74 ans, amenée par sa fille après être tombée de la chaise sur le sol de la cuisine devant son mari, était très confuse"
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Moment de l'événement",
+          "patientComment": "Il y a 2 heures",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Dernier moment où la patiente était normale",
+          "patientComment": "Il y a 2 heures",
+          "binaryOnly": true
+        },
+        {
+          "id": "a4",
+          "text": "Circonstances de la chute",
+          "patientComment": "Soudainement trouvée sur le sol de la cuisine, confuse",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Force musculaire",
+          "patientComment": "Ne bougeait plus le côté gauche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Sensibilité",
+          "patientComment": "Diminuée à gauche, fourmillements du côté gauche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Motricité fine",
+          "patientComment": "Diminuée",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Langage",
+          "patientComment": "Normal",
+          "binaryOnly": true
+        },
+        {
+          "id": "a9",
+          "text": "Vision",
+          "patientComment": "Normale",
+          "binaryOnly": true
+        },
+        {
+          "id": "a10",
+          "text": "Audition",
+          "patientComment": "Normale",
+          "binaryOnly": true
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents personnels",
+          "details": [
+            "AVC antérieurs",
+            "Autres pathologies [hypertension]"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a12",
+          "text": "Toxiques",
+          "patientComment": "Aucun",
+          "binaryOnly": true
+        },
+        {
+          "id": "a13",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension",
+            "Hyperlipidémie"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "a14",
+          "text": "Activités sportives, loisirs",
+          "patientComment": "Aucune",
+          "binaryOnly": true
+        },
+        {
+          "id": "a15",
+          "text": "Médicaments",
+          "patientComment": "Bêta-bloquant, statine",
+          "binaryOnly": true
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "details": [
+            "AVC",
+            "Maladies cardiaques",
+            "Hypertension",
+            "Diabète [père décédé de fibrose pulmonaire à 65 ans]"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "patientComment": "Mariée, aide à domicile 2x par semaine",
+          "binaryOnly": true
+        },
+        {
+          "id": "a18",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Orientation et état de conscience",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Examen de la marche",
+          "details": [
+            "Marche normale",
+            "Marche en tandem"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e3",
+          "text": "Tests de coordination",
+          "details": [
+            "Test de Romberg",
+            "Test d'Unterberger",
+            "Diadococinésie",
+            "Test de préhension des bras",
+            "Épreuve doigt-nez",
+            "Épreuve talon-genou"
+          ],
+          "scoringRule": "Au moins cinq = 2 pts, trois à quatre = 1 pt, aucun à deux = 0 pt"
+        },
+        {
+          "id": "e4",
+          "text": "Examen moteur",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Examen sensitif",
+          "binaryOnly": true
+        },
+        {
+          "id": "e6",
+          "text": "Nerfs crâniens",
+          "binaryOnly": true
+        },
+        {
+          "id": "e7",
+          "text": "Recherche d'apraxie",
+          "binaryOnly": true
+        },
+        {
+          "id": "e8",
+          "text": "Réflexes",
+          "details": [
+            "Réflexes ostéo-tendineux",
+            "Signe de Babinski"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e9",
+          "text": "Signes méningés",
+          "binaryOnly": true
+        },
+        {
+          "id": "e10",
+          "text": "Auscultation",
+          "details": [
+            "Auscultation cardiaque",
+            "Auscultation des carotides"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e11",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen neurologique ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "patientComment": "Accident vasculaire cérébral",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Dissection des carotides",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Accident ischémique transitoire",
+                    "cause": "□ AIT",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Déficit neurologique ischémique réversible prolongé",
+                    "cause": "□ DNIR",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "AVC progressif",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ CT cérébral, IRM cérébrale"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Laboratoire",
+            "ECG",
+            "Imagerie cérébrale / CT"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Traitement d'urgence",
+          "details": [
+            "Position allongée",
+            "Oxygénothérapie",
+            "Thrombolyse",
+            "Contrôle glycémique",
+            "Ne pas trop abaisser la tension artérielle"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "m5",
+          "text": "Information du neurologue",
+          "patientComment": "Organise la consultation neurologique",
+          "binaryOnly": true
+        },
+        {
+          "id": "m6",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

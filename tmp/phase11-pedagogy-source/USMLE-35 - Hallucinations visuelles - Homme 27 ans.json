@@ -1,0 +1,632 @@
+{
+  "title": "USMLE-35 - Hallucinations visuelles - Homme 27 ans",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Jack Edwards, 27 ans, se présente aux urgences en se plaignant de voir des écritures étranges sur le mur",
+    "vitals": {
+      "ta": "140/80 mmHg",
+      "fc": "110 bpm",
+      "fr": "15/min",
+      "temperature": "36.8°C"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Motif principal",
+          "binaryOnly": true,
+          "patientComment": "Je vois des écritures étranges sur le mur"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des hallucinations visuelles",
+          "binaryOnly": false,
+          "details": [
+            "Début [Cela a commencé hier]",
+            "Contenu [Ce n'est pas clair, et je n'arrive pas à les lire la plupart du temps]",
+            "Durée [Cela dure moins d'une minute]",
+            "Evolution [Cela vient et ça part]",
+            "Fréquence [Cela s'est produit 3 à 4 fois depuis hier]",
+            "Persistance yeux fermés [Parfois]",
+            "Facteurs atténuants [Aucun]",
+            "Facteurs aggravants [Aucun]"
+          ]
+        },
+        {
+          "id": "a3",
+          "text": "Exploration des hallucinations auditives",
+          "binaryOnly": false,
+          "details": [
+            "Hallucinations auditives associées [J'ai l'impression d'entendre des voix étranges quand je vois les écritures]",
+            "Contenu des voix [Je ne les comprends pas ; les voix semblent lointaines]",
+            "Voix impératives [Non]",
+            "Perte d'audition [Non]"
+          ]
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation du risque et insight",
+          "binaryOnly": false,
+          "details": [
+            "Sentiment d'être contrôlé [Non]",
+            "Idées d'automutilation ou hétéro-agressivité [Non]",
+            "Pensées suicidaires ou homicidaires [Non]",
+            "Association symptômes/consommation de drogue [Non]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Symptômes neurologiques",
+          "binaryOnly": false,
+          "details": [
+            "Maux de tête [Aucun]",
+            "Changements visuels ou perte de vision [Aucun]",
+            "Traumatisme crânien [Non]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Symptômes psychiatriques",
+          "binaryOnly": false,
+          "details": [
+            "Plaisir dans les activités quotidiennes [Oui]",
+            "Maladie mentale dans la famille [Non]",
+            "Problèmes de sommeil [Non, mais parfois j'ai du mal à me réveiller le matin]",
+            "Somnolence diurne [Non, mais parfois je me sens très somnolent pendant la journée]"
+          ]
+        },
+        {
+          "id": "a7",
+          "text": "Changements de vie ou stress",
+          "binaryOnly": true,
+          "patientComment": "Pas vraiment"
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes généraux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [Non]",
+            "Changements de poids [Aucun]"
+          ]
+        },
+        {
+          "id": "a9",
+          "text": "Consommation de substances",
+          "binaryOnly": false,
+          "details": [
+            "Drogues illicites [Occasionnellement]",
+            "Types de drogues [Angel dust (PCP) ; parfois de l'ecstasy]",
+            "Dernière consommation [Hier, à une soirée chez un ami]",
+            "Consommation d'alcool [Non]",
+            "Tabac [Oui, je fume un paquet par jour depuis 6 ans]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a11",
+          "text": "Antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents chirurgicaux",
+          "binaryOnly": true,
+          "patientComment": "Aucun"
+        },
+        {
+          "id": "a13",
+          "text": "Antécédents familiaux",
+          "binaryOnly": true,
+          "patientComment": "Mon père avait de l'hypertension"
+        },
+        {
+          "id": "a14",
+          "text": "Mode de vie et habitudes",
+          "binaryOnly": false,
+          "details": [
+            "Profession [Je travaille comme barman]",
+            "Exercice [Non]",
+            "Activité sexuelle [Oui, avec ma petite amie]",
+            "Protection [Oui, j'en utilise]"
+          ]
+        },
+        {
+          "id": "a15",
+          "text": "Allergies médicamenteuses",
+          "binaryOnly": true,
+          "patientComment": "Aucune allergie médicamenteuse connue"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Aspect général",
+          "binaryOnly": true,
+          "patientComment": "Le patient semble anxieux et en légère détresse"
+        },
+        {
+          "id": "e2",
+          "text": "Examen des yeux",
+          "binaryOnly": false,
+          "details": [
+            "Inspection des pupilles [Pupilles dilatées]",
+            "Vérification de la réactivité [Nystagmus vertical]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Examen cardiovasculaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Tachycardie ; B1/B2 normaux ; pas de souffles, frottements ou galops]",
+            "Signes vitaux [FC 110, TA 140/80]"
+          ]
+        },
+        {
+          "id": "e4",
+          "text": "Examen pulmonaire",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [Murmures vésiculaires clairs bilatéralement]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen abdominal",
+          "binaryOnly": false,
+          "details": [
+            "Palpation [Détendu, souple et indolore]",
+            "Organomégalie [Pas d'hépato-splénomégalie]"
+          ]
+        },
+        {
+          "id": "e6",
+          "text": "Examen neurologique - État mental",
+          "binaryOnly": false,
+          "details": [
+            "Orientation [Alerte et orienté × 3]",
+            "Mémoire et concentration [Épelle à l'envers et se souvient de 3 objets]"
+          ]
+        },
+        {
+          "id": "e7",
+          "text": "Examen neurologique - Nerfs crâniens",
+          "binaryOnly": true,
+          "patientComment": "II-XII intacts"
+        },
+        {
+          "id": "e8",
+          "text": "Examen neurologique - Moteur et réflexes",
+          "binaryOnly": false,
+          "details": [
+            "Force musculaire [5/5 dans tous les groupes musculaires]",
+            "ROT [Symétriques]"
+          ]
+        },
+        {
+          "id": "e9",
+          "text": "Examen neurologique - Marche",
+          "binaryOnly": true,
+          "patientComment": "Normale"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Hypothèses diagnostiques",
+          "binaryOnly": false,
+          "scoringRule": "2 points si au moins 2 diagnostics pertinents mentionnés, 1 point si 1 diagnostic",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Intoxications aiguës",
+                "items": [
+                  {
+                    "text": "Intoxication au PCP (phencyclidine)",
+                    "cause": "Arguments POUR:\n\t□ Consommation de PCP la veille\n\t□ Hallucinations visuelles et auditives\n\t□ Délires (écritures sur le mur)\n\t□ Nystagmus vertical pathognomonique\n\t□ Tachycardie (FC 110/min)\n\t□ Hypertension (TA 140/80)\n\t□ Pupilles dilatées\n\t□ État anxieux\nMnémonique RED DANES : Rage, Érythème, Dilatation pupillaire, Délires, Amnésie, Nystagmus, Excitation, Sécheresse cutanée",
+                    "test": "→ Toxicologie urinaire, CK, myoglobine urinaire"
+                  }
+                ]
+              },
+              {
+                "name": "Troubles psychiatriques induits",
+                "items": [
+                  {
+                    "text": "Psychose induite par une substance",
+                    "cause": "Arguments POUR:\n\t□ Consommation récente de drogues psychoactives\n\t□ Hallucinations plus importantes que l'intoxication simple\n\t□ Absence d'insight (n'associe pas drogue et symptômes)\n\t□ Pas d'ATCD de psychose non liée aux drogues\n\t□ Pupilles dilatées\nArguments CONTRE:\n\t□ Durée courte depuis consommation",
+                    "test": "→ Toxicologie, examen psychiatrique approfondi"
+                  }
+                ]
+              },
+              {
+                "name": "Autres causes à considérer",
+                "items": [
+                  {
+                    "text": "Trouble psychotique bref",
+                    "cause": "Arguments POUR:\n\t□ Hallucinations visuelles et auditives\n\t□ Début aigu\nArguments CONTRE:\n\t□ Consommation récente de substances (critère d'exclusion DSM-5)\n\t□ Pas de facteur de stress identifié",
+                    "test": "→ Évaluation psychiatrique après sevrage"
+                  },
+                  {
+                    "text": "Psychose secondaire à une condition médicale",
+                    "cause": "Arguments POUR:\n\t□ Présentation aiguë\nArguments CONTRE:\n\t□ Jeune âge (27 ans)\n\t□ Pas d'ATCD médicaux\n\t□ Pas de signes neurologiques focaux\n\t□ Consommation de drogues évidente",
+                    "test": "→ CT cérébral si doute, bilan métabolique"
+                  },
+                  {
+                    "text": "Narcolepsie avec hallucinations",
+                    "cause": "Arguments POUR:\n\t□ Somnolence diurne\n\t□ Difficultés au réveil\nArguments CONTRE:\n\t□ Hallucinations non hypnagogiques/hypnopompiques\n\t□ Pas de cataplexie\n\t□ Contexte de consommation de drogues",
+                    "test": "→ Polysomnographie si symptômes persistent"
+                  },
+                  {
+                    "text": "Crise d'épilepsie partielle complexe",
+                    "cause": "Arguments POUR:\n\t□ Hallucinations visuelles épisodiques\n\t□ Durée < 1 minute\nArguments CONTRE:\n\t□ Pas d'ATCD d'épilepsie\n\t□ Conscience préservée\n\t□ Pas d'automatismes\n\t□ Contexte toxique évident",
+                    "test": "→ EEG si récidive sans toxiques"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "m2",
+          "text": "Examens complémentaires urgents",
+          "binaryOnly": false,
+          "details": [
+            "Toxicologie urinaire (PCP, MDMA, amphétamines, cannabis, cocaïne, opiacés)",
+            "Électrolytes, glycémie, urée, créatinine",
+            "CK totale (rhabdomyolyse sous PCP)",
+            "Myoglobine urinaire",
+            "ECG (troubles du rythme sous stimulants)"
+          ]
+        },
+        {
+          "id": "m3",
+          "text": "Prise en charge immédiate",
+          "binaryOnly": false,
+          "details": [
+            "Environnement calme et sécurisé",
+            "Surveillance continue des signes vitaux",
+            "Hydratation IV si rhabdomyolyse",
+            "Benzodiazépines si agitation (lorazépam)",
+            "Éviter halopéridol (abaisse seuil épileptique avec PCP)"
+          ]
+        },
+        {
+          "id": "m4",
+          "text": "Plan thérapeutique à long terme",
+          "binaryOnly": false,
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Sevrage et abstinence",
+                "content": "• Arrêt complet des drogues illicites\n• Programme de désintoxication\n• Groupes de soutien (NA)\n• Thérapie cognitivo-comportementale\n• Suivi addictologique régulier"
+              },
+              {
+                "title": "Sevrage tabagique",
+                "content": "• Substituts nicotiniques\n• Varénicline ou bupropion\n• Soutien comportemental\n• Applications mobiles de suivi"
+              },
+              {
+                "title": "Prévention des rechutes",
+                "content": "• Identification des triggers\n• Stratégies de coping\n• Restructuration du mode de vie\n• Changement d'environnement social\n• Sport et activités saines"
+              },
+              {
+                "title": "Suivi psychiatrique",
+                "content": "• Évaluation après sevrage complet\n• Dépistage comorbidités psychiatriques\n• Psychothérapie si troubles persistants\n• Médication si pathologie sous-jacente"
+              }
+            ]
+          }
+        },
+        {
+          "id": "m5",
+          "text": "Signes d'alarme à surveiller",
+          "binaryOnly": false,
+          "redflagsSection": {
+            "title": "Red Flags - Complications potentielles du PCP",
+            "items": [
+              {
+                "text": "Rhabdomyolyse",
+                "description": "→ Myalgies, urines foncées, CK > 5× normale"
+              },
+              {
+                "text": "Hyperthermie maligne",
+                "description": "→ T° > 40°C, rigidité musculaire, troubles conscience"
+              },
+              {
+                "text": "Convulsions",
+                "description": "→ Benzodiazépines IV, éviter phénytoïne"
+              },
+              {
+                "text": "Comportement violent",
+                "description": "→ Contention physique, sédation chimique"
+              },
+              {
+                "text": "Insuffisance rénale aiguë",
+                "description": "→ Hyperhydratation, dialyse si nécessaire"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloture": {
+      "weight": 0,
+      "criteria": [
+        {
+          "id": "cl1",
+          "text": "Clôture type",
+          "content": "Monsieur Edwards, vos symptômes pourraient être causés par votre consommation de drogues illicites, ou ils pourraient être le résultat d'un problème mental ou même d'une condition médicale. Nous allons faire quelques tests pour essayer de clarifier votre état. De plus, je vous recommande fortement d'arrêter de consommer des drogues illicites et de cesser de fumer. Avez-vous des questions pour moi ?"
+        },
+        {
+          "id": "cl2",
+          "text": "Questions difficiles à poser",
+          "content": "[Est-ce que vous pensez que quelqu'un essaie de me donner des instructions à travers les écritures que je vois sur le mur ?]"
+        },
+        {
+          "id": "cl3",
+          "text": "Réponse type du candidat",
+          "content": "Je ne pense pas que quelqu'un essaie de vous donner des instructions. Si vous avez pris des drogues illicites, il est possible que ce soient les drogues qui vous fassent voir ces écritures. Dans tous les cas, nous allons faire quelques tests pour essayer de comprendre ce qui se passe."
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Jack Edwards",
+      "age": "27 ans",
+      "contexte": "Homme se présentant aux urgences pour hallucinations visuelles",
+      "motifConsultation": {
+        "plaintePrincipale": "Je vois des écritures étranges sur le mur.",
+        "autreChose": "Ça a commencé hier et ça m'inquiète."
+      },
+      "consignes": [
+        "Asseyez-vous sur le lit.",
+        "Donnez l'impression que vous regardez fixement le mur.",
+        "Paraissez anxieux et légèrement agité.",
+        "Montrez un nystagmus vertical lors de l'examen oculaire.",
+        "Niez faire le lien entre la drogue et vos symptômes."
+      ],
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Hallucinations visuelles depuis hier",
+          "Écritures illisibles sur le mur",
+          "Épisodes de moins d'une minute",
+          "3-4 fois depuis hier",
+          "Intermittent"
+        ],
+        "symptomesAssocies": [
+          "Voix étranges associées aux écritures",
+          "Voix lointaines incompréhensibles",
+          "Parfois voit les écritures yeux fermés",
+          "Somnolence diurne occasionnelle",
+          "Difficultés matinales au réveil"
+        ],
+        "consommationSubstances": [
+          "PCP (angel dust) hier soir",
+          "MDMA (ecstasy) occasionnellement",
+          "Tabac 1 paquet/jour depuis 6 ans",
+          "Pas d'alcool"
+        ],
+        "reponseAuxSymptomes": [
+          "Anxiété face aux hallucinations",
+          "Recherche d'explications",
+          "Nie le lien avec la drogue"
+        ],
+        "representationMaladie": [
+          "Pense recevoir des messages",
+          "Inquiet mais nie idées de référence",
+          "Pas d'insight sur cause toxique"
+        ]
+      },
+      "anamneseSystemes": {
+        "psychiatrique": [
+          "Pas d'ATCD psychiatriques",
+          "Pas d'ATCD familiaux psychiatriques",
+          "Maintient le plaisir dans activités",
+          "Nie idées suicidaires/homicidaires"
+        ],
+        "neurologique": [
+          "Pas de céphalées",
+          "Pas de troubles visuels autres",
+          "Pas de TC",
+          "Pas de convulsions"
+        ],
+        "general": [
+          "Pas de fièvre",
+          "Pas de perte de poids",
+          "Appétit normal"
+        ]
+      },
+      "habitudes": {
+        "medicaments": "Aucun",
+        "tabac": "1 paquet/jour depuis 6 ans",
+        "alcool": "Non",
+        "profession": "Barman",
+        "activite_sexuelle": "Active avec petite amie, utilise préservatifs",
+        "drogues": "PCP et MDMA occasionnellement"
+      },
+      "histoireMedicale": [
+        "Aucun ATCD médical",
+        "Aucun ATCD chirurgical",
+        "Père hypertendu"
+      ],
+      "simulation": {
+        "durantEntretien": [
+          "Regarder fréquemment le mur",
+          "Pointer vers des endroits vides",
+          "Paraître distrait par moments",
+          "Anxiété croissante si confronté"
+        ],
+        "durantStatus": [
+          "Pupilles dilatées",
+          "Nystagmus vertical évident",
+          "Tachycardie palpable",
+          "Légère agitation psychomotrice"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations de l'expert",
+      "dossierMedical": "Homme de 27 ans, barman, présentant des hallucinations visuelles et auditives 24h après consommation de PCP. Tableau typique d'intoxication au PCP avec nystagmus vertical pathognomonique, mydriase, tachycardie et HTA. Absence d'insight caractéristique. Risque de complications graves (rhabdomyolyse, convulsions, hyperthermie). Nécessite surveillance rapprochée et dépistage des complications.",
+      "rolesInterventions": [
+        "L'expert-e intervient si l'étudiant-e dit vouloir faire :",
+        "• Sédation : privilégier benzodiazépines, éviter neuroleptiques",
+        "• Contention : seulement si danger imminent",
+        "• Alcalémie : mentionner que l'acidification urinaire est contre-indiquée",
+        "• Dialyse : rarement nécessaire, PCP très liposoluble"
+      ],
+      "pointsCles": [
+        "Nystagmus vertical = quasi-pathognomonique du PCP",
+        "RED DANES : mnémonique des signes d'intoxication",
+        "Surveillance CK obligatoire (rhabdomyolyse)",
+        "Éviter halopéridol (abaisse seuil épileptique)",
+        "Environnement calme essentiel (stimuli → agitation)"
+      ],
+      "pieges": [
+        "Ne pas reconnaître le nystagmus vertical",
+        "Oublier de doser CK/myoglobine",
+        "Utiliser des neuroleptiques en première intention",
+        "Ne pas hydrater si rhabdomyolyse",
+        "Minimiser le risque de violence"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique concernant la vignette",
+      "sections": [
+        {
+          "titre": "Diagnostic",
+          "contenu": "Intoxication aiguë au PCP avec hallucinations et risque de complications"
+        },
+        {
+          "titre": "Phencyclidine (PCP)",
+          "contenu": "Anesthésique dissociatif détourné :",
+          "points": [
+            "Antagoniste NMDA non compétitif",
+            "Effet dopaminergique et noradrénergique",
+            "Demi-vie longue (7-46h)",
+            "Très liposoluble, stockage tissulaire",
+            "Métabolisation hépatique",
+            "Élimination rénale pH-dépendante"
+          ]
+        },
+        {
+          "titre": "Présentation clinique du PCP",
+          "contenu": "Tableau dose-dépendant :",
+          "points": [
+            "Faible dose : euphorie, ataxie, nystagmus",
+            "Dose modérée : hallucinations, agitation, HTA",
+            "Forte dose : coma, convulsions, hyperthermie",
+            "Nystagmus vertical/rotatoire pathognomonique",
+            "Analgésie et force surhumaine possibles",
+            "Comportement imprévisible et violent"
+          ]
+        },
+        {
+          "titre": "Complications du PCP",
+          "contenu": "Potentiellement mortelles :",
+          "points": [
+            "Rhabdomyolyse (30% des cas)",
+            "Insuffisance rénale aiguë",
+            "Hyperthermie maligne",
+            "État de mal épileptique",
+            "Hémorragie intracrânienne",
+            "Arrêt cardiorespiratoire"
+          ]
+        },
+        {
+          "titre": "Prise en charge aiguë",
+          "contenu": "Approche symptomatique :",
+          "points": [
+            "Environnement calme, peu stimulant",
+            "Benzodiazépines si agitation (lorazépam)",
+            "Hydratation IV généreuse",
+            "Surveillance continue signes vitaux",
+            "CK sériées toutes les 6h",
+            "Refroidissement si hyperthermie"
+          ]
+        },
+        {
+          "titre": "Erreurs à éviter",
+          "contenu": "Pièges thérapeutiques :",
+          "points": [
+            "Halopéridol : abaisse seuil épileptique",
+            "Acidification urinaire : augmente toxicité",
+            "Contention physique : majore rhabdomyolyse",
+            "Phénytoïne : inefficace sur convulsions PCP",
+            "Sous-estimer potentiel de violence",
+            "Sortie prématurée (rebond possible)"
+          ]
+        },
+        {
+          "titre": "Diagnostic différentiel toxique",
+          "contenu": "Autres substances hallucinogènes :",
+          "points": [
+            "LSD : hallucinations visuelles géométriques",
+            "Psilocybine : plus introspectif, moins agité",
+            "MDMA : empathie, bruxisme, hyperthermie",
+            "Kétamine : dissociation mais durée courte",
+            "Cannabis synthétique : psychose possible",
+            "Anticholinergiques : mydriase, peau sèche"
+          ]
+        },
+        {
+          "titre": "Aspects addictologiques",
+          "contenu": "Prise en charge au long cours :",
+          "points": [
+            "Motivation au changement (entretien motivationnel)",
+            "Identification facteurs de risque/protection",
+            "Thérapie cognitivo-comportementale",
+            "Gestion des craving et rechutes",
+            "Changement environnement social",
+            "Traitement comorbidités psychiatriques"
+          ]
+        },
+        {
+          "titre": "Résumé du cas clinique",
+          "contenu": "Homme de 27 ans présentant une intoxication aiguë au PCP caractérisée par des hallucinations visuelles et auditives, un nystagmus vertical pathognomonique, et des signes sympathomimétiques. La prise en charge immédiate vise à prévenir les complications (rhabdomyolyse++) et assurer la sécurité. Le sevrage et la prise en charge addictologique sont essentiels pour prévenir les récidives."
+        },
+        {
+          "titre": "Conclusion",
+          "points": [
+            "Le nystagmus vertical oriente fortement vers le PCP",
+            "La surveillance des complications est prioritaire",
+            "L'approche doit être prudente (potentiel violent)",
+            "Les benzodiazépines sont le traitement de choix",
+            "Le suivi addictologique est indispensable",
+            "L'éducation sur les risques est cruciale"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Lorazépam 2-4mg IV/IM si agitation",
+        "Diazépam 10-20mg PO alternative",
+        "Hydratation : NaCl 0.9% 200-500ml/h",
+        "Mannitol si rhabdomyolyse sévère",
+        "Cooling si T° > 39°C"
+      ],
+      "examensComplementaires": [
+        "Toxicologie urinaire : PCP détectable 8 jours",
+        "CK : N < 200 UI/L, rhabdomyolyse si > 5× N",
+        "Myoglobine urinaire : positive si rhabdomyolyse",
+        "Ionogramme : hypoK+ fréquente",
+        "Gaz du sang si détresse respiratoire"
+      ]
+    }
+  }
+}

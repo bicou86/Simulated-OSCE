@@ -1,0 +1,381 @@
+{
+  "title": "German-78 - Toux",
+  "context": {
+    "setting": "Service d'urgences",
+    "patient": "Mme Bühler, 31 ans, se présente aux urgences pour toux irritative et dyspnée."
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Symptômes principaux",
+          "binaryOnly": true,
+          "patientComment": "Dyspnée"
+        },
+        {
+          "id": "a3",
+          "text": "État actuel",
+          "binaryOnly": true,
+          "patientComment": "Gratte encore un peu/toux irritative - mais sinon à nouveau sans symptômes"
+        },
+        {
+          "id": "a4",
+          "text": "Type de dyspnée",
+          "binaryOnly": false,
+          "details": [
+            "Repos ou effort [plus à l'effort]",
+            "Circonstances de début [lors d'une sortie à vélo]"
+          ]
+        },
+        {
+          "id": "a5",
+          "text": "Caractéristiques de la toux",
+          "binaryOnly": false,
+          "details": [
+            "Début et fréquence [depuis aujourd'hui]",
+            "Antécédents similaires [jamais eu quelque chose comme ça]"
+          ]
+        },
+        {
+          "id": "a6",
+          "text": "Expectorations",
+          "binaryOnly": true,
+          "patientComment": "Non, toux sèche"
+        },
+        {
+          "id": "a7",
+          "text": "Douleurs",
+          "binaryOnly": false,
+          "details": [
+            "Douleurs à la toux [non]",
+            "Autres douleurs [non]"
+          ]
+        },
+        {
+          "id": "a8",
+          "text": "Infection préalable ou concomitante",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a9",
+          "text": "Symptômes infectieux",
+          "binaryOnly": false,
+          "details": [
+            "Fièvre [non]",
+            "Rhinorrhée [non]"
+          ]
+        },
+        {
+          "id": "a10",
+          "text": "Symptômes associés",
+          "binaryOnly": false,
+          "details": [
+            "Anxiété [avait peur d'étouffer]",
+            "Nervosité [très nerveuse]",
+            "Sueurs [non mentionné]"
+          ]
+        },
+        {
+          "id": "a11",
+          "text": "Allergies connues",
+          "binaryOnly": false,
+          "details": [
+            "[Bouleaux]",
+            "[Pommes]",
+            "[Poils de cheval]"
+          ]
+        },
+        {
+          "id": "a12",
+          "text": "Médicaments actuels",
+          "binaryOnly": true,
+          "patientComment": "Pilule contraceptive"
+        },
+        {
+          "id": "a13",
+          "text": "Habitudes de vie",
+          "binaryOnly": false,
+          "details": [
+            "Tabac [oui, fume]",
+            "Alcool [boit occasionnellement le week-end]",
+            "Drogues [a déjà fumé du cannabis dans le passé]"
+          ]
+        },
+        {
+          "id": "a14",
+          "text": "Antécédents cardiaques",
+          "binaryOnly": true,
+          "patientComment": "Non, notamment pas d'angine de poitrine"
+        },
+        {
+          "id": "a15",
+          "text": "Autres antécédents médicaux",
+          "binaryOnly": true,
+          "patientComment": "Non"
+        },
+        {
+          "id": "a16",
+          "text": "Activités sportives et loisirs",
+          "binaryOnly": true,
+          "patientComment": "Fait rarement du sport, préfère le cinéma et le shopping"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse familiale",
+          "binaryOnly": false,
+          "details": [
+            "Mère [allergie aux graminées]",
+            "Père [intolérance au lactose et coronaropathie]"
+          ]
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse sociale",
+          "binaryOnly": false,
+          "details": [
+            "État civil [mariée]",
+            "Enfants [aucun]",
+            "Profession [assistante sociale]"
+          ]
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse complète et ciblée sur la pathologie respiratoire aiguë"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Hygiène des mains",
+          "binaryOnly": true
+        },
+        {
+          "id": "e2",
+          "text": "Inspection thoracique",
+          "binaryOnly": false,
+          "details": [
+            "[Normal]",
+            "[Pas de tirage ou utilisation des muscles respiratoires accessoires]"
+          ]
+        },
+        {
+          "id": "e3",
+          "text": "Auscultation pulmonaire",
+          "binaryOnly": true,
+          "patientComment": "Légers sifflements expiratoires bilatéraux audibles"
+        },
+        {
+          "id": "e4",
+          "text": "Examen cardiaque",
+          "binaryOnly": false,
+          "details": [
+            "Auscultation [régulier, pas de souffle]",
+            "Pouls [régulier]"
+          ]
+        },
+        {
+          "id": "e5",
+          "text": "Examen des extrémités (recherche d'embolie pulmonaire)",
+          "binaryOnly": true,
+          "patientComment": "Sans particularité"
+        },
+        {
+          "id": "e6",
+          "text": "Examens complémentaires si pertinents",
+          "binaryOnly": false,
+          "details": [
+            "Peau [sans particularité]",
+            "Gorge [sans particularité]",
+            "Ganglions lymphatiques [sans particularité]"
+          ],
+          "scoringRule": "Au moins 2 = 2 pts, 1 = 1 pt, 0 = 0 pt"
+        },
+        {
+          "id": "e7",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Examen cardio-pulmonaire ciblé et approprié à la situation d'urgence"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic principal évoqué",
+          "binaryOnly": true,
+          "patientComment": "Asthme bronchique d'effort"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels cardiaques",
+          "binaryOnly": false,
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Insuffisance cardiaque",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ NT-proBNP, échocardiographie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Infarctus du myocarde",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, troponines, coronarographie"
+                  },
+                  {
+                    "text": "Valvulopathie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Diagnostics différentiels pulmonaires",
+          "binaryOnly": false,
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Asthme",
+                    "cause": "□ effort, allergique",
+                    "test": "→ Spirométrie avec test de réversibilité, peak flow"
+                  },
+                  {
+                    "text": "Pneumonie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CRP, hémocultures"
+                  },
+                  {
+                    "text": "Embolie pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ D-dimères, angio-CT thoracique"
+                  },
+                  {
+                    "text": "Œdème pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Pneumothorax",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, CT thoracique"
+                  },
+                  {
+                    "text": "BPCO",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Spirométrie, radiographie thoracique"
+                  },
+                  {
+                    "text": "Fibrose pulmonaire",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Tuberculose",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Radiographie thoracique, test IGRA, culture d'expectoration"
+                  },
+                  {
+                    "text": "Carcinome bronchique",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Aspiration de corps étranger",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires proposés",
+          "binaryOnly": false,
+          "details": [
+            "Gazométrie artérielle",
+            "Bilan sanguin (FSC, CRP, CK, troponines, D-dimères)",
+            "Épreuves fonctionnelles respiratoires avec test de provocation bronchique",
+            "Radiographie thoracique",
+            "ECG/Échocardiographie",
+            "Tests d'allergie"
+          ],
+          "scoringRule": "Au moins 4 = 2 pts, 2-3 = 1 pt, 0-1 = 0 pt"
+        },
+        {
+          "id": "m5",
+          "text": "Interprétation des épreuves fonctionnelles respiratoires",
+          "binaryOnly": false,
+          "details": [
+            "Syndrome obstructif [VEMS et VEMS/CV diminués]",
+            "Résistances centrales augmentées",
+            "Volume résiduel augmenté",
+            "Test de réversibilité [obstruction réversible après salbutamol, VEMS augmenté >20%]"
+          ]
+        },
+        {
+          "id": "m6",
+          "text": "Traitement proposé",
+          "binaryOnly": false,
+          "details": [
+            "Bêta-2-mimétiques (salbutamol) en inhalation",
+            "Éducation thérapeutique",
+            "Éviction des facteurs déclenchants"
+          ]
+        },
+        {
+          "id": "m7",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge complète avec diagnostic différentiel approprié et traitement adapté"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "images": [
+      {
+        "title": "Spirométrie avec test de reversibilité",
+        "description": "Test spirométrique montrant une obstruction réversible après bronchodilatateur (amélioration VEMS > 20%)",
+        "data": "grilles_generees/images/toux-iv-img.jpg"
+      }
+    ]
+  }
+}

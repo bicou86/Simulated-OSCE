@@ -1,0 +1,335 @@
+{
+  "title": "German-7 - Bradycardie",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Madame Hugendubel, 45 ans, se présente au cabinet pour altération de l'état général",
+    "vitals": {
+      "ta": "109/74 mmHg",
+      "fc": "43 bpm",
+      "fr": "13/min"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Présentation avec nom, fonction et tâche",
+          "binaryOnly": true
+        },
+        {
+          "id": "a2",
+          "text": "Question d'entrée ouverte → Symptôme principal",
+          "patientComment": "pouls lent",
+          "binaryOnly": true
+        },
+        {
+          "id": "a3",
+          "text": "Apparition temporelle",
+          "details": [
+            "Début soudain – insidieux [insidieux]",
+            "Durée [depuis quatre jours]",
+            "Évolution paroxystique – persistante – permanente [permanente]",
+            "Épisodes antérieurs [non]"
+          ],
+          "scoringRule": "Les quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a4",
+          "text": "Fréquence cardiaque",
+          "patientComment": "43/min",
+          "binaryOnly": true
+        },
+        {
+          "id": "a5",
+          "text": "Rythme cardiaque",
+          "patientComment": "régulier",
+          "binaryOnly": true
+        },
+        {
+          "id": "a6",
+          "text": "Palpitations ou extrasystoles",
+          "patientComment": "non",
+          "binaryOnly": true
+        },
+        {
+          "id": "a7",
+          "text": "Facteurs influençants",
+          "patientComment": "rien remarqué",
+          "binaryOnly": true
+        },
+        {
+          "id": "a8",
+          "text": "Symptômes d'accompagnement",
+          "details": [
+            "Douleurs thoraciques [non]",
+            "Vertiges/Collapsus [oui, déjà chuté trois fois]",
+            "Fatigue [me sens faible]",
+            "Dyspnée [légère]",
+            "Œdèmes [oui, aux chevilles, chaussures serrées]",
+            "Évolution pondérale [prise de 5 kg en 2 semaines, ne sait pas pourquoi]",
+            "Diurèse augmentée [non, presque plus d'urine]"
+          ],
+          "scoringRule": "Au moins cinq = 2 pts, trois à quatre = 1 pt, aucun à deux = 0 pt"
+        },
+        {
+          "id": "a9",
+          "text": "Signes d'hypothyroïdie",
+          "details": [
+            "Intolérance au froid",
+            "Prise de poids",
+            "Constipation",
+            "Peau/cheveux"
+          ],
+          "patientComment": "pas remarqué",
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a10",
+          "text": "Facteurs de risque cardiovasculaire",
+          "details": [
+            "Hypertension [oui, sous Métoprolol 20 mg/j 1-0-0]",
+            "Tabagisme [oui, 2 paquets/j, 25 ans]",
+            "Diabète [non]",
+            "Dyslipidémie [oui, sous Atorvastatine 40 mg/j 0-0-1]",
+            "Antécédents familiaux d'infarctus du myocarde [non]"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a11",
+          "text": "Résumé avec retour au patient",
+          "patientComment": "Avez-vous des questions ?",
+          "binaryOnly": true
+        },
+        {
+          "id": "a12",
+          "text": "Antécédents médicaux",
+          "details": [
+            "Maladies cardiaques (coronaropathie, infarctus du myocarde)/chirurgie cardiaque [non]",
+            "Maladies cérébrovasculaires (AIT, AVC) [non]",
+            "Artériopathie périphérique [non]",
+            "Thyroïde [ablation thyroïdienne il y a 10 ans pour adénome, depuis Euthyrox 50 μg]",
+            "Chirurgies"
+          ],
+          "scoringRule": "Au moins quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a13",
+          "text": "Allergies",
+          "patientComment": "cacahuètes",
+          "binaryOnly": true
+        },
+        {
+          "id": "a14",
+          "text": "Médicaments",
+          "details": [
+            "Métoprolol 20 mg",
+            "Atorvastatine 40 mg",
+            "Euthyrox 50 μg"
+          ],
+          "patientComment": "Métoprolol 20 mg, Atorvastatine 40 mg, Euthyrox 50 μg",
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a15",
+          "text": "Toxiques",
+          "details": [
+            "Alcool [2 verres de vin/j]",
+            "Tabac [2 paquets/j, 25 ans]",
+            "Drogues [non]"
+          ],
+          "scoringRule": "Les trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a16",
+          "text": "Anamnèse familiale",
+          "details": [
+            "Maladies cardiovasculaires (coronaropathie, artériopathie, cérébrovasculaire, infarctus du myocarde)",
+            "Diabète, hypertension",
+            "Maladies thyroïdiennes",
+            "Morts subites [père décédé subitement à 82 ans, mère démence d'Alzheimer]"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a17",
+          "text": "Anamnèse sociale",
+          "details": [
+            "Famille [mariée, 1 enfant]",
+            "Profession [vendeuse en papeterie]",
+            "Habitudes alimentaires [cuisine équilibrée, beaucoup de légumes/fruits]",
+            "Loisirs (activités sportives) [ski de randonnée, randonnée, vélo]"
+          ],
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "a18",
+          "text": "Anamnèse systémique",
+          "binaryOnly": false,
+          "scoringRule": "Complète = 2 pts, partielle = 1 pt, absente = 0 pt"
+        },
+        {
+          "id": "a19",
+          "text": "Évaluation globale de la qualité de l'anamnèse",
+          "binaryOnly": false,
+          "details": [
+            "Anamnèse ciblée et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Status cardiaque",
+          "details": [
+            "Inspection [normal]",
+            "Palpation [pouls faible, régulier]",
+            "Percussion [normale]",
+            "Auscultation [bruits purs, souffle systolique 2/6 en fuseau sur foyer aortique, sans irradiation]"
+          ],
+          "scoringRule": "Les quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "e2",
+          "text": "Status pulmonaire",
+          "details": [
+            "Inspection",
+            "Palpation [excursions respiratoires symétriques, vibrations vocales symétriques]",
+            "Percussion [normale]",
+            "Auscultation [murmure vésiculaire symétrique, pas de râles]"
+          ],
+          "scoringRule": "Les quatre = 2 pts, deux à trois = 1 pt, aucun à un = 0 pt"
+        },
+        {
+          "id": "e3",
+          "text": "Examen thyroïdien",
+          "details": [
+            "Palpation",
+            "Auscultation"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "e4",
+          "text": "Examen cutané",
+          "patientComment": "coloration légèrement grisâtre, conjonctives/muqueuses normales",
+          "binaryOnly": true
+        },
+        {
+          "id": "e5",
+          "text": "Évaluation globale de la qualité de l'examen clinique",
+          "binaryOnly": false,
+          "details": [
+            "Status ciblé et bien conduit"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Diagnostic de suspicion",
+          "patientComment": "Insuffisance cardiaque aiguë avec accumulation de bêta-bloquants",
+          "binaryOnly": true
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostics différentiels",
+          "scoringRule": "Au moins trois = 2 pts, deux = 1 pt, aucun à un = 0 pt",
+          "ddSection": {
+            "categories": [
+              {
+                "name": "Diagnostics différentiels à considérer",
+                "items": [
+                  {
+                    "text": "Bloc AV II°/III°",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Syndrome du sinus malade",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ Examens complémentaires selon contexte clinique"
+                  },
+                  {
+                    "text": "Fibrillation auriculaire bradycarde",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ ECG, échocardiographie"
+                  },
+                  {
+                    "text": "Hypothyroïdie",
+                    "cause": "□ À évaluer cliniquement",
+                    "test": "→ TSH, T4 libre"
+                  }
+                ]
+              }
+            ],
+            "title": "Diagnostics différentiels à considérer"
+          }
+        },
+        {
+          "id": "m3",
+          "text": "Examens diagnostiques",
+          "details": [
+            "Laboratoire : NFS, CRP, Ferritine, Troponine I, CK-MB, LDH",
+            "Créatinine, électrolytes (Na, K, Ca), TSH, Glucose",
+            "Transaminases, Gamma-GT, phosphatases alcalines (PAL), Albumine, Quick/aPTT",
+            "Radiographie thoracique / ECG (24h) / Échocardiographie",
+            "Éventuellement angio-CT (si suspicion d'embolie pulmonaire)",
+            "Éventuellement dosage médicamenteux (bêta-bloquants)"
+          ],
+          "scoringRule": "Au moins cinq = 2 pts, trois à quatre = 1 pt, aucun à deux = 0 pt"
+        },
+        {
+          "id": "m4",
+          "text": "Reconnaissance de pathologie",
+          "patientComment": "sur radiographie/ECG",
+          "binaryOnly": true
+        },
+        {
+          "id": "m5",
+          "text": "Traitement médicamenteux",
+          "details": [
+            "Parasympatholytiques : Atropine 0,5-1 mg IV",
+            "Sympathomimétiques : Adrénaline 0,1 mg IV"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "m6",
+          "text": "Traitement par stimulateur cardiaque",
+          "details": [
+            "Indications absolues : Fibrillation auriculaire, Bloc AV II°/III°",
+            "Indications relatives : Bradycardie symptomatique"
+          ],
+          "scoringRule": "Les deux = 2 pts, un = 1 pt, aucun = 0 pt"
+        },
+        {
+          "id": "m7",
+          "text": "Hospitalisation si nécessaire",
+          "patientComment": "organise le transfert à l'hôpital si nécessaire",
+          "binaryOnly": true
+        },
+        {
+          "id": "m8",
+          "text": "Évaluation globale de la qualité de la prise en charge",
+          "binaryOnly": false,
+          "details": [
+            "Prise en charge cohérente et bien conduite"
+          ],
+          "scoringRule": "Bien = 2 pts, suffisant = 1 pt, insuffisant = 0 pt"
+        }
+      ]
+    }
+  },
+  "annexes": {}
+}

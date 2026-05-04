@@ -1,0 +1,842 @@
+{
+  "title": "RESCOS-62 - Toux - ECC Poumon",
+  "context": {
+    "setting": "Cabinet de médecine générale",
+    "patient": "Patient de 65 ans consultant pour toux fébrile évoluant depuis 10 jours avec dyspnée d'effort",
+    "vitals": {
+      "temperature": "39.0°C",
+      "ta": "140/90 mmHg",
+      "fc": "90 bpm",
+      "fr": "20/min",
+      "sao2": "95%"
+    }
+  },
+  "sections": {
+    "anamnese": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "a1",
+          "text": "Caractérisation de la toux",
+          "details": [
+            "Type de toux [sèche puis productive]",
+            "Horaire [diurne et/ou nocturne]",
+            "Facteurs déclenchants [effort, froid, position]",
+            "Durée et évolution [10 jours, sèche puis grasse]",
+            "Efficacité de la toux [productive ou non]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a2",
+          "text": "Caractérisation des expectorations",
+          "details": [
+            "Couleur des crachats [jaunes-verts depuis 3 jours]",
+            "Quantité [environ 1 paquet de mouchoirs/jour]",
+            "Odeur [fétide si germes anaérobes]",
+            "Présence de sang [hémoptysie]",
+            "Évolution dans le temps [claires puis purulentes]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a3",
+          "text": "Caractérisation de la douleur thoracique",
+          "details": [
+            "Localisation [thorax droit]",
+            "Reproductible à la palpation [oui/non]",
+            "Variation avec la respiration [augmentée à la toux]",
+            "Irradiation [épaule si plèvre diaphragmatique]",
+            "Intensité [échelle 0-10]",
+            "Durée et circonstances [depuis hier soir, en toussant]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a4",
+          "text": "Évaluation de la dyspnée",
+          "details": [
+            "Circonstances [repos vs effort - moindre effort]",
+            "Classification NYHA ou mMRC [stade III NYHA]",
+            "Orthopnée [dort à plat]",
+            "Dyspnée paroxystique nocturne [absence]",
+            "Évolution dans le temps [aggravation récente]",
+            "Sifflements ou bruits associés"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "a5",
+          "text": "Signes généraux et symptômes associés",
+          "details": [
+            "Fièvre [39°C ce matin, frissons nocturnes]",
+            "Asthénie et perte de poids",
+            "Sueurs nocturnes",
+            "Signes d'insuffisance cardiaque [œdèmes, nycturie - absents]",
+            "Autres symptômes respiratoires [rhinorrhée, pharyngite]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a6",
+          "text": "Antécédents personnels et facteurs de risque",
+          "details": [
+            "Pathologies chroniques [HTA, dyslipidémie]",
+            "Antécédents pulmonaires [aucun]",
+            "Hospitalisations antérieures [jamais]",
+            "Allergies médicamenteuses",
+            "Vaccinations [grippe, pneumocoque]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a7",
+          "text": "Habitudes et expositions",
+          "details": [
+            "Tabac [5 cigarettes/jour depuis 30 ans = 7.5 UPA]",
+            "Alcool [consommation occasionnelle]",
+            "Activité physique [marche régulière, monte 3 étages]",
+            "Exposition professionnelle [enseignant retraité]",
+            "Exposition infectieuse [conjoint grippal il y a 2 semaines]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "a8",
+          "text": "Antécédents familiaux",
+          "details": [
+            "Pathologies pulmonaires [père BPCO sévère, décédé 68 ans]",
+            "Pathologies cardiovasculaires",
+            "Cancers [mère cancer sein à 60 ans]",
+            "Maladies héréditaires",
+            "Allergies familiales"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "a9",
+          "text": "Anamnèse en général - approche respiratoire systématique",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "examen": {
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "e1",
+          "text": "Inspection générale - patient couché",
+          "details": [
+            "Aspect général [faciès, pâleur, transpiration, agitation]",
+            "Fréquence respiratoire [mesure et valeur]",
+            "Cycle respiratoire [rapport I/E, expirium prolongé]",
+            "Détresse respiratoire [tirage, muscles accessoires]",
+            "Cyanose centrale et périphérique",
+            "Hippocratisme digital"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e2",
+          "text": "Inspection thoracique - patient assis",
+          "details": [
+            "Forme du thorax [tonneau, pectus excavatum/carinatum]",
+            "Asymétrie thoracique",
+            "Déformations rachidiennes [cyphose, scoliose]",
+            "Cicatrices [thoracotomie, drains]",
+            "Respiration paradoxale [test mains abdomen/thorax]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e3",
+          "text": "Palpation thoracique",
+          "details": [
+            "Ampliation thoracique [symétrie des mouvements]",
+            "Localisation précise de la douleur [reproduction palpation]",
+            "Vibrations vocales [faire dire '33', comparaison G/D]",
+            "Technique correcte [bord cubital, 3 hauteurs]",
+            "Recherche d'emphysème sous-cutané"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e4",
+          "text": "Percussion thoracique",
+          "details": [
+            "Limite inférieure poumons [percussion postérieure]",
+            "Comparaison sonorité G/D [3 hauteurs, région axillaire]",
+            "Reconnaissance des sons [normal, matité, tympanisme]",
+            "Technique correcte [doigt sur doigt]",
+            "Interprétation [épanchement, consolidation, pneumothorax]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e5",
+          "text": "Auscultation pulmonaire",
+          "details": [
+            "Demande respiration bouche ouverte",
+            "Points d'auscultation [postérieur 3 niveaux, axillaire, antérieur]",
+            "Comparaison symétrique G/D systématique",
+            "Murmure vésiculaire [intensité, symétrie]",
+            "Souffle tubaire [consolidation parenchymateuse]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e6",
+          "text": "Identification des bruits pathologiques",
+          "details": [
+            "Sibilances [sifflements haute fréquence - asthme]",
+            "Ronchi [basse fréquence, ronflements - bronchite]",
+            "Râles fins [crépitants, velcro - pneumonie, fibrose]",
+            "Râles grossiers [bulleux, humides - bronchite, OAP]",
+            "Frottement pleural [craquement tout le cycle]",
+            "Stridor [sifflement trachéal audible sans stéthoscope]"
+          ],
+          "scoringRule": "Au moins cinq = oui, quatre = ±, aucun à trois = non"
+        },
+        {
+          "id": "e7",
+          "text": "Examen cardiovasculaire complémentaire",
+          "details": [
+            "Palpation choc de pointe",
+            "Auscultation cardiaque [5 foyers]",
+            "Œdèmes membres inférieurs",
+            "Turgescence jugulaire",
+            "Reflux hépato-jugulaire"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "e8",
+          "text": "Technique d'examen en général - séquence IPPA",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    },
+    "management": {
+      "weight": 0.5,
+      "criteria": [
+        {
+          "id": "m1",
+          "text": "Orientation diagnostique principale",
+          "details": [
+            "Pneumonie communautaire [toux productive, fièvre, râles]",
+            "Évaluation de la gravité [âge, comorbidités, signes vitaux]",
+            "Scores de gravité [CRB-65, CURB-65]",
+            "Indication d'hospitalisation [critères de sévérité]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m2",
+          "text": "Diagnostic différentiel respiratoire",
+          "ddSection": {
+            "title": "Diagnostics différentiels à considérer",
+            "categories": [
+              {
+                "name": "Infections respiratoires",
+                "items": [
+                  {
+                    "text": "Pneumonie bactérienne communautaire",
+                    "cause": "Arguments POUR:\n\t□ Toux productive purulente\n\t□ Fièvre 39°C avec frissons\n\t□ Douleur pleurale\n\t□ Contexte épidémique (conjoint)",
+                    "test": "→ Radiographie thorax, NFS, CRP, hémocultures si sévère"
+                  },
+                  {
+                    "text": "Bronchite aiguë",
+                    "cause": "Arguments POUR:\n\t□ Toux évoluant 10 jours\n\t□ Expectorations purulentes\n\t□ Contexte viral initial\nArguments CONTRE:\n\t□ Fièvre élevée 39°C",
+                    "test": "→ Examen clinique, radiographie si doute"
+                  }
+                ]
+              },
+              {
+                "name": "Exacerbations chroniques",
+                "items": [
+                  {
+                    "text": "Exacerbation BPCO",
+                    "cause": "Arguments POUR:\n\t□ Tabagisme 7.5 UPA\n\t□ ATCD familial (père BPCO)\nArguments CONTRE:\n\t□ Pas d'ATCD personnel BPCO\n\t□ Bonne tolérance effort habituelle",
+                    "test": "→ Spirométrie à distance, radiographie thorax"
+                  }
+                ]
+              },
+              {
+                "name": "Complications",
+                "items": [
+                  {
+                    "text": "Pleurésie parapneumonique",
+                    "cause": "Arguments POUR:\n\t□ Douleur pleurale à la toux\n\t□ Contexte infectieux\nArguments CONTRE:\n\t□ Pas de matité franche",
+                    "test": "→ Radiographie thorax, échographie pleurale si doute"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoringRule": "Au moins trois diagnostics évoqués = oui, deux = ±, un ou aucun = non"
+        },
+        {
+          "id": "m3",
+          "text": "Examens complémentaires de première intention",
+          "details": [
+            "Radiographie thorax [consolidation, épanchement]",
+            "NFS [hyperleucocytose, formule]",
+            "CRP [syndrome inflammatoire]",
+            "Saturation O2 [hypoxémie]",
+            "Bandelette urinaire [antigènes pneumocoque/légionelle si sévère]"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m4",
+          "text": "Examens complémentaires selon gravité",
+          "details": [
+            "Hémocultures [si critères hospitalisation]",
+            "Gazométrie artérielle [si hypoxémie]",
+            "PCT [aide décision antibiothérapie]",
+            "PCR respiratoire [virus, bactéries atypiques]",
+            "ECBC [si expectorations abondantes]"
+          ],
+          "scoringRule": "Au moins trois = oui, deux = ±, aucun à un = non"
+        },
+        {
+          "id": "m5",
+          "text": "Traitement antibiotique ambulatoire",
+          "therapySection": {
+            "categories": [
+              {
+                "title": "Première intention",
+                "content": "• Amoxicilline : 1g x 3/j PO pendant 7 jours × 7 jours, réévaluation à 48-72h\n• Alternative si allergie : Clarithromycine 500mg x 2/j ou lévofloxacine 500mg/j × 5-7 jours selon évolution"
+              }
+            ]
+          },
+          "scoringRule": "Traitement approprié avec posologie = oui, partiel = ±, inadapté = non"
+        },
+        {
+          "id": "m6",
+          "text": "Traitements symptomatiques et mesures générales",
+          "details": [
+            "Antipyrétiques [paracétamol 1g x 4/j si fièvre]",
+            "Hydratation [1.5-2L/jour]",
+            "Repos et arrêt de travail",
+            "Oxygénothérapie si SpO2 < 92%",
+            "Kinésithérapie respiratoire si encombrement"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m7",
+          "text": "Surveillance et critères d'hospitalisation",
+          "details": [
+            "Réévaluation clinique à 48-72h",
+            "Critères CURB-65 ≥ 2 [Confusion, Urée, FR ≥ 30, TA < 90/60, ≥ 65 ans]",
+            "Désaturation < 90% en air ambiant",
+            "Comorbidités décompensées",
+            "Échec traitement ambulatoire"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m8",
+          "text": "Prévention et conseils",
+          "details": [
+            "Sevrage tabagique [orientation consultation]",
+            "Vaccination antigrippale annuelle",
+            "Vaccination antipneumococcique [> 65 ans]",
+            "Mesures hygiéno-diététiques",
+            "Consultation de suivi post-infection"
+          ],
+          "scoringRule": "Au moins quatre = oui, trois = ±, aucun à deux = non"
+        },
+        {
+          "id": "m9",
+          "text": "Management en général - prise en charge infection respiratoire",
+          "scoringRule": "Bien = oui, suffisant = ±, insuffisant = non"
+        }
+      ]
+    }
+  },
+  "annexes": {
+    "scenarioPatienteStandardisee": {
+      "titre": "Scénario pour le patient standardisé",
+      "nom": "Patient de 65 ans",
+      "age": "65 ans",
+      "contexte": "Enseignant retraité consultant pour toux productive fébrile",
+      "motifConsultation": {
+        "plaintePrincipale": "Je viens vous voir car je tousse, et ce matin j'ai eu de la fièvre",
+        "autreChose": "Je suis inquiet car mon père avait des problèmes pulmonaires graves"
+      },
+      "histoireActuelle": {
+        "symptomePrincipal": [
+          "Toux depuis 10 jours, d'abord sèche puis grasse",
+          "Crachats jaunes-verts depuis 3 jours",
+          "Quantité environ 1 paquet de mouchoirs/jour",
+          "Fièvre à 39°C ce matin",
+          "Frissons nocturnes la nuit passée"
+        ],
+        "symptomesAssocies": [
+          "Douleur thoracique droite seulement en toussant depuis hier",
+          "Dyspnée au moindre effort, même à la maison",
+          "Pas de dyspnée de repos",
+          "Dort à plat, pas de réveil nocturne par dyspnée",
+          "Pas de nycturie"
+        ],
+        "circonstances": [
+          "Début progressif il y a 10 jours",
+          "Aggravation ces derniers jours",
+          "Conjoint a eu un épisode grippal il y a 2 semaines",
+          "Limitation des activités habituelles"
+        ]
+      },
+      "antecedentsPersonnels": [
+        "Hypertension artérielle traitée",
+        "Dyslipidémie traitée",
+        "Jamais hospitalisé",
+        "Pas d'antécédents pulmonaires"
+      ],
+      "antecedentsFamiliaux": [
+        "Père fumeur, bronchites à répétition, oxygène à domicile, décédé à 68 ans",
+        "Mère cancer du sein à 60 ans, toujours vivante à 90 ans",
+        "Sœur 70 ans en bonne santé"
+      ],
+      "habitudes": {
+        "tabac": "5 cigarettes/jour depuis 30 ans (7.5 UPA)",
+        "alcool": "Un verre de vin occasionnel",
+        "activite": "Marche plusieurs fois/semaine, monte 3 étages habituellement",
+        "profession": "Enseignant école primaire, retraité"
+      },
+      "traitements": {
+        "actuels": [
+          "Médicaments pour la tension (nom non retenu)",
+          "Médicaments pour le cholestérol (nom non retenu)"
+        ],
+        "observance": "Bonne observance habituelle"
+      },
+      "contexteSocial": {
+        "situation": "Vit avec conjoint en bonne santé",
+        "enfants": "3 enfants en bonne santé",
+        "logement": "Appartement 3ème étage",
+        "autonomie": "Totalement autonome habituellement"
+      },
+      "simulation": {
+        "durantEntretien": [
+          "Toux productive pendant la consultation",
+          "Légère dyspnée en parlant",
+          "Expression d'inquiétude sur l'évolution (comme le père)",
+          "Coopératif mais fatigué"
+        ],
+        "durantExamen": [
+          "Fréquence respiratoire légèrement augmentée",
+          "Douleur à la palpation thorax droit",
+          "Râles crépitants base droite à simuler",
+          "Pas de cyanose ni hippocratisme"
+        ],
+        "questionsAPoser": [
+          "Est-ce que je vais finir comme mon père avec de l'oxygène ?",
+          "C'est une pneumonie docteur ?",
+          "Combien de temps vais-je être comme ça ?"
+        ]
+      }
+    },
+    "informationsExpert": {
+      "titre": "Informations pour l'expert",
+      "dossierMedical": "Patient 65 ans, ex-fumeur actif 7.5 UPA. Toux productive fébrile 10j avec expectorations purulentes. Dyspnée effort stade III NYHA. ATCD: HTA, dyslipidémie. AF: père BPCO sévère. Contexte épidémique (conjoint). Évoque pneumonie communautaire.",
+      "pointsCles": [
+        "Anamnèse respiratoire complète avec caractérisation toux/expectorations/dyspnée",
+        "Recherche facteurs de risque et exposition infectieuse",
+        "Examen physique séquence IPPA systématique",
+        "Reconnaissance bruits pathologiques (râles, sibilances, ronchi)",
+        "Évaluation gravité pneumonie (CURB-65)",
+        "Examen cardiovasculaire complémentaire obligatoire",
+        "Diagnostic différentiel infections respiratoires",
+        "Antibiothérapie probabiliste adaptée ambulatoire",
+        "Critères hospitalisation et surveillance",
+        "Prévention secondaire (vaccinations, sevrage tabac)"
+      ],
+      "pieges": [
+        "Ne pas quantifier la dyspnée (NYHA/mMRC)",
+        "Oublier de caractériser les expectorations",
+        "Ne pas rechercher les signes de gravité",
+        "Mauvaise technique d'examen physique (ordre IPPA)",
+        "Ne pas comparer systématiquement droite/gauche",
+        "Confondre les différents bruits auscultatoires",
+        "Omettre l'examen cardiovasculaire",
+        "Ne pas évaluer les critères d'hospitalisation",
+        "Antibiothérapie inadaptée ou sans réévaluation",
+        "Oublier la prévention (vaccins, sevrage tabac)"
+      ]
+    },
+    "theoriePratique": {
+      "titre": "Théorie pratique en pneumologie",
+      "sections": [
+        {
+          "titre": "Classification de la dyspnée",
+          "contenu": "Échelles standardisées pour quantifier la dyspnée.",
+          "points": [
+            "NYHA I : efforts intenses sans limitation quotidienne",
+            "NYHA II : efforts importants vie quotidienne",
+            "NYHA III : efforts modérés, limitation importante",
+            "NYHA IV : moindre effort ou repos",
+            "mMRC 0-4 : de l'effort intense à dyspnée habillage",
+            "Dyspnée aiguë vs chronique : délai < ou > 1 mois",
+            "Dyspnée paroxystique nocturne : origine cardiaque"
+          ]
+        },
+        {
+          "titre": "Bruits respiratoires pathologiques",
+          "contenu": "Origine et signification des bruits adventices.",
+          "points": [
+            "Sibilances : rétrécissement bronchique (asthme, BPCO)",
+            "Ronchi : sécrétions bronchiques grosses bronches",
+            "Râles fins : origine alvéolaire (pneumonie, fibrose, OAP)",
+            "Râles grossiers : sécrétions bronchiques (bronchite, OAP)",
+            "Frottement pleural : inflammation plèvre",
+            "Stridor : obstruction voies aériennes supérieures",
+            "Souffle tubaire : consolidation parenchymateuse"
+          ]
+        },
+        {
+          "titre": "Technique d'examen physique pulmonaire",
+          "contenu": "Séquence IPPA : Inspection, Palpation, Percussion, Auscultation.",
+          "points": [
+            "Inspection : FR, cyanose, tirage, forme thorax",
+            "Palpation : ampliation, vibrations vocales, douleur",
+            "Percussion : matité (épanchement), tympanisme (pneumothorax)",
+            "Auscultation : murmure vésiculaire, bruits surajoutés",
+            "Comparaison systématique droite/gauche",
+            "Points d'auscultation : post 3 niveaux, axillaire, antérieur",
+            "Position patient : couché puis assis"
+          ]
+        },
+        {
+          "titre": "Pneumonie communautaire",
+          "contenu": "Diagnostic et prise en charge ambulatoire.",
+          "points": [
+            "Critères diagnostiques : toux, fièvre, expectorations, râles",
+            "Score CURB-65 : Confusion, Urée, FR≥30, TA<90/60, ≥65 ans",
+            "Radiographie thorax : consolidation alvéolaire",
+            "Germes fréquents : pneumocoque, H. influenzae, atypiques",
+            "Antibiothérapie 1ère intention : amoxicilline 1g x3/j",
+            "Durée traitement : 7 jours, réévaluation 48-72h",
+            "Critères hospitalisation : CURB-65 ≥2, hypoxémie"
+          ]
+        },
+        {
+          "titre": "Facteurs de risque respiratoires",
+          "contenu": "Identification des populations à risque.",
+          "points": [
+            "Tabagisme : principal FDR BPCO et cancer",
+            "Âge > 65 ans : immunosénescence",
+            "Comorbidités : diabète, insuffisance cardiaque",
+            "Immunodépression : corticoïdes, chimiothérapie",
+            "Expositions professionnelles : amiante, silice",
+            "Facteurs environnementaux : pollution, allergènes",
+            "Contexte épidémique : transmission interhumaine"
+          ]
+        },
+        {
+          "titre": "Examens complémentaires en pneumologie",
+          "contenu": "Hiérarchisation des examens selon le contexte.",
+          "points": [
+            "Radiographie thorax : 1ère intention infection/dyspnée",
+            "Scanner thoracique : si Rx normale et forte suspicion",
+            "Spirométrie : diagnostic et suivi obstructif/restrictif",
+            "Gazométrie : si SpO2 <92% ou signes gravité",
+            "Fibroscopie bronchique : hémoptysie, suspicion néoplasie",
+            "Tests microbiologiques : ECBC, hémocultures si sévère",
+            "D-dimères/angio-CT : si suspicion embolie pulmonaire"
+          ]
+        }
+      ],
+      "rappelsTherapeutiques": [
+        "Pneumonie communautaire : amoxicilline 1g x3/j 7j ou macrolide si allergie",
+        "Exacerbation BPCO : amoxicilline-clavulanate + corticoïdes oraux",
+        "Asthme aigu : β2-mimétiques nébulisés + corticoïdes systémiques",
+        "Embolie pulmonaire : anticoagulation curative HBPM/AOD",
+        "Pneumothorax : drainage si >2cm ou symptomatique",
+        "Pleurésie : drainage si épanchement abondant + antibiotiques si purulent",
+        "Oxygénothérapie : objectif SpO2 92-96% (88-92% si BPCO)"
+      ],
+      "examensComplementaires": [
+        "Radiographie thorax face/profil : consolidation, épanchement, pneumothorax",
+        "NFS : hyperleucocytose neutrophile si bactérien",
+        "CRP/PCT : marqueurs inflammation, aide décision antibiotique",
+        "Gazométrie artérielle : pH, PaO2, PaCO2 si dyspnée sévère",
+        "D-dimères : exclusion EP si probabilité faible/intermédiaire",
+        "Scanner thoracique : HR si pathologie interstitielle suspectée",
+        "Spirométrie : VEMS/CVF pour diagnostic obstruction"
+      ]
+    },
+    "resume": {
+      "titre": "🌬️ Toux – Diagnostic final : Pneumonie communautaire (CAP) – Résumé ECOS",
+      "sections": [
+        {
+          "titre": "🔍 Anamnèse",
+          "subsections": [
+            {
+              "titre": "Symptômes typiques",
+              "points": [
+                "Toux productive ou sèche",
+                "Fièvre, frissons, sueurs",
+                "Dyspnée, douleur thoracique pleurétique",
+                "Fatigue, myalgies",
+                "Confusion chez le sujet âgé"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque",
+              "points": [
+                "Âge > 65 ans",
+                "Tabagisme, alcoolisme",
+                "BPCO, asthme, diabète, insuffisance cardiaque",
+                "Immunodépression",
+                "Infections virales récentes (ex. : grippe)"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "👀 Examen clinique",
+          "subsections": [
+            {
+              "titre": "Signes à rechercher",
+              "points": [
+                "Fièvre, polypnée, tachycardie",
+                "Crépitants à l’auscultation",
+                "Matité à la percussion, diminution du MV",
+                "Signes de gravité : cyanose, confusion, hypotension"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "🧪 Examens diagnostiques",
+          "subsections": [
+            {
+              "titre": "Examens de base",
+              "points": [
+                "Radiographie thoracique : infiltrat alvéolaire (souvent unilatéral)",
+                "NFS : hyperleucocytose ou leucopénie",
+                "CRP / procalcitonine",
+                "Gaz du sang si dyspnée ou comorbidités respiratoires"
+              ]
+            },
+            {
+              "titre": "Examens étiologiques",
+              "points": [
+                "Hémocultures (si hospitalisation ou sepsis)",
+                "Antigènes urinaires (Pneumocoque, Legionella)",
+                "PCR virale (grippe, SARS-CoV-2)",
+                "ECBC ou aspiration endotrachéale si hospitalisé"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "⚙️ Prise en charge",
+          "subsections": [
+            {
+              "titre": "Orientation",
+              "points": [
+                "Score CURB-65 ou PSI pour évaluer la sévérité",
+                "Ambulatoire si forme légère, hospitalisation si forme modérée à sévère"
+              ]
+            },
+            {
+              "titre": "Antibiothérapie probabiliste",
+              "points": [
+                "Forme légère (ambulatoire) : amoxicilline ou amoxicilline-acide clavulanique ± macrolide",
+                "Forme modérée : ceftriaxone IV + macrolide",
+                "Forme sévère (réanimation) : pipéracilline-tazobactam + macrolide ou fluoroquinolone ± couverture anti-MRSA"
+              ]
+            },
+            {
+              "titre": "Traitement symptomatique",
+              "points": [
+                "Antipyrétiques (paracétamol)",
+                "Oxygénothérapie si besoin (SpO2 < 92 %)",
+                "Hydratation, repos",
+                "Prévention thromboembolique si alité"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "✅ Points clés ECOS",
+          "points": [
+            "Toux + fièvre + dyspnée = suspecter CAP",
+            "Radio thoracique indispensable au diagnostic",
+            "Ne pas négliger les formes atypiques chez le sujet âgé",
+            "Évaluer la sévérité avec CURB-65",
+            "Antibiothérapie probabiliste rapide adaptée à la gravité"
+          ]
+        }
+      ]
+    },
+    "presentationPatient": {
+      "titre": "📑 Fiche ECOS – Cas : Toux fébrile et dyspnée (Pneumonie communautaire)",
+      "sections": [
+        {
+          "titre": "🧩 Checklist mentale (présentation systématisée)",
+          "points": [
+            "Intro → âge, motif de consultation",
+            "Caractériser la toux → sèche vs productive, durée, évolution",
+            "Expectorations → couleur, quantité, sang ?",
+            "Fièvre et symptômes associés → frissons, sueurs, douleurs thoraciques, dyspnée",
+            "ATCD médicaux (HTA, dyslipidémie) et facteurs de risque (tabac, âge, épidémie)",
+            "Examen clinique → constantes, inspection, IPPA pulmonaire, bruits pathologiques",
+            "Résumé + hypothèse principale + DD",
+            "Examens complémentaires → Rx thorax, NFS, CRP, gaz du sang si SpO2 <92%",
+            "Prise en charge → antibiothérapie probabiliste, repos, hydratation, critères hospitalisation"
+          ],
+          "mnemo": {
+            "titre": "👉 Mnémo rapide : CAPE",
+            "elements": [
+              "C = Cough (toux productive)",
+              "A = Alvéolaire infiltrat (radio)",
+              "P = Pneumocoque (germe principal)",
+              "E = Évaluer sévérité (CURB-65)"
+            ]
+          }
+        },
+        {
+          "titre": "🎤 Version longue (≈2-3 min)",
+          "contenu": "Il s’agit d’un patient de 65 ans, enseignant retraité, qui consulte pour une toux évoluant depuis environ dix jours.\n\nAu départ la toux était sèche, puis depuis trois jours elle est devenue productive avec des expectorations jaunâtres verdâtres, en grande quantité. Ce matin il a eu 39 degrés de fièvre avec des frissons dans la nuit. Il décrit aussi une douleur thoracique du côté droit déclenchée par la toux, et une dyspnée inhabituelle : alors qu’il montait auparavant trois étages sans problème, il est maintenant essoufflé au moindre effort. Il ne rapporte pas de dyspnée de repos ni d’orthopnée.\n\nPour ses antécédents, il est suivi pour une hypertension et une dyslipidémie, mais il n’a pas d’antécédent pulmonaire connu. Il a un tabagisme modéré à 7,5 paquets-années. Son conjoint a présenté une grippe il y a deux semaines. Son père est décédé d’une BPCO sévère à 68 ans.\n\nÀ l’examen ses constantes sont : tension à 140/90, fréquence cardiaque 90, fréquence respiratoire 20, température 39 et saturation à 95 %. Le patient est fatigué, avec une dyspnée modérée. La palpation thoracique retrouve une douleur du côté droit, et à l’auscultation on entend des râles crépitants à la base droite.\n\nEn résumé, il s’agit d’un patient de 65 ans qui présente une toux productive fébrile, avec dyspnée et râles localisés. Le diagnostic principal est une pneumonie communautaire. Les diagnostics différentiels incluent une bronchite aiguë, une exacerbation de BPCO ou une pleurésie parapneumonique.\n\nComme examens complémentaires, je demanderais une radiographie thoracique, une NFS, une CRP et des gaz du sang si la saturation passe en dessous de 92 %. En cas d’hospitalisation, des hémocultures seraient nécessaires.\n\nEn termes de prise en charge, je propose une antibiothérapie probabiliste par amoxicilline un gramme trois fois par jour pendant sept jours, du repos, de l’hydratation, des antipyrétiques et une réévaluation à 48 à 72 heures. L’hospitalisation serait indiquée en cas d’aggravation ou si les critères CURB-65 sont supérieurs ou égaux à deux."
+        },
+        {
+          "titre": "⚡ Version express (SBAR, 30 sec)",
+          "contenu": "S (Situation) : Patient de 65 ans, toux productive fébrile depuis 10 jours, dyspnée effort.\n\nB (Background) : ATCD HTA, dyslipidémie, tabac 7,5 UPA, conjoint grippal.\n\nA (Assessment) : Suspicion pneumonie communautaire base droite, DD : bronchite aiguë, BPCO, pleurésie.\n\nR (Recommendation) : Rx thorax, NFS/CRP, antibiothérapie amoxicilline 1g x3/j 7j, réévaluation 48-72h, critères hospitalisation selon CURB-65."
+        },
+        {
+          "titre": "🎲 Touches ludiques / mnémos",
+          "subsections": [
+            {
+              "titre": "Red flags toux fébrile",
+              "points": [
+                "Fièvre > 38,5°C",
+                "Dyspnée",
+                "Douleur thoracique pleurétique",
+                "Hypoxémie",
+                "Âge > 65 ans"
+              ]
+            },
+            {
+              "titre": "Critères CURB-65",
+              "points": [
+                "Confusion",
+                "Urée > 7 mmol/L",
+                "FR ≥ 30/min",
+                "TA < 90/60 mmHg",
+                "Âge ≥ 65 ans"
+              ]
+            },
+            {
+              "titre": "Antibiothérapie clé",
+              "points": [
+                "Amoxicilline 1g x3/j 7j",
+                "Alternative : macrolide si allergie",
+                "Réévaluation 48-72h"
+              ]
+            }
+          ]
+        },
+        {
+          "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+          "subsections": [
+            {
+              "titre": "1. Arguments pour et contre chaque hypothèse",
+              "questions": [
+                {
+                  "question": "Pneumonie communautaire",
+                  "reponse": {
+                    "pour": [
+                      "Toux productive purulente",
+                      "Fièvre 39°C avec frissons",
+                      "Douleur pleurétique droite",
+                      "Dyspnée effort",
+                      "Râles crépitants base droite"
+                    ],
+                    "contre": [
+                      "SpO2 conservée à 95% (forme non sévère)"
+                    ]
+                  }
+                },
+                {
+                  "question": "Bronchite aiguë",
+                  "reponse": {
+                    "pour": [
+                      "Toux évoluant 10 jours",
+                      "Expectorations purulentes",
+                      "Contexte viral initial"
+                    ],
+                    "contre": [
+                      "Fièvre élevée 39°C",
+                      "Dyspnée marquée",
+                      "Râles focalisés"
+                    ]
+                  }
+                },
+                {
+                  "question": "Exacerbation BPCO",
+                  "reponse": {
+                    "pour": [
+                      "Tabagisme chronique",
+                      "ATCD familial BPCO"
+                    ],
+                    "contre": [
+                      "Pas d’ATCD personnel BPCO",
+                      "Bonne tolérance effort habituelle"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "titre": "2. Examens complémentaires immédiats",
+              "questions": [
+                {
+                  "question": "Quels examens demander ?",
+                  "reponse": [
+                    "Radiographie thorax",
+                    "NFS",
+                    "CRP",
+                    "Gaz du sang si SpO2 <92%",
+                    "Hémocultures si critères hospitalisation"
+                  ],
+                  "analyse": "👉 Analyse orale : « La radio thorax confirme l’infiltrat, la NFS et CRP objectivent l’infection, et la gazométrie évalue la gravité. »"
+                }
+              ]
+            },
+            {
+              "titre": "3. Diagnostic définitif, traitement, suivi",
+              "questions": [
+                {
+                  "question": "Diagnostic",
+                  "reponse": "Pneumonie communautaire lobaire droite"
+                },
+                {
+                  "question": "Traitement",
+                  "reponse": [
+                    "Antibiothérapie : amoxicilline 1g x3/j 7j",
+                    "Paracétamol pour fièvre",
+                    "Hydratation, repos",
+                    "Oxygène si SpO2 < 92%"
+                  ]
+                },
+                {
+                  "question": "Suivi",
+                  "reponse": [
+                    "Réévaluation clinique à 48-72h",
+                    "Contrôle radio à distance (4-6 semaines chez >50 ans/fumeur)",
+                    "Prévention secondaire : arrêt tabac, vaccination grippe + pneumocoque"
+                  ],
+                  "astuce": "👉 Astuce révision : penser à « CAP = Cough + Alvéolaire + Pneumocoque »."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
