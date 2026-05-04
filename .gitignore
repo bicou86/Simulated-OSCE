@@ -19,6 +19,14 @@ server/logs/
 # Previews éphémères Phase 3 (non committés — artefacts de travail)
 tmp/phase3-previews/
 
+# Phase 11 J3 — sources pédagogiques brutes (input du script de
+# migration scripts/migrate-pedagogical-content.ts) et fixtures jouet
+# utilisées par les tests dry-run. Aucun de ces dossiers ne doit être
+# committé : les sources sont déposées localement par l'utilisateur, et
+# les fixtures jouet sont créées/supprimées par les tests.
+tmp/phase11-pedagogy-source/
+tmp/phase11-test-fixtures/
+
 # Phase 6 — sorties du script de triage médico-légal.
 # Sont commités pour traçabilité :
 #   • phase-6-j1.csv : run machine de référence J1
