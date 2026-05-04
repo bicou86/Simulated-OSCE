@@ -605,6 +605,13 @@ export function stripLegalContextOnly(
   delete cloned.legalContext;
   delete cloned.medicoLegalReviewed;
   delete cloned.parentStationId;
+  // Phase 11 J3 — invariant I13 : strip aussi `pedagogicalContent` du
+  // chemin mono-patient legacy. Sans ce delete, le bloc pédagogique
+  // (résumé clinique, théorie, drapeaux rouges) fuiterait dans le
+  // <station_data> du LLM patient et le candidat aurait des indices
+  // factuels durant la consultation. Le strip côté multi-profils est
+  // déjà couvert par META_FIELDS_TO_STRIP / filterStationByScope.
+  delete cloned.pedagogicalContent;
   return cloned;
 }
 

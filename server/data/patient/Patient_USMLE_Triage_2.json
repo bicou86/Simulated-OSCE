@@ -399,7 +399,37 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Hématurie de l'adulte",
+          "sections": [
+            {
+              "titre": "Approche diagnostique de l'hématurie",
+              "contenu": "L'hématurie chez l'homme de plus de 40 ans nécessite une investigation urologique complète. La distinction entre hématurie initiale, terminale et totale guide l'orientation diagnostique."
+            },
+            {
+              "titre": "Causes principales selon l'âge",
+              "contenu": "Chez l'homme de 45 ans : HBP (30%), infections (25%), lithiase (20%), cancers urologiques (15%), glomérulonéphrites (10%)."
+            }
+          ],
+          "examensComplementaires": [
+            "ECBU systématique avec antibiogramme",
+            "Bilan métabolique de base (urée, créatinine, électrolytes)",
+            "CT abdomen-pelvis sans injection (recherche lithiase)",
+            "Cystoscopie (indispensable >40 ans avec hématurie)",
+            "Échographie rénale et vésicale",
+            "PSA et toucher rectal"
+          ],
+          "rappelsTherapeutiques": [
+            "Hématurie indolore = cancer jusqu'à preuve du contraire",
+            "Cystoscopie obligatoire chez homme >40 ans avec hématurie",
+            "Bilan complet même si cause bénigne suspectée",
+            "Suivi urologique nécessaire",
+            "Arrêt temporaire anticoagulants si possible"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 2 - Œil Rouge",
@@ -885,7 +915,287 @@
           "question_patient": "Est-ce que c'est ça ? (en référence à la conjonctivite)"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "👁️ Uvéite antérieure – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse ciblée",
+              "subsections": [
+                {
+                  "titre": "Symptômes typiques",
+                  "points": [
+                    "Douleur oculaire unilatérale (dull ache)",
+                    "Photophobie",
+                    "Rougeur périkératique (injection ciliaire)",
+                    "Baisse de l'acuité visuelle",
+                    "Larmoiement (épiphora)",
+                    "Début souvent aigu, récidivant possible"
+                  ]
+                },
+                {
+                  "titre": "Contexte/terrain",
+                  "points": [
+                    "Jeune adulte",
+                    "ATCD d’uvéite antérieure",
+                    "Maladie inflammatoire systémique (ex. spondylarthrite ankylosante, Crohn, RCH)",
+                    "HLA-B27+",
+                    "Récente chirurgie oculaire ou traumatisme",
+                    "Immunodépression si forme atypique ou sévère"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes à rechercher",
+                  "points": [
+                    "Injection ciliaire (rougeur localisée autour de la cornée)",
+                    "Myosis (réflexe photomoteur ralenti)",
+                    "Hypopion (si forme sévère)",
+                    "Cellules et flare à la lampe à fente",
+                    "Précipités kératiques (dépôts endothéliaux cornéens)",
+                    "Nodules iridiens",
+                    "Adhérences irido-cristalliniennes (synéchies postérieures)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Diagnostic clinique",
+                  "points": [
+                    "Examen à la lampe à fente : cellules + flare",
+                    "Pas de besoin systématique de bilan à la 1ʳᵉ poussée isolée"
+                  ]
+                },
+                {
+                  "titre": "Bilan étiologique (si indiqué)",
+                  "points": [
+                    "Recherche HLA-B27 (uvéite récidivante ou bilatérale)",
+                    "Bilan inflammatoire + immunologique si suspicion maladie systémique",
+                    "Sérologies infectieuses si contexte évocateur (syphilis, tuberculose...)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Mesures en urgence",
+                  "points": [
+                    "Avis/ophtalmologie urgent",
+                    "Corticoïdes topiques (prednisolone ou dexaméthasone)",
+                    "Cycloplégique topique (atropine, cyclopentolate)",
+                    "NE PAS instiller de corticoïde sans confirmation du diagnostic"
+                  ]
+                },
+                {
+                  "titre": "Traitement étiologique",
+                  "points": [
+                    "Si cause infectieuse prouvée : traitement spécifique (antibiotique, antiviral)",
+                    "Si maladie systémique : coordination rhumatologie, médecine interne"
+                  ]
+                },
+                {
+                  "titre": "Formes réfractaires",
+                  "points": [
+                    "Corticoïdes systémiques ± immunosuppresseurs (ex : méthotrexate)",
+                    "Suivi spécialisé indispensable"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Rougeur douloureuse + photophobie = penser à une uvéite antérieure",
+                "Signes spécifiques à la lampe à fente : cellules + flare, précipités kératiques",
+                "Toujours rechercher un terrain HLA-B27 (spondylarthrite, Crohn...)",
+                "Ne pas confondre avec conjonctivite (plus bénigne, sécrétions, pas de photophobie)",
+                "Corticoïde topique uniquement après avis spécialisé"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Œil rouge douloureux (suspicion d’uvéite antérieure)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte, motif de consultation",
+                "Symptôme principal → début, durée, mode d’apparition",
+                "Caractéristiques → douleur, photophobie, larmoiement, vision floue",
+                "Facteurs déclenchants/ATCD → polyarthrite juvénile, maladies systémiques",
+                "Signes associés → myosis, sécrétions, céphalées, bilatéralité ?",
+                "Examen clinique ciblé → rougeur conjonctivale vs ciliaire, pupilles, acuité visuelle",
+                "Résumé + hypothèse principale + DD",
+                "Examens complémentaires → lampe à fente, fluorescéine, tonométrie, bilan inflammatoire",
+                "Prise en charge immédiate → avis ophtalmo, corticoïdes topiques + cycloplégiques (si confirmé)"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : ROUGE",
+                "elements": [
+                  "Rougeur localisée périkératique",
+                  "Oeil douloureux + photophobie",
+                  "Uvéite suspectée",
+                  "Grossissement (lampe à fente indispensable)",
+                  "Examens complémentaires ciblés"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Mme Geneviève Eathe, 19 ans, étudiante, consulte pour un œil rouge douloureux évoluant depuis 1 semaine. Les symptômes ont débuté après un match de softball en extérieur par une rougeur, puis apparition de photophobie importante, larmoiement, vision floue et douleur oculaire profonde. L’œil atteint est l’œil droit, sans atteinte du gauche.\n\nElle décrit des croûtes le matin mais pas de sécrétions franchement purulentes. Pas de fièvre, pas de rhume récent. Elle rapporte une polyarthrite rhumatoïde juvénile dans son enfance, actuellement en rémission, et un antécédent de conjonctivite. Pas de port de lentilles de contact.\n\nÀ l’examen : rougeur conjonctivale localisée, pas de corps étranger visible, pupilles PERRLA, acuité visuelle diminuée à droite. Fond d’œil normal. Douleur marquée à la lumière.\n\nEn résumé : jeune femme avec œil rouge unilatéral douloureux, photophobie, vision floue et ATCD rhumatismal → suspicion d’uvéite antérieure.\n\nDiagnostics différentiels : conjonctivite virale/bactérienne, corps étranger cornéen, abrasion cornéenne, plus rarement glaucome aigu (peu probable vu l’âge et pupilles normales).\n\nExamens complémentaires : examen à la lampe à fente (cellules + flare), test à la fluorescéine, tonométrie, bilan inflammatoire (CRP, VS, HLA-B27 si suspicion systémique).\n\nPrise en charge immédiate : avis ophtalmologique en urgence, traitement par corticoïdes topiques et cycloplégiques si uvéite confirmée, hygiène oculaire et arrêt d’automédication."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Mme Eathe, 19 ans, présente depuis 1 semaine un œil rouge douloureux, photophobe, avec vision floue.\n\nB (Background) : ATCD de polyarthrite juvénile, pas de lentilles, épisode déclenché après exposition au vent.\n\nA (Assessment) : Suspicion d’uvéite antérieure droite. DD : conjonctivite virale/bactérienne, corps étranger, abrasion cornéenne.\n\nR (Recommendation) : Examen à la lampe à fente et tonométrie, avis ophtalmologique urgent, corticoïdes topiques et cycloplégiques si uvéite confirmée."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "Œil rouge dangereux → \"3D\"",
+                  "points": [
+                    "Douleur profonde",
+                    "Diplopie / Photophobie",
+                    "Déficit visuel"
+                  ]
+                },
+                {
+                  "titre": "Différencier uvéite vs conjonctivite → \"PPP\"",
+                  "points": [
+                    "Photophobie : forte dans uvéite",
+                    "Perte visuelle : oui dans uvéite, non dans conjonctivite",
+                    "Pus : présent si conjonctivite bactérienne"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Uvéite antérieure",
+                      "reponse": {
+                        "pour": [
+                          "ATCD polyarthrite juvénile",
+                          "Douleur profonde, photophobie",
+                          "Vision floue, unilatérale",
+                          "Durée subaiguë"
+                        ],
+                        "contre": [
+                          "Pas de myosis clairement décrit"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Conjonctivite virale",
+                      "reponse": {
+                        "pour": [
+                          "Évolution progressive",
+                          "Larmoiement"
+                        ],
+                        "contre": [
+                          "Photophobie sévère inhabituelle",
+                          "Douleur profonde"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Corps étranger / abrasion cornéenne",
+                      "reponse": {
+                        "pour": [
+                          "Début après exposition au vent",
+                          "Sensation initiale de corps étranger"
+                        ],
+                        "contre": [
+                          "Pas de corps étranger visible",
+                          "Durée prolongée sans amélioration"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demander ?",
+                      "reponse": [
+                        "Examen à la lampe à fente (cellules, flare)",
+                        "Coloration fluorescéine (abrasion/ulcère cornéen)",
+                        "Tonométrie (PIO)",
+                        "Bilan inflammatoire (VS, CRP, HLA-B27)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif et traitement",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Uvéite antérieure probable (à confirmer par ophtalmologiste)"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": [
+                        "Corticoïdes topiques (prednisolone)",
+                        "Cycloplégiques (atropine/cyclopentolate)",
+                        "Avis ophtalmologique urgent",
+                        "Suivi étroit pour éviter synéchies et glaucome secondaire"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Œil rouge",
+          "sections": [
+            {
+              "titre": "Uvéite antérieure",
+              "contenu": "Inflammation de l'iris et du corps ciliaire. Souvent associée aux maladies systémiques (spondylarthropathies, ARJ, sarcoïdose). Présentation : œil rouge péri-kératique, photophobie, douleur, myosis, troubles visuels. Complications : synéchies, cataracte, glaucome."
+            },
+            {
+              "titre": "Association ARJ et uvéite",
+              "contenu": "L'uvéite survient chez 10-20% des patients avec ARJ. Plus fréquente dans les formes oligoarticulaires et chez les filles. Peut être asymptomatique initialement. Dépistage régulier recommandé. Traitement : corticoïdes locaux + surveillance."
+            },
+            {
+              "titre": "Diagnostic différentiel œil rouge",
+              "contenu": "Conjonctivite : injection conjonctivale diffuse, sécrétions, pas de baisse AV. Kératite : douleur ++, photophobie, test fluorescéine +. Uvéite : cercle périkératique, photophobie ++, myosis. Glaucome aigu : mydriase, TO élevée, nausées."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Uvéite : corticoïdes topiques (prednisolone) + cycloplégiques",
+            "Conjonctivite bactérienne : antibiotiques topiques (tobramycine, ofloxacine)",
+            "Conjonctivite virale : traitement symptomatique, larmes artificielles",
+            "Abrasion cornéenne : antibiotique prophylactique + cycloplégie",
+            "Ne jamais prescrire de corticoïdes sans examen à la lampe à fente"
+          ],
+          "examensComplementaires": [
+            "Lampe à fente : gold standard pour diagnostic uvéite (cellules, flare)",
+            "Test fluorescéine : détecte ulcères et abrasions cornéennes",
+            "Tonométrie : mesure pression intraoculaire",
+            "HLA-B27 : associé aux uvéites des spondylarthropathies",
+            "Bilan inflammatoire : VS, CRP si uvéite"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 30 - Masse Testiculaire",
@@ -1270,7 +1580,40 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Masses scrotales",
+          "sections": [
+            {
+              "titre": "Approche diagnostique des masses scrotales",
+              "contenu": "Toute masse testiculaire chez l'homme jeune doit faire suspecter un cancer testiculaire. L'échographie est l'examen de première intention."
+            },
+            {
+              "titre": "Granulome spermatique post-vasectomie",
+              "contenu": "Complication bénigne fréquente (5-30% des vasectomies). Résulte d'une réaction inflammatoire au sperme qui fuit du déférent sectionné."
+            },
+            {
+              "titre": "Cancer testiculaire",
+              "contenu": "Cancer le plus fréquent chez l'homme de 20-40 ans. Excellent pronostic si diagnostic précoce. Souvent indolore."
+            }
+          ],
+          "examensComplementaires": [
+            "Échographie testiculaire bilatérale (examen de première intention)",
+            "Marqueurs tumoraux : β-hCG, α-fœtoprotéine, LDH",
+            "CT abdomen-pelvis si suspicion de cancer",
+            "Radiographie thoracique si cancer confirmé",
+            "Examen clinique complet avec palpation ganglions"
+          ],
+          "rappelsTherapeutiques": [
+            "Masse testiculaire = échographie systématique",
+            "Cancer testiculaire = urgence relative (délai <1 semaine)",
+            "Granulome spermatique = surveillance possible mais échographie obligatoire",
+            "Orchidectomie radicale si cancer confirmé",
+            "Suivi oncologique spécialisé nécessaire"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 31 - Règles irrégulières",
@@ -1703,7 +2046,42 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Métrorragies chez la femme jeune",
+          "sections": [
+            {
+              "titre": "Approche diagnostique des troubles menstruels",
+              "contenu": "Chez toute femme en âge de procréer avec troubles menstruels : éliminer grossesse en premier. L'interrogatoire sur l'observance contraceptive est crucial."
+            },
+            {
+              "titre": "Contraception orale et efficacité",
+              "contenu": "Efficacité de la pilule dépend de l'observance. Un oubli > 12h peut compromettre l'efficacité contraceptive et perturber les cycles."
+            },
+            {
+              "titre": "SOPK et troubles métaboliques",
+              "contenu": "Le SOPK est fréquent chez les femmes avec IMC élevé et cycles irréguliers. Diagnostic par échographie et dosages hormonaux."
+            }
+          ],
+          "examensComplementaires": [
+            "β-hCG qualitatif (test de grossesse prioritaire)",
+            "Examen pelvien avec prélèvements cervicaux",
+            "Recherche Chlamydia/Gonorrhée (PCR)",
+            "Frottis cervical (antécédent anormal)",
+            "TSH, T4 libre (troubles thyroïdiens)",
+            "Prolactinémie (hyperprolactinémie)",
+            "Échographie pelvienne si SOPK suspecté"
+          ],
+          "rappelsTherapeutiques": [
+            "Test de grossesse = examen systématique avant tout traitement",
+            "Prélèvements cervicaux avant tout traitement hormonal",
+            "Counseling contraceptif si observance défaillante",
+            "Suivi cytologique si antécédent de frottis anormal",
+            "Prise en charge du surpoids si SOPK confirmé"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 32 - Fièvre chez l'enfant",
@@ -2107,7 +2485,40 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Fièvre chez l'enfant",
+          "sections": [
+            {
+              "titre": "Otite moyenne chez l'enfant",
+              "contenu": "Diagnostic otoscopique : érythème + bombement + épanchement + mobilité diminuée. Fréquente chez enfants avec antécédents d'otites récurrentes."
+            },
+            {
+              "titre": "Pharyngite streptococcique",
+              "contenu": "Critères de Centor : fièvre + exsudats + adénopathies + absence de toux. Test rapide obligatoire si ≥2 critères. Prévention rhumatisme articulaire aigu."
+            },
+            {
+              "titre": "Approche de la fièvre pédiatrique",
+              "contenu": "Recherche systématique foyer infectieux : ORL, pulmonaire, urinaire. Attention signes de gravité : détresse respiratoire, déshydratation, troubles conscience."
+            }
+          ],
+          "examensComplementaires": [
+            "Test antigénique rapide streptocoque (prélèvement pharyngé)",
+            "Test antigénique grippe (prélèvement nasal)",
+            "Analyse d'urine et culture (ECBU)",
+            "Otoscopie avec pneumo-otoscopie",
+            "Auscultation pulmonaire complète"
+          ],
+          "rappelsTherapeutiques": [
+            "Otite moyenne : antibiotiques selon âge et sévérité",
+            "Pharyngite streptococcique : pénicilline V ou amoxicilline",
+            "Pharyngite virale : traitement symptomatique",
+            "Paracétamol : 15 mg/kg toutes les 6h",
+            "Surveillance clinique et réévaluation si aggravation"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 33 - Patient Difficile - Fibromyalgie",
@@ -2519,7 +2930,40 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Gestion du patient difficile",
+          "sections": [
+            {
+              "titre": "Fibromyalgie et troubles du sommeil",
+              "contenu": "La fibromyalgie est souvent associée à des troubles du sommeil non-réparateur. Le diagnostic nécessite une approche globale incluant facteurs psychosociaux."
+            },
+            {
+              "titre": "Patient difficile : approche systémique",
+              "contenu": "Comportement difficile souvent secondaire à traumatismes, frustrations médicales ou mécanismes de défense face à vulnérabilité. Nécessite validation et empathie."
+            },
+            {
+              "titre": "Violence domestique et dépistage",
+              "contenu": "Dépistage systématique violence domestique chez femmes avec troubles sommeil/dépression. Approche non-directive, ressources d'aide, respect autonomie."
+            }
+          ],
+          "examensComplementaires": [
+            "TSH, T4 libre (dysfonctionnement thyroïdien)",
+            "Polysomnographie nocturne (syndrome apnée sommeil)",
+            "Échelles d'évaluation fibromyalgie",
+            "Questionnaires dépression (PHQ-9, Beck)",
+            "Évaluation violence domestique (si acceptée)"
+          ],
+          "rappelsTherapeutiques": [
+            "Fibromyalgie : approche multimodale (antidépresseurs tricycliques, prégabaline)",
+            "SAOS : CPAP si confirmé par polysomnographie",
+            "Dépression : ISRS, psychothérapie si acceptée",
+            "Violence domestique : ressources, plan sécurité",
+            "Hygiène sommeil : éducation, techniques relaxation"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 34 - Patient Difficile - Recherche de Médicaments",
@@ -2936,7 +3380,40 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Drug-seeking behavior",
+          "sections": [
+            {
+              "titre": "Reconnaissance du comportement drug-seeking",
+              "contenu": "Patients développent techniques sophistiquées : réticence feinte, faire nommer médicament, exclusivité traitement, incohérences cliniques. Évaluation systématique nécessaire."
+            },
+            {
+              "titre": "Tests cliniques de simulation",
+              "contenu": "Tests de Waddell, incohérences Lasègue selon position, amplitude mouvement normale malgré douleur sévère. Documentation précise essentielle."
+            },
+            {
+              "titre": "Gestion thérapeutique",
+              "contenu": "Éviter prescription opioïdes, alternatives non-addictives, référence appropriée, documentation complète. Focus sur sécurité et continuité soins."
+            }
+          ],
+          "examensComplementaires": [
+            "Radiographies lombaires (évaluation structurelle)",
+            "Vérification base données prescriptions",
+            "Contact médecin traitant habituel",
+            "Tests de simulation (Waddell)",
+            "IRM seulement si justification clinique claire"
+          ],
+          "rappelsTherapeutiques": [
+            "Éviter prescription opioïdes si suspicion drug-seeking",
+            "Alternatives : AINS, relaxants musculaires, physiothérapie",
+            "Documentation détaillée comportement et incohérences",
+            "Référence médecin traitant pour continuité",
+            "Information patient sur alternatives thérapeutiques"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 35 - Patient Difficile - Non Francophone",
@@ -3350,7 +3827,40 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Consultation avec interprète",
+          "sections": [
+            {
+              "titre": "Gestion de l'interprétariat médical",
+              "contenu": "Communication tripartite nécessite règles claires : traduction fidèle, première personne, maintien relation thérapeutique directe patient-médecin."
+            },
+            {
+              "titre": "Sensibilité culturelle en médecine",
+              "contenu": "Respect différences culturelles (perception tabac, médecines traditionnelles) essentiel pour établir confiance et améliorer compliance."
+            },
+            {
+              "titre": "RGO et facteurs culturels",
+              "contenu": "Alimentation épicée, habitudes alimentaires culturelles peuvent influencer symptômes. Approche thérapeutique doit intégrer contexte culturel."
+            }
+          ],
+          "examensComplementaires": [
+            "Test respiratoire H. pylori (recherche infection)",
+            "NFS avec formule (dépistage anémie)",
+            "Amylase/Lipase (exclusion pancréatite)",
+            "EOGD avec biopsies (diagnostic définitif)",
+            "pH-métrie si RGO non confirmé"
+          ],
+          "rappelsTherapeutiques": [
+            "IPP en première intention si RGO",
+            "Éradication H. pylori si positif",
+            "Modification habitudes alimentaires culturellement acceptable",
+            "Sevrage tabagique avec approche culturellement sensible",
+            "Suivi régulier avec interprète si nécessaire"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 36 - Cas téléphonique - Douleur abdominale",
@@ -3691,7 +4201,352 @@
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "⚠️ Ulcère gastro-duodénal perforé – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes typiques",
+                  "points": [
+                    "Douleur abdominale brutale, intense, souvent épigastrique puis diffuse",
+                    "Douleur en coup de poignard, persistante",
+                    "Nausées, vomissements possibles",
+                    "Arrêt des gaz et des selles (iléus réflexe)"
+                  ]
+                },
+                {
+                  "titre": "Contexte évocateur",
+                  "points": [
+                    "Antécédents d’ulcère gastrique ou duodénal",
+                    "Prise d’AINS, corticoïdes",
+                    "Alcool, tabac",
+                    "Absence d’antécédent abdominal aigu connu"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes physiques",
+                  "points": [
+                    "Abdomen en bois (contracture généralisée)",
+                    "Douleur à la palpation diffuse",
+                    "Disparition de la matité hépatique (pneumopéritoine)",
+                    "Tachycardie, hypotension, signes de choc",
+                    "Fièvre possible (péritonite secondaire)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens complémentaires",
+              "subsections": [
+                {
+                  "titre": "Biologie",
+                  "points": [
+                    "Leucocytose neutrophile",
+                    "Signe de déshydratation ou d’hypovolémie (urée, créatinine ↑)",
+                    "Recherche de troubles électrolytiques"
+                  ]
+                },
+                {
+                  "titre": "Imagerie",
+                  "points": [
+                    "Radiographie thorax/abdomen debout : pneumopéritoine (air sous diaphragme)",
+                    "Scanner abdomino-pelvien avec contraste : examen de référence (perforation, fuite, liquide libre, étiologie)",
+                    "Échographie : alternative si contre-indication au scanner"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Mesures initiales",
+                  "points": [
+                    "Mise à jeun stricte",
+                    "Voie veineuse, remplissage IV, correction hydro-électrolytique",
+                    "Oxygénothérapie si besoin",
+                    "Antibiothérapie à large spectre IV",
+                    "IPP IV"
+                  ]
+                },
+                {
+                  "titre": "Traitement chirurgical",
+                  "points": [
+                    "Indication chirurgicale en urgence (péritonite)",
+                    "Laparotomie ou laparoscopie",
+                    "Fermeture du perforation (patch épiploïque de Graham si petite perforation duodénale)",
+                    "Résection gastrique en cas d’ulcère gastrique perforé suspect de malignité"
+                  ]
+                },
+                {
+                  "titre": "Suivi post-opératoire",
+                  "points": [
+                    "Surveillance en soins continus ou réanimation si choc septique",
+                    "Contrôle des bilans biologiques et hydriques",
+                    "Eradication d’Helicobacter pylori secondairement",
+                    "Prévention secondaire : sevrage AINS/alcool/tabac, traitement anti-sécrétoire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Douleur abdominale brutale + abdomen en bois = perforation digestive jusqu’à preuve du contraire",
+                "Le pneumopéritoine au scanner ou à la radio est diagnostic",
+                "C’est une urgence chirurgicale absolue",
+                "Prise en charge initiale = réanimation + antibiotiques + chirurgie",
+                "Les ulcères antérieurs perforent, les postérieurs saignent"
+              ]
+            },
+            {
+              "titre": "📋 Check-list rapide ECOS",
+              "subsections": [
+                {
+                  "titre": "Questions à poser",
+                  "points": [
+                    "Début brutal de la douleur ? Type coup de poignard ?",
+                    "Localisation initiale (épigastrique) puis diffusion",
+                    "Antécédents d’ulcère, AINS, corticoïdes, tabac, alcool",
+                    "Nausées, vomissements, arrêt gaz/selles",
+                    "Signes de gravité : malaise, hypotension, état de choc"
+                  ]
+                },
+                {
+                  "titre": "Examens à faire",
+                  "points": [
+                    "Constantes vitales : TA, FC, FR, SpO₂, température",
+                    "Inspection/auscultation : silence abdominal",
+                    "Palpation : défense ou contracture généralisée",
+                    "Percussion : disparition matité hépatique",
+                    "Rechercher signes de choc hypovolémique"
+                  ]
+                },
+                {
+                  "titre": "PEC en 3 points",
+                  "points": [
+                    "Réanimation initiale : perfusion IV, oxygène, antibiothérapie, IPP",
+                    "Confirmation diagnostique par imagerie (radio ou scanner)",
+                    "Chirurgie en urgence (laparoscopie/laparotomie, patch de Graham ou résection selon contexte)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Douleur abdominale aiguë (consultation téléphonique, suspicion ulcère perforé/pancréatite)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte (consultation téléphonique), motif : douleur abdominale aiguë",
+                "Caractériser douleur → début brutal post-prandial, épigastrique, irradiation dorsale, type coup de poignard, EVA 10/10",
+                "Évolution → progressive en 1h, aggravée respiration profonde",
+                "Symptômes associés → vomissements répétés sans sang, constipation, pas de diarrhée, pas de fièvre rapportée",
+                "ATCD → reflux gastrique traité par oméprazole, arrêt il y a 1 semaine, épisode similaire il y a 6 mois",
+                "Habitudes de vie → alcool régulier (bières + shot hier), tabac à chiquer occasionnel",
+                "Famille → non contributif",
+                "Résumé + hypothèse principale : ulcère perforé ou pancréatite aiguë ; DD : occlusion, gastrite sévère",
+                "Examens complémentaires → impossibles par téléphone mais nécessaires : NFS, bilan hépatique, lipase/amylase, radio thorax/abdomen, scanner abdo",
+                "Prise en charge → orientation immédiate aux urgences, hospitalisation, imagerie + bilan biologique, PEC chirurgicale si perforation, PEC médicale si pancréatite"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : DOULEUR",
+                "elements": [
+                  "D = Douleur épigastrique brutale",
+                  "O = Oméprazole arrêté (ATCD ulcère)",
+                  "U = Urines et selles perturbées (constipation)",
+                  "L = Lipase/amylase à demander (pancréas)",
+                  "E = Émission vomissements répétés",
+                  "U = Urgence vitale suspectée",
+                  "R = Radiographie/scanner indispensable"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit d’Andy Lightfoot, un jeune homme de 22 ans, étudiant, que j’ai eu en consultation téléphonique. Il appelle car il présente depuis environ 4 heures une douleur abdominale très sévère. La douleur est apparue brutalement après un petit-déjeuner copieux composé d’œufs et de crêpes. Elle a rapidement augmenté en intensité en l’espace d’une heure, pour atteindre un niveau qu’il décrit comme 10/10, 'comme si on le poignardait dans l’estomac'. La douleur est localisée à l’épigastre et irradie vers le dos, reste constante, et s’aggrave lorsqu’il prend une inspiration profonde.\n\nIl a déjà vomi cinq fois ce matin, sans sang, uniquement les aliments du petit-déjeuner. Il n’a pas eu de selles depuis, et rapporte une constipation. Il nie diarrhée, douleurs thoraciques ou difficultés respiratoires, mais dit que la douleur est insupportable. Pas de fièvre rapportée.\n\nDans ses antécédents, il a un reflux gastrique traité par oméprazole, qu’il a arrêté il y a une semaine faute de renouvellement d’ordonnance. Il se rappelle avoir eu un épisode similaire il y a environ six mois, qu’il avait calmé avec des médicaments contre la douleur donnés par sa sœur, sans diagnostic précis. Pas d’antécédents chirurgicaux, pas d’allergies connues. Pas d’antécédents familiaux significatifs.\n\nConcernant ses habitudes de vie, il consomme de l’alcool quotidiennement, environ une bière le soir, et davantage le week-end. Hier soir, il a bu plusieurs bières et un shot. Il chique du tabac occasionnellement en sortie, mais ne fume pas. Pas de consommation de drogues.\n\nEn résumé, nous avons un jeune homme avec une douleur abdominale épigastrique brutale et intense, irradiant dans le dos, avec vomissements répétés, antécédent de reflux sous IPP arrêté récemment, et consommation alcoolique. Mon hypothèse principale est un ulcère gastro-duodénal compliqué, notamment perforé. Un diagnostic différentiel important est la pancréatite aiguë. D’autres hypothèses incluent une occlusion intestinale ou une gastrite sévère.\n\nÉtant donné la gravité des symptômes et l’absence d’examen possible par téléphone, la seule attitude est de l’orienter immédiatement aux urgences. Les examens complémentaires nécessaires incluent un bilan biologique (NFS, ionogramme, CRP, enzymes pancréatiques, bilan hépatique), une radiographie thorax/abdomen pour rechercher un pneumopéritoine, et un scanner abdominal injecté. La prise en charge dépendra du diagnostic : réanimation + chirurgie si perforation, traitement médical et surveillance si pancréatite."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Andy Lightfoot, 22 ans, consulte par téléphone pour douleur abdominale brutale, épigastrique, EVA 10/10, irradiant au dos, avec vomissements.\n\nB (Background) : ATCD reflux traité par oméprazole arrêté il y a 1 semaine, épisode similaire il y a 6 mois, consommation d’alcool hier soir.\n\nA (Assessment) : Suspicion d’ulcère perforé ou pancréatite aiguë. DD : occlusion, gastrite sévère.\n\nR (Recommendation) : Orientation immédiate aux urgences, bilan biologique et imagerie abdominale en urgence, PEC chirurgicale si perforation, médicale si pancréatite."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Ulcère perforé : DRAME",
+                  "points": [
+                    "D = Douleur brutale, coup de poignard",
+                    "R = Radiographie (pneumopéritoine)",
+                    "A = Abdomen en bois (péritonite)",
+                    "M = Mise à jeun, IPP, antibiotiques IV",
+                    "E = Exérèse ou patch chirurgical"
+                  ]
+                },
+                {
+                  "titre": "👉 Pancréatite aiguë : 3A",
+                  "points": [
+                    "Alcool",
+                    "Amylase/Lipase ↑",
+                    "Abdomen épigastrique + irradiation dorsale"
+                  ]
+                },
+                {
+                  "titre": "⚠️ Pièges ECOS",
+                  "points": [
+                    "Sous-estimer la douleur (urgence vitale !)",
+                    "Oublier limites consultation téléphonique",
+                    "Donner un traitement à distance sans orientation",
+                    "Ne pas mentionner examens indispensables"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Ulcère gastro-duodénal perforé",
+                      "reponse": {
+                        "pour": [
+                          "Douleur brutale épigastrique",
+                          "Irradiation dorsale",
+                          "Vomissements répétés",
+                          "Arrêt IPP",
+                          "Consommation alcool"
+                        ],
+                        "contre": [
+                          "Pas de défense abdominale objectivable (consultation téléphonique)"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Pancréatite aiguë",
+                      "reponse": {
+                        "pour": [
+                          "Douleur épigastrique irradiant au dos",
+                          "Alcool récent",
+                          "Vomissements"
+                        ],
+                        "contre": [
+                          "Pas de confirmation biologique par téléphone"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Occlusion intestinale",
+                      "reponse": {
+                        "pour": [
+                          "Vomissements répétés",
+                          "Absence de selles"
+                        ],
+                        "contre": [
+                          "Douleur épigastrique localisée plutôt que diffuse"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demanderiez-vous ?",
+                      "reponse": [
+                        "NFS, CRP, ionogramme",
+                        "Lipase, amylase",
+                        "Bilan hépatique complet",
+                        "Radio thorax/abdomen debout",
+                        "Scanner abdomino-pelvien injecté"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Suspicion d’ulcère gastro-duodénal perforé ou pancréatite aiguë"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Hospitalisation en urgence",
+                          "Mise à jeun",
+                          "Voies veineuses larges",
+                          "Remplissage IV",
+                          "IPP IV",
+                          "Antibiothérapie large spectre"
+                        ],
+                        "specifique": [
+                          "Chirurgie si perforation",
+                          "Traitement médical (repos pancréatique, hydratation, antalgiques, nutrition) si pancréatite"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Surveillance en soins intensifs si instabilité",
+                        "Évaluation et correction facteurs favorisants (alcool, AINS, IPP)",
+                        "Prévention secondaire (éradication H. pylori si ulcère, sevrage alcool/tabac)",
+                        "Suivi gastro-entérologie"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Consultation téléphonique d'urgence",
+          "sections": [
+            {
+              "titre": "Anamnèse téléphonique structurée",
+              "contenu": "Questions ciblées, chronologie précise, caractérisation symptômes. Compenser absence examen physique par anamnèse détaillée."
+            },
+            {
+              "titre": "Reconnaissance urgences abdominales",
+              "contenu": "Douleur 10/10 + vomissements + antécédents ulcère + irradiation dorsale = suspicion perforation. Pattern classique nécessitant orientation immédiate."
+            },
+            {
+              "titre": "Communication des risques",
+              "contenu": "Expliquer clairement gravité potentielle, limitations consultation téléphonique, nécessité évaluation urgente. Rassurer tout en orientant."
+            }
+          ],
+          "examensDifferentiels": [
+            "Perforation ulcère peptique (urgence vitale)",
+            "Pancréatite aiguë (alcool + douleur dorsale)",
+            "Occlusion intestinale (vomissements + constipation)",
+            "Gastrite sévère (moins probable vu intensité)",
+            "Cholangite (moins probable vu localisation)"
+          ],
+          "rappelsTherapeutiques": [
+            "Orientation urgente si suspicion perforation",
+            "Pas de conseils thérapeutiques par téléphone",
+            "Coordination avec équipe urgences",
+            "Information patient sur gravité potentielle",
+            "Organisation transport sécurisé"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 37 - Cas téléphonique - Chute d'une personne âgée",
@@ -3989,7 +4844,40 @@
           "resultat": "Pas d'examen physique possible [consultation téléphonique via fille]"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Chute personne âgée sous anticoagulants",
+          "sections": [
+            {
+              "titre": "Gestion téléphonique urgences gériatriques",
+              "contenu": "Priorité sécurité immédiate : stabilisation, transport urgent. Chute non-témoin = supposer gravité maximale. Instructions claires famille."
+            },
+            {
+              "titre": "Anticoagulation et traumatisme",
+              "contenu": "Coumadine multiplie risque hémorragique. Hématome intracrânien peut être retardé. Bilan coagulation urgent nécessaire."
+            },
+            {
+              "titre": "Démence et évaluation neurologique",
+              "contenu": "Démence baseline masque changements neurologiques. Évaluation objective difficile. Seuil abaissé pour imagerie."
+            }
+          ],
+          "examensComplementaires": [
+            "CT cérébral (hémorragie intracrânienne)",
+            "CT cervical (fractures vertébrales)",
+            "Radiographies hanches bilatérales",
+            "NFS, bilan coagulation (TP/TCA/INR)",
+            "Radiographies membres selon clinique"
+          ],
+          "rappelsTherapeutiques": [
+            "Stabilisation cervicale immédiate",
+            "Transport ambulance obligatoire",
+            "Bilan coagulation et INR urgent",
+            "Surveillance neurologique rapprochée",
+            "Imagerie systématique si anticoagulation"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 38 - Cas téléphonique - Fin de grossesse",
@@ -4353,7 +5241,40 @@
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Urgence obstétricale téléphonique",
+          "sections": [
+            {
+              "titre": "Triage téléphonique obstétrical",
+              "contenu": "Évaluation contractions, pertes vaginales, mouvements fœtaux. Seuil abaissé orientation si prématurité ou rupture membranes suspectée."
+            },
+            {
+              "titre": "Rupture prématurée membranes (PROM)",
+              "contenu": "Pertes aqueuses + contractions = PROM probable. Risques : infection, travail prématuré. Confirmation par examen spéculum, tests nitrazine/cristallisation."
+            },
+            {
+              "titre": "Travail prématuré et prématurité",
+              "contenu": "35+4 semaines = prématurité modérée. Soins néonataux spécialisés nécessaires. Facteurs risque : tabac, PROM, primigeste."
+            }
+          ],
+          "examensComplementaires": [
+            "Examen spéculum stérile (confirmation PROM)",
+            "Test nitrazine et cristallisation liquide",
+            "Index liquide amniotique (échographie)",
+            "Monitoring fœtal et utérin (20 min)",
+            "Examen col utérin (progression travail)"
+          ],
+          "rappelsTherapeutiques": [
+            "Orientation hospitalière urgente si PROM",
+            "Monitoring continu si travail prématuré",
+            "Corticothérapie anténatale si possible",
+            "Antibioprophylaxie si PROM",
+            "Support psychosocial contexte difficile"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 39 - Cas téléphonique - Suspicion de maltraitance",
@@ -4795,7 +5716,40 @@
           "imposer un dépôt de plainte immédiat avant toute évaluation"
         ]
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Suspicion maltraitance infantile",
+          "sections": [
+            {
+              "titre": "Communication téléphonique en suspicion maltraitance",
+              "contenu": "Empathie sans leading questions, encouragement consultation, éviter spécifications diagnostiques. Rassurer sur processus tout en prenant au sérieux."
+            },
+            {
+              "titre": "Signes comportementaux maltraitance",
+              "contenu": "Régression développementale, évitement situations spécifiques, changements comportement soudains. Contexte familial et garde partagée."
+            },
+            {
+              "titre": "Évaluation médico-légale pédiatrique",
+              "contenu": "Équipe spécialisée, examen supervisé, prélèvements appropriés, documentation photographique, coordination services protection."
+            }
+          ],
+          "examensComplementaires": [
+            "Analyse d'urine et culture urinaire",
+            "Frottis microscopiques et cultures (vaginaux, oraux, anaux)",
+            "Tests antigéniques gonorrhée et chlamydia",
+            "Tests RPR, anticorps VIH, hépatites B et C",
+            "Échantillons cheveux et ongles"
+          ],
+          "rappelsTherapeutiques": [
+            "Signalement obligatoire si suspicion fondée",
+            "Évaluation équipe multidisciplinaire",
+            "Documentation précise et objective",
+            "Support psychologique famille",
+            "Coordination services protection enfance"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 3 - Troubles de Mémoire",
@@ -5359,7 +6313,40 @@
           "question_patient": "Pensez-vous que c'est quelque chose comme la maladie d'Alzheimer ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Troubles cognitifs chez la personne âgée",
+          "sections": [
+            {
+              "titre": "Hydrocéphalie à pression normale",
+              "contenu": "Triade classique : troubles cognitifs + apraxie de la marche + incontinence urinaire. Cause potentiellement réversible de démence. Diagnostic : IRM (dilatation ventriculaire disproportionnée), ponction lombaire soustractive. Traitement : dérivation ventriculo-péritonéale si amélioration après PL."
+            },
+            {
+              "titre": "Démences et diagnostic différentiel",
+              "contenu": "Alzheimer : troubles mnésiques prédominants, évolution progressive. Vasculaire : facteurs de risque CV, évolution par paliers. Corps de Lewy : hallucinations, fluctuations, parkinsonisme. Fronto-temporale : troubles comportementaux précoces."
+            },
+            {
+              "titre": "Bilan de démence",
+              "contenu": "Biologie : NFS, iono, urée/créat, B12, folates, TSH, syphilis. Imagerie : IRM > TDM. Tests cognitifs : MMSE, MoCA. Éliminer causes réversibles : médicaments, dépression, hypothyroïdie, carence B12."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "HPN : dérivation VP si réponse positive à PL soustractive",
+            "Alzheimer : inhibiteurs cholinestérase (donépézil, rivastigmine, galantamine)",
+            "Stade modéré-sévère : ajouter mémantine",
+            "Mesures non pharmacologiques : stimulation cognitive, activité physique",
+            "Support aux aidants : formation, répit, groupes de soutien"
+          ],
+          "examensComplementaires": [
+            "IRM cérébrale : gold standard pour HPN et atrophie",
+            "Ponction lombaire : pression d'ouverture, protéines, test soustractif",
+            "MMSE/MoCA : évaluation cognitive standardisée",
+            "Bilan métabolique complet : éliminer causes réversibles",
+            "EEG si suspicion de crises épileptiques"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 40 - Cas téléphonique - Intoxication",
@@ -5584,7 +6571,40 @@
           "resultat": "Pas d'examen physique possible [consultation téléphonique]"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie et Pratique - Intoxication caustique pédiatrique",
+          "sections": [
+            {
+              "titre": "Agents caustiques et mécanisme lésionnel",
+              "contenu": "Hydroxyde de potassium = alcali fort causant nécrose liquéfaction. Atteinte oropharyngée, œsophagienne possible. Risque perforation tardive."
+            },
+            {
+              "titre": "Gestion téléphonique urgences pédiatriques",
+              "contenu": "Réassurance parentale, information rapide, orientation appropriée. Éviter prolongation dangereuse conversation au volant."
+            },
+            {
+              "titre": "Transport et priorisation sécurité",
+              "contenu": "Transport parental souvent plus rapide. Prioriser sécurité trajet sur consultation téléphonique. Préparation équipe cruciale."
+            }
+          ],
+          "examensComplementaires": [
+            "Gazométrie artérielle (équilibre acide-base)",
+            "Ionogramme et fonction rénale",
+            "Radiographie thoracique debout (perforation/aspiration)",
+            "NFS (surveillance hématologique)",
+            "Endoscopie si indication clinique"
+          ],
+          "rappelsTherapeutiques": [
+            "PAS de neutralisation (risque thermique)",
+            "PAS de vomissements provoqués",
+            "Surveillance voies respiratoires",
+            "Antalgie adaptée",
+            "Endoscopie précoce si indication"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 4 - Vertiges",
@@ -6038,7 +7058,40 @@
           "question_patient": "Est-ce que je pourrais avoir fait un AVC ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Vertiges",
+          "sections": [
+            {
+              "titre": "Classification des vertiges",
+              "contenu": "Vertiges vrais (rotatoires) : origine vestibulaire périphérique ou centrale. Pseudo-vertiges : lipothymies, déséquilibre, vertiges psychogènes. Durée : secondes (VPPB), heures (Ménière), jours (névrite vestibulaire), permanent (central)."
+            },
+            {
+              "titre": "Manœuvre de Dix-Hallpike",
+              "contenu": "Patient assis, tourner tête 45° d'un côté. Basculer rapidement en décubitus, tête en hyperextension 30° sous le plan horizontal. Maintenir 30 secondes. Positif si nystagmus + vertiges après latence 1-5 secondes."
+            },
+            {
+              "titre": "Red flags des vertiges",
+              "contenu": "Signes neurologiques focaux, céphalées brutales, troubles visuels, troubles de la marche, vertiges post-traumatiques, surdité brutale associée. Nécessitent imagerie cérébrale urgente."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "VPPB : manœuvres de repositionnement (Epley, Semont)",
+            "Labyrinthite/névrite : corticoïdes si précoce, antivertigineux symptomatiques",
+            "Ménière : régime hyposodé, diurétiques, bétahistine",
+            "Central : traiter la cause (AVC, SEP, tumeur)",
+            "Symptomatique : méclizine, dimenhydrinate, métoclopramide si nausées"
+          ],
+          "examensComplementaires": [
+            "IRM cérébrale : gold standard pour causes centrales",
+            "Audiométrie : si symptômes auditifs associés",
+            "Vidéonystagmographie : étude du nystagmus",
+            "Test calorique : fonction vestibulaire",
+            "VEMP (potentiels évoqués myogéniques vestibulaires) : fonction otolithique"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 5 - Céphalées",
@@ -6495,7 +7548,41 @@
           "question_patient": "Est-ce que j'ai une tumeur au cerveau ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Céphalées",
+          "sections": [
+            {
+              "titre": "Critères diagnostiques de la migraine sans aura",
+              "contenu": "A. Au moins 5 crises répondant aux critères B-D. B. Céphalées durant 4-72h. C. Au moins 2 : unilatérale, pulsatile, modérée/sévère, aggravée par activité. D. Au moins 1 : nausées/vomissements, photo ET phonophobie. E. Non attribuée à autre cause."
+            },
+            {
+              "titre": "Céphalées et caféine",
+              "contenu": "Surconsommation : > 200mg/jour (2 tasses). Mécanisme : vasoconstriction chronique avec tolérance. Sevrage : céphalées 12-24h après dernière prise, pic à 48h. Traitement : réduction progressive sur 2-4 semaines."
+            },
+            {
+              "titre": "Red flags des céphalées",
+              "contenu": "SNOOP : Systémiques (fièvre, perte poids), Neurologiques (déficits focaux), Onset brutal, Older (>50 ans nouveau), Pattern change. Nécessitent imagerie urgente et/ou PL."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Crise migraineuse : triptans (CI si coronaropathie), AINS haute dose précoce",
+            "Prophylaxie : indiquée si >4 crises/mois ou handicap important",
+            "1ère ligne : propranolol, métoprolol, amitriptyline",
+            "2ème ligne : topiramate, valproate (CI si grossesse)",
+            "Éviction triggers : stress, manque sommeil, jeûne, alcool, fromages vieillis",
+            "Sevrage caféine progressif pour éviter céphalées rebond"
+          ],
+          "examensComplementaires": [
+            "CT cérébral : 1ère imagerie si première évaluation céphalées",
+            "IRM cérébrale : si anomalie au CT ou signes atypiques",
+            "PL : si suspicion méningite, HTIC, HSA avec CT normal",
+            "Journal céphalées : fréquence, triggers, réponse traitement",
+            "Dosage caféine : rarement nécessaire, histoire suffisante"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 6 - Troubles du Sommeil",
@@ -6881,7 +7968,40 @@
           "question_patient": "Est-ce que je suis en train de devenir fou ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Troubles du sommeil et dépression",
+          "sections": [
+            {
+              "titre": "Critères DSM-5 Épisode dépressif majeur",
+              "contenu": "Au moins 5 symptômes pendant 2 semaines dont humeur dépressive ou anhédonie. Autres : insomnie/hypersomnie, fatigue, culpabilité excessive, troubles concentration, modifications appétit/poids, agitation/ralentissement, idées suicidaires. Altération fonctionnement significative."
+            },
+            {
+              "titre": "Trouble de l'adaptation",
+              "contenu": "Symptômes émotionnels/comportementaux dans les 3 mois d'un stresseur identifiable. Détresse disproportionnée ou altération fonctionnement. Résolution dans les 6 mois après disparition stresseur. Ne remplit pas critères autre trouble mental."
+            },
+            {
+              "titre": "Hygiène du sommeil",
+              "contenu": "Horaires réguliers, éviter écrans avant coucher, chambre sombre/fraîche/calme, pas de caféine après 14h, activité physique régulière (pas le soir), éviter alcool, pas de siestes > 20 min, lit réservé au sommeil."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Dépression : ISRS première ligne (sertraline 50mg, escitalopram 10mg)",
+            "Insomnie : éviter benzodiazépines, préférer trazodone 25-50mg si besoin",
+            "Psychothérapie : TCC efficacité prouvée, thérapie interpersonnelle",
+            "Urgence : hospitalisation si risque suicidaire",
+            "Support social : groupes de soutien, services sociaux"
+          ],
+          "examensComplementaires": [
+            "TSH, T4 libre : éliminer hypothyroïdie",
+            "NFS : anémie comme cause de fatigue",
+            "Bilan métabolique : déséquilibres électrolytiques",
+            "ECG : si bradycardie ou avant antidépresseurs",
+            "Échelles : PHQ-9, échelle de Hamilton pour suivi"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 7 - Céphalées",
@@ -7367,7 +8487,40 @@
           "question_patient": "Est-ce que je vais mourir ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Méningites",
+          "sections": [
+            {
+              "titre": "Triade méningée classique",
+              "contenu": "Céphalées + fièvre + raideur nucale présente chez seulement 44% des patients. Signes méningés : Kernig (douleur à l'extension du genou, cuisse fléchie), Brudzinski (flexion involontaire des genoux lors de la flexion du cou)."
+            },
+            {
+              "titre": "Méningite bactérienne de l'adulte",
+              "contenu": "Urgence médicale absolue. Mortalité 10-20% malgré traitement. Germes : Pneumocoque (40%), Méningocoque (25%), Listeria (>50 ans). Complications : HTIC, hydrocéphalie, AVC, convulsions, choc septique."
+            },
+            {
+              "titre": "Analyse du LCR",
+              "contenu": "Bactérienne : PO>30 cmH2O, PMN>1000, protéines>1g/L, glucose<2,2 mM. Virale : lymphocytes prédominants, protéines modérément élevées, glucose normale. Aspect trouble = bactérienne jusqu'à preuve contraire."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Antibiotiques IV immédiat : ceftriaxone + vancomycine",
+            "Dexaméthasone 15 min avant/avec première dose antibiotique",
+            "Traitement adapté selon antibiogramme : pénicilline G si sensible",
+            "Durée : 7 jours pneumocoque, 5-7 jours méningocoque",
+            "Prophylaxie contacts si méningocoque : rifampicine ou ceftriaxone"
+          ],
+          "examensComplementaires": [
+            "CT cérébral avant PL si : coma, déficits focaux, œdème papillaire",
+            "PL urgente : aspect, cytologie, biochimie, bactériologie",
+            "Hémocultures avant antibiotiques",
+            "Antigènes solubles urinaires (pneumocoque, méningocoque)",
+            "PCR méningocoque si traitement antibiotique préalable"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 8 - Syncope",
@@ -7810,7 +8963,390 @@
           "question_patient": "Est-ce que ça peut être grave ? Suis-je en danger ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "⚡ Syncope chez le jeune sportif – Origine cardiaque – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes et contexte",
+                  "points": [
+                    "Syncope brutale, souvent sans prodromes",
+                    "Survenue à l’effort ou immédiatement après",
+                    "Palpitations précédant la perte de connaissance",
+                    "Douleur thoracique, dyspnée, malaise"
+                  ]
+                },
+                {
+                  "titre": "Facteurs de risque / contexte familial",
+                  "points": [
+                    "ATCD familiaux de mort subite ou de cardiopathie",
+                    "Antécédents de syncope inexpliquée",
+                    "ATCD personnels de cardiopathie congénitale ou connue",
+                    "Prise de médicaments allongeant QT"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes à rechercher",
+                  "points": [
+                    "Souffle cardiaque (sténose aortique, cardiomyopathie hypertrophique obstructive)",
+                    "Pouls irrégulier (arythmie)",
+                    "TA basse, signes d’insuffisance cardiaque",
+                    "Examen neurologique normal (≠ épilepsie)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "ECG",
+                  "points": [
+                    "Allongement QT, Brugada",
+                    "Pré-excitation (WPW)",
+                    "Troubles du rythme ventriculaire ou supraventriculaire"
+                  ]
+                },
+                {
+                  "titre": "Imagerie et tests",
+                  "points": [
+                    "Échocardiographie : hypertrophie, sténose, cardiomyopathie",
+                    "IRM cardiaque si suspicion de cardiomyopathie ou anomalie structurelle",
+                    "Test d’effort avec ECG",
+                    "Holter ECG si palpitations intermittentes"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Mesures générales",
+                  "points": [
+                    "Arrêt immédiat du sport compétitif jusqu’au bilan complet",
+                    "Hospitalisation si syncope à l’effort inexpliquée"
+                  ]
+                },
+                {
+                  "titre": "Traitement spécifique selon cause",
+                  "points": [
+                    "Bradyarythmie : implantation d’un stimulateur cardiaque",
+                    "Tachyarythmie : ablation par radiofréquence si possible",
+                    "Cardiomyopathie hypertrophique ou canalopathie (long QT, Brugada) : défibrillateur implantable (ICD) selon risque",
+                    "Sténose aortique serrée : chirurgie valvulaire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Toute syncope à l’effort chez un jeune sportif = considérer cause cardiaque jusqu’à preuve du contraire",
+                "Toujours rechercher ATCD familiaux de mort subite",
+                "ECG, écho et test d’effort sont essentiels",
+                "Arrêt du sport jusqu’à évaluation spécialisée",
+                "Prise en charge spécifique selon l’étiologie (rythmique, structurelle, génétique)"
+              ]
+            },
+            {
+              "titre": "📋 Check-list rapide ECOS",
+              "subsections": [
+                {
+                  "titre": "Questions à poser",
+                  "points": [
+                    "Syncope survenue à l’effort ou au repos ?",
+                    "Prodromes (palpitations, douleur thoracique, dyspnée) ?",
+                    "ATCD familiaux de mort subite ou cardiopathie ?",
+                    "Médicaments en cours (QT, antiarythmiques, psychotropes) ?"
+                  ]
+                },
+                {
+                  "titre": "Examens à faire",
+                  "points": [
+                    "Constantes vitales (TA, FC, SpO₂)",
+                    "ECG 12 dérivations",
+                    "Échocardiographie cardiaque",
+                    "Test d’effort + Holter ECG",
+                    "IRM cardiaque selon suspicion"
+                  ]
+                },
+                {
+                  "titre": "PEC en 3 points",
+                  "points": [
+                    "Arrêt du sport immédiat et bilan complet",
+                    "ECG, écho et test d’effort systématiques",
+                    "Orientation spécialisée (rythmologie/cardiologie du sport)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Syncope à l’effort (homme 23 ans, sportif)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, motif (homme 23 ans, chute avec perte de connaissance, fracture dentaire)",
+                "Caractériser la syncope → circonstances (effort = montée escaliers après sport), durée (quelques secondes), récupération (confusion transitoire), témoin (ami, pas de convulsions)",
+                "Symptômes associés → pas de douleur thoracique, pas de palpitations, pas de prodromes, pas de convulsions observées",
+                "Contexte médical → diarrhée récente (déshydratation possible), pas d’ATCD médicaux, sportif universitaire",
+                "ATCD familiaux → père HTA, pas de morts subites, pas de cardiopathie familiale",
+                "Habitudes → sport intensif, pas de tabac, alcool modéré, pas de médicaments",
+                "Examen clinique → constantes normales sauf bradycardie relative (54 bpm), examen cardio et neuro normaux, fracture incisive, lacération labiale",
+                "Résumé + hypothèse principale → syncope d’effort (cause cardiaque à éliminer en priorité), DD : arythmie, cardiomyopathie hypertrophique, hypotension orthostatique, syncope vasovagale, épilepsie, hypoglycémie",
+                "Examens complémentaires → ECG 12 dérivations, glycémie capillaire, bilan orthostatique, troponines, NFS/iono, écho cardiaque, Holter, test d’effort, IRM cardiaque si suspicion",
+                "PEC → surveillance monitorée, arrêt sport, bilan cardio complet, prise en charge du traumatisme dentaire, explications et consignes sécurité"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide SYNCOPE",
+                "elements": [
+                  "S = Signe d’alerte (syncope à l’effort)",
+                  "Y = Young (sportif jeune, penser cause cardiaque)",
+                  "N = Neuro (épilepsie ? mais examen normal)",
+                  "C = Cardiaque (arythmie, CMH, QT long, Brugada)",
+                  "O = Orthostatique (déshydratation, diarrhée)",
+                  "P = Prodromes absents (donc cause rythmique ?)",
+                  "E = ECG systématique"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de James Patterson, un étudiant de 23 ans, sportif universitaire, qui se présente aux urgences après une chute ayant entraîné une fracture dentaire. En interrogeant le patient et son ami témoin, on comprend qu’il a perdu connaissance brutalement en montant les escaliers après un match de racquetball. L’épisode a duré quelques secondes, il a repris conscience rapidement mais avec une confusion transitoire. Il se plaint de douleur dentaire et labiale. \n\nAvant l’épisode, il n’a présenté ni douleur thoracique, ni palpitations, ni vertiges, ni malaise. Son ami n’a observé aucun mouvement anormal, aucune convulsion, ni perte d’urines. C’est son premier épisode syncopal, hormis quelques ‘black-out’ liés à l’alcool par le passé. \n\nConcernant son état de santé, il est en général en bonne santé, n’a jamais été hospitalisé, pas de chirurgie, pas de traitement en cours. Ses habitudes de vie incluent un entraînement sportif intense, une consommation d’alcool modérée le week-end, pas de tabac, et des suppléments protéinés. Il rapporte une diarrhée récente non sanglante, ce qui suggère une possible déshydratation contributive. \n\nSes antécédents familiaux sont marqués uniquement par une HTA chez son père, sans morts subites ni cardiopathies connues. À l’examen, ses constantes sont normales hormis une bradycardie relative à 54 bpm, compatible avec son statut de sportif. L’examen cardio, neuro et ORL est rassurant, hormis la fracture dentaire et la lacération labiale. \n\nEn résumé, il s’agit d’un homme de 23 ans, sportif, présentant une syncope d’effort avec chute et traumatisme dentaire. Les causes cardiaques doivent être éliminées en priorité : arythmie, cardiomyopathie hypertrophique, QT long, Brugada. Les diagnostics différentiels incluent une hypotension orthostatique (déshydratation récente), une syncope vasovagale (mais contexte atypique), une crise d’épilepsie (peu probable sans convulsions ni signes post-critique), et une hypoglycémie. \n\nLa prise en charge initiale consiste en une surveillance monitorée, mise en place d’une voie veineuse, réhydratation, prise en charge du traumatisme dentaire. Les examens à demander en urgence incluent un ECG 12 dérivations, une glycémie capillaire, un bilan orthostatique et des troponines. Secondairement, on réalisera une NFS, ionogramme, fonction rénale, échocardiographie, Holter 24-48h, test d’effort, voire IRM cardiaque. \n\nEn attendant le bilan complet, il doit absolument interrompre toute activité sportive. Je lui expliquerais que la plupart des syncopes chez le jeune sont bénignes, mais qu’en tant que sportif, on doit écarter une cause cardiaque avant d’autoriser la reprise. Le suivi cardiologique spécialisé est indispensable."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : James Patterson, 23 ans, syncope brutale à l’effort, chute avec fracture dentaire.\n\nB (Background) : Sportif universitaire, sans antécédents, diarrhée récente, pas de morts subites familiales.\n\nA (Assessment) : Syncope d’effort, cause cardiaque à éliminer en priorité (arythmie, cardiomyopathie hypertrophique, QT long). DD : hypotension orthostatique, syncope vasovagale, épilepsie, hypoglycémie.\n\nR (Recommendation) : ECG, glycémie, orthostatique, troponines, suivi cardio complet, arrêt sport temporaire, surveillance monitorée."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Red flags syncope sportive",
+                  "points": [
+                    "Survenue à l’effort",
+                    "Absence de prodrome",
+                    "ATCD familiaux de mort subite",
+                    "ECG anormal",
+                    "Syncope répétée"
+                  ]
+                },
+                {
+                  "titre": "👉 Étiologies majeures chez le sportif",
+                  "points": [
+                    "Cardiomyopathie hypertrophique",
+                    "Arythmies (TV, BAV, QT long, Brugada)",
+                    "Hypotension orthostatique/déshydratation",
+                    "Syncope vasovagale",
+                    "Hypoglycémie"
+                  ]
+                },
+                {
+                  "titre": "👉 PEC immédiate en 3 points",
+                  "points": [
+                    "Surveillance monitorée + voie IV",
+                    "ECG systématique",
+                    "Arrêt du sport jusqu’au bilan"
+                  ]
+                },
+                {
+                  "titre": "⚠️ Pièges ECOS",
+                  "points": [
+                    "Banaliser la syncope chez jeune sportif",
+                    "Oublier l’ECG",
+                    "Ne pas rechercher antécédents familiaux",
+                    "Autoriser reprise sport trop tôt",
+                    "Négliger les consignes de sécurité (conduite, récidive)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Arythmie cardiaque",
+                      "reponse": {
+                        "pour": [
+                          "Syncope brutale à l’effort",
+                          "Récupération rapide",
+                          "Bradycardie relative",
+                          "Sportif"
+                        ],
+                        "contre": [
+                          "Pas de palpitations",
+                          "Pas d’ATCD cardiaques"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Cardiomyopathie hypertrophique",
+                      "reponse": {
+                        "pour": [
+                          "Jeune sportif",
+                          "Syncope d’effort"
+                        ],
+                        "contre": [
+                          "Pas de souffle à l’auscultation",
+                          "Pas d’ATCD familiaux"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Hypotension orthostatique",
+                      "reponse": {
+                        "pour": [
+                          "Diarrhée récente",
+                          "Déshydratation possible"
+                        ],
+                        "contre": [
+                          "Pas de vertiges prodromiques",
+                          "PA normale"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Syncope vasovagale",
+                      "reponse": {
+                        "pour": [
+                          "Âge jeune",
+                          "Récupération rapide"
+                        ],
+                        "contre": [
+                          "Pas de déclencheur émotionnel",
+                          "Pas de prodrome typique"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Épilepsie",
+                      "reponse": {
+                        "pour": [
+                          "Confusion post-critique transitoire"
+                        ],
+                        "contre": [
+                          "Pas de convulsions",
+                          "Pas de morsure de langue",
+                          "Pas d’incontinence"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Hypoglycémie",
+                      "reponse": {
+                        "pour": [
+                          "Effort physique récent"
+                        ],
+                        "contre": [
+                          "Pas de symptômes neurovégétatifs",
+                          "Pas de jeûne prolongé"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demanderiez-vous ?",
+                      "reponse": [
+                        "ECG 12 dérivations",
+                        "Glycémie capillaire",
+                        "Mesure orthostatique",
+                        "Troponines",
+                        "NFS, ionogramme, fonction rénale",
+                        "Échocardiographie si suspicion",
+                        "Holter 24-48h si suspicion arythmique",
+                        "IRM cardiaque si anomalie structurelle suspectée"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Syncope d’effort chez un sportif, origine cardiaque à éliminer"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Surveillance monitorée",
+                          "Arrêt sport",
+                          "Réhydratation si besoin",
+                          "Prise en charge fracture dentaire"
+                        ],
+                        "secondaire": [
+                          "ECG, écho, Holter, test d’effort",
+                          "Orientation cardiologique"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Consultation cardiologie spécialisée",
+                        "Reprise sport uniquement après clearance",
+                        "Informer patient : revenir en cas de récidive, palpitations, douleur thoracique",
+                        "Dépistage familial si pathologie cardiaque confirmée"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Syncope chez le sportif",
+          "sections": [
+            {
+              "titre": "Étiologies de syncope chez le jeune sportif",
+              "contenu": "Causes cardiaques (20%) : cardiomyopathie hypertrophique, DAVD, coronaropathie précoce, troubles du rythme héréditaires. Causes vasculaires (70%) : hypotension orthostatique, syncope vasovagale. Causes neurologiques (5%) : épilepsie. Causes métaboliques (5%) : hypoglycémie."
+            },
+            {
+              "titre": "Cardiomyopathie hypertrophique obstructive",
+              "contenu": "Première cause de mort subite chez jeunes sportifs. Transmission autosomique dominante. Syncope d'effort typique. Diagnostic : échocardiographie (hypertrophie asymétrique), ECG (ondes Q, HVG). Contre-indication absolue au sport de compétition."
+            },
+            {
+              "titre": "Bilan de syncope chez sportif",
+              "contenu": "ECG 12 dérivations obligatoire. Échocardiographie si ECG anormal ou syncope d'effort. Test d'effort si suspicion ischémique. Holter si suspicion rythmique. IRM cardiaque si cardiomyopathie suspectée."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Arrêt immédiat du sport jusqu'à bilan complet",
+            "ECG et échocardiographie systématiques",
+            "Consultation cardiologique spécialisée obligatoire",
+            "Test d'effort supervisé si pas de contre-indication",
+            "Reprise progressive après clearance cardiologique"
+          ],
+          "examensComplementaires": [
+            "ECG 12 dérivations : recherche troubles rythme/conduction",
+            "Échocardiographie : fonction VG, hypertrophie, valvulopathies",
+            "Holter 24-48h : arythmies intermittentes",
+            "Test d'inclinaison : hypotension orthostatique, syncope vasovagale",
+            "IRM cardiaque : cardiomyopathies, cicatrices myocardiques"
+          ]
+        }
+      }
     },
     {
       "id": "USMLE Triage 9 - Coup de Chaleur",
@@ -8302,7 +9838,40 @@
           "question_patient": "Est-ce que mes reins vont récupérer ? Vais-je avoir besoin de dialyse ?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Coup de chaleur et insuffisance rénale",
+          "sections": [
+            {
+              "titre": "Physiopathologie du coup de chaleur",
+              "contenu": "Défaillance thermorégulatrice avec température > 40°C. Triade : hyperthermie + altération mentale + dysfonction multi-organes. Mécanismes : vasodilatation périphérique, déshydratation, cytolyse, coagulation intravasculaire. Atteinte rénale par rhabdomyolyse, nécrose tubulaire aiguë, hypovolémie."
+            },
+            {
+              "titre": "Rhabdomyolyse et insuffisance rénale",
+              "contenu": "Libération massive myoglobine → précipitation tubulaire → obstruction + toxicité directe. CPK > 1000 UI/L (normale < 200). Myoglobinurie (urine brun-rouge). Complications : hyperkaliémie, hyperphosphorémie, hypocalcémie. Traitement : hydratation massive, alcalinisation."
+            },
+            {
+              "titre": "Néphrotoxicité des AINS",
+              "contenu": "Inhibition cyclo-oxygénase → vasoconstriction afférente → diminution filtration glomérulaire. Facteurs de risque : âge > 65 ans, déshydratation, insuffisance cardiaque, usage prolongé. IRA habituellement réversible si arrêt précoce. Interactions avec diurétiques (HCTZ)."
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Arrêt immédiat AINS et diurétiques thiazidiques",
+            "Hydratation IV adaptée à la fonction cardiaque",
+            "Rhabdomyolyse : alcalinisation urinaire (bicarbonate)",
+            "Surveillance électrolytique quotidienne (K+, PO4, Ca)",
+            "Hémodialyse si : anurie, hyperkaliémie > 6,5, œdème pulmonaire"
+          ],
+          "examensComplementaires": [
+            "CPK totale : diagnostic rhabdomyolyse (> 1000 UI/L)",
+            "Myoglobine urinaire : confirmation lyse musculaire",
+            "FeNa : < 1% (pré-rénale), > 2% (rénale intrinsèque)",
+            "Échographie rénale : éliminer obstruction",
+            "ECG : surveillance troubles rythme (hyperkaliémie)"
+          ]
+        }
+      }
     }
   ]
 }

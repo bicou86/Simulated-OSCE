@@ -533,7 +533,335 @@
           "resultat": "Décision de réanimation dans le dossier est OUI, directives anticipées non connues"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "💧 Ralentissement sur déshydratation (diarrhées aiguës) chez le sujet âgé – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes digestifs",
+                  "points": [
+                    "Diarrhée aiguë (≤ 14 jours), souvent d’allure virale",
+                    "Nombre de selles/jour, aspect (liquide, sanglant, glaireux)",
+                    "Présence de fièvre, douleurs abdominales, nausées/vomissements"
+                  ]
+                },
+                {
+                  "titre": "Symptômes de déshydratation",
+                  "points": [
+                    "Fatigue, confusion, ralentissement psychomoteur",
+                    "Diminution de la diurèse",
+                    "Soif (parfois absente chez la personne âgée)"
+                  ]
+                },
+                {
+                  "titre": "Facteurs de risque et contexte",
+                  "points": [
+                    "Âge > 65 ans",
+                    "Polymédication (diurétiques, laxatifs, antidiabétiques...)",
+                    "Chaleur ambiante, pertes hydriques non compensées",
+                    "Troubles cognitifs limitant l’hydratation spontanée"
+                  ]
+                },
+                {
+                  "titre": "Contexte épidémiologique",
+                  "points": [
+                    "Contage digestif (établissements, entourage)",
+                    "Voyage récent",
+                    "Antibiothérapie récente (penser C. difficile)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes de déshydratation",
+                  "points": [
+                    "Hypotension orthostatique",
+                    "Tachycardie",
+                    "Pli cutané, sécheresse muqueuses",
+                    "Altération de l’état général"
+                  ]
+                },
+                {
+                  "titre": "Recherche de complications",
+                  "points": [
+                    "Fièvre, douleur abdominale → infection invasive",
+                    "Bruits hydroaériques diminués ou absents",
+                    "Signes de choc (marbrures, confusion, oligurie sévère)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Biologie",
+                  "points": [
+                    "Ionogramme sanguin : hyponatrémie/hypernatrémie, hyperurémie",
+                    "Créatininémie : IRA fonctionnelle",
+                    "CRP, NFS si syndrome inflammatoire",
+                    "Recherche de toxine C. difficile si ATB récente"
+                  ]
+                },
+                {
+                  "titre": "Autres examens",
+                  "points": [
+                    "ECG si troubles hydro-électrolytiques",
+                    "Échographie abdominale si douleur localisée ou suspicion de complication"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Réhydratation",
+                  "points": [
+                    "Forme légère à modérée : réhydratation orale (solution sucrée-salée)",
+                    "Forme sévère : réhydratation IV (NaCl 0.9%) avec surveillance hémodynamique"
+                  ]
+                },
+                {
+                  "titre": "Mesures associées",
+                  "points": [
+                    "Arrêt des traitements aggravants (diurétiques, AINS, IEC... selon contexte)",
+                    "Antalgiques si douleurs abdominales",
+                    "Surveillance poids, diurèse, constantes"
+                  ]
+                },
+                {
+                  "titre": "Traitement étiologique",
+                  "points": [
+                    "Traitement symptomatique de la diarrhée (éviter lopéramide si suspicion de diarrhée invasive)",
+                    "Antibiotiques si cause bactérienne avérée (ex. : C. difficile)",
+                    "Prévention des récidives (éducation, hydratation préventive)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Penser à la déshydratation chez la personne âgée ralentie avec diarrhée",
+                "Interrogatoire précis : ATB récente, contage, fièvre, antalgiques",
+                "Évaluer les signes de gravité (IRA, choc, troubles conscience)",
+                "Réhydratation précoce et adaptée",
+                "Adapter les traitements usuels pendant l’épisode"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Consultation téléphonique – Ralentissement et diarrhées (Gastro-entérite, déshydratation)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (consultation téléphonique systématisée)",
+              "points": [
+                "Se présenter et identifier l’interlocuteur (nom, fonction, lieu)",
+                "Identifier le patient : nom, âge, état général habituel",
+                "Caractériser le symptôme principal : début, évolution, intensité",
+                "Rechercher diarrhées : fréquence, aspect, sang/mucus, contage",
+                "Rechercher symptômes associés : fièvre, vomissements, douleurs, état de conscience",
+                "Vérifier les constantes",
+                "Évaluer hydratation : muqueuses, recoloration, diurèse",
+                "ATCD et traitements, médicaments introduits récemment",
+                "Directives anticipées / statut de réanimation",
+                "Résumé + hypothèse principale + DD",
+                "Mesures immédiates → hydratation, surveillance, critères d’alerte, consultation le lendemain"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo TELEPHONE",
+                "elements": [
+                  "T = Titre / présentation",
+                  "E = État habituel du patient",
+                  "L = Localisation (lieu, EMS/chambre)",
+                  "E = Évaluation du symptôme principal",
+                  "P = Paramètres vitaux",
+                  "H = Hydratation",
+                  "O = Ordonnances (médicaments/erreurs récentes)",
+                  "N = Niveau de conscience",
+                  "E = Examens complémentaires / directives"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min, script oral)",
+              "contenu": "Il s’agit d’un appel concernant M. Michel Bertchi, 88 ans, résident en EMS, habituellement autonome avec une aide pour l’habillement, qui présente ce soir un ralentissement psychomoteur associé à des diarrhées depuis deux jours.\n\nSelon l’infirmière, il a eu aujourd’hui 5 à 6 épisodes de diarrhée aqueuse, sans sang ni méléna. Il a également eu un épisode de vomissement après le repas de midi. Depuis ce soir, il est plus fatigué, ralenti, avec une latence à répondre, mais reste orienté aux 4 modes. Son appétit est conservé.\n\nÀ l’examen, ses constantes sont : fréquence cardiaque 98/min, tension 120/78, température 37,8°C. Pas de signe de focalisation neurologique. L’abdomen est diffusément sensible sans défense ni masse. Les bruits intestinaux sont augmentés. Les muqueuses sont sèches, le temps de recoloration est prolongé à 4 secondes, avec une pâleur cutanée.\n\nSes antécédents incluent une hypertension, une hypercholestérolémie, une hyperplasie bénigne de la prostate, des troubles du sommeil et un déclin cognitif léger. Il prend Cosaar Plus, atorvastatine, Pradif T, Distraneurine et Ginkgo. Pas d’erreur de délivrance médicamenteuse. Il est en réanimation complète selon le dossier.\n\nEn résumé, il s’agit d’un homme âgé, fragilisé, avec diarrhées aiguës probablement infectieuses dans un contexte de contage en EMS, compliquées d’une déshydratation modérée responsable d’un ralentissement. L’hypothèse principale est une gastro-entérite virale. Les diagnostics différentiels incluent une déshydratation sévère, une infection urinaire, un effet médicamenteux (notamment Distraneurine), ou plus rarement une pathologie cardiaque.\n\nLa prise en charge immédiate consiste à favoriser une hydratation orale régulière si possible, à assurer une surveillance rapprochée de l’état de conscience et des constantes durant la nuit, et à prévoir une consultation médicale en priorité le lendemain matin. J’ai rappelé les signes d’alerte justifiant un transfert immédiat : aggravation de la conscience, instabilité hémodynamique, refus d’hydratation."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : M. Bertchi, 88 ans, résident en EMS, présente un ralentissement ce soir, avec diarrhées depuis 2 jours.\n\nB (Background) : Antécédents d’HTA, HBP, troubles cognitifs légers. Polymédication. Contage récent en EMS.\n\nA (Assessment) : Probable gastro-entérite virale avec déshydratation modérée. DD : infection urinaire, effet médicamenteux, pathologie cardiaque.\n\nR (Recommendation) : Hydratation orale régulière, surveillance rapprochée cette nuit (constantes, vigilance), consultation médicale demain matin, rappeler si aggravation (confusion, constantes, refus hydratation)."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Déshydratation = SEC",
+                  "points": [
+                    "S = Sècheresse des muqueuses",
+                    "E = État de conscience ralenti",
+                    "C = Capillary refill time prolongé"
+                  ]
+                },
+                {
+                  "titre": "👉 Diarrhée aiguë en collectivité = « 3C »",
+                  "points": [
+                    "C = Contage (autres cas en EMS)",
+                    "C = Courte durée (< 14 jours)",
+                    "C = Contexte collectif (risque épidémie)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Gastro-entérite infectieuse",
+                      "reponse": {
+                        "pour": [
+                          "Diarrhées aiguës aqueuses",
+                          "Contexte de contage en EMS",
+                          "Fièvre subfébrile",
+                          "Vomissement alimentaire"
+                        ],
+                        "contre": [
+                          "Pas de fièvre élevée",
+                          "Pas de sang dans les selles"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Déshydratation sévère",
+                      "reponse": {
+                        "pour": [
+                          "Muqueuses sèches",
+                          "TRC 4 sec",
+                          "Ralentissement psychomoteur"
+                        ],
+                        "contre": [
+                          "TA correcte",
+                          "Patient encore orienté"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Effet médicamenteux (ex. Distraneurine)",
+                      "reponse": {
+                        "pour": [
+                          "Polymédication",
+                          "Patient âgé"
+                        ],
+                        "contre": [
+                          "Pas de nouvelle introduction",
+                          "Pas d’erreur de délivrance"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Que proposeriez-vous ?",
+                      "reponse": [
+                        "Pas d’examens immédiats téléphoniques",
+                        "Prévoir consultation médicale avec NFS, ionogramme, créatinine",
+                        "Si persistance : recherche Clostridium difficile (si ATB récente)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Gastro-entérite aiguë avec déshydratation modérée"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Réhydratation orale régulière",
+                          "Surveillance rapprochée cette nuit",
+                          "Régime adapté (BRAT : banane, riz, compote, toast)",
+                          "Éviter les anti-diarrhéiques"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Consultation médicale en priorité le lendemain",
+                        "Surveillance de l’évolution (vigilance, constantes, hydratation)",
+                        "Appeler immédiatement en cas de péjoration"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Points théoriques et pratiques",
+          "sections": [
+            {
+              "titre": "Déshydratation chez la personne âgée",
+              "contenu": "La déshydratation est fréquente et potentiellement grave chez les personnes âgées en institution. Les signes cliniques incluent : sécheresse des muqueuses, pli cutané persistant, temps de recoloration capillaire allongé, confusion ou ralentissement psychomoteur.",
+              "points": [
+                "Risque accru chez les patients avec troubles cognitifs",
+                "La confusion peut être le premier signe",
+                "Nécessité d'une surveillance rapprochée des constantes"
+              ]
+            },
+            {
+              "titre": "Gastro-entérite en collectivité",
+              "contenu": "Les épidémies de gastro-entérite sont fréquentes en EMS. La transmission est favorisée par la vie en collectivité et la fragilité des résidents.",
+              "points": [
+                "Mesures d'hygiène renforcées nécessaires",
+                "Isolement entérique du patient",
+                "Surveillance des autres résidents"
+              ]
+            },
+            {
+              "titre": "Communication téléphonique en médecine",
+              "contenu": "La consultation téléphonique nécessite des compétences spécifiques : écoute active, questions ciblées, synthèse claire des informations.",
+              "points": [
+                "Utiliser le modèle SBAR (Situation, Background, Assessment, Recommendation)",
+                "Toujours vérifier la compréhension des consignes",
+                "Documenter précisément l'appel"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Réhydratation orale précoce avec solutés de réhydratation",
+            "Régime alimentaire adapté (BRAT : Bananes, Riz, Applesauce, Toast)",
+            "Surveillance des signes vitaux toutes les 4 heures",
+            "Antipyrétiques si fièvre > 38.5°C",
+            "Éviter les anti-diarrhéiques chez les personnes âgées"
+          ],
+          "examensComplementaires": [
+            "Bilan biologique si persistance : NFS, ionogramme, fonction rénale",
+            "Coproculture si diarrhées sanglantes ou fièvre élevée",
+            "Recherche de Clostridium difficile si antibiothérapie récente",
+            "ECG si troubles du rythme ou signes cardiaques"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-58 - Rectorragies",
@@ -863,7 +1191,122 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie pratique sur les rectorragies",
+          "sections": [
+            {
+              "titre": "Définition et classification",
+              "contenu": "Les rectorragies sont définies comme l'émission de sang rouge par l'anus.",
+              "points": [
+                "Hématochésie : sang rouge vif (origine basse)",
+                "Méléna : selles noires goudronnées (origine haute)",
+                "Rectorragies abondantes : retentissement hémodynamique",
+                "Rectorragies minimes : traces sur papier toilette",
+                "Distinguer du sang mélangé aux selles vs en surface",
+                "Importance de la quantification des pertes"
+              ]
+            },
+            {
+              "titre": "Étiologies principales",
+              "contenu": "Les causes de rectorragies varient selon l'âge et le contexte clinique.",
+              "points": [
+                "Cancer colorectal : > 50 ans, modification du transit",
+                "Diverticulose colique : hémorragie abondante, indolore",
+                "Hémorroïdes : sang rouge sur papier, prurit anal",
+                "Fissure anale : douleur à la défécation",
+                "Angiodysplasies : sujets âgés, récidivantes",
+                "Maladies inflammatoires intestinales : jeunes, diarrhée",
+                "Polypes coliques : souvent asymptomatiques"
+              ]
+            },
+            {
+              "titre": "Facteurs de gravité",
+              "contenu": "L'évaluation de la gravité guide la prise en charge urgente.",
+              "points": [
+                "Instabilité hémodynamique : hypotension, tachycardie",
+                "Signes d'anémie aiguë : pâleur, dyspnée, vertiges",
+                "Abondance du saignement : > 100ml",
+                "Terrain : âge, comorbidités, anticoagulation",
+                "Récidive hémorragique",
+                "Hémoglobine < 8 g/dl"
+              ]
+            },
+            {
+              "titre": "Examen clinique",
+              "contenu": "L'examen doit être complet et systématique.",
+              "points": [
+                "Évaluation hémodynamique : pouls, TA, orthostatisme",
+                "Recherche signes d'anémie : pâleur, tachycardie",
+                "Examen abdominal complet : masse, douleur",
+                "Inspection anale : hémorroïdes, fissure",
+                "Toucher rectal OBLIGATOIRE : masse, méléna",
+                "Recherche signes de maladie systémique"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires",
+              "contenu": "Le bilan paraclinique dépend du contexte et de l'urgence.",
+              "points": [
+                "NFS : hémoglobine, hématocrite",
+                "Coagulation : TP, TCA si anticoagulation",
+                "Groupe sanguin, RAI si transfusion envisagée",
+                "Ionogramme, fonction rénale",
+                "Coloscopie : examen de référence",
+                "Angioscanner si hémorragie active",
+                "Rectosigmoïdoscopie si lésion basse suspectée"
+              ]
+            },
+            {
+              "titre": "Prise en charge thérapeutique",
+              "contenu": "Le traitement dépend de la cause et de la gravité.",
+              "points": [
+                "Stabilisation hémodynamique : voie veineuse, remplissage",
+                "Arrêt antiagrégants/AINS si possible",
+                "Transfusion si Hb < 7-8 g/dl ou instabilité",
+                "Surveillance continue : scope, diurèse",
+                "Traitement étiologique selon endoscopie",
+                "Chirurgie si échec du traitement médical",
+                "Embolisation si angiodysplasie"
+              ]
+            },
+            {
+              "titre": "Cancer colorectal",
+              "contenu": "Première cause à évoquer après 50 ans devant des rectorragies.",
+              "points": [
+                "Facteurs de risque : âge, tabac, ATCD familiaux",
+                "Signes d'alarme : modification transit, AEG, anémie",
+                "Localisation : 70% rectosigmoïde",
+                "Diagnostic : coloscopie avec biopsies",
+                "Bilan d'extension : scanner TAP, ACE",
+                "Traitement : chirurgie +/- chimiothérapie",
+                "Pronostic selon stade TNM"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Remplissage vasculaire : cristalloïdes 20ml/kg",
+            "Transfusion si Hb < 7g/dl ou signes de mauvaise tolérance",
+            "Arrêt aspirine si hémorragie sévère",
+            "IPP IV si suspicion origine haute",
+            "Antibioprophylaxie si geste endoscopique",
+            "Préparation colique pour coloscopie",
+            "Surveillance : Hb/6-12h, constantes/2-4h"
+          ],
+          "examensComplementaires": [
+            "NFS, plaquettes en urgence",
+            "TP, TCA, fibrinogène",
+            "Groupe sanguin, phénotype, RAI",
+            "Ionogramme, urée, créatinine",
+            "Bilan hépatique si suspicion cirrhose",
+            "Coloscopie totale (gold standard)",
+            "Angioscanner si saignement actif",
+            "Rectosigmoïdoscopie si urgence",
+            "Capsule endoscopique si bilan négatif"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-58b - Rectorragies",
@@ -1200,7 +1643,346 @@
           "resultat": "Donner les résultats une fois la prise de sang demandée: Hb 92 g/L (N: 120-160), Hct 28% (N: 36-46%), VGM 72 fL (N: 80-100), plaquettes 450 G/L (N: 150-400), leucocytes 8.5 G/L (N: 4-10). Si pas demandé, ne donner rien."
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🩸 Rectorragies – Cancer du rectum – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes d'appel",
+                  "points": [
+                    "Rectorragies : sang rouge vif dans les selles ou sur le papier toilette",
+                    "Modification récente du transit : constipation ou diarrhée",
+                    "Sensation de faux besoins (ténesme rectal)",
+                    "Douleurs rectales ou pelviennes",
+                    "Masse rectale perçue à la défécation",
+                    "Fatigue, amaigrissement, anorexie"
+                  ]
+                },
+                {
+                  "titre": "Contexte à risque",
+                  "points": [
+                    "Âge > 50 ans",
+                    "Antécédents personnels ou familiaux de cancer colorectal ou polypes",
+                    "Maladie inflammatoire chronique de l’intestin",
+                    "Antécédents de radiothérapie pelvienne",
+                    "Mode de vie : tabac, alcool, alimentation pauvre en fibres"
+                  ]
+                },
+                {
+                  "titre": "Signes d’alarme",
+                  "points": [
+                    "Rectorragies persistantes ou récurrentes",
+                    "Altération de l’état général",
+                    "Anémie ferriprive inexpliquée",
+                    "Selles fines en ruban (rétrécissement du calibre)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Examen proctologique",
+                  "points": [
+                    "Inspection : hémorroïdes, fissure anale ou masse visible",
+                    "Toucher rectal : masse dure, fixe, saignante",
+                    "Anoscopie ou rectoscopie : visualisation directe d’une tumeur",
+                    "Palpation des aires ganglionnaires (inguinales, abdominales)"
+                  ]
+                },
+                {
+                  "titre": "Signes associés",
+                  "points": [
+                    "Pâleur cutanéo-muqueuse (anémie)",
+                    "Hépatomégalie (métastases hépatiques)",
+                    "Signes occlusifs si tumeur avancée"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Biologie",
+                  "points": [
+                    "NFS : recherche d'anémie ferriprive",
+                    "Bilan hépatique : métastases hépatiques ?",
+                    "Marqueurs tumoraux : CEA (suivi plus qu’au diagnostic)"
+                  ]
+                },
+                {
+                  "titre": "Imagerie et endoscopie",
+                  "points": [
+                    "Coloscopie totale avec biopsies : examen de référence",
+                    "IRM pelvienne : bilan local d’extension rectale",
+                    "TDM TAP : recherche de métastases (foie, poumons)",
+                    "Écho-endoscopie rectale : utile pour les tumeurs localisées"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Stratégie thérapeutique",
+                  "points": [
+                    "Multidisciplinaire (RCP) : chirurgie, radio et chimiothérapie selon stade",
+                    "Stade I : chirurgie seule (résection transanale ou antérieure basse)",
+                    "Stades II-III : radiochimiothérapie néoadjuvante puis chirurgie",
+                    "Stade IV : traitement individualisé, curatif ou palliatif selon cas"
+                  ]
+                },
+                {
+                  "titre": "Suivi et prévention",
+                  "points": [
+                    "Suivi post-opératoire et oncologique (imagerie, CEA, coloscopie)",
+                    "Dépistage familial si facteur de risque",
+                    "Prévention : alimentation, arrêt tabac, activité physique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Rectorragie + modification du transit = rechercher cancer colorectal",
+                "Toucher rectal et coloscopie sont essentiels au diagnostic",
+                "IRM pelvienne pour bilan d’extension locale",
+                "Traitement basé sur le stade : chirurgie ± chimio/radiothérapie",
+                "Penser au dépistage familial"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Rectorragies (Cancer colorectal probable)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, motif (sang dans selles)",
+                "Caractériser saignement → couleur, quantité, durée, douleur associée",
+                "Symptômes associés → modification transit, amaigrissement, fatigue, étourdissements",
+                "ATCD perso/fam (cancers, MICI, ulcère, traitements AINS/aspirine)",
+                "Habitudes de vie (tabac, alcool, alimentation)",
+                "Examen clinique → constantes, abdomen, TR obligatoire",
+                "Résumé + hypothèse principale + DD",
+                "Examens complémentaires → NFS, crase, coloscopie, imagerie",
+                "Prise en charge → hospitalisation, arrêt aspirine/AINS, surveillance Hb, endoscopie"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo RED FLAG",
+                "elements": [
+                  "R = Rectorragies persistantes",
+                  "E = État général altéré (fatigue, perte poids)",
+                  "D = Dyspnée/étourdissements",
+                  "F = Family history cancer",
+                  "L = Local exam : masse au TR",
+                  "A = Anémie ferriprive",
+                  "G = Groupe sanguin pour transfusion"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de M. Delacrétaz, 52 ans, directeur d’une société de consulting, qui consulte aux urgences pour la survenue de sang dans les selles depuis trois jours.\n\nIl rapporte trois selles par jour contenant du sang rouge frais, en quantité importante, visible dans la cuvette. C’est la première fois que cela lui arrive. Depuis ce matin, il se sent particulièrement fatigué, avec des étourdissements lorsqu’il se lève et un essoufflement inhabituel dans les escaliers. \n\nIl n’a pas eu de douleurs abdominales, pas de nausées ni vomissements, et pas de fièvre. Il mentionne toutefois une alternance diarrhée-constipation depuis quelques semaines. Son appétit est conservé, mais il pense avoir perdu environ deux kilos récemment. \n\nPour ses antécédents, il avait eu un ulcère gastrique il y a un an, traité médicalement par inhibiteurs de pompe à protons. Pas de chirurgie. Son père est décédé d’un cancer généralisé, sans précision de la localisation. Sa mère et sa sœur sont en bonne santé. \n\nComme traitements, il prend de l’aspirine cardio une fois par jour, récemment introduite en prévention cardiaque, et des AINS occasionnels pour des lombalgies, mais il n’en a pas pris ces derniers jours. Il fume près de deux paquets par jour depuis 25 ans et consomme de l’alcool de manière sociale, environ deux verres trois fois par semaine. Pas de drogues. \n\nÀ l’examen clinique, ses constantes sont : TA 120/80, pouls 108 par minute, FR 23, saturation 100 %, température 36,2°C. Il est pâle et légèrement tachycarde. L’abdomen est souple, sans défense ni masse palpable. Le toucher rectal retrouve une masse polypoïde bourgeonnante au niveau du rectum, avec sphincter normal. \n\nEn résumé, il s’agit d’un homme de 52 ans présentant des rectorragies récentes et abondantes, associées à une altération de l’état général, une anémie microcytaire à la prise de sang, et une masse palpable au toucher rectal. Mon hypothèse principale est un cancer colorectal, probablement rectal. Les diagnostics différentiels incluent une diverticulose sigmoïdienne, un ulcère gastroduodénal, ou une pathologie proctologique comme des hémorroïdes, bien que la masse au TR oriente clairement vers une tumeur. \n\nComme examens complémentaires, je demanderais un bilan biologique avec NFS, crase et groupe sanguin, puis une coloscopie totale avec biopsies. Une imagerie par scanner TAP et une IRM pelvienne seraient nécessaires pour le bilan d’extension. \n\nEn termes de prise en charge immédiate, je propose une hospitalisation, l’arrêt de l’aspirine, une surveillance rapprochée de l’hémoglobine et la préparation rapide à une coloscopie."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : M. Delacrétaz, 52 ans, présente depuis 3 jours des rectorragies abondantes.\n\nB (Background) : ATCD ulcère gastrique, prend aspirine cardio. Père décédé d’un cancer. Fumeur important. Transit modifié depuis quelques semaines.\n\nA (Assessment) : Rectorragies avec anémie microcytaire et masse rectale au TR. Hypothèse principale : cancer colorectal. DD : diverticulose, ulcère, hémorroïdes.\n\nR (Recommendation) : Hospitalisation, arrêt aspirine, surveillance Hb, coloscopie avec biopsies, bilan d’extension (scanner TAP, IRM pelvienne)."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Red flags cancer colorectal",
+                  "points": [
+                    "Rectorragies nouvelles après 50 ans",
+                    "Modification récente du transit",
+                    "Perte de poids",
+                    "Antécédents familiaux de cancer",
+                    "Masse palpable au TR",
+                    "Anémie ferriprive"
+                  ]
+                },
+                {
+                  "titre": "👉 Mnémo CANCER",
+                  "points": [
+                    "C = Constipation/diarrhée alternées",
+                    "A = Amaigrissement",
+                    "N = Néo (masse au TR)",
+                    "C = Cardiovasculaire (aspirine/AINS favorisent saignement)",
+                    "E = État général altéré",
+                    "R = Rectorragies persistantes"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Cancer colorectal",
+                      "reponse": {
+                        "pour": [
+                          "Âge > 50 ans",
+                          "Rectorragies récentes",
+                          "Masse palpable au TR",
+                          "Modification du transit",
+                          "Perte de poids",
+                          "Anémie microcytaire"
+                        ],
+                        "contre": [
+                          "Aucun élément fortement contre"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Diverticulose",
+                      "reponse": {
+                        "pour": [
+                          "Âge > 50 ans",
+                          "Saignement possible"
+                        ],
+                        "contre": [
+                          "Absence de douleurs abdominales",
+                          "Pas de fièvre"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Ulcère gastroduodénal",
+                      "reponse": {
+                        "pour": [
+                          "ATCD ulcère",
+                          "Aspirine et tabac"
+                        ],
+                        "contre": [
+                          "Sang rouge et non méléna",
+                          "Pas de douleur épigastrique"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Hémorroïdes",
+                      "reponse": {
+                        "pour": [
+                          "Sang rouge vif"
+                        ],
+                        "contre": [
+                          "Masse rectale au TR",
+                          "Pas de douleur anale",
+                          "Modification du transit"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demanderiez-vous ?",
+                      "reponse": [
+                        "NFS, crase, groupe sanguin",
+                        "Coloscopie totale avec biopsies",
+                        "IRM pelvienne pour bilan d’extension",
+                        "Scanner TAP (métastases)",
+                        "Gastroscopie si doute sur origine haute"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Cancer rectal"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Hospitalisation",
+                          "Arrêt aspirine",
+                          "Surveillance Hb",
+                          "Transfusion si Hb < 70 g/L ou instabilité",
+                          "Coloscopie + biopsies"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Bilan extension (IRM pelvienne, scanner TAP)",
+                        "Discussion RCP pour stratégie thérapeutique (chirurgie ± chimio/radiothérapie)",
+                        "Suivi oncologique et coloscopique régulier",
+                        "Dépistage familial"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Rappels théoriques sur les rectorragies",
+          "sections": [
+            {
+              "titre": "Évaluation de la gravité",
+              "points": [
+                "Signes de choc: tachycardie, hypotension, pâleur, sueurs",
+                "Anémie aiguë: Hb < 100 g/L avec microcytose",
+                "Quantité de sang perdu: estimation difficile mais importante",
+                "Retentissement fonctionnel: dyspnée, vertiges, syncope"
+              ]
+            },
+            {
+              "titre": "Causes selon l'âge",
+              "contenu": "< 50 ans: hémorroïdes, fissure anale, MICI, polypes\n> 50 ans: cancer colorectal, diverticulose, angiodysplasie, ischémie mésentérique"
+            },
+            {
+              "titre": "Signes d'alarme (red flags)",
+              "points": [
+                "Âge > 50 ans avec rectorragies nouvelles",
+                "Modification récente du transit",
+                "Perte de poids inexpliquée",
+                "Antécédent familial de cancer colorectal",
+                "Masse palpable au toucher rectal",
+                "Anémie ferriprive"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Arrêt des anticoagulants/antiagrégants si possible",
+            "Réanimation si instabilité: remplissage, transfusion",
+            "IPP IV si suspicion de saignement haut",
+            "Antibioprophylaxie si cirrhose",
+            "Chirurgie en urgence si échec de l'endoscopie ou instabilité persistante"
+          ],
+          "examensComplementaires": [
+            "NFS: recherche d'anémie, thrombopénie",
+            "Coagulation: TP, TCA si anticoagulants ou hépatopathie",
+            "Groupe sanguin, RAI si transfusion envisagée",
+            "Coloscopie: examen de référence pour saignement bas",
+            "Gastroscopie: si doute sur origine haute malgré rectorragies",
+            "Angio-CT: si saignement actif massif pour localisation",
+            "Artériographie: thérapeutique si saignement actif identifié"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-59 - SD - Cholestérol",
@@ -1400,7 +2182,34 @@
           "question_patient": "Que feriez-vous à ma place?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Rappels théoriques - Décision médicale partagée",
+          "sections": [
+            {
+              "titre": "Modèle en 3 étapes",
+              "contenu": "1. Team Talk: Établir le partenariat\n2. Option Talk: Présenter les alternatives\n3. Decision Talk: Intégrer les préférences"
+            },
+            {
+              "titre": "Pertinence du SDM",
+              "contenu": "• Recommandations faibles (balance étroite)\n• Incertitude sur les effets\n• Valeurs et préférences variables\n• Maladies chroniques\n• Options équivalentes"
+            },
+            {
+              "titre": "Communication du risque",
+              "contenu": "• Risques absolus > risques relatifs\n• Fréquences naturelles (X sur 100)\n• Horizons temporels clairs\n• Aides visuelles (pictogrammes)\n• Éviter le framing effect"
+            }
+          ],
+          "evidenceSDM": [
+            "Amélioration des connaissances (+13%)",
+            "Perception plus précise des risques (+82%)",
+            "Meilleure congruence avec valeurs (+52%)",
+            "Réduction du conflit décisionnel (-7%)",
+            "Pas d'allongement systématique consultation (+2 min)",
+            "Satisfaction accrue des patients"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-60 - SD - Iléus palliatif",
@@ -1623,7 +2432,34 @@
           "question_patient": "Combien de temps me reste-t-il?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "SDM en soins palliatifs",
+          "sections": [
+            {
+              "titre": "Particularités du contexte palliatif",
+              "contenu": "• Pronostic limité\n• Options sans visée curative\n• Charge émotionnelle élevée\n• Importance qualité de vie\n• Implication des proches cruciale"
+            },
+            {
+              "titre": "Gestion de l'iléus malin",
+              "contenu": "• Incidence 3-15% cancers avancés\n• Récidives fréquentes\n• Mortalité élevée si chirurgie\n• Approche conservatrice privilégiée\n• Focus sur contrôle symptômes"
+            },
+            {
+              "titre": "Communication des mauvaises nouvelles",
+              "contenu": "• Protocole SPIKES adapté\n• Setting approprié\n• Perception du patient\n• Information progressive\n• Emotions et empathie\n• Stratégie et synthèse"
+            }
+          ],
+          "optionsTherapeutiques": [
+            "Gastrostomie: taux succès 90% pour symptômes",
+            "SNG: efficace mais inconfortable",
+            "Octréotide: réduit sécrétions 60-80%",
+            "Corticoïdes: effet anti-inflammatoire",
+            "Opioïdes: contrôle douleur et anxiolyse",
+            "Antiémétiques: halopéridol, métoclopramide"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-61 - Suivi de grossesse - ECC Obstétrique",
@@ -2088,7 +2924,110 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie pratique en obstétrique",
+          "sections": [
+            {
+              "titre": "Physiologie de la grossesse",
+              "contenu": "Adaptations maternelles et développement fœtal selon les trimestres.",
+              "points": [
+                "Modifications cardiovasculaires : ↑VolSang, ↓RP, ↑DC",
+                "Adaptations respiratoires : ↑ ventilation minute, ↓CRF",
+                "Changements rénaux : ↑ DFG, glycosurie physiologique",
+                "Modifications hématologiques : anémie dilutionnelle",
+                "Adaptations endocriniennes : hCG, progestérone, œstrogènes",
+                "Développement fœtal : organogenèse, croissance, maturation",
+                "Modifications utérines : hypertrophie, vascularisation"
+              ]
+            },
+            {
+              "titre": "Pathologies du 1er trimestre",
+              "contenu": "Principales complications précoces de la grossesse.",
+              "points": [
+                "Fausses couches : 15-20% grossesses, causes multiples",
+                "Grossesse extra-utérine : 1-2%, urgence chirurgicale",
+                "Hyperémèse gravidique : nausées/vomissements sévères",
+                "Môle hydatiforme : prolifération trophoblastique anormale",
+                "Infections TORCH : toxoplasmose, rubéole, CMV, herpès",
+                "Anémie précoce : besoins augmentés en fer/folates",
+                "Exposition médicamenteuse : tératogénicité période critique"
+              ]
+            },
+            {
+              "titre": "Complications du 2ème et 3ème trimestre",
+              "contenu": "Pathologies spécifiques de la grossesse avancée.",
+              "points": [
+                "Pré-éclampsie : HTA + protéinurie, 3-5% grossesses",
+                "Retard croissance intra-utérin : <10e percentile",
+                "Placenta prævia : insertion basse, saignements",
+                "Hématome rétroplacentaire : urgence obstétricale",
+                "Menace accouchement prématuré : <37 SA",
+                "Rupture prématurée membranes : risque infectieux",
+                "Cholestase gravidique : prurit, risque fœtal"
+              ]
+            },
+            {
+              "titre": "Surveillance fœtale",
+              "contenu": "Méthodes d'évaluation du bien-être fœtal.",
+              "points": [
+                "Mouvements fœtaux : perception 18-20 SA, surveillance",
+                "Rythme cardiaque fœtal : Doppler dès 12 SA",
+                "Cardiotocographie : RCF + contractions, dès 24 SA",
+                "Échographie : biométries, Doppler, liquide amniotique",
+                "Score de Manning : profil biophysique fœtal",
+                "Doppler utérin : dépistage pré-éclampsie, RCIU",
+                "pH au scalp : surveillance per-partum si besoin"
+              ]
+            },
+            {
+              "titre": "Examens de dépistage et diagnostic prénatal",
+              "contenu": "Stratégies de dépistage des anomalies fœtales.",
+              "points": [
+                "Dépistage 1er trimestre : clarté nucale + marqueurs sériques",
+                "DPNI : ADN fœtal circulant, trisomies 13-18-21",
+                "Échographie morphologique : 20-22 SA, malformations",
+                "Amniocentèse : 15-18 SA, caryotype fœtal",
+                "Choriocentèse : 10-13 SA, diagnostic génétique précoce",
+                "Dépistage diabète : HGPO 24-28 SA",
+                "Dépistage streptocoque B : 35-37 SA"
+              ]
+            },
+            {
+              "titre": "Techniques d'examen obstétrical",
+              "contenu": "Méthodes spécialisées d'évaluation maternelle et fœtale.",
+              "points": [
+                "Hauteur utérine : symphyse-fond, courbe croissance",
+                "Manœuvres Leopold : présentation, position, engagement",
+                "Toucher vaginal : col, bassin, présentation",
+                "Examen au spéculum : col, prélèvements, saignements",
+                "Cardiotocographie : interprétation RCF et contractions",
+                "Échographie : voies abdominale et endovaginale",
+                "Tests de rupture membranes : pH, fern test, amnisure"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Supplémentation acide folique : 400µg/j avant conception et 1er trimestre",
+            "Supplémentation fer : 30-60mg/j si anémie ou carence",
+            "Tocolyse : β2-mimétiques, inhibiteurs calciques, atosiban",
+            "Corticothérapie : bétaméthasone 12mg IM x2 24-34 SA",
+            "Antibioprophylaxie : ampicilline si streptocoque B+",
+            "Traitement HTA : méthyldopa, labétalol, nifédipine",
+            "Antiémétiques : doxylamine, métoclopramide, ondansétron"
+          ],
+          "examensComplementaires": [
+            "Échographie obstétricale : croissance, morphologie, Doppler",
+            "Cardiotocographie : surveillance RCF et activité utérine",
+            "Bandelette urinaire : protéines, leucocytes, nitrites, glucose",
+            "Bilan pré-éclampsie : créatinine, urates, transaminases, plaquettes",
+            "NFS : hémoglobine, plaquettes, surveillance anémie",
+            "Prélèvements vaginaux : infections, fibronectine, streptocoque B",
+            "HGPO : dépistage diabète gestationnel 24-28 SA"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-62 - Toux - ECC Poumon",
@@ -2573,7 +3512,381 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🌬️ Toux – Diagnostic final : Pneumonie communautaire (CAP) – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes typiques",
+                  "points": [
+                    "Toux productive ou sèche",
+                    "Fièvre, frissons, sueurs",
+                    "Dyspnée, douleur thoracique pleurétique",
+                    "Fatigue, myalgies",
+                    "Confusion chez le sujet âgé"
+                  ]
+                },
+                {
+                  "titre": "Facteurs de risque",
+                  "points": [
+                    "Âge > 65 ans",
+                    "Tabagisme, alcoolisme",
+                    "BPCO, asthme, diabète, insuffisance cardiaque",
+                    "Immunodépression",
+                    "Infections virales récentes (ex. : grippe)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes à rechercher",
+                  "points": [
+                    "Fièvre, polypnée, tachycardie",
+                    "Crépitants à l’auscultation",
+                    "Matité à la percussion, diminution du MV",
+                    "Signes de gravité : cyanose, confusion, hypotension"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Examens de base",
+                  "points": [
+                    "Radiographie thoracique : infiltrat alvéolaire (souvent unilatéral)",
+                    "NFS : hyperleucocytose ou leucopénie",
+                    "CRP / procalcitonine",
+                    "Gaz du sang si dyspnée ou comorbidités respiratoires"
+                  ]
+                },
+                {
+                  "titre": "Examens étiologiques",
+                  "points": [
+                    "Hémocultures (si hospitalisation ou sepsis)",
+                    "Antigènes urinaires (Pneumocoque, Legionella)",
+                    "PCR virale (grippe, SARS-CoV-2)",
+                    "ECBC ou aspiration endotrachéale si hospitalisé"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Orientation",
+                  "points": [
+                    "Score CURB-65 ou PSI pour évaluer la sévérité",
+                    "Ambulatoire si forme légère, hospitalisation si forme modérée à sévère"
+                  ]
+                },
+                {
+                  "titre": "Antibiothérapie probabiliste",
+                  "points": [
+                    "Forme légère (ambulatoire) : amoxicilline ou amoxicilline-acide clavulanique ± macrolide",
+                    "Forme modérée : ceftriaxone IV + macrolide",
+                    "Forme sévère (réanimation) : pipéracilline-tazobactam + macrolide ou fluoroquinolone ± couverture anti-MRSA"
+                  ]
+                },
+                {
+                  "titre": "Traitement symptomatique",
+                  "points": [
+                    "Antipyrétiques (paracétamol)",
+                    "Oxygénothérapie si besoin (SpO2 < 92 %)",
+                    "Hydratation, repos",
+                    "Prévention thromboembolique si alité"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Toux + fièvre + dyspnée = suspecter CAP",
+                "Radio thoracique indispensable au diagnostic",
+                "Ne pas négliger les formes atypiques chez le sujet âgé",
+                "Évaluer la sévérité avec CURB-65",
+                "Antibiothérapie probabiliste rapide adaptée à la gravité"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Toux fébrile et dyspnée (Pneumonie communautaire)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, motif de consultation",
+                "Caractériser la toux → sèche vs productive, durée, évolution",
+                "Expectorations → couleur, quantité, sang ?",
+                "Fièvre et symptômes associés → frissons, sueurs, douleurs thoraciques, dyspnée",
+                "ATCD médicaux (HTA, dyslipidémie) et facteurs de risque (tabac, âge, épidémie)",
+                "Examen clinique → constantes, inspection, IPPA pulmonaire, bruits pathologiques",
+                "Résumé + hypothèse principale + DD",
+                "Examens complémentaires → Rx thorax, NFS, CRP, gaz du sang si SpO2 <92%",
+                "Prise en charge → antibiothérapie probabiliste, repos, hydratation, critères hospitalisation"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : CAPE",
+                "elements": [
+                  "C = Cough (toux productive)",
+                  "A = Alvéolaire infiltrat (radio)",
+                  "P = Pneumocoque (germe principal)",
+                  "E = Évaluer sévérité (CURB-65)"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit d’un patient de 65 ans, enseignant retraité, qui consulte pour une toux évoluant depuis environ dix jours.\n\nAu départ la toux était sèche, puis depuis trois jours elle est devenue productive avec des expectorations jaunâtres verdâtres, en grande quantité. Ce matin il a eu 39 degrés de fièvre avec des frissons dans la nuit. Il décrit aussi une douleur thoracique du côté droit déclenchée par la toux, et une dyspnée inhabituelle : alors qu’il montait auparavant trois étages sans problème, il est maintenant essoufflé au moindre effort. Il ne rapporte pas de dyspnée de repos ni d’orthopnée.\n\nPour ses antécédents, il est suivi pour une hypertension et une dyslipidémie, mais il n’a pas d’antécédent pulmonaire connu. Il a un tabagisme modéré à 7,5 paquets-années. Son conjoint a présenté une grippe il y a deux semaines. Son père est décédé d’une BPCO sévère à 68 ans.\n\nÀ l’examen ses constantes sont : tension à 140/90, fréquence cardiaque 90, fréquence respiratoire 20, température 39 et saturation à 95 %. Le patient est fatigué, avec une dyspnée modérée. La palpation thoracique retrouve une douleur du côté droit, et à l’auscultation on entend des râles crépitants à la base droite.\n\nEn résumé, il s’agit d’un patient de 65 ans qui présente une toux productive fébrile, avec dyspnée et râles localisés. Le diagnostic principal est une pneumonie communautaire. Les diagnostics différentiels incluent une bronchite aiguë, une exacerbation de BPCO ou une pleurésie parapneumonique.\n\nComme examens complémentaires, je demanderais une radiographie thoracique, une NFS, une CRP et des gaz du sang si la saturation passe en dessous de 92 %. En cas d’hospitalisation, des hémocultures seraient nécessaires.\n\nEn termes de prise en charge, je propose une antibiothérapie probabiliste par amoxicilline un gramme trois fois par jour pendant sept jours, du repos, de l’hydratation, des antipyrétiques et une réévaluation à 48 à 72 heures. L’hospitalisation serait indiquée en cas d’aggravation ou si les critères CURB-65 sont supérieurs ou égaux à deux."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Patient de 65 ans, toux productive fébrile depuis 10 jours, dyspnée effort.\n\nB (Background) : ATCD HTA, dyslipidémie, tabac 7,5 UPA, conjoint grippal.\n\nA (Assessment) : Suspicion pneumonie communautaire base droite, DD : bronchite aiguë, BPCO, pleurésie.\n\nR (Recommendation) : Rx thorax, NFS/CRP, antibiothérapie amoxicilline 1g x3/j 7j, réévaluation 48-72h, critères hospitalisation selon CURB-65."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "Red flags toux fébrile",
+                  "points": [
+                    "Fièvre > 38,5°C",
+                    "Dyspnée",
+                    "Douleur thoracique pleurétique",
+                    "Hypoxémie",
+                    "Âge > 65 ans"
+                  ]
+                },
+                {
+                  "titre": "Critères CURB-65",
+                  "points": [
+                    "Confusion",
+                    "Urée > 7 mmol/L",
+                    "FR ≥ 30/min",
+                    "TA < 90/60 mmHg",
+                    "Âge ≥ 65 ans"
+                  ]
+                },
+                {
+                  "titre": "Antibiothérapie clé",
+                  "points": [
+                    "Amoxicilline 1g x3/j 7j",
+                    "Alternative : macrolide si allergie",
+                    "Réévaluation 48-72h"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Pneumonie communautaire",
+                      "reponse": {
+                        "pour": [
+                          "Toux productive purulente",
+                          "Fièvre 39°C avec frissons",
+                          "Douleur pleurétique droite",
+                          "Dyspnée effort",
+                          "Râles crépitants base droite"
+                        ],
+                        "contre": [
+                          "SpO2 conservée à 95% (forme non sévère)"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Bronchite aiguë",
+                      "reponse": {
+                        "pour": [
+                          "Toux évoluant 10 jours",
+                          "Expectorations purulentes",
+                          "Contexte viral initial"
+                        ],
+                        "contre": [
+                          "Fièvre élevée 39°C",
+                          "Dyspnée marquée",
+                          "Râles focalisés"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Exacerbation BPCO",
+                      "reponse": {
+                        "pour": [
+                          "Tabagisme chronique",
+                          "ATCD familial BPCO"
+                        ],
+                        "contre": [
+                          "Pas d’ATCD personnel BPCO",
+                          "Bonne tolérance effort habituelle"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demander ?",
+                      "reponse": [
+                        "Radiographie thorax",
+                        "NFS",
+                        "CRP",
+                        "Gaz du sang si SpO2 <92%",
+                        "Hémocultures si critères hospitalisation"
+                      ],
+                      "analyse": "👉 Analyse orale : « La radio thorax confirme l’infiltrat, la NFS et CRP objectivent l’infection, et la gazométrie évalue la gravité. »"
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Pneumonie communautaire lobaire droite"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": [
+                        "Antibiothérapie : amoxicilline 1g x3/j 7j",
+                        "Paracétamol pour fièvre",
+                        "Hydratation, repos",
+                        "Oxygène si SpO2 < 92%"
+                      ]
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Réévaluation clinique à 48-72h",
+                        "Contrôle radio à distance (4-6 semaines chez >50 ans/fumeur)",
+                        "Prévention secondaire : arrêt tabac, vaccination grippe + pneumocoque"
+                      ],
+                      "astuce": "👉 Astuce révision : penser à « CAP = Cough + Alvéolaire + Pneumocoque »."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique en pneumologie",
+          "sections": [
+            {
+              "titre": "Classification de la dyspnée",
+              "contenu": "Échelles standardisées pour quantifier la dyspnée.",
+              "points": [
+                "NYHA I : efforts intenses sans limitation quotidienne",
+                "NYHA II : efforts importants vie quotidienne",
+                "NYHA III : efforts modérés, limitation importante",
+                "NYHA IV : moindre effort ou repos",
+                "mMRC 0-4 : de l'effort intense à dyspnée habillage",
+                "Dyspnée aiguë vs chronique : délai < ou > 1 mois",
+                "Dyspnée paroxystique nocturne : origine cardiaque"
+              ]
+            },
+            {
+              "titre": "Bruits respiratoires pathologiques",
+              "contenu": "Origine et signification des bruits adventices.",
+              "points": [
+                "Sibilances : rétrécissement bronchique (asthme, BPCO)",
+                "Ronchi : sécrétions bronchiques grosses bronches",
+                "Râles fins : origine alvéolaire (pneumonie, fibrose, OAP)",
+                "Râles grossiers : sécrétions bronchiques (bronchite, OAP)",
+                "Frottement pleural : inflammation plèvre",
+                "Stridor : obstruction voies aériennes supérieures",
+                "Souffle tubaire : consolidation parenchymateuse"
+              ]
+            },
+            {
+              "titre": "Technique d'examen physique pulmonaire",
+              "contenu": "Séquence IPPA : Inspection, Palpation, Percussion, Auscultation.",
+              "points": [
+                "Inspection : FR, cyanose, tirage, forme thorax",
+                "Palpation : ampliation, vibrations vocales, douleur",
+                "Percussion : matité (épanchement), tympanisme (pneumothorax)",
+                "Auscultation : murmure vésiculaire, bruits surajoutés",
+                "Comparaison systématique droite/gauche",
+                "Points d'auscultation : post 3 niveaux, axillaire, antérieur",
+                "Position patient : couché puis assis"
+              ]
+            },
+            {
+              "titre": "Pneumonie communautaire",
+              "contenu": "Diagnostic et prise en charge ambulatoire.",
+              "points": [
+                "Critères diagnostiques : toux, fièvre, expectorations, râles",
+                "Score CURB-65 : Confusion, Urée, FR≥30, TA<90/60, ≥65 ans",
+                "Radiographie thorax : consolidation alvéolaire",
+                "Germes fréquents : pneumocoque, H. influenzae, atypiques",
+                "Antibiothérapie 1ère intention : amoxicilline 1g x3/j",
+                "Durée traitement : 7 jours, réévaluation 48-72h",
+                "Critères hospitalisation : CURB-65 ≥2, hypoxémie"
+              ]
+            },
+            {
+              "titre": "Facteurs de risque respiratoires",
+              "contenu": "Identification des populations à risque.",
+              "points": [
+                "Tabagisme : principal FDR BPCO et cancer",
+                "Âge > 65 ans : immunosénescence",
+                "Comorbidités : diabète, insuffisance cardiaque",
+                "Immunodépression : corticoïdes, chimiothérapie",
+                "Expositions professionnelles : amiante, silice",
+                "Facteurs environnementaux : pollution, allergènes",
+                "Contexte épidémique : transmission interhumaine"
+              ]
+            },
+            {
+              "titre": "Examens complémentaires en pneumologie",
+              "contenu": "Hiérarchisation des examens selon le contexte.",
+              "points": [
+                "Radiographie thorax : 1ère intention infection/dyspnée",
+                "Scanner thoracique : si Rx normale et forte suspicion",
+                "Spirométrie : diagnostic et suivi obstructif/restrictif",
+                "Gazométrie : si SpO2 <92% ou signes gravité",
+                "Fibroscopie bronchique : hémoptysie, suspicion néoplasie",
+                "Tests microbiologiques : ECBC, hémocultures si sévère",
+                "D-dimères/angio-CT : si suspicion embolie pulmonaire"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Pneumonie communautaire : amoxicilline 1g x3/j 7j ou macrolide si allergie",
+            "Exacerbation BPCO : amoxicilline-clavulanate + corticoïdes oraux",
+            "Asthme aigu : β2-mimétiques nébulisés + corticoïdes systémiques",
+            "Embolie pulmonaire : anticoagulation curative HBPM/AOD",
+            "Pneumothorax : drainage si >2cm ou symptomatique",
+            "Pleurésie : drainage si épanchement abondant + antibiotiques si purulent",
+            "Oxygénothérapie : objectif SpO2 92-96% (88-92% si BPCO)"
+          ],
+          "examensComplementaires": [
+            "Radiographie thorax face/profil : consolidation, épanchement, pneumothorax",
+            "NFS : hyperleucocytose neutrophile si bactérien",
+            "CRP/PCT : marqueurs inflammation, aide décision antibiotique",
+            "Gazométrie artérielle : pH, PaO2, PaCO2 si dyspnée sévère",
+            "D-dimères : exclusion EP si probabilité faible/intermédiaire",
+            "Scanner thoracique : HR si pathologie interstitielle suspectée",
+            "Spirométrie : VEMS/CVF pour diagnostic obstruction"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-63 - Toux - Pédiatrie",
@@ -2829,7 +4142,403 @@
           ]
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🤧 Toux pédiatrique – Diagnostic final : Coqueluche – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Éléments évocateurs",
+                  "points": [
+                    "Toux paroxystique persistante > 2 semaines",
+                    "Quintes de toux violente avec reprise inspiratoire (chant du coq)",
+                    "Vomissements post-toux fréquents",
+                    "Apnées, cyanose chez le nourrisson",
+                    "Absence ou faible fièvre"
+                  ]
+                },
+                {
+                  "titre": "Terrain et contexte",
+                  "points": [
+                    "Nourrissons non vaccinés < 6 mois (forme sévère)",
+                    "Adolescents ou adultes avec rappel vaccinal incomplet",
+                    "Contage familial récent (toux dans l'entourage)",
+                    "Épidémies scolaires ou collectives"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes cliniques",
+                  "points": [
+                    "Toux spasmodique sans phase catarrhale claire chez le nourrisson",
+                    "Apnées, cyanose, fatigue post-toux",
+                    "Vomissements induits par la toux",
+                    "État général souvent conservé sauf chez le nourrisson"
+                  ]
+                },
+                {
+                  "titre": "Critères de gravité (hospitalisation)",
+                  "points": [
+                    "Apnées, détresse respiratoire",
+                    "Hypoxie, déshydratation",
+                    "Difficulté d’alimentation",
+                    "Âge < 4 mois, prématurité, poids bas",
+                    "Comorbidités (cardiaques, neurologiques, immunodépression)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Confirmation microbiologique",
+                  "points": [
+                    "PCR Bordetella pertussis (écouvillon nasopharyngé) : test de référence",
+                    "Culture bactérienne : possible mais moins sensible",
+                    "Sérodiagnostic utile chez l'adulte ou tardivement"
+                  ]
+                },
+                {
+                  "titre": "Autres examens",
+                  "points": [
+                    "NFS : hyperlymphocytose fréquente",
+                    "Radiographie thoracique si suspicion de complication (atélectasie, surinfection)",
+                    "Évaluation de la saturation en oxygène (SpO2)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Antibiothérapie",
+                  "points": [
+                    "Macrolide : azithromycine (1er choix), clarithromycine ou érythromycine",
+                    "Traitement efficace pour ↓ contagiosité si début précoce",
+                    "Alternative : cotrimoxazole si allergie"
+                  ]
+                },
+                {
+                  "titre": "Support et prévention",
+                  "points": [
+                    "Hospitalisation en pédiatrie si critères de gravité",
+                    "Oxygénothérapie, hydratation, nutrition adaptée",
+                    "Vaccination des sujets contacts non à jour",
+                    "Prophylaxie post-exposition chez les contacts à risque (macrolide)",
+                    "Déclaration obligatoire (maladie à déclaration obligatoire)"
+                  ]
+                },
+                {
+                  "titre": "Contre-indications",
+                  "points": [
+                    "Pas de traitement symptomatique par antitussif ou corticoïde",
+                    "Pas de sirop antitussif"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Toux paroxystique prolongée + vomissements = penser coqueluche",
+                "PCR nasopharyngée = test diagnostique de choix",
+                "Macrolide rapide dès la suspicion clinique",
+                "Nourrisson < 6 mois = à haut risque → hospitalisation",
+                "Vaccination et prophylaxie pour briser la chaîne de transmission"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Nourrisson 5 mois, toux en quintes (Coqueluche)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte, motif (toux, fièvre, cyanose)",
+                "Caractériser la toux → durée, quintes, chant du coq, cyanose, vomissements post-toux",
+                "Symptômes associés → fièvre, apathie, alimentation diminuée, oligurie",
+                "Statut vaccinal et contage épidémiologique (crèche, fratrie, épidémie coqueluche)",
+                "ATCD néonataux, grossesse, croissance, développement",
+                "Examen clinique → constantes vitales, tirage, saturation O2, état d’hydratation, signes de détresse",
+                "Résumé + hypothèse principale (coqueluche) + diagnostics différentiels",
+                "Examens complémentaires → PCR Bordetella nasopharyngée, NFS (hyperlymphocytose), gaz du sang, Rx thorax",
+                "Prise en charge immédiate → hospitalisation, isolement respiratoire, antibiothérapie macrolide, hydratation/nutrition, prophylaxie entourage"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : TOUX",
+                "elements": [
+                  "T = Toux en quintes",
+                  "O = Oxygène ↓ (cyanose, apnées)",
+                  "U = Vomissements post-toux",
+                  "X = Xpert PCR Bordetella pour confirmation"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de Liam Lambretta, nourrisson de 5 mois, amené par sa mère pour une toux persistante depuis cinq jours.\n\nLa toux survient par quintes, répétitives, avec des épisodes de cyanose et des difficultés à reprendre son souffle. Parfois elle est suivie d’un bruit inspiratoire typique de chant du coq. Depuis trois jours, il vomit après les quintes, en rejetant des glaires claires.\n\nIl a de la fièvre depuis quatre jours, jusqu’à 39 degrés, avec plusieurs pics quotidiens. Son alimentation est diminuée de moitié et il n’a mouillé qu’une seule couche en vingt-quatre heures. Sa mère le décrit fatigué et apathique après les épisodes de toux.\n\nPour ses antécédents, la grossesse et l’accouchement étaient normaux, la croissance est correcte. Il n’est pas encore vacciné car ses parents s’y opposent. Il n’a pas d’allergies connues. Dans le contexte, ses deux sœurs de quatre ans ont présenté un rhume, et la crèche a signalé des cas de coqueluche.\n\nÀ l’examen ses constantes sont les suivantes : fréquence cardiaque 145 par minute, fréquence respiratoire 40, température 38,6. Le nourrisson est fatigué, pâle, avec des quintes de toux provoquant une cyanose, une hydratation insuffisante et un tirage discret.\n\nEn résumé, il s’agit d’un nourrisson de 5 mois, non vacciné, avec une toux en quintes typiques, cyanose et vomissements post-toux, associé à des signes de déshydratation. Mon diagnostic principal est une coqueluche. Les diagnostics différentiels incluent une bronchiolite, une pneumonie, un faux croup ou une infection virale des voies respiratoires hautes.\n\nComme examens complémentaires, je demanderais une PCR Bordetella pertussis, une NFS pour rechercher une lymphocytose, une CRP, éventuellement une hémoculture, et une radiographie thoracique pour rechercher des complications.\n\nEn termes de prise en charge, j’indique une hospitalisation en pédiatrie avec monitoring cardio-respiratoire, un isolement gouttelettes, un traitement par azithromycine, de l’oxygène si la saturation descend en dessous de 92 %, une hydratation intraveineuse, une alimentation fractionnée et une prophylaxie antibiotique par macrolide pour l’entourage."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Nourrisson 5 mois, toux en quintes avec cyanose et vomissements post-toux.\n\nB (Background) : Non vacciné, contage probable via sœurs enrhumées en crèche avec cas coqueluche.\n\nA (Assessment) : Tableau typique de coqueluche sévère, nourrisson à risque de complications (apnées, déshydratation).\n\nR (Recommendation) : Hospitalisation immédiate, isolement respiratoire, azithromycine, hydratation IV, prophylaxie contacts familiaux."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "Triade typique du nourrisson",
+                  "points": [
+                    "Toux en quintes",
+                    "Cyanose ou apnée",
+                    "Vomissements post-toux"
+                  ]
+                },
+                {
+                  "titre": "Critères de gravité pédiatriques",
+                  "points": [
+                    "Âge < 6 mois",
+                    "Apnées/cyanose",
+                    "Alimentation < 50%",
+                    "Oligurie",
+                    "Déshydratation"
+                  ]
+                },
+                {
+                  "titre": "Antibioprophylaxie des contacts",
+                  "points": [
+                    "Macrolide (azithromycine)",
+                    "Vaccination de rattrapage",
+                    "Éviction crèche/école pendant 5 jours ATB"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Coqueluche",
+                      "reponse": {
+                        "pour": [
+                          "Toux en quintes",
+                          "Cyanose/apnées",
+                          "Vomissements post-toux",
+                          "Non vacciné",
+                          "Contage familial probable"
+                        ],
+                        "contre": [
+                          "Fièvre modérée (mais compatible, surtout nourrisson)"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Bronchiolite",
+                      "reponse": {
+                        "pour": [
+                          "Nourrisson < 2 ans",
+                          "Toux, dyspnée"
+                        ],
+                        "contre": [
+                          "Pas de sibilants ni signes obstructifs",
+                          "Vomissements post-toux atypiques"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Pneumonie",
+                      "reponse": {
+                        "pour": [
+                          "Fièvre 39°C",
+                          "Toux productive"
+                        ],
+                        "contre": [
+                          "Quintes typiques + chant du coq",
+                          "Cyanose paroxystique"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demander ?",
+                      "reponse": [
+                        "PCR Bordetella pertussis (nasopharyngé)",
+                        "NFS (lymphocytose)",
+                        "CRP, hémocultures si fièvre élevée",
+                        "Rx thorax si complications suspectées",
+                        "Gaz du sang si détresse respiratoire"
+                      ],
+                      "analyse": "👉 Analyse orale : « La PCR est l’examen de référence, la NFS montre typiquement une hyperlymphocytose. »"
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Coqueluche du nourrisson"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": [
+                        "Hospitalisation en unité pédiatrique",
+                        "Isolement gouttelettes",
+                        "Azithromycine 10mg/kg/j × 5j",
+                        "Oxygène si SpO2 <92%",
+                        "Hydratation IV, alimentation fractionnée"
+                      ]
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Surveillance cardio-respiratoire continue",
+                        "Prévenir et traiter les apnées",
+                        "Prophylaxie macrolide pour fratrie et entourage",
+                        "Vaccination de rattrapage pour contacts non immunisés",
+                        "Déclaration obligatoire de la maladie"
+                      ],
+                      "astuce": "👉 Astuce révision : penser au mnémo « MACRO » : Macrolide, Alimentation, Cardio-respi monitoring, Rattrapage vaccinal, Organisation prophylaxie contacts."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique sur la coqueluche du nourrisson",
+          "sections": [
+            {
+              "titre": "Épidémiologie et agent pathogène",
+              "contenu": "La coqueluche est une infection respiratoire très contagieuse causée par Bordetella pertussis.",
+              "points": [
+                "Transmission par gouttelettes (taux d'attaque 80-90%)",
+                "Incubation : 7-10 jours (5-21 jours)",
+                "Contagiosité maximale en phase catarrhale",
+                "Résurgence dans les pays développés malgré vaccination",
+                "Nourrissons < 6 mois : groupe le plus à risque",
+                "Source souvent intrafamiliale (parents, fratrie)",
+                "Protection maternelle insuffisante si mère non vaccinée récemment"
+              ]
+            },
+            {
+              "titre": "Présentation clinique classique",
+              "contenu": "L'évolution se fait en trois phases caractéristiques.",
+              "points": [
+                "Phase catarrhale (1-2 sem) : rhinorrhée, toux légère, peu fébrile",
+                "Phase paroxystique (2-8 sem) : quintes caractéristiques",
+                "Quintes : accès de toux répétés sans inspiration",
+                "Chant du coq : inspiration sifflante post-quinte",
+                "Cyanose fréquente pendant les quintes",
+                "Vomissements post-tussifs typiques",
+                "Phase de convalescence : diminution progressive"
+              ]
+            },
+            {
+              "titre": "Particularités chez le nourrisson",
+              "contenu": "La présentation peut être atypique et plus grave chez les très jeunes enfants.",
+              "points": [
+                "Absence possible du chant du coq caractéristique",
+                "Apnées et bradycardies fréquentes",
+                "Cyanose sévère, détresse respiratoire",
+                "Difficultés alimentaires, déshydratation rapide",
+                "Risque de pneumonie bactérienne secondaire",
+                "Encéphalopathie hypoxique possible",
+                "Mortalité élevée < 3 mois (1-3%)"
+              ]
+            },
+            {
+              "titre": "Diagnostic",
+              "contenu": "Le diagnostic repose sur la clinique et la confirmation bactériologique.",
+              "points": [
+                "PCR Bordetella : gold standard, résultat rapide",
+                "Culture sur milieu spécial : spécifique mais longue",
+                "Prélèvement nasopharyngé profond indispensable",
+                "Hyperlymphocytose caractéristique (>10 000/mm³)",
+                "Radiographie thoracique : souvent normale",
+                "Possibles infiltrats péribronchiques",
+                "Exclusion des complications (pneumonie, atélectasie)"
+              ]
+            },
+            {
+              "titre": "Complications",
+              "contenu": "Les complications sont fréquentes et potentiellement graves chez le nourrisson.",
+              "points": [
+                "Pneumonie (principale cause de décès)",
+                "Apnées sévères nécessitant ventilation",
+                "Convulsions (2-4% des cas hospitalisés)",
+                "Encéphalopathie coquelucheuse",
+                "Hypertension artérielle pulmonaire",
+                "Hémorragies (conjonctivales, cérébrales)",
+                "Hernies, prolapsus rectal (efforts de toux)"
+              ]
+            },
+            {
+              "titre": "Traitement",
+              "contenu": "La prise en charge associe antibiothérapie et soins de support.",
+              "points": [
+                "Hospitalisation systématique < 6 mois",
+                "Azithromycine : 10mg/kg/j x 5 jours",
+                "Alternative : clarithromycine 15mg/kg/j x 7 jours",
+                "Oxygénothérapie selon besoins",
+                "Hydratation IV si apports oraux insuffisants",
+                "Alimentation fractionnée, position proclive",
+                "Surveillance cardio-respiratoire continue",
+                "Aspiration douce des sécrétions"
+              ]
+            },
+            {
+              "titre": "Prévention",
+              "contenu": "La vaccination reste la meilleure protection.",
+              "points": [
+                "Vaccination dès 2 mois (DTPa-VPI-Hib-HBV)",
+                "Schéma : 2, 4, 11 mois + rappels",
+                "Vaccination cocooning de l'entourage",
+                "Vaccination maternelle au 3e trimestre",
+                "Antibioprophylaxie des contacts proches",
+                "Éviction de collectivité 5 jours après ATB",
+                "Déclaration obligatoire (cas groupés)"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Azithromycine : 10mg/kg/j en 1 prise x 5 jours",
+            "Clarithromycine : 7.5mg/kg x 2/j x 7 jours",
+            "Érythromycine : 50mg/kg/j en 4 prises x 14 jours",
+            "Paracétamol : 15mg/kg/prise, max 60mg/kg/j",
+            "O2 si saturation < 92%",
+            "Salbutamol inhalé : peu efficace dans la coqueluche",
+            "Corticoïdes : non recommandés en routine"
+          ],
+          "examensComplementaires": [
+            "PCR Bordetella pertussis sur aspiration nasopharyngée",
+            "Culture sur milieu de Bordet-Gengou",
+            "NFS : hyperlymphocytose > 10 000/mm³",
+            "CRP : souvent peu élevée sauf surinfection",
+            "Hémocultures si fièvre élevée",
+            "Radiographie thoracique",
+            "Gazométrie si détresse respiratoire",
+            "Ionogramme si déshydratation"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-64 - Toux - Station double 1",
@@ -3263,7 +4972,295 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🫁 Toux – Diagnostic final : Cancer pulmonaire – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes respiratoires",
+                  "points": [
+                    "Toux chronique ± hémoptysie",
+                    "Dyspnée progressive",
+                    "Douleur thoracique",
+                    "Sifflements respiratoires"
+                  ]
+                },
+                {
+                  "titre": "Symptômes systémiques ou extra-pulmonaires",
+                  "points": [
+                    "Perte de poids, fatigue, fièvre",
+                    "Dysphagie (compression œsophagienne)",
+                    "Enrouement (atteinte du nerf laryngé récurrent)",
+                    "Infections respiratoires récidivantes",
+                    "Syndrome cave supérieur (œdème tête/cou, cyanose)"
+                  ]
+                },
+                {
+                  "titre": "Facteurs de risque",
+                  "points": [
+                    "Tabagisme (actuel ou passé)",
+                    "Exposition professionnelle (amiante, silice, radon)",
+                    "Âge > 45 ans",
+                    "ATCD familiaux ou personnels de néoplasie"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes à rechercher",
+                  "points": [
+                    "Râles localisés, matité à la percussion",
+                    "Syndrome cave supérieur",
+                    "Clubbing digital (hippocratisme)",
+                    "Signes de métastases : hépatomégalie, douleurs osseuses",
+                    "Troubles neurologiques si atteinte cérébrale"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Imagerie",
+                  "points": [
+                    "Radiographie thoracique (1ère intention)",
+                    "Scanner thoracique injecté : caractérisation du nodule ou masse",
+                    "PET-Scan pour le bilan d'extension",
+                    "IRM cérébrale si signes neurologiques"
+                  ]
+                },
+                {
+                  "titre": "Biopsie et analyse histologique",
+                  "points": [
+                    "Fibroscopie avec biopsie transbronchique pour les lésions centrales",
+                    "Ponction transthoracique guidée pour lésions périphériques",
+                    "Analyse immunohistochimique et recherche de mutations (EGFR, ALK, PD-L1, etc.)"
+                  ]
+                },
+                {
+                  "titre": "Bilans biologiques",
+                  "points": [
+                    "NFS : anémie ou thrombopénie",
+                    "Bilan hépatique et phosphatases alcalines (métastases)",
+                    "LDH : parfois augmenté"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Stratégie thérapeutique",
+                  "points": [
+                    "Référer en pneumo-oncologie",
+                    "Chirurgie si tumeur localisée (souvent NSCLC)",
+                    "Chimiothérapie ± immunothérapie ± radiothérapie selon le stade et le type histologique",
+                    "Traitement des complications (pleurésie maligne, syndrome cave)"
+                  ]
+                },
+                {
+                  "titre": "Support symptomatique",
+                  "points": [
+                    "Oxygénothérapie si hypoxie",
+                    "Antalgiques (palier selon douleur)",
+                    "Antitussifs si toux invalidante",
+                    "Kinésithérapie respiratoire"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Toux chronique chez un patient tabagique = toujours penser au cancer",
+                "Red flags : hémoptysie, amaigrissement, enrouement, infections récidivantes",
+                "Radiographie thoracique normale n’exclut pas un cancer → scanner si suspicion",
+                "Biopsie indispensable pour confirmer le diagnostic",
+                "Référer précocement en oncologie"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Toux chronique avec hémoptysie (Suspicion cancer pulmonaire)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte, motif (toux chronique, hémoptysie)",
+                "Caractériser la toux → ancienneté, évolution, productivité, horaire",
+                "Hémoptysie → depuis quand, quantité, sang frais ou digéré, stable ou aggravé",
+                "Symptômes associés → dyspnée, douleur thoracique, sibilances, sueurs nocturnes, perte de poids",
+                "Facteurs de risque → tabac, exposition professionnelle, ATCD pulmonaires",
+                "ATCD médicaux, chirurgicaux, familiaux",
+                "Examen clinique ciblé → auscultation, recherche adénopathies, hippocratisme digital",
+                "Résumé + hypothèse principale (cancer) + DD (BPCO, tuberculose, bronchectasies, EP)",
+                "Examens complémentaires → radio thorax, scanner thoracique, fibroscopie avec biopsie, expectorations pour BK",
+                "Prise en charge immédiate → arrêt tabac, orientation pneumologie, surveillance hémoptysie"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : HEMO",
+                "elements": [
+                  "H = Hémoptysie (quantité, qualité)",
+                  "E = Évolution toux/dyspnée",
+                  "M = Malignité (facteurs de risque, perte de poids)",
+                  "O = Orientation examens (Rx, CT, bronchoscopie)"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de Mme Denise Dumont, 61 ans, chauffeur de taxi, qui consulte pour une toux chronique aggravée et l’apparition de crachats sanglants depuis 4 jours.\n\nElle décrit une toux ancienne, présente depuis plusieurs années, surtout le matin, avec des expectorations blanches mousseuses. Depuis environ un mois, la toux est devenue plus fréquente toute la journée, sans augmentation nette des crachats. Elle rapporte une douleur thoracique du côté droit apparue il y a un mois, modérée à 2 sur 10, augmentée par la toux et l’inspiration profonde. Elle dit aussi être plus essoufflée dans les escaliers, alors qu’auparavant elle les montait sans trop de difficulté.\n\nDepuis 4 jours, ses crachats contiennent du sang rouge frais, en petite quantité, de l’ordre du fond d’un mouchoir, sans aggravation récente. Elle n’a pas eu de fièvre, pas de sueurs nocturnes, mais elle rapporte une perte de poids involontaire de 4 kilos ces derniers mois. Pas de fatigue anormale.\n\nPour ses antécédents, son médecin avait suspecté une BPCO il y a 2 ans, mais elle avait refusé les explorations car elle se sentait bien. Elle présente environ un épisode de bronchite par an, traité parfois par antibiotiques. Elle n’a jamais eu de diagnostic de tuberculose. Elle fume un paquet de cigarettes par jour depuis 35 ans. Elle ne prend pas de traitement, n’a pas d’allergies connues. Elle boit un verre de vin le week-end. Elle est mariée, sans enfants, et travaille comme chauffeur de taxi. Dans sa famille, ses parents sont vivants et en bonne santé, sans pathologie respiratoire connue.\n\nÀ l’examen, ses constantes sont : tension artérielle 155/90, fréquence cardiaque 68 par minute, température 36,9°C, fréquence respiratoire 16 par minute, saturation correcte. Elle est en état général conservé. L’inspection est normale. La palpation ne retrouve pas de matité. À l’auscultation, on note quelques sibilances bilatérales, mais pas de crépitants. Pas de cyanose, pas d’œdème des membres inférieurs, pas d’adénopathies cervicales palpables, pas d’hippocratisme digital.\n\nEn résumé, il s’agit d’une femme de 61 ans, tabagique chronique, qui présente une toux chronique aggravée, compliquée par une hémoptysie récente, associée à une perte de poids. Mon hypothèse principale est un cancer bronchopulmonaire. Les diagnostics différentiels incluent une BPCO exacerbée, une tuberculose pulmonaire, des bronchectasies ou une embolie pulmonaire.\n\nComme examens complémentaires, je demanderais en première intention une radiographie thoracique, une NFS et un bilan de coagulation. Ensuite, un scanner thoracique injecté et une fibroscopie bronchique avec biopsies seraient nécessaires. J’ajouterais trois examens d’expectorations pour rechercher une tuberculose. Une spirométrie et, selon le contexte, un PET scan ou un scanner thoraco-abdomino-pelvien compléteraient le bilan.\n\nEn termes de prise en charge immédiate, je recommanderais un arrêt du tabac avec accompagnement, une orientation rapide en pneumologie, une surveillance de l’hémoptysie et une information claire de la patiente. Si un cancer est confirmé, la prise en charge devra être discutée en oncologie."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Mme Dumont, 61 ans, présente toux chronique aggravée et hémoptysie depuis 4 jours.\n\nB (Background) : Tabagisme actif 35 PA, BPCO suspectée non explorée, perte de poids récente 4 kg.\n\nA (Assessment) : Suspicion forte cancer bronchopulmonaire. DD : BPCO exacerbée, tuberculose, bronchectasies.\n\nR (Recommendation) : Radio thorax immédiate, bilan biologique et coagulation, CT thoracique injecté, fibroscopie avec biopsie, orientation pneumo-oncologie, arrêt tabac."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "Red flags hémoptysie",
+                  "points": [
+                    "Sang rouge frais",
+                    "Perte de poids involontaire",
+                    "Tabagisme chronique",
+                    "Douleur thoracique",
+                    "Âge > 50 ans"
+                  ]
+                },
+                {
+                  "titre": "Principaux DD hémoptysie",
+                  "points": [
+                    "Cancer bronchopulmonaire",
+                    "Tuberculose",
+                    "BPCO exacerbée",
+                    "Bronchectasies",
+                    "Embolie pulmonaire"
+                  ]
+                },
+                {
+                  "titre": "⚠️ Urgence si hémoptysie massive",
+                  "points": [
+                    "> 200 mL/24h",
+                    "Risque asphyxie",
+                    "Appel réanimation + intubation possible"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Cancer bronchopulmonaire",
+                      "reponse": {
+                        "pour": [
+                          "Tabagisme chronique 35 PA",
+                          "Âge 61 ans",
+                          "Hémoptysie récente",
+                          "Perte de poids involontaire",
+                          "Toux chronique aggravée"
+                        ],
+                        "contre": [
+                          "Pas de masse palpable, pas de crépitants (mais non spécifiques)"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Tuberculose",
+                      "reponse": {
+                        "pour": [
+                          "Hémoptysie",
+                          "Amaigrissement"
+                        ],
+                        "contre": [
+                          "Pas de fièvre",
+                          "Pas de sueurs nocturnes",
+                          "Pas de contage connu"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "BPCO exacerbée",
+                      "reponse": {
+                        "pour": [
+                          "Toux chronique productive",
+                          "Tabagisme chronique",
+                          "Sibilances à l’auscultation"
+                        ],
+                        "contre": [
+                          "Hémoptysie atypique",
+                          "Pas de surinfection récente"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demander ?",
+                      "reponse": [
+                        "Radiographie thorax",
+                        "NFS et plaquettes",
+                        "Bilan de coagulation",
+                        "CT thoracique avec injection",
+                        "Fibroscopie bronchique avec biopsie",
+                        "Expectorations ×3 pour BK"
+                      ],
+                      "analyse": "👉 Analyse orale : « La radio est le premier examen, le scanner et la fibroscopie permettent de confirmer le diagnostic. Les expectorations recherchent une tuberculose. »"
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Suspicion de cancer bronchopulmonaire"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": [
+                        "Arrêt tabac immédiat",
+                        "Orientation pneumologie/oncologie",
+                        "Confirmation histologique (biopsie)",
+                        "PEC selon stade (chirurgie, chimio, radio, immuno)",
+                        "Traitement symptomatique : antitussifs, antalgiques"
+                      ]
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Surveillance hémoptysie",
+                        "Coordination pneumologue-oncologue",
+                        "Stadification (PET scan, CT TAP, IRM cérébrale)",
+                        "Soutien psychologique",
+                        "Soins de support si avancé"
+                      ],
+                      "astuce": "👉 Astuce révision : penser au triptyque « Voir – Prouver – Traiter » : Voir (imagerie), Prouver (biopsie), Traiter (oncologie)."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-64 - Toux - Station double 2",
@@ -3271,8 +5268,18 @@
       "patient_description": "Examinateur-trice : Posez uniquement les questions écrites en rouge.",
       "consigneCandidat": "Vous avez 4 minutes pour préparer votre présentation orale (9 minutes) au pneumologue. Synthétisez le tableau clinique, l'hypothèse diagnostique principale et la prise en charge initiale.",
       "phases": [
-        { "id": "preparation", "label": "Préparation", "minutes": 4, "kind": "silent" },
-        { "id": "presentation", "label": "Présentation à l'examinateur", "minutes": 9, "kind": "examiner" }
+        {
+          "id": "preparation",
+          "label": "Préparation",
+          "minutes": 4,
+          "kind": "silent"
+        },
+        {
+          "id": "presentation",
+          "label": "Présentation à l'examinateur",
+          "minutes": 9,
+          "kind": "examiner"
+        }
       ],
       "source_scenario": false,
       "examen_resultats": {
@@ -3745,7 +5752,97 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie pratique de la maladie de Parkinson",
+          "sections": [
+            {
+              "titre": "Physiopathologie de la maladie de Parkinson",
+              "contenu": "Dégénérescence des neurones dopaminergiques de la substance noire.",
+              "points": [
+                "Perte neurones dopaminergiques : substantia nigra pars compacta",
+                "Corps de Lewy : inclusions α-synucléine intraneuronal",
+                "Déséquilibre dopamine/acétylcholine : circuits moteurs",
+                "Voies nigrostriées : putamen, noyau caudé",
+                "Seuil symptomatique : 70-80% perte neuronale",
+                "Progression rostro-caudale : tronc cérébral → cortex",
+                "Stades de Braak : extension topographique lésions"
+              ]
+            },
+            {
+              "titre": "Critères diagnostiques de la maladie de Parkinson",
+              "contenu": "Diagnostic clinique selon critères MDS (Movement Disorder Society).",
+              "points": [
+                "Critères essentiels : bradykinésie + 1 autre signe cardinal",
+                "Tremblement repos : 4-6 Hz, asymétrique, réémergent",
+                "Rigidité : plastique, roue dentée, asymétrique",
+                "Critères supportifs : réponse L-DOPA, hyposmie, RBD",
+                "Critères d'exclusion : signes atypiques, médicaments",
+                "Évolution : asymétrie persistante, progression lente",
+                "Red flags : chutes, dysautonomie, démence précoces"
+              ]
+            },
+            {
+              "titre": "Classification des tremblements",
+              "contenu": "Différenciation selon les circonstances d'apparition.",
+              "points": [
+                "Tremblement repos : 4-6 Hz, disparaît au mouvement",
+                "Tremblement action : kinétique, positionnel",
+                "Tremblement intention : augmente près du but (cérébelleux)",
+                "Tremblement essentiel : postural 6-8 Hz, bilatéral",
+                "Tremblement psychogène : variable, distractible",
+                "Tremblement médicamenteux : β2-agonistes, théophylline",
+                "Tremblement dystonique : asymétrique, irrégulier"
+              ]
+            },
+            {
+              "titre": "Syndromes parkinsoniens atypiques",
+              "contenu": "Différenciation clinique des parkinsonismes non-Parkinson.",
+              "points": [
+                "AMS : dysautonomie, ataxie, syndrome pyramidal",
+                "PSP : paralysie regard vertical, instabilité axiale",
+                "DCB : apraxie, dystonie, syndrome alien hand",
+                "Réponse L-DOPA : excellente Parkinson, pauvre atypiques",
+                "Évolution : Parkinson lente, atypiques rapides",
+                "Symétrie : Parkinson asymétrique, atypiques symétriques",
+                "Pronostic : Parkinson favorable, atypiques péjoratif"
+              ]
+            },
+            {
+              "titre": "Stratégies thérapeutiques dans Parkinson",
+              "contenu": "Choix traitement selon âge, sévérité, profil patient.",
+              "points": [
+                "Patient jeune <65 ans : agonistes dopaminergiques",
+                "Patient âgé >65 ans : L-DOPA première intention",
+                "Monothérapie : rasagiline, agonistes formes légères",
+                "Complications motrices : fluctuations, dyskinésies",
+                "Traitement avancé : pompes, stimulation cérébrale",
+                "Symptômes non-moteurs : depression, troubles sommeil",
+                "Neuroprotection : exercice physique, antioxydants"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "L-DOPA/Carbidopa : 100/25mg x3/j → 400-800mg/j L-DOPA",
+            "Ropinirole : 0.25mg x3/j → 6-8mg/j (augmentation hebdomadaire)",
+            "Pramipexole : 0.125mg x3/j → 1.5mg x3/j (augmentation graduelle)",
+            "Rasagiline : 1mg/j monothérapie ou adjuvant L-DOPA",
+            "Entacapone : 200mg avec chaque prise L-DOPA si fluctuations",
+            "Amantadine : 100mg x2/j, dyskinésies et tremblements",
+            "Stimulation cérébrale profonde : NST si complications motrices"
+          ],
+          "examensComplementaires": [
+            "DaTscan : scintigraphie transporteur dopamine, confirme diagnostic",
+            "IRM cérébrale : éliminer causes secondaires, atrophies",
+            "MIBG cardiaque : dénervation sympathique (Parkinson vs AMS)",
+            "Test olfactif : hyposmie 90% Parkinson vs tremblements essentiels",
+            "Polysomnographie : RBD précède Parkinson de 10-15 ans",
+            "Tests neuropsychologiques : troubles exécutifs, mémoire",
+            "Test thérapeutique L-DOPA : amélioration >30% = Parkinson"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-66 - Troubles de l'équilibre - ECC Neurologie",
@@ -4162,7 +6259,97 @@
           ]
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "theoriePratique": {
+          "titre": "Théorie pratique des troubles de l'équilibre",
+          "sections": [
+            {
+              "titre": "Physiologie de l'équilibre",
+              "contenu": "L'équilibre résulte de l'intégration de trois systèmes sensoriels.",
+              "points": [
+                "Système vestibulaire : détection mouvements tête",
+                "Système visuel : orientation spatiale, obstacles",
+                "Système proprioceptif : position segments corporels",
+                "Intégration centrale : cervelet, tronc cérébral, cortex",
+                "Réponses motrices : ajustements posturaux, réflexes",
+                "Anticipation : stratégies motrices préventives",
+                "Plasticité : compensation déficits sensoriels"
+              ]
+            },
+            {
+              "titre": "Syndromes ataxiques",
+              "contenu": "Classification selon le niveau lésionnel et mécanismes.",
+              "points": [
+                "Ataxie cérébelleuse : dysmétrie, adiadococinésie, hypermétrie",
+                "Ataxie sensitive : Romberg+, marche talonnante, pseudo-athétose",
+                "Ataxie vestibulaire : nystagmus, vertiges, déséquilibre latéralisé",
+                "Ataxie frontale : troubles initiation marche, apraxie marche",
+                "Ataxie mixte : combinaison plusieurs mécanismes",
+                "Signes associés : dysarthrie, troubles oculomoteurs",
+                "Évolution : aiguë vs chronique, progressive vs stable"
+              ]
+            },
+            {
+              "titre": "Causes des troubles de l'équilibre chez la personne âgée",
+              "contenu": "Étiologies multifactorielles fréquentes après 65 ans.",
+              "points": [
+                "Neurodégénératives : Parkinson, atrophie multisystémique",
+                "Vasculaires : leucoaraïose, infarctus cérébraux",
+                "Néoplasiques : métastases, syndromes paranéoplasiques",
+                "Métaboliques : diabète, hypothyroïdie, carences B12",
+                "Médicamenteuses : psychotropes, antiépileptiques",
+                "Sensorielles : presbytie, presbyacousie, neuropathies",
+                "Orthopédiques : arthrose, déconditionnement musculaire"
+              ]
+            },
+            {
+              "titre": "Évaluation clinique des troubles de l'équilibre",
+              "contenu": "Tests standardisés pour objectiver les déficits.",
+              "points": [
+                "Station unipodale : <5 secondes = pathologique",
+                "Test de Romberg : ataxie sensitive si positif",
+                "Marche en tandem : 10 pas alignés, ataxie si <8",
+                "Test chronométré lever-marcher (TUG) : >20 sec = risque chute",
+                "Échelle d'équilibre de Berg : 56 points max",
+                "Test de poussée : réflexes posturaux",
+                "Posturographie : analyse quantitative instabilité"
+              ]
+            },
+            {
+              "titre": "Syndromes paranéoplasiques neurologiques",
+              "contenu": "Manifestations neurologiques des cancers sans métastases.",
+              "points": [
+                "Dégénérescence cérébelleuse : ataxie subaiguë, anti-Yo",
+                "Encéphalite limbique : troubles mnésiques, anti-Hu",
+                "Syndrome de Lambert-Eaton : faiblesse musculaire",
+                "Neuropathies périphériques : sensitives, motrices",
+                "Myasthénie : fatigabilité, ptosis, anticorps anti-RACh",
+                "Cancers associés : poumon, ovaire, sein, lymphomes",
+                "Diagnostic : anticorps spécifiques, recherche tumeur"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Rééducation vestibulaire : exercices adaptation, habituation",
+            "Kinésithérapie : renforcement, proprioception, équilibre",
+            "Aides techniques : cannes, déambulateurs, barres d'appui",
+            "L-DOPA : test thérapeutique si syndrome parkinsonien",
+            "Vitamine B12 : 1000µg IM puis 1000µg/j PO si carence",
+            "Révision médicamenteuse : arrêt psychotropes si possible",
+            "Correction déficits sensoriels : lunettes, prothèses auditives"
+          ],
+          "examensComplementaires": [
+            "IRM cérébrale : atrophie, lésions cérébelleuses, métastases",
+            "Vidéonystagmographie : exploration vestibulaire complète",
+            "Posturographie : analyse quantitative instabilité",
+            "EMG : neuropathies périphériques, myopathies",
+            "TEP-scan : recherche néoplasie primitive si paranéoplasique",
+            "Anticorps paranéoplasiques : anti-Yo, anti-Hu, anti-Ri",
+            "Bilan métabolique : B12, folates, TSH, glycémie"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-67 - Fatigue",
@@ -4496,7 +6683,309 @@
           "resultat": "TSH 20.6 mU/L (N: 0.2-3.5), T4 libre 2.06 pmol/L (N: 12-22)"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🦋 Hypothyroïdie primaire – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes fréquents",
+                  "points": [
+                    "Fatigue chronique, somnolence",
+                    "Prise de poids malgré une baisse de l'appétit",
+                    "Intolérance au froid",
+                    "Peau sèche, constipation, voix rauque",
+                    "Troubles mnésiques, ralentissement psychomoteur",
+                    "Chute de cheveux, ongles cassants",
+                    "Règles abondantes ou irrégulières"
+                  ]
+                },
+                {
+                  "titre": "Facteurs de risque / antécédents",
+                  "points": [
+                    "Sexe féminin (prévalence plus élevée)",
+                    "Maladie auto-immune personnelle ou familiale (ex : Hashimoto, diabète type 1, vitiligo)",
+                    "Traitement antérieur du cancer thyroïdien ou chirurgie thyroïdienne",
+                    "Traitements iatrogènes (amiodarone, lithium, radiothérapie cervicale)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes généraux",
+                  "points": [
+                    "Bradycardie",
+                    "Peau sèche et froide",
+                    "Œdèmes péri-orbitaires, visage bouffi (myxœdème)",
+                    "Réflexes ostéotendineux ralentis (phase de relâchement prolongée)",
+                    "Goitre éventuel (dur, irrégulier, indolore si Hashimoto)",
+                    "Hypothermie (dans les formes sévères)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Bilan biologique",
+                  "points": [
+                    "TSH élevée + T4L basse = hypothyroïdie primaire",
+                    "Présence d’anticorps anti-TPO (thyroïdite d’Hashimoto)",
+                    "Hypercholestérolémie fréquente",
+                    "Anémie normocytaire ou macrocytaire"
+                  ]
+                },
+                {
+                  "titre": "Examens complémentaires",
+                  "points": [
+                    "Échographie thyroïdienne si goitre palpable ou nodules",
+                    "ECG si bradycardie importante",
+                    "Autres bilans selon contexte (glycémie, ferritine, cortisol, etc.)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Traitement hormonal substitutif",
+                  "points": [
+                    "Lévothyroxine (T4) en prise orale à jeun 30 min avant le petit déjeuner",
+                    "Adaptation de la dose selon TSH (objectif : TSH normale)",
+                    "Surveillance biologique après 6 semaines d’initiation ou d’ajustement",
+                    "Traitement à vie dans la majorité des cas"
+                  ]
+                },
+                {
+                  "titre": "Précautions",
+                  "points": [
+                    "Commencer à faible dose chez les sujets âgés ou coronariens",
+                    "Éviter les prises simultanées de fer, calcium ou IPP qui diminuent l’absorption",
+                    "Surveillance accrue pendant la grossesse (adaptation de dose nécessaire)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Évoquer en cas de fatigue, frilosité, prise de poids",
+                "TSH + T4L indispensables pour le diagnostic",
+                "Ne pas oublier les anticorps anti-TPO dans l'étiologie auto-immune",
+                "Lévothyroxine : traitement simple mais nécessitant un bon suivi biologique",
+                "Adapter la dose progressivement, surtout chez les patients à risque CV",
+                "Toujours évoquer une hypothyroïdie centrale si TSH normale ou basse avec T4L basse"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Fatigue chronique (Hypothyroïdie primaire)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, motif (fatigue, baisse énergie)",
+                "Caractériser fatigue → durée, évolution, rythme, impact quotidien",
+                "Symptômes associés → constipation, prise poids, frilosité, humeur",
+                "ATCD médicaux (carences, endocrino), traitements",
+                "Habitudes de vie (tabac, alimentation, stress, sommeil)",
+                "Examen → constantes, thyroïde, peau, cheveux, ROT, sclères",
+                "Résumé + hypothèse principale + DD",
+                "Examens complémentaires → TSH, T4 libre, anticorps anti-TPO",
+                "Prise en charge → lévothyroxine, éducation, suivi biologique"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo FATIGUE",
+                "elements": [
+                  "F = Fatigue persistante",
+                  "A = Anxiété/stress associés",
+                  "T = Transit ralenti (constipation)",
+                  "I = Intolérance au froid (souvent)",
+                  "G = Gain de poids",
+                  "U = Un peu ralentie (ROT, affect)",
+                  "E = Examens → TSH/T4L"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de Mme Iris Gomez, 38 ans, analyste financière, qui consulte pour une fatigue persistante et une baisse d’énergie importante depuis environ six mois.\n\nAu début, la fatigue était surtout intermittente, présente les jours de gros travail, mais depuis deux mois elle est quasiment constante, dès le matin, et s’aggrave en fin de journée. Elle dit que cette fatigue impacte sa concentration et sa motivation, ce qui affecte son travail.\n\nElle rapporte aussi une prise de poids de 3 à 4 kilos sur l’année écoulée, malgré un appétit globalement inchangé, et une constipation qui s’est aggravée depuis quelques mois, avec un transit environ une fois tous les deux jours, selles dures. Elle n’a pas eu de fièvre ni de sueurs nocturnes. Pas de perte d’appétit majeure. Son sommeil est correct, environ 7 heures par nuit, sans réel effet sur la fatigue.\n\nAu niveau psychologique, elle se dit souvent débordée par ses responsabilités, avec des sautes d’humeur, un niveau de stress élevé depuis un an avec de nouvelles responsabilités, et une perte d’intérêt pour ses activités habituelles. Elle reconnaît une baisse de plaisir et une vulnérabilité émotionnelle. Pas d’idées suicidaires.\n\nDans ses antécédents, elle a présenté une carence martiale lors de l’adolescence et jeune adulte, corrigée par substitution. Elle n’a pas de traitement actuel. Pas de chirurgie. Sa famille est en bonne santé. \n\nCôté habitudes de vie, elle fume 10 cigarettes par jour depuis l’âge de 18 ans, a arrêté pendant ses grossesses, consomme de l’alcool occasionnellement, et ne fait pas d’activité physique régulière. Son alimentation est déséquilibrée, riche en glucides et graisses.\n\nÀ l’examen clinique, ses constantes sont normales : TA 122/84, FC 60, température 36,6. Elle paraît légèrement pâle. La thyroïde est de volume normal, non douloureuse. Les réflexes ostéotendineux sont particuliers : la phase de relaxation est ralentie. Le reste de l’examen est normal, pas d’adénopathies, abdomen souple, pas d’hépatosplénomégalie.\n\nEn résumé, il s’agit d’une femme jeune avec une fatigue chronique progressive, associée à une constipation, une prise de poids, un ralentissement psychomoteur discret, et un signe clinique typique : la phase de relaxation des ROT ralentie. Mon hypothèse principale est une hypothyroïdie primaire. Les diagnostics différentiels incluent une anémie ferriprive, ou un trouble anxio-dépressif réactionnel.\n\nComme examens complémentaires, je demanderais une NFS et ferritine, une TSH et une T4 libre. Ici, les résultats montrent une TSH à 20,6 (très élevée) et une T4 libre basse à 2,06, ce qui confirme l’hypothyroïdie primaire. Je compléterais par un dosage des anticorps anti-TPO pour rechercher une thyroïdite auto-immune.\n\nEn termes de prise en charge, je propose un traitement substitutif par lévothyroxine, débuté à faible dose (25–50 µg/j), à adapter progressivement selon la TSH. Je l’informerais de la prise matinale à jeun et du suivi biologique à 6–8 semaines pour ajuster la dose, puis annuel une fois l’équilibre atteint."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Mme Iris Gomez, 38 ans, consulte pour une fatigue persistante depuis 6 mois.\n\nB (Background) : Antécédent de carence martiale, tabac 10 cigarettes/j, alimentation déséquilibrée. Depuis 2 mois fatigue quasi constante, constipation aggravée, prise de poids. \n\nA (Assessment) : Suspicion forte d’hypothyroïdie primaire confirmée par TSH élevée et T4 libre basse. DD : anémie ferriprive, trouble anxio-dépressif.\n\nR (Recommendation) : Prescrire lévothyroxine à faible dose, informer sur la prise matinale, contrôle TSH dans 6–8 semaines, dosage anti-TPO, suivi régulier."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Hypothyroïdie = TRISTE",
+                  "points": [
+                    "T = Transit ralenti",
+                    "R = Ralentissement psychomoteur / ROT",
+                    "I = Intolérance au froid",
+                    "S = Somnolence / fatigue",
+                    "T = TSH ↑, T4 ↓",
+                    "E = Énergie basse"
+                  ]
+                },
+                {
+                  "titre": "👉 Suivi traitement",
+                  "points": [
+                    "Commencer petit (25–50 µg)",
+                    "Ajuster toutes les 6–8 semaines",
+                    "Cible TSH normale",
+                    "Prise matinale à jeun",
+                    "Surveillance surdosage : palpitations, nervosité, insomnie"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Hypothyroïdie primaire",
+                      "reponse": {
+                        "pour": [
+                          "Fatigue chronique et progressive",
+                          "Prise de poids, constipation",
+                          "Phase de relaxation des ROT ralentie",
+                          "TSH très élevée et T4 libre basse"
+                        ],
+                        "contre": [
+                          "Pas de frilosité marquée"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Anémie ferriprive",
+                      "reponse": {
+                        "pour": [
+                          "Antécédent de carence martiale",
+                          "Femme jeune"
+                        ],
+                        "contre": [
+                          "Hb normale",
+                          "Ferritine normale"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Trouble anxio-dépressif",
+                      "reponse": {
+                        "pour": [
+                          "Stress professionnel élevé",
+                          "Perte d’intérêt",
+                          "Humeur variable"
+                        ],
+                        "contre": [
+                          "Symptômes physiques marqués (constipation, ROT, prise de poids)",
+                          "Pas d’idées suicidaires"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demanderiez-vous ?",
+                      "reponse": [
+                        "NFS + ferritine",
+                        "TSH et T4 libre",
+                        "Anticorps anti-TPO"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Hypothyroïdie primaire, probablement auto-immune (Hashimoto)"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Lévothyroxine faible dose (25–50 µg/j)",
+                          "Prise matinale à jeun",
+                          "Ajustement progressif selon TSH"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Contrôle TSH après 6–8 semaines",
+                        "Puis annuel une fois équilibrée",
+                        "Informer des signes de surdosage",
+                        "Surveillance grossesse et maladies auto-immunes associées"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Rappels théoriques sur l'hypothyroïdie",
+          "sections": [
+            {
+              "titre": "Diagnostic différentiel de la fatigue",
+              "contenu": "Fatigue = plainte avec un DD initial très large. Dans la démarche commencer par cibler des causes fréquentes de fatigue au vu des informations initiales par exemple carence martiale (rechercher des FR comme hyperménorrhée, alimentation), troubles du sommeil, troubles psychiatriques (à chercher dans l'anamnèse), hypothyroïdie (chercher constipation, frilosité, prise de poids). Sans oublier des causes potentiellement graves par exemple oncologiques (d'où l'investigation ciblée par système et des symptômes B, recherche d'ADP)."
+            },
+            {
+              "titre": "Hypothyroïdie - Diagnostic",
+              "points": [
+                "À rechercher sur la base de la fatigue, prise de poids et constipation + allongement de la phase de relaxation des ROT",
+                "TSH abaissée et T4 libre augmentée = hypothyroïdie primaire",
+                "Dans la suite des investigations, dosage des anticorps anti-TPO conseillé afin d'exclure hypothyroïdie primaire d'une autre origine (De Quervain, thyroïdite silencieuse)"
+              ]
+            },
+            {
+              "titre": "Prise en charge",
+              "points": [
+                "Substitution par lévothyroxine",
+                "Contrôle à 6-8 semaines pour nouveau dosage des hormones thyroïdiennes",
+                "Mise en garde symptômes d'hyperthyroïdie (surdosage)"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Débuter lévothyroxine à faible dose (25-50 μg/jour)",
+            "Augmentation progressive par paliers de 25 μg toutes les 4-6 semaines",
+            "Dose cible environ 1.6 μg/kg/jour",
+            "Prise matinale à jeun, 30 min avant le petit-déjeuner",
+            "Objectif TSH : 0.5-2.5 mU/L",
+            "Surveillance annuelle une fois équilibrée"
+          ],
+          "examensComplementaires": [
+            "TSH : test de première intention (sensibilité > 99%)",
+            "T4 libre : si TSH anormale",
+            "Anticorps anti-TPO : pour confirmer origine auto-immune (thyroïdite de Hashimoto)",
+            "Échographie thyroïdienne : non systématique, si goitre ou nodule palpable",
+            "NFS, ferritine : pour exclure anémie ferriprive associée",
+            "VS/CRP : pour exclure processus inflammatoire"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-68 - Eruption cutanée",
@@ -4731,7 +7220,356 @@
           "question_patient": "Est-ce contagieux?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🔥 Zona (Herpes zoster) – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Symptômes typiques",
+                  "points": [
+                    "Douleur neuropathique unilatérale en bande (brûlure, picotement, fourmillements)",
+                    "Éruption vésiculeuse sur un territoire dermatomérique",
+                    "Phase prodromique possible : fièvre, fatigue, céphalées",
+                    "Photophobie si atteinte oculaire",
+                    "Historique de varicelle (VZV latent dans le ganglion postérieur)",
+                    "Facteurs déclenchants : stress, immunodépression, âge > 50 ans"
+                  ]
+                },
+                {
+                  "titre": "Formes à risque",
+                  "points": [
+                    "Patient immunodéprimé (VIH, greffe, chimiothérapie)",
+                    "Zona ophtalmique (branche V1 du trijumeau)",
+                    "Zona disséminé ou multidermatomérique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Inspection cutanée",
+                  "points": [
+                    "Éruption vésiculeuse unilatérale sur un dermatome bien délimité",
+                    "Croûtes après 7–10 jours",
+                    "Pas de passage de la ligne médiane",
+                    "Signe de Hutchinson : vésicules sur l’aile du nez → atteinte oculaire possible"
+                  ]
+                },
+                {
+                  "titre": "Autres éléments à rechercher",
+                  "points": [
+                    "Fièvre ou signes de dissémination",
+                    "Déficit moteur associé (ex : zona du plexus brachial)",
+                    "Signe de surinfection bactérienne locale"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Diagnostic clinique",
+                  "points": [
+                    "Souvent suffisant si tableau typique"
+                  ]
+                },
+                {
+                  "titre": "Examens à visée étiologique ou de confirmation",
+                  "points": [
+                    "PCR VZV sur écouvillon vésiculaire (forme atypique, disséminée)",
+                    "Bilan VIH / immunodépression si forme sévère ou récidivante",
+                    "Ponction lombaire si suspicion d'encéphalite ou méningite"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Traitement antiviral (si < 72 h ou critères de gravité)",
+                  "points": [
+                    "Valaciclovir, famciclovir ou aciclovir PO",
+                    "Aciclovir IV si immunodépression, dissémination, ou atteinte neurologique",
+                    "Durée : 7 jours"
+                  ]
+                },
+                {
+                  "titre": "Antalgiques",
+                  "points": [
+                    "Paracétamol, AINS pour douleurs légères",
+                    "Tramadol ou morphine si douleur intense",
+                    "Gabapentine, prégabaline ou antidépresseurs tricycliques si douleur neuropathique persistante"
+                  ]
+                },
+                {
+                  "titre": "Corticothérapie (cas sélectionnés)",
+                  "points": [
+                    "Discussion en cas de douleur sévère, atteinte oculaire ou neurologique (avec antiviraux)"
+                  ]
+                },
+                {
+                  "titre": "Mesures complémentaires",
+                  "points": [
+                    "Isolement si lésion active : éviter contact avec femmes enceintes non immunisées, immunodéprimés et nourrissons",
+                    "Vaccin Zostavax ou Shingrix en prévention chez > 50 ans (hors épisode aigu)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Douleur en bande suivie d’une éruption vésiculeuse unilatérale = penser zona",
+                "Antiviraux à initier dans les 72 h ou en cas de formes graves",
+                "Toujours rechercher une immunodépression en cas de formes atypiques",
+                "Vaccination recommandée après 50 ans pour prévenir les récidives",
+                "Surveillance de la douleur : risque de névralgie post-zostérienne"
+              ]
+            },
+            {
+              "titre": "📋 Check-list rapide ECOS",
+              "subsections": [
+                {
+                  "titre": "Questions à poser",
+                  "points": [
+                    "Douleur en bande unilatérale ? Depuis combien de temps ?",
+                    "Apparition d’une éruption vésiculeuse sur le trajet d’un dermatome ?",
+                    "ATCD de varicelle ?",
+                    "Facteurs de risque : âge > 50 ans, immunodépression, stress ?",
+                    "Localisation : visage (V1), œil, atteinte multidermatomérique ?"
+                  ]
+                },
+                {
+                  "titre": "Examens à faire",
+                  "points": [
+                    "Inspection cutanée détaillée",
+                    "Recherche de signe de Hutchinson (atteinte nasale → risque oculaire)",
+                    "Examen neurologique : déficit moteur, douleur neuropathique",
+                    "PCR VZV si forme atypique ou disséminée",
+                    "Bilan VIH ou immunité si forme sévère/récidivante"
+                  ]
+                },
+                {
+                  "titre": "PEC en 3 points",
+                  "points": [
+                    "Antiviraux PO dans les 72 h ou IV si immunodéprimé/atteinte grave",
+                    "Antalgiques adaptés (± traitement neuropathique)",
+                    "Isolement et prévention (éviter contacts à risque, proposer vaccination après 50 ans)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Zona (Herpes zoster)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte, motif de consultation",
+                "Caractériser l’éruption → début, localisation, évolution, douleur",
+                "Symptômes associés → fièvre, prurit, céphalées, fatigue",
+                "ATCD médicaux (varicelle, immunosuppression, comorbidités)",
+                "Facteurs de risque → stress, infection récente, traitement immunosuppresseur",
+                "Examen clinique → distribution dermatomique, unilatérale, état général",
+                "Résumé + hypothèse principale + DD",
+                "Examens complémentaires → clinique le plus souvent, PCR si doute",
+                "Prise en charge → antiviraux si < 72 h, antalgie adaptée, surveillance complications"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo ZONA",
+                "elements": [
+                  "Z = Zoster (douleur en bande avant éruption)",
+                  "O = One side (unilatéral, dermatomique)",
+                  "N = Ne dépasse pas la ligne médiane",
+                  "A = Antécédent de varicelle obligatoire"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de M. Maballe, 31 ans, en bonne santé habituelle, qui consulte pour une éruption cutanée douloureuse apparue il y a deux jours.\n\nLes lésions ont commencé sur le flanc droit, sous forme de petites vésicules regroupées, qui se sont rapidement multipliées. Elles restent strictement limitées à ce côté et ne dépassent pas la ligne médiane. Depuis hier, elles commencent à croûter avec un érythème autour. \n\nIl décrit des douleurs intenses de type brûlures, apparues 48 heures avant l’éruption, avec des lancées et un prurit associé. La douleur est évaluée entre 6 et 8 sur 10 et n’est que partiellement soulagée par le paracétamol. \n\nIl n’a pas de fièvre, pas de céphalée, pas de toux ni de fatigue particulière. C’est le premier épisode de ce type. \n\nPour ses antécédents, il a eu la varicelle à l’âge de 3 ans, il n’a pas de maladie immunologique connue, pas d’allergie, il n’a pas de traitement chronique. Il a eu une infection Covid il y a deux mois mais s’est bien rétabli. Ses vaccins sont à jour. Il n’a pas de contage récent ni de stress particulier.\n\nÀ l’examen, ses constantes sont normales : tension 125/70, pouls 72, température 37,2°C, FR 15, saturation 98 %. On observe une éruption vésiculo-papuleuse croûteuse sur le flanc droit, limitée à un dermatome thoracique, unilatérale et ne dépassant pas la ligne médiane. Il n’y a pas d’adénopathie palpable, les muqueuses sont normales et l’examen général est sans particularité.\n\nEn résumé, il s’agit d’un patient jeune, immunocompétent, présentant une éruption vésiculeuse douloureuse en bande, précédée de douleurs neuropathiques, avec distribution dermatomique typique. Mon hypothèse principale est un zona thoracique. Les diagnostics différentiels incluent un eczéma, un impétigo, une varicelle ou une dermatite de contact, mais la douleur préalable, la distribution unilatérale et l’antécédent de varicelle orientent clairement vers le zona.\n\nComme examens complémentaires, le diagnostic est clinique, une PCR VZV sur frottis vésiculaire peut être demandée en cas de doute ou forme atypique. \n\nEn termes de prise en charge, je propose un traitement antiviral oral à débuter rapidement car nous sommes dans les 72 premières heures, par valaciclovir 1 g trois fois par jour pendant 7 jours, associé à une antalgie adaptée. J’informerais le patient sur la contagiosité par contact direct avec les lésions, à éviter particulièrement avec les femmes enceintes non immunisées et les immunodéprimés. Je surveillerais aussi l’évolution de la douleur en raison du risque de névralgie post-zostérienne."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : M. Maballe, 31 ans, consulte pour une éruption cutanée douloureuse apparue depuis 2 jours.\n\nB (Background) : Antécédent de varicelle à 3 ans, pas d’immunosuppression connue, pas de fièvre ni autres symptômes.\n\nA (Assessment) : Éruption vésiculeuse douloureuse unilatérale, distribution dermatomique. Hypothèse principale : zona. DD : eczéma, impétigo, dermatite de contact, varicelle.\n\nR (Recommendation) : Débuter antiviral oral rapidement (< 72 h), antalgie adaptée, conseils sur contagiosité et surveillance des complications."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Mnémo des signes typiques : PAVE",
+                  "points": [
+                    "P = Prodrome douloureux avant l’éruption",
+                    "A = Antécédent de varicelle",
+                    "V = Vésicules groupées",
+                    "E = Éruption unilatérale dermatomérique"
+                  ]
+                },
+                {
+                  "titre": "👉 Complications = « 3N »",
+                  "points": [
+                    "Névralgie post-zostérienne",
+                    "Nerf trijumeau (zona ophtalmique)",
+                    "Nerf facial (syndrome de Ramsay Hunt)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Arguments pour et contre chaque hypothèse",
+                  "questions": [
+                    {
+                      "question": "Zona",
+                      "reponse": {
+                        "pour": [
+                          "Antécédent de varicelle",
+                          "Douleur prodromique avant éruption",
+                          "Éruption vésiculeuse en dermatome unilatéral",
+                          "Ne dépasse pas la ligne médiane"
+                        ],
+                        "contre": [
+                          "Âge jeune (moins classique, mais possible)"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Eczéma",
+                      "reponse": {
+                        "pour": [
+                          "Prurit",
+                          "Lésions croûteuses"
+                        ],
+                        "contre": [
+                          "Douleur neuropathique intense",
+                          "Distribution dermatomérique stricte",
+                          "Unilatéral"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Impétigo",
+                      "reponse": {
+                        "pour": [
+                          "Croûtes",
+                          "Prurit"
+                        ],
+                        "contre": [
+                          "Pas de contexte infectieux",
+                          "Douleur neuropathique absente en impétigo",
+                          "Distribution en dermatome"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires immédiats",
+                  "questions": [
+                    {
+                      "question": "Quels examens demanderiez-vous ?",
+                      "reponse": [
+                        "Aucun nécessaire si tableau typique",
+                        "PCR VZV sur frottis vésiculaire si doute",
+                        "Sérologie VIH si zona récidivant ou atypique"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Diagnostic définitif, traitement, suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Zona thoracique"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Valaciclovir 1 g x 3/j pendant 7 jours si < 72 h",
+                          "Antalgiques adaptés (paracétamol, ± tramadol)",
+                          "Soins locaux avec antiseptiques"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Surveillance de la douleur (prévention névralgie post-zostérienne)",
+                        "Informer sur contagiosité",
+                        "Vaccination zona possible plus tard en prévention des récidives"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Points théoriques et pratiques",
+          "sections": [
+            {
+              "titre": "Zona (Herpes zoster)",
+              "contenu": "Le zona est une réactivation du virus varicelle-zona (VZV) resté latent dans les ganglions sensitifs après la varicelle.",
+              "points": [
+                "Incidence : augmente avec l'âge et l'immunosuppression",
+                "Prodrome : douleurs 48-72h avant l'éruption",
+                "Distribution : dermatomique, unilatérale, ne dépasse pas la ligne médiane",
+                "Évolution : macules → papules → vésicules → croûtes en 7-10 jours"
+              ]
+            },
+            {
+              "titre": "Complications",
+              "contenu": "Les complications dépendent de l'âge et du statut immunitaire.",
+              "points": [
+                "Névralgie post-zostérienne : douleur > 3 mois après éruption",
+                "Zona ophtalmique : atteinte V1, risque de kératite",
+                "Zona otique (Ramsay-Hunt) : atteinte VII avec paralysie faciale",
+                "Dissémination chez l'immunodéprimé"
+              ]
+            },
+            {
+              "titre": "Diagnostic différentiel",
+              "contenu": "Le diagnostic est généralement clinique mais peut être confondu avec d'autres dermatoses.",
+              "points": [
+                "Herpès simplex : récurrent, pas de distribution dermatomique",
+                "Dermatite de contact : prurit prédominant, contexte d'exposition",
+                "Eczéma : bilatéral, prurit intense, pas de vésicules groupées",
+                "Impétigo : croûtes mélicériques, contexte infectieux"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Antiviraux dans les 72h : valaciclovir 1000mg 3x/j pendant 7 jours",
+            "Alternative : aciclovir 800mg 5x/j pendant 7 jours",
+            "Analgésie : paracétamol, AINS, gabapentine si douleurs neuropathiques",
+            "Soins locaux : antiseptiques, pansements non adhérents",
+            "Prévention : vaccin zona après 50 ans (Zostavax ou Shingrix)"
+          ],
+          "examensComplementaires": [
+            "Diagnostic clinique dans la majorité des cas",
+            "PCR VZV sur prélèvement vésiculaire : gold standard si doute",
+            "Immunofluorescence directe : rapide mais moins sensible",
+            "Culture virale : peu utilisée car longue",
+            "Sérologie VZV : pas utile en phase aiguë",
+            "HIV si zona chez sujet jeune sans facteur de risque"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-69 - Traumatisme MS - Basketteur 25 ans",
@@ -4948,7 +7786,317 @@
           "resultat": "Vous donnez les radiographies du MSD dans le dossier"
         }
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "💥 Traumatisme du MS – Fracture diaphysaire de l’humérus – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🔍 Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Éléments à rechercher",
+                  "points": [
+                    "Mécanisme du traumatisme (haute vs basse énergie, chute, accident de la voie publique, sport)",
+                    "Douleur immédiate, impotence fonctionnelle du bras",
+                    "Perception de craquement ou déformation",
+                    "ATCD médicaux : ostéoporose, cancer (métastase osseuse ?)",
+                    "Traitements en cours (anticoagulants, corticoïdes)",
+                    "Niveau d’activité et exigences fonctionnelles"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "👀 Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Signes à rechercher",
+                  "points": [
+                    "Douleur localisée, impotence fonctionnelle",
+                    "Déformation du bras, raccourcissement, varus",
+                    "Mobilisation douloureuse avec crépitation osseuse",
+                    "Inspection cutanée : plaie, menace de fracture ouverte",
+                    "Bilan neurovasculaire (pDMS) : n. radial (extension du poignet/doigts), sensibilité, pouls périphériques",
+                    "Recherche de polytraumatisme (AVP, chute de grande hauteur)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Imagerie",
+                  "points": [
+                    "Radiographies du bras en 2 incidences (AP + profil) incluant épaule et coude",
+                    "Scanner si fracture complexe, polytraumatisme ou doute diagnostique"
+                  ]
+                },
+                {
+                  "titre": "Examens complémentaires",
+                  "points": [
+                    "Bilan biologique selon contexte (NFS, coagulation, fonction rénale)",
+                    "Exploration vasculaire (Doppler/angio-CT) si suspicion de lésion artérielle"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Conservatrice",
+                  "points": [
+                    "Indiquée dans la majorité des cas si pas de complication",
+                    "Immobilisation initiale (attelle, bandage coude au corps ou plâtre brachio-antébrachial)",
+                    "Brace fonctionnel du bras (4–6 semaines)",
+                    "Rééducation précoce de l’épaule, coude, main"
+                  ]
+                },
+                {
+                  "titre": "Chirurgicale",
+                  "points": [
+                    "Indications absolues : fracture ouverte, lésion vasculo-nerveuse, polytraumatisme, pseudarthrose, échec du traitement conservateur",
+                    "Indications relatives : obésité, mauvaise observance, fractures transverses instables",
+                    "Techniques : plaque vissée (ORIF), enclouage centromédullaire, fixateur externe si polytrauma",
+                    "Objectif : fixation stable, mobilisation précoce"
+                  ]
+                },
+                {
+                  "titre": "Surveillance et complications",
+                  "points": [
+                    "Contrôles cliniques et radiologiques réguliers",
+                    "Complications : lésion du nerf radial, pseudarthrose, cal vicieux, infection (post-op)",
+                    "Rééducation fonctionnelle systématique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Toujours rechercher et documenter un déficit neurovasculaire (n. radial !)",
+                "La majorité des fractures diaphysaires humérales se traitent bien par méthode conservatrice",
+                "La chirurgie est réservée aux fractures instables, ouvertes ou compliquées",
+                "Rééducation précoce = clé du bon résultat fonctionnel",
+                "Informer le patient sur la durée de consolidation (8–12 semaines)"
+              ]
+            },
+            {
+              "titre": "📋 Check-list rapide ECOS",
+              "subsections": [
+                {
+                  "titre": "Questions à poser",
+                  "points": [
+                    "Comment est survenu le traumatisme ? Haute/basse énergie ?",
+                    "Douleur immédiate, impotence fonctionnelle ?",
+                    "Antécédents d’ostéoporose, cancer, fracture ?",
+                    "Traitement anticoagulant ou corticoïdes ?",
+                    "Engourdissement, déficit moteur (main tombante) ?"
+                  ]
+                },
+                {
+                  "titre": "Examens à faire",
+                  "points": [
+                    "Inspection : déformation, plaie",
+                    "Palpation douce : douleur, crépitation",
+                    "Examen neurovasculaire systématique",
+                    "Radiographies AP + profil incluant épaule et coude",
+                    "Scanner si fracture complexe ou polytrauma"
+                  ]
+                },
+                {
+                  "titre": "PEC en 3 points",
+                  "points": [
+                    "Immobiliser immédiatement et calmer la douleur",
+                    "Contrôle neurovasculaire systématique + documentation",
+                    "Décider traitement conservateur vs chirurgical selon indications"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Traumatisme du membre supérieur (Fracture humérus droit, basketteur 25 ans, agression/harcèlement)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro → âge, contexte sportif (25 ans, basketteur semi-pro, urgences après match)",
+                "Mécanisme → agression par un coéquipier, torsion violente du bras, craquement immédiat",
+                "Symptômes → douleur intense 9/10, impotence fonctionnelle, déformation et tuméfaction humérus distal",
+                "Facteurs aggravants/soulageants → aggravée par mouvements, persiste au repos, pas soulagée par AINS/paracétamol",
+                "Symptômes associés → pas de perte de sensibilité, pas de déficit moteur, perfusion distale conservée",
+                "Autres lésions → griffures superficielles avant-bras G, pas de trauma crânien/abdominal/thoracique",
+                "ATCD médicaux/chirurgicaux/allergies → RAS",
+                "Habitudes → pas tabac, pas alcool, pas drogues",
+                "Contexte psychosocial → isolement, harcèlement chronique dans l’équipe, attaque raciste",
+                "Examen clinique ciblé → inspection (déformation, œdème, peau intacte), examen neurovasculaire distal, motricité main/doigts, recherche autres lésions cutanées/corporelles",
+                "Hypothèse principale → fracture diaphysaire déplacée de l’humérus droit (spiroïde, multifragmentaire)",
+                "Examens complémentaires → radiographies AP + profil incluant épaule et coude",
+                "Prise en charge → immobilisation (attelle/plâtre), antalgie, réduction si nécessaire, suivi orthopédie",
+                "Prise en charge médico-légale → documentation, photos, informer possibilité porter plainte, orientation soutien psychologique/aide aux victimes"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo rapide : DOULEUR + NVP",
+                "elements": [
+                  "D = Déformation",
+                  "O = Œdème",
+                  "U = Urgence (traumatisme violent)",
+                  "L = Localisation précise",
+                  "E = Échelle EVA",
+                  "U = Urgence médico-légale",
+                  "R = Recherche lésions associées",
+                  "N = Neuro (motricité/sensibilité)",
+                  "V = Vasculaire (pouls distaux, coloration)",
+                  "P = Plaie (fracture ouverte ?)"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈2-3 min)",
+              "contenu": "Il s’agit de Larry Norton, un basketteur semi-professionnel de 25 ans, arrivé récemment du Texas et qui consulte aux urgences après un match. Dans le vestiaire, à l’issue d’une défaite, il a eu une altercation avec un coéquipier. Celui-ci l’a saisi par le bras droit et l’a tordu violemment. Il a immédiatement ressenti un craquement accompagné d’une douleur aiguë, évaluée à 9/10, avec apparition rapide d’un œdème et d’une déformation au tiers distal de l’humérus droit. Il décrit une impotence fonctionnelle complète, ne peut plus mobiliser son bras, mais il garde la sensibilité et la motricité des doigts, et sa main reste bien perfusée. Il a pris paracétamol et ibuprofène sans réel soulagement.\n\nIl n’a pas de traumatisme associé notable, si ce n’est trois griffures superficielles au bras gauche. Il n’y a pas eu de choc crânien, thoracique ou abdominal. Ses antécédents médicaux sont vierges, il n’a jamais été opéré, pas d’allergie connue, vaccinations à jour. Il ne fume pas, ne consomme ni alcool ni drogues.\n\nÀ l’examen, ses paramètres vitaux sont stables. L’inspection montre une tuméfaction importante et une déformation de l’humérus distal droit, avec peau intacte. Le bilan neurovasculaire distal est normal : sensibilité et motricité préservées, pouls radial présent. Les doigts et la main sont chauds et bien colorés. À l’examen sommaire du reste du corps, pas d’autres lésions traumatiques significatives. \n\nLes radiographies confirment une fracture diaphysaire spiroïde, déplacée et multifragmentaire de l’humérus droit. Mon hypothèse principale est donc une fracture diaphysaire de l’humérus compliquée par le contexte d’agression. \n\nLa prise en charge comporte l’immobilisation immédiate avec antalgie, une réduction si nécessaire, puis la mise en place d’un plâtre ou d’un brace. Une consultation orthopédique est organisée pour discuter la stratégie : traitement conservateur ou chirurgical selon stabilité et contexte. On documente soigneusement les lésions (photos, dossier), on informe le patient de la possibilité de déposer plainte, et on l’oriente vers les structures d’aide aux victimes de violences et soutien psychologique. Enfin, on planifie un suivi rapproché en orthopédie pour surveiller la consolidation et prévenir les complications."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Norton, 25 ans, basketteur, présente une douleur intense et impotence fonctionnelle du bras droit après agression par coéquipier.\n\nB (Background) : RAS médicaux, pas de toxiques, contexte de harcèlement dans l’équipe.\n\nA (Assessment) : Fracture diaphysaire spiroïde déplacée et multifragmentaire de l’humérus droit. Pas de déficit neurovasculaire, peau intacte. Contexte médico-légal d’agression.\n\nR (Recommendation) : Immobilisation et antalgie, radiographies de contrôle, avis orthopédie, documentation médico-légale, informer possibilité de plainte et orienter vers soutien psychologique."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Complications à surveiller",
+                  "points": [
+                    "Lésion du nerf radial (main tombante)",
+                    "Syndrome de loge",
+                    "Fracture ouverte",
+                    "Pseudarthrose",
+                    "Cal vicieux"
+                  ]
+                },
+                {
+                  "titre": "👉 PEC en 3 étapes",
+                  "points": [
+                    "Antalgie + immobilisation",
+                    "Contrôle neurovasculaire systématique et répété",
+                    "Documentation médico-légale + orientation orthopédie"
+                  ]
+                },
+                {
+                  "titre": "👉 Harcèlement/violence",
+                  "points": [
+                    "Explorer le contexte relationnel",
+                    "Informer possibilité de porter plainte",
+                    "Proposer structures de soutien (aide aux victimes, psychologue)",
+                    "Documenter objectivement les lésions"
+                  ]
+                },
+                {
+                  "titre": "⚠️ Pièges ECOS",
+                  "points": [
+                    "Oublier bilan neurovasculaire distal",
+                    "Négliger recherche autres lésions",
+                    "Ne pas documenter lésion dans un contexte médico-légal",
+                    "Ne pas aborder le contexte de harcèlement",
+                    "Se limiter au bras sans vision globale"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Diagnostic différentiel",
+                  "questions": [
+                    {
+                      "question": "Fracture diaphysaire de l’humérus",
+                      "reponse": {
+                        "pour": [
+                          "Mécanisme traumatique direct et violent",
+                          "Craquement, douleur immédiate, impotence fonctionnelle",
+                          "Déformation visible",
+                          "Radiographies confirmant fracture spiroïde, déplacée"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Luxation gléno-humérale",
+                      "reponse": {
+                        "pour": [
+                          "Douleur et impotence fonctionnelle"
+                        ],
+                        "contre": [
+                          "Déformation typique absente",
+                          "Mobilité de l’épaule limitée mais atteinte humérale distale visible",
+                          "Radio montre fracture et non luxation"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Contusion/entorse",
+                      "reponse": {
+                        "contre": [
+                          "Douleur trop intense",
+                          "Déformation et craquement",
+                          "Impotence fonctionnelle complète",
+                          "Radio confirmant fracture"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Examens complémentaires",
+                  "questions": [
+                    {
+                      "question": "Quels examens demandez-vous ?",
+                      "reponse": [
+                        "Radiographies bras droit en AP et profil incluant épaule et coude",
+                        "± scanner si fracture complexe ou doute",
+                        "Bilan biologique de base (NFS, coag, fonction rénale) avant chirurgie si nécessaire"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Prise en charge et suivi",
+                  "questions": [
+                    {
+                      "question": "Diagnostic",
+                      "reponse": "Fracture diaphysaire de l’humérus droit, déplacée et multifragmentaire"
+                    },
+                    {
+                      "question": "Traitement",
+                      "reponse": {
+                        "immediat": [
+                          "Immobilisation + antalgie",
+                          "Avis orthopédie",
+                          "Réduction fermée si indiquée",
+                          "Plâtre ou orthèse",
+                          "Documentation médico-légale"
+                        ]
+                      }
+                    },
+                    {
+                      "question": "Suivi",
+                      "reponse": [
+                        "Contrôle radiographique régulier",
+                        "Surveillance déficit neurovasculaire secondaire",
+                        "Rééducation fonctionnelle",
+                        "Accompagnement psychologique",
+                        "Suivi orthopédique rapproché"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-70 - Contraception cachée + effets secondaires - Adolescente 16 ans",
