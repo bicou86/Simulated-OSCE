@@ -34,7 +34,11 @@ const colors = {
   background: "#ffffff",
 };
 
-const styles = StyleSheet.create({
+// Exporté pour permettre aux tests de vérifier la conformité des styles
+// — notamment la régression J4-hotfix sur `pedagogyImage` qui doit
+// strictement utiliser `width` (et pas `maxWidth`/`maxHeight`/`objectFit`,
+// ignorés par @react-pdf/renderer et source de NaN/Infinity Yoga).
+export const styles = StyleSheet.create({
   page: {
     paddingTop: 40,
     paddingBottom: 60,
@@ -234,7 +238,15 @@ const styles = StyleSheet.create({
   //   • h4 (11pt) : depth ≥ 2
   //   • paragraphe (10pt) : `contenu`
   //   • puces (10pt) : `points[]` avec caractère "•" (Helvetica supporte)
-  //   • images : maxWidth 480 / maxHeight 320, objectFit contain
+  //   • images : width 400pt fixe (hauteur auto, ratio natif préservé)
+  //
+  // Phase 11 J4-hotfix : @react-pdf/renderer ne supporte PAS `maxWidth`,
+  // `maxHeight` ni `objectFit` sur `<Image>`. Les utiliser fait retomber
+  // la lib sur l'inférence des dimensions natives qui peut produire des
+  // valeurs flottantes invalides propagées dans le moteur Yoga (erreur
+  // runtime "unsupported number: -8.559289250201232e+21" au moment du
+  // pdf().toBlob()). Seules `width` et `height` (Number ou string `"N%"`)
+  // sont supportées par la lib.
   pedagogySectionTitle: {
     fontSize: 16,
     fontFamily: "Helvetica-Bold",
@@ -252,7 +264,7 @@ const styles = StyleSheet.create({
   pedagogyBulletChar: { width: 12, fontSize: 10 },
   pedagogyBulletText: { flex: 1, fontSize: 10, lineHeight: 1.5 },
   pedagogyImageCard: { marginBottom: 14 },
-  pedagogyImage: { maxWidth: 480, maxHeight: 320, objectFit: "contain", marginBottom: 4 },
+  pedagogyImage: { width: 400, marginBottom: 4 },
   pedagogyImageTitle: { fontSize: 11, fontFamily: "Helvetica-Bold", marginTop: 4, marginBottom: 2, color: colors.text },
   pedagogyImageDesc: { fontSize: 9, color: colors.muted, lineHeight: 1.4 },
 });

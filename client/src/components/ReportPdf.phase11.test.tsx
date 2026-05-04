@@ -58,7 +58,7 @@ vi.mock("@react-pdf/renderer", () => {
   };
 });
 
-import { ReportPdf, type ReportPdfProps } from "./ReportPdf";
+import { ReportPdf, styles, type ReportPdfProps } from "./ReportPdf";
 import type { PedagogicalContent } from "@shared/pedagogical-content-schema";
 
 // Props minimales communes à tous les tests. Couvre exactement les 5
@@ -262,5 +262,46 @@ describe("Phase 11 J4 — ReportPdf : sections pédagogiques rendues", () => {
       })
       .filter((v): v is number => v !== null);
     expect(paddings.some((p) => p >= 48)).toBe(true);
+  });
+});
+
+// Phase 11 J4-hotfix — régression sur les styles d'image. La lib
+// @react-pdf/renderer ignore silencieusement `maxWidth`, `maxHeight` et
+// `objectFit` sur `<Image>` ; leur présence force la lib à inférer les
+// dimensions natives, ce qui peut produire un flottant invalide propagé
+// dans le moteur Yoga (erreur runtime "unsupported number: …e+21" au
+// pdf().toBlob()). Les seuls champs supportés sont `width` et `height`.
+describe("Phase 11 J4-hotfix — styles pedagogyImage compatibles @react-pdf/renderer", () => {
+  it("pedagogyImage : utilise width (number) et n'a ni maxWidth/maxHeight/objectFit", () => {
+    const imageStyle = styles.pedagogyImage as Record<string, unknown>;
+    expect(typeof imageStyle.width).toBe("number");
+    expect(imageStyle.width).toBe(400);
+    expect("maxWidth" in imageStyle).toBe(false);
+    expect("maxHeight" in imageStyle).toBe(false);
+    expect("objectFit" in imageStyle).toBe(false);
+  });
+
+  it("rendu PDF avec 1 image : <Image> reçoit style.width === 400 sans crash", () => {
+    const pedagogicalContent: PedagogicalContent = {
+      images: [
+        {
+          data: "/pedagogical-images/test-hotfix-img.jpg",
+          title: "Image test hotfix",
+          description: "Vérifie que la définition style passe bien width=400",
+        },
+      ],
+    };
+    const { container } = render(
+      <ReportPdf {...baseProps} pedagogicalContent={pedagogicalContent} />,
+    );
+    const images = container.querySelectorAll("img[data-src]");
+    expect(images.length).toBe(1);
+    const dataStyle = images[0].getAttribute("data-style");
+    expect(dataStyle).toBeTruthy();
+    const parsed = JSON.parse(dataStyle as string) as Record<string, unknown>;
+    expect(parsed.width).toBe(400);
+    expect("maxWidth" in parsed).toBe(false);
+    expect("maxHeight" in parsed).toBe(false);
+    expect("objectFit" in parsed).toBe(false);
   });
 });
