@@ -58,7 +58,13 @@ vi.mock("@react-pdf/renderer", () => {
   };
 });
 
-import { ReportPdf, styles, type ReportPdfProps } from "./ReportPdf";
+import {
+  ReportPdf,
+  sanitizeForHelvetica,
+  styles,
+  toSafeText,
+  type ReportPdfProps,
+} from "./ReportPdf";
 import type { PedagogicalContent } from "@shared/pedagogical-content-schema";
 
 // Props minimales communes à tous les tests. Couvre exactement les 5
@@ -303,5 +309,75 @@ describe("Phase 11 J4-hotfix — styles pedagogyImage compatibles @react-pdf/ren
     expect("maxWidth" in parsed).toBe(false);
     expect("maxHeight" in parsed).toBe(false);
     expect("objectFit" in parsed).toBe(false);
+  });
+});
+
+// Phase 11 J4-hotfix-2 — guards défensifs contre l'erreur runtime
+// "unsupported number: -8.559289250201232e+21" déclenchée par les emojis
+// hors-BMP non rendus par Helvetica (cf. AMBOSS-1, 15+ emojis dans les
+// titres source) et par les valeurs non-string atteignant `<Text>`.
+describe("Phase 11 J4-hotfix-2 — toSafeText et sanitizeForHelvetica", () => {
+  it("toSafeText : coercion défensive pour 8 valeurs typées", () => {
+    expect(toSafeText("abc")).toBe("abc");
+    expect(toSafeText(123)).toBe("123");
+    expect(toSafeText(null)).toBe("");
+    expect(toSafeText(undefined)).toBe("");
+    expect(toSafeText([])).toBe("");
+    expect(toSafeText(["a", "b"])).toBe("a b");
+    expect(toSafeText({})).toBe("");
+    expect(toSafeText(true)).toBe("true");
+  });
+
+  it("sanitizeForHelvetica : retire contrôles ASCII, surrogates orphelins, emojis hors-BMP", () => {
+    // Caractères de contrôle ASCII (sauf \n et \t).
+    expect(sanitizeForHelvetica("\x00abc\x1Fdef")).toBe("abcdef");
+    // Surrogates orphelins (la moitié haute U+D83D sans suivante).
+    expect(sanitizeForHelvetica("a\uD83Db")).toBe("ab");
+    // Emoji hors-BMP (🧪 = U+1F9EA, présent dans AMBOSS-1).
+    expect(sanitizeForHelvetica("🧪 Cholécystite aiguë")).toBe("Cholécystite aiguë");
+    // Emoji symbole BMP (✅ = U+2705 dans Misc Symbols & Dingbats).
+    expect(sanitizeForHelvetica("✅ OK")).toBe("OK");
+    // Sélecteur de variation emoji (U+FE0F après ⚙).
+    expect(sanitizeForHelvetica("⚙️ Prise en charge")).toBe("Prise en charge");
+    // Texte 100 % latin/typographique préservé (en-dash, accents, ponctuation FR).
+    expect(sanitizeForHelvetica("Cholécystite aiguë – Résumé")).toBe(
+      "Cholécystite aiguë – Résumé",
+    );
+    // Espaces multiples compactés.
+    expect(sanitizeForHelvetica("a  b\t\tc")).toBe("a b c");
+    // Pas de crash sur input vide / null-coerced.
+    expect(sanitizeForHelvetica("")).toBe("");
+  });
+
+  it("rendu robuste : valeurs invalides (undefined/null/array hétérogène) skippées sans crash", () => {
+    const pedagogicalContent = {
+      resume: {
+        // Titre racine emoji-only → après sanitize devient string vide → bandeau
+        // tombe sur le fallback `sectionTitle` "Synthèse pédagogique".
+        titre: "🧪🧪🧪",
+        sections: [
+          {
+            // titre undefined ne doit JAMAIS atteindre <Text>.
+            titre: undefined,
+            // contenu null idem.
+            contenu: null,
+            // points avec valeurs invalides intercalées.
+            points: [null, "valid", undefined, "", "  "],
+          } as never,
+        ],
+      },
+    };
+    // Le rendu ne doit PAS lever d'erreur React, et les valeurs invalides
+    // ne doivent pas produire de <Text> (ni de bullet vide).
+    const { container } = render(
+      <ReportPdf {...baseProps} pedagogicalContent={pedagogicalContent} />,
+    );
+    const html = container.innerHTML;
+    expect(html).toContain("valid");
+    // Pas de tofu / pas d'emoji rémanent.
+    expect(html).not.toContain("🧪");
+    // Le bandeau racine doit afficher le fallback (titre source emoji-only
+    // sanitisé donne "" → fallback sectionTitle).
+    expect(html).toContain("Synthèse pédagogique");
   });
 });

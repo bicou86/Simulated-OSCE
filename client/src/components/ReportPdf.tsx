@@ -764,23 +764,108 @@ function pedagogyTitleStyleForDepth(depth: number) {
   return styles.pedagogyTitleH4;
 }
 
+// ─────────── Phase 11 J4-hotfix-2 — guards défensifs <Text> ───────────
+//
+// CAUSE ROOT identifiée par bisection sur les données AMBOSS-1 (5 images
+// + 3 sections textuelles riches en emojis) : les arborescences source
+// contiennent (a) des emojis hors-BMP (U+1F9EA 🧪, U+1F50D 🔍, etc.) en
+// début de `titre`, et (b) des sous-blocs passthrough avec des valeurs
+// non-string non-array (ex. `mnemo: { titre, elements }`,
+// `reponse: { pour, contre }`).
+//
+// Helvetica embarquée par @react-pdf/renderer ne contient AUCUN glyphe
+// emoji ; quand Yoga essaie de mesurer la largeur du caractère, il
+// retourne NaN qui propage en cascade jusqu'à l'overflow flottant
+// "unsupported number: -8.559289250201232e+21" lors du toBlob().
+//
+// `toSafeText` : coerce défensive vers string pour absorber tout
+// undefined/null/objet/array atteignant un `<Text>` par accident
+// (passthrough non anticipé, données malformées en source).
+//
+// `sanitizeForHelvetica` : retire les caractères de contrôle ASCII
+// hors \n et \t, les surrogates orphelins, la zone d'usage privé, et
+// les emojis hors-BMP que Helvetica ne peut mesurer. Les caractères
+// latins étendus, accentués et la ponctuation typographique (en-dash,
+// guillemets français, etc.) sont préservés.
+
+export function toSafeText(v: unknown): string {
+  if (typeof v === "string") return v;
+  if (typeof v === "number" || typeof v === "boolean") return String(v);
+  if (v == null) return "";
+  if (Array.isArray(v)) return v.map(toSafeText).filter(Boolean).join(" ");
+  return "";
+}
+
+export function sanitizeForHelvetica(s: string): string {
+  if (!s) return "";
+  return s
+    // Caractères de contrôle ASCII (sauf \n et \t) — prudence sur les CR.
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "")
+    // Surrogates orphelins (les paires complètes U+1F000+ sont retirées
+    // par le pattern suivant via le drapeau "u" ; ici on attrape les
+    // moitiés isolées qui produiraient un crash de mesure layout).
+    .replace(/[\uD800-\uDFFF]/g, "")
+    // Plages d'emojis hors-BMP non rendues par Helvetica :
+    //   • U+1F300–U+1F9FF (blocs Misc Symbols / Pictographs / Emoticons /
+    //     Transport / Geometric ext / Supplemental Symbols)
+    //   • U+1FA00–U+1FAFF (Symbols & Pictographs Ext-A)
+    .replace(/[\u{1F300}-\u{1F9FF}]/gu, "")
+    .replace(/[\u{1FA00}-\u{1FAFF}]/gu, "")
+    // Symboles BMP fréquemment utilisés comme emojis dans le corpus
+    // pédagogique (📋📊📑📖 etc. sont déjà au-dessus de U+FFFF, mais
+    // ⚙️ ❓ ✅ ❌ ⚠️ sont en U+2600–U+27BF Misc Symbols + Dingbats).
+    .replace(/[☀-➿]/g, "")
+    // Sélecteurs de variation emoji (U+FE00–U+FE0F) qui peuvent rester
+    // après suppression de leur emoji de base et provoquer des glyphes
+    // résiduels.
+    .replace(/[︀-️]/g, "")
+    // Zone Private Use (U+E000–U+F8FF) et zone Specials (U+FFF0–U+FFFF)
+    // que Helvetica ne mappe pas à un glyphe stable.
+    .replace(/[-]/g, "")
+    .replace(/[￰-￿]/g, "")
+    // Compaction des espaces multiples laissés par les suppressions.
+    .replace(/[ \t]+/g, " ")
+    .trim();
+}
+
+// Helper composé : pipeline standard pour tout texte pédagogique poussé
+// dans un `<Text>`. Coerce → sanitize → string finale prête au rendu.
+function safePedagogyText(v: unknown): string {
+  return sanitizeForHelvetica(toSafeText(v));
+}
+
 // Aplatit récursivement les sous-sections au-delà du cap (depth >= 4) en
 // concaténant tous les textes accessibles (titre + contenu + points). Le
 // résultat est rendu en un seul paragraphe pour respecter A24.
 function flattenSubsection(sub: PedagogicalSubsection): string {
   const parts: string[] = [];
-  if (sub.titre) parts.push(sub.titre);
-  if (sub.contenu) parts.push(sub.contenu);
-  if (Array.isArray(sub.points)) parts.push(sub.points.join(" • "));
-  if (Array.isArray(sub.subsections)) {
-    for (const child of sub.subsections) parts.push(flattenSubsection(child));
+  const safeTitre = safePedagogyText(sub.titre);
+  const safeContenu = safePedagogyText(sub.contenu);
+  if (safeTitre) parts.push(safeTitre);
+  if (safeContenu) parts.push(safeContenu);
+  if (Array.isArray(sub.points)) {
+    const safePoints = sub.points.map(safePedagogyText).filter(Boolean);
+    if (safePoints.length > 0) parts.push(safePoints.join(" • "));
   }
-  // Champs passthrough : on les sérialise en best-effort.
+  if (Array.isArray(sub.subsections)) {
+    for (const child of sub.subsections) {
+      const flatChild = flattenSubsection(child);
+      if (flatChild) parts.push(flatChild);
+    }
+  }
+  // Champs passthrough : on les sérialise en best-effort, toujours via
+  // safePedagogyText pour éliminer emojis/contrôles non rendus par
+  // Helvetica.
   for (const [key, value] of Object.entries(sub)) {
     if (SUBSECTION_KNOWN_KEYS.has(key)) continue;
-    if (typeof value === "string") parts.push(`${humanizeKey(key)} : ${value}`);
-    else if (Array.isArray(value)) {
-      const strs = value.filter((v): v is string => typeof v === "string");
+    if (typeof value === "string") {
+      const safe = safePedagogyText(value);
+      if (safe) parts.push(`${humanizeKey(key)} : ${safe}`);
+    } else if (Array.isArray(value)) {
+      const strs = value
+        .filter((v): v is string => typeof v === "string")
+        .map(safePedagogyText)
+        .filter(Boolean);
       if (strs.length > 0) parts.push(`${humanizeKey(key)} : ${strs.join(" • ")}`);
     }
   }
@@ -814,6 +899,8 @@ function PedagogicalSubsectionRenderer({
   }
 
   const titleStyle = pedagogyTitleStyleForDepth(depth);
+  const safeTitre = safePedagogyText(subsection.titre);
+  const safeContenu = safePedagogyText(subsection.contenu);
 
   // Champs passthrough rendus comme sous-blocs supplémentaires (A24).
   // Ex. `examensComplementaires`, `phrasesCles`. On les récupère dans
@@ -824,18 +911,22 @@ function PedagogicalSubsectionRenderer({
 
   return (
     <View style={{ paddingLeft: depth * 12, marginBottom: 6 }}>
-      {subsection.titre ? <Text style={titleStyle}>{subsection.titre}</Text> : null}
-      {subsection.contenu ? (
-        <Text style={styles.pedagogyParagraph}>{subsection.contenu}</Text>
+      {safeTitre ? <Text style={titleStyle}>{safeTitre}</Text> : null}
+      {safeContenu ? (
+        <Text style={styles.pedagogyParagraph}>{safeContenu}</Text>
       ) : null}
       {Array.isArray(subsection.points) && subsection.points.length > 0 ? (
         <View style={{ marginBottom: 6 }}>
-          {subsection.points.map((p, i) => (
-            <View key={`${keyPrefix}-pt${i}`} style={styles.pedagogyBulletRow} wrap={false}>
-              <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
-              <Text style={styles.pedagogyBulletText}>{p}</Text>
-            </View>
-          ))}
+          {subsection.points.map((p, i) => {
+            const safe = safePedagogyText(p);
+            if (!safe) return null;
+            return (
+              <View key={`${keyPrefix}-pt${i}`} style={styles.pedagogyBulletRow} wrap={false}>
+                <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
+                <Text style={styles.pedagogyBulletText}>{safe}</Text>
+              </View>
+            );
+          })}
         </View>
       ) : null}
       {Array.isArray(subsection.subsections) && subsection.subsections.length > 0
@@ -852,20 +943,26 @@ function PedagogicalSubsectionRenderer({
         // Rendu d'une clé passthrough comme sous-bloc additionnel : titre h4
         // (humanizeKey) + valeur formatée selon son type.
         const subTitleStyle = pedagogyTitleStyleForDepth(Math.max(depth + 1, 2));
+        const safeKeyLabel = safePedagogyText(humanizeKey(key));
         if (typeof value === "string") {
+          const safeVal = safePedagogyText(value);
+          if (!safeVal) return null;
           return (
             <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4, marginBottom: 4 }}>
-              <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
-              <Text style={styles.pedagogyParagraph}>{value}</Text>
+              {safeKeyLabel ? <Text style={subTitleStyle}>{safeKeyLabel}</Text> : null}
+              <Text style={styles.pedagogyParagraph}>{safeVal}</Text>
             </View>
           );
         }
         if (Array.isArray(value)) {
-          const stringPoints = value.filter((v): v is string => typeof v === "string");
+          const stringPoints = value
+            .filter((v): v is string => typeof v === "string")
+            .map(safePedagogyText)
+            .filter(Boolean);
           if (stringPoints.length > 0) {
             return (
               <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4, marginBottom: 4 }}>
-                <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
+                {safeKeyLabel ? <Text style={subTitleStyle}>{safeKeyLabel}</Text> : null}
                 {stringPoints.map((p, j) => (
                   <View key={`${keyPrefix}-extra${i}-pt${j}`} style={styles.pedagogyBulletRow} wrap={false}>
                     <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
@@ -882,7 +979,7 @@ function PedagogicalSubsectionRenderer({
           if (subObjects.length > 0) {
             return (
               <View key={`${keyPrefix}-extra${i}`} style={{ marginTop: 4 }}>
-                <Text style={subTitleStyle}>{humanizeKey(key)}</Text>
+                {safeKeyLabel ? <Text style={subTitleStyle}>{safeKeyLabel}</Text> : null}
                 {subObjects.map((child, j) => (
                   <PedagogicalSubsectionRenderer
                     key={`${keyPrefix}-extra${i}-obj${j}`}
@@ -915,18 +1012,19 @@ function PedagogicalTreeSection({
   sectionTitle,
   keyPrefix,
 }: PedagogicalTreeSectionProps) {
-  const rootTitle = tree.titre || tree.title || sectionTitle;
+  const rawRootTitle = tree.titre || tree.title || sectionTitle;
+  const rootTitle = safePedagogyText(rawRootTitle) || safePedagogyText(sectionTitle);
   // Champs racine passthrough (au-delà des canoniques TREE_KNOWN_KEYS).
   // Ex. `theoriePratique.examensComplementaires`, `rappelsTherapeutiques`.
   const passthroughEntries: Array<[string, unknown]> = Object.entries(tree).filter(
     ([k]) => !TREE_KNOWN_KEYS.has(k),
   );
   const sections = Array.isArray(tree.sections) ? tree.sections : [];
-  const legacyBody = typeof tree.body === "string" ? tree.body : "";
+  const legacyBody = safePedagogyText(tree.body);
 
   return (
     <View break>
-      <Text style={styles.pedagogySectionTitle}>{rootTitle}</Text>
+      {rootTitle ? <Text style={styles.pedagogySectionTitle}>{rootTitle}</Text> : null}
       {legacyBody ? <Text style={styles.pedagogyParagraph}>{legacyBody}</Text> : null}
       {sections.length > 0 ? (
         sections.map((sub, i) => (
@@ -942,20 +1040,26 @@ function PedagogicalTreeSection({
         // Variantes `theoriePratique` racine : rendues comme sous-blocs
         // après les sections canoniques. Si la valeur est un tableau
         // d'objets, on les rend comme sous-sections depth=0.
+        const safeKeyLabel = safePedagogyText(humanizeKey(key));
         if (typeof value === "string") {
+          const safeVal = safePedagogyText(value);
+          if (!safeVal) return null;
           return (
             <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
-              <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
-              <Text style={styles.pedagogyParagraph}>{value}</Text>
+              {safeKeyLabel ? <Text style={styles.pedagogyTitleH2}>{safeKeyLabel}</Text> : null}
+              <Text style={styles.pedagogyParagraph}>{safeVal}</Text>
             </View>
           );
         }
         if (Array.isArray(value)) {
-          const stringPoints = value.filter((v): v is string => typeof v === "string");
+          const stringPoints = value
+            .filter((v): v is string => typeof v === "string")
+            .map(safePedagogyText)
+            .filter(Boolean);
           if (stringPoints.length > 0) {
             return (
               <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
-                <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
+                {safeKeyLabel ? <Text style={styles.pedagogyTitleH2}>{safeKeyLabel}</Text> : null}
                 {stringPoints.map((p, j) => (
                   <View key={`${keyPrefix}-x${i}-pt${j}`} style={styles.pedagogyBulletRow} wrap={false}>
                     <Text style={styles.pedagogyBulletChar}>{"•"}</Text>
@@ -971,7 +1075,7 @@ function PedagogicalTreeSection({
           if (subObjects.length > 0) {
             return (
               <View key={`${keyPrefix}-x${i}`} style={{ marginBottom: 8 }}>
-                <Text style={styles.pedagogyTitleH2}>{humanizeKey(key)}</Text>
+                {safeKeyLabel ? <Text style={styles.pedagogyTitleH2}>{safeKeyLabel}</Text> : null}
                 {subObjects.map((child, j) => (
                   <PedagogicalSubsectionRenderer
                     key={`${keyPrefix}-x${i}-obj${j}`}
@@ -1001,18 +1105,26 @@ interface PedagogicalImagesBlockProps {
 // description plain text 9pt.
 function PedagogicalImagesBlock({ images, keyPrefix }: PedagogicalImagesBlockProps) {
   if (!Array.isArray(images) || images.length === 0) return null;
+  // Filtrage strict des entrées avec un `data` exploitable (string non
+  // vide, sinon `<Image src>` reçoit undefined → mesure layout NaN).
+  const validImages = images.filter(
+    (img): img is PedagogicalImage & { data: string } =>
+      typeof img?.data === "string" && img.data.length > 0,
+  );
+  if (validImages.length === 0) return null;
   return (
     <View break>
       <Text style={styles.pedagogySectionTitle}>Iconographie pédagogique</Text>
-      {images.map((img, i) => {
-        if (!img.data) return null;
-        const title = img.title ?? "";
-        const description = img.description ?? img.caption ?? "";
+      {validImages.map((img, i) => {
+        const safeTitle = safePedagogyText(img.title);
+        const safeDescription = safePedagogyText(img.description ?? img.caption);
         return (
           <View key={`${keyPrefix}-img${i}`} style={styles.pedagogyImageCard} wrap={false}>
             <Image src={img.data} style={styles.pedagogyImage} />
-            {title ? <Text style={styles.pedagogyImageTitle}>{title}</Text> : null}
-            {description ? <Text style={styles.pedagogyImageDesc}>{description}</Text> : null}
+            {safeTitle ? <Text style={styles.pedagogyImageTitle}>{safeTitle}</Text> : null}
+            {safeDescription ? (
+              <Text style={styles.pedagogyImageDesc}>{safeDescription}</Text>
+            ) : null}
           </View>
         );
       })}
