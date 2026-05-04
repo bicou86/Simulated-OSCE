@@ -381,3 +381,76 @@ describe("Phase 11 J4-hotfix-2 — toSafeText et sanitizeForHelvetica", () => {
     expect(html).toContain("Synthèse pédagogique");
   });
 });
+
+// Phase 11 J4-hotfix-4 — flags de bisection runtime.
+// Les 4 flags VITE_PDF_RENDER_* permettent à l'utilisateur d'isoler
+// laquelle des 4 sous-sections pédagogiques produit le crash
+// "unsupported number" au pdf().toBlob() côté navigateur. Comme les
+// flags sont des `const` lus à l'import (`import.meta.env.X`), on doit
+// utiliser `vi.resetModules()` + dynamic import pour réévaluer le module
+// avec un environnement Vite stubé.
+describe("Phase 11 J4-hotfix-4 — flags bisection RENDER_*", () => {
+  it("VITE_PDF_RENDER_IMAGES=0 : bloc Iconographie non rendu (autres sections présentes)", async () => {
+    vi.resetModules();
+    vi.stubEnv("VITE_PDF_RENDER_IMAGES", "0");
+    // Re-mock @react-pdf/renderer pour le module fraîchement chargé.
+    vi.doMock("@react-pdf/renderer", () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const passthrough = (tag: string) => (props: any) => {
+        const { children, style, src, break: doBreak, wrap, fixed, render: _r, ...rest } = props ?? {};
+        const serializedStyle = style
+          ? Array.isArray(style)
+            ? JSON.stringify(Object.assign({}, ...style))
+            : JSON.stringify(style)
+          : undefined;
+        const finalProps: Record<string, unknown> = { ...rest };
+        if (serializedStyle) finalProps["data-style"] = serializedStyle;
+        if (doBreak) finalProps["data-break"] = "true";
+        if (wrap === false) finalProps["data-wrap"] = "false";
+        if (fixed) finalProps["data-fixed"] = "true";
+        if (src) {
+          finalProps["data-src"] = src;
+          finalProps["src"] = src;
+        }
+        return React.createElement(tag, finalProps, children);
+      };
+      return {
+        Document: passthrough("section"),
+        Page: passthrough("article"),
+        View: passthrough("div"),
+        Text: passthrough("span"),
+        Image: passthrough("img"),
+        StyleSheet: { create: <T,>(s: T) => s },
+        Font: { register: () => {} },
+        pdf: () => ({ toBlob: async () => new Blob() }),
+      };
+    });
+
+    const mod = await import("./ReportPdf");
+    const FreshReportPdf = mod.ReportPdf;
+
+    const pedagogicalContent: PedagogicalContent = {
+      resume: { titre: "Synthèse R", sections: [{ titre: "Sous-r" }] },
+      images: [
+        {
+          data: "/pedagogical-images/should-not-render.jpg",
+          title: "Devrait être absent",
+          description: "Ne doit pas apparaître quand RENDER_IMAGES=0",
+        },
+      ],
+    };
+    const { container } = render(
+      <FreshReportPdf {...baseProps} pedagogicalContent={pedagogicalContent} />,
+    );
+    const html = container.innerHTML;
+    // Bloc Iconographie absent.
+    expect(html).not.toContain("Iconographie pédagogique");
+    expect(html).not.toContain("/pedagogical-images/should-not-render.jpg");
+    // Mais la section Synthèse reste rendue (autre flag à 1 par défaut).
+    expect(html).toContain("Synthèse R");
+
+    vi.unstubAllEnvs();
+    vi.doUnmock("@react-pdf/renderer");
+    vi.resetModules();
+  });
+});
