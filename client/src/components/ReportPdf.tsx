@@ -1139,35 +1139,6 @@ function PedagogicalImagesBlock({ images, keyPrefix }: PedagogicalImagesBlockPro
   );
 }
 
-// ─────────── Phase 11 J4-hotfix-4 — flags bisection runtime ───────────
-//
-// TEMPORAIRE : à retirer en Commit 3 du hotfix-4 ou avant Phase 11 J5.
-//
-// Problème : le téléchargement PDF d'AMBOSS-1 (avec pedagogicalContent
-// non-null) lève toujours "unsupported number: -8.559289250201232e+21"
-// au pdf().toBlob() malgré J4-hotfix-2 (sanitization emojis Helvetica)
-// et J4-hotfix-3 (polyfill Buffer). Test isolation : RESCOS-72 (sans
-// pedagogicalContent) télécharge → le bug est strictement dans une des
-// 4 sous-sections rendues quand pedagogicalContent !== null.
-//
-// Ces 4 flags permettent une bisection runtime non destructive : par
-// défaut tout est rendu (comportement identique à pré-hotfix-4). En
-// posant à "0" un seul flag, on isole laquelle des 4 sections produit
-// l'erreur Yoga/pdfkit. Procédure pour l'utilisateur (Replit shell) :
-//
-//   Essai A : VITE_PDF_RENDER_RESUME=0 npm run dev
-//   Essai B : VITE_PDF_RENDER_PRESENTATION=0 npm run dev
-//   Essai C : VITE_PDF_RENDER_THEORY=0 npm run dev
-//   Essai D : VITE_PDF_RENDER_IMAGES=0 npm run dev
-//
-// Pour chaque essai : ouvrir AMBOSS-1, cliquer "Télécharger PDF". Le
-// premier essai dont le téléchargement réussit identifie la section
-// coupable. Une fois le coupable identifié, fix ciblé puis retrait.
-const RENDER_RESUME = (import.meta.env?.VITE_PDF_RENDER_RESUME ?? "1") !== "0";
-const RENDER_PRESENTATION = (import.meta.env?.VITE_PDF_RENDER_PRESENTATION ?? "1") !== "0";
-const RENDER_THEORY = (import.meta.env?.VITE_PDF_RENDER_THEORY ?? "1") !== "0";
-const RENDER_IMAGES = (import.meta.env?.VITE_PDF_RENDER_IMAGES ?? "1") !== "0";
-
 // ─────────── Composant principal ───────────
 
 export interface ReportPdfProps {
@@ -1262,7 +1233,7 @@ export function ReportPdf({
           naturelle préservée, footer répété par page (`<View fixed>`).
           Comportement visuel inchangé : chaque section commence en haut
           d'une nouvelle page comme avant. */}
-      {RENDER_RESUME && pedagogicalContent?.resume ? (
+      {pedagogicalContent?.resume ? (
         <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.resume}
@@ -1272,7 +1243,7 @@ export function ReportPdf({
           <PdfFooter label={pageFooterLabel} />
         </Page>
       ) : null}
-      {RENDER_PRESENTATION && pedagogicalContent?.presentationPatient ? (
+      {pedagogicalContent?.presentationPatient ? (
         <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.presentationPatient}
@@ -1282,7 +1253,7 @@ export function ReportPdf({
           <PdfFooter label={pageFooterLabel} />
         </Page>
       ) : null}
-      {RENDER_THEORY && pedagogicalContent?.theoriePratique ? (
+      {pedagogicalContent?.theoriePratique ? (
         <Page size="A4" style={styles.page} wrap>
           <PedagogicalTreeSection
             tree={pedagogicalContent.theoriePratique}
@@ -1292,7 +1263,7 @@ export function ReportPdf({
           <PdfFooter label={pageFooterLabel} />
         </Page>
       ) : null}
-      {RENDER_IMAGES && pedagogicalContent?.images && pedagogicalContent.images.length > 0 ? (
+      {pedagogicalContent?.images && pedagogicalContent.images.length > 0 ? (
         <Page size="A4" style={styles.page} wrap>
           <PedagogicalImagesBlock
             images={pedagogicalContent.images}
