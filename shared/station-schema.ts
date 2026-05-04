@@ -14,6 +14,7 @@
 //     puis J3 (cloisonnement runtime).
 
 import { z } from "zod";
+import { pedagogicalContentSchema } from "./pedagogical-content-schema";
 
 // Rôle du participant dans la station :
 //   • patient      : le sujet médical de la consultation.
@@ -284,6 +285,10 @@ export type StationPhase = z.infer<typeof stationPhaseSchema>;
 //   • `consigneCandidat` optionnel (Phase 9 J2, consigne candidat
 //     orientée présentation pour partie 2 — fallback patient_description
 //     si absent),
+//   • `pedagogicalContent` optionnel (Phase 11 J2, bloc pédagogique
+//     additif strict consommé UNIQUEMENT par /api/patient/:id/pedagogy
+//     et le rendu PDF Phase 11 J4 — strippé du <station_data> LLM via
+//     META_FIELDS_TO_STRIP, cf. invariant I13),
 //   • `.passthrough()` laisse intacts tous les champs historiques
 //     (nom, age, patient_description, vitals, antecedents, …) sans les
 //     décrire — l'objectif est seulement de typer les champs additifs.
@@ -297,6 +302,7 @@ export const stationSchema = z
     parentStationId: z.string().min(1).optional(),
     phases: z.array(stationPhaseSchema).min(1).optional(),
     consigneCandidat: z.string().min(1).optional(),
+    pedagogicalContent: pedagogicalContentSchema.optional(),
   })
   .passthrough();
 export type Station = z.infer<typeof stationSchema>;

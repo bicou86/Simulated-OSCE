@@ -19,6 +19,7 @@ import {
   StationNotFoundError,
   streamPatientChat,
 } from "../services/patientService";
+import { getPatientPedagogy } from "../services/pedagogyService";
 
 const router = Router();
 
@@ -198,6 +199,34 @@ router.get("/:id/brief", async (req: Request, res: Response) => {
   try {
     const brief = await getPatientBrief(String(req.params.id));
     res.json(brief);
+  } catch (err) {
+    if (err instanceof StationNotFoundError) {
+      return sendApiError(res, "bad_request", err.message);
+    }
+    return sendApiError(res, "internal_error", (err as Error).message);
+  }
+});
+
+// ───────── Pedagogy (Phase 11 J2) ─────────
+//
+// GET /api/patient/:stationId/pedagogy — bloc pédagogique additif consommé
+// par le rendu PDF post-évaluation (Phase 11 J4) et, le cas échéant, par
+// une vue UI dédiée. Strictement séparé du brief (invariant I14) pour
+// éviter toute fuite d'indices factuels durant la consultation.
+//
+// Réponses :
+//   • 200 + { stationId, pedagogicalContent: PedagogicalContent | null }
+//   • 400 + { error, code: "bad_request" } si la station est inconnue
+//   • 500 si le bloc présent en base est malformé (validation Zod)
+//
+// Header Cache-Control: no-store — le bloc peut évoluer entre deux phases
+// du corpus (J3 enrichira), on ne veut pas qu'un proxy CDN serve une
+// version périmée. Pas d'auth en J2 (Phase 12).
+router.get("/:stationId/pedagogy", async (req: Request, res: Response) => {
+  try {
+    const payload = await getPatientPedagogy(String(req.params.stationId));
+    res.setHeader("Cache-Control", "no-store");
+    return res.json(payload);
   } catch (err) {
     if (err instanceof StationNotFoundError) {
       return sendApiError(res, "bad_request", err.message);

@@ -574,6 +574,15 @@ const META_FIELDS_TO_STRIP = [
   // construit explicitement ces champs hors du chemin de strip.
   "phases",
   "consigneCandidat",
+  // Phase 11 J2 — `pedagogicalContent` est un bloc pédagogique additif
+  // (résumé, présentation type, théorie, iconographie) destiné
+  // EXCLUSIVEMENT au rapport PDF post-évaluation et à l'endpoint
+  // /api/patient/:id/pedagogy. Strippé par défense-en-profondeur pour
+  // l'invariant I13 (cloisonnement LLM patient) : si le LLM voyait ce
+  // bloc, le candidat aurait des indices factuels durant la consultation,
+  // ce qui briserait la simulation OSCE. Le brief HTTP ne le remonte pas
+  // non plus (invariant I14 : isolation heuristique vs pédagogie).
+  "pedagogicalContent",
 ];
 
 // Phase 5 J3 — variante minimale du strip pour le chemin mono-patient
