@@ -234,3 +234,38 @@ le `filename` source.
   `theoriePratique` — ont été migrés normalement en J3, seul le bloc images
   pédagogiques manque). Aucune action future possible sans ré-acquisition
   externe du fichier source.
+
+### Statut J4quater (2026-05-05)
+
+- **4 stations restaurées** : RESCOS-14 (2 imgs `diarrhees-1-img{1,2}`),
+  RESCOS-33 (5 imgs `ecc-gyneco-img{1..5}`), RESCOS-45 (1 img
+  `depression-1-img1`), RESCOS-47 (2 imgs `ictere-1-img{1,2}`) = **10 imgs au
+  total**.
+- **Méthode** : restauration des fichiers depuis
+  [tmp/phase-12-orphans-deleted/](../tmp/phase-12-orphans-deleted/) vers
+  [client/public/pedagogical-images/](../client/public/pedagogical-images/) —
+  5 `git mv` simples (`diarrhees`, `depression`, `ictere` déjà sous leur slug
+  canonique) + 5 `git mv` avec rename `ecc_gyneco-imgX.jpg` →
+  `ecc-gyneco-imgX.jpg` pour aligner sur le slug canonique produit par
+  `slugifyPedagogicalImageName` (étape 3 de la slugification : underscore →
+  tiret, cf. [shared/pedagogical-image-slug.ts](../shared/pedagogical-image-slug.ts)).
+- **Aucune modification du script
+  [scripts/migrate-pedagogical-content.ts](../scripts/migrate-pedagogical-content.ts)** :
+  le fallback `legacy-filename` introduit en J4ter détecte automatiquement les
+  fichiers une fois remis en place sous leur slug canonique. Le rapport passe
+  de `imagesRecoveredTotal: 26` (post-J4ter) à **`imagesRecoveredTotal: 36`**
+  (post-J4quater) et `imagesMissingOnDisk` se réduit à **1 entrée**
+  (`rescos-68-zona-thoracique.jpg` seul restant).
+- **Schéma additif strict** : ces 10 entrées sont ajoutées via le mécanisme
+  de spread `images: [...existing, ...recovered]` du script (mêmes garanties
+  qu'en J4ter) — aucune entrée existante modifiée, conformité I16 préservée
+  (`data` slugifié, `source: "legacy-filename"`, `filename` source intact avec
+  accents et underscore d'origine).
+
+### RESCOS-68 — dette définitive (inchangée post-J4quater)
+
+- Image `rescos-68-zona-thoracique.jpg` **toujours introuvable** après
+  J4quater (cohérent avec la décision Q-P12-A-15b actée).
+- Station RESCOS-68 reste **partiellement enrichie sans iconographie**.
+- `imagesMissingOnDisk` final post-J4quater = `["rescos-68-zona-thoracique.jpg"]`
+  (1 entrée résiduelle, perte définitive documentée).
