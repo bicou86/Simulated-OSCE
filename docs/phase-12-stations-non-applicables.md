@@ -141,3 +141,41 @@ Ce flag n'est **pas implémenté en Phase 12 J3**, juste documenté ici comme é
 3. Re-validation de l'invariant I13/I14 (cloisonnement LLM patient — vérifier que `META_FIELDS_TO_STRIP` couvre toujours le bloc complet).
 
 **Schéma Zod** : la déclaration explicite des 2 champs optionnels dans [shared/pedagogical-content-schema.ts](shared/pedagogical-content-schema.ts) est **conservée en Phase 12 J3** indépendamment de la stratégie d'extraction. Cela garantit le typage TypeScript pour les 2 stations migrées en fallback (RESCOS-29, RESCOS-57) et reste cohérent avec une éventuelle réactivation future de l'extraction systématique.
+
+## Iconographie RESCOS non migrée (Phase 12)
+
+Audit J4 a révélé 26 images conservées sur disque mais non rattachées au
+`pedagogicalContent` runtime. Cause : le script Phase 11 J3
+([scripts/migrate-pedagogical-content.ts](scripts/migrate-pedagogical-content.ts))
+ignore les entrées d'annexes dont le champ `data` est absent au profit du seul
+champ `filename` (legacy structure). Voir le détail dans
+[docs/phase-12-orphans-audit.md](phase-12-orphans-audit.md) section
+`manual_review` (lignes 132-180).
+
+**Décision Q-P12-A-12 = (d)** : ces 26 images sont **conservées sur disque** dans
+`client/public/pedagogical-images/` (contrairement aux 71 `delete_safe` déplacées en
+corbeille `tmp/phase-12-orphans-deleted/` au commit J4bis). Justification :
+référence `filename` présente dans `tmp/phase11-pedagogy-source/*.json` rend ces
+images récupérables via une extension future du script.
+
+**Correction prévue — Q-P12-A-13 = oui** : J4ter (Phase 12) — extension du script
+avec fallback `filename → basename → slug → lookup disque` pour migrer ces 26
+images vers leurs 12 stations RESCOS d'origine.
+
+### Stations concernées (12 RESCOS, 26 images)
+
+| Station | Nb images | Bucket | Source |
+|---|---|---|---|
+| RESCOS-17 - Douleur abdominale | 1 | douleur | `douleur-abdo-1-img1.jpg` |
+| RESCOS-19 - Douleur abdominale | 1 | douleur | `douleur-abdo-3-img1.jpg` |
+| RESCOS-20 - Douleur abdominale | 4 | douleur | `douleur-abdo-4-img{1..4}.jpg` |
+| RESCOS-24 - Douleur au flanc | 3 | douleur | `douleur-au-flanc-1-img{1..3}.jpg` |
+| RESCOS-32 - Douleur oculaire | 1 | oeil | `oeil-rouge-img1.jpg` |
+| RESCOS-34 - Douleur thoracique | 2 | douleur | `douleur-thoracique-1-img{1,2}.jpg` |
+| RESCOS-35 - Douleur thoracique | 3 | douleur | `douleur-thoracique-2-img{1..3}.jpg` |
+| RESCOS-41 - Dysurie | 3 | dysurie | `dysurie-2-img{1..3}.jpg` |
+| RESCOS-44 - Fatigue | 2 | fatigue | `fatigue-1-img{1,2}.jpg` |
+| RESCOS-48 - Lombalgie | 2 | douleur | `douleur-dorsale-1-img{1,2}.jpg` |
+| RESCOS-50 - Malaise | 1 | syncope | `syncope-1-img1.jpg` |
+| RESCOS-5 - AVP | 3 | urgence | `urgence-1-img{1..3}.jpg` |
+| **Total** | **26** | | **12 stations** |
