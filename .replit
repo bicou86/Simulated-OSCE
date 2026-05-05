@@ -90,6 +90,15 @@ task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
 
+[[workflows.workflow]]
+name = "Test"
+mode = "sequential"
+author = 55248197
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "VITE_PDF_RENDER_THEORY=0 VITE_PDF_RENDER_IMAGES=0 npm run dev"
+
 [agent]
 stack = "MOCKUP_JS"
 mockupState = "MOCKUP"

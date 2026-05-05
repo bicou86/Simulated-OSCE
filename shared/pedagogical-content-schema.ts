@@ -142,6 +142,16 @@ export type PedagogicalImage = z.infer<typeof pedagogicalImageSchema>;
 //   • `theoriePratique`     : théorie + 8 variantes passthrough (189/285)
 //   • `images`              : iconographie (68/285 sources, 280 images)
 //
+// Phase 12 J3 — extension additive pour les sources RESCOS-29 et RESCOS-57
+// qui exposent uniquement `annexes.informationsExpert` et
+// `annexes.scenarioPatienteStandardisee` (objets structurés, fidélité au
+// nommage source). Aucune transformation sémantique. Le `passthrough` racine
+// acceptait déjà ces champs en silence ; la déclaration explicite permet
+// le typage TypeScript et documente l'intention dans le contrat. Type
+// `z.unknown()` plutôt qu'un sous-schéma typé : la structure interne varie
+// d'un cas à l'autre (titre + pointsCles pour RESCOS-29, titre + objectifSSP
+// + diagnosticPrincipal pour RESCOS-57). Le passthrough du parent suffit.
+//
 // Backward-compat J2 :
 //   • `presentation` (ancien nom J2) et `theory` (ancien nom J2) restent
 //     déclarés en option pour que les tests J2 et les payloads
@@ -156,6 +166,8 @@ export const pedagogicalContentSchema = z
     presentation: pedagogicalTreeSchema.optional(),
     theory: pedagogicalTreeSchema.optional(),
     images: z.array(pedagogicalImageSchema).optional(),
+    informationsExpert: z.unknown().optional(),
+    scenarioPatienteStandardisee: z.unknown().optional(),
   })
   .passthrough();
 export type PedagogicalContent = z.infer<typeof pedagogicalContentSchema>;

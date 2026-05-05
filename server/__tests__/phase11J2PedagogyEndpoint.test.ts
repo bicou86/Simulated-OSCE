@@ -80,13 +80,14 @@ describe("Phase 11 J2 — GET /api/patient/:stationId/pedagogy", () => {
   });
 
   it("station réelle sans pedagogicalContent → 200 + pedagogicalContent: null", async () => {
-    // Station réelle (pas de mock) : RESCOS-70 fait partie des 4 stations
-    // sans source pédagogique post-J3 (cf. migration-report.json :
-    // RESCOS-64-P2, RESCOS-70, RESCOS-71, RESCOS-72). On attend null.
+    // Station réelle (pas de mock) : RESCOS-11 fait partie des 63 stations
+    // documentées comme structurellement non-applicables au schéma pédagogique
+    // post-Phase 12 J3 (cf. docs/phase-12-stations-non-applicables.md : 62
+    // German + RESCOS-11 — source sans `annexes`, rien à extraire). On attend null.
     const app = buildTestApp();
-    const res = await request(app).get("/api/patient/RESCOS-70/pedagogy");
+    const res = await request(app).get("/api/patient/RESCOS-11/pedagogy");
     expect(res.status).toBe(200);
-    expect(res.body.stationId).toBe("RESCOS-70");
+    expect(res.body.stationId).toBe("RESCOS-11");
     expect(res.body.pedagogicalContent).toBeNull();
   });
 

@@ -26,7 +26,7 @@
 //     pas de rename, listé dans `imagesOrphans[]`.
 //
 // CONTRAT (A13, A14, A22)
-//   • Dry-run par défaut (sans flag) : génère migration-report.json,
+//   • Dry-run par défaut (sans flag) : génère docs/phase-11-migration-report.json,
 //     n'écrit AUCUN Patient_*.json ni rename d'image.
 //   • --apply : applique les écritures (Patient_*.json + renames).
 //   • --strict : exit 1 si unmapped.length > 0 (CI future).
@@ -119,7 +119,7 @@ export function defaultOptions(overrides: Partial<MigrationOptions> = {}): Migra
     sourceDir: path.join(ROOT, "tmp", "phase11-pedagogy-source"),
     patientDir: path.join(ROOT, "server", "data", "patient"),
     imagesDir: path.join(ROOT, "client", "public", "pedagogical-images"),
-    reportPath: path.join(ROOT, "migration-report.json"),
+    reportPath: path.join(ROOT, "docs", "phase-11-migration-report.json"),
     ...overrides,
   };
 }
@@ -187,14 +187,13 @@ export function deriveStationCandidate(sourceFile: string): string {
 // Lookup à 2 passes :
 //   1. Exact (case-insensitive) — couvre la majorité des cas
 //      (AMBOSS-N, USMLE Triage N, RESCOS-N propres).
-//   2. Préfixe + séparateur attendu — couvre les rares shortId
-//      malformés du catalog où `extractShortId` runtime n'a pas trouvé
-//      son séparateur " - " (ex. « RESCOS-10 -Céphalée » sans espace
-//      avant le titre). Le candidat « RESCOS-10 » matche alors le
-//      shortId catalog complet par préfixe + espace, sans risque de
-//      collision avec « RESCOS-100 » (qui n'existerait pas dans ce
-//      corpus de toute façon, mais le test du séparateur le protège
-//      structurellement).
+//   2. Préfixe + séparateur attendu — fallback de sécurité au cas où
+//      un shortId catalog malformé (séparateur « - » sans espace
+//      autour) empêcherait `extractShortId` de séparer correctement.
+//      Le typo historique « RESCOS-10 -Céphalée » (Phase 11) a été
+//      corrigé en Phase 12 J2 ; cette passe est conservée
+//      défensivement pour les futurs imports tant que la convention
+//      de nommage n'est pas formalisée par un schéma Zod.
 //   3. Si > 1 match préfixe → ambigu, retourne null (sécurité).
 function lookupStationId(
   candidate: string,
@@ -238,6 +237,31 @@ export function buildPedagogicalContent(
   }
   if (annexes.theoriePratique !== undefined) {
     out.theoriePratique = annexes.theoriePratique;
+  }
+  // Phase 12 J3 — extension additive ciblée (RESCOS-29, RESCOS-57).
+  // Ces 2 champs (informationsExpert, scenarioPatienteStandardisee) sont
+  // présents dans la majorité des sources (189/285) mais NON RENDUS par
+  // ReportPdf.tsx. On les extrait UNIQUEMENT en fallback : quand aucun
+  // des 3 champs canoniques (resume, presentationPatient, theoriePratique)
+  // n'est présent dans l'output, on récupère les fallbacks pour éviter
+  // que la station ne soit classée content=null.
+  //
+  // Cette asymétrie est documentée dans docs/phase-12-stations-non-applicables.md
+  // (section « Champs auxiliaires non extraits par défaut ») et reste
+  // réversible : un re-run futur avec un flag MIGRATE_INCLUDE_AUXILIARY=1
+  // pourrait extraire systématiquement les 2 champs sur les 189 sources.
+  const hasCanonicalContent =
+    out.resume !== undefined ||
+    out.presentationPatient !== undefined ||
+    out.theoriePratique !== undefined;
+
+  if (!hasCanonicalContent) {
+    if (annexes.informationsExpert !== undefined) {
+      out.informationsExpert = annexes.informationsExpert;
+    }
+    if (annexes.scenarioPatienteStandardisee !== undefined) {
+      out.scenarioPatienteStandardisee = annexes.scenarioPatienteStandardisee;
+    }
   }
 
   const renames = new Map<string, string>();

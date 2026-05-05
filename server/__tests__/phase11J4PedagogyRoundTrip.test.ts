@@ -2,8 +2,11 @@
 // round-trip pédagogique post-migration. Assure trois invariants :
 //   1. AMBOSS-1 : station migrée riche → /pedagogy expose 5 images
 //      avec slugs canoniques (premier slug = amboss-1-img1-murphy-s-sign.jpg)
-//   2. RESCOS-72 : station SANS source pédagogique → /pedagogy renvoie
-//      pedagogicalContent: null (fallback gracieux côté client A26)
+//   2. RESCOS-11 : station structurellement non-applicable (source sans
+//      `annexes`, cf. docs/phase-12-stations-non-applicables.md) →
+//      /pedagogy renvoie pedagogicalContent: null (fallback gracieux client A26).
+//      Phase 12 J3 — RESCOS-72 n'est plus utilisée ici car elle est désormais
+//      migrée (resume + presentationPatient + theoriePratique).
 //   3. Invariant I13 cross-référencé : /brief de AMBOSS-1 ne contient
 //      JAMAIS le mot `pedagogicalContent` (META_FIELDS_TO_STRIP étendu
 //      Phase 11 J2 protège l'isolement LLM patient)
@@ -29,11 +32,11 @@ describe("Phase 11 J4 — round-trip /pedagogy + invariants cross-référencés"
     expect(images[0].data).toBe("/pedagogical-images/amboss-1-img1-murphy-s-sign.jpg");
   });
 
-  it("RESCOS-72 : station sans source → pedagogicalContent: null", async () => {
+  it("RESCOS-11 : station non-applicable au schéma → pedagogicalContent: null", async () => {
     const app = buildTestApp();
-    const res = await request(app).get("/api/patient/RESCOS-72/pedagogy");
+    const res = await request(app).get("/api/patient/RESCOS-11/pedagogy");
     expect(res.status).toBe(200);
-    expect(res.body.stationId).toBe("RESCOS-72");
+    expect(res.body.stationId).toBe("RESCOS-11");
     expect(res.body.pedagogicalContent).toBeNull();
   });
 

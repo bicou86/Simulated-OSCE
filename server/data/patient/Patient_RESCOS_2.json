@@ -8173,7 +8173,89 @@
           "question_patient": "Est-ce que c'est grave?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "informationsExpert": {
+          "titre": "Informations pour l'expert - TVP/EP",
+          "pointsCles": [
+            "Score de Wells élevé (≥ 6 points)",
+            "Multiples facteurs de risque thromboembolique",
+            "Probable EP associée (dyspnée)",
+            "Cancer actif = indication anticoagulation prolongée",
+            "Préférer HBPM si cancer actif"
+          ],
+          "pieges": [
+            "Ne pas minimiser la dyspnée",
+            "Rechercher systématiquement l'EP",
+            "Ne pas oublier le cancer comme facteur de risque",
+            "Adapter la durée d'anticoagulation au contexte",
+            "Surveillance plaquettes sous héparine"
+          ],
+          "scores": [
+            "Wells TVP ≥ 2 = probabilité forte",
+            "Wells EP: calculer si dyspnée",
+            "Genève révisé: alternative au Wells EP",
+            "PESI: pronostic de l'EP"
+          ]
+        },
+        "scenarioPatienteStandardisee": {
+          "titre": "Instructions pour la patiente standardisée - Cas 2",
+          "nom": "Patiente féminine",
+          "age": "68 ans",
+          "profession": "Retraitée, ancienne enseignante",
+          "contexte": "Cabinet de médecine générale",
+          "motifConsultation": {
+            "plaintePrincipale": "Ma jambe gauche a enflé et me fait mal",
+            "description": "Œdème et douleur progressive depuis retour voyage Italie il y a 4 jours"
+          },
+          "histoireActuelle": {
+            "voyage": [
+              "Tour d'Italie en car avec groupe 3e âge",
+              "16 heures d'une seule traite",
+              "Venise, Rome, Florence, Naples",
+              "Retour il y a 4 jours"
+            ],
+            "symptomes": [
+              "Cheville gauche a commencé à enfler au milieu du voyage",
+              "Puis jambe entière douloureuse",
+              "Mise au lit 2 jours, légère amélioration",
+              "Jambe gauche nettement plus grosse",
+              "Peur d'attraper la gangrène"
+            ],
+            "dyspnee": [
+              "Essoufflée depuis 2-3 jours",
+              "Surtout à l'effort modéré",
+              "Même en parlant parfois"
+            ]
+          },
+          "antecedents": {
+            "medicaux": [
+              "Cancer sein droit il y a 4 ans (mastectomie)",
+              "Récidive locale il y a 6 mois",
+              "Chimiothérapie (dernière cure il y a 1 mois)",
+              "Varices opérées il y a 4 ans",
+              "Excès de poids (93 kg pour 1m68)"
+            ],
+            "familiaux": [
+              "Mère décédée embolie pulmonaire à 94 ans",
+              "Père décédé hémiplégie à 78 ans",
+              "Sœur cancer du sein (va bien)"
+            ]
+          },
+          "simulation": {
+            "attitude": [
+              "Inquiète de la gangrène",
+              "Fatiguée du voyage",
+              "Minimise la dyspnée"
+            ],
+            "signesPhysiques": [
+              "Jambe gauche visiblement plus grosse",
+              "Légère dyspnée en parlant",
+              "Se tient la jambe en position surélevée si possible"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "RESCOS-30 - Douleur à la jambe - ECC Neurologie",

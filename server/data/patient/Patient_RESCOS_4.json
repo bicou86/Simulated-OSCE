@@ -317,7 +317,93 @@
           "question_patient": "Dois-je le transférer cette nuit?"
         }
       ],
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "informationsExpert": {
+          "titre": "Informations pour l'expert évaluateur",
+          "objectifSSP": "SSP 216 - Changement soudain du statut mental",
+          "diagnosticPrincipal": "Ralentissement sur déshydratation (diarrhées aiguës)",
+          "pointsCles": [
+            "Gestion consultation téléphonique avec professionnel de santé",
+            "Évaluation indirecte d'un patient fragile",
+            "Identification signes de déshydratation",
+            "Décision hospitalisation vs surveillance",
+            "Instructions claires et précises",
+            "Communication adaptée avec infirmier·ère"
+          ],
+          "pieges": [
+            "Vouloir hospitaliser immédiatement sans évaluation",
+            "Sous-estimer la déshydratation chez personne âgée",
+            "Oublier l'aspect contagieux (autre résident atteint)",
+            "Ne pas donner d'instructions de surveillance",
+            "Ne pas suspendre le diurétique",
+            "Communication inadaptée (trop technique ou pas assez précise)"
+          ],
+          "criteresCommunication": [
+            "Identification claire de l'interlocuteur",
+            "Questions structurées et pertinentes",
+            "Écoute active des informations fournies",
+            "Instructions claires et vérifiables",
+            "Rassurer tout en restant vigilant",
+            "Définir critères de rappel/transfert"
+          ]
+        },
+        "scenarioPatienteStandardisee": {
+          "titre": "Instructions pour l'infirmier·ère standardisé·e",
+          "nom": "Sofia/Sofian",
+          "role": "Infirmier·ère de nuit à l'EMS de la Croix",
+          "contexte": "Appel téléphonique au médecin de garde à 21h30",
+          "patient": "M. Michel Bertchi, 88 ans (ne participe pas à la consultation)",
+          "motifConsultation": {
+            "plaintePrincipale": "Résident ralenti ce soir avec diarrhées depuis 2 jours",
+            "introduction": "Bonsoir, Sofia/Sofian, infirmier·ère de nuit à l'EMS de la Croix. Je vous appelle car un de nos résidents est un peu ralenti ce soir. Je m'inquiète pour lui et je ne sais pas quoi faire..."
+          },
+          "histoireActuelle": {
+            "symptomePrincipal": [
+              "M. Bertchi est ralenti depuis ce soir",
+              "Gémit souvent, ne se laisse pas faire comme d'habitude",
+              "Répond avec temps de latence mais orienté aux 4 modes",
+              "Hier soir était normal, souriant après visite de sa fille"
+            ],
+            "diarrhees": [
+              "Depuis 2 jours",
+              "5-6 épisodes aujourd'hui",
+              "Type aqueux, pas de sang",
+              "Un autre résident avec symptômes similaires"
+            ],
+            "signesAssocies": [
+              "Vomissement 1x après midi (alimentaire)",
+              "Température 37.8°C ce soir",
+              "Fatigue importante",
+              "Inconfortable, mains sur le ventre"
+            ]
+          },
+          "examenPhysique": {
+            "signesVitaux": "FC 98/min, TA 120/78 mmHg, T° 37.8°C",
+            "deshydratation": "Pâleur, muqueuses sèches, temps recoloration 4 sec",
+            "abdominal": "Sensible diffusément, pas de défense, bruits augmentés",
+            "neurologique": "Ralenti mais orienté, pas de latéralisation"
+          },
+          "simulation": {
+            "attitude": [
+              "Stressé·e mais professionnel·le",
+              "Inquiet·ète pour le résident",
+              "Cherche conseils clairs"
+            ],
+            "durantAppel": [
+              "Reste derrière paravent (invisible)",
+              "Communication claire et calme",
+              "Peut avoir le scénario avec soi"
+            ],
+            "reponsesSituations": [
+              "Si transfert immédiat demandé: 'Je ne suis pas certaine que ce soit nécessaire...'",
+              "Si demande d'opinion: 'Je suis un peu perdu·e, il allait bien hier...'",
+              "Si insistance transfert: accepte et appelle ambulance",
+              "Si réveil patient demandé: 'Il dort bien maintenant, pas sûr que ce soit une bonne idée'"
+            ]
+          }
+        }
+      }
     },
     {
       "id": "RESCOS-57b - Ralentissement - Consultation téléphonique",
@@ -5330,7 +5416,348 @@
         }
       },
       "parentStationId": "RESCOS-64",
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "🫁 Présentation au pneumologue – Cancer pulmonaire suspect – Résumé ECOS",
+          "sections": [
+            {
+              "titre": "🎯 Objectif de la station",
+              "subsections": [
+                {
+                  "titre": "Compétences évaluées",
+                  "points": [
+                    "Synthèse claire et structurée d'un dossier complexe",
+                    "Présentation orale médicale au format SBAR ou équivalent",
+                    "Hiérarchisation des hypothèses diagnostiques",
+                    "Justification d'un plan d'investigation et de prise en charge",
+                    "Communication efficace avec un confrère spécialiste"
+                  ]
+                },
+                {
+                  "titre": "Format de la station",
+                  "points": [
+                    "4 minutes de préparation silencieuse",
+                    "9 minutes de présentation orale au pneumologue",
+                    "L'examinateur ne pose que des questions ciblées (en rouge)",
+                    "Évaluation de la structure, du contenu et de la communication"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🔍 Synthèse du tableau clinique",
+              "subsections": [
+                {
+                  "titre": "Éléments anamnestiques clés",
+                  "points": [
+                    "Femme 61 ans, tabagique actif (35 paquets-années)",
+                    "Hémoptysie récente (4 jours), sang rouge frais, faible abondance",
+                    "Toux chronique aggravée depuis 1 mois",
+                    "Douleur thoracique droite, augmentée à l'inspiration",
+                    "Perte pondérale involontaire de 4 kg",
+                    "BPCO suspectée non explorée il y a 2 ans"
+                  ]
+                },
+                {
+                  "titre": "Éléments à l'examen",
+                  "points": [
+                    "État général conservé, FR 16/min",
+                    "Sibilances bilatérales à l'auscultation",
+                    "Pas de matité, pas d'adénopathies",
+                    "Pas de signes d'insuffisance cardiaque droite",
+                    "Pas d'hippocratisme digital"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "🧪 Examens complémentaires à proposer",
+              "subsections": [
+                {
+                  "titre": "Première ligne",
+                  "points": [
+                    "Radiographie thoracique face/profil",
+                    "NFS, CRP, bilan de coagulation",
+                    "Ionogramme, fonction rénale, calcémie",
+                    "Gazométrie artérielle si désaturation"
+                  ]
+                },
+                {
+                  "titre": "Spécialisés (en pneumologie)",
+                  "points": [
+                    "Scanner thoracique injecté avec coupes fines",
+                    "Fibroscopie bronchique avec biopsies et lavage broncho-alvéolaire",
+                    "Cytologie des expectorations × 3 pour BK",
+                    "Test QuantiFERON pour tuberculose latente",
+                    "Spirométrie/EFR à distance pour confirmer BPCO",
+                    "PET-scan FDG pour bilan d'extension si cancer confirmé",
+                    "Échographie cardiaque transthoracique si suspicion cœur pulmonaire",
+                    "Doppler veineux MI si suspicion EP associée"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "⚙️ Stratégie de prise en charge",
+              "subsections": [
+                {
+                  "titre": "Mesures immédiates",
+                  "points": [
+                    "Arrêt du tabac avec accompagnement (substitution nicotinique)",
+                    "Surveillance de l'hémoptysie (signes d'aggravation)",
+                    "Information de la patiente sur la démarche diagnostique",
+                    "Coordination avec le pneumologue"
+                  ]
+                },
+                {
+                  "titre": "Suite de prise en charge",
+                  "points": [
+                    "Confirmation histologique par biopsie",
+                    "Bilan d'extension complet si néoplasie",
+                    "Discussion en RCP (réunion de concertation pluridisciplinaire)",
+                    "Stratégie thérapeutique selon stade et type histologique",
+                    "Information claire et soutien psychologique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "✅ Points clés ECOS",
+              "points": [
+                "Une présentation efficace suit une structure claire (SBAR ou systématique)",
+                "Hiérarchiser les hypothèses du plus probable au moins probable avec arguments",
+                "Justifier chaque examen demandé par l'hypothèse qu'il vise à confirmer/infirmer",
+                "Anticiper les questions du spécialiste (red flags, comorbidités, capacité fonctionnelle)",
+                "Conclure par un plan concret et hiérarchisé",
+                "Garder une posture professionnelle, claire, sans hésitation"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "📑 Fiche ECOS – Cas : Présentation orale au pneumologue (Toux + hémoptysie, suspicion cancer pulmonaire)",
+          "sections": [
+            {
+              "titre": "🧩 Checklist mentale de préparation (4 min)",
+              "points": [
+                "Identifier patient → âge, sexe, profession, motif",
+                "Synthétiser anamnèse → toux chronique, hémoptysie, douleur, perte pondérale",
+                "Mettre en avant les facteurs de risque → tabagisme, exposition, ATCD",
+                "Résumer l'examen clinique → constantes, signes pulmonaires, signes négatifs",
+                "Formuler hypothèse principale + 2-3 DD avec arguments",
+                "Lister examens complémentaires hiérarchisés",
+                "Proposer une PEC immédiate et un plan de suivi",
+                "Anticiper les questions probables (stade, opérabilité, comorbidités)"
+              ],
+              "mnemo": {
+                "titre": "👉 Mnémo de présentation : SBAR-P",
+                "elements": [
+                  "S = Situation (qui, motif principal)",
+                  "B = Background (anamnèse, ATCD, facteurs de risque)",
+                  "A = Assessment (hypothèse + DD justifiés)",
+                  "R = Recommendations (examens, PEC immédiate)",
+                  "P = Plan de suivi et coordination"
+                ]
+              }
+            },
+            {
+              "titre": "🎤 Version longue (≈3-4 min, structure idéale)",
+              "contenu": "Bonjour Docteur, je vous présente Mme Denise Dumont, 61 ans, chauffeuse de taxi, tabagique active à 35 paquets-années, qui consulte pour une hémoptysie récente survenue dans un contexte de toux chronique aggravée.\n\nSur le plan anamnestique, elle décrit une toux ancienne, présente depuis plusieurs années, surtout matinale avec expectorations blanches mousseuses. Depuis un mois, la toux s'est aggravée, devenue plus fréquente toute la journée. Depuis quatre jours, elle remarque du sang rouge frais dans ses crachats, en faible quantité (fond d'un mouchoir), sans aggravation. Elle rapporte également une douleur thoracique droite apparue il y a un mois, modérée à 2/10, augmentée par la toux et l'inspiration profonde, ainsi qu'une dyspnée d'effort progressive. Elle a perdu 4 kg de manière involontaire ces derniers mois, sans fièvre ni sueurs nocturnes.\n\nDans ses antécédents, le médecin traitant avait suspecté une BPCO il y a deux ans, mais elle avait refusé les explorations. Elle présente environ un épisode de bronchite annuel parfois traité par antibiotiques. Elle n'a pas d'antécédent cardiaque, pas d'antécédent thromboembolique, et aucun cas de tuberculose ni d'embolie pulmonaire dans la famille. Elle est mariée, sans enfants, ne prend aucun traitement et n'a pas d'allergie connue.\n\nÀ l'examen clinique, ses constantes sont stables : tension 155/90, fréquence cardiaque 68, température 36.9°C, fréquence respiratoire 16, saturation correcte. L'état général est conservé. L'auscultation pulmonaire retrouve quelques sibilances bilatérales sans crépitants, sans matité à la percussion. Il n'y a pas de cyanose, pas d'œdèmes des membres inférieurs, pas d'adénopathies cervicales ou sus-claviculaires palpables, pas d'hippocratisme digital.\n\nMon hypothèse principale est un cancer bronchopulmonaire, étant donné le terrain (tabagisme chronique, âge), l'hémoptysie récente, la perte pondérale et la modification récente d'une toux chronique. Les diagnostics différentiels que je retiens sont une BPCO exacerbée (compatible avec la toux et les sibilances mais n'explique pas l'hémoptysie ni l'amaigrissement), une tuberculose pulmonaire (à éliminer compte tenu du terrain), des bronchectasies (rares dans ce contexte), et une embolie pulmonaire (peu probable en l'absence de facteurs déclenchants).\n\nComme examens complémentaires, je proposerais en première ligne une radiographie thoracique, une NFS avec bilan de coagulation, et la cytologie des expectorations à la recherche de BK. En deuxième ligne, un scanner thoracique injecté est indispensable, suivi d'une fibroscopie bronchique avec biopsies si une lésion est identifiée. Je compléterais par une spirométrie à distance pour caractériser la BPCO suspectée, un test QuantiFERON pour la tuberculose latente, et selon les résultats, une échographie cardiaque, un bilan angiologique veineux, et un PET-scan pour le bilan d'extension.\n\nEn termes de prise en charge immédiate, je recommanderais un arrêt du tabac avec accompagnement, une surveillance de l'hémoptysie, une information claire à la patiente sur la démarche diagnostique, et une orientation rapide en pneumologie. Si un cancer est confirmé, le dossier sera discuté en réunion de concertation pluridisciplinaire pour définir la stratégie thérapeutique."
+            },
+            {
+              "titre": "⚡ Version express (SBAR, 45 sec)",
+              "contenu": "S (Situation) : Mme Dumont, 61 ans, tabagique 35 PA, présente une hémoptysie depuis 4 jours sur fond de toux chronique aggravée.\n\nB (Background) : BPCO suspectée non explorée, perte pondérale 4 kg, douleur thoracique droite, dyspnée d'effort.\n\nA (Assessment) : Forte suspicion de cancer bronchopulmonaire. DD : BPCO exacerbée, tuberculose, bronchectasies.\n\nR (Recommendation) : Radiographie thoracique, NFS-coag, expectorations BK, scanner thoracique injecté, fibroscopie bronchique avec biopsies, spirométrie à distance. Arrêt tabac et coordination pneumo-oncologique."
+            },
+            {
+              "titre": "🎲 Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "👉 Structure d'une bonne présentation",
+                  "points": [
+                    "1. Identification (qui, quoi, pourquoi en 1 phrase)",
+                    "2. Anamnèse synthétique (chronologique)",
+                    "3. Examen clinique pertinent",
+                    "4. Hypothèse + DD (toujours justifiés)",
+                    "5. Examens complémentaires hiérarchisés",
+                    "6. PEC immédiate + plan de suivi"
+                  ]
+                },
+                {
+                  "titre": "👉 Pièges à éviter en présentation",
+                  "points": [
+                    "Énumérer sans synthétiser",
+                    "Oublier les facteurs de risque",
+                    "Ne pas hiérarchiser les hypothèses",
+                    "Demander des examens sans justification",
+                    "Oublier la PEC immédiate (arrêt tabac, surveillance)",
+                    "Ne pas anticiper les questions du spécialiste"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "❓ Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Pourquoi suspectez-vous un cancer plutôt qu'une autre cause ?",
+                  "questions": [
+                    {
+                      "question": "Arguments principaux",
+                      "reponse": [
+                        "Terrain : tabagisme chronique 35 PA, âge 61 ans",
+                        "Hémoptysie récente sang rouge frais",
+                        "Triade évocatrice : modification toux chronique + hémoptysie + perte pondérale",
+                        "Douleur thoracique localisée évoquant atteinte pleurale ou pariétale",
+                        "Absence d'argument pour cause infectieuse aiguë"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Quels examens en priorité et pourquoi ?",
+                  "questions": [
+                    {
+                      "question": "Hiérarchisation",
+                      "reponse": [
+                        "Radiographie thoracique : examen de débrouillage, rapide et accessible",
+                        "Scanner thoracique injecté : caractérisation lésionnelle, bilan locorégional",
+                        "Fibroscopie bronchique : confirmation histologique indispensable",
+                        "Cytologie expectorations BK : élimination tuberculose (DD majeur)",
+                        "Bilan biologique : préopératoire, fonction d'organe"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Que faire si l'hémoptysie devient massive ?",
+                  "questions": [
+                    {
+                      "question": "Conduite à tenir",
+                      "reponse": [
+                        "Définition : > 200 mL/24h ou retentissement hémodynamique/respiratoire",
+                        "Position : décubitus latéral du côté qui saigne (protection poumon sain)",
+                        "Oxygénothérapie, voie veineuse, monitoring",
+                        "Transfert urgent en USI ou bloc",
+                        "Embolisation artérielle bronchique en première intention",
+                        "Chirurgie en dernier recours"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "4. Comment annoncer un diagnostic de cancer ?",
+                  "questions": [
+                    {
+                      "question": "Principes de l'annonce",
+                      "reponse": [
+                        "Cadre adapté : consultation dédiée, sans interruption",
+                        "Présence d'un proche si la patiente le souhaite",
+                        "Vérifier ce que la patiente sait déjà",
+                        "Information progressive et adaptée",
+                        "Vocabulaire clair, sans euphémisme excessif",
+                        "Place pour les émotions et silence",
+                        "Plan concret de prise en charge",
+                        "Proposer un soutien psychologique"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique – Présentation médicale et cancer bronchopulmonaire",
+          "sections": [
+            {
+              "titre": "Structure d'une présentation médicale efficace",
+              "contenu": "La présentation orale est un exercice codifié qui suit des règles précises.",
+              "points": [
+                "Format SBAR : Situation, Background, Assessment, Recommendation",
+                "Format SOAP : Subjective, Objective, Assessment, Plan",
+                "Hiérarchisation : du plus important au moins important",
+                "Concision : éviter les détails non pertinents",
+                "Justification : chaque hypothèse et examen doit être justifié",
+                "Anticipation : prévoir les questions du destinataire",
+                "Fluidité : éviter les hésitations et les retours en arrière"
+              ]
+            },
+            {
+              "titre": "Classification des cancers bronchopulmonaires",
+              "contenu": "Les cancers bronchopulmonaires se divisent en deux grandes catégories histologiques.",
+              "points": [
+                "CBNPC (cancer bronchique non à petites cellules) : 85% des cas",
+                "→ Adénocarcinome : le plus fréquent, périphérique, non-fumeurs aussi",
+                "→ Carcinome épidermoïde : central, lié au tabac",
+                "→ Carcinome à grandes cellules : rare, agressif",
+                "CBPC (cancer bronchique à petites cellules) : 15% des cas",
+                "→ Tumeur neuroendocrine, fortement lié au tabac",
+                "→ Évolution rapide, métastases précoces",
+                "Tumeurs carcinoïdes : rares, meilleur pronostic"
+              ]
+            },
+            {
+              "titre": "Stadification TNM des CBNPC",
+              "contenu": "La classification TNM guide la stratégie thérapeutique.",
+              "points": [
+                "T : taille tumorale et envahissement local (T1-T4)",
+                "N : envahissement ganglionnaire (N0-N3)",
+                "M : métastases à distance (M0-M1c)",
+                "Stade I : tumeur localisée, opérable",
+                "Stade II : envahissement ganglionnaire hilaire homolatéral",
+                "Stade III : envahissement médiastinal",
+                "Stade IV : métastases à distance"
+              ]
+            },
+            {
+              "titre": "Stratégie thérapeutique selon le stade",
+              "contenu": "Le traitement dépend du stade, du type histologique et de l'état général.",
+              "points": [
+                "Stades I-II : chirurgie (lobectomie + curage) ± chimio adjuvante",
+                "Stade IIIA résécable : chimio néoadjuvante + chirurgie",
+                "Stade IIIA non résécable / IIIB : radio-chimiothérapie concomitante",
+                "Stade IV : thérapies ciblées (EGFR, ALK, ROS1) si mutation",
+                "Stade IV sans mutation : immunothérapie ± chimio",
+                "CBPC limité : radio-chimiothérapie concomitante",
+                "CBPC étendu : chimiothérapie ± immunothérapie"
+              ]
+            },
+            {
+              "titre": "Hémoptysie : conduite à tenir",
+              "contenu": "L'hémoptysie est une urgence dont la gravité dépend de l'abondance.",
+              "points": [
+                "Hémoptysie de faible abondance : < 50 mL/24h, ambulatoire",
+                "Hémoptysie de moyenne abondance : 50-200 mL/24h, hospitalisation",
+                "Hémoptysie massive : > 200 mL/24h, urgence vitale (USI)",
+                "Causes principales : cancer, tuberculose, bronchectasies, EP",
+                "Bilan : scanner thoracique, fibroscopie, bilan coagulation",
+                "Traitement : étiologique + symptomatique (embolisation si grave)",
+                "Décubitus latéral du côté qui saigne en attendant"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Arrêt du tabac : substitution nicotinique, varénicline, accompagnement",
+            "Embolisation artérielle bronchique : 1ère intention si hémoptysie massive",
+            "Chimiothérapie CBNPC : cisplatine + pemetrexed (adénocarcinome) ou cisplatine + gemcitabine",
+            "Thérapies ciblées : erlotinib/gefitinib (EGFR+), crizotinib (ALK+)",
+            "Immunothérapie : pembrolizumab (PD-L1 ≥ 50%), nivolumab",
+            "Soins de support : antalgie palier 3, oxygène, kinésithérapie respiratoire",
+            "Vaccination antigrippale et antipneumococcique chez BPCO"
+          ],
+          "examensComplementaires": [
+            "Radiographie thoracique : examen de première intention, peu sensible",
+            "Scanner thoracique injecté : caractérisation lésionnelle, extension locorégionale",
+            "Fibroscopie bronchique avec biopsies : confirmation histologique (lésions centrales)",
+            "Ponction transthoracique : lésions périphériques inaccessibles à la fibroscopie",
+            "PET-scan FDG : bilan d'extension, recherche métastases",
+            "IRM cérébrale : recherche métastases si signes neurologiques ou stade IV",
+            "Spirométrie : évaluation préopératoire, caractérisation BPCO",
+            "Recherche de mutations : EGFR, ALK, ROS1, BRAF, PD-L1 (CBNPC métastatique)"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-65 - Tremblements - ECC Neurologie",
@@ -8264,7 +8691,410 @@
           "sexual_health"
         ]
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "� Contraception adolescente + confidentialité � Résumé ECOS",
+          "sections": [
+            {
+              "titre": "� Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Cadre de la consultation adolescente",
+                  "points": [
+                    "Toujours proposer un temps en tête-à-tête sans le parent",
+                    "Expliquer le cadre de la confidentialité d'emblée",
+                    "Adapter le vocabulaire à l'âge et au niveau de compréhension",
+                    "Aborder progressivement les sujets sensibles (santé sexuelle, consommations, humeur)",
+                    "Utiliser le canevas HEEADSSS (Home, Education, Eating, Activities, Drugs, Sexuality, Suicide/Safety)"
+                  ]
+                },
+                {
+                  "titre": "Symptômes à caractériser",
+                  "points": [
+                    "Saignements irréguliers (spotting) : ancienneté, abondance, contexte",
+                    "Douleurs pelviennes : type, intensité, horaire, facteurs modulateurs",
+                    "Date des dernières règles, régularité du cycle",
+                    "Activité sexuelle : début, partenaires, protection, antécédent IST",
+                    "Méthode contraceptive en cours, observance, oublis"
+                  ]
+                },
+                {
+                  "titre": "Signes d'alarme à éliminer",
+                  "points": [
+                    "Grossesse en cours (test β-hCG systématique)",
+                    "Grossesse extra-utérine (douleur + saignement + retard)",
+                    "Infection sexuellement transmissible",
+                    "Violences sexuelles ou contexte de coercition",
+                    "Saignements abondants évoquant pathologie organique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Examen général",
+                  "points": [
+                    "Constantes vitales, IMC",
+                    "Recherche de pâleur, signes de carence",
+                    "Examen abdominal : palpation, défense, sensibilité",
+                    "Examen gynécologique uniquement si nécessaire et avec consentement éclairé",
+                    "Toujours proposer la présence d'un tiers de confiance lors d'examen intime"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Examens diagnostiques",
+              "subsections": [
+                {
+                  "titre": "Examens de débrouillage",
+                  "points": [
+                    "Test de grossesse urinaire (β-hCG) : indispensable",
+                    "Bandelette urinaire : recherche infection",
+                    "NFS si saignements répétés",
+                    "Dépistage IST si rapports non protégés (chlamydia, gonocoque, VIH, syphilis)"
+                  ]
+                },
+                {
+                  "titre": "Si symptômes persistants",
+                  "points": [
+                    "Échographie pelvienne (sus-pubienne)",
+                    "Avis gynécologique spécialisé",
+                    "Bilan hormonal si suspicion pathologie endocrinienne"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "�� Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Effets secondaires de la contraception progestative",
+                  "points": [
+                    "Spotting fréquent les premiers mois (jusqu'à 6 mois) : effet attendu",
+                    "Aménorrhée possible avec désogestrel : non pathologique",
+                    "Tension mammaire, céphalées, troubles de l'humeur",
+                    "Acné, prise de poids modérée variable",
+                    "Réassurance + conseils si effets secondaires bénins",
+                    "Réévaluation à 3-6 mois ou changement de méthode si persistance"
+                  ]
+                },
+                {
+                  "titre": "Cadre légal de la confidentialité (Suisse)",
+                  "points": [
+                    "Mineur capable de discernement = secret médical s'applique pleinement",
+                    "Capacité de discernement évaluée au cas par cas (� 14-16 ans selon situation)",
+                    "Contraception, IVG, IST : domaines de capacité reconnue",
+                    "Pas d'obligation d'informer les parents si discernement présent",
+                    "Encourager le dialogue familial sans l'imposer",
+                    "Lever le secret uniquement si danger pour le mineur ou autrui"
+                  ]
+                },
+                {
+                  "titre": "Accompagnement et suivi",
+                  "points": [
+                    "Renouvellement de la contraception en relais avec gynécologue",
+                    "Information sur la double protection (préservatif + pilule)",
+                    "Sensibilisation aux IST et au consentement",
+                    "Coordonnées en cas de question urgente",
+                    "Rendez-vous de contrôle à 3 mois"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Points clés ECOS",
+              "points": [
+                "Toujours créer un espace de confidentialité avec un mineur",
+                "Le secret médical s'applique au mineur capable de discernement",
+                "Spotting sous progestatif = effet secondaire fréquent et attendu",
+                "Test β-hCG systématique chez toute adolescente sexuellement active avec saignements",
+                "Encourager le dialogue parental sans l'imposer",
+                "Toujours évoquer la double protection (IST + grossesse)",
+                "Repérer les violences sexuelles et la contrainte",
+                "Coordonner avec le gynécologue traitant"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "� Fiche ECOS � Cas : Adolescente 16 ans, contraception cachée et effets secondaires",
+          "sections": [
+            {
+              "titre": "� Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro � âge, contexte (mère présente), motif affiché",
+                "Cadrer la consultation � proposer temps seul, expliquer la confidentialité",
+                "Anamnèse en tête-à-tête � activité sexuelle, contraception, partenaires",
+                "Caractériser les symptômes � spotting, douleurs pelviennes, dernières règles",
+                "Éliminer les signes d'alarme � grossesse, IST, violences",
+                "Examen clinique adapté � général + abdominal, gynéco si justifié",
+                "Test β-hCG urinaire systématique",
+                "Hypothèse principale � effets secondaires bénins du désogestrel",
+                "Diagnostics différentiels � grossesse, IST, GEU",
+                "Prise en charge � réassurance, renouvellement, conseils, coordination",
+                "Cadrer la confidentialité vis-à-vis de la mère � respecter le choix d'Emma"
+              ],
+              "mnemo": {
+                "titre": "� Mnémo HEEADSSS (entretien adolescent)",
+                "elements": [
+                  "H = Home (famille, logement)",
+                  "E = Education (école, projet)",
+                  "E = Eating (alimentation, image corporelle)",
+                  "A = Activities (loisirs, sport, écrans)",
+                  "D = Drugs (tabac, alcool, autres)",
+                  "S = Sexuality (orientation, activité, protection)",
+                  "S = Suicide/Safety (humeur, idées noires)",
+                  "S = Strengths (ressources, confidents)"
+                ]
+              }
+            },
+            {
+              "titre": "� Version longue (�2-3 min)",
+              "contenu": "Il s'agit d'Emma Delacroix, adolescente de 16 ans, lycéenne en première littéraire, qui consulte avec sa mère pour 'fatigue et maux de ventre depuis quelques semaines', motif rapporté par sa mère qui a pris le rendez-vous.\n\nDès le début de l'entretien, j'ai constaté qu'Emma se montrait en retrait, répondant par monosyllabes en présence de sa mère. J'ai donc proposé un temps en tête-à-tête, en cadrant explicitement la confidentialité : tout ce qu'elle me dirait resterait entre nous, sauf situation de danger pour elle ou pour autrui. La mère est sortie sans difficulté.\n\nEn entretien individuel, Emma s'est progressivement ouverte. Elle prend en réalité une pilule progestative, le désogestrel, depuis trois mois, prescrite par une gynécologue qu'elle a consultée seule. Elle a un copain depuis l'été, étudiant dans le même lycée, et leurs rapports sexuels ont été protégés par préservatif les deux premiers mois puis seulement par la pilule. Sa mère ignore tout.\n\nDepuis deux à trois semaines, elle présente deux symptômes qui l'inquiètent : des saignements irréguliers entre les règles, qu'elle décrit comme 'des petites tâches qui arrivent n'importe quand', et des douleurs abdominales basses intermittentes, modérées, sans horaire précis. Ses dernières règles régulières remontent à environ six semaines, peu abondantes comme c'est habituel sous désogestrel. Elle ne présente pas de nausées, pas de tension mammaire, pas de symptômes évocateurs de grossesse. Pas de troubles urinaires, pas de pertes anormales en dehors du spotting. L'observance est bonne, sans oubli supérieur à trois heures.\n\nSes antécédents sont vierges, vaccinations à jour incluant l'HPV. Elle ne fume pas, consomme de l'alcool très occasionnellement, pas de drogues. Sur le plan psychosocial, elle est bonne élève, sans absentéisme, l'humeur est légèrement anxieuse uniquement liée au secret vis-à-vis de sa mère.\n\nàl'examen, ses constantes sont normales, IMC 20.2, pas de pâleur. L'abdomen est souple, avec une légère sensibilité sus-pubienne sans défense ni masse. Je n'ai pas réalisé d'examen gynécologique, non indiqué en l'absence de signes de gravité. J'ai effectué un test de grossesse urinaire qui est revenu négatif.\n\nMon hypothèse principale est qu'il s'agit d'effets secondaires bénins du désogestrel : le spotting est très fréquent les premiers mois sous progestatif seul, et les douleurs pelviennes basses sont également décrites. Le diagnostic différentiel inclut une grossesse débutante (éliminée par le test négatif), une infection sexuellement transmissible que je dépisterais en cas de doute, une grossesse extra-utérine (peu probable au vu du test négatif et de l'examen rassurant), et une pathologie organique (kyste, endométriose) à explorer si persistance.\n\nMa prise en charge a comporté plusieurs volets. D'abord, une réassurance étayée : ces effets sont fréquents et attendus, ils diminuent souvent après quelques mois. Ensuite, j'ai donné des conseils sur la double protection préservatif + pilule pour la prévention des IST. J'ai proposé un renouvellement de l'ordonnance en attendant son rendez-vous gynécologique dans deux mois, en validant la coordination avec sa gynécologue. J'ai abordé sans la juger la question du dialogue avec sa mère : Emma préfère pour l'instant maintenir la confidentialité, ce que j'ai respecté. Je lui ai donné mes coordonnées en cas de question urgente, et programmé un contrôle dans trois mois si les symptômes persistent. Enfin, j'ai proposé un dépistage IST de base que je lui ai laissé le choix d'effectuer."
+            },
+            {
+              "titre": "� Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Emma, 16 ans, consulte avec sa mère pour 'fatigue et douleurs abdominales'. En entretien seul, révèle prendre le désogestrel depuis 3 mois (caché à la mère) avec spotting et douleurs pelviennes depuis 2-3 semaines.\n\nB (Background) : Lycéenne, premier copain depuis l'été, rapports sexuels actifs, suivi gynéco autonome, mère ignore tout. Pas d'antécédents.\n\nA (Assessment) : Effets secondaires bénins attendus du désogestrel (spotting + douleurs pelviennes basses). β-hCG négatif. DD : grossesse, IST, GEU, pathologie organique.\n\nR (Recommendation) : Réassurance, conseils double protection, renouvellement contraception en relais gynéco, dépistage IST proposé, contrôle à 3 mois, respect de la confidentialité vis-à-vis de la mère, encourager dialogue familial sans imposer."
+            },
+            {
+              "titre": "� Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "� Cadrage de la confidentialité (5 étapes)",
+                  "points": [
+                    "1. Saluer la patiente et son accompagnant",
+                    "2. Expliquer le déroulement (temps ensemble + temps seul)",
+                    "3. Inviter le parent à sortir avec naturel",
+                    "4. Cadrer explicitement la confidentialité",
+                    "5. Préciser les limites (danger pour soi ou autrui)"
+                  ]
+                },
+                {
+                  "titre": "� Effets secondaires fréquents du désogestrel",
+                  "points": [
+                    "Spotting / saignements irréguliers (50% des patientes)",
+                    "Aménorrhée (20-30%)",
+                    "Acné, peau grasse",
+                    "Tension mammaire",
+                    "Céphalées, variations de l'humeur",
+                    "Diminution de la libido"
+                  ]
+                },
+                {
+                  "titre": "� � Red flags chez l'adolescente",
+                  "points": [
+                    "Saignements abondants ou prolongés",
+                    "Douleur pelvienne aiguë intense",
+                    "Test de grossesse positif inattendu",
+                    "Signes d'IST",
+                    "Suspicion de violences sexuelles ou de coercition",
+                    "Troubles de l'humeur sévères, idées suicidaires"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Comment cadrez-vous la consultation avec une mineure accompagnée ?",
+                  "questions": [
+                    {
+                      "question": "Étapes clés",
+                      "reponse": [
+                        "Saluer mère et fille ensemble",
+                        "Expliquer la pratique habituelle : 'Je vois les adolescents un moment seuls, c'est important pour qu'ils puissent parler librement'",
+                        "Inviter la mère à attendre en salle d'attente",
+                        "Cadrer la confidentialité : 'Ce que tu me dis reste entre nous, sauf si tu es en danger ou si tu veux que j'en parle'",
+                        "Aborder progressivement les sujets sensibles",
+                        "àla fin, accord sur ce qui sera dit ou non à la mère"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Quel est le cadre légal en Suisse pour une mineure ?",
+                  "questions": [
+                    {
+                      "question": "Capacité de discernement",
+                      "reponse": [
+                        "Pas d'âge légal fixe, évaluation au cas par cas",
+                        "� 14-16 ans selon la complexité de la décision",
+                        "Critères : compréhension de la situation, des alternatives, des conséquences",
+                        "Domaines de capacité reconnue précocement : contraception, IVG, IST",
+                        "Si capable de discernement � secret médical s'applique pleinement",
+                        "Pas d'obligation d'informer les parents",
+                        "Lever le secret uniquement si danger grave"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Quels diagnostics différentiels et examens ?",
+                  "questions": [
+                    {
+                      "question": "DD du spotting + douleurs pelviennes chez une adolescente sous pilule",
+                      "reponse": [
+                        "Effets secondaires de la pilule (le plus fréquent)",
+                        "Grossesse débutante",
+                        "Grossesse extra-utérine",
+                        "Infection sexuellement transmissible (chlamydia, gonocoque)",
+                        "Endométriose",
+                        "Kyste ovarien fonctionnel",
+                        "Pathologie utérine (rare à cet âge)"
+                      ]
+                    },
+                    {
+                      "question": "Examens à proposer",
+                      "reponse": [
+                        "β-hCG urinaire systématique",
+                        "Bandelette urinaire",
+                        "Dépistage IST (chlamydia, gonocoque) sur PCR vaginal ou urinaire",
+                        "± NFS si saignements répétés",
+                        "Échographie pelvienne si persistance ou aggravation"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "4. Quelle prise en charge proposez-vous ?",
+                  "questions": [
+                    {
+                      "question": "Plan",
+                      "reponse": [
+                        "Réassurance étayée sur les effets secondaires bénins",
+                        "Renouvellement de la contraception en relais avec la gynécologue",
+                        "Conseils sur la double protection (préservatif + pilule)",
+                        "Dépistage IST proposé selon les pratiques",
+                        "Information sur les signes d'alarme",
+                        "Encourager le dialogue avec la mère sans l'imposer",
+                        "Coordonnées en cas de question urgente",
+                        "Rendez-vous de contrôle à 3 mois"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "5. Que faire si Emma révélait des violences ?",
+                  "questions": [
+                    {
+                      "question": "Conduite à tenir",
+                      "reponse": [
+                        "Écoute non-jugeante, validation de la parole",
+                        "Évaluation de la sécurité immédiate",
+                        "Information sur les ressources (LAVI, gynécologue, psy)",
+                        "Consentement à un signalement le cas échéant",
+                        "Si danger grave et imminent : signalement à l'autorité de protection même sans consentement",
+                        "Documentation soignée dans le dossier",
+                        "Coordination avec un référent maltraitance",
+                        "Suivi rapproché"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique � Santé sexuelle de l'adolescente et confidentialité",
+          "sections": [
+            {
+              "titre": "Cadre légal de la confidentialité avec un mineur (Suisse)",
+              "contenu": "Le secret médical s'applique au mineur capable de discernement.",
+              "points": [
+                "Capacité de discernement = aptitude à comprendre une situation et à décider en conséquence",
+                "Évaluation au cas par cas, pas d'âge fixe",
+                "Critères : maturité intellectuelle, compréhension des enjeux, capacité à peser les alternatives",
+                "Domaines reconnus précocement : contraception, IVG, dépistage IST, soins courants",
+                "Mineur capable de discernement = consentement aux soins valable seul",
+                "Information aux parents non obligatoire si discernement présent",
+                "Encourager le dialogue familial reste une bonne pratique",
+                "Levée du secret uniquement si danger grave (CC art. 314c)"
+              ]
+            },
+            {
+              "titre": "L'entretien avec un adolescent : canevas HEEADSSS",
+              "contenu": "Outil systématique pour aborder tous les domaines de la santé adolescente.",
+              "points": [
+                "H (Home) : situation familiale, logement, relations",
+                "E (Education) : scolarité, projets, intégration",
+                "E (Eating) : alimentation, image corporelle, troubles",
+                "A (Activities) : loisirs, sport, écrans, amis",
+                "D (Drugs) : tabac, alcool, cannabis, autres",
+                "S (Sexuality) : orientation, activité, protection, consentement",
+                "S (Suicide/Safety) : humeur, idées noires, sécurité",
+                "S (Strengths) : ressources, confidents, projets positifs",
+                "Aborder progressivement, du moins au plus intime"
+              ]
+            },
+            {
+              "titre": "Méthodes contraceptives chez l'adolescente",
+              "contenu": "Le choix tient compte de l'efficacité, de la tolérance et du mode de vie.",
+              "points": [
+                "Préservatif masculin : indispensable pour les IST, peut être seul ou associé",
+                "Pilule combinée Œstroprogestative : efficace si bonne observance, contre-indications cardiovasculaires",
+                "Pilule progestative (désogestrel, Cerazette) : pas de CI vasculaires, spotting fréquent",
+                "Patch et anneau : observance facilitée, équivalent à la pilule",
+                "Implant sous-cutané (étonogestrel) : 3 ans, très efficace, indépendant de l'observance",
+                "DIU au cuivre ou au lévonorgestrel : efficace, longue durée, possible chez nullipare",
+                "Contraception d'urgence : lévonorgestrel < 72h, ulipristal < 120h, DIU cuivre < 5j",
+                "LARC (Long Acting Reversible Contraception) recommandées en première ligne par WHO/CDC"
+              ]
+            },
+            {
+              "titre": "Effets secondaires des contraceptifs progestatifs",
+              "contenu": "Le désogestrel (Cerazette) est une pilule progestative pure très utilisée.",
+              "points": [
+                "Spotting / saignements irréguliers : 40-50%, surtout les 6 premiers mois",
+                "Aménorrhée : 20-30%, non pathologique",
+                "Acné, peau grasse, hirsutisme léger",
+                "Tension mammaire, céphalées",
+                "Variations de l'humeur, diminution libido",
+                "Pas d'effet vasculaire significatif (avantage vs combinées)",
+                "Efficacité conservée même avec retard < 12h",
+                "Pas de contre-indication tabagique"
+              ]
+            },
+            {
+              "titre": "Dépistage IST chez l'adolescente",
+              "contenu": "L'adolescence est une période à haut risque d'IST.",
+              "points": [
+                "Chlamydia trachomatis : la plus fréquente, souvent asymptomatique",
+                "Neisseria gonorrhoeae : co-infection fréquente avec chlamydia",
+                "Mycoplasma genitalium : émergent",
+                "Trichomonas vaginalis : moins fréquent",
+                "Herpès génital, HPV, syphilis, VIH, hépatites",
+                "PCR sur prélèvement vaginal ou urinaire (premier jet)",
+                "Dépistage annuel chez les adolescentes sexuellement actives",
+                "Vaccination HPV recommandée chez tous les adolescents"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Désogestrel 75 µg : 1 cp/j en continu, pas d'intervalle libre",
+            "Renouvellement contraception : possible par MG, sage-femme, gynécologue",
+            "Contraception d'urgence : lévonorgestrel 1.5 mg PO < 72h, ulipristal 30 mg PO < 120h",
+            "Traitement chlamydia : azithromycine 1g PO dose unique ou doxycycline 100 mg x 2/j x 7j",
+            "Traitement gonocoque : ceftriaxone 500 mg IM dose unique + azithromycine 1g PO",
+            "Vaccination HPV : 2 doses si < 15 ans, 3 doses si � 15 ans",
+            "Information : centres de santé sexuelle (Profa, SIPE), ligne adolescents (147)"
+          ],
+          "examensComplementaires": [
+            "Test de grossesse urinaire (β-hCG) : sensibilité > 99% à partir de 14 jours post-conception",
+            "PCR chlamydia/gonocoque : prélèvement vaginal auto-prélevé ou premier jet d'urine",
+            "Sérologies IST : VIH, syphilis (TPHA-VDRL), hépatites B et C",
+            "NFS si saignements répétés ou pâleur",
+            "Échographie pelvienne sus-pubienne : exploration utéro-ovarienne sans inconfort",
+            "Bilan hormonal : LH, FSH, Œstradiol, prolactine si suspicion pathologie endocrinienne",
+            "Avis gynécologique spécialisé si persistance ou complication"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-71 - Fin de vie à domicile - Accompagnante épuisée",
@@ -8362,7 +9192,402 @@
           "full_scenario"
         ]
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "�� Fin de vie à domicile et épuisement de l'aidant � Résumé ECOS",
+          "sections": [
+            {
+              "titre": "� Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Évaluation de la situation du patient",
+                  "points": [
+                    "Diagnostic, stade, pronostic estimé",
+                    "Symptômes physiques actuels (douleur, dyspnée, escarres, alimentation)",
+                    "Confort actuel et qualité de vie perçue",
+                    "Directives anticipées et personne de confiance",
+                    "Volontés du patient sur les soins, le lieu de fin de vie, la sédation"
+                  ]
+                },
+                {
+                  "titre": "Évaluation de l'aidant principal",
+                  "points": [
+                    "Charge de soins quotidienne (intensité, durée, fréquence)",
+                    "Sommeil : durée, qualité, réveils nocturnes",
+                    "Alimentation, perte pondérale, négligence de soi",
+                    "État émotionnel : tristesse, anxiété, ambivalence, culpabilité",
+                    "Idées noires, idées suicidaires (à dépister explicitement)",
+                    "Isolement social, soutien familial et amical",
+                    "Impact professionnel (arrêt, congé, perte de revenu)",
+                    "Antécédents psy personnels et deuils antérieurs"
+                  ]
+                },
+                {
+                  "titre": "Évaluation des ressources disponibles",
+                  "points": [
+                    "Équipe mobile de soins palliatifs (EMSP)",
+                    "Soins infirmiers à domicile (CMS, IMAD, Spitex)",
+                    "Médecin traitant, médecin référent EMSP",
+                    "Aides à domicile, auxiliaires de vie",
+                    "Famille élargie, voisinage, bénévoles",
+                    "Soutien psychologique (psy, aumônier, association)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Repérer l'épuisement de l'aidant",
+              "subsections": [
+                {
+                  "titre": "Signes d'alerte",
+                  "points": [
+                    "Fatigue chronique, troubles du sommeil",
+                    "Amaigrissement, négligence de la santé",
+                    "Anxiété, palpitations, somatisations",
+                    "Tristesse, pleurs, perte d'élan",
+                    "Ambivalence : désir que 'ça finisse' + culpabilité",
+                    "Isolement, retrait social",
+                    "Irritabilité, conflits avec la famille",
+                    "Pensées intrusives, ruminations",
+                    "Idées suicidaires (à rechercher)"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Outils d'évaluation",
+              "subsections": [
+                {
+                  "titre": "Échelles utiles",
+                  "points": [
+                    "Zarit Burden Interview : fardeau de l'aidant (22 items)",
+                    "Mini-Zarit : version courte 7 items",
+                    "PHQ-9 : dépistage dépression",
+                    "GAD-7 : dépistage anxiété",
+                    "ESAS : symptômes du patient (douleur, dyspnée, anxiété)",
+                    "Échelle de PPS (Palliative Performance Scale) : pronostic"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "�� Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Soutien à l'aidant",
+                  "points": [
+                    "Validation et normalisation de l'ambivalence",
+                    "Reconnaissance explicite de l'épuisement",
+                    "Information sur les ressources disponibles",
+                    "Coordination avec l'EMSP, les soins à domicile",
+                    "Proposition de répit (séjour de répit, garde de nuit)",
+                    "Soutien psychologique individuel",
+                    "Groupes de parole pour aidants",
+                    "Anticipation du décès et du deuil"
+                  ]
+                },
+                {
+                  "titre": "Coordination des soins palliatifs",
+                  "points": [
+                    "Réévaluation du plan de soin (médicaments, confort)",
+                    "Anticipation des symptômes (prescriptions anticipées)",
+                    "Disponibilité 24h/24 (numéros, procédures)",
+                    "Discussion sur la sédation profonde si douleur réfractaire",
+                    "Préparation aux derniers instants (signes, gestes, présence)",
+                    "Évaluation de la pertinence d'une hospitalisation"
+                  ]
+                },
+                {
+                  "titre": "Accompagnement du deuil",
+                  "points": [
+                    "Préparation au deuil anticipé pendant la fin de vie",
+                    "Suivi post-décès (consultation à 1-3 mois)",
+                    "Repérage du deuil pathologique",
+                    "Orientation vers psychologue ou groupe de deuil si besoin"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Points clés ECOS",
+              "points": [
+                "Toujours dédier un temps à l'aidant lors des consultations palliatives",
+                "Valider l'ambivalence sans juger",
+                "Dépister activement l'épuisement et les idées suicidaires",
+                "Coordonner avec l'EMSP, les soins à domicile, le réseau de proximité",
+                "Anticiper les symptômes du patient et préparer l'aidant aux derniers instants",
+                "Proposer du répit avant l'épuisement complet",
+                "Préparer le deuil dès la phase palliative",
+                "Documenter les directives anticipées et la personne de confiance"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "� Fiche ECOS � Cas : Accompagnante épuisée d'un patient en fin de vie à domicile",
+          "sections": [
+            {
+              "titre": "� Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro � contexte de la consultation, qui consulte, motif",
+                "Situation du patient � diagnostic, stade, symptômes, directives anticipées",
+                "Évaluation de l'aidant � charge, sommeil, alimentation, humeur",
+                "Repérage de l'épuisement � signes physiques, psychiques, comportementaux",
+                "Validation de l'ambivalence � écoute, normalisation, déculpabilisation",
+                "Dépistage IS � idées noires, idées suicidaires explicites",
+                "Évaluation des ressources � réseau, EMSP, soutien social",
+                "Anticipation des derniers instants � symptômes, gestes, sédation",
+                "Plan de prise en charge � soutien aidant, coordination soins, répit",
+                "Suivi post-décès � deuil, accompagnement"
+              ],
+              "mnemo": {
+                "titre": "� Mnémo AIDANT",
+                "elements": [
+                  "A = Ambivalence à valider",
+                  "I = Idées suicidaires à rechercher",
+                  "D = Dormir, manger, prendre soin de soi",
+                  "A = Anticipation (symptômes, derniers instants)",
+                  "N = Réseau de soutien",
+                  "T = Temps de répit"
+                ]
+              }
+            },
+            {
+              "titre": "� Version longue (�2-3 min)",
+              "contenu": "Il s'agit d'une consultation palliative avec Madame Martine Bettaz, 52 ans, fille et accompagnante principale de son père Monsieur Louis Bettaz, 78 ans, atteint d'un cancer pancréatique métastatique en phase terminale, suivi à domicile. Cette consultation a été motivée par l'infirmière de l'équipe mobile de soins palliatifs qui a noté que Martine 'n'en peut plus'.\n\nConcernant le patient, le diagnostic a été posé il y a 14 mois avec atteinte hépatique et pulmonaire. Une décision collégiale d'arrêt des traitements oncologiques a été prise il y a 2 mois. Il est confiné au lit depuis 3 semaines. Ses douleurs sont contrôlées par patchs de fentanyl et oxycodone de secours. Il a signé ses directives anticipées il y a 2 semaines : pas de réanimation, sa fille est désignée personne de confiance, et il accepte une sédation profonde si les douleurs deviennent réfractaires. Il reste conscient, parle peu mais reconnaît ses proches, et a exprimé plusieurs fois 'c'est assez long comme ça'. L'appétit est quasi nul, l'hydratation difficile, et des escarres débutants apparaissent malgré les soins.\n\nConcernant Martine, elle assure l'essentiel des soins à domicile depuis trois semaines, avec l'appui de l'EMSP qui passe deux fois par jour. Elle a pris un congé sans solde il y a cinq semaines pour être présente. àl'entretien, elle se montre épuisée, la voix fatiguée, des phrases qui s'arrêtent, parfois des larmes retenues.\n\nElle décrit une charge importante : cinq heures de sommeil par nuit interrompu par des réveils multiples pour vérifier son père. Une perte pondérale de quatre kilos en deux mois. Une anxiété diffuse avec des palpitations occasionnelles. Des pensées intrusives : peur qu'il meure seul, qu'il souffre, qu'elle 'rate' la fin. Surtout, elle exprime, après que je lui ai donné un espace bienveillant, des moments d'ambivalence avec un souhait que 'ça se termine' suivi d'une culpabilité massive. J'ai pris le temps de valider explicitement cette ambivalence, en lui disant que ces pensées sont fréquentes, normales, et qu'elles ne diminuent en rien son amour pour son père. J'ai recherché activement des idées suicidaires : elle n'en a pas, ne prend pas de psychotropes, ne consomme pas d'alcool.\n\nDans le contexte, elle a perdu sa mère il y a huit ans d'un cancer du sein, deuil qui avait été difficile à l'époque. Elle est seule à assumer, son père étant veuf. Elle exprime aussi des questions pragmatiques : que va-t-il se passer à la fin, peut-il souffrir, peut-on appeler l'EMSP la nuit, faut-il envisager une hospitalisation en unité de soins palliatifs.\n\nMon évaluation est qu'il s'agit d'un épuisement de l'aidant principal en phase terminale, avec ambivalence non pathologique, sans dépression caractérisée ni idées suicidaires, mais avec un risque d'aggravation si la situation se prolonge.\n\nMa prise en charge a comporté plusieurs volets. D'abord, la validation et la normalisation de son ambivalence et de son épuisement. Ensuite, j'ai répondu à ses questions pragmatiques : description des derniers instants probables, possibilité d'appeler l'EMSP 24h/24 avec les coordonnées précises, indication des prescriptions anticipées en place pour la douleur et l'angoisse. J'ai discuté avec elle des deux options : poursuivre à domicile avec un renforcement du soutien (passages plus fréquents, garde de nuit ponctuelle, séjour de répit envisageable même tardif) ou envisager une hospitalisation en unité de soins palliatifs si la charge devient trop lourde. Elle souhaite poursuivre à domicile, conformément aux souhaits de son père, mais accepte la garde de nuit pour les jours à venir. Je lui ai proposé un soutien psychologique individuel, qu'elle accepte. J'ai planifié un contact à 48 heures, et un suivi post-décès à un et trois mois pour accompagner le deuil. Enfin, j'ai abordé la question de la sédation profonde, de manière progressive, en l'informant qu'elle est possible si les douleurs deviennent réfractaires, conformément aux directives anticipées de son père."
+            },
+            {
+              "titre": "� Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : Martine, 52 ans, fille et accompagnante principale d'un père de 78 ans en phase terminale (cancer pancréatique métastatique). Consultation pour épuisement signalé par l'EMSP.\n\nB (Background) : Soins à domicile depuis 3 semaines, congé sans solde, sommeil 5h/nuit, perte 4 kg, anxiété, pensées d'ambivalence avec culpabilité. Pas d'IS. Deuil maternel difficile il y a 8 ans.\n\nA (Assessment) : Épuisement de l'aidant en phase terminale, ambivalence non pathologique, pas de dépression caractérisée. Patient en fin de vie avec directives anticipées claires (pas de réa, sédation acceptée).\n\nR (Recommendation) : Validation de l'ambivalence, renforcement du soutien (garde de nuit, séjour de répit), soutien psychologique, coordination EMSP 24h/24, anticipation des derniers instants et de la sédation, suivi post-décès."
+            },
+            {
+              "titre": "� Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "� Signes des derniers jours",
+                  "points": [
+                    "Diminution de la conscience, somnolence",
+                    "Arrêt de l'alimentation et de l'hydratation",
+                    "Râles agoniques",
+                    "Respiration de Cheyne-Stokes",
+                    "Marbrures, extrémités froides",
+                    "Pouls filant, hypotension",
+                    "Confusion, agitation terminale possible"
+                  ]
+                },
+                {
+                  "titre": "� Phrases utiles à l'aidant",
+                  "points": [
+                    "'Ce que vous ressentez est légitime et fréquent'",
+                    "'Vous avez le droit d'être fatiguée'",
+                    "'Souhaiter que ça finisse n'enlève rien à votre amour'",
+                    "'Vous n'êtes pas seule, on est là'",
+                    "'Comment allez-vous, vous ?'",
+                    "'Qu'est-ce qui pourrait vous aider concrètement ?'"
+                  ]
+                },
+                {
+                  "titre": "� � Red flags chez l'aidant",
+                  "points": [
+                    "Idées suicidaires",
+                    "Dépression caractérisée",
+                    "Consommation d'alcool ou de psychotropes",
+                    "Isolement social complet",
+                    "Maltraitance involontaire du patient",
+                    "Décompensation somatique"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Comment évaluez-vous l'épuisement de l'aidant ?",
+                  "questions": [
+                    {
+                      "question": "Critères et outils",
+                      "reponse": [
+                        "Évaluation clinique : sommeil, alimentation, humeur, charge",
+                        "Échelle Zarit Burden Interview (ou mini-Zarit)",
+                        "Dépistage dépression : PHQ-9",
+                        "Dépistage anxiété : GAD-7",
+                        "Recherche active d'idées suicidaires",
+                        "Évaluation des ressources : réseau, soutien, professionnels",
+                        "Repérage de la maltraitance par épuisement"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Comment gérez-vous l'ambivalence de Martine ?",
+                  "questions": [
+                    {
+                      "question": "Approche",
+                      "reponse": [
+                        "Créer un espace bienveillant et sans jugement",
+                        "Valider explicitement l'ambivalence comme normale",
+                        "Normaliser la culpabilité associée",
+                        "Distinguer ambivalence (normale) et idées suicidaires (à dépister)",
+                        "Ne pas chercher à 'résoudre' l'ambivalence",
+                        "Proposer un soutien psychologique individuel",
+                        "Préparer au deuil anticipé"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Quelles sont les directives anticipées et la personne de confiance ?",
+                  "questions": [
+                    {
+                      "question": "Cadre",
+                      "reponse": [
+                        "Directives anticipées : volontés écrites du patient capable",
+                        "Opposables aux soignants si elles concernent la situation",
+                        "Modifiables à tout moment par le patient",
+                        "Personne de confiance : représentant thérapeutique en cas d'incapacité",
+                        "Désignation par écrit, recommandation verbale possible",
+                        "Hiérarchie en CH : directives écrites > personne de confiance > proches",
+                        "Importance d'aborder ces sujets précocement en palliatif"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "4. Qu'est-ce que la sédation palliative et quand l'envisager ?",
+                  "questions": [
+                    {
+                      "question": "Définition et cadre",
+                      "reponse": [
+                        "Sédation palliative : diminution de la conscience pour soulager une souffrance réfractaire",
+                        "Profondeur variable : légère à profonde",
+                        "Indication : symptôme réfractaire (douleur, dyspnée, angoisse) en phase terminale",
+                        "Conditions : pronostic engagé à court terme (jours/heures), volonté du patient",
+                        "Cadre éthique : intention de soulager, pas de hâter la mort",
+                        "Médicaments : midazolam, propofol, en titration",
+                        "Différent de l'euthanasie (acte intentionnel de provoquer la mort)",
+                        "Doit être discutée en équipe et tracée dans le dossier"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "5. Comment anticipez-vous les derniers instants ?",
+                  "questions": [
+                    {
+                      "question": "Préparation",
+                      "reponse": [
+                        "Information progressive sur les signes des derniers jours",
+                        "Prescriptions anticipées : antalgique, anxiolytique, antisécrétoire",
+                        "Coordination avec l'EMSP (24h/24)",
+                        "Préparation pratique : qui appeler, à quel moment",
+                        "Proposer une présence (famille, soignant, bénévole)",
+                        "Démystifier les râles agoniques (souffrance pour l'entourage > patient)",
+                        "Aborder les rituels souhaités (religieux, culturels)",
+                        "Anticiper le 'après' : constat de décès, démarches administratives, deuil"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique � Soins palliatifs et épuisement de l'aidant",
+          "sections": [
+            {
+              "titre": "Principes des soins palliatifs (OMS)",
+              "contenu": "Les soins palliatifs visent à améliorer la qualité de vie des patients et de leurs proches face à une maladie engageant le pronostic vital.",
+              "points": [
+                "Soulagement de la douleur et des autres symptômes",
+                "Approche globale : physique, psychologique, sociale, spirituelle",
+                "Affirmation de la vie, considère la mort comme un processus normal",
+                "Pas d'intention d'accélérer ni de retarder la mort",
+                "Soutien aux patients pour vivre activement jusqu'au décès",
+                "Soutien aux proches pendant la maladie et le deuil",
+                "Approche en équipe interprofessionnelle",
+                "Applicables tôt dans la maladie, en parallèle des traitements actifs"
+              ]
+            },
+            {
+              "titre": "Épuisement de l'aidant (caregiver burden)",
+              "contenu": "L'épuisement de l'aidant principal est un syndrome multidimensionnel.",
+              "points": [
+                "Définition : retentissement physique, psychique, social, financier de l'aide",
+                "Prévalence : 30-50% des aidants principaux en fin de vie",
+                "Facteurs de risque : durée des soins, intensité, isolement, conflits",
+                "Conséquences : dépression, anxiété, somatisations, mortalité augmentée",
+                "Risque de maltraitance involontaire du patient",
+                "Repérage : signes cliniques, échelles validées (Zarit)",
+                "Prévention : reconnaissance précoce, répit, soutien"
+              ]
+            },
+            {
+              "titre": "Directives anticipées et personne de confiance (Suisse)",
+              "contenu": "Cadre légal du Code Civil suisse (art. 370-373).",
+              "points": [
+                "Directives anticipées : volontés écrites pour le cas d'incapacité de discernement",
+                "Forme libre, mais signature et date obligatoires",
+                "Opposables aux soignants sauf situations exceptionnelles",
+                "Modifiables à tout moment par le patient capable",
+                "Personne de confiance (représentant thérapeutique) : décide à la place du patient incapable",
+                "Désignation par écrit",
+                "Hiérarchie de représentation en l'absence de désignation : conjoint > descendants > parents > frères et sŒurs",
+                "ProMedDial, Caritas, Pro Senectute proposent des modèles"
+              ]
+            },
+            {
+              "titre": "Sédation palliative",
+              "contenu": "Démarche médicale spécifique en fin de vie pour soulager une souffrance réfractaire.",
+              "points": [
+                "Définition : diminution induite de la conscience pour soulager",
+                "Indications : symptômes réfractaires en phase terminale",
+                "Symptômes : douleur, dyspnée, agitation, hémorragie cataclysmique, angoisse",
+                "Conditions : pronostic engagé (jours-heures), volonté patient (directives)",
+                "Profondeur : superficielle (somnolence) à profonde (inconscience)",
+                "Durée : intermittente ou continue jusqu'au décès",
+                "Médicaments : midazolam (titration), propofol, neuroleptiques",
+                "Différent de l'euthanasie (intention différente : soulager vs provoquer la mort)",
+                "Procédure encadrée : décision collégiale, consentement, traçabilité"
+              ]
+            },
+            {
+              "titre": "Deuil normal et pathologique",
+              "contenu": "Le deuil est un processus psychique normal après une perte.",
+              "points": [
+                "Phases (Kübler-Ross, indicatives) : déni, colère, négociation, dépression, acceptation",
+                "Durée variable : 6-12 mois pour les manifestations aiguës",
+                "Deuil normal : tristesse, idées centrées sur le défunt, restauration progressive",
+                "Deuil anticipé : commence avant le décès, aide à la préparation",
+                "Deuil pathologique : > 12 mois, retentissement fonctionnel majeur",
+                "Facteurs de risque : décès brutal, jeune âge, antécédents psy, isolement",
+                "Suivi : consultation à 1-3 mois, repérage du deuil compliqué",
+                "Orientation : psychologue, groupes de deuil (Vivre son Deuil, AVED)"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Antalgie palier 3 : morphine (titration), fentanyl patch, oxycodone, hydromorphone",
+            "Bouche : soins de bouche réguliers, glaçons, salive artificielle",
+            "Dyspnée : morphine faible dose, oxygène si hypoxémie, ventilateur",
+            "Anxiété : benzodiazépines (lorazépam, midazolam), neuroleptiques",
+            "Râles agoniques : scopolamine, glycopyrrolate, position",
+            "Sédation : midazolam 0.5-5 mg/h IV/SC en titration",
+            "Soutien aidant : EMSP, soins à domicile, séjour de répit, soutien psy"
+          ],
+          "examensComplementaires": [
+            "Évaluation clinique répétée du patient (douleur, dyspnée, conscience)",
+            "ESAS (Edmonton Symptom Assessment System) : 10 symptômes",
+            "PPS (Palliative Performance Scale) : pronostic à court terme",
+            "Pas d'imagerie ni de biologie sauf si modifie la prise en charge",
+            "Évaluation de l'aidant : Zarit Burden Interview, PHQ-9, GAD-7",
+            "Coordination interprofessionnelle (EMSP, MG, IDE, psy, aumônier)",
+            "Documentation des directives anticipées et de la personne de confiance"
+          ]
+        }
+      }
     },
     {
       "id": "RESCOS-72 - Certificat de complaisance - Arrêt de travail abusif",
@@ -8483,7 +9708,408 @@
           "rompre la relation thérapeutique de manière abrupte"
         ]
       },
-      "medicoLegalReviewed": true
+      "medicoLegalReviewed": true,
+      "pedagogicalContent": {
+        "resume": {
+          "titre": "� Certificat de complaisance et refus motivé � Résumé ECOS",
+          "sections": [
+            {
+              "titre": "� Anamnèse",
+              "subsections": [
+                {
+                  "titre": "Repérer une demande douteuse",
+                  "points": [
+                    "Plainte vague, non spécifique, peu cohérente",
+                    "Demande ciblée et chiffrée d'un certificat précis",
+                    "Comportement clinique discordant avec la plainte",
+                    "Absence d'éléments objectifs ou d'antécédents cohérents",
+                    "Contexte évoqué (conflit pro, voyage, démarche administrative)",
+                    "Cotation excessive de la douleur (8-10/10) sans signe associé"
+                  ]
+                },
+                {
+                  "titre": "Anamnèse rigoureuse mais non accusatoire",
+                  "points": [
+                    "Caractériser précisément la plainte (chronologie, type, intensité)",
+                    "Demander les activités de la journée (test indirect)",
+                    "Rechercher les facteurs déclenchants",
+                    "Antécédents médicaux et professionnels",
+                    "Traitements pris et leur efficacité",
+                    "Contexte psychosocial sans le forcer"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Examen clinique",
+              "subsections": [
+                {
+                  "titre": "Examen rigoureux et documenté",
+                  "points": [
+                    "Inspection : posture, mobilité spontanée, attitude antalgique",
+                    "Palpation : reproductibilité de la douleur",
+                    "Mobilité active et passive",
+                    "Tests spécifiques (Lasègue, manŒuvres ciblées)",
+                    "Examen neurologique systématique",
+                    "Recherche de signes objectifs (contracture, défense)",
+                    "Documentation précise dans le dossier"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Démarche diagnostique et décisionnelle",
+              "subsections": [
+                {
+                  "titre": "Confronter plainte et examen",
+                  "points": [
+                    "Identifier la discordance plainte/examen",
+                    "Reformuler de manière neutre et factuelle",
+                    "Créer un cadre bienveillant pour explorer le motif réel",
+                    "Sans accusation, sans jugement moral",
+                    "Permettre au patient d'exprimer son contexte"
+                  ]
+                },
+                {
+                  "titre": "Cadre légal du certificat médical (Suisse)",
+                  "points": [
+                    "Art. 318 CP : faux certificat médical = délit pénal",
+                    "Punition : peine privative de liberté ou peine pécuniaire",
+                    "CDM-FMH art. 34 : interdiction d'attestations contraires à la vérité",
+                    "Sanctions disciplinaires de la FMH",
+                    "Responsabilité civile possible (employeur, assurance)",
+                    "Atteinte à la confiance de la société dans la profession"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "�� Prise en charge",
+              "subsections": [
+                {
+                  "titre": "Refus motivé du certificat",
+                  "points": [
+                    "Refuser clairement mais avec respect",
+                    "Expliquer le cadre légal et déontologique",
+                    "Reconnaître la difficulté de la situation du patient",
+                    "Valider les émotions sans valider la demande",
+                    "Préserver la relation thérapeutique",
+                    "Documenter la consultation dans le dossier"
+                  ]
+                },
+                {
+                  "titre": "Proposer des alternatives",
+                  "points": [
+                    "Dialogue avec l'employeur (médiation si possible)",
+                    "Demande de congés sans solde",
+                    "Recours aux RH ou au syndicat",
+                    "Aménagement du temps de travail",
+                    "Annulation/report du voyage avec assurance",
+                    "Si souffrance psychique réelle : consultation dédiée, psy"
+                  ]
+                },
+                {
+                  "titre": "Préserver la relation",
+                  "points": [
+                    "Tonalité respectueuse tout au long",
+                    "Éviter les reproches et le moralisme",
+                    "Proposer un suivi si besoin médical réel",
+                    "Inviter à revenir consulter en cas de symptôme objectif"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Points clés ECOS",
+              "points": [
+                "Le certificat médical engage la responsabilité pénale du médecin (CP-318)",
+                "L'examen doit être rigoureux et documenté",
+                "Refuser un certificat de complaisance n'est pas une faute, c'est une obligation",
+                "Le refus doit être expliqué et accompagné d'alternatives",
+                "Préserver la relation thérapeutique malgré le refus",
+                "Ne pas juger, ne pas moraliser, valider la difficulté du contexte",
+                "Documenter précisément la consultation",
+                "Connaître le cadre légal (CP-318, CDM-FMH art. 34, CO art. 324a)"
+              ]
+            }
+          ]
+        },
+        "presentationPatient": {
+          "titre": "� Fiche ECOS � Cas : Demande de certificat de complaisance pour 'lombalgie'",
+          "sections": [
+            {
+              "titre": "� Checklist mentale (présentation systématisée)",
+              "points": [
+                "Intro � âge, profession, motif affiché de consultation",
+                "Caractériser la plainte � chronologie, type, intensité, facteurs",
+                "Tester la cohérence � activités quotidiennes, efficacité antalgiques",
+                "Anamnèse complète � ATCD, traitements, contexte psychosocial",
+                "Examen clinique rigoureux � inspection, palpation, mobilité, neuro",
+                "Identifier la discordance plainte/examen",
+                "Créer un cadre bienveillant pour explorer le motif réel",
+                "Refuser le certificat de complaisance avec respect",
+                "Expliquer le cadre légal (CP-318, CDM-FMH art. 34)",
+                "Proposer des alternatives concrètes",
+                "Documenter la consultation dans le dossier",
+                "Préserver la relation thérapeutique"
+              ],
+              "mnemo": {
+                "titre": "� Mnémo REFUS",
+                "elements": [
+                  "R = Rigueur de l'examen clinique",
+                  "E = Empathie sans complaisance",
+                  "F = Faux dans les titres (CP-318)",
+                  "U = Utiliser des alternatives",
+                  "S = Sauvegarder la relation"
+                ]
+              }
+            },
+            {
+              "titre": "� Version longue (�2-3 min)",
+              "contenu": "Il s'agit de Monsieur Marc Bernard, 34 ans, ingénieur en système d'information dans une grande entreprise lausannoise, qui se présente sans rendez-vous ce mardi matin et demande explicitement 'un papier pour 7 jours d'arrêt' pour cause de 'lombalgie aiguë depuis dimanche soir'.\n\nàl'anamnèse, il décrit une douleur lombaire qu'il cote 8 sur 10, sans irradiation, sans facteur déclenchant identifié, sans horaire mécanique clair. Il nie toute notion de traumatisme. Il a pris du paracétamol et de l'ibuprofène sans soulagement notable selon lui. Il ne décrit pas de troubles sphinctériens, pas de paresthésie, pas de déficit moteur, pas de fièvre, pas de réveil nocturne. Le sommeil et l'appétit sont conservés.\n\nIl n'a aucun antécédent médical notable, pas de pathologie chronique, pas de traitement habituel. Une appendicectomie sans complication à l'âge de 14 ans. Pas d'antécédent de lombalgie ni de traumatisme dorsal. Pas de suivi psychiatrique. Pas d'antécédent rhumatologique familial.\n\nàl'examen, je constate d'emblée un patient en très bon état général, qui marche aisément dans la salle de consultation, sans boiterie, qui s'assied sans antalgie particulière et se penche pour ramasser sa veste sans grimace. Les constantes sont normales : tension 128/82, pouls 76, température 36.8°C. àl'examen rachidien, je ne retrouve aucune douleur à la palpation des épineuses ni des paravertébraux. Les mobilités en flexion, extension et inclinaisons sont complètes sans grimace, sans défense, sans contracture. Le Lasègue est négatif bilatéralement jusqu'à 80 degrés. L'examen neurologique des membres inférieurs est strictement normal : ROT symétriques, sensibilité conservée, force 5/5, pas de signe de queue de cheval.\n\nDevant cette discordance majeure entre une plainte cotée 8/10 et un examen strictement normal avec un comportement incompatible avec la douleur décrite, j'ai cherché à comprendre la situation sans accusation. J'ai reformulé de manière factuelle : 'Monsieur Bernard, je vois que vous décrivez une douleur très intense, mais à l'examen je ne trouve aucun signe objectif. Je ne suis pas là pour vous juger, mais j'ai besoin de comprendre ce qui se passe vraiment pour vous aider.' Après quelques échanges, le patient s'est ouvert et a expliqué qu'il quitte mercredi pour 10 jours de road trip aux États-Unis avec un ami, que son billet d'avion à 2200 francs est non remboursable, et que ses congés ont été refusés la semaine dernière par son employeur en raison d'une charge de travail importante.\n\nMon évaluation est qu'il s'agit d'une demande de certificat de complaisance, c'est-à-dire d'un certificat médical d'incapacité de travail dans un contexte où il n'existe aucune incapacité médicale objective. Émettre un tel certificat tomberait sous le coup de l'article 318 du Code Pénal suisse qui réprime le faux certificat médical, engagerait ma responsabilité disciplinaire au titre de l'article 34 du Code de Déontologie de la FMH, et exposerait à des poursuites tant pour moi que pour le patient.\n\nMa prise en charge a comporté plusieurs volets. D'abord, j'ai refusé clairement mais avec respect d'établir le certificat, en expliquant le cadre légal sans le menacer ni le juger. J'ai validé la difficulté de sa situation : la perte financière est réelle, le conflit avec son employeur est compréhensible. Ensuite, j'ai proposé plusieurs alternatives concrètes : un dialogue direct avec son employeur ou les ressources humaines pour expliquer la situation et négocier, une demande de congés sans solde, le recours à son assurance voyage si elle couvre l'annulation, ou en dernier recours le report du voyage. Je l'ai informé que s'il ressentait une réelle souffrance liée à cette situation (stress, anxiété, conflit), une consultation spécifique pouvait être organisée. Enfin, j'ai préservé la relation thérapeutique en l'invitant à revenir consulter pour tout symptôme objectif, et j'ai documenté précisément la consultation dans son dossier."
+            },
+            {
+              "titre": "� Version express (SBAR, 30 sec)",
+              "contenu": "S (Situation) : M. Bernard, 34 ans, ingénieur, demande sans RDV un certificat d'arrêt de travail de 7 jours pour 'lombalgie aiguë'.\n\nB (Background) : Aucun antécédent, plainte vague cotée 8/10 sans facteur déclenchant. Examen clinique strictement normal avec comportement incompatible. Révélation : voyage non remboursable de 10 jours aux USA dès demain, congés refusés par l'employeur.\n\nA (Assessment) : Demande de certificat de complaisance. L'émission d'un tel certificat tombe sous CP-318 (faux dans les titres) et CDM-FMH art. 34. Pas de pathologie objective.\n\nR (Recommendation) : Refus motivé du certificat avec explication du cadre légal. Validation empathique de la difficulté. Alternatives : dialogue employeur, congés sans solde, médiation RH, assurance voyage. Préservation de la relation et invitation à revenir si besoin médical réel."
+            },
+            {
+              "titre": "� Touches ludiques / mnémos",
+              "subsections": [
+                {
+                  "titre": "� Red flags d'une demande de complaisance",
+                  "points": [
+                    "Plainte vague, non spécifique",
+                    "Cotation excessive sans signe objectif",
+                    "Comportement incompatible avec la plainte",
+                    "Demande ciblée et chiffrée (durée, type)",
+                    "Absence d'antécédents et de cohérence",
+                    "Contexte révélé : voyage, conflit, démarche admin",
+                    "Refus de tout examen complémentaire ou suivi"
+                  ]
+                },
+                {
+                  "titre": "� Phrases clés pour refuser avec tact",
+                  "points": [
+                    "'Je comprends votre situation, mais je ne peux pas...'",
+                    "'Établir un certificat sans pathologie m'expose à des poursuites'",
+                    "'Mon rôle est de vous aider, pas de vous juger'",
+                    "'Voici ce que je peux vous proposer à la place...'",
+                    "'Je reste disponible pour tout problème médical réel'"
+                  ]
+                },
+                {
+                  "titre": "� � Pièges ECOS",
+                  "points": [
+                    "Émettre le certificat 'pour cette fois'",
+                    "Refuser sans expliquer ni proposer d'alternatives",
+                    "Moraliser ou juger le patient",
+                    "Menacer (employeur, signalement)",
+                    "Rompre la relation thérapeutique",
+                    "Ne pas documenter la consultation"
+                  ]
+                }
+              ]
+            },
+            {
+              "titre": "� Questions probables de l'examinateur (avec réponses orales)",
+              "subsections": [
+                {
+                  "titre": "1. Pourquoi refusez-vous d'émettre ce certificat ?",
+                  "questions": [
+                    {
+                      "question": "Justification",
+                      "reponse": [
+                        "Examen clinique strictement normal sans pathologie objective",
+                        "Plainte fabriquée selon les éléments révélés",
+                        "Émission = faux dans les titres (CP-318, peine privative ou pécuniaire)",
+                        "Violation de la déontologie médicale (CDM-FMH art. 34)",
+                        "Atteinte à la confiance dans la profession médicale",
+                        "Préjudice indirect à l'employeur et à la collectivité (assurances)",
+                        "Risque pour ma propre responsabilité légale et disciplinaire"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "2. Quel est le cadre légal en Suisse ?",
+                  "questions": [
+                    {
+                      "question": "Textes applicables",
+                      "reponse": [
+                        "CP art. 318 : faux certificat médical = délit pénal",
+                        "Punition : peine privative de liberté jusqu'à 3 ans ou peine pécuniaire",
+                        "CDM-FMH art. 34 : 'le médecin n'établit pas d'attestation contraire à la vérité'",
+                        "Sanctions disciplinaires : avertissement, blâme, amende, suspension",
+                        "CO art. 324a : droit du salarié au salaire pendant l'incapacité = enjeu pour l'employeur",
+                        "Engagement de la responsabilité civile possible",
+                        "Loi cantonale sur la santé : sanctions administratives"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "3. Comment refusez-vous sans rompre la relation ?",
+                  "questions": [
+                    {
+                      "question": "Stratégie",
+                      "reponse": [
+                        "Tonalité respectueuse et bienveillante",
+                        "Reconnaître la difficulté de la situation",
+                        "Valider les émotions (frustration, stress)",
+                        "Expliquer le cadre légal sans menacer",
+                        "Distinguer la personne (digne de respect) de l'acte (impossible)",
+                        "Proposer des alternatives concrètes",
+                        "Inviter à revenir pour tout problème médical réel",
+                        "Éviter le moralisme et le jugement"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "4. Quelles alternatives proposer ?",
+                  "questions": [
+                    {
+                      "question": "Options concrètes",
+                      "reponse": [
+                        "Dialogue direct avec l'employeur (négociation)",
+                        "Demande de congés sans solde",
+                        "Médiation RH ou syndicale",
+                        "Aménagement du temps de travail (télétravail, horaires)",
+                        "Recours à l'assurance voyage (annulation)",
+                        "Report ou modification du voyage",
+                        "Si souffrance psychique réelle : consultation dédiée",
+                        "Orientation vers un psychologue si stress chronique"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "titre": "5. Que faire si le patient insiste ou devient agressif ?",
+                  "questions": [
+                    {
+                      "question": "Conduite à tenir",
+                      "reponse": [
+                        "Garder son calme et son professionnalisme",
+                        "Réaffirmer le cadre sans s'énerver",
+                        "Reconnaître la frustration sans céder",
+                        "Si menace ou agression verbale : poser le cadre",
+                        "Possibilité d'interrompre la consultation si dérapage",
+                        "Documenter précisément les faits dans le dossier",
+                        "En cas de menaces graves : information aux autorités",
+                        "Soutien d'un confrère ou d'une consultation collégiale si situation complexe récurrente"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "theoriePratique": {
+          "titre": "Théorie pratique � Certificat médical, déontologie et cadre légal",
+          "sections": [
+            {
+              "titre": "Le certificat médical : nature et obligations",
+              "contenu": "Le certificat médical est un acte authentique engageant la responsabilité du médecin.",
+              "points": [
+                "Définition : document écrit attestant de faits médicaux constatés",
+                "Doit reposer sur un examen personnel du patient",
+                "Doit refléter exactement les constatations objectives",
+                "Doit être daté, signé, identifié (médecin et patient)",
+                "Doit mentionner l'objet (pour l'employeur, l'assurance...)",
+                "Soumis au secret médical : informations strictement nécessaires",
+                "Ne mentionne ni diagnostic précis ni détails inutiles à l'employeur",
+                "Conservation : 10 ans minimum (LPMéd)"
+              ]
+            },
+            {
+              "titre": "Cadre légal du faux certificat médical (Suisse)",
+              "contenu": "L'émission d'un faux certificat est un délit pénal.",
+              "points": [
+                "CP art. 318 : 'Faux certificat médical et faux dans la médecine'",
+                "Vise spécifiquement le médecin qui constate faussement des faits ayant une portée juridique",
+                "Peine : peine privative de liberté jusqu'à 3 ans ou peine pécuniaire",
+                "Aggravation possible si dessein de lucre ou récidive",
+                "CP art. 251 : faux dans les titres (cadre général)",
+                "Application : arrêt de travail injustifié, fausse cause de décès, faux statut vaccinal",
+                "Sanctions cumulables : pénales, disciplinaires, civiles, administratives"
+              ]
+            },
+            {
+              "titre": "Déontologie FMH",
+              "contenu": "Le Code de déontologie FMH cadre la pratique médicale.",
+              "points": [
+                "CDM art. 34 : 'Le médecin n'établit pas d'attestation contraire à la vérité'",
+                "Obligation de probité et d'intégrité professionnelle",
+                "Sanctions disciplinaires : avertissement, blâme, amende, suspension",
+                "Possibilité d'exclusion de la FMH",
+                "Procédure : commission de déontologie, recours possible",
+                "Information aux autorités cantonales en cas de violation grave",
+                "Signalement à l'assurance maladie si fraude avérée"
+              ]
+            },
+            {
+              "titre": "Droits du salarié (CO art. 324a)",
+              "contenu": "Le code des obligations cadre l'arrêt de travail pour maladie.",
+              "points": [
+                "Droit au salaire pendant l'incapacité de travail médicalement justifiée",
+                "Durée variable selon ancienneté (échelles de Berne, Bâle, Zurich)",
+                "Première année : 3 semaines minimum",
+                "Au-delà : selon l'échelle applicable",
+                "Assurance perte de gain (APG) en relais selon les contrats",
+                "Obligation pour le salarié d'informer rapidement l'employeur",
+                "Certificat médical demandé dès le 3e jour habituellement",
+                "Contre-visite médicale possible par l'assurance"
+              ]
+            },
+            {
+              "titre": "Détecter une demande de complaisance",
+              "contenu": "Plusieurs signaux doivent alerter le médecin.",
+              "points": [
+                "Discordance majeure entre plainte et examen",
+                "Plainte vague, peu cohérente, peu spécifique",
+                "Cotation excessive de la douleur sans signes associés",
+                "Comportement clinique incompatible (mobilité, posture)",
+                "Absence d'antécédents évocateurs",
+                "Demande très ciblée (durée, type de certificat)",
+                "Contexte révélé (voyage, conflit professionnel, démarche)",
+                "Refus de tout examen complémentaire ou suivi",
+                "Insistance, négociation, voire pression"
+              ]
+            },
+            {
+              "titre": "Communication empathique en cas de refus",
+              "contenu": "Refuser sans rompre la relation est une compétence essentielle.",
+              "points": [
+                "Reformuler la demande pour vérifier la compréhension",
+                "Verbaliser la difficulté de la situation du patient",
+                "Distinguer la personne (respectée) de la demande (refusée)",
+                "Expliquer le cadre légal de manière pédagogique",
+                "Utiliser le 'je' médical : 'je ne peux pas', 'mon rôle est de...'",
+                "Éviter le 'vous' accusateur : 'vous mentez', 'vous fraudez'",
+                "Proposer des alternatives concrètes",
+                "Maintenir la disponibilité pour les besoins médicaux réels",
+                "Documenter précisément la consultation"
+              ]
+            }
+          ],
+          "rappelsTherapeutiques": [
+            "Pas de prescription médicamenteuse non justifiée",
+            "Si souffrance psychique réelle : antalgie symptomatique, anxiolytique court (lorazépam), orientation psy",
+            "Si lombalgie réelle (autre patient) : antalgie palier 1, mobilisation, kinésithérapie",
+            "Conseil : éviter le repos strict, maintenir l'activité adaptée",
+            "Pas d'arrêt de travail systématique : proposer aménagements quand possible"
+          ],
+          "examensComplementaires": [
+            "Examens orientés selon la clinique réelle",
+            "Pas d'examen pour 'justifier' un certificat",
+            "Imagerie lombaire (radio, IRM) uniquement si red flags : âge > 50 ans, traumatisme, fièvre, perte de poids, antécédent cancer, déficit neurologique",
+            "Bilan biologique uniquement si suspicion organique objectivée",
+            "Si conflit professionnel chronique : envisager bilan psychologique et coordination avec médecin du travail",
+            "Documentation rigoureuse de chaque consultation"
+          ]
+        }
+      }
     }
   ]
 }
