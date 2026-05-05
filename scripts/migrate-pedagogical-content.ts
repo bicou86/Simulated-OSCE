@@ -84,12 +84,14 @@ export interface MigrationReport {
     sourceFile: string;
     imagesMigrated: number;
     imagesOmitted: number;
+    imagesRecovered?: number;
   }>;
   unmapped: Array<{ sourceFile: string; reason: string }>;
   stationsWithoutSource: string[];
   validationErrors: Array<{ stationId: string; sourceFile: string; zodError: string }>;
   imagesOnDiskTotal: number;
   imagesReferencedTotal: number;
+  imagesRecoveredTotal?: number;
   imagesMissingOnDisk: string[];
   imagesRenamed: Array<{ from: string; to: string }>;
   imagesOrphans: string[];
@@ -218,6 +220,7 @@ interface BuildResult {
   content: PedagogicalContent | null;
   imagesMigrated: number;
   imagesOmitted: number;
+  imagesRecovered: number;
   missingOnDisk: string[];
   /** basename original → slug canonique (pour rename différé) */
   renames: Map<string, string>;
@@ -268,14 +271,48 @@ export function buildPedagogicalContent(
   const missingOnDisk: string[] = [];
   let imagesMigrated = 0;
   let imagesOmitted = 0;
+  let imagesRecovered = 0;
 
   const rawImages = (annexes.images as Array<Record<string, unknown>> | undefined) ?? [];
   if (rawImages.length > 0) {
     const migratedImages: PedagogicalImage[] = [];
     for (const img of rawImages) {
       const dataRaw = img.data;
+      // Phase 12 J4ter — fallback legacy : entrée sans `data` mais avec
+      // `filename`. Couvre 26 images de 12 stations RESCOS dont la source
+      // porte { id, title, description, filename } sans `data` inline. On
+      // résout le filename source vers son slug canonique, et si le fichier
+      // existe sur disque, on construit l'entrée comme une image migrée
+      // standard (data = URL canonique conforme I16) avec le marqueur
+      // `source: "legacy-filename"` pour traçabilité audit. Si le slug
+      // calculé n'est pas trouvé sur disque, l'entrée est omise (pas
+      // d'invention de chemin). Référence : docs/phase-12-orphans-audit.md.
+      if (typeof dataRaw !== "string" && typeof img.filename === "string") {
+        const basename = path.basename(img.filename);
+        const slugResult = slugifyPedagogicalImageName(basename);
+        const onDisk =
+          imagesOnDisk.has(basename) || imagesOnDisk.has(slugResult.basename);
+        if (onDisk) {
+          registerSlug(slugResult.basename, basename);
+          if (basename !== slugResult.basename && imagesOnDisk.has(basename)) {
+            renames.set(basename, slugResult.basename);
+          }
+          const recovered: Record<string, unknown> = {
+            ...img,
+            data: slugResult.url,
+            source: "legacy-filename",
+          };
+          migratedImages.push(recovered as PedagogicalImage);
+          imagesRecovered++;
+          continue;
+        }
+        missingOnDisk.push(basename);
+        imagesOmitted++;
+        continue;
+      }
       if (typeof dataRaw !== "string") {
-        // Image source sans data : on omet (pas de chemin → pas migrable).
+        // Image source sans data ni filename exploitable : on omet
+        // (pas de chemin → pas migrable).
         imagesOmitted++;
         continue;
       }
@@ -308,12 +345,20 @@ export function buildPedagogicalContent(
   }
 
   if (Object.keys(out).length === 0) {
-    return { content: null, imagesMigrated, imagesOmitted, missingOnDisk, renames };
+    return {
+      content: null,
+      imagesMigrated,
+      imagesOmitted,
+      imagesRecovered,
+      missingOnDisk,
+      renames,
+    };
   }
   return {
     content: out as PedagogicalContent,
     imagesMigrated,
     imagesOmitted,
+    imagesRecovered,
     missingOnDisk,
     renames,
   };
@@ -372,6 +417,7 @@ export async function runMigration(opts: MigrationOptions): Promise<MigrationRep
   // sourceFile → { stationId, content }
   const perStationContent = new Map<string, PedagogicalContent>();
   let imagesReferencedTotal = 0;
+  let imagesRecoveredTotal = 0;
 
   for (const file of sourceFiles) {
     const candidate = deriveStationCandidate(file);
@@ -391,7 +437,9 @@ export async function runMigration(opts: MigrationOptions): Promise<MigrationRep
       continue;
     }
     const built = buildPedagogicalContent(source, imagesOnDisk, registerSlug);
-    imagesReferencedTotal += built.imagesMigrated + built.imagesOmitted;
+    imagesReferencedTotal +=
+      built.imagesMigrated + built.imagesOmitted + built.imagesRecovered;
+    imagesRecoveredTotal += built.imagesRecovered;
     for (const m of built.missingOnDisk) missingOnDiskGlobal.add(m);
     for (const [from, to] of built.renames) allRenames.set(from, to);
 
@@ -399,12 +447,14 @@ export async function runMigration(opts: MigrationOptions): Promise<MigrationRep
       // Source mappable mais sans contenu pédagogique extrayable :
       // on l'enregistre dans `mapped` avec compteurs zéro pour
       // visibilité, sans injecter de pedagogicalContent.
-      mapped.push({
+      const entry: MigrationReport["mapped"][number] = {
         stationId,
         sourceFile: file,
         imagesMigrated: 0,
         imagesOmitted: built.imagesOmitted,
-      });
+      };
+      if (built.imagesRecovered > 0) entry.imagesRecovered = built.imagesRecovered;
+      mapped.push(entry);
       continue;
     }
 
@@ -422,12 +472,14 @@ export async function runMigration(opts: MigrationOptions): Promise<MigrationRep
     }
 
     perStationContent.set(stationId, result.data);
-    mapped.push({
+    const entry: MigrationReport["mapped"][number] = {
       stationId,
       sourceFile: file,
       imagesMigrated: built.imagesMigrated,
       imagesOmitted: built.imagesOmitted,
-    });
+    };
+    if (built.imagesRecovered > 0) entry.imagesRecovered = built.imagesRecovered;
+    mapped.push(entry);
   }
 
   // 5. Détection collisions.
@@ -479,6 +531,7 @@ export async function runMigration(opts: MigrationOptions): Promise<MigrationRep
     imagesOnDiskTotal: imagesOnDiskList.length,
     imagesReferencedTotal,
     imagesMissingOnDisk: [...missingOnDiskGlobal].sort(),
+    ...(imagesRecoveredTotal > 0 ? { imagesRecoveredTotal } : {}),
     imagesRenamed: [...allRenames]
       .map(([from, to]) => ({ from, to }))
       .sort((a, b) => a.from.localeCompare(b.from)),
@@ -592,7 +645,7 @@ async function main(): Promise<void> {
   );
   // eslint-disable-next-line no-console
   console.log(
-    `[migrate-pedagogy] images: référencées=${report.imagesReferencedTotal} renames=${report.imagesRenamed.length} orphans=${report.imagesOrphans.length} missing=${report.imagesMissingOnDisk.length}`,
+    `[migrate-pedagogy] images: référencées=${report.imagesReferencedTotal} recovered=${report.imagesRecoveredTotal ?? 0} renames=${report.imagesRenamed.length} orphans=${report.imagesOrphans.length} missing=${report.imagesMissingOnDisk.length}`,
   );
   // eslint-disable-next-line no-console
   console.log(

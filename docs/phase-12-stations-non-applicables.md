@@ -179,3 +179,58 @@ images vers leurs 12 stations RESCOS d'origine.
 | RESCOS-50 - Malaise | 1 | syncope | `syncope-1-img1.jpg` |
 | RESCOS-5 - AVP | 3 | urgence | `urgence-1-img{1..3}.jpg` |
 | **Total** | **26** | | **12 stations** |
+
+**Statut J4ter (2026-05-05)** : ces 26 images ont été migrées vers leurs 12
+stations RESCOS d'origine via le fallback `filename → basename → slug → lookup
+disque` ajouté dans
+[scripts/migrate-pedagogical-content.ts](../scripts/migrate-pedagogical-content.ts)
+(branche conditionnée par `typeof img.data !== "string" && typeof img.filename === "string"`).
+Chaque entrée migrée porte le marqueur additif `source: "legacy-filename"` et
+expose un champ `data` au format `/pedagogical-images/<slug>.jpg` conforme à
+l'invariant I16. Le rapport
+[docs/phase-11-migration-report.json](phase-11-migration-report.json) acte
+`imagesRecoveredTotal: 26` et `mapped[].imagesRecovered` ventilé par station.
+
+### Découverte J4ter — 5 stations supplémentaires hors scope (11 entrées)
+
+Le run J4ter a détecté 11 entrées legacy supplémentaires sur 5 stations dont les
+filenames source utilisent des accents non normalisés vs. les noms ASCII sur
+disque. L'audit J4 ([docs/phase-12-orphans-audit.md](phase-12-orphans-audit.md))
+n'a pas relié les deux variantes : il cherchait par stem ASCII parmi les
+fichiers présents sur disque, sans tester la version accentuée référencée par
+le `filename` source.
+
+| Station | Imgs | Filename source (accent) | Fichier disque (ASCII) | État |
+|---|---|---|---|---|
+| RESCOS-14 — Diarrhées | 2 | `diarrhées-1-img{1,2}.jpg` | `diarrhees-1-img{1,2}.jpg` | en corbeille J4bis (restaurable) |
+| RESCOS-33 — ECC Gynécologique | 5 | `ecc_gynéco-img{1..5}.jpg` | `ecc_gyneco-img{1..5}.jpg` | en corbeille J4bis (restaurable) |
+| RESCOS-45 — Fatigue | 1 | `dépression-1-img1.jpg` | `depression-1-img1.jpg` | en corbeille J4bis (restaurable) |
+| RESCOS-47 — Ictère | 2 | `ictère-1-img{1,2}.jpg` | `ictere-1-img{1,2}.jpg` | en corbeille J4bis (restaurable) |
+| RESCOS-68 — Eruption cutanée | 1 | `rescos-68-zona-thoracique.jpg` | (introuvable) | dette définitive |
+| **Total** | **11** | | | **10 récupérables, 1 perdu** |
+
+**Effet visible dans le rapport** : `imagesMissingOnDisk` passe de 0 (post-J3)
+à 11 (post-J4ter) — visibilité de la découverte, non régression fonctionnelle.
+
+**Décisions Phase 12 (Q-P12-A-15 = (1), Q-P12-A-15b = (α))** :
+
+- **4 stations restaurables (10 images)** — RESCOS-14, RESCOS-33, RESCOS-45,
+  RESCOS-47 — reportées en **J4quater** : extension du fallback avec
+  normalisation diacritique (`removeDiacritics(basename)`) et restauration
+  préalable des 10 fichiers ASCII depuis `tmp/phase-12-orphans-deleted/` vers
+  `client/public/pedagogical-images/` via `git mv` inverse. Hors scope J4ter
+  pour respecter l'invariant « périmètre strict » et éviter de mélanger deux
+  problématiques distinctes (migration legacy filename simple vs. résolution
+  drift accent/non-accent).
+
+- **RESCOS-68 (1 image, dette définitive)** — l'image
+  `rescos-68-zona-thoracique.jpg` est introuvable :
+  - absente de [client/public/pedagogical-images/](../client/public/pedagogical-images/)
+  - absente de [tmp/phase-12-orphans-deleted/](../tmp/phase-12-orphans-deleted/) (corbeille J4bis)
+  - absente de tout autre emplacement pédagogique connu du dépôt
+
+  La station RESCOS-68 reste **partiellement enrichie sans iconographie**
+  (les autres champs `pedagogicalContent` — `resume` / `presentationPatient` /
+  `theoriePratique` — ont été migrés normalement en J3, seul le bloc images
+  pédagogiques manque). Aucune action future possible sans ré-acquisition
+  externe du fichier source.
