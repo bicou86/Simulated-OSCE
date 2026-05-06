@@ -269,3 +269,46 @@ le `filename` source.
 - Station RESCOS-68 reste **partiellement enrichie sans iconographie**.
 - `imagesMissingOnDisk` final post-J4quater = `["rescos-68-zona-thoracique.jpg"]`
   (1 entrée résiduelle, perte définitive documentée).
+
+## Clôture Phase 12 Axe A (J5 — 2026-05-05)
+
+- **Migration pédagogique** : **225/288** stations enrichies (78,1 %).
+  Les 63 stations restantes (62 German + RESCOS-11) sont
+  structurellement non-applicables — corpus en allemand hors scope
+  OSCE suisse francophone (62 stations) et RESCOS-11 dont les annexes
+  source sont inexistantes (cf. tableau J3 supra).
+- **Dette image** : RESCOS-68 conserve `pedagogicalContent` (texte +
+  théorie/pratique) mais l'image `rescos-68-zona-thoracique.jpg` reste
+  perdue (dette définitive Q-P12-A-15b — non comptée dans les
+  stations « non-applicables » car le contenu textuel est bien
+  injecté).
+- **Snapshot
+  [tests/fixtures/__snapshots__/phase2-checksum.json](../tests/fixtures/__snapshots__/phase2-checksum.json)** :
+  **282 stations verrouillées** (288 shortIds uniques − 6 pilotes
+  Phase 3/4/5 toujours sous schéma additif futur attendu).
+  Régénération via le nouveau script
+  [scripts/regenerate-phase2-checksums.ts](../scripts/regenerate-phase2-checksums.ts)
+  (`--dry-run` par défaut + audit pré-flight intégré, `--apply` pour
+  écrire — invariants : `stationCount = 282`, aucune entrée disparue,
+  drift ⊆ liste Phase 12, nouvelles entrées ⊆
+  `{RESCOS-64-P2, RESCOS-70, -71, -72}`).
+- **Alignement `shortIdOf` (test) ↔ `extractShortId` (runtime)** :
+  [server/__tests__/phase2Checksum.test.ts:91](../server/__tests__/phase2Checksum.test.ts#L91)
+  partage désormais la même définition d'identité station que
+  [server/services/stationsService.ts:42](../server/services/stationsService.ts#L42)
+  (Phase 8 J2). RESCOS-64-P2 (« Toux — Station double 2 ») est
+  désormais distinct de RESCOS-64 dans le snapshot.
+- **Drift Phase 12 absorbée** : 21 stations rehashées (5 J3 :
+  AMBOSS-25, German-68, RESCOS-10/-29/-57 ; 12 J4ter :
+  RESCOS-5/-17/-19/-20/-24/-32/-34/-35/-41/-44/-48/-50 ; 4 J4quater :
+  RESCOS-14/-33/-45/-47) + 1 nouvelle entrée (RESCOS-64-P2) + 3
+  ré-entrées sortant de `_meta.excluded` (RESCOS-70/-71/-72).
+- **Pilotes excluded résiduels (6)** : AMBOSS-4 (Phase 3 J3 —
+  register/tags), RESCOS-9b/-13/-63 (Phase 4 J1 — `participants[]`),
+  AMBOSS-24/USMLE-34 (Phase 5 J1 — `legalContext`). Schémas additifs
+  toujours susceptibles d'évoluer ⇒ conservation de l'exclusion par
+  prudence.
+- **Conformité Invariants** : zéro LLM, schéma additif strict (aucune
+  entrée checksum supprimée par rapport au snapshot Phase 11 J3),
+  baselines HTTP byteLength inchangées (aucune modification data en
+  J5 — uniquement test + script + snapshot + doc).

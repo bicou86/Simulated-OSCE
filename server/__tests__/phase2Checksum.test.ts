@@ -8,12 +8,15 @@
 // en pointant l'ID concerné.
 //
 // Stations volontairement exclues du checksum :
-//   • Phase 3 J3 — AMBOSS-4, RESCOS-70, RESCOS-71 : champs additifs
+//   • Phase 3 J3 — AMBOSS-4 : champs additifs
 //     (register, patient_age_years, motif_cache, tags).
-//   • Phase 4 J1 — RESCOS-9b, RESCOS-13, RESCOS-63 (+ RESCOS-70, RESCOS-71
-//     déjà exclus) : champ additif `participants[]` pour la composition
-//     multi-profils (ado + mère, enfant + parent, …).
-// Le verrou redémarre à 280 stations post-J1, déterministes.
+//   • Phase 4 J1 — RESCOS-9b, RESCOS-13, RESCOS-63 : champ additif
+//     `participants[]` pour la composition multi-profils (ado + mère,
+//     enfant + parent, …).
+//   • Phase 5 J1 — AMBOSS-24, USMLE-34 : champ additif `legalContext`.
+// Phase 12 J5 — RESCOS-70, RESCOS-71, RESCOS-72 ont quitté l'exclusion
+// (pédagogie injectée + schéma additif figé) et entrent dans le checksum
+// verrouillé. Le verrou s'établit à 282 stations.
 //
 // Pour mettre à jour le snapshot après un changement Phase 2 *intentionnel*,
 // supprimer phase2-checksum.json et relancer le test avec
@@ -40,22 +43,21 @@ const SNAPSHOT_PATH = path.resolve(
   "phase2-checksum.json",
 );
 // Pilotes exclus = Phase 3 J3 ∪ Phase 4 J1 ∪ Phase 5 J1.
-//   • RESCOS-70/RESCOS-71 sont communs Phase 3 J3 + Phase 4 J1
-//     (register/tags + participants[]).
-//   • AMBOSS-24/USMLE-34 ajoutent legalContext (Phase 5 J1) — annotation
-//     additive sur stations existantes ⇒ checksum dérive.
-//   • RESCOS-72 est une station entièrement nouvelle (Phase 5 J1),
-//     créée pour le scénario certificat_complaisance — pas de baseline.
+//   • AMBOSS-4 (Phase 3 J3) — register/tags additifs.
+//   • RESCOS-9b/RESCOS-13/RESCOS-63 (Phase 4 J1) — participants[] additifs.
+//   • AMBOSS-24/USMLE-34 (Phase 5 J1) — legalContext additif.
+//
+// Phase 12 J5 — RESCOS-70, RESCOS-71 et RESCOS-72 sortent de l'exclusion :
+// elles ont reçu pedagogicalContent comme le reste du catalogue et leur
+// schéma additif (register/tags pour -70/-71, certificat_complaisance pour
+// -72) est maintenant figé. Elles entrent dans le checksum verrouillé.
 const PHASE_PILOTS_EXCLUDED = new Set([
   "AMBOSS-4",
-  "RESCOS-70",
-  "RESCOS-71",
   "RESCOS-9b",
   "RESCOS-13",
   "RESCOS-63",
   "AMBOSS-24",
   "USMLE-34",
-  "RESCOS-72",
 ]);
 
 // Champs d'AUDIT internes ajoutés post-Phase 2 et qui ne doivent pas
@@ -88,7 +90,17 @@ function sortKeysRecursive(v: unknown, isStationRoot = false): unknown {
   return v;
 }
 
+// Phase 12 J5 — aligné sur server/services/stationsService.ts:extractShortId
+// (Phase 8 J2). Le pattern « ... - Station double 2 » suffixe « -P2 » pour
+// distinguer la partie 2 d'une station double de la partie 1 dans le
+// catalog (RESCOS-64-P2 ≠ RESCOS-64). Sans cet alignement, le test
+// dédupliquait silencieusement la partie 2 et la masquait du snapshot.
 function shortIdOf(fullId: string): string {
+  if (/ - Station double 2$/.test(fullId)) {
+    const idx = fullId.indexOf(" - ");
+    const base = idx === -1 ? fullId : fullId.slice(0, idx);
+    return `${base}-P2`;
+  }
   const idx = fullId.indexOf(" - ");
   return idx === -1 ? fullId : fullId.slice(0, idx);
 }
@@ -134,18 +146,15 @@ describe("Phase 2 byte-stability checksum (post-J1 baseline)", () => {
     expect(snap._meta.excluded).toEqual(
       expect.arrayContaining([
         "AMBOSS-4",
-        "RESCOS-70",
-        "RESCOS-71",
         "RESCOS-9b",
         "RESCOS-13",
         "RESCOS-63",
         "AMBOSS-24",
         "USMLE-34",
-        "RESCOS-72",
       ]),
     );
     expect(Object.keys(snap.checksums).length).toBe(snap._meta.stationCount);
-    expect(Object.keys(snap.checksums).length).toBeGreaterThanOrEqual(278);
+    expect(Object.keys(snap.checksums).length).toBeGreaterThanOrEqual(282);
   });
 
   it("none of the excluded pilots is present in the snapshot (excluded by design)", async () => {
