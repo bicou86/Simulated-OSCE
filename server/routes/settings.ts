@@ -19,6 +19,20 @@ const SettingsBody = z.object({
 });
 
 router.post("/", async (req: Request, res: Response) => {
+  // Phase 12 Axe B J1 — désactivé en production (Replit autoscale +
+  // Restricted with password). Le filesystem est volatile entre instances
+  // (la persistance .env.local serait perdue à chaque scale), et un
+  // utilisateur authentifié par mot de passe partagé ne doit pas pouvoir
+  // écraser les clés API du déploiement. Les clés se gèrent via les
+  // Replit Secrets (Tools → Secrets : OPENAI_API_KEY, ANTHROPIC_API_KEY).
+  if (process.env.NODE_ENV === "production") {
+    return res.status(403).json({
+      error:
+        "Configuration des clés API désactivée en production. Utilisez les "
+        + "Replit Secrets (onglet Tools → Secrets) pour gérer OPENAI_API_KEY "
+        + "et ANTHROPIC_API_KEY.",
+    });
+  }
   const parsed = SettingsBody.safeParse(req.body);
   if (!parsed.success) {
     return sendApiError(

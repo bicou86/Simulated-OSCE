@@ -6,6 +6,12 @@ import { createServer } from "http";
 const app = express();
 const httpServer = createServer(app);
 
+// Phase 12 Axe B J1 — derrière le proxy Replit Deployments (autoscale +
+// Restricted with password), req.ip et req.protocol doivent refléter le
+// client réel et non le proxy interne. `trust proxy = 1` honore un seul
+// hop (le proxy Replit), suffisant pour cette topologie.
+app.set("trust proxy", 1);
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
