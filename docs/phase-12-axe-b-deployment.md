@@ -205,3 +205,109 @@ NODE_ENV=production node /home/runner/workspace/dist/index.js
 - `npm test` : 1575 passed / 12 skipped (baseline inchangée).
 - `npm run check` : 8 erreurs préexistantes (target ES5/iterators), aucune
   nouvelle erreur introduite par les modifs B-J2.
+
+## B-J3 — Mise à jour happy-dom + retrait @anthropic-ai/claude-code de dependencies
+
+### Contexte
+
+Publication Replit Autoscale bloquée par le scan sécurité avec le verdict
+`Deployment blocked: found 1 critical vulnerabilities`. Diagnostic local
+confirmé via le scan Replit (`.cache/replit/security-scan/dependencyAudit.json`)
+et `npm audit`.
+
+### Vulnérabilités traitées
+
+**`happy-dom` 15.11.7 → 20.9.0** (devDependency, env Vitest pour `client/**`) :
+
+| Sévérité | ID GHSA | Titre | Fix |
+| --- | --- | --- | --- |
+| **Critical** | GHSA-37j7-fg3j-429f | VM Context Escape → Remote Code Execution | ≥ 20.0.0 |
+| High | GHSA-6q6h-j7hj-3r64 | ECMAScriptModuleCompiler interpole code exécutable | ≥ 20.8.8 |
+| High | GHSA-w4gp-fjgq-3q4g | `fetch credentials` utilise cookies page-origin au lieu de target-origin | ≥ 20.8.9 |
+
+Le saut majeur 15 → 20 (cinq versions) est **forcé** par le fix de la
+Critical (`requiresMajorUpdate: true` dans le scan). Choix de la latest
+20.9.0 pour couvrir les trois CVE en un seul bump. Engines `node >=20.0.0`,
+compatible avec le module `nodejs-20` du `.replit`.
+
+**`@anthropic-ai/claude-code` 2.1.72** (anomalie : déclaré en
+`dependencies` au lieu de devDependencies, probable `npm install` accidentel) :
+
+| Sévérité | ID GHSA | Titre |
+| --- | --- | --- |
+| High | GHSA-q5hj-mxqh-vv77 | Trust Dialog Bypass via Git Worktree Spoofing → arbitrary code execution |
+| High | GHSA-5cwg-9f6j-9jvx | Insecure System-Wide Configuration Loading (Windows priv-esc) |
+
+Vérification d'usage avant retrait :
+
+```bash
+grep -rn "@anthropic-ai/claude-code" --include="*.ts" --include="*.tsx" \
+  --include="*.js" --include="*.mjs" --include="*.cjs" \
+  --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git \
+  --exclude-dir=.cache --exclude-dir=.config .
+# → 0 fichier consommateur (présent uniquement dans package.json + lock)
+```
+
+Désinstallation propre (`npm uninstall @anthropic-ai/claude-code`),
+**pas de réinstall en devDep** : aucune ligne du projet n'importe ce
+module — c'est un CLI Replit-side, pas un module npm consommé par le
+runtime ni les tests.
+
+### Commandes appliquées
+
+```bash
+npm install --save-dev happy-dom@20.9.0
+npm uninstall @anthropic-ai/claude-code
+```
+
+### Diff package.json
+
+- `dependencies."@anthropic-ai/claude-code"` supprimé.
+- `devDependencies."happy-dom"` : `^15.11.7` → `^20.9.0`.
+- Aucune autre dep modifiée.
+
+Diff `package-lock.json` : 21 ins + 21 del pour la bascule happy-dom
+(transitive deps quasi-inchangées) + 21 ins + 349 del pour le retrait
+de la sous-arborescence claude-code.
+
+### Validations B-J3 acquises au commit
+
+- `npm test` : **1575 passed / 12 skipped** (baseline strictement
+  inchangée). Le saut majeur happy-dom 15 → 20 ne casse aucun des
+  9 tests `client/src/**.test.{ts,tsx}` qui s'exécutent dans cet env.
+- `npm run build` : succès, `dist/index.js` 1.3 MB + `dist/public/`
+  générés. `grep "happy-dom"` et `grep "@anthropic-ai/claude-code"` dans
+  `dist/index.js` : **0 occurrence** chacun (devDeps non bundlées).
+- `npm run start` (court) : `[stationsService] 288 stations indexées
+  depuis 14 fichiers.` + `[express] serving on port 5000`. Garde
+  fail-fast non déclenchée.
+- `npm run check` : 8 erreurs préexistantes (target ES5/iterators),
+  aucune nouvelle.
+- `npm audit --omit=dev` : **0 Critical** (cible blocking déploiement
+  Autoscale levée). 7 High résiduelles côté prod (voir dette technique
+  ci-dessous).
+- `npm audit | grep -i critical` : **0 ligne**.
+
+### Dette technique acceptée (hors scope B-J3)
+
+CVE résiduelles signalées par `npm audit --omit=dev` post-B-J3, **toutes
+de sévérité ≤ High**, donc non bloquantes pour le déploiement Autoscale
+(qui ne bloque que sur Critical) :
+
+- `fast-xml-parser` (high) — via `@aws-sdk/xml-builder`. Fix possible via
+  `npm audit fix` simple.
+- `lodash` + `lodash-es` (high) — Prototype Pollution / Code Injection.
+  Fix possible via `npm audit fix`.
+- `node-forge` (high) — basicConstraints bypass + Ed25519 forgery.
+- `path-to-regexp` (high) — ReDoS via wildcards / sequential optional
+  groups.
+- `qs` (high) — DoS via `arrayLimit` bypass.
+- `tmp` (low → high suivant chemin).
+- `elliptic` (high, devDep) + `esbuild` (moderate, devDep) — fixes
+  nécessitent `--force` et breakings (`vite-plugin-node-polyfills@0.2.0`,
+  `vitest@4.1.5`). Reportés.
+
+À traiter dans un Axe B-J4 ultérieur si le seuil de criticité du scan
+Replit évolue, ou si l'audit interne le requiert. Aucun n'est exploitable
+dans le contexte d'un déploiement Autoscale fermé par mot de passe (pas
+de surface d'attaque non authentifiée).
