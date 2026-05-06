@@ -33,8 +33,18 @@ export interface StationMeta {
   parentStationId?: string;
 }
 
-const PATIENT_DIR = path.resolve(import.meta.dirname, "..", "data", "patient");
-const EVALUATOR_DIR = path.resolve(import.meta.dirname, "..", "data", "evaluator");
+// Phase 12 Axe B J2 — ancrage des chemins data via process.cwd() plutôt
+// que `import.meta.dirname`. Le bundle ESM (script/build.ts) place
+// `dist/index.js` à la racine du repo, donc `import.meta.dirname` =
+// `<root>/dist/` et `path.resolve(import.meta.dirname, "..", "data")` =
+// `<root>/data/` — chemin inexistant. process.cwd() pointe vers le
+// project root dans tous nos contextes (Replit Autoscale `npm start`,
+// `npm run dev` via tsx, `vitest run`). Une garde boot fail-fast dans
+// server/index.ts vérifie l'invariant cwd au démarrage.
+const PROJECT_ROOT = process.cwd();
+const SERVER_ROOT = path.resolve(PROJECT_ROOT, "server");
+const PATIENT_DIR = path.resolve(SERVER_ROOT, "data", "patient");
+const EVALUATOR_DIR = path.resolve(SERVER_ROOT, "data", "evaluator");
 
 // Map indexée par shortId → meta (source de vérité en mémoire).
 const catalog = new Map<string, StationMeta>();

@@ -1,7 +1,25 @@
 import express, { type Request, Response, NextFunction } from "express";
+import fs from "node:fs";
+import path from "node:path";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+
+// Phase 12 Axe B J2 — garde boot fail-fast. L'app utilise process.cwd()
+// pour ancrer les chemins data/prompts (cf. stationsService et prompts).
+// Cette hypothèse est silencieuse : si quelqu'un démarre depuis un autre
+// répertoire, on crashe sur ENOENT plus tard avec un message obscur.
+// On convertit cette hypothèse en crash diagnosticable au boot.
+const expectedServerDir = path.resolve(process.cwd(), "server");
+if (!fs.existsSync(expectedServerDir)) {
+  // eslint-disable-next-line no-console
+  console.error(
+    `[boot] Erreur fatale : process.cwd() = ${process.cwd()} `
+      + `ne contient pas de répertoire 'server/'. `
+      + `L'application doit être démarrée depuis la racine du projet.`,
+  );
+  process.exit(1);
+}
 
 const app = express();
 const httpServer = createServer(app);

@@ -4,7 +4,10 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-const PROMPTS_DIR = path.resolve(import.meta.dirname, "..", "prompts");
+// Phase 12 Axe B J2 — ancrage via process.cwd() (cf. stationsService.ts
+// pour la justification ; bundle ESM rend `import.meta.dirname` peu utile
+// pour des chemins relatifs au source).
+const PROMPTS_DIR = path.resolve(process.cwd(), "server", "prompts");
 const cache = new Map<string, string>();
 
 export async function loadPrompt(name: string): Promise<string> {
